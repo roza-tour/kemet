@@ -66,8 +66,16 @@ export interface DestinationRelationships {
 }
 
 export interface ExperienceRelationships {
+  /** Canonical: the destinations this experience is located at / primarily serves. */
   destinations?: Ref<"destination">[];
+  /** Tours that include or pair well with this experience. */
+  tours?: Ref<"tour">[];
+  /** Travel guides that cover this experience or its context. */
+  guides?: Ref<"guide">[];
+  /** Reusable activity concepts this experience instantiates. */
+  activities?: Ref<"activity">[];
   categories?: Ref<"category">[];
+  /** Editorial "similar experiences" — authored cross-links. */
   relatedExperiences?: Ref<"experience">[];
 }
 
@@ -196,14 +204,87 @@ export interface Destination extends ContentEntity {
   relationships?: DestinationRelationships;
 }
 
+/**
+ * A visitor experience — the activity layer of the platform. Represents a real
+ * bookable (or enquirable) offering rather than a destination or a tour.
+ * Every field is data and presentation-independent; pages render from it and a
+ * future booking API maps onto it without a model change.
+ *
+ * Relationship rule: Experience stores canonical edges to its destinations, tours,
+ * guides and activities. Inverse lookups (e.g. experiences-on-a-destination) are
+ * derived by the registry — never hand-maintained here.
+ */
 export interface Experience extends ContentEntity {
   domain: "experience";
-  summary: string;
-  taxonomy?: {
-    destinations?: string[];
-    travelStyles?: TravelStyle[];
-    seasons?: Season[];
-  };
+
+  // Copy
+  /** 1–2 sentence factual summary — meta description source and AI snippet. */
+  shortSummary: string;
+  /** Full factual description paragraph(s) — overview body. */
+  longDescription: string;
+
+  // Classification
+  /** Experience category id — references experienceCategories in config/taxonomy. */
+  category: string;
+
+  // Logistics
+  /** Human-readable duration label, e.g. "3–4 hours", "Full day". */
+  durationLabel: string;
+  /** Duration in minutes — for future filtering and sorting. */
+  durationMinutes?: number;
+  /** Physical demand level for the visitor. */
+  difficulty?: Difficulty;
+
+  // Suitability
+  minAge?: number;
+  familyFriendly?: boolean;
+  luxuryFriendly?: boolean;
+  adventureFriendly?: boolean;
+  accessibilityNotes?: string;
+
+  // Seasonality
+  bestSeasons?: Season[];
+
+  // Location
+  region: RegionId;
+  /** Human-readable location, e.g. "Giza Plateau, Giza". */
+  location?: string;
+  /** Meeting point description — placeholder until booking system is live. */
+  meetingPointNote?: string;
+  coordinates?: GeoPoint;
+
+  // Format
+  /** True if the experience runs for a single party only (no shared groups). */
+  isPrivate?: boolean;
+  /** BCP-47 language codes the experience is offered in. */
+  languages?: string[];
+  /** Human-readable group-size note, e.g. "Your private party only." */
+  groupSizeNote?: string;
+
+  // Future availability & pricing (architecture-ready, not yet live)
+  /** Availability description — e.g. "Available most mornings year-round." */
+  availabilityNote?: string;
+  /** Pricing note — e.g. "Pricing confirmed on enquiry." No fabricated prices. */
+  priceNote?: string;
+
+  // Scannable, AI-search-friendly content blocks
+  highlights?: string[];
+  /** Sidebar key–value facts table. */
+  keyFacts?: { label: string; value: string }[];
+  whatsIncluded?: string[];
+  whatsExcluded?: string[];
+  preparationTips?: string[];
+  goodToKnow?: string[];
+
+  // Q&A — rendered as FAQPage JSON-LD and an accordion
+  faqs?: Faq[];
+
+  // Future media (placeholders until photography is sourced)
+  hero?: MediaPlaceholder;
+  gallery?: MediaPlaceholder[];
+
+  // Future reviews & ratings (intentionally omitted — Phase 9+)
+
   relationships?: ExperienceRelationships;
 }
 

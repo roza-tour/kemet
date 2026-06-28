@@ -1,0 +1,27 @@
+---
+// ExperienceCard — used by the hub grid and "related experiences" sections.
+// Reuses the existing .tease card. Data-driven, reusable for any experience.
+import { experienceCategories, labelOf } from "@/config/taxonomy";
+import type { Experience } from "@/types";
+
+interface Props {
+  experience: Experience;
+  /** Link prefix back to the site root. */
+  base?: string;
+}
+const { experience, base = "" } = Astro.props;
+const categoryLabel = labelOf(experienceCategories, experience.category) ?? experience.category;
+const href = `${base}experiences/${experience.slug}.html`;
+---
+<a class="tease reveal" href={href} aria-label={`${experience.title} — experience`}>
+  <div class="eyebrow" style="margin-bottom:8px">{categoryLabel}</div>
+  <h3>{experience.title}</h3>
+  <p>{experience.shortSummary}</p>
+  <div style="margin-top:12px;display:flex;gap:18px;align-items:center">
+    <span class="eyebrow" style="font-size:.68em;opacity:.6">{experience.durationLabel}</span>
+    {experience.isPrivate && (
+      <span class="eyebrow" style="font-size:.68em;opacity:.6">Private</span>
+    )}
+  </div>
+  <span class="more" style="margin-top:14px;display:block">Explore <b>→</b></span>
+</a>

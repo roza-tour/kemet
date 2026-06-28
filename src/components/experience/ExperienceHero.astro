@@ -1,0 +1,37 @@
+---
+// ExperienceHero — breadcrumb, category eyebrow, H1, summary and hero media
+// placeholder. Fully data-driven: no per-experience logic or markup.
+// Follows the same pattern as DestinationHero and GuideHero.
+import Placeholder from "@/components/Placeholder.astro";
+import { experienceCategories, labelOf } from "@/config/taxonomy";
+import { hubFor } from "@/config/routes";
+import type { Experience } from "@/types";
+
+interface Props {
+  experience: Experience;
+  /** Link prefix back to the site root ("" at root, "../" inside a subfolder). */
+  base?: string;
+}
+const { experience, base = "" } = Astro.props;
+const categoryLabel = labelOf(experienceCategories, experience.category) ?? experience.category;
+const hub = hubFor("experience");
+---
+<header class="phero" style="padding-bottom:34px">
+  <div class="wrap">
+    <nav class="crumb" aria-label="Breadcrumb">
+      <a href={`${base}index.html`}>Home</a> ·
+      <a href={`${base}${hub}`}>Experiences</a> ·
+      <span>{experience.title}</span>
+    </nav>
+    <div class="eyebrow">{categoryLabel} · {experience.durationLabel}</div>
+    <h1>{experience.title}</h1>
+    <p>{experience.shortSummary}</p>
+  </div>
+</header>
+{experience.hero && (
+  <section style="padding-top:18px;padding-bottom:0">
+    <div class="wrap">
+      <Placeholder class="tgallery reveal" label={experience.hero.label ?? experience.title} />
+    </div>
+  </section>
+)}

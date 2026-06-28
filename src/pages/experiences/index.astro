@@ -1,0 +1,58 @@
+---
+// Experiences hub (/experiences.html — flat hub, like destinations.html). Lists
+// every experience grouped by category for scannability at any scale (5 or 500).
+// Entirely data-driven: adding an experience surfaces it here automatically.
+import Base from "@/layouts/Base.astro";
+import PageHero from "@/components/PageHero.astro";
+import SectionHeader from "@/components/SectionHeader.astro";
+import ExperienceCard from "@/components/experience/ExperienceCard.astro";
+import Frieze from "@/components/Frieze.astro";
+import { experiences } from "@/data/experiences";
+import { experienceCategories, labelOf } from "@/config/taxonomy";
+import { hubFor, relativePrefix } from "@/config/routes";
+import { breadcrumb } from "@/schemas/jsonld";
+import { trailFor } from "@/config/navigation";
+
+const ROUTE = hubFor("experience");
+const base = relativePrefix(ROUTE);
+
+// Group by category in vocabulary order; only categories that have at least
+// one experience are rendered — empty sections never appear.
+const byCategory = experienceCategories
+  .map((cat) => ({
+    category: cat,
+    items: experiences.filter((e) => e.category === cat.id),
+  }))
+  .filter((group) => group.items.length > 0);
+
+const jsonld = breadcrumb(trailFor("experience"));
+---
+<Base
+  title="Egypt Experiences — Private, Cultural & Historical Activities | Kemet"
+  description="Curated private experiences across Egypt — sunrise at the Giza Pyramids, felucca sailing on the Nile, Old Cairo walking tours, cooking classes and Luxor Temple by night."
+  active={ROUTE}
+  jsonld={jsonld}
+>
+  <PageHero
+    crumb="Experiences"
+    symbol="ankh"
+    title="Experiences"
+    text="Curated private activities across Egypt — from dawn at the pyramids to an evening at Luxor Temple. Each experience is led by a specialist and arranged exclusively for your party."
+    base={base}
+  />
+
+  {byCategory.map((group) => (
+    <section style="padding-top:30px">
+      <div class="wrap">
+        <SectionHeader eyebrow="Category" title={group.category.label} />
+        <div class="grid-3">
+          {group.items.map((experience) => (
+            <ExperienceCard experience={experience} base={base} />
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <Frieze />
+</Base>

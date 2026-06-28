@@ -19,6 +19,7 @@ import DestinationHero from "@/components/destination/DestinationHero.astro";
 import DestinationCard from "@/components/destination/DestinationCard.astro";
 import FactList from "@/components/destination/FactList.astro";
 import HighlightList from "@/components/destination/HighlightList.astro";
+import ExperienceCard from "@/components/experience/ExperienceCard.astro";
 import { destinations } from "@/data/destinations";
 import { relatedTours, relatedExperiences, nearbyDestinations } from "@/data/registry";
 import { entityStaticPaths, relativePrefix, routeFor } from "@/config/routes";
@@ -171,14 +172,10 @@ const jsonld = entitySchema("destination", dest);
     {experiences.length > 0 && (
       <section>
         <div class="wrap">
-          <SectionHeader eyebrow="Experiences" title="Featured experiences" />
+          <SectionHeader eyebrow="Experiences" title="Featured experiences" text={`Activities and private experiences based in ${dest.title}.`} />
           <div class="grid-3">
             {experiences.map((exp) => (
-              <a class="tease reveal" href={`${base}experiences/${exp.slug}.html`}>
-                <h3>{exp.title}</h3>
-                <p>{exp.summary}</p>
-                <span class="more">Explore <b>→</b></span>
-              </a>
+              <ExperienceCard experience={exp} base={base} />
             ))}
           </div>
         </div>

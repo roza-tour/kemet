@@ -13,13 +13,15 @@ import { getTourMeta } from "@/data/tours.taxonomy";
 import { destinations } from "@/data/destinations";
 import { activities } from "@/data/activities";
 import { guides } from "@/data/guides";
+import { experiences } from "@/data/experiences";
 import type { Destination, Experience, Guide, Tour } from "@/types";
 
 export const registry = new ContentRegistry()
   .register("destination", destinations)
   .register("tour", toursByOrder)
   .register("activity", activities)
-  .register("guide", guides);
+  .register("guide", guides)
+  .register("experience", experiences);
 
 /**
  * Inverse of the canonical Tour→Destination edge: Map<destinationId, Tour[]>.
@@ -44,10 +46,9 @@ export function nearbyDestinations(destination: Destination): Destination[] {
 
 /**
  * Experiences that belong to a destination, derived from the canonical
- * Experience→Destination edge (never stored on the destination). The
- * experience domain is not authored yet, so this returns [] today; once
- * experiences with destination refs are registered, the section populates with
- * no change to the destination data, components or pages.
+ * Experience→Destination edge (never stored on the destination). Adding an
+ * experience with a destination ref surfaces it here automatically — no change
+ * to the destination data, components or pages.
  */
 export function relatedExperiences(destinationId: string): Experience[] {
   return registry
@@ -55,6 +56,14 @@ export function relatedExperiences(destinationId: string): Experience[] {
     .filter((e) =>
       e.relationships?.destinations?.some((ref) => ref.id === destinationId),
     );
+}
+
+/**
+ * Resolve an experience's authored relatedExperiences refs to entities. These
+ * are the editorial "similar experiences" cross-links stored on the canonical side.
+ */
+export function resolveRelatedExperiences(exp: Experience): Experience[] {
+  return registry.resolve<Experience>(exp.relationships?.relatedExperiences ?? []);
 }
 
 /**

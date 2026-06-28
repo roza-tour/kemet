@@ -137,6 +137,30 @@ export const guideCategories: GuideCategory[] = [
   { id: "accessibility", label: "Accessible Travel", parentId: "travel-styles" },
 ];
 
+/**
+ * Controlled vocabulary for the Experience domain. Flat taxonomy — no hierarchy
+ * required at this stage; deeper nesting can be added later via parentId without
+ * touching entity data. Adding a new category never requires structural changes.
+ */
+export const experienceCategories: TaxonomyTerm[] = [
+  { id: "historical", label: "Historical" },
+  { id: "cultural", label: "Cultural" },
+  { id: "food-drink", label: "Food & Drink" },
+  { id: "walking-tour", label: "Walking Tour" },
+  { id: "museum-visit", label: "Museum Visit" },
+  { id: "religious-site", label: "Religious Site" },
+  { id: "photography", label: "Photography" },
+  { id: "desert-adventure", label: "Desert Adventure" },
+  { id: "nile-experience", label: "Nile Experience" },
+  { id: "family-activity", label: "Family Activity" },
+  { id: "luxury-experience", label: "Luxury Experience" },
+  { id: "night-experience", label: "Night Experience" },
+  { id: "shopping", label: "Shopping" },
+  { id: "workshop", label: "Workshop" },
+  { id: "nature", label: "Nature" },
+  { id: "archaeology", label: "Archaeology" },
+];
+
 /** Convenience: look up a term's label by id within a vocabulary. */
 export function labelOf(terms: TaxonomyTerm[], id: string): string | undefined {
   return terms.find((t) => t.id === id)?.label;

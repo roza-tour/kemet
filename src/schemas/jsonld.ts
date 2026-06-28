@@ -6,7 +6,7 @@ import { SITE_URL, OG_IMAGE_PATH, CURRENCY, site } from "@/config/site";
 import { canonical, phoneHref } from "@/utils/links";
 import { routeFor } from "@/config/routes";
 import { trailFor } from "@/config/navigation";
-import type { BreadcrumbItem, ContentDomain, Destination, Guide, JsonLd, Tour } from "@/types";
+import type { BreadcrumbItem, ContentDomain, Destination, Experience, Guide, JsonLd, Tour } from "@/types";
 
 const SCHEMA_CONTEXT = "https://schema.org";
 
@@ -194,8 +194,79 @@ export function guideSchema(guide: Guide): JsonLd[] {
 }
 
 /**
+ * Full structured-data set for an experience page:
+ * TouristAttraction · Service · WebPage · BreadcrumbList (+ FAQPage when present).
+ * Schema.org TouristAttraction is the best fit for named, place-based visitor
+ * experiences. A companion Service node represents the bookable offering.
+ * No fabricated values — availability, price and geo are omitted until confirmed.
+ */
+export function experienceSchema(experience: Experience): JsonLd[] {
+  const route = routeFor("experience", experience.slug);
+  const url = canonical(route);
+  const org = { "@type": "TravelAgency", name: site.name, url: SITE_URL };
+
+  const touristAttraction: JsonLd = {
+    "@context": SCHEMA_CONTEXT,
+    "@type": "TouristAttraction",
+    name: experience.title,
+    description: experience.shortSummary,
+    url,
+    containedInPlace: { "@type": "Country", name: "Egypt" },
+    provider: org,
+    inLanguage: experience.languages ?? ["en"],
+    ...(experience.highlights?.length
+      ? {
+          amenityFeature: experience.highlights.map((name) => ({
+            "@type": "LocationFeatureSpecification",
+            name,
+          })),
+        }
+      : {}),
+    ...(experience.coordinates?.lat != null && experience.coordinates?.lng != null
+      ? {
+          geo: {
+            "@type": "GeoCoordinates",
+            latitude: experience.coordinates.lat,
+            longitude: experience.coordinates.lng,
+          },
+        }
+      : {}),
+  };
+
+  const webPage: JsonLd = {
+    "@context": SCHEMA_CONTEXT,
+    "@type": "WebPage",
+    name: experience.title,
+    description: experience.shortSummary,
+    url,
+    isPartOf: { "@type": "WebSite", name: `${site.name} — The Black Land`, url: SITE_URL },
+    about: { "@type": "TouristAttraction", name: experience.title },
+    publisher: org,
+  };
+
+  const leaf: BreadcrumbItem = [experience.title, route];
+  const crumbs = breadcrumb(trailFor("experience", leaf));
+
+  const out: JsonLd[] = [touristAttraction, webPage, crumbs];
+
+  if (experience.faqs?.length) {
+    out.push({
+      "@context": SCHEMA_CONTEXT,
+      "@type": "FAQPage",
+      mainEntity: experience.faqs.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    });
+  }
+
+  return out;
+}
+
+/**
  * Structured-data dispatcher — routes an entity to its schema builder by
- * domain. Tours, destinations and guides are wired; experience/category
+ * domain. Tours, destinations, guides and experiences are wired; category
  * builders slot in here later with no change to callers.
  */
 export function entitySchema(domain: ContentDomain, entity: unknown): JsonLd[] {
@@ -206,6 +277,8 @@ export function entitySchema(domain: ContentDomain, entity: unknown): JsonLd[] {
       return destinationSchema(entity as Destination);
     case "guide":
       return guideSchema(entity as Guide);
+    case "experience":
+      return experienceSchema(entity as Experience);
     default:
       return [];
   }
