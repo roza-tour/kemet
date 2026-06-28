@@ -3,10 +3,14 @@ import Base from "@/layouts/Base.astro";
 import Placeholder from "@/components/Placeholder.astro";
 import Faq from "@/components/Faq.astro";
 import Frieze from "@/components/Frieze.astro";
+import SectionHeader from "@/components/SectionHeader.astro";
+import TourCard from "@/components/TourCard.astro";
 import TourFit from "@/components/conversion/TourFit.astro";
 import LeadCapture from "@/components/conversion/LeadCapture.astro";
+import GuideCard from "@/components/guide/GuideCard.astro";
 import { tours } from "@/data/tours";
 import { getTourMeta } from "@/data/tours.taxonomy";
+import { findSimilarTours, findPreparationGuides } from "@/data/registry";
 import type { Tour } from "@/types";
 import { formatPrice } from "@/utils/format";
 import { whatsappLink, mailtoLink } from "@/utils/links";
@@ -28,6 +32,9 @@ export function getStaticPaths() {
 const base = Astro.props.tour;
 const meta = getTourMeta(base.slug);
 const tour: Tour = meta ? { ...base, id: base.slug, domain: "tour", ...meta } : base;
+
+const similarTours = findSimilarTours(tour);
+const prepGuides = findPreparationGuides(tour);
 
 const title = `${tour.title} — ${tour.durationLabel} | Kemet Egypt`;
 const description = tour.summary;
@@ -127,6 +134,28 @@ const jsonld = entitySchema("tour", tour);
     </section>
 
     <Frieze />
+
+    {prepGuides.length > 0 && (
+      <section>
+        <div class="wrap">
+          <SectionHeader eyebrow="Planning" title="Preparation reading" text="Guides to help you prepare for this journey." />
+          <div class="grid-3">
+            {prepGuides.map((g) => <GuideCard guide={g} base="" />)}
+          </div>
+        </div>
+      </section>
+    )}
+
+    {similarTours.length > 0 && (
+      <section>
+        <div class="wrap">
+          <SectionHeader eyebrow="Journeys" title="Similar journeys" />
+          <div class="grid-3">
+            {similarTours.map((t) => <TourCard tour={t} base="" />)}
+          </div>
+        </div>
+      </section>
+    )}
 
     <LeadCapture
       variant="expert"

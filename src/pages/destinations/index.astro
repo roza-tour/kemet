@@ -11,7 +11,7 @@ import Frieze from "@/components/Frieze.astro";
 import { destinations } from "@/data/destinations";
 import { regions, labelOf } from "@/config/taxonomy";
 import { hubFor, relativePrefix } from "@/config/routes";
-import { breadcrumb } from "@/schemas/jsonld";
+import { breadcrumb, collectionSchema } from "@/schemas/jsonld";
 import { trailFor } from "@/config/navigation";
 
 const ROUTE = hubFor("destination");
@@ -26,7 +26,15 @@ const byRegion = regions
   }))
   .filter((group) => group.items.length > 0);
 
-const jsonld = breadcrumb(trailFor("destination"));
+const jsonld = [
+  breadcrumb(trailFor("destination")),
+  ...collectionSchema(
+    "Egypt Destinations",
+    "Explore Egypt by destination — Cairo, Giza, Luxor, Aswan and Alexandria.",
+    ROUTE,
+    destinations.map((d) => ({ title: d.title, slug: d.slug, domain: "destination" })),
+  ),
+];
 ---
 <Base
   title="Egypt Destinations — Cairo, Giza, Luxor, Aswan & Alexandria | Kemet"

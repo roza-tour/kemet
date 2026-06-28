@@ -19,11 +19,12 @@ import HighlightList from "@/components/destination/HighlightList.astro";
 import DestinationCard from "@/components/destination/DestinationCard.astro";
 import GuideHero from "@/components/guide/GuideHero.astro";
 import GuideCard from "@/components/guide/GuideCard.astro";
+import ExperienceCard from "@/components/experience/ExperienceCard.astro";
 import { guides } from "@/data/guides";
-import { registry, resolveRelatedGuides } from "@/data/registry";
+import { registry, resolveRelatedGuides, findRelatedExperiencesForGuide } from "@/data/registry";
 import { entityStaticPaths, relativePrefix, routeFor } from "@/config/routes";
 import { entitySchema } from "@/schemas/jsonld";
-import type { Destination, Guide, Tour } from "@/types";
+import type { Destination, Experience, Guide, Tour } from "@/types";
 
 interface Props {
   entity: Guide;
@@ -43,6 +44,7 @@ const base = relativePrefix(route);
 const relDestinations = registry.resolve<Destination>(guide.relationships?.destinations ?? []);
 const relTours = registry.resolve<Tour>(guide.relationships?.tours ?? []);
 const relGuides = resolveRelatedGuides(guide);
+const relExperiences = findRelatedExperiencesForGuide(guide);
 
 const title = guide.seo?.title ?? `${guide.title} | Kemet Egypt Travel Guides`;
 const description = guide.seo?.description ?? guide.shortSummary;
@@ -159,6 +161,19 @@ const jsonld = entitySchema("guide", guide);
           <div class="grid-3">
             {relGuides.map((g) => (
               <GuideCard guide={g} base={base} />
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    {relExperiences.length > 0 && (
+      <section>
+        <div class="wrap">
+          <SectionHeader eyebrow="Experiences" title="Related experiences" text="Private activities at the destinations covered in this guide." />
+          <div class="grid-3">
+            {relExperiences.map((e) => (
+              <ExperienceCard experience={e} base={base} />
             ))}
           </div>
         </div>

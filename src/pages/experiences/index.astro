@@ -10,7 +10,7 @@ import Frieze from "@/components/Frieze.astro";
 import { experiences } from "@/data/experiences";
 import { experienceCategories, labelOf } from "@/config/taxonomy";
 import { hubFor, relativePrefix } from "@/config/routes";
-import { breadcrumb } from "@/schemas/jsonld";
+import { breadcrumb, collectionSchema } from "@/schemas/jsonld";
 import { trailFor } from "@/config/navigation";
 
 const ROUTE = hubFor("experience");
@@ -25,7 +25,15 @@ const byCategory = experienceCategories
   }))
   .filter((group) => group.items.length > 0);
 
-const jsonld = breadcrumb(trailFor("experience"));
+const jsonld = [
+  breadcrumb(trailFor("experience")),
+  ...collectionSchema(
+    "Egypt Experiences",
+    "Curated private experiences across Egypt — sunrise at the pyramids, felucca sailing and more.",
+    ROUTE,
+    experiences.map((e) => ({ title: e.title, slug: e.slug, domain: "experience" })),
+  ),
+];
 ---
 <Base
   title="Egypt Experiences — Private, Cultural & Historical Activities | Kemet"

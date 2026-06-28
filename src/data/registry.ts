@@ -14,6 +14,7 @@ import { destinations } from "@/data/destinations";
 import { activities } from "@/data/activities";
 import { guides } from "@/data/guides";
 import { experiences } from "@/data/experiences";
+import { rankByRelevance, type EntitySignals } from "@/utils/knowledge";
 import type { Destination, Experience, Guide, Tour } from "@/types";
 
 export const registry = new ContentRegistry()
@@ -98,4 +99,99 @@ export function relatedGuidesForTour(tourId: string): Guide[] {
  */
 export function resolveRelatedGuides(g: Guide): Guide[] {
   return registry.resolve<Guide>(g.relationships?.relatedGuides ?? []);
+}
+
+// ---------------------------------------------------------------------------
+// Knowledge Graph — signal extractors + scored recommendation functions.
+// All computation happens at build time. No runtime JS.
+// ---------------------------------------------------------------------------
+
+/** Normalised signal vector for a tour (derived from taxonomy side-car). */
+function tourSignals(tour: Tour): EntitySignals {
+  const meta = getTourMeta(tour.slug);
+  return {
+    id: tour.slug,
+    destinationIds: meta?.relationships?.destinations?.map((r) => r.id),
+    regionIds: meta?.taxonomy?.regions,
+    travelStyles: meta?.taxonomy?.travelStyles,
+    seasons: meta?.taxonomy?.seasons,
+    categoryIds: meta?.relationships?.categories?.map((r) => r.id),
+    difficulty: meta?.taxonomy?.difficulty,
+  };
+}
+
+/** Normalised signal vector for a guide. */
+function guideSignals(guide: Guide): EntitySignals {
+  const destIds = guide.relationships?.destinations?.map((r) => r.id);
+  // Planning/practical guides pair well with any tour — include as broad category
+  const isPlanningGuide = ["planning", "practical", "overview", "seasonal"].includes(
+    guide.guideType ?? "",
+  );
+  return {
+    id: guide.slug,
+    destinationIds: destIds,
+    categoryIds: guide.category
+      ? [guide.category, ...(isPlanningGuide ? ["planning-resources"] : [])]
+      : isPlanningGuide
+        ? ["planning-resources"]
+        : [],
+  };
+}
+
+/** Normalised signal vector for an experience. */
+function experienceSignals(exp: Experience): EntitySignals {
+  const travelStyles: string[] = [];
+  if (exp.luxuryFriendly) travelStyles.push("luxury");
+  if (exp.adventureFriendly) travelStyles.push("adventure");
+  if (exp.familyFriendly) travelStyles.push("family");
+  return {
+    id: exp.slug,
+    destinationIds: exp.relationships?.destinations?.map((r) => r.id),
+    regionIds: [exp.region],
+    travelStyles,
+    seasons: exp.bestSeasons,
+    categoryIds: [exp.category],
+    difficulty: exp.difficulty,
+  };
+}
+
+/** Scored similar tours for a given tour (same destinations / travel styles). */
+export function findSimilarTours(tour: Tour, limit = 3): Tour[] {
+  const source = tourSignals(tour);
+  const candidates = registry
+    .all<Tour>("tour")
+    .filter((t) => t.slug !== tour.slug)
+    .map((t) => ({ entity: t, signals: tourSignals(t) }));
+  return rankByRelevance(source, candidates, { limit });
+}
+
+/**
+ * Preparation guides most relevant to a tour.
+ * Guides are matched on shared destinations or as planning resources.
+ * A category "planning-resources" is added to guides of type planning/practical/overview.
+ * Tours receive the same category so they score against such guides.
+ */
+export function findPreparationGuides(tour: Tour, limit = 3): Guide[] {
+  const meta = getTourMeta(tour.slug);
+  const source: EntitySignals = {
+    ...tourSignals(tour),
+    categoryIds: [
+      ...(meta?.relationships?.categories?.map((r) => r.id) ?? []),
+      "planning-resources",
+    ],
+  };
+  const candidates = guides.map((g) => ({ entity: g, signals: guideSignals(g) }));
+  return rankByRelevance(source, candidates, { limit });
+}
+
+/**
+ * Experiences most relevant to a guide.
+ * Matched on shared destinations.
+ */
+export function findRelatedExperiencesForGuide(guide: Guide, limit = 3): Experience[] {
+  const source = guideSignals(guide);
+  const candidates = registry
+    .all<Experience>("experience")
+    .map((e) => ({ entity: e, signals: experienceSignals(e) }));
+  return rankByRelevance(source, candidates, { limit });
 }

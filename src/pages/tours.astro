@@ -5,10 +5,18 @@ import SectionHeader from "@/components/SectionHeader.astro";
 import TourCard from "@/components/TourCard.astro";
 import Frieze from "@/components/Frieze.astro";
 import CustomTrip from "@/components/conversion/CustomTrip.astro";
-import { multidayTours, dayTours } from "@/data/tours";
-import { breadcrumb } from "@/schemas/jsonld";
+import { multidayTours, dayTours, tours } from "@/data/tours";
+import { breadcrumb, collectionSchema } from "@/schemas/jsonld";
 
-const jsonld = breadcrumb([["Home", "index.html"], ["Tours", "tours.html"]]);
+const jsonld = [
+  breadcrumb([["Home", "index.html"], ["Tours", "tours.html"]]),
+  ...collectionSchema(
+    "Egypt Tours & Private Journeys",
+    "Twelve private Egypt tours — multi-day journeys and full-day experiences.",
+    "tours.html",
+    tours.map((t) => ({ title: t.title, slug: t.slug, domain: "tour" })),
+  ),
+];
 ---
 <Base
   title="Egypt Tours & Nile Cruises — 12 Private Journeys | Kemet"

@@ -11,7 +11,7 @@ import Frieze from "@/components/Frieze.astro";
 import { guides } from "@/data/guides";
 import { guideCategories } from "@/config/taxonomy";
 import { hubFor, relativePrefix } from "@/config/routes";
-import { breadcrumb } from "@/schemas/jsonld";
+import { breadcrumb, collectionSchema } from "@/schemas/jsonld";
 import { trailFor } from "@/config/navigation";
 
 const ROUTE = hubFor("guide");
@@ -32,7 +32,15 @@ const byCategory = rootCategories
   }))
   .filter((group) => group.items.length > 0);
 
-const jsonld = breadcrumb(trailFor("guide"));
+const jsonld = [
+  breadcrumb(trailFor("guide")),
+  ...collectionSchema(
+    "Egypt Travel Guides",
+    "Expert travel guides for Egypt — visa, transport, culture and planning.",
+    ROUTE,
+    guides.map((g) => ({ title: g.title, slug: g.slug, domain: "guide" })),
+  ),
+];
 ---
 <Base
   title="Egypt Travel Guides — Planning, Visa, Transport & Culture | Kemet"

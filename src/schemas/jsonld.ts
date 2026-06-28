@@ -265,6 +265,47 @@ export function experienceSchema(experience: Experience): JsonLd[] {
 }
 
 /**
+ * CollectionPage + ItemList for hub pages (tours, destinations, experiences, guides).
+ * Emits two nodes: a CollectionPage (the hub URL) and an ItemList of named entities.
+ * Call from hub pages that list an entire catalogue.
+ */
+export function collectionSchema(
+  name: string,
+  description: string,
+  route: string,
+  items: Array<{ title: string; slug: string; domain: string }>,
+): JsonLd[] {
+  const url = canonical(route);
+
+  const itemList: JsonLd = {
+    "@context": SCHEMA_CONTEXT,
+    "@type": "ItemList",
+    name,
+    description,
+    url,
+    numberOfItems: items.length,
+    itemListElement: items.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.title,
+      url: canonical(routeFor(item.domain as never, item.slug)),
+    })),
+  };
+
+  const collectionPage: JsonLd = {
+    "@context": SCHEMA_CONTEXT,
+    "@type": "CollectionPage",
+    name,
+    description,
+    url,
+    isPartOf: { "@type": "WebSite", name: `${site.name} — The Black Land`, url: SITE_URL },
+    publisher: { "@type": "TravelAgency", name: site.name, url: SITE_URL },
+  };
+
+  return [collectionPage, itemList];
+}
+
+/**
  * Structured-data dispatcher — routes an entity to its schema builder by
  * domain. Tours, destinations, guides and experiences are wired; category
  * builders slot in here later with no change to callers.
