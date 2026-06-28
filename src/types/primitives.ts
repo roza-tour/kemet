@@ -26,7 +26,7 @@ export type ContentDomain =
   | "guide"
   | "activity"
   | "category"
-  | "seasonal"
+  | "seasonal"  // editorial collections
   | "identity"
   | "page"; // company / legal / support / static marketing pages
 

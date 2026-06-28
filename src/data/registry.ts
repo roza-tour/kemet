@@ -14,15 +14,17 @@ import { destinations } from "@/data/destinations";
 import { activities } from "@/data/activities";
 import { guides } from "@/data/guides";
 import { experiences } from "@/data/experiences";
+import { collections } from "@/data/collections";
 import { rankByRelevance, type EntitySignals } from "@/utils/knowledge";
-import type { Destination, Experience, Guide, Tour } from "@/types";
+import type { Collection, Destination, Experience, Guide, Tour } from "@/types";
 
 export const registry = new ContentRegistry()
   .register("destination", destinations)
   .register("tour", toursByOrder)
   .register("activity", activities)
   .register("guide", guides)
-  .register("experience", experiences);
+  .register("experience", experiences)
+  .register("seasonal", collections);
 
 /**
  * Inverse of the canonical Tour→Destination edge: Map<destinationId, Tour[]>.
@@ -193,5 +195,37 @@ export function findRelatedExperiencesForGuide(guide: Guide, limit = 3): Experie
   const candidates = registry
     .all<Experience>("experience")
     .map((e) => ({ entity: e, signals: experienceSignals(e) }));
+  return rankByRelevance(source, candidates, { limit });
+}
+
+/** Normalised signal vector for a collection. */
+function collectionSignals(col: Collection): EntitySignals {
+  return {
+    id: col.slug,
+    destinationIds: col.relationships?.destinations?.map((r) => r.id),
+    travelStyles: col.travelStyles,
+    seasons: col.seasons,
+    categoryIds: [col.collectionType],
+    editorialBoost: col.featured ? 2 : 0,
+  };
+}
+
+/**
+ * Resolve a collection's authored relatedCollections refs to entities.
+ */
+export function resolveRelatedCollections(col: Collection): Collection[] {
+  return registry.resolve<Collection>(col.relationships?.relatedCollections ?? []);
+}
+
+/**
+ * Scored related collections for a given collection.
+ * Matches on shared travel styles, seasons and destination overlap.
+ */
+export function findRelatedCollections(col: Collection, limit = 3): Collection[] {
+  const source = collectionSignals(col);
+  const candidates = registry
+    .all<Collection>("seasonal")
+    .filter((c) => c.slug !== col.slug)
+    .map((c) => ({ entity: c, signals: collectionSignals(c) }));
   return rankByRelevance(source, candidates, { limit });
 }

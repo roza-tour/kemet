@@ -93,6 +93,86 @@ export interface ActivityRelationships {
   categories?: Ref<"category">[];
 }
 
+// --- Collections (Seasonal / Editorial) ------------------------------------
+
+export type CollectionType =
+  | "seasonal"
+  | "travel-inspiration"
+  | "family"
+  | "luxury"
+  | "adventure"
+  | "photography"
+  | "historical"
+  | "food"
+  | "festival"
+  | "nile"
+  | "weekend"
+  | "first-time"
+  | "hidden-gems"
+  | "best-of"
+  | "road-trip";
+
+/** Intended audience for a collection. */
+export type CollectionAudience =
+  | "everyone"
+  | "families"
+  | "couples"
+  | "solo"
+  | "luxury-travellers"
+  | "adventure-seekers"
+  | "photographers"
+  | "history-enthusiasts"
+  | "first-timers";
+
+export interface CollectionRelationships {
+  /** Canonical: tours that belong to this collection. */
+  tours?: Ref<"tour">[];
+  /** Canonical: destinations this collection covers. */
+  destinations?: Ref<"destination">[];
+  /** Canonical: experiences this collection includes. */
+  experiences?: Ref<"experience">[];
+  /** Canonical: guides that support this collection's planning. */
+  guides?: Ref<"guide">[];
+  /** Editorial cross-links to related collections. */
+  relatedCollections?: Ref<"seasonal">[];
+}
+
+/**
+ * An Editorial Collection — a first-class content domain that curates existing
+ * entities around a travel theme, season or visitor intent. Collections do NOT
+ * duplicate content; they reference it. They are presentation-independent:
+ * adding a collection is data-only, no template or component change is required.
+ */
+export interface Collection extends ContentEntity {
+  domain: "seasonal";
+  subtitle: string;
+  shortSummary: string;
+  editorialIntro: string;
+  collectionType: CollectionType;
+  /** Primary season(s) this collection is most relevant for. */
+  seasons?: Season[];
+  /** Thematic travel styles that characterise this collection. */
+  travelStyles?: TravelStyle[];
+  /** Target audience. */
+  audience?: CollectionAudience[];
+  /** Editorial priority — higher numbers surface first on hub. */
+  priority?: number;
+  /** Pin to featured slots on hub and homepage. */
+  featured?: boolean;
+  /** Key reasons to visit / highlights used as the editorial intro list. */
+  highlights?: string[];
+  /** Practical planning notes (not duplicated from guides). */
+  planningNotes?: string[];
+  /** Short travel tips specific to this collection's theme. */
+  travelTips?: string[];
+  faqs?: Faq[];
+  hero?: MediaPlaceholder;
+  gallery?: MediaPlaceholder[];
+  /** When this editorial content was last reviewed. */
+  lastReviewed?: string;
+  relationships?: CollectionRelationships;
+}
+
 // --- Tours -----------------------------------------------------------------
 // Existing fields are unchanged so the current catalogue and rendering are
 // byte-identical. Architecture fields are optional and supplied by the

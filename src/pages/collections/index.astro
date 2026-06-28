@@ -1,0 +1,66 @@
+---
+// Collections hub (/collections.html). Lists every collection grouped by
+// collection type for scannability. Entirely data-driven: adding a collection
+// surfaces it here automatically — no edit to this page required.
+import Base from "@/layouts/Base.astro";
+import PageHero from "@/components/PageHero.astro";
+import SectionHeader from "@/components/SectionHeader.astro";
+import CollectionCard from "@/components/collection/CollectionCard.astro";
+import Frieze from "@/components/Frieze.astro";
+import { collectionsByPriority } from "@/data/collections";
+import { collectionTypes, labelOf } from "@/config/taxonomy";
+import { hubFor, relativePrefix } from "@/config/routes";
+import { breadcrumb, collectionSchema } from "@/schemas/jsonld";
+import { trailFor } from "@/config/navigation";
+
+const ROUTE = hubFor("seasonal");
+const base = relativePrefix(ROUTE);
+
+// Group by collection type in vocabulary order; only types with at least one
+// collection are rendered — empty sections never appear.
+const byType = collectionTypes
+  .map((type) => ({
+    type,
+    items: collectionsByPriority.filter((c) => c.collectionType === type.id),
+  }))
+  .filter((group) => group.items.length > 0);
+
+const jsonld = [
+  breadcrumb(trailFor("seasonal")),
+  ...collectionSchema(
+    "Egypt Travel Collections",
+    "Curated editorial collections by season, travel style and visitor intent — from winter journeys to luxury escapes and family adventures.",
+    ROUTE,
+    collectionsByPriority.map((c) => ({ title: c.title, slug: c.slug, domain: "seasonal" })),
+  ),
+];
+---
+<Base
+  title="Egypt Travel Collections — Seasonal, Luxury, Family & Themed Journeys | Kemet"
+  description="Curated editorial collections for Egypt travel — Egypt in Winter, Luxury Egypt, Family Adventures, First-Time Visitors and more. Explore by season, style or intent."
+  active={ROUTE}
+  jsonld={jsonld}
+>
+  <PageHero
+    crumb="Collections"
+    symbol="ankh"
+    title="Travel Collections"
+    text="Curated by season, travel style and visitor intent. Each collection brings together the tours, destinations, experiences and guides that best serve a particular kind of Egypt journey."
+    base={base}
+  />
+
+  {byType.map((group) => (
+    <section style="padding-top:30px">
+      <div class="wrap">
+        <SectionHeader eyebrow="Theme" title={group.type.label} text={group.type.description} />
+        <div class="grid-3">
+          {group.items.map((collection) => (
+            <CollectionCard collection={collection} base={base} />
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <Frieze />
+</Base>

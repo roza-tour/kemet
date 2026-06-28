@@ -1,0 +1,198 @@
+---
+// Collection detail (/collections/<slug>.html). ONE template renders every
+// collection from data — adding a collection is data-only, no edit here.
+//
+// Sections composed from generic primitives (CollectionHero, HighlightList,
+// TourCard, DestinationCard, ExperienceCard, GuideCard, CollectionCard,
+// Faq, LeadCapture). No per-collection logic, no collection-specific markup.
+// Every block is gated on the presence of its data so a sparser or richer
+// collection renders correctly with no template change.
+import Base from "@/layouts/Base.astro";
+import Frieze from "@/components/Frieze.astro";
+import Faq from "@/components/Faq.astro";
+import SectionHeader from "@/components/SectionHeader.astro";
+import TourCard from "@/components/TourCard.astro";
+import HighlightList from "@/components/destination/HighlightList.astro";
+import DestinationCard from "@/components/destination/DestinationCard.astro";
+import ExperienceCard from "@/components/experience/ExperienceCard.astro";
+import GuideCard from "@/components/guide/GuideCard.astro";
+import CollectionHero from "@/components/collection/CollectionHero.astro";
+import CollectionCard from "@/components/collection/CollectionCard.astro";
+import LeadCapture from "@/components/conversion/LeadCapture.astro";
+import { collections } from "@/data/collections";
+import { registry, resolveRelatedCollections, findRelatedCollections } from "@/data/registry";
+import { entityStaticPaths, relativePrefix, routeFor } from "@/config/routes";
+import { entitySchema } from "@/schemas/jsonld";
+import type { Collection, Destination, Experience, Guide, Tour } from "@/types";
+
+interface Props {
+  entity: Collection;
+}
+
+// One static page per collection → collections/egypt-in-winter.html, etc.
+export function getStaticPaths() {
+  return entityStaticPaths(collections);
+}
+
+const col = Astro.props.entity;
+const route = routeFor("seasonal", col.slug);
+const base = relativePrefix(route);
+
+// Resolve all relationships from the registry — never hardcoded.
+const relTours = registry.resolve<Tour>(col.relationships?.tours ?? []);
+const relDestinations = registry.resolve<Destination>(col.relationships?.destinations ?? []);
+const relExperiences = registry.resolve<Experience>(col.relationships?.experiences ?? []);
+const relGuides = registry.resolve<Guide>(col.relationships?.guides ?? []);
+
+// Editorial authored cross-links, scored-fallback if none authored.
+const authoredRelated = resolveRelatedCollections(col);
+const relCollections: Collection[] = authoredRelated.length > 0
+  ? authoredRelated
+  : findRelatedCollections(col);
+
+const title = col.seo?.title ?? `${col.title} — Egypt Travel Collection | Kemet`;
+const description = col.seo?.description ?? col.shortSummary;
+const jsonld = entitySchema("seasonal", col);
+---
+<Base title={title} description={description} active={route} jsonld={jsonld}>
+  <article>
+    <CollectionHero collection={col} base={base} />
+
+    <section style="padding-top:20px">
+      <div class="wrap">
+        <div class="tdetail">
+
+          {/* ---- Left column: editorial content ---- */}
+          <div>
+            <div class="tblock reveal">
+              <h2>Overview</h2>
+              <p>{col.editorialIntro}</p>
+            </div>
+
+            {col.highlights && col.highlights.length > 0 && (
+              <div class="tblock reveal">
+                <h2>Highlights</h2>
+                <HighlightList items={col.highlights} variant="check" />
+              </div>
+            )}
+
+            {col.planningNotes && col.planningNotes.length > 0 && (
+              <div class="tblock reveal">
+                <h2>Planning notes</h2>
+                <HighlightList items={col.planningNotes} variant="dot" />
+              </div>
+            )}
+
+            {col.travelTips && col.travelTips.length > 0 && (
+              <div class="tblock reveal">
+                <h2>Travel tips</h2>
+                <HighlightList items={col.travelTips} variant="dot" />
+              </div>
+            )}
+
+            {col.faqs && col.faqs.length > 0 && (
+              <div class="reveal">
+                <Faq items={col.faqs} heading="Frequently asked questions" />
+              </div>
+            )}
+          </div>
+
+          {/* ---- Right sidebar: quick signals ---- */}
+          <aside class="side">
+            <div class="pcard reveal">
+              <div class="eyebrow" style="margin-bottom:8px">About this collection</div>
+              {col.seasons && col.seasons.length > 0 && (
+                <div style="margin-bottom:10px">
+                  <span style="font-size:.8rem;color:var(--muted)">Best seasons: </span>
+                  <span style="font-size:.85rem">
+                    {col.seasons.map((s) => s.charAt(0).toUpperCase() + s.slice(1)).join(", ")}
+                  </span>
+                </div>
+              )}
+              {col.travelStyles && col.travelStyles.length > 0 && (
+                <div style="margin-bottom:10px">
+                  <span style="font-size:.8rem;color:var(--muted)">Travel styles: </span>
+                  <span style="font-size:.85rem">
+                    {col.travelStyles.map((s) => s.charAt(0).toUpperCase() + s.slice(1)).join(" · ")}
+                  </span>
+                </div>
+              )}
+              {col.audience && col.audience.length > 0 && (
+                <div>
+                  <span style="font-size:.8rem;color:var(--muted)">Ideal for: </span>
+                  <span style="font-size:.85rem">
+                    {col.audience.map((a) => a.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())).join(", ")}
+                  </span>
+                </div>
+              )}
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <Frieze />
+
+    {relTours.length > 0 && (
+      <section>
+        <div class="wrap">
+          <SectionHeader eyebrow="Journeys" title="Featured tours" text={`Private tours included in the ${col.title} collection.`} />
+          <div class="grid-3">
+            {relTours.map((tour) => <TourCard tour={tour} base={base} />)}
+          </div>
+        </div>
+      </section>
+    )}
+
+    {relDestinations.length > 0 && (
+      <section>
+        <div class="wrap">
+          <SectionHeader eyebrow="Destinations" title="Featured destinations" />
+          <div class="grid-3">
+            {relDestinations.map((d) => <DestinationCard destination={d} base={base} />)}
+          </div>
+        </div>
+      </section>
+    )}
+
+    {relExperiences.length > 0 && (
+      <section>
+        <div class="wrap">
+          <SectionHeader eyebrow="Experiences" title="Featured experiences" />
+          <div class="grid-3">
+            {relExperiences.map((e) => <ExperienceCard experience={e} base={base} />)}
+          </div>
+        </div>
+      </section>
+    )}
+
+    {relGuides.length > 0 && (
+      <section>
+        <div class="wrap">
+          <SectionHeader eyebrow="Planning" title="Planning resources" text="Guides to help you plan and prepare." />
+          <div class="grid-3">
+            {relGuides.map((g) => <GuideCard guide={g} base={base} />)}
+          </div>
+        </div>
+      </section>
+    )}
+
+    {relCollections.length > 0 && (
+      <section>
+        <div class="wrap">
+          <SectionHeader eyebrow="Continue exploring" title="Related collections" />
+          <div class="grid-3">
+            {relCollections.map((c) => <CollectionCard collection={c} base={base} />)}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <LeadCapture
+      variant="planning"
+      whatsappMessage={`Hello Kemet — I'm interested in the "${col.title}" collection and would like to start planning.`}
+      emailSubject={`${col.title} journey enquiry — Kemet Egypt`}
+    />
+  </article>
+</Base>

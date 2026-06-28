@@ -1,0 +1,28 @@
+---
+// CollectionCard — used by the hub grid and "related collections" sections.
+// Reuses the existing .tease card pattern. Data-driven, reusable for any collection.
+import { collectionTypes, labelOf } from "@/config/taxonomy";
+import type { Collection } from "@/types";
+
+interface Props {
+  collection: Collection;
+  /** Link prefix back to the site root. */
+  base?: string;
+}
+const { collection, base = "" } = Astro.props;
+const typeLabel = labelOf(collectionTypes, collection.collectionType) ?? collection.collectionType;
+const href = `${base}collections/${collection.slug}.html`;
+---
+<a class="tease reveal" href={href} aria-label={`${collection.title} — collection`}>
+  <div class="eyebrow" style="margin-bottom:8px">{typeLabel}</div>
+  <h3>{collection.title}</h3>
+  <p>{collection.shortSummary}</p>
+  {collection.seasons && collection.seasons.length > 0 && (
+    <div style="margin-top:12px">
+      <span class="eyebrow" style="font-size:.68em;opacity:.6">
+        {collection.seasons.map((s) => s.charAt(0).toUpperCase() + s.slice(1)).join(" · ")}
+      </span>
+    </div>
+  )}
+  <span class="more" style="margin-top:14px;display:block">Explore <b>→</b></span>
+</a>

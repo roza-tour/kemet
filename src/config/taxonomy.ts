@@ -161,6 +161,29 @@ export const experienceCategories: TaxonomyTerm[] = [
   { id: "archaeology", label: "Archaeology" },
 ];
 
+/**
+ * Controlled vocabulary for the Collections domain. Flat taxonomy — each entry
+ * is a collection "type" (theme). New types can be added here without any
+ * structural change to the Collection entity or its components.
+ */
+export const collectionTypes: TaxonomyTerm[] = [
+  { id: "seasonal", label: "Seasonal", description: "Travel tied to Egypt's seasons and climate." },
+  { id: "travel-inspiration", label: "Travel Inspiration", description: "Curated thematic inspiration for planning." },
+  { id: "family", label: "Family", description: "Collections designed for families travelling with children." },
+  { id: "luxury", label: "Luxury", description: "High-end experiences and premium-level itineraries." },
+  { id: "adventure", label: "Adventure", description: "Active, off-the-beaten-path and nature journeys." },
+  { id: "photography", label: "Photography", description: "Collections optimised for photographers." },
+  { id: "historical", label: "Historical", description: "Deep dives into ancient Egypt and its monuments." },
+  { id: "food", label: "Food & Drink", description: "Culinary-focused collections across Egypt." },
+  { id: "festival", label: "Festival & Events", description: "Collections tied to festivals and cultural events." },
+  { id: "nile", label: "Nile", description: "River-centric journeys and experiences." },
+  { id: "weekend", label: "Weekend Escapes", description: "Short break itineraries from Cairo or other hubs." },
+  { id: "first-time", label: "First-Time Visitors", description: "Essential curations for first trips to Egypt." },
+  { id: "hidden-gems", label: "Hidden Gems", description: "Lesser-known destinations and off-the-path gems." },
+  { id: "best-of", label: "Best of Egypt", description: "Top-picks across destinations, tours and experiences." },
+  { id: "road-trip", label: "Road Trips", description: "Self-drive and overland journey collections." },
+];
+
 /** Convenience: look up a term's label by id within a vocabulary. */
 export function labelOf(terms: TaxonomyTerm[], id: string): string | undefined {
   return terms.find((t) => t.id === id)?.label;

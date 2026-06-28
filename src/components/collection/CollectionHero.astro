@@ -1,0 +1,37 @@
+---
+// CollectionHero — breadcrumb, type eyebrow, H1, subtitle and hero placeholder.
+// Fully data-driven: no per-collection logic or markup.
+// Follows the same pattern as DestinationHero, ExperienceHero, GuideHero.
+import Placeholder from "@/components/Placeholder.astro";
+import { collectionTypes, labelOf, seasons as seasonVocab, travelStyles as styleVocab } from "@/config/taxonomy";
+import { hubFor } from "@/config/routes";
+import type { Collection } from "@/types";
+
+interface Props {
+  collection: Collection;
+  /** Link prefix back to the site root ("" at root, "../" inside a subfolder). */
+  base?: string;
+}
+const { collection, base = "" } = Astro.props;
+const typeLabel = labelOf(collectionTypes, collection.collectionType) ?? collection.collectionType;
+const hub = hubFor("seasonal");
+---
+<header class="phero" style="padding-bottom:34px">
+  <div class="wrap">
+    <nav class="crumb" aria-label="Breadcrumb">
+      <a href={`${base}index.html`}>Home</a> ·
+      <a href={`${base}${hub}`}>Collections</a> ·
+      <span>{collection.title}</span>
+    </nav>
+    <div class="eyebrow">{typeLabel}</div>
+    <h1>{collection.title}</h1>
+    <p>{collection.subtitle}</p>
+  </div>
+</header>
+{collection.hero && (
+  <section style="padding-top:18px;padding-bottom:0">
+    <div class="wrap">
+      <Placeholder class="tgallery reveal" label={collection.hero.label ?? collection.title} />
+    </div>
+  </section>
+)}

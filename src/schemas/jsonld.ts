@@ -6,7 +6,7 @@ import { SITE_URL, OG_IMAGE_PATH, CURRENCY, site } from "@/config/site";
 import { canonical, phoneHref } from "@/utils/links";
 import { routeFor } from "@/config/routes";
 import { trailFor } from "@/config/navigation";
-import type { BreadcrumbItem, ContentDomain, Destination, Experience, Guide, JsonLd, Tour } from "@/types";
+import type { BreadcrumbItem, Collection, ContentDomain, Destination, Experience, Guide, JsonLd, Tour } from "@/types";
 
 const SCHEMA_CONTEXT = "https://schema.org";
 
@@ -306,6 +306,62 @@ export function collectionSchema(
 }
 
 /**
+ * Full structured-data set for a Collection detail page:
+ * CollectionPage · WebPage · BreadcrumbList (+ FAQPage when present).
+ */
+export function collectionDetailSchema(col: Collection): JsonLd[] {
+  const route = routeFor("seasonal", col.slug);
+  const url = canonical(route);
+  const org = { "@type": "TravelAgency", name: site.name, url: SITE_URL };
+
+  const collectionPage: JsonLd = {
+    "@context": SCHEMA_CONTEXT,
+    "@type": "CollectionPage",
+    name: col.title,
+    description: col.shortSummary,
+    url,
+    isPartOf: { "@type": "WebSite", name: `${site.name} — The Black Land`, url: SITE_URL },
+    publisher: org,
+    about: { "@type": "Country", name: "Egypt" },
+    keywords: [
+      ...(col.travelStyles ?? []),
+      ...(col.seasons ?? []),
+      col.collectionType,
+    ].join(", "),
+  };
+
+  const webPage: JsonLd = {
+    "@context": SCHEMA_CONTEXT,
+    "@type": "WebPage",
+    name: col.title,
+    description: col.shortSummary,
+    url,
+    isPartOf: { "@type": "WebSite", name: `${site.name} — The Black Land`, url: SITE_URL },
+    publisher: org,
+    ...(col.lastReviewed ? { dateModified: col.lastReviewed } : {}),
+  };
+
+  const leaf: BreadcrumbItem = [col.title, route];
+  const crumbs = breadcrumb(trailFor("seasonal", leaf));
+
+  const out: JsonLd[] = [collectionPage, webPage, crumbs];
+
+  if (col.faqs?.length) {
+    out.push({
+      "@context": SCHEMA_CONTEXT,
+      "@type": "FAQPage",
+      mainEntity: col.faqs.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    });
+  }
+
+  return out;
+}
+
+/**
  * Structured-data dispatcher — routes an entity to its schema builder by
  * domain. Tours, destinations, guides and experiences are wired; category
  * builders slot in here later with no change to callers.
@@ -320,6 +376,8 @@ export function entitySchema(domain: ContentDomain, entity: unknown): JsonLd[] {
       return guideSchema(entity as Guide);
     case "experience":
       return experienceSchema(entity as Experience);
+    case "seasonal":
+      return collectionDetailSchema(entity as Collection);
     default:
       return [];
   }
