@@ -1,0 +1,8 @@
+---
+// Frieze — a thin hairline band of repeating gold glyphs between sections.
+import SymbolIcon from "@/components/SymbolIcon.astro";
+const glyphs = ["ankh", "eye", "scarab", "lotus", "horus", "sun", "ankh", "eye", "scarab", "lotus"];
+---
+<div class="frieze" aria-hidden="true">
+  {glyphs.map((g) => <SymbolIcon name={g} />)}
+</div>

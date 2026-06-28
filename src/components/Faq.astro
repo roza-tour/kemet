@@ -1,0 +1,22 @@
+---
+// Faq — visible "Good to know" Q&A. Mirrors the FAQPage JSON-LD on tour pages
+// so answer engines can quote concise answers.
+import type { Faq } from "@/types";
+
+interface Props {
+  items: Faq[];
+  heading?: string;
+}
+const { items = [], heading = "Good to know" } = Astro.props;
+---
+<div class="tblock">
+  {heading && <h2>{heading}</h2>}
+  <div class="faq">
+    {items.map((f) => (
+      <div class="qa">
+        <h4>{f.q}</h4>
+        <p>{f.a}</p>
+      </div>
+    ))}
+  </div>
+</div>

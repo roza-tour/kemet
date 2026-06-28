@@ -1,0 +1,30 @@
+---
+import Base from "@/layouts/Base.astro";
+import PageHero from "@/components/PageHero.astro";
+import ActivityCard from "@/components/ActivityCard.astro";
+import { activities } from "@/data/activities";
+import { breadcrumb } from "@/schemas/jsonld";
+
+const jsonld = breadcrumb([["Home", "index.html"], ["Activities", "activities.html"]]);
+---
+<Base
+  title="Activities & Experiences in Egypt — Kemet"
+  description="The moments between the monuments — a hot-air balloon over Luxor, a Sufi tanoura night in Cairo, Red Sea diving at Marsa Alam and a sunset felucca in Aswan, curated by Kemet."
+  active="activities.html"
+  jsonld={jsonld}
+>
+  <PageHero
+    crumb="Activities"
+    symbol="sun"
+    title="Activities & Experiences"
+    text="The moments between the monuments — eight experiences we fold into private journeys, from dawn balloons to desert nights."
+  />
+
+  <section style="padding-top:20px">
+    <div class="wrap">
+      <div class="grid-3">
+        {activities.map((activity) => <ActivityCard activity={activity} />)}
+      </div>
+    </div>
+  </section>
+</Base>

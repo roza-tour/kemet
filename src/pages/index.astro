@@ -1,0 +1,90 @@
+---
+import Base from "@/layouts/Base.astro";
+import Hero from "@/components/Hero.astro";
+import Frieze from "@/components/Frieze.astro";
+import SectionHeader from "@/components/SectionHeader.astro";
+import SymbolIcon from "@/components/SymbolIcon.astro";
+import TourCard from "@/components/TourCard.astro";
+import { multidayTours, dayTours } from "@/data/tours";
+import { identities } from "@/data/identities";
+import { breadcrumb } from "@/schemas/jsonld";
+
+const featured = [...multidayTours, ...dayTours.slice(0, 2)];
+
+// [symbol, title, blurb, href] for the four section pillars.
+const pillars: ReadonlyArray<readonly [string, string, string, string]> = [
+  ["ankh", "The 8 Identities", "Eight cultural worlds woven into one country — Pharaonic to Red Sea.", "identities.html"],
+  ["sun", "Activities", "Balloons over Luxor, feluccas at sunset, reefs and desert dunes.", "activities.html"],
+  ["lotus", "Cuisine", "From koshari and molokhia to kunafa — the everyday feast of Egypt.", "cuisine.html"],
+  ["eye", "Culture", "The gods, symbols and living crafts behind the monuments.", "culture.html"],
+];
+
+const jsonld = breadcrumb([["Home", "index.html"]]);
+---
+<Base
+  title="Kemet — Luxury Egypt Travel · The Black Land"
+  description="Kemet designs private, luxury Egypt journeys — 12 curated tours from Cairo and Giza to a 10-day Nile cruise, plus activities, cuisine and the country's eight cultural worlds."
+  active="index.html"
+  jsonld={jsonld}
+>
+  <Hero />
+
+  <Frieze />
+
+  <section>
+    <div class="wrap">
+      <SectionHeader
+        eyebrow="The Premise"
+        title="Egypt is not one country. It is eight."
+        text="Most travellers see one Egypt — the pyramids, a temple, a photograph. We design for the others too: the Nubian south, Coptic and Islamic Cairo, the Greco-Roman Mediterranean, the Bedouin deserts, the Siwan oasis and the Red Sea coast. One journey, every layer, entirely private."
+      />
+      <div class="grid-4">
+        {pillars.map(([sym, name, blurb, href]) => (
+          <a class="tease reveal" href={href} data-tilt>
+            <div class="sym"><SymbolIcon name={sym} /></div>
+            <h3>{name}</h3>
+            <p>{blurb}</p>
+            <span class="more">Explore <b>→</b></span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <SectionHeader
+        eyebrow="The Journeys"
+        title="Signature private journeys"
+        text="Twelve curated itineraries, from a half day at the Sphinx to ten days down the Nile. Every price below is per person and already includes our service — guides, fees, lunches and private transfers."
+      />
+      <div class="grid-3">
+        {featured.map((tour) => <TourCard tour={tour} />)}
+      </div>
+      <div class="hero-actions" style="margin-top:46px">
+        <a href="tours.html" class="btn btn-solid">View all 12 tours</a>
+      </div>
+    </div>
+  </section>
+
+  <Frieze />
+
+  <section>
+    <div class="wrap">
+      <SectionHeader
+        eyebrow="The 8 Identities"
+        title="The eight worlds of Egypt"
+        text="Each identity has its own colour, symbol and set of experiences. Together they are the map we travel by."
+      />
+      <div class="gods-grid">
+        {identities.map((identity) => (
+          <a class="god reveal" href="identities.html" data-tilt style={`--c:var(${identity.accentVar})`}>
+            <div class="sym"><SymbolIcon name={identity.symbol} title={identity.name} /></div>
+            <h3>{identity.name}</h3>
+            <p>{identity.intro}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>

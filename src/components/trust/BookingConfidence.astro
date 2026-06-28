@@ -1,0 +1,30 @@
+---
+// BookingConfidence — pre-commitment peace-of-mind points from company data.
+// Shown before a traveller decides to enquire: sets clear expectations.
+// Source of truth is company.bookingConfidence — never hardcoded here.
+import { company } from "@/data/company";
+
+interface Props {
+  heading?: string;
+  eyebrow?: string;
+}
+const {
+  heading = "Before you enquire",
+  eyebrow = "Booking confidence",
+} = Astro.props;
+const points = company.bookingConfidence ?? [];
+---
+{points.length > 0 && (
+  <div>
+    <div class="eyebrow" style="margin-bottom:8px">{eyebrow}</div>
+    <h2 style="margin-bottom:28px">{heading}</h2>
+    <div class="grid-3" style="gap:24px">
+      {points.map((point) => (
+        <div class="tblock reveal">
+          <h3>{point.headline}</h3>
+          <p>{point.body}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+)}

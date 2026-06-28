@@ -1,0 +1,32 @@
+---
+import type { Tour } from "@/types";
+import { formatPrice } from "@/utils/format";
+import Placeholder from "@/components/Placeholder.astro";
+
+interface Props {
+  tour: Tour;
+  /** Link prefix back to the site root ("" at root, "../" in subfolders). */
+  base?: string;
+}
+const { tour, base = "" } = Astro.props;
+const href = `${base}${tour.slug}.html`;
+---
+<a class="jcard reveal" href={href} data-tilt aria-label={`${tour.title} — view journey`}>
+  <div style="position:relative">
+    <span class="tag">{tour.tag}</span>
+    <Placeholder label={tour.title} />
+  </div>
+  <div class="body">
+    <h3>{tour.title}</h3>
+    <div class="route">{tour.cities.join(" · ")}</div>
+    <p>{tour.summary}</p>
+    <div class="meta">
+      <div class="price">
+        {formatPrice(tour.price)}
+        {tour.was && <span class="was">{formatPrice(tour.was)}</span>}
+        <small>/ person</small>
+      </div>
+      <span class="arrow" aria-hidden="true">→</span>
+    </div>
+  </div>
+</a>

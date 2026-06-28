@@ -1,0 +1,127 @@
+---
+import Base from "@/layouts/Base.astro";
+import Placeholder from "@/components/Placeholder.astro";
+import Faq from "@/components/Faq.astro";
+import Frieze from "@/components/Frieze.astro";
+import { tours } from "@/data/tours";
+import { getTourMeta } from "@/data/tours.taxonomy";
+import type { Tour } from "@/types";
+import { formatPrice } from "@/utils/format";
+import { whatsappLink, mailtoLink } from "@/utils/links";
+import { tourStaticPaths } from "@/config/routes";
+import { entitySchema } from "@/schemas/jsonld";
+
+interface Props {
+  tour: Tour;
+}
+
+// One static page per tour → emits tour-7-day.html, tour-fayoum.html, …
+// Routing convention (grandfathered flat root namespace) lives in config/routes.
+export function getStaticPaths() {
+  return tourStaticPaths(tours);
+}
+
+// Merge the editorial tour with its structured taxonomy/relationship side-car,
+// so the page (and its schema/links) work from one enriched object.
+const base = Astro.props.tour;
+const meta = getTourMeta(base.slug);
+const tour: Tour = meta ? { ...base, id: base.slug, domain: "tour", ...meta } : base;
+
+const title = `${tour.title} — ${tour.durationLabel} | Kemet Egypt`;
+const description = tour.summary;
+const wa = whatsappLink(
+  `Hello Kemet — I'm interested in the "${tour.title}" journey (${tour.durationLabel}). Could you share availability?`,
+);
+const enquire = mailtoLink(
+  `Request: ${tour.title}`,
+  `Hello Kemet,\n\nI'd like to request the "${tour.title}" journey (${tour.durationLabel}, from ${formatPrice(tour.price)} per person).\n\nPreferred dates:\nNumber of travellers:\n\nThank you.`,
+);
+const jsonld = entitySchema("tour", tour);
+---
+<Base title={title} description={description} active={`${tour.slug}.html`} jsonld={jsonld}>
+  <article>
+    <header class="phero" style="padding-bottom:40px">
+      <div class="wrap">
+        <nav class="crumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a> · <a href="tours.html">Tours</a> · <span>{tour.title}</span>
+        </nav>
+        <div class="eyebrow">{tour.category} · {tour.durationLabel}</div>
+        <h1>{tour.title}</h1>
+        <p>{tour.subtitle}</p>
+      </div>
+    </header>
+
+    <section style="padding-top:20px">
+      <div class="wrap">
+        <Placeholder class="tgallery reveal" label={tour.title} />
+
+        <div class="tdetail">
+          <div>
+            <div class="tblock reveal">
+              <h2>Overview</h2>
+              <p>{tour.overview}</p>
+            </div>
+
+            <div class="tblock reveal">
+              <h2>Itinerary</h2>
+              <div class="tl">
+                {tour.itinerary.map((step) => (
+                  <div class="day">
+                    <div class="dn"><small>{step.label}</small><b>{step.num}</b></div>
+                    <div class="dc">
+                      <h4>{step.title}</h4>
+                      {step.items && (
+                        <ul>{step.items.map((it) => <li>{it}</li>)}</ul>
+                      )}
+                      {step.text && <p>{step.text}</p>}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div class="tblock reveal inc">
+              <h2>Included &amp; not included</h2>
+              <div class="grid-2">
+                <div>
+                  <h5>Included</h5>
+                  <ul>{tour.included.map((i) => <li>{i}</li>)}</ul>
+                </div>
+                <div>
+                  <h5>Not included</h5>
+                  <ul class="no">{tour.excluded.map((i) => <li>{i}</li>)}</ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="reveal">
+              <Faq items={tour.faqs} />
+            </div>
+          </div>
+
+          <aside class="side">
+            <div class="pcard reveal">
+              <div class="from">From</div>
+              <div class="big">
+                {formatPrice(tour.price)}
+                {tour.was && <span class="was">{formatPrice(tour.was)}</span>}
+              </div>
+              <div class="pp">per person · EUR</div>
+              <a href={enquire} class="btn btn-solid">Request this Journey</a>
+              <a href={wa} class="btn btn-ghost" target="_blank" rel="noopener">Ask on WhatsApp</a>
+              <div class="facts">
+                <div><span>Duration</span><b>{tour.durationLabel}</b></div>
+                <div><span>Start point</span><b>{tour.startPoint}</b></div>
+                <div><span>Visiting</span><b>{tour.visiting}</b></div>
+                <div><span>Private</span><b>{tour.isPrivate}</b></div>
+                {tour.flightsIncluded && <div><span>Flights</span><b>Domestic included</b></div>}
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <Frieze />
+  </article>
+</Base>

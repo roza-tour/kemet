@@ -1,0 +1,59 @@
+---
+// Destinations hub (/destinations.html — flat hub, like tours.html). Lists
+// every destination, grouped by region for scannability at any scale (5 or
+// 500). Entirely data-driven: it reads the catalogue and the region vocabulary,
+// so adding a destination surfaces it here automatically — no edit to this page.
+import Base from "@/layouts/Base.astro";
+import PageHero from "@/components/PageHero.astro";
+import SectionHeader from "@/components/SectionHeader.astro";
+import DestinationCard from "@/components/destination/DestinationCard.astro";
+import Frieze from "@/components/Frieze.astro";
+import { destinations } from "@/data/destinations";
+import { regions, labelOf } from "@/config/taxonomy";
+import { hubFor, relativePrefix } from "@/config/routes";
+import { breadcrumb } from "@/schemas/jsonld";
+import { trailFor } from "@/config/navigation";
+
+const ROUTE = hubFor("destination");
+const base = relativePrefix(ROUTE);
+
+// Group by region in the controlled-vocabulary order; only regions that
+// actually have destinations are rendered.
+const byRegion = regions
+  .map((region) => ({
+    region,
+    items: destinations.filter((d) => d.region === region.id),
+  }))
+  .filter((group) => group.items.length > 0);
+
+const jsonld = breadcrumb(trailFor("destination"));
+---
+<Base
+  title="Egypt Destinations — Cairo, Giza, Luxor, Aswan & Alexandria | Kemet"
+  description="Explore Egypt by destination — Cairo, Giza, Luxor, Aswan and Alexandria. Facts, highlights, best seasons and the private tours that visit each, from Kemet."
+  active={ROUTE}
+  jsonld={jsonld}
+>
+  <PageHero
+    crumb="Destinations"
+    symbol="lotus"
+    title="Destinations"
+    text="The places Egypt is made of — each with its highlights, best season and the journeys that take you there."
+    base={base}
+  />
+
+  {byRegion.map((group) => (
+    <section style="padding-top:30px">
+      <div class="wrap">
+        <SectionHeader eyebrow="Region" title={labelOf(regions, group.region.id) ?? group.region.id} />
+        <div class="grid-3">
+          {group.items.map((destination) => (
+            <DestinationCard destination={destination} base={base} />
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <Frieze />
+</Base>

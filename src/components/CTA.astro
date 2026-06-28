@@ -1,0 +1,35 @@
+---
+import { mailtoLink } from "@/utils/links";
+
+interface Props {
+  eyebrow?: string;
+  title?: string;
+  text?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+  /** Link prefix back to the site root ("" at root, "../" in subfolders). */
+  base?: string;
+}
+const {
+  eyebrow = "Begin",
+  title = "Eight Egypts. One journey, made for you.",
+  text = "Tell us your dates and what draws you — we design a private itinerary end to end.",
+  ctaLabel = "Plan a Journey",
+  ctaHref = "tours.html",
+  base = "",
+} = Astro.props;
+const enquire = mailtoLink("Kemet enquiry");
+---
+<section class="cta">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">{eyebrow}</div>
+      <h2>{title}</h2>
+      <p>{text}</p>
+      <div class="hero-actions" style="margin-top:8px">
+        <a href={`${base}${ctaHref}`} class="btn btn-solid">{ctaLabel}</a>
+        <a href={enquire} class="btn btn-ghost">Enquire by email</a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,32 @@
+---
+// Home hero — the full-height brand lockup: glyph row, framed Cormorant
+// wordmark with a slow shine, the "Black Land" meaning, lede and actions.
+import { site } from "@/config/site";
+---
+<header class="hero">
+  <div class="dunes" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="kicker eyebrow">{site.eyebrow}</div>
+    <div class="lockup">
+      <div class="hiero" aria-hidden="true">{site.hiero}</div>
+      <div class="plaque">
+        <svg class="fr" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+          <rect x="1" y="1" width="98" height="98" vector-effect="non-scaling-stroke" />
+          <rect class="inner" x="4" y="4" width="92" height="92" vector-effect="non-scaling-stroke" />
+        </svg>
+        <div class="wordmark">{site.wordmark}</div>
+      </div>
+      <div class="meaning">— {site.meaning} —</div>
+    </div>
+    <p class="lede">
+      Egypt is not one country but eight cultural worlds. Kemet designs private,
+      unhurried journeys through all of them — from the Pyramids of Giza to a
+      Nile cruise, the Mediterranean to the Red Sea.
+    </p>
+    <div class="hero-actions">
+      <a href="tours.html" class="btn btn-solid">Explore the Journeys</a>
+      <a href="identities.html" class="btn btn-ghost">The 8 Identities</a>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true">Scroll<i></i></div>
+</header>

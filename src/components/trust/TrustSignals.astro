@@ -1,0 +1,28 @@
+---
+// TrustSignals — a grid of trust signal cards rendered from company data.
+// Reusable anywhere: hub pages, about page, homepage, tour pages.
+// Source of truth is always company.trustSignals — never hardcoded inline.
+import SymbolIcon from "@/components/SymbolIcon.astro";
+import { company } from "@/data/company";
+import type { TrustSignal } from "@/types";
+
+interface Props {
+  /** Override to show a subset of trust signals. Defaults to all. */
+  signals?: TrustSignal[];
+  /** Maximum number of signals to show. */
+  limit?: number;
+}
+const { signals = company.trustSignals ?? [], limit } = Astro.props;
+const items = limit ? signals.slice(0, limit) : signals;
+---
+<div class="grid-3">
+  {items.map((signal) => (
+    <div class="tease reveal">
+      {signal.symbol && (
+        <div class="sym"><SymbolIcon name={signal.symbol} title={signal.headline} /></div>
+      )}
+      <h3>{signal.headline}</h3>
+      <p>{signal.body}</p>
+    </div>
+  ))}
+</div>

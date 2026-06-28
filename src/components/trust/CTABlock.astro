@@ -1,0 +1,71 @@
+---
+// CTABlock — a configurable call-to-action section.
+// All contact values are read from centralized site config via links.ts.
+// No phone numbers, emails or WhatsApp numbers are hardcoded here.
+// Pass `types` to control which CTAs appear; order is preserved.
+import { whatsappLink, mailtoLink, phoneHref } from "@/utils/links";
+import { site } from "@/config/site";
+import type { CTAType } from "@/types";
+
+interface Props {
+  heading?: string;
+  subtext?: string;
+  /** Which CTAs to show, in order. Defaults to WhatsApp + email. */
+  types?: CTAType[];
+  eyebrow?: string;
+}
+const {
+  heading = "Plan your journey",
+  subtext = "Tell us your travel dates and what draws you to Egypt — we design a private itinerary end to end.",
+  types = ["whatsapp", "email"],
+  eyebrow = "Get in touch",
+} = Astro.props;
+
+const waHref = whatsappLink("Hello Kemet — I'd like to plan a private Egypt journey.");
+const emailHrefVal = mailtoLink("Kemet — Egypt journey enquiry");
+const phoneHrefVal = phoneHref();
+
+function resolveHref(type: CTAType): string {
+  switch (type) {
+    case "whatsapp":     return waHref;
+    case "email":
+    case "quote":
+    case "consultation": return emailHrefVal;
+    case "phone":        return phoneHrefVal;
+    case "form":         return "contact.html"; // future form page
+    default:             return emailHrefVal;
+  }
+}
+
+function resolveLabel(type: CTAType): string {
+  switch (type) {
+    case "whatsapp":     return "Chat on WhatsApp";
+    case "email":        return "Enquire by email";
+    case "quote":        return "Request a quote";
+    case "consultation": return "Book a consultation";
+    case "phone":        return `Call ${site.phoneDisplay}`;
+    case "form":         return "Send an enquiry";
+    default:             return "Get in touch";
+  }
+}
+
+function isExternal(type: CTAType): boolean {
+  return type === "whatsapp";
+}
+---
+<div class="reveal" style="text-align:center">
+  <div class="eyebrow" style="margin-bottom:8px">{eyebrow}</div>
+  <h2 style="margin-bottom:12px">{heading}</h2>
+  {subtext && <p style="margin-bottom:24px;opacity:0.8;max-width:540px;margin-left:auto;margin-right:auto">{subtext}</p>}
+  <div class="hero-actions" style="justify-content:center">
+    {types.map((type, i) => (
+      <a
+        href={resolveHref(type)}
+        class={i === 0 ? "btn btn-solid" : "btn btn-ghost"}
+        {...(isExternal(type) ? { rel: "noopener", target: "_blank" } : {})}
+      >
+        {resolveLabel(type)}
+      </a>
+    ))}
+  </div>
+</div>

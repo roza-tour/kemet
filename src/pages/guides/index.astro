@@ -1,0 +1,64 @@
+---
+// Guides hub (/guides.html — flat hub, like destinations.html). Lists every
+// guide grouped by root category for scannability at any scale (5 or 500).
+// Entirely data-driven: adding a guide surfaces it here automatically — no
+// edit to this page required.
+import Base from "@/layouts/Base.astro";
+import PageHero from "@/components/PageHero.astro";
+import SectionHeader from "@/components/SectionHeader.astro";
+import GuideCard from "@/components/guide/GuideCard.astro";
+import Frieze from "@/components/Frieze.astro";
+import { guides } from "@/data/guides";
+import { guideCategories } from "@/config/taxonomy";
+import { hubFor, relativePrefix } from "@/config/routes";
+import { breadcrumb } from "@/schemas/jsonld";
+import { trailFor } from "@/config/navigation";
+
+const ROUTE = hubFor("guide");
+const base = relativePrefix(ROUTE);
+
+// Root categories in vocabulary order; each is a hub section heading.
+// A guide is placed in the root category matching its own category OR
+// its category's parentId — so child-category guides roll up to the root.
+const rootCategories = guideCategories.filter((c) => !c.parentId);
+
+const byCategory = rootCategories
+  .map((rootCat) => ({
+    category: rootCat,
+    items: guides.filter((g) => {
+      const cat = guideCategories.find((c) => c.id === g.category);
+      return g.category === rootCat.id || cat?.parentId === rootCat.id;
+    }),
+  }))
+  .filter((group) => group.items.length > 0);
+
+const jsonld = breadcrumb(trailFor("guide"));
+---
+<Base
+  title="Egypt Travel Guides — Planning, Visa, Transport & Culture | Kemet"
+  description="Expert travel guides for Egypt — visa requirements, best time to visit, getting around, cuisine and culture. Essential reading before and during your trip."
+  active={ROUTE}
+  jsonld={jsonld}
+>
+  <PageHero
+    crumb="Travel Guides"
+    title="Egypt Travel Guides"
+    text="Everything you need to know before and during your trip — practical guides written by Egypt travel specialists."
+    base={base}
+  />
+
+  {byCategory.map((group) => (
+    <section style="padding-top:30px">
+      <div class="wrap">
+        <SectionHeader eyebrow="Category" title={group.category.label} />
+        <div class="grid-3">
+          {group.items.map((g) => (
+            <GuideCard guide={g} base={base} />
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <Frieze />
+</Base>

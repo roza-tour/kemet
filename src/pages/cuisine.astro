@@ -1,0 +1,65 @@
+---
+import Base from "@/layouts/Base.astro";
+import PageHero from "@/components/PageHero.astro";
+import SectionHeader from "@/components/SectionHeader.astro";
+import Placeholder from "@/components/Placeholder.astro";
+import { savoury, sweets } from "@/data/cuisine";
+import { breadcrumb } from "@/schemas/jsonld";
+
+const jsonld = breadcrumb([["Home", "index.html"], ["Cuisine", "cuisine.html"]]);
+---
+<Base
+  title="Egyptian Cuisine — The Table of Kemet"
+  description="Taste Egypt with Kemet — koshari, ful and falafel, molokhia, stuffed pigeon, feteer and sayadeya, plus the great sweets: kunafa, basbousa, om ali and qatayef."
+  active="cuisine.html"
+  jsonld={jsonld}
+>
+  <PageHero
+    crumb="Cuisine"
+    symbol="lotus"
+    title="The Table of Egypt"
+    text="A cuisine of beans and bread, herbs and slow-cooked greens, finished with syrup and nuts — generous, everyday and deeply Egyptian."
+  />
+
+  <section class="light">
+    <div class="wrap">
+      <SectionHeader
+        eyebrow="Savoury"
+        title="The everyday feast"
+        text="Six dishes that define the Egyptian table, from the national bowl of koshari to the coastal rice of sayadeya."
+      />
+      <div class="grid-3">
+        {savoury.map((d) => (
+          <article class="eat reveal">
+            <Placeholder label={d.name} />
+            <div class="body">
+              <h3>{d.name}</h3>
+              <p>{d.note}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <SectionHeader
+        eyebrow="Sweets"
+        title="Syrup, nuts & pastry"
+        text="The honeyed finish to any Egyptian meal — and the heart of every celebration."
+      />
+      <div class="grid-4">
+        {sweets.map((d) => (
+          <article class="sweet reveal">
+            <Placeholder label={d.name} />
+            <div class="body">
+              <h4>{d.name}</h4>
+              <span>{d.note}</span>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>

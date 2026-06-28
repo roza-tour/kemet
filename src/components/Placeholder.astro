@@ -1,0 +1,16 @@
+---
+// Styled gradient image placeholder. Stands in for real photography until
+// images are supplied (drop files into public/ and replace these blocks).
+import BrandMark from "@/components/BrandMark.astro";
+
+interface Props {
+  class?: string;
+  label?: string;
+}
+const { class: className = "", label = "Image" } = Astro.props;
+---
+<div class={`frame ${className}`}>
+  <div class="glow"></div>
+  <div class="wm"><BrandMark class="" /></div>
+  <span class="lab">{label}</span>
+</div>

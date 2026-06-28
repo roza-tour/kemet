@@ -1,0 +1,39 @@
+---
+// Destination hero — breadcrumb trail, region eyebrow, name, summary and a hero
+// media placeholder. Reusable across every destination (data-driven, no
+// per-destination logic). Reuses the site's existing .phero / .tgallery styles.
+import SymbolIcon from "@/components/SymbolIcon.astro";
+import Placeholder from "@/components/Placeholder.astro";
+import { labelOf, regions } from "@/config/taxonomy";
+import { hubFor } from "@/config/routes";
+import type { Destination } from "@/types";
+
+interface Props {
+  destination: Destination;
+  /** Link prefix back to the site root. */
+  base?: string;
+}
+const { destination, base = "" } = Astro.props;
+const regionLabel = labelOf(regions, destination.region) ?? destination.region;
+const hub = hubFor("destination");
+---
+<header class="phero" style="padding-bottom:34px">
+  <div class="wrap">
+    <nav class="crumb" aria-label="Breadcrumb">
+      <a href={`${base}index.html`}>Home</a> ·
+      <a href={`${base}${hub}`}>Destinations</a> ·
+      <span>{destination.title}</span>
+    </nav>
+    {destination.symbol && <div class="sym"><SymbolIcon name={destination.symbol} title={destination.title} /></div>}
+    <div class="eyebrow">{regionLabel}</div>
+    <h1>{destination.title}</h1>
+    <p>{destination.shortSummary}</p>
+  </div>
+</header>
+{destination.hero && (
+  <section style="padding-top:18px;padding-bottom:0">
+    <div class="wrap">
+      <Placeholder class="tgallery reveal" label={destination.hero.label ?? destination.title} />
+    </div>
+  </section>
+)}

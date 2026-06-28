@@ -1,0 +1,91 @@
+---
+// Contact page (/contact.html). All contact values are read from centralized
+// site config via links.ts and company.ts — no values hardcoded here.
+import Base from "@/layouts/Base.astro";
+import PageHero from "@/components/PageHero.astro";
+import SectionHeader from "@/components/SectionHeader.astro";
+import Frieze from "@/components/Frieze.astro";
+import ContactInfo from "@/components/trust/ContactInfo.astro";
+import CTABlock from "@/components/trust/CTABlock.astro";
+import BookingConfidence from "@/components/trust/BookingConfidence.astro";
+import { company } from "@/data/company";
+import { contactPageSchema } from "@/schemas/jsonld";
+
+const ROUTE = "contact.html";
+const jsonld = contactPageSchema();
+---
+<Base
+  title={`Contact ${company.name} — Plan Your Egypt Journey`}
+  description={`Get in touch with ${company.name} to start planning your private Egypt journey. We respond to all enquiries within 24 hours.`}
+  active={ROUTE}
+  showCta={false}
+  jsonld={jsonld}
+>
+  <PageHero
+    crumb="Contact"
+    title="Plan Your Egypt Journey"
+    text="Every journey begins with a conversation. Tell us what you're looking for and we'll design a private itinerary around you."
+  />
+
+  <section style="padding-top:30px">
+    <div class="wrap">
+      <div class="tdetail">
+
+        <div>
+          <div class="tblock reveal">
+            <h2>Reach us</h2>
+            <ContactInfo showHours={true} />
+          </div>
+
+          {company.emergencyContactNote && (
+            <div class="tblock reveal">
+              <h2>During your trip</h2>
+              <p>{company.emergencyContactNote}</p>
+            </div>
+          )}
+        </div>
+
+        <aside class="side">
+          <div class="pcard reveal">
+            <div class="eyebrow" style="margin-bottom:8px">What happens next</div>
+            <div class="dc">
+              <ul>
+                <li>We read your enquiry in full and consider your dates and interests.</li>
+                <li>We respond within 24 hours with an initial assessment and questions.</li>
+                <li>Once we understand your vision, we begin designing your itinerary.</li>
+                <li>You review it, refine it and confirm when you're ready.</li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <Frieze />
+
+  {/* Primary CTAs */}
+  <section class="cta">
+    <div class="wrap">
+      <CTABlock
+        eyebrow="Begin"
+        heading="Start the conversation"
+        subtext="No commitment, no pressure. Just a conversation about what you want from Egypt."
+        types={["whatsapp", "email", "phone"]}
+      />
+    </div>
+  </section>
+
+  {/* Booking confidence — reassure before they commit */}
+  <section>
+    <div class="wrap">
+      <SectionHeader
+        eyebrow="Before you enquire"
+        title="What to expect"
+        text="We want you to feel completely confident before you commit to anything."
+      />
+      <BookingConfidence eyebrow="" heading="" />
+    </div>
+  </section>
+</Base>

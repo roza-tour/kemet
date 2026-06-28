@@ -1,0 +1,198 @@
+---
+// Destination detail (/destinations/<slug>.html). ONE template renders every
+// destination from data — adding a destination is data-only, no edit here.
+//
+// Sections are composed from generic, reusable primitives (DestinationHero,
+// FactList, HighlightList, DestinationCard, TourCard, Faq, Placeholder); there
+// is no per-destination logic and no destination-specific markup. Every block
+// is gated on the presence of its data, so a sparser or richer destination
+// renders correctly with no template change. Relationships (tours, experiences,
+// nearby) come from the content registry, never hardcoded.
+import Base from "@/layouts/Base.astro";
+import Frieze from "@/components/Frieze.astro";
+import Faq from "@/components/Faq.astro";
+import Placeholder from "@/components/Placeholder.astro";
+import SectionHeader from "@/components/SectionHeader.astro";
+import TourCard from "@/components/TourCard.astro";
+import DestinationHero from "@/components/destination/DestinationHero.astro";
+import DestinationCard from "@/components/destination/DestinationCard.astro";
+import FactList from "@/components/destination/FactList.astro";
+import HighlightList from "@/components/destination/HighlightList.astro";
+import { destinations } from "@/data/destinations";
+import { relatedTours, relatedExperiences, nearbyDestinations } from "@/data/registry";
+import { entityStaticPaths, relativePrefix, routeFor } from "@/config/routes";
+import { regions, seasons, travelStyles, labelOf } from "@/config/taxonomy";
+import { entitySchema } from "@/schemas/jsonld";
+import type { Destination } from "@/types";
+
+interface Props {
+  entity: Destination;
+}
+
+// One static page per destination → destinations/cairo.html, …/luxor.html, …
+// The generic helper scales to 50/100/500 destinations with no change here.
+export function getStaticPaths() {
+  return entityStaticPaths(destinations);
+}
+
+const dest = Astro.props.entity;
+const route = routeFor("destination", dest.slug);
+const base = relativePrefix(route);
+
+const regionLabel = labelOf(regions, dest.region) ?? dest.region;
+const seasonsLabel = dest.bestSeasons?.map((s) => labelOf(seasons, s) ?? s).join(", ");
+const stylesLabel = dest.travelStyles?.map((s) => labelOf(travelStyles, s) ?? s).join(" · ");
+
+// Fact tables — each entry is dropped when its source field is absent.
+type Fact = { label: string; value: string };
+const quickFacts = [
+  { label: "Region", value: regionLabel },
+  dest.recommendedStay && { label: "Recommended stay", value: dest.recommendedStay },
+  dest.elevationMeters != null && { label: "Elevation", value: `${dest.elevationMeters} m` },
+  dest.unesco?.listed && { label: "UNESCO", value: dest.unesco.siteName ?? "World Heritage Site" },
+  stylesLabel && { label: "Travel styles", value: stylesLabel },
+].filter(Boolean) as Fact[];
+
+const seasonFacts = [
+  seasonsLabel && { label: "Best seasons", value: seasonsLabel },
+  dest.climateSummary && { label: "Climate", value: dest.climateSummary },
+].filter(Boolean) as Fact[];
+
+const essentialsFacts = [
+  dest.accessibilityNotes && { label: "Accessibility", value: dest.accessibilityNotes },
+  dest.familyFriendly != null && { label: "Family friendly", value: dest.familyFriendly ? "Yes" : "No" },
+  dest.luxuryFriendly != null && { label: "Luxury friendly", value: dest.luxuryFriendly ? "Yes" : "No" },
+  dest.adventureFriendly != null && { label: "Adventure friendly", value: dest.adventureFriendly ? "Yes" : "No" },
+].filter(Boolean) as Fact[];
+
+// Relationships — all derived from the registry, never hand-maintained.
+const tours = relatedTours(dest.id);
+const experiences = relatedExperiences(dest.id);
+const nearby = nearbyDestinations(dest);
+
+const title = dest.seo?.title ?? `${dest.title} — ${regionLabel}, Egypt | Kemet`;
+const description = dest.seo?.description ?? dest.shortSummary;
+const jsonld = entitySchema("destination", dest);
+---
+<Base title={title} description={description} active={route} jsonld={jsonld}>
+  <article>
+    <DestinationHero destination={dest} base={base} />
+
+    <section style="padding-top:20px">
+      <div class="wrap">
+        <div class="tdetail">
+          <div>
+            <div class="tblock reveal">
+              <h2>Overview</h2>
+              <p>{dest.longDescription}</p>
+              {dest.historicalImportance && (
+                <p><b>Historical importance.</b> {dest.historicalImportance}</p>
+              )}
+              {dest.culturalImportance && (
+                <p><b>Cultural importance.</b> {dest.culturalImportance}</p>
+              )}
+            </div>
+
+            {dest.whyVisit?.length && (
+              <div class="tblock reveal">
+                <h2>Why visit</h2>
+                <HighlightList items={dest.whyVisit} variant="check" />
+              </div>
+            )}
+
+            {dest.highlights?.length && (
+              <div class="tblock reveal">
+                <h2>Highlights</h2>
+                <HighlightList items={dest.highlights} variant="check" />
+              </div>
+            )}
+
+            {dest.thingsToKnow?.length && (
+              <div class="tblock reveal">
+                <h2>Things to know</h2>
+                <HighlightList items={dest.thingsToKnow} variant="dot" />
+              </div>
+            )}
+
+            {dest.photographyHighlights?.length && (
+              <div class="tblock reveal">
+                <h2>Photography</h2>
+                <HighlightList items={dest.photographyHighlights} variant="dot" />
+              </div>
+            )}
+
+            {seasonFacts.length > 0 && (
+              <div class="tblock reveal">
+                <h2>Season overview</h2>
+                <FactList items={seasonFacts} />
+              </div>
+            )}
+
+            {essentialsFacts.length > 0 && (
+              <div class="tblock reveal">
+                <h2>Travel essentials</h2>
+                <FactList items={essentialsFacts} />
+              </div>
+            )}
+
+            {dest.faqs?.length && (
+              <div class="reveal">
+                <Faq items={dest.faqs} />
+              </div>
+            )}
+          </div>
+
+          <aside class="side">
+            <div class="pcard reveal">
+              <div class="eyebrow" style="margin-bottom:4px">Quick facts</div>
+              <FactList items={quickFacts} />
+              {/* Map placeholder — geometry/tiles slot in later with no layout change. */}
+              <Placeholder class="tgallery" label="Map" />
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <Frieze />
+
+    {tours.length > 0 && (
+      <section>
+        <div class="wrap">
+          <SectionHeader eyebrow="Journeys" title="Featured tours" text={`Private journeys that visit ${dest.title}.`} />
+          <div class="grid-3">
+            {tours.map((tour) => <TourCard tour={tour} base={base} />)}
+          </div>
+        </div>
+      </section>
+    )}
+
+    {experiences.length > 0 && (
+      <section>
+        <div class="wrap">
+          <SectionHeader eyebrow="Experiences" title="Featured experiences" />
+          <div class="grid-3">
+            {experiences.map((exp) => (
+              <a class="tease reveal" href={`${base}experiences/${exp.slug}.html`}>
+                <h3>{exp.title}</h3>
+                <p>{exp.summary}</p>
+                <span class="more">Explore <b>→</b></span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    {nearby.length > 0 && (
+      <section>
+        <div class="wrap">
+          <SectionHeader eyebrow="Close by" title="Nearby destinations" />
+          <div class="grid-3">
+            {nearby.map((d) => <DestinationCard destination={d} base={base} />)}
+          </div>
+        </div>
+      </section>
+    )}
+  </article>
+</Base>

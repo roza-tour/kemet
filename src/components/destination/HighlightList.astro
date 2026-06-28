@@ -1,0 +1,16 @@
+---
+// Generic scannable bullet list (reuses existing .inc checkmark / .dc gold-dot
+// styles). Used for Highlights, Why Visit, Things To Know and Photography.
+interface Props {
+  items: string[];
+  /** "check" → ticks (highlights/reasons); "dot" → gold dots (notes). */
+  variant?: "check" | "dot";
+}
+const { items, variant = "check" } = Astro.props;
+const wrapClass = variant === "dot" ? "dc" : "inc";
+---
+<div class={wrapClass}>
+  <ul>
+    {items.map((i) => <li>{i}</li>)}
+  </ul>
+</div>

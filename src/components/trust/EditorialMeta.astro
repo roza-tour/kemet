@@ -1,0 +1,30 @@
+---
+// EditorialMeta — editorial attribution for content pages (guides, articles).
+// Renders author, reviewer and update/review dates when data is present.
+// Architecture is complete; author fields remain empty until the author
+// system is built — only the lastUpdated line renders in the current phase.
+import type { EditorialAttribution } from "@/types";
+
+interface Props {
+  meta: EditorialAttribution;
+}
+const { meta } = Astro.props;
+const hasAnyMeta =
+  meta.authorName || meta.reviewerName || meta.lastUpdated || meta.reviewDate;
+---
+{hasAnyMeta && (
+  <div style="display:flex;flex-wrap:wrap;gap:16px;font-size:0.82em;opacity:0.6;margin-top:8px;margin-bottom:4px">
+    {meta.authorName && (
+      <span>By <b>{meta.authorName}</b></span>
+    )}
+    {meta.reviewerName && (
+      <span>Reviewed by <b>{meta.reviewerName}</b></span>
+    )}
+    {meta.lastUpdated && (
+      <span>Updated {meta.lastUpdated}</span>
+    )}
+    {meta.reviewDate && !meta.lastUpdated && (
+      <span>Reviewed {meta.reviewDate}</span>
+    )}
+  </div>
+)}

@@ -1,0 +1,119 @@
+---
+// About page (/about.html). Data-driven: every section reads from the
+// centralized company profile. No company information is hardcoded here.
+import Base from "@/layouts/Base.astro";
+import PageHero from "@/components/PageHero.astro";
+import SectionHeader from "@/components/SectionHeader.astro";
+import Frieze from "@/components/Frieze.astro";
+import TrustSignals from "@/components/trust/TrustSignals.astro";
+import OurProcess from "@/components/trust/OurProcess.astro";
+import BookingConfidence from "@/components/trust/BookingConfidence.astro";
+import CTABlock from "@/components/trust/CTABlock.astro";
+import { company } from "@/data/company";
+import { aboutPageSchema } from "@/schemas/jsonld";
+
+const ROUTE = "about.html";
+const jsonld = aboutPageSchema();
+---
+<Base
+  title={`About ${company.name} — Luxury Private Egypt Travel`}
+  description={company.mission ?? company.description}
+  active={ROUTE}
+  showCta={false}
+  jsonld={jsonld}
+>
+  <PageHero
+    crumb="About"
+    symbol="lotus"
+    title={`About ${company.name}`}
+    text={company.mission}
+  />
+
+  {/* Mission, vision, values */}
+  {(company.vision || (company.values && company.values.length > 0)) && (
+    <section style="padding-top:30px">
+      <div class="wrap">
+        <div class="tdetail">
+          <div>
+            {company.vision && (
+              <div class="tblock reveal">
+                <h2>Our vision</h2>
+                <p>{company.vision}</p>
+              </div>
+            )}
+            {company.values && company.values.length > 0 && (
+              <div class="tblock reveal">
+                <h2>What we believe</h2>
+                <div class="dc">
+                  <ul>
+                    {company.values.map((v) => <li>{v}</li>)}
+                  </ul>
+                </div>
+              </div>
+            )}
+            {company.editorialStandards && company.editorialStandards.length > 0 && (
+              <div class="tblock reveal">
+                <h2>Our content standards</h2>
+                {company.editorialStandards.map((s) => (
+                  <p><b>{s.heading}.</b> {s.body}</p>
+                ))}
+              </div>
+            )}
+          </div>
+          <aside class="side">
+            <div class="pcard reveal">
+              <div class="eyebrow" style="margin-bottom:4px">At a glance</div>
+              <div class="facts">
+                <div><span>Service area</span><b>{company.serviceArea?.join(", ")}</b></div>
+                <div><span>Languages</span><b>{company.languages?.join(", ")}</b></div>
+                {company.headquarters && (
+                  <div><span>Based in</span><b>{company.headquarters.city}, {company.headquarters.country}</b></div>
+                )}
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  )}
+
+  {/* Why choose Kemet — trust signal grid */}
+  <section>
+    <div class="wrap">
+      <SectionHeader
+        eyebrow="Why Kemet"
+        title="Why choose us"
+        text="What makes a Kemet journey different from any other Egypt tour."
+      />
+      <TrustSignals />
+    </div>
+  </section>
+
+  <Frieze />
+
+  {/* Our process */}
+  <section>
+    <div class="wrap">
+      <OurProcess />
+    </div>
+  </section>
+
+  {/* Booking confidence */}
+  <section>
+    <div class="wrap">
+      <BookingConfidence />
+    </div>
+  </section>
+
+  {/* CTA */}
+  <section class="cta">
+    <div class="wrap">
+      <CTABlock
+        eyebrow="Begin"
+        heading="Ready to plan your Egypt journey?"
+        subtext="Tell us your travel dates and what draws you — we design a private itinerary end to end."
+        types={["whatsapp", "email"]}
+      />
+    </div>
+  </section>
+</Base>

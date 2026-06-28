@@ -1,0 +1,16 @@
+---
+// The small gold Kemet mark (a stylised papyrus/feather), painted with the
+// site gold gradient. Used in the nav, footer and image placeholders.
+interface Props {
+  class?: string;
+}
+const { class: className = "mk" } = Astro.props;
+---
+<svg class={className} viewBox="0 0 130 96" aria-hidden="true">
+  <g fill="url(#g)">
+    <path d="M6 30C40 8 92 8 118 26l-4 11C90 22 44 22 14 41Z" />
+    <path fill-rule="evenodd" d="M12 48C44 30 92 32 116 50 92 68 48 70 18 56Zm44 1a8 8 0 1 0 .1 0Z" />
+    <path d="M44 60 36 92l13-3-3-30Z" />
+    <path d="M70 58c14-1 30 6 34 22 3 13-8 17-18 12 7-3 9-9 4-15-5-7-13-8-22-7Z" />
+  </g>
+</svg>

@@ -1,0 +1,20 @@
+---
+import type { Activity } from "@/types";
+import Placeholder from "@/components/Placeholder.astro";
+
+interface Props {
+  activity: Activity;
+}
+const { activity } = Astro.props;
+---
+<article class="jcard reveal" data-tilt>
+  <div style="position:relative">
+    <span class="tag">{activity.place}</span>
+    <Placeholder label={activity.title} />
+  </div>
+  <div class="body">
+    <h3>{activity.title}</h3>
+    <div class="route">{activity.place}</div>
+    <p>{activity.blurb}</p>
+  </div>
+</article>

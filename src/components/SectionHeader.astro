@@ -1,0 +1,16 @@
+---
+// SectionHeader — eyebrow + heading + gold rule + optional lede.
+interface Props {
+  eyebrow?: string;
+  title: string;
+  text?: string;
+}
+const { eyebrow, title, text = "" } = Astro.props;
+---
+<div class="sec-head reveal">
+  {eyebrow && <div class="eyebrow">{eyebrow}</div>}
+  <h2>{title}</h2>
+  <div class="rule"></div>
+  {text && <p>{text}</p>}
+  <slot />
+</div>

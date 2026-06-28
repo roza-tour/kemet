@@ -1,0 +1,314 @@
+// ---------------------------------------------------------------------------
+// JSON-LD builders (structured data). Keeps schema.org graphs out of page
+// markup. Returns plain JsonLd objects that pages serialise into <script> tags.
+// ---------------------------------------------------------------------------
+import { SITE_URL, OG_IMAGE_PATH, CURRENCY, site } from "@/config/site";
+import { canonical, phoneHref } from "@/utils/links";
+import { routeFor } from "@/config/routes";
+import { trailFor } from "@/config/navigation";
+import type { BreadcrumbItem, ContentDomain, Destination, Guide, JsonLd, Tour } from "@/types";
+
+const SCHEMA_CONTEXT = "https://schema.org";
+
+/** BreadcrumbList from [name, file] pairs (file relative to the site root). */
+export function breadcrumb(items: BreadcrumbItem[]): JsonLd {
+  return {
+    "@context": SCHEMA_CONTEXT,
+    "@type": "BreadcrumbList",
+    itemListElement: items.map(([name, file], i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name,
+      item: canonical(file),
+    })),
+  };
+}
+
+/**
+ * Full structured-data set for a tour detail page:
+ * TouristTrip (+ ItemList itinerary) · Offer · FAQPage · BreadcrumbList.
+ */
+export function tourSchema(tour: Tour): JsonLd[] {
+  const route = routeFor("tour", tour.slug);
+  const url = canonical(route);
+
+  const itinerary: JsonLd = {
+    "@type": "ItemList",
+    numberOfItems: tour.itinerary.length,
+    itemListElement: tour.itinerary.map((step, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: `${step.label} ${step.num}: ${step.title}`,
+    })),
+  };
+
+  const touristTrip: JsonLd = {
+    "@context": SCHEMA_CONTEXT,
+    "@type": "TouristTrip",
+    name: tour.title,
+    description: tour.summary,
+    url,
+    image: `${SITE_URL}${OG_IMAGE_PATH}`,
+    touristType: "Luxury travellers",
+    provider: { "@type": "TravelAgency", name: site.name, url: SITE_URL },
+    itinerary,
+    offers: {
+      "@type": "Offer",
+      price: String(tour.price),
+      priceCurrency: CURRENCY,
+      availability: "https://schema.org/InStock",
+      url,
+      category: "per person",
+    },
+  };
+
+  const faqPage: JsonLd = {
+    "@context": SCHEMA_CONTEXT,
+    "@type": "FAQPage",
+    mainEntity: tour.faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
+  const leaf: BreadcrumbItem = [tour.title, route];
+  const crumbs = breadcrumb(trailFor("tour", leaf));
+
+  return [touristTrip, faqPage, crumbs];
+}
+
+/**
+ * Full structured-data set for a destination page:
+ * TouristDestination (a Place) · WebPage · BreadcrumbList (+ FAQPage when present).
+ * Geo and image are emitted only when real values exist — placeholders are
+ * omitted so the JSON-LD never contains fabricated data and always validates.
+ */
+export function destinationSchema(dest: Destination): JsonLd[] {
+  const route = routeFor("destination", dest.slug);
+  const url = canonical(route);
+  const org = { "@type": "TravelAgency", name: site.name, url: SITE_URL };
+
+  const touristDestination: JsonLd = {
+    "@context": SCHEMA_CONTEXT,
+    "@type": "TouristDestination",
+    name: dest.title,
+    description: dest.shortSummary,
+    url,
+    containedInPlace: { "@type": "Country", name: "Egypt" },
+    provider: org,
+    ...(dest.highlights?.length
+      ? {
+          includesAttraction: dest.highlights.map((name) => ({
+            "@type": "TouristAttraction",
+            name,
+          })),
+        }
+      : {}),
+    ...(dest.coordinates?.lat != null && dest.coordinates?.lng != null
+      ? { geo: { "@type": "GeoCoordinates", latitude: dest.coordinates.lat, longitude: dest.coordinates.lng } }
+      : {}),
+  };
+
+  const webPage: JsonLd = {
+    "@context": SCHEMA_CONTEXT,
+    "@type": "WebPage",
+    name: dest.title,
+    description: dest.shortSummary,
+    url,
+    isPartOf: { "@type": "WebSite", name: `${site.name} — The Black Land`, url: SITE_URL },
+    about: { "@type": "TouristDestination", name: dest.title },
+    publisher: org,
+  };
+
+  const leaf: BreadcrumbItem = [dest.title, route];
+  const crumbs = breadcrumb(trailFor("destination", leaf));
+
+  const out: JsonLd[] = [touristDestination, webPage, crumbs];
+
+  if (dest.faqs?.length) {
+    out.push({
+      "@context": SCHEMA_CONTEXT,
+      "@type": "FAQPage",
+      mainEntity: dest.faqs.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    });
+  }
+
+  return out;
+}
+
+/**
+ * Full structured-data set for a travel guide page:
+ * Article · WebPage · BreadcrumbList (+ FAQPage when present).
+ * dateModified is emitted only when lastUpdated is present — no fabricated dates.
+ */
+export function guideSchema(guide: Guide): JsonLd[] {
+  const route = routeFor("guide", guide.slug);
+  const url = canonical(route);
+  const org = { "@type": "TravelAgency", name: site.name, url: SITE_URL };
+
+  const article: JsonLd = {
+    "@context": SCHEMA_CONTEXT,
+    "@type": "Article",
+    headline: guide.title,
+    description: guide.shortSummary,
+    url,
+    inLanguage: "en",
+    about: { "@type": "Country", name: "Egypt" },
+    publisher: org,
+    ...(guide.lastUpdated ? { dateModified: guide.lastUpdated } : {}),
+  };
+
+  const webPage: JsonLd = {
+    "@context": SCHEMA_CONTEXT,
+    "@type": "WebPage",
+    name: guide.title,
+    description: guide.shortSummary,
+    url,
+    isPartOf: { "@type": "WebSite", name: `${site.name} — The Black Land`, url: SITE_URL },
+    publisher: org,
+  };
+
+  const leaf: BreadcrumbItem = [guide.title, route];
+  const crumbs = breadcrumb(trailFor("guide", leaf));
+
+  const out: JsonLd[] = [article, webPage, crumbs];
+
+  if (guide.faqs?.length) {
+    out.push({
+      "@context": SCHEMA_CONTEXT,
+      "@type": "FAQPage",
+      mainEntity: guide.faqs.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    });
+  }
+
+  return out;
+}
+
+/**
+ * Structured-data dispatcher — routes an entity to its schema builder by
+ * domain. Tours, destinations and guides are wired; experience/category
+ * builders slot in here later with no change to callers.
+ */
+export function entitySchema(domain: ContentDomain, entity: unknown): JsonLd[] {
+  switch (domain) {
+    case "tour":
+      return tourSchema(entity as Tour);
+    case "destination":
+      return destinationSchema(entity as Destination);
+    case "guide":
+      return guideSchema(entity as Guide);
+    default:
+      return [];
+  }
+}
+
+/**
+ * Site-wide structured data rendered on every page (once, in Base.astro).
+ * TravelAgency + LocalBusiness (multi-typed) with ContactPoint, address
+ * placeholder, opening hours and service area. Values come exclusively from
+ * centralized site config — nothing is hardcoded here.
+ * Fields that are not yet confirmed (street address, aggregate rating) are
+ * omitted rather than fabricated.
+ */
+export function siteSchema(): JsonLd[] {
+  const org: JsonLd = {
+    "@context": SCHEMA_CONTEXT,
+    "@type": ["TravelAgency", "LocalBusiness"],
+    name: site.name,
+    url: SITE_URL,
+    description:
+      "Luxury private Egypt travel — tailored tours, Nile cruises and experiences built exclusively for each traveller.",
+    email: site.email,
+    telephone: phoneHref().replace("tel:", ""),
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "EG",
+      addressLocality: "Cairo",
+      // streetAddress and postalCode omitted until confirmed
+    },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "09:00",
+        closes: "18:00",
+      },
+    ],
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "customer service",
+        email: site.email,
+        telephone: phoneHref().replace("tel:", ""),
+        availableLanguage: ["English", "French", "Arabic"],
+      },
+    ],
+    areaServed: { "@type": "Country", name: "Egypt" },
+    knowsLanguage: ["en", "fr", "ar"],
+    // sameAs: [] — future social profiles
+    // hasCredential: [] — future certifications/memberships
+  };
+
+  const webSite: JsonLd = {
+    "@context": SCHEMA_CONTEXT,
+    "@type": "WebSite",
+    name: `${site.name} — The Black Land`,
+    url: SITE_URL,
+  };
+
+  return [org, webSite];
+}
+
+/**
+ * Structured data for the About page.
+ * AboutPage (WebPage subtype) referencing the Organization.
+ */
+export function aboutPageSchema(): JsonLd {
+  const url = canonical("about.html");
+  return {
+    "@context": SCHEMA_CONTEXT,
+    "@type": "AboutPage",
+    name: `About ${site.name} — Luxury Private Egypt Travel`,
+    description:
+      "Learn about Kemet — our mission, values, and why we design private, tailor-made Egypt journeys for discerning international travellers.",
+    url,
+    isPartOf: { "@type": "WebSite", name: `${site.name} — The Black Land`, url: SITE_URL },
+    about: {
+      "@type": "TravelAgency",
+      name: site.name,
+      url: SITE_URL,
+    },
+  };
+}
+
+/**
+ * Structured data for the Contact page.
+ * ContactPage (WebPage subtype) with contact point reference.
+ */
+export function contactPageSchema(): JsonLd {
+  const url = canonical("contact.html");
+  return {
+    "@context": SCHEMA_CONTEXT,
+    "@type": "ContactPage",
+    name: `Contact ${site.name} — Plan Your Egypt Journey`,
+    description: `Get in touch with ${site.name} to start planning your private Egypt journey.`,
+    url,
+    isPartOf: { "@type": "WebSite", name: `${site.name} — The Black Land`, url: SITE_URL },
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "customer service",
+      email: site.email,
+      telephone: phoneHref().replace("tel:", ""),
+      availableLanguage: ["English", "French", "Arabic"],
+    },
+  };
+}

@@ -1,0 +1,71 @@
+---
+// ContactInfo — displays all contact channels from the centralized company
+// profile. Links are built from site config via links.ts — never hardcoded.
+// Reusable on contact page, about page, footer enhancements, etc.
+import { company } from "@/data/company";
+import { whatsappLink, mailtoLink, phoneHref } from "@/utils/links";
+import { site } from "@/config/site";
+import type { CTAType } from "@/types";
+
+interface Props {
+  /** Whether to show business hours below the contact channels. */
+  showHours?: boolean;
+}
+const { showHours = true } = Astro.props;
+
+const channels = company.contactChannels ?? [];
+const hours = company.businessHours ?? [];
+
+function buildHref(type: CTAType): string {
+  switch (type) {
+    case "whatsapp": return whatsappLink("Hello Kemet — I'd like to plan a private Egypt journey.");
+    case "email":    return mailtoLink("Kemet enquiry");
+    case "phone":    return phoneHref();
+    default:         return mailtoLink("Kemet enquiry");
+  }
+}
+
+function buildDisplay(type: CTAType): string {
+  switch (type) {
+    case "whatsapp": return `+${site.whatsapp}`;
+    case "email":    return site.email;
+    case "phone":    return site.phoneDisplay;
+    default:         return site.email;
+  }
+}
+
+function isExternal(type: CTAType): boolean {
+  return type === "whatsapp";
+}
+---
+<div class="facts" style="gap:20px">
+  {channels.map((ch) => (
+    <div style="display:flex;flex-direction:column;gap:4px">
+      <span style="opacity:0.6;font-size:0.8em;text-transform:uppercase;letter-spacing:0.06em">{ch.label}</span>
+      <a
+        href={buildHref(ch.type)}
+        style="font-weight:500"
+        {...(isExternal(ch.type) ? { rel: "noopener", target: "_blank" } : {})}
+      >
+        {buildDisplay(ch.type)}
+      </a>
+      {ch.availability && (
+        <span style="opacity:0.55;font-size:0.82em">{ch.availability}</span>
+      )}
+    </div>
+  ))}
+</div>
+
+{showHours && hours.length > 0 && (
+  <div style="margin-top:24px">
+    <div class="eyebrow" style="margin-bottom:8px;opacity:0.6">Business hours</div>
+    {hours.map((h) => (
+      <p style="margin:0;font-size:0.9em">
+        {h.days} · {h.opens}–{h.closes} {h.timezone}
+      </p>
+    ))}
+    {company.emergencyContactNote && (
+      <p style="margin-top:12px;font-size:0.85em;opacity:0.7">{company.emergencyContactNote}</p>
+    )}
+  </div>
+)}

@@ -1,0 +1,31 @@
+---
+// OurProcess — how a Kemet journey comes together, step by step.
+// Steps are authored in company.process — not hardcoded here.
+// Reusable on about page, tour pages, homepage, etc.
+import { company } from "@/data/company";
+
+interface Props {
+  heading?: string;
+  eyebrow?: string;
+}
+const {
+  heading = "How it works",
+  eyebrow = "Our process",
+} = Astro.props;
+const steps = company.process ?? [];
+---
+{steps.length > 0 && (
+  <div>
+    <div class="eyebrow" style="margin-bottom:8px">{eyebrow}</div>
+    <h2 style="margin-bottom:28px">{heading}</h2>
+    <div class="grid-3" style="gap:24px">
+      {steps.map((step) => (
+        <div class="tblock reveal">
+          <div class="eyebrow" style="margin-bottom:6px">Step {step.step}</div>
+          <h3>{step.heading}</h3>
+          <p>{step.body}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+)}

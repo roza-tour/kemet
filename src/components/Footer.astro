@@ -1,0 +1,54 @@
+---
+import { site } from "@/config/site";
+import { whatsappLink, mailtoLink } from "@/utils/links";
+import { multidayTours } from "@/data/tours";
+import { footerExplore, footerCompany } from "@/config/navigation";
+import BrandMark from "@/components/BrandMark.astro";
+
+interface Props {
+  /** Link prefix back to the site root ("" at root, "../" in subfolders). */
+  base?: string;
+}
+const { base = "" } = Astro.props;
+const enquire = mailtoLink("Kemet enquiry");
+const wa = whatsappLink("Hello Kemet — I'd like to plan a journey to Egypt.");
+---
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href={`${base}index.html`} aria-label="Kemet — home"><BrandMark /> KEMET</a>
+        <p>Private luxury travel through every layer of Egypt — the Black Land, in full colour.</p>
+      </div>
+      <div class="foot-col">
+        <h5>{footerExplore.heading}</h5>
+        {footerExplore.links.map(({ href, label }, i) => (
+          <Fragment>{i > 0 ? " " : ""}<a href={`${base}${href}`}>{label}</a></Fragment>
+        ))}
+      </div>
+      <div class="foot-col">
+        <h5>Journeys</h5>
+        {multidayTours.map((t) => (
+          <a href={`${base}${t.slug}.html`}>{t.title}</a>
+        ))}
+        <a href={`${base}tours.html`}>All day tours</a>
+      </div>
+      <div class="foot-col">
+        <h5>{footerCompany.heading}</h5>
+        {footerCompany.links.map(({ href, label }, i) => (
+          <Fragment>{i > 0 ? " " : ""}<a href={`${base}${href}`}>{label}</a></Fragment>
+        ))}
+      </div>
+      <div class="foot-col">
+        <h5>Contact</h5>
+        <a href={enquire}>Enquire</a>
+        <a href={wa} rel="noopener" target="_blank">WhatsApp</a>
+        <a href={`mailto:${site.email}`}>{site.email}</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>{site.copyright}</span>
+      <span>Prices are operator rates +20% · itineraries from operator data</span>
+    </div>
+  </div>
+</footer>

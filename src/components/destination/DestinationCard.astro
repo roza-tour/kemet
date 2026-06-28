@@ -1,0 +1,23 @@
+---
+// Destination card — used by the hub grid and the "nearby destinations" block.
+// Reuses the existing .tease card. Data-driven, reusable for any destination.
+import SymbolIcon from "@/components/SymbolIcon.astro";
+import { labelOf, regions } from "@/config/taxonomy";
+import type { Destination } from "@/types";
+
+interface Props {
+  destination: Destination;
+  /** Link prefix back to the site root. */
+  base?: string;
+}
+const { destination, base = "" } = Astro.props;
+const regionLabel = labelOf(regions, destination.region) ?? destination.region;
+const href = `${base}destinations/${destination.slug}.html`;
+---
+<a class="tease reveal" href={href} data-tilt aria-label={`${destination.title} — explore destination`}>
+  {destination.symbol && <div class="sym"><SymbolIcon name={destination.symbol} title={destination.title} /></div>}
+  <div class="eyebrow" style="margin-bottom:8px">{regionLabel}</div>
+  <h3>{destination.title}</h3>
+  <p>{destination.shortSummary}</p>
+  <span class="more">Explore <b>→</b></span>
+</a>

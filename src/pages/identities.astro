@@ -1,0 +1,44 @@
+---
+import Base from "@/layouts/Base.astro";
+import PageHero from "@/components/PageHero.astro";
+import SymbolIcon from "@/components/SymbolIcon.astro";
+import { identities } from "@/data/identities";
+import { breadcrumb } from "@/schemas/jsonld";
+import { pad2 } from "@/utils/format";
+
+const jsonld = breadcrumb([["Home", "index.html"], ["The 8 Identities", "identities.html"]]);
+---
+<Base
+  title="The 8 Identities of Egypt — Kemet"
+  description="Egypt is eight cultural worlds in one — Pharaonic, Nubian, Coptic, Islamic, Bedouin·Sinai, Greco-Roman, Siwan·Amazigh and the Red Sea. The map every Kemet journey travels by."
+  active="identities.html"
+  jsonld={jsonld}
+>
+  <PageHero
+    crumb="The 8 Identities"
+    symbol="ankh"
+    title="The Eight Egypts"
+    text="One country, eight overlapping cultural worlds. Each has its own colour, symbol and experiences — and any Kemet journey can be woven from several at once."
+  />
+
+  <section style="padding-top:20px">
+    <div class="wrap">
+      {identities.map((identity, i) => (
+        <div class={`eg-row reveal${i % 2 ? " rev" : ""}`} style={`--c:var(${identity.accentVar})`}>
+          <div class="eg-media">
+            <div class="g"><SymbolIcon name={identity.symbol} title={identity.name} /></div>
+            <span class="lab">Image</span>
+          </div>
+          <div class="eg-info">
+            <div class="ix">{pad2(i + 1)} · {identity.name}</div>
+            <h2>{identity.name}</h2>
+            <p>{identity.intro}</p>
+            <div class="exp">
+              {identity.experiences.map((e) => <span>{e}</span>)}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+</Base>

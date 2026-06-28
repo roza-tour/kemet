@@ -1,0 +1,68 @@
+---
+import Base from "@/layouts/Base.astro";
+import PageHero from "@/components/PageHero.astro";
+import SectionHeader from "@/components/SectionHeader.astro";
+import SymbolIcon from "@/components/SymbolIcon.astro";
+import Placeholder from "@/components/Placeholder.astro";
+import { symbols, crafts } from "@/data/culture";
+import { breadcrumb } from "@/schemas/jsonld";
+
+const jsonld = breadcrumb([["Home", "index.html"], ["Culture", "culture.html"]]);
+---
+<Base
+  title="Egyptian Culture & Heritage — Symbols, Gods & Crafts | Kemet"
+  description="The gods, symbols and living crafts of Egypt — the ankh, Eye of Horus, scarab, Anubis, Horus and lotus, plus khayamiya, alabaster, Nubian beadwork and the oud."
+  active="culture.html"
+  jsonld={jsonld}
+>
+  <PageHero
+    crumb="Culture"
+    symbol="eye"
+    title="Symbols, Gods & Craft"
+    text="The meaning behind the monuments — the gods and symbols carved into every wall, and the crafts still made by hand today."
+  />
+
+  <section style="padding-top:20px">
+    <div class="wrap">
+      <SectionHeader
+        eyebrow="Symbols & gods"
+        title="The language of the walls"
+        text="Six emblems you will meet again and again across Egypt's temples and tombs — and what they meant to the people who carved them."
+      />
+      <div class="gods-grid">
+        {symbols.map((s) => (
+          <article class="god reveal" data-tilt>
+            <div class="sym"><SymbolIcon name={s.symbol} title={s.name} /></div>
+            <h3>{s.name}</h3>
+            <div class="nat">{s.nature}</div>
+            <p>{s.note}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="her-grid">
+        <div class="her-text reveal">
+          <div class="eyebrow">Living crafts</div>
+          <h2>Made by hand, still</h2>
+          <p>Egypt's heritage is not only in its museums. In workshops from Cairo to Aswan, artisans keep alive crafts that reach back centuries — colour, pattern and sound passed from one generation to the next.</p>
+          <div class="her-list">
+            {crafts.map((c) => (
+              <div class="her-item">
+                <div class="i"><SymbolIcon name={c.symbol} title={c.name} /></div>
+                <div>
+                  <h4>{c.name}</h4>
+                  <p>{c.note}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <Placeholder class="her-art" label="Image" />
+      </div>
+    </div>
+  </section>
+</Base>

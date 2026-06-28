@@ -1,0 +1,26 @@
+---
+// Guide card — used by the hub grid and "related guides" sections.
+// Reuses the existing .tease card. Data-driven, reusable for any guide.
+import { guideCategories, labelOf } from "@/config/taxonomy";
+import type { Guide } from "@/types";
+
+interface Props {
+  guide: Guide;
+  /** Link prefix back to the site root. */
+  base?: string;
+}
+const { guide, base = "" } = Astro.props;
+const categoryLabel = labelOf(guideCategories, guide.category) ?? guide.category;
+const href = `${base}guides/${guide.slug}.html`;
+---
+<a class="tease reveal" href={href} aria-label={`${guide.title} — travel guide`}>
+  <div class="eyebrow" style="margin-bottom:8px">{categoryLabel}</div>
+  <h3>{guide.title}</h3>
+  <p>{guide.shortSummary}</p>
+  {guide.readingTimeMinutes && (
+    <div class="eyebrow" style="margin-top:10px;opacity:0.65;font-size:0.8em">
+      {guide.readingTimeMinutes} min read
+    </div>
+  )}
+  <span class="more">Read guide <b>→</b></span>
+</a>

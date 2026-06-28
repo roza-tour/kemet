@@ -1,0 +1,167 @@
+---
+// Guide detail (/guides/<slug>.html). ONE template renders every guide from
+// data — adding a guide is data-only, no edit here.
+//
+// Sections are composed from generic, reusable primitives (GuideHero,
+// FactList, HighlightList, Faq, GuideCard, DestinationCard, TourCard,
+// Placeholder). There is no per-guide logic and no guide-specific markup.
+// Every block is gated on the presence of its data so a sparser or richer
+// guide renders correctly with no template change. Relationships come from
+// the content registry, never hardcoded.
+import Base from "@/layouts/Base.astro";
+import Frieze from "@/components/Frieze.astro";
+import Faq from "@/components/Faq.astro";
+import SectionHeader from "@/components/SectionHeader.astro";
+import TourCard from "@/components/TourCard.astro";
+import FactList from "@/components/destination/FactList.astro";
+import HighlightList from "@/components/destination/HighlightList.astro";
+import DestinationCard from "@/components/destination/DestinationCard.astro";
+import GuideHero from "@/components/guide/GuideHero.astro";
+import GuideCard from "@/components/guide/GuideCard.astro";
+import { guides } from "@/data/guides";
+import { registry, resolveRelatedGuides } from "@/data/registry";
+import { entityStaticPaths, relativePrefix, routeFor } from "@/config/routes";
+import { entitySchema } from "@/schemas/jsonld";
+import type { Destination, Guide, Tour } from "@/types";
+
+interface Props {
+  entity: Guide;
+}
+
+// One static page per guide → guides/egypt-travel-guide.html, etc.
+// The generic helper scales to any number of guides with no change here.
+export function getStaticPaths() {
+  return entityStaticPaths(guides);
+}
+
+const guide = Astro.props.entity;
+const route = routeFor("guide", guide.slug);
+const base = relativePrefix(route);
+
+// Resolve relationships from the registry — never hardcoded.
+const relDestinations = registry.resolve<Destination>(guide.relationships?.destinations ?? []);
+const relTours = registry.resolve<Tour>(guide.relationships?.tours ?? []);
+const relGuides = resolveRelatedGuides(guide);
+
+const title = guide.seo?.title ?? `${guide.title} | Kemet Egypt Travel Guides`;
+const description = guide.seo?.description ?? guide.shortSummary;
+const jsonld = entitySchema("guide", guide);
+---
+<Base title={title} description={description} active={route} jsonld={jsonld}>
+  <article>
+    <GuideHero guide={guide} base={base} />
+
+    <section style="padding-top:20px">
+      <div class="wrap">
+        <div class="tdetail">
+
+          {/* ---- Left column: main content ---- */}
+          <div>
+            {guide.keyTakeaways && guide.keyTakeaways.length > 0 && (
+              <div class="tblock reveal">
+                <h2>Key takeaways</h2>
+                <HighlightList items={guide.keyTakeaways} variant="check" />
+              </div>
+            )}
+
+            {guide.sections.map((section) => (
+              <div class="tblock reveal">
+                <h2>{section.heading}</h2>
+                {section.paragraphs && section.paragraphs.map((p) => <p>{p}</p>)}
+                {section.items && section.items.length > 0 && (
+                  <div class="dc">
+                    <ul>
+                      {section.items.map((item) => <li>{item}</li>)}
+                    </ul>
+                  </div>
+                )}
+                {section.note && (
+                  <p style="margin-top:14px;padding:12px 16px;background:rgba(255,255,255,0.04);border-left:3px solid var(--gold,#c9a84c);font-size:0.92em">
+                    <b>{section.noteType === "warning" ? "Important:" : section.noteType === "tip" ? "Tip:" : "Note:"}</b>{" "}
+                    {section.note}
+                  </p>
+                )}
+              </div>
+            ))}
+
+            {guide.faqs && guide.faqs.length > 0 && (
+              <div class="reveal">
+                <Faq items={guide.faqs} heading="Frequently asked questions" />
+              </div>
+            )}
+          </div>
+
+          {/* ---- Right sidebar ---- */}
+          <aside class="side">
+            {guide.keyFacts && guide.keyFacts.length > 0 && (
+              <div class="pcard reveal">
+                <div class="eyebrow" style="margin-bottom:4px">Quick facts</div>
+                <FactList items={guide.keyFacts} />
+              </div>
+            )}
+
+            {guide.planningTips && guide.planningTips.length > 0 && (
+              <div class="pcard reveal" style="margin-top:20px">
+                <div class="eyebrow" style="margin-bottom:8px">Planning tips</div>
+                <HighlightList items={guide.planningTips} variant="dot" />
+              </div>
+            )}
+
+            {guide.importantNotes && guide.importantNotes.length > 0 && (
+              <div class="pcard reveal" style="margin-top:20px">
+                <div class="eyebrow" style="margin-bottom:8px">Important notes</div>
+                <HighlightList items={guide.importantNotes} variant="dot" />
+              </div>
+            )}
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <Frieze />
+
+    {relDestinations.length > 0 && (
+      <section>
+        <div class="wrap">
+          <SectionHeader
+            eyebrow="Destinations"
+            title="Related destinations"
+            text={`Places covered in this guide.`}
+          />
+          <div class="grid-3">
+            {relDestinations.map((d) => (
+              <DestinationCard destination={d} base={base} />
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    {relTours.length > 0 && (
+      <section>
+        <div class="wrap">
+          <SectionHeader eyebrow="Journeys" title="Related tours" />
+          <div class="grid-3">
+            {relTours.map((tour) => (
+              <TourCard tour={tour} base={base} />
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    {relGuides.length > 0 && (
+      <section>
+        <div class="wrap">
+          <SectionHeader eyebrow="Further reading" title="Related guides" />
+          <div class="grid-3">
+            {relGuides.map((g) => (
+              <GuideCard guide={g} base={base} />
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+  </article>
+</Base>

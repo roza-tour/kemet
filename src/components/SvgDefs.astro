@@ -1,0 +1,14 @@
+---
+// Shared SVG <defs> rendered once per page by Base.astro. Every inline gold
+// glyph (BrandMark, SymbolIcon, the hero plaque) paints itself with this
+// gradient via url(#g), so it only needs to be defined here.
+---
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F7E6AE" />
+      <stop offset=".55" stop-color="#D9B45A" />
+      <stop offset="1" stop-color="#A87E32" />
+    </linearGradient>
+  </defs>
+</svg>

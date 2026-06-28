@@ -1,0 +1,29 @@
+---
+// PageHero — the centred header used by every inner page: breadcrumb, an
+// optional gold symbol, the H1 and a short lede.
+import SymbolIcon from "@/components/SymbolIcon.astro";
+
+interface Props {
+  title: string;
+  text?: string;
+  /** SymbolIcon name to show above the heading. */
+  symbol?: string;
+  /** Breadcrumb leaf label (Home is prepended automatically). */
+  crumb?: string;
+  /** Link prefix back to the site root ("" at root, "../" in subfolders). */
+  base?: string;
+}
+const { title, text = "", symbol = "", crumb = "", base = "" } = Astro.props;
+---
+<header class="phero">
+  <div class="wrap">
+    {crumb && (
+      <nav class="crumb" aria-label="Breadcrumb">
+        <a href={`${base}index.html`}>Home</a> · <span>{crumb}</span>
+      </nav>
+    )}
+    {symbol && <div class="sym"><SymbolIcon name={symbol} /></div>}
+    <h1>{title}</h1>
+    {text && <p>{text}</p>}
+  </div>
+</header>

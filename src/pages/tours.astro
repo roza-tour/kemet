@@ -1,0 +1,52 @@
+---
+import Base from "@/layouts/Base.astro";
+import PageHero from "@/components/PageHero.astro";
+import SectionHeader from "@/components/SectionHeader.astro";
+import TourCard from "@/components/TourCard.astro";
+import Frieze from "@/components/Frieze.astro";
+import { multidayTours, dayTours } from "@/data/tours";
+import { breadcrumb } from "@/schemas/jsonld";
+
+const jsonld = breadcrumb([["Home", "index.html"], ["Tours", "tours.html"]]);
+---
+<Base
+  title="Egypt Tours & Nile Cruises — 12 Private Journeys | Kemet"
+  description="Twelve private Egypt tours by Kemet — multi-day journeys with Nile cruises and sleeper trains, plus full- and half-day tours of Giza, Saqqara, Cairo and Alexandria. EUR, per person."
+  active="tours.html"
+  jsonld={jsonld}
+>
+  <PageHero
+    crumb="Tours"
+    symbol="ankh"
+    title="The Journeys"
+    text="Twelve private itineraries across Egypt. Prices are per person in euros and already include our guiding, entrance fees, lunches and private transfers."
+  />
+
+  <section style="padding-top:30px">
+    <div class="wrap">
+      <SectionHeader
+        eyebrow="Multi-day"
+        title="Signature journeys"
+        text="Three to ten days, with five-star hotels and — on the longest — a three-night Nile cruise between Aswan and Luxor."
+      />
+      <div class="grid-3">
+        {multidayTours.map((tour) => <TourCard tour={tour} />)}
+      </div>
+    </div>
+  </section>
+
+  <Frieze />
+
+  <section>
+    <div class="wrap">
+      <SectionHeader
+        eyebrow="Day tours"
+        title="Days out from Cairo"
+        text="Self-contained full, half and evening tours — perfect on their own or as additions to a longer stay."
+      />
+      <div class="grid-3">
+        {dayTours.map((tour) => <TourCard tour={tour} />)}
+      </div>
+    </div>
+  </section>
+</Base>

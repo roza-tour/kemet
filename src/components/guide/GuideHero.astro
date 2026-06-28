@@ -1,0 +1,44 @@
+---
+// Guide hero — breadcrumb, category eyebrow, H1, summary and reading-time meta.
+// Reuses the site's .phero layout and follows the same pattern as DestinationHero.
+// Fully data-driven: no per-guide logic, no guide-specific markup.
+import Placeholder from "@/components/Placeholder.astro";
+import { guideCategories, labelOf } from "@/config/taxonomy";
+import { hubFor } from "@/config/routes";
+import type { Guide } from "@/types";
+
+interface Props {
+  guide: Guide;
+  /** Link prefix back to the site root ("" at root, "../" inside a subfolder). */
+  base?: string;
+}
+const { guide, base = "" } = Astro.props;
+const categoryLabel = labelOf(guideCategories, guide.category) ?? guide.category;
+const hub = hubFor("guide");
+---
+<header class="phero" style="padding-bottom:34px">
+  <div class="wrap">
+    <nav class="crumb" aria-label="Breadcrumb">
+      <a href={`${base}index.html`}>Home</a> ·
+      <a href={`${base}${hub}`}>Travel Guides</a> ·
+      <span>{guide.title}</span>
+    </nav>
+    <div class="eyebrow">{categoryLabel}</div>
+    <h1>{guide.title}</h1>
+    <p>{guide.shortSummary}</p>
+    {(guide.readingTimeMinutes || guide.lastUpdated) && (
+      <p class="eyebrow" style="margin-top:12px;opacity:0.65;font-size:0.8em">
+        {guide.readingTimeMinutes && <span>{guide.readingTimeMinutes} min read</span>}
+        {guide.readingTimeMinutes && guide.lastUpdated && <span> · </span>}
+        {guide.lastUpdated && <span>Updated {guide.lastUpdated}</span>}
+      </p>
+    )}
+  </div>
+</header>
+{guide.hero && (
+  <section style="padding-top:18px;padding-bottom:0">
+    <div class="wrap">
+      <Placeholder class="tgallery reveal" label={guide.hero.label ?? guide.title} />
+    </div>
+  </section>
+)}

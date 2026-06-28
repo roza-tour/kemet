@@ -1,0 +1,13 @@
+---
+// Generic label/value fact list (reuses the existing .facts styling). Used for
+// Quick Facts, Season Overview and Travel Essentials — no domain logic.
+interface Props {
+  items: { label: string; value: string }[];
+}
+const { items } = Astro.props;
+---
+<div class="facts">
+  {items.map((i) => (
+    <div><span>{i.label}</span><b>{i.value}</b></div>
+  ))}
+</div>
