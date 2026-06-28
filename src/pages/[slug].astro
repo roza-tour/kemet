@@ -3,6 +3,8 @@ import Base from "@/layouts/Base.astro";
 import Placeholder from "@/components/Placeholder.astro";
 import Faq from "@/components/Faq.astro";
 import Frieze from "@/components/Frieze.astro";
+import TourFit from "@/components/conversion/TourFit.astro";
+import LeadCapture from "@/components/conversion/LeadCapture.astro";
 import { tours } from "@/data/tours";
 import { getTourMeta } from "@/data/tours.taxonomy";
 import type { Tour } from "@/types";
@@ -97,6 +99,8 @@ const jsonld = entitySchema("tour", tour);
             <div class="reveal">
               <Faq items={tour.faqs} />
             </div>
+
+            <TourFit />
           </div>
 
           <aside class="side">
@@ -123,5 +127,11 @@ const jsonld = entitySchema("tour", tour);
     </section>
 
     <Frieze />
+
+    <LeadCapture
+      variant="expert"
+      whatsappMessage={`Hello Kemet — I'm interested in the "${tour.title}" journey and have some questions.`}
+      emailSubject={`Enquiry: ${tour.title} — Kemet Egypt`}
+    />
   </article>
 </Base>

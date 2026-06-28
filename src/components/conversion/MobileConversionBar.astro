@@ -1,0 +1,39 @@
+---
+// MobileConversionBar — architecture-ready mobile sticky CTA.
+// Hidden by default via CSS. Activates with the `.mcb-active` class on
+// <body> (set via JS when the user scrolls past the primary CTA).
+// All contact values come from centralized config via links.ts.
+// Future: wire up scroll listener in enhance.ts; no layout changes required.
+import { whatsappLink, mailtoLink } from "@/utils/links";
+
+interface Props {
+  /** Pre-filled WhatsApp message. */
+  whatsappMessage?: string;
+  /** Pre-filled email subject. */
+  emailSubject?: string;
+  /** Primary action label. */
+  primaryLabel?: string;
+  /** Secondary action label. */
+  secondaryLabel?: string;
+}
+
+const {
+  whatsappMessage = "Hello Kemet — I'd like to plan an Egypt journey.",
+  emailSubject = "Egypt journey enquiry — Kemet",
+  primaryLabel = "WhatsApp",
+  secondaryLabel = "Email",
+} = Astro.props;
+
+const waHref = whatsappLink(whatsappMessage);
+const emailHref = mailtoLink(emailSubject);
+---
+
+{/* Mobile CTA bar — hidden until .mcb-active on <body>. See global.css .mcb-* rules. */}
+<div class="mcb" role="region" aria-label="Quick contact" aria-hidden="true">
+  <a href={waHref} class="mcb-btn mcb-primary" target="_blank" rel="noopener">
+    {primaryLabel}
+  </a>
+  <a href={emailHref} class="mcb-btn mcb-secondary">
+    {secondaryLabel}
+  </a>
+</div>

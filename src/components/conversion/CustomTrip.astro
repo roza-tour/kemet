@@ -1,0 +1,52 @@
+---
+// CustomTrip — "Build your custom trip" conversion section.
+// Used on the homepage and tours hub to capture visitors who haven't
+// found the right tour and want something built from scratch.
+// All contact values come from centralized config via links.ts.
+import { whatsappLink, mailtoLink } from "@/utils/links";
+
+interface Props {
+  heading?: string;
+  subtext?: string;
+}
+
+const {
+  heading = "Don't see exactly what you're looking for?",
+  subtext =
+    "Every Kemet journey is built for you — not adapted from a template. Share your vision and we'll design a private itinerary around it.",
+} = Astro.props;
+
+const waHref = whatsappLink(
+  "Hello Kemet — I'd like to build a custom Egypt itinerary.",
+);
+const emailHref = mailtoLink(
+  "Custom itinerary request — Kemet Egypt",
+  "Hello Kemet,\n\nI'd like to discuss a custom Egypt itinerary.\n\nTravel dates:\nDuration:\nGroup size:\nDestinations / interests:\nBudget range:\n\nThank you.",
+);
+---
+
+<section class="custom-trip">
+  <div class="wrap">
+    <div class="custom-trip-inner reveal">
+      <div class="custom-trip-text">
+        <div class="eyebrow">Custom journeys</div>
+        <h2>{heading}</h2>
+        <p>{subtext}</p>
+        <ul class="custom-trip-features">
+          <li>Fully private — your group only</li>
+          <li>Any duration, any destinations</li>
+          <li>We handle all logistics end to end</li>
+          <li>Fixed price confirmed before you travel</li>
+        </ul>
+      </div>
+      <div class="custom-trip-cta">
+        <a href={waHref} class="btn btn-solid" target="_blank" rel="noopener">
+          Start on WhatsApp
+        </a>
+        <a href={emailHref} class="btn btn-ghost" style="margin-top:12px;display:block;text-align:center">
+          Describe your trip by email
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

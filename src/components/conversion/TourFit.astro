@@ -1,0 +1,45 @@
+---
+// TourFit — decision-support component for tour detail pages.
+// Helps visitors self-qualify by showing who the tour is best suited for
+// and who it may not suit. Accepts optional fitFor / notFor arrays;
+// falls back to defaults from conversion config when absent.
+import { defaultTourFitFor, defaultTourNotFor } from "@/config/conversion";
+
+interface Props {
+  heading?: string;
+  /** Positive signals — this tour IS right for these travellers. */
+  fitFor?: string[];
+  /** Honest qualification — this tour may NOT suit these travellers. */
+  notFor?: string[];
+}
+
+const {
+  heading = "Is this journey right for you?",
+  fitFor = defaultTourFitFor,
+  notFor = defaultTourNotFor,
+} = Astro.props;
+---
+
+<div class="tour-fit tblock reveal">
+  <h2>{heading}</h2>
+  <div class="grid-2">
+    <div class="fit-col">
+      <div class="fit-label fit-yes">Ideal if you</div>
+      <ul class="fit-list">
+        {fitFor.map((item) => (
+          <li class="fit-item fit-item--yes">{item}</li>
+        ))}
+      </ul>
+    </div>
+    {notFor && notFor.length > 0 && (
+      <div class="fit-col">
+        <div class="fit-label fit-no">Less suited if you</div>
+        <ul class="fit-list">
+          {notFor.map((item) => (
+            <li class="fit-item fit-item--no">{item}</li>
+          ))}
+        </ul>
+      </div>
+    )}
+  </div>
+</div>

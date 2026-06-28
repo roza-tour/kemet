@@ -10,3 +10,4 @@ export type * from "@/types/primitives";
 export type * from "@/types/taxonomy";
 export type * from "@/types/content";
 export type * from "@/types/trust";
+export type * from "@/types/conversion";

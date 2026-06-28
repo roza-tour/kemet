@@ -41,3 +41,17 @@ export function phoneHref(): string {
 export function canonical(file: string): string {
   return `${SITE_URL}/${file}`;
 }
+
+/**
+ * Build a WhatsApp or mailto link for a specific enquiry type.
+ * All contact values come from site config — nothing is hardcoded here.
+ */
+export function enquiryLink(
+  channel: "whatsapp" | "email",
+  whatsappMessage: string,
+  emailSubject: string,
+  emailBody?: string,
+): string {
+  if (channel === "whatsapp") return whatsappLink(whatsappMessage);
+  return mailtoLink(emailSubject, emailBody ?? "");
+}

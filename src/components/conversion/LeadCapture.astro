@@ -1,0 +1,102 @@
+---
+// LeadCapture — reusable mid-funnel lead generation section.
+// Bridges discovery (destination / guide pages) to planning (enquiry).
+// All contact values come from centralized config via links.ts.
+// Supports three visual variants: "expert" | "planning" | "consultation".
+import { whatsappLink, mailtoLink } from "@/utils/links";
+
+interface Props {
+  variant?: "expert" | "planning" | "consultation";
+  heading?: string;
+  subtext?: string;
+  primaryLabel?: string;
+  secondaryLabel?: string;
+  /** Pre-filled WhatsApp message for this placement. */
+  whatsappMessage?: string;
+  /** Pre-filled email subject. */
+  emailSubject?: string;
+}
+
+const {
+  variant = "expert",
+  heading,
+  subtext,
+  primaryLabel,
+  secondaryLabel,
+  whatsappMessage,
+  emailSubject,
+} = Astro.props;
+
+type VariantConfig = {
+  heading: string;
+  subtext: string;
+  primaryLabel: string;
+  secondaryLabel: string;
+  whatsappMessage: string;
+  emailSubject: string;
+  eyebrow: string;
+};
+
+const variants: Record<string, VariantConfig> = {
+  expert: {
+    eyebrow: "Local expertise",
+    heading: "Talk to a local expert",
+    subtext:
+      "Our team lives and breathes Egypt travel. Share what draws you here — we'll help you design the journey that fits.",
+    primaryLabel: "Chat on WhatsApp",
+    secondaryLabel: "Send an enquiry",
+    whatsappMessage: "Hello Kemet — I'd like to talk to someone about planning my Egypt journey.",
+    emailSubject: "Planning enquiry — Kemet Egypt",
+  },
+  planning: {
+    eyebrow: "Journey planning",
+    heading: "Need help planning?",
+    subtext:
+      "Tell us your travel dates, group size and what matters most to you. We design every itinerary from scratch — no templates.",
+    primaryLabel: "Start planning",
+    secondaryLabel: "Email us",
+    whatsappMessage: "Hello Kemet — I need help planning an Egypt trip.",
+    emailSubject: "Planning enquiry — Kemet Egypt",
+  },
+  consultation: {
+    eyebrow: "Free consultation",
+    heading: "Book a travel consultation",
+    subtext:
+      "A short conversation can save weeks of research. Speak to our team about destinations, timing, budgets and what to expect.",
+    primaryLabel: "Book on WhatsApp",
+    secondaryLabel: "Request by email",
+    whatsappMessage: "Hello Kemet — I'd like to book a travel consultation.",
+    emailSubject: "Consultation request — Kemet Egypt",
+  },
+};
+
+const config = variants[variant];
+
+const resolvedHeading = heading ?? config.heading;
+const resolvedSubtext = subtext ?? config.subtext;
+const resolvedPrimaryLabel = primaryLabel ?? config.primaryLabel;
+const resolvedSecondaryLabel = secondaryLabel ?? config.secondaryLabel;
+const resolvedWa = whatsappMessage ?? config.whatsappMessage;
+const resolvedEmail = emailSubject ?? config.emailSubject;
+
+const waHref = whatsappLink(resolvedWa);
+const emailHref = mailtoLink(resolvedEmail);
+---
+
+<section class="lead-capture">
+  <div class="wrap">
+    <div class="lead-inner reveal">
+      <div class="eyebrow">{config.eyebrow}</div>
+      <h2>{resolvedHeading}</h2>
+      <p>{resolvedSubtext}</p>
+      <div class="hero-actions" style="justify-content:flex-start;margin-top:28px">
+        <a href={waHref} class="btn btn-solid" target="_blank" rel="noopener">
+          {resolvedPrimaryLabel}
+        </a>
+        <a href={emailHref} class="btn btn-ghost">
+          {resolvedSecondaryLabel}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

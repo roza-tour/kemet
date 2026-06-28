@@ -4,6 +4,7 @@ import PageHero from "@/components/PageHero.astro";
 import SectionHeader from "@/components/SectionHeader.astro";
 import TourCard from "@/components/TourCard.astro";
 import Frieze from "@/components/Frieze.astro";
+import CustomTrip from "@/components/conversion/CustomTrip.astro";
 import { multidayTours, dayTours } from "@/data/tours";
 import { breadcrumb } from "@/schemas/jsonld";
 
@@ -49,4 +50,6 @@ const jsonld = breadcrumb([["Home", "index.html"], ["Tours", "tours.html"]]);
       </div>
     </div>
   </section>
+
+  <CustomTrip />
 </Base>

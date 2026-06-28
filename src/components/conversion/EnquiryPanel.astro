@@ -1,0 +1,56 @@
+---
+// EnquiryPanel — reusable enquiry type selector.
+// Renders a grid of enquiry category cards, each with pre-filled WhatsApp
+// and email links. All contact values come from centralized config via
+// links.ts. Pass `kinds` to show a subset; defaults to the four most common.
+import { enquiryTypes } from "@/config/conversion";
+import { enquiryLink } from "@/utils/links";
+import type { EnquiryKind } from "@/types/conversion";
+
+interface Props {
+  heading?: string;
+  subtext?: string;
+  /** Subset of enquiry kinds to display. Defaults to the four most common. */
+  kinds?: EnquiryKind[];
+}
+
+const {
+  heading = "How can we help?",
+  subtext = "Choose the option that best describes your trip — we'll respond within one business day.",
+  kinds = ["general", "quote", "custom-itinerary", "group-travel"],
+} = Astro.props;
+
+const items = enquiryTypes.filter((t) => kinds.includes(t.id));
+---
+
+<div class="enq-panel reveal">
+  <div class="enq-head">
+    <h2>{heading}</h2>
+    {subtext && <p>{subtext}</p>}
+  </div>
+  <div class="enq-grid">
+    {items.map((item) => (
+      <div class="enq-card">
+        <span class="enq-icon" aria-hidden="true">{item.icon}</span>
+        <h3>{item.label}</h3>
+        <p>{item.description}</p>
+        <div class="enq-actions">
+          <a
+            href={enquiryLink("whatsapp", item.whatsappMessage, item.emailSubject, item.emailBody)}
+            class="btn btn-solid enq-btn"
+            target="_blank"
+            rel="noopener"
+          >
+            WhatsApp
+          </a>
+          <a
+            href={enquiryLink("email", item.whatsappMessage, item.emailSubject, item.emailBody)}
+            class="btn btn-ghost enq-btn"
+          >
+            Email
+          </a>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>

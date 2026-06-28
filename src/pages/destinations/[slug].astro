@@ -10,6 +10,7 @@
 // nearby) come from the content registry, never hardcoded.
 import Base from "@/layouts/Base.astro";
 import Frieze from "@/components/Frieze.astro";
+import LeadCapture from "@/components/conversion/LeadCapture.astro";
 import Faq from "@/components/Faq.astro";
 import Placeholder from "@/components/Placeholder.astro";
 import SectionHeader from "@/components/SectionHeader.astro";
@@ -194,5 +195,11 @@ const jsonld = entitySchema("destination", dest);
         </div>
       </section>
     )}
+
+    <LeadCapture
+      variant="planning"
+      whatsappMessage={`Hello Kemet — I'm planning a trip to ${dest.title} and would like some help.`}
+      emailSubject={`${dest.title} journey enquiry — Kemet Egypt`}
+    />
   </article>
 </Base>
