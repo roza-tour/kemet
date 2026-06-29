@@ -127,7 +127,7 @@ function guideSignals(guide: Guide): EntitySignals {
   const destIds = guide.relationships?.destinations?.map((r) => r.id);
   // Planning/practical guides pair well with any tour — include as broad category
   const isPlanningGuide = ["planning", "practical", "overview", "seasonal"].includes(
-    guide.guideType ?? "",
+    guide.guideType,
   );
   return {
     id: guide.slug,

@@ -80,7 +80,7 @@ export const SECTION_HUB: Partial<Record<ContentDomain, BreadcrumbItem>> = {
   experience: ["Experiences", hubFor("experience")],
   guide: ["Travel Guides", hubFor("guide")],
   category: ["Categories", hubFor("category")],
-  seasonal: ["Seasonal Collections", hubFor("seasonal")],
+  seasonal: ["Collections", hubFor("seasonal")],
 };
 
 /**

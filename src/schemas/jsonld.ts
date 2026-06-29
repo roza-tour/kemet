@@ -288,7 +288,7 @@ export function collectionSchema(
       "@type": "ListItem",
       position: i + 1,
       name: item.title,
-      url: canonical(routeFor(item.domain as never, item.slug)),
+      url: canonical(routeFor(item.domain as ContentDomain, item.slug)),
     })),
   };
 

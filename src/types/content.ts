@@ -453,16 +453,6 @@ export interface Category extends ContentEntity {
   summary?: string;
 }
 
-export interface SeasonalCollection extends ContentEntity {
-  domain: "seasonal";
-  season: Season;
-  summary?: string;
-  relationships?: {
-    tours?: Ref<"tour">[];
-    destinations?: Ref<"destination">[];
-  };
-}
-
 // --- Existing taxonomy/marketing content (unchanged shapes) ----------------
 
 export interface Identity {

@@ -32,6 +32,8 @@ export type PlacementContext =
   | "homepage"
   | "tour"
   | "destination"
+  | "experience"
+  | "collection"
   | "guide"
   | "about"
   | "contact"
