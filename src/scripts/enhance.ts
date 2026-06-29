@@ -11,6 +11,7 @@ const STAR_COUNT_DESKTOP = 120;
 const STAR_COUNT_MOBILE = 60;
 const STAR_MOBILE_BREAKPOINT = 700;
 const NAV_SCROLL_THRESHOLD = 40; // px scrolled before the nav gains its solid background
+const MCB_SCROLL_THRESHOLD = 600; // px scrolled before the mobile conversion bar appears
 const REVEAL_THRESHOLD = 0.08; // IntersectionObserver ratio for scroll-reveal
 const TILT_DEG = 5; // max card tilt in degrees
 
@@ -25,6 +26,7 @@ export const enhanceScript = `
     d.style.animationDelay=(Math.random()*5).toFixed(2)+'s';d.style.animationDuration=(3.5+Math.random()*4).toFixed(2)+'s';sc.appendChild(d);}}
   var nav=document.getElementById('nav');
   if(nav)addEventListener('scroll',function(){nav.classList.toggle('scrolled',scrollY>${NAV_SCROLL_THRESHOLD})},{passive:true});
+  addEventListener('scroll',function(){document.body.classList.toggle('mcb-active',scrollY>${MCB_SCROLL_THRESHOLD})},{passive:true});
   var b=document.querySelector('.burger'),nl=document.getElementById('navlinks');
   if(b&&nl)b.addEventListener('click',function(){var open=nl.classList.toggle('open');
     nl.style.cssText=open?'display:flex;position:absolute;flex-direction:column;top:100%;right:18px;background:rgba(11,9,7,.97);padding:18px 26px;gap:16px;border:1px solid var(--line)':'';

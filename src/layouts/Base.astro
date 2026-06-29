@@ -10,6 +10,7 @@ import Nav from "@/components/Nav.astro";
 import Footer from "@/components/Footer.astro";
 import CTA from "@/components/CTA.astro";
 import SvgDefs from "@/components/SvgDefs.astro";
+import MobileConversionBar from "@/components/conversion/MobileConversionBar.astro";
 
 interface Props {
   title?: string;
@@ -66,6 +67,7 @@ const pageLd = jsonld ? (Array.isArray(jsonld) ? jsonld : [jsonld]) : [];
   <main><slot /></main>
   {showCta && <CTA base={base} />}
   <Footer base={base} />
+  <MobileConversionBar />
   <script is:inline set:html={enhanceScript}></script>
 </body>
 </html>
