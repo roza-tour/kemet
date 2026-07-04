@@ -35,6 +35,12 @@ export const tours: Tour[] = [
   // ========================= MULTI-DAY =====================================
   {
     slug: "tour-10-day",
+    hero: {
+      alt: "The great hypostyle hall of Karnak Temple in Luxor",
+      src: "/images/luxor/luxor-karnak-hypostyle-hall.webp",
+      width: 652,
+      height: 980,
+    },
     title: "Egypt Icons & Nile Cruise",
     subtitle:
       "Ten unhurried days from the Pyramids of Giza to the temples of Upper Egypt, threaded together by a three-night Nile cruise.",
@@ -185,6 +191,12 @@ export const tours: Tour[] = [
   },
   {
     slug: "tour-7-day",
+    hero: {
+      alt: "The Great Sphinx of Giza facing the dawn",
+      src: "/images/giza/giza-great-sphinx-frontal.webp",
+      width: 736,
+      height: 920,
+    },
     title: "Egypt Highlights Deluxe",
     subtitle:
       "A week that gathers the essentials — Cairo, Alexandria and Luxor — with sleeper-train nights between them.",
@@ -299,6 +311,12 @@ export const tours: Tour[] = [
   },
   {
     slug: "tour-4-day",
+    hero: {
+      alt: "The lighthouse on the Alexandria seafront on the Mediterranean",
+      src: "/images/alexandria/alexandria-lighthouse.webp",
+      width: 736,
+      height: 920,
+    },
     title: "From Pyramids to the Sea",
     subtitle:
       "Four days pairing the monuments of Cairo and Giza with a day on the Mediterranean at Alexandria.",
@@ -382,6 +400,12 @@ export const tours: Tour[] = [
   },
   {
     slug: "tour-3-day",
+    hero: {
+      alt: "A painted royal tomb in the Valley of the Kings, Luxor",
+      src: "/images/luxor/luxor-valley-of-the-kings-tomb.webp",
+      width: 1000,
+      height: 600,
+    },
     title: "Cairo to Luxor & Aswan",
     subtitle:
       "Three days of Upper Egypt's temples and tombs, with domestic flights folded into the price.",
@@ -532,6 +556,12 @@ export const tours: Tour[] = [
   },
   {
     slug: "tour-giza-museum",
+    hero: {
+      alt: "The Great Pyramid of Khufu on the Giza plateau",
+      src: "/images/giza/giza-great-pyramid-khufu.webp",
+      width: 736,
+      height: 981,
+    },
     title: "Giza & the Grand Museum",
     subtitle:
       "The Pyramids and Sphinx in the morning, the Grand Egyptian Museum in the afternoon — the old wonder and the new, in one day.",
@@ -597,6 +627,12 @@ export const tours: Tour[] = [
   },
   {
     slug: "tour-saqqara",
+    hero: {
+      alt: "The Step Pyramid of Djoser at Saqqara, the world's oldest stone monument",
+      src: "/images/giza/saqqara-step-pyramid-djoser.webp",
+      width: 1600,
+      height: 1200,
+    },
     title: "Saqqara, Memphis & Dahshur",
     subtitle:
       "The birthplace of the pyramid — from Djoser's first step pyramid to the great geometric tombs of Dahshur.",
@@ -659,6 +695,12 @@ export const tours: Tour[] = [
   },
   {
     slug: "tour-religious-citadel",
+    hero: {
+      alt: "The Mosque of Muhammad Ali crowning the Saladin Citadel in Cairo",
+      src: "/images/cairo/cairo-mosque-muhammad-ali-citadel.webp",
+      width: 736,
+      height: 1104,
+    },
     title: "Religious Cairo & the Citadel",
     subtitle:
       "The faiths of Cairo in one day — Coptic churches, an ancient synagogue, and the great mosque-crowned Citadel.",
@@ -721,6 +763,12 @@ export const tours: Tour[] = [
   },
   {
     slug: "tour-cairo-museums",
+    hero: {
+      alt: "The grand hall of the Egyptian Museum in Cairo",
+      src: "/images/cairo/cairo-egyptian-museum-hall.webp",
+      width: 1067,
+      height: 1600,
+    },
     title: "Cairo Museums",
     subtitle:
       "Two great collections in one day — the historic Egyptian Museum and the National Museum of Egyptian Civilization, with the Royal Mummies.",
@@ -777,6 +825,12 @@ export const tours: Tour[] = [
   },
   {
     slug: "tour-alexandria",
+    hero: {
+      alt: "The Roman Amphitheatre at Kom el-Dikka in Alexandria",
+      src: "/images/alexandria/alexandria-roman-amphitheatre.webp",
+      width: 1000,
+      height: 600,
+    },
     title: "Alexandria Sightseeing",
     subtitle:
       "A full day on the Mediterranean — catacombs, a Roman pillar, a sea-girt citadel and the great modern library.",
@@ -843,6 +897,12 @@ export const tours: Tour[] = [
   },
   {
     slug: "tour-giza-sphinx",
+    hero: {
+      alt: "The Great Sphinx of Giza in profile before the pyramids",
+      src: "/images/giza/giza-great-sphinx-profile.webp",
+      width: 736,
+      height: 1104,
+    },
     title: "Giza Pyramids & Sphinx",
     subtitle:
       "A focused half day among the three great pyramids and the Sphinx, with the classic panoramic viewpoint.",

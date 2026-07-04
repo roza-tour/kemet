@@ -125,8 +125,11 @@ export const guides: Guide[] = [
       },
     ],
     hero: {
-      alt: "The Pyramids of Giza on the desert plateau at dusk",
+      alt: "The Great Pyramid of Khufu on the Giza plateau under a clear desert sky",
       label: "Egypt",
+      src: "/images/giza/giza-great-pyramid-clear-sky.webp",
+      width: 1600,
+      height: 1062,
     },
     seo: {
       title: "Egypt Travel Guide — Visa, When to Go, Transport & Destinations | Kemet",
@@ -242,8 +245,11 @@ export const guides: Guide[] = [
       },
     ],
     hero: {
-      alt: "Cairo International Airport arrivals hall",
+      alt: "The Cairo Tower rising above the Nile and the city skyline",
       label: "Egypt entry",
+      src: "/images/cairo/cairo-tower-nile-skyline.webp",
+      width: 736,
+      height: 981,
     },
     seo: {
       title: "Egypt Visa Guide — On Arrival, e-Visa & Requirements | Kemet",
@@ -366,8 +372,11 @@ export const guides: Guide[] = [
       },
     ],
     hero: {
-      alt: "Hot air balloons at dawn over the West Bank of Luxor",
+      alt: "Hot-air balloons drifting over the West Bank of Luxor at dawn",
       label: "Dawn over Luxor",
+      src: "/images/luxor/luxor-hot-air-balloons-dawn.webp",
+      width: 736,
+      height: 981,
     },
     seo: {
       title: "Best Time to Visit Egypt — Season-by-Season Guide | Kemet",
@@ -493,8 +502,11 @@ export const guides: Guide[] = [
       },
     ],
     hero: {
-      alt: "A traditional dahabhiya sailing on the Nile near Luxor",
+      alt: "Brightly decorated Nubian boats moored on the Nile at Aswan",
       label: "Nile travel",
+      src: "/images/aswan/aswan-nubian-decorated-boats.webp",
+      width: 736,
+      height: 1077,
     },
     seo: {
       title: "Getting Around Egypt — Trains, Flights, Nile Cruises & Transfers | Kemet",

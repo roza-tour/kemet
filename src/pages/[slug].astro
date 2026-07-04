@@ -62,7 +62,15 @@ const jsonld = entitySchema("tour", tour);
 
     <section style="padding-top:20px">
       <div class="wrap">
-        <Placeholder class="tgallery reveal" label={tour.title} />
+        <Placeholder
+          class="tgallery reveal"
+          label={tour.title}
+          src={tour.hero?.src}
+          alt={tour.hero?.alt}
+          width={tour.hero?.width}
+          height={tour.hero?.height}
+          loading="eager"
+        />
 
         <div class="tdetail">
           <div>

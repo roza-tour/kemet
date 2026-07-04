@@ -1,6 +1,5 @@
 ---
 import { primaryNav } from "@/config/navigation";
-import BrandMark from "@/components/BrandMark.astro";
 
 interface Props {
   /** Route file of the active page, e.g. "tours.html". */
@@ -11,7 +10,9 @@ interface Props {
 const { active = "index.html", base = "" } = Astro.props;
 ---
 <nav class="nav" id="nav">
-  <a class="brand" href={`${base}index.html`} aria-label="Kemet — home"><BrandMark /> KEMET</a>
+  <a class="brand" href={`${base}index.html`} aria-label="Kemet — Luxury Egypt Travel — home">
+    <img src="/images/brand/kemet-logo-transparent.png" alt="Kemet — Luxury Egypt Travel" width="120" height="46" style="height:46px;width:auto;display:block" />
+  </a>
   <div class="navlinks" id="navlinks">
     {primaryNav.map(({ href, label }) => (
       <a href={`${base}${href}`} class={href === active ? "active" : undefined} aria-current={href === active ? "page" : undefined}>{label}</a>

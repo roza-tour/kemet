@@ -70,10 +70,18 @@ export const destinations: Destination[] = [
       "One of the great food cities of the Arab world — from koshari shops to Nile-side rooftop dining",
     ],
     symbol: "crescent",
-    hero: { alt: "Cairo skyline with minarets and the Citadel", label: "Cairo" },
+    hero: {
+      alt: "The Mosque of Muhammad Ali crowning the Saladin Citadel in Cairo at dusk",
+      label: "Cairo",
+      src: "/images/cairo/cairo-citadel-mosque-dusk.webp",
+      width: 1600,
+      height: 1066,
+    },
     gallery: [
-      { alt: "Khan el-Khalili bazaar, Cairo", label: "Bazaar" },
-      { alt: "Mosque of Muhammad Ali at the Citadel", label: "Citadel" },
+      { alt: "The arcaded courtyard of Al-Azhar Mosque in Cairo", label: "Al-Azhar", src: "/images/cairo/cairo-al-azhar-mosque-courtyard.webp", width: 736, height: 920 },
+      { alt: "Lantern-lit Al-Muizz Street in medieval Islamic Cairo", label: "Al-Muizz Street", src: "/images/cairo/cairo-al-muizz-street.webp", width: 736, height: 1104 },
+      { alt: "The Cairo Tower rising above the Nile", label: "Cairo Tower", src: "/images/cairo/cairo-tower-nile-skyline.webp", width: 736, height: 981 },
+      { alt: "The Baron Empain Palace in Heliopolis, Cairo", label: "Baron Palace", src: "/images/cairo/cairo-baron-empain-palace.webp", width: 975, height: 650 },
     ],
     faqs: [
       {
@@ -157,10 +165,18 @@ export const destinations: Destination[] = [
       "Sunrise at the plateau before the crowds arrive — one of Egypt's defining travel moments",
     ],
     symbol: "ankh",
-    hero: { alt: "The pyramids of Giza on the desert plateau", label: "Giza" },
+    hero: {
+      alt: "The Great Pyramid of Khufu on the Giza plateau under a clear desert sky",
+      label: "Giza",
+      src: "/images/giza/giza-great-pyramid-clear-sky.webp",
+      width: 1600,
+      height: 1062,
+    },
     gallery: [
-      { alt: "The Great Sphinx of Giza", label: "Sphinx" },
-      { alt: "Panorama of the three Giza pyramids", label: "Panorama" },
+      { alt: "The Great Sphinx of Giza facing the dawn", label: "Great Sphinx", src: "/images/giza/giza-great-sphinx-frontal.webp", width: 736, height: 920 },
+      { alt: "The Great Pyramid of Khufu on the Giza plateau", label: "Great Pyramid", src: "/images/giza/giza-great-pyramid-khufu.webp", width: 736, height: 981 },
+      { alt: "The Sphinx set before a pyramid at Giza", label: "Sphinx & Pyramid", src: "/images/giza/giza-sphinx-and-pyramid.webp", width: 736, height: 920 },
+      { alt: "The Grand Egyptian Museum beside the Giza plateau", label: "Grand Egyptian Museum", src: "/images/giza/giza-grand-egyptian-museum.webp", width: 474, height: 592 },
     ],
     faqs: [
       {
@@ -242,10 +258,18 @@ export const destinations: Destination[] = [
       "Hot-air ballooning over the West Bank at dawn — one of Egypt's most distinctive and celebrated experiences",
     ],
     symbol: "horus",
-    hero: { alt: "Karnak Temple columns at Luxor", label: "Luxor" },
+    hero: {
+      alt: "The terraced Mortuary Temple of Hatshepsut at Deir el-Bahri on the Luxor West Bank",
+      label: "Luxor",
+      src: "/images/luxor/luxor-hatshepsut-temple-deir-el-bahri.webp",
+      width: 1000,
+      height: 600,
+    },
     gallery: [
-      { alt: "Valley of the Kings, Luxor West Bank", label: "Valley of the Kings" },
-      { alt: "Mortuary Temple of Hatshepsut", label: "Hatshepsut" },
+      { alt: "The great hypostyle hall of Karnak Temple, Luxor", label: "Karnak", src: "/images/luxor/luxor-karnak-hypostyle-hall.webp", width: 652, height: 980 },
+      { alt: "A painted royal tomb in the Valley of the Kings", label: "Valley of the Kings", src: "/images/luxor/luxor-valley-of-the-kings-tomb.webp", width: 1000, height: 600 },
+      { alt: "Hot-air balloons over the Luxor West Bank at dawn", label: "Dawn ballooning", src: "/images/luxor/luxor-hot-air-balloons-dawn.webp", width: 736, height: 981 },
+      { alt: "The colonnade of Luxor Temple with its royal statues", label: "Luxor Temple", src: "/images/luxor/luxor-temple-colonnade.webp", width: 736, height: 920 },
     ],
     faqs: [
       {
@@ -329,10 +353,18 @@ export const destinations: Destination[] = [
       "Living Nubian culture — the music, food and hospitality of one of Africa's most distinctive river communities",
     ],
     symbol: "sun",
-    hero: { alt: "Feluccas on the Nile at Aswan", label: "Aswan" },
+    hero: {
+      alt: "The island Temple of Philae rising from the Nile near Aswan",
+      label: "Aswan",
+      src: "/images/aswan/aswan-philae-temple-island.webp",
+      width: 1080,
+      height: 810,
+    },
     gallery: [
-      { alt: "Temple of Philae near Aswan", label: "Philae" },
-      { alt: "Nubian village above the Nile", label: "Nubian village" },
+      { alt: "A blue-and-white Nubian village on the Nile at Aswan", label: "Nubian village", src: "/images/aswan/aswan-nubian-village-nile.webp", width: 512, height: 640 },
+      { alt: "A felucca under sail on the Nile at Aswan", label: "Felucca", src: "/images/aswan/aswan-felucca-sailing-nile.webp", width: 736, height: 981 },
+      { alt: "The Aswan High Dam holding back Lake Nasser", label: "High Dam", src: "/images/aswan/aswan-high-dam.webp", width: 1080, height: 607 },
+      { alt: "The colossi of the Great Temple of Ramesses II at Abu Simbel", label: "Abu Simbel", src: "/images/aswan/abu-simbel-great-temple-colossi.webp", width: 736, height: 1308 },
     ],
     faqs: [
       {
@@ -412,10 +444,18 @@ export const destinations: Destination[] = [
       "Mediterranean Egypt — a cooler, coastal, intellectually rich counterpoint to the heat and density of the Nile valley",
     ],
     symbol: "greco",
-    hero: { alt: "The Citadel of Qaitbay on the Alexandria seafront", label: "Alexandria" },
+    hero: {
+      alt: "The 15th-century Citadel of Qaitbay on the Alexandria seafront, built on the site of the Pharos lighthouse",
+      label: "Alexandria",
+      src: "/images/alexandria/alexandria-qaitbay-citadel.webp",
+      width: 736,
+      height: 981,
+    },
     gallery: [
-      { alt: "Bibliotheca Alexandrina", label: "Library" },
-      { alt: "The Alexandria corniche", label: "Corniche" },
+      { alt: "The disc of the Bibliotheca Alexandrina on the waterfront", label: "Bibliotheca", src: "/images/alexandria/alexandria-bibliotheca.webp", width: 764, height: 458 },
+      { alt: "Pompey's Pillar rising from the ruins of the Serapeum", label: "Pompey's Pillar", src: "/images/alexandria/alexandria-pompeys-pillar.webp", width: 764, height: 458 },
+      { alt: "The Roman Amphitheatre at Kom el-Dikka, Alexandria", label: "Roman Amphitheatre", src: "/images/alexandria/alexandria-roman-amphitheatre.webp", width: 1000, height: 600 },
+      { alt: "The underground Catacombs of Kom el-Shoqafa", label: "Catacombs", src: "/images/alexandria/alexandria-catacombs-kom-el-shoqafa.webp", width: 1000, height: 725 },
     ],
     faqs: [
       {

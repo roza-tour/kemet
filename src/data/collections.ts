@@ -71,7 +71,12 @@ export const collections: Collection[] = [
         a: "Rarely. The Nile Valley — Luxor, Aswan, Abu Simbel — receives almost no rainfall year-round. Cairo sees occasional light showers in December and January, and Alexandria's Mediterranean climate brings more frequent winter rain. For desert sightseeing, rain is essentially not a planning factor.",
       },
     ],
-    hero: { alt: "Karnak Temple colonnade in winter morning light" },
+    hero: {
+      alt: "Karnak Temple and its sacred lake at Luxor under clear winter light",
+      src: "/images/luxor/luxor-karnak-sacred-lake.webp",
+      width: 1000,
+      height: 600,
+    },
     lastReviewed: "2026-01",
     relationships: {
       tours: tour("tour-10-day", "tour-7-day", "tour-3-day", "tour-giza-museum"),
@@ -134,7 +139,12 @@ export const collections: Collection[] = [
         a: "Everything. Egypt's monuments, museums, restaurants and transport all operate normally year-round. The Grand Egyptian Museum, the Egyptian Museum, the Coptic Museum, the Islamic Art Museum and Alexandria's Bibliotheca Alexandrina are all open and air-conditioned. Outdoor sites like Karnak and the Valley of the Kings are also open — they are simply best visited very early in the morning.",
       },
     ],
-    hero: { alt: "Alexandria Bibliotheca Alexandrina waterfront in summer" },
+    hero: {
+      alt: "The Montaza Palace and its gardens on the Alexandria coast in summer",
+      src: "/images/alexandria/alexandria-montaza-palace.webp",
+      width: 960,
+      height: 600,
+    },
     lastReviewed: "2026-01",
     relationships: {
       tours: tour("tour-giza-museum", "tour-cairo-museums", "tour-alexandria", "tour-religious-citadel"),
@@ -201,7 +211,12 @@ export const collections: Collection[] = [
         a: "You do not need one legally, but a private Egyptologist guide is the single most impactful upgrade for a first visit. The monuments' context — why a specific pharaoh built a specific tomb, what the hieroglyphs say, how the engineering was achieved — transforms sightseeing into understanding. Kemet arranges private, licensed Egyptologist guides for every tour.",
       },
     ],
-    hero: { alt: "First-time visitor at the Giza Pyramids with the Sphinx in the foreground" },
+    hero: {
+      alt: "The Great Sphinx of Giza facing the dawn beneath a pyramid",
+      src: "/images/giza/giza-great-sphinx-frontal.webp",
+      width: 736,
+      height: 920,
+    },
     lastReviewed: "2026-01",
     relationships: {
       tours: tour("tour-10-day", "tour-7-day", "tour-3-day", "tour-giza-museum"),
@@ -264,7 +279,12 @@ export const collections: Collection[] = [
         a: "Yes. Kemet arranges special-access permits for pre-opening entry and, in some cases, after-hours private visits to monuments including the Valley of the Kings and Karnak Temple. These require advance planning — typically four to eight weeks — and availability depends on the site and season. Contact us to discuss what is possible for your dates.",
       },
     ],
-    hero: { alt: "Private dahabiya at sunset on the Nile between Luxor and Aswan" },
+    hero: {
+      alt: "A private Nubian terrace above the Nile at sunset in Aswan",
+      src: "/images/aswan/aswan-nubian-terrace-sunset.webp",
+      width: 736,
+      height: 1275,
+    },
     lastReviewed: "2026-01",
     relationships: {
       tours: tour("tour-10-day", "tour-7-day"),
@@ -327,7 +347,12 @@ export const collections: Collection[] = [
         a: "Yes. Egypt is a child-friendly culture — Egyptians are warmly attentive to children, and the major tourist areas are safe for family travel. The practical considerations are heat management (especially for children under ten), pacing monument visits carefully, and hydration. A private guide means you never need to worry about logistics, crowds or navigation — you simply focus on the experience.",
       },
     ],
-    hero: { alt: "Family standing at the base of the Great Pyramid of Giza" },
+    hero: {
+      alt: "The Great Sphinx and a pyramid of Giza, a highlight for families",
+      src: "/images/giza/giza-sphinx-and-pyramid.webp",
+      width: 736,
+      height: 920,
+    },
     lastReviewed: "2026-01",
     relationships: {
       tours: tour("tour-7-day", "tour-4-day", "tour-fayoum", "tour-giza-museum"),

@@ -94,8 +94,11 @@ export const experiences: Experience[] = [
       },
     ],
     hero: {
-      alt: "The Great Pyramid of Giza silhouetted against an amber dawn sky",
+      alt: "A decorated camel resting before the Pyramids of Giza in warm early light",
       label: "Sunrise at the Giza Pyramids",
+      src: "/images/giza/giza-camel-pyramids-sunrise.webp",
+      width: 736,
+      height: 736,
     },
     seo: {
       title: "Sunrise at the Giza Pyramids — Private Dawn Experience | Kemet Egypt",
@@ -187,8 +190,11 @@ export const experiences: Experience[] = [
       },
     ],
     hero: {
-      alt: "A traditional felucca with a white lateen sail on the Nile near Aswan",
+      alt: "A traditional felucca under white lateen sail on the Nile at Aswan",
       label: "Private Felucca on the Nile",
+      src: "/images/aswan/aswan-felucca-sailing-nile.webp",
+      width: 736,
+      height: 981,
     },
     seo: {
       title: "Private Felucca Sailing on the Nile, Aswan — Exclusive Charter | Kemet Egypt",
@@ -279,8 +285,11 @@ export const experiences: Experience[] = [
       },
     ],
     hero: {
-      alt: "The medieval lanes of Islamic Cairo with a minaret visible above the rooftops",
+      alt: "A lantern-lit medieval lane of Islamic Cairo along Al-Muizz Street, minarets above the rooftops",
       label: "Old Cairo Walking Experience",
+      src: "/images/cairo/cairo-al-muizz-street.webp",
+      width: 736,
+      height: 1104,
     },
     seo: {
       title: "Old Cairo Walking Experience — Private Historian Tour | Kemet Egypt",
@@ -465,8 +474,11 @@ export const experiences: Experience[] = [
       },
     ],
     hero: {
-      alt: "The Avenue of Sphinxes in Luxor illuminated at night, leading to the pylon of Luxor Temple",
+      alt: "The colonnade of Luxor Temple with its seated royal statues, floodlit in the evening",
       label: "Luxor Temple by Night",
+      src: "/images/luxor/luxor-temple-colonnade.webp",
+      width: 736,
+      height: 920,
     },
     seo: {
       title: "Luxor Temple by Night — Avenue of Sphinxes Illuminated Experience | Kemet Egypt",

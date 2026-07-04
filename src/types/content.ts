@@ -220,6 +220,9 @@ export interface Tour {
   domain?: "tour";
   taxonomy?: TourTaxonomy;
   relationships?: TourRelationships;
+  /** Hero/card photography (optional; placeholder is shown until supplied). */
+  hero?: MediaPlaceholder;
+  gallery?: MediaPlaceholder[];
 }
 
 // --- Future domains (modelled now; data/pages added later) -----------------

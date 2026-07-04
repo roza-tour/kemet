@@ -1,7 +1,9 @@
 ---
 // PageHero — the centred header used by every inner page: breadcrumb, an
-// optional gold symbol, the H1 and a short lede.
+// optional gold symbol, the H1 and a short lede. An optional hero image renders
+// full-width beneath the header when `heroSrc` is supplied.
 import SymbolIcon from "@/components/SymbolIcon.astro";
+import Placeholder from "@/components/Placeholder.astro";
 
 interface Props {
   title: string;
@@ -12,8 +14,16 @@ interface Props {
   crumb?: string;
   /** Link prefix back to the site root ("" at root, "../" in subfolders). */
   base?: string;
+  /** Optional hero photo shown beneath the header. */
+  heroSrc?: string;
+  heroAlt?: string;
+  heroWidth?: number;
+  heroHeight?: number;
 }
-const { title, text = "", symbol = "", crumb = "", base = "" } = Astro.props;
+const {
+  title, text = "", symbol = "", crumb = "", base = "",
+  heroSrc, heroAlt, heroWidth, heroHeight,
+} = Astro.props;
 ---
 <header class="phero">
   <div class="wrap">
@@ -27,3 +37,10 @@ const { title, text = "", symbol = "", crumb = "", base = "" } = Astro.props;
     {text && <p>{text}</p>}
   </div>
 </header>
+{heroSrc && (
+  <section style="padding-top:18px;padding-bottom:0">
+    <div class="wrap">
+      <Placeholder class="tgallery reveal" src={heroSrc} alt={heroAlt ?? title} width={heroWidth} height={heroHeight} loading="eager" />
+    </div>
+  </section>
+)}

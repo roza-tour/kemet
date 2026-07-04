@@ -14,7 +14,13 @@ const href = `${base}${tour.slug}.html`;
 <a class="jcard reveal" href={href} data-tilt aria-label={`${tour.title} — view journey`}>
   <div style="position:relative">
     <span class="tag">{tour.tag}</span>
-    <Placeholder label={tour.title} />
+    <Placeholder
+      label={tour.title}
+      src={tour.hero?.src}
+      alt={tour.hero?.alt}
+      width={tour.hero?.width}
+      height={tour.hero?.height}
+    />
   </div>
   <div class="body">
     <h3>{tour.title}</h3>

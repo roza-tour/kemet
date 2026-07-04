@@ -1,16 +1,50 @@
 ---
-// Styled gradient image placeholder. Stands in for real photography until
-// images are supplied (drop files into public/ and replace these blocks).
+// Image frame. When a `src` is supplied it renders a real, lazy-loaded image
+// that fills the frame (object-fit: cover, honouring the context aspect-ratio).
+// With no `src` it falls back to the branded gradient placeholder — so any
+// page that has not yet been assigned photography still renders correctly.
 import BrandMark from "@/components/BrandMark.astro";
 
 interface Props {
   class?: string;
   label?: string;
+  /** Root-absolute image path, e.g. "/images/giza/giza-great-pyramid.webp". */
+  src?: string;
+  /** Accessible, descriptive alt text (required for real images). */
+  alt?: string;
+  /** Intrinsic dimensions — improve CLS and are good SEO practice. */
+  width?: number;
+  height?: number;
+  /** Eager-load above-the-fold heroes; defaults to lazy. */
+  loading?: "lazy" | "eager";
 }
-const { class: className = "", label = "Image" } = Astro.props;
+const {
+  class: className = "",
+  label = "Image",
+  src,
+  alt,
+  width,
+  height,
+  loading = "lazy",
+} = Astro.props;
 ---
 <div class={`frame ${className}`}>
-  <div class="glow"></div>
-  <div class="wm"><BrandMark class="" /></div>
-  <span class="lab">{label}</span>
+  {src ? (
+    <img
+      src={src}
+      alt={alt ?? label}
+      title={alt ?? label}
+      width={width}
+      height={height}
+      loading={loading}
+      decoding="async"
+      style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block"
+    />
+  ) : (
+    <>
+      <div class="glow"></div>
+      <div class="wm"><BrandMark class="" /></div>
+      <span class="lab">{label}</span>
+    </>
+  )}
 </div>

@@ -38,7 +38,15 @@ const hub = hubFor("guide");
 {guide.hero && (
   <section style="padding-top:18px;padding-bottom:0">
     <div class="wrap">
-      <Placeholder class="tgallery reveal" label={guide.hero.label ?? guide.title} />
+      <Placeholder
+        class="tgallery reveal"
+        label={guide.hero.label ?? guide.title}
+        src={guide.hero.src}
+        alt={guide.hero.alt}
+        width={guide.hero.width}
+        height={guide.hero.height}
+        loading="eager"
+      />
     </div>
   </section>
 )}

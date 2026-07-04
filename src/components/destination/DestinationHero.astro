@@ -33,7 +33,15 @@ const hub = hubFor("destination");
 {destination.hero && (
   <section style="padding-top:18px;padding-bottom:0">
     <div class="wrap">
-      <Placeholder class="tgallery reveal" label={destination.hero.label ?? destination.title} />
+      <Placeholder
+        class="tgallery reveal"
+        label={destination.hero.label ?? destination.title}
+        src={destination.hero.src}
+        alt={destination.hero.alt}
+        width={destination.hero.width}
+        height={destination.hero.height}
+        loading="eager"
+      />
     </div>
   </section>
 )}

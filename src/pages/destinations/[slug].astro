@@ -158,6 +158,26 @@ const jsonld = entitySchema("destination", dest);
 
     <Frieze />
 
+    {dest.gallery && dest.gallery.length > 0 && (
+      <section>
+        <div class="wrap">
+          <SectionHeader eyebrow="Gallery" title={`${dest.title} in photographs`} />
+          <div class="grid-2">
+            {dest.gallery.map((g) => (
+              <Placeholder
+                class="tgallery reveal"
+                src={g.src}
+                alt={g.alt}
+                width={g.width}
+                height={g.height}
+                label={g.label ?? dest.title}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
     {tours.length > 0 && (
       <section>
         <div class="wrap">
