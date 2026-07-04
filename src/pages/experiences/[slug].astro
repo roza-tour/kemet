@@ -89,7 +89,7 @@ const jsonld = entitySchema("experience", experience);
                 <div class="grid-2">
                   {experience.whatsIncluded && experience.whatsIncluded.length > 0 && (
                     <div>
-                      <h5>Included</h5>
+                      <h3>Included</h3>
                       <ul>
                         {experience.whatsIncluded.map((item) => <li>{item}</li>)}
                       </ul>
@@ -97,7 +97,7 @@ const jsonld = entitySchema("experience", experience);
                   )}
                   {experience.whatsExcluded && experience.whatsExcluded.length > 0 && (
                     <div>
-                      <h5>Not included</h5>
+                      <h3>Not included</h3>
                       <ul class="no">
                         {experience.whatsExcluded.map((item) => <li>{item}</li>)}
                       </ul>

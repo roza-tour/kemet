@@ -139,7 +139,7 @@ section{position:relative;padding:110px 0}
 .facts{margin:24px 0;border-top:1px solid var(--line);padding-top:20px}
 .facts div{display:flex;justify-content:space-between;font-size:.86rem;padding:7px 0;color:var(--muted)}
 .facts div b{color:var(--bone);font-weight:400}
-.inc h5{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin:6px 0 12px}
+.inc h3{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin:6px 0 12px}
 .inc ul{list-style:none}.inc li{position:relative;padding-left:24px;font-size:.88rem;color:var(--muted);margin-bottom:9px}
 .inc li::before{content:"\2713";position:absolute;left:0;color:var(--gold)}
 .inc .no li::before{content:"\2715";color:var(--muted-2)}

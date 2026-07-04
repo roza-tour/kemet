@@ -68,7 +68,8 @@ const essentialsFacts = [
 ].filter(Boolean) as Fact[];
 
 // Relationships — all derived from the registry, never hand-maintained.
-const tours = relatedTours(dest.id);
+// The tour grid is capped at six; the full catalogue lives on the tours hub.
+const tours = relatedTours(dest.id).slice(0, 6);
 const experiences = relatedExperiences(dest.id);
 const nearby = nearbyDestinations(dest);
 

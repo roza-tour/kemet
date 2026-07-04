@@ -619,7 +619,7 @@ export const tours: Tour[] = [
         a: "The main galleries, the grand staircase and the Tutankhamun collection are open to visitors. Your guide will focus on the highlights so the afternoon never feels rushed.",
       },
       {
-        q: "How much walking is involved?",
+        q: "How much walking does this day involve?",
         a: "A moderate amount across the plateau and through the museum galleries. We take it at your pace with rests in the shade.",
       },
     ],
@@ -1233,8 +1233,8 @@ export const tours: Tour[] = [
         a: "The road allows Edfu and Kom Ombo without committing to a cruise ship's fixed schedule, and keeps every night in a full-size hotel room. If you would rather sail, our Nile in Style cruise covers the same corridor by water.",
       },
       {
-        q: "Can Abu Simbel be added?",
-        a: "Yes — as an early-morning excursion from Aswan on the final day by road convoy, or by short flight. Tell us at booking so we can hold the timing.",
+        q: "Does this journey include Abu Simbel?",
+        a: "Not by default — but it slots in cleanly as an early-morning excursion from Aswan on the final day, by road convoy or short flight. Tell us at booking so we can hold the timing.",
       },
       {
         q: "How do I reach Luxor to start?",

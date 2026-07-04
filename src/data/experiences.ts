@@ -1028,6 +1028,15 @@ export const experiences: Experience[] = [
       width: 736,
       height: 1308,
     },
+    gallery: [
+      {
+        alt: "A still rock pool hidden in a granite wadi of the Sinai interior",
+        label: "Sinai wadi",
+        src: "/images/redsea/sinai-wadi-rock-pool.webp",
+        width: 719,
+        height: 800,
+      },
+    ],
     seo: {
       title: "Sinai Desert Evening & Stargazing, Sharm El Sheikh — Bedouin Dinner | Kemet Egypt",
       description:
