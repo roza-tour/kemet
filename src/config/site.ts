@@ -12,7 +12,7 @@
 const env = import.meta.env;
 
 /** Live origin, no trailing slash. Must match `site` in astro.config.mjs. */
-export const SITE_URL = (env.PUBLIC_SITE_URL ?? "https://kemetvoyages.com").replace(/\/+$/, "");
+export const SITE_URL = (env.PUBLIC_SITE_URL ?? "https://kemet-travel.com").replace(/\/+$/, "");
 
 /** Pricing/format constants. */
 export const CURRENCY = "EUR";

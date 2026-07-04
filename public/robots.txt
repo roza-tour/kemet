@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # @astrojs/sitemap emits sitemap-index.xml at the site root.
-Sitemap: https://kemetvoyages.com/sitemap-index.xml
+Sitemap: https://kemet-travel.com/sitemap-index.xml
