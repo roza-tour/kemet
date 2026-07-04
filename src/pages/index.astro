@@ -7,7 +7,10 @@ import SymbolIcon from "@/components/SymbolIcon.astro";
 import TourCard from "@/components/TourCard.astro";
 import { multidayTours, dayTours } from "@/data/tours";
 import { identities } from "@/data/identities";
+import { destinations } from "@/data/destinations";
+import { getExperience } from "@/data/experiences";
 import { breadcrumb } from "@/schemas/jsonld";
+import { pad2 } from "@/utils/format";
 
 // Six featured cards: the four flagship multi-day journeys plus two day tours.
 const featured = [...multidayTours.slice(0, 4), ...dayTours.slice(0, 2)];
@@ -19,6 +22,44 @@ const pillars: ReadonlyArray<readonly [string, string, string, string]> = [
   ["lotus", "Cuisine", "From koshari and molokhia to kunafa — the everyday flavours of Egypt, properly guided.", "cuisine.html"],
   ["eye", "Culture", "The gods, hieroglyphs and living crafts behind the monuments you walk through.", "culture.html"],
 ];
+
+// Signature experiences for the mosaic — curated picks with photography.
+const mosaicIds = [
+  "hot-air-balloon-luxor",
+  "sunrise-giza-pyramids",
+  "private-nile-dinner-cruise",
+  "red-sea-yacht-day",
+  "nubian-village-experience",
+] as const;
+const mosaic = mosaicIds
+  .map((id) => getExperience(id))
+  .filter((e): e is NonNullable<typeof e> => !!e?.hero?.src);
+const mosaicShape = ["tall", "wide", "", "", ""]; // grid spans per position
+const mosaicHook = [
+  "Drift above the Valley of the Kings as the sun rises over Thebes.",
+  "The plateau before it opens — silence, first light and 4,500 years.",
+  "A vessel reserved for your party alone as the city lights come on.",
+  "Ras Mohammed's coral walls from a charter that follows your day.",
+  "Hibiscus tea and henna in a family home above the river.",
+];
+
+// Destination strip — the five cities in catalogue order.
+const strip = destinations.filter((d) => d.hero?.src);
+const stripKicker: Record<string, string> = {
+  cairo: "The Capital",
+  giza: "The Wonder",
+  luxor: "The Open-Air Museum",
+  aswan: "The Gentle South",
+  alexandria: "The Mediterranean",
+};
+const stripLine: Record<string, string> = {
+  cairo: "Two great museums & a medieval city",
+  giza: "The last ancient wonder standing",
+  luxor: "Karnak & the Valley of the Kings",
+  aswan: "Philae, feluccas & Nubian colour",
+  alexandria: "Greco-Roman Egypt beside the sea",
+};
+const roman = ["i", "ii", "iii", "iv", "v", "vi"];
 
 const jsonld = breadcrumb([["Home", "index.html"]]);
 ---
@@ -32,14 +73,27 @@ const jsonld = breadcrumb([["Home", "index.html"]]);
 
   <Frieze />
 
-  <section>
+  {/* ── The premise — editorial overlap ── */}
+  <section style="padding-top:170px">
     <div class="wrap">
-      <SectionHeader
-        eyebrow="The Premise"
-        title="Egypt is not one country. It is eight."
-        text="Most itineraries show you one Egypt — a pyramid, a temple, a photograph — and move on. We plan for the others: the Nubian south around Aswan, Coptic and Islamic Cairo, the Greco-Roman Mediterranean at Alexandria, the Bedouin deserts of Sinai, the palm-shaded oasis of Siwa and the coral coast of the Red Sea. A single private journey can hold several of these worlds at once, led throughout by a licensed Egyptologist."
-      />
-      <div class="grid-4">
+      <div class="ov-grid">
+        <div class="ov-copy reveal">
+          <span class="eyebrow">01 · The Premise</span>
+          <h2>Egypt is not one country. It is eight.</h2>
+          <p>Most itineraries show you one Egypt — a pyramid, a temple, a photograph — and move on. We plan for the others: the Nubian south around Aswan, Coptic and Islamic Cairo, the Greco-Roman Mediterranean at Alexandria, the Bedouin deserts of Sinai, the palm-shaded oasis of Siwa and the coral coast of the Red Sea.</p>
+          <p>A single private journey can hold several of these worlds at once, led throughout by a licensed Egyptologist.</p>
+          <a class="more" href="identities.html">Discover the Eight Identities <i aria-hidden="true"></i></a>
+        </div>
+        <div class="ov-media reveal">
+          <div class="main">
+            <img src="/images/cairo/cairo-citadel-mosque-dusk.webp" alt="The Mosque of Muhammad Ali crowning the Saladin Citadel in Cairo at dusk" width="1600" height="1066" loading="lazy" decoding="async" />
+          </div>
+          <div class="over">
+            <img src="/images/aswan/aswan-felucca-sailing-nile.webp" alt="A felucca under white sail on the Nile at Aswan" width="736" height="981" loading="lazy" decoding="async" />
+          </div>
+        </div>
+      </div>
+      <div class="grid-4" style="margin-top:150px">
         {pillars.map(([sym, name, blurb, href]) => (
           <a class="tease reveal" href={href} data-tilt>
             <div class="sym"><SymbolIcon name={sym} /></div>
@@ -52,36 +106,105 @@ const jsonld = breadcrumb([["Home", "index.html"]]);
     </div>
   </section>
 
+  {/* ── Signature journeys ── */}
   <section style="padding-top:0">
     <div class="wrap">
       <SectionHeader
-        eyebrow="The Journeys"
+        eyebrow="02 · The Journeys"
         title="Signature private journeys"
         text="Twenty-five private itineraries, from a half-day at the Sphinx to a fourteen-day grand tour taking in the Nile and the Red Sea. Every price shown is per person and genuinely all-inclusive — your own Egyptologist guide, all entrance fees, daily lunch and private air-conditioned transfers, with no hidden extras."
       />
       <div class="grid-3">
         {featured.map((tour) => <TourCard tour={tour} />)}
       </div>
-      <div class="hero-actions" style="margin-top:46px">
+      <div class="hero-actions" style="margin-top:56px;justify-content:center;opacity:1;animation:none">
         <a href="tours.html" class="btn btn-solid">View all 25 journeys</a>
+      </div>
+    </div>
+  </section>
+
+  {/* ── Stats band ── */}
+  <section style="padding:0">
+    <div class="stats-band">
+      <div class="wrap">
+        <div class="stats-row">
+          <div class="stat reveal"><div class="num" data-count="25">0</div><div class="slab">Private Journeys</div></div>
+          <div class="stat reveal"><div class="num" data-count="8">0</div><div class="slab">Worlds of Egypt</div></div>
+          <div class="stat reveal"><div class="num" data-count="15">0</div><div class="slab">Curated Experiences</div></div>
+          <div class="stat reveal"><div class="num" data-count="100">0<sup>%</sup></div><div class="slab">Private &amp; Tailor-Made</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* ── Curated experiences mosaic ── */}
+  <section>
+    <div class="wrap">
+      <SectionHeader
+        eyebrow="03 · Curated Experiences"
+        title="Moments money can't usually buy"
+        text="Early-access mornings, private charters and evenings arranged with a standing relationship — fifteen experiences that turn sightseeing into memory."
+      />
+      <div class="mosaic">
+        {mosaic.map((exp, i) => (
+          <a class={`tile reveal ${mosaicShape[i] ?? ""}`} href={`experiences/${exp.slug}.html`}>
+            <img src={exp.hero!.src} alt={exp.hero!.alt} width={exp.hero!.width} height={exp.hero!.height} loading="lazy" decoding="async" />
+            <div class="tframe" aria-hidden="true"></div>
+            <div class="tcap">
+              <span class="k">{exp.location}</span>
+              <h3>{exp.title}</h3>
+              <p>{mosaicHook[i]}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* ── Destinations strip ── */}
+  <section style="padding-top:0">
+    <div class="wrap">
+      <SectionHeader
+        eyebrow="04 · The Destinations"
+        title="Five cities, five thousand years"
+      />
+    </div>
+    <div class="reveal">
+      <div class="dstrip" id="dstrip">
+        {strip.map((d, i) => (
+          <a class="dpost" href={`destinations/${d.slug}.html`}>
+            <img src={d.hero!.src} alt={d.hero!.alt} width={d.hero!.width} height={d.hero!.height} loading="lazy" decoding="async" />
+            <span class="didx" aria-hidden="true">{roman[i]}</span>
+            <div class="dcap">
+              <span class="k">{stripKicker[d.id] ?? ""}</span>
+              <h3>{d.title}</h3>
+              <span>{stripLine[d.id] ?? d.shortSummary}</span>
+            </div>
+          </a>
+        ))}
+      </div>
+      <div class="dstrip-nav">
+        <button id="dprev" aria-label="Previous destination">←</button>
+        <button id="dnext" aria-label="Next destination">→</button>
       </div>
     </div>
   </section>
 
   <Frieze />
 
+  {/* ── The eight worlds ── */}
   <section>
     <div class="wrap">
       <SectionHeader
-        eyebrow="The 8 Identities"
+        eyebrow="05 · The 8 Identities"
         title="The eight worlds of Egypt"
         text="Each of the eight worlds has its own colour, symbol and set of experiences — and most can be combined within a single trip. Together they are the map we travel by, and the reason no two Kemet journeys look quite the same."
       />
       <div class="gods-grid">
-        {identities.map((identity) => (
+        {identities.map((identity, i) => (
           <a class="god reveal" href="identities.html" data-tilt style={`--c:var(${identity.accentVar})`}>
             <div class="sym"><SymbolIcon name={identity.symbol} title={identity.name} /></div>
-            <h3>{identity.name}</h3>
+            <h3>{pad2(i + 1)} · {identity.name}</h3>
             <p>{identity.intro}</p>
           </a>
         ))}

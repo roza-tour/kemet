@@ -63,7 +63,7 @@ const pageLd = jsonld ? (Array.isArray(jsonld) ? jsonld : [jsonld]) : [];
   {pageLd.map((ld) => <script type="application/ld+json" is:inline set:html={JSON.stringify(ld)} />)}
 </head>
 <body>
-  <div class="stars" aria-hidden="true"></div>
+  <canvas id="dust" aria-hidden="true"></canvas>
   <SvgDefs />
   <Nav active={active} base={base} />
   <main><slot /></main>

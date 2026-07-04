@@ -1400,3 +1400,7 @@ export const experiences: Experience[] = [
     },
   },
 ];
+
+export function getExperience(slug: string): Experience | undefined {
+  return experiences.find((e) => e.slug === slug);
+}
