@@ -29,10 +29,10 @@ const wa = whatsappLink("Hello Kemet — I'd like to plan a journey to Egypt.");
       </div>
       <div class="foot-col">
         <h5>Journeys</h5>
-        {multidayTours.map((t) => (
+        {multidayTours.slice(0, 6).map((t) => (
           <a href={`${base}${t.slug}.html`}>{t.title}</a>
         ))}
-        <a href={`${base}tours.html`}>All day tours</a>
+        <a href={`${base}tours.html`}>All 25 journeys</a>
       </div>
       <div class="foot-col">
         <h5>{footerCompany.heading}</h5>

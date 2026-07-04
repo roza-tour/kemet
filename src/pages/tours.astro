@@ -12,15 +12,15 @@ const jsonld = [
   breadcrumb([["Home", "index.html"], ["Tours", "tours.html"]]),
   ...collectionSchema(
     "Egypt Tours & Private Journeys",
-    "Twelve private Egypt tours — multi-day journeys and full-day experiences.",
+    "Twenty-five private Egypt tours — Nile cruises, multi-day journeys, Red Sea escapes and full-day experiences.",
     "tours.html",
     tours.map((t) => ({ title: t.title, slug: t.slug, domain: "tour" })),
   ),
 ];
 ---
 <Base
-  title="Egypt Tours & Nile Cruises — 12 Private Journeys | Kemet"
-  description="Twelve private Egypt tours by Kemet — multi-day journeys with Nile cruises and sleeper trains, plus full- and half-day tours of Giza, Saqqara, Cairo and Alexandria. EUR, per person."
+  title="Egypt Tours & Nile Cruises — 25 Private Journeys | Kemet"
+  description="Twenty-five private Egypt tours by Kemet — Nile cruises, honeymoon and family journeys, Red Sea escapes, Abu Simbel and day tours of Giza, Saqqara, Cairo and Alexandria. EUR, per person."
   active="tours.html"
   jsonld={jsonld}
 >
@@ -28,7 +28,7 @@ const jsonld = [
     crumb="Tours"
     symbol="ankh"
     title="The Journeys"
-    text="Twelve private itineraries across Egypt. Prices are per person in euros and already include our guiding, entrance fees, lunches and private transfers."
+    text="Twenty-five private itineraries across Egypt. Prices are per person in euros and already include our guiding, entrance fees, lunches and private transfers."
     heroSrc="/images/giza/giza-sound-and-light-show.webp"
     heroAlt="The Sound and Light show illuminating the Pyramids of Giza after dark"
     heroWidth={1200}
@@ -40,7 +40,7 @@ const jsonld = [
       <SectionHeader
         eyebrow="Multi-day"
         title="Signature journeys"
-        text="Three to ten days, with five-star hotels and — on the longest — a three-night Nile cruise between Aswan and Luxor."
+        text="Two to fourteen days — five-star hotels, Nile cruises between Aswan and Luxor, honeymoon and family journeys, and Red Sea escapes to close the trip."
       />
       <div class="grid-3">
         {multidayTours.map((tour) => <TourCard tour={tour} />)}
@@ -54,8 +54,8 @@ const jsonld = [
     <div class="wrap">
       <SectionHeader
         eyebrow="Day tours"
-        title="Days out from Cairo"
-        text="Self-contained full, half and evening tours — perfect on their own or as additions to a longer stay."
+        title="Day tours & excursions"
+        text="Self-contained full, half and evening tours from Cairo and Aswan — perfect on their own or as additions to a longer stay."
       />
       <div class="grid-3">
         {dayTours.map((tour) => <TourCard tour={tour} />)}

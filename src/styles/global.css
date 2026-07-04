@@ -299,5 +299,9 @@ body.mcb-active .mcb[aria-hidden="true"]{display:flex}
   .custom-trip-cta .btn{width:100%}
   .mcb[aria-hidden="true"]{display:flex}
 }
+/* real photography — slow luxury zoom on card hover */
+.frame img{transition:transform .8s cubic-bezier(.22,.61,.36,1)}
+.jcard:hover .frame img{transform:scale(1.05)}
+
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}.wordmark{background-position:0 0}}
 :focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px}

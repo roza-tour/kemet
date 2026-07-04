@@ -9,7 +9,8 @@ import { multidayTours, dayTours } from "@/data/tours";
 import { identities } from "@/data/identities";
 import { breadcrumb } from "@/schemas/jsonld";
 
-const featured = [...multidayTours, ...dayTours.slice(0, 2)];
+// Six featured cards: the four flagship multi-day journeys plus two day tours.
+const featured = [...multidayTours.slice(0, 4), ...dayTours.slice(0, 2)];
 
 // [symbol, title, blurb, href] for the four section pillars.
 const pillars: ReadonlyArray<readonly [string, string, string, string]> = [
@@ -56,13 +57,13 @@ const jsonld = breadcrumb([["Home", "index.html"]]);
       <SectionHeader
         eyebrow="The Journeys"
         title="Signature private journeys"
-        text="Twelve private itineraries, from a half-day at the Sphinx to ten days down the Nile through Luxor and Aswan. Every price shown is per person and genuinely all-inclusive — your own Egyptologist guide, all entrance fees, daily lunch and private air-conditioned transfers, with no hidden extras."
+        text="Twenty-five private itineraries, from a half-day at the Sphinx to a fourteen-day grand tour taking in the Nile and the Red Sea. Every price shown is per person and genuinely all-inclusive — your own Egyptologist guide, all entrance fees, daily lunch and private air-conditioned transfers, with no hidden extras."
       />
       <div class="grid-3">
         {featured.map((tour) => <TourCard tour={tour} />)}
       </div>
       <div class="hero-actions" style="margin-top:46px">
-        <a href="tours.html" class="btn btn-solid">View all 12 tours</a>
+        <a href="tours.html" class="btn btn-solid">View all 25 journeys</a>
       </div>
     </div>
   </section>

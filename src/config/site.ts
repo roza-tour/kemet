@@ -42,7 +42,7 @@ export const site = {
   phoneDisplay: env.PUBLIC_CONTACT_PHONE ?? "+20 100 000 0000",
 
   description:
-    "Kemet designs private, luxury journeys through every layer of Egypt — twelve curated tours from Cairo and Giza to a 10-day Nile cruise, plus activities, cuisine and the country's eight cultural worlds.",
+    "Kemet designs private, luxury journeys through every layer of Egypt — twenty-five curated tours from Cairo and Giza to a 14-day grand tour, Nile cruises, the Red Sea, and the country's eight cultural worlds.",
 
   copyright: "© 2026 Kemet — Luxury Egypt Travel",
 } as const;

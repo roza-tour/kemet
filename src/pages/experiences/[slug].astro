@@ -11,6 +11,7 @@
 import Base from "@/layouts/Base.astro";
 import Frieze from "@/components/Frieze.astro";
 import Faq from "@/components/Faq.astro";
+import Placeholder from "@/components/Placeholder.astro";
 import SectionHeader from "@/components/SectionHeader.astro";
 import TourCard from "@/components/TourCard.astro";
 import FactList from "@/components/destination/FactList.astro";
@@ -164,6 +165,26 @@ const jsonld = entitySchema("experience", experience);
     </section>
 
     <Frieze />
+
+    {experience.gallery && experience.gallery.length > 0 && (
+      <section>
+        <div class="wrap">
+          <SectionHeader eyebrow="Gallery" title="In photographs" />
+          <div class="grid-2">
+            {experience.gallery.map((g) => (
+              <Placeholder
+                class="tgallery reveal"
+                src={g.src}
+                alt={g.alt}
+                width={g.width}
+                height={g.height}
+                label={g.label ?? experience.title}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
 
     {relDestinations.length > 0 && (
       <section>
