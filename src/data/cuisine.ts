@@ -34,18 +34,18 @@ export const savoury: Dish[] = [
 export const sweets: Dish[] = [
   {
     name: "Kunafa",
-    note: "Shredded pastry over sweet cheese or cream, soaked in syrup.",
+    note: "Fine shredded pastry over sweet cheese or cream, baked crisp and drenched in syrup — a centrepiece of Ramadan tables and celebrations.",
   },
   {
     name: "Basbousa",
-    note: "Syrup-soaked semolina cake, crowned with an almond.",
+    note: "Syrup-soaked semolina cake, tender and grainy, crowned with an almond and often scented with coconut or orange-blossom water.",
   },
   {
     name: "Om Ali",
-    note: "Warm pastry-and-milk pudding with nuts and raisins.",
+    note: "Egypt's warm bread-and-milk pudding baked with nuts and raisins — comfort food wrapped in a famous medieval palace legend.",
   },
   {
     name: "Qatayef",
-    note: "Stuffed pancakes of nuts or cream, a Ramadan classic.",
+    note: "Folded pancakes stuffed with nuts or sweet cream, then fried or baked in syrup — made almost exclusively during Ramadan.",
   },
 ];
