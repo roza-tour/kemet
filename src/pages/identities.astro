@@ -26,8 +26,22 @@ const jsonld = breadcrumb([["Home", "index.html"], ["The 8 Identities", "identit
       {identities.map((identity, i) => (
         <div class={`eg-row reveal${i % 2 ? " rev" : ""}`} style={`--c:var(${identity.accentVar})`}>
           <div class="eg-media">
-            <div class="g"><SymbolIcon name={identity.symbol} title={identity.name} /></div>
-            <span class="lab">Image</span>
+            {identity.image?.src ? (
+              <img
+                src={identity.image.src}
+                alt={identity.image.alt}
+                width={identity.image.width}
+                height={identity.image.height}
+                loading="lazy"
+                decoding="async"
+                style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"
+              />
+            ) : (
+              <>
+                <div class="g"><SymbolIcon name={identity.symbol} title={identity.name} /></div>
+                <span class="lab">Image</span>
+              </>
+            )}
           </div>
           <div class="eg-info">
             <div class="ix">{pad2(i + 1)} · {identity.name}</div>

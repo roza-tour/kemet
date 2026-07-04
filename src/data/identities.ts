@@ -13,6 +13,12 @@ export const identities: Identity[] = [
     accentVar: "--pharaonic",
     intro:
       "The deep current beneath everything — five thousand years of temples, tombs and gods along the Nile.",
+    image: {
+      src: "/images/luxor/luxor-karnak-hypostyle-hall.webp",
+      alt: "The great hypostyle hall of Karnak Temple at Luxor",
+      width: 652,
+      height: 980,
+    },
     experiences: [
       "Dawn at the Pyramids of Giza before the crowds",
       "The Valley of the Kings with an Egyptologist",
@@ -27,6 +33,12 @@ export const identities: Identity[] = [
     accentVar: "--nubian",
     intro:
       "The bright south of Egypt — riverside villages of painted houses, drum rhythms and a living language older than Arabic.",
+    image: {
+      src: "/images/aswan/aswan-nubian-village-nile.webp",
+      alt: "A blue-painted Nubian village above the Nile at Aswan",
+      width: 512,
+      height: 640,
+    },
     experiences: [
       "A felucca to a Nubian village above Aswan",
       "Henna, hibiscus tea and home-cooked Nubian food",
@@ -41,6 +53,12 @@ export const identities: Identity[] = [
     accentVar: "--coptic",
     intro:
       "Egypt's Christian heritage — desert monasteries, ancient churches and a liturgy still sung in the language of the pharaohs.",
+    image: {
+      src: "/images/alexandria/coptic-cathedral-alexandria.webp",
+      alt: "The twin bell towers of a Coptic Orthodox cathedral in Alexandria",
+      width: 1000,
+      height: 600,
+    },
     experiences: [
       "The Hanging Church and the lanes of Old Cairo",
       "Abu Serga, linked to the Holy Family's journey",
@@ -55,6 +73,12 @@ export const identities: Identity[] = [
     accentVar: "--islamic",
     intro:
       "Medieval Cairo in stone — minarets and madrasas, the Citadel, and bazaars that have traded for a thousand years.",
+    image: {
+      src: "/images/cairo/cairo-al-muizz-street.webp",
+      alt: "A lantern-lit medieval lane of Al-Muizz Street in Islamic Cairo",
+      width: 736,
+      height: 1104,
+    },
     experiences: [
       "Saladin's Citadel and the Mosque of Muhammad Ali",
       "Al-Muizz street at dusk, lit minaret by minaret",
@@ -69,6 +93,12 @@ export const identities: Identity[] = [
     accentVar: "--bedouin",
     intro:
       "The desert peoples of Sinai and the Eastern Desert — campfire hospitality, star-deep skies and trails only locals know.",
+    image: {
+      src: "/images/redsea/sinai-wadi-rock-pool.webp",
+      alt: "A still rock pool hidden in a granite wadi of the Sinai interior",
+      width: 719,
+      height: 800,
+    },
     experiences: [
       "Tea with a Bedouin host in a desert camp",
       "Star-gazing far from any city light",
@@ -83,6 +113,12 @@ export const identities: Identity[] = [
     accentVar: "--greco",
     intro:
       "Alexander's Mediterranean Egypt — Hellenistic cities, Roman ruins and the memory of the great Library.",
+    image: {
+      src: "/images/alexandria/alexandria-pompeys-pillar.webp",
+      alt: "Pompey's Pillar rising from the ruins of the Serapeum in Alexandria",
+      width: 764,
+      height: 458,
+    },
     experiences: [
       "The Catacombs of Kom El Shoqafa, Alexandria",
       "Pompey's Pillar and the Greco-Roman Museum",
@@ -111,6 +147,12 @@ export const identities: Identity[] = [
     accentVar: "--redsea",
     intro:
       "Egypt's coral coast — warm clear water, reef walls and desert mountains meeting the sea at Hurghada and Marsa Alam.",
+    image: {
+      src: "/images/redsea/red-sea-blue-hole.webp",
+      alt: "Snorkellers over the deep blue circle of a Red Sea reef hole",
+      width: 736,
+      height: 736,
+    },
     experiences: [
       "Snorkelling or diving a Red Sea reef",
       "A liveaboard to the offshore islands (on request)",

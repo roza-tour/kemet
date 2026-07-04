@@ -467,6 +467,8 @@ export interface Identity {
   accentVar: string;
   intro: string;
   experiences: string[];
+  /** Representative photograph; the symbol placeholder renders when absent. */
+  image?: MediaPlaceholder;
 }
 
 export interface Activity {

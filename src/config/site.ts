@@ -38,7 +38,7 @@ export const site = {
   // Deploy-time values (env-driven, with placeholders as fallback)
   domain: SITE_URL,
   whatsapp: env.PUBLIC_WHATSAPP ?? "201000000000", // international format, digits only
-  email: env.PUBLIC_CONTACT_EMAIL ?? "hello@kemetvoyages.com",
+  email: env.PUBLIC_CONTACT_EMAIL ?? "info@kemet-travel.com",
   phoneDisplay: env.PUBLIC_CONTACT_PHONE ?? "+20 100 000 0000",
 
   description:
