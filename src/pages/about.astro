@@ -6,6 +6,7 @@ import PageHero from "@/components/PageHero.astro";
 import SectionHeader from "@/components/SectionHeader.astro";
 import Frieze from "@/components/Frieze.astro";
 import TrustSignals from "@/components/trust/TrustSignals.astro";
+import CustomerGallery from "@/components/CustomerGallery.astro";
 import OurProcess from "@/components/trust/OurProcess.astro";
 import BookingConfidence from "@/components/trust/BookingConfidence.astro";
 import CTABlock from "@/components/trust/CTABlock.astro";
@@ -92,6 +93,9 @@ const jsonld = aboutPageSchema();
       <TrustSignals />
     </div>
   </section>
+
+  {/* Real guests, real moments */}
+  <CustomerGallery eyebrow="Our Travellers" />
 
   <Frieze />
 

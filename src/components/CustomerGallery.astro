@@ -1,0 +1,57 @@
+---
+// CustomerGallery — a slow, continuous filmstrip of real Kemet guests across
+// Egypt. The strip drifts endlessly (sequence rendered twice for a seamless
+// loop), pauses on hover, and fades at the edges. Root-absolute image paths
+// keep it reusable from any route depth. Reduced-motion freezes the strip.
+import SectionHeader from "@/components/SectionHeader.astro";
+
+interface Props {
+  /** Editorial section number for the watermark numeral. */
+  no?: string;
+  eyebrow?: string;
+}
+const { no, eyebrow = "Our Travellers" } = Astro.props;
+
+const photos: Array<{ src: string; alt: string }> = [
+  { src: "/images/clients/clients-giza-selfie.webp", alt: "A group of Kemet guests taking a laughing selfie in front of the Pyramids of Giza" },
+  { src: "/images/clients/clients-citadel-steps.webp", alt: "Kemet guests gathered on the stone steps of the Saladin Citadel in Cairo" },
+  { src: "/images/clients/clients-giza-wedding.webp", alt: "A newly-wed couple celebrating at the Pyramids of Giza with their Kemet guide" },
+  { src: "/images/clients/clients-sphinx-group.webp", alt: "Guests smiling together before the Great Sphinx and the pyramids at Giza" },
+  { src: "/images/clients/clients-nile-gardens.webp", alt: "A family of Kemet guests in the riverside gardens beside the Nile" },
+  { src: "/images/clients/clients-giza-jump.webp", alt: "Guests jumping for joy above the Giza pyramid panorama" },
+  { src: "/images/clients/clients-mosque-courtyard.webp", alt: "Three guests in the marble courtyard of a historic Cairo mosque" },
+  { src: "/images/clients/clients-giza-panorama.webp", alt: "Guests at the Giza panorama viewpoint with all the pyramids behind them" },
+  { src: "/images/clients/clients-citadel-performer.webp", alt: "Guests sharing a laugh with a traditional performer at the Mosque of Muhammad Ali" },
+  { src: "/images/clients/clients-dahshur-bent-pyramid.webp", alt: "Kemet guests at the Bent Pyramid of Dahshur" },
+  { src: "/images/clients/clients-saqqara-family.webp", alt: "A large family group celebrating in front of the Step Pyramid of Saqqara" },
+  { src: "/images/clients/clients-giza-friends.webp", alt: "Three friends at the Giza plateau with camel riders in the distance" },
+  { src: "/images/clients/clients-sphinx-laughs.webp", alt: "A group of guests laughing beside the Great Sphinx" },
+  { src: "/images/clients/clients-cave-church.webp", alt: "Guests visiting the rock-cut Cave Church of Cairo" },
+  { src: "/images/clients/clients-red-pyramid.webp", alt: "A family cheering at the base of the Red Pyramid of Dahshur" },
+  { src: "/images/clients/clients-group-sign.webp", alt: "A joyful group of guests holding a 'You should be here' sign at Giza" },
+];
+---
+<section class="cgal-sec">
+  <div class="wrap">
+    <SectionHeader
+      no={no}
+      eyebrow={eyebrow}
+      title="Real journeys, real joy"
+      text="Not stock photography — our guests, at the moments Egypt became theirs. From first selfies at the Great Pyramid to weddings on the plateau, these are the journeys we design."
+    />
+  </div>
+  <div class="cgal reveal" role="img" aria-label="A moving strip of photographs of Kemet guests travelling across Egypt">
+    <div class="cgal-track">
+      {photos.map((p) => (
+        <figure class="cgal-item">
+          <img src={p.src} alt={p.alt} height="360" loading="lazy" decoding="async" />
+        </figure>
+      ))}
+      {photos.map((p) => (
+        <figure class="cgal-item" aria-hidden="true">
+          <img src={p.src} alt="" height="360" loading="lazy" decoding="async" />
+        </figure>
+      ))}
+    </div>
+  </div>
+</section>

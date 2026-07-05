@@ -17,8 +17,10 @@ body{color:var(--bone);font-family:var(--ff-body);font-weight:300;line-height:1.
 body::after{content:"";position:fixed;inset:0;z-index:200;pointer-events:none;opacity:.045;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 img{max-width:100%;display:block}a{color:inherit;text-decoration:none}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
-/* golden dust — site-wide drifting star canvas (drawn by enhance.ts) */
-#dust{position:fixed;inset:0;z-index:1;pointer-events:none;mix-blend-mode:screen}
+/* golden dust — site-wide drifting star canvas (drawn by enhance.ts).
+   Strictly a BACKGROUND layer: z-index 0 beneath main/nav/footer (z 2+), so
+   stars can never paint above images, text, cards or any UI element. */
+#dust{position:fixed;inset:0;z-index:0;pointer-events:none;mix-blend-mode:screen}
 main,nav,footer{position:relative;z-index:2}
 .eyebrow{font-family:var(--ff-body);font-weight:400;font-size:.66rem;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);display:inline-block}
 h1,h2,h3{font-family:var(--ff-display);font-weight:300;line-height:1.1;letter-spacing:.005em}
@@ -419,6 +421,19 @@ body.mcb-active .mcb[aria-hidden="true"]{display:flex}
 
 /* scroll progress — a gold hairline crossing the top of the viewport */
 #sprog{position:fixed;top:0;left:0;height:2px;width:100%;z-index:190;background:linear-gradient(90deg,var(--gold-deep),var(--gold),var(--gold-bright));transform-origin:left;transform:scaleX(0);pointer-events:none}
+
+/* customer gallery — slow endless filmstrip of real guests */
+.cgal-sec{padding-bottom:110px}
+.cgal{overflow:hidden;padding:14px 0 28px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.cgal-track{display:flex;gap:22px;width:max-content;align-items:flex-start;animation:friezemove 90s linear infinite}
+.cgal:hover .cgal-track{animation-play-state:paused}
+.cgal-item{margin:0;flex:0 0 auto;position:relative;overflow:hidden;border:1px solid var(--line);transition:transform .7s cubic-bezier(.22,.61,.36,1),border-color .7s,box-shadow .7s}
+.cgal-item:nth-child(even){margin-top:26px}
+.cgal-item img{display:block;height:360px;width:auto;transition:transform 1.4s cubic-bezier(.22,.61,.36,1)}
+.cgal-item:hover{transform:translateY(-8px);border-color:var(--line-2);box-shadow:0 40px 80px -30px rgba(0,0,0,.85)}
+.cgal-item:hover img{transform:scale(1.05)}
+.cgal-item::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 70%,rgba(10,8,5,.35));pointer-events:none}
+@media(max-width:680px){.cgal-item img{height:250px}.cgal-item:nth-child(even){margin-top:16px}}
 
 /* magnetic buttons — JS drives translate; keep it composable */
 .btn,.nav-cta{will-change:transform}
