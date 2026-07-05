@@ -2,7 +2,6 @@
 import Base from "@/layouts/Base.astro";
 import Hero from "@/components/Hero.astro";
 import Frieze from "@/components/Frieze.astro";
-import Ribbon from "@/components/Ribbon.astro";
 import CustomerGallery from "@/components/CustomerGallery.astro";
 import SectionHeader from "@/components/SectionHeader.astro";
 import SymbolIcon from "@/components/SymbolIcon.astro";
@@ -131,10 +130,10 @@ const jsonld = breadcrumb([["Home", "index.html"]]);
     <div class="stats-band">
       <div class="wrap">
         <div class="stats-row">
-          <div class="stat reveal"><div class="num" data-count="25">0</div><div class="slab">Private Journeys</div></div>
-          <div class="stat reveal"><div class="num" data-count="8">0</div><div class="slab">Worlds of Egypt</div></div>
-          <div class="stat reveal"><div class="num" data-count="15">0</div><div class="slab">Curated Experiences</div></div>
-          <div class="stat reveal"><div class="num" data-count="100">0<sup>%</sup></div><div class="slab">Private &amp; Tailor-Made</div></div>
+          <div class="stat"><div class="num">25</div><div class="slab">Private Journeys</div></div>
+          <div class="stat"><div class="num">8</div><div class="slab">Worlds of Egypt</div></div>
+          <div class="stat"><div class="num">15</div><div class="slab">Curated Experiences</div></div>
+          <div class="stat"><div class="num">100<sup>%</sup></div><div class="slab">Private &amp; Tailor-Made</div></div>
         </div>
       </div>
     </div>
@@ -198,7 +197,7 @@ const jsonld = breadcrumb([["Home", "index.html"]]);
   {/* ── Our travellers — real guests, real moments ── */}
   <CustomerGallery no="05" eyebrow="05 · Our Travellers" />
 
-  <Ribbon />
+  <Frieze />
 
   {/* ── The eight worlds ── */}
   <section>

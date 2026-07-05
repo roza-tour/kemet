@@ -1,13 +1,8 @@
 ---
-// Frieze — a thin hairline band of gold glyphs between sections, now an
-// endless, slow marquee. The run is rendered twice so the loop is seamless;
-// reduced-motion freezes it into the original static band.
+// Frieze — a thin, static hairline band of gold glyphs between sections.
 import SymbolIcon from "@/components/SymbolIcon.astro";
-const glyphs = ["ankh", "eye", "scarab", "lotus", "horus", "sun", "ankh", "eye", "scarab", "lotus", "horus", "sun"];
+const glyphs = ["ankh", "eye", "scarab", "lotus", "horus", "sun", "ankh", "eye", "scarab", "lotus"];
 ---
 <div class="frieze" aria-hidden="true">
-  <div class="frieze-track">
-    {glyphs.map((g) => <SymbolIcon name={g} />)}
-    {glyphs.map((g) => <SymbolIcon name={g} />)}
-  </div>
+  {glyphs.map((g) => <SymbolIcon name={g} />)}
 </div>

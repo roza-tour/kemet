@@ -1,29 +1,26 @@
 // ---------------------------------------------------------------------------
 // Progressive-enhancement script, inlined once by Base.astro.
 //
-// RC7 performance discipline: only effects that earn their cost survive.
-// - golden dust: fewer particles, no per-frame shadow blur, DPR capped
-// - reveals: IntersectionObserver + a single fail-open sweep on load
-// - tilt/glare: hover-scoped only; tracks the last element (no per-move
-//   document-wide queries)
-// - scroll progress: passive scroll listener, transform-only
-// - customer slider: discrete, timed page transitions (no continuous loop)
-// Removed: cursor orb, magnetic buttons, hero parallax/drift (hero is static).
-// Everything is disabled under prefers-reduced-motion.
+// Deliberately minimal (RC9). Pages render fully without JS — there are no
+// loading or scroll-reveal animations. This script only:
+//   - draws the ambient golden-dust background (canvas)
+//   - toggles the nav's glass background past a scroll threshold
+//   - shows the mobile conversion bar past a scroll threshold
+//   - drives the mobile menu button
+//   - wires the destination strip's prev/next arrows
+// All motion is disabled under prefers-reduced-motion.
 // ---------------------------------------------------------------------------
 
-const NAV_SCROLL_THRESHOLD = 40; // px scrolled before the nav gains its glass background
-const MCB_SCROLL_THRESHOLD = 600; // px scrolled before the mobile conversion bar appears
-const REVEAL_THRESHOLD = 0.08; // IntersectionObserver ratio for scroll-reveal
+const NAV_SCROLL_THRESHOLD = 40; // px before the nav gains its glass background
+const MCB_SCROLL_THRESHOLD = 600; // px before the mobile conversion bar appears
 const DUST_MAX = 120; // particle ceiling on large screens
 const DUST_DENSITY = 15000; // px² of viewport per particle
-const SLIDER_INTERVAL_MS = 6000; // customer slider auto-advance cadence (slow & calm)
 
 export const enhanceScript = `
 (function(){
   var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* golden dust — lightweight: no shadow blur, capped DPR, modest count */
+  /* ambient golden dust — lightweight background canvas */
   var cv=document.getElementById('dust');
   if(cv&&!reduce&&cv.getContext){var cx=cv.getContext('2d'),W,H,stars=[];
     var GOLD=['217,180,90','232,205,143','247,230,174'];
@@ -53,15 +50,11 @@ export const enhanceScript = `
           cx.moveTo(x,s.y-L);cx.lineTo(x,s.y+L);cx.stroke();}}
       requestAnimationFrame(fr);})(last);}
 
-  /* nav glass + mobile conversion bar + scroll progress — one passive listener */
-  var nav=document.getElementById('nav'),sp=null;
-  if(!reduce){sp=document.createElement('div');sp.id='sprog';document.body.appendChild(sp);}
-  var dh=0;function measure(){dh=document.documentElement.scrollHeight-innerHeight;}
-  measure();addEventListener('resize',measure);
+  /* nav glass + mobile conversion bar — one passive scroll listener */
+  var nav=document.getElementById('nav');
   addEventListener('scroll',function(){var y=scrollY;
     if(nav)nav.classList.toggle('scrolled',y>${NAV_SCROLL_THRESHOLD});
     document.body.classList.toggle('mcb-active',y>${MCB_SCROLL_THRESHOLD});
-    if(sp)sp.style.transform='scaleX('+(dh>0?y/dh:0)+')';
   },{passive:true});
 
   /* mobile menu */
@@ -70,53 +63,10 @@ export const enhanceScript = `
     nl.style.cssText=open?'display:flex;position:absolute;flex-direction:column;top:100%;right:18px;background:rgba(11,9,7,.97);padding:18px 26px;gap:16px;border:1px solid var(--line)':'';
     b.setAttribute('aria-expanded',open?'true':'false');});
 
-  /* scroll reveal — IO plus ONE fail-open sweep after load */
-  var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}})},{threshold:${REVEAL_THRESHOLD}});
-  var rvs=document.querySelectorAll('.reveal');
-  rvs.forEach(function(el,i){el.style.transitionDelay=((i%4)*55)+'ms';io.observe(el);});
-  addEventListener('load',function(){var lim=innerHeight*1.15;rvs.forEach(function(el){
-    if(!el.classList.contains('in')&&el.getBoundingClientRect().top<lim)el.classList.add('in');});measure();});
-
   /* destination strip arrows (homepage) */
   var strip=document.getElementById('dstrip');
   if(strip){var pv=document.getElementById('dprev'),nx=document.getElementById('dnext');
     if(pv)pv.addEventListener('click',function(){strip.scrollBy({left:-360,behavior:'smooth'})});
     if(nx)nx.addEventListener('click',function(){strip.scrollBy({left:360,behavior:'smooth'})});}
-
-  /* stat counters (homepage) */
-  var nums=document.querySelectorAll('.num[data-count]');
-  function count(el){if(el.dataset.done)return;el.dataset.done=1;
-    var end=+el.dataset.count,t0=performance.now(),D=1600;
-    (function tick(t){var p=Math.min((t-t0)/D,1),v=Math.round(end*(1-Math.pow(1-p,3)));
-      el.firstChild.textContent=v;if(p<1)requestAnimationFrame(tick);})(t0);}
-  if(reduce){nums.forEach(function(el){el.firstChild.textContent=el.dataset.count;});}
-  else if(nums.length){var cio=new IntersectionObserver(function(es){es.forEach(function(x){
-    if(x.isIntersecting){count(x.target);cio.unobserve(x.target);}})},{threshold:.5});
-    nums.forEach(function(el){cio.observe(el);});}
-
-  /* customer slider — uniform squares, discrete sliding-window pager.
-     Advances one image at a time and loops cleanly at the end; no clones. */
-  var cs=document.getElementById('cslider');
-  if(cs){var tr=cs.querySelector('.cslider-track'),items=tr.children,
-    N=+cs.dataset.count,idx=0,timer=null,cnt=document.getElementById('cscount');
-    function per(){return Math.max(1,Math.round(+getComputedStyle(cs).getPropertyValue('--per')||4));}
-    function maxIdx(){return Math.max(0,N-per());}
-    function step(){var st=getComputedStyle(tr);
-      return items[0].getBoundingClientRect().width+parseFloat(st.gap||0);}
-    function label(){if(cnt)cnt.textContent=('0'+(idx+1)).slice(-2)+' / '+N;}
-    function go(n,instant){idx=Math.max(0,Math.min(n,maxIdx()));
-      tr.style.transition=instant?'none':'transform 1.1s cubic-bezier(.22,.61,.36,1)';
-      tr.style.transform='translateX('+(-idx*step())+'px)';label();}
-    function next(){go(idx>=maxIdx()?0:idx+1);}
-    function prev(){go(idx<=0?maxIdx():idx-1);}
-    function play(){if(!reduce&&!timer)timer=setInterval(next,${SLIDER_INTERVAL_MS});}
-    function stop(){clearInterval(timer);timer=null;}
-    var p2=document.getElementById('csprev'),n2=document.getElementById('csnext');
-    if(p2)p2.addEventListener('click',function(){stop();prev();play();});
-    if(n2)n2.addEventListener('click',function(){stop();next();play();});
-    cs.addEventListener('pointerenter',stop);
-    cs.addEventListener('pointerleave',play);
-    addEventListener('resize',function(){go(idx,true);});
-    go(0,true);play();}
 })();
 `;

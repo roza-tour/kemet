@@ -1,62 +1,58 @@
 ---
-// CustomerGallery — a premium, disciplined slider of real Kemet guests.
-// Every photograph is a uniform square (identical 1:1 crop, same dimensions),
-// laid in a single aligned row that advances in smooth discrete pages on a
-// gentle timer. Driven by enhance.ts (#cslider): pauses on hover, arrow
-// controls, a slide counter; reduced-motion holds it static. No continuous
-// marquee, no uneven heights — a clean gallery wall, not a scroll ticker.
+// CustomerGallery — a continuous, seamless auto-scrolling wall of real Kemet
+// guests. Uniform square photographs (identical 680x680 crop) drift at a
+// slow, even pace; the full set is rendered twice so the loop is infinite
+// with no gaps. Pure CSS motion (one GPU transform), paused on hover, frozen
+// under prefers-reduced-motion. No controls, no JS.
 import SectionHeader from "@/components/SectionHeader.astro";
 
 interface Props {
-  /** Editorial section number for the watermark numeral. */
   no?: string;
   eyebrow?: string;
 }
 const { no, eyebrow = "Our Travellers" } = Astro.props;
 
 const photos: Array<{ src: string; alt: string }> = [
-  { src: "/images/clients/clients-giza-selfie.webp", alt: "A group of Kemet guests taking a laughing selfie in front of the Pyramids of Giza" },
-  { src: "/images/clients/clients-giza-wedding.webp", alt: "A newly-wed couple celebrating at the Pyramids of Giza with their Kemet guide" },
-  { src: "/images/clients/clients-sphinx-group.webp", alt: "Guests smiling together before the Great Sphinx and the pyramids at Giza" },
-  { src: "/images/clients/clients-citadel-steps.webp", alt: "Kemet guests gathered on the stone steps of the Saladin Citadel in Cairo" },
-  { src: "/images/clients/clients-nile-gardens.webp", alt: "A family of Kemet guests in the riverside gardens beside the Nile" },
-  { src: "/images/clients/clients-giza-jump.webp", alt: "Guests jumping for joy above the Giza pyramid panorama" },
-  { src: "/images/clients/clients-saqqara-family.webp", alt: "A large family group celebrating in front of the Step Pyramid of Saqqara" },
-  { src: "/images/clients/clients-mosque-courtyard.webp", alt: "Three guests in the marble courtyard of a historic Cairo mosque" },
-  { src: "/images/clients/clients-giza-panorama.webp", alt: "Guests at the Giza panorama viewpoint with all the pyramids behind them" },
-  { src: "/images/clients/clients-sphinx-laughs.webp", alt: "A group of guests laughing beside the Great Sphinx" },
-  { src: "/images/clients/clients-citadel-performer.webp", alt: "Guests sharing a laugh with a traditional performer at the Mosque of Muhammad Ali" },
-  { src: "/images/clients/clients-dahshur-bent-pyramid.webp", alt: "Kemet guests at the Bent Pyramid of Dahshur" },
-  { src: "/images/clients/clients-giza-friends.webp", alt: "Three friends at the Giza plateau with camel riders in the distance" },
-  { src: "/images/clients/clients-red-pyramid.webp", alt: "A family cheering at the base of the Red Pyramid of Dahshur" },
-  { src: "/images/clients/clients-cave-church.webp", alt: "Guests visiting the rock-cut Cave Church of Cairo" },
-  { src: "/images/clients/clients-group-sign.webp", alt: "A joyful group of guests holding a 'You should be here' sign at Giza" },
+  { src: "/images/clients/clients-01-giza-selfie.webp", alt: "Kemet guests taking a laughing group selfie at the Pyramids of Giza" },
+  { src: "/images/clients/clients-02-sphinx-group.webp", alt: "Guests smiling before the Great Sphinx and the pyramids at Giza" },
+  { src: "/images/clients/clients-03-giza-wedding.webp", alt: "A newly-wed couple celebrating at the Pyramids of Giza" },
+  { src: "/images/clients/clients-04-citadel-steps.webp", alt: "A group of Kemet guests on the steps of the Saladin Citadel in Cairo" },
+  { src: "/images/clients/clients-05-nile-gardens.webp", alt: "A family of guests in the riverside gardens beside the Nile" },
+  { src: "/images/clients/clients-06-giza-jump.webp", alt: "Guests jumping for joy above the Giza pyramid panorama" },
+  { src: "/images/clients/clients-07-saqqara-family.webp", alt: "A large family group celebrating at the Step Pyramid of Saqqara" },
+  { src: "/images/clients/clients-08-mosque-courtyard.webp", alt: "Guests in the marble courtyard of a historic Cairo mosque" },
+  { src: "/images/clients/clients-09-giza-panorama.webp", alt: "Guests at the Giza panorama viewpoint with the pyramids behind them" },
+  { src: "/images/clients/clients-10-giza-hats-group.webp", alt: "A group of guests in sun hats before the Giza pyramids" },
+  { src: "/images/clients/clients-11-sphinx-laughs.webp", alt: "Guests laughing together beside the Great Sphinx" },
+  { src: "/images/clients/clients-12-winter-group.webp", alt: "A travel group on the desert plateau at Giza" },
+  { src: "/images/clients/clients-13-citadel-performer.webp", alt: "Guests with a traditional performer at the Mosque of Muhammad Ali" },
+  { src: "/images/clients/clients-14-palm-obelisk-group.webp", alt: "Guests among the palms beside an ancient obelisk" },
+  { src: "/images/clients/clients-15-dahshur-bent-pyramid.webp", alt: "Kemet guests at the Bent Pyramid of Dahshur" },
+  { src: "/images/clients/clients-16-thumbs-up-group.webp", alt: "A cheerful group of guests giving a thumbs-up at Giza" },
+  { src: "/images/clients/clients-17-giza-friends.webp", alt: "Three friends at the Giza plateau" },
+  { src: "/images/clients/clients-18-citadel-gate.webp", alt: "Guests at the gateway of a historic Cairo landmark" },
+  { src: "/images/clients/clients-19-red-pyramid.webp", alt: "A family cheering at the base of the Red Pyramid of Dahshur" },
+  { src: "/images/clients/clients-20-cave-church.webp", alt: "Guests visiting the rock-cut Cave Church of Cairo" },
+  { src: "/images/clients/clients-21-temple-explorers.webp", alt: "Guests exploring an ancient Egyptian temple" },
+  { src: "/images/clients/clients-22-mosque-group.webp", alt: "A large group of guests at a historic Egyptian mosque" },
+  { src: "/images/clients/clients-23-group-sign.webp", alt: "A joyful group of guests holding a sign at the Giza pyramids" },
+  { src: "/images/clients/clients-24-family-citadel.webp", alt: "A family of guests at the Cairo Citadel" },
 ];
 ---
 <section class="cgal-sec">
   <div class="wrap">
-    <SectionHeader no={no} eyebrow={eyebrow} title="Real journeys, real joy">
-      <div class="cgal-head-row">
-        <p>Not stock photography — our guests, at the moments Egypt became theirs. From first mornings at the Great Pyramid to a wedding on the plateau, these are the journeys we design.</p>
-        <div class="cgal-ctrl">
-          <span id="cscount" class="cgal-count" aria-hidden="true"></span>
-          <button id="csprev" class="cgal-arrow" type="button" aria-label="Previous photographs">←</button>
-          <button id="csnext" class="cgal-arrow" type="button" aria-label="Next photographs">→</button>
-        </div>
-      </div>
-    </SectionHeader>
+    <SectionHeader no={no} eyebrow={eyebrow} title="Real journeys, real joy"
+      text="Not stock photography — our own guests, at the moments Egypt became theirs. From first mornings at the Great Pyramid to a wedding on the plateau, these are the journeys we design." />
   </div>
 
-  <div class="wrap">
-    <div class="cslider reveal" id="cslider" data-count={photos.length}
-         role="group" aria-roledescription="carousel" aria-label="Photographs of Kemet guests across Egypt">
-      <div class="cslider-track">
-        {photos.map((p) => (
-          <figure class="cslide">
-            <img src={p.src} alt={p.alt} width="700" height="700" loading="lazy" decoding="async" />
-          </figure>
-        ))}
-      </div>
+  <div class="cgal" role="img" aria-label="A continuous gallery of photographs of Kemet guests travelling across Egypt">
+    <div class="cgal-track">
+      {photos.map((p) => (
+        <figure class="cgal-item"><img src={p.src} alt={p.alt} width="680" height="680" loading="lazy" decoding="async" /></figure>
+      ))}
+      {photos.map((p) => (
+        <figure class="cgal-item" aria-hidden="true"><img src={p.src} alt="" width="680" height="680" loading="lazy" decoding="async" /></figure>
+      ))}
     </div>
   </div>
 </section>
