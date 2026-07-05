@@ -15,10 +15,9 @@
 const NAV_SCROLL_THRESHOLD = 40; // px scrolled before the nav gains its glass background
 const MCB_SCROLL_THRESHOLD = 600; // px scrolled before the mobile conversion bar appears
 const REVEAL_THRESHOLD = 0.08; // IntersectionObserver ratio for scroll-reveal
-const TILT_DEG = 4; // max card tilt in degrees
-const DUST_MAX = 130; // particle ceiling on large screens
-const DUST_DENSITY = 14000; // px² of viewport per particle
-const SLIDER_INTERVAL_MS = 4600; // customer slider auto-advance cadence
+const DUST_MAX = 120; // particle ceiling on large screens
+const DUST_DENSITY = 15000; // px² of viewport per particle
+const SLIDER_INTERVAL_MS = 6000; // customer slider auto-advance cadence (slow & calm)
 
 export const enhanceScript = `
 (function(){
@@ -94,20 +93,6 @@ export const enhanceScript = `
   else if(nums.length){var cio=new IntersectionObserver(function(es){es.forEach(function(x){
     if(x.isIntersecting){count(x.target);cio.unobserve(x.target);}})},{threshold:.5});
     nums.forEach(function(el){cio.observe(el);});}
-
-  /* hover tilt + gold glare — tracks only the previous element (cheap) */
-  if(!reduce){var prevTilt=null;
-    document.addEventListener('pointermove',function(e){
-      if(e.pointerType==='touch')return;
-      var g=e.target.closest('[data-tilt],[data-glare]');
-      if(g){var gr=g.getBoundingClientRect();
-        g.style.setProperty('--mx',((e.clientX-gr.left)/gr.width*100)+'%');
-        g.style.setProperty('--my',((e.clientY-gr.top)/gr.height*100)+'%');}
-      var el=e.target.closest('[data-tilt]');
-      if(prevTilt&&prevTilt!==el)prevTilt.style.transform='';
-      prevTilt=el;
-      if(!el)return;var r=el.getBoundingClientRect();var px=(e.clientX-r.left)/r.width-.5,py=(e.clientY-r.top)/r.height-.5;
-      el.style.transform='perspective(900px) rotateX('+(-py*${TILT_DEG})+'deg) rotateY('+(px*${TILT_DEG})+'deg) translateY(-5px)';},{passive:true});}
 
   /* customer slider — uniform squares, discrete sliding-window pager.
      Advances one image at a time and loops cleanly at the end; no clones. */
