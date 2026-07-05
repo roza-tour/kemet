@@ -1,0 +1,17 @@
+---
+// Ribbon — a full-bleed, slowly drifting band of giant outlined serif words.
+// A signature editorial gesture between sections. The phrase run is rendered
+// twice for a seamless loop; reduced-motion freezes it.
+interface Props {
+  /** Phrases joined by a gold separator. */
+  items?: string[];
+}
+const { items = ["The Land", "The Legacy", "The Journey", "Private Egypt", "Tailor-Made"] } = Astro.props;
+const run = items;
+---
+<div class="ribbon" aria-hidden="true">
+  <div class="ribbon-track">
+    {run.map((w) => <span class="rw">{w}<i>◆</i></span>)}
+    {run.map((w) => <span class="rw">{w}<i>◆</i></span>)}
+  </div>
+</div>

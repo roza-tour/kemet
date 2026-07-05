@@ -82,9 +82,46 @@ export const enhanceScript = `
     addEventListener('scroll',function(){var lim=innerHeight*1.1;nums.forEach(function(el){
       if(el.getBoundingClientRect().top<lim)count(el);});},{passive:true});}
   if(!reduce){document.addEventListener('pointermove',function(e){
-    if(e.pointerType==='touch')return;var el=e.target.closest('[data-tilt]');
+    if(e.pointerType==='touch')return;
+    var g=e.target.closest('[data-tilt],[data-glare]');
+    if(g){var gr=g.getBoundingClientRect();
+      g.style.setProperty('--mx',((e.clientX-gr.left)/gr.width*100)+'%');
+      g.style.setProperty('--my',((e.clientY-gr.top)/gr.height*100)+'%');}
+    var el=e.target.closest('[data-tilt]');
     document.querySelectorAll('[data-tilt]').forEach(function(t){if(t!==el)t.style.transform='';});
     if(!el)return;var r=el.getBoundingClientRect();var px=(e.clientX-r.left)/r.width-.5,py=(e.clientY-r.top)/r.height-.5;
     el.style.transform='perspective(900px) rotateX('+(-py*${TILT_DEG})+'deg) rotateY('+(px*${TILT_DEG})+'deg) translateY(-6px)';});}
+
+  if(!reduce){
+    /* scroll progress hairline */
+    var sp=document.createElement('div');sp.id='sprog';document.body.appendChild(sp);
+    /* cursor light orb (desktop pointers only) */
+    var orb=null,ox=0,oy=0,tx=0,ty=0;
+    if(matchMedia('(pointer:fine)').matches){
+      orb=document.createElement('div');orb.id='orb';document.body.appendChild(orb);
+      document.addEventListener('pointermove',function(e){tx=e.clientX;ty=e.clientY;orb.classList.add('on');
+        orb.classList.toggle('big',!!e.target.closest('a,button'));});
+      document.addEventListener('pointerleave',function(){orb.classList.remove('on');});}
+    /* magnetic buttons */
+    document.querySelectorAll('.btn,.nav-cta').forEach(function(bt){
+      bt.addEventListener('pointermove',function(e){var r=bt.getBoundingClientRect();
+        bt.style.transform='translate('+((e.clientX-r.left-r.width/2)*.16)+'px,'+((e.clientY-r.top-r.height/2)*.22)+'px)';});
+      bt.addEventListener('pointerleave',function(){bt.style.transform='';});});
+    /* hero depth — scroll settle + pointer counter-parallax, composed via translate */
+    var hbg=document.querySelector('.hero .bg img'),hin=document.querySelector('.hero .hero-inner');
+    var hx=0,hy=0;
+    if(hbg)document.addEventListener('pointermove',function(e){
+      hx=(e.clientX/innerWidth-.5);hy=(e.clientY/innerHeight-.5);});
+    /* one rAF loop drives orb lerp, progress and hero parallax */
+    (function loop(){
+      if(orb){ox+=(tx-ox)*.14;oy+=(ty-oy)*.14;
+        orb.style.left=ox+'px';orb.style.top=oy+'px';}
+      var dh=document.documentElement.scrollHeight-innerHeight;
+      sp.style.transform='scaleX('+(dh>0?scrollY/dh:0)+')';
+      if(hbg){var sy=Math.min(scrollY,900)*.14;
+        hbg.style.translate=(hx*-18)+'px '+(sy+hy*-12)+'px';
+        if(hin)hin.style.translate=(hx*8)+'px '+(hy*6)+'px';}
+      requestAnimationFrame(loop);})();
+  }
 })();
 `;

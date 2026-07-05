@@ -2,6 +2,7 @@
 import Base from "@/layouts/Base.astro";
 import Hero from "@/components/Hero.astro";
 import Frieze from "@/components/Frieze.astro";
+import Ribbon from "@/components/Ribbon.astro";
 import SectionHeader from "@/components/SectionHeader.astro";
 import SymbolIcon from "@/components/SymbolIcon.astro";
 import TourCard from "@/components/TourCard.astro";
@@ -84,7 +85,7 @@ const jsonld = breadcrumb([["Home", "index.html"]]);
           <p>A single private journey can hold several of these worlds at once, led throughout by a licensed Egyptologist.</p>
           <a class="more" href="identities.html">Discover the Eight Identities <i aria-hidden="true"></i></a>
         </div>
-        <div class="ov-media reveal">
+        <div class="ov-media reveal cur" data-glare>
           <div class="main">
             <img src="/images/cairo/cairo-citadel-mosque-dusk.webp" alt="The Mosque of Muhammad Ali crowning the Saladin Citadel in Cairo at dusk" width="1600" height="1066" loading="lazy" decoding="async" />
           </div>
@@ -110,6 +111,7 @@ const jsonld = breadcrumb([["Home", "index.html"]]);
   <section style="padding-top:0">
     <div class="wrap">
       <SectionHeader
+        no="02"
         eyebrow="02 · The Journeys"
         title="Signature private journeys"
         text="Twenty-five private itineraries, from a half-day at the Sphinx to a fourteen-day grand tour taking in the Nile and the Red Sea. Every price shown is per person and genuinely all-inclusive — your own Egyptologist guide, all entrance fees, daily lunch and private air-conditioned transfers, with no hidden extras."
@@ -141,13 +143,14 @@ const jsonld = breadcrumb([["Home", "index.html"]]);
   <section>
     <div class="wrap">
       <SectionHeader
+        no="03"
         eyebrow="03 · Curated Experiences"
         title="Moments money can't usually buy"
         text="Early-access mornings, private charters and evenings arranged with a standing relationship — fifteen experiences that turn sightseeing into memory."
       />
       <div class="mosaic">
         {mosaic.map((exp, i) => (
-          <a class={`tile reveal ${mosaicShape[i] ?? ""}`} href={`experiences/${exp.slug}.html`}>
+          <a class={`tile reveal cur ${mosaicShape[i] ?? ""}`} href={`experiences/${exp.slug}.html`} data-glare>
             <img src={exp.hero!.src} alt={exp.hero!.alt} width={exp.hero!.width} height={exp.hero!.height} loading="lazy" decoding="async" />
             <div class="tframe" aria-hidden="true"></div>
             <div class="tcap">
@@ -165,6 +168,7 @@ const jsonld = breadcrumb([["Home", "index.html"]]);
   <section style="padding-top:0">
     <div class="wrap">
       <SectionHeader
+        no="04"
         eyebrow="04 · The Destinations"
         title="Five cities, five thousand years"
       />
@@ -172,7 +176,7 @@ const jsonld = breadcrumb([["Home", "index.html"]]);
     <div class="reveal">
       <div class="dstrip" id="dstrip">
         {strip.map((d, i) => (
-          <a class="dpost" href={`destinations/${d.slug}.html`}>
+          <a class="dpost" href={`destinations/${d.slug}.html`} data-glare>
             <img src={d.hero!.src} alt={d.hero!.alt} width={d.hero!.width} height={d.hero!.height} loading="lazy" decoding="async" />
             <span class="didx" aria-hidden="true">{roman[i]}</span>
             <div class="dcap">
@@ -190,12 +194,13 @@ const jsonld = breadcrumb([["Home", "index.html"]]);
     </div>
   </section>
 
-  <Frieze />
+  <Ribbon />
 
   {/* ── The eight worlds ── */}
   <section>
     <div class="wrap">
       <SectionHeader
+        no="05"
         eyebrow="05 · The 8 Identities"
         title="The eight worlds of Egypt"
         text="Each of the eight worlds has its own colour, symbol and set of experiences — and most can be combined within a single trip. Together they are the map we travel by, and the reason no two Kemet journeys look quite the same."
