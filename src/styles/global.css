@@ -30,6 +30,13 @@ h1,h2,h3{font-family:var(--ff-display);font-weight:300;line-height:1.1;letter-sp
 .nav.scrolled{background:rgba(10,8,5,.58);backdrop-filter:blur(22px) saturate(140%);-webkit-backdrop-filter:blur(22px) saturate(140%);padding:13px 44px;border-bottom:1px solid var(--line)}
 .brand{display:flex;align-items:center;gap:12px;font-family:var(--ff-display);font-size:1.28rem;letter-spacing:.2em;color:var(--bone)}
 .brand .mk{width:30px;height:22px}
+/* logo plaque — the cut-out logo presented on warm ivory so it always reads */
+.logo-plaque{display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(150deg,#F7F1E3,#E9DEC7);border:1px solid rgba(201,163,86,.5);border-radius:5px;padding:6px 15px;box-shadow:0 8px 26px -8px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.55)}
+.logo-plaque img{display:block;height:42px;width:auto}
+.nav.scrolled .logo-plaque{padding:5px 13px}.nav.scrolled .logo-plaque img{height:38px}
+.logo-plaque--lg{padding:14px 22px}.logo-plaque--lg img{height:96px}
+.hero-seal{padding:14px 22px;margin-bottom:32px}.hero-seal img{height:80px}
+@media(max-width:680px){.hero-seal img{height:60px}.logo-plaque--lg img{height:78px}}
 .navlinks{display:flex;gap:38px;align-items:center}
 .navlinks a{font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);transition:color .4s;position:relative;padding:6px 0}
 .navlinks a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform .5s cubic-bezier(.22,.61,.36,1)}
@@ -382,9 +389,8 @@ body.mcb-active .mcb[aria-hidden="true"]{display:flex}
 .frame img{transition:transform 1.4s cubic-bezier(.22,.61,.36,1)}
 .jcard:hover .frame img{transform:scale(1.07)}
 
-/* homepage hero — slow settle for cinematic depth (killed by reduced-motion) */
-@keyframes hero-drift{from{transform:scale(1.08)}to{transform:scale(1)}}
-.hero .bg img{animation:hero-drift 30s cubic-bezier(.22,.61,.36,1) forwards}
+/* homepage hero — the photograph is deliberately, completely static */
+.hero .bg img{transform:none}
 
 /* ── RC5 motion & depth system ──────────────────────────────────────────── */
 
@@ -401,42 +407,36 @@ body.mcb-active .mcb[aria-hidden="true"]{display:flex}
 .sec-head{position:relative}
 .sec-head[data-no]::before{content:attr(data-no);position:absolute;top:-.62em;left:-.05em;z-index:-1;font-family:var(--ff-display);font-weight:400;font-size:clamp(6rem,13vw,11rem);line-height:1;color:transparent;-webkit-text-stroke:1px rgba(217,180,90,.13);pointer-events:none;user-select:none}
 
-/* gold shimmer on the hero's italic word and the stat numerals */
-.hero h1 em,.stat .num{background:linear-gradient(100deg,var(--gold-deep),var(--gold-bright) 30%,#FFFDF5 50%,var(--gold-bright) 70%,var(--gold-deep));background-size:220% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shine 7s ease-in-out infinite}
+/* hero italic + stat numerals — static gold gradient (no perpetual shimmer) */
+.hero h1 em,.stat .num{background:linear-gradient(100deg,var(--gold),var(--gold-bright) 45%,#FFFDF5 60%,var(--gold-bright) 78%,var(--gold-deep));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .stat .num sup{-webkit-text-fill-color:var(--gold)}
-@keyframes shine{0%,100%{background-position:0 0}50%{background-position:100% 0}}
 
 /* marquee ribbon — giant outlined serif words drifting between sections */
 .ribbon{overflow:hidden;padding:44px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.ribbon-track{display:flex;align-items:center;width:max-content;animation:friezemove 60s linear infinite}
+.ribbon-track{display:flex;align-items:center;width:max-content;animation:friezemove 72s linear infinite}
 .ribbon .rw{display:flex;align-items:center;font-family:var(--ff-display);font-weight:300;font-size:clamp(3rem,7vw,5.6rem);line-height:1;letter-spacing:.04em;white-space:nowrap;color:transparent;-webkit-text-stroke:1px rgba(217,180,90,.35)}
 .ribbon .rw i{font-style:normal;font-size:.32em;margin:0 .55em;color:var(--gold);-webkit-text-stroke:0;opacity:.7}
 .ribbon:hover .ribbon-track{animation-play-state:paused}
 
-/* cursor light — a soft gold orb trailing the pointer (desktop only) */
-#orb{position:fixed;left:0;top:0;width:44px;height:44px;margin:-22px 0 0 -22px;border-radius:50%;pointer-events:none;z-index:200;background:radial-gradient(circle,rgba(247,230,174,.35),rgba(217,180,90,.12) 45%,transparent 70%);mix-blend-mode:screen;transition:transform .3s cubic-bezier(.22,.61,.36,1),opacity .4s;opacity:0}
-#orb.on{opacity:1}
-#orb.big{transform:scale(2.1)}
-@media(pointer:coarse){#orb{display:none}}
-
 /* scroll progress — a gold hairline crossing the top of the viewport */
-#sprog{position:fixed;top:0;left:0;height:2px;width:100%;z-index:190;background:linear-gradient(90deg,var(--gold-deep),var(--gold),var(--gold-bright));transform-origin:left;transform:scaleX(0);pointer-events:none}
+#sprog{position:fixed;top:0;left:0;height:2px;width:100%;z-index:190;background:linear-gradient(90deg,var(--gold-deep),var(--gold),var(--gold-bright));transform-origin:left;transform:scaleX(0);pointer-events:none;will-change:transform}
 
-/* customer gallery — slow endless filmstrip of real guests */
-.cgal-sec{padding-bottom:110px}
-.cgal{overflow:hidden;padding:14px 0 28px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
-.cgal-track{display:flex;gap:22px;width:max-content;align-items:flex-start;animation:friezemove 90s linear infinite}
-.cgal:hover .cgal-track{animation-play-state:paused}
-.cgal-item{margin:0;flex:0 0 auto;position:relative;overflow:hidden;border:1px solid var(--line);transition:transform .7s cubic-bezier(.22,.61,.36,1),border-color .7s,box-shadow .7s}
-.cgal-item:nth-child(even){margin-top:26px}
-.cgal-item img{display:block;height:360px;width:auto;transition:transform 1.4s cubic-bezier(.22,.61,.36,1)}
-.cgal-item:hover{transform:translateY(-8px);border-color:var(--line-2);box-shadow:0 40px 80px -30px rgba(0,0,0,.85)}
-.cgal-item:hover img{transform:scale(1.05)}
-.cgal-item::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 70%,rgba(10,8,5,.35));pointer-events:none}
-@media(max-width:680px){.cgal-item img{height:250px}.cgal-item:nth-child(even){margin-top:16px}}
+/* customer gallery — a disciplined slider of uniform square photographs */
+.cgal-sec{padding-bottom:120px}
+.cgal-head-row{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap}
+.cgal-head-row p{color:var(--muted);font-size:1rem;font-weight:200;line-height:1.9;max-width:640px}
+.cgal-ctrl{display:flex;align-items:center;gap:16px;flex:0 0 auto}
+.cgal-count{font-family:var(--ff-display);font-size:.9rem;letter-spacing:.16em;color:var(--gold);min-width:56px;text-align:right}
+.cgal-arrow{width:50px;height:50px;border:1px solid var(--line-2);background:transparent;color:var(--gold);font-size:1rem;cursor:pointer;transition:background .4s cubic-bezier(.22,.61,.36,1),color .4s}
+.cgal-arrow:hover{background:var(--gold);color:var(--ink)}
+.cslider{--per:4;--gap:18px;overflow:hidden;border:1px solid var(--line);margin-top:44px}
+.cslider-track{display:flex;gap:var(--gap);will-change:transform}
+.cslide{flex:0 0 calc((100% - (var(--per) - 1) * var(--gap)) / var(--per));margin:0;position:relative;overflow:hidden}
+.cslide img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;transition:transform 1.2s cubic-bezier(.22,.61,.36,1)}
+.cslide::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 62%,rgba(10,8,5,.34));pointer-events:none}
+.cslide:hover img{transform:scale(1.05)}
+@media(max-width:1000px){.cslider{--per:3}}
+@media(max-width:680px){.cslider{--per:2;--gap:14px}.cgal-head-row{align-items:flex-start}}
 
-/* magnetic buttons — JS drives translate; keep it composable */
-.btn,.nav-cta{will-change:transform}
-
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}.cur{clip-path:none}#dust,#orb,#sprog{display:none}.hero h1 em,.stat .num{background:none;-webkit-text-fill-color:var(--gold-bright)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}.cur{clip-path:none}#dust,#sprog{display:none}}
 :focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px}

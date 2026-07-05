@@ -11,7 +11,9 @@ const { active = "index.html", base = "" } = Astro.props;
 ---
 <nav class="nav" id="nav">
   <a class="brand" href={`${base}index.html`} aria-label="Kemet — Luxury Egypt Travel — home">
-    <img src="/images/brand/kemet-logo-transparent.png" alt="Kemet — Luxury Egypt Travel" width="120" height="46" decoding="async" style="height:46px;width:auto;display:block" />
+    <span class="logo-plaque">
+      <img src="/images/brand/kemet-logo-transparent.png" alt="Kemet — Luxury Egypt Travel" width="116" height="44" decoding="async" />
+    </span>
   </a>
   <div class="navlinks" id="navlinks">
     {primaryNav.map(({ href, label }) => (
