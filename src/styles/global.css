@@ -31,14 +31,14 @@ h1,h2,h3{font-family:var(--ff-display);font-weight:300;line-height:1.1;letter-sp
 .nav{position:fixed;top:0;left:0;right:0;z-index:120;display:flex;align-items:center;justify-content:space-between;height:86px;padding:0 44px;transition:height .5s cubic-bezier(.22,.61,.36,1),background .5s,border-color .5s;border-bottom:1px solid transparent}
 .nav.scrolled{height:68px;background:rgba(10,8,5,.62);backdrop-filter:blur(20px) saturate(140%);-webkit-backdrop-filter:blur(20px) saturate(140%);border-bottom:1px solid var(--line)}
 .brand{display:inline-flex;align-items:center}
-/* logo plaque — the ORIGINAL logo on a clean white card (matching its own
-   white ground, so no seam), framed by a gold hairline and a soft shadow. */
-.logo-plaque{display:inline-block;line-height:0;background:#fff;border-radius:4px;padding:6px 12px;box-shadow:0 0 0 1px rgba(168,126,50,.3),0 12px 28px -14px rgba(0,0,0,.5)}
-.logo-plaque img{display:block;height:48px;width:auto;max-width:none;transition:height .5s cubic-bezier(.22,.61,.36,1)}
-.nav.scrolled .logo-plaque img{height:40px}
-.logo-plaque--lg{padding:12px 18px}.logo-plaque--lg img{height:104px}
-.hero-seal{padding:11px 16px;margin-bottom:34px}.hero-seal img{height:92px}
-@media(max-width:680px){.nav{height:70px;padding:0 22px}.nav.scrolled{height:60px}.logo-plaque img{height:40px}.nav.scrolled .logo-plaque img{height:36px}.hero-seal img{height:72px}.logo-plaque--lg img{height:84px}}
+/* logo — the gold master on transparency, placed directly on the dark theme
+   with a soft golden glow. No card is needed on the near-black ground. */
+.logo-plaque{display:inline-block;line-height:0}
+.logo-plaque img{display:block;height:50px;width:auto;max-width:none;filter:drop-shadow(0 3px 14px rgba(217,180,90,.26));transition:height .5s cubic-bezier(.22,.61,.36,1)}
+.nav.scrolled .logo-plaque img{height:42px}
+.logo-plaque--lg img{height:112px}
+.hero-seal{margin-bottom:32px}.hero-seal img{height:104px}
+@media(max-width:680px){.nav{height:70px;padding:0 22px}.nav.scrolled{height:60px}.logo-plaque img{height:42px}.nav.scrolled .logo-plaque img{height:38px}.hero-seal img{height:80px}.logo-plaque--lg img{height:92px}}
 .navlinks{display:flex;gap:38px;align-items:center}
 .navlinks a{font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);transition:color .4s;position:relative;padding:6px 0}
 .navlinks a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform .5s cubic-bezier(.22,.61,.36,1)}
