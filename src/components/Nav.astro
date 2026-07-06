@@ -20,6 +20,6 @@ const { active = "index.html", base = "" } = Astro.props;
       <a href={`${base}${href}`} class={href === active ? "active" : undefined} aria-current={href === active ? "page" : undefined}>{label}</a>
     ))}
   </div>
-  <a href={`${base}tours.html`} class="nav-cta">Plan a Journey</a>
+  <a href={`${base}contact.html`} class="nav-cta">Contact</a>
   <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navlinks">&#9776;</button>
 </nav>

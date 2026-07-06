@@ -22,18 +22,15 @@ export interface FooterColumn {
   links: NavItem[];
 }
 
-/** Primary navigation. Today these are flat; a mega-menu would add `children`. */
+/** Primary navigation — a short, minimal set. The logo links Home; Contact is
+ *  the nav CTA. Activities/Cuisine remain reachable from the footer. */
 export const primaryNav: NavItem[] = [
-  { label: "Home", href: "index.html" },
-  { label: "Tours", href: "tours.html" },
-  { label: "Destinations", href: hubFor("destination") },
+  { label: "Journeys", href: "tours.html" },
   { label: "Experiences", href: hubFor("experience") },
-  { label: "Travel Guides", href: hubFor("guide") },
+  { label: "Destinations", href: hubFor("destination") },
+  { label: "Guides", href: hubFor("guide") },
   { label: "Collections", href: hubFor("seasonal") },
-  { label: "The 8 Identities", href: "identities.html" },
-  { label: "Activities", href: "activities.html" },
-  { label: "Cuisine", href: "cuisine.html" },
-  { label: "Culture", href: "culture.html" },
+  { label: "Cultures", href: "culture.html" },
 ];
 
 /** Footer "Explore" column (the static link group). The Journeys column is
@@ -42,15 +39,15 @@ export const primaryNav: NavItem[] = [
 export const footerExplore: FooterColumn = {
   heading: "Explore",
   links: [
-    { label: "Tours", href: "tours.html" },
+    { label: "Journeys", href: "tours.html" },
     { label: "Destinations", href: hubFor("destination") },
     { label: "Experiences", href: hubFor("experience") },
-    { label: "Travel Guides", href: hubFor("guide") },
+    { label: "Guides", href: hubFor("guide") },
     { label: "Collections", href: hubFor("seasonal") },
+    { label: "Cultures", href: "culture.html" },
     { label: "The 8 Identities", href: "identities.html" },
     { label: "Activities", href: "activities.html" },
     { label: "Cuisine", href: "cuisine.html" },
-    { label: "Culture", href: "culture.html" },
   ],
 };
 
