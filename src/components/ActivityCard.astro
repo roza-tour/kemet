@@ -10,7 +10,13 @@ const { activity } = Astro.props;
 <article class="jcard reveal" data-tilt>
   <div style="position:relative">
     <span class="tag">{activity.place}</span>
-    <Placeholder label={activity.title} />
+    <Placeholder
+      label={activity.title}
+      src={activity.image?.src}
+      alt={activity.image?.alt}
+      width={activity.image?.width}
+      height={activity.image?.height}
+    />
   </div>
   <div class="body">
     <h3>{activity.title}</h3>

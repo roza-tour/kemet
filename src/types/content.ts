@@ -476,6 +476,8 @@ export interface Activity {
   title: string;
   place: string;
   blurb: string;
+  /** Card photograph; the branded placeholder renders when absent. */
+  image?: MediaPlaceholder;
   // Architecture (optional, additive)
   domain?: "activity";
   taxonomy?: { destinations?: string[]; travelStyles?: TravelStyle[] };

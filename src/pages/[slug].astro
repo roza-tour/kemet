@@ -143,6 +143,19 @@ const jsonld = entitySchema("tour", tour);
 
     <Frieze />
 
+    {tour.gallery && tour.gallery.length > 0 && (
+      <section>
+        <div class="wrap">
+          <SectionHeader eyebrow="Gallery" title="Moments from this journey" />
+          <div class="grid-2">
+            {tour.gallery.map((g) => (
+              <Placeholder class="tgallery reveal" src={g.src} alt={g.alt} width={g.width} height={g.height} label={g.label ?? tour.title} />
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
     {prepGuides.length > 0 && (
       <section>
         <div class="wrap">

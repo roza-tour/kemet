@@ -37,9 +37,9 @@ export const site = {
 
   // Deploy-time values (env-driven, with placeholders as fallback)
   domain: SITE_URL,
-  whatsapp: env.PUBLIC_WHATSAPP ?? "201000000000", // international format, digits only
+  whatsapp: env.PUBLIC_WHATSAPP ?? "201158367162", // international format, digits only
   email: env.PUBLIC_CONTACT_EMAIL ?? "info@kemet-travel.com",
-  phoneDisplay: env.PUBLIC_CONTACT_PHONE ?? "+20 100 000 0000",
+  phoneDisplay: env.PUBLIC_CONTACT_PHONE ?? "+20 11 5836 7162",
 
   description:
     "Kemet designs private, luxury journeys through every layer of Egypt — twenty-five curated tours from Cairo and Giza to a 14-day grand tour, Nile cruises, the Red Sea, and the country's eight cultural worlds.",

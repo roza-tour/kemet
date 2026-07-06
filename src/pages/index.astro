@@ -151,8 +151,10 @@ const jsonld = breadcrumb([["Home", "index.html"]]);
       <div class="mosaic">
         {mosaic.map((exp, i) => (
           <a class={`tile reveal cur ${mosaicShape[i] ?? ""}`} href={`experiences/${exp.slug}.html`} data-glare>
-            <img src={exp.hero!.src} alt={exp.hero!.alt} width={exp.hero!.width} height={exp.hero!.height} loading="lazy" decoding="async" />
-            <div class="tframe" aria-hidden="true"></div>
+            <div class="timg">
+              <img src={exp.hero!.src} alt={exp.hero!.alt} width={exp.hero!.width} height={exp.hero!.height} loading="lazy" decoding="async" />
+              <div class="tframe" aria-hidden="true"></div>
+            </div>
             <div class="tcap">
               <span class="k">{exp.location}</span>
               <h3>{exp.title}</h3>
@@ -177,10 +179,11 @@ const jsonld = breadcrumb([["Home", "index.html"]]);
       <div class="dstrip" id="dstrip">
         {strip.map((d, i) => (
           <a class="dpost" href={`destinations/${d.slug}.html`} data-glare>
-            <img src={d.hero!.src} alt={d.hero!.alt} width={d.hero!.width} height={d.hero!.height} loading="lazy" decoding="async" />
-            <span class="didx" aria-hidden="true">{roman[i]}</span>
+            <div class="dimg">
+              <img src={d.hero!.src} alt={d.hero!.alt} width={d.hero!.width} height={d.hero!.height} loading="lazy" decoding="async" />
+            </div>
             <div class="dcap">
-              <span class="k">{stripKicker[d.id] ?? ""}</span>
+              <span class="k"><i aria-hidden="true">{roman[i]}</i> · {stripKicker[d.id] ?? ""}</span>
               <h3>{d.title}</h3>
               <span>{stripLine[d.id] ?? d.shortSummary}</span>
             </div>

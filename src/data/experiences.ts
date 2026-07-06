@@ -196,6 +196,10 @@ export const experiences: Experience[] = [
       width: 736,
       height: 981,
     },
+    gallery: [
+      { alt: "A felucca silhouetted on the Nile as the sun sets over the water", label: "Golden hour", src: "/images/activities/felucca-golden-hour.webp", width: 1500, height: 1000 },
+      { alt: "A lateen-sailed felucca drifting past palms on the Nile at sunset", label: "Under sail", src: "/images/activities/act-felucca-sunset.webp", width: 1300, height: 867 },
+    ],
     seo: {
       title: "Private Felucca Sailing on the Nile, Aswan — Exclusive Charter | Kemet Egypt",
       description:
@@ -662,6 +666,10 @@ export const experiences: Experience[] = [
       width: 736,
       height: 981,
     },
+    gallery: [
+      { alt: "A fleet of hot-air balloons rising over the Nile valley and temples of Luxor at dawn", label: "Dawn fleet", src: "/images/activities/balloons-over-luxor.webp", width: 1500, height: 1000 },
+      { alt: "Balloons drifting above the West Bank and the green Nile floodplain", label: "Above Thebes", src: "/images/activities/act-balloon-luxor.webp", width: 1300, height: 867 },
+    ],
     seo: {
       title: "Hot-Air Balloon over Luxor — Dawn Flight above the Valley of the Kings | Kemet Egypt",
       description:
@@ -851,6 +859,11 @@ export const experiences: Experience[] = [
       width: 764,
       height: 458,
     },
+    gallery: [
+      { alt: "A wooden jetty reaching over the turquoise Red Sea to a desert island", label: "Island anchorage", src: "/images/redsea/hurghada-island-jetty.webp", width: 1500, height: 844 },
+      { alt: "Guests parasailing high above the Red Sea under a bright canopy", label: "Parasailing", src: "/images/activities/parasailing-pair.webp", width: 1200, height: 800 },
+      { alt: "A quiet turquoise Red Sea bay fringed by palms", label: "Turquoise bay", src: "/images/redsea/hurghada-turquoise-swing.webp", width: 564, height: 845 },
+    ],
     seo: {
       title: "Red Sea Private Yacht Charter, Sharm El Sheikh — Ras Mohammed Day | Kemet Egypt",
       description:

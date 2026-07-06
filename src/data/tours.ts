@@ -483,6 +483,18 @@ export const tours: Tour[] = [
   // ========================= DAY TOURS =====================================
   {
     slug: "tour-fayoum",
+    hero: {
+      alt: "The Magic Lake and desert dunes of the Fayoum oasis under a wide sky",
+      src: "/images/fayoum/fayoum-magic-lake.webp",
+      width: 1600,
+      height: 1067,
+    },
+    gallery: [
+      { alt: "The pyramid of Hawara rising from the Fayoum farmland", label: "Hawara Pyramid", src: "/images/fayoum/fayoum-hawara-pyramid.webp", width: 1200, height: 800 },
+      { alt: "The desert waterfalls of Wadi El Rayan in Fayoum", label: "Wadi El Rayan", src: "/images/fayoum/fayoum-waterfalls.webp", width: 1200, height: 800 },
+      { alt: "The historic wooden waterwheels of Fayoum", label: "Waterwheels", src: "/images/fayoum/fayoum-waterwheels.webp", width: 1200, height: 800 },
+      { alt: "Hand-painted pottery in the artists' village of Tunis, Fayoum", label: "Tunis pottery", src: "/images/fayoum/fayoum-tunis-pottery.webp", width: 1200, height: 800 },
+    ],
     title: "Fayoum Oasis",
     subtitle:
       "A full day in the green oasis southwest of Cairo — lakes, desert waterfalls, fossil whales and a pottery village.",
@@ -1054,11 +1066,17 @@ export const tours: Tour[] = [
   {
     slug: "tour-nile-cruise",
     hero: {
-      alt: "An ancient temple standing at the edge of the Nile in Upper Egypt",
-      src: "/images/luxor/luxor-temple-on-the-nile.webp",
-      width: 736,
-      height: 736,
+      alt: "A Nile cruise ship gliding the river between Aswan and Luxor at sunset",
+      src: "/images/cruise/nile-cruise-sunset.webp",
+      width: 1600,
+      height: 1067,
     },
+    gallery: [
+      { alt: "The teak sun-deck of a Nile cruise vessel set for the day", label: "Sun deck", src: "/images/cruise/nile-dahabiya-deck.webp", width: 1300, height: 867 },
+      { alt: "A Nile cruise ship reflected in the river at golden hour", label: "Golden hour", src: "/images/cruise/nile-cruise-golden.webp", width: 1400, height: 933 },
+      { alt: "A Nile cruise ship illuminated on the river after dark", label: "By night", src: "/images/cruise/nile-cruise-night.webp", width: 1300, height: 867 },
+      { alt: "An ancient temple standing at the edge of the Nile in Upper Egypt", label: "Riverside temple", src: "/images/luxor/luxor-temple-on-the-nile.webp", width: 736, height: 736 },
+    ],
     title: "Nile in Style: Aswan to Luxor",
     subtitle:
       "Three nights on the river between Aswan and Luxor, with Kom Ombo and Edfu unlocked along the way — the classic cruise, privately guided.",
@@ -1890,6 +1908,12 @@ export const tours: Tour[] = [
       width: 736,
       height: 981,
     },
+    gallery: [
+      { alt: "A wooden jetty reaching over the turquoise Red Sea to a desert island", label: "Island jetty", src: "/images/redsea/hurghada-island-jetty.webp", width: 1500, height: 844 },
+      { alt: "Thatched parasols along a calm Red Sea resort beach", label: "Resort beach", src: "/images/redsea/hurghada-beach-umbrellas.webp", width: 1400, height: 933 },
+      { alt: "A quiet turquoise bay on the Red Sea coast", label: "Turquoise bay", src: "/images/redsea/hurghada-turquoise-swing.webp", width: 564, height: 845 },
+      { alt: "The El Mina Mosque above the marina on the Red Sea coast", label: "Coastal mosque", src: "/images/redsea/hurghada-el-mina-mosque.webp", width: 736, height: 1308 },
+    ],
     title: "Red Sea Retreat: Sharm El Sheikh",
     subtitle:
       "Five days where Sinai's mountains meet the clearest water in the northern hemisphere — reefs, desert evenings and deliberate idleness.",
@@ -1991,6 +2015,12 @@ export const tours: Tour[] = [
       width: 736,
       height: 736,
     },
+    gallery: [
+      { alt: "A scuba diver beside a vivid Red Sea coral reef teeming with fish", label: "Reef wall", src: "/images/activities/red-sea-diver-reef.webp", width: 1500, height: 1000 },
+      { alt: "A diver among a cloud of anthias on a Red Sea coral garden", label: "Coral garden", src: "/images/activities/act-diving.webp", width: 1200, height: 800 },
+      { alt: "Visitors before the whale-shark tank of the Red Sea aquarium", label: "Grand Aquarium", src: "/images/redsea/red-sea-aquarium.webp", width: 764, height: 458 },
+      { alt: "A wooden jetty reaching over the turquoise Red Sea to a desert island", label: "Island jetty", src: "/images/redsea/hurghada-island-jetty.webp", width: 1500, height: 844 },
+    ],
     title: "Dive the Red Sea",
     subtitle:
       "Four days built around bottom time — Ras Mohammed's walls, the Strait of Tiran's drift reefs and small-group boats that leave early.",
