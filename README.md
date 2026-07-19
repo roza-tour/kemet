@@ -20,12 +20,17 @@ Optional deploy-time configuration lives in environment variables — copy
 contact details. Without a `.env`, the build falls back to the placeholders in
 `src/config/site.ts` so it always runs.
 
-## Deploy (cPanel / shared hosting)
+## Deploy (cPanel / shared hosting — single branch)
 
-1. `npm run build`.
-2. Upload the **contents of `dist/`** into `public_html/` (not the folder
-   itself). Because the build emits flat `.html` files and all internal links
-   end in `.html`, the site works on any static host with no rewrite rules.
+Everything lives on `main`: the Astro source **and** the built website at the
+repo root. `public/.htaccess` (shipped with the build) hides the source
+folders from visitors, so the server can serve the repo root directly.
+
+1. Publish from the dev machine: `./scripts/publish.sh "release: message"`
+   (runs `astro check` + `npm run build`, syncs `dist/` into the repo root,
+   commits and pushes `main`).
+2. Update the live site on the server: `git pull origin main` inside
+   `public_html/`.
 
 ## Architecture
 

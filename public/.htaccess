@@ -1,0 +1,27 @@
+# ---------------------------------------------------------------------------
+# Kemet — served from the repo root of `main` (single-branch deployment).
+# The built site and the Astro source live side by side; this file makes sure
+# visitors only ever see the site, and fixes two SEO redirects.
+# ---------------------------------------------------------------------------
+
+Options -Indexes
+
+RewriteEngine On
+
+# www → apex domain (301), keeping one canonical host.
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+
+# Legacy extensionless URLs (old sitemap) → their real .html pages (301).
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^([^.]+?)/?$ $1.html [R=301,L]
+
+# Repo internals are not part of the website — hide them completely (404).
+RewriteRule ^(?:\.git|src|scripts|public|node_modules|dist|\.claude|\.astro)(/|$) - [R=404,L]
+
+# Project/config files that sit in the repo root must never be downloadable.
+<FilesMatch "^(package(-lock)?\.json|astro\.config\.mjs|tsconfig\.json|README\.md|\.env.*|\.gitignore|\.publish-manifest)$">
+  Require all denied
+</FilesMatch>
