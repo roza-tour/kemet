@@ -310,6 +310,21 @@ footer{background:var(--ink-2);border-top:1px solid var(--line);padding:100px 0 
 .enq-actions{display:flex;gap:10px;flex-wrap:wrap}
 .enq-btn{padding:11px 20px;font-size:.7rem}
 
+/* ContactForm — direct "Message us" form (posts to /contact-handler.php) */
+.cform{border:1px solid var(--line);border-radius:2px;padding:36px 32px;background:linear-gradient(165deg,rgba(28,23,17,.85),rgba(13,16,20,.5))}
+.cform-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px 20px;margin-bottom:28px}
+.cform-full{grid-column:1/-1}
+.cform label{display:block}
+.cform label span{display:block;font-size:.64rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-bright);font-weight:500;margin-bottom:10px}
+.cform input,.cform textarea{width:100%;background:rgba(10,8,5,.55);border:1px solid var(--line-2);border-radius:2px;color:var(--bone);font-family:var(--ff-body);font-size:.95rem;font-weight:300;padding:14px 16px;transition:border-color .3s,box-shadow .3s}
+.cform input::placeholder,.cform textarea::placeholder{color:var(--muted-2);opacity:.7}
+.cform input:focus,.cform textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(217,180,90,.14)}
+.cform textarea{resize:vertical;min-height:140px}
+.cform-hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
+.cform-note{border:1px solid var(--line-2);border-radius:2px;padding:18px 22px;margin-bottom:26px;font-size:.95rem;color:var(--bone)}
+.cform-note--ok{border-color:rgba(140,190,120,.5);background:rgba(60,110,50,.16)}
+.cform-note--err{border-color:rgba(210,120,100,.5);background:rgba(130,50,40,.18)}
+
 /* TourFit */
 .tour-fit{}
 .fit-label{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600;margin-bottom:14px}
@@ -375,6 +390,8 @@ body.mcb-active .mcb[aria-hidden="true"]{display:flex}
   .grid-4{grid-template-columns:repeat(2,1fr)}
   .foot-grid{grid-template-columns:1fr}
   .enq-grid{grid-template-columns:1fr}
+  .cform-grid{grid-template-columns:1fr}
+  .cform{padding:28px 20px}
   .custom-trip-inner{grid-template-columns:1fr}
   .custom-trip-cta{flex-direction:column}
   .custom-trip-cta .btn{width:100%}

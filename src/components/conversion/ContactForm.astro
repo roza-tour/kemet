@@ -1,0 +1,73 @@
+---
+// ContactForm — the direct "Message us" form on contact.html.
+// Posts to /contact-handler.php (public/contact-handler.php), which delivers
+// to the site mailbox via the cPanel server. Success/failure comes back as
+// ?sent=1|0#message-us and is shown by the small inline script below.
+interface Props {
+  heading?: string;
+  subtext?: string;
+}
+const {
+  heading = "Send us a message",
+  subtext = "Write to us directly — your message lands in our inbox and we reply within one business day.",
+} = Astro.props;
+---
+<div class="enq-panel reveal" id="message-us">
+  <div class="enq-head">
+    <h2>{heading}</h2>
+    {subtext && <p>{subtext}</p>}
+  </div>
+
+  <div class="cform-note cform-note--ok" hidden>
+    Thank you — your message has been sent. We will reply within one business day.
+  </div>
+  <div class="cform-note cform-note--err" hidden>
+    Something went wrong and the message was not sent. Please check your name,
+    email and message — or write to us on WhatsApp instead.
+  </div>
+
+  <form class="cform" method="post" action="/contact-handler.php">
+    {/* Honeypot — hidden from humans, bots fill it and get silently dropped. */}
+    <label class="cform-hp" aria-hidden="true">
+      Website
+      <input type="text" name="website" tabindex="-1" autocomplete="off" />
+    </label>
+
+    <div class="cform-grid">
+      <label>
+        <span>Your name *</span>
+        <input type="text" name="name" required maxlength="120" autocomplete="name" />
+      </label>
+      <label>
+        <span>Email *</span>
+        <input type="email" name="email" required maxlength="200" autocomplete="email" />
+      </label>
+      <label>
+        <span>Phone / WhatsApp</span>
+        <input type="tel" name="phone" maxlength="40" autocomplete="tel" />
+      </label>
+      <label>
+        <span>Travel dates</span>
+        <input type="text" name="dates" maxlength="120" placeholder="e.g. 10–20 October, flexible" />
+      </label>
+      <label class="cform-full">
+        <span>Your message *</span>
+        <textarea name="message" required rows="6" maxlength="5000" placeholder="Tell us where you want to go, who is travelling and what you would love to see."></textarea>
+      </label>
+    </div>
+
+    <button type="submit" class="btn btn-solid">Send message</button>
+  </form>
+</div>
+
+<script is:inline>
+  (function () {
+    var sent = new URLSearchParams(location.search).get("sent");
+    if (sent === null) return;
+    var note = document.querySelector(sent === "1" ? ".cform-note--ok" : ".cform-note--err");
+    if (note) note.hidden = false;
+    if (sent === "1") { var f = document.querySelector(".cform"); if (f) f.reset(); }
+    var target = document.getElementById("message-us");
+    if (target) target.scrollIntoView({ block: "start" });
+  })();
+</script>

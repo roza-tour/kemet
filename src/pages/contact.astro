@@ -9,6 +9,7 @@ import ContactInfo from "@/components/trust/ContactInfo.astro";
 import CTABlock from "@/components/trust/CTABlock.astro";
 import BookingConfidence from "@/components/trust/BookingConfidence.astro";
 import EnquiryPanel from "@/components/conversion/EnquiryPanel.astro";
+import ContactForm from "@/components/conversion/ContactForm.astro";
 import { company } from "@/data/company";
 import { contactPageSchema } from "@/schemas/jsonld";
 
@@ -69,6 +70,13 @@ const jsonld = contactPageSchema();
   </section>
 
   <Frieze />
+
+  {/* Direct message form — delivers straight to the site inbox */}
+  <section>
+    <div class="wrap">
+      <ContactForm />
+    </div>
+  </section>
 
   {/* Primary CTAs */}
   <section class="cta">
