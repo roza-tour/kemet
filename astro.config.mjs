@@ -14,5 +14,17 @@ const SITE_URL = (PUBLIC_SITE_URL || "https://kemet-travel.com").replace(/\/$/, 
 export default defineConfig({
   site: SITE_URL,
   build: { format: "file" },
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      // build.format "file" serves flat .html files and every page's canonical
+      // tag uses the .html URL — the sitemap must list those exact URLs, or
+      // crawlers hit extensionless paths that 404 on plain static hosting.
+      serialize(item) {
+        const url = new URL(item.url);
+        const path = url.pathname.replace(/\/$/, "");
+        item.url = path === "" ? `${url.origin}/index.html` : `${url.origin}${path}.html`;
+        return item;
+      },
+    }),
+  ],
 });
