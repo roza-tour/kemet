@@ -23,8 +23,36 @@ export const NUMBER_LOCALE = "en-IE";
 /** Document/meta constants. */
 export const HTML_LANG = "en";
 export const OG_LOCALE = "en_US";
-/** Open Graph share image path, relative to the site root. */
+/** Open Graph share image path, relative to the site root, and its intrinsic
+ *  dimensions (scrapers use these for card layout). */
 export const OG_IMAGE_PATH = "/og.jpg";
+export const OG_IMAGE_WIDTH = 1200;
+export const OG_IMAGE_HEIGHT = 630;
+export const OG_IMAGE_ALT = "Kemet — luxury private Egypt travel";
+
+/** Approximate geographic centre used for geo-targeting meta (Cairo). */
+export const GEO_REGION = "EG";
+export const GEO_PLACENAME = "Egypt";
+export const GEO_POSITION = "30.0444;31.2357";
+
+/** Default keyword set (site-wide fallback). Note: the <meta keywords> tag has
+ *  negligible weight with Google — kept for smaller engines and completeness;
+ *  real ranking comes from titles, content and structured data. Pages may pass
+ *  a more specific `keywords` string to override this. */
+export const DEFAULT_KEYWORDS = [
+  "Egypt tours",
+  "luxury Egypt travel",
+  "private Egypt tours",
+  "tailor-made Egypt holidays",
+  "Nile cruise",
+  "Cairo tours",
+  "Giza pyramids tour",
+  "Luxor tours",
+  "Aswan tours",
+  "Egypt travel agency",
+  "Egypt tour packages",
+  "bespoke Egypt itinerary",
+].join(", ");
 
 export const site = {
   name: "Kemet",

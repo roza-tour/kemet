@@ -46,8 +46,27 @@ const enquire = mailtoLink(
   `Hello Kemet,\n\nI'd like to request the "${tour.title}" journey (${tour.durationLabel}, from ${formatPrice(tour.price)} per person).\n\nPreferred dates:\nNumber of travellers:\n\nThank you.`,
 );
 const jsonld = entitySchema("tour", tour);
+
+// Page-specific keywords and a share card that uses the tour's own hero photo.
+const keywords = [
+  tour.title,
+  `${tour.title} tour`,
+  tour.category,
+  `${tour.durationLabel} Egypt tour`,
+  "private Egypt tour",
+  "luxury Egypt travel",
+  ...(tour.visiting ? [tour.visiting] : []),
+].join(", ");
 ---
-<Base title={title} description={description} active={`${tour.slug}.html`} jsonld={jsonld}>
+<Base
+  title={title}
+  description={description}
+  active={`${tour.slug}.html`}
+  jsonld={jsonld}
+  keywords={keywords}
+  ogImage={tour.hero?.src}
+  ogImageAlt={tour.hero?.alt}
+>
   <article>
     <header class="phero" style="padding-bottom:40px">
       <div class="wrap">

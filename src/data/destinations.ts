@@ -13,8 +13,6 @@ import type { Destination } from "@/types";
 const near = (...ids: string[]) =>
   ids.map((id) => ({ domain: "destination" as const, id }));
 
-const PLACEHOLDER_GEO = { lat: null, lng: null };
-
 export const destinations: Destination[] = [
   {
     id: "cairo",
@@ -27,7 +25,7 @@ export const destinations: Destination[] = [
     longDescription:
       "Cairo is the Arab world's largest city and one of the oldest continuously inhabited capitals on earth. The layers of settlement here span more than two thousand years: Roman Babylon, the fortress built to guard the Nile crossing, is still visible in the Coptic quarter, its towers incorporated into the Hanging Church — one of the oldest Christian places of worship in Africa. The Fatimid caliphate founded Cairo as a royal city in 969 CE and immediately established Al-Azhar mosque and university, now the oldest continuously operating university in the world. Over the following centuries, Islamic Cairo grew into one of the great medieval cities of the world: a dense fabric of mosques, madrasas and merchant palaces surrounding the fourteenth-century Khan el-Khalili bazaar, still trading today. Modern greater Cairo is home to some twenty million people. It holds the Egyptian Museum on Tahrir Square — the world's largest collection of pharaonic antiquities — and, on its western edge beside the Giza plateau, the Grand Egyptian Museum: the largest archaeological museum ever built, purpose-designed to display Tutankhamun's complete treasure alongside the great monuments it was found near.",
     region: "cairo",
-    coordinates: PLACEHOLDER_GEO,
+    coordinates: { lat: 30.0444, lng: 31.2357 },
     elevationMeters: 23,
     unesco: { listed: true, siteName: "Historic Cairo" },
     bestSeasons: ["autumn", "winter", "spring"],
@@ -120,7 +118,7 @@ export const destinations: Destination[] = [
     longDescription:
       "The Giza plateau rises from the edge of greater Cairo on the west bank of the Nile, a limestone escarpment where the Sahara begins. The three pyramids built here during Egypt's Fourth Dynasty — for the pharaohs Khufu (c. 2560 BCE), his son Khafre, and grandson Menkaure — are the only surviving wonder of the ancient world. Khufu's Great Pyramid stood as the tallest structure on earth for nearly four thousand years, built from an estimated 2.3 million stone blocks averaging 2.5 tonnes each. Khafre's pyramid retains a band of the original polished limestone casing at its apex; the Great Sphinx, 73 metres long and 20 metres tall, was carved from the plateau's living bedrock and guards the approach to Khafre's Valley Temple — a mortuary complex of red Aswan granite and alabaster that remains one of the finest examples of Old Kingdom stonework in existence. The Grand Egyptian Museum, opened progressively from 2021, was built specifically on the plateau's edge to display the antiquities of Giza and to give Tutankhamun's complete treasure — over 5,000 objects — a permanent, purpose-designed home beside the monuments that inspired them.",
     region: "cairo",
-    coordinates: PLACEHOLDER_GEO,
+    coordinates: { lat: 29.9773, lng: 31.1325 },
     unesco: {
       listed: true,
       siteName: "Memphis and its Necropolis – the Pyramid Fields",
@@ -215,7 +213,7 @@ export const destinations: Destination[] = [
     longDescription:
       "Luxor stands on the east bank of the Nile at the site of ancient Thebes, the capital of Egypt at the height of the New Kingdom (c. 1550–1070 BCE). The concentration of monuments here is greater than anywhere else on earth. On the East Bank stand the temples of the living city: Karnak, the largest religious complex ever constructed — a 2-kilometre enclosure of temples, hypostyle halls and processional avenues built continuously over thirteen centuries by successive pharaohs — and the riverside Luxor Temple, connected to Karnak by the 2.7-kilometre Avenue of Sphinxes, lined with 1,057 ram-headed sphinxes and dramatically illuminated after the avenue's 2021 restoration. The West Bank was the ancient city of the dead: the Valley of the Kings, where sixty-two royal tombs have been discovered cut into the limestone Theban hills, including the intact tomb of Tutankhamun found by Howard Carter in 1922; the terraced mortuary temple of Hatshepsut at Deir el-Bahri; and the Colossi of Memnon — two 18-metre quartzite statues of Amenhotep III that are all that remains of what was once Egypt's largest funerary temple. Luxor is not a ruin city but a working town of half a million people whose residents live alongside, and sometimes within, three and a half thousand years of stone.",
     region: "nile-valley",
-    coordinates: PLACEHOLDER_GEO,
+    coordinates: { lat: 25.6872, lng: 32.6396 },
     elevationMeters: 76,
     unesco: { listed: true, siteName: "Ancient Thebes with its Necropolis" },
     bestSeasons: ["autumn", "winter", "spring"],
@@ -308,7 +306,7 @@ export const destinations: Destination[] = [
     longDescription:
       "Aswan is Egypt's southernmost city, set where the Nile meets the First Cataract — a stretch of granite rapids and boulder-strewn islands that marked the ancient boundary between Egypt and Nubia. For four thousand years it was Egypt's frontier garrison and its quarry: the distinctive pink Aswan granite used in obelisks, colossi and temple columns across the country was cut from these cliffs, and the Unfinished Obelisk still lies in the bedrock of the ancient quarry, abandoned mid-cut when a crack appeared. At 42 metres and an estimated 1,168 tonnes, it would have been the largest obelisk ever raised. The island temples of Philae, dedicated to the goddess Isis, were the last outpost of active pharaonic worship, still drawing pilgrims as late as the sixth century CE. When the Aswan High Dam created Lake Nasser in the 1960s and 70s, the Philae complex faced permanent submersion; in one of UNESCO's most ambitious rescue operations, the temples were dismantled stone by stone between 1972 and 1980 and rebuilt on the higher ground of Agilkia Island, where they stand today. The dam itself, completed in 1970, ended the Nile's annual flood cycle and generates electricity for the whole of Egypt. Beyond its monuments, Aswan is the heartland of living Nubian culture: the painted villages, music and extraordinary hospitality of the Nubian people give the city a warmth and colour that distinguishes it from anywhere else in Egypt.",
     region: "nubia",
-    coordinates: PLACEHOLDER_GEO,
+    coordinates: { lat: 24.0889, lng: 32.8998 },
     unesco: {
       listed: true,
       siteName: "Nubian Monuments from Abu Simbel to Philae",
@@ -403,7 +401,7 @@ export const destinations: Destination[] = [
     longDescription:
       "Alexandria was founded in 331 BCE by Alexander the Great on a narrow strip of land between the Mediterranean Sea and Lake Mareotis, chosen for its natural harbour and its position as a pivot between Africa and the Greek world. For three centuries under the Ptolemaic dynasty it was the foremost intellectual city in the ancient world — home to the great Library, founded around 295 BCE, which sought to gather a copy of every text in existence; the Mouseion, an early academy of scholars; and the Pharos lighthouse, built around 280 BCE and one of the Seven Ancient Wonders, which guided ships into the harbour for eight centuries before earthquakes brought it down in the fourteenth century CE. The city's layered past is visible across its surviving monuments. The Catacombs of Kom El Shoqafa, a second-century CE Roman-era necropolis discovered in 1900 when a donkey fell through the entrance, descend three levels underground and blend Egyptian, Greek and Roman funerary motifs in a way unique in the ancient world. Pompey's Pillar — actually raised in honour of the Emperor Diocletian in 297 CE — is a 27-metre monolithic column standing among the ruins of the ancient Serapeum, the largest Roman column outside Constantinople. The Citadel of Qaitbay, built by the Mamluk sultan in 1477 CE using stones from the ruined Pharos, looks out to sea from the exact spot where the ancient lighthouse stood. Modern Alexandria is a working Mediterranean port city of over five million people — cooler and breezier than the Nile valley, with a 20-kilometre corniche seafront. The Bibliotheca Alexandrina, opened in 2002, is a deliberate revival of the ancient Library's spirit: a vast circular building of grey granite and glass holding over two million volumes.",
     region: "mediterranean",
-    coordinates: PLACEHOLDER_GEO,
+    coordinates: { lat: 31.2001, lng: 29.9187 },
     bestSeasons: ["spring", "summer", "autumn"],
     climateSummary:
       "Mild Mediterranean climate with warm summers averaging 28–30 °C, cool damp winters, and sea breezes year-round.",

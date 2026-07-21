@@ -42,23 +42,36 @@ export function tourSchema(tour: Tour): JsonLd[] {
     })),
   };
 
+  // Use the tour's own hero image (absolute), falling back to the site OG image
+  // only when a tour has no hero — never the generic image when a real one exists.
+  const image = tour.hero?.src ? `${SITE_URL}${tour.hero.src}` : `${SITE_URL}${OG_IMAGE_PATH}`;
+
   const touristTrip: JsonLd = {
     "@context": SCHEMA_CONTEXT,
     "@type": "TouristTrip",
     name: tour.title,
     description: tour.summary,
     url,
-    image: `${SITE_URL}${OG_IMAGE_PATH}`,
+    image,
+    inLanguage: "en",
     touristType: "Luxury travellers",
     provider: { "@type": "TravelAgency", name: site.name, url: SITE_URL },
     itinerary,
     offers: {
       "@type": "Offer",
+      name: `${tour.title} — private, per person`,
       price: String(tour.price),
       priceCurrency: CURRENCY,
       availability: "https://schema.org/InStock",
       url,
-      category: "per person",
+      // Correct pricing unit (was misusing Offer.category for "per person").
+      priceSpecification: {
+        "@type": "UnitPriceSpecification",
+        price: String(tour.price),
+        priceCurrency: CURRENCY,
+        referenceQuantity: { "@type": "QuantitativeValue", value: 1, unitText: "person" },
+      },
+      seller: { "@type": "TravelAgency", name: site.name, url: SITE_URL },
     },
   };
 
@@ -396,7 +409,11 @@ export function siteSchema(): JsonLd[] {
     "@context": SCHEMA_CONTEXT,
     "@type": ["TravelAgency", "LocalBusiness"],
     name: site.name,
+    alternateName: "Kemet — Luxury Egypt Travel",
     url: SITE_URL,
+    logo: `${SITE_URL}/images/brand/kemet-logo-gold.webp`,
+    image: `${SITE_URL}${OG_IMAGE_PATH}`,
+    slogan: site.tagline,
     description:
       "Luxury private Egypt travel — tailored tours, Nile cruises and experiences built exclusively for each traveller.",
     email: site.email,

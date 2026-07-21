@@ -1,6 +1,10 @@
 ---
 import "@/styles/global.css";
-import { site, HTML_LANG, OG_LOCALE } from "@/config/site";
+import {
+  site, HTML_LANG, OG_LOCALE,
+  OG_IMAGE_WIDTH, OG_IMAGE_HEIGHT,
+  GEO_REGION, GEO_PLACENAME, GEO_POSITION,
+} from "@/config/site";
 import { relativePrefix } from "@/config/routes";
 import { buildPageSeo } from "@/utils/seo";
 import { siteSchema } from "@/schemas/jsonld";
@@ -20,15 +24,23 @@ interface Props {
   /** Page-specific structured data. */
   jsonld?: JsonLd | JsonLd[];
   showCta?: boolean;
+  /** Comma-separated keywords for this page (falls back to the site default). */
+  keywords?: string;
+  /** Share-image overrides. */
+  ogImage?: string;
+  ogImageAlt?: string;
 }
 
 const { active = "index.html", jsonld, showCta = true } = Astro.props;
 
 // Resolve SEO once, so every page inherits the same defaults (utils/seo).
-const { title, description, canonicalUrl, ogImage } = buildPageSeo({
+const { title, description, canonicalUrl, ogImage, ogImageAlt, keywords } = buildPageSeo({
   title: Astro.props.title,
   description: Astro.props.description,
   route: active,
+  keywords: Astro.props.keywords,
+  ogImage: Astro.props.ogImage,
+  ogImageAlt: Astro.props.ogImageAlt,
 });
 // Link prefix so shared nav/footer resolve from any directory depth.
 // Root pages → "" (output unchanged); /destinations/* → "../".
@@ -46,7 +58,20 @@ const pageLd = jsonld ? (Array.isArray(jsonld) ? jsonld : [jsonld]) : [];
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <title>{title}</title>
   <meta name="description" content={description} />
+  <meta name="keywords" content={keywords} />
   <link rel="canonical" href={canonicalUrl} />
+  {/* Let search + answer engines show large images and full snippets (rich
+      results / AI answers). */}
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="author" content={site.name} />
+  <meta name="publisher" content={site.name} />
+  {/* Geo-targeting */}
+  <meta name="geo.region" content={GEO_REGION} />
+  <meta name="geo.placename" content={GEO_PLACENAME} />
+  <meta name="geo.position" content={GEO_POSITION} />
+  <meta name="ICBM" content={GEO_POSITION.replace(";", ", ")} />
+  <meta name="theme-color" content="#0B0907" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content={site.name} />
   <meta property="og:locale" content={OG_LOCALE} />
@@ -54,10 +79,16 @@ const pageLd = jsonld ? (Array.isArray(jsonld) ? jsonld : [jsonld]) : [];
   <meta property="og:description" content={description} />
   <meta property="og:url" content={canonicalUrl} />
   <meta property="og:image" content={ogImage} />
+  <meta property="og:image:width" content={String(OG_IMAGE_WIDTH)} />
+  <meta property="og:image:height" content={String(OG_IMAGE_HEIGHT)} />
+  <meta property="og:image:alt" content={ogImageAlt} />
+  <meta property="og:image:type" content="image/jpeg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={ogImage} />
+  <meta name="twitter:image:alt" content={ogImageAlt} />
+  <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Outfit:wght@200;300;400;500;600&family=Cormorant+Garamond:wght@300;400;500;600&family=Noto+Sans+Egyptian+Hieroglyphs&display=swap" rel="stylesheet" />

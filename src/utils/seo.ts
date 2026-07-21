@@ -4,7 +4,7 @@
 // current and future page inherits the same defaults, so a new page type needs
 // no bespoke head logic.
 // ---------------------------------------------------------------------------
-import { OG_IMAGE_PATH, SITE_URL, site } from "@/config/site";
+import { DEFAULT_KEYWORDS, OG_IMAGE_ALT, OG_IMAGE_PATH, SITE_URL, site } from "@/config/site";
 import { canonical } from "@/utils/links";
 import type { SeoMeta } from "@/types";
 
@@ -15,6 +15,10 @@ export interface PageSeoInput {
   route?: string;
   /** Share image path relative to the site root; defaults to the site OG image. */
   ogImage?: string;
+  /** Alt text for the share image. */
+  ogImageAlt?: string;
+  /** Comma-separated keywords for the <meta keywords> tag (low SEO weight). */
+  keywords?: string;
 }
 
 export interface ResolvedSeo {
@@ -22,6 +26,8 @@ export interface ResolvedSeo {
   description: string;
   canonicalUrl: string;
   ogImage: string;
+  ogImageAlt: string;
+  keywords: string;
 }
 
 const DEFAULT_TITLE = `${site.name} — The Black Land`;
@@ -35,6 +41,8 @@ export function buildPageSeo(input: PageSeoInput = {}): ResolvedSeo {
     description: input.description ?? site.description,
     canonicalUrl: canonical(route),
     ogImage: `${SITE_URL}${image}`,
+    ogImageAlt: input.ogImageAlt ?? OG_IMAGE_ALT,
+    keywords: input.keywords ?? DEFAULT_KEYWORDS,
   };
 }
 
