@@ -1,0 +1,79 @@
+---
+// Egypt Travel FAQ (/faq.html). Answers are pulled from the maintained travel
+// guides plus one authored planning group — see src/data/faq.ts. Emits FAQPage
+// JSON-LD so the answers are eligible for rich results and AI-answer citation.
+import Base from "@/layouts/Base.astro";
+import PageHero from "@/components/PageHero.astro";
+import Faq from "@/components/Faq.astro";
+import Frieze from "@/components/Frieze.astro";
+import CTABlock from "@/components/trust/CTABlock.astro";
+import { faqGroups, allFaqs } from "@/data/faq";
+import { faqPageSchema } from "@/schemas/jsonld";
+
+const ROUTE = "faq.html";
+const jsonld = faqPageSchema(allFaqs);
+
+const keywords = [
+  "Egypt travel FAQ",
+  "is Egypt safe",
+  "best time to visit Egypt",
+  "Egypt visa on arrival",
+  "how many days in Egypt",
+  "Egypt trip cost",
+  "Egypt travel tips",
+  "planning a trip to Egypt",
+].join(", ");
+---
+<Base
+  title="Egypt Travel FAQ — Safety, Visas, Best Time, Costs & Tips | Kemet"
+  description="Answers to the most common Egypt travel questions — safety, visas and entry, the best time to visit, how many days you need, costs, getting around, food and more."
+  active={ROUTE}
+  keywords={keywords}
+  jsonld={jsonld}
+>
+  <PageHero
+    crumb="Travel FAQ"
+    symbol="horus"
+    title="Egypt Travel FAQ"
+    text="Straight answers to the questions travellers ask us most — from visas and safety to the best time to go, how long to stay and what a private journey costs."
+  />
+
+  <section style="padding-top:30px">
+    <div class="wrap faq-wrap">
+      {faqGroups.map((group, i) => (
+        <Fragment>
+          {i > 0 && <Frieze />}
+          <div class="faq-group reveal">
+            {group.intro && (
+              <div class="faq-grouphead">
+                <h2>{group.heading}</h2>
+                <p>{group.intro}</p>
+              </div>
+            )}
+            <Faq items={group.items} heading={group.intro ? "" : group.heading} />
+          </div>
+        </Fragment>
+      ))}
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap">
+      <CTABlock
+        eyebrow="Still deciding?"
+        heading="Ask us your own question"
+        subtext="Whatever you're wondering about your trip to Egypt, message us — we answer every enquiry personally, usually within one business day."
+        types={["whatsapp", "email"]}
+      />
+    </div>
+  </section>
+</Base>
+
+<style>
+  .faq-wrap{max-width:820px}
+  .faq-grouphead{margin-bottom:6px}
+  .faq-grouphead h2{margin:0 0 6px}
+  .faq-grouphead p{margin:0 0 4px;color:var(--muted)}
+  /* When the group renders its own heading via Faq, keep rhythm tidy. */
+  .faq-group + .faq-group{margin-top:8px}
+</style>

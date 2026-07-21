@@ -483,6 +483,30 @@ export function aboutPageSchema(): JsonLd {
 }
 
 /**
+ * Structured data for the standalone Egypt Travel FAQ page:
+ * FAQPage (for rich results and answer-engine citation) + BreadcrumbList.
+ */
+export function faqPageSchema(items: Array<{ q: string; a: string }>): JsonLd[] {
+  const faqPage: JsonLd = {
+    "@context": SCHEMA_CONTEXT,
+    "@type": "FAQPage",
+    name: "Egypt Travel FAQ",
+    url: canonical("faq.html"),
+    inLanguage: "en",
+    mainEntity: items.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+  const crumbs = breadcrumb([
+    ["Home", "index.html"],
+    ["Travel FAQ", "faq.html"],
+  ]);
+  return [faqPage, crumbs];
+}
+
+/**
  * Structured data for the Contact page.
  * ContactPage (WebPage subtype) with contact point reference.
  */

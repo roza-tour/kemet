@@ -48,6 +48,7 @@ export const footerExplore: FooterColumn = {
     { label: "The 8 Identities", href: "identities.html" },
     { label: "Activities", href: "activities.html" },
     { label: "Cuisine", href: "cuisine.html" },
+    { label: "Travel FAQ", href: "faq.html" },
   ],
 };
 
