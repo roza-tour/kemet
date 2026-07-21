@@ -1,0 +1,31 @@
+---
+// Privacy Policy (/privacy.html). Content lives in src/data/legal.ts.
+import Base from "@/layouts/Base.astro";
+import PageHero from "@/components/PageHero.astro";
+import LegalContent from "@/components/trust/LegalContent.astro";
+import { privacyPolicy } from "@/data/legal";
+import { canonical } from "@/utils/links";
+import { site, SITE_URL } from "@/config/site";
+
+const ROUTE = "privacy.html";
+const jsonld = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: `Privacy Policy — ${site.name}`,
+  url: canonical(ROUTE),
+  isPartOf: { "@type": "WebSite", name: `${site.name} — The Black Land`, url: SITE_URL },
+};
+---
+<Base
+  title={`Privacy Policy — ${site.name}`}
+  description="How Kemet collects, uses and protects the personal information you share when you contact us or use this website. We collect as little as possible and never sell it."
+  active={ROUTE}
+  jsonld={jsonld}
+>
+  <PageHero crumb="Privacy Policy" title="Privacy Policy" />
+  <section style="padding-top:26px">
+    <div class="wrap">
+      <LegalContent doc={privacyPolicy} />
+    </div>
+  </section>
+</Base>

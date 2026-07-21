@@ -59,6 +59,8 @@ export const footerCompany: FooterColumn = {
     { label: "About Kemet", href: "about.html" },
     { label: "Contact", href: "contact.html" },
     { label: "Booking & Cancellation", href: "booking.html" },
+    { label: "Privacy Policy", href: "privacy.html" },
+    { label: "Terms of Use", href: "terms.html" },
   ],
 };
 

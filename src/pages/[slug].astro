@@ -37,7 +37,16 @@ const similarTours = findSimilarTours(tour);
 const prepGuides = findPreparationGuides(tour);
 
 const title = `${tour.title} — ${tour.durationLabel} | Kemet Egypt`;
-const description = tour.summary;
+
+// Per-tour meta description: the summary is already a strong, specific hook, so
+// we keep it verbatim and append a clean "private, from €X pp." price signal
+// (better click-through in search) — but only when the WHOLE summary still fits
+// in ~160 chars, so we never truncate mid-sentence. Longer summaries are used
+// as-is. summary itself stays untouched (reused verbatim in the JSON-LD).
+const priceTag = ` — private, from ${formatPrice(tour.price)} pp.`;
+const cleanSummary = tour.summary.replace(/\s+$/, "").replace(/\.\s*$/, "");
+const description =
+  (cleanSummary + priceTag).length <= 158 ? cleanSummary + priceTag : tour.summary;
 const wa = whatsappLink(
   `Hello Kemet — I'm interested in the "${tour.title}" journey (${tour.durationLabel}). Could you share availability?`,
 );

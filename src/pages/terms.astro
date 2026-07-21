@@ -1,0 +1,31 @@
+---
+// Terms of Use (/terms.html). Content lives in src/data/legal.ts.
+import Base from "@/layouts/Base.astro";
+import PageHero from "@/components/PageHero.astro";
+import LegalContent from "@/components/trust/LegalContent.astro";
+import { termsOfService } from "@/data/legal";
+import { canonical } from "@/utils/links";
+import { site, SITE_URL } from "@/config/site";
+
+const ROUTE = "terms.html";
+const jsonld = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: `Terms of Use — ${site.name}`,
+  url: canonical(ROUTE),
+  isPartOf: { "@type": "WebSite", name: `${site.name} — The Black Land`, url: SITE_URL },
+};
+---
+<Base
+  title={`Terms of Use — ${site.name}`}
+  description="The terms governing use of the Kemet website, enquiries and quotes. Read alongside our Booking & Cancellation terms for confirmed trips."
+  active={ROUTE}
+  jsonld={jsonld}
+>
+  <PageHero crumb="Terms of Use" title="Terms of Use" />
+  <section style="padding-top:26px">
+    <div class="wrap">
+      <LegalContent doc={termsOfService} />
+    </div>
+  </section>
+</Base>
