@@ -152,6 +152,8 @@ section{position:relative;padding:100px 0}
 .pcard .was{color:var(--muted-2);text-decoration:line-through;font-size:1.1rem;margin-left:8px}
 .pcard .pp{font-size:.8rem;color:var(--muted);margin-bottom:22px}
 .pcard .btn{width:100%;text-align:center;margin-bottom:10px}
+.pcard-terms{display:inline-block;margin-top:16px;font-size:.78rem;letter-spacing:.04em;color:var(--muted);border-bottom:1px solid var(--line-2);padding-bottom:2px;transition:color .25s}
+.pcard-terms:hover{color:var(--gold-bright)}
 .facts{margin:24px 0;border-top:1px solid var(--line);padding-top:20px}
 .facts div{display:flex;justify-content:space-between;font-size:.86rem;padding:7px 0;color:var(--muted)}
 .facts div b{color:var(--bone);font-weight:400}
@@ -376,6 +378,7 @@ footer{background:var(--ink-2);border-top:1px solid var(--line);padding:100px 0 
   .grid-3,.gods-grid{grid-template-columns:repeat(3,1fr)}
   .grid-4{grid-template-columns:repeat(2,1fr)}
   .tdetail{grid-template-columns:1fr}.side{position:static}
+  .side.side-lead{order:-1}
   .eg-row{grid-template-columns:1fr;gap:28px}.eg-row.rev .eg-media{order:0}
   .her-grid{grid-template-columns:1fr;gap:44px}.foot-grid{grid-template-columns:1fr 1fr}
   .custom-trip-inner{grid-template-columns:1fr;gap:36px}

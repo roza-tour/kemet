@@ -57,6 +57,7 @@ export const footerCompany: FooterColumn = {
   links: [
     { label: "About Kemet", href: "about.html" },
     { label: "Contact", href: "contact.html" },
+    { label: "Booking & Cancellation", href: "booking.html" },
   ],
 };
 

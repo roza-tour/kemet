@@ -35,6 +35,12 @@ RewriteRule ^([^.]+?)/?$ $1.html [R=301,L]
 RewriteRule ^(?:\.git|src|scripts|public|node_modules|dist|\.claude|\.astro)(/|$) - [R=404,L]
 
 # Project/config files that sit in the repo root must never be downloadable.
-<FilesMatch "^(package(-lock)?\.json|astro\.config\.mjs|tsconfig\.json|README\.md|\.env.*|\.gitignore|\.publish-manifest)$">
+<FilesMatch "^(package(-lock)?\.json|astro\.config\.mjs|tsconfig\.json|README\.md|DEPLOYMENT\.md|ARCHITECTURE\.md|\.env.*|\.gitignore|\.publish-manifest)$">
+  Require all denied
+</FilesMatch>
+
+# Astro source that co-lives in the repo root must never be served, even if a
+# new source file ever lands outside the folders blocked above.
+<FilesMatch "\.(ts|astro|mjs)$">
   Require all denied
 </FilesMatch>

@@ -31,6 +31,7 @@ export const MAIN_PAGES = [
   "culture.html",
   "about.html",
   "contact.html",
+  "booking.html",
 ] as const;
 
 /**

@@ -1,0 +1,162 @@
+---
+// Booking, payment & cancellation page (/booking.html). All figures come from
+// src/data/booking.ts — see the DRAFT-terms note there before publishing.
+import Base from "@/layouts/Base.astro";
+import PageHero from "@/components/PageHero.astro";
+import SectionHeader from "@/components/SectionHeader.astro";
+import Frieze from "@/components/Frieze.astro";
+import CTABlock from "@/components/trust/CTABlock.astro";
+import { bookingTerms } from "@/data/booking";
+import { company } from "@/data/company";
+
+const ROUTE = "booking.html";
+const { steps, deposit, balance, paymentMethods, cancellationTiers, policies } = bookingTerms;
+---
+<Base
+  title={`Booking, Payment & Cancellation — ${company.name}`}
+  description="How booking a private Kemet journey works — our step-by-step process, deposit and payment terms, accepted payment methods and cancellation policy."
+  active={ROUTE}
+>
+  <PageHero
+    crumb="Booking & Cancellation"
+    symbol="ankh"
+    title="Booking, Payment & Cancellation"
+    text="Everything you need to know before you confirm — how booking works, when payments fall due, and our cancellation terms. Transparent, with no hidden costs."
+  />
+
+  {/* How booking works */}
+  <section style="padding-top:30px">
+    <div class="wrap">
+      <SectionHeader eyebrow="The process" title="How booking works" />
+      <div class="bk-steps">
+        {steps.map((s) => (
+          <div class="bk-step reveal">
+            <div class="bk-num">{s.step}</div>
+            <div class="bk-body">
+              <h3>{s.heading}</h3>
+              <p>{s.body}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Frieze />
+
+  {/* Payment terms */}
+  <section>
+    <div class="wrap">
+      <SectionHeader eyebrow="Payment" title="Deposit & balance" />
+      <div class="bk-cards">
+        <div class="bk-card reveal">
+          <div class="bk-k">Deposit to confirm</div>
+          <div class="bk-v">{deposit.label}</div>
+          <p>{deposit.note}</p>
+        </div>
+        <div class="bk-card reveal">
+          <div class="bk-k">Balance</div>
+          <div class="bk-v">{balance.label}</div>
+          <p>{balance.note}</p>
+        </div>
+        <div class="bk-card reveal">
+          <div class="bk-k">Ways to pay</div>
+          <ul class="bk-pay">
+            {paymentMethods.map((m) => <li>{m}</li>)}
+          </ul>
+          <p>All amounts are quoted and settled in euros (EUR).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Cancellation policy */}
+  <section>
+    <div class="wrap">
+      <SectionHeader
+        eyebrow="If plans change"
+        title="Cancellation by you"
+        text="If you need to cancel, the following charges apply based on how far ahead of departure you let us know. Charges reflect commitments we make to hotels, guides and operators on your behalf."
+      />
+      <div class="bk-table-wrap">
+        <table class="bk-table">
+          <thead>
+            <tr><th scope="col">Notice before departure</th><th scope="col">Cancellation charge</th></tr>
+          </thead>
+          <tbody>
+            {cancellationTiers.map((t) => (
+              <tr><td>{t.window}</td><td>{t.charge}</td></tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  {/* Other policies */}
+  <section>
+    <div class="wrap">
+      <SectionHeader eyebrow="Good to know" title="Changes, insurance & the unexpected" />
+      <div class="grid-2 bk-policies">
+        {policies.map((p) => (
+          <div class="bk-policy reveal">
+            <h3>{p.heading}</h3>
+            <p>{p.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* CTA */}
+  <section class="cta">
+    <div class="wrap">
+      <CTABlock
+        eyebrow="Questions?"
+        heading="Ask us anything before you commit"
+        subtext="Not sure about a term or a date? Message us — we'll explain everything clearly before you decide."
+        types={["whatsapp", "email"]}
+      />
+    </div>
+  </section>
+</Base>
+
+<style>
+  .bk-steps{display:flex;flex-direction:column;gap:22px;margin-top:8px}
+  .bk-step{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:start;
+    border:1px solid var(--line);border-radius:2px;padding:24px 26px;
+    background:linear-gradient(165deg,rgba(28,23,17,.55),rgba(13,16,20,.35))}
+  .bk-num{font-family:var(--ff-display);font-size:1.9rem;line-height:1;color:var(--gold);
+    width:52px;height:52px;display:flex;align-items:center;justify-content:center;
+    border:1px solid var(--line-2);border-radius:50%;flex:none}
+  .bk-body h3{margin:0 0 8px;font-size:1.2rem}
+  .bk-body p{margin:0;color:var(--muted)}
+
+  .bk-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:8px}
+  .bk-card{border:1px solid var(--line-2);border-radius:2px;padding:28px 26px;
+    background:linear-gradient(165deg,rgba(28,23,17,.92),rgba(13,16,20,.6));
+    box-shadow:0 24px 60px rgba(0,0,0,.28)}
+  .bk-k{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted-2)}
+  .bk-v{font-family:var(--ff-display);font-size:1.7rem;margin:6px 0 12px;color:var(--bone)}
+  .bk-card p{color:var(--muted);font-size:.95rem;margin:0}
+  .bk-pay{list-style:none;padding:0;margin:2px 0 12px}
+  .bk-pay li{padding:6px 0;border-bottom:1px solid var(--line);color:var(--bone)}
+  .bk-pay li:last-child{border-bottom:0}
+
+  .bk-table-wrap{overflow-x:auto;margin-top:8px}
+  .bk-table{width:100%;border-collapse:collapse;min-width:420px}
+  .bk-table th,.bk-table td{text-align:start;padding:16px 18px;border-bottom:1px solid var(--line)}
+  .bk-table th{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:500}
+  .bk-table td{color:var(--bone)}
+  .bk-table tbody tr:hover{background:rgba(217,180,90,.04)}
+
+  .bk-policies{gap:22px 40px;margin-top:8px}
+  .bk-policy h3{margin:0 0 8px;font-size:1.15rem}
+  .bk-policy p{margin:0;color:var(--muted)}
+
+  @media(max-width:860px){.bk-cards{grid-template-columns:1fr}}
+  @media(max-width:680px){
+    .bk-step{grid-template-columns:1fr;gap:14px}
+    .bk-policies{grid-template-columns:1fr}
+  }
+</style>

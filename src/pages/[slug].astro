@@ -118,7 +118,7 @@ const jsonld = entitySchema("tour", tour);
             <TourFit />
           </div>
 
-          <aside class="side">
+          <aside class="side side-lead">
             <div class="pcard reveal">
               <div class="from">From</div>
               <div class="big">
@@ -135,6 +135,7 @@ const jsonld = entitySchema("tour", tour);
                 <div><span>Private</span><b>{tour.isPrivate}</b></div>
                 {tour.flightsIncluded && <div><span>Flights</span><b>Domestic included</b></div>}
               </div>
+              <a href="booking.html" class="pcard-terms">Booking &amp; cancellation terms →</a>
             </div>
           </aside>
         </div>

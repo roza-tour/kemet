@@ -37,8 +37,13 @@ export function phoneHref(): string {
   return `tel:${digits}`;
 }
 
-/** Absolute canonical URL for a route file (e.g. "tours.html"). */
+/**
+ * Absolute canonical URL for a route file (e.g. "tours.html"). The homepage
+ * canonicalises to the bare origin ("https://kemet-travel.com/") rather than
+ * "/index.html", so search engines and social shares consolidate on one URL.
+ */
 export function canonical(file: string): string {
+  if (file === "index.html") return `${SITE_URL}/`;
   return `${SITE_URL}/${file}`;
 }
 

@@ -22,7 +22,9 @@ export default defineConfig({
       serialize(item) {
         const url = new URL(item.url);
         const path = url.pathname.replace(/\/$/, "");
-        item.url = path === "" ? `${url.origin}/index.html` : `${url.origin}${path}.html`;
+        // Homepage → bare origin ("/") to match its canonical tag; all other
+        // pages → flat ".html" URLs matching their canonicals.
+        item.url = path === "" ? `${url.origin}/` : `${url.origin}${path}.html`;
         return item;
       },
     }),
