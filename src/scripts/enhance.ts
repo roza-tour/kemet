@@ -5,14 +5,13 @@
 // loading or scroll-reveal animations. This script only:
 //   - draws the ambient golden-dust background (canvas)
 //   - toggles the nav's glass background past a scroll threshold
-//   - shows the mobile conversion bar past a scroll threshold
 //   - drives the mobile menu button
 //   - wires the destination strip's prev/next arrows
+// The WhatsApp button is a pure-CSS floating affordance — no JS needed.
 // All motion is disabled under prefers-reduced-motion.
 // ---------------------------------------------------------------------------
 
 const NAV_SCROLL_THRESHOLD = 40; // px before the nav gains its glass background
-const MCB_SCROLL_THRESHOLD = 600; // px before the mobile conversion bar appears
 const DUST_MAX = 120; // particle ceiling on large screens
 const DUST_DENSITY = 15000; // px² of viewport per particle
 
@@ -50,11 +49,10 @@ export const enhanceScript = `
           cx.moveTo(x,s.y-L);cx.lineTo(x,s.y+L);cx.stroke();}}
       requestAnimationFrame(fr);})(last);}
 
-  /* nav glass + mobile conversion bar — one passive scroll listener */
+  /* nav glass — one passive scroll listener */
   var nav=document.getElementById('nav');
   addEventListener('scroll',function(){var y=scrollY;
     if(nav)nav.classList.toggle('scrolled',y>${NAV_SCROLL_THRESHOLD});
-    document.body.classList.toggle('mcb-active',y>${MCB_SCROLL_THRESHOLD});
   },{passive:true});
 
   /* mobile menu */
