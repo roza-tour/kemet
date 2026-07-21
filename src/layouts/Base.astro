@@ -60,6 +60,10 @@ const pageLd = jsonld ? (Array.isArray(jsonld) ? jsonld : [jsonld]) : [];
   <meta name="description" content={description} />
   <meta name="keywords" content={keywords} />
   <link rel="canonical" href={canonicalUrl} />
+  {/* Single global-English site: serve this page to every English region and
+      make it the default worldwide. */}
+  <link rel="alternate" hreflang="en" href={canonicalUrl} />
+  <link rel="alternate" hreflang="x-default" href={canonicalUrl} />
   {/* Let search + answer engines show large images and full snippets (rich
       results / AI answers). */}
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />

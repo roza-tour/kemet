@@ -442,6 +442,9 @@ export function siteSchema(): JsonLd[] {
       },
     ],
     areaServed: { "@type": "Country", name: "Egypt" },
+    // The audience is worldwide; the service is delivered in Egypt.
+    serviceType: "Luxury private tours, Nile cruises and tailor-made travel",
+    priceRange: "€€€€",
     knowsLanguage: ["en", "fr", "ar"],
     // sameAs: [] — future social profiles
     // hasCredential: [] — future certifications/memberships

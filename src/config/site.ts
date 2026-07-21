@@ -44,14 +44,24 @@ export const DEFAULT_KEYWORDS = [
   "luxury Egypt travel",
   "private Egypt tours",
   "tailor-made Egypt holidays",
+  "Egypt vacation packages", // US phrasing
+  "Egypt holidays", // UK/AU phrasing
+  "trip to Egypt",
+  "Egypt travel packages",
+  "Egypt tour operator",
+  "all-inclusive Egypt tours",
   "Nile cruise",
+  "Nile river cruise",
   "Cairo tours",
   "Giza pyramids tour",
   "Luxor tours",
   "Aswan tours",
+  "Abu Simbel tour",
+  "Red Sea holidays",
   "Egypt travel agency",
   "Egypt tour packages",
   "bespoke Egypt itinerary",
+  "Egyptologist guided tours",
 ].join(", ");
 
 export const site = {
