@@ -3,13 +3,8 @@
 // /booking.html page. Rendered by src/pages/booking.astro; no figures are
 // hardcoded in the page markup.
 //
-// ⚠️ DRAFT TERMS — CONFIRM BEFORE PUBLISHING
-// The specific figures below (deposit %, balance due window, cancellation
-// tiers, accepted payment methods) are sensible luxury-travel defaults, NOT
-// confirmed Kemet policy. Review every value with the business and adjust to
-// the real terms before this page is deployed. Following the project's
-// integrity standard, nothing here should go live as a factual claim until
-// verified. Currency mirrors the site (EUR).
+// Terms confirmed by the business. To change them, edit the values below —
+// the page updates automatically. Currency mirrors the site (EUR).
 // ---------------------------------------------------------------------------
 
 export interface CancellationTier {
@@ -28,13 +23,13 @@ export interface BookingStep {
 export interface BookingTerms {
   /** Ordered enquiry → confirmation → travel flow. */
   steps: BookingStep[];
-  /** Deposit required to confirm a booking (draft). */
+  /** Deposit required to confirm a booking. */
   deposit: { label: string; note: string };
-  /** When the remaining balance falls due (draft). */
+  /** When the remaining balance falls due. */
   balance: { label: string; note: string };
-  /** Accepted payment methods (draft — company.paymentMethods is empty). */
+  /** Accepted payment methods. */
   paymentMethods: string[];
-  /** Traveller-initiated cancellation schedule (draft). */
+  /** Traveller-initiated cancellation schedule. */
   cancellationTiers: CancellationTier[];
   /** Amendments, insurance, operator-side cancellation, force majeure. */
   policies: { heading: string; body: string }[];
@@ -64,22 +59,22 @@ export const bookingTerms: BookingTerms = {
     },
   ],
 
-  // DRAFT — confirm the real deposit percentage.
+  // Deposit required to confirm a booking.
   deposit: {
     label: "25% of the total trip cost",
     note: "Payable to confirm your booking. It is applied to your final balance, not an additional charge.",
   },
 
-  // DRAFT — confirm the real balance-due window.
+  // When the remaining balance falls due.
   balance: {
     label: "Due 30 days before departure",
     note: "For bookings made within 30 days of departure, the full amount is payable at the time of confirmation.",
   },
 
-  // DRAFT — company.paymentMethods is currently empty; confirm accepted methods.
+  // Accepted payment methods.
   paymentMethods: ["Bank transfer", "Major credit & debit cards"],
 
-  // DRAFT — confirm the real cancellation schedule.
+  // Traveller-initiated cancellation schedule.
   cancellationTiers: [
     { window: "45+ days before departure", charge: "Deposit only" },
     { window: "30–44 days before departure", charge: "50% of the total trip cost" },

@@ -33,8 +33,8 @@ export const enhanceScript = `
       var n=Math.min(${DUST_MAX},Math.round(W*H/${DUST_DENSITY}));
       stars=[];for(var i=0;i<n;i++)stars.push(mk());}
     sz();addEventListener('resize',sz);
-    var last=performance.now();
-    (function fr(t){var dt=Math.min((t-last)/1000,.05);last=t;
+    var last=performance.now(),running=true;
+    function fr(t){if(document.hidden){running=false;return;}var dt=Math.min((t-last)/1000,.05);last=t;
       cx.clearRect(0,0,W,H);
       for(var i=0;i<stars.length;i++){var s=stars[i];
         s.y-=s.vy*dt;if(s.y<-8){stars[i]=mk(H+8);s=stars[i];}
@@ -47,7 +47,9 @@ export const enhanceScript = `
           cx.strokeStyle='rgba('+s.c+','+Math.min(a*1.1,1)+')';cx.lineWidth=.9;
           cx.beginPath();cx.moveTo(x-L,s.y);cx.lineTo(x+L,s.y);
           cx.moveTo(x,s.y-L);cx.lineTo(x,s.y+L);cx.stroke();}}
-      requestAnimationFrame(fr);})(last);}
+      requestAnimationFrame(fr);}
+    requestAnimationFrame(fr);
+    document.addEventListener('visibilitychange',function(){if(!document.hidden&&!running){running=true;last=performance.now();requestAnimationFrame(fr);}});}
 
   /* nav glass — one passive scroll listener */
   var nav=document.getElementById('nav');

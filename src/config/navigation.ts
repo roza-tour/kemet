@@ -31,6 +31,7 @@ export const primaryNav: NavItem[] = [
   { label: "Guides", href: hubFor("guide") },
   { label: "Collections", href: hubFor("seasonal") },
   { label: "Cultures", href: "culture.html" },
+  { label: "About", href: "about.html" },
 ];
 
 /** Footer "Explore" column (the static link group). The Journeys column is
