@@ -22,9 +22,10 @@ export default defineConfig({
       serialize(item) {
         const url = new URL(item.url);
         const path = url.pathname.replace(/\/$/, "");
-        // Homepage → bare origin ("/") to match its canonical tag; all other
-        // pages → flat ".html" URLs matching their canonicals.
-        item.url = path === "" ? `${url.origin}/` : `${url.origin}${path}.html`;
+        // Clean URLs: homepage → bare origin ("/"); every other page keeps its
+        // extensionless path ("/tours") to match its canonical tag. Apache
+        // serves these from the real .html files (see public/.htaccess).
+        item.url = path === "" ? `${url.origin}/` : `${url.origin}${path}`;
         // Freshness signal — the date this build was published.
         item.lastmod = new Date().toISOString();
         return item;
