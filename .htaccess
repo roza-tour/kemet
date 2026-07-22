@@ -1,16 +1,3 @@
-# ---------------------------------------------------------------------------
-# Kemet — served from the repo root of `main` (single-branch deployment).
-# The built site and the Astro source live side by side; this file makes sure
-# visitors only ever see the site, and fixes two SEO redirects.
-# ---------------------------------------------------------------------------
-
-Options -Indexes
-
-RewriteEngine On
-
-# http → https (301). This is the hosting panel's own AutoSSL block, kept
-# verbatim WITH its markers so the AutoSSL tool detects it and never appends
-# a duplicate (which would dirty the git checkout and block `git pull`).
 ### AutoSSL-Satellite Don't Edit Below This Line ###
 <IfModule mod_rewrite.c>
         RewriteEngine On
@@ -20,6 +7,21 @@ RewriteEngine On
         RewriteRule ^(.*)$ "https://%{HTTP_HOST}%{REQUEST_URI}" [R=301,L]
 </IfModule>
 ### AutoSSL-Satellite Don't Edit Above This Line ###
+
+# ---------------------------------------------------------------------------
+# Kemet — served from the repo root of `main` (single-branch deployment).
+# The built site and the Astro source live side by side; this file makes sure
+# visitors only ever see the site, and fixes the SEO redirects.
+#
+# IMPORTANT: cPanel's AutoSSL writes its HTTPS-force block at the VERY TOP of
+# this file. It must stay there (with its markers, above) so AutoSSL detects
+# its own block and never prepends a duplicate — a duplicate dirties the git
+# checkout and blocks `git pull` on the server.
+# ---------------------------------------------------------------------------
+
+Options -Indexes
+
+RewriteEngine On
 
 # www → apex domain (301), keeping one canonical host.
 RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
