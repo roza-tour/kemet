@@ -36,6 +36,10 @@ const keywords = [
     symbol="horus"
     title="Egypt Travel FAQ"
     text="Straight answers to the questions travellers ask us most — from visas and safety to the best time to go, how long to stay and what a private journey costs."
+    heroSrc="/images/giza/giza-camel-pyramids-sunrise.webp"
+    heroAlt="A camel resting before the Pyramids of Giza at sunrise"
+    heroWidth={736}
+    heroHeight={736}
   />
 
   <section style="padding-top:30px">
@@ -44,13 +48,14 @@ const keywords = [
         <Fragment>
           {i > 0 && <Frieze />}
           <div class="faq-group reveal">
-            {group.intro && (
-              <div class="faq-grouphead">
+            <div class="faq-grouphead">
+              <span class="faq-gnum">{String(i + 1).padStart(2, "0")}</span>
+              <div>
                 <h2>{group.heading}</h2>
-                <p>{group.intro}</p>
+                {group.intro && <p>{group.intro}</p>}
               </div>
-            )}
-            <Faq items={group.items} heading={group.intro ? "" : group.heading} />
+            </div>
+            <Faq items={group.items} heading="" />
           </div>
         </Fragment>
       ))}
@@ -70,10 +75,11 @@ const keywords = [
 </Base>
 
 <style>
-  .faq-wrap{max-width:820px}
-  .faq-grouphead{margin-bottom:6px}
-  .faq-grouphead h2{margin:0 0 6px}
-  .faq-grouphead p{margin:0 0 4px;color:var(--muted)}
-  /* When the group renders its own heading via Faq, keep rhythm tidy. */
-  .faq-group + .faq-group{margin-top:8px}
+  .faq-wrap{max-width:880px}
+  .faq-group{padding:6px 0}
+  .faq-grouphead{display:flex;gap:22px;align-items:baseline;margin-bottom:14px;padding-bottom:16px;border-bottom:1px solid var(--line-2)}
+  .faq-gnum{font-family:var(--ff-display);font-size:1.9rem;line-height:1;color:var(--gold);font-variant-numeric:tabular-nums;flex:none}
+  .faq-grouphead h2{font-size:1.5rem;color:var(--bone);margin:0}
+  .faq-grouphead p{margin:7px 0 0;color:var(--muted);font-size:.95rem;line-height:1.7}
+  @media(max-width:520px){.faq-gnum{font-size:1.5rem}}
 </style>
