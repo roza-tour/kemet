@@ -6,15 +6,19 @@ import LegalContent from "@/components/trust/LegalContent.astro";
 import { privacyPolicy } from "@/data/legal";
 import { canonical } from "@/utils/links";
 import { site, SITE_URL } from "@/config/site";
+import { breadcrumb } from "@/schemas/jsonld";
 
 const ROUTE = "privacy.html";
-const jsonld = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  name: `Privacy Policy — ${site.name}`,
-  url: canonical(ROUTE),
-  isPartOf: { "@type": "WebSite", name: `${site.name} — The Black Land`, url: SITE_URL },
-};
+const jsonld = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: `Privacy Policy — ${site.name}`,
+    url: canonical(ROUTE),
+    isPartOf: { "@type": "WebSite", name: `${site.name} — The Black Land`, url: SITE_URL },
+  },
+  breadcrumb([["Home", "index.html"], ["Privacy Policy", ROUTE]]),
+];
 ---
 <Base
   title={`Privacy Policy — ${site.name}`}

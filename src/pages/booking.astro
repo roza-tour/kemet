@@ -1,6 +1,6 @@
 ---
 // Booking, payment & cancellation page (/booking.html). All figures come from
-// src/data/booking.ts — see the DRAFT-terms note there before publishing.
+// src/data/booking.ts.
 import Base from "@/layouts/Base.astro";
 import PageHero from "@/components/PageHero.astro";
 import SectionHeader from "@/components/SectionHeader.astro";
@@ -8,14 +8,28 @@ import Frieze from "@/components/Frieze.astro";
 import CTABlock from "@/components/trust/CTABlock.astro";
 import { bookingTerms } from "@/data/booking";
 import { company } from "@/data/company";
+import { canonical } from "@/utils/links";
+import { SITE_URL } from "@/config/site";
+import { breadcrumb } from "@/schemas/jsonld";
 
 const ROUTE = "booking.html";
 const { steps, deposit, balance, paymentMethods, cancellationTiers, policies } = bookingTerms;
+const jsonld = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: `Booking, Payment & Cancellation — ${company.name}`,
+    url: canonical(ROUTE),
+    isPartOf: { "@type": "WebSite", name: `${company.name} — The Black Land`, url: SITE_URL },
+  },
+  breadcrumb([["Home", "index.html"], ["Booking & Cancellation", ROUTE]]),
+];
 ---
 <Base
   title={`Booking, Payment & Cancellation — ${company.name}`}
   description="How booking a private Kemet journey works — our step-by-step process, deposit and payment terms, accepted payment methods and cancellation policy."
   active={ROUTE}
+  jsonld={jsonld}
 >
   <PageHero
     crumb="Booking & Cancellation"

@@ -458,4 +458,23 @@ html.js .reveal.in{opacity:1;transform:none}
 @media(max-width:560px){.cgal-item{width:158px;height:158px}}
 
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal,html.js .reveal{opacity:1!important;transform:none!important}.cur{clip-path:none}#dust{display:none}}
+
+/* Skip-to-content link — visible only on keyboard focus */
+.skip-link{position:fixed;top:12px;left:50%;transform:translate(-50%,-160%);z-index:300;background:var(--gold);color:var(--ink);padding:12px 24px;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;border-radius:2px;transition:transform .25s ease}
+.skip-link:focus{transform:translate(-50%,0);outline:2px solid var(--bone);outline-offset:2px}
+
+/* Cap tall portrait hero images on phones so a page opens with rhythm */
+@media(max-width:680px){.phero + section .frame.tgallery{max-height:58vh;overflow:hidden}}
+
+/* Print — drop the chrome, ink on paper */
+@media print{
+  #dust,.nav,.wafab,footer,.frieze,.cta,.skip-link,.hfoot{display:none!important}
+  html,body{background:#fff!important;color:#111!important}
+  main{padding-top:0}
+  .phero{padding:20px 0 10px}
+  .legal-toc{display:none!important}
+  .legal-layout{grid-template-columns:1fr!important;gap:0!important}
+  a{color:#111!important}
+  *{box-shadow:none!important;text-shadow:none!important}
+}
 :focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px}

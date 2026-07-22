@@ -6,15 +6,19 @@ import LegalContent from "@/components/trust/LegalContent.astro";
 import { termsOfService } from "@/data/legal";
 import { canonical } from "@/utils/links";
 import { site, SITE_URL } from "@/config/site";
+import { breadcrumb } from "@/schemas/jsonld";
 
 const ROUTE = "terms.html";
-const jsonld = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  name: `Terms of Use — ${site.name}`,
-  url: canonical(ROUTE),
-  isPartOf: { "@type": "WebSite", name: `${site.name} — The Black Land`, url: SITE_URL },
-};
+const jsonld = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: `Terms of Use — ${site.name}`,
+    url: canonical(ROUTE),
+    isPartOf: { "@type": "WebSite", name: `${site.name} — The Black Land`, url: SITE_URL },
+  },
+  breadcrumb([["Home", "index.html"], ["Terms of Use", ROUTE]]),
+];
 ---
 <Base
   title={`Terms of Use — ${site.name}`}

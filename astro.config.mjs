@@ -25,6 +25,8 @@ export default defineConfig({
         // Homepage → bare origin ("/") to match its canonical tag; all other
         // pages → flat ".html" URLs matching their canonicals.
         item.url = path === "" ? `${url.origin}/` : `${url.origin}${path}.html`;
+        // Freshness signal — the date this build was published.
+        item.lastmod = new Date().toISOString();
         return item;
       },
     }),

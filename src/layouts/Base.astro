@@ -61,6 +61,7 @@ const pageLd = jsonld ? (Array.isArray(jsonld) ? jsonld : [jsonld]) : [];
   <meta name="google-site-verification" content="KpsvY-0-G6RYJRLd8UJLs2pI5eBHZPFHsaWbJIEhDIw" />
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
   <title>{title}</title>
   <meta name="description" content={description} />
   <meta name="keywords" content={keywords} />
@@ -107,10 +108,11 @@ const pageLd = jsonld ? (Array.isArray(jsonld) ? jsonld : [jsonld]) : [];
   {pageLd.map((ld) => <script type="application/ld+json" is:inline set:html={JSON.stringify(ld)} />)}
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <canvas id="dust" aria-hidden="true"></canvas>
   <SvgDefs />
   <Nav active={active} base={base} />
-  <main><slot /></main>
+  <main id="main"><slot /></main>
   {showCta && <CTA base={base} />}
   <Footer base={base} />
   <WhatsAppButton />
