@@ -21,6 +21,9 @@
 
 Options -Indexes
 
+# Branded 404 page.
+ErrorDocument 404 /404.html
+
 RewriteEngine On
 
 # www → apex domain (301), keeping one canonical host.

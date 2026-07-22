@@ -1,0 +1,49 @@
+---
+// 404 page (/404.html). Served by Apache via `ErrorDocument 404 /404.html`.
+import Base from "@/layouts/Base.astro";
+import { whatsappLink } from "@/utils/links";
+const wa = whatsappLink("Hello Kemet — I was looking for something on your site and lost my way.");
+---
+<Base
+  title="Page Not Found — Kemet"
+  description="This page has drifted into the sands. Return home to keep planning your private Egypt journey."
+  active="index.html"
+  showCta={false}
+  noindex={true}
+>
+  <section class="nf">
+    <div class="nf-bg" aria-hidden="true"></div>
+    <div class="nf-veil" aria-hidden="true"></div>
+    <div class="wrap nf-inner">
+      <div class="nf-glyph" aria-hidden="true">𓂀</div>
+      <div class="eyebrow">Error 404</div>
+      <h1>This path is lost to the sands</h1>
+      <p>The page you were looking for has drifted away — but every great journey needs a guide. Let us point you back.</p>
+      <div class="nf-actions">
+        <a href="index.html" class="btn btn-solid">Return home</a>
+        <a href="tours.html" class="btn btn-ghost">Browse the journeys</a>
+        <a href={wa} class="btn btn-ghost" target="_blank" rel="noopener">Ask on WhatsApp</a>
+      </div>
+      <nav class="nf-links" aria-label="Popular pages">
+        <a href="destinations.html">Destinations</a>
+        <a href="experiences.html">Experiences</a>
+        <a href="faq.html">Travel FAQ</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .nf{position:relative;min-height:82vh;display:flex;align-items:center;overflow:hidden}
+  .nf-bg{position:absolute;inset:0;background:url("/images/home/egypt-giza-pyramids-desert-panorama.webp") center/cover no-repeat;transform:scale(1.05)}
+  .nf-veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,8,5,.7),rgba(10,8,5,.82)),radial-gradient(120% 90% at 50% 20%,transparent 30%,rgba(10,8,5,.7) 100%)}
+  .nf-inner{position:relative;z-index:2;text-align:center;padding:120px 0}
+  .nf-glyph{font-family:var(--ff-hiero);font-size:3.4rem;color:var(--gold);opacity:.85;margin-bottom:18px;filter:drop-shadow(0 8px 24px rgba(217,180,90,.35))}
+  .nf h1{font-size:clamp(2.4rem,5.5vw,4.2rem);color:var(--bone);margin:14px 0 20px}
+  .nf p{max-width:540px;margin:0 auto;color:var(--muted);font-size:1.05rem;line-height:1.85}
+  .nf-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin:40px 0 34px}
+  .nf-links{display:flex;gap:26px;justify-content:center;flex-wrap:wrap;font-size:.68rem;letter-spacing:.24em;text-transform:uppercase}
+  .nf-links a{color:var(--muted-2);transition:color .3s}
+  .nf-links a:hover{color:var(--gold-bright)}
+</style>

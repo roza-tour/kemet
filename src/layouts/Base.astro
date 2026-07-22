@@ -24,6 +24,8 @@ interface Props {
   /** Page-specific structured data. */
   jsonld?: JsonLd | JsonLd[];
   showCta?: boolean;
+  /** When true, tell crawlers not to index this page (e.g. the 404 page). */
+  noindex?: boolean;
   /** Comma-separated keywords for this page (falls back to the site default). */
   keywords?: string;
   /** Share-image overrides. */
@@ -52,6 +54,9 @@ const pageLd = jsonld ? (Array.isArray(jsonld) ? jsonld : [jsonld]) : [];
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  {/* Mark JS-capable before paint so scroll-reveal only hides content when it
+      can actually be revealed (no-JS renders everything visible). */}
+  <script is:inline>document.documentElement.classList.add('js')</script>
   <!-- Google Search Console — site ownership verification (HTML-tag method). -->
   <meta name="google-site-verification" content="KpsvY-0-G6RYJRLd8UJLs2pI5eBHZPFHsaWbJIEhDIw" />
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png" />
@@ -65,9 +70,11 @@ const pageLd = jsonld ? (Array.isArray(jsonld) ? jsonld : [jsonld]) : [];
   <link rel="alternate" hreflang="en" href={canonicalUrl} />
   <link rel="alternate" hreflang="x-default" href={canonicalUrl} />
   {/* Let search + answer engines show large images and full snippets (rich
-      results / AI answers). */}
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1" />
+      results / AI answers). Pages flagged noindex opt out. */}
+  {Astro.props.noindex
+    ? <meta name="robots" content="noindex, follow" />
+    : <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />}
+  {!Astro.props.noindex && <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1" />}
   <meta name="author" content={site.name} />
   <meta name="publisher" content={site.name} />
   {/* Geo-targeting */}

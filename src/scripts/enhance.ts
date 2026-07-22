@@ -19,6 +19,21 @@ export const enhanceScript = `
 (function(){
   var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* scroll-reveal — reveal .reveal elements as they enter the viewport. Runs
+     FIRST and defensively so content is never left hidden if anything below
+     throws. Falls back to showing everything when reduced-motion or no IO. */
+  try{
+    var rev=document.querySelectorAll('.reveal');
+    if(reduce||!('IntersectionObserver' in window)){
+      for(var r=0;r<rev.length;r++)rev[r].classList.add('in');
+    }else{
+      var io=new IntersectionObserver(function(es){
+        es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+      },{rootMargin:'0px 0px -8% 0px',threshold:.08});
+      for(var i=0;i<rev.length;i++)io.observe(rev[i]);
+    }
+  }catch(e){var a=document.querySelectorAll('.reveal');for(var k=0;k<a.length;k++)a[k].classList.add('in');}
+
   /* ambient golden dust — lightweight background canvas */
   var cv=document.getElementById('dust');
   if(cv&&!reduce&&cv.getContext){var cx=cv.getContext('2d'),W,H,stars=[];
@@ -57,11 +72,18 @@ export const enhanceScript = `
     if(nav)nav.classList.toggle('scrolled',y>${NAV_SCROLL_THRESHOLD});
   },{passive:true});
 
-  /* mobile menu */
+  /* mobile menu — toggle, close on Escape, reset when resizing to desktop */
   var b=document.querySelector('.burger'),nl=document.getElementById('navlinks');
-  if(b&&nl)b.addEventListener('click',function(){var open=nl.classList.toggle('open');
-    nl.style.cssText=open?'display:flex;position:absolute;flex-direction:column;top:100%;right:18px;background:rgba(11,9,7,.97);padding:18px 26px;gap:16px;border:1px solid var(--line)':'';
-    b.setAttribute('aria-expanded',open?'true':'false');});
+  if(b&&nl){
+    var setMenu=function(open){
+      nl.style.cssText=open?'display:flex;position:absolute;flex-direction:column;top:100%;right:18px;background:rgba(11,9,7,.97);padding:18px 26px;gap:16px;border:1px solid var(--line)':'';
+      nl.classList.toggle('open',open);
+      b.setAttribute('aria-expanded',open?'true':'false');
+    };
+    b.addEventListener('click',function(){setMenu(!nl.classList.contains('open'));});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&nl.classList.contains('open'))setMenu(false);});
+    addEventListener('resize',function(){if(innerWidth>680&&nl.classList.contains('open'))setMenu(false);});
+  }
 
   /* destination strip arrows (homepage) */
   var strip=document.getElementById('dstrip');
