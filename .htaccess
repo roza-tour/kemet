@@ -30,21 +30,14 @@ RewriteEngine On
 RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
 RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
 
-# --- Clean URLs -----------------------------------------------------------
-# One canonical form: /tours (not /tours.html). The THE_REQUEST guard means the
-# 301s fire only for real browser requests, never for the internal rewrite
-# below — so there is no redirect loop.
-#
-# 1) /index.html → /   and   /x.html → /x   (301, external requests only).
-RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
-RewriteRule ^ / [R=301,L]
-RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
-RewriteRule ^ /%1 [R=301,L]
-# 2) Serve the clean URL from its real .html file (internal rewrite, no redirect).
+# Canonical URLs are the real .html files. Internal links, canonicals and the
+# sitemap all use .html, so crawlers never hit a redirect. As a courtesy, a
+# manually-typed extensionless URL (e.g. /tours) is 301'd to its .html page —
+# this only ever affects hand-typed URLs, never the crawl.
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}.html -f
-RewriteRule ^ %{REQUEST_URI}.html [L]
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^([^.]+?)/?$ $1.html [R=301,L]
 
 # Repo internals are not part of the website — hide them completely (404).
 RewriteRule ^(?:\.git|src|scripts|public|node_modules|dist|\.claude|\.astro)(/|$) - [R=404,L]

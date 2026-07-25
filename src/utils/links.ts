@@ -38,15 +38,14 @@ export function phoneHref(): string {
 }
 
 /**
- * Absolute canonical URL for a route file (e.g. "tours.html"). URLs are clean
- * (extensionless): the homepage canonicalises to the bare origin
- * ("https://kemet-travel.com/") and every other page drops its ".html"
- * ("https://kemet-travel.com/tours"). Apache serves the clean URL from the
- * real .html file and 301-redirects the .html form (see public/.htaccess).
+ * Absolute canonical URL for a route file (e.g. "tours.html"). The homepage
+ * canonicalises to the bare origin ("https://kemet-travel.com/"); every other
+ * page keeps its real ".html" path. Internal links, canonicals and the sitemap
+ * all use the same .html form, so crawlers never hit a redirect.
  */
 export function canonical(file: string): string {
   if (file === "index.html") return `${SITE_URL}/`;
-  return `${SITE_URL}/${file.replace(/\.html$/, "")}`;
+  return `${SITE_URL}/${file}`;
 }
 
 /**
