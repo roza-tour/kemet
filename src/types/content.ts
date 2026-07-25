@@ -12,6 +12,7 @@ import type {
   GeoPoint,
   MediaPlaceholder,
   Ref,
+  SeoMeta,
 } from "@/types/primitives";
 import type {
   Difficulty,
@@ -501,6 +502,28 @@ export interface Activity {
   domain?: "activity";
   taxonomy?: { destinations?: string[]; travelStyles?: TravelStyle[] };
   relationships?: ActivityRelationships;
+
+  // --- Detail page (optional; an activity renders a page once `slug` is set) --
+  /** URL slug — presence of this is what generates /activities/<slug>.html. */
+  slug?: string;
+  /** One-line factual summary — meta description source and AI snippet. */
+  shortSummary?: string;
+  /** Full editorial description. */
+  longDescription?: string;
+  /** e.g. "About 45 minutes airborne, 3–4 hours door to door". */
+  durationLabel?: string;
+  /** When this is at its best. */
+  bestTime?: string;
+  /** Who it suits — short phrases. */
+  goodFor?: string[];
+  /** What actually happens, in order. */
+  whatToExpect?: string[];
+  /** Honest practicalities: fitness, safety, restrictions, what to bring. */
+  practicalities?: string[];
+  faqs?: Faq[];
+  /** When this content was last reviewed. */
+  lastReviewed?: string;
+  seo?: SeoMeta;
 }
 
 export interface Dish {

@@ -66,7 +66,8 @@ ok "updated to $(git rev-parse --short HEAD)"
 say "4/4  التحقق من الموقع  ·  Verifying site"
 FAIL=0
 for f in index.html tours.html contact.html faq.html booking.html privacy.html terms.html \
-         404.html robots.txt llms.txt sitemap-index.xml .htaccess contact-handler.php; do
+         sitemap.html 404.html robots.txt llms.txt sitemap-index.xml .htaccess contact-handler.php \
+         activities/hot-air-balloon-luxor.html collections/ramadan-in-egypt.html; do
   if [ -s "$f" ]; then ok "$f"; else bad "MISSING: $f"; FAIL=1; fi
 done
 PAGES=$(find . -name '*.html' -not -path './node_modules/*' -not -path './.git/*' | wc -l)
@@ -80,6 +81,7 @@ if [ "$FAIL" -eq 0 ]; then
   echo "  افتحي الموقع للتأكد  ·  Open the site to confirm:"
   echo "     https://kemet-travel.com"
   echo "     https://kemet-travel.com/collections/ramadan-in-egypt.html"
+  echo "     https://kemet-travel.com/activities/hot-air-balloon-luxor.html"
   echo "     https://kemet-travel.com/llms.txt"
 else
   printf '\033[0;31m  ⚠  بعض الملفات ناقصة — ابعتي اللقطة دي للمطوّر\n'

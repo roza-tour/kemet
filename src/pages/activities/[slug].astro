@@ -1,0 +1,175 @@
+---
+// Activity detail pages (/activities/<slug>.html). One page per activity that
+// has a `slug` — adding an activity page is data-only, no template change.
+import Base from "@/layouts/Base.astro";
+import Placeholder from "@/components/Placeholder.astro";
+import Faq from "@/components/Faq.astro";
+import Frieze from "@/components/Frieze.astro";
+import SectionHeader from "@/components/SectionHeader.astro";
+import ActivityCard from "@/components/ActivityCard.astro";
+import LeadCapture from "@/components/conversion/LeadCapture.astro";
+import { activities } from "@/data/activities";
+import type { Activity } from "@/types";
+import { whatsappLink, mailtoLink, canonical } from "@/utils/links";
+import { site, SITE_URL } from "@/config/site";
+import { breadcrumb } from "@/schemas/jsonld";
+
+export function getStaticPaths() {
+  return activities
+    .filter((a) => a.slug)
+    .map((activity) => ({ params: { slug: activity.slug! }, props: { activity } }));
+}
+
+interface Props {
+  activity: Activity;
+}
+const { activity } = Astro.props;
+const route = `activities/${activity.slug}.html`;
+const base = "../";
+
+// Other activities in the same place first, then the rest — capped at three.
+const related = activities
+  .filter((a) => a.slug && a.id !== activity.id)
+  .sort((a, b) => Number(b.place === activity.place) - Number(a.place === activity.place))
+  .slice(0, 3);
+
+const wa = whatsappLink(
+  `Hello Kemet — I'd like to include "${activity.title}" (${activity.place}) in my Egypt journey.`,
+);
+const enquire = mailtoLink(
+  `Enquiry: ${activity.title}`,
+  `Hello Kemet,\n\nI'd like to include the "${activity.title}" activity in ${activity.place} in my journey.\n\nPreferred dates:\nNumber of travellers:\n\nThank you.`,
+);
+
+const title = activity.seo?.title ?? `${activity.title}, ${activity.place} | Kemet`;
+const description = activity.seo?.description ?? activity.shortSummary ?? activity.blurb;
+
+const jsonld: Record<string, unknown>[] = [
+  {
+    "@context": "https://schema.org",
+    "@type": "TouristAttraction",
+    name: activity.title,
+    description: activity.shortSummary ?? activity.blurb,
+    url: canonical(route),
+    ...(activity.image?.src ? { image: `${SITE_URL}${activity.image.src}` } : {}),
+    address: { "@type": "PostalAddress", addressLocality: activity.place, addressCountry: "EG" },
+    isPartOf: { "@type": "WebSite", name: `${site.name} — The Black Land`, url: SITE_URL },
+  },
+  breadcrumb([["Home", "index.html"], ["Activities", "activities.html"], [activity.title, route]]),
+];
+if (activity.faqs?.length) {
+  jsonld.push({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: activity.faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  });
+}
+---
+<Base title={title} description={description} active={route} jsonld={jsonld}
+      ogImage={activity.image?.src} ogImageAlt={activity.image?.alt}>
+  <article>
+    <header class="phero" style="padding-bottom:36px">
+      <div class="wrap">
+        <nav class="crumb" aria-label="Breadcrumb">
+          <a href={`${base}index.html`}>Home</a> ·
+          <a href={`${base}activities.html`}>Activities</a> ·
+          <span>{activity.title}</span>
+        </nav>
+        <div class="eyebrow">{activity.place}</div>
+        <h1>{activity.title}</h1>
+        <p>{activity.shortSummary ?? activity.blurb}</p>
+      </div>
+    </header>
+
+    <section style="padding-top:18px">
+      <div class="wrap">
+        <Placeholder
+          class="tgallery reveal cur"
+          label={activity.title}
+          src={activity.image?.src}
+          alt={activity.image?.alt}
+          width={activity.image?.width}
+          height={activity.image?.height}
+          loading="eager"
+        />
+
+        <div class="tdetail">
+          <div>
+            {activity.longDescription && (
+              <div class="tblock reveal">
+                <h2>About this experience</h2>
+                <p>{activity.longDescription}</p>
+              </div>
+            )}
+
+            {activity.whatToExpect && activity.whatToExpect.length > 0 && (
+              <div class="tblock reveal">
+                <h2>What to expect</h2>
+                <div class="tl">
+                  {activity.whatToExpect.map((step, i) => (
+                    <div class="day">
+                      <div class="dn"><small>Step</small><b>{i + 1}</b></div>
+                      <div class="dc"><p>{step}</p></div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {activity.practicalities && activity.practicalities.length > 0 && (
+              <div class="tblock reveal inc">
+                <h2>Good to know before you go</h2>
+                <ul>{activity.practicalities.map((p) => <li>{p}</li>)}</ul>
+              </div>
+            )}
+
+            {activity.faqs && activity.faqs.length > 0 && (
+              <div class="reveal"><Faq items={activity.faqs} /></div>
+            )}
+          </div>
+
+          <aside class="side side-lead">
+            <div class="pcard reveal">
+              <div class="from">Activity</div>
+              <div class="big" style="font-size:1.6rem">{activity.place}</div>
+              <div class="pp">Arranged privately within your journey</div>
+              <a href={enquire} class="btn btn-solid">Add to my journey</a>
+              <a href={wa} class="btn btn-ghost" target="_blank" rel="noopener">Ask on WhatsApp</a>
+              <div class="facts facts-stacked">
+                {activity.durationLabel && <div><span>Duration</span><b>{activity.durationLabel}</b></div>}
+                {activity.bestTime && <div><span>Best time</span><b>{activity.bestTime}</b></div>}
+                {activity.goodFor && activity.goodFor.length > 0 && (
+                  <div><span>Good for</span><b>{activity.goodFor.join(" · ")}</b></div>
+                )}
+              </div>
+              <a href={`${base}activities.html`} class="pcard-terms">All activities →</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <Frieze />
+
+    {related.length > 0 && (
+      <section>
+        <div class="wrap">
+          <SectionHeader eyebrow="More" title="Other activities" />
+          <div class="grid-3">
+            {related.map((a) => <ActivityCard activity={a} base={base} />)}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <LeadCapture
+      variant="expert"
+      whatsappMessage={`Hello Kemet — I'm interested in "${activity.title}" and have some questions.`}
+      emailSubject={`Enquiry: ${activity.title} — Kemet Egypt`}
+    />
+  </article>
+</Base>

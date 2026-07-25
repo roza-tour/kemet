@@ -11,6 +11,39 @@ export const activities: Activity[] = [
     blurb:
       "Lift off at dawn over the West Bank as the temples and tombs of Thebes emerge from the mist and the Nile turns gold below.",
     image: { src: "/images/activities/act-balloon-luxor.webp", alt: "Hot-air balloons drifting over the Nile valley and temples of Luxor at dawn", width: 1300, height: 867 },
+    slug: "hot-air-balloon-luxor",
+    shortSummary:
+      "A dawn balloon flight over the Theban West Bank — the Valley of the Kings, Hatshepsut's terraces and the Colossi of Memnon from about 500 metres up.",
+    longDescription:
+      "Luxor is one of the few places on earth where ballooning is not simply a scenic flight but an archaeological vantage point. You lift off in the dark from the West Bank, and as the sun clears the eastern hills the whole necropolis resolves beneath you: the ridge of the Valley of the Kings, the three terraces of Hatshepsut's mortuary temple at Deir el-Bahri, the Ramesseum, the Colossi of Memnon standing alone in the fields, and the green strip of cultivation running hard against the desert line. Flights typically cruise between 300 and 600 metres. The air at dawn is at its stillest, which is why every operator flies at first light and nobody flies in the afternoon.",
+    durationLabel: "45–60 minutes airborne · about 3½ hours door to door",
+    bestTime: "Year-round at sunrise; October to April is the most reliable for wind and visibility.",
+    goodFor: ["Photographers", "First-time visitors to Luxor", "Couples", "Anyone comfortable standing for an hour"],
+    whatToExpect: [
+      "A pre-dawn pick-up from your hotel or cruise vessel — typically between 4:00 and 5:30 am depending on the season",
+      "A short motorboat crossing of the Nile to the West Bank, then transfer to the launch field",
+      "Watching the envelopes inflate in the dark — the burners are loud and the whole field lights up",
+      "45 to 60 minutes airborne over the necropolis, with the pilot working altitude to follow the wind",
+      "Landing in farmland or desert edge, where the retrieval crew meets the basket, then transfer back for breakfast",
+    ],
+    practicalities: [
+      "Baskets are shared and hold roughly 8–24 passengers depending on the operator; private baskets can be arranged with notice",
+      "You stand for the whole flight and climb in and out over the basket wall — reasonable mobility is needed",
+      "Flights are weather-dependent and are cancelled or postponed for wind; build a spare morning into a short Luxor stay",
+      "Dress in layers: the pre-dawn field is cold, the basket is warm under the burner, and it is hot again by landing",
+      "Not suitable in late pregnancy; operators usually set a minimum age (commonly around 6) and may ask about mobility",
+    ],
+    faqs: [
+      { q: "Is hot-air ballooning in Luxor safe?",
+        a: "Egyptian balloon operations are licensed and regulated by the civil aviation authority, with flights restricted to the calm dawn window and grounded whenever wind conditions are marginal. As with ballooning anywhere, the main risk is a bumpy landing, which is why pilots brief the landing position before descent. We work only with operators we have vetted." },
+      { q: "What time does the Luxor balloon flight start?",
+        a: "Pick-up is in the dark, usually between 4:00 and 5:30 am depending on the time of year, because the flight must launch at first light when the air is stillest. You are normally back at your hotel or vessel for breakfast by about 8:30 am." },
+      { q: "How much does a hot-air balloon ride in Luxor cost?",
+        a: "It is priced per person and varies by season and by whether you take a shared or private basket. We quote it inside your itinerary so the cost, the transfers and the timing are all confirmed together rather than arranged on the ground." },
+      { q: "What will I actually see from the balloon?",
+        a: "The Theban necropolis: the ridge above the Valley of the Kings, Hatshepsut's temple at Deir el-Bahri, the Ramesseum, Medinet Habu, the Colossi of Memnon, and the sharp line where irrigated farmland stops and desert begins. On a clear morning you can see across the river to Karnak." },
+    ],
+    lastReviewed: "2026-07",
   },
   {
     id: "sufi-tanoura",
@@ -19,6 +52,37 @@ export const activities: Activity[] = [
     blurb:
       "An evening of whirling dervishes and live music in a restored Ottoman palace — colour, percussion and devotion in motion.",
     image: { src: "/images/activities/act-tanoura.webp", alt: "A Sufi tanoura performer spinning in a brightly coloured skirt", width: 1200, height: 800 },
+    slug: "sufi-tanoura-cairo",
+    shortSummary:
+      "An evening of Egyptian Sufi music and tanoura spinning in medieval Cairo — devotional performance, not a tourist floor show.",
+    longDescription:
+      "The tanoura takes its name from the skirt, and the form descends from the Mevlevi Sufi practice of turning as a meditative discipline. In Egypt it developed its own vocabulary: multiple weighted skirts in saturated colour, lifted and separated as the dancer spins, accompanied by a live ensemble of ney, rababa, oud and percussion. The performances held in the restored Ottoman buildings of medieval Cairo are the real thing — the musicians are serious, the repertoire is devotional, and the spinning is sustained far longer than looks possible. It is one of the few evening experiences in Cairo that is genuinely of the city rather than staged for visitors.",
+    durationLabel: "About 1 hour of performance · 2–3 hours with transfers",
+    bestTime: "Most evenings year-round; Ramadan evenings are exceptional and busiest.",
+    goodFor: ["Culture-first travellers", "Families with older children", "Photographers", "An evening after a museum day"],
+    whatToExpect: [
+      "An early-evening transfer into medieval Cairo, often combined with a walk along Al-Muizz Street beforehand",
+      "Seating in a restored Ottoman-era courtyard or hall — atmospheric, and not large",
+      "A live ensemble opening the programme: ney flute, rababa, oud and hand percussion",
+      "The tanoura itself — sustained spinning with layered skirts, lit and lifted as the dancer turns",
+      "Time afterwards for tea and the surrounding lanes, which are lively well into the night",
+    ],
+    practicalities: [
+      "Seating is often unreserved and the venues are small — arriving early materially improves where you sit",
+      "Modest dress is appropriate: this is a devotional form performed in a historic religious quarter",
+      "Photography is generally allowed without flash; check on the night, as it varies by venue",
+      "The performance is in Arabic with no narration — your guide can explain the structure and the repertoire",
+      "Programmes can change on short notice around religious holidays",
+    ],
+    faqs: [
+      { q: "What is the tanoura dance?",
+        a: "Tanoura is the Egyptian form of Sufi whirling. The dancer turns continuously in weighted, brightly coloured skirts — tanoura means skirt — while a live ensemble plays devotional music. It shares its origin with the Mevlevi tradition of Turkey but has developed a distinctly Egyptian character in costume, music and staging." },
+      { q: "Is the Sufi show in Cairo suitable for children?",
+        a: "Yes, and older children usually enjoy it — the colour, the drumming and the sheer spectacle of sustained spinning hold attention well. It is an evening event of about an hour, so very young children may find it long." },
+      { q: "Where is the Sufi tanoura performance held?",
+        a: "In restored historic buildings in medieval Islamic Cairo, most often an Ottoman-era palace or wikala near Al-Muizz Street. The setting is a large part of the experience, and it pairs naturally with a walk through the surrounding lanes beforehand." },
+    ],
+    lastReviewed: "2026-07",
   },
   {
     id: "banana-boat",
@@ -27,6 +91,37 @@ export const activities: Activity[] = [
     blurb:
       "A fast, laughter-filled spin across the turquoise shallows of the Red Sea — the easiest way onto the water for all ages.",
     image: { src: "/images/activities/act-banana-boat.webp", alt: "Guests riding a banana boat across the turquoise Red Sea", width: 1200, height: 800 },
+    slug: "banana-boat-sharm",
+    shortSummary:
+      "A fast inflatable ride across the sheltered turquoise shallows of the Red Sea — the simplest way onto the water for mixed-age groups.",
+    longDescription:
+      "Not everything on the Red Sea needs a mask and a briefing. The banana boat is exactly what it sounds like: an inflatable towed behind a speedboat across the flat water inside the reef line, taken at whatever pace the group wants. It works because the water at Sharm is warm, clear and sheltered, and because it is the one activity on the coast that a mixed group of ages and swimming abilities can all do together. It also makes a good first half-hour of a boat day, before the snorkelling starts and the pace slows down.",
+    durationLabel: "About 15–20 minutes on the water",
+    bestTime: "April to November for the warmest water; mornings are calmest.",
+    goodFor: ["Families", "Groups of friends", "Non-swimmers in a life jacket", "A light first activity on the coast"],
+    whatToExpect: [
+      "A short briefing and a properly fitted buoyancy aid before you board",
+      "Boarding the inflatable from a jetty or from the beach shallows",
+      "A tow across the flat water inside the reef, at a speed the driver matches to the group",
+      "Falling off is part of it — the driver circles back immediately",
+      "Straight back onto the boat or beach, usually with time for a swim afterwards",
+    ],
+    practicalities: [
+      "Buoyancy aids are provided and worn by everyone, so confident swimming is not required",
+      "Hold on with both hands and keep loose items — sunglasses, phones, jewellery — on shore",
+      "Not advised in pregnancy or with back, neck or shoulder problems; the ride is bumpy by design",
+      "Operators normally set a minimum age of around six, with an adult alongside younger children",
+      "Reef-safe sunscreen only, and reapply after — you will get wet",
+    ],
+    faqs: [
+      { q: "Do I need to be able to swim for a banana boat ride?",
+        a: "No. Everyone wears a buoyancy aid, the ride stays in sheltered shallow water inside the reef line, and the speedboat circles back immediately if anyone comes off. Nervous or non-swimming guests do it comfortably, and the driver will keep the pace gentle if you ask." },
+      { q: "Is the banana boat suitable for children?",
+        a: "Yes, from around six years old with an adult alongside, though operators set their own minimum age. It is one of the few Red Sea activities that works for a whole family at once regardless of swimming ability." },
+      { q: "Where does the banana boat ride take place?",
+        a: "In the sheltered bays along the Sharm El Sheikh coast, inside the reef line where the water is flat, shallow and warm. It is usually run from a hotel jetty or as the opening stretch of a private boat day." },
+    ],
+    lastReviewed: "2026-07",
   },
   {
     id: "parasailing",
@@ -35,6 +130,37 @@ export const activities: Activity[] = [
     blurb:
       "Rise on the wind above the reef line for a gull's-eye view of the coast, the corals and the desert mountains behind.",
     image: { src: "/images/activities/act-parasailing.webp", alt: "A pair parasailing above the Red Sea under a colourful canopy", width: 1200, height: 800 },
+    slug: "parasailing-sharm",
+    shortSummary:
+      "A towed canopy flight above the Red Sea reef line at Sharm El Sheikh — a few minutes of quiet, and the coast laid out beneath you.",
+    longDescription:
+      "Parasailing is the least strenuous way to get height on this coast. You are harnessed under a canopy and towed behind a boat, lifting off the deck and climbing to somewhere around a hundred metres. What makes it worth doing at Sharm is what is underneath: the water is clear enough that from altitude you can read the reef structure — the pale shallows, the dark coral heads, the abrupt navy line where the wall drops away — with the Sinai mountains standing behind the town. The ride itself is surprisingly quiet once you are up, away from the engine.",
+    durationLabel: "About 10–15 minutes airborne · 1–2 hours including the boat trip",
+    bestTime: "Morning, before the afternoon wind builds. April to November for the warmest conditions.",
+    goodFor: ["First-timers wanting height without effort", "Couples (tandem flights)", "Photographers", "Anyone who does not want to dive"],
+    whatToExpect: [
+      "A short boat trip out from the marina or jetty to the towing area",
+      "Harness fitting and a briefing on the launch and landing signals",
+      "Taking off directly from the boat's platform as the line pays out — there is no running or jumping",
+      "Ten to fifteen minutes at altitude, usually flown solo or in tandem",
+      "A winch back down to the deck, normally landing dry",
+    ],
+    practicalities: [
+      "Operators set weight limits at both ends — too light and you will not fly, too heavy and you fly tandem; confirm in advance",
+      "Not suitable in pregnancy, or with heart, back or shoulder conditions",
+      "Wind decides everything: flights are cancelled or moved to the following morning if it builds",
+      "Secure or leave behind hats, glasses and phones — anything dropped is gone",
+      "You can usually stay dry, but ask for a dip landing if you want one",
+    ],
+    faqs: [
+      { q: "Is parasailing in Sharm El Sheikh safe?",
+        a: "It is among the more controlled water activities on the coast: you launch and land from the boat itself under a winch, harnesses are checked before each flight, and operations stop entirely when wind conditions are marginal. There is no jumping and no running — the boat does the work." },
+      { q: "How high do you go parasailing?",
+        a: "Typically around a hundred metres, depending on the line length and the wind. It is high enough to read the whole reef structure below you and see the Sinai mountains behind the coast, and the ride is calm once you are up." },
+      { q: "Can two people parasail together?",
+        a: "Yes — tandem flights are standard and are often the default for heavier guests. Couples usually prefer them, and operators will advise on the weight range for solo versus tandem when the flight is arranged." },
+    ],
+    lastReviewed: "2026-07",
   },
   {
     id: "felucca-sunset",
@@ -43,6 +169,37 @@ export const activities: Activity[] = [
     blurb:
       "Drift under a lateen sail past Elephantine Island and the Nubian shore as the sun sinks behind the dunes — Egypt at its most serene.",
     image: { src: "/images/activities/act-felucca-sunset.webp", alt: "A felucca under sail on the Nile at golden sunset", width: 1300, height: 867 },
+    slug: "felucca-sunset-aswan",
+    shortSummary:
+      "An hour under lateen sail at Aswan as the light goes — past Elephantine Island and the Nubian shore, with no engine.",
+    longDescription:
+      "The felucca is the oldest thing still working on the Nile. It has no engine: the boatman reads the current running north and the prevailing wind blowing south, and works the two against each other. At Aswan this matters more than anywhere else, because the river here is at its most beautiful — split by Elephantine Island, strewn with granite boulders, edged by the painted Nubian houses of the west bank and the desert behind them. Going out in the hour before sunset is not a cliché; it is when the granite turns orange, the sails of the other feluccas catch the low light, and the noise of the town drops away entirely.",
+    durationLabel: "1–2 hours on the water",
+    bestTime: "The hour before sunset, year-round. Winter and spring give the cleanest light.",
+    goodFor: ["Couples", "Families", "Photographers", "Anyone wanting an unhurried hour"],
+    whatToExpect: [
+      "Boarding from the corniche or a hotel jetty in the late afternoon",
+      "Sailing out around Elephantine Island — no engine, so the only sound is water and canvas",
+      "Passing the Nubian villages on the west bank, with the Aga Khan Mausoleum on the ridge above",
+      "Optional stops: Kitchener's Island botanical gardens, or a Nubian village landing for tea",
+      "Returning as the light goes, with the granite and the dunes at their warmest",
+    ],
+    practicalities: [
+      "Feluccas are open boats with low cushioned benches and no shade structure late in the day — bring a layer for after sunset",
+      "There is no lavatory on board; a one to two hour sail is the comfortable maximum for most guests",
+      "Boarding involves a step down into the boat, which can be awkward with limited mobility — tell us and we will arrange a suitable jetty",
+      "It is entirely wind-dependent: on a still evening the boatman may need to be towed out, which is normal here",
+      "A private charter costs very little more than a shared one and completely changes the hour",
+    ],
+    faqs: [
+      { q: "What is a felucca?",
+        a: "A traditional Nile sailing boat with a single tall lateen sail and no engine. The design is ancient and still in daily working use between Aswan and Luxor. Because it sails rather than motors, the pace is set by the wind and the current — which is the whole point of taking one." },
+      { q: "How long is a felucca ride in Aswan?",
+        a: "One to two hours is the standard, and about right: long enough to sail around Elephantine Island and along the Nubian shore, short enough to stay comfortable on an open boat with no facilities. Longer multi-day felucca journeys exist but are a different kind of trip." },
+      { q: "When is the best time for a felucca sail?",
+        a: "The hour before sunset. The granite boulders and the west-bank dunes take the low light, the other feluccas' sails glow, and the temperature drops to something pleasant. Mornings are lovely too and usually quieter, but the light is the reason most people go at dusk." },
+    ],
+    lastReviewed: "2026-07",
   },
   {
     id: "camel-pyramids",
@@ -51,6 +208,37 @@ export const activities: Activity[] = [
     blurb:
       "Cross the desert edge by camel for the timeless approach to the pyramids and the panoramic viewpoint beyond the plateau.",
     image: { src: "/images/activities/act-camel-pyramids.webp", alt: "Guests on a camel caravan before the Pyramids of Giza", width: 1300, height: 867 },
+    slug: "camel-ride-pyramids",
+    shortSummary:
+      "A short camel ride along the desert edge at Giza to the panoramic viewpoint — the classic approach, arranged so nobody haggles.",
+    longDescription:
+      "The camel ride at Giza has a reputation, and it is largely deserved: the plateau is one of the more persistent places in Egypt for touts, and an unarranged ride can turn into a negotiation halfway across the sand. Arranged properly, it is something else. A short ride along the desert edge takes you to the panoramic viewpoint where all three pyramids line up, on a route that is quieter than the road and has been used to approach Giza for as long as anyone has been coming here. Twenty to thirty minutes is genuinely enough — long enough for the view and the photographs, short enough to stay comfortable.",
+    durationLabel: "20–40 minutes riding, within a half or full day at Giza",
+    bestTime: "Early morning or late afternoon. Avoid midday in summer entirely.",
+    goodFor: ["First-time visitors", "Photographers", "Families with older children", "The classic Giza photograph"],
+    whatToExpect: [
+      "Meeting the handler at an agreed point on the plateau, with the price already settled",
+      "Mounting while the camel is seated — it stands back legs first, so you lean back, then forward",
+      "A walk along the desert edge with the pyramids on one side and open sand on the other",
+      "Time at the panoramic point where all three pyramids align for photographs",
+      "Dismounting the same way, then continuing the visit on foot or by vehicle",
+    ],
+    practicalities: [
+      "Everything is arranged and paid in advance through us — no negotiation on the sand, and no pressure for extras",
+      "The mount and dismount are the unsteady moments; the handler holds the animal throughout",
+      "Long trousers are far more comfortable than shorts, and closed shoes keep the sand out",
+      "Not advised in pregnancy or with back or hip problems; a horse-drawn carriage is a gentler alternative",
+      "If an animal looks thin or poorly kept, we do not use that handler — tell your guide and it will be changed on the spot",
+    ],
+    faqs: [
+      { q: "Is a camel ride at the Pyramids worth it?",
+        a: "For most first-time visitors, yes — but keep it short. Twenty to thirty minutes along the desert edge to the panoramic viewpoint gives you the approach and the photographs without the ride becoming uncomfortable. Its reputation suffers mainly from unarranged rides that turn into haggling, which is avoided when it is booked in advance." },
+      { q: "How much does a camel ride at Giza cost?",
+        a: "When arranged through us it is priced into your itinerary in advance, so there is no negotiation on the plateau and no pressure for extra payments partway round. Prices quoted on the sand to walk-up visitors vary enormously, which is the source of most complaints." },
+      { q: "Are the camels at the Pyramids treated well?",
+        a: "It varies by handler, which is precisely why we work with specific ones. We do not use handlers whose animals are thin, sore or poorly equipped, and if you are unhappy with the condition of an animal, tell your guide and it will be changed immediately." },
+    ],
+    lastReviewed: "2026-07",
   },
   {
     id: "diving-red-sea",
@@ -59,6 +247,39 @@ export const activities: Activity[] = [
     blurb:
       "Descend reef walls alive with coral and fish in some of the clearest, warmest water on earth, from beginner dives to deep sites.",
     image: { src: "/images/activities/act-diving.webp", alt: "A scuba diver beside a vivid Red Sea coral reef teeming with fish", width: 1200, height: 800 },
+    slug: "diving-marsa-alam",
+    shortSummary:
+      "Reef-wall diving in the southern Red Sea at Marsa Alam — 20–30 metres of visibility, warm water year-round, and reefs in better condition than the north.",
+    longDescription:
+      "Marsa Alam sits far enough south that the diving changes character. The reefs here have seen less traffic than those off Sharm and Hurghada, the walls are steep and close to shore, and the sites are known for larger life: dugong in the seagrass bays, turtles almost routinely, and the offshore reefs of Elphinstone and the Fury Shoals for divers with the experience for them. Water temperature runs from about 22 °C in winter to 28 °C in late summer, and visibility of 20 to 30 metres is normal rather than exceptional. It works for a first open-water course and for a serious week of diving equally well, which is unusual.",
+    durationLabel: "A half day for two boat dives; a full week for a proper series",
+    bestTime: "Year-round. March–May and September–November are the balance of warm water and light wind.",
+    goodFor: ["Certified divers", "First-timers doing a try-dive or course", "Snorkellers on the same boat", "Photographers"],
+    whatToExpect: [
+      "A morning departure from the marina, with the day's sites chosen for conditions and your certification level",
+      "A briefing per dive covering the site profile, entry and exit, and the maximum depth planned",
+      "Typically two dives with a surface interval and lunch on board between them",
+      "Reef walls, coral gardens and — depending on the site — turtles, napoleon wrasse, and reef sharks at the offshore reefs",
+      "Return to the marina in the afternoon, with logbooks signed",
+    ],
+    practicalities: [
+      "Bring your certification card and logbook; a centre may ask for a check dive if you have not dived recently",
+      "Do not fly for at least 24 hours after your last dive — this shapes how the end of an Egypt itinerary is built",
+      "Reef-safe sunscreen only, and never stand on or touch coral: these are protected reefs",
+      "Non-divers can come on the same boat and snorkel the same sites — the walls start near the surface",
+      "Elphinstone and the far offshore reefs are current-swept and are for experienced divers only",
+    ],
+    faqs: [
+      { q: "Is Marsa Alam good for diving?",
+        a: "It is among the best in Egypt. The southern reefs have had less pressure than those further north, the walls are steep and close in, and the area is known for dugong, turtles and — at the offshore reefs — larger pelagics. Visibility of 20–30 metres is the norm and the water stays between about 22 and 28 °C all year." },
+      { q: "Can beginners dive in the Red Sea?",
+        a: "Yes. The sheltered bays are ideal for try-dives and open-water courses: warm, clear, shallow to begin with, and with reef life immediately. Beginners and experienced divers can usually be accommodated on the same boat day, with different sites or profiles." },
+      { q: "How long should I wait to fly after diving?",
+        a: "At least 24 hours after your final dive. It is a firm constraint rather than a suggestion, and it affects itinerary design — we always place the diving days so that the buffer is in place before any domestic or international flight." },
+      { q: "Do I need to dive to enjoy the Red Sea?",
+        a: "No. Because the reef walls begin very close to the surface, snorkellers see much of what divers see. Non-diving members of a group routinely come on the same boat and spend the day snorkelling the same sites." },
+    ],
+    lastReviewed: "2026-07",
   },
   {
     id: "quad-biking",
@@ -67,5 +288,36 @@ export const activities: Activity[] = [
     blurb:
       "Throttle across open dunes into the silence of the desert, stopping for sweet tea and a sunset that runs the full spectrum of gold.",
     image: { src: "/images/activities/act-quad-biking.webp", alt: "Guests quad biking across desert dunes near the Giza pyramids", width: 1300, height: 867 },
+    slug: "quad-biking-desert",
+    shortSummary:
+      "A guided quad run into the open desert with a Bedouin tea stop and sunset — dunes, silence and a sky that goes from gold to violet.",
+    longDescription:
+      "The desert starts abruptly in Egypt. A few minutes past the last building the ground turns to open sand and gravel plain, and the noise stops. A guided quad run is the quickest honest way into it: an hour or so of riding in convoy across dunes and flats, out to a point far enough that there is nothing man-made in any direction, then a stop for sweet tea while the sun goes down. What people remember is not the riding — it is switching the engines off. The silence in the deep desert is total, and the colour run at sunset, from gold through rose to violet, lasts about twenty minutes and is worth the dust.",
+    durationLabel: "1–2 hours riding · about 3–4 hours with transfers and the tea stop",
+    bestTime: "Late afternoon into sunset, October to April. Avoid midday in summer.",
+    goodFor: ["Adventure-minded travellers", "Families with teenagers", "Sunset photographers", "A change of pace after temple days"],
+    whatToExpect: [
+      "A transfer out to the staging point at the desert edge, in the late afternoon",
+      "A safety briefing and a short practice loop before setting off — no experience is assumed",
+      "Riding in convoy behind a lead guide, with a sweep rider at the back",
+      "A stop at a Bedouin camp or open vantage point for sweet tea as the sun drops",
+      "Riding or transferring back in the last light",
+    ],
+    practicalities: [
+      "Goggles and a head covering are essential — the dust is the real feature of the day; both are provided",
+      "Wear closed shoes, long sleeves and clothes you do not mind ruining",
+      "Minimum ages apply for solo riders; younger children usually ride pillion with a guide",
+      "Not advised in pregnancy or with back, wrist or shoulder problems — quads vibrate hard over rough ground",
+      "Contact lenses and blowing sand do not mix; glasses under goggles are the better option",
+    ],
+    faqs: [
+      { q: "Do I need experience to ride a quad bike in the desert?",
+        a: "No. The machines are automatic, the briefing covers everything you need, and you take a short practice loop before setting off. You ride in convoy behind a lead guide with a sweep rider at the back, at a pace set for the slowest rider in the group." },
+      { q: "What should I wear for desert quad biking?",
+        a: "Closed shoes, long sleeves and long trousers, plus clothes you do not mind getting dusty — and dust is guaranteed. Goggles and a head covering are provided and genuinely necessary. If you wear contact lenses, bring glasses instead: blowing sand and lenses are a bad combination." },
+      { q: "Is quad biking suitable for children?",
+        a: "Older children and teenagers usually ride, subject to the operator's minimum age for solo riders; younger children ride pillion with a guide. It is not suitable during pregnancy, or for anyone with back, wrist or shoulder problems, because the ride is genuinely rough." },
+    ],
+    lastReviewed: "2026-07",
   },
 ];

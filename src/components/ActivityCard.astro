@@ -4,10 +4,20 @@ import Placeholder from "@/components/Placeholder.astro";
 
 interface Props {
   activity: Activity;
+  /** Link prefix back to the site root ("" at root, "../" in subfolders). */
+  base?: string;
 }
-const { activity } = Astro.props;
+const { activity, base = "" } = Astro.props;
+// Activities with a slug have a detail page; any without stay as plain cards.
+const href = activity.slug ? `${base}activities/${activity.slug}.html` : undefined;
+const Tag = href ? "a" : "article";
 ---
-<article class="jcard reveal" data-tilt>
+<Tag
+  class="jcard reveal"
+  data-tilt
+  href={href}
+  aria-label={href ? `${activity.title} — ${activity.place}` : undefined}
+>
   <div style="position:relative">
     <span class="tag">{activity.place}</span>
     <Placeholder
@@ -22,5 +32,11 @@ const { activity } = Astro.props;
     <h3>{activity.title}</h3>
     <div class="route">{activity.place}</div>
     <p>{activity.blurb}</p>
+    {href && (
+      <div class="meta">
+        <span class="route" style="margin:0">Explore</span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </div>
+    )}
   </div>
-</article>
+</Tag>

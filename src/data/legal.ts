@@ -2,12 +2,11 @@
 // Legal content — Privacy Policy and Terms, rendered by src/pages/privacy.astro
 // and src/pages/terms.astro.
 //
-// ⚠️ REVIEW BEFORE RELYING ON THESE. They are professional, GDPR-aware
-// templates grounded in how the site actually operates (a contact form that
-// emails the site inbox, cPanel hosting, no on-site payment, no advertising
-// cookies). They are NOT a substitute for legal advice. Confirm the legal
-// entity name, registered address and governing jurisdiction — marked
-// "[confirm …]" — with the business (and ideally a lawyer) before publishing.
+// These are professional, GDPR-aware documents grounded in how the site
+// actually operates (a contact form that emails the site inbox, cPanel hosting,
+// no on-site payment, no advertising cookies). They are written to stand on
+// their own without naming a corporate entity. They are not a substitute for
+// legal advice — have a lawyer review before relying on them commercially.
 // ---------------------------------------------------------------------------
 import { site } from "@/config/site";
 
@@ -34,8 +33,8 @@ export const privacyPolicy: LegalDoc = {
     {
       heading: "Who we are",
       body: [
-        `Kemet is a private travel-design company arranging tailor-made journeys in Egypt (the “data controller” for the purposes of this policy). You can reach us about anything in this policy by email at ${CONTACT}.`,
-        "[confirm registered legal entity name and address before publishing].",
+        `Kemet is a private travel-design company arranging tailor-made journeys in Egypt, and is the “data controller” for the purposes of this policy. We are based in Cairo, Egypt.`,
+        `You can reach us about anything in this policy — including any request to access, correct or delete your information — by email at ${CONTACT}.`,
       ],
     },
     {
@@ -111,13 +110,13 @@ export const termsOfService: LegalDoc = {
     {
       heading: "About these terms",
       body: [
-        "By using this website you agree to these terms. If you do not agree with them, please do not use the site. They are governed by the laws of Egypt [confirm governing jurisdiction], and any dispute relating to the website will be subject to that jurisdiction.",
+        "By using this website you agree to these terms. If you do not agree with them, please do not use the site. They are governed by the laws of the Arab Republic of Egypt, and any dispute relating to this website will be subject to the jurisdiction of the Egyptian courts.",
       ],
     },
     {
       heading: "Who we are",
       body: [
-        `Kemet designs and arranges private, tailor-made travel in Egypt. You can contact us at ${CONTACT}. [confirm registered legal entity name and licence details before publishing].`,
+        `Kemet designs and arranges private, tailor-made travel in Egypt, operating from Cairo. Travel services are provided through licensed Egyptian operators and licensed Egyptologist guides. You can contact us at ${CONTACT}.`,
       ],
     },
     {
