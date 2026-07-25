@@ -101,7 +101,7 @@ export const experiences: Experience[] = [
       height: 736,
     },
     seo: {
-      title: "Sunrise at the Giza Pyramids — Private Dawn Experience | Kemet Egypt",
+      title: "Sunrise at the Giza Pyramids — Private Dawn Experience | Kemet",
       description:
         "Private early-access dawn experience at the Giza Plateau with a licensed Egyptologist. Watch first light break over the Great Pyramid before the day-visitors arrive.",
     },
@@ -201,7 +201,7 @@ export const experiences: Experience[] = [
       { alt: "A lateen-sailed felucca drifting past palms on the Nile at sunset", label: "Under sail", src: "/images/activities/act-felucca-sunset.webp", width: 1300, height: 867 },
     ],
     seo: {
-      title: "Private Felucca Sailing on the Nile, Aswan — Exclusive Charter | Kemet Egypt",
+      title: "Private Felucca Sailing, Aswan — Exclusive Charter | Kemet",
       description:
         "Charter an entire traditional felucca in Aswan for an unhurried private sail on the Nile past Elephantine Island, the First Cataract and the desert west bank.",
     },
@@ -296,7 +296,7 @@ export const experiences: Experience[] = [
       height: 1104,
     },
     seo: {
-      title: "Old Cairo Walking Experience — Private Historian Tour | Kemet Egypt",
+      title: "Old Cairo Walking Experience — Private Historian Tour | Kemet",
       description:
         "Private walking tour of Islamic Cairo and the Coptic quarter with a historian guide. Roman fortress of Babylon, Ibn Tulun Mosque, Hanging Church and Khan el-Khalili.",
     },
@@ -390,9 +390,9 @@ export const experiences: Experience[] = [
       label: "Egyptian Cooking Experience",
     },
     seo: {
-      title: "Egyptian Cooking Experience, Cairo — Private Kitchen Session | Kemet Egypt",
+      title: "Egyptian Cooking Class, Cairo — Private Session | Kemet",
       description:
-        "Private Egyptian cooking class in Cairo — market visit, four dishes spanning 7,000 years of food history, and a shared meal. Hands-on, history-led, private instruction.",
+        "Private Egyptian cooking class in Cairo — a market visit, four dishes spanning 7,000 years of food history, and a shared meal. Hands-on and history-led.",
     },
     relationships: {
       destinations: [{ domain: "destination", id: "cairo" }],
@@ -485,7 +485,7 @@ export const experiences: Experience[] = [
       height: 920,
     },
     seo: {
-      title: "Luxor Temple by Night — Avenue of Sphinxes Illuminated Experience | Kemet Egypt",
+      title: "Luxor Temple by Night — Avenue of Sphinxes | Kemet",
       description:
         "Private guided evening experience at Luxor Temple and the restored Avenue of Sphinxes. One of Egypt's most dramatic heritage experiences — best seen after dark.",
     },
@@ -574,7 +574,7 @@ export const experiences: Experience[] = [
       height: 1308,
     },
     seo: {
-      title: "Private Nile Dinner Cruise, Cairo — Exclusive Evening on the River | Kemet Egypt",
+      title: "Private Nile Dinner Cruise, Cairo — Evening Sailing | Kemet",
       description:
         "A privately reserved dinner cruise on the Cairo Nile — set Egyptian menu, skyline at dusk and hotel transfers included. No shared decks, no buffet lines.",
     },
@@ -671,7 +671,7 @@ export const experiences: Experience[] = [
       { alt: "Balloons drifting above the West Bank and the green Nile floodplain", label: "Above Thebes", src: "/images/activities/act-balloon-luxor.webp", width: 1300, height: 867 },
     ],
     seo: {
-      title: "Hot-Air Balloon over Luxor — Dawn Flight above the Valley of the Kings | Kemet Egypt",
+      title: "Hot-Air Balloon over Luxor — Private Dawn Flight | Kemet",
       description:
         "Sunrise balloon flight over Luxor's West Bank — the Valley of the Kings, Hatshepsut's temple and the Nile at dawn, with licensed pilots and flexible-date booking.",
     },
@@ -769,7 +769,7 @@ export const experiences: Experience[] = [
       },
     ],
     seo: {
-      title: "Grand Egyptian Museum Private Tour — Tutankhamun with an Egyptologist | Kemet Egypt",
+      title: "Grand Egyptian Museum Private Tour — Tutankhamun | Kemet",
       description:
         "Private guided tour of the Grand Egyptian Museum — the complete Tutankhamun treasure, the grand staircase and Khufu's solar boat, paced around the crowds.",
     },
@@ -865,7 +865,7 @@ export const experiences: Experience[] = [
       { alt: "A quiet turquoise Red Sea bay fringed by palms", label: "Turquoise bay", src: "/images/redsea/hurghada-turquoise-swing.webp", width: 564, height: 845 },
     ],
     seo: {
-      title: "Red Sea Private Yacht Charter, Sharm El Sheikh — Ras Mohammed Day | Kemet Egypt",
+      title: "Private Yacht Charter, Sharm El Sheikh — Ras Mohammed | Kemet",
       description:
         "Charter a private yacht from Sharm El Sheikh for the day — snorkelling over Ras Mohammed's reefs, deck lunch at anchor and a route set by your party alone.",
     },
@@ -955,7 +955,7 @@ export const experiences: Experience[] = [
       height: 915,
     },
     seo: {
-      title: "Red Sea Diving, Sharm El Sheikh — Guided Boat Dives at Ras Mohammed | Kemet Egypt",
+      title: "Red Sea Diving, Sharm El Sheikh — Ras Mohammed | Kemet",
       description:
         "Two guided Red Sea boat dives with a vetted PADI centre — Ras Mohammed's walls, small groups and full equipment. Discover Scuba option for beginners.",
     },
@@ -1051,7 +1051,7 @@ export const experiences: Experience[] = [
       },
     ],
     seo: {
-      title: "Sinai Desert Evening & Stargazing, Sharm El Sheikh — Bedouin Dinner | Kemet Egypt",
+      title: "Sinai Stargazing & Bedouin Dinner, Sharm El Sheikh | Kemet",
       description:
         "A private Bedouin-hosted evening in the Sinai interior — fire-brewed tea, charcoal dinner and guided stargazing under some of the darkest skies in Egypt.",
     },
@@ -1137,7 +1137,7 @@ export const experiences: Experience[] = [
       height: 800,
     },
     seo: {
-      title: "Pyramids Sound & Light Show, Giza — Private Evening with Transfers | Kemet Egypt",
+      title: "Pyramids Sound & Light Show, Giza — Private Evening | Kemet",
       description:
         "The Giza Sound & Light show done properly — reserved terrace seating, private transfers and optional dinner with plateau views. The perfect arrival evening.",
     },
@@ -1226,7 +1226,7 @@ export const experiences: Experience[] = [
       height: 640,
     },
     seo: {
-      title: "Nubian Village Experience, Aswan — Private Family Visit | Kemet Egypt",
+      title: "Nubian Village Experience, Aswan — Private Family Visit | Kemet",
       description:
         "Cross the Nile to a painted Nubian village above Aswan — a private, family-hosted visit with hibiscus tea, henna and living Nubian culture. No convoy tourism.",
     },
@@ -1314,7 +1314,7 @@ export const experiences: Experience[] = [
       height: 920,
     },
     seo: {
-      title: "Alexandria Heritage Walk — Private Guided Walking Tour | Kemet Egypt",
+      title: "Alexandria Heritage Walk — Private Guided Walking Tour | Kemet",
       description:
         "A private walking tour of Alexandria's layers — the Roman Amphitheatre, belle-époque downtown, historic cafés and the corniche to Qaitbay on the Pharos site.",
     },
@@ -1401,7 +1401,7 @@ export const experiences: Experience[] = [
       label: "VIP Airport Meet & Assist",
     },
     seo: {
-      title: "VIP Airport Meet & Assist, Cairo — Fast-Track Arrival & Departure | Kemet Egypt",
+      title: "VIP Airport Meet & Assist, Cairo — Fast-Track | Kemet",
       description:
         "Met at the aircraft door, fast-tracked through immigration, luggage handled to the car. Cairo airport VIP meet & assist, 24/7 across all terminals.",
     },

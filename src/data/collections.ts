@@ -88,7 +88,7 @@ export const collections: Collection[] = [
     seo: {
       title: "Egypt in Winter — The Best Season for Travel | Kemet",
       description:
-        "Plan your Egypt winter trip — October to March is the golden window: 18–26 °C across the Nile Valley, perfect photography light and monuments at their most accessible.",
+        "Plan your Egypt winter trip: October to March is the golden window — 18–26 °C across the Nile Valley, superb light and monuments at their most accessible.",
     },
   },
 
@@ -226,9 +226,9 @@ export const collections: Collection[] = [
       relatedCollections: col("egypt-in-winter", "luxury-egypt"),
     },
     seo: {
-      title: "First-Time Visitors to Egypt — Essential Guide & Curated Tours | Kemet",
+      title: "First-Time Visitors to Egypt — Essential Guide | Kemet",
       description:
-        "Planning your first trip to Egypt? Everything you need: essential tours, the right destinations, planning guides and experiences that define Egypt — curated by Kemet.",
+        "Planning your first trip to Egypt? The essential tours, the right destinations, planning guides and the experiences that define the country.",
     },
   },
 
@@ -294,7 +294,7 @@ export const collections: Collection[] = [
       relatedCollections: col("egypt-in-winter", "first-time-egypt"),
     },
     seo: {
-      title: "Luxury Egypt — Private Tours, Nile Cruises & Exclusive Experiences | Kemet",
+      title: "Luxury Egypt — Private Tours & Nile Cruises | Kemet",
       description:
         "Luxury Egypt travel by Kemet — private Egyptologist guides, exclusive dahabiya Nile cruises, pre-opening monument access and bespoke five-star itineraries.",
     },
@@ -362,7 +362,7 @@ export const collections: Collection[] = [
       relatedCollections: col("first-time-egypt", "egypt-in-winter"),
     },
     seo: {
-      title: "Family Adventures in Egypt — Tours & Experiences for Families | Kemet",
+      title: "Family Adventures in Egypt — Tours & Experiences | Kemet",
       description:
         "Egypt is one of the great family destinations — Pyramids, mummies, Nile sailing and desert wildlife. Curated family tours and experiences from Kemet.",
     },
@@ -458,9 +458,9 @@ export const collections: Collection[] = [
       relatedCollections: col("egypt-in-winter", "luxury-egypt", "first-time-egypt"),
     },
     seo: {
-      title: "Christmas & New Year in Egypt — Winter Sun, Nile Cruises & Coptic Christmas | Kemet",
+      title: "Christmas & New Year in Egypt — Tours & Nile Cruises | Kemet",
       description:
-        "Spend Christmas and New Year in Egypt: 19–26 °C winter sun, New Year's Eve aboard a Nile cruise, quiet Pyramids on Christmas Day and Coptic Christmas on 7 January. Private, tailor-made.",
+        "Christmas and New Year in Egypt: 19–26 °C winter sun, New Year's Eve on a Nile cruise, quiet Pyramids on Christmas Day and Coptic Christmas on 7 January.",
     },
   },
 
@@ -548,9 +548,9 @@ export const collections: Collection[] = [
       relatedCollections: col("egypt-in-winter", "first-time-egypt"),
     },
     seo: {
-      title: "Ramadan in Egypt — Travelling During Ramadan, Dates & What Changes | Kemet",
+      title: "Ramadan in Egypt — Dates & What Changes | Kemet",
       description:
-        "Travelling to Egypt during Ramadan: expected dates, what opens and closes, lantern-lit Islamic Cairo after dark, iftar, and the courtesies to know. Private tours planned around the month's rhythm.",
+        "Travelling to Egypt during Ramadan: expected dates, what opens and closes, lantern-lit Islamic Cairo after dark, iftar, and the courtesies to know.",
     },
   },
 
@@ -638,9 +638,9 @@ export const collections: Collection[] = [
       relatedCollections: col("egypt-in-winter", "first-time-egypt", "luxury-egypt"),
     },
     seo: {
-      title: "Abu Simbel Sun Festival — 22 February & 22 October Dates, Times & Tours | Kemet",
+      title: "Abu Simbel Sun Festival — 22 Feb & 22 Oct Dates | Kemet",
       description:
-        "The Abu Simbel Sun Festival: on 22 February and 22 October sunrise illuminates the inner sanctuary of Ramesses II's temple. Dates, times, how to get there from Aswan, and private tours.",
+        "The Abu Simbel Sun Festival: on 22 February and 22 October, sunrise lights the inner sanctuary of Ramesses II's temple. Dates, times and how to get there.",
     },
   },
 ];

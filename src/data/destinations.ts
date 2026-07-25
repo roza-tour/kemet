@@ -101,9 +101,9 @@ export const destinations: Destination[] = [
     ],
     relationships: { nearbyDestinations: near("giza", "alexandria") },
     seo: {
-      title: "Cairo Travel Guide — Egyptian Museum, Islamic Cairo & Coptic Quarter | Kemet",
+      title: "Cairo Travel Guide — Museums, Islamic & Coptic Cairo | Kemet",
       description:
-        "Plan your Cairo visit. The Egyptian Museum, Grand Egyptian Museum, Khan el-Khalili, the Citadel and the gateway to Giza's Pyramids — expert guide by Egypt travel specialists.",
+        "Plan your Cairo visit: the Egyptian Museum, the Grand Egyptian Museum, Khan el-Khalili, the Citadel and the gateway to the Pyramids of Giza.",
     },
   },
 
@@ -196,7 +196,7 @@ export const destinations: Destination[] = [
     ],
     relationships: { nearbyDestinations: near("cairo") },
     seo: {
-      title: "Giza Pyramids & Great Sphinx — Complete Visitor Guide | Kemet Egypt",
+      title: "Giza Pyramids & Great Sphinx — Complete Visitor Guide | Kemet",
       description:
         "Visit the Giza Pyramids, Great Sphinx and Grand Egyptian Museum. Tickets, timing, early access and everything you need to know — from Egypt travel specialists.",
     },
@@ -289,9 +289,9 @@ export const destinations: Destination[] = [
     ],
     relationships: { nearbyDestinations: near("aswan") },
     seo: {
-      title: "Luxor, Egypt — Karnak, Valley of the Kings & Avenue of Sphinxes | Kemet",
+      title: "Luxor, Egypt — Karnak & the Valley of the Kings | Kemet",
       description:
-        "Luxor travel guide. Karnak Temple, Valley of the Kings, Luxor Temple illuminated at night and the West Bank monuments — how to make the most of two days in the world's greatest monument city.",
+        "Luxor travel guide: Karnak, the Valley of the Kings, Luxor Temple by night and the West Bank — how to make the most of two days in Egypt's monument capital.",
     },
   },
 
@@ -475,9 +475,9 @@ export const destinations: Destination[] = [
     ],
     relationships: { nearbyDestinations: near("cairo") },
     seo: {
-      title: "Alexandria, Egypt — Catacombs, Citadel of Qaitbay & Bibliotheca Alexandrina | Kemet",
+      title: "Alexandria, Egypt — Catacombs, Qaitbay & the Library | Kemet",
       description:
-        "Alexandria travel guide. The Catacombs of Kom El Shoqafa, the Citadel of Qaitbay on the Pharos site and the Bibliotheca Alexandrina — Greco-Roman Egypt on the Mediterranean.",
+        "Alexandria travel guide: the Catacombs of Kom El Shoqafa, the Citadel of Qaitbay on the Pharos site, and the Bibliotheca Alexandrina.",
     },
   },
 ];

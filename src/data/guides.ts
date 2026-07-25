@@ -132,7 +132,7 @@ export const guides: Guide[] = [
       height: 1062,
     },
     seo: {
-      title: "Egypt Travel Guide — Visa, When to Go, Transport & Destinations | Kemet",
+      title: "Egypt Travel Guide — Visa, When to Go & Transport | Kemet",
       description:
         "Everything you need to plan a trip to Egypt. Visa requirements, best time to go, getting around, top destinations and practical advice from Egypt travel specialists.",
     },
@@ -509,7 +509,7 @@ export const guides: Guide[] = [
       height: 1077,
     },
     seo: {
-      title: "Getting Around Egypt — Trains, Flights, Nile Cruises & Transfers | Kemet",
+      title: "Getting Around Egypt — Trains, Flights & Cruises | Kemet",
       description:
         "How to travel between Egypt's cities. Domestic flights, high-speed trains, Nile cruises, the Cairo Metro and private transfers explained for the main tourist route.",
     },
@@ -650,7 +650,7 @@ export const guides: Guide[] = [
     seo: {
       title: "Egyptian Food Guide — What to Eat, Where & Cuisine Tips | Kemet",
       description:
-        "A guide to Egyptian cuisine — essential dishes, street food, breakfast culture, vegetarian options and where to find the best food in Cairo, Luxor, Aswan and Alexandria.",
+        "A guide to Egyptian cuisine: essential dishes, street food, breakfast culture, vegetarian options and where to eat in Cairo, Luxor and Alexandria.",
     },
     relationships: {
       destinations: dest("cairo", "luxor", "aswan", "alexandria"),
