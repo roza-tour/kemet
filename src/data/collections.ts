@@ -367,6 +367,282 @@ export const collections: Collection[] = [
         "Egypt is one of the great family destinations — Pyramids, mummies, Nile sailing and desert wildlife. Curated family tours and experiences from Kemet.",
     },
   },
+
+  // ---------------------------------------------------------------------------
+  // 6. Christmas & New Year in Egypt
+  // ---------------------------------------------------------------------------
+  {
+    id: "christmas-new-year-egypt",
+    slug: "christmas-new-year-egypt",
+    domain: "seasonal",
+    title: "Christmas & New Year in Egypt",
+    subtitle: "Winter sun, empty desert mornings and New Year's Eve on the Nile.",
+    shortSummary:
+      "Late December and early January are Egypt's warmest, brightest weeks of the northern winter — and the country's most sought-after travel dates. Christmas at the Pyramids, New Year's Eve aboard a Nile cruise, and Coptic Christmas on 7 January.",
+    editorialIntro:
+      "While northern Europe sits at four degrees and dark by four o'clock, Cairo is 20 °C under a clear sky and Luxor is warmer still. That contrast is why the fortnight around Christmas and New Year has become the most requested window in Egyptian travel — and why it needs the earliest planning of any date in the calendar. Egypt does not do Christmas the way Europe does, and that is precisely the appeal: the day itself is quiet at the monuments, hotel dining rooms put on serious festive tables, and on 31 December the Nile cruise fleet moors together at Luxor or Edfu for one of the more extraordinary New Year's Eves available anywhere. Egypt's own Christmas comes later — the Coptic Orthodox Church marks the Nativity on 7 January, and midnight liturgy at the Hanging Church in Old Cairo is one of the oldest continuous Christmas observances on earth.",
+    collectionType: "seasonal",
+    seasons: ["winter"],
+    travelStyles: ["luxury", "cultural", "historical", "relaxed"],
+    audience: ["everyone", "couples", "families", "luxury-travellers"],
+    priority: 9,
+    featured: true,
+    highlights: [
+      "Daytime temperatures of 19–24 °C in Cairo and 22–26 °C in Luxor and Aswan — the northern winter's best-value warmth",
+      "New Year's Eve aboard a Nile cruise, moored alongside the fleet at Luxor or Edfu with a gala dinner on deck",
+      "Christmas Day itself is a normal working day in Egypt — the Pyramids and Karnak are noticeably calmer than the days either side",
+      "Coptic Christmas on 7 January — midnight liturgy at the Hanging Church and Abu Serga in Old Cairo",
+      "Clear, low-angle winter light: the best photography conditions of the year at Giza and on the West Bank",
+    ],
+    planningNotes: [
+      "This is the single most competitive window of the Egyptian year — the best Nile cruise cabins and Giza-view rooms are typically gone 6–9 months ahead",
+      "Expect peak-season supplements over the 24 December – 2 January period at most hotels and on every cruise vessel",
+      "Domestic flights (Cairo–Luxor, Cairo–Aswan) fill early over the holiday; the high-speed and sleeper trains are useful alternatives",
+      "Egyptian schools break for a mid-year holiday in late January, not December, so domestic crowding is low over Christmas week",
+      "Coptic Christmas Eve (6 January) sees heightened security and some road closures around Old Cairo's churches — worth planning around, not avoiding",
+    ],
+    travelTips: [
+      "If New Year's Eve on the Nile is the priority, book the cruise first and build the land itinerary around its fixed departure day",
+      "Ask for a Giza-facing room only if you actually want the view at dawn — the plateau is floodlit at night and rooms facing it can be bright",
+      "Pack a warm layer: Luxor and Aswan drop to 8–11 °C after dark in late December, and Nile cruise decks are cold at night",
+      "Attending Coptic Christmas liturgy is welcomed but it is worship, not a spectacle — dress modestly, arrive early and follow your guide's lead",
+    ],
+    faqs: [
+      {
+        q: "Is Egypt a good place to spend Christmas and New Year?",
+        a: "Yes — it is one of the strongest winter-sun options within a short flight of Europe. Daytime temperatures sit around 19–24 °C in Cairo and a few degrees higher in Luxor and Aswan, the light is exceptional, and every major site is fully open. Egypt is a majority-Muslim country, so 25 December is an ordinary working day, which means the monuments are often quieter on Christmas Day itself than in the days around it. International hotels and Nile cruise vessels lay on full festive programmes for guests.",
+      },
+      {
+        q: "How far in advance should I book Christmas or New Year in Egypt?",
+        a: "Six to nine months for the 24 December – 2 January window. This is the peak of Egypt's peak season: the well-run Nile cruise vessels, the Giza-view hotel rooms and the domestic flights south all sell out first, and prices carry a holiday supplement. Three months out you can usually still build an excellent trip, but the specific cruise or hotel you had in mind may no longer be available.",
+      },
+      {
+        q: "What is New Year's Eve like on a Nile cruise?",
+        a: "Distinctive. On 31 December the cruise fleet is generally moored together at Luxor or Edfu, and vessels put on a gala dinner with live music on the upper deck. You get the celebration without the logistics — no taxis, no queues, and the temples the following morning before the crowds. Cabins on the New Year sailing are the first to sell out on any Egyptian itinerary.",
+      },
+      {
+        q: "When is Coptic Christmas in Egypt?",
+        a: "7 January. Egypt's Coptic Orthodox Church follows the older calendar, so the Nativity falls thirteen days after 25 December, with the main liturgy held late on the evening of 6 January. Services at the Hanging Church and Abu Serga in Old Cairo — buildings that have been in continuous use for well over a thousand years — are among the oldest Christmas observances anywhere. Visitors are welcome; modest dress and an early arrival are essential.",
+      },
+      {
+        q: "Is it cold in Egypt in December and January?",
+        a: "Not by northern-European standards, but the nights are cooler than people expect. Cairo runs about 19–21 °C by day and 9–11 °C at night; Luxor and Aswan reach 22–26 °C by day and drop to 8–11 °C after dark. Desert excursions and Nile cruise decks are genuinely cold in the early morning and evening, so pack a proper layer alongside the sun protection.",
+      },
+    ],
+    hero: {
+      alt: "A Nile cruise vessel lit up on the water at night",
+      label: "Christmas & New Year in Egypt",
+      src: "/images/cruise/nile-cruise-night.webp",
+      width: 700,
+      height: 500,
+    },
+    lastReviewed: "2026-07",
+    relationships: {
+      tours: tour(
+        "tour-nile-cruise",
+        "tour-7-day",
+        "tour-10-day",
+        "tour-cairo-vip-3day",
+        "tour-luxor-3day",
+        "tour-grand-14day",
+      ),
+      destinations: dest("cairo", "giza", "luxor", "aswan"),
+      experiences: exp(
+        "private-nile-dinner-cruise",
+        "sunrise-giza-pyramids",
+        "giza-sound-light-private",
+        "hot-air-balloon-luxor",
+        "old-cairo-walking",
+      ),
+      guides: guide("best-time-to-visit-egypt", "egypt-travel-guide"),
+      relatedCollections: col("egypt-in-winter", "luxury-egypt", "first-time-egypt"),
+    },
+    seo: {
+      title: "Christmas & New Year in Egypt — Winter Sun, Nile Cruises & Coptic Christmas | Kemet",
+      description:
+        "Spend Christmas and New Year in Egypt: 19–26 °C winter sun, New Year's Eve aboard a Nile cruise, quiet Pyramids on Christmas Day and Coptic Christmas on 7 January. Private, tailor-made.",
+    },
+  },
+
+  // ---------------------------------------------------------------------------
+  // 7. Ramadan in Egypt
+  // ---------------------------------------------------------------------------
+  {
+    id: "ramadan-in-egypt",
+    slug: "ramadan-in-egypt",
+    domain: "seasonal",
+    title: "Ramadan in Egypt",
+    subtitle: "The month Cairo comes alive after dark.",
+    shortSummary:
+      "Travelling during Ramadan is not a compromise — it is the one month of the year when Cairo's medieval heart is lantern-lit until dawn, the monuments are quiet, and hospitality is at its most generous. It requires a little planning, and rewards it completely.",
+    editorialIntro:
+      "Most itineraries route around Ramadan. We think that is a mistake. For roughly thirty days the rhythm of Egypt inverts: mornings are unhurried and the great sites are noticeably emptier, and then at sunset the whole country exhales at once. Fanous lanterns are strung the length of Al-Muizz Street, tables of food appear on pavements for anyone passing, and Khan el-Khalili trades until three in the morning. Iftar — the meal that breaks the fast — is the most sociable hour in the Egyptian calendar, and being invited to one is not unusual. The practical trade-offs are real and we plan around them: shorter monument hours, restaurants that close during daylight, and an hour before sunset when Cairo's traffic is best avoided entirely. What you get in exchange is a version of the country most visitors never see.",
+    collectionType: "seasonal",
+    seasons: ["winter", "spring"],
+    travelStyles: ["cultural", "historical", "photography"],
+    audience: ["everyone", "couples", "history-enthusiasts", "photographers"],
+    priority: 7,
+    featured: false,
+    highlights: [
+      "Islamic Cairo after dark — Al-Muizz Street strung with fanous lanterns and busier at midnight than at midday",
+      "Noticeably quieter monuments: Giza, Saqqara and Karnak see fewer visitors through the daytime hours",
+      "Iftar at sunset — the most generous, most sociable meal of the Egyptian year",
+      "Khan el-Khalili and the old cafés trading until two or three in the morning",
+      "Ramadan falls in the cool season for the rest of this decade, so the daytime heat is not a factor",
+    ],
+    planningNotes: [
+      "Ramadan follows the lunar calendar and moves about eleven days earlier each year — in 2027 it is expected to run from roughly 8 February to 8 March, with Eid al-Fitr around 9 March. Final dates depend on the crescent-moon sighting, so treat any published date as provisional until close to the time",
+      "Many monuments and museums shorten their afternoon hours during Ramadan; we build itineraries around early starts and finish before the pre-iftar rush",
+      "The hour before sunset is the worst traffic of the day, every day — everyone is travelling home to break the fast. We deliberately schedule nothing across it",
+      "Hotel restaurants, tourist-area cafés and cruise vessels serve normally through the day; independent local restaurants in residential districts often do not open until sunset",
+      "Eid al-Fitr, the three-day festival that closes Ramadan, is a national holiday — domestic flights and trains are heavily booked and some offices close, but the monuments stay open and the mood is celebratory",
+    ],
+    travelTips: [
+      "Eating, drinking or smoking in the street during daylight is best avoided out of courtesy — hotels, restaurants and your private vehicle are all entirely fine",
+      "Dress a little more conservatively than usual, particularly around mosques and in older districts",
+      "Book an iftar table in advance: the good ones — rooftop tables over Islamic Cairo especially — fill weeks ahead",
+      "Shift your day later. An early monument start, a long afternoon rest, then out from sunset until midnight matches the country's actual rhythm",
+      "Alcohol service is reduced during Ramadan; international hotels generally continue to serve residents discreetly",
+    ],
+    faqs: [
+      {
+        q: "Can tourists visit Egypt during Ramadan?",
+        a: "Absolutely, and it is one of the more rewarding times to come. Every major monument, museum, hotel and Nile cruise operates throughout Ramadan, and tourists are not expected to fast. Opening hours at some sites are shortened in the afternoon and the atmosphere shifts dramatically after sunset — with a private guide who plans around the day's rhythm, it is a straightforward and unusually memorable trip.",
+      },
+      {
+        q: "When is Ramadan in Egypt?",
+        a: "Ramadan follows the Islamic lunar calendar, so it moves roughly eleven days earlier each Gregorian year. In 2027 it is expected to begin around 8 February and end around 8 March, with Eid al-Fitr near 9 March. The exact start depends on the sighting of the crescent moon the evening before, so dates published in advance are always provisional by a day.",
+      },
+      {
+        q: "Will restaurants and monuments be closed during Ramadan?",
+        a: "Monuments and museums stay open, though several shorten their afternoon hours. Hotel restaurants, tourist-area cafés and cruise vessels serve normally throughout the day. What changes is local, residential-district dining: many independent restaurants do not open until iftar at sunset, and street food during daylight is limited. In practice this rarely affects a well-planned itinerary.",
+      },
+      {
+        q: "Is it disrespectful to travel in Egypt during Ramadan?",
+        a: "Not at all — Egypt welcomes visitors throughout the month and hospitality is, if anything, at its most generous. The courtesies are simple: avoid eating, drinking or smoking in the street during daylight, dress a little more modestly than usual, and be patient in the hour before sunset when everyone is hurrying home. Being invited to share an iftar is common, and accepting is the best thing you can do.",
+      },
+      {
+        q: "What is the best thing to do in Egypt during Ramadan?",
+        a: "Walk Islamic Cairo at night. Al-Muizz Street, Khan el-Khalili and the lanes around Al-Azhar are strung with fanous lanterns and are livelier at eleven at night than they are at midday, with the old cafés trading until two or three in the morning. Combine it with an iftar table on a rooftop overlooking the medieval skyline and you have an evening that simply does not exist during the other eleven months.",
+      },
+    ],
+    hero: {
+      alt: "Lantern-lit Al-Muizz Street in medieval Islamic Cairo at night",
+      label: "Ramadan in Egypt",
+      src: "/images/cairo/cairo-al-muizz-street.webp",
+      width: 736,
+      height: 1104,
+    },
+    lastReviewed: "2026-07",
+    relationships: {
+      tours: tour(
+        "tour-cairo-culture-5day",
+        "tour-religious-citadel",
+        "tour-cairo-food",
+        "tour-cairo-museums",
+        "tour-cairo-vip-3day",
+      ),
+      destinations: dest("cairo", "giza", "luxor"),
+      experiences: exp("old-cairo-walking", "egyptian-cooking", "giza-sound-light-private"),
+      guides: guide("egypt-travel-guide", "egyptian-food-guide", "best-time-to-visit-egypt"),
+      relatedCollections: col("egypt-in-winter", "first-time-egypt"),
+    },
+    seo: {
+      title: "Ramadan in Egypt — Travelling During Ramadan, Dates & What Changes | Kemet",
+      description:
+        "Travelling to Egypt during Ramadan: expected dates, what opens and closes, lantern-lit Islamic Cairo after dark, iftar, and the courtesies to know. Private tours planned around the month's rhythm.",
+    },
+  },
+
+  // ---------------------------------------------------------------------------
+  // 8. The Abu Simbel Sun Festival
+  // ---------------------------------------------------------------------------
+  {
+    id: "abu-simbel-sun-festival",
+    slug: "abu-simbel-sun-festival",
+    domain: "seasonal",
+    title: "The Abu Simbel Sun Festival",
+    subtitle: "Twice a year, the sun reaches 60 metres into a mountain.",
+    shortSummary:
+      "On 22 February and 22 October, sunrise drives a shaft of light through the entire length of Ramesses II's temple to illuminate the gods in its innermost sanctuary — an alignment engineered more than three thousand years ago, and still accurate.",
+    editorialIntro:
+      "It lasts about twenty minutes. At dawn on two mornings each year, the rising sun clears the hills across Lake Nasser and sends a beam through the temple doorway at Abu Simbel, down sixty metres of rock-cut hall, and onto the four seated figures in the sanctuary at the very back. Three of them light up: Ra-Horakhty, Amun-Ra, and Ramesses II himself, seated among gods as one of them. The fourth, Ptah — a deity of the underworld — stays in shadow, as he was always meant to. The dates are traditionally read as Ramesses II's coronation and his birth. What makes it remarkable is not only the astronomy but that it survived the temple being cut into more than a thousand blocks and rebuilt 200 metres back and 65 metres higher when the High Dam flooded the original site in the 1960s — the reconstruction shifted the alignment by roughly a day, which is why the crowd now gathers on both the 21st and the 22nd.",
+    collectionType: "festival",
+    seasons: ["winter", "autumn"],
+    travelStyles: ["historical", "cultural", "photography"],
+    audience: ["history-enthusiasts", "photographers", "luxury-travellers", "couples"],
+    priority: 8,
+    featured: true,
+    highlights: [
+      "22 February and 22 October — the two mornings the sanctuary is lit, roughly twenty minutes each",
+      "Ra-Horakhty, Amun-Ra and Ramesses II are illuminated; Ptah, god of the underworld, deliberately is not",
+      "A dawn start from Aswan, arriving in the dark for the doors opening around 5:00–6:00 am",
+      "Nubian music and dancing outside the temple through the morning — the event is a local festival, not only an archaeological one",
+      "The rest of the day at Abu Simbel is unusually quiet once the crowd disperses back north",
+    ],
+    planningNotes: [
+      "Both dates are fixed and known years ahead, and Aswan's hotels and the Lake Nasser cruise vessels sell out for them — book 6–12 months in advance",
+      "Because the 1960s relocation shifted the alignment by about a day, many visitors attend on the 21st as well as the 22nd; if the event is the reason for your trip, allow both mornings",
+      "The temple sits roughly 280 km south of Aswan — around a three-hour road transfer, so a festival morning means leaving Aswan between 2:00 and 3:00 am, or flying in on the short Aswan–Abu Simbel hop",
+      "Staying overnight at Abu Simbel itself is the civilised option on festival dates: a handful of hotels sit within minutes of the temple, and they are the first thing to go",
+      "February mornings at the lake are cold before dawn — 8–12 °C — and hot by mid-morning; October is milder at both ends",
+    ],
+    travelTips: [
+      "The sanctuary is small and the moment is brief: your guide should position you before the doors open, not after",
+      "Photography inside the temple is restricted and the light is extremely contrasty — expect to watch it rather than shoot it, and photograph the façade and the crowd instead",
+      "Bring a head torch or use your phone for the walk in: the approach is genuinely dark at 5 am",
+      "Combine the festival with Philae, the Unfinished Obelisk and a Nubian village afternoon — you are already in Aswan for the best part of a week's worth of sights",
+      "If you cannot make the festival dates, Abu Simbel on any ordinary morning is still one of the great sights of the ancient world, and infinitely calmer",
+    ],
+    faqs: [
+      {
+        q: "What is the Abu Simbel Sun Festival?",
+        a: "Twice a year, at sunrise on 22 February and 22 October, a shaft of sunlight passes through the doorway of the Great Temple of Ramesses II and travels about sixty metres to the sanctuary at the rear, illuminating three of the four seated statues there — Ra-Horakhty, Amun-Ra and Ramesses II. Ptah, associated with the underworld, remains in darkness. The alignment was engineered into the temple when it was cut from the mountainside in the thirteenth century BCE and the effect lasts roughly twenty minutes.",
+      },
+      {
+        q: "What are the Abu Simbel Sun Festival dates?",
+        a: "22 February and 22 October each year. Because the temple was dismantled and rebuilt on higher ground in the 1960s to save it from the rising waters of Lake Nasser, the alignment shifted by approximately one day, so many visitors now attend on both the 21st and the 22nd. The illumination happens at sunrise, with the temple opening early — generally between 5:00 and 6:00 am.",
+      },
+      {
+        q: "Why are 22 February and 22 October the dates?",
+        a: "The two dates are traditionally associated with Ramesses II's coronation and his birth, separated by exactly eight months. Whether they mark those precise events is debated by Egyptologists, but the deliberate astronomical design of the temple is not in question — the axis was set so that the sun would reach the sanctuary on two specific mornings and no others.",
+      },
+      {
+        q: "How do I get to Abu Simbel for the sun festival?",
+        a: "Abu Simbel is about 280 km south of Aswan. Most visitors travel by private road transfer, which takes roughly three hours and means leaving Aswan around 2:00–3:00 am to be in position before dawn. There is also a short flight from Aswan. On festival dates the most comfortable approach by far is to stay overnight in one of the few hotels at Abu Simbel itself — they book out many months ahead.",
+      },
+      {
+        q: "Is the Abu Simbel Sun Festival worth it?",
+        a: "If you have a genuine interest in ancient engineering or astronomy, yes — watching a three-thousand-year-old calculation still work to the minute is a rare thing. Be clear about what it involves: a middle-of-the-night start, cold, and a large crowd for a twenty-minute event in a confined space. Travellers who mainly want the temple itself are often better served visiting on an ordinary morning, when Abu Simbel is quiet and you can take your time.",
+      },
+    ],
+    hero: {
+      alt: "The colossal seated statues of Ramesses II at the Great Temple of Abu Simbel",
+      label: "The Abu Simbel Sun Festival",
+      src: "/images/aswan/abu-simbel-great-temple-colossi.webp",
+      width: 736,
+      height: 1308,
+    },
+    lastReviewed: "2026-07",
+    relationships: {
+      tours: tour(
+        "tour-abu-simbel",
+        "tour-upper-egypt-5day",
+        "tour-nile-cruise",
+        "tour-10-day",
+        "tour-grand-14day",
+      ),
+      destinations: dest("aswan", "luxor", "cairo"),
+      experiences: exp("nubian-village-experience", "private-felucca-nile"),
+      guides: guide("best-time-to-visit-egypt", "transportation-in-egypt", "egypt-travel-guide"),
+      relatedCollections: col("egypt-in-winter", "first-time-egypt", "luxury-egypt"),
+    },
+    seo: {
+      title: "Abu Simbel Sun Festival — 22 February & 22 October Dates, Times & Tours | Kemet",
+      description:
+        "The Abu Simbel Sun Festival: on 22 February and 22 October sunrise illuminates the inner sanctuary of Ramesses II's temple. Dates, times, how to get there from Aswan, and private tours.",
+    },
+  },
 ];
 
 /** Collections in editorial priority order (highest first). */

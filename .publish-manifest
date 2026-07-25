@@ -7,11 +7,14 @@ activities.html
 apple-touch-icon.png
 booking.html
 collections.html
+collections/abu-simbel-sun-festival.html
+collections/christmas-new-year-egypt.html
 collections/egypt-in-summer.html
 collections/egypt-in-winter.html
 collections/family-egypt.html
 collections/first-time-egypt.html
 collections/luxury-egypt.html
+collections/ramadan-in-egypt.html
 contact-handler.php
 contact.html
 cuisine.html
@@ -179,6 +182,7 @@ images/redsea/sinai-cliff-lounge-night.webp
 images/redsea/sinai-wadi-rock-pool.webp
 images/tours/tour-nile-cairo-feluccas-aerial.webp
 index.html
+llms.txt
 og.jpg
 privacy.html
 robots.txt

@@ -49,3 +49,6 @@ Allow: /
 
 # @astrojs/sitemap emits sitemap-index.xml at the site root.
 Sitemap: https://kemet-travel.com/sitemap-index.xml
+
+# Curated Markdown index of the site for LLMs (llms.txt convention):
+# https://kemet-travel.com/llms.txt
