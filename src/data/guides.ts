@@ -13,6 +13,9 @@ import type { Guide } from "@/types";
 const dest = (...ids: string[]) =>
   ids.map((id) => ({ domain: "destination" as const, id }));
 
+const tour = (...ids: string[]) =>
+  ids.map((id) => ({ domain: "tour" as const, id }));
+
 const guide = (...ids: string[]) =>
   ids.map((id) => ({ domain: "guide" as const, id }));
 
@@ -655,6 +658,258 @@ export const guides: Guide[] = [
     relationships: {
       destinations: dest("cairo", "luxor", "aswan", "alexandria"),
       relatedGuides: guide("egypt-travel-guide"),
+    },
+  },
+  // -------------------------------------------------------------------------
+  // 6. The Ideal 10-Day Egypt Itinerary
+  // -------------------------------------------------------------------------
+  {
+    id: "10-day-egypt-itinerary",
+    slug: "10-day-egypt-itinerary",
+    domain: "guide",
+    title: "The Ideal 10-Day Egypt Itinerary",
+    locales: ["en"],
+    guideType: "planning",
+    category: "planning-your-trip",
+    parentGuideId: "egypt-travel-guide",
+    shortSummary:
+      "A field-tested 10-day Egypt route — Cairo and Giza, a flight south, Luxor's two banks, a three-night Nile cruise to Aswan and Abu Simbel — with the pacing mistakes to avoid.",
+    difficulty: "easy",
+    readingTimeMinutes: 9,
+    lastUpdated: "2026-07",
+    keyTakeaways: [
+      "Ten days is the sweet spot for a first visit: the full Cairo–Luxor–Nile–Aswan arc without a single rushed day",
+      "Fly south, don't drive: Cairo to Luxor is one hour by air versus ten by road",
+      "Cruise downstream logic matters — board in Aswan or Luxor depending on the day's sailing schedule, and let the cruise set the trip's spine",
+      "Abu Simbel is worth the early start from Aswan — three hours each way for one of the greatest sights on earth",
+      "Leave day ten genuinely free in Cairo: the Grand Egyptian Museum deserves an unhurried half day",
+    ],
+    keyFacts: [
+      { label: "Total nights", value: "9 (3 Cairo · 2 Luxor · 3 cruise · 1 Cairo)" },
+      { label: "Internal flights", value: "2 (Cairo–Luxor, Aswan–Cairo)" },
+      { label: "Best months", value: "October – April" },
+      { label: "Pace", value: "Full but never rushed — one anchor sight per day" },
+    ],
+    sections: [
+      {
+        heading: "Why ten days is the right length",
+        paragraphs: [
+          "A week forces a choice between depth and coverage; two weeks is a luxury not everyone has. Ten days is where the classic Egypt route stops fighting the calendar: Cairo and Giza get three nights instead of two, Luxor's West Bank gets the full morning it needs, the Nile cruise runs its natural three-night course, and Abu Simbel fits without wrecking the following day.",
+          "The route below is the shape we build most first-visit journeys around. Every element can be swapped — a dahabiya for the cruise, the Red Sea instead of the second Cairo stay — but the pacing logic holds.",
+        ],
+      },
+      {
+        heading: "Days 1–3 · Cairo & Giza",
+        items: [
+          "Day 1 — Arrive, settle in. Nothing scheduled beyond dinner: jet lag is real and day 2 starts early.",
+          "Day 2 — The Giza plateau at opening (the light and the calm are worth the alarm), the Great Sphinx, then Saqqara's Step Pyramid and Dahshur in the afternoon: the whole invention of the pyramid in one day.",
+          "Day 3 — The Grand Egyptian Museum in the morning while you are fresh, then Islamic Cairo in the late afternoon: Al-Muizz Street, Khan el-Khalili as the lanterns come on.",
+        ],
+        note: "Resist the urge to add Alexandria here — it is a superb city but it costs a full day, and on a 10-day frame that day belongs to the south.",
+        noteType: "tip",
+      },
+      {
+        heading: "Days 4–5 · Luxor",
+        items: [
+          "Day 4 — Morning flight to Luxor (about an hour). Karnak in the afternoon, when the tour-bus wave has passed; Luxor Temple lit up after dark.",
+          "Day 5 — The West Bank early: Valley of the Kings at opening, Hatshepsut's temple, the Colossi of Memnon — done by early afternoon, before the heat.",
+        ],
+        note: "The hot-air balloon flies at dawn on the West Bank — if it is on your list, day 5 is its slot. Book ahead and keep day 4's evening early.",
+        noteType: "info",
+      },
+      {
+        heading: "Days 6–8 · The Nile cruise to Aswan",
+        paragraphs: [
+          "Board in Luxor for the classic three-night southbound sailing: Esna lock, Edfu's Temple of Horus (the best-preserved in Egypt), Kom Ombo at sunset, arriving Aswan on the final morning. The cruise is deliberately the slowest part of the trip — river, temples, deck. That is the point.",
+        ],
+        items: [
+          "Day 6 — Board by midday, sail through the Esna lock in the afternoon",
+          "Day 7 — Edfu by horse-drawn calèche in the morning; Kom Ombo's double temple at golden hour",
+          "Day 8 — Arrive Aswan: Philae on its island, the High Dam, a felucca around Elephantine at sunset",
+        ],
+      },
+      {
+        heading: "Day 9 · Abu Simbel, then fly north",
+        paragraphs: [
+          "The early start (roughly 4–5 am from Aswan, three hours each way by road) puts you at Ramesses II's rock-cut temples while the light is still low on the colossi. Back in Aswan by mid-afternoon for the evening flight to Cairo. It is a long day and worth every minute of it — but it is why day 10 must stay light.",
+        ],
+      },
+      {
+        heading: "Day 10 · Cairo, unhurried",
+        paragraphs: [
+          "Whatever you loved most, more of it: a second museum visit, Coptic Cairo's churches, a final koshari, shopping done properly. Departures are usually in the evening or overnight, so the day is fuller than it sounds — but it should never be scheduled to the hour.",
+        ],
+      },
+      {
+        heading: "How to adapt this route",
+        items: [
+          "Honeymoon — swap the cruise for a small dahabiya under sail and add a Red Sea coda (12 days total)",
+          "Families — same shape, later starts, and a pool-anchored hotel in Luxor; children handle the cruise brilliantly",
+          "Second visit — replace days 1–3 with Alexandria and the Fayoum, keep the south as is",
+          "Tighter budget — the sleeper train replaces both flights: board in Cairo after dinner, wake in Luxor",
+        ],
+      },
+    ],
+    planningTips: [
+      "Book the cruise first — its fixed sailing days set the whole itinerary's rhythm",
+      "October to April for the classic route; summer works but shifts everything to dawn starts",
+      "This exact shape is our 10-day signature journey — we tailor it around your dates rather than selling fixed departures",
+    ],
+    faqs: [
+      {
+        q: "Is 10 days enough for Egypt?",
+        a: "For a first visit, it is the sweet spot. Ten days covers Cairo and Giza, Luxor, a full three-night Nile cruise and Abu Simbel at a pace that never feels rushed — which a 7-day version cannot honestly claim. You will leave with the whole classical arc seen properly, and a reason to come back for Alexandria, Siwa or the Red Sea.",
+      },
+      {
+        q: "Should I do the Nile cruise from Luxor or Aswan?",
+        a: "Both directions sail the same stretch and visit the same temples. Southbound from Luxor fits this itinerary's flow (Cairo → Luxor → cruise → Aswan → fly home via Cairo); northbound from Aswan works equally well reversed. In practice the deciding factor is the sailing schedule of the specific vessel — cruises depart on fixed weekdays, and the itinerary is built around that.",
+      },
+      {
+        q: "Is Abu Simbel worth the long day trip from Aswan?",
+        a: "Yes — emphatically. The 4 am start and six hours of road time deter many visitors, and then they stand in front of the four 20-metre colossi of Ramesses II and stop mentioning the drive. If the early start is genuinely unappealing, there are short flights from Aswan, or an overnight at Abu Simbel itself, which also gives you the temples at dawn without the crowd.",
+      },
+      {
+        q: "How much walking does this itinerary involve?",
+        a: "Moderate and manageable. The big days — Giza with Saqqara, the West Bank, Abu Simbel — each involve two to three hours on your feet over uneven ground, usually in the morning. Because the trip is private, the pace is yours: more rest stops, shorter site visits or a car repositioned closer are all trivially arranged.",
+      },
+    ],
+    seo: {
+      title: "10-Day Egypt Itinerary — Cairo, Luxor & Nile Cruise | Kemet",
+      description:
+        "A field-tested 10-day Egypt itinerary: Cairo & Giza, Luxor's two banks, a 3-night Nile cruise to Aswan and Abu Simbel — with pacing tips and adaptations.",
+    },
+    relationships: {
+      tours: tour("tour-10-day", "tour-grand-14day", "tour-7-day", "tour-nile-cruise"),
+      destinations: dest("cairo", "giza", "luxor", "aswan"),
+      relatedGuides: guide("egypt-travel-guide", "best-time-to-visit-egypt", "transportation-in-egypt"),
+    },
+  },
+
+  // -------------------------------------------------------------------------
+  // 7. What to Pack for Egypt
+  // -------------------------------------------------------------------------
+  {
+    id: "egypt-packing-list",
+    slug: "egypt-packing-list",
+    domain: "guide",
+    title: "What to Pack for Egypt",
+    locales: ["en"],
+    guideType: "practical",
+    category: "packing",
+    parentGuideId: "egypt-travel-guide",
+    shortSummary:
+      "The Egypt packing list that actually matches the trip: what the desert, the monuments, the mosques and the Nile each demand — by season, with the five things everyone forgets.",
+    difficulty: "easy",
+    readingTimeMinutes: 7,
+    lastUpdated: "2026-07",
+    keyTakeaways: [
+      "Layers beat outfits: a 20-degree swing between dawn and mid-afternoon is normal for most of the year",
+      "Shoulders-and-knees coverage gets you into every mosque and church without improvising",
+      "Real walking shoes, already broken in — monument floors are sand, gravel and 3,000-year-old stone",
+      "Winter evenings are genuinely cold on the Nile: pack one warm layer even in December",
+      "Sunscreen, a proper hat and a refillable bottle are non-negotiable twelve months a year",
+    ],
+    keyFacts: [
+      { label: "Luggage style", value: "One case + one day-pack per person" },
+      { label: "Dress code", value: "Modest at religious sites; relaxed at hotels & resorts" },
+      { label: "Laundry", value: "Fast and inexpensive at hotels and cruise vessels" },
+      { label: "Adapters", value: "Type C/F (European two-pin), 220V" },
+    ],
+    sections: [
+      {
+        heading: "The principle: pack for four climates at once",
+        paragraphs: [
+          "A classic Egypt itinerary crosses a desert plateau at dawn, an air-conditioned museum at noon, a mosque in the afternoon and a breezy cruise deck after dark — in one day. The packing answer is not more clothes; it is layers of light, breathable ones. Natural fabrics (cotton, linen) outperform synthetics everywhere except the Red Sea.",
+        ],
+      },
+      {
+        heading: "Clothing — the core list",
+        items: [
+          "4–5 light, loose tops with sleeves (sun protection doubles as mosque-readiness)",
+          "2–3 pairs of light trousers or long skirts — knees covered gets you in everywhere",
+          "One warm layer: a fleece or light jacket (November–March evenings drop to 8–11 °C)",
+          "A scarf or shawl — instant shoulder or head cover, dust shield, sun block, cruise-deck warmth: the single hardest-working item in the bag",
+          "Broken-in walking shoes with real soles, plus sandals for hotels and decks",
+          "Swimwear — hotel pools everywhere, plus the Red Sea if it is on the route",
+          "One smarter outfit for a cruise dinner or a Cairo rooftop evening",
+        ],
+        note: "There is no legal dress code for visitors, and hotels and resorts are fully relaxed. Modesty at religious sites and in older neighbourhoods is a courtesy that is always noticed and always repaid.",
+        noteType: "info",
+      },
+      {
+        heading: "Sun, sand and health",
+        items: [
+          "High-SPF sunscreen — and a reef-safe one if the Red Sea is on the itinerary",
+          "A hat with a real brim; the site shade at Giza and Karnak rounds to zero",
+          "Sunglasses (the desert glare is fierce), lip balm with SPF, and a small moisturiser — the dry air is relentless",
+          "A refillable water bottle — your guide keeps bottled water in the vehicle, and hotels increasingly have refill stations",
+          "A small personal kit: rehydration salts, your usual stomach remedy, plasters, any prescription in its original packaging",
+          "Hand sanitiser and pocket tissues — public bathrooms at monument sites vary",
+        ],
+        note: "Tap water is not for drinking anywhere in Egypt. Bottled water is universal and inexpensive; brushing teeth with tap water in city hotels is generally fine.",
+        noteType: "warning",
+      },
+      {
+        heading: "Electronics & documents",
+        items: [
+          "Type C/F adapter (Egypt runs European two-pin at 220V) — one per person plus a spare",
+          "Power bank — long site days, phone as camera",
+          "Passport valid 6+ months, a printed copy kept separately, and your e-Visa confirmation or USD 25 in cash for the visa on arrival",
+          "A modest amount of small-denomination cash for tips — see the money guide for how tipping actually works",
+        ],
+      },
+      {
+        heading: "By season",
+        items: [
+          "October–April (the classic season): everything above, with the warm layer promoted from optional to essential — cruise decks and desert dawns are cold",
+          "May–September: swap a top for an extra one, add electrolytes, and treat the hat and sunscreen as safety equipment rather than accessories",
+          "Ramadan (moves each year): nothing extra to pack, but slightly more conservative daywear is a graceful courtesy",
+          "Red Sea add-on: rash guard or swim shirt (the sun on the water is stronger than it feels), reef-safe sunscreen only",
+        ],
+      },
+      {
+        heading: "The five things everyone forgets",
+        items: [
+          "The scarf (see above — it earns its place daily)",
+          "A head torch: pre-dawn starts for Abu Simbel, the balloon, or the Sun Festival are genuinely dark",
+          "A dry bag or zip pouch for sand-proofing phones and cameras on desert days",
+          "Slip-on-able shoes — mosques mean shoes off and on several times in an afternoon",
+          "An empty duffel folded flat in the case: the bazaar happens to almost everyone",
+        ],
+      },
+    ],
+    planningTips: [
+      "Laundry on the cruise or at the hotel is cheap and next-day — pack for six days, not ten",
+      "Leave room (or that folded duffel): Khan el-Khalili, Aswan's spice market and the Tunis pottery village are hard to walk out of empty-handed",
+      "On a private journey the vehicle is your locker — heavy camera kit and the warm layer can live there between stops",
+    ],
+    faqs: [
+      {
+        q: "Is there a dress code for tourists in Egypt?",
+        a: "No formal one. Hotels, resorts and cruise vessels are fully relaxed, and Cairo's modern districts dress like any big city. At mosques, churches and in the older quarters, covered shoulders and knees for everyone — and a head scarf for women inside mosques — is the expected courtesy. A light scarf in the day-pack covers every situation, literally.",
+      },
+      {
+        q: "What shoes should I bring to Egypt?",
+        a: "One pair of genuinely comfortable, already-broken-in walking shoes with proper soles — monument sites are sand, gravel and ancient stone, and you will cover several kilometres on the big days. Add sandals or slip-ons for hotels, decks and mosque visits, where shoes come off and on repeatedly. Heels have a hard time everywhere except a cruise dining room.",
+      },
+      {
+        q: "Do I need warm clothes for Egypt in winter?",
+        a: "Yes — more than most visitors expect. Daytimes are a glorious 18–26 °C, but desert and river temperatures fall fast after sunset: 8–11 °C evenings are normal from December to February, and a Nile cruise deck or a pre-dawn Abu Simbel start feels properly cold. One fleece or light jacket solves the entire season.",
+      },
+      {
+        q: "Can I buy things I forget in Egypt?",
+        a: "Almost everything, easily. Pharmacies are excellent, ubiquitous and inexpensive; sunscreen, adapters, hats and clothing are all readily available in Cairo, Luxor and the resort towns. The two things genuinely worth bringing from home are specific prescription medication and broken-in walking shoes.",
+      },
+    ],
+    seo: {
+      title: "What to Pack for Egypt — Season-by-Season Packing List | Kemet",
+      description:
+        "The Egypt packing list that matches the real trip: layers for desert dawns, mosque-ready cover, the right shoes, and the five things everyone forgets.",
+    },
+    relationships: {
+      tours: tour("tour-10-day", "tour-7-day", "tour-nile-cruise"),
+      destinations: dest("cairo", "giza", "luxor", "aswan"),
+      relatedGuides: guide("egypt-travel-guide", "best-time-to-visit-egypt", "egypt-visa-guide", "10-day-egypt-itinerary"),
     },
   },
 ];
