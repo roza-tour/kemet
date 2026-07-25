@@ -22,14 +22,18 @@ export interface FooterColumn {
   links: NavItem[];
 }
 
-/** Primary navigation — a short, minimal set. The logo links Home; Contact is
- *  the nav CTA. Activities/Cuisine remain reachable from the footer. */
+/** Primary navigation. The logo links Home; Contact is the nav CTA.
+ *  Ordered as a traveller reads it: what you book (Journeys), what you do
+ *  (Experiences, Activities), where you go (Destinations), then planning
+ *  (Collections, Guides) and background (Cultures, About). Cuisine and The 8
+ *  Identities stay in the footer — they are reading, not booking, pages. */
 export const primaryNav: NavItem[] = [
   { label: "Journeys", href: "tours.html" },
   { label: "Experiences", href: hubFor("experience") },
+  { label: "Activities", href: "activities.html" },
   { label: "Destinations", href: hubFor("destination") },
-  { label: "Guides", href: hubFor("guide") },
   { label: "Collections", href: hubFor("seasonal") },
+  { label: "Guides", href: hubFor("guide") },
   { label: "Cultures", href: "culture.html" },
   { label: "About", href: "about.html" },
 ];

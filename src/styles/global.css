@@ -43,8 +43,10 @@ h3{font-weight:400}
 .logo-plaque--lg img{height:112px}
 .hero-seal{margin-bottom:32px}.hero-seal img{height:104px}
 @media(max-width:680px){.nav{height:70px;padding:0 22px}.nav.scrolled{height:60px}.logo-plaque img{height:42px}.nav.scrolled .logo-plaque img{height:38px}.hero-seal img{height:80px}.logo-plaque--lg img{height:92px}}
-.navlinks{display:flex;gap:38px;align-items:center}
-.navlinks a{font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);transition:color .4s;position:relative;padding:6px 0}
+/* Fluid gap: eight items must fit a 1100px laptop without wrapping, while
+   staying airy on a wide desktop. */
+.navlinks{display:flex;gap:clamp(17px,2.15vw,38px);align-items:center}
+.navlinks a{font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);transition:color .4s;position:relative;padding:6px 0;white-space:nowrap}
 .navlinks a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform .5s cubic-bezier(.22,.61,.36,1)}
 .navlinks a:hover,.navlinks a.active{color:var(--bone)}
 .navlinks a:hover::after,.navlinks a.active::after{transform:scaleX(1);transform-origin:left}
@@ -411,8 +413,21 @@ html.js .reveal.in{opacity:1;transform:none}
   .stats-row{grid-template-columns:repeat(2,1fr);gap:52px 20px}
   .stat:nth-child(3){border-left:0}
 }
+/* Eight wide-tracked uppercase labels plus the logo and the Contact CTA need
+   room. Above 1080px they sit on one line with air around them; below that the
+   menu collapses into the burger rather than cramming — this covers tablets in
+   both orientations. */
+@media(max-width:1280px) and (min-width:1081px){
+  .navlinks a{letter-spacing:.22em}
+}
+@media(max-width:1080px){
+  .navlinks{display:none}
+  /* Displayed as a real touch target from the moment it appears. */
+  .burger{display:flex;min-width:44px;min-height:44px;align-items:center;justify-content:center;margin-right:-10px}
+  /* Links inside the opened panel get a full-width hit area. */
+  .navlinks.open a{padding:12px 0}
+}
 @media(max-width:680px){
-  .navlinks{display:none}.burger{display:block}
   section{padding:66px 0}
   .grid-2,.grid-3,.gods-grid,.grid-4{grid-template-columns:1fr}
   .grid-4{grid-template-columns:repeat(2,1fr)}
@@ -513,7 +528,7 @@ html.js .reveal.in{opacity:1;transform:none}
   .eyebrow{font-size:.7rem}
   /* 404 quick links */
   .nf-links a{display:inline-block;padding:12px 4px;min-height:44px}
-  /* tablet still shows the desktop nav — give those links a real hit area */
+  /* menu-panel links need a real hit area */
   .navlinks a{padding:12px 0}
   /* form labels are read while typing — keep them comfortably legible */
   .cform label span{font-size:.74rem;letter-spacing:.2em}

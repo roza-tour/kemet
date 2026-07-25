@@ -543,7 +543,7 @@ export const destinations: Destination[] = [
       description:
         "Hurghada travel guide: Giftun Island reefs, private boat days, the old harbour quarter — and how to pair the Red Sea with a Luxor or Nile itinerary.",
     },
-    relationships: { nearby: near("luxor") },
+    relationships: { nearbyDestinations: near("luxor") },
   },
   {
     id: "sharm-el-sheikh",
@@ -608,7 +608,7 @@ export const destinations: Destination[] = [
       description:
         "Sharm El Sheikh travel guide: Ras Mohammed National Park, Tiran reefs, shore snorkelling, Bedouin stargazing nights — and how to fit Sinai into an Egypt itinerary.",
     },
-    relationships: { nearby: near("hurghada") },
+    relationships: { nearbyDestinations: near("hurghada") },
   },
   {
     id: "fayoum",
@@ -674,7 +674,7 @@ export const destinations: Destination[] = [
       description:
         "The Fayoum from Cairo: UNESCO's Wadi Al-Hitan whale fossils, Wadi El Rayan waterfalls, sandboarding above Magic Lake and the potters of Tunis village.",
     },
-    relationships: { nearby: near("cairo", "giza") },
+    relationships: { nearbyDestinations: near("cairo", "giza") },
   },
 ];
 

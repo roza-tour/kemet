@@ -1,8 +1,9 @@
 .gitkeep
 .htaccess
 404.html
-_astro/_slug_.D6vo5zWs.css
+_astro/_slug_.ClUCbC7i.css
 _astro/_slug_.Dok7lQyC.css
+_astro/page.DCTgdEH6.js
 about.html
 activities.html
 activities/banana-boat-sharm.html
@@ -65,9 +66,7 @@ fonts/QGYvz_MVcBeNP4NJtEtq.woff2
 fonts/QGYvz_MVcBeNP4NJuktqQ4E.woff2
 fonts/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYp3tKgS4.woff2
 fonts/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYqXtK.woff2
-fonts/vEF42-tODB8RrNDvZSUmRhcQHzx1s7y_F9-j3qSzEcbEYintQFi99Rg.woff2
-fonts/vEF42-tODB8RrNDvZSUmRhcQHzx1s7y_F9-j3qSzEcbEYintTli9.woff2
-fonts/vEF42-tODB8RrNDvZSUmRhcQHzx1s7y_F9-j3qSzEcbEYintdVi99Rg.woff2
+fonts/hieroglyphs-subset.woff2
 guides.html
 guides/10-day-egypt-itinerary.html
 guides/best-time-to-visit-egypt.html

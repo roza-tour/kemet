@@ -14,6 +14,13 @@ const SITE_URL = (PUBLIC_SITE_URL || "https://kemet-travel.com").replace(/\/$/, 
 export default defineConfig({
   site: SITE_URL,
   build: { format: "file" },
+  // This is a multi-page site: every click is a full document load. Prefetching
+  // on hover/focus fetches the next page ~200-800ms before the click lands, so
+  // navigation feels instant instead of "heavy". Only same-origin links are
+  // prefetched, Astro skips it on save-data and 2G connections, and a
+  // `<link rel="prefetch">` is a browser hint only — crawlers ignore it, so
+  // this carries no indexing risk.
+  prefetch: { prefetchAll: true, defaultStrategy: "hover" },
   integrations: [
     sitemap({
       // build.format "file" serves flat .html files and every page's canonical

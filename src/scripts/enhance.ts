@@ -82,7 +82,7 @@ export const enhanceScript = `
     };
     b.addEventListener('click',function(){setMenu(!nl.classList.contains('open'));});
     document.addEventListener('keydown',function(e){if(e.key==='Escape'&&nl.classList.contains('open'))setMenu(false);});
-    addEventListener('resize',function(){if(innerWidth>680&&nl.classList.contains('open'))setMenu(false);});
+    addEventListener('resize',function(){if(innerWidth>1080&&nl.classList.contains('open'))setMenu(false);});
   }
 
   /* first-party analytics — pageview + conversion events to /k.php.

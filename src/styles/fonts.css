@@ -125,32 +125,18 @@
   src: url(/fonts/6NU78FyLNQOQZAnv9bYEvDiIdE9Ea92uemAk_WBq8U_9v0c2Wa0KxC9TeA.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
-/* egyptian-hieroglyphs */
+/* egyptian-hieroglyphs — subset to the 7 glyphs the site actually uses
+   (the enquiry-panel icons and the 404 eye of Horus). The full Noto Sans
+   Egyptian Hieroglyphs face is 390KB; this subset is 3KB. The Latin faces of
+   this family are not shipped at all — --ff-hiero falls back to serif for any
+   non-hieroglyph character, and no element using it contains one. */
 @font-face {
   font-family: 'Noto Sans Egyptian Hieroglyphs';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(/fonts/vEF42-tODB8RrNDvZSUmRhcQHzx1s7y_F9-j3qSzEcbEYintdVi99Rg.woff2) format('woff2');
-  unicode-range: U+13000-13455, U+13460-143FA;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Noto Sans Egyptian Hieroglyphs';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(/fonts/vEF42-tODB8RrNDvZSUmRhcQHzx1s7y_F9-j3qSzEcbEYintQFi99Rg.woff2) format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Noto Sans Egyptian Hieroglyphs';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(/fonts/vEF42-tODB8RrNDvZSUmRhcQHzx1s7y_F9-j3qSzEcbEYintTli9.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  src: url(/fonts/hieroglyphs-subset.woff2) format('woff2');
+  unicode-range: U+13000, U+13080, U+1308B, U+13191, U+131A3, U+132F4, U+133E0;
 }
 /* latin-ext */
 @font-face {
