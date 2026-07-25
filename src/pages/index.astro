@@ -6,6 +6,7 @@ import CustomerGallery from "@/components/CustomerGallery.astro";
 import SectionHeader from "@/components/SectionHeader.astro";
 import SymbolIcon from "@/components/SymbolIcon.astro";
 import TourCard from "@/components/TourCard.astro";
+import SeasonalStrip from "@/components/collection/SeasonalStrip.astro";
 import { multidayTours, dayTours } from "@/data/tours";
 import { identities } from "@/data/identities";
 import { destinations } from "@/data/destinations";
@@ -202,12 +203,17 @@ const jsonld = breadcrumb([["Home", "index.html"]]);
 
   <Frieze />
 
+  {/* ── By season & occasion ── */}
+  <SeasonalStrip />
+
+  <Frieze />
+
   {/* ── The eight worlds ── */}
   <section>
     <div class="wrap">
       <SectionHeader
-        no="06"
-        eyebrow="06 · The 8 Identities"
+        no="08"
+        eyebrow="08 · The 8 Identities"
         title="The eight worlds of Egypt"
         text="Each of the eight worlds has its own colour, symbol and set of experiences — and most can be combined within a single trip. Together they are the map we travel by, and the reason no two Kemet journeys look quite the same."
       />

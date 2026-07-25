@@ -1,0 +1,139 @@
+---
+// SeasonalStrip — surfaces the seasonal and occasion collections on the
+// homepage, so this content isn't buried two clicks deep in the hub.
+//
+// Each card carries a data-window (month/day ranges). A tiny inline script
+// marks whichever collection is in season on the visitor's date with an
+// "In season now" badge and floats it to the front. Without JS the strip still
+// renders in full — the badge is pure enhancement.
+import { collections } from "@/data/collections";
+import type { Collection } from "@/types";
+
+/** Relevance windows as "MM-DD..MM-DD" (may wrap the year end). */
+const WINDOWS: Record<string, string> = {
+  "christmas-new-year-egypt": "11-01..01-08",
+  "abu-simbel-sun-festival": "01-25..02-23,09-25..10-23",
+  "ramadan-in-egypt": "01-15..03-25",
+  "sham-el-nessim-egypt": "03-15..05-12",
+  "red-sea-egypt": "05-01..09-30",
+  "egypt-in-winter": "10-01..03-31",
+};
+
+// The seasonal/occasion set: everything with a visual theme, plus winter.
+const picked: Collection[] = collections
+  .filter((c) => c.theme || c.slug === "egypt-in-winter")
+  .sort((a, b) => (b.priority ?? 0) - (a.priority ?? 0));
+---
+<section class="sstrip-sec">
+  <div class="wrap">
+    <div class="sec-head reveal" data-no="07">
+      <div class="eyebrow">07 · By Season &amp; Occasion</div>
+      <h2>When you come changes what you see</h2>
+      <div class="rule"></div>
+      <p>
+        Egypt reads differently in February than in August, and a honeymoon is not
+        a family fortnight. These are the moments and occasions worth planning
+        around — each with its own itineraries, timing and practicalities.
+      </p>
+    </div>
+
+    <div class="sstrip" id="sstrip">
+      {picked.map((c) => (
+        <a
+          class={`sstrip-card reveal${c.theme ? ` st-${c.theme}` : ""}`}
+          href={`collections/${c.slug}.html`}
+          data-window={WINDOWS[c.slug] ?? ""}
+          aria-label={`${c.title} — collection`}
+        >
+          <span class="sstrip-badge" hidden>In season now</span>
+          <span class="sstrip-glyph" aria-hidden="true"></span>
+          <h3>{c.title}</h3>
+          <p>{c.subtitle}</p>
+          <span class="sstrip-more">Explore <i aria-hidden="true"></i></span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  (function () {
+    var strip = document.getElementById("sstrip");
+    if (!strip) return;
+    var now = new Date();
+    var md = (now.getMonth() + 1) * 100 + now.getDate(); // e.g. 1231
+    function inRange(spec) {
+      return spec.split(",").some(function (range) {
+        var p = range.split("..");
+        if (p.length !== 2) return false;
+        var a = +p[0].replace("-", ""), b = +p[1].replace("-", "");
+        return a <= b ? md >= a && md <= b : md >= a || md <= b; // wraps the year
+      });
+    }
+    var cards = strip.querySelectorAll(".sstrip-card");
+    for (var i = 0; i < cards.length; i++) {
+      var w = cards[i].getAttribute("data-window");
+      if (w && inRange(w)) {
+        cards[i].classList.add("is-now");
+        var badge = cards[i].querySelector(".sstrip-badge");
+        if (badge) badge.hidden = false;
+        strip.insertBefore(cards[i], strip.firstChild);
+      }
+    }
+  })();
+</script>
+
+<style>
+  .sstrip-sec { padding-top: 0; }
+  .sstrip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 40px; }
+
+  .sstrip-card {
+    position: relative; display: block; padding: 34px 30px 30px;
+    border: 1px solid var(--line); border-radius: 2px; overflow: hidden;
+    background: linear-gradient(165deg, rgba(30,25,18,.92), rgba(14,17,21,.72));
+    transition: transform .5s cubic-bezier(.22,.61,.36,1), border-color .5s, box-shadow .5s;
+  }
+  .sstrip-card::before {
+    content: ""; position: absolute; inset: 0 0 auto 0; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--st, var(--gold)), transparent);
+    opacity: .55; transition: opacity .5s;
+  }
+  .sstrip-card:hover { transform: translateY(-6px); border-color: var(--st, var(--gold));
+    box-shadow: 0 24px 60px rgba(0,0,0,.5); }
+  .sstrip-card:hover::before { opacity: 1; }
+
+  .sstrip-card h3 { font-size: 1.3rem; color: var(--bone); margin: 0 0 8px; }
+  .sstrip-card p { color: var(--muted); font-size: .93rem; line-height: 1.7; margin: 0; }
+  .sstrip-more { display: inline-flex; align-items: center; gap: 12px; margin-top: 20px;
+    font-size: .64rem; letter-spacing: .3em; text-transform: uppercase; color: var(--st, var(--gold)); }
+  .sstrip-more i { width: 30px; height: 1px; background: currentColor; transition: width .5s cubic-bezier(.22,.61,.36,1); }
+  .sstrip-card:hover .sstrip-more i { width: 52px; }
+
+  /* Per-theme accent, mirroring each collection's own page */
+  .st-ramadan      { --st: #E0BE6A; }
+  .st-christmas    { --st: #E3C579; }
+  .st-sun-festival { --st: #E8A33D; }
+  .st-spring       { --st: #9CCBA2; }
+  .st-red-sea      { --st: #6FD0C6; }
+  .st-honeymoon    { --st: #E3B98C; }
+
+  /* Glyph mark, drawn per theme with pure CSS */
+  .sstrip-glyph { display: block; width: 30px; height: 30px; margin-bottom: 16px;
+    border-radius: 50%; border: 1px solid var(--st, var(--gold)); opacity: .8; position: relative; }
+  .sstrip-glyph::after { content: ""; position: absolute; inset: 7px; border-radius: 50%;
+    background: var(--st, var(--gold)); opacity: .35; }
+  .st-ramadan .sstrip-glyph { box-shadow: inset -7px 0 0 -1px var(--ink-2); }
+  .st-ramadan .sstrip-glyph::after { display: none; }
+
+  /* In-season highlight */
+  .sstrip-card.is-now { border-color: var(--st, var(--gold)); }
+  .sstrip-card.is-now::before { opacity: 1; height: 3px; }
+  .sstrip-badge {
+    position: absolute; top: 16px; right: 16px; font-size: .58rem; letter-spacing: .18em;
+    text-transform: uppercase; color: var(--ink); background: var(--st, var(--gold));
+    padding: 5px 11px; border-radius: 20px; font-weight: 600;
+  }
+
+  @media(max-width:1000px){ .sstrip { grid-template-columns: repeat(2, 1fr); } }
+  @media(max-width:640px){ .sstrip { grid-template-columns: 1fr; } }
+</style>
