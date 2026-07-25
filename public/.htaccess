@@ -49,6 +49,6 @@ RewriteRule ^(?:\.git|src|scripts|public|node_modules|dist|\.claude|\.astro)(/|$
 
 # Astro source that co-lives in the repo root must never be served, even if a
 # new source file ever lands outside the folders blocked above.
-<FilesMatch "\.(ts|astro|mjs)$">
+<FilesMatch "\.(ts|astro|mjs|sh)$">
   Require all denied
 </FilesMatch>
