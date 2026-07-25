@@ -250,8 +250,12 @@ footer{background:var(--ink-2);border-top:1px solid var(--line);padding:100px 0 
 /* Scroll-reveal — content renders immediately without JS (visible). When JS is
    present, elements start hidden and enhance.ts adds .in as they scroll in. */
 .reveal{opacity:1;transform:none}
-html.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1);will-change:opacity,transform}
+html.js .reveal{opacity:0;transform:translateY(12px);transition:opacity .45s ease-out,transform .45s cubic-bezier(.22,.61,.36,1);will-change:opacity,transform}
 html.js .reveal.in{opacity:1;transform:none}
+/* On phones people scroll fast, so movement reads as lag — fade only, quicker. */
+@media(max-width:860px){
+  html.js .reveal{transform:none;transition:opacity .3s ease-out}
+}
 
 /* ── RC4 homepage systems — overlap intro, stats, mosaic, strip ─────────── */
 .ov-grid{display:grid;grid-template-columns:repeat(12,1fr);align-items:center}
@@ -485,3 +489,37 @@ html.js .reveal.in{opacity:1;transform:none}
   *{box-shadow:none!important;text-shadow:none!important}
 }
 :focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px}
+
+/* ── Touch ergonomics ────────────────────────────────────────────────────
+   Audit on 360/390/768px found the key mobile controls below a comfortable
+   tap size (the burger was 22×29). These raise the *hit area* without
+   changing how anything looks. */
+@media(max-width:900px){
+  /* Primary mobile control — was the smallest target on the page */
+  .burger{min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center;margin-right:-10px}
+  /* Breadcrumbs */
+  .crumb a{display:inline-block;padding:8px 2px}
+  /* Contact details are the highest-intent taps on the site — the phone and
+     email links sit inside .facts rows and were only 23px tall. */
+  .facts a,.enq-actions a,.foot-col a,.sm-machine a{display:inline-block;padding:11px 0;min-height:44px}
+  .facts.facts-stacked a{padding:6px 0;min-height:0}
+  .pcard-terms{padding:12px 0;min-height:44px}
+  /* Site index + footer link lists */
+  .sm-list a{display:inline-block;padding:9px 0;min-height:44px}
+  /* Micro-labels: lift the smallest tier to stay legible on a phone */
+  .hero .hfoot,.jcard .tag,.route,.foot-bottom,.frame .lab{font-size:.72rem}
+  /* match the authored specificity so these actually take effect */
+  .tile .tcap .k,.dpost .dcap .k{font-size:.72rem;letter-spacing:.24em}
+  .eyebrow{font-size:.7rem}
+  /* 404 quick links */
+  .nf-links a{display:inline-block;padding:12px 4px;min-height:44px}
+  /* tablet still shows the desktop nav — give those links a real hit area */
+  .navlinks a{padding:12px 0}
+  /* form labels are read while typing — keep them comfortably legible */
+  .cform label span{font-size:.74rem;letter-spacing:.2em}
+  /* breadcrumbs + micro-eyebrows: lift above the 11px legibility floor */
+  .crumb{font-size:.74rem;letter-spacing:.22em}
+  /* editorial "Discover ..." links */
+  .ov-copy .more,.tease .more{padding:12px 0;min-height:44px;display:inline-flex;align-items:center}
+  .eyebrow[style*=".68em"],.pcard .eyebrow{font-size:.72rem!important}
+}

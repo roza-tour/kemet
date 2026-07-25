@@ -88,13 +88,17 @@ const rows = seasonalCalendar.map((w) => [
   :root[data-season="honeymoon"]    { --gold:#E3B98C; --gold-bright:#FBE7D6; --gold-deep:#A9764B; --line-2:rgba(227,185,140,.46); --srb:#A9764B; }
 
   /* ===== The ribbon ===================================================== */
-  .srb { position: fixed; top: 86px; left: 0; right: 0; z-index: 115;
+  /* Pinned to the BOTTOM so it never interferes with the hero or the nav. */
+  .srb { position: fixed; bottom: 0; left: 0; right: 0; z-index: 115;
     background: linear-gradient(90deg, rgba(11,9,7,.97), rgba(20,16,12,.97));
-    border-bottom: 1px solid var(--line-2);
-    box-shadow: 0 10px 30px -18px rgba(0,0,0,.9); }
+    border-top: 1px solid var(--line-2);
+    box-shadow: 0 -10px 30px -18px rgba(0,0,0,.9);
+    transform: translateY(100%); animation: srb-in .6s cubic-bezier(.22,.61,.36,1) .8s forwards; }
+  @keyframes srb-in { to { transform: translateY(0); } }
+  @media (prefers-reduced-motion: reduce) { .srb { animation: none; transform: none; } }
   .srb[hidden] { display: none; }
   .srb-in { display: flex; align-items: center; gap: 16px; max-width: var(--maxw);
-    margin: 0 auto; padding: 11px 56px 11px 28px; }
+    margin: 0 auto; padding: 11px 104px 11px 28px; }
   .srb-text { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; flex: 1; min-width: 0; }
   .srb-text b { color: var(--gold-bright); font-weight: 500; font-size: .82rem; letter-spacing: .04em; }
   .srb-text span { color: var(--muted-2); font-size: .8rem; }
@@ -102,9 +106,10 @@ const rows = seasonalCalendar.map((w) => [
     font-size: .6rem; letter-spacing: .28em; text-transform: uppercase; color: var(--gold); }
   .srb-cta i { width: 24px; height: 1px; background: currentColor; transition: width .45s cubic-bezier(.22,.61,.36,1); }
   .srb-in:hover .srb-cta i { width: 40px; }
-  .srb-close { position: absolute; right: 16px; top: 50%; transform: translateY(-50%);
+  .srb-close { position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
     background: none; border: 0; color: var(--muted-2); font-size: 1.4rem; line-height: 1;
-    cursor: pointer; padding: 4px 8px; transition: color .3s; }
+    cursor: pointer; width: 44px; height: 44px; display: flex; align-items: center;
+    justify-content: center; transition: color .3s; }
   .srb-close:hover { color: var(--gold-bright); }
 
   /* Ornament mark, drawn per season. Default: a ring with a soft centre. */
@@ -142,16 +147,81 @@ const rows = seasonalCalendar.map((w) => [
   }
   :root[data-season="red-sea"] .srb-mark::after { display: none; }
 
-  /* The nav sits above the ribbon; push page content down when it shows. */
-  body:has(#season-ribbon:not([hidden])) .phero { padding-top: 232px; }
-  body:has(#season-ribbon:not([hidden])) .hero { padding-top: 44px; }
+  /* Lift the floating WhatsApp button above the ribbon while it is showing. */
+  body:has(#season-ribbon:not([hidden])) .wafab { bottom: max(78px, calc(env(safe-area-inset-bottom) + 74px)); }
 
   @media(max-width:900px){
-    .srb { top: 70px; }
-    .srb-in { padding: 10px 46px 10px 20px; gap: 12px; }
+    .srb-in { padding: 10px 92px 10px 18px; gap: 11px; }
     .srb-cta { display: none; }
     .srb-text span { display: none; }
-    body:has(#season-ribbon:not([hidden])) .phero { padding-top: 210px; }
+    .srb-close { right: 62px; }
   }
+  /* ===== Seasonal atmosphere on every page hero ==========================
+     A soft, pure-CSS motif layered into the hero (.hero on the homepage,
+     .phero on inner pages) so the season is felt everywhere, not only on the
+     collection page. Gradients only — nothing to load, nothing to maintain. */
+  .hero .veil::after, .phero::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0;
+    transition: opacity 1.2s ease;
+  }
+  :root[data-season] .hero .veil::after,
+  :root[data-season] .phero::after { opacity: 1; }
+
+  /* Ramadan — a crescent glow high in the sky + a lantern-warm horizon */
+  :root[data-season="ramadan"] .hero .veil::after,
+  :root[data-season="ramadan"] .phero::after {
+    background:
+      radial-gradient(circle 46px at 84% 106px, rgba(247,230,174,.5) 44px, transparent 47px),
+      radial-gradient(circle 46px at calc(84% + 26px) 96px, rgba(11,9,7,.92) 44px, transparent 47px),
+      radial-gradient(720px 300px at 50% 100%, rgba(47,126,102,.14), transparent 70%);
+  }
+
+  /* Christmas — a sprinkle of still stars + pine-cool depth */
+  :root[data-season="christmas"] .hero .veil::after,
+  :root[data-season="christmas"] .phero::after {
+    background:
+      radial-gradient(1.6px 1.6px at 12% 22%, rgba(255,246,218,.9), transparent 60%),
+      radial-gradient(1.2px 1.2px at 28% 12%, rgba(255,246,218,.7), transparent 60%),
+      radial-gradient(2px 2px at 46% 18%, rgba(255,246,218,.8), transparent 60%),
+      radial-gradient(1.3px 1.3px at 64% 9%, rgba(255,246,218,.7), transparent 60%),
+      radial-gradient(1.8px 1.8px at 78% 20%, rgba(255,246,218,.85), transparent 60%),
+      radial-gradient(1.2px 1.2px at 90% 13%, rgba(255,246,218,.7), transparent 60%),
+      radial-gradient(700px 280px at 50% 0%, rgba(47,126,102,.13), transparent 70%);
+  }
+
+  /* Sun Festival — dawn rays fanning from the top */
+  :root[data-season="sun-festival"] .hero .veil::after,
+  :root[data-season="sun-festival"] .phero::after {
+    background:
+      conic-gradient(from 168deg at 50% -60px,
+        transparent 0deg, rgba(232,163,61,.10) 4deg, transparent 8deg,
+        transparent 14deg, rgba(232,163,61,.09) 18deg, transparent 22deg,
+        transparent 28deg, rgba(232,163,61,.08) 32deg, transparent 36deg),
+      radial-gradient(640px 260px at 50% 0%, rgba(232,163,61,.16), transparent 70%);
+  }
+
+  /* Spring — a fresh green-gold wash */
+  :root[data-season="spring"] .hero .veil::after,
+  :root[data-season="spring"] .phero::after {
+    background:
+      radial-gradient(700px 300px at 20% 0%, rgba(127,176,134,.14), transparent 70%),
+      radial-gradient(600px 260px at 80% 10%, rgba(251,243,210,.09), transparent 70%);
+  }
+
+  /* Red Sea — light through water from above */
+  :root[data-season="red-sea"] .hero .veil::after,
+  :root[data-season="red-sea"] .phero::after {
+    background:
+      linear-gradient(180deg, rgba(44,142,134,.16), transparent 46%),
+      radial-gradient(760px 320px at 50% 0%, rgba(67,133,160,.14), transparent 72%);
+  }
+
+  /* Honeymoon — rose-gold warmth */
+  :root[data-season="honeymoon"] .hero .veil::after,
+  :root[data-season="honeymoon"] .phero::after {
+    background:
+      radial-gradient(700px 300px at 50% 0%, rgba(232,180,160,.16), transparent 70%);
+  }
+
   @media print { .srb { display: none !important; } }
 </style>
