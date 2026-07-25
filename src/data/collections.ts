@@ -646,6 +646,258 @@ export const collections: Collection[] = [
         "The Abu Simbel Sun Festival: on 22 February and 22 October, sunrise lights the inner sanctuary of Ramesses II's temple. Dates, times and how to get there.",
     },
   },
+
+  // ---------------------------------------------------------------------------
+  // 9. Sham El-Nessim & the Egyptian Spring
+  // ---------------------------------------------------------------------------
+  {
+    id: "sham-el-nessim-egypt",
+    slug: "sham-el-nessim-egypt",
+    domain: "seasonal",
+    title: "Sham El-Nessim & the Egyptian Spring",
+    subtitle: "The oldest festival still celebrated on earth — and the country's kindest weather.",
+    shortSummary:
+      "Every spring, the whole of Egypt goes outdoors on the same day for a festival that predates Christianity and Islam by millennia. Around it sits the year's most temperate travel window.",
+    editorialIntro:
+      "Sham El-Nessim is not a religious holiday, which is exactly why every Egyptian celebrates it. Its roots run back to the Old Kingdom — to a harvest festival marked here at least as early as the third dynasty, around 2700 BCE — and it has been observed continuously ever since, through pharaonic, Christian and Islamic Egypt alike. On the Monday after Coptic Easter the entire country goes outside: to the Nile banks, the parks, the gardens of Aswan, the Alexandria corniche. Families bring painted eggs, spring onions, lupini beans and fesikh, the salted mullet that is either the best or the worst thing about the day depending on whom you ask. For a visitor it is the single most vivid day to be in Egypt, and it sits inside March–May, when the Nile Valley is warm but not yet fierce and the light is long and clean.",
+    collectionType: "festival",
+    seasons: ["spring"],
+    travelStyles: ["cultural", "family", "photography", "relaxed"],
+    audience: ["everyone", "families", "history-enthusiasts", "photographers"],
+    priority: 7,
+    featured: true,
+    highlights: [
+      "A festival documented in Egypt since roughly 2700 BCE — still a public holiday, still universally kept",
+      "Celebrated by Egyptians of every faith, which makes it the most unguarded, most sociable day of the year",
+      "Painted eggs, spring onions, lupini beans and fesikh — a menu essentially unchanged for millennia",
+      "Kitchener's Island in Aswan, Al-Azhar Park in Cairo and the Alexandria corniche at their liveliest",
+      "March–May daytime temperatures of 25–33 °C in the Nile Valley — warm, long-lit and pre-summer",
+    ],
+    planningNotes: [
+      "The date moves with Coptic Easter: it falls on the Monday after, which in 2027 is 3 May (Coptic Easter, 2 May)",
+      "It is a national public holiday — parks, riverbanks and gardens are full, and domestic travel that weekend is heavily booked",
+      "Book internal flights and Nile cruise segments early for the surrounding week; hotels in Aswan and Luxor fill",
+      "The khamaseen — hot, dust-laden southerly winds — can blow for a day or two between March and early May; itineraries stay flexible around them",
+      "By late May the Nile Valley is regularly above 38 °C, so spring travel is best planned before the third week of May",
+    ],
+    travelTips: [
+      "Be outdoors on the day itself: a felucca at Aswan or a morning in Al-Azhar Park shows you the festival as Egyptians actually keep it",
+      "Fesikh is fermented salted fish and is an acquired taste — try it somewhere reputable or admire it and eat the rest",
+      "Spring light is excellent for photography but hazier than winter; shoot early and late",
+      "Pack for a real temperature swing: 33 °C at midday in Luxor can fall to 17 °C after dark",
+    ],
+    faqs: [
+      {
+        q: "What is Sham El-Nessim?",
+        a: "Sham El-Nessim is Egypt's spring festival, celebrated on the Monday after Coptic Easter. Its origins are ancient Egyptian — it is documented from around 2700 BCE as a harvest and renewal festival — and because it predates both Christianity and Islam it is kept by all Egyptians regardless of religion. The day is spent outdoors with family, eating painted eggs, spring onions, lupini beans and fesikh (salted mullet).",
+      },
+      {
+        q: "When is Sham El-Nessim 2027?",
+        a: "Monday 3 May 2027, following Coptic Easter on Sunday 2 May. The date shifts each year because it is tied to the Coptic Orthodox Easter calculation, so it can fall anywhere between early April and early May. It is an official public holiday in Egypt.",
+      },
+      {
+        q: "Is spring a good time to visit Egypt?",
+        a: "It is one of the two best windows, alongside autumn. March to May brings daytime temperatures of roughly 25–33 °C in the Nile Valley — warm enough to enjoy, cool enough for long days at Karnak or the Valley of the Kings — with long, clean light. The one caveat is the khamaseen, a hot dusty wind that can blow for a day or two; a flexible private itinerary absorbs it easily.",
+      },
+      {
+        q: "How do tourists celebrate Sham El-Nessim?",
+        a: "By being outdoors, which is the whole point. The best vantage points are the gardens of Kitchener's Island in Aswan, Al-Azhar Park in Cairo, and the Alexandria corniche — all packed with families picnicking. Your guide can arrange a felucca or a garden picnic with the traditional foods so you experience the day rather than watch it.",
+      },
+      {
+        q: "What is the khamaseen wind?",
+        a: "A hot, dry, dust-carrying wind that blows out of the Sahara for short spells between roughly March and early May, sometimes dropping visibility and coating everything in fine sand. It rarely lasts more than a day or two at a time. It is a reason to keep a spring itinerary flexible, not a reason to avoid the season.",
+      },
+    ],
+    hero: {
+      alt: "The botanical gardens of Kitchener's Island on the Nile at Aswan",
+      label: "Sham El-Nessim & the Egyptian Spring",
+      src: "/images/aswan/aswan-kitcheners-island-garden.webp",
+      width: 600,
+      height: 600,
+    },
+    theme: "spring",
+    lastReviewed: "2026-07",
+    relationships: {
+      tours: tour("tour-upper-egypt-5day", "tour-7-day", "tour-family-8day", "tour-cairo-culture-5day", "tour-fayoum", "tour-alexandria"),
+      destinations: dest("aswan", "cairo", "alexandria", "luxor"),
+      experiences: exp("private-felucca-nile", "nubian-village-experience", "egyptian-cooking", "old-cairo-walking"),
+      guides: guide("best-time-to-visit-egypt", "egyptian-food-guide", "egypt-travel-guide"),
+      relatedCollections: col("family-egypt", "first-time-egypt", "egypt-in-winter"),
+    },
+    seo: {
+      title: "Sham El-Nessim & Spring in Egypt — 2027 Date & Guide | Kemet",
+      description:
+        "Sham El-Nessim, Egypt's 4,700-year-old spring festival, falls on 3 May 2027. What it is, how it's celebrated, and why March–May is one of the best times to visit.",
+    },
+  },
+
+  // ---------------------------------------------------------------------------
+  // 10. The Red Sea
+  // ---------------------------------------------------------------------------
+  {
+    id: "red-sea-egypt",
+    slug: "red-sea-egypt",
+    domain: "seasonal",
+    title: "The Red Sea",
+    subtitle: "The clearest warm water in the northern hemisphere — and the other half of an Egypt trip.",
+    shortSummary:
+      "Ras Mohammed, the Straits of Tiran and the reefs off Hurghada offer year-round warm water, 20–30 metres of visibility and more than a thousand fish species. It pairs naturally with the Nile Valley.",
+    editorialIntro:
+      "Most Egypt itineraries end at Abu Simbel. The country's other great landscape lies east, along a coast where the desert stops at a reef wall. The Red Sea is enclosed, warm and unusually saline, which makes it exceptionally clear — 20 to 30 metres of visibility is routine — and it holds over a thousand fish species, around a fifth of them found nowhere else. Ras Mohammed, where the Gulfs of Suez and Aqaba meet at the tip of Sinai, is consistently ranked among the finest dive sites on earth, and you do not have to dive to see it: the drop-offs begin so close to shore that a snorkeller floats above the same coral wall. After a week of temples, three or four days here is not an indulgence — it is the part of the trip people talk about afterwards.",
+    collectionType: "adventure",
+    seasons: ["spring", "summer", "autumn", "winter"],
+    travelStyles: ["adventure", "relaxed", "luxury", "nature"],
+    audience: ["everyone", "couples", "families", "adventure-seekers"],
+    priority: 6,
+    featured: true,
+    highlights: [
+      "Ras Mohammed National Park — the meeting of two gulfs, and one of the most celebrated dive sites in the world",
+      "Water at 22–28 °C year-round, with 20–30 m visibility in the calmer months",
+      "Over 1,000 fish species and roughly 200 coral species, a fifth of them endemic to the Red Sea",
+      "Reef walls that start metres from the shore — snorkellers see what divers see",
+      "A natural counterweight to a Nile itinerary: temples first, then three or four days of nothing",
+    ],
+    planningNotes: [
+      "Sharm El Sheikh serves Ras Mohammed and the Straits of Tiran; Hurghada is closer to the Nile Valley and easier to combine with Luxor",
+      "Summer (June–August) is hot on land — 38–42 °C — but the water is at its warmest and this coast handles heat far better than the Nile Valley",
+      "Do not fly within 24 hours of your last dive; build the buffer into the itinerary before any onward flight",
+      "Bring or ask for reef-safe sunscreen — oxybenzone-based products damage coral and are discouraged across the Egyptian Red Sea",
+      "Non-divers lose nothing: the best snorkelling here is genuinely world-class, and a private boat day reaches sites the day-trip fleet does not",
+    ],
+    travelTips: [
+      "A private reef boat costs a fraction of what the equivalent charter costs in Europe and completely changes the day",
+      "Mornings are calmer — wind typically builds through the afternoon, so book water days early",
+      "Never stand on or touch coral: it is living, fragile and protected within the national parks",
+      "Pair a Sinai desert evening with the sea days — the stargazing an hour inland is extraordinary",
+    ],
+    faqs: [
+      {
+        q: "When is the best time to visit the Red Sea in Egypt?",
+        a: "It is a genuine year-round destination. Water temperatures run about 22 °C in winter and 28 °C in late summer. March to May and September to November are the sweet spot — warm water, comfortable air temperatures and lighter winds. Summer is hot on land (38–42 °C) but very manageable at the coast, and winter is mild by day though a wetsuit is welcome in the water.",
+      },
+      {
+        q: "Is the Red Sea good for snorkelling if I don't dive?",
+        a: "Exceptionally. The reef walls here begin very close to shore and drop steeply, so a snorkeller on the surface looks down on the same coral gardens and fish life divers descend to. Ras Mohammed, the Tiran reefs and many of the house reefs at Sharm and Hurghada are outstanding from the surface alone.",
+      },
+      {
+        q: "Can I combine the Red Sea with a Nile cruise?",
+        a: "Yes, and it makes for the most complete version of an Egypt trip. The usual shape is Cairo and Giza, then Luxor and Aswan or a Nile cruise, then a short domestic flight east for three or four days at the coast before flying home. Hurghada is the easier pairing with Luxor; Sharm El Sheikh is the better base for Ras Mohammed and Sinai.",
+      },
+      {
+        q: "How long should I spend on the Red Sea?",
+        a: "Three to four nights is the sensible minimum — enough for two full boat days plus a rest day, and enough to justify the internal flight. Divers doing a proper series of dives should allow five or more, remembering to leave 24 hours between the final dive and any flight.",
+      },
+      {
+        q: "Is the Red Sea safe for families with children?",
+        a: "Yes. The resort coast is set up for families, the water is warm and calm in the sheltered bays, and shallow house reefs let children snorkel safely within sight of the shore. A private boat day keeps the group small and the pace yours, which works far better with children than a shared excursion.",
+      },
+    ],
+    hero: {
+      alt: "The turquoise lagoon at Ras Mohammed National Park on the Red Sea",
+      label: "The Red Sea",
+      src: "/images/redsea/ras-mohammed-lagoon.webp",
+      width: 764,
+      height: 458,
+    },
+    theme: "red-sea",
+    lastReviewed: "2026-07",
+    relationships: {
+      tours: tour("tour-red-sea-diving-4day", "tour-sharm-5day", "tour-grand-14day", "tour-family-8day", "tour-honeymoon-9day"),
+      destinations: dest("cairo", "luxor", "aswan"),
+      experiences: exp("luxury-red-sea-diving", "red-sea-yacht-day", "sinai-stargazing-bedouin"),
+      guides: guide("egypt-travel-guide", "best-time-to-visit-egypt", "transportation-in-egypt"),
+      relatedCollections: col("egypt-in-summer", "family-egypt", "luxury-egypt"),
+    },
+    seo: {
+      title: "The Red Sea, Egypt — Diving, Snorkelling & Resorts | Kemet",
+      description:
+        "Egypt's Red Sea: Ras Mohammed, the Tiran reefs and Hurghada. Water at 22–28 °C year-round, 20–30 m visibility, and how to combine the coast with a Nile itinerary.",
+    },
+  },
+
+  // ---------------------------------------------------------------------------
+  // 11. Honeymoons in Egypt
+  // ---------------------------------------------------------------------------
+  {
+    id: "honeymoon-egypt",
+    slug: "honeymoon-egypt",
+    domain: "seasonal",
+    title: "Honeymoons in Egypt",
+    subtitle: "Two people, five thousand years, and nobody else's schedule.",
+    shortSummary:
+      "A honeymoon here is not a resort with a temple bolted on. It is a private dahabiya under sail, sunrise at the pyramids before the gates open, and a Red Sea coda — arranged so the two of you are never in a group.",
+    editorialIntro:
+      "The lotus, entwined in pairs, was the ancient Egyptian symbol of union — which is a neat coincidence for a country that turns out to be one of the great honeymoon destinations. The appeal is not romance-by-numbers; it is that everything worth doing here can be made private. A dahabiya, the small sailing vessel that predates the cruise fleet, carries a handful of cabins and moors at islands the large boats cannot reach. The Giza plateau can be entered at opening, before the coaches. A felucca at Aswan at golden hour costs almost nothing and is the thing couples remember. Then, because Egypt is generous this way, you fly ninety minutes east and finish on a reef. It is a honeymoon with a spine of substance — you will have seen something extraordinary together, not only rested.",
+    collectionType: "luxury",
+    seasons: ["autumn", "winter", "spring"],
+    travelStyles: ["luxury", "relaxed", "cultural", "photography"],
+    audience: ["couples", "luxury-travellers"],
+    priority: 8,
+    featured: true,
+    highlights: [
+      "A private dahabiya under sail — a handful of cabins, moorings the big vessels cannot reach",
+      "Sunrise on the Giza plateau at opening, before the day's crowds arrive",
+      "A felucca at Aswan at golden hour, and a Nubian terrace above the cataract at sunset",
+      "Hot-air balloon over the Theban West Bank at dawn — the most photographed hour of any Egyptian honeymoon",
+      "A Red Sea finish: three or four nights where the only obligation is the water",
+    ],
+    planningNotes: [
+      "October to April is the comfortable window; December and January are peak and need six months' notice",
+      "Dahabiyas have very few cabins and are booked far in advance — if that is the centrepiece, book it first and build around its sailing days",
+      "Tell us it is a honeymoon when you enquire: room categories, private moorings, a table set apart and dawn access all need arranging in advance, not on arrival",
+      "Nine to twelve nights is the natural length for Cairo, the Nile and the Red Sea without compressing any of it",
+      "Egypt is conservative in public: affection is best kept low-key outside hotels and private vessels, which is easily managed and never a problem",
+    ],
+    travelTips: [
+      "The balloon over Luxor takes off before sunrise — an early night beforehand pays for itself",
+      "Ask for the West Bank on your own in the first hour of opening; it is a different place before nine",
+      "Bring one properly good outfit: a dinner on a dahabiya deck or a Cairo rooftop deserves it",
+      "Book the felucca for the hour before sunset, not after — the light on the granite at Aswan is the point",
+    ],
+    faqs: [
+      {
+        q: "Is Egypt a good honeymoon destination?",
+        a: "Unusually good, for a specific reason: almost everything here can be made genuinely private. A dahabiya under sail, dawn access at Giza, a felucca at golden hour and a private reef boat are all straightforward to arrange, so a honeymoon is not spent moving with a group. You get the substance of one of the world's great destinations plus the seclusion a honeymoon needs — and the Red Sea provides the rest at the end.",
+      },
+      {
+        q: "When is the best time for an Egypt honeymoon?",
+        a: "October to April, when the Nile Valley sits at a comfortable 20–28 °C. December and January are the peak of that window — beautiful, but booked months ahead and carrying holiday supplements. Late October to early December and February to April give you the same weather with more availability and calmer sites.",
+      },
+      {
+        q: "How many days do you need for a honeymoon in Egypt?",
+        a: "Nine to twelve nights is the natural length: three in Cairo and Giza, four or five on the Nile between Luxor and Aswan, and three or four on the Red Sea. Shorter is possible — a week covers Cairo and the Nile well — but the coastal ending is what turns a tour into a honeymoon, and it needs its own days.",
+      },
+      {
+        q: "What is a dahabiya, and is it worth it?",
+        a: "A dahabiya is a small twin-sailed Nile vessel — the type that carried travellers before the modern cruise fleet — typically with fewer than a dozen cabins. It sails rather than motors, moors at islands and villages the large boats pass, and the pace is entirely different. For a honeymoon it is usually the single best upgrade on the itinerary, and because there are so few cabins it is the first thing to book.",
+      },
+      {
+        q: "Are there privacy or dress considerations for couples in Egypt?",
+        a: "Egypt is socially conservative in public, so overt affection is best kept low-key in streets, markets and religious sites, and modest dress is expected at mosques and churches. Inside hotels, on private vessels and at Red Sea resorts, normal resort behaviour is entirely usual. In practice this is a small courtesy rather than a constraint, and a private itinerary means most of your time is your own anyway.",
+      },
+    ],
+    hero: {
+      alt: "The open deck of a dahabiya sailing vessel on the Nile",
+      label: "Honeymoons in Egypt",
+      src: "/images/cruise/nile-dahabiya-deck.webp",
+      width: 1200,
+      height: 900,
+    },
+    theme: "honeymoon",
+    lastReviewed: "2026-07",
+    relationships: {
+      tours: tour("tour-honeymoon-9day", "tour-nile-cruise", "tour-grand-14day", "tour-luxor-3day", "tour-sharm-5day", "tour-cairo-vip-3day"),
+      destinations: dest("aswan", "luxor", "giza", "cairo"),
+      experiences: exp("private-felucca-nile", "hot-air-balloon-luxor", "private-nile-dinner-cruise", "sunrise-giza-pyramids", "red-sea-yacht-day"),
+      guides: guide("best-time-to-visit-egypt", "egypt-travel-guide"),
+      relatedCollections: col("luxury-egypt", "red-sea-egypt", "egypt-in-winter"),
+    },
+    seo: {
+      title: "Honeymoons in Egypt — Private Dahabiya, Nile & Red Sea | Kemet",
+      description:
+        "Egypt honeymoons designed privately: a dahabiya under sail, sunrise at the pyramids, a felucca at golden hour and a Red Sea finish. When to go and how long to stay.",
+    },
+  },
 ];
 
 /** Collections in editorial priority order (highest first). */

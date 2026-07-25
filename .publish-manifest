@@ -2,6 +2,7 @@
 .htaccess
 404.html
 _astro/_slug_.BCUJZ03n.css
+_astro/_slug_.BjponEWQ.css
 about.html
 activities.html
 apple-touch-icon.png
@@ -13,8 +14,11 @@ collections/egypt-in-summer.html
 collections/egypt-in-winter.html
 collections/family-egypt.html
 collections/first-time-egypt.html
+collections/honeymoon-egypt.html
 collections/luxury-egypt.html
 collections/ramadan-in-egypt.html
+collections/red-sea-egypt.html
+collections/sham-el-nessim-egypt.html
 contact-handler.php
 contact.html
 cuisine.html
@@ -189,6 +193,7 @@ robots.txt
 site.webmanifest
 sitemap-0.xml
 sitemap-index.xml
+sitemap.html
 terms.html
 tour-10-day.html
 tour-3-day.html

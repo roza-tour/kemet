@@ -100,6 +100,92 @@ const { theme } = Astro.props;
   </div>
 )}
 
+{theme === "spring" && (
+  <div class="sth sth-spring" aria-hidden="true">
+    {/* Drifting blossom petals */}
+    <div class="sth-petals">
+      {[...Array(14)].map((_, i) => (
+        <span class={`sth-petal sth-p${i % 5}`} style={`left:${(i * 7.3 + (i % 3) * 3) % 96}%`}></span>
+      ))}
+    </div>
+    {/* Garland of painted eggs + spring shoots */}
+    <div class="sth-band sth-spring-band">
+      <svg viewBox="0 0 420 84" width="420" height="84">
+        <defs>
+          <linearGradient id="spgar" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#7FB086" stop-opacity="0" />
+            <stop offset="30%" stop-color="#7FB086" stop-opacity=".7" />
+            <stop offset="70%" stop-color="#7FB086" stop-opacity=".7" />
+            <stop offset="100%" stop-color="#7FB086" stop-opacity="0" />
+          </linearGradient>
+        </defs>
+        <path d="M14 26 Q210 66 406 26" fill="none" stroke="url(#spgar)" stroke-width="1.4" />
+        {/* painted eggs hanging from the vine */}
+        {[
+          { x: 96, y: 50, c: "#D9B45A" },
+          { x: 168, y: 58, c: "#C06B3A" },
+          { x: 252, y: 58, c: "#4385A0" },
+          { x: 324, y: 50, c: "#9A4456" },
+        ].map((e) => (
+          <g opacity=".9">
+            <path d={`M${e.x} ${e.y - 12}v6`} stroke="#7FB086" stroke-width="1" opacity=".7" />
+            <ellipse cx={e.x} cy={e.y + 4} rx="7" ry="9.5" fill="none" stroke={e.c} stroke-width="1.5" />
+            <path d={`M${e.x - 6} ${e.y + 2}q6 3 12 0 M${e.x - 6} ${e.y + 7}q6 3 12 0`} stroke={e.c} stroke-width="1" fill="none" opacity=".75" />
+          </g>
+        ))}
+        {/* young shoots */}
+        <g stroke="#7FB086" stroke-width="1.5" fill="none" opacity=".85" stroke-linecap="round">
+          <path d="M210 24v-16M210 14q-8-4-10-11M210 16q8-5 11-12" />
+        </g>
+        <circle cx="210" cy="6" r="2.6" fill="#F7E6AE" opacity=".85" />
+      </svg>
+    </div>
+  </div>
+)}
+
+{theme === "red-sea" && (
+  <div class="sth sth-redsea" aria-hidden="true">
+    {/* Light shafts through water + rolling swell */}
+    <div class="sth-shafts"></div>
+    <svg class="sth-swell" viewBox="0 0 1200 120" width="1200" height="120" preserveAspectRatio="none">
+      <path d="M0 74 Q150 44 300 74 T600 74 T900 74 T1200 74 V120 H0Z" fill="#2C8E86" opacity=".14" />
+      <path d="M0 88 Q150 62 300 88 T600 88 T900 88 T1200 88 V120 H0Z" fill="#4385A0" opacity=".12" />
+      <path d="M0 74 Q150 44 300 74 T600 74 T900 74 T1200 74" fill="none" stroke="#7FD8CE" stroke-width="1" opacity=".3" />
+    </svg>
+    {/* Rising bubbles */}
+    <div class="sth-bubbles">
+      {[...Array(10)].map((_, i) => (
+        <span class={`sth-bubble sth-b${i % 4}`} style={`left:${(i * 9.5 + (i % 3) * 4) % 94}%`}></span>
+      ))}
+    </div>
+  </div>
+)}
+
+{theme === "honeymoon" && (
+  <div class="sth sth-honeymoon" aria-hidden="true">
+    {/* Soft rose-gold glow + a delicate lotus pair */}
+    <div class="sth-glow"></div>
+    {/* A lotus in bloom on two entwined stems — the Egyptian emblem of union */}
+    <svg class="sth-lotus" viewBox="0 0 200 96" width="200" height="96">
+      <g stroke="#E8B4A0" stroke-width="1.5" fill="none" opacity=".9" stroke-linejoin="round">
+        {/* outer petals */}
+        <path d="M100 54 C 82 52, 66 46, 54 36 C 70 34, 88 42, 100 54 Z" />
+        <path d="M100 54 C 118 52, 134 46, 146 36 C 130 34, 112 42, 100 54 Z" />
+        {/* inner petals */}
+        <path d="M100 54 C 88 44, 80 32, 76 20 C 88 26, 96 40, 100 54 Z" />
+        <path d="M100 54 C 112 44, 120 32, 124 20 C 112 26, 104 40, 100 54 Z" />
+        {/* central petal */}
+        <path d="M100 54 C 94 40, 94 24, 100 10 C 106 24, 106 40, 100 54 Z" />
+        {/* entwined stems */}
+        <path d="M100 56 C 96 68, 84 76, 72 82" />
+        <path d="M100 56 C 104 68, 116 76, 128 82" />
+      </g>
+      <circle cx="100" cy="34" r="2.2" fill="#F7E6AE" opacity=".85" />
+      <path d="M100 86l1.6 4.4 4.4 1.6-4.4 1.6-1.6 4.4-1.6-4.4-4.4-1.6 4.4-1.6Z" fill="#F7E6AE" opacity=".6" />
+    </svg>
+  </div>
+)}
+
 {theme === "sun-festival" && (
   <div class="sth sth-sun" aria-hidden="true">
     {/* Radiating solar burst */}
@@ -214,7 +300,92 @@ const { theme } = Astro.props;
     width: min(1100px, 130%); height: auto; opacity: .9; }
   .themed-sun-festival .phero h1 { text-shadow: 0 0 42px rgba(232,163,61,.22); }
 
+  /* ---------------------------------------------------------------------
+     Spring / Sham El-Nessim — drifting petals + painted-egg garland
+     --------------------------------------------------------------------- */
+  .themed-spring {
+    --gold: #DCC06B; --gold-bright: #FBF3D2; --gold-deep: #9C8438;
+    --line: rgba(127,176,134,.26); --line-2: rgba(220,192,107,.44);
+  }
+  .themed-spring .phero {
+    padding-top: 200px;
+    background:
+      radial-gradient(760px 400px at 50% 0%, rgba(127,176,134,.20), transparent 62%),
+      radial-gradient(560px 300px at 50% 4%, rgba(251,243,210,.12), transparent 60%);
+  }
+  .sth-petals { position: absolute; inset: 0; }
+  .sth-petal { position: absolute; top: -14px; width: 9px; height: 6px;
+    border-radius: 60% 40% 55% 45%; background: linear-gradient(135deg,#F6D9D2,#E8B4A0);
+    opacity: .5; animation: sth-fall 13s linear infinite; }
+  .sth-p0 { animation-delay: 0s; }    .sth-p1 { animation-delay: -2.6s; width:7px;height:5px; }
+  .sth-p2 { animation-delay: -5.2s; } .sth-p3 { animation-delay: -7.8s; width:11px;height:7px; }
+  .sth-p4 { animation-delay: -10.4s; }
+  @keyframes sth-fall {
+    0%   { transform: translateY(0) rotate(0deg); opacity: 0; }
+    12%  { opacity: .55; }
+    100% { transform: translateY(300px) translateX(46px) rotate(300deg); opacity: 0; }
+  }
+  .sth-spring-band { top: 100px; }
+
+  /* ---------------------------------------------------------------------
+     Red Sea — light shafts, swell and rising bubbles
+     --------------------------------------------------------------------- */
+  .themed-red-sea {
+    --gold: #6FD0C6; --gold-bright: #CFF3EE; --gold-deep: #2C8E86;
+    --line: rgba(44,142,134,.28); --line-2: rgba(111,208,198,.44);
+  }
+  .themed-red-sea .phero {
+    padding-top: 196px;
+    background:
+      linear-gradient(180deg, rgba(44,142,134,.16), transparent 62%),
+      radial-gradient(760px 380px at 50% 0%, rgba(67,133,160,.20), transparent 64%);
+  }
+  /* Soft caustic light shafts — wide, feathered and skewed so they read as
+     sunlight through water rather than hard bands. */
+  .sth-shafts { position: absolute; top: 60px; left: -10%; right: -10%; height: 330px;
+    transform: skewX(-11deg); filter: blur(22px); opacity: .85;
+    background:
+      linear-gradient(90deg, transparent 12%, rgba(207,243,238,.075) 20%, transparent 29%),
+      linear-gradient(90deg, transparent 40%, rgba(207,243,238,.055) 50%, transparent 60%),
+      linear-gradient(90deg, transparent 70%, rgba(207,243,238,.065) 79%, transparent 88%);
+    -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,.95), transparent 88%);
+    mask-image: linear-gradient(180deg, rgba(0,0,0,.95), transparent 88%);
+  }
+  .sth-swell { position: absolute; left: 0; right: 0; bottom: -1px; width: 100%; height: 120px; }
+  .sth-bubbles { position: absolute; inset: 0; }
+  .sth-bubble { position: absolute; bottom: -12px; width: 6px; height: 6px; border-radius: 50%;
+    border: 1px solid rgba(207,243,238,.55); animation: sth-rise 11s linear infinite; opacity: 0; }
+  .sth-b0 { animation-delay: 0s; }    .sth-b1 { animation-delay: -2.8s; width:4px;height:4px; }
+  .sth-b2 { animation-delay: -5.5s; } .sth-b3 { animation-delay: -8.2s; width:8px;height:8px; }
+  @keyframes sth-rise {
+    0%   { transform: translateY(0) translateX(0); opacity: 0; }
+    14%  { opacity: .5; }
+    100% { transform: translateY(-330px) translateX(24px); opacity: 0; }
+  }
+
+  /* ---------------------------------------------------------------------
+     Honeymoon — soft rose-gold glow + entwined lotus
+     --------------------------------------------------------------------- */
+  .themed-honeymoon {
+    --gold: #E3B98C; --gold-bright: #FBE7D6; --gold-deep: #A9764B;
+    --line: rgba(232,180,160,.24); --line-2: rgba(227,185,140,.46);
+  }
+  .themed-honeymoon .phero {
+    padding-top: 198px;
+    background:
+      radial-gradient(780px 420px at 50% 0%, rgba(232,180,160,.20), transparent 62%),
+      radial-gradient(520px 280px at 50% 6%, rgba(251,231,214,.12), transparent 60%);
+  }
+  .sth-glow { position: absolute; top: 60px; left: 50%; transform: translateX(-50%);
+    width: min(760px, 88%); height: 260px; border-radius: 50%;
+    background: radial-gradient(closest-side, rgba(232,180,160,.20), transparent 72%);
+    filter: blur(8px); }
+  .sth-lotus { position: absolute; top: 96px; left: 50%; transform: translateX(-50%); opacity: .9;
+    filter: drop-shadow(0 6px 20px rgba(232,180,160,.28)); }
+  @media(max-width:600px){ .sth-lotus{ transform:translateX(-50%) scale(.78); top:88px; } }
+
   @media (prefers-reduced-motion: reduce) {
-    .sth-lantern, .sth-star { animation: none !important; }
+    .sth-lantern, .sth-star, .sth-petal, .sth-bubble { animation: none !important; }
+    .sth-petal, .sth-bubble { display: none; }
   }
 </style>

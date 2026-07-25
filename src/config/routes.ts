@@ -35,6 +35,7 @@ export const MAIN_PAGES = [
   "faq.html",
   "privacy.html",
   "terms.html",
+  "sitemap.html",
 ] as const;
 
 /**

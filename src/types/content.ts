@@ -118,7 +118,13 @@ export type CollectionType =
  * palette and adds its own ornament layer — Ramadan lanterns and crescents,
  * Christmas stars and evergreen, the solar burst of the Abu Simbel alignment.
  */
-export type SeasonalTheme = "ramadan" | "christmas" | "sun-festival";
+export type SeasonalTheme =
+  | "ramadan"
+  | "christmas"
+  | "sun-festival"
+  | "spring"
+  | "red-sea"
+  | "honeymoon";
 
 export type CollectionAudience =
   | "everyone"

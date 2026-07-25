@@ -1,0 +1,163 @@
+---
+// Human-readable site index (/sitemap.html) — every page on the site in one
+// place. Complements sitemap-index.xml (for crawlers) and llms.txt (for AI):
+// this one is for people, and it gives every page a second internal inbound
+// link, which helps discovery and crawl depth.
+import Base from "@/layouts/Base.astro";
+import PageHero from "@/components/PageHero.astro";
+import { tours } from "@/data/tours";
+import { destinations } from "@/data/destinations";
+import { experiences } from "@/data/experiences";
+import { guides } from "@/data/guides";
+import { collections } from "@/data/collections";
+import { canonical } from "@/utils/links";
+import { site, SITE_URL } from "@/config/site";
+import { breadcrumb } from "@/schemas/jsonld";
+import { formatPrice } from "@/utils/format";
+
+const ROUTE = "sitemap.html";
+
+const main = [
+  ["Home", "index.html", "The eight cultural worlds of Egypt, and how we travel them."],
+  ["All journeys", "tours.html", `Every private journey — ${tours.length} in total.`],
+  ["Experiences", "experiences.html", "Private moments between the monuments."],
+  ["Destinations", "destinations.html", "Cairo, Giza, Luxor, Aswan and Alexandria."],
+  ["Collections", "collections.html", "Seasonal and thematic ways into Egypt."],
+  ["Travel guides", "guides.html", "Visas, seasons, transport and food."],
+  ["Cultures", "culture.html", "The living heritage behind the monuments."],
+  ["The 8 Identities", "identities.html", "The eight Egypts a journey can cross."],
+  ["Activities", "activities.html", "Ballooning, diving, sailing, desert nights."],
+  ["Cuisine", "cuisine.html", "What to eat, and where."],
+  ["About Kemet", "about.html", "Who we are and how we work."],
+] as const;
+
+const support = [
+  ["Contact", "contact.html", "Start a conversation about your journey."],
+  ["Egypt Travel FAQ", "faq.html", "Safety, visas, timing, cost, and more."],
+  ["Booking & Cancellation", "booking.html", "Deposit, balance and cancellation terms."],
+  ["Privacy Policy", "privacy.html", "What we collect and how we use it."],
+  ["Terms of Use", "terms.html", "The terms behind the site and our quotes."],
+] as const;
+
+const jsonld = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: `Site Index — ${site.name}`,
+    url: canonical(ROUTE),
+    isPartOf: { "@type": "WebSite", name: `${site.name} — The Black Land`, url: SITE_URL },
+  },
+  breadcrumb([["Home", "index.html"], ["Site Index", ROUTE]]),
+];
+
+const pageCount =
+  main.length + support.length + tours.length + collections.length +
+  destinations.length + experiences.length + guides.length;
+---
+<Base
+  title={`Site Index — Every Page on Kemet | Kemet`}
+  description="A complete index of every page on kemet-travel.com — journeys, collections, destinations, experiences, travel guides and support pages."
+  active={ROUTE}
+  jsonld={jsonld}
+>
+  <PageHero
+    crumb="Site Index"
+    symbol="ankh"
+    title="Site Index"
+    text={`Every page on this site in one place — ${pageCount} in total. If you prefer a machine-readable version, there is an XML sitemap and an llms.txt.`}
+  />
+
+  <section style="padding-top:26px">
+    <div class="wrap sm-wrap">
+
+      <div class="sm-group reveal">
+        <h2>Main pages</h2>
+        <ul class="sm-list">
+          {main.map(([label, href, note]) => (
+            <li><a href={href}>{label}</a><span>{note}</span></li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="sm-group reveal">
+        <h2>Plan &amp; support</h2>
+        <ul class="sm-list">
+          {support.map(([label, href, note]) => (
+            <li><a href={href}>{label}</a><span>{note}</span></li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="sm-group reveal">
+        <h2>Collections <em>({collections.length})</em></h2>
+        <ul class="sm-list">
+          {collections.map((c) => (
+            <li><a href={`collections/${c.slug}.html`}>{c.title}</a><span>{c.subtitle}</span></li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="sm-group reveal">
+        <h2>Journeys <em>({tours.length})</em></h2>
+        <ul class="sm-list sm-cols">
+          {[...tours].sort((a, b) => a.price - b.price).map((t) => (
+            <li>
+              <a href={`${t.slug}.html`}>{t.title}</a>
+              <span>{t.durationLabel} · from {formatPrice(t.price)} pp</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="sm-group reveal">
+        <h2>Destinations <em>({destinations.length})</em></h2>
+        <ul class="sm-list">
+          {destinations.map((d) => (
+            <li><a href={`destinations/${d.slug}.html`}>{d.title}</a><span>{d.shortSummary}</span></li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="sm-group reveal">
+        <h2>Experiences <em>({experiences.length})</em></h2>
+        <ul class="sm-list sm-cols">
+          {experiences.map((e) => (
+            <li><a href={`experiences/${e.slug}.html`}>{e.title}</a></li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="sm-group reveal">
+        <h2>Travel guides <em>({guides.length})</em></h2>
+        <ul class="sm-list">
+          {guides.map((g) => (
+            <li><a href={`guides/${g.slug}.html`}>{g.title}</a><span>{g.shortSummary}</span></li>
+          ))}
+        </ul>
+      </div>
+
+      <p class="sm-machine">
+        Machine-readable: <a href="/sitemap-index.xml">XML sitemap</a> · <a href="/llms.txt">llms.txt</a>
+      </p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .sm-wrap { max-width: 940px; }
+  .sm-group { margin-bottom: 46px; }
+  .sm-group h2 { font-size: 1.35rem; margin: 0 0 6px; }
+  .sm-group h2 em { font-style: normal; font-size: .8rem; color: var(--muted-2); letter-spacing: .1em; }
+  .sm-list { list-style: none; margin: 14px 0 0; padding: 0; }
+  .sm-list li { padding: 11px 0; border-bottom: 1px solid var(--line); display: flex;
+    flex-wrap: wrap; gap: 4px 16px; align-items: baseline; }
+  .sm-list li:last-child { border-bottom: 0; }
+  .sm-list a { color: var(--bone); font-size: 1rem; transition: color .3s; }
+  .sm-list a:hover { color: var(--gold-bright); }
+  .sm-list span { color: var(--muted-2); font-size: .86rem; flex: 1 1 300px; }
+  .sm-cols { columns: 2; column-gap: 46px; }
+  .sm-cols li { break-inside: avoid; }
+  .sm-machine { margin-top: 8px; font-size: .84rem; color: var(--muted-2); }
+  .sm-machine a { color: var(--gold); border-bottom: 1px solid var(--line-2); }
+  @media(max-width:700px){ .sm-cols { columns: 1; } }
+</style>

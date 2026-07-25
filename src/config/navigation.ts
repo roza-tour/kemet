@@ -62,6 +62,7 @@ export const footerCompany: FooterColumn = {
     { label: "Booking & Cancellation", href: "booking.html" },
     { label: "Privacy Policy", href: "privacy.html" },
     { label: "Terms of Use", href: "terms.html" },
+    { label: "Site Index", href: "sitemap.html" },
   ],
 };
 
