@@ -9,7 +9,7 @@
 - Languages: English, French, Arabic
 - Contact: info@kemet-travel.com · WhatsApp +20 11 5836 7162
 - Model: 100% private, tailor-made itineraries (no shared coaches, no fixed departures)
-- Catalogue: 25 journeys, 15 experiences, 5 destinations, 7 travel guides
+- Catalogue: 25 journeys, 15 experiences, 8 destinations, 7 travel guides
 
 ## Start here
 
@@ -69,6 +69,9 @@
 - [Luxor](https://kemet-travel.com/destinations/luxor.html): The open-air museum of ancient Thebes — Karnak, Luxor Temple and the royal tombs of the Valley of the Kings.
 - [Aswan](https://kemet-travel.com/destinations/aswan.html): Egypt's tranquil southern city on the Nile — Nubian culture, the High Dam and the island temple of Philae.
 - [Alexandria](https://kemet-travel.com/destinations/alexandria.html): Egypt's Mediterranean port founded by Alexander the Great — Greco-Roman ruins and the reborn Library.
+- [Hurghada](https://kemet-travel.com/destinations/hurghada.html): Egypt's main Red Sea resort coast — warm, clear water over island reefs, and the easiest beach pairing with a Luxor or Nile itinerary.
+- [Sharm El Sheikh](https://kemet-travel.com/destinations/sharm-el-sheikh.html): Sinai's resort capital between desert mountains and the Red Sea — gateway to Ras Mohammed, the Tiran reefs and Bedouin stargazing nights.
+- [The Fayoum](https://kemet-travel.com/destinations/fayoum.html): A green depression an hour from Cairo — waterfalls in the desert, a lake full of birdlife, whale fossils, and a village of potters.
 
 ## Experiences
 

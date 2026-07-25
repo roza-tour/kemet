@@ -108,6 +108,37 @@ export const enhanceScript = `
     if(cf)cf.addEventListener('submit',function(){send('ev','form-submit');});
   }catch(e){}
 
+  /* lightbox — click any gallery/hero photo to view it full-screen.
+     Builds one overlay per page, arrow keys + swipe-free prev/next, Esc/backdrop
+     to close. Only binds to real photographs (.frame img inside .tgallery or
+     .grid-2/.grid-3 galleries), never UI imagery. */
+  try{
+    var imgs=[].slice.call(document.querySelectorAll('.tgallery img, section .grid-2 .frame img'));
+    if(imgs.length){
+      var lb=document.createElement('div');lb.className='lb';lb.setAttribute('role','dialog');
+      lb.setAttribute('aria-label','Image viewer');lb.innerHTML=
+        '<button class="lb-x" aria-label="Close">×</button>'+
+        '<button class="lb-p" aria-label="Previous">‹</button>'+
+        '<img alt="">'+
+        '<button class="lb-n" aria-label="Next">›</button>';
+      document.body.appendChild(lb);
+      var pic=lb.querySelector('img'),cur=0;
+      function show(i){cur=(i+imgs.length)%imgs.length;
+        pic.src=imgs[cur].src;pic.alt=imgs[cur].alt||'';lb.classList.add('open');
+        document.body.style.overflow='hidden';}
+      function hide(){lb.classList.remove('open');document.body.style.overflow='';}
+      imgs.forEach(function(im,i){im.style.cursor='zoom-in';
+        im.addEventListener('click',function(){show(i);});});
+      lb.querySelector('.lb-x').addEventListener('click',hide);
+      lb.querySelector('.lb-p').addEventListener('click',function(e){e.stopPropagation();show(cur-1);});
+      lb.querySelector('.lb-n').addEventListener('click',function(e){e.stopPropagation();show(cur+1);});
+      lb.addEventListener('click',function(e){if(e.target===lb)hide();});
+      document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;
+        if(e.key==='Escape')hide();if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1);});
+      if(imgs.length<2){lb.querySelector('.lb-p').style.display='none';lb.querySelector('.lb-n').style.display='none';}
+    }
+  }catch(e){}
+
   /* destination strip arrows (homepage) */
   var strip=document.getElementById('dstrip');
   if(strip){var pv=document.getElementById('dprev'),nx=document.getElementById('dnext');

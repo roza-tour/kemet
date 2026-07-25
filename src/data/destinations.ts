@@ -480,6 +480,202 @@ export const destinations: Destination[] = [
         "Alexandria travel guide: the Catacombs of Kom El Shoqafa, the Citadel of Qaitbay on the Pharos site, and the Bibliotheca Alexandrina.",
     },
   },
+  {
+    id: "hurghada",
+    slug: "hurghada",
+    domain: "destination",
+    title: "Hurghada",
+    locales: ["en"],
+    shortSummary:
+      "Egypt's main Red Sea resort coast — warm, clear water over island reefs, and the easiest beach pairing with a Luxor or Nile itinerary.",
+    longDescription:
+      "Hurghada grew from a fishing village into the workhorse of Egypt's Red Sea coast: a long ribbon of resorts, marinas and dive centres facing a lagoon-studded sea. Its real asset is position — the offshore islands of Giftun and the reef banks around them sit in shallow, sheltered water that suits snorkellers and first-time divers as well as it suits a private boat day, and Luxor is only a four-hour road transfer away, which makes Hurghada the natural beach coda to a Nile itinerary. The town itself splits in two characters: the old harbour quarter of El Dahar with its market and mosque, and the polished marina promenade to the south, where the evening happens.",
+    region: "red-sea",
+    coordinates: { lat: 27.2579, lng: 33.8116 },
+    bestSeasons: ["spring", "autumn", "summer"],
+    climateSummary:
+      "Sunny virtually year-round; sea 22–29 °C. Air 20–25 °C in winter, 35–40 °C midsummer, cooled by a near-constant northerly breeze.",
+    recommendedStay: "3–4 days",
+    travelStyles: ["relaxed", "adventure", "family", "nature"],
+    familyFriendly: true,
+    luxuryFriendly: true,
+    adventureFriendly: true,
+    highlights: [
+      "Giftun Islands — white-sand banks and house reefs a short boat ride from the marina",
+      "Snorkelling and diving on gentle, sheltered reefs suited to all levels",
+      "A private boat day: reefs, a sandbank lunch, dolphins with luck",
+      "El Dahar's old market and the seafront El Mina Mosque",
+      "The marina promenade at dusk — dinner over the boats",
+    ],
+    thingsToKnow: [
+      "Hurghada Airport receives direct flights from much of Europe; Luxor is about four hours by private road transfer.",
+      "Wind is part of the coast's character — mornings are calmest for boat trips and snorkelling.",
+      "Reef-safe sunscreen only; standing on coral is prohibited within the protected areas.",
+      "Resorts are self-contained; going out for dinner means the marina or El Dahar, both easy by taxi.",
+    ],
+    whyVisit: [
+      "The easiest Red Sea add-on to a classic Nile itinerary",
+      "Shallow, sheltered reefs that work for children and nervous swimmers",
+      "Year-round warm sea and near-guaranteed sunshine",
+    ],
+    symbol: "sun",
+    hero: {
+      alt: "Boats moored off the beach at Hurghada on the Red Sea",
+      label: "Hurghada",
+      src: "/images/redsea/hurghada-beach-boats.webp",
+      width: 764, height: 458,
+    },
+    gallery: [
+      { alt: "A jetty reaching over turquoise water to an island near Hurghada", label: "Giftun waters", src: "/images/redsea/hurghada-island-jetty.webp", width: 764, height: 458 },
+      { alt: "The seafront El Mina Mosque in Hurghada", label: "El Mina Mosque", src: "/images/redsea/hurghada-el-mina-mosque.webp", width: 736, height: 1308 },
+      { alt: "Palm-lined Red Sea resort beach", label: "The resort coast", src: "/images/redsea/red-sea-beach-resort-palms.webp", width: 764, height: 458 },
+    ],
+    faqs: [
+      { q: "How do I combine Hurghada with Luxor?",
+        a: "By private road transfer — about four hours door to door through the Eastern Desert, comfortably done after a final Luxor morning. It is the classic pairing: temples first, then three or four nights of reef and beach before flying home, either from Hurghada's international airport or back via Cairo." },
+      { q: "Is Hurghada good for families?",
+        a: "One of the best bases in Egypt for them. The bays are shallow and sheltered, house reefs let children snorkel within sight of the beach, resorts are built around pools and kids' facilities, and a private boat day keeps the pace flexible in a way shared excursions never do." },
+      { q: "Hurghada or Sharm El Sheikh — which should I choose?",
+        a: "Choose by geography. Hurghada pairs naturally with Luxor and the Nile (a four-hour drive); Sharm sits on the Sinai side, closer to Ras Mohammed's dramatic walls and the desert-and-stargazing side of the peninsula. Diving is superb from both; families slightly favour Hurghada, divers chasing big walls slightly favour Sharm." },
+    ],
+    seo: {
+      title: "Hurghada, Egypt — Red Sea Reefs, Islands & Resorts | Kemet",
+      description:
+        "Hurghada travel guide: Giftun Island reefs, private boat days, the old harbour quarter — and how to pair the Red Sea with a Luxor or Nile itinerary.",
+    },
+    relationships: { nearby: near("luxor") },
+  },
+  {
+    id: "sharm-el-sheikh",
+    slug: "sharm-el-sheikh",
+    domain: "destination",
+    title: "Sharm El Sheikh",
+    locales: ["en"],
+    shortSummary:
+      "Sinai's resort capital between desert mountains and the Red Sea — gateway to Ras Mohammed, the Tiran reefs and Bedouin stargazing nights.",
+    longDescription:
+      "Sharm El Sheikh occupies the tip of the Sinai Peninsula, where bare red mountains fall straight into some of the clearest water in the world. That geography is the whole story: Ras Mohammed National Park — routinely ranked among the finest dive sites anywhere — is twenty minutes away by boat, the Straits of Tiran a little further, and reef walls plunge within metres of the shore along the whole coast. Naama Bay supplies the promenade-and-restaurants side; the quieter bays north and south hold the resorts. And an hour inland, the desert takes over entirely — Bedouin camps, canyon walks and some of the darkest, clearest night skies within reach of any beach holiday.",
+    region: "red-sea",
+    coordinates: { lat: 27.9158, lng: 34.33 },
+    bestSeasons: ["spring", "autumn", "summer"],
+    climateSummary:
+      "Arid and reliably sunny; sea 22–28 °C. Cooler and breezier than the mainland coast in winter, hot in high summer.",
+    recommendedStay: "3–5 days",
+    travelStyles: ["adventure", "relaxed", "luxury", "nature"],
+    familyFriendly: true,
+    luxuryFriendly: true,
+    adventureFriendly: true,
+    highlights: [
+      "Ras Mohammed National Park — the meeting of two gulfs and world-ranked reef walls",
+      "The Straits of Tiran: drift dives and big-fish encounters",
+      "Shore reefs that begin metres from the beach — snorkelling as good as the diving",
+      "A Sinai desert evening: Bedouin dinner and serious stargazing an hour inland",
+      "Naama Bay's promenade for the social evening hour",
+    ],
+    thingsToKnow: [
+      "Sharm's international airport makes it an easy direct arrival from Europe; Cairo is an hour's flight.",
+      "Do not fly within 24 hours of your last dive — plan the final day as beach, desert or promenade.",
+      "The best sites are boat sites: a private boat day reaches Ras Mohammed's outer walls before the day-trip fleet.",
+      "Afternoons blow up breezy most of the year — book water activities for the morning.",
+    ],
+    whyVisit: [
+      "Some of the finest diving and snorkelling on earth, minutes from shore",
+      "Desert and reef in one stay — canyon, camp and coral in the same day",
+      "A polished resort infrastructure at prices well below comparable coasts",
+    ],
+    symbol: "sun",
+    hero: {
+      alt: "Aerial view over the curved bays of Sharm El Sheikh",
+      label: "Sharm El Sheikh",
+      src: "/images/redsea/sharm-naama-bay-aerial.webp",
+      width: 627, height: 627,
+    },
+    gallery: [
+      { alt: "Vivid coral and fish on a Red Sea reef near Sharm El Sheikh", label: "The reefs", src: "/images/redsea/red-sea-aquarium.webp", width: 764, height: 458 },
+      { alt: "A rock pool in a Sinai desert wadi", label: "Sinai wadis", src: "/images/redsea/sinai-wadi-rock-pool.webp", width: 719, height: 800 },
+      { alt: "A beach café at sunset on the Sharm El Sheikh coast", label: "Farsha at dusk", src: "/images/redsea/sharm-farsha-cafe-sunset.webp", width: 736, height: 981 },
+    ],
+    faqs: [
+      { q: "What makes Ras Mohammed special?",
+        a: "It sits where the Gulf of Suez and the Gulf of Aqaba meet at Sinai's tip, so nutrient-rich currents feed reef walls of unusual density and drama — Shark and Yolanda reefs are the famous pair. Visibility of 20–30 metres is routine, and because the walls rise close to the surface, snorkellers on a boat day see a remarkable share of what divers see." },
+      { q: "Is Sharm El Sheikh only for divers?",
+        a: "Not at all. The shore snorkelling is world-class in its own right, the resorts are genuinely relaxing, and the Sinai interior adds a second holiday: Bedouin camp dinners, canyon walks and stargazing under some of the darkest accessible skies anywhere. Plenty of guests never put a tank on and leave delighted." },
+      { q: "How do I fit Sharm into an Egypt itinerary?",
+        a: "Fly — Cairo to Sharm is about an hour, which makes a three-or-four-night Sinai finish practical after Cairo and the Nile. Remember the 24-hour no-fly buffer after a final dive when placing the last day, and consider arriving or departing on Sharm's own international airport to save a Cairo transit." },
+    ],
+    seo: {
+      title: "Sharm El Sheikh — Ras Mohammed, Reefs & Sinai Desert | Kemet",
+      description:
+        "Sharm El Sheikh travel guide: Ras Mohammed National Park, Tiran reefs, shore snorkelling, Bedouin stargazing nights — and how to fit Sinai into an Egypt itinerary.",
+    },
+    relationships: { nearby: near("hurghada") },
+  },
+  {
+    id: "fayoum",
+    slug: "fayoum",
+    domain: "destination",
+    title: "The Fayoum",
+    locales: ["en"],
+    shortSummary:
+      "A green depression an hour from Cairo — waterfalls in the desert, a lake full of birdlife, whale fossils, and a village of potters.",
+    longDescription:
+      "The Fayoum is Egypt's oldest oasis and its most surprising day of travel: a fertile basin an hour and a half southwest of Cairo where the rules of the desert are suspended. Wadi El Rayan's twin lakes spill into each other over Egypt's only waterfalls, dunes run straight to the water's edge, and the wind farms of birdlife on Lake Qarun have drawn travellers since pharaonic times — the region's waterwheels, still turning, are its emblem. Beyond the green rim lies Wadi Al-Hitan, the Valley of the Whales, a UNESCO World Heritage site scattered with forty-million-year-old skeletons of early whales that still had legs. Tie it together with lunch among the potters of Tunis village and you have the richest single day trip Cairo offers — or an unhurried overnight under desert stars.",
+    region: "fayoum",
+    coordinates: { lat: 29.3084, lng: 30.8428 },
+    unesco: { listed: true, siteName: "Wadi Al-Hitan (Whale Valley)" },
+    bestSeasons: ["autumn", "winter", "spring"],
+    climateSummary:
+      "Desert climate softened by the lakes; ideal October–April, hot at midday in summer.",
+    recommendedStay: "Full day, or 1 night",
+    travelStyles: ["nature", "adventure", "cultural", "photography"],
+    familyFriendly: true,
+    luxuryFriendly: false,
+    adventureFriendly: true,
+    highlights: [
+      "Wadi Al-Hitan — UNESCO-listed valley of 40-million-year-old whale fossils, walked on open desert trails",
+      "Wadi El Rayan's lakes and Egypt's only waterfalls",
+      "Sandboarding and 4x4 running on the dunes above Magic Lake",
+      "Tunis village — a hillside of working potteries above Lake Qarun",
+      "The Fayoum's ancient waterwheels, still creaking in the canals",
+    ],
+    thingsToKnow: [
+      "About 1.5–2 hours' drive from Cairo or Giza; the desert sites need a 4x4 and a local permit, both arranged for you.",
+      "Wadi Al-Hitan is an open-air walk of one to two hours — hat, water and closed shoes matter here more than anywhere.",
+      "Tunis village is the lunch stop of choice; several potteries welcome visitors and children can try the wheel.",
+      "An overnight desert camp near Magic Lake turns the trip from a long day into something special.",
+    ],
+    whyVisit: [
+      "The most varied single day out of Cairo — fossils, waterfalls, dunes and crafts",
+      "A UNESCO site most visitors to Egypt never hear about",
+      "The counterpoint to monuments: Egypt's landscapes, alive and working",
+    ],
+    symbol: "lotus",
+    hero: {
+      alt: "Magic Lake among the dunes of the Fayoum desert",
+      label: "The Fayoum",
+      src: "/images/fayoum/fayoum-magic-lake.webp",
+      width: 764, height: 458,
+    },
+    gallery: [
+      { alt: "The waterfalls of Wadi El Rayan in the Fayoum", label: "Wadi El Rayan", src: "/images/fayoum/fayoum-waterfalls.webp", width: 736, height: 981 },
+      { alt: "Traditional wooden waterwheels of the Fayoum", label: "The waterwheels", src: "/images/fayoum/fayoum-waterwheels.webp", width: 764, height: 458 },
+      { alt: "The mudbrick pyramid of Hawara in the Fayoum", label: "Hawara pyramid", src: "/images/fayoum/fayoum-hawara-pyramid.webp", width: 764, height: 458 },
+    ],
+    faqs: [
+      { q: "Is the Fayoum worth a day trip from Cairo?",
+        a: "If you have four or more days in Cairo, emphatically yes — it is the day that surprises people most. In one loop you walk among forty-million-year-old whale skeletons at a UNESCO site, watch waterfalls in the desert, run dunes above a lake and lunch in a village of potters. It is Egypt with no queues and almost no coaches." },
+      { q: "What is Wadi Al-Hitan, the Valley of the Whales?",
+        a: "A UNESCO World Heritage site in the desert southwest of the Fayoum, holding hundreds of fossilised skeletons of early whales — creatures that still carried hind legs — from around forty million years ago, when this desert was a shallow sea. The fossils lie along open walking trails, with a small, excellent visitor centre." },
+      { q: "Can children enjoy the Fayoum?",
+        a: "It is one of the best family days in Egypt: sandboarding on the dunes, boats and birdlife on the lakes, whale skeletons that beat any museum for imagination, and a pottery wheel to try in Tunis village. The distances between stops are short, so attention spans are rarely tested." },
+    ],
+    seo: {
+      title: "The Fayoum, Egypt — Whale Valley, Waterfalls & Dunes | Kemet",
+      description:
+        "The Fayoum from Cairo: UNESCO's Wadi Al-Hitan whale fossils, Wadi El Rayan waterfalls, sandboarding above Magic Lake and the potters of Tunis village.",
+    },
+    relationships: { nearby: near("cairo", "giza") },
+  },
 ];
 
 export function getDestination(slug: string): Destination | undefined {
