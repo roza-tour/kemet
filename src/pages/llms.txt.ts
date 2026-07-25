@@ -15,6 +15,7 @@ import { destinations } from "@/data/destinations";
 import { experiences } from "@/data/experiences";
 import { guides } from "@/data/guides";
 import { collections } from "@/data/collections";
+import { activities } from "@/data/activities";
 import { company } from "@/data/company";
 import { formatPrice } from "@/utils/format";
 
@@ -43,7 +44,7 @@ export const GET: APIRoute = () => {
     `- Model: 100% private, tailor-made itineraries (no shared coaches, no fixed departures)`,
   );
   lines.push(
-    `- Catalogue: ${tours.length} journeys, ${experiences.length} experiences, ${destinations.length} destinations, ${guides.length} travel guides`,
+    `- Catalogue: ${tours.length} journeys, ${experiences.length} experiences, ${activities.filter(a=>a.slug).length} activities, ${destinations.length} destinations, ${guides.length} travel guides`,
   );
   lines.push("");
 
@@ -88,6 +89,14 @@ export const GET: APIRoute = () => {
   lines.push("");
   for (const e of experiences) {
     lines.push(item(e.title, `experiences/${e.slug}.html`, e.shortSummary ?? ""));
+  }
+  lines.push("");
+
+  lines.push("## Activities (bookable within any journey)");
+  lines.push("");
+  for (const a of activities) {
+    if (!a.slug) continue;
+    lines.push(item(a.title, `activities/${a.slug}.html`, `${a.place}. ${a.shortSummary ?? a.blurb}`));
   }
   lines.push("");
 

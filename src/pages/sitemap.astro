@@ -10,6 +10,7 @@ import { destinations } from "@/data/destinations";
 import { experiences } from "@/data/experiences";
 import { guides } from "@/data/guides";
 import { collections } from "@/data/collections";
+import { activities } from "@/data/activities";
 import { canonical } from "@/utils/links";
 import { site, SITE_URL } from "@/config/site";
 import { breadcrumb } from "@/schemas/jsonld";
@@ -52,7 +53,8 @@ const jsonld = [
 
 const pageCount =
   main.length + support.length + tours.length + collections.length +
-  destinations.length + experiences.length + guides.length;
+  destinations.length + experiences.length + guides.length +
+  activities.filter((a) => a.slug).length;
 ---
 <Base
   title={`Site Index — Every Page on Kemet | Kemet`}
@@ -123,6 +125,15 @@ const pageCount =
         <ul class="sm-list sm-cols">
           {experiences.map((e) => (
             <li><a href={`experiences/${e.slug}.html`}>{e.title}</a></li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="sm-group reveal">
+        <h2>Activities <em>({activities.filter((a) => a.slug).length})</em></h2>
+        <ul class="sm-list sm-cols">
+          {activities.filter((a) => a.slug).map((a) => (
+            <li><a href={`activities/${a.slug}.html`}>{a.title}</a><span>{a.place}</span></li>
           ))}
         </ul>
       </div>
