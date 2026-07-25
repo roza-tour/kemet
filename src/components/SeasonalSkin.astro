@@ -86,6 +86,7 @@ const rows = seasonalCalendar.map((w) => [
   :root[data-season="spring"]       { --gold:#DCC06B; --gold-bright:#FBF3D2; --gold-deep:#9C8438; --line-2:rgba(220,192,107,.44); --srb:#7FB086; }
   :root[data-season="red-sea"]      { --gold:#6FD0C6; --gold-bright:#CFF3EE; --gold-deep:#2C8E86; --line-2:rgba(111,208,198,.44); --srb:#2C8E86; }
   :root[data-season="honeymoon"]    { --gold:#E3B98C; --gold-bright:#FBE7D6; --gold-deep:#A9764B; --line-2:rgba(227,185,140,.46); --srb:#A9764B; }
+  :root[data-season="eid"]          { --gold:#E0BE6A; --gold-bright:#FBEFC4; --gold-deep:#9C7A2E; --line-2:rgba(224,190,106,.44); --srb:#2F7E66; }
 
   /* ===== The ribbon ===================================================== */
   /* Pinned to the BOTTOM so it never interferes with the hero or the nav. */
@@ -140,6 +141,14 @@ const rows = seasonalCalendar.map((w) => [
   }
   :root[data-season="spring"] .srb-mark::after { display: none; }
 
+  /* Eid — the same masked crescent as Ramadan. */
+  :root[data-season="eid"] .srb-mark {
+    border: 0; background: var(--gold);
+    -webkit-mask: radial-gradient(circle at 72% 50%, transparent 54%, #000 55%);
+    mask: radial-gradient(circle at 72% 50%, transparent 54%, #000 55%);
+  }
+  :root[data-season="eid"] .srb-mark::after { display: none; }
+
   /* Red Sea — a droplet. */
   :root[data-season="red-sea"] .srb-mark {
     border: 0; background: var(--gold); border-radius: 50% 50% 50% 8%;
@@ -166,6 +175,9 @@ const rows = seasonalCalendar.map((w) => [
   }
   :root[data-season] .hero .veil::after,
   :root[data-season] .phero::after { opacity: 1; }
+  /* Themed collection pages carry their own ornament layer — skip the generic
+     atmosphere there so motifs never double up. */
+  [class*="themed-"] .phero::after { content: none; }
 
   /* Ramadan — a crescent glow high in the sky + a lantern-warm horizon */
   :root[data-season="ramadan"] .hero .veil::after,
@@ -214,6 +226,15 @@ const rows = seasonalCalendar.map((w) => [
     background:
       linear-gradient(180deg, rgba(44,142,134,.16), transparent 46%),
       radial-gradient(760px 320px at 50% 0%, rgba(67,133,160,.14), transparent 72%);
+  }
+
+  /* Eid — festive warmth over the skyline */
+  :root[data-season="eid"] .hero .veil::after,
+  :root[data-season="eid"] .phero::after {
+    background:
+      radial-gradient(circle 40px at 82% 100px, rgba(247,230,174,.45) 38px, transparent 41px),
+      radial-gradient(circle 40px at calc(82% + 22px) 92px, rgba(11,9,7,.92) 38px, transparent 41px),
+      radial-gradient(700px 300px at 50% 100%, rgba(47,126,102,.13), transparent 70%);
   }
 
   /* Honeymoon — rose-gold warmth */

@@ -68,6 +68,11 @@ export const seasonalCalendar: SeasonalWindow[] = [
     note: "Egypt's spring festival falls on 3 May 2027 — the whole country goes outdoors.",
     start: "2027-03-14", end: "2027-05-08", priority: 65, eventDate: "3 May 2027" },
 
+  // Eid al-Adha 1448: expected 16-19 May 2027 (moon-sighting confirms).
+  { theme: "eid", slug: "eid-al-adha-egypt", label: "Eid al-Adha",
+    note: "Expected 16-19 May 2027 - Egypt's biggest holiday; quiet monuments, festive cities.",
+    start: "2027-05-12", end: "2027-05-20", priority: 75, eventDate: "16-19 May 2027" },
+
   { theme: "red-sea", slug: "red-sea-egypt", label: "Red Sea season",
     note: "Warmest water of the year on the Sinai and Hurghada reefs.",
     start: "2027-05-09", end: "2027-09-21", priority: 20 },
@@ -94,6 +99,11 @@ export const seasonalCalendar: SeasonalWindow[] = [
   { theme: "spring", slug: "sham-el-nessim-egypt", label: "Sham El-Nessim",
     note: "Egypt's spring festival falls on 17 April 2028 — the whole country goes outdoors.",
     start: "2028-03-04", end: "2028-04-22", priority: 65, eventDate: "17 April 2028" },
+
+  // Eid al-Adha 1449: expected 5-8 May 2028.
+  { theme: "eid", slug: "eid-al-adha-egypt", label: "Eid al-Adha",
+    note: "Expected 5-8 May 2028 - Egypt's biggest holiday; quiet monuments, festive cities.",
+    start: "2028-05-01", end: "2028-05-09", priority: 75, eventDate: "5-8 May 2028" },
 
   { theme: "red-sea", slug: "red-sea-egypt", label: "Red Sea season",
     note: "Warmest water of the year on the Sinai and Hurghada reefs.",

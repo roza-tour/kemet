@@ -186,6 +186,24 @@ const { theme } = Astro.props;
   </div>
 )}
 
+{theme === "eid" && (
+  <div class="sth sth-eid" aria-hidden="true">
+    {/* Festive bunting — two swags of pennant flags */}
+    <svg class="sth-bunting" viewBox="0 0 460 70" width="460" height="70">
+      <path d="M8 12 Q230 52 452 12" fill="none" stroke="#D9B45A" stroke-width="1.2" opacity=".7" />
+      {[36,96,156,216,276,336,396].map((x, i) => {
+        const y = 12 + Math.sin(((x - 8) / 444) * Math.PI) * 38;
+        const c = ["#2F7E66", "#D9B45A", "#9A4456", "#4385A0"][i % 4];
+        return <path d={`M${x - 9} ${y} L${x + 9} ${y} L${x} ${y + 17} Z`} fill={c} opacity=".8" />;
+      })}
+    </svg>
+    <svg class="sth-eid-moon" viewBox="0 0 90 90" width="86" height="86">
+      <path d="M60 12a34 34 0 1 0 20 58A28 28 0 1 1 60 12Z" fill="none" stroke="#D9B45A" stroke-width="2" opacity=".6" />
+      <path d="M72 24l2.4 5.6 6 .6-4.5 4 1.3 6-5.2-3.2-5.2 3.2 1.3-6-4.5-4 6-.6Z" fill="#F7E6AE" opacity=".7" />
+    </svg>
+  </div>
+)}
+
 {theme === "sun-festival" && (
   <div class="sth sth-sun" aria-hidden="true">
     {/* Radiating solar burst */}
@@ -245,6 +263,21 @@ const { theme } = Astro.props;
   .themed-sun-festival .phero {
     background: radial-gradient(820px 440px at 50% 0%, rgba(232,163,61,.20), transparent 62%);
   }
+  .themed-eid {
+    --gold: #E0BE6A; --gold-bright: #FBEFC4; --gold-deep: #9C7A2E;
+    --line: rgba(47,126,102,.24); --line-2: rgba(224,190,106,.44);
+  }
+  .themed-eid .phero {
+    padding-top: 196px; position: relative;
+    background:
+      radial-gradient(740px 380px at 50% 0%, rgba(47,126,102,.16), transparent 62%),
+      radial-gradient(560px 300px at 50% 4%, rgba(251,239,196,.12), transparent 60%);
+  }
+  .themed-eid .phero > .wrap { position: relative; z-index: 2; }
+  .sth-bunting { position: absolute; left: 50%; top: 96px; transform: translateX(-50%); opacity: .85; }
+  .sth-eid-moon { position: absolute; right: 6%; top: 44%; opacity: .55;
+    filter: drop-shadow(0 0 18px rgba(217,180,90,.3)); }
+  @media(max-width:600px){ .sth-bunting{ transform:translateX(-50%) scale(.8); top:86px; } .sth-eid-moon{ display:none; } }
 
   /* Make the page hero the positioning context for the ornament layer, and keep
      the heading/breadcrumb above it. */

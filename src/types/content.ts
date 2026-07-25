@@ -125,7 +125,8 @@ export type SeasonalTheme =
   | "sun-festival"
   | "spring"
   | "red-sea"
-  | "honeymoon";
+  | "honeymoon"
+  | "eid";
 
 export type CollectionAudience =
   | "everyone"

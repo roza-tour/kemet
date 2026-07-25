@@ -898,6 +898,85 @@ export const collections: Collection[] = [
         "Egypt honeymoons designed privately: a dahabiya under sail, sunrise at the pyramids, a felucca at golden hour and a Red Sea finish. When to go and how long to stay.",
     },
   },
+  // ---------------------------------------------------------------------------
+  // 12. Eid al-Adha in Egypt
+  // ---------------------------------------------------------------------------
+  {
+    id: "eid-al-adha-egypt",
+    slug: "eid-al-adha-egypt",
+    domain: "seasonal",
+    title: "Eid al-Adha in Egypt",
+    subtitle: "Four days when the whole country celebrates — and the monuments quietly empty.",
+    shortSummary:
+      "Egypt's biggest holiday is a family festival of shared meals and city lights. For visitors it splits the country in two: resorts and riverbanks fill with celebrating Egyptian families, while the great monuments have some of their quietest mornings of the year.",
+    editorialIntro:
+      "Eid al-Adha — the Feast of the Sacrifice — closes the Hajj season and is Egypt's largest holiday: four official days when offices shut, extended families gather, new clothes come out and the smell of grilling fills every neighbourhood by noon. For a traveller the effect is double-sided, and worth planning around rather than avoiding. Domestic tourism surges — Red Sea resorts, Nile corniches and city parks belong joyfully to Egyptian families, which is a spectacle of its own — while the pharaonic sites see fewer organised groups than almost any other week: Egyptians have seen Karnak; the holiday is for the beach. Book transport early, keep the first morning of Eid gentle, and you get a version of Giza and Luxor that feels almost private, plus a country in its best mood.",
+    collectionType: "festival",
+    seasons: ["spring", "summer"],
+    travelStyles: ["cultural", "historical", "relaxed"],
+    audience: ["everyone", "history-enthusiasts", "photographers"],
+    priority: 6,
+    featured: false,
+    highlights: [
+      "Egypt's biggest public holiday — four official days of family celebration",
+      "The quietest mornings of the season at the major pharaonic sites",
+      "Cities in a festive mood: lights, new clothes, families out until late",
+      "A living counterpoint to the monuments — Egypt celebrating, not performing",
+      "Dates move ~11 days earlier each year: expected 16–19 May 2027, 5–8 May 2028",
+    ],
+    planningNotes: [
+      "The date follows the lunar calendar and is confirmed by moon sighting — expected around 16 May 2027 and 5 May 2028; treat published dates as provisional by a day",
+      "Domestic flights, trains and Red Sea hotels fill with Egyptian family travel — book internal transport well ahead of the holiday block",
+      "Banks and government offices close for the official days; monuments, museums and restaurants serving visitors stay open, some on holiday hours",
+      "The first morning is the religious heart of the feast — streets are quiet until midday, then the celebration starts; plan an early monument visit and a relaxed afternoon",
+      "Animal sacrifice is part of the tradition and can be visible in ordinary neighbourhoods on the first morning — worth knowing in advance, easy to route around",
+    ],
+    travelTips: [
+      "Accept the mood: an evening corniche walk during Eid is one of the most cheerful hours you can spend in Egypt",
+      "Ask your guide about kahk and Eid sweets — bakeries are at their best all week",
+      "If the Red Sea is in your plan, place it before or after the holiday block rather than across it — rates and crowds both spike",
+      "Greet people with 'Eid Mubarak' — it opens every door a little wider",
+    ],
+    faqs: [
+      {
+        q: "Is it a good idea to visit Egypt during Eid al-Adha?",
+        a: "Yes, with one adjustment: plan around domestic travel, not around the sights. Monuments and museums stay open and are often unusually quiet, since the holiday sends Egyptian families to beaches and parks rather than temples. The trade-off is that internal flights, trains and Red Sea resorts are heavily booked by domestic tourism — reserve those early and the week is a delight.",
+      },
+      {
+        q: "When is Eid al-Adha in 2027 and 2028?",
+        a: "It is expected to begin around 16 May 2027 and 5 May 2028, running about four official days, with the exact start confirmed by the moon-sighting announcement shortly before. Because the Islamic calendar is lunar, the holiday moves roughly eleven days earlier each Gregorian year.",
+      },
+      {
+        q: "Will restaurants and sites be closed during Eid?",
+        a: "The monuments, museums and visitor-oriented restaurants remain open through Eid, occasionally on adjusted hours for the first day. Banks and government offices close for the official holiday. The first morning is quiet everywhere until families finish prayers and gatherings; by afternoon the cities are livelier than on any normal day.",
+      },
+      {
+        q: "What is Eid al-Adha, briefly?",
+        a: "The Feast of the Sacrifice — Islam's major holiday, marking the end of the Hajj pilgrimage season and commemorating Ibrahim's devotion. In Egypt it means four days of family gatherings, new clothes, charity, and shared meals in which meat is distributed to relatives and to those in need. It is family-first and visitor-friendly: expect warmth, greetings and full corniches.",
+      },
+    ],
+    hero: {
+      alt: "Islamic Cairo rooftops and minarets glowing at sunset",
+      label: "Eid al-Adha in Egypt",
+      src: "/images/cairo/cairo-islamic-rooftops-sunset.webp",
+      width: 735,
+      height: 649,
+    },
+    theme: "eid",
+    lastReviewed: "2026-07",
+    relationships: {
+      tours: tour("tour-cairo-culture-5day", "tour-giza-museum", "tour-luxor-3day", "tour-upper-egypt-5day", "tour-cairo-food"),
+      destinations: dest("cairo", "giza", "luxor"),
+      experiences: exp("old-cairo-walking", "egyptian-cooking", "sunrise-giza-pyramids"),
+      guides: guide("egypt-travel-guide", "best-time-to-visit-egypt", "egyptian-food-guide"),
+      relatedCollections: col("ramadan-in-egypt", "sham-el-nessim-egypt", "first-time-egypt"),
+    },
+    seo: {
+      title: "Eid al-Adha in Egypt — Dates, What Changes & Tips | Kemet",
+      description:
+        "Visiting Egypt during Eid al-Adha: expected 2027–2028 dates, what opens and closes, why the monuments empty while resorts fill, and how to plan around it.",
+    },
+  },
 ];
 
 /** Collections in editorial priority order (highest first). */
