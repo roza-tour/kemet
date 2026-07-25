@@ -55,7 +55,7 @@ const description = col.seo?.description ?? col.shortSummary;
 const jsonld = entitySchema("seasonal", col);
 ---
 <Base title={title} description={description} active={route} jsonld={jsonld}>
-  <article>
+  <article class={col.theme ? `themed-${col.theme}` : undefined}>
     <CollectionHero collection={col} base={base} />
 
     <section style="padding-top:20px">

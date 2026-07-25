@@ -113,6 +113,13 @@ export type CollectionType =
   | "road-trip";
 
 /** Intended audience for a collection. */
+/**
+ * Seasonal visual identity for a collection page. Each theme swaps the accent
+ * palette and adds its own ornament layer — Ramadan lanterns and crescents,
+ * Christmas stars and evergreen, the solar burst of the Abu Simbel alignment.
+ */
+export type SeasonalTheme = "ramadan" | "christmas" | "sun-festival";
+
 export type CollectionAudience =
   | "everyone"
   | "families"
@@ -170,6 +177,12 @@ export interface Collection extends ContentEntity {
   gallery?: MediaPlaceholder[];
   /** When this editorial content was last reviewed. */
   lastReviewed?: string;
+  /**
+   * Seasonal visual identity applied to this collection's page — shifts the
+   * accent palette and adds themed ornament (see SeasonalTheme.astro).
+   * Omit for the default Kemet gold treatment.
+   */
+  theme?: SeasonalTheme;
   relationships?: CollectionRelationships;
 }
 

@@ -3,6 +3,7 @@
 // Fully data-driven: no per-collection logic or markup.
 // Follows the same pattern as DestinationHero, ExperienceHero, GuideHero.
 import Placeholder from "@/components/Placeholder.astro";
+import SeasonalTheme from "@/components/collection/SeasonalTheme.astro";
 import { collectionTypes, labelOf } from "@/config/taxonomy";
 import { hubFor } from "@/config/routes";
 import type { Collection } from "@/types";
@@ -17,6 +18,7 @@ const typeLabel = labelOf(collectionTypes, collection.collectionType) ?? collect
 const hub = hubFor("seasonal");
 ---
 <header class="phero" style="padding-bottom:34px">
+  {collection.theme && <SeasonalTheme theme={collection.theme} />}
   <div class="wrap">
     <nav class="crumb" aria-label="Breadcrumb">
       <a href={`${base}index.html`}>Home</a> ·

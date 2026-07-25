@@ -436,6 +436,7 @@ export const collections: Collection[] = [
       width: 700,
       height: 500,
     },
+    theme: "christmas",
     lastReviewed: "2026-07",
     relationships: {
       tours: tour(
@@ -533,6 +534,7 @@ export const collections: Collection[] = [
       width: 736,
       height: 1104,
     },
+    theme: "ramadan",
     lastReviewed: "2026-07",
     relationships: {
       tours: tour(
@@ -623,6 +625,7 @@ export const collections: Collection[] = [
       width: 736,
       height: 1308,
     },
+    theme: "sun-festival",
     lastReviewed: "2026-07",
     relationships: {
       tours: tour(
