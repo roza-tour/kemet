@@ -1,0 +1,157 @@
+---
+// SeasonalSkin — the site's automatic seasonal dressing.
+//
+// Reads the dated calendar in src/data/seasonalCalendar.ts, finds the window
+// that contains the visitor's current date, and applies that occasion's identity
+// site-wide: an accent shift, a slim ribbon under the nav announcing the season,
+// and a matching ornament in the ribbon.
+//
+// It runs in the browser (not at build time) so a page built today still shows
+// the right season months from now without rebuilding. Without JS nothing is
+// shown — the ribbon is hidden by default and only revealed when a window
+// matches, so no visitor ever sees a wrong or empty season.
+import { seasonalCalendar } from "@/data/seasonalCalendar";
+
+// Serialised to the client as compact rows: [theme, slug, label, note, start, end, priority, eventDate]
+const rows = seasonalCalendar.map((w) => [
+  w.theme, w.slug, w.label, w.note, w.start, w.end, w.priority, w.eventDate ?? "",
+]);
+---
+<div id="season-ribbon" class="srb" hidden>
+  <a class="srb-in" href="#" id="srb-link">
+    <span class="srb-mark" aria-hidden="true"></span>
+    <span class="srb-text">
+      <b id="srb-label"></b>
+      <span id="srb-note"></span>
+    </span>
+    <span class="srb-cta">Explore <i aria-hidden="true"></i></span>
+  </a>
+  <button type="button" class="srb-close" id="srb-close" aria-label="Dismiss seasonal notice">×</button>
+</div>
+
+<script is:inline define:vars={{ rows }}>
+  (function () {
+    try {
+      var today = new Date();
+      var iso = today.getFullYear() + "-" +
+                String(today.getMonth() + 1).padStart(2, "0") + "-" +
+                String(today.getDate()).padStart(2, "0");
+
+      // Highest-priority window containing today.
+      var active = null;
+      for (var i = 0; i < rows.length; i++) {
+        var r = rows[i];
+        if (iso >= r[4] && iso <= r[5]) {
+          if (!active || r[6] > active[6]) active = r;
+        }
+      }
+      if (!active) return;
+
+      var theme = active[0], slug = active[1], label = active[2], note = active[3], when = active[7];
+
+      // 1) Site-wide accent: everything reads through these custom properties.
+      document.documentElement.setAttribute("data-season", theme);
+
+      // 2) The ribbon — unless this visitor dismissed this exact season already.
+      var key = "kemet-season-" + slug + "-" + active[4];
+      try { if (localStorage.getItem(key) === "1") return; } catch (e) {}
+
+      var root = document.getElementById("season-ribbon");
+      if (!root) return;
+      var depth = (location.pathname.match(/\//g) || []).length - 1;
+      var prefix = depth > 0 ? "../".repeat(depth) : "";
+      document.getElementById("srb-link").setAttribute("href", prefix + "collections/" + slug + ".html");
+      document.getElementById("srb-label").textContent = when ? label + " · " + when : label;
+      document.getElementById("srb-note").textContent = note;
+      root.hidden = false;
+
+      var close = document.getElementById("srb-close");
+      if (close) close.addEventListener("click", function () {
+        root.hidden = true;
+        try { localStorage.setItem(key, "1"); } catch (e) {}
+      });
+    } catch (e) {
+      /* never let the seasonal layer break the page */
+    }
+  })();
+</script>
+
+<style is:global>
+  /* ===== Site-wide accent per season =====================================
+     Every component already reads --gold / --gold-bright / --line, so shifting
+     these four values re-tints the whole site with no component changes. */
+  :root[data-season="ramadan"]      { --gold:#E0BE6A; --gold-bright:#FBEFC4; --gold-deep:#9C7A2E; --line-2:rgba(224,190,106,.44); --srb:#2F7E66; }
+  :root[data-season="christmas"]    { --gold:#E3C579; --gold-bright:#FFF6DA; --gold-deep:#A8823A; --line-2:rgba(227,197,121,.46); --srb:#2F7E66; }
+  :root[data-season="sun-festival"] { --gold:#E8A33D; --gold-bright:#FBE2A6; --gold-deep:#A9631C; --line-2:rgba(232,163,61,.46); --srb:#A9631C; }
+  :root[data-season="spring"]       { --gold:#DCC06B; --gold-bright:#FBF3D2; --gold-deep:#9C8438; --line-2:rgba(220,192,107,.44); --srb:#7FB086; }
+  :root[data-season="red-sea"]      { --gold:#6FD0C6; --gold-bright:#CFF3EE; --gold-deep:#2C8E86; --line-2:rgba(111,208,198,.44); --srb:#2C8E86; }
+  :root[data-season="honeymoon"]    { --gold:#E3B98C; --gold-bright:#FBE7D6; --gold-deep:#A9764B; --line-2:rgba(227,185,140,.46); --srb:#A9764B; }
+
+  /* ===== The ribbon ===================================================== */
+  .srb { position: fixed; top: 86px; left: 0; right: 0; z-index: 115;
+    background: linear-gradient(90deg, rgba(11,9,7,.97), rgba(20,16,12,.97));
+    border-bottom: 1px solid var(--line-2);
+    box-shadow: 0 10px 30px -18px rgba(0,0,0,.9); }
+  .srb[hidden] { display: none; }
+  .srb-in { display: flex; align-items: center; gap: 16px; max-width: var(--maxw);
+    margin: 0 auto; padding: 11px 56px 11px 28px; }
+  .srb-text { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; flex: 1; min-width: 0; }
+  .srb-text b { color: var(--gold-bright); font-weight: 500; font-size: .82rem; letter-spacing: .04em; }
+  .srb-text span { color: var(--muted-2); font-size: .8rem; }
+  .srb-cta { flex: none; display: inline-flex; align-items: center; gap: 10px;
+    font-size: .6rem; letter-spacing: .28em; text-transform: uppercase; color: var(--gold); }
+  .srb-cta i { width: 24px; height: 1px; background: currentColor; transition: width .45s cubic-bezier(.22,.61,.36,1); }
+  .srb-in:hover .srb-cta i { width: 40px; }
+  .srb-close { position: absolute; right: 16px; top: 50%; transform: translateY(-50%);
+    background: none; border: 0; color: var(--muted-2); font-size: 1.4rem; line-height: 1;
+    cursor: pointer; padding: 4px 8px; transition: color .3s; }
+  .srb-close:hover { color: var(--gold-bright); }
+
+  /* Ornament mark, drawn per season. Default: a ring with a soft centre. */
+  .srb-mark { flex: none; width: 20px; height: 20px; border-radius: 50%;
+    border: 1px solid var(--gold); position: relative; }
+  .srb-mark::after { content: ""; position: absolute; inset: 5px; border-radius: 50%;
+    background: var(--gold); opacity: .4; }
+
+  /* Ramadan — a true crescent, masked out of a solid disc so it reads on any
+     background (no colour-matched overlay to keep in sync). */
+  :root[data-season="ramadan"] .srb-mark {
+    border: 0; background: var(--gold);
+    -webkit-mask: radial-gradient(circle at 72% 50%, transparent 54%, #000 55%);
+    mask: radial-gradient(circle at 72% 50%, transparent 54%, #000 55%);
+  }
+  :root[data-season="ramadan"] .srb-mark::after { display: none; }
+
+  /* Christmas — a four-point star. */
+  :root[data-season="christmas"] .srb-mark {
+    border: 0; background: var(--gold-bright); border-radius: 0;
+    clip-path: polygon(50% 0%, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0% 50%, 40% 40%);
+  }
+  :root[data-season="christmas"] .srb-mark::after { display: none; }
+
+  /* Spring — a leaf. */
+  :root[data-season="spring"] .srb-mark {
+    border: 0; background: var(--srb); border-radius: 0 60% 0 60%;
+  }
+  :root[data-season="spring"] .srb-mark::after { display: none; }
+
+  /* Red Sea — a droplet. */
+  :root[data-season="red-sea"] .srb-mark {
+    border: 0; background: var(--gold); border-radius: 50% 50% 50% 8%;
+    transform: rotate(45deg);
+  }
+  :root[data-season="red-sea"] .srb-mark::after { display: none; }
+
+  /* The nav sits above the ribbon; push page content down when it shows. */
+  body:has(#season-ribbon:not([hidden])) .phero { padding-top: 232px; }
+  body:has(#season-ribbon:not([hidden])) .hero { padding-top: 44px; }
+
+  @media(max-width:900px){
+    .srb { top: 70px; }
+    .srb-in { padding: 10px 46px 10px 20px; gap: 12px; }
+    .srb-cta { display: none; }
+    .srb-text span { display: none; }
+    body:has(#season-ribbon:not([hidden])) .phero { padding-top: 210px; }
+  }
+  @media print { .srb { display: none !important; } }
+</style>

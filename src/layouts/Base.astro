@@ -16,6 +16,7 @@ import Footer from "@/components/Footer.astro";
 import CTA from "@/components/CTA.astro";
 import SvgDefs from "@/components/SvgDefs.astro";
 import WhatsAppButton from "@/components/conversion/WhatsAppButton.astro";
+import SeasonalSkin from "@/components/SeasonalSkin.astro";
 
 interface Props {
   title?: string;
@@ -112,6 +113,7 @@ const pageLd = jsonld ? (Array.isArray(jsonld) ? jsonld : [jsonld]) : [];
   <canvas id="dust" aria-hidden="true"></canvas>
   <SvgDefs />
   <Nav active={active} base={base} />
+  <SeasonalSkin />
   <main id="main"><slot /></main>
   {showCta && <CTA base={base} />}
   <Footer base={base} />
