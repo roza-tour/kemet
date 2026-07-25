@@ -8,6 +8,18 @@
 
 $to = "info@kemet-travel.com"; // ← the real cPanel mailbox
 
+// AJAX requests (the enhanced form) get JSON back instead of a redirect.
+$wantsJson = (($_SERVER["HTTP_X_REQUESTED_WITH"] ?? "") === "fetch");
+function respond($ok, $wantsJson) {
+  if ($wantsJson) {
+    header("Content-Type: application/json; charset=UTF-8");
+    echo json_encode(["ok" => (bool)$ok]);
+  } else {
+    header("Location: /contact.html?sent=" . ($ok ? "1" : "0") . "#message-us");
+  }
+  exit;
+}
+
 // Only accept real form posts.
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
   header("Location: /contact.html");
@@ -16,8 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
 
 // Honeypot: hidden field humans never fill. Bots do — pretend success.
 if (!empty($_POST["website"])) {
-  header("Location: /contact.html?sent=1#message-us");
-  exit;
+  respond(true, $wantsJson); // pretend success to the bot
 }
 
 // Light per-IP throttle: at most one submission every 15s. Stops a bot (or a
@@ -27,8 +38,7 @@ $ip = preg_replace('/[^0-9a-fA-F:.]/', '', $_SERVER["REMOTE_ADDR"] ?? "");
 if ($ip !== "") {
   $throttle = sys_get_temp_dir() . "/kemet_ct_" . md5($ip);
   if (is_file($throttle) && (time() - @filemtime($throttle)) < 15) {
-    header("Location: /contact.html?sent=1#message-us"); // pretend success
-    exit;
+    respond(true, $wantsJson); // pretend success
   }
   @touch($throttle);
 }
@@ -47,8 +57,7 @@ $dates   = mb_substr(clean_line($_POST["dates"] ?? ""), 0, 120);
 $message = mb_substr(trim((string)($_POST["message"] ?? "")), 0, 5000);
 
 if ($name === "" || $message === "" || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-  header("Location: /contact.html?sent=0#message-us");
-  exit;
+  respond(false, $wantsJson);
 }
 
 // UTF-8-safe subject (visitor names may be Arabic, French, ...).
@@ -77,5 +86,15 @@ $headers =
 
 $ok = @mail($to, $subject, $body, $headers, "-fno-reply@kemet-travel.com");
 
-header("Location: /contact.html?sent=" . ($ok ? "1" : "0") . "#message-us");
-exit;
+// Keep a local safety copy of every delivered enquiry (CSV, web-blocked dir).
+if ($ok) {
+  $logDir = __DIR__ . "/_stats";
+  if (!is_dir($logDir)) { @mkdir($logDir, 0755, true); }
+  $row = sprintf("%s,\"%s\",\"%s\",\"%s\",\"%s\",\"%s\"\n",
+    gmdate("Y-m-d H:i"), str_replace('"', "'", $name), str_replace('"', "'", $email),
+    str_replace('"', "'", $phone), str_replace('"', "'", $dates),
+    str_replace('"', "'", mb_substr($message, 0, 500)));
+  @file_put_contents($logDir . "/enquiries.csv", $row, FILE_APPEND | LOCK_EX);
+}
+
+respond($ok, $wantsJson);

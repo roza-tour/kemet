@@ -197,6 +197,29 @@
     addEventListener('resize',function(){if(innerWidth>680&&nl.classList.contains('open'))setMenu(false);});
   }
 
+  /* first-party analytics — pageview + conversion events to /k.php.
+     Cookie-less; k.php also honours DNT/GPC server-side. Never blocks UI. */
+  try{
+    var KP='/k.php';
+    var send=function(t,v){try{
+      var u=KP+'?t='+t+'&p='+encodeURIComponent(location.pathname)+'&v='+encodeURIComponent(v||'');
+      if(navigator.sendBeacon)navigator.sendBeacon(u);else (new Image()).src=u;
+    }catch(e){}};
+    var refHost='';try{if(document.referrer){var rh=new URL(document.referrer).hostname;
+      if(rh&&rh!==location.hostname)refHost=rh;}}catch(e){}
+    send('pv',refHost);
+    document.addEventListener('click',function(ev){
+      var a=ev.target&&ev.target.closest?ev.target.closest('a'):null;if(!a)return;
+      var h=a.getAttribute('href')||'';
+      if(h.indexOf('wa.me')>-1)send('ev','whatsapp');
+      else if(h.indexOf('mailto:')===0)send('ev','email');
+      else if(h.indexOf('tel:')===0)send('ev','phone');
+      else if(a.id==='srb-link')send('ev','season-ribbon');
+    },true);
+    var cf=document.querySelector('.cform');
+    if(cf)cf.addEventListener('submit',function(){send('ev','form-submit');});
+  }catch(e){}
+
   /* destination strip arrows (homepage) */
   var strip=document.getElementById('dstrip');
   if(strip){var pv=document.getElementById('dprev'),nx=document.getElementById('dnext');

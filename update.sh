@@ -59,7 +59,8 @@ say "3/4  تطبيق التحديث  ·  Applying update"
 if ! git reset --hard "origin/$BRANCH" --quiet 2>/dev/null; then
   git reset --hard "origin/$BRANCH" >/dev/null || { bad "Could not apply the update."; exit 1; }
 fi
-git clean -fd --quiet -e node_modules 2>/dev/null || true
+# -e _stats: NEVER delete the analytics + enquiry logs the site writes at runtime
+git clean -fd --quiet -e node_modules -e _stats 2>/dev/null || true
 ok "updated to $(git rev-parse --short HEAD)"
 
 # --- 4. Verify the live site is intact --------------------------------------

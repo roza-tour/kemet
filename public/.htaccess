@@ -40,7 +40,7 @@ RewriteCond %{DOCUMENT_ROOT}/$1.html -f
 RewriteRule ^([^.]+?)/?$ $1.html [R=301,L]
 
 # Repo internals are not part of the website — hide them completely (404).
-RewriteRule ^(?:\.git|src|scripts|public|node_modules|dist|\.claude|\.astro)(/|$) - [R=404,L]
+RewriteRule ^(?:\.git|src|scripts|public|node_modules|dist|\.claude|\.astro|_stats)(/|$) - [R=404,L]
 
 # Project/config files that sit in the repo root must never be downloadable.
 <FilesMatch "^(package(-lock)?\.json|astro\.config\.mjs|tsconfig\.json|README\.md|DEPLOYMENT\.md|ARCHITECTURE\.md|\.env.*|\.gitignore|\.publish-manifest)$">
