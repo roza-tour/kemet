@@ -19,20 +19,8 @@ export const enhanceScript = `
 (function(){
   var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* scroll-reveal — reveal .reveal elements as they enter the viewport. Runs
-     FIRST and defensively so content is never left hidden if anything below
-     throws. Falls back to showing everything when reduced-motion or no IO. */
-  try{
-    var rev=document.querySelectorAll('.reveal');
-    if(reduce||!('IntersectionObserver' in window)){
-      for(var r=0;r<rev.length;r++)rev[r].classList.add('in');
-    }else{
-      var io=new IntersectionObserver(function(es){
-        es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
-      },{rootMargin:'240px 0px 240px 0px',threshold:0});
-      for(var i=0;i<rev.length;i++)io.observe(rev[i]);
-    }
-  }catch(e){var a=document.querySelectorAll('.reveal');for(var k=0;k<a.length;k++)a[k].classList.add('in');}
+  /* Scroll-reveal removed by request — content is visible from first paint, so
+     there is no observer and nothing to wait for while scrolling. */
 
   /* ambient golden dust — lightweight background canvas */
   var cv=document.getElementById('dust');
