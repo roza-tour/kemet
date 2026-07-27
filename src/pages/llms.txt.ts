@@ -15,6 +15,7 @@ import { destinations } from "@/data/destinations";
 import { experiences } from "@/data/experiences";
 import { guides } from "@/data/guides";
 import { collections } from "@/data/collections";
+import { occasions } from "@/data/occasions";
 import { activities } from "@/data/activities";
 import { nationalities, VISA_FEE_USD, VISA_STAY_DAYS, VERIFIED_ON } from "@/data/entryRequirements";
 import { company } from "@/data/company";
@@ -78,6 +79,13 @@ export const GET: APIRoute = () => {
   lines.push("");
   for (const c of collections) {
     lines.push(item(c.title, `collections/${c.slug}.html`, c.shortSummary));
+  }
+  lines.push("");
+
+  lines.push("## Occasions (journeys planned around what is being marked)");
+  lines.push("");
+  for (const o of occasions) {
+    lines.push(item(o.title, `occasions/${o.slug}.html`, o.metaDescription));
   }
   lines.push("");
 

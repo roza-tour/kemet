@@ -70,6 +70,7 @@ export const RESERVED_ROOT_SLUGS: ReadonlySet<string> = new Set([
   "search",
   "sitemap",
   "visa",
+  "occasions",
 ]);
 
 /** True if a slug would collide with a reserved root name. */

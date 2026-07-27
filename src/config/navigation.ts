@@ -32,9 +32,9 @@ export const primaryNav: NavItem[] = [
   { label: "Experiences", href: hubFor("experience") },
   { label: "Activities", href: "activities.html" },
   { label: "Destinations", href: hubFor("destination") },
+  { label: "Occasions", href: "occasions.html" },
   { label: "Collections", href: hubFor("seasonal") },
   { label: "Guides", href: hubFor("guide") },
-  { label: "Cultures", href: "culture.html" },
   { label: "About", href: "about.html" },
 ];
 
@@ -49,6 +49,7 @@ export const footerExplore: FooterColumn = {
     { label: "Experiences", href: hubFor("experience") },
     { label: "Guides", href: hubFor("guide") },
     { label: "Collections", href: hubFor("seasonal") },
+    { label: "Occasions", href: "occasions.html" },
     { label: "Cultures", href: "culture.html" },
     { label: "The 8 Identities", href: "identities.html" },
     { label: "Activities", href: "activities.html" },

@@ -10,5 +10,21 @@
       <stop offset=".55" stop-color="#D9B45A" />
       <stop offset="1" stop-color="#A87E32" />
     </linearGradient>
+    <!--
+      Same gold, but mapped to user space over the 0 0 100 100 glyph viewBox.
+
+      WHY IT EXISTS: `#g` above uses the default gradientUnits="objectBoundingBox".
+      A perfectly straight stroke — the ankh's stem `M50 47 V88`, the palm trunk,
+      the scarab's body line — has a bounding box of zero width or zero height,
+      and the SVG spec says an element with a degenerate bounding box painted
+      with an objectBoundingBox gradient is NOT rendered. The ankh was drawing
+      as a bare ring with no stem or crossbar. Every SymbolIcon glyph shares the
+      same 100×100 space, so a userSpaceOnUse gradient is exact for all of them.
+    -->
+    <linearGradient id="gs" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="100">
+      <stop offset="0" stop-color="#F7E6AE" />
+      <stop offset=".55" stop-color="#D9B45A" />
+      <stop offset="1" stop-color="#A87E32" />
+    </linearGradient>
   </defs>
 </svg>

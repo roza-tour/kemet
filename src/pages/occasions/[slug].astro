@@ -1,0 +1,224 @@
+---
+// Occasion pages (/occasions/<slug>.html) — journeys defined by the reason for
+// travelling. Data-only: adding an occasion is one entry in data/occasions.ts.
+import Base from "@/layouts/Base.astro";
+import PageHero from "@/components/PageHero.astro";
+import Frieze from "@/components/Frieze.astro";
+import Faq from "@/components/Faq.astro";
+import TourCard from "@/components/TourCard.astro";
+import StandardOfTravel from "@/components/trust/StandardOfTravel.astro";
+import LeadCapture from "@/components/conversion/LeadCapture.astro";
+import { occasions } from "@/data/occasions";
+import type { Occasion } from "@/data/occasions";
+import { tours } from "@/data/tours";
+import { canonical } from "@/utils/links";
+import { site, SITE_URL } from "@/config/site";
+import { breadcrumb } from "@/schemas/jsonld";
+
+export function getStaticPaths() {
+  return occasions.map((o) => ({ params: { slug: o.slug }, props: { o } }));
+}
+
+interface Props { o: Occasion }
+const { o } = Astro.props;
+const route = `occasions/${o.slug}.html`;
+const base = "../";
+
+// Journeys that genuinely suit this occasion, most substantial first — never
+// the cheapest. If the category match is thin, fall back to the signature
+// multi-day itineraries rather than padding with day tours.
+const matched = tours.filter((t) => o.suitedCategories.includes(t.category));
+const picks = (matched.length >= 3 ? matched : tours.filter((t) => t.price >= 900))
+  .sort((a, b) => b.price - a.price)
+  .slice(0, 3);
+
+const others = occasions.filter((x) => x.slug !== o.slug);
+
+const jsonld: Record<string, unknown>[] = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: o.title,
+    description: o.metaDescription,
+    url: canonical(route),
+    inLanguage: "en",
+    about: { "@type": "Country", name: "Egypt" },
+    isPartOf: { "@type": "WebSite", name: `${site.name} — The Black Land`, url: SITE_URL },
+    publisher: { "@type": "TravelAgency", name: site.name, url: SITE_URL },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: o.faqs.map((f) => ({
+      "@type": "Question", name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  },
+  breadcrumb([["Home", "index.html"], ["Occasions", "occasions.html"], [o.label, route]]),
+];
+
+const title = `${o.title} | Kemet`;
+---
+<Base
+  title={title.length <= 65 ? title : `${o.label} in Egypt | Kemet`}
+  description={o.metaDescription}
+  active={route}
+  jsonld={jsonld}
+  keywords={o.keywords.join(", ")}
+>
+  <PageHero
+    crumb={o.label}
+    symbol={o.symbol}
+    base={base}
+    title={o.title}
+    text={o.shortSummary}
+  />
+
+  <section style="padding-top:26px">
+    <div class="wrap oc-wrap">
+      <p class="oc-lede">{o.lede}</p>
+
+      <div class="oc-changes">
+        <h2>What changes</h2>
+        <p>{o.whatChanges}</p>
+      </div>
+
+      <Frieze />
+
+      <div class="sec-head reveal">
+        <div class="eyebrow">In practice</div>
+        <h2>What we would suggest</h2>
+        <div class="rule"></div>
+        <p>
+          Specific rather than aspirational. Where something depends on a permission or a single
+          boat, it says so — we would rather tell you now than after you have paid.
+        </p>
+      </div>
+
+      <div class="oc-ideas">
+        {o.ideas.map((i, idx) => (
+          <div class="oc-idea reveal">
+            <span class="oc-n">{String(idx + 1).padStart(2, "0")}</span>
+            <div>
+              <h3>{i.title}</h3>
+              <p>{i.body}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <Frieze />
+
+      <div class="oc-practical reveal">
+        <h2>Worth knowing before you plan</h2>
+        <ul>{o.practical.map((p) => <li>{p}</li>)}</ul>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow">Journeys</div>
+        <h2>Starting points</h2>
+        <div class="rule"></div>
+        <p>
+          Private throughout, led by a licensed Egyptologist, rewritten around your dates and your
+          party. Prices are per person and fall as the party grows.
+        </p>
+      </div>
+      <div class="grid-3">
+        {picks.map((t) => <TourCard tour={t} base={base} />)}
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap oc-wrap">
+      <Faq items={o.faqs} heading={`${o.label} — questions`} />
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <StandardOfTravel compact={true} showPrice={false} heading="What every Kemet journey is" />
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="oc-others reveal">
+        <h2>Other occasions</h2>
+        <div class="oc-others-grid">
+          {others.map((x) => (
+            <a href={`${x.slug}.html`} class="oc-other">
+              <h3>{x.title}</h3>
+              <p>{x.shortSummary}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <LeadCapture
+    variant="consultation"
+    heading="Tell us what is being marked"
+    subtext="One sentence about the occasion changes the itinerary more than any list of sites. Send it with your dates and who is travelling."
+    whatsappMessage={`Hello Kemet — I'm planning a journey in Egypt: ${o.label.toLowerCase()}.`}
+    emailSubject={`Enquiry — ${o.title}`}
+  />
+</Base>
+
+<style>
+  .oc-wrap { max-width: 940px; }
+  .oc-lede { font-family: var(--ff-display); font-weight: 300; font-size: 1.32rem;
+    line-height: 1.68; color: var(--bone); margin: 0 0 34px; max-width: 800px; }
+
+  .oc-changes { padding: 28px 32px; border-left: 2px solid var(--gold);
+    background: rgba(217,180,90,.05); margin-bottom: 8px; }
+  .oc-changes h2 { font-size: .68rem; letter-spacing: .3em; text-transform: uppercase;
+    font-family: var(--ff-body); font-weight: 400; color: var(--gold); margin: 0 0 12px; }
+  .oc-changes p { margin: 0; color: var(--muted); font-size: .99rem; line-height: 1.88; }
+
+  .oc-ideas { margin-top: 30px; }
+  .oc-idea { display: grid; grid-template-columns: 58px 1fr; gap: 22px;
+    padding: 26px 0; border-bottom: 1px solid var(--line); }
+  .oc-idea:last-child { border-bottom: 0; }
+  .oc-n { font-family: var(--ff-display); font-size: 1.7rem; color: var(--gold);
+    line-height: 1.2; width: 58px; }
+  .oc-idea h3 { font-size: 1.24rem; color: var(--bone); margin: 0 0 10px; }
+  .oc-idea p { color: var(--muted); font-size: .96rem; line-height: 1.85; margin: 0; }
+
+  .oc-practical { border: 1px solid var(--line); border-radius: 2px; padding: 30px 32px;
+    background: rgba(255,255,255,.012); }
+  .oc-practical h2 { font-size: 1.3rem; color: var(--bone); margin: 0 0 18px; }
+  .oc-practical ul { list-style: none; margin: 0; padding: 0; }
+  .oc-practical li { position: relative; padding-left: 20px; color: var(--muted);
+    font-size: .95rem; line-height: 1.8; margin-bottom: 12px; }
+  .oc-practical li:last-child { margin-bottom: 0; }
+  .oc-practical li::before { content: ""; position: absolute; left: 0; top: .7em;
+    width: 5px; height: 5px; border-radius: 50%; background: var(--gold); }
+
+  .oc-others h2 { font-size: 1.5rem; color: var(--bone); margin-bottom: 22px; }
+  .oc-others-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .oc-other { display: block; border: 1px solid var(--line); border-radius: 2px;
+    padding: 24px 22px; transition: border-color .4s, transform .4s cubic-bezier(.22,.61,.36,1); }
+  .oc-other:hover { border-color: var(--gold); transform: translateY(-4px); }
+  .oc-other h3 { font-size: 1.02rem; color: var(--bone); margin: 0 0 8px; font-weight: 500; }
+  .oc-other:hover h3 { color: var(--gold-bright); }
+  .oc-other p { color: var(--muted-2); font-size: .87rem; line-height: 1.65; margin: 0; }
+
+  @media(max-width:1000px){ .oc-others-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media(max-width:680px){
+    .oc-lede { font-size: 1.16rem; }
+    .oc-changes { padding: 24px 20px; }
+    .oc-practical { padding: 24px 20px; }
+    .oc-others-grid { grid-template-columns: 1fr; }
+    .oc-other { padding: 22px 20px; }
+    /* Site-wide phone rule: the numeral sits above its heading so the text
+       returns to the page gutter. */
+    .oc-idea { display: block; padding: 22px 0; }
+    .oc-n { display: block; width: auto; font-size: 1.25rem; margin-bottom: 8px; }
+  }
+</style>

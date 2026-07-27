@@ -11,6 +11,7 @@ import { experiences } from "@/data/experiences";
 import { guides } from "@/data/guides";
 import { collections } from "@/data/collections";
 import { activities } from "@/data/activities";
+import { occasions } from "@/data/occasions";
 import { nationalities } from "@/data/entryRequirements";
 import { canonical } from "@/utils/links";
 import { site, SITE_URL } from "@/config/site";
@@ -25,6 +26,7 @@ const main = [
   ["Experiences", "experiences.html", "Private moments between the monuments."],
   ["Destinations", "destinations.html", "Cairo, Giza, Luxor, Aswan and Alexandria."],
   ["Collections", "collections.html", "Seasonal and thematic ways into Egypt."],
+  ["Occasions", "occasions.html", "Journeys planned around what is being marked."],
   ["Travel guides", "guides.html", "Visas, seasons, transport and food."],
   ["Cultures", "culture.html", "The living heritage behind the monuments."],
   ["The 8 Identities", "identities.html", "The eight Egypts a journey can cross."],
@@ -57,7 +59,7 @@ const jsonld = [
 const pageCount =
   main.length + support.length + tours.length + collections.length +
   destinations.length + experiences.length + guides.length +
-  activities.filter((a) => a.slug).length + nationalities.length;
+  activities.filter((a) => a.slug).length + nationalities.length + occasions.length;
 ---
 <Base
   title={`Site Index — Every Page on Kemet | Kemet`}
@@ -137,6 +139,15 @@ const pageCount =
         <ul class="sm-list sm-cols">
           {activities.filter((a) => a.slug).map((a) => (
             <li><a href={`activities/${a.slug}.html`}>{a.title}</a><span>{a.place}</span></li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="sm-group reveal">
+        <h2>Occasions <em>({occasions.length})</em></h2>
+        <ul class="sm-list">
+          {occasions.map((o) => (
+            <li><a href={`occasions/${o.slug}.html`}>{o.title}</a><span>{o.shortSummary}</span></li>
           ))}
         </ul>
       </div>
