@@ -68,7 +68,8 @@ say "4/5  التحقق من الموقع  ·  Verifying site"
 FAIL=0
 for f in index.html tours.html contact.html faq.html booking.html privacy.html terms.html \
          sitemap.html 404.html robots.txt llms.txt sitemap-index.xml sitemap-images.xml .htaccess \
-         contact-handler.php visa.html visa/united-states.html \
+         contact-handler.php visa.html visa/united-states.html BingSiteAuth.xml \
+         occasions.html egypt-tour-cost.html \
          activities/hot-air-balloon-luxor.html collections/ramadan-in-egypt.html; do
   if [ -s "$f" ]; then ok "$f"; else bad "MISSING: $f"; FAIL=1; fi
 done

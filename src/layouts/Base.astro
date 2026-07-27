@@ -58,6 +58,18 @@ const pageLd = jsonld ? (Array.isArray(jsonld) ? jsonld : [jsonld]) : [];
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!-- Google Search Console — site ownership verification (HTML-tag method). -->
   <meta name="google-site-verification" content="KpsvY-0-G6RYJRLd8UJLs2pI5eBHZPFHsaWbJIEhDIw" />
+  <!--
+    Bing Webmaster Tools — site ownership verification.
+    Bing accepts any one of three proofs; we ship two so a single point of
+    failure cannot un-verify the site: this meta tag, and the XML file at
+    /BingSiteAuth.xml (public/BingSiteAuth.xml, byte-identical to the file Bing
+    issued). Both carry the same code. Leave both in place permanently —
+    Bing re-checks ownership periodically and removing the proof drops the site.
+    This matters beyond Bing itself: Bing's index feeds ChatGPT Search,
+    Copilot, DuckDuckGo and Yahoo, and it is the endpoint our IndexNow ping
+    in update.sh notifies on every publish.
+  -->
+  <meta name="msvalidate.01" content="5D3CF7281731A894F620497D79317F74" />
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
