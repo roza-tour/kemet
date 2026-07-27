@@ -1,0 +1,358 @@
+---
+// /egypt-tour-cost.html — what a private, high-end journey in Egypt actually
+// costs, and what moves the number.
+//
+// STRATEGIC PURPOSE
+// "How much does a trip to Egypt cost" is one of the highest-volume travel
+// queries in the world, and almost every page answering it is written for the
+// bottom of the market — backpacker per-diems and how to haggle a felucca.
+// A traveller at the top of the market who reads those pages learns nothing
+// and leaves. This page answers the same question honestly for the tier we
+// actually serve, which means it filters as hard as it attracts: someone
+// looking to do Egypt on €40 a day reads the first band and leaves, which is
+// the correct outcome for both of us.
+import Base from "@/layouts/Base.astro";
+import PageHero from "@/components/PageHero.astro";
+import Frieze from "@/components/Frieze.astro";
+import Faq from "@/components/Faq.astro";
+import TourCard from "@/components/TourCard.astro";
+import StandardOfTravel from "@/components/trust/StandardOfTravel.astro";
+import LeadCapture from "@/components/conversion/LeadCapture.astro";
+import { tours } from "@/data/tours";
+import { bookingTerms } from "@/data/booking";
+import { canonical } from "@/utils/links";
+import { site, SITE_URL } from "@/config/site";
+import { breadcrumb } from "@/schemas/jsonld";
+import { formatPrice } from "@/utils/format";
+
+const ROUTE = "egypt-tour-cost.html";
+
+// Real figures from the catalogue rather than invented ranges.
+const prices = tours.map((t) => t.price).sort((a, b) => a - b);
+const lowest = prices[0];
+const highest = prices[prices.length - 1];
+const multiDay = tours.filter((t) => /day/i.test(t.durationLabel) && t.price >= 900);
+const signature = [...multiDay].sort((a, b) => b.price - a.price).slice(0, 3);
+
+/** What actually moves the number, in the order it moves it. */
+const drivers = [
+  {
+    n: "01",
+    title: "How many of you there are",
+    body:
+      "This is the single largest factor and it surprises people. A private guide, a private vehicle and a private driver cost the same whether two people or six are using them — so the per-person price of a private journey falls sharply as the party grows. Two travellers carry the whole cost of the car; six split it. A family of six will often pay less per head for a fully private journey than a couple pays for the same itinerary.",
+  },
+  {
+    n: "02",
+    title: "When you come",
+    body:
+      "Egypt has a genuine high season — roughly October to April, plus Christmas, New Year and Easter — and the difference is not marginal. The same Nile suite can cost twice as much over New Year as it does in early June. If your dates are flexible by even two weeks, late October, early March and the first half of June buy noticeably more journey for the same money.",
+  },
+  {
+    n: "03",
+    title: "Where you sleep",
+    body:
+      "Hotels are the largest line in most quotes and the range in Egypt is enormous. A comfortable five-star in Cairo and a landmark hotel with a pyramid view are both 'five-star'; they are not the same price and they are not the same experience. On the Nile the gap is wider still — the difference between a standard cruise vessel and one of the small, restored boats is the difference between a holiday and a memory.",
+  },
+  {
+    n: "04",
+    title: "How you cross the country",
+    body:
+      "Cairo to Luxor is an hour by air or ten by road. Aswan to Abu Simbel is a forty-minute flight or a three-hour desert drive each way. Domestic flights add cost and give back the thing you cannot buy more of, which is time on the ground. On a short trip they are almost always the right call.",
+  },
+  {
+    n: "05",
+    title: "How hard the days work",
+    body:
+      "An itinerary with four sites a day is cheaper to build and worse to live. Slower days need more nights, and more nights cost more — but they are the difference between having seen Egypt and having been there. We would rather quote you seven unhurried days than five exhausting ones.",
+  },
+];
+
+/** Honest market bands. The point is to place ourselves precisely. */
+const bands = [
+  {
+    label: "Independent travel",
+    range: "€40–90",
+    per: "per person, per day",
+    body:
+      "Public transport, budget hotels, self-guided sites, group day-tours bought locally. Egypt is genuinely rewarding at this level and many people travel it happily this way. It is not what we do, and we would not pretend otherwise.",
+    us: false,
+  },
+  {
+    label: "Group tours",
+    range: "€90–180",
+    per: "per person, per day",
+    body:
+      "A seat on a coach with twenty to forty others, fixed dates, a shared guide and an itinerary you cannot change. Good value if the itinerary happens to suit you, and the standard way most of the world sees Egypt.",
+    us: false,
+  },
+  {
+    label: "Private, tailor-made",
+    range: "€200–450",
+    per: "per person, per day",
+    body:
+      "Where Kemet sits. Your own licensed Egyptologist, your own vehicle and driver, hotels chosen for the room rather than the star rating, and an itinerary written for you. Per-person cost falls as the party grows.",
+    us: true,
+  },
+  {
+    label: "At the very top",
+    range: "€600+",
+    per: "per person, per day",
+    body:
+      "Private charter between cities, a chartered dahabiya on the Nile, suites at the landmark hotels, private after-hours access where it can be arranged. We plan at this level when it is asked for.",
+    us: false,
+  },
+];
+
+const faqs = [
+  {
+    q: "How much does a private tour of Egypt cost?",
+    a: `For a fully private, tailor-made journey with a licensed Egyptologist, a private vehicle and driver and good hotels, budget roughly €200–450 per person per day. Kemet's own journeys start from ${formatPrice(lowest)} per person for a single day and run to ${formatPrice(highest)} per person for a fourteen-day grand tour. The per-person figure falls as the party grows, because the guide and the vehicle are shared between more people.`,
+  },
+  {
+    q: "Why is a private Egypt tour more expensive than a group tour?",
+    a: "Because almost nothing is shared. A group tour divides one guide, one coach and one driver between thirty people; a private journey divides them between your party alone. You are also buying the ability to change the plan — to stay longer at Abu Simbel, to skip the papyrus shop, to start at six because the light is better. That flexibility has a real cost and it is the main thing you are paying for.",
+  },
+  {
+    q: "Is Egypt expensive to visit?",
+    a: "Egypt is one of the least expensive countries in the world for food, transport and entrance fees, and one where the gap between the bottom and the top of the market is unusually wide. You can see the Pyramids for the price of a museum ticket. What costs money is not access — it is the quality of the person standing next to you explaining what you are looking at, the car that collects you, and the room you come back to.",
+  },
+  {
+    q: "How much should I budget for a week in Egypt?",
+    a: `At the private, tailor-made level a week for two people typically lands between €2,800 and €6,000 in total, depending on hotels, season and whether you fly or drive between cities. That covers your Egyptologist throughout, all entrance fees, private transfers and lunch on touring days. International flights, the ${"US$30"} entry visa and gratuities sit outside it.`,
+  },
+  {
+    q: "What is included in a Kemet price?",
+    a: "Your private licensed Egyptologist throughout, all entrance fees to sites and monuments, private air-conditioned transfers, hotel pickup and drop-off, lunch on each touring day and bottled water every day. Excluded: international flights, the Egypt entry visa, gratuities, personal expenses and named optional extras. Every quote itemises both lists before you commit to anything.",
+  },
+  {
+    q: "When do I pay?",
+    a: `${bookingTerms.deposit.label} confirms your journey; the balance is ${bookingTerms.balance.label.toLowerCase()}. Nothing is paid before you have the written itinerary and the itemised price in front of you.`,
+  },
+  {
+    q: "Are prices per person or for the whole party?",
+    a: "Every price on this site is per person, and every one is a starting point for a private journey — never a per-seat price on a shared departure. Because the fixed costs are split across your party, the per-person figure drops as more of you travel; tell us the party size and the quote reflects it.",
+  },
+  {
+    q: "Is it cheaper to book in Egypt when I arrive?",
+    a: "For a single day tour, sometimes. For anything else, no — and the saving is rarely what it appears. Booking on the ground means taking whichever guide is free rather than one chosen for your interests, competing for hotel rooms in high season, and losing the days you came for to arranging things. The travellers who do this most often end up paying a similar amount for a worse trip.",
+  },
+];
+
+const jsonld: Record<string, unknown>[] = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "How Much a Private Egypt Tour Costs",
+    description:
+      "What a private, tailor-made journey in Egypt costs per person per day, what moves the number, and where Kemet sits in the market.",
+    url: canonical(ROUTE),
+    inLanguage: "en",
+    about: { "@type": "Country", name: "Egypt" },
+    isPartOf: { "@type": "WebSite", name: `${site.name} — The Black Land`, url: SITE_URL },
+    publisher: { "@type": "TravelAgency", name: site.name, url: SITE_URL },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question", name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  },
+  breadcrumb([["Home", "index.html"], ["What a private Egypt journey costs", ROUTE]]),
+];
+---
+<Base
+  title="How Much a Private Egypt Tour Costs (2026) | Kemet"
+  description="What a private, tailor-made Egypt journey costs per person per day, the five things that move the price, and exactly where Kemet sits in the market."
+  active={ROUTE}
+  jsonld={jsonld}
+  keywords="private egypt tour cost, luxury egypt tour price, how much does a trip to egypt cost, egypt tour price per person, tailor-made egypt itinerary cost, egypt nile cruise price"
+>
+  <PageHero
+    crumb="What it costs"
+    symbol="sun"
+    title="What a private Egypt journey costs"
+    text="An honest answer, written for travellers at the top of the market rather than the bottom — where the money goes, what moves the number, and where we sit."
+  />
+
+  <section style="padding-top:26px">
+    <div class="wrap ec-wrap">
+
+      <p class="ec-lede">
+        Most pages answering this question are written for a different traveller — per-diems,
+        dormitories and how to bargain for a felucca. That is a real and worthwhile way to see
+        Egypt, and it is not the one we plan. Here is the same question answered for a private,
+        guided journey, with the numbers we actually quote.
+      </p>
+
+      <div class="ec-headline">
+        <div>
+          <span class="ec-k">Private, tailor-made</span>
+          <b>€200–450</b>
+          <em>per person, per day</em>
+        </div>
+        <div>
+          <span class="ec-k">Kemet journeys from</span>
+          <b>{formatPrice(lowest)}</b>
+          <em>per person, a single day</em>
+        </div>
+        <div>
+          <span class="ec-k">A week for two</span>
+          <b>€2,800–6,000</b>
+          <em>total, typically</em>
+        </div>
+        <div>
+          <span class="ec-k">Deposit</span>
+          <b>25%</b>
+          <em>balance 30 days before</em>
+        </div>
+      </div>
+
+      <Frieze />
+
+      <div class="sec-head reveal">
+        <div class="eyebrow">01 · The market</div>
+        <h2>Four ways to see Egypt, and what each costs</h2>
+        <div class="rule"></div>
+        <p>
+          The gap between the bottom and the top of the Egyptian market is wider than almost
+          anywhere else in the world. Knowing which band you are shopping in is more useful than
+          any single number.
+        </p>
+      </div>
+
+      <div class="ec-bands">
+        {bands.map((b) => (
+          <div class={`ec-band reveal${b.us ? " is-us" : ""}`}>
+            {b.us && <span class="ec-badge">Where Kemet sits</span>}
+            <h3>{b.label}</h3>
+            <div class="ec-range">{b.range} <em>{b.per}</em></div>
+            <p>{b.body}</p>
+          </div>
+        ))}
+      </div>
+
+      <Frieze />
+
+      <div class="sec-head reveal">
+        <div class="eyebrow">02 · The variables</div>
+        <h2>Five things that move the number</h2>
+        <div class="rule"></div>
+        <p>In the order they matter, not the order people expect.</p>
+      </div>
+
+      <div class="ec-drivers">
+        {drivers.map((d) => (
+          <div class="ec-driver reveal">
+            <span class="ec-n">{d.n}</span>
+            <div>
+              <h3>{d.title}</h3>
+              <p>{d.body}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <StandardOfTravel
+        eyebrow="03 · The standard"
+        heading="What the money buys"
+        intro="Every operator in Egypt uses the word luxury. These are the specifics behind ours — the things you can check, before you pay for anything."
+      />
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow">04 · In practice</div>
+        <h2>Three signature journeys</h2>
+        <div class="rule"></div>
+        <p>
+          Starting points, not fixed departures — each is rewritten around your dates, your party
+          and what you care about. Prices are per person and fall as the party grows.
+        </p>
+      </div>
+      <div class="grid-3">
+        {signature.map((t) => <TourCard tour={t} />)}
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap ec-wrap">
+      <Faq items={faqs} heading="Cost questions, answered" />
+    </div>
+  </section>
+
+  <LeadCapture
+    variant="consultation"
+    heading="Tell us what you have in mind"
+    subtext="Send your dates, your party and roughly what you want the trip to be. You will get a written itinerary with an itemised price — no obligation, and no call centre."
+    whatsappMessage="Hello Kemet — I'd like a quote for a private journey in Egypt."
+    emailSubject="Quote request — private Egypt journey"
+  />
+</Base>
+
+<style>
+  .ec-wrap { max-width: 940px; }
+  .ec-lede { font-family: var(--ff-display); font-weight: 300; font-size: 1.3rem;
+    line-height: 1.68; color: var(--bone); margin: 0 0 38px; max-width: 780px; }
+
+  .ec-headline {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+    background: var(--line); border: 1px solid var(--line); border-radius: 2px;
+    overflow: hidden; margin-bottom: 8px;
+  }
+  .ec-headline > div { background: var(--ink-2); padding: 24px 20px; text-align: center; }
+  .ec-k { display: block; font-size: .61rem; letter-spacing: .24em; text-transform: uppercase;
+    color: var(--muted-2); margin-bottom: 9px; }
+  .ec-headline b { display: block; font-family: var(--ff-display); font-weight: 400;
+    font-size: 1.85rem; line-height: 1; color: var(--gold-bright); }
+  .ec-headline em { display: block; font-style: normal; margin-top: 8px;
+    font-size: .8rem; color: var(--muted-2); line-height: 1.5; }
+
+  .ec-bands { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 34px; }
+  .ec-band { position: relative; border: 1px solid var(--line); border-radius: 2px;
+    padding: 28px 26px; background: rgba(255,255,255,.012); }
+  .ec-band.is-us { border-color: var(--gold); background: rgba(217,180,90,.06); }
+  .ec-band.is-us::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+  .ec-badge { position: absolute; top: -11px; left: 26px; font-size: .6rem; letter-spacing: .24em;
+    text-transform: uppercase; color: var(--ink); background: var(--gold);
+    padding: 5px 12px; border-radius: 20px; font-weight: 600; }
+  .ec-band h3 { font-size: 1.12rem; color: var(--bone); margin: 0 0 6px; font-weight: 500; }
+  .ec-range { font-family: var(--ff-display); font-size: 1.5rem; color: var(--gold-bright);
+    margin-bottom: 12px; line-height: 1.2; }
+  .ec-range em { font-style: normal; font-family: var(--ff-body); font-size: .76rem;
+    letter-spacing: .16em; text-transform: uppercase; color: var(--muted-2);
+    display: block; margin-top: 4px; }
+  .ec-band p { color: var(--muted); font-size: .92rem; line-height: 1.78; margin: 0; }
+
+  .ec-drivers { margin-top: 34px; }
+  .ec-driver { display: grid; grid-template-columns: 62px 1fr; gap: 22px;
+    padding: 26px 0; border-bottom: 1px solid var(--line); }
+  .ec-driver:last-child { border-bottom: 0; }
+  .ec-n { font-family: var(--ff-display); font-size: 1.9rem; color: var(--gold);
+    line-height: 1; width: 62px; }
+  .ec-driver h3 { font-size: 1.25rem; color: var(--bone); margin: 0 0 10px; }
+  .ec-driver p { color: var(--muted); font-size: .96rem; line-height: 1.85; margin: 0; }
+
+  @media(max-width:900px){ .ec-headline { grid-template-columns: repeat(2, 1fr); } }
+  @media(max-width:760px){ .ec-bands { grid-template-columns: 1fr; } }
+  @media(max-width:680px){
+    .ec-lede { font-size: 1.15rem; }
+    .ec-headline > div { padding: 18px 14px; }
+    .ec-headline b { font-size: 1.5rem; }
+    .ec-band { padding: 24px 20px; }
+    /* Match the site-wide phone rule: the numeral sits above its heading so the
+       text returns to the page gutter. */
+    .ec-driver { display: block; padding: 22px 0; }
+    .ec-n { display: block; width: auto; font-size: 1.3rem; margin-bottom: 8px; }
+  }
+</style>

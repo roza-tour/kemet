@@ -64,6 +64,7 @@ export const footerCompany: FooterColumn = {
   links: [
     { label: "About Kemet", href: "about.html" },
     { label: "Contact", href: "contact.html" },
+    { label: "What a journey costs", href: "egypt-tour-cost.html" },
     { label: "Booking & Cancellation", href: "booking.html" },
     { label: "Privacy Policy", href: "privacy.html" },
     { label: "Terms of Use", href: "terms.html" },

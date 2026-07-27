@@ -2,6 +2,7 @@
 // About page (/about.html). Data-driven: every section reads from the
 // centralized company profile. No company information is hardcoded here.
 import Base from "@/layouts/Base.astro";
+import StandardOfTravel from "@/components/trust/StandardOfTravel.astro";
 import PageHero from "@/components/PageHero.astro";
 import SectionHeader from "@/components/SectionHeader.astro";
 import Frieze from "@/components/Frieze.astro";
@@ -114,6 +115,16 @@ const jsonld = aboutPageSchema();
   </section>
 
   {/* CTA */}
+  <section style="padding-top:0">
+    <div class="wrap">
+      <StandardOfTravel
+        eyebrow="The standard"
+        heading="What we are, and what we are not"
+        intro="Every operator in Egypt uses the word luxury. These are the specifics behind ours, and an honest account of the traveller we are not the right choice for."
+      />
+    </div>
+  </section>
+
   <section class="cta">
     <div class="wrap">
       <CTABlock

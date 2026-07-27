@@ -1,0 +1,122 @@
+---
+// StandardOfTravel — states the tier in concrete terms, wherever a visitor
+// might be meeting the brand for the first time.
+//
+// The point is not to say "luxury" again. It is to give a stranger enough
+// verifiable specifics in ten seconds that they can place us correctly and
+// self-select — including out. `compact` renders the six points only; the full
+// variant adds who it suits, who it does not, and the position on price.
+import SymbolIcon from "@/components/SymbolIcon.astro";
+import { alwaysTrue, notOurTraveller, ourTraveller, priceStance } from "@/data/standard";
+
+interface Props {
+  /** Section eyebrow. */
+  eyebrow?: string;
+  heading?: string;
+  intro?: string;
+  /** Points only — for pages that already carry a fit/not-for block. */
+  compact?: boolean;
+  /** Include the plain statement about price. */
+  showPrice?: boolean;
+}
+const {
+  eyebrow = "The standard",
+  heading = "What every Kemet journey is",
+  intro =
+    "Every operator in Egypt uses the word luxury. These are the specifics behind ours — the things you can check, before you pay for anything.",
+  compact = false,
+  showPrice = true,
+} = Astro.props;
+---
+<div class="sot">
+  <div class="sot-head reveal">
+    <div class="eyebrow">{eyebrow}</div>
+    <h2>{heading}</h2>
+    <div class="rule"></div>
+    {intro && <p>{intro}</p>}
+  </div>
+
+  <div class="sot-grid">
+    {alwaysTrue.map((p) => (
+      <div class="sot-card reveal">
+        <div class="sot-sym" aria-hidden="true"><SymbolIcon name={p.symbol} /></div>
+        <h3>{p.title}</h3>
+        <p>{p.body}</p>
+      </div>
+    ))}
+  </div>
+
+  {!compact && (
+    <div class="sot-fit reveal">
+      <div class="sot-col">
+        <h3><span aria-hidden="true">✓</span> Who this is for</h3>
+        <ul>{ourTraveller.map((i) => <li>{i}</li>)}</ul>
+      </div>
+      <div class="sot-col sot-col--no">
+        <h3><span aria-hidden="true">—</span> Who it isn't for</h3>
+        <ul>{notOurTraveller.map((i) => <li>{i}</li>)}</ul>
+      </div>
+    </div>
+  )}
+
+  {showPrice && (
+    <div class="sot-price reveal">
+      <h3>{priceStance.headline}</h3>
+      <p>{priceStance.body}</p>
+    </div>
+  )}
+</div>
+
+<style>
+  .sot-head { margin-bottom: 44px; }
+  .sot-head h2 { font-size: clamp(1.9rem, 3.4vw, 2.7rem); color: var(--bone); margin-top: 18px; }
+  .sot-head p { color: var(--muted); max-width: 640px; margin: 24px 0 0; line-height: 1.85; }
+
+  .sot-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .sot-card {
+    border: 1px solid var(--line); border-radius: 2px; padding: 30px 28px;
+    background: linear-gradient(165deg, rgba(30,25,18,.9), rgba(14,17,21,.66));
+    transition: border-color .5s, transform .5s cubic-bezier(.22,.61,.36,1);
+  }
+  .sot-card:hover { border-color: var(--line-2); transform: translateY(-4px); }
+  .sot-sym { width: 44px; height: 50px; margin-bottom: 18px;
+    filter: drop-shadow(0 6px 16px rgba(217,180,90,.22)); }
+  .sot-sym :global(svg) { width: 100%; height: 100%; }
+  .sot-card h3 { font-size: 1.14rem; color: var(--bone); margin: 0 0 10px; font-weight: 500; }
+  .sot-card p { color: var(--muted); font-size: .93rem; line-height: 1.78; margin: 0; }
+
+  .sot-fit { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; margin-top: 26px; }
+  .sot-col { border: 1px solid var(--line); border-radius: 2px; padding: 28px 26px;
+    background: rgba(217,180,90,.04); }
+  .sot-col--no { background: rgba(255,255,255,.015); }
+  .sot-col h3 { font-size: .68rem; letter-spacing: .3em; text-transform: uppercase;
+    font-family: var(--ff-body); font-weight: 400; color: var(--gold);
+    margin: 0 0 16px; display: flex; align-items: center; gap: 10px; }
+  .sot-col--no h3 { color: var(--muted-2); }
+  .sot-col ul { list-style: none; margin: 0; padding: 0; }
+  .sot-col li { position: relative; padding-left: 18px; color: var(--muted);
+    font-size: .93rem; line-height: 1.7; margin-bottom: 11px; }
+  .sot-col li:last-child { margin-bottom: 0; }
+  .sot-col li::before { content: ""; position: absolute; left: 0; top: .66em;
+    width: 5px; height: 5px; border-radius: 50%; background: var(--gold); opacity: .8; }
+  .sot-col--no li::before { background: var(--muted-2); opacity: .55; }
+
+  .sot-price { margin-top: 26px; padding: 30px 32px; border-left: 2px solid var(--gold);
+    background: rgba(217,180,90,.05); }
+  .sot-price h3 { font-family: var(--ff-display); font-weight: 300; font-size: 1.4rem;
+    color: var(--gold-bright); margin: 0 0 12px; }
+  .sot-price p { color: var(--muted); font-size: .97rem; line-height: 1.88; margin: 0;
+    max-width: 760px; }
+
+  @media(max-width:1000px){ .sot-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media(max-width:760px){
+    .sot-grid { grid-template-columns: 1fr; gap: 18px; }
+    .sot-fit { grid-template-columns: 1fr; gap: 18px; }
+  }
+  @media(max-width:680px){
+    .sot-head { margin-bottom: 34px; }
+    .sot-card { padding: 24px 20px; }
+    .sot-col { padding: 24px 20px; }
+    .sot-price { padding: 24px 20px; }
+  }
+</style>

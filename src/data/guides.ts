@@ -746,7 +746,7 @@ export const guides: Guide[] = [
           "Honeymoon — swap the cruise for a small dahabiya under sail and add a Red Sea coda (12 days total)",
           "Families — same shape, later starts, and a pool-anchored hotel in Luxor; children handle the cruise brilliantly",
           "Second visit — replace days 1–3 with Alexandria and the Fayoum, keep the south as is",
-          "Tighter budget — the sleeper train replaces both flights: board in Cairo after dinner, wake in Luxor",
+          "Slower, by rail — a private sleeper cabin replaces the Cairo–Luxor flight: dinner on board, the Nile valley at first light through the window",
         ],
       },
     ],

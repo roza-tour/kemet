@@ -38,9 +38,13 @@ const verified = new Date(VERIFIED_ON).toLocaleDateString("en-GB", {
 
 const needsVisa = n.route !== "visa-free";
 
-// Three journeys to seed a plan — cheapest first so the page ends on a
-// concrete next step rather than a dead end.
-const picks = [...tours].sort((a, b) => a.price - b.price).slice(0, 3);
+// Three journeys to seed a plan. Deliberately the substantial multi-day
+// itineraries, NOT the cheapest — a visitor arriving from a search engine
+// should meet the standard of travel we actually sell, not the entry price.
+const picks = [...tours]
+  .filter((t) => /day/i.test(t.durationLabel) && t.price >= 900)
+  .sort((a, b) => b.price - a.price)
+  .slice(0, 3);
 
 const faqs = [
   {
@@ -203,8 +207,9 @@ const jsonld: Record<string, unknown>[] = [
     <div class="wrap">
       <h2 class="vpicks-h">Journeys to start from</h2>
       <p class="vpicks-p">
-        Every Kemet journey is private and shaped around you — these are starting points, not fixed
-        departures. Tell us your dates and we will build the itinerary around them.
+        Private throughout, led by a licensed Egyptologist, with no shared coaches and no fixed
+        departure dates. These are starting points — tell us your dates and your party and the
+        itinerary is rewritten around them.
       </p>
       <div class="grid-3">
         {picks.map((t) => <TourCard tour={t} base={base} />)}

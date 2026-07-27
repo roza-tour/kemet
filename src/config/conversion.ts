@@ -35,7 +35,7 @@ export const enquiryTypes: EnquiryType[] = [
     whatsappMessage: "Hello Kemet — I'd like to request a quote for an Egypt journey.",
     emailSubject: "Quote request — Kemet Egypt",
     emailBody:
-      "Hello Kemet,\n\nI'd like to request a quote for an Egypt journey.\n\nTravel dates:\nGroup size:\nDestinations of interest:\nBudget range:\n\nThank you.",
+      "Hello Kemet,\n\nI'd like to request a quote for an Egypt journey.\n\nTravel dates:\nGroup size:\nDestinations of interest:\nWhat matters most to you:\n\nThank you.",
   },
   {
     id: "custom-itinerary",
@@ -46,7 +46,7 @@ export const enquiryTypes: EnquiryType[] = [
       "Hello Kemet — I'd like to build a custom Egypt itinerary.",
     emailSubject: "Custom itinerary request — Kemet Egypt",
     emailBody:
-      "Hello Kemet,\n\nI'd like to discuss a custom Egypt itinerary.\n\nTravel dates:\nDuration:\nGroup size:\nDestinations / interests:\nBudget range:\n\nThank you.",
+      "Hello Kemet,\n\nI'd like to discuss a custom Egypt itinerary.\n\nTravel dates:\nDuration:\nGroup size:\nDestinations / interests:\nWhat matters most to you:\n\nThank you.",
   },
   {
     id: "private-tour",
@@ -101,7 +101,7 @@ export const enquiryTypes: EnquiryType[] = [
       "Hello Kemet — I'd like to discuss a corporate Egypt programme.",
     emailSubject: "Business travel enquiry — Kemet Egypt",
     emailBody:
-      "Hello Kemet,\n\nI'd like to discuss a corporate travel programme to Egypt.\n\nType of event:\nGroup size:\nTravel dates:\nBudget range:\n\nThank you.",
+      "Hello Kemet,\n\nI'd like to discuss a corporate travel programme to Egypt.\n\nType of event:\nGroup size:\nTravel dates:\nWhat matters most to you:\n\nThank you.",
   },
 ];
 
@@ -288,14 +288,15 @@ export const ctaPlacements: CTAPlacement[] = [
 // ---------------------------------------------------------------------------
 
 export const defaultTourFitFor: string[] = [
-  "Travellers who prefer a private, guided experience",
-  "Those with a deep interest in ancient history and culture",
-  "Visitors who want a curated itinerary rather than self-guided travel",
-  "Anyone seeking high-quality, professionally managed logistics",
+  "Travellers who would rather see four things properly than twelve badly",
+  "Anyone who wants a licensed Egyptologist beside them, not a headset and a flag",
+  "Couples and families for whom pace, comfort and privacy decide whether a trip works",
+  "Visitors marking something — a honeymoon, an anniversary, a milestone birthday",
 ];
 
 export const defaultTourNotFor: string[] = [
-  "Travellers seeking large group or coach tours",
-  "Budget-focused independent backpackers",
-  "Visitors looking primarily for nightlife or beach holidays",
+  "Anyone looking for the lowest price on Egypt — we are not the cheapest and do not try to be",
+  "Coach tours, shared group departures and itineraries sold by the seat",
+  "Hostels, dormitories and hop-on backpacking routes",
+  "Travellers who would rather organise the logistics themselves",
 ];

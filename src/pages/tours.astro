@@ -1,5 +1,6 @@
 ---
 import Base from "@/layouts/Base.astro";
+import StandardOfTravel from "@/components/trust/StandardOfTravel.astro";
 import PageHero from "@/components/PageHero.astro";
 import SectionHeader from "@/components/SectionHeader.astro";
 import TourCard from "@/components/TourCard.astro";
@@ -60,6 +61,16 @@ const jsonld = [
       <div class="grid-3">
         {dayTours.map((tour) => <TourCard tour={tour} />)}
       </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <StandardOfTravel
+        eyebrow="The standard"
+        heading="What every journey on this page is"
+        showPrice={true}
+      />
     </div>
   </section>
 
