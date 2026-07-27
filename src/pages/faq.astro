@@ -78,8 +78,16 @@ const keywords = [
   .faq-wrap{max-width:880px}
   .faq-group{padding:6px 0}
   .faq-grouphead{display:flex;gap:22px;align-items:baseline;margin-bottom:14px;padding-bottom:16px;border-bottom:1px solid var(--line-2)}
-  .faq-gnum{font-family:var(--ff-display);font-size:1.9rem;line-height:1;color:var(--gold);font-variant-numeric:tabular-nums;flex:none}
+  /* Fraunces has no tabular figures, so `tabular-nums` is ignored and 01/02/03
+     each measured a different width — pushing every group heading to a
+     slightly different left edge. A fixed box makes the column true. */
+  .faq-gnum{font-family:var(--ff-display);font-size:1.9rem;line-height:1;color:var(--gold);flex:none;width:44px;text-align:right}
   .faq-grouphead h2{font-size:1.5rem;color:var(--bone);margin:0}
   .faq-grouphead p{margin:7px 0 0;color:var(--muted);font-size:.95rem;line-height:1.7}
-  @media(max-width:520px){.faq-gnum{font-size:1.5rem}}
+  /* On a phone the numeral + gap pushed the heading to a third left edge.
+     Stacking it returns the heading to the page gutter. */
+  @media(max-width:680px){
+    .faq-grouphead{display:block}
+    .faq-gnum{display:block;width:auto;text-align:left;font-size:1.4rem;margin-bottom:6px}
+  }
 </style>

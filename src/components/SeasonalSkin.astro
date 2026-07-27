@@ -84,7 +84,11 @@ const rows = seasonalCalendar.map((w) => [
   :root[data-season="christmas"]    { --gold:#E3C579; --gold-bright:#FFF6DA; --gold-deep:#A8823A; --line-2:rgba(227,197,121,.46); --srb:#2F7E66; }
   :root[data-season="sun-festival"] { --gold:#E8A33D; --gold-bright:#FBE2A6; --gold-deep:#A9631C; --line-2:rgba(232,163,61,.46); --srb:#A9631C; }
   :root[data-season="spring"]       { --gold:#DCC06B; --gold-bright:#FBF3D2; --gold-deep:#9C8438; --line-2:rgba(220,192,107,.44); --srb:#7FB086; }
-  :root[data-season="red-sea"]      { --gold:#6FD0C6; --gold-bright:#CFF3EE; --gold-deep:#2C8E86; --line-2:rgba(111,208,198,.44); --srb:#2C8E86; }
+  /* Red Sea runs May–September — five months. Repainting --gold teal turned
+     the entire brand mint for nearly half the year: logo glow, buttons, rules,
+     the nav CTA. The season now shifts gold to a cooler, sea-lit tone and the
+     teal lives where it belongs — in the ribbon and the ornament layer. */
+  :root[data-season="red-sea"]      { --gold:#D6C588; --gold-bright:#F2EDD2; --gold-deep:#8E8244; --line-2:rgba(214,197,136,.44); --srb:#2C8E86; }
   :root[data-season="honeymoon"]    { --gold:#E3B98C; --gold-bright:#FBE7D6; --gold-deep:#A9764B; --line-2:rgba(227,185,140,.46); --srb:#A9764B; }
   :root[data-season="eid"]          { --gold:#E0BE6A; --gold-bright:#FBEFC4; --gold-deep:#9C7A2E; --line-2:rgba(224,190,106,.44); --srb:#2F7E66; }
 
@@ -98,6 +102,12 @@ const rows = seasonalCalendar.map((w) => [
   @keyframes srb-in { to { transform: translateY(0); } }
   @media (prefers-reduced-motion: reduce) { .srb { animation: none; transform: none; } }
   .srb[hidden] { display: none; }
+
+  /* The floating WhatsApp button sits at bottom-right; with the ribbon shown it
+     landed on top of it. Lift it clear while the ribbon is actually visible —
+     the moment a visitor dismisses the ribbon it drops back down. */
+  html:has(.srb:not([hidden])) .wafab { bottom: max(66px, calc(env(safe-area-inset-bottom) + 62px)); }
+
   .srb-in { display: flex; align-items: center; gap: 16px; max-width: var(--maxw);
     margin: 0 auto; padding: 11px 104px 11px 28px; }
   .srb-text { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; flex: 1; min-width: 0; }

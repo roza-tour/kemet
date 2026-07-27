@@ -137,5 +137,13 @@ const picked: Collection[] = collections
   }
 
   @media(max-width:1000px){ .sstrip { grid-template-columns: repeat(2, 1fr); } }
-  @media(max-width:640px){ .sstrip { grid-template-columns: 1fr; } }
+  @media(max-width:640px){ .sstrip { grid-template-columns: 1fr; gap: 16px; } }
+  /* Match the single card inset the rest of the site uses on a phone, so this
+     strip's text lands on the same left edge as every other card. */
+  @media(max-width:680px){
+    .sstrip-card { padding: 26px 20px 24px; }
+    .sstrip-glyph { margin-bottom: 13px; }
+    .sstrip-more { font-size: .74rem; letter-spacing: .22em; }
+    .sstrip-badge { font-size: .72rem; }
+  }
 </style>

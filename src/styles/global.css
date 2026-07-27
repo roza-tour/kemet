@@ -549,3 +549,118 @@ footer{background:var(--ink-2);border-top:1px solid var(--line);padding:100px 0 
 .lb-p{left:10px;top:50%;transform:translateY(-50%);font-size:2.6rem}
 .lb-n{right:10px;top:50%;transform:translateY(-50%);font-size:2.6rem}
 @media(max-width:680px){.lb-p{left:0}.lb-n{right:0}.lb img{max-width:96vw}}
+
+/* ── Mobile composition ──────────────────────────────────────────────────
+   A 390px audit found body text starting at THIRTEEN different left edges
+   (23, 28, 50, 53, 55, 57, 59, 70, 75, 76, 77, 78, 86px), because every card
+   had chosen its own padding — 20, 22, 24, 26, 28 and 30px. At desktop widths
+   those differences read as variety; on a phone the eye tracks one vertical
+   line down the page and every mismatch reads as carelessness.
+
+   This block is the whole system. On a phone there are exactly TWO edges:
+     · 26px — the page gutter: section headings, eyebrows, body copy
+     · 47px — inside any card or panel (26 gutter + 20 padding + 1 border)
+   Nothing else is allowed to invent its own inset. */
+@media(max-width:680px){
+  .wrap{padding:0 26px}
+
+  /* The hero opted out of the gutter entirely: its headline, lede and buttons
+     sat at x=0, touching both screen edges and crossing the gold frame. */
+  /* NOTE: the .wrap shorthand above resets padding-bottom, and .hero-inner
+     carries both classes — so the hero's bottom inset must be restated here.
+     It is sized to clear the floating WhatsApp button and the seasonal
+     ribbon, which both sit over the bottom ~110px of the screen. */
+  .hero-inner{padding-left:26px;padding-right:26px;padding-bottom:150px}
+  /* "SCROLL" and "EST. CAIRO — THE BLACK LAND" are desktop furniture. On a
+     phone they landed on top of the hero buttons and the WhatsApp control,
+     and "scroll" is a prompt no touch user needs. */
+  .hero .hfoot{display:none}
+  .hero .hframe{inset:14px}
+
+  /* The editorial overlap: on desktop a small portrait sits across the corner
+     of the main photograph. At 390px the two images are nearly the same size,
+     so the overlap stopped reading as composition and started reading as a
+     collision. Stagger them instead — main image, then the portrait set right
+     and slightly narrower, keeping the offset gold frame as the detail. */
+  .ov-media .over{position:static;width:64%;margin:18px 0 16px auto;
+    box-shadow:0 30px 60px -34px rgba(0,0,0,.8)}
+  .ov-media .over::after{transform:translate(10px,10px)}
+  .ov-copy{margin-bottom:44px}
+  .hero h1{font-size:clamp(2.6rem,11.5vw,3.6rem)}
+  .lede{font-size:.97rem;line-height:1.75;margin-top:26px}
+  /* Two buttons of different widths stacked left is the least composed shape
+     available — full width gives the hero a single confident column. */
+  .hero-actions{flex-direction:column;gap:12px;margin-top:38px}
+  .hero-actions .btn{width:100%;text-align:center}
+
+  /* ONE inner inset for every card, panel and caption on the site. */
+  .jcard .body,.tease,.god,.tile .tcap,.dpost .dcap,.qa,.enq-card,.cform,
+  .sweet .body,.eat .body{padding-left:20px;padding-right:20px}
+  /* Cards designed around generous desktop breathing room are too tall on a
+     phone once the width halves — bring the vertical padding back in scale. */
+  .tease{padding-top:30px;padding-bottom:26px}
+  .god{padding-top:32px;padding-bottom:28px}
+  .enq-card{padding-top:24px;padding-bottom:24px}
+
+  /* Type floor. The micro-label tier rendered at 9.3–11.2px with .3–.42em
+     tracking: at that size the letter-spacing pulls the word apart faster than
+     the eye can reassemble it. Larger type, tighter tracking. */
+  .eyebrow{font-size:.74rem;letter-spacing:.32em}
+  .btn{font-size:.75rem;letter-spacing:.24em;padding:18px 30px}
+  /* These are authored as descendant selectors, so the mobile floor has to
+     match that specificity or it silently loses the cascade. */
+  .jcard .route{font-size:.74rem;letter-spacing:.2em}
+  .jcard .tag{font-size:.72rem;letter-spacing:.18em}
+  .jcard .price small{font-size:.72rem;letter-spacing:.16em}
+  .dn small{font-size:.66rem;letter-spacing:.14em}
+  .foot-col h5{font-size:.76rem;letter-spacing:.26em}
+  .stat .slab{font-size:.72rem;letter-spacing:.24em}
+  .ov-copy .more,.tease .more{font-size:.75rem;letter-spacing:.22em}
+
+  /* Identity cards: the copy was centred inside a 250px auto-margin box, so on
+     a single-column phone layout it floated 23px inside the card's own padding
+     — a third edge for no reason. Left-aligned, full card width. */
+  .god{text-align:left}
+  .god p{text-align:left;max-width:none;margin:0}
+  .god .sym,.god .gsym{margin-left:0}
+
+  /* The itinerary is the most-read block on a tour page, and the timeline
+     reserved 84px of a 390px screen for its day marker — the text ran in a
+     254px column. On a phone the marker sits above its day and the copy gets
+     the full page width, on the same gutter as everything else. The spine
+     becomes a left rule so the sequence still reads as a timeline. */
+  .day{display:block;padding-left:0;padding-bottom:26px;border-left:0}
+  .day::before{content:none}
+  .dn{width:auto;height:auto;border-radius:0;border:0;background:none;
+    flex-direction:row;align-items:baseline;justify-content:flex-start;gap:8px;
+    display:inline-flex;padding-bottom:8px}
+  .dn small{margin-bottom:0;order:0}
+  .dn b{font-size:1rem;color:var(--gold-bright)}
+  .dc h3,.dc h4{margin-top:0}
+  /* Price / process cards join the single card inset. */
+  .pcard{padding-left:20px;padding-right:20px;padding-top:24px;padding-bottom:24px}
+  /* .qa carries no side border, so 21px lands it on the same edge as the
+     bordered cards rather than 1px inside them. */
+  .qa{padding-left:21px;padding-right:21px}
+
+  /* The watermark numeral behind section headings is sized off the viewport;
+     at 13vw it crowded the heading it sits behind instead of ghosting it. */
+  .sec-head[data-no]::before{font-size:5.2rem;top:-.5em}
+}
+
+/* Below 560px a two-column grid leaves ~95px for a paragraph — three words a
+   line, a ribbon rather than a column. The pillar cards go single-file; the
+   cuisine tiles (a photo and two short lines) stay paired. */
+@media(max-width:560px){
+  .grid-tease{grid-template-columns:1fr}
+}
+
+/* Mobile nav: with the links collapsed into the burger, space-between left the
+   Contact button stranded in the middle of the bar between the logo and the
+   burger. Group the two controls together on the right. */
+@media(max-width:1080px){
+  .nav-cta{margin-left:auto;margin-right:14px;padding:11px 18px;font-size:.68rem;letter-spacing:.22em}
+}
+@media(max-width:420px){
+  .nav-cta{padding:10px 14px;letter-spacing:.16em;margin-right:8px}
+}
