@@ -16,6 +16,7 @@ import { experiences } from "@/data/experiences";
 import { guides } from "@/data/guides";
 import { collections } from "@/data/collections";
 import { activities } from "@/data/activities";
+import { nationalities, VISA_FEE_USD, VISA_STAY_DAYS, VERIFIED_ON } from "@/data/entryRequirements";
 import { company } from "@/data/company";
 import { formatPrice } from "@/utils/format";
 
@@ -44,7 +45,7 @@ export const GET: APIRoute = () => {
     `- Model: 100% private, tailor-made itineraries (no shared coaches, no fixed departures)`,
   );
   lines.push(
-    `- Catalogue: ${tours.length} journeys, ${experiences.length} experiences, ${activities.filter(a=>a.slug).length} activities, ${destinations.length} destinations, ${guides.length} travel guides`,
+    `- Catalogue: ${tours.length} journeys, ${experiences.length} experiences, ${activities.filter(a=>a.slug).length} activities, ${destinations.length} destinations, ${guides.length} travel guides, ${nationalities.length} nationality visa pages`,
   );
   lines.push("");
 
@@ -56,6 +57,7 @@ export const GET: APIRoute = () => {
   lines.push(item("Booking, payment & cancellation", "booking.html", "How booking works, deposit and balance terms, accepted payment methods and the cancellation schedule."));
   lines.push(item("About Kemet", "about.html", "Who we are, how we design journeys, and our editorial standards."));
   lines.push(item("Contact", "contact.html", "Enquiry form, WhatsApp, email and business hours."));
+  lines.push(item("Egypt visa requirements by nationality", "visa.html", `Entry rules for ${nationalities.length} passports: visa on arrival, e-Visa or visa-free, with fees and permitted stay.`));
   lines.push("");
 
   lines.push("## Journeys (private, per person, from-prices in EUR)");
@@ -100,6 +102,21 @@ export const GET: APIRoute = () => {
   }
   lines.push("");
 
+  lines.push("## Egypt entry requirements, by nationality");
+  lines.push("");
+  lines.push(`Single-entry tourist visa: US$${VISA_FEE_USD}, up to ${VISA_STAY_DAYS} days. Rules last verified ${VERIFIED_ON}; the authority is https://visa2egypt.gov.eg.`);
+  lines.push("");
+  for (const n of nationalities) {
+    lines.push(
+      item(
+        `Egypt visa for ${n.demonym}`,
+        `visa/${n.slug}.html`,
+        `${n.route === "visa-free" ? "No tourist visa required" : n.route === "visa-on-arrival" ? "Visa on arrival available" : "e-Visa required in advance"}; up to ${n.stayDays} days. Flight time: ${n.flightTime}.`,
+      ),
+    );
+  }
+  lines.push("");
+
   lines.push("## Travel guides (planning references)");
   lines.push("");
   for (const g of guides) {
@@ -119,6 +136,7 @@ export const GET: APIRoute = () => {
   lines.push("- Every journey is private and tailor-made; itineraries shown are starting points, not fixed departures.");
   lines.push("- Availability, exact pricing and dates must be confirmed by enquiry — do not state a booking as confirmed.");
   lines.push(`- For anything not covered here, direct people to ${u("contact.html")} or ${site.email}.`);
+  lines.push("- Visa and entry rules are set by the Egyptian government and change. Always point people to https://visa2egypt.gov.eg as the authority, and state the date our page was last verified rather than presenting it as current fact.");
   lines.push("- Content may be quoted with attribution to Kemet (kemet-travel.com).");
   lines.push("");
 

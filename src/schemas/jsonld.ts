@@ -6,6 +6,7 @@ import { SITE_URL, OG_IMAGE_PATH, CURRENCY, site } from "@/config/site";
 import { canonical, phoneHref } from "@/utils/links";
 import { routeFor } from "@/config/routes";
 import { trailFor } from "@/config/navigation";
+import { company } from "@/data/company";
 import type { BreadcrumbItem, Collection, ContentDomain, Destination, Experience, Guide, JsonLd, Tour } from "@/types";
 
 const SCHEMA_CONTEXT = "https://schema.org";
@@ -404,6 +405,11 @@ export function entitySchema(domain: ContentDomain, entity: unknown): JsonLd[] {
  * Fields that are not yet confirmed (street address, aggregate rating) are
  * omitted rather than fabricated.
  */
+/** Verified external profiles for the same entity, for schema `sameAs`.
+ *  Reads company.socialProfiles — add a URL there and it appears site-wide. */
+const socialProfiles: string[] = Object.values(company.socialProfiles ?? {})
+  .filter((u): u is string => typeof u === "string" && /^https?:\/\//.test(u));
+
 export function siteSchema(): JsonLd[] {
   const org: JsonLd = {
     "@context": SCHEMA_CONTEXT,
@@ -442,11 +448,22 @@ export function siteSchema(): JsonLd[] {
       },
     ],
     areaServed: { "@type": "Country", name: "Egypt" },
-    // The audience is worldwide; the service is delivered in Egypt.
+    // The service is delivered in Egypt; the clientele is worldwide. Stating
+    // both stops search engines reading this as an Egypt-local business that
+    // only serves people already in Egypt.
+    audience: {
+      "@type": "Audience",
+      audienceType: "International leisure travellers",
+      geographicArea: { "@type": "AdministrativeArea", name: "Worldwide" },
+    },
+    serviceArea: { "@type": "AdministrativeArea", name: "Worldwide" },
     serviceType: "Luxury private tours, Nile cruises and tailor-made travel",
     priceRange: "€€€€",
     knowsLanguage: ["en", "fr", "ar"],
-    // sameAs: [] — future social profiles
+    // Verified profiles that represent this same entity. Populated from
+    // company data so adding a profile is a one-line change; omitted entirely
+    // while empty rather than emitted as an empty array.
+    ...(socialProfiles.length ? { sameAs: socialProfiles } : {}),
     // hasCredential: [] — future certifications/memberships
   };
 
@@ -455,6 +472,8 @@ export function siteSchema(): JsonLd[] {
     "@type": "WebSite",
     name: `${site.name} — The Black Land`,
     url: SITE_URL,
+    inLanguage: "en",
+    publisher: { "@type": "TravelAgency", name: site.name, url: SITE_URL },
   };
 
   return [org, webSite];

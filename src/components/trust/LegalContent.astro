@@ -66,5 +66,15 @@ const pad2 = (n: number) => String(n).padStart(2, "0");
     .legal-toc ol{columns:2;column-gap:26px}
     .legal-body{max-width:none}
   }
+  /* Fraunces ships no tabular figures, so `tabular-nums` above is ignored and
+     01/02/03 each measure differently — every section heading landed on its
+     own left edge. On a phone the numeral moves above the heading so the
+     heading returns to the page gutter; above that a fixed box trues the column. */
+  .legal-num{width:38px;text-align:right}
+  @media(max-width:680px){
+    .legal-sec-head{display:block}
+    .legal-num{display:block;width:auto;text-align:left;font-size:1.2rem;margin-bottom:6px}
+    .legal-sec{padding:30px 0}
+  }
   @media(max-width:520px){.legal-toc ol{columns:1}}
 </style>
