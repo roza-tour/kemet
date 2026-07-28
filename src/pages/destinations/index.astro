@@ -4,6 +4,8 @@
 // 500). Entirely data-driven: it reads the catalogue and the region vocabulary,
 // so adding a destination surfaces it here automatically — no edit to this page.
 import Base from "@/layouts/Base.astro";
+import HubEditorial from "@/components/HubEditorial.astro";
+import { hubs } from "@/data/hubs";
 import PageHero from "@/components/PageHero.astro";
 import SectionHeader from "@/components/SectionHeader.astro";
 import DestinationCard from "@/components/destination/DestinationCard.astro";
@@ -35,12 +37,25 @@ const jsonld = [
     destinations.map((d) => ({ title: d.title, slug: d.slug, domain: "destination" })),
   ),
 ];
+
+const hub = hubs.destinations;
+// FAQPage from the hub editorial — rich results plus a clean answer source
+// for AI engines, generated from the same data the page renders.
+const faqLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: hub.faqs.map((f) => ({
+    "@type": "Question", name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
 ---
 <Base
   title="Egypt Destinations — Cairo, Giza, Luxor & Aswan | Kemet"
   description="Explore Egypt by destination — Cairo, Giza, Luxor, Aswan and Alexandria. Facts, highlights, best seasons and the private tours that visit each, from Kemet."
   active={ROUTE}
-  jsonld={jsonld}
+  jsonld={[...(Array.isArray(jsonld) ? jsonld : [jsonld]), faqLd]}
 >
   <PageHero
     crumb="Destinations"
@@ -67,5 +82,6 @@ const jsonld = [
     </section>
   ))}
 
+  <HubEditorial hub={hub} faqHeading="Egypt destination questions" />
   <Frieze />
 </Base>

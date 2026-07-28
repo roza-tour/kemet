@@ -16,6 +16,7 @@ import { experiences } from "@/data/experiences";
 import { guides } from "@/data/guides";
 import { collections } from "@/data/collections";
 import { occasions } from "@/data/occasions";
+import { months } from "@/data/months";
 import { activities } from "@/data/activities";
 import { nationalities, VISA_FEE_USD, VISA_STAY_DAYS, VERIFIED_ON } from "@/data/entryRequirements";
 import { company } from "@/data/company";
@@ -79,6 +80,20 @@ export const GET: APIRoute = () => {
   lines.push("");
   for (const c of collections) {
     lines.push(item(c.title, `collections/${c.slug}.html`, c.shortSummary));
+  }
+  lines.push("");
+
+  lines.push("## Egypt month by month (timing, weather, crowds and prices)");
+  lines.push("");
+  lines.push(item("When to visit Egypt — the overview", "when-to-go.html", "The twelve months compared: temperatures for Cairo, Luxor, Aswan and the Red Sea, crowd and price levels, and which month suits which trip."));
+  for (const mo of months) {
+    lines.push(
+      item(
+        `Egypt in ${mo.name}`,
+        `when-to-go/${mo.slug}.html`,
+        `Luxor ${mo.temps.luxor}, Cairo ${mo.temps.cairo}, Red Sea water ${mo.seaTemp}. Crowds: ${mo.crowds}. Prices: ${mo.prices}. ${mo.shortSummary}`,
+      ),
+    );
   }
   lines.push("");
 

@@ -1,5 +1,7 @@
 ---
 import Base from "@/layouts/Base.astro";
+import HubEditorial from "@/components/HubEditorial.astro";
+import { hubs } from "@/data/hubs";
 import PageHero from "@/components/PageHero.astro";
 import SectionHeader from "@/components/SectionHeader.astro";
 import Placeholder from "@/components/Placeholder.astro";
@@ -7,12 +9,25 @@ import { savoury, sweets } from "@/data/cuisine";
 import { breadcrumb } from "@/schemas/jsonld";
 
 const jsonld = breadcrumb([["Home", "index.html"], ["Cuisine", "cuisine.html"]]);
+
+const hub = hubs.cuisine;
+// FAQPage from the hub editorial — rich results plus a clean answer source
+// for AI engines, generated from the same data the page renders.
+const faqLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: hub.faqs.map((f) => ({
+    "@type": "Question", name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
 ---
 <Base
   title="Egyptian Cuisine — The Table of Kemet"
   description="Taste Egypt with Kemet — koshari, ful and falafel, molokhia, stuffed pigeon, feteer and sayadeya, plus the great sweets: kunafa, basbousa, om ali and qatayef."
   active="cuisine.html"
-  jsonld={jsonld}
+  jsonld={[...(Array.isArray(jsonld) ? jsonld : [jsonld]), faqLd]}
 >
   <PageHero
     crumb="Cuisine"
@@ -62,4 +77,5 @@ const jsonld = breadcrumb([["Home", "index.html"], ["Cuisine", "cuisine.html"]])
       </div>
     </div>
   </section>
+  <HubEditorial hub={hub} faqHeading="Egyptian food questions" />
 </Base>

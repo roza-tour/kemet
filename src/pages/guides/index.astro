@@ -4,6 +4,8 @@
 // Entirely data-driven: adding a guide surfaces it here automatically — no
 // edit to this page required.
 import Base from "@/layouts/Base.astro";
+import HubEditorial from "@/components/HubEditorial.astro";
+import { hubs } from "@/data/hubs";
 import PageHero from "@/components/PageHero.astro";
 import SectionHeader from "@/components/SectionHeader.astro";
 import GuideCard from "@/components/guide/GuideCard.astro";
@@ -41,12 +43,25 @@ const jsonld = [
     guides.map((g) => ({ title: g.title, slug: g.slug, domain: "guide" })),
   ),
 ];
+
+const hub = hubs.guides;
+// FAQPage from the hub editorial — rich results plus a clean answer source
+// for AI engines, generated from the same data the page renders.
+const faqLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: hub.faqs.map((f) => ({
+    "@type": "Question", name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
 ---
 <Base
   title="Egypt Travel Guides — Planning, Visa, Transport & Culture | Kemet"
   description="Expert travel guides for Egypt — visa requirements, best time to visit, getting around, cuisine and culture. Essential reading before and during your trip."
   active={ROUTE}
-  jsonld={jsonld}
+  jsonld={[...(Array.isArray(jsonld) ? jsonld : [jsonld]), faqLd]}
 >
   <PageHero
     crumb="Travel Guides"
@@ -72,5 +87,6 @@ const jsonld = [
     </section>
   ))}
 
+  <HubEditorial hub={hub} faqHeading="Planning questions" />
   <Frieze />
 </Base>

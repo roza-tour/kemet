@@ -1,17 +1,32 @@
 ---
 import Base from "@/layouts/Base.astro";
+import HubEditorial from "@/components/HubEditorial.astro";
+import { hubs } from "@/data/hubs";
 import PageHero from "@/components/PageHero.astro";
 import ActivityCard from "@/components/ActivityCard.astro";
 import { activities } from "@/data/activities";
 import { breadcrumb } from "@/schemas/jsonld";
 
 const jsonld = breadcrumb([["Home", "index.html"], ["Activities", "activities.html"]]);
+
+const hub = hubs.activities;
+// FAQPage from the hub editorial — rich results plus a clean answer source
+// for AI engines, generated from the same data the page renders.
+const faqLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: hub.faqs.map((f) => ({
+    "@type": "Question", name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
 ---
 <Base
   title="Activities & Experiences in Egypt — Kemet"
   description="The moments between the monuments — a hot-air balloon over Luxor, a Sufi tanoura night in Cairo, Red Sea diving and a sunset felucca in Aswan."
   active="activities.html"
-  jsonld={jsonld}
+  jsonld={[...(Array.isArray(jsonld) ? jsonld : [jsonld]), faqLd]}
 >
   <PageHero
     crumb="Activities"
@@ -31,4 +46,5 @@ const jsonld = breadcrumb([["Home", "index.html"], ["Activities", "activities.ht
       </div>
     </div>
   </section>
+  <HubEditorial hub={hub} faqHeading="Activity questions, answered" />
 </Base>

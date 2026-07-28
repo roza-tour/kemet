@@ -1,0 +1,211 @@
+---
+// Egypt month by month (/when-to-go/<month>.html). Data-only from
+// src/data/months.ts — the twelve highest-volume timing queries in the
+// category, each answered for the tier we actually serve.
+import Base from "@/layouts/Base.astro";
+import PageHero from "@/components/PageHero.astro";
+import Frieze from "@/components/Frieze.astro";
+import Faq from "@/components/Faq.astro";
+import TourCard from "@/components/TourCard.astro";
+import LeadCapture from "@/components/conversion/LeadCapture.astro";
+import { months } from "@/data/months";
+import type { MonthGuide } from "@/data/months";
+import { tours } from "@/data/tours";
+import { canonical } from "@/utils/links";
+import { site, SITE_URL } from "@/config/site";
+import { breadcrumb } from "@/schemas/jsonld";
+
+export function getStaticPaths() {
+  return months.map((m) => ({ params: { slug: m.slug }, props: { m } }));
+}
+
+interface Props { m: MonthGuide }
+const { m } = Astro.props;
+const route = `when-to-go/${m.slug}.html`;
+const base = "../";
+
+const prev = months[(m.index + 10) % 12];
+const next = months[m.index % 12];
+
+// The substantial multi-day journeys, never the entry price.
+const picks = [...tours]
+  .filter((t) => /day/i.test(t.durationLabel) && t.price >= 900)
+  .sort((a, b) => b.price - a.price)
+  .slice(0, 3);
+
+const jsonld: Record<string, unknown>[] = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: `Egypt in ${m.name}`,
+    description: m.metaDescription,
+    url: canonical(route),
+    inLanguage: "en",
+    about: { "@type": "Country", name: "Egypt" },
+    isPartOf: { "@type": "WebSite", name: `${site.name} — The Black Land`, url: SITE_URL },
+    publisher: { "@type": "TravelAgency", name: site.name, url: SITE_URL },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: m.faqs.map((f) => ({
+      "@type": "Question", name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  },
+  breadcrumb([["Home", "index.html"], ["When to go", "when-to-go.html"], [`Egypt in ${m.name}`, route]]),
+];
+---
+<Base
+  title={`Egypt in ${m.name} — Weather, Crowds & Costs | Kemet`}
+  description={m.metaDescription}
+  active={route}
+  jsonld={jsonld}
+  keywords={`egypt in ${m.name.toLowerCase()}, visit egypt ${m.name.toLowerCase()}, egypt weather ${m.name.toLowerCase()}, best time to visit egypt, luxor ${m.name.toLowerCase()} temperature, red sea ${m.name.toLowerCase()}`}
+>
+  <PageHero
+    crumb={`Egypt in ${m.name}`}
+    symbol="sun"
+    base={base}
+    title={`Egypt in ${m.name}`}
+    text={m.shortSummary}
+  />
+
+  <section style="padding-top:26px">
+    <div class="wrap wm-wrap">
+
+      <div class="wm-stats">
+        <div><span class="wm-k">Cairo</span><b>{m.temps.cairo}</b></div>
+        <div><span class="wm-k">Luxor</span><b>{m.temps.luxor}</b></div>
+        <div><span class="wm-k">Aswan</span><b>{m.temps.aswan}</b></div>
+        <div><span class="wm-k">Red Sea air</span><b>{m.temps.redSea}</b></div>
+        <div><span class="wm-k">Sea temp</span><b>{m.seaTemp}</b></div>
+        <div><span class="wm-k">Crowds</span><b>{m.crowds}</b></div>
+        <div><span class="wm-k">Prices</span><b>{m.prices}</b></div>
+      </div>
+      <p class="wm-caption">
+        Typical daytime highs, rounded. A planning aid, not a forecast — crowd and price levels are
+        relative to Egypt's own year rather than to anywhere else.
+      </p>
+
+      <p class="wm-lede">{m.lede}</p>
+
+      <div class="wm-cols">
+        <div class="wm-col wm-col--good">
+          <h2><span aria-hidden="true">✓</span> What {m.name} is good for</h2>
+          <ul>{m.goodFor.map((g) => <li>{g}</li>)}</ul>
+        </div>
+        <div class="wm-col wm-col--watch">
+          <h2><span aria-hidden="true">—</span> What to be realistic about</h2>
+          <ul>{m.watchFor.map((w) => <li>{w}</li>)}</ul>
+        </div>
+      </div>
+
+      <div class="wm-occ">
+        <h2>Occasions this month</h2>
+        <p>{m.occasions}</p>
+        <a class="wm-more" href={`${base}collections.html`}>
+          Seasonal collections <i aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <div class="wm-verdict">
+        <h2>Our honest verdict</h2>
+        <p>{m.verdict}</p>
+      </div>
+
+      <nav class="wm-nav" aria-label="Other months">
+        <a href={`${prev.slug}.html`}>← Egypt in {prev.name}</a>
+        <a href={`${base}when-to-go.html`}>All twelve months</a>
+        <a href={`${next.slug}.html`}>Egypt in {next.name} →</a>
+      </nav>
+
+      <Frieze />
+
+      <Faq items={m.faqs} heading={`Egypt in ${m.name} — questions`} />
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow">Journeys</div>
+        <h2>Built around your dates</h2>
+        <div class="rule"></div>
+        <p>
+          Private throughout, led by a licensed Egyptologist. Tell us your month and the itinerary is
+          shaped to it — the hours, the order and the pace all change with the season.
+        </p>
+      </div>
+      <div class="grid-3">{picks.map((t) => <TourCard tour={t} base={base} />)}</div>
+    </div>
+  </section>
+
+  <LeadCapture
+    variant="planning"
+    heading={`Thinking about ${m.name}?`}
+    subtext="Send us your dates and who is travelling. We will tell you honestly whether that month suits what you want — and if it doesn't, which one does."
+    whatsappMessage={`Hello Kemet — I'm considering travelling to Egypt in ${m.name}.`}
+    emailSubject={`Enquiry — Egypt in ${m.name}`}
+  />
+</Base>
+
+<style>
+  .wm-wrap { max-width: 940px; }
+
+  .wm-stats { display: grid; grid-template-columns: repeat(7, 1fr); gap: 1px;
+    background: var(--line); border: 1px solid var(--line); border-radius: 2px;
+    overflow: hidden; }
+  .wm-stats > div { background: var(--ink-2); padding: 18px 10px; text-align: center; }
+  .wm-k { display: block; font-size: .58rem; letter-spacing: .2em; text-transform: uppercase;
+    color: var(--muted-2); margin-bottom: 8px; }
+  .wm-stats b { font-family: var(--ff-display); font-weight: 400; font-size: 1.12rem;
+    line-height: 1.2; color: var(--gold-bright); }
+  .wm-caption { margin: 12px 0 32px; font-size: .82rem; color: var(--muted-2); line-height: 1.65; }
+
+  .wm-lede { font-family: var(--ff-display); font-weight: 300; font-size: 1.3rem;
+    line-height: 1.68; color: var(--bone); margin: 0 0 34px; }
+
+  .wm-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  .wm-col { border: 1px solid var(--line); border-radius: 2px; padding: 26px 24px; }
+  .wm-col--good { background: rgba(217,180,90,.05); }
+  .wm-col--watch { background: rgba(255,255,255,.015); }
+  .wm-col h2 { font-size: .68rem; letter-spacing: .28em; text-transform: uppercase;
+    font-family: var(--ff-body); font-weight: 400; color: var(--gold); margin: 0 0 16px;
+    display: flex; align-items: center; gap: 10px; }
+  .wm-col--watch h2 { color: var(--muted-2); }
+  .wm-col ul { list-style: none; margin: 0; padding: 0; }
+  .wm-col li { position: relative; padding-left: 18px; color: var(--muted);
+    font-size: .93rem; line-height: 1.75; margin-bottom: 12px; }
+  .wm-col li:last-child { margin-bottom: 0; }
+  .wm-col li::before { content: ""; position: absolute; left: 0; top: .68em;
+    width: 5px; height: 5px; border-radius: 50%; background: var(--gold); opacity: .8; }
+  .wm-col--watch li::before { background: var(--muted-2); opacity: .55; }
+
+  .wm-occ, .wm-verdict { margin-top: 22px; padding: 26px 28px;
+    border-left: 2px solid var(--gold); background: rgba(217,180,90,.05); }
+  .wm-occ h2, .wm-verdict h2 { font-family: var(--ff-display); font-weight: 300;
+    font-size: 1.3rem; color: var(--gold-bright); margin: 0 0 10px; }
+  .wm-occ p, .wm-verdict p { margin: 0; color: var(--muted); font-size: .97rem; line-height: 1.85; }
+  .wm-more { display: inline-flex; align-items: center; gap: 12px; margin-top: 16px;
+    font-size: .66rem; letter-spacing: .28em; text-transform: uppercase; color: var(--gold); }
+  .wm-more i { width: 30px; height: 1px; background: currentColor; transition: width .5s; }
+  .wm-more:hover i { width: 50px; }
+
+  .wm-nav { display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+    margin-top: 30px; padding-top: 22px; border-top: 1px solid var(--line); }
+  .wm-nav a { font-size: .74rem; letter-spacing: .12em; color: var(--gold);
+    padding: 10px 0; min-height: 44px; display: inline-flex; align-items: center; }
+  .wm-nav a:hover { color: var(--gold-bright); }
+
+  @media(max-width:900px){ .wm-stats { grid-template-columns: repeat(4, 1fr); } }
+  @media(max-width:680px){
+    .wm-stats { grid-template-columns: repeat(2, 1fr); }
+    .wm-stats > div { padding: 15px 8px; }
+    .wm-lede { font-size: 1.15rem; }
+    .wm-cols { grid-template-columns: 1fr; gap: 16px; }
+    .wm-col { padding: 22px 20px; }
+    .wm-occ, .wm-verdict { padding: 22px 20px; }
+    .wm-nav { flex-direction: column; gap: 0; }
+  }
+</style>
