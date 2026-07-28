@@ -53,15 +53,43 @@ ok "downloaded"
 
 # --- 3. Apply it (this also clears the recurring .htaccess conflict) ---------
 say "3/5  تطبيق التحديث  ·  Applying update"
-# cPanel's AutoSSL edits .htaccess in place, which blocks a normal pull.
-# A hard reset to the published state is the correct, safe fix here: the
-# repo's own .htaccess already contains the AutoSSL block.
+
+# Where the server was before, so we can report exactly what changed. This
+# matters because nobody remembers when they last pulled.
+BEFORE="$(git rev-parse HEAD 2>/dev/null || echo none)"
+BEHIND="$(git rev-list --count "HEAD..origin/$BRANCH" 2>/dev/null || echo '?')"
+if [ "$BEHIND" != "0" ] && [ "$BEHIND" != "?" ]; then
+  echo "     كنتِ متأخرة بـ $BEHIND تحديث · you were $BEHIND commit(s) behind"
+fi
+
+# NOT a `git pull`. A hard reset makes this checkout byte-for-byte identical to
+# what is published on GitHub, no matter how old or how modified it was — which
+# also clears the .htaccess that cPanel's AutoSSL edits in place and which
+# blocks a normal pull. Nothing is merged, so nothing can conflict.
 if ! git reset --hard "origin/$BRANCH" --quiet 2>/dev/null; then
   git reset --hard "origin/$BRANCH" >/dev/null || { bad "Could not apply the update."; exit 1; }
 fi
 # -e _stats: NEVER delete the analytics + enquiry logs the site writes at runtime
 git clean -fd --quiet -e node_modules -e _stats 2>/dev/null || true
-ok "updated to $(git rev-parse --short HEAD)"
+
+AFTER="$(git rev-parse --short HEAD)"
+if [ "$BEFORE" = "none" ]; then
+  ok "installed at $AFTER"
+elif [ "$BEFORE" = "$(git rev-parse "origin/$BRANCH")" ]; then
+  ok "already current at $AFTER — nothing to change"
+else
+  ok "updated $(git rev-parse --short "$BEFORE") → $AFTER"
+fi
+
+# Prove it: the working tree must now differ from GitHub in nothing at all.
+DRIFT="$(git status --porcelain --untracked-files=no)"
+if [ -z "$DRIFT" ]; then
+  ok "مطابق تمامًا لـ GitHub · byte-for-byte identical to GitHub"
+else
+  bad "Some files still differ from GitHub:"
+  printf '%s\n' "$DRIFT" | head -20 | sed 's/^/       /'
+  FAIL_MATCH=1
+fi
 
 # --- 4. Verify the live site is intact --------------------------------------
 say "4/5  التحقق من الموقع  ·  Verifying site"
@@ -107,7 +135,7 @@ else
 fi
 
 echo
-if [ "$FAIL" -eq 0 ]; then
+if [ "$FAIL" -eq 0 ] && [ -z "${FAIL_MATCH:-}" ]; then
   printf '\033[0;32m========================================================\n'
   printf '  ✅  تم التحديث بنجاح  ·  SITE UPDATED SUCCESSFULLY\n'
   printf '========================================================\033[0m\n\n'
