@@ -55,6 +55,7 @@ export const footerExplore: FooterColumn = {
     { label: "Activities", href: "activities.html" },
     { label: "Cuisine", href: "cuisine.html" },
     { label: "When to go", href: "when-to-go.html" },
+    { label: "Compare", href: "compare.html" },
     { label: "Travel FAQ", href: "faq.html" },
     { label: "Egypt Visa by Nationality", href: "visa.html" },
   ],

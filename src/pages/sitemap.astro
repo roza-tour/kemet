@@ -13,6 +13,7 @@ import { collections } from "@/data/collections";
 import { activities } from "@/data/activities";
 import { occasions } from "@/data/occasions";
 import { months } from "@/data/months";
+import { comparisons } from "@/data/comparisons";
 import { nationalities } from "@/data/entryRequirements";
 import { canonical } from "@/utils/links";
 import { site, SITE_URL } from "@/config/site";
@@ -30,6 +31,7 @@ const main = [
   ["Occasions", "occasions.html", "Journeys planned around what is being marked."],
   ["Travel guides", "guides.html", "Visas, seasons, transport and food."],
   ["When to go", "when-to-go.html", "Egypt month by month — weather, crowds, prices."],
+  ["Compare", "compare.html", "The decisions people get stuck on, answered."],
   ["Cultures", "culture.html", "The living heritage behind the monuments."],
   ["The 8 Identities", "identities.html", "The eight Egypts a journey can cross."],
   ["Activities", "activities.html", "Ballooning, diving, sailing, desert nights."],
@@ -61,7 +63,7 @@ const jsonld = [
 const pageCount =
   main.length + support.length + tours.length + collections.length +
   destinations.length + experiences.length + guides.length +
-  activities.filter((a) => a.slug).length + nationalities.length + occasions.length + months.length;
+  activities.filter((a) => a.slug).length + nationalities.length + occasions.length + months.length + comparisons.length;
 ---
 <Base
   title={`Site Index — Every Page on Kemet | Kemet`}
@@ -144,6 +146,15 @@ const pageCount =
         <ul class="sm-list sm-cols">
           {activities.filter((a) => a.slug).map((a) => (
             <li><a href={`activities/${a.slug}.html`}>{a.title}</a><span>{a.place}</span></li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="sm-group reveal">
+        <h2>Comparisons <em>({comparisons.length})</em></h2>
+        <ul class="sm-list">
+          {comparisons.map((cp) => (
+            <li><a href={`compare/${cp.slug}.html`}>{cp.title}</a><span>{cp.shortSummary}</span></li>
           ))}
         </ul>
       </div>

@@ -1,0 +1,237 @@
+---
+// Comparison pages (/compare/<slug>.html) — the decision a traveller is making
+// at the moment they are about to commit. Data-only from data/comparisons.ts.
+import Base from "@/layouts/Base.astro";
+import PageHero from "@/components/PageHero.astro";
+import Frieze from "@/components/Frieze.astro";
+import Faq from "@/components/Faq.astro";
+import TourCard from "@/components/TourCard.astro";
+import LeadCapture from "@/components/conversion/LeadCapture.astro";
+import { comparisons } from "@/data/comparisons";
+import type { Comparison } from "@/data/comparisons";
+import { tours } from "@/data/tours";
+import { canonical } from "@/utils/links";
+import { site, SITE_URL } from "@/config/site";
+import { breadcrumb } from "@/schemas/jsonld";
+
+export function getStaticPaths() {
+  return comparisons.map((c) => ({ params: { slug: c.slug }, props: { c } }));
+}
+
+interface Props { c: Comparison }
+const { c } = Astro.props;
+const route = `compare/${c.slug}.html`;
+const base = "../";
+
+const picks = [...tours]
+  .filter((t) => /day/i.test(t.durationLabel) && t.price >= 900)
+  .sort((a, b) => b.price - a.price)
+  .slice(0, 3);
+
+const others = comparisons.filter((x) => x.slug !== c.slug);
+
+const jsonld: Record<string, unknown>[] = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: c.title,
+    description: c.metaDescription,
+    url: canonical(route),
+    inLanguage: "en",
+    about: { "@type": "Country", name: "Egypt" },
+    isPartOf: { "@type": "WebSite", name: `${site.name} — The Black Land`, url: SITE_URL },
+    publisher: { "@type": "TravelAgency", name: site.name, url: SITE_URL },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: c.faqs.map((f) => ({
+      "@type": "Question", name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  },
+  breadcrumb([["Home", "index.html"], ["Compare", "compare.html"], [c.label, route]]),
+];
+
+const title = `${c.title} | Kemet`;
+---
+<Base
+  title={title.length <= 65 ? title : `${c.label} — Egypt | Kemet`}
+  description={c.metaDescription}
+  active={route}
+  jsonld={jsonld}
+  keywords={c.keywords.join(", ")}
+>
+  <PageHero crumb={c.label} symbol={c.symbol} base={base} title={c.title} text={c.shortSummary} />
+
+  <section style="padding-top:26px">
+    <div class="wrap cp-wrap">
+
+      {/* The answer first. A comparison page that withholds its verdict is worse
+          than no page at all. */}
+      <div class="cp-verdict">
+        <span class="cp-vlabel">The short answer</span>
+        <p>{c.verdict}</p>
+      </div>
+
+      <p class="cp-lede">{c.lede}</p>
+
+      <div class="cp-scroll">
+        <table class="cp-table">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">{c.optionA}</th>
+              <th scope="col">{c.optionB}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {c.rows.map((r) => (
+              <tr>
+                <th scope="row">{r.aspect}</th>
+                <td>{r.a}</td>
+                <td>{r.b}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="cp-cols">
+        <div class="cp-col">
+          <h2>{c.chooseA.heading}</h2>
+          <ul>{c.chooseA.points.map((p) => <li>{p}</li>)}</ul>
+        </div>
+        <div class="cp-col cp-col--b">
+          <h2>{c.chooseB.heading}</h2>
+          <ul>{c.chooseB.points.map((p) => <li>{p}</li>)}</ul>
+        </div>
+      </div>
+
+      <Frieze />
+
+      <div class="cp-sections">
+        {c.sections.map((s, i) => (
+          <div class="cp-sec reveal">
+            <span class="cp-n">{String(i + 1).padStart(2, "0")}</span>
+            <div>
+              <h2>{s.title}</h2>
+              <p>{s.body}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <Frieze />
+
+      <Faq items={c.faqs} heading={`${c.label} — questions`} />
+
+      <div class="cp-others">
+        <h2>Other decisions</h2>
+        <div class="cp-others-grid">
+          {others.map((x) => (
+            <a href={`${x.slug}.html`} class="cp-other">
+              <h3>{x.title}</h3>
+              <p>{x.shortSummary}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="eyebrow">Journeys</div>
+        <h2>Either way, privately</h2>
+        <div class="rule"></div>
+        <p>
+          Led by a licensed Egyptologist, with no shared coaches and no fixed departures. Tell us
+          which way you are leaning and we will build the itinerary around it.
+        </p>
+      </div>
+      <div class="grid-3">{picks.map((t) => <TourCard tour={t} base={base} />)}</div>
+    </div>
+  </section>
+
+  <LeadCapture
+    variant="consultation"
+    heading="Still deciding?"
+    subtext="Tell us your dates, your party and what you want out of the trip. We will tell you which way we would go and why — including when the answer is the cheaper one."
+    whatsappMessage={`Hello Kemet — I'd like advice on ${c.title.replace(/\?$/, "").toLowerCase()}.`}
+    emailSubject={`Enquiry — ${c.label}`}
+  />
+</Base>
+
+<style>
+  .cp-wrap { max-width: 940px; }
+
+  .cp-verdict { border: 1px solid var(--gold); border-radius: 2px; padding: 28px 30px;
+    background: rgba(217,180,90,.07); position: relative; overflow: hidden; }
+  .cp-verdict::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+  .cp-vlabel { display: inline-block; font-size: .64rem; letter-spacing: .3em;
+    text-transform: uppercase; color: var(--ink); background: var(--gold);
+    padding: 6px 13px; border-radius: 2px; font-weight: 500; margin-bottom: 16px; }
+  .cp-verdict p { margin: 0; color: var(--bone); font-size: 1.04rem; line-height: 1.82; }
+
+  .cp-lede { font-family: var(--ff-display); font-weight: 300; font-size: 1.22rem;
+    line-height: 1.7; color: var(--muted); margin: 30px 0 30px; }
+
+  /* Wide table scrolls inside its own box — the page never scrolls sideways. */
+  .cp-scroll { overflow-x: auto; margin-bottom: 30px; }
+  .cp-table { width: 100%; border-collapse: collapse; min-width: 620px; }
+  .cp-table th, .cp-table td { text-align: left; vertical-align: top;
+    padding: 14px 16px 14px 0; border-bottom: 1px solid var(--line); }
+  .cp-table thead th { font-family: var(--ff-display); font-weight: 400; font-size: 1.05rem;
+    color: var(--gold-bright); border-bottom-color: var(--line-2); padding-bottom: 12px; }
+  .cp-table tbody th { font-weight: 400; color: var(--muted-2); font-size: .78rem;
+    letter-spacing: .1em; text-transform: uppercase; width: 26%; }
+  .cp-table td { color: var(--muted); font-size: .93rem; line-height: 1.7; }
+
+  .cp-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  .cp-col { border: 1px solid var(--line); border-radius: 2px; padding: 26px 24px;
+    background: rgba(217,180,90,.05); }
+  .cp-col--b { background: rgba(255,255,255,.015); }
+  .cp-col h2 { font-size: .68rem; letter-spacing: .28em; text-transform: uppercase;
+    font-family: var(--ff-body); font-weight: 400; color: var(--gold); margin: 0 0 16px; }
+  .cp-col--b h2 { color: var(--muted-2); }
+  .cp-col ul { list-style: none; margin: 0; padding: 0; }
+  .cp-col li { position: relative; padding-left: 18px; color: var(--muted);
+    font-size: .93rem; line-height: 1.75; margin-bottom: 12px; }
+  .cp-col li:last-child { margin-bottom: 0; }
+  .cp-col li::before { content: ""; position: absolute; left: 0; top: .68em;
+    width: 5px; height: 5px; border-radius: 50%; background: var(--gold); opacity: .8; }
+  .cp-col--b li::before { background: var(--muted-2); opacity: .55; }
+
+  .cp-sec { display: grid; grid-template-columns: 58px 1fr; gap: 22px;
+    padding: 26px 0; border-bottom: 1px solid var(--line); }
+  .cp-sec:last-child { border-bottom: 0; }
+  .cp-n { font-family: var(--ff-display); font-size: 1.7rem; color: var(--gold);
+    line-height: 1.2; width: 58px; }
+  .cp-sec h2 { font-size: 1.24rem; color: var(--bone); margin: 0 0 10px; }
+  .cp-sec p { color: var(--muted); font-size: .96rem; line-height: 1.88; margin: 0; }
+
+  .cp-others { margin-top: 40px; }
+  .cp-others h2 { font-size: 1.4rem; color: var(--bone); margin-bottom: 20px; }
+  .cp-others-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .cp-other { display: block; border: 1px solid var(--line); border-radius: 2px;
+    padding: 22px 20px; transition: border-color .4s, transform .4s cubic-bezier(.22,.61,.36,1); }
+  .cp-other:hover { border-color: var(--gold); transform: translateY(-4px); }
+  .cp-other h3 { font-size: 1rem; color: var(--bone); margin: 0 0 7px; font-weight: 500; }
+  .cp-other:hover h3 { color: var(--gold-bright); }
+  .cp-other p { color: var(--muted-2); font-size: .86rem; line-height: 1.65; margin: 0; }
+
+  @media(max-width:680px){
+    .cp-verdict { padding: 24px 20px; }
+    .cp-verdict p { font-size: .99rem; }
+    .cp-lede { font-size: 1.1rem; }
+    .cp-cols { grid-template-columns: 1fr; gap: 16px; }
+    .cp-col { padding: 22px 20px; }
+    .cp-others-grid { grid-template-columns: 1fr; }
+    /* Site-wide phone rule: the numeral goes above its heading. */
+    .cp-sec { display: block; padding: 22px 0; }
+    .cp-n { display: block; width: auto; font-size: 1.25rem; margin-bottom: 8px; }
+  }
+</style>

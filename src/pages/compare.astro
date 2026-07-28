@@ -1,0 +1,110 @@
+---
+// /compare.html — the hub for the decisions travellers get stuck on.
+import Base from "@/layouts/Base.astro";
+import PageHero from "@/components/PageHero.astro";
+import SymbolIcon from "@/components/SymbolIcon.astro";
+import LeadCapture from "@/components/conversion/LeadCapture.astro";
+import { comparisons } from "@/data/comparisons";
+import { canonical } from "@/utils/links";
+import { site, SITE_URL } from "@/config/site";
+import { breadcrumb } from "@/schemas/jsonld";
+
+const ROUTE = "compare.html";
+
+const jsonld: Record<string, unknown>[] = [
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Egypt Travel Comparisons",
+    description:
+      "The decisions travellers get stuck on — Nile cruise or land tour, dahabiya or cruise ship, Luxor or Aswan, which Cairo museum, Sharm or Hurghada.",
+    url: canonical(ROUTE),
+    inLanguage: "en",
+    isPartOf: { "@type": "WebSite", name: `${site.name} — The Black Land`, url: SITE_URL },
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: comparisons.length,
+      itemListElement: comparisons.map((c, i) => ({
+        "@type": "ListItem", position: i + 1, name: c.title,
+        url: canonical(`compare/${c.slug}.html`),
+      })),
+    },
+  },
+  breadcrumb([["Home", "index.html"], ["Compare", ROUTE]]),
+];
+---
+<Base
+  title="Egypt Travel Comparisons — The Decisions | Kemet"
+  description="Nile cruise or land tour, dahabiya or cruise ship, Luxor or Aswan, which Cairo museum, Sharm or Hurghada — answered plainly, with the verdict first."
+  active={ROUTE}
+  jsonld={jsonld}
+  keywords="nile cruise vs land tour, dahabiya vs cruise ship, luxor or aswan, grand egyptian museum vs egyptian museum, sharm el sheikh vs hurghada"
+>
+  <PageHero
+    crumb="Compare"
+    symbol="scarab"
+    title="The decisions people get stuck on"
+    text="Five questions we are asked more than any others, answered with the verdict first and the reasoning after — including the times the answer is the cheaper option."
+  />
+
+  <section style="padding-top:26px">
+    <div class="wrap cg-wrap">
+      <p class="cg-lede">
+        Most comparison pages on the internet refuse to answer, because refusing to answer offends
+        nobody. These give the verdict in the first paragraph and then earn it. Where the honest
+        answer is "both, in this order", that is what it says.
+      </p>
+
+      <div class="cg-grid">
+        {comparisons.map((c) => (
+          <a class="cg-card reveal" href={`compare/${c.slug}.html`}>
+            <div class="cg-sym" aria-hidden="true"><SymbolIcon name={c.symbol} /></div>
+            <h2>{c.title}</h2>
+            <p>{c.shortSummary}</p>
+            <span class="cg-more">Read the answer <i aria-hidden="true"></i></span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <LeadCapture
+    variant="consultation"
+    heading="Or just ask us"
+    subtext="Tell us your dates, your party and what you want the trip to be. We will tell you which way we would go — and say so plainly when the cheaper option is the better one."
+    whatsappMessage="Hello Kemet — I have a question about planning my Egypt journey."
+    emailSubject="Planning question — Kemet"
+  />
+</Base>
+
+<style>
+  .cg-wrap { max-width: 940px; }
+  .cg-lede { font-family: var(--ff-display); font-weight: 300; font-size: 1.3rem;
+    line-height: 1.7; color: var(--bone); max-width: 820px; margin: 0 0 40px; }
+  .cg-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .cg-card { display: block; border: 1px solid var(--line); border-radius: 2px;
+    padding: 30px 28px; position: relative; overflow: hidden;
+    background: linear-gradient(165deg, rgba(30,25,18,.92), rgba(14,17,21,.72));
+    transition: transform .5s cubic-bezier(.22,.61,.36,1), border-color .5s, box-shadow .5s; }
+  .cg-card::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    opacity: .5; transition: opacity .5s; }
+  .cg-card:hover { transform: translateY(-6px); border-color: var(--gold);
+    box-shadow: 0 24px 60px rgba(0,0,0,.5); }
+  .cg-card:hover::before { opacity: 1; }
+  .cg-sym { width: 46px; height: 54px; margin-bottom: 16px;
+    filter: drop-shadow(0 6px 16px rgba(217,180,90,.24)); }
+  .cg-sym :global(svg) { width: 100%; height: 100%; }
+  .cg-card h2 { font-size: 1.24rem; color: var(--bone); margin: 0 0 9px; }
+  .cg-card p { color: var(--muted); font-size: .93rem; line-height: 1.72; margin: 0; }
+  .cg-more { display: inline-flex; align-items: center; gap: 12px; margin-top: 20px;
+    font-size: .64rem; letter-spacing: .3em; text-transform: uppercase; color: var(--gold); }
+  .cg-more i { width: 30px; height: 1px; background: currentColor; transition: width .5s; }
+  .cg-card:hover .cg-more i { width: 52px; }
+
+  @media(max-width:760px){ .cg-grid { grid-template-columns: 1fr; } }
+  @media(max-width:680px){
+    .cg-lede { font-size: 1.15rem; margin-bottom: 30px; }
+    .cg-card { padding: 26px 20px; }
+  }
+</style>

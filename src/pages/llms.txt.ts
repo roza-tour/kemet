@@ -17,6 +17,7 @@ import { guides } from "@/data/guides";
 import { collections } from "@/data/collections";
 import { occasions } from "@/data/occasions";
 import { months } from "@/data/months";
+import { comparisons } from "@/data/comparisons";
 import { activities } from "@/data/activities";
 import { nationalities, VISA_FEE_USD, VISA_STAY_DAYS, VERIFIED_ON } from "@/data/entryRequirements";
 import { company } from "@/data/company";
@@ -80,6 +81,13 @@ export const GET: APIRoute = () => {
   lines.push("");
   for (const c of collections) {
     lines.push(item(c.title, `collections/${c.slug}.html`, c.shortSummary));
+  }
+  lines.push("");
+
+  lines.push("## Comparisons (the decision, with the verdict stated first)");
+  lines.push("");
+  for (const cp of comparisons) {
+    lines.push(item(cp.title, `compare/${cp.slug}.html`, `${cp.shortSummary} Verdict: ${cp.verdict}`));
   }
   lines.push("");
 
