@@ -111,6 +111,8 @@ export const enhanceScript = `
         '<button class="lb-n" aria-label="Next">›</button>';
       document.body.appendChild(lb);
       var pic=lb.querySelector('img'),cur=0;
+      /* carry the source image's alt into the viewer — otherwise every
+         photograph opens as an unlabelled image for a screen reader */
       function show(i){cur=(i+imgs.length)%imgs.length;
         pic.src=imgs[cur].src;pic.alt=imgs[cur].alt||'';lb.classList.add('open');
         document.body.style.overflow='hidden';}

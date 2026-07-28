@@ -18,7 +18,7 @@ import {
   TRANSLATION_GROUPS, TRANSLATED_LOCALES, LOCALE_META,
 } from "@/config/i18n";
 import type { TranslatedLocale } from "@/config/i18n";
-import { canonical, whatsappLink, mailtoLink } from "@/utils/links";
+import { canonical, publicPath, whatsappLink, mailtoLink } from "@/utils/links";
 import { site, SITE_URL } from "@/config/site";
 
 export function getStaticPaths() {
@@ -134,7 +134,7 @@ const jsonld: Record<string, unknown>[] = [
       <div class="lz-more reveal">
         <h2>{page.moreLabel}</h2>
         <p>{page.moreText}</p>
-        <a class="lz-morelink" href={`${base}${group.en}`}>
+        <a class="lz-morelink" href={`${base}${publicPath(group.en)}` || "/"}>
           {group.en === "index.html" ? "kemet-travel.com" : `kemet-travel.com/${group.en}`}
           <i aria-hidden="true"></i>
         </a>

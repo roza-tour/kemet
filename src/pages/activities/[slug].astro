@@ -70,6 +70,7 @@ if (activity.faqs?.length) {
 }
 ---
 <Base title={title} description={description} active={route} jsonld={jsonld}
+      canonicalTo={activity.canonicalTo}
       ogImage={activity.image?.src} ogImageAlt={activity.image?.alt}>
   <article>
     <header class="phero" style="padding-bottom:36px">

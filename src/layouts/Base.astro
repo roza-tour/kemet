@@ -32,6 +32,12 @@ interface Props {
   noindex?: boolean;
   /** Comma-separated keywords for this page (falls back to the site default). */
   keywords?: string;
+  /**
+   * Route of a different page that should own this content in search. Used
+   * only where two pages genuinely cover the same subject — the canonical
+   * points at the fuller one so they do not split the ranking signal.
+   */
+  canonicalTo?: string;
   /** Share-image overrides. */
   ogImage?: string;
   ogImageAlt?: string;
@@ -43,7 +49,7 @@ const { active = "index.html", jsonld, showCta = true } = Astro.props;
 const { title, description, canonicalUrl, ogImage, ogImageAlt, keywords } = buildPageSeo({
   title: Astro.props.title,
   description: Astro.props.description,
-  route: active,
+  route: Astro.props.canonicalTo ?? active,
   keywords: Astro.props.keywords,
   ogImage: Astro.props.ogImage,
   ogImageAlt: Astro.props.ogImageAlt,

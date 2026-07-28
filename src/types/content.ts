@@ -507,6 +507,13 @@ export interface Activity {
   // --- Detail page (optional; an activity renders a page once `slug` is set) --
   /** URL slug — presence of this is what generates /activities/<slug>.html. */
   slug?: string;
+  /**
+   * Route of the page that is the search authority for this subject, when
+   * another page on the site covers the same thing more fully. The page still
+   * renders and stays in the funnel; its canonical points here so the two do
+   * not compete for the same query.
+   */
+  canonicalTo?: string;
   /** One-line factual summary — meta description source and AI snippet. */
   shortSummary?: string;
   /** Full editorial description. */

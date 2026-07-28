@@ -12,6 +12,12 @@ export const activities: Activity[] = [
       "Lift off at dawn over the West Bank as the temples and tombs of Thebes emerge from the mist and the Nile turns gold below.",
     image: { src: "/images/activities/act-balloon-luxor.webp", alt: "Hot-air balloons drifting over the Nile valley and temples of Luxor at dawn", width: 1300, height: 867 },
     slug: "hot-air-balloon-luxor",
+    // This activity and experiences/hot-air-balloon-luxor.html describe the same
+    // flight. Two indexable pages competing for "hot air balloon Luxor" split
+    // the ranking signal and Google picks one arbitrarily. The experience page
+    // is the fuller of the two, so it is the authority; this page stays in the
+    // activities grid and in the funnel, but points its canonical there.
+    canonicalTo: "experiences/hot-air-balloon-luxor.html",
     shortSummary:
       "A dawn balloon flight over the Theban West Bank — the Valley of the Kings, Hatshepsut's terraces and the Colossi of Memnon from about 500 metres up.",
     longDescription:

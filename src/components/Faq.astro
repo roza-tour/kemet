@@ -1,20 +1,31 @@
 ---
 // Faq — visible "Good to know" Q&A. Mirrors the FAQPage JSON-LD on tour pages
 // so answer engines can quote concise answers.
+//
+// Questions were <h4> under an <h2> heading, which skipped a level on 174 of
+// the site's 188 pages. A skipped level breaks screen-reader outline navigation
+// and gives crawlers a document structure that does not match the visual one.
+// The block heading is h2, so a question is h3.
 import type { Faq } from "@/types";
 
 interface Props {
   items: Faq[];
   heading?: string;
+  /**
+   * Heading level for each question. Defaults to 3, one below the block's own
+   * h2. Pass 4 where this block already sits under an h3.
+   */
+  level?: 3 | 4;
 }
-const { items = [], heading = "Good to know" } = Astro.props;
+const { items = [], heading = "Good to know", level = 3 } = Astro.props;
+const QTag = `h${level}` as "h3" | "h4";
 ---
 <div class="tblock">
   {heading && <h2>{heading}</h2>}
   <div class="faq">
     {items.map((f) => (
       <div class="qa">
-        <h4>{f.q}</h4>
+        <QTag>{f.q}</QTag>
         <p>{f.a}</p>
       </div>
     ))}

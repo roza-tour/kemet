@@ -23,6 +23,7 @@ import { activities } from "@/data/activities";
 import { nationalities, VISA_FEE_USD, VISA_STAY_DAYS, VERIFIED_ON } from "@/data/entryRequirements";
 import { company } from "@/data/company";
 import { formatPrice } from "@/utils/format";
+import { publicPath } from "@/utils/links";
 
 const u = (path: string) => `${SITE_URL}/${path}`;
 /** One Markdown list entry: - [Title](url): description */
@@ -165,7 +166,7 @@ export const GET: APIRoute = () => {
     lines.push(`### ${LOCALE_META[loc].endonym} (${loc})`);
     lines.push("");
     for (const g of TRANSLATION_GROUPS) {
-      lines.push(`- ${u(g[loc])}`);
+      lines.push(`- ${u(publicPath(g[loc]))}`);
     }
     lines.push("");
   }

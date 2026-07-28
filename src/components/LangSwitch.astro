@@ -9,6 +9,7 @@
 //
 // Renders nothing at all on pages with no translations.
 import { alternatesFor, LOCALE_META, localeOfRoute, basePrefixFor } from "@/config/i18n";
+import { publicPath } from "@/utils/links";
 import type { SiteLocale } from "@/config/i18n";
 
 interface Props {
@@ -34,7 +35,7 @@ const base = basePrefixFor(route);
         return (
           <li>
             <a
-              href={`${base}${a.route}`}
+              href={`${base}${publicPath(a.route)}` || "/"}
               hreflang={a.hreflang}
               lang={a.hreflang}
               class={isCurrent ? "is-current" : undefined}

@@ -111,11 +111,13 @@ RewriteRule ^(?:package(?:-lock)?\.json|astro\.config\.mjs|tsconfig\.json|README
 # new source file ever lands outside the folders blocked above.
 RewriteRule \.(?:ts|astro|mjs|sh)$ - [R=404,L]
 
-# The homepage had two live URLs — / and /index.html — serving identical HTML.
-# Search Console was reporting /index.html as a duplicate. Every internal link
-# now points at "/", so this 301 only ever catches an old bookmark or an
-# external link; no internal link and no sitemap entry hits it.
+# A directory index has ONE public URL: the directory. /index.html and
+# /de/index.html are 301'd to / and /de/ so the same document is never served
+# at two addresses. Every internal link, canonical, hreflang and sitemap entry
+# already uses the directory form (utils/links → publicPath), so these only
+# ever catch an old bookmark or an external link.
 RewriteRule ^index(?:\.html)?$ / [R=301,L]
+RewriteRule ^([a-z]{2})/index\.html$ /$1/ [R=301,L]
 
 # Section names are BOTH a page and a folder: destinations.html is the page,
 # destinations/ holds the detail pages. Left alone, Apache answers a bare
@@ -132,6 +134,14 @@ DirectorySlash Off
 RewriteCond %{DOCUMENT_ROOT}/$1/index.html !-f
 RewriteCond %{DOCUMENT_ROOT}/$1.html -f
 RewriteRule ^([^.]+?)/?$ /$1.html [R=301,L]
+
+# A folder that HAS its own index.html — /de, /it, /es — needs the trailing
+# slash restored. DirectorySlash normally does this; with it off, Apache
+# answered /de with a 403 because it would neither redirect nor serve the
+# directory. Put the redirect back explicitly for exactly this case.
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{REQUEST_FILENAME}/index.html -f
+RewriteRule ^(.+[^/])$ /$1/ [R=301,L]
 
 # Any other bare folder — /images, /fonts — has no page behind it. Answer 404
 # rather than the 403 that "indexes off" would otherwise produce, for the same

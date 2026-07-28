@@ -208,7 +208,7 @@ Six key pages are published in German, Italian and Spanish for Egypt's largest E
 
 ### Deutsch (de)
 
-- https://kemet-travel.com/de/index.html
+- https://kemet-travel.com/de/
 - https://kemet-travel.com/de/aegypten-reisen.html
 - https://kemet-travel.com/de/nilkreuzfahrt.html
 - https://kemet-travel.com/de/aegypten-reise-kosten.html
@@ -217,7 +217,7 @@ Six key pages are published in German, Italian and Spanish for Egypt's largest E
 
 ### Italiano (it)
 
-- https://kemet-travel.com/it/index.html
+- https://kemet-travel.com/it/
 - https://kemet-travel.com/it/viaggi-in-egitto.html
 - https://kemet-travel.com/it/crociera-sul-nilo.html
 - https://kemet-travel.com/it/quanto-costa-viaggio-egitto.html
@@ -226,7 +226,7 @@ Six key pages are published in German, Italian and Spanish for Egypt's largest E
 
 ### Español (es)
 
-- https://kemet-travel.com/es/index.html
+- https://kemet-travel.com/es/
 - https://kemet-travel.com/es/viajes-a-egipto.html
 - https://kemet-travel.com/es/crucero-por-el-nilo.html
 - https://kemet-travel.com/es/cuanto-cuesta-viajar-a-egipto.html

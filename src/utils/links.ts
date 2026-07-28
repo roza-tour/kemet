@@ -44,8 +44,25 @@ export function phoneHref(): string {
  * all use the same .html form, so crawlers never hit a redirect.
  */
 export function canonical(file: string): string {
-  if (file === "index.html") return `${SITE_URL}/`;
-  return `${SITE_URL}/${file}`;
+  return `${SITE_URL}/${publicPath(file)}`;
+}
+
+/**
+ * The public URL form of a route file, relative to the site root.
+ *
+ * A directory index is served at the directory URL, not at its index.html:
+ *   index.html        → ""      (the bare origin)
+ *   de/index.html     → "de/"
+ *   tours.html        → "tours.html"
+ *
+ * Everything that emits a URL — canonical, hreflang, the sitemap, the language
+ * switcher — goes through this, so the site never publishes two URLs for the
+ * same document. `.htaccess` 301s the index.html form to match.
+ */
+export function publicPath(file: string): string {
+  if (file === "index.html") return "";
+  if (file.endsWith("/index.html")) return file.slice(0, -"index.html".length);
+  return file;
 }
 
 /**

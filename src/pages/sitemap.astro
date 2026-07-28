@@ -16,7 +16,7 @@ import { months } from "@/data/months";
 import { comparisons } from "@/data/comparisons";
 import { TRANSLATION_GROUPS, TRANSLATED_LOCALES, LOCALE_META } from "@/config/i18n";
 import { nationalities } from "@/data/entryRequirements";
-import { canonical } from "@/utils/links";
+import { canonical, publicPath } from "@/utils/links";
 import { site, SITE_URL } from "@/config/site";
 import { breadcrumb } from "@/schemas/jsonld";
 import { formatPrice } from "@/utils/format";
@@ -206,7 +206,7 @@ const pageCount =
           <ul class="sm-list sm-cols">
             {TRANSLATION_GROUPS.map((g) => (
               <li>
-                <a href={g[loc]} hreflang={loc} lang={loc}>{g[loc].split("/")[1].replace(".html", "").replace(/-/g, " ")}</a>
+                <a href={publicPath(g[loc])} hreflang={loc} lang={loc}>{g[loc].split("/")[1].replace(".html", "").replace(/-/g, " ")}</a>
                 <span>{LOCALE_META[loc].endonym}</span>
               </li>
             ))}

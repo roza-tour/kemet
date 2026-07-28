@@ -41,6 +41,8 @@ const faqLd = {
 
   <section style="padding-top:20px">
     <div class="wrap">
+      {/* The cards are h3; without this the page jumped h1 → h3. */}
+      <h2 class="sr-head">Activities we fold into private journeys</h2>
       <div class="grid-3">
         {activities.map((activity) => <ActivityCard activity={activity} />)}
       </div>

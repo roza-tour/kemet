@@ -56,23 +56,23 @@ const faqs = [
         : `Yes. ${n.demonym} must obtain an Egypt e-Visa online before travelling — a visa cannot be bought on arrival. The single-entry e-Visa costs US$${VISA_FEE_USD} and permits a stay of up to ${n.stayDays} days.`,
   },
   {
-    q: "How much does an Egypt tourist visa cost?",
+    q: `How much does an Egypt visa cost for ${n.demonym}?`,
     a: `A single-entry tourist visa costs US$${VISA_FEE_USD}, whether bought on arrival or applied for online as an e-Visa. The multiple-entry e-Visa costs US$${VISA_FEE_MULTI_USD}. The single-entry fee rose from US$25 on 1 March 2026. Visa-on-arrival counters are cash-only, so carry clean US dollar notes.`,
   },
   {
-    q: "How long can I stay in Egypt on a tourist visa?",
+    q: `How long can ${n.demonym} stay in Egypt?`,
     a: `A single-entry tourist visa permits a stay of up to ${n.stayDays} days from the date of entry. Extensions are possible inside Egypt through the passport authorities, but they take time — if you already know you want longer, apply for the multiple-entry e-Visa or plan around the ${n.stayDays}-day limit.`,
   },
   {
-    q: "What do I need to have with me?",
+    q: `What documents do ${n.demonym} need to enter Egypt?`,
     a: "A passport valid for at least six months beyond your arrival date, with at least two blank pages. Immigration may ask for your first night's hotel booking and a return or onward ticket — have both reachable on your phone. If we are arranging your journey, we send you a single confirmation document with everything an officer might ask for.",
   },
   ...(n.sinaiPermit ? [{
-    q: "What is the Sinai-only entry permit?",
+    q: `Can ${n.demonym} use the Sinai-only entry permit?`,
     a: `If your entire trip stays within Sharm el-Sheikh, Dahab, Nuweiba and Taba, ${n.demonym} can be issued a free entry permit at Sinai entry points instead of a visa, valid for ${SINAI_PERMIT_DAYS} days. It is genuinely restrictive: it does not allow travel to Cairo, Luxor, Aswan or anywhere on the Egyptian mainland — not even a day trip. If there is any chance you will want to see the Pyramids, buy the ordinary visa instead.`,
   }] : []),
   {
-    q: "Is it better to get the visa on arrival or online?",
+    q: `Should ${n.demonym} get the visa on arrival or apply online?`,
     a: n.route === "e-visa"
       ? "For your passport the choice is not open — the e-Visa must be obtained online in advance. Apply at least a few weeks before you fly, since supporting documents are sometimes requested."
       : "Both are valid and cost the same. On arrival is faster to organise and takes a few minutes at the airport bank counter. The e-Visa is calmer: you land with the visa already issued and walk straight to passport control, which matters most after a long flight or when arriving late at night with children.",
@@ -199,7 +199,7 @@ const jsonld: Record<string, unknown>[] = [
 
       <Frieze />
 
-      <Faq items={faqs} heading={`Egypt visa questions — ${n.demonym}`} />
+      <Faq items={faqs} heading={`Egypt entry questions — ${n.country} passport`} />
     </div>
   </section>
 

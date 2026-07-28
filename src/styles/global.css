@@ -179,7 +179,9 @@ section{position:relative;padding:100px 0}
 .qa{padding:20px 22px;border-top:1px solid var(--line);transition:background .4s ease}
 .qa:first-child{border-top:0}
 .qa:hover{background:linear-gradient(90deg,rgba(217,180,90,.06),transparent 72%)}
-.qa h4{font-family:var(--ff-display);font-size:1.12rem;color:var(--bone);margin-bottom:8px;letter-spacing:.005em}
+/* Questions are h3 (one below the block heading); h4 kept for any block
+   nested under an h3. */
+.qa h3,.qa h4{font-family:var(--ff-display);font-size:1.12rem;color:var(--bone);margin-bottom:8px;letter-spacing:.005em}
 .qa p{color:var(--muted);font-size:.95rem;line-height:1.85}
 
 /* identities expanded */
@@ -211,7 +213,7 @@ section{position:relative;padding:100px 0}
 .sweet .frame{aspect-ratio:1/1;background:linear-gradient(150deg,#1C1610,#3A2A18)}
 .sweet .frame .glow{background:radial-gradient(80% 70% at 35% 25%,rgba(247,230,174,.22),transparent 60%)}
 .sweet .body{padding:18px 20px 22px;text-align:center}
-.sweet h4{font-family:var(--ff-display);font-size:1.15rem;color:var(--bone);margin-bottom:5px}
+.sweet h3,.sweet h4{font-family:var(--ff-display);font-size:1.15rem;color:var(--bone);margin-bottom:5px}
 .sweet span{font-size:.82rem;color:var(--muted)}
 
 /* gods + crafts */
@@ -231,7 +233,7 @@ section{position:relative;padding:100px 0}
 .her-item:last-child{border-bottom:1px solid var(--line)}
 .her-item .i{width:38px;height:38px;flex:0 0 auto;filter:drop-shadow(0 4px 10px rgba(217,180,90,.2))}
 .her-item .i svg{width:100%;height:100%}
-.her-item h4{font-family:var(--ff-display);font-size:1.2rem;color:var(--bone);margin-bottom:4px}
+.her-item h3,.her-item h4{font-family:var(--ff-display);font-size:1.2rem;color:var(--bone);margin-bottom:4px}
 .her-item p{font-size:.9rem;color:var(--muted);margin:0}
 .her-art{aspect-ratio:3/4;border-radius:2px;border:1px solid var(--line)}
 
@@ -664,3 +666,8 @@ footer{background:var(--ink-2);border-top:1px solid var(--line);padding:100px 0 
 @media(max-width:420px){
   .nav-cta{padding:10px 14px;letter-spacing:.16em;margin-right:8px}
 }
+
+/* A heading that exists for document structure rather than for display — it
+   keeps the outline continuous (no h1→h3 jump) without adding visual noise. */
+.sr-head{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
+  clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
