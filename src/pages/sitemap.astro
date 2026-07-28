@@ -81,7 +81,10 @@ const pageCount =
         <h2>Main pages</h2>
         <ul class="sm-list">
           {main.map(([label, href, note]) => (
-            <li><a href={href}>{label}</a><span>{note}</span></li>
+            /* The homepage's canonical URL is the bare origin, so link it as
+               "/" rather than index.html — otherwise this page is the last
+               internal link pointing at the duplicate. */
+            <li><a href={href === "index.html" ? "/" : href}>{label}</a><span>{note}</span></li>
           ))}
         </ul>
       </div>

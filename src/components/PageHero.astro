@@ -12,7 +12,8 @@ interface Props {
   symbol?: string;
   /** Breadcrumb leaf label (Home is prepended automatically). */
   crumb?: string;
-  /** Link prefix back to the site root ("" at root, "../" in subfolders). */
+  /** Accepted for call-site consistency with the other hero components.
+   *  No longer used here: the Home link is the absolute "/" at every depth. */
   base?: string;
   /** Optional hero photo shown beneath the header. */
   heroSrc?: string;
@@ -21,7 +22,7 @@ interface Props {
   heroHeight?: number;
 }
 const {
-  title, text = "", symbol = "", crumb = "", base = "",
+  title, text = "", symbol = "", crumb = "",
   heroSrc, heroAlt, heroWidth, heroHeight,
 } = Astro.props;
 ---
@@ -29,7 +30,7 @@ const {
   <div class="wrap">
     {crumb && (
       <nav class="crumb" aria-label="Breadcrumb">
-        <a href={`${base}index.html`}>Home</a> · <span>{crumb}</span>
+        <a href="/">Home</a> · <span>{crumb}</span>
       </nav>
     )}
     {symbol && <div class="sym"><SymbolIcon name={symbol} /></div>}

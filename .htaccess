@@ -87,29 +87,67 @@ ErrorDocument 404 /404.html
 
 RewriteEngine On
 
+# REQUIRED. Without it, a relative rewrite target in a .htaccess file is
+# resolved against the filesystem, and Apache emits the absolute server path in
+# the Location header — /cuisine was 301'ing to
+# https://kemet-travel.com/home/<user>/public_html/cuisine.html, which both 404s
+# and discloses the account path. Reproduced on Apache 2.4 and fixed here.
+RewriteBase /
+
 # www → apex domain (301), keeping one canonical host.
 RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
 RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
-
-# Canonical URLs are the real .html files. Internal links, canonicals and the
-# sitemap all use .html, so crawlers never hit a redirect. As a courtesy, a
-# manually-typed extensionless URL (e.g. /tours) is 301'd to its .html page —
-# this only ever affects hand-typed URLs, never the crawl.
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{DOCUMENT_ROOT}/$1.html -f
-RewriteRule ^([^.]+?)/?$ $1.html [R=301,L]
 
 # Repo internals are not part of the website — hide them completely (404).
 RewriteRule ^(?:\.git|src|scripts|public|node_modules|dist|\.claude|\.astro|_stats)(/|$) - [R=404,L]
 
 # Project/config files that sit in the repo root must never be downloadable.
-<FilesMatch "^(package(-lock)?\.json|astro\.config\.mjs|tsconfig\.json|README\.md|DEPLOYMENT\.md|ARCHITECTURE\.md|\.env.*|\.gitignore|\.publish-manifest)$">
-  Require all denied
-</FilesMatch>
+# Answered 404 rather than 403 on purpose: a crawler treats 403 as "exists but
+# temporarily refused" and keeps coming back (Search Console was reporting
+# /tsconfig.json as a blocked URL); a 404 makes it drop the URL for good.
+RewriteRule ^(?:package(?:-lock)?\.json|astro\.config\.mjs|tsconfig\.json|README\.md|DEPLOYMENT\.md|ARCHITECTURE\.md|\.env.*|\.gitignore|\.publish-manifest)$ - [R=404,L]
 
 # Astro source that co-lives in the repo root must never be served, even if a
 # new source file ever lands outside the folders blocked above.
-<FilesMatch "\.(ts|astro|mjs|sh)$">
-  Require all denied
-</FilesMatch>
+RewriteRule \.(?:ts|astro|mjs|sh)$ - [R=404,L]
+
+# The homepage had two live URLs — / and /index.html — serving identical HTML.
+# Search Console was reporting /index.html as a duplicate. Every internal link
+# now points at "/", so this 301 only ever catches an old bookmark or an
+# external link; no internal link and no sitemap entry hits it.
+RewriteRule ^index(?:\.html)?$ / [R=301,L]
+
+# Section names are BOTH a page and a folder: destinations.html is the page,
+# destinations/ holds the detail pages. Left alone, Apache answers a bare
+# /destinations by redirecting to /destinations/, finding no index.html inside,
+# and — with indexes off — returning 403. Search Console reported exactly that.
+# Turning DirectorySlash off lets the rule below route these itself.
+DirectorySlash Off
+
+# Canonical URLs are the real .html files. Internal links, canonicals and the
+# sitemap all use .html, so crawlers never hit a redirect. As a courtesy, a
+# manually-typed extensionless URL (/tours) or a bare section name
+# (/destinations) is 301'd to its .html page. The first condition makes sure a
+# folder that has its own index.html is never hijacked.
+RewriteCond %{DOCUMENT_ROOT}/$1/index.html !-f
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^([^.]+?)/?$ /$1.html [R=301,L]
+
+# Any other bare folder — /images, /fonts — has no page behind it. Answer 404
+# rather than the 403 that "indexes off" would otherwise produce, for the same
+# crawler reason as above. The document root is excluded: it has an index.html.
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{REQUEST_FILENAME}/index.html !-f
+RewriteRule ^ - [R=404,L]
+
+# Fallback if mod_rewrite is ever unavailable: the blocks above are all
+# rewrite-based, so keep a hard authz denial as a safety net in that case only.
+# (When mod_rewrite IS present this block is skipped, so the 404s above win.)
+<IfModule !mod_rewrite.c>
+  <FilesMatch "^(package(-lock)?\.json|astro\.config\.mjs|tsconfig\.json|README\.md|DEPLOYMENT\.md|ARCHITECTURE\.md|\.env.*|\.gitignore|\.publish-manifest)$">
+    Require all denied
+  </FilesMatch>
+  <FilesMatch "\.(ts|astro|mjs|sh)$">
+    Require all denied
+  </FilesMatch>
+</IfModule>
