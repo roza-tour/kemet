@@ -18,6 +18,7 @@ import { collections } from "@/data/collections";
 import { occasions } from "@/data/occasions";
 import { months } from "@/data/months";
 import { comparisons } from "@/data/comparisons";
+import { TRANSLATION_GROUPS, TRANSLATED_LOCALES, LOCALE_META } from "@/config/i18n";
 import { activities } from "@/data/activities";
 import { nationalities, VISA_FEE_USD, VISA_STAY_DAYS, VERIFIED_ON } from "@/data/entryRequirements";
 import { company } from "@/data/company";
@@ -155,6 +156,19 @@ export const GET: APIRoute = () => {
     lines.push(item(g.title, `guides/${g.slug}.html`, g.shortSummary ?? ""));
   }
   lines.push("");
+
+  lines.push("## Other languages");
+  lines.push("");
+  lines.push("Six key pages are published in German, Italian and Spanish for Egypt's largest European source markets. The English site is the complete one; the translated pages carry the same facts, written for those markets.");
+  lines.push("");
+  for (const loc of TRANSLATED_LOCALES) {
+    lines.push(`### ${LOCALE_META[loc].endonym} (${loc})`);
+    lines.push("");
+    for (const g of TRANSLATION_GROUPS) {
+      lines.push(`- ${u(g[loc])}`);
+    }
+    lines.push("");
+  }
 
   lines.push("## Policies");
   lines.push("");

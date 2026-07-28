@@ -14,6 +14,7 @@ import { activities } from "@/data/activities";
 import { occasions } from "@/data/occasions";
 import { months } from "@/data/months";
 import { comparisons } from "@/data/comparisons";
+import { TRANSLATION_GROUPS, TRANSLATED_LOCALES, LOCALE_META } from "@/config/i18n";
 import { nationalities } from "@/data/entryRequirements";
 import { canonical } from "@/utils/links";
 import { site, SITE_URL } from "@/config/site";
@@ -63,7 +64,7 @@ const jsonld = [
 const pageCount =
   main.length + support.length + tours.length + collections.length +
   destinations.length + experiences.length + guides.length +
-  activities.filter((a) => a.slug).length + nationalities.length + occasions.length + months.length + comparisons.length;
+  activities.filter((a) => a.slug).length + nationalities.length + occasions.length + months.length + comparisons.length + TRANSLATION_GROUPS.length * TRANSLATED_LOCALES.length;
 ---
 <Base
   title={`Site Index — Every Page on Kemet | Kemet`}
@@ -195,6 +196,24 @@ const pageCount =
         </ul>
       </div>
 
+      <div class="sm-group reveal">
+        <h2>Andere Sprachen · Altre lingue · Otros idiomas</h2>
+        <p class="sm-langnote">
+          Six key pages are published in German, Italian and Spanish — Egypt's largest European
+          source markets. The full catalogue remains in English.
+        </p>
+        {TRANSLATED_LOCALES.map((loc) => (
+          <ul class="sm-list sm-cols">
+            {TRANSLATION_GROUPS.map((g) => (
+              <li>
+                <a href={g[loc]} hreflang={loc} lang={loc}>{g[loc].split("/")[1].replace(".html", "").replace(/-/g, " ")}</a>
+                <span>{LOCALE_META[loc].endonym}</span>
+              </li>
+            ))}
+          </ul>
+        ))}
+      </div>
+
       <p class="sm-machine">
         Machine-readable: <a href="/sitemap-index.xml">XML sitemap</a> · <a href="/llms.txt">llms.txt</a>
       </p>
@@ -216,6 +235,7 @@ const pageCount =
   .sm-list span { color: var(--muted-2); font-size: .86rem; flex: 1 1 300px; }
   .sm-cols { columns: 2; column-gap: 46px; }
   .sm-cols li { break-inside: avoid; }
+  .sm-langnote { color: var(--muted-2); font-size: .88rem; line-height: 1.7; margin: 10px 0 4px; max-width: 640px; }
   .sm-machine { margin-top: 8px; font-size: .84rem; color: var(--muted-2); }
   .sm-machine a { color: var(--gold); border-bottom: 1px solid var(--line-2); }
   @media(max-width:700px){ .sm-cols { columns: 1; } }

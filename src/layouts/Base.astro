@@ -2,7 +2,7 @@
 import "@/styles/fonts.css";
 import "@/styles/global.css";
 import {
-  site, HTML_LANG, OG_LOCALE,
+  site, OG_LOCALE,
   OG_IMAGE_WIDTH, OG_IMAGE_HEIGHT,
   GEO_REGION, GEO_PLACENAME, GEO_POSITION,
 } from "@/config/site";
@@ -11,6 +11,8 @@ import { buildPageSeo } from "@/utils/seo";
 import { siteSchema } from "@/schemas/jsonld";
 import { enhanceScript } from "@/scripts/enhance";
 import type { JsonLd } from "@/types";
+import { localeOfRoute, alternatesFor, LOCALE_META } from "@/config/i18n";
+import { canonical } from "@/utils/links";
 import Nav from "@/components/Nav.astro";
 import Footer from "@/components/Footer.astro";
 import CTA from "@/components/CTA.astro";
@@ -50,9 +52,28 @@ const { title, description, canonicalUrl, ogImage, ogImageAlt, keywords } = buil
 // Root pages → "" (output unchanged); /destinations/* → "../".
 const base = relativePrefix(active);
 const pageLd = jsonld ? (Array.isArray(jsonld) ? jsonld : [jsonld]) : [];
+
+// --- Localisation -----------------------------------------------------------
+// The locale is derived from the route, and the hreflang set comes from the
+// translation registry, so a page can never declare an alternate that another
+// page does not declare back. Pages with no translations emit only the
+// site-wide English/x-default pair.
+const pageLocale = localeOfRoute(active);
+const htmlLang = LOCALE_META[pageLocale].tag;
+const alternates = alternatesFor(active);
+// og:locale follows the page, and the other members of the group are declared
+// as og:locale:alternate so social previews resolve to the right language.
+const OG_LOCALE_BY_LANG: Record<string, string> = {
+  en: OG_LOCALE, de: "de_DE", it: "it_IT", es: "es_ES",
+};
+const ogLocale = OG_LOCALE_BY_LANG[pageLocale] ?? OG_LOCALE;
+const ogLocaleAlternates = alternates
+  .filter((a) => a.hreflang !== "x-default" && a.hreflang !== pageLocale)
+  .map((a) => OG_LOCALE_BY_LANG[a.hreflang])
+  .filter(Boolean);
 ---
 <!doctype html>
-<html lang={HTML_LANG}>
+<html lang={htmlLang}>
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -77,10 +98,20 @@ const pageLd = jsonld ? (Array.isArray(jsonld) ? jsonld : [jsonld]) : [];
   <meta name="description" content={description} />
   <meta name="keywords" content={keywords} />
   <link rel="canonical" href={canonicalUrl} />
-  {/* Single global-English site: serve this page to every English region and
-      make it the default worldwide. */}
-  <link rel="alternate" hreflang="en" href={canonicalUrl} />
-  <link rel="alternate" hreflang="x-default" href={canonicalUrl} />
+  {/* hreflang. Where a page has translations the set is generated from the
+      registry in config/i18n and is self-referential and reciprocal — the
+      requirement Google enforces before it will honour any of it. Pages with no
+      translations keep the site-wide English/x-default pair. */}
+  {alternates.length > 0
+    ? alternates.map((alt) => (
+        <link rel="alternate" hreflang={alt.hreflang} href={canonical(alt.route)} />
+      ))
+    : (
+      <>
+        <link rel="alternate" hreflang="en" href={canonicalUrl} />
+        <link rel="alternate" hreflang="x-default" href={canonicalUrl} />
+      </>
+    )}
   {/* Let search + answer engines show large images and full snippets (rich
       results / AI answers). Pages flagged noindex opt out. */}
   {Astro.props.noindex
@@ -97,7 +128,8 @@ const pageLd = jsonld ? (Array.isArray(jsonld) ? jsonld : [jsonld]) : [];
   <meta name="theme-color" content="#0B0907" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content={site.name} />
-  <meta property="og:locale" content={OG_LOCALE} />
+  <meta property="og:locale" content={ogLocale} />
+  {ogLocaleAlternates.map((l) => <meta property="og:locale:alternate" content={l} />)}
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:url" content={canonicalUrl} />
@@ -125,7 +157,7 @@ const pageLd = jsonld ? (Array.isArray(jsonld) ? jsonld : [jsonld]) : [];
   <SeasonalSkin />
   <main id="main"><slot /></main>
   {showCta && <CTA base={base} />}
-  <Footer base={base} />
+  <Footer base={base} route={active} />
   <WhatsAppButton />
   <script is:inline set:html={enhanceScript}></script>
 </body>

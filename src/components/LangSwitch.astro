@@ -1,0 +1,74 @@
+---
+// LangSwitch — the language chooser for pages that have translations.
+//
+// A LINK, never a redirect. Automatic language switching by browser header or
+// IP is the classic way to make translated pages invisible to search: Googlebot
+// crawls predominantly from the United States, so it would only ever be shown
+// the English version and the other languages would never be indexed. The
+// visitor chooses; nothing chooses for them.
+//
+// Renders nothing at all on pages with no translations.
+import { alternatesFor, LOCALE_META, localeOfRoute, basePrefixFor } from "@/config/i18n";
+import type { SiteLocale } from "@/config/i18n";
+
+interface Props {
+  /** Route file of the current page. */
+  route: string;
+  /** Distinguishes the two placements (top of page and footer) so a screen
+   *  reader's landmark list does not show two identically-named navigations. */
+  label?: string;
+}
+const { route, label = "Language" } = Astro.props;
+
+const alternates = alternatesFor(route).filter((a) => a.hreflang !== "x-default");
+const current = localeOfRoute(route);
+const base = basePrefixFor(route);
+---
+{alternates.length > 1 && (
+  <nav class="lsw" aria-label={label}>
+    <span class="lsw-label">Language</span>
+    <ul>
+      {alternates.map((a) => {
+        const loc = a.hreflang as SiteLocale;
+        const isCurrent = loc === current;
+        return (
+          <li>
+            <a
+              href={`${base}${a.route}`}
+              hreflang={a.hreflang}
+              lang={a.hreflang}
+              class={isCurrent ? "is-current" : undefined}
+              aria-current={isCurrent ? "true" : undefined}
+            >
+              <b>{LOCALE_META[loc].short}</b>
+              <span>{LOCALE_META[loc].endonym}</span>
+            </a>
+          </li>
+        );
+      })}
+    </ul>
+  </nav>
+)}
+
+<style>
+  .lsw { display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+    padding: 14px 0 4px; border-bottom: 1px solid var(--line); margin-bottom: 6px; }
+  .lsw-label { font-size: .6rem; letter-spacing: .28em; text-transform: uppercase;
+    color: var(--muted-2); }
+  .lsw ul { list-style: none; display: flex; gap: 8px; margin: 0; padding: 0; flex-wrap: wrap; }
+  .lsw a { display: inline-flex; align-items: baseline; gap: 7px;
+    padding: 9px 13px; min-height: 44px; align-content: center; border-radius: 20px;
+    border: 1px solid var(--line); transition: border-color .3s, color .3s, background .3s; }
+  .lsw a b { font-weight: 500; font-size: .72rem; letter-spacing: .12em; color: var(--muted); }
+  .lsw a span { font-size: .78rem; color: var(--muted-2); }
+  .lsw a:hover { border-color: var(--gold); }
+  .lsw a:hover b, .lsw a:hover span { color: var(--gold-bright); }
+  .lsw a.is-current { border-color: var(--gold); background: rgba(217,180,90,.08); }
+  .lsw a.is-current b { color: var(--gold-bright); }
+  .lsw a.is-current span { color: var(--gold); }
+
+  @media(max-width:520px){
+    .lsw a span { display: none; }
+    .lsw a { padding: 9px 15px; }
+  }
+</style>
