@@ -69,7 +69,9 @@ FAIL=0
 for f in index.html tours.html contact.html faq.html booking.html privacy.html terms.html \
          sitemap.html 404.html robots.txt llms.txt sitemap-index.xml sitemap-images.xml .htaccess \
          contact-handler.php visa.html visa/united-states.html BingSiteAuth.xml \
-         occasions.html egypt-tour-cost.html \
+         occasions.html egypt-tour-cost.html when-to-go.html compare.html \
+         when-to-go/october.html compare/luxor-vs-aswan.html occasions/proposal-in-egypt.html \
+         de/index.html it/index.html es/index.html \
          activities/hot-air-balloon-luxor.html collections/ramadan-in-egypt.html; do
   if [ -s "$f" ]; then ok "$f"; else bad "MISSING: $f"; FAIL=1; fi
 done
@@ -113,6 +115,8 @@ if [ "$FAIL" -eq 0 ]; then
   echo "     https://kemet-travel.com"
   echo "     https://kemet-travel.com/collections/ramadan-in-egypt.html"
   echo "     https://kemet-travel.com/activities/hot-air-balloon-luxor.html"
+  echo "     https://kemet-travel.com/when-to-go.html"
+  echo "     https://kemet-travel.com/de/   ·   /it/   ·   /es/"
   echo "     https://kemet-travel.com/llms.txt"
 else
   printf '\033[0;31m  ⚠  بعض الملفات ناقصة — ابعتي اللقطة دي للمطوّر\n'
