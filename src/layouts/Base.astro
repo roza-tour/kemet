@@ -97,6 +97,30 @@ const ogLocaleAlternates = alternates
     in update.sh notifies on every publish.
   -->
   <meta name="msvalidate.01" content="5D3CF7281731A894F620497D79317F74" />
+  {/*
+    NO font preload — and that is a measured decision, not an oversight.
+
+    Preloading the woff2 files is the standard advice, so it was implemented
+    and then benchmarked against the alternatives on a throttled 1.6 Mbps / 70ms
+    connection, median of three runs per page:
+
+                          /            /tours.html   /visa.html
+      no preload          1412ms       1312ms        1128ms      <- shipped
+      Fraunces + Outfit   1800ms       1868ms        1732ms
+      Outfit only         1584ms       1532ms        1276ms
+
+    Preloading made LCP 200-550ms WORSE on every page. On a bandwidth-limited
+    connection the font requests are promoted above the stylesheet and the hero
+    image and compete with them, and the LCP element is one of those two.
+
+    It does improve CLS (0.0218 -> 0.0051 on the home page) by removing the
+    swap reflow — but every one of those numbers is already an order of
+    magnitude inside the 0.1 threshold, so that buys nothing, while LCP has a
+    real 2.5s cliff. font-display:swap in styles/fonts.css covers the gap.
+
+    If the font files are ever subset down substantially, re-run the benchmark
+    before assuming this still holds.
+  */}
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />

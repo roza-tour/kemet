@@ -11,10 +11,12 @@ import BookingConfidence from "@/components/trust/BookingConfidence.astro";
 import EnquiryPanel from "@/components/conversion/EnquiryPanel.astro";
 import ContactForm from "@/components/conversion/ContactForm.astro";
 import { company } from "@/data/company";
-import { contactPageSchema } from "@/schemas/jsonld";
+import { contactPageSchema, breadcrumb } from "@/schemas/jsonld";
 
 const ROUTE = "contact.html";
-const jsonld = contactPageSchema();
+// A crawler reads the trail from BreadcrumbList, not from the visible
+// nav — without it this page sits outside the site hierarchy.
+const jsonld = [contactPageSchema(), breadcrumb([["Home", "index.html"], ["Contact", "contact.html"]])];
 ---
 <Base
   title={`Contact ${company.name} — Plan Your Egypt Journey`}

@@ -1,6 +1,7 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import { loadEnv } from "vite";
+import { execSync } from "node:child_process";
 
 // Deploy-time configuration is read from the environment (see .env.example),
 // with safe fallbacks so a default build is fully reproducible. `site` must
@@ -28,6 +29,83 @@ const GROUPS = [
   ["visa.html", "de/aegypten-visum.html", "it/visto-egitto.html", "es/visado-egipto.html"],
 ];
 const LANGS = ["en", "de", "it", "es"];
+
+// ---------------------------------------------------------------------------
+// lastmod — a real content date, or none at all.
+//
+// This previously stamped every URL with `new Date()` at build time, so all
+// 190 entries claimed to have changed at the same millisecond on every
+// publish. That is not a freshness signal: Google's guidance is that a lastmod
+// it cannot trust is ignored, and an unreliable one risks the whole file being
+// discounted.
+//
+// The obvious fix — the last commit that touched the page's built .html — was
+// measured and rejected: every publish rewrites every page (a footer link
+// changes all 190), so the git dates came back identical too. The date has to
+// come from the SOURCE OF THE CONTENT, not from the rendered artefact.
+//
+// So each URL is mapped to the files that actually decide what is on it: its
+// own page template plus the data module its content lives in. The newest
+// commit among those is the answer, and a URL with no match gets no lastmod at
+// all rather than a fabricated one.
+// ---------------------------------------------------------------------------
+const FILE_DATES = new Map();
+try {
+  const log = execSync("git log --pretty=format:%x00%cI --name-only", {
+    maxBuffer: 128 * 1024 * 1024,
+    stdio: ["ignore", "pipe", "ignore"],
+  }).toString();
+  let commitDate = null;
+  for (const line of log.split("\n")) {
+    if (line.startsWith("\0")) { commitDate = line.slice(1).trim(); continue; }
+    const file = line.trim();
+    // git log is reverse-chronological, so the first sighting is the newest.
+    if (commitDate && file.startsWith("src/") && !FILE_DATES.has(file)) {
+      FILE_DATES.set(file, commitDate);
+    }
+  }
+} catch {
+  // No git history available (a tarball build). Every entry omits lastmod.
+}
+
+/** Section prefix → [page template, data module] that decide its content. */
+const CONTENT_SOURCES = [
+  [/^destinations\//, ["src/pages/destinations/[slug].astro", "src/data/destinations.ts"]],
+  [/^experiences\//, ["src/pages/experiences/[slug].astro", "src/data/experiences.ts"]],
+  [/^activities\//, ["src/pages/activities/[slug].astro", "src/data/activities.ts"]],
+  [/^collections\//, ["src/pages/collections/[slug].astro", "src/data/collections.ts"]],
+  [/^guides\//, ["src/pages/guides/[slug].astro", "src/data/guides.ts"]],
+  [/^visa\//, ["src/pages/visa/[slug].astro", "src/data/entryRequirements.ts"]],
+  [/^compare\//, ["src/pages/compare/[slug].astro", "src/data/comparisons.ts"]],
+  [/^when-to-go\//, ["src/pages/when-to-go/[slug].astro", "src/data/months.ts"]],
+  [/^occasions\//, ["src/pages/occasions/[slug].astro", "src/data/occasions.ts"]],
+  [/^(de|it|es)\//, ["src/pages/[locale]/[slug].astro"]],
+  [/^tour-/, ["src/pages/[slug].astro", "src/data/tours.ts"]],
+];
+
+/** Newest commit date among the sources that decide this route's content. */
+function contentLastmod(route) {
+  const sources = [];
+  for (const [pattern, files] of CONTENT_SOURCES) {
+    if (pattern.test(route)) {
+      sources.push(...files);
+      // A localised route's words live in its own locale module.
+      const locale = route.match(/^(de|it|es)\//);
+      if (locale) sources.push(`src/data/i18n/${locale[1]}.ts`);
+      break;
+    }
+  }
+  // Standalone pages. A section hub is authored either as `<name>.astro` or as
+  // `<name>/index.astro` — both spellings are in use here, so try both, and
+  // pull in the section's data module too since that is what the hub lists.
+  const stem = route.replace(/\.html$/, "") || "index";
+  sources.push(`src/pages/${stem}.astro`, `src/pages/${stem}/index.astro`);
+  for (const [pattern, files] of CONTENT_SOURCES) {
+    if (pattern.test(`${stem}/`)) { sources.push(...files); break; }
+  }
+  const dates = sources.map((f) => FILE_DATES.get(f)).filter(Boolean);
+  return dates.length ? dates.sort().at(-1) : undefined;
+}
 const SITEMAP_ALTERNATES = {};
 for (const g of GROUPS) {
   const links = g.map((path, i) => ({ lang: LANGS[i], url: `${SITE_URL}/${path}` }));
@@ -80,8 +158,12 @@ export default defineConfig({
         // from the sitemap as well as from the page head.
         const group = SITEMAP_ALTERNATES[item.url];
         if (group) item.links = group;
-        // Freshness signal — the date this build was published.
-        item.lastmod = new Date().toISOString();
+        // Freshness: when this page's content last actually changed, or nothing.
+        // A directory URL (/, /de/) is served by its index.html.
+        const rel = new URL(item.url).pathname.replace(/^\//, "");
+        const when = contentLastmod(rel === "" || rel.endsWith("/") ? `${rel}index.html` : rel);
+        if (when) item.lastmod = when;
+        else delete item.lastmod;
         return item;
       },
     }),

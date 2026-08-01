@@ -10,8 +10,13 @@ interface Props {
   text?: string;
   /** SymbolIcon name to show above the heading. */
   symbol?: string;
-  /** Breadcrumb leaf label (Home is prepended automatically). */
+  /** Breadcrumb leaf label (the root is prepended automatically). */
   crumb?: string;
+  /** Root crumb label and href — overridden on localised pages so the trail
+   *  reads "Startseite · Sicherheit" and points at /de/, not at the English
+   *  home page. */
+  rootLabel?: string;
+  rootHref?: string;
   /** Accepted for call-site consistency with the other hero components.
    *  No longer used here: the Home link is the absolute "/" at every depth. */
   base?: string;
@@ -23,6 +28,7 @@ interface Props {
 }
 const {
   title, text = "", symbol = "", crumb = "",
+  rootLabel = "Home", rootHref = "/",
   heroSrc, heroAlt, heroWidth, heroHeight,
 } = Astro.props;
 ---
@@ -30,7 +36,7 @@ const {
   <div class="wrap">
     {crumb && (
       <nav class="crumb" aria-label="Breadcrumb">
-        <a href="/">Home</a> · <span>{crumb}</span>
+        <a href={rootHref}>{rootLabel}</a> · <span>{crumb}</span>
       </nav>
     )}
     {symbol && <div class="sym"><SymbolIcon name={symbol} /></div>}

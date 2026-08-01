@@ -13,10 +13,12 @@ import OurProcess from "@/components/trust/OurProcess.astro";
 import BookingConfidence from "@/components/trust/BookingConfidence.astro";
 import CTABlock from "@/components/trust/CTABlock.astro";
 import { company } from "@/data/company";
-import { aboutPageSchema } from "@/schemas/jsonld";
+import { aboutPageSchema, breadcrumb } from "@/schemas/jsonld";
 
 const ROUTE = "about.html";
-const jsonld = aboutPageSchema();
+// A crawler reads the trail from BreadcrumbList, not from the visible
+// nav — without it this page sits outside the site hierarchy.
+const jsonld = [aboutPageSchema(), breadcrumb([["Home", "index.html"], ["About", "about.html"]])];
 ---
 <Base
   title={`About ${company.name} — Luxury Private Egypt Travel`}

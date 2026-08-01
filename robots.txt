@@ -54,5 +54,9 @@ Sitemap: https://kemet-travel.com/sitemap-index.xml
 # can index it. Multiple Sitemap directives are valid and additive.
 Sitemap: https://kemet-travel.com/sitemap-images.xml
 
-# Curated Markdown index of the site for LLMs (llms.txt convention):
-# https://kemet-travel.com/llms.txt
+# For LLMs and answer engines (llms.txt convention). Two files:
+#   the index      https://kemet-travel.com/llms.txt
+#   the full text  https://kemet-travel.com/llms-full.txt
+# The first says which page answers what; the second carries the answers
+# themselves as clean Markdown, so an assistant that will not fetch twenty
+# pages still has the substance rather than scraped HTML.

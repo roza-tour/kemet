@@ -62,6 +62,10 @@ export const GET: APIRoute = () => {
   );
   lines.push("");
 
+  lines.push(
+    `- Full content as a single Markdown document: ${u("llms-full.txt")} — the substance of these pages in one file, for when fetching each page individually is not practical.`,
+  );
+  lines.push("");
   lines.push("## Start here");
   lines.push("");
   lines.push(item("Home", "index.html", "Overview of Kemet and the eight cultural worlds of Egypt."));

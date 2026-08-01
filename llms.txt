@@ -12,6 +12,8 @@
 - Catalogue: 25 journeys, 15 experiences, 8 activities, 8 destinations, 7 travel guides, 50 nationality visa pages
 - Content reviewed by: Mervat Farouk, Egyptologist guide — Egyptian tour guide and specialist in Egyptology (https://kemet-travel.com/about.html#mervat-farouk)
 
+- Full content as a single Markdown document: https://kemet-travel.com/llms-full.txt — the substance of these pages in one file, for when fetching each page individually is not practical.
+
 ## Start here
 
 - [Home](https://kemet-travel.com/index.html): Overview of Kemet and the eight cultural worlds of Egypt.

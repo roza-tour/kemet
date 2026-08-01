@@ -110,6 +110,11 @@ export function tourSchema(tour: Tour): JsonLd[] {
       priceCurrency: CURRENCY,
       availability: "https://schema.org/InStock",
       url,
+      // Google warns on an Offer with no stated validity and will eventually
+      // treat the price as stale. These are published "from" prices reviewed
+      // each season, so the honest horizon is the end of the current year —
+      // computed, never hardcoded, so it cannot silently fall into the past.
+      priceValidUntil: `${new Date().getUTCFullYear()}-12-31`,
       // Correct pricing unit (was misusing Offer.category for "per person").
       priceSpecification: {
         "@type": "UnitPriceSpecification",

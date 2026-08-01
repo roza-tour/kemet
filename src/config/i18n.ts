@@ -37,6 +37,10 @@ export interface LocaleMeta {
   tag: string;
   /** The language's own name, for the switcher. Never translated. */
   endonym: string;
+  /** The word "Home" in this language — used by the breadcrumb, visible and
+   *  in BreadcrumbList. A German page whose crumb trail reads "HOME" is a
+   *  small but real tell that the page is a translation of an English one. */
+  home: string;
   /** Short label for the switcher chip. */
   short: string;
   /** Locale used for number and date formatting. */
@@ -44,10 +48,10 @@ export interface LocaleMeta {
 }
 
 export const LOCALE_META: Record<SiteLocale, LocaleMeta> = {
-  en: { tag: "en", endonym: "English", short: "EN", formatLocale: "en-IE" },
-  de: { tag: "de", endonym: "Deutsch", short: "DE", formatLocale: "de-DE" },
-  it: { tag: "it", endonym: "Italiano", short: "IT", formatLocale: "it-IT" },
-  es: { tag: "es", endonym: "Español", short: "ES", formatLocale: "es-ES" },
+  en: { tag: "en", home: "Home", endonym: "English", short: "EN", formatLocale: "en-IE" },
+  de: { tag: "de", home: "Startseite", endonym: "Deutsch", short: "DE", formatLocale: "de-DE" },
+  it: { tag: "it", home: "Home", endonym: "Italiano", short: "IT", formatLocale: "it-IT" },
+  es: { tag: "es", home: "Inicio", endonym: "Español", short: "ES", formatLocale: "es-ES" },
 };
 
 /**
