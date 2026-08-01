@@ -7,6 +7,7 @@ import SectionHeader from "@/components/SectionHeader.astro";
 import SymbolIcon from "@/components/SymbolIcon.astro";
 import TourCard from "@/components/TourCard.astro";
 import SeasonalStrip from "@/components/collection/SeasonalStrip.astro";
+import StandardOfTravel from "@/components/trust/StandardOfTravel.astro";
 import { multidayTours, dayTours } from "@/data/tours";
 import { identities } from "@/data/identities";
 import { destinations } from "@/data/destinations";
@@ -68,6 +69,23 @@ const stripLine: Record<string, string> = {
   fayoum: "Whale fossils & desert waterfalls",
 };
 const roman = ["i", "ii", "iii", "iv", "v", "vi", "vii", "viii"];
+
+// The questions people settle before they will look at an itinerary. Each one
+// already has a full page behind it; until now those pages were only reachable
+// from the footer, so the most-visited page on the site offered no route to
+// them. [href, kicker, question, answer, symbol]
+const decisions: ReadonlyArray<readonly [string, string, string, string, string]> = [
+  ["when-to-go.html", "The timing", "When should we go?",
+   "Egypt month by month — heat, crowds, prices and festivals, with an honest verdict on each of the twelve.", "sun"],
+  ["egypt-tour-cost.html", "The budget", "What does it actually cost?",
+   "What a private, tailor-made journey costs per person per day, the five things that move the price, and where we sit.", "scarab"],
+  ["visa.html", "The paperwork", "Do we need a visa?",
+   "Entry rules by nationality — visa on arrival, e-Visa or visa-free — with the fee, the permitted stay and the documents.", "horus"],
+  ["compare.html", "The choices", "Cruise or land tour?",
+   "The decisions people get stuck on — dahabiya or cruise ship, Luxor or Aswan, which Cairo museum. Verdict first.", "eye"],
+  ["occasions.html", "The occasion", "We're travelling for a reason",
+   "A proposal, a milestone birthday, a second visit, three generations travelling together — planned around the occasion.", "lotus"],
+];
 
 const jsonld = breadcrumb([["Home", "index.html"]]);
 ---
@@ -146,12 +164,46 @@ const jsonld = breadcrumb([["Home", "index.html"]]);
     </div>
   </section>
 
+  {/* ── The standard — what "luxury" means here, in checkable specifics ──
+       This is the site's most-visited page and, for most visitors, the first
+       thing they ever see of the brand. It has to place us in the right tier
+       within ten seconds — including telling the wrong traveller, plainly,
+       that this is not for them. */}
+  <section>
+    <div class="wrap">
+      <StandardOfTravel eyebrow="03 · The Standard" />
+    </div>
+  </section>
+
+  {/* ── Before you choose — the five questions that precede an itinerary ── */}
+  <section style="padding-top:0">
+    <div class="wrap">
+      <SectionHeader
+        no="04"
+        eyebrow="04 · Before You Choose"
+        title="The questions that come before the itinerary"
+        text="Almost nobody picks a journey first. They settle the month, the budget, the paperwork and the shape of the trip — and only then look at itineraries. Each of these is answered in full, plainly, and without asking you for anything."
+      />
+      <div class="dec-grid">
+        {decisions.map(([href, kicker, question, answer, sym]) => (
+          <a class="dec pick" href={href}>
+            <div class="dec-sym" aria-hidden="true"><SymbolIcon name={sym} /></div>
+            <span class="k">{kicker}</span>
+            <h3>{question}</h3>
+            <p>{answer}</p>
+            <span class="more">Read the answer <b>→</b></span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
   {/* ── Curated experiences mosaic ── */}
   <section>
     <div class="wrap">
       <SectionHeader
-        no="03"
-        eyebrow="03 · Curated Experiences"
+        no="05"
+        eyebrow="05 · Curated Experiences"
         title="Moments money can't usually buy"
         text="Early-access mornings, private charters and evenings arranged with a standing relationship — fifteen experiences that turn sightseeing into memory."
       />
@@ -177,8 +229,8 @@ const jsonld = breadcrumb([["Home", "index.html"]]);
   <section style="padding-top:0">
     <div class="wrap">
       <SectionHeader
-        no="04"
-        eyebrow="04 · The Destinations"
+        no="06"
+        eyebrow="06 · The Destinations"
         title="Five cities, five thousand years"
       />
     </div>
@@ -205,7 +257,7 @@ const jsonld = breadcrumb([["Home", "index.html"]]);
   </section>
 
   {/* ── Our travellers — real guests, real moments ── */}
-  <CustomerGallery no="05" eyebrow="05 · Our Travellers" />
+  <CustomerGallery no="07" eyebrow="07 · Our Travellers" />
 
   <Frieze />
 
@@ -218,8 +270,8 @@ const jsonld = breadcrumb([["Home", "index.html"]]);
   <section>
     <div class="wrap">
       <SectionHeader
-        no="08"
-        eyebrow="08 · The 8 Identities"
+        no="09"
+        eyebrow="09 · The 8 Identities"
         title="The eight worlds of Egypt"
         text="Each of the eight worlds has its own colour, symbol and set of experiences — and most can be combined within a single trip. Together they are the map we travel by, and the reason no two Kemet journeys look quite the same."
       />
@@ -235,3 +287,58 @@ const jsonld = breadcrumb([["Home", "index.html"]]);
     </div>
   </section>
 </Base>
+
+<style>
+  /* "Before you choose" — deliberately not another card grid. The teaser cards
+     sit two sections above, so these read as an index: hairline columns, no
+     box, the rule doing the work. Five across on desktop, and on a phone they
+     stack into a clean list rather than five tall boxes. */
+  .dec-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; }
+  .dec {
+    /* Flex column so the five "read the answer" links sit on one line however
+       long each answer runs — five ragged baselines is exactly the kind of
+       untidiness this section is meant to avoid. */
+    display: flex; flex-direction: column; position: relative;
+    padding: 4px 24px 30px;
+    border-left: 1px solid var(--line);
+    transition: border-color .5s;
+  }
+  .dec:first-child { border-left: 0; padding-left: 0; }
+  .dec:hover { border-color: rgba(217, 180, 90, .5); }
+  .dec-sym { width: 34px; height: 40px; margin-bottom: 16px; opacity: .9;
+    filter: drop-shadow(0 5px 14px rgba(217, 180, 90, .22));
+    transition: transform .5s cubic-bezier(.22,.61,.36,1); }
+  .dec-sym :global(svg) { width: 100%; height: 100%; }
+  .dec:hover .dec-sym { transform: translateY(-3px); }
+  .dec .k { display: block; font-size: .6rem; letter-spacing: .3em;
+    text-transform: uppercase; color: var(--gold-bright); font-weight: 500;
+    margin-bottom: 10px; }
+  .dec h3 { font-size: 1.16rem; color: var(--bone); margin: 0 0 10px;
+    font-weight: 400; line-height: 1.35; }
+  .dec p { font-size: .88rem; color: var(--muted); line-height: 1.75;
+    margin: 0 0 16px; }
+  .dec .more { margin-top: auto; font-size: .66rem; letter-spacing: .18em;
+    text-transform: uppercase; color: var(--gold); font-weight: 500; }
+  .dec:hover .more b { margin-left: 6px; transition: margin .3s; }
+
+  @media(max-width:1080px){
+    .dec-grid { grid-template-columns: repeat(3, 1fr); row-gap: 34px; }
+    .dec:first-child { border-left: 1px solid var(--line); padding-left: 24px; }
+    .dec:nth-child(3n+1) { border-left: 0; padding-left: 0; }
+  }
+  @media(max-width:680px){
+    /* One column. The vertical rule becomes a horizontal one so the list keeps
+       its spine instead of dissolving into five unrelated blocks. */
+    .dec-grid { grid-template-columns: 1fr; row-gap: 0; }
+    .dec, .dec:first-child, .dec:nth-child(3n+1) {
+      border-left: 0; padding: 26px 0 26px 46px;
+      border-top: 1px solid var(--line);
+    }
+    .dec:first-child { border-top: 0; padding-top: 4px; }
+    .dec-sym { position: absolute; left: 0; top: 28px; width: 28px; height: 33px;
+      margin: 0; }
+    .dec:first-child .dec-sym { top: 6px; }
+    .dec h3 { font-size: 1.22rem; }
+    .dec p { font-size: .92rem; }
+  }
+</style>

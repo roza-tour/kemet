@@ -11,6 +11,12 @@ const wa = whatsappLink("Hello Kemet — I was looking for something on your sit
   showCta={false}
   noindex={true}
 >
+  {/* Apache serves this document under whatever URL was requested, so the
+      analytics beacon would otherwise log a broken link as a real pageview.
+      This flag is read by scripts/enhance.ts (which runs later, at the end of
+      <body>) and files the hit under "broken links" instead. */}
+  <script is:inline>window.__k404=1</script>
+
   <section class="nf">
     <div class="nf-bg" aria-hidden="true"></div>
     <div class="nf-veil" aria-hidden="true"></div>
@@ -24,7 +30,10 @@ const wa = whatsappLink("Hello Kemet — I was looking for something on your sit
         <a href="tours.html" class="btn btn-ghost">Browse the journeys</a>
         <a href={wa} class="btn btn-ghost" target="_blank" rel="noopener">Ask on WhatsApp</a>
       </div>
-      <nav class="nf-links" aria-label="Popular pages">
+      {/* Structural only. Without it this page jumps h1 → h3 (the footer
+          column labels), because a 404 carries no CTA section of its own. */}
+      <h2 class="sr-head" id="nf-popular">Popular pages</h2>
+      <nav class="nf-links" aria-labelledby="nf-popular">
         <a href="destinations.html">Destinations</a>
         <a href="experiences.html">Experiences</a>
         <a href="faq.html">Travel FAQ</a>

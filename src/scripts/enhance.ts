@@ -22,6 +22,11 @@ export const enhanceScript = `
   /* Scroll-reveal removed by request — content is visible from first paint, so
      there is no observer and nothing to wait for while scrolling. */
 
+  /* Set by the analytics block below; a no-op until then, and permanently a
+     no-op for a visitor who sends Do Not Track. Other blocks call it to record
+     an interaction without needing to know anything about the collector. */
+  var KEV=function(_n,_d){};
+
   /* ambient golden dust — lightweight background canvas */
   var cv=document.getElementById('dust');
   if(cv&&!reduce&&cv.getContext){var cx=cv.getContext('2d'),W,H,stars=[];
@@ -68,32 +73,97 @@ export const enhanceScript = `
       nl.classList.toggle('open',open);
       b.setAttribute('aria-expanded',open?'true':'false');
     };
-    b.addEventListener('click',function(){setMenu(!nl.classList.contains('open'));});
+    b.addEventListener('click',function(){var o=!nl.classList.contains('open');
+      setMenu(o);if(o)KEV('menu');});
     document.addEventListener('keydown',function(e){if(e.key==='Escape'&&nl.classList.contains('open'))setMenu(false);});
     addEventListener('resize',function(){if(innerWidth>1080&&nl.classList.contains('open'))setMenu(false);});
   }
 
-  /* first-party analytics — pageview + conversion events to /k.php.
-     Cookie-less; k.php also honours DNT/GPC server-side. Never blocks UI. */
+  /* -------------------------------------------------------------------------
+     First-party analytics → /k.php. Cookie-less, no third party, no raw IP;
+     k.php also honours DNT/GPC server-side. Exactly two beacons per page —
+     one on arrival, one on leave — plus one per deliberate interaction, so
+     this never becomes a source of network chatter. Everything is inside a
+     try/catch and every listener is passive: analytics must not be able to
+     slow a page down or break it.
+
+     What we record, and why:
+       arrival  path · referrer host · browser language · viewport width ·
+                the campaign tag on the URL (this is how a visit that lands on
+                "/" stops being anonymous — see the query column in k.php)
+       leave    engaged seconds and how far down the page was actually read
+       events   whatsapp / email / phone / form-start / form-submit, which
+                journey or destination card was clicked, language switches,
+                photo views — the demand signal we plan the catalogue from
+     ------------------------------------------------------------------------- */
   try{
-    var KP='/k.php';
-    var send=function(t,v){try{
-      var u=KP+'?t='+t+'&p='+encodeURIComponent(location.pathname)+'&v='+encodeURIComponent(v||'');
+    var KP='/k.php', PATH=location.pathname;
+    var QS=location.search.replace(/^\\?/,'').slice(0,80);   /* campaign tag */
+    var LANG=(navigator.language||'').slice(0,5);            /* nationality signal */
+    /* The 404 document is served under whatever URL was requested, so without
+       this flag a broken link is indistinguishable from a real page. */
+    var IS404=!!window.__k404;
+
+    var beacon=function(p){try{
+      var u=KP+'?'+p;
       if(navigator.sendBeacon)navigator.sendBeacon(u);else (new Image()).src=u;
     }catch(e){}};
+    var q=function(k,v){return '&'+k+'='+encodeURIComponent(String(v==null?'':v).slice(0,80));};
+    var head=function(t){return 't='+t+q('p',PATH)+q('l',LANG)+'&w='+(innerWidth|0);};
+
+    KEV=function(name,detail){beacon(head('ev')+q('v',name)+(detail?q('d',detail):''));};
+
+    /* arrival */
     var refHost='';try{if(document.referrer){var rh=new URL(document.referrer).hostname;
       if(rh&&rh!==location.hostname)refHost=rh;}}catch(e){}
-    send('pv',refHost);
-    document.addEventListener('click',function(ev){
-      var a=ev.target&&ev.target.closest?ev.target.closest('a'):null;if(!a)return;
+    beacon(head(IS404?'404':'pv')+q('v',refHost)+(QS?q('q',QS):''));
+
+    /* Leave: how long the page actually held attention, and how far it was
+       read. Engaged time only accrues while the tab is visible, so a page left
+       open in a background tab does not inflate it. Sent once, on whichever of
+       pagehide / tab-hide fires first — pagehide alone is unreliable on iOS. */
+    var deep=0,t0=Date.now(),acc=0,vis=!document.hidden,left=false;
+    var mark=function(){
+      var h=document.documentElement.scrollHeight-innerHeight;
+      var p=h>0?Math.round(scrollY/h*100):100;
+      if(p>deep)deep=p>100?100:(p<0?0:p);
+    };
+    mark();
+    addEventListener('scroll',mark,{passive:true});
+    var leave=function(){
+      if(left)return;left=true;
+      if(vis){acc+=Date.now()-t0;vis=false;}
+      var s=Math.round(acc/1000);if(s>1800)s=1800;
+      beacon(head('ev')+q('v','end')+q('d',s)+'&n='+deep);
+    };
+    document.addEventListener('visibilitychange',function(){
+      if(document.hidden){if(vis){acc+=Date.now()-t0;vis=false;}leave();}
+      else if(!left){t0=Date.now();vis=true;}
+    });
+    addEventListener('pagehide',leave);
+
+    document.addEventListener('click',function(e){
+      var a=e.target&&e.target.closest?e.target.closest('a'):null;if(!a)return;
       var h=a.getAttribute('href')||'';
-      if(h.indexOf('wa.me')>-1)send('ev','whatsapp');
-      else if(h.indexOf('mailto:')===0)send('ev','email');
-      else if(h.indexOf('tel:')===0)send('ev','phone');
-      else if(a.id==='srb-link')send('ev','season-ribbon');
+      if(h.indexOf('wa.me')>-1){KEV('whatsapp');return;}
+      if(h.indexOf('mailto:')===0){KEV('email');return;}
+      if(h.indexOf('tel:')===0){KEV('phone');return;}
+      if(a.id==='srb-link'){KEV('season-ribbon');return;}
+      if(a.closest('.langsw')){KEV('language',h);return;}
+      /* Which card pulled the click. Cards are the whole anchor, so closest()
+         returns the link itself; the href identifies the journey. */
+      if(a.closest('.jcard,.tile,.dpost,.tease,.god,.sstrip-card,.pick'))
+        KEV('pick',h.replace(/^\\.\\//,'').replace(/\\.html$/,''));
     },true);
+
+    /* Enquiry funnel: a form that is started but not sent is the single most
+       actionable number on the dashboard. */
     var cf=document.querySelector('.cform');
-    if(cf)cf.addEventListener('submit',function(){send('ev','form-submit');});
+    if(cf){
+      var began=false;
+      cf.addEventListener('focusin',function(){if(!began){began=true;KEV('form-start');}});
+      cf.addEventListener('submit',function(){KEV('form-submit');});
+    }
   }catch(e){}
 
   /* lightbox — click any gallery/hero photo to view it full-screen.
@@ -113,9 +183,13 @@ export const enhanceScript = `
       var pic=lb.querySelector('img'),cur=0;
       /* carry the source image's alt into the viewer — otherwise every
          photograph opens as an unlabelled image for a screen reader */
+      var opened=false;
       function show(i){cur=(i+imgs.length)%imgs.length;
         pic.src=imgs[cur].src;pic.alt=imgs[cur].alt||'';lb.classList.add('open');
-        document.body.style.overflow='hidden';}
+        document.body.style.overflow='hidden';
+        /* once per page — a visitor who opens the photography is reading the
+           page seriously, but paging through 20 shots is still one signal */
+        if(!opened){opened=true;KEV('photo');}}
       function hide(){lb.classList.remove('open');document.body.style.overflow='';}
       imgs.forEach(function(im,i){im.style.cursor='zoom-in';
         im.addEventListener('click',function(){show(i);});});
@@ -132,7 +206,7 @@ export const enhanceScript = `
   /* destination strip arrows (homepage) */
   var strip=document.getElementById('dstrip');
   if(strip){var pv=document.getElementById('dprev'),nx=document.getElementById('dnext');
-    if(pv)pv.addEventListener('click',function(){strip.scrollBy({left:-360,behavior:'smooth'})});
-    if(nx)nx.addEventListener('click',function(){strip.scrollBy({left:360,behavior:'smooth'})});}
+    if(pv)pv.addEventListener('click',function(){strip.scrollBy({left:-360,behavior:'smooth'});KEV('strip')});
+    if(nx)nx.addEventListener('click',function(){strip.scrollBy({left:360,behavior:'smooth'});KEV('strip')});}
 })();
 `;

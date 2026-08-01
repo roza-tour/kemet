@@ -245,7 +245,7 @@ footer{background:var(--ink-2);border-top:1px solid var(--line);padding:100px 0 
 .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:54px;margin-bottom:70px;position:relative;z-index:2}
 .foot-brand .brand{margin-bottom:20px}
 .foot-brand p{color:var(--muted);font-size:.9rem;font-weight:300;line-height:1.85;max-width:300px}
-.foot-col h5{font-weight:400;font-size:.64rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);margin-bottom:24px}
+.foot-col h3{font-weight:400;font-size:.64rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);margin-bottom:24px}
 .foot-col a{display:block;color:var(--muted);font-size:.88rem;font-weight:300;padding:7px 0;transition:color .4s,padding-left .4s}
 .foot-col a:hover{color:var(--gold-bright);padding-left:6px}
 .foot-bottom{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;padding-top:32px;border-top:1px solid var(--line);color:var(--muted-2);font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;flex-wrap:wrap;gap:12px}
@@ -615,7 +615,7 @@ footer{background:var(--ink-2);border-top:1px solid var(--line);padding:100px 0 
   .jcard .tag{font-size:.72rem;letter-spacing:.18em}
   .jcard .price small{font-size:.72rem;letter-spacing:.16em}
   .dn small{font-size:.66rem;letter-spacing:.14em}
-  .foot-col h5{font-size:.76rem;letter-spacing:.26em}
+  .foot-col h3{font-size:.76rem;letter-spacing:.26em}
   .stat .slab{font-size:.72rem;letter-spacing:.24em}
   .ov-copy .more,.tease .more{font-size:.75rem;letter-spacing:.22em}
 
