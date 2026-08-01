@@ -43,9 +43,24 @@
       // 1) Site-wide accent: everything reads through these custom properties.
       document.documentElement.setAttribute("data-season", theme);
 
-      // 2) The ribbon — unless this visitor dismissed this exact season already.
+      // 2) The ribbon — unless this visitor dismissed it recently.
+      //
+      // Dismissal used to be permanent for the whole window, which for the Red
+      // Sea season means five months. One stray click on the × and the ribbon
+      // was gone until October, with no way to bring it back — indistinguishable
+      // from the feature being broken, which is exactly how it was reported.
+      // A dismissal now lapses after a week: long enough not to nag anyone,
+      // short enough that the season still gets announced. Legacy "1" values
+      // written by the old code are treated as a dismissal made just now, so
+      // nobody who already dismissed it gets the ribbon back in their face on
+      // the very next page view.
       var key = "kemet-season-" + slug + "-" + active[4];
-      try { if (localStorage.getItem(key) === "1") return; } catch (e) {}
+      var SNOOZE = 7 * 24 * 60 * 60 * 1000;
+      try {
+        var seen = localStorage.getItem(key);
+        if (seen === "1") { localStorage.setItem(key, String(Date.now())); return; }
+        if (seen && Date.now() - Number(seen) < SNOOZE) return;
+      } catch (e) {}
 
       var root = document.getElementById("season-ribbon");
       if (!root) return;
@@ -59,7 +74,7 @@
       var close = document.getElementById("srb-close");
       if (close) close.addEventListener("click", function () {
         root.hidden = true;
-        try { localStorage.setItem(key, "1"); } catch (e) {}
+        try { localStorage.setItem(key, String(Date.now())); } catch (e) {}
       });
     } catch (e) {
       /* never let the seasonal layer break the page */
