@@ -17,6 +17,7 @@
 - [Home](https://kemet-travel.com/index.html): Overview of Kemet and the eight cultural worlds of Egypt.
 - [All journeys](https://kemet-travel.com/tours.html): Every private journey, 25 in total, from day tours to a 14-day grand tour.
 - [Egypt Travel FAQ](https://kemet-travel.com/faq.html): Answers to the most common Egypt travel questions: safety, visas, best time to visit, how many days, costs, getting around, food.
+- [Is Egypt safe to visit?](https://kemet-travel.com/egypt-safety.html): Safety in Egypt region by region: Cairo, Luxor, the Red Sea and the North Sinai advisory, plus solo female travel, water and the persistent-seller problem at Giza.
 - [What a private Egypt journey costs](https://kemet-travel.com/egypt-tour-cost.html): Honest price bands for the Egyptian market, where Kemet sits (private, tailor-made, roughly EUR 200-450 per person per day), and the five variables that move a quote.
 - [Booking, payment & cancellation](https://kemet-travel.com/booking.html): How booking works, deposit and balance terms, accepted payment methods and the cancellation schedule.
 - [About Kemet](https://kemet-travel.com/about.html): Who we are, how we design journeys, and our editorial standards.
@@ -214,6 +215,7 @@ Six key pages are published in German, Italian and Spanish for Egypt's largest E
 - https://kemet-travel.com/de/nilkreuzfahrt.html
 - https://kemet-travel.com/de/aegypten-reise-kosten.html
 - https://kemet-travel.com/de/beste-reisezeit-aegypten.html
+- https://kemet-travel.com/de/ist-aegypten-sicher.html
 - https://kemet-travel.com/de/aegypten-visum.html
 
 ### Italiano (it)
@@ -223,6 +225,7 @@ Six key pages are published in German, Italian and Spanish for Egypt's largest E
 - https://kemet-travel.com/it/crociera-sul-nilo.html
 - https://kemet-travel.com/it/quanto-costa-viaggio-egitto.html
 - https://kemet-travel.com/it/quando-andare-in-egitto.html
+- https://kemet-travel.com/it/e-sicuro-viaggiare-in-egitto.html
 - https://kemet-travel.com/it/visto-egitto.html
 
 ### Español (es)
@@ -232,6 +235,7 @@ Six key pages are published in German, Italian and Spanish for Egypt's largest E
 - https://kemet-travel.com/es/crucero-por-el-nilo.html
 - https://kemet-travel.com/es/cuanto-cuesta-viajar-a-egipto.html
 - https://kemet-travel.com/es/mejor-epoca-para-viajar-a-egipto.html
+- https://kemet-travel.com/es/es-seguro-viajar-a-egipto.html
 - https://kemet-travel.com/es/visado-egipto.html
 
 ## Policies

@@ -24,6 +24,7 @@ const GROUPS = [
   ["tour-nile-cruise.html", "de/nilkreuzfahrt.html", "it/crociera-sul-nilo.html", "es/crucero-por-el-nilo.html"],
   ["egypt-tour-cost.html", "de/aegypten-reise-kosten.html", "it/quanto-costa-viaggio-egitto.html", "es/cuanto-cuesta-viajar-a-egipto.html"],
   ["when-to-go.html", "de/beste-reisezeit-aegypten.html", "it/quando-andare-in-egitto.html", "es/mejor-epoca-para-viajar-a-egipto.html"],
+  ["egypt-safety.html", "de/ist-aegypten-sicher.html", "it/e-sicuro-viaggiare-in-egitto.html", "es/es-seguro-viajar-a-egipto.html"],
   ["visa.html", "de/aegypten-visum.html", "it/visto-egitto.html", "es/visado-egipto.html"],
 ];
 const LANGS = ["en", "de", "it", "es"];

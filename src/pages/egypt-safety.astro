@@ -1,0 +1,259 @@
+---
+// /egypt-safety.html — "is Egypt safe" and its variants are among the highest
+// -volume queries in this whole category, and the site had no page for them in
+// any language. The FAQ carried two sentences buried in a hub; that is not a
+// page a search engine can rank or an answer engine can quote.
+//
+// TONE. This is the one subject where overselling is both dishonest and
+// counter-productive: a reader who is nervous can tell when they are being
+// managed. So the page names the real nuisances plainly, distinguishes the
+// parts of the country that carry a genuine advisory from the parts that do
+// not, and tells the reader to check their own government's current advice
+// rather than taking ours as the last word.
+import Base from "@/layouts/Base.astro";
+import PageHero from "@/components/PageHero.astro";
+import Frieze from "@/components/Frieze.astro";
+import Faq from "@/components/Faq.astro";
+import AnswerBox from "@/components/aeo/AnswerBox.astro";
+import Byline from "@/components/trust/Byline.astro";
+import LeadCapture from "@/components/conversion/LeadCapture.astro";
+import SectionHeader from "@/components/SectionHeader.astro";
+import { breadcrumb, answerPageSchema } from "@/schemas/jsonld";
+
+const ROUTE = "egypt-safety.html";
+
+const facts = [
+  { label: "Emergency", value: "Police 122 · Ambulance 123 · Tourism Police 126" },
+  { label: "Tap water", value: "Not for drinking — bottled is universal" },
+  { label: "Main nuisances", value: "Persistent touts · Cairo traffic" },
+  { label: "Before booking", value: "Check your own government's advice" },
+];
+
+const regions = [
+  {
+    name: "Cairo & Giza",
+    verdict: "Routine",
+    body:
+      "The pyramids, the museums and Islamic Cairo are visited by millions of people a year without incident. The two real irritations are traffic, which is heavy and improvisational, and persistent sellers at the plateau. A private driver removes the first entirely and a guide removes most of the second, because the approach is being handled by someone the sellers can see is local.",
+  },
+  {
+    name: "Luxor & Aswan",
+    verdict: "Routine",
+    body:
+      "Upper Egypt is quieter than Cairo in every sense, and the monument sites are heavily policed. The genuine risk in Luxor between May and September is not crime, it is heat — 45°C at two in the afternoon is a medical matter, not a discomfort. Journeys here are built around dawn starts for that reason.",
+  },
+  {
+    name: "The Red Sea coast",
+    verdict: "Routine",
+    body:
+      "Hurghada, Marsa Alam and the South Sinai resorts around Sharm el-Sheikh and Dahab operate year-round for European charter traffic and are self-contained. Diving and watersports carry ordinary operator risk, which is why the operator matters more than the price — we name ours before anything is booked.",
+  },
+  {
+    name: "North Sinai & remote border areas",
+    verdict: "Advisory — we do not go",
+    body:
+      "North Sinai carries a standing advisory against travel from most Western governments, and the western desert near the Libyan border is restricted. This is a real distinction, not a formality: the South Sinai resort coast is usually excepted from those advisories, but North Sinai is not. No Kemet itinerary enters these areas, and no reputable operator's does.",
+  },
+];
+
+const faqs = [
+  {
+    q: "Is Egypt safe for tourists in 2026?",
+    a: "The tourist regions — Cairo, Giza, Luxor, Aswan, Alexandria and the Red Sea coast — are heavily policed and visited by millions of travellers a year without incident. The practical nuisances are persistent touts at the major sites and heavy Cairo traffic, both of which a private guide and driver remove almost entirely. North Sinai and remote border areas carry standing advisories and are not visited on any itinerary. Check your own government's current travel advice before you book.",
+  },
+  {
+    q: "Is Egypt safe for solo female travellers?",
+    a: "Solo women do travel Egypt, and the most common report is not danger but attention — staring, comment and persistent approaches, particularly in crowded areas of Cairo. A private guide changes that dynamic more than any other single measure, because approaches largely stop when you are visibly accompanied by an Egyptian professional. Dressing to cover shoulders and knees away from resort areas reduces attention further, and is expected at mosques and churches regardless.",
+  },
+  {
+    q: "Is it safe to drink the water in Egypt?",
+    a: "No — tap water is not for drinking anywhere in Egypt, including in good hotels. Bottled water is universal, inexpensive and included on every Kemet touring day. Use it for brushing teeth too. Ice in established hotels and restaurants is made from treated water and is fine; ice from a street stall is not worth the gamble.",
+  },
+  {
+    q: "Is Sharm el-Sheikh safe?",
+    a: "Sharm el-Sheikh is in South Sinai, which is generally excepted from the North Sinai travel advisories and operates continuously for European charter traffic. The resort strip and the Ras Mohammed diving grounds are self-contained and routinely visited. The advisory that people have read about applies to North Sinai, which is several hundred kilometres away and somewhere no itinerary goes.",
+  },
+  {
+    q: "How bad is the hassle from sellers at the pyramids?",
+    a: "Persistent, and it is the single most common complaint from independent visitors to Giza. Camel and trinket sellers work the plateau and do not take a first no. With a licensed guide and a private vehicle the problem largely disappears — the approaches are handled before they reach you, and the entry, the route across the plateau and the exit are managed rather than improvised.",
+  },
+  {
+    q: "Do I need vaccinations or travel insurance for Egypt?",
+    a: "No vaccination is required for entry from most countries, though your own doctor or travel clinic should confirm what is recommended for you and check that routine immunisations are current. Travel insurance is not a legal requirement but is strongly advised, particularly if diving or ballooning are in the plan — confirm your policy covers both, because many exclude them by default.",
+  },
+  {
+    q: "What should I do if something goes wrong?",
+    a: "Egypt has a dedicated Tourism Police force on 126, alongside police on 122 and ambulance on 123. If you are travelling with Kemet you also have a direct line to the people who planned your journey for the whole time you are in the country — not a call centre, and not a number that stops answering once the deposit has cleared.",
+  },
+];
+
+const ANSWER_Q = "Is Egypt safe to visit?";
+const ANSWER_A =
+  "Egypt is safe to visit in its tourist regions — Cairo, Giza, Luxor, Aswan, " +
+  "Alexandria and the Red Sea coast — which are heavily policed and receive " +
+  "millions of visitors a year. The real nuisances are persistent touts and " +
+  "Cairo traffic, not crime. North Sinai and remote border areas carry standing " +
+  "government advisories and should not be visited.";
+
+const jsonld: Record<string, unknown>[] = [
+  answerPageSchema({
+    route: ROUTE,
+    name: "Is Egypt safe to visit?",
+    description:
+      "An honest answer on safety in Egypt — region by region, the real nuisances, solo female travel, water, and which areas carry standing advisories.",
+    question: ANSWER_Q,
+    answer: ANSWER_A,
+  }),
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  },
+  breadcrumb([["Home", "index.html"], ["Is Egypt safe?", ROUTE]]),
+];
+---
+<Base
+  title="Is Egypt Safe to Visit in 2026? An Honest Answer | Kemet"
+  description="Is Egypt safe? A straight answer region by region — Cairo, Luxor, the Red Sea and Sinai — plus solo female travel, water, touts and the areas no itinerary should enter."
+  active={ROUTE}
+  jsonld={jsonld}
+  keywords="is egypt safe, is egypt safe to visit 2026, egypt safety for tourists, is egypt safe for solo female travellers, is sharm el sheikh safe, egypt travel advice"
+>
+  <PageHero
+    crumb="Is Egypt safe?"
+    symbol="horus"
+    title="Is Egypt safe to visit?"
+    text="The honest version — what is genuinely worth knowing, what is noise, and the one part of the country that is a real exception."
+  />
+
+  <section style="padding-top:26px">
+    <div class="wrap sf-wrap">
+
+      <AnswerBox question={ANSWER_Q} answer={ANSWER_A} />
+
+      <Byline />
+
+      <div class="sf-facts">
+        {facts.map((f) => (
+          <div>
+            <span class="sf-k">{f.label}</span>
+            <b>{f.value}</b>
+          </div>
+        ))}
+      </div>
+
+      <p class="sf-lede">
+        Most of the anxiety about travelling to Egypt is inherited from headlines
+        rather than from the country. The parts of Egypt a visitor actually goes
+        to are among the most heavily policed tourist areas anywhere, and the
+        problems people genuinely report are mundane: sellers who do not take a
+        first no, traffic that follows its own logic, heat that is dangerous in
+        June if it is not planned around, and a stomach that objects to a change
+        of water. None of that is nothing. None of it is what people are
+        picturing either.
+      </p>
+      <p class="sf-lede">
+        There is one real exception, and it deserves to be stated clearly rather
+        than buried: North Sinai and some remote border areas carry standing
+        advisories from most Western governments. They are not on any itinerary
+        we build, and the resort coast people usually mean when they ask about
+        "Sinai" is a different place several hundred kilometres away.
+      </p>
+    </div>
+  </section>
+
+  <Frieze />
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <SectionHeader
+        eyebrow="Region by region"
+        title="Where you are actually going"
+        text="Egypt is a large country and a single verdict on all of it is useless. These are the areas a journey covers, and the honest position on each."
+      />
+      <div class="sf-regions">
+        {regions.map((r) => (
+          <div class="sf-region">
+            <div class="sf-region-head">
+              <h3>{r.name}</h3>
+              <span class:list={["sf-verdict", r.verdict.startsWith("Advisory") && "is-warn"]}>
+                {r.verdict}
+              </span>
+            </div>
+            <p>{r.body}</p>
+          </div>
+        ))}
+      </div>
+      <p class="sf-note">
+        Advisories change. Before you book anything, read your own government's
+        current travel advice for Egypt — it is written for your nationality and
+        it is more current than any tour operator's page, including this one.
+      </p>
+    </div>
+  </section>
+
+  <Frieze />
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <SectionHeader eyebrow="Questions" title="What people actually ask" />
+      <Faq items={faqs} />
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <LeadCapture
+        heading="Still not sure?"
+        subtext="Ask us the specific thing you are worried about. You will get a straight answer — including when the answer is that a particular plan is a bad idea."
+        whatsappMessage="Hello Kemet — I have a question about safety in Egypt."
+        emailSubject="Kemet — a question about safety in Egypt"
+      />
+    </div>
+  </section>
+</Base>
+
+<style>
+  .sf-wrap { max-width: 900px; }
+  .sf-facts {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+    border: 1px solid var(--line); margin: 34px 0 40px;
+  }
+  .sf-facts > div { padding: 20px 22px; border-left: 1px solid var(--line); }
+  .sf-facts > div:first-child { border-left: 0; }
+  .sf-k { display: block; font-size: .6rem; letter-spacing: .28em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 8px; }
+  .sf-facts b { font-weight: 400; color: var(--bone); font-size: .92rem; line-height: 1.6; }
+  .sf-lede { color: var(--muted); font-size: 1.02rem; line-height: 1.9; margin: 0 0 22px; }
+
+  .sf-regions { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 34px; }
+  .sf-region { border: 1px solid var(--line); padding: 28px 30px;
+    background: linear-gradient(165deg, rgba(30,25,18,.7), rgba(14,17,21,.5)); }
+  .sf-region-head { display: flex; align-items: baseline; justify-content: space-between;
+    gap: 16px; margin-bottom: 12px; flex-wrap: wrap; }
+  .sf-region h3 { font-size: 1.22rem; color: var(--bone); margin: 0; font-weight: 400; }
+  .sf-verdict { font-size: .6rem; letter-spacing: .22em; text-transform: uppercase;
+    color: var(--gold); border: 1px solid var(--line); padding: 5px 10px; white-space: nowrap; }
+  .sf-verdict.is-warn { color: #E8B4A0; border-color: rgba(232,180,160,.4); }
+  .sf-region p { color: var(--muted); font-size: .93rem; line-height: 1.8; margin: 0; }
+  .sf-note { margin-top: 28px; padding: 22px 26px; border-left: 2px solid var(--gold);
+    background: rgba(217,180,90,.05); color: var(--muted); font-size: .95rem; line-height: 1.85; }
+
+  @media(max-width:900px){
+    .sf-facts { grid-template-columns: 1fr 1fr; }
+    .sf-facts > div:nth-child(3) { border-left: 0; }
+    .sf-facts > div:nth-child(n+3) { border-top: 1px solid var(--line); }
+    .sf-regions { grid-template-columns: 1fr; }
+  }
+  @media(max-width:680px){
+    .sf-facts { grid-template-columns: 1fr; }
+    .sf-facts > div { border-left: 0; border-top: 1px solid var(--line); }
+    .sf-facts > div:first-child { border-top: 0; }
+    .sf-region { padding: 24px 20px; }
+    .sf-note { padding: 20px 20px; }
+  }
+</style>

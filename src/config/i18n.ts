@@ -2,7 +2,7 @@
 // Localisation — the registry that keeps translated pages honest.
 //
 // SCOPE (deliberately small)
-// English remains the full site. German, Italian and Spanish carry six key
+// English remains the full site. German, Italian and Spanish carry seven key
 // pages each — the funnel, not the catalogue. Those three are Egypt's largest
 // European source markets and the ones where travellers search in their own
 // language rather than in English.
@@ -101,6 +101,15 @@ export const TRANSLATION_GROUPS: TranslationGroup[] = [
     de: "de/beste-reisezeit-aegypten.html",
     it: "it/quando-andare-in-egitto.html",
     es: "es/mejor-epoca-para-viajar-a-egipto.html",
+  },
+  {
+    // "is Egypt safe" is one of the highest-volume queries in the category and
+    // the same worry is searched in every market, phrased almost identically.
+    id: "safety",
+    en: "egypt-safety.html",
+    de: "de/ist-aegypten-sicher.html",
+    it: "it/e-sicuro-viaggiare-in-egitto.html",
+    es: "es/es-seguro-viajar-a-egipto.html",
   },
   {
     id: "visa",

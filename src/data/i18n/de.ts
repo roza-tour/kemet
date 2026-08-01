@@ -399,4 +399,91 @@ export const de: LocalizedPage[] = [
     moreText:
       "Die Einreiseregeln für fünfzig Nationalitäten — jeweils mit Gebühr, Aufenthaltsdauer und Flugzeiten — stehen auf Englisch zur Verfügung.",
   },
+
+  // ===== Ist Ägypten sicher? ===============================================
+  // Die meistgestellte Frage des deutschen Marktes vor der Buchung. Bezugspunkt
+  // ist das Auswärtige Amt, nicht das US State Department, und der Unterschied
+  // zwischen Nord- und Südsinai wird ausdrücklich benannt — deutsche Reisende
+  // fliegen im Winter in großer Zahl nach Hurghada und Sharm el-Sheikh und
+  // lesen Schlagzeilen über "Sinai", die eine andere Region meinen.
+  {
+    groupId: "safety",
+    symbol: "horus",
+    title: "Ist Ägypten sicher? Eine ehrliche Antwort | Kemet",
+    description:
+      "Ist Ägypten sicher? Region für Region — Kairo, Luxor, Rotes Meer und Sinai — dazu Alleinreisende Frauen, Wasser, Aufdringlichkeit und die Gebiete mit Reisewarnung.",
+    keywords:
+      "ist ägypten sicher, ägypten sicherheit, ägypten reisewarnung, sharm el sheikh sicher, hurghada sicher, ägypten alleine reisen frau, ägypten urlaub sicher 2026",
+    crumb: "Sicherheit",
+    h1: "Ist Ägypten sicher?",
+    standfirst:
+      "Die ehrliche Fassung — was wirklich zählt, was Rauschen ist, und die eine Region, die tatsächlich eine Ausnahme darstellt.",
+    lede:
+      "Die meiste Sorge vor einer Ägypten-Reise stammt aus Schlagzeilen, nicht aus dem Land. Die Gebiete, in die Reisende tatsächlich fahren, gehören zu den am stärksten bewachten Tourismusregionen überhaupt, und die Probleme, von denen Gäste wirklich berichten, sind alltäglich: Verkäufer, die ein erstes Nein nicht akzeptieren, Verkehr mit eigener Logik, Hitze, die im Juni gefährlich wird, wenn man nicht um sie herum plant, und ein Magen, der auf anderes Wasser reagiert. Nichts davon ist belanglos. Nichts davon ist aber auch das, was man sich vorstellt.",
+    facts: [
+      { label: "Notruf", value: "Polizei 122 · Rettung 123 · Touristenpolizei 126" },
+      { label: "Leitungswasser", value: "Nicht trinkbar — Flaschenwasser überall" },
+      { label: "Hauptärgernis", value: "Aufdringliche Verkäufer · Verkehr in Kairo" },
+      { label: "Vor der Buchung", value: "Auswärtiges Amt prüfen" },
+    ],
+    sections: [
+      {
+        title: "Der Unterschied zwischen Nord- und Südsinai",
+        body:
+          "Das ist der wichtigste Punkt der ganzen Seite, und er wird regelmäßig verwechselt. Für den Nordsinai besteht eine stehende Reisewarnung des Auswärtigen Amts. Die Badeorte, die deutsche Reisende meinen, wenn sie \"Sinai\" sagen — Sharm el-Sheikh, Dahab, Nuweiba — liegen im Südsinai, mehrere hundert Kilometer entfernt, und sind von dieser Warnung in der Regel ausdrücklich ausgenommen. Der Winterflugverkehr aus Deutschland dorthin läuft durchgehend. Keine unserer Reiserouten führt in den Nordsinai oder in die Grenzregionen der Westwüste.",
+      },
+      {
+        title: "Kairo und Gizeh",
+        body:
+          "Die Pyramiden, die Museen und das islamische Kairo werden jährlich von Millionen Menschen ohne Zwischenfall besucht. Die zwei echten Ärgernisse sind der Verkehr — dicht und improvisiert — und hartnäckige Verkäufer auf dem Plateau von Gizeh. Ein privater Fahrer nimmt Ihnen das Erste vollständig ab, ein Ägyptologe das Zweite weitgehend: Ansprachen werden abgefangen, bevor sie Sie erreichen, weil sie von jemandem abgefangen werden, den die Verkäufer als Einheimischen erkennen.",
+      },
+      {
+        title: "Oberägypten: die Hitze ist das Risiko, nicht die Kriminalität",
+        body:
+          "Luxor und Assuan sind in jeder Hinsicht ruhiger als Kairo, und die Monumente werden stark bewacht. Das reale Risiko zwischen Mai und September ist nicht Kriminalität, sondern Hitze: 45 °C um zwei Uhr nachmittags sind eine medizinische Frage, keine Unannehmlichkeit. Reisen in diesen Monaten werden bei uns konsequent um Sonnenaufgangsstarts und lange Nachmittagspausen herum gebaut — oder wir sagen Ihnen, dass Oktober die bessere Wahl wäre.",
+      },
+      {
+        title: "Als Frau allein unterwegs",
+        body:
+          "Frauen reisen allein durch Ägypten, und berichtet wird meist nicht von Gefahr, sondern von Aufmerksamkeit: Blicke, Bemerkungen, hartnäckige Ansprachen, besonders in belebten Vierteln Kairos. Eine private Reiseleitung verändert diese Dynamik stärker als jede andere Einzelmaßnahme, weil Ansprachen weitgehend aufhören, sobald Sie sichtbar in Begleitung einer ägyptischen Fachkraft sind. Schultern und Knie bedeckt zu halten reduziert die Aufmerksamkeit außerhalb der Badeorte zusätzlich und wird in Moscheen und Kirchen ohnehin erwartet.",
+      },
+      {
+        title: "Wasser, Essen und der Magen",
+        body:
+          "Leitungswasser ist in Ägypten nirgends zum Trinken geeignet, auch nicht in guten Hotels — auch nicht zum Zähneputzen. Flaschenwasser ist überall verfügbar, günstig und an jedem Besichtigungstag bei uns inbegriffen. Eis in etablierten Hotels und Restaurants wird aus aufbereitetem Wasser hergestellt und ist unbedenklich; Eis vom Straßenstand ist es nicht. Essen Sie dort, wo Umschlag herrscht: ein voller Tresen ist ein sicherer Tresen.",
+      },
+      {
+        title: "Was wir nicht behaupten",
+        body:
+          "Reisehinweise ändern sich, und wir sind ein Reiseveranstalter, keine Behörde. Lesen Sie vor jeder Buchung die aktuellen Reise- und Sicherheitshinweise des Auswärtigen Amts für Ägypten. Sie sind für deutsche Staatsangehörige geschrieben und aktueller als jede Veranstalterseite, diese eingeschlossen. Wenn wir eine geplante Route für eine schlechte Idee halten, sagen wir Ihnen das — auch wenn es die Buchung kostet.",
+      },
+    ],
+    highlights: {
+      heading: "Kurz gefasst",
+      items: [
+        "Die touristischen Regionen — Kairo, Gizeh, Luxor, Assuan, Alexandria, Rotes Meer — sind stark bewacht",
+        "Nordsinai: stehende Reisewarnung. Südsinai mit Sharm el-Sheikh und Dahab: in der Regel ausgenommen",
+        "Keine Kemet-Reiseroute führt in den Nordsinai oder die Grenzgebiete der Westwüste",
+        "Leitungswasser nirgends trinken, auch nicht zum Zähneputzen",
+        "Vor der Buchung die Hinweise des Auswärtigen Amts lesen",
+      ],
+    },
+    faqs: [
+      { q: "Ist Ägypten 2026 sicher für Touristen?", a: "Die touristischen Regionen — Kairo, Gizeh, Luxor, Assuan, Alexandria und die Küste des Roten Meeres — sind stark bewacht und werden jährlich von Millionen Reisenden ohne Zwischenfall besucht. Die praktischen Ärgernisse sind aufdringliche Verkäufer an den großen Sehenswürdigkeiten und der Verkehr in Kairo; beides nimmt eine private Reiseleitung mit eigenem Fahrer weitgehend heraus. Für den Nordsinai und einzelne Grenzgebiete bestehen Reisewarnungen; dorthin führt keine Reiseroute. Prüfen Sie vor der Buchung die aktuellen Hinweise des Auswärtigen Amts." },
+      { q: "Ist Sharm el-Sheikh sicher?", a: "Sharm el-Sheikh liegt im Südsinai, der von den Warnungen für den Nordsinai in der Regel ausgenommen ist, und wird durchgehend von europäischen Charterflügen bedient. Die Hotelzone und die Tauchgründe von Ras Mohammed sind in sich geschlossen und werden routinemäßig besucht. Die Warnung, von der viele gelesen haben, betrifft den Nordsinai — mehrere hundert Kilometer entfernt und für uns kein Reiseziel." },
+      { q: "Ist Hurghada sicher?", a: "Ja. Hurghada und Marsa Alam sind Badeorte am Roten Meer auf dem ägyptischen Festland, weit vom Sinai entfernt, und werden aus zahlreichen deutschen Flughäfen direkt angeflogen. Sie funktionieren das ganze Jahr über für europäischen Charterverkehr. Tauchen und Wassersport bergen das übliche Anbieterrisiko — deshalb zählt der Anbieter mehr als der Preis, und wir nennen Ihnen unseren vor der Buchung." },
+      { q: "Kann ich als Frau allein nach Ägypten reisen?", a: "Ja, und viele tun es. Berichtet wird überwiegend von Aufmerksamkeit statt von Gefahr — Blicke, Bemerkungen, hartnäckige Ansprachen, vor allem in belebten Vierteln Kairos. Eine private Reiseleitung verändert das deutlich, weil Ansprachen aufhören, sobald Sie sichtbar begleitet werden. Bedeckte Schultern und Knie außerhalb der Badeorte reduzieren die Aufmerksamkeit weiter." },
+      { q: "Kann man in Ägypten das Leitungswasser trinken?", a: "Nein, nirgends, auch nicht in guten Hotels und auch nicht zum Zähneputzen. Flaschenwasser ist überall verfügbar, günstig und an jedem Besichtigungstag bei uns inbegriffen. Eis aus etablierten Hotels und Restaurants ist unbedenklich, Eis vom Straßenstand nicht." },
+      { q: "Brauche ich Impfungen oder eine Reiseversicherung?", a: "Für die Einreise aus Deutschland sind keine Impfungen vorgeschrieben; lassen Sie dennoch von Ihrem Arzt oder einer reisemedizinischen Beratung prüfen, was für Sie empfohlen ist und ob die Standardimpfungen aktuell sind. Eine Auslandsreisekrankenversicherung ist nicht Pflicht, aber dringend zu empfehlen — besonders wenn Tauchen oder Ballonfahren geplant sind, denn viele Policen schließen beides standardmäßig aus." },
+    ],
+    cta: {
+      heading: "Noch unsicher?",
+      text: "Fragen Sie uns genau das, was Sie beschäftigt. Sie bekommen eine gerade Antwort — auch dann, wenn die Antwort lautet, dass ein Plan keine gute Idee ist.",
+      whatsapp: "Guten Tag Kemet — ich habe eine Frage zur Sicherheit in Ägypten.",
+      emailSubject: "Frage zur Sicherheit in Ägypten — Kemet",
+    },
+    moreLabel: "Ausführlich auf Englisch",
+    moreText:
+      "Die vollständige Fassung mit weiteren Regionen und Fragen steht auf Englisch zur Verfügung.",
+  },
 ];

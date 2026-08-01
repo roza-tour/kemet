@@ -67,6 +67,7 @@ export const GET: APIRoute = () => {
   lines.push(item("Home", "index.html", "Overview of Kemet and the eight cultural worlds of Egypt."));
   lines.push(item("All journeys", "tours.html", `Every private journey, ${tours.length} in total, from day tours to a 14-day grand tour.`));
   lines.push(item("Egypt Travel FAQ", "faq.html", "Answers to the most common Egypt travel questions: safety, visas, best time to visit, how many days, costs, getting around, food."));
+  lines.push(item("Is Egypt safe to visit?", "egypt-safety.html", "Safety in Egypt region by region: Cairo, Luxor, the Red Sea and the North Sinai advisory, plus solo female travel, water and the persistent-seller problem at Giza."));
   lines.push(item("What a private Egypt journey costs", "egypt-tour-cost.html", "Honest price bands for the Egyptian market, where Kemet sits (private, tailor-made, roughly EUR 200-450 per person per day), and the five variables that move a quote."));
   lines.push(item("Booking, payment & cancellation", "booking.html", "How booking works, deposit and balance terms, accepted payment methods and the cancellation schedule."));
   lines.push(item("About Kemet", "about.html", "Who we are, how we design journeys, and our editorial standards."));

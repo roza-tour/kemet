@@ -399,4 +399,90 @@ export const it: LocalizedPage[] = [
     moreText:
       "Le regole d'ingresso per cinquanta nazionalità — con costo, durata del soggiorno e tempi di volo — sono disponibili in inglese.",
   },
+
+  // ===== L'Egitto è sicuro? ================================================
+  // Il riferimento è Viaggiare Sicuri della Farnesina, non i bollettini
+  // anglosassoni, e la distinzione fra Sinai del Nord e del Sud è esplicita:
+  // il mercato italiano vola in massa su Sharm el-Sheikh e Marsa Alam e legge
+  // titoli sul "Sinai" che parlano di un'altra regione.
+  {
+    groupId: "safety",
+    symbol: "horus",
+    title: "L'Egitto è sicuro? Una risposta onesta | Kemet",
+    description:
+      "L'Egitto è sicuro? Regione per regione — Il Cairo, Luxor, Mar Rosso e Sinai — con donne sole, acqua, venditori insistenti e le zone sconsigliate.",
+    keywords:
+      "egitto è sicuro, sicurezza egitto, egitto viaggiare sicuri, sharm el sheikh è sicura, marsa alam sicura, viaggiare da sola in egitto, egitto vacanze sicurezza 2026",
+    crumb: "Sicurezza",
+    h1: "L'Egitto è sicuro?",
+    standfirst:
+      "La versione onesta — quello che conta davvero, quello che è rumore di fondo, e l'unica regione che fa davvero eccezione.",
+    lede:
+      "Gran parte dell'ansia legata a un viaggio in Egitto viene dai titoli di giornale, non dal paese. Le zone in cui un viaggiatore va davvero sono fra le aree turistiche più sorvegliate al mondo, e i problemi che i visitatori segnalano realmente sono ordinari: venditori che non accettano un primo no, un traffico con una logica tutta sua, un caldo che a giugno è pericoloso se non lo si pianifica, e uno stomaco che reagisce a un'acqua diversa. Niente di tutto ciò è irrilevante. Niente di tutto ciò è nemmeno quello che ci si immagina.",
+    facts: [
+      { label: "Emergenze", value: "Polizia 122 · Ambulanza 123 · Polizia turistica 126" },
+      { label: "Acqua del rubinetto", value: "Non potabile — bottiglia ovunque" },
+      { label: "Fastidio principale", value: "Venditori insistenti · traffico al Cairo" },
+      { label: "Prima di prenotare", value: "Consultare Viaggiare Sicuri" },
+    ],
+    sections: [
+      {
+        title: "Sinai del Nord e Sinai del Sud non sono la stessa cosa",
+        body:
+          "È il punto più importante di questa pagina, ed è quello che viene confuso più spesso. Il Sinai del Nord è oggetto di una sconsigliazione stabile da parte della Farnesina e della maggior parte dei governi occidentali. Le località che gli italiani intendono quando dicono \"Sinai\" — Sharm el-Sheikh, Dahab, Nuweiba — si trovano nel Sinai del Sud, a diverse centinaia di chilometri di distanza, e sono di norma escluse da quelle indicazioni. I voli charter dall'Italia vi operano con continuità. Nessun itinerario Kemet entra nel Sinai del Nord né nelle zone di confine del deserto occidentale.",
+      },
+      {
+        title: "Il Cairo e Giza",
+        body:
+          "Le piramidi, i musei e il Cairo islamico ricevono milioni di visitatori l'anno senza incidenti. I due fastidi reali sono il traffico — denso e improvvisato — e i venditori insistenti sull'altopiano di Giza. Un autista privato elimina completamente il primo, una guida egittologa elimina in gran parte il secondo: gli approcci vengono intercettati prima di arrivare a voi, perché a intercettarli è qualcuno che i venditori riconoscono come del posto.",
+      },
+      {
+        title: "Alto Egitto: il rischio è il caldo, non la criminalità",
+        body:
+          "Luxor e Assuan sono più tranquille del Cairo sotto ogni aspetto, e i siti monumentali sono presidiati in modo capillare. Il rischio reale fra maggio e settembre non è la criminalità ma il caldo: 45 °C alle due del pomeriggio sono una questione medica, non un disagio. In quei mesi costruiamo gli itinerari attorno a partenze all'alba e pomeriggi liberi — oppure vi diciamo che ottobre sarebbe la scelta migliore.",
+      },
+      {
+        title: "Viaggiare da sola",
+        body:
+          "Le donne viaggiano da sole in Egitto, e ciò che viene riferito più spesso non è pericolo ma attenzione: sguardi, commenti, approcci insistenti, soprattutto nelle zone affollate del Cairo. Una guida privata cambia questa dinamica più di qualunque altra singola misura, perché gli approcci si interrompono quando si è visibilmente accompagnate da un professionista egiziano. Tenere spalle e ginocchia coperte fuori dai villaggi turistici riduce ulteriormente l'attenzione, ed è comunque richiesto in moschee e chiese.",
+      },
+      {
+        title: "Acqua, cibo e stomaco",
+        body:
+          "L'acqua del rubinetto non è potabile in nessuna parte dell'Egitto, nemmeno negli hotel buoni e nemmeno per lavarsi i denti. L'acqua in bottiglia è ovunque, costa poco ed è inclusa in ogni giornata di visita. Il ghiaccio di hotel e ristoranti affermati è prodotto con acqua trattata e non pone problemi; quello di un chiosco di strada sì. Mangiate dove c'è ricambio: un banco affollato è un banco sicuro.",
+      },
+      {
+        title: "Quello che non pretendiamo di essere",
+        body:
+          "Le indicazioni cambiano, e noi siamo un operatore turistico, non un'autorità. Prima di prenotare qualsiasi cosa, leggete le raccomandazioni aggiornate di Viaggiare Sicuri per l'Egitto: sono scritte per i cittadini italiani e sono più aggiornate di qualunque pagina di un operatore, questa compresa. Se riteniamo che un percorso richiesto sia una cattiva idea, ve lo diciamo — anche quando ci costa la prenotazione.",
+      },
+    ],
+    highlights: {
+      heading: "In breve",
+      items: [
+        "Le regioni turistiche — Cairo, Giza, Luxor, Assuan, Alessandria, Mar Rosso — sono fortemente presidiate",
+        "Sinai del Nord: sconsigliato. Sinai del Sud con Sharm el-Sheikh e Dahab: normalmente escluso",
+        "Nessun itinerario Kemet entra nel Sinai del Nord o nelle zone di confine occidentali",
+        "Acqua del rubinetto mai, nemmeno per i denti",
+        "Consultare Viaggiare Sicuri prima di prenotare",
+      ],
+    },
+    faqs: [
+      { q: "L'Egitto è sicuro per i turisti nel 2026?", a: "Le regioni turistiche — Il Cairo, Giza, Luxor, Assuan, Alessandria e la costa del Mar Rosso — sono fortemente presidiate e ricevono milioni di viaggiatori l'anno senza incidenti. I fastidi concreti sono i venditori insistenti nei siti principali e il traffico del Cairo, entrambi in gran parte eliminati da una guida privata con autista. Il Sinai del Nord e alcune zone di confine sono sconsigliati e non rientrano in alcun itinerario. Consultate Viaggiare Sicuri prima di prenotare." },
+      { q: "Sharm el-Sheikh è sicura?", a: "Sharm el-Sheikh si trova nel Sinai del Sud, normalmente escluso dalle indicazioni relative al Sinai del Nord, ed è servita con continuità dai voli charter europei. La zona alberghiera e i fondali di Ras Mohammed sono autonomi e frequentati regolarmente. L'avvertenza di cui molti hanno letto riguarda il Sinai del Nord, a centinaia di chilometri di distanza e fuori da qualsiasi itinerario." },
+      { q: "Marsa Alam e Hurghada sono sicure?", a: "Sì. Marsa Alam e Hurghada sono località del Mar Rosso sulla terraferma egiziana, lontane dal Sinai, e ricevono voli diretti da diversi aeroporti italiani. Funzionano tutto l'anno per il traffico charter europeo. Immersioni e sport acquatici comportano il normale rischio legato all'operatore: per questo l'operatore conta più del prezzo, e vi diciamo il nostro prima di prenotare." },
+      { q: "Posso viaggiare da sola in Egitto?", a: "Sì, e molte lo fanno. Quello che viene riferito è soprattutto attenzione più che pericolo — sguardi, commenti, approcci insistenti, in particolare nelle zone affollate del Cairo. Una guida privata cambia sensibilmente la situazione, perché gli approcci cessano quando si è visibilmente accompagnate. Spalle e ginocchia coperte fuori dai villaggi turistici riducono ulteriormente l'attenzione." },
+      { q: "Si può bere l'acqua del rubinetto in Egitto?", a: "No, in nessun luogo, nemmeno negli hotel buoni e nemmeno per lavarsi i denti. L'acqua in bottiglia è disponibile ovunque, costa poco ed è inclusa in ogni giornata di visita. Il ghiaccio di hotel e ristoranti affermati non pone problemi, quello di strada sì." },
+      { q: "Servono vaccinazioni o un'assicurazione di viaggio?", a: "Per l'ingresso dall'Italia non sono richieste vaccinazioni, ma fate verificare dal vostro medico o da un ambulatorio di medicina dei viaggi cosa sia raccomandato per voi e se le vaccinazioni di routine siano aggiornate. L'assicurazione sanitaria di viaggio non è obbligatoria ma è fortemente consigliata, soprattutto se sono previste immersioni o voli in mongolfiera: molte polizze li escludono per impostazione predefinita." },
+    ],
+    cta: {
+      heading: "Ancora dubbi?",
+      text: "Chiedeteci esattamente ciò che vi preoccupa. Avrete una risposta diretta — anche quando la risposta è che un certo piano non è una buona idea.",
+      whatsapp: "Buongiorno Kemet — ho una domanda sulla sicurezza in Egitto.",
+      emailSubject: "Domanda sulla sicurezza in Egitto — Kemet",
+    },
+    moreLabel: "Versione completa in inglese",
+    moreText:
+      "La versione integrale, con altre regioni e altre domande, è disponibile in inglese.",
+  },
 ];

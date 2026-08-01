@@ -57,6 +57,7 @@ export const footerExplore: FooterColumn = {
     { label: "When to go", href: "when-to-go.html" },
     { label: "Compare", href: "compare.html" },
     { label: "Travel FAQ", href: "faq.html" },
+    { label: "Is Egypt safe?", href: "egypt-safety.html" },
     { label: "Egypt Visa by Nationality", href: "visa.html" },
   ],
 };
