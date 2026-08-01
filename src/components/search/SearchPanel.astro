@@ -1,0 +1,272 @@
+---
+// SearchPanel — the search overlay, its behaviour and all of its styling.
+// Rendered at body level by Base.astro; the trigger that opens it lives in
+// the nav as components/search/SearchButton.
+//
+// WHY IT IS BUILT THIS WAY
+// The site is 192 pages and growing, and the navigation can only ever surface
+// a dozen of them. Search is how a visitor reaches the other 180 — the visa
+// page for their own passport, the month they are considering, the one
+// experience they half-remember.
+//
+// COST DISCIPLINE. Nothing about this loads on a normal page view: the button
+// is markup, and /search-index.json (18KB gzipped) is fetched the first time
+// the panel is actually opened, then kept for the rest of the session. No
+// third-party widget, no external request, no render-blocking work.
+//
+// It also answers a question we could not answer before: what visitors are
+// looking for. Every search is reported to the analytics layer, and a search
+// that returns NOTHING is reported separately — that list is the most direct
+// statement of demand the site can produce, because it is people telling us,
+// in their own words, what they expected to find and did not.
+//
+// Without JavaScript the button is a plain link to /sitemap.html, which lists
+// every page on the site.
+---
+<div class="sov" id="sov" role="dialog" aria-modal="true" aria-label="Search the site" hidden>
+  <div class="sov-panel">
+    <div class="sov-bar">
+      <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+        <circle cx="8.5" cy="8.5" r="5.6" fill="none" stroke="currentColor" stroke-width="1.5" />
+        <line x1="12.7" y1="12.7" x2="17.4" y2="17.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+      </svg>
+      <input
+        id="sin"
+        type="search"
+        autocomplete="off"
+        autocorrect="off"
+        spellcheck="false"
+        placeholder="Journeys, cities, months, your nationality…"
+        aria-label="Search"
+        aria-controls="sres"
+      />
+      <button type="button" class="sov-x" id="sovx" aria-label="Close search">Esc</button>
+    </div>
+    <div class="sov-body">
+      <p class="sov-hint" id="shint">Try <b>Luxor</b>, <b>Nile cruise</b>, <b>October</b>, <b>visa for Germans</b> or <b>diving</b>.</p>
+      <ul class="sres" id="sres" role="listbox" aria-label="Search results"></ul>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  (function () {
+    var btn = document.getElementById("sbtn");
+    var ov = document.getElementById("sov");
+    var input = document.getElementById("sin");
+    var list = document.getElementById("sres");
+    var hint = document.getElementById("shint");
+    var closeBtn = document.getElementById("sovx");
+    if (!btn || !ov || !input || !list) return;
+
+    // With JS available the button stops being a link to the site index.
+    btn.setAttribute("href", "#");
+
+    var docs = null, loading = false, cursor = -1, current = [], lastReported = "";
+    var depth = (location.pathname.match(/\//g) || []).length - 1;
+    var prefix = depth > 0 ? "../".repeat(depth) : "";
+
+    function load() {
+      if (docs || loading) return;
+      loading = true;
+      fetch(prefix + "search-index.json", { credentials: "omit" })
+        .then(function (r) { return r.json(); })
+        .then(function (d) { docs = d; loading = false; if (input.value) run(); })
+        .catch(function () { loading = false; hint.textContent = "Search is unavailable right now — try the site index instead."; });
+    }
+
+    /* Scoring. A visitor typing two words means both, so every word must match
+       somewhere; the score then rewards where it matched. A title hit is worth
+       far more than a description hit, and a word that starts a title beats one
+       buried in the middle — "luxor" should return Luxor before it returns a
+       journey that mentions Luxor in passing. */
+    function score(doc, words) {
+      var t = doc.t.toLowerCase(), k = doc.k, d = doc.d.toLowerCase(), s = 0;
+      for (var i = 0; i < words.length; i++) {
+        var w = words[i], hit = 0;
+        if (t === w) hit = 120;
+        else if (t.indexOf(w) === 0) hit = 90;
+        else if (t.indexOf(" " + w) > -1) hit = 70;
+        else if (t.indexOf(w) > -1) hit = 50;
+        else if (k.indexOf(w) === 0 || k.indexOf(" " + w) > -1) hit = 30;
+        else if (k.indexOf(w) > -1) hit = 16;
+        else if (d.indexOf(w) > -1) hit = 10;
+        if (!hit) return 0;                 // every word must match something
+        s += hit;
+      }
+      return s;
+    }
+
+    function esc(s) {
+      return String(s).replace(/[&<>"]/g, function (c) {
+        return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+      });
+    }
+
+    function run() {
+      var q = input.value.trim().toLowerCase();
+      cursor = -1;
+      if (!q) { list.innerHTML = ""; hint.hidden = false; current = []; return; }
+      if (!docs) { load(); return; }
+      hint.hidden = true;
+
+      var words = q.split(/\s+/).filter(Boolean);
+      var scored = [];
+      for (var i = 0; i < docs.length; i++) {
+        var sc = score(docs[i], words);
+        if (sc > 0) scored.push([sc, docs[i]]);
+      }
+      scored.sort(function (a, b) { return b[0] - a[0]; });
+      current = scored.slice(0, 12).map(function (x) { return x[1]; });
+
+      if (!current.length) {
+        list.innerHTML =
+          '<li class="sres-none">Nothing matched <b>' + esc(input.value.trim()) + '</b>.' +
+          ' <a href="' + prefix + 'contact.html">Ask us directly</a> — we plan these individually,' +
+          ' so a journey that is not on the site can still be built.</li>';
+        report(q, 0);
+        return;
+      }
+      list.innerHTML = current.map(function (r, i) {
+        return '<li role="option" id="sres-' + i + '" aria-selected="false">' +
+          '<a href="' + prefix + esc(r.u) + '">' +
+            '<span class="sres-k">' + esc(r.s) + '</span>' +
+            '<span class="sres-t">' + esc(r.t) + '</span>' +
+            '<span class="sres-d">' + esc(r.d) + '</span>' +
+            (r.m ? '<span class="sres-m">' + esc(r.m) + '</span>' : "") +
+          "</a></li>";
+      }).join("");
+      report(q, current.length);
+    }
+
+    /* Reported to analytics through an event, the same way the enquiry form
+       reports its outcome — this component does not need to know how the
+       collector works. Debounced by "has the query changed", so typing
+       "luxor" sends one search, not five. */
+    var reportTimer;
+    function report(q, hits) {
+      clearTimeout(reportTimer);
+      reportTimer = setTimeout(function () {
+        if (q.length < 3 || q === lastReported) return;
+        lastReported = q;
+        document.dispatchEvent(new CustomEvent("kemet:search", { detail: { q: q, hits: hits } }));
+      }, 900);
+    }
+
+    function open() {
+      ov.hidden = false;
+      document.body.style.overflow = "hidden";
+      load();
+      setTimeout(function () { input.focus(); }, 30);
+    }
+    function close() {
+      ov.hidden = true;
+      document.body.style.overflow = "";
+      btn.focus();
+    }
+
+    function move(step) {
+      var items = list.querySelectorAll("li[role=option]");
+      if (!items.length) return;
+      if (cursor > -1 && items[cursor]) items[cursor].setAttribute("aria-selected", "false");
+      cursor = (cursor + step + items.length) % items.length;
+      items[cursor].setAttribute("aria-selected", "true");
+      items[cursor].scrollIntoView({ block: "nearest" });
+      input.setAttribute("aria-activedescendant", items[cursor].id);
+    }
+
+    btn.addEventListener("click", function (e) { e.preventDefault(); open(); });
+    if (closeBtn) closeBtn.addEventListener("click", close);
+    ov.addEventListener("click", function (e) { if (e.target === ov) close(); });
+    input.addEventListener("input", run);
+
+    input.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowDown") { e.preventDefault(); move(1); }
+      else if (e.key === "ArrowUp") { e.preventDefault(); move(-1); }
+      else if (e.key === "Enter") {
+        var items = list.querySelectorAll("li[role=option] a");
+        var target = cursor > -1 ? items[cursor] : items[0];
+        if (target) { e.preventDefault(); location.href = target.getAttribute("href"); }
+      }
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (!ov.hidden && e.key === "Escape") { close(); return; }
+      if (ov.hidden && (e.key === "/" || ((e.metaKey || e.ctrlKey) && e.key === "k"))) {
+        var tag = (document.activeElement && document.activeElement.tagName) || "";
+        if (tag === "INPUT" || tag === "TEXTAREA") return;   // never steal a keystroke
+        e.preventDefault(); open();
+      }
+    });
+  })();
+</script>
+
+<style is:global>
+  /* --- the trigger in the nav ------------------------------------------- */
+  .sbtn { display: inline-flex; align-items: center; gap: 9px; color: var(--muted);
+    font-size: .66rem; letter-spacing: .28em; text-transform: uppercase;
+    padding: 10px 0; transition: color .4s; cursor: pointer; }
+  .sbtn:hover { color: var(--gold-bright); }
+  .sbtn svg { width: 15px; height: 15px; flex: none; }
+
+  /* --- the overlay ------------------------------------------------------- */
+  .sov { position: fixed; inset: 0; z-index: 200; background: rgba(6, 5, 4, .82);
+    backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    display: flex; align-items: flex-start; justify-content: center;
+    padding: 12vh 20px 20px; overflow-y: auto; }
+  .sov[hidden] { display: none; }
+  .sov-panel { width: 100%; max-width: 720px; background: #14100B;
+    border: 1px solid var(--line-2); box-shadow: 0 40px 100px -30px rgba(0,0,0,.9);
+    animation: sov-in .28s cubic-bezier(.22,.61,.36,1); }
+  @keyframes sov-in { from { opacity: 0; transform: translateY(-10px); } }
+  @media (prefers-reduced-motion: reduce) { .sov-panel { animation: none; } }
+
+  .sov-bar { display: flex; align-items: center; gap: 14px; padding: 18px 20px;
+    border-bottom: 1px solid var(--line); }
+  .sov-bar svg { width: 19px; height: 19px; color: var(--gold); flex: none; }
+  .sov-bar input { flex: 1; min-width: 0; background: none; border: 0; outline: none;
+    color: var(--bone); font-family: var(--ff-body); font-size: 1.05rem; padding: 6px 0; }
+  .sov-bar input::placeholder { color: var(--muted-2); }
+  .sov-bar input::-webkit-search-cancel-button { -webkit-appearance: none; }
+  .sov-x { background: none; border: 1px solid var(--line); color: var(--muted-2);
+    font-size: .6rem; letter-spacing: .18em; text-transform: uppercase;
+    padding: 6px 10px; cursor: pointer; transition: color .3s, border-color .3s; }
+  .sov-x:hover { color: var(--gold-bright); border-color: var(--line-2); }
+
+  .sov-body { max-height: 62vh; overflow-y: auto; }
+  .sov-hint { padding: 20px; margin: 0; color: var(--muted-2); font-size: .88rem; line-height: 1.8; }
+  .sov-hint b { color: var(--gold); font-weight: 400; }
+
+  .sres { list-style: none; margin: 0; padding: 0; }
+  .sres li + li { border-top: 1px solid rgba(217,180,90,.1); }
+  .sres a { display: grid; grid-template-columns: 1fr auto; gap: 2px 16px;
+    padding: 14px 20px; transition: background .2s; }
+  .sres a:hover, .sres li[aria-selected="true"] a { background: rgba(217,180,90,.07); }
+  .sres-k { grid-column: 1; font-size: .58rem; letter-spacing: .26em; text-transform: uppercase;
+    color: var(--gold); }
+  .sres-m { grid-column: 2; grid-row: 1 / span 2; align-self: center; text-align: right;
+    font-size: .72rem; color: var(--muted-2); white-space: nowrap; }
+  .sres-t { grid-column: 1; font-family: var(--ff-display); font-size: 1.14rem;
+    color: var(--bone); line-height: 1.3; }
+  .sres-d { grid-column: 1; font-size: .84rem; color: var(--muted); line-height: 1.6;
+    margin-top: 3px; }
+  .sres-none { padding: 22px 20px; color: var(--muted); font-size: .92rem; line-height: 1.8; }
+  .sres-none b { color: var(--bone); font-weight: 400; }
+  .sres-none a { display: inline; padding: 0; color: var(--gold);
+    border-bottom: 1px solid rgba(217,180,90,.4); }
+
+  @media(max-width:1080px){
+    /* In the burger menu the label carries the meaning, so the row reads as
+       a menu item rather than a stray icon. */
+    .sbtn { letter-spacing: .22em; font-size: .75rem; }
+  }
+  @media(max-width:680px){
+    .sov { padding: 0; }
+    .sov-panel { max-width: none; min-height: 100%; border: 0; }
+    .sov-body { max-height: none; }
+    .sov-bar { padding: 16px 18px; position: sticky; top: 0; background: #14100B; z-index: 1; }
+    .sov-bar input { font-size: 16px; }   /* iOS zooms anything smaller on focus */
+    .sres a { grid-template-columns: 1fr; padding: 16px 18px; }
+    .sres-m { grid-column: 1; grid-row: auto; text-align: left; margin-top: 4px; }
+  }
+</style>

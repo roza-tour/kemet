@@ -170,6 +170,14 @@ export const enhanceScript = `
     document.addEventListener('kemet:enquiry',function(e){
       KEV(e.detail&&e.detail.ok?'form-submit':'form-failed');
     });
+
+    /* Site search. A query that found nothing is recorded under its own event
+       name: that list is visitors stating, in their own words, what they came
+       for and did not find. */
+    document.addEventListener('kemet:search',function(e){
+      var d=e.detail||{};
+      KEV(d.hits?'search':'search-none',d.q);
+    });
   }catch(e){}
 
   /* lightbox — click any gallery/hero photo to view it full-screen.

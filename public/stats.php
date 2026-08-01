@@ -48,6 +48,7 @@ function pageLabel(string $p): string {
 
 $daysMap = $pages = $refs = $events = $devices = $langs = $camps = [];
 $landing = $picks = $broken = [];
+$searches = $searchNone = [];
 $visitors = $seenVisit = $hitsPerVisit = [];
 $depthSum = $depthN = $timeSum = $timeN = [];
 $engTotal = $engCount = $depthTotal = $depthCount = 0;
@@ -81,7 +82,11 @@ foreach ($rows as $c) {
 
   // --- events ---------------------------------------------------------------
   $events[$extra] = ($events[$extra] ?? 0) + 1;
-  if ($extra === "pick" && $detail !== "") {
+  if ($extra === "search" && $detail !== "") {
+    $searches[$detail] = ($searches[$detail] ?? 0) + 1;
+  } elseif ($extra === "search-none" && $detail !== "") {
+    $searchNone[$detail] = ($searchNone[$detail] ?? 0) + 1;
+  } elseif ($extra === "pick" && $detail !== "") {
     $picks[$detail] = ($picks[$detail] ?? 0) + 1;
   } elseif ($extra === "end") {
     $sec = (int)$detail;
@@ -101,6 +106,7 @@ foreach ($rows as $c) {
 
 arsort($pages); arsort($refs); arsort($events); arsort($langs);
 arsort($camps); arsort($landing); arsort($picks); arsort($broken);
+arsort($searches); arsort($searchNone);
 ksort($daysMap);
 
 $pv       = array_sum($daysMap);
@@ -160,6 +166,26 @@ usort($enquiries, fn($a, $b) => strcmp($b[0], $a[0]));        // newest first
 $enqRecent = array_filter($enquiries, fn($e) => $e[0] >= $since->format("Y-m-d"));
 $enqFailed = array_values(array_filter($enquiries, fn($e) => $e[1] === "mail-failed"));
 
+/**
+ * Contact details are masked here on purpose: this page opens without a key,
+ * so the enquiry list should not hand a stranger a customer's email address
+ * and phone number. Enough is left to recognise a returning enquirer and to
+ * look them up. The unmasked originals are in _stats/enquiries.csv, readable
+ * from cPanel File Manager, which is where you go to reply.
+ */
+function maskEmail(string $e): string {
+  $at = strpos($e, "@");
+  if ($at === false || $at < 1) return $e === "" ? "" : "•••";
+  $user = substr($e, 0, $at);
+  $keep = mb_substr($user, 0, 1);
+  return $keep . str_repeat("•", max(3, min(6, mb_strlen($user) - 1))) . substr($e, $at);
+}
+function maskPhone(string $p): string {
+  $digits = preg_replace('/\D/', "", $p);
+  if ($digits === "") return "";
+  return strlen($digits) <= 4 ? "••••" : "••••" . substr($digits, -3);
+}
+
 $fmt = fn($n) => number_format($n);
 $esc = fn($s) => htmlspecialchars((string)$s, ENT_QUOTES);
 $pct = fn($n, $d) => $d > 0 ? round($n / $d * 100) . "%" : "—";
@@ -216,6 +242,7 @@ td.n2{text-align:right;color:var(--mut);font-variant-numeric:tabular-nums;width:
 .alarm b{display:block;color:#F0A88F;margin-bottom:4px}
 .enq td b{font-weight:500;color:var(--bone)}
 .enq td a{color:var(--gold)}
+.enq-masked{color:var(--mut);font-variant-numeric:tabular-nums}
 .enq-msg{color:var(--mut);font-size:.82rem;margin-top:5px;line-height:1.6}
 .tag{display:inline-block;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--line);padding:2px 7px;margin-right:8px;color:var(--mut);vertical-align:1px}
 .tag--sent{color:#9FD4A8;border-color:rgba(159,212,168,.45)}
@@ -288,6 +315,19 @@ td.n2{text-align:right;color:var(--mut);font-variant-numeric:tabular-nums;width:
 <div class="note">Whatever followed “?” on the page someone arrived at. This is what separates visits that would otherwise all read as plain “/”. Tag the links you post — <code>?utm_source=instagram</code> — and each one appears here on its own line.</div>
 <?php $table($camps, 15, null, "No tagged links yet — add ?utm_source=… to links you post"); ?>
 
+<div class="cols">
+<div>
+  <h2>What visitors searched for</h2>
+  <div class="note">Typed into the search box in the navigation. This is demand in the visitor's own words, not ours.</div>
+  <?php $table($searches, 20, null, "No searches yet"); ?>
+</div>
+<div>
+  <h2>Searches that found nothing</h2>
+  <div class="note">The most useful list on this page. Every line is somebody telling you what they came for and did not find — a journey to add, a page to write, or a word we call something else.</div>
+  <?php $table($searchNone, 20, null, "Nothing so far — every search matched something"); ?>
+</div>
+</div>
+
 <h2>Most-clicked journeys &amp; cards</h2>
 <div class="note">Which journey, destination, experience or season card pulled the click. This is the demand signal: what to offer more of, and what is being ignored.</div>
 <?php $table($picks, 20, null, "No card clicks recorded yet"); ?>
@@ -321,7 +361,7 @@ if (!$attn) {
 <?php $table($broken, 15, null, "None — no visitor hit a missing page"); ?>
 
 <h2>Enquiries</h2>
-<div class="note">Every message the contact form received, newest first, with what became of it. <b>sent</b> reached the mail server · <b>mail-failed</b> did not — reply to those by hand · <b>invalid</b> failed validation, but the phone number may still be good · <b>duplicate</b> is the same message submitted twice.</div>
+<div class="note">Every message the contact form received, newest first, with what became of it. Email addresses and phone numbers are masked because this page opens without a key — the full details are in <code>_stats/enquiries.csv</code> on the server.  <b>sent</b> reached the mail server · <b>mail-failed</b> did not — reply to those by hand · <b>invalid</b> failed validation, but the phone number may still be good · <b>duplicate</b> is the same message submitted twice.</div>
 <?php if (!$enquiries): ?>
 <table><tr><td style="color:var(--mut)">No enquiries recorded yet</td></tr></table>
 <?php else: ?>
@@ -331,8 +371,8 @@ if (!$attn) {
     <td>
       <span class="tag tag--<?= $esc($status) ?>"><?= $esc($status) ?></span>
       <b><?= $esc($nm) ?></b>
-      <a href="mailto:<?= $esc($em) ?>"><?= $esc($em) ?></a>
-      <?= $ph !== "" ? " · " . $esc($ph) : "" ?>
+      <span class="enq-masked"><?= $esc(maskEmail($em)) ?></span>
+      <?= $ph !== "" ? ' · <span class="enq-masked">' . $esc(maskPhone($ph)) . "</span>" : "" ?>
       <?= $dt !== "" ? " · dates: " . $esc($dt) : "" ?>
       <div class="enq-msg"><?= $esc($msg) ?></div>
     </td>

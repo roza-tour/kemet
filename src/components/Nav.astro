@@ -1,5 +1,6 @@
 ---
 import { primaryNav } from "@/config/navigation";
+import SearchButton from "@/components/search/SearchButton.astro";
 
 interface Props {
   /** Route file of the active page, e.g. "tours.html". */
@@ -19,6 +20,11 @@ const { active = "index.html", base = "" } = Astro.props;
     {primaryNav.map(({ href, label }) => (
       <a href={`${base}${href}`} class={href === active ? "active" : undefined} aria-current={href === active ? "page" : undefined}>{label}</a>
     ))}
+    {/* Only the trigger belongs here, so it collapses into the burger menu
+        with the other links. The panel itself is rendered by Base at body
+        level — inside .navlinks it inherited the nav's uppercase, letter
+        spacing and nowrap, which wrecked the result list. */}
+    <SearchButton />
   </div>
   <a href={`${base}contact.html`} class="nav-cta">Contact</a>
   <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navlinks">&#9776;</button>
