@@ -119,9 +119,9 @@
     <path d="M50 84C64 76 72 62 72 44 56 50 48 64 50 84Z"/>
     <path d="M50 82C32 80 18 70 12 54 30 52 46 62 50 82Z" opacity=".75"/>
     <path d="M50 82C68 80 82 70 88 54 70 52 54 62 50 82Z" opacity=".75"/>
-  </g></svg> </div> <section> <div class="wrap"> <div class="enq-panel reveal" id="message-us" data-astro-cid-vmtze36z> <div class="enq-head" data-astro-cid-vmtze36z> <h2 data-astro-cid-vmtze36z>Send us a message</h2> <p data-astro-cid-vmtze36z>Write to us directly — your message lands in our inbox and we reply within one business day.</p> </div> <div class="cform-note cform-note--ok" hidden data-astro-cid-vmtze36z>
+  </g></svg> </div> <section> <div class="wrap"> <div class="enq-panel reveal" id="message-us" data-astro-cid-vmtze36z> <div class="enq-head" data-astro-cid-vmtze36z> <h2 data-astro-cid-vmtze36z>Send us a message</h2> <p data-astro-cid-vmtze36z>Write to us directly — your message lands in our inbox and we reply within one business day.</p> </div>  <div class="cform-note cform-note--ok" role="status" aria-live="polite" hidden data-astro-cid-vmtze36z>
 Thank you — your message has been sent. We will reply within one business day.
-</div> <div class="cform-note cform-note--err" hidden data-astro-cid-vmtze36z>
+</div> <div class="cform-note cform-note--err" role="alert" hidden data-astro-cid-vmtze36z>
 Something went wrong and the message was not sent. Please check your name,
     email and message — or write to us on WhatsApp instead.
 </div> <form class="cform" method="post" action="/contact-handler.php" data-astro-cid-vmtze36z>  <label class="cform-hp" aria-hidden="true" data-astro-cid-vmtze36z>
@@ -129,8 +129,17 @@ Website
 <input type="text" name="website" tabindex="-1" autocomplete="off" data-astro-cid-vmtze36z> </label> <div class="cform-grid" data-astro-cid-vmtze36z> <label data-astro-cid-vmtze36z> <span data-astro-cid-vmtze36z>Your name *</span> <input type="text" name="name" required maxlength="120" autocomplete="name" data-astro-cid-vmtze36z> </label> <label data-astro-cid-vmtze36z> <span data-astro-cid-vmtze36z>Email *</span> <input type="email" name="email" required maxlength="200" autocomplete="email" data-astro-cid-vmtze36z> </label> <label data-astro-cid-vmtze36z> <span data-astro-cid-vmtze36z>Phone / WhatsApp</span> <input type="tel" name="phone" maxlength="40" autocomplete="tel" data-astro-cid-vmtze36z> </label> <label data-astro-cid-vmtze36z> <span data-astro-cid-vmtze36z>Travel dates</span> <input type="text" name="dates" maxlength="120" placeholder="e.g. 10–20 October, flexible" data-astro-cid-vmtze36z> </label> <label class="cform-full" data-astro-cid-vmtze36z> <span data-astro-cid-vmtze36z>Your message *</span> <textarea name="message" required rows="6" maxlength="5000" placeholder="Tell us where you want to go, who is travelling and what you would love to see." data-astro-cid-vmtze36z></textarea> </label> </div> <button type="submit" class="btn btn-solid" data-astro-cid-vmtze36z>Send message</button> </form> </div> <script>
   (function () {
     // Fallback path (no-JS submits land back here with ?sent=1|0).
+    // The analytics layer (scripts/enhance) counts enquiries from this event.
+    // It is dispatched from the paths that KNOW the outcome — never from the
+    // submit handler, which fires before the server has answered and would
+    // have counted every failed send as a conversion.
+    var report = function (ok) {
+      document.dispatchEvent(new CustomEvent("kemet:enquiry", { detail: { ok: ok } }));
+    };
+
     var sent = new URLSearchParams(location.search).get("sent");
     if (sent !== null) {
+      report(sent === "1");
       var note = document.querySelector(sent === "1" ? ".cform-note--ok" : ".cform-note--err");
       if (note) note.hidden = false;
       if (sent === "1") { var f0 = document.querySelector(".cform"); if (f0) f0.reset(); }
@@ -167,6 +176,7 @@ Website
       })
         .then(function (r) { return r.json(); })
         .then(function (d) {
+          report(!!(d && d.ok));
           if (d && d.ok) {
             form.reset();
             if (ok) { ok.hidden = false; ok.scrollIntoView({ block: "center", behavior: "smooth" }); }
@@ -353,8 +363,14 @@ Email
     if(cf){
       var began=false;
       cf.addEventListener('focusin',function(){if(!began){began=true;KEV('form-start');}});
-      cf.addEventListener('submit',function(){KEV('form-submit');});
     }
+    /* The outcome, not the attempt. Listening on 'submit' counted a message
+       the server rejected as a conversion, which made the funnel on the
+       dashboard read better than reality. ContactForm dispatches this once it
+       knows what actually happened. */
+    document.addEventListener('kemet:enquiry',function(e){
+      KEV(e.detail&&e.detail.ok?'form-submit':'form-failed');
+    });
   }catch(e){}
 
   /* lightbox — click any gallery/hero photo to view it full-screen.

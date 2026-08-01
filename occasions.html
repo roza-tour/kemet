@@ -280,8 +280,14 @@ A proposal is planned backwards from a quarter of an hour. A sixtieth birthday w
     if(cf){
       var began=false;
       cf.addEventListener('focusin',function(){if(!began){began=true;KEV('form-start');}});
-      cf.addEventListener('submit',function(){KEV('form-submit');});
     }
+    /* The outcome, not the attempt. Listening on 'submit' counted a message
+       the server rejected as a conversion, which made the funnel on the
+       dashboard read better than reality. ContactForm dispatches this once it
+       knows what actually happened. */
+    document.addEventListener('kemet:enquiry',function(e){
+      KEV(e.detail&&e.detail.ok?'form-submit':'form-failed');
+    });
   }catch(e){}
 
   /* lightbox — click any gallery/hero photo to view it full-screen.

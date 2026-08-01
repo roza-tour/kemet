@@ -18,10 +18,13 @@ const {
     {subtext && <p>{subtext}</p>}
   </div>
 
-  <div class="cform-note cform-note--ok" hidden>
+  {/* role/aria-live so the outcome is announced. A visually-revealed <div>
+      tells a sighted visitor the message was sent and tells a screen-reader
+      user nothing at all. */}
+  <div class="cform-note cform-note--ok" role="status" aria-live="polite" hidden>
     Thank you — your message has been sent. We will reply within one business day.
   </div>
-  <div class="cform-note cform-note--err" hidden>
+  <div class="cform-note cform-note--err" role="alert" hidden>
     Something went wrong and the message was not sent. Please check your name,
     email and message — or write to us on WhatsApp instead.
   </div>
@@ -63,8 +66,17 @@ const {
 <script is:inline>
   (function () {
     // Fallback path (no-JS submits land back here with ?sent=1|0).
+    // The analytics layer (scripts/enhance) counts enquiries from this event.
+    // It is dispatched from the paths that KNOW the outcome — never from the
+    // submit handler, which fires before the server has answered and would
+    // have counted every failed send as a conversion.
+    var report = function (ok) {
+      document.dispatchEvent(new CustomEvent("kemet:enquiry", { detail: { ok: ok } }));
+    };
+
     var sent = new URLSearchParams(location.search).get("sent");
     if (sent !== null) {
+      report(sent === "1");
       var note = document.querySelector(sent === "1" ? ".cform-note--ok" : ".cform-note--err");
       if (note) note.hidden = false;
       if (sent === "1") { var f0 = document.querySelector(".cform"); if (f0) f0.reset(); }
@@ -101,6 +113,7 @@ const {
       })
         .then(function (r) { return r.json(); })
         .then(function (d) {
+          report(!!(d && d.ok));
           if (d && d.ok) {
             form.reset();
             if (ok) { ok.hidden = false; ok.scrollIntoView({ block: "center", behavior: "smooth" }); }

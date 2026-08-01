@@ -132,6 +132,33 @@ const LANG_NAMES = [
   "th" => "ไทย · Thai", "vi" => "Tiếng Việt · Vietnamese",
 ];
 
+// --- Enquiries -------------------------------------------------------------
+// contact-handler.php writes a row for every enquiry it receives, whatever
+// became of it. That file — not the mailbox — is the record of record: mail()
+// reporting success only means the message reached the local mail server, and
+// a delivery failure used to leave no trace at all. Surfacing it here is the
+// difference between noticing a broken mailbox today and noticing it in a
+// month, after the enquiries are gone.
+//
+// Rows written before the status column existed have six fields and were only
+// ever written on success, so they are read as "sent".
+const ENQ_STATUS = ["sent", "mail-failed", "invalid", "duplicate", "throttled"];
+$enquiries = [];
+$enqFile = $dir . "/enquiries.csv";
+if (is_file($enqFile)) {
+  foreach (file($enqFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) as $line) {
+    $c = str_getcsv($line);
+    if (count($c) < 6) continue;
+    if (!in_array($c[1] ?? "", ENQ_STATUS, true)) array_splice($c, 1, 0, "sent");
+    $enquiries[] = array_pad(array_slice($c, 0, 7), 7, "");
+  }
+}
+// Sort by timestamp, not by file order: a hand-restored or back-filled row
+// would otherwise jump to the top purely because it was appended last.
+usort($enquiries, fn($a, $b) => strcmp($b[0], $a[0]));        // newest first
+$enqRecent = array_filter($enquiries, fn($e) => $e[0] >= $since->format("Y-m-d"));
+$enqFailed = array_values(array_filter($enquiries, fn($e) => $e[1] === "mail-failed"));
+
 $fmt = fn($n) => number_format($n);
 $esc = fn($s) => htmlspecialchars((string)$s, ENT_QUOTES);
 $pct = fn($n, $d) => $d > 0 ? round($n / $d * 100) . "%" : "—";
@@ -182,6 +209,17 @@ td.n2{text-align:right;color:var(--mut);font-variant-numeric:tabular-nums;width:
 .cols{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
 @media(max-width:760px){.cols{grid-template-columns:1fr}}
 .links{margin-top:26px;font-size:.8rem}.links a{color:var(--gold)}
+.card--alarm{border-color:rgba(224,122,95,.65);background:rgba(224,122,95,.09)}
+.card--alarm b{color:#F0A88F}
+.alarm{background:rgba(224,122,95,.1);border:1px solid rgba(224,122,95,.5);border-radius:10px;padding:14px 18px;margin-bottom:22px;font-size:.86rem;line-height:1.65;color:#F3CBBC}
+.alarm b{display:block;color:#F0A88F;margin-bottom:4px}
+.enq td b{font-weight:500;color:var(--bone)}
+.enq td a{color:var(--gold)}
+.enq-msg{color:var(--mut);font-size:.82rem;margin-top:5px;line-height:1.6}
+.tag{display:inline-block;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--line);padding:2px 7px;margin-right:8px;color:var(--mut);vertical-align:1px}
+.tag--sent{color:#9FD4A8;border-color:rgba(159,212,168,.45)}
+.tag--mail-failed{color:#F0A88F;border-color:rgba(240,168,143,.6)}
+.tag--invalid{color:#E6CE8A;border-color:rgba(230,206,138,.45)}
 </style></head><body><div class="wrap">
 <h1>Kemet — التقرير · Site Stats</h1>
 <div class="sub">آخر <?= $days ?> يوم · Last <?= $days ?> days (UTC) — cookie-less, first-party, no third-party scripts</div>
@@ -195,7 +233,16 @@ td.n2{text-align:right;color:var(--mut);font-variant-numeric:tabular-nums;width:
 <div class="card"><b><?= $fmt($reach) ?></b><span>Contact actions</span></div>
 <div class="card"><b><?= $fmt($devices["m"] ?? 0) ?> / <?= $fmt($devices["t"] ?? 0) ?> / <?= $fmt($devices["d"] ?? 0) ?></b><span>Mobile / Tablet / Desktop</span></div>
 <div class="card"><b><?= $pct($oneAndOut, $uv) ?></b><span>Single-page visits</span></div>
+<div class="card<?= $enqFailed ? ' card--alarm' : '' ?>"><b><?= $fmt(count($enqRecent)) ?><?= $enqFailed ? ' / ' . $fmt(count($enqFailed)) : '' ?></b><span>Enquiries<?= $enqFailed ? ' / undelivered' : '' ?></span></div>
 </div>
+
+<?php if ($enqFailed): ?>
+<div class="alarm">
+  <b>&#9888; <?= $fmt(count($enqFailed)) ?> enquir<?= count($enqFailed) === 1 ? 'y was' : 'ies were' ?> not delivered by email.</b>
+  The people below wrote to you and the message never reached the inbox — check the
+  mailbox on the server, then reply to them directly. Their details are safe here.
+</div>
+<?php endif; ?>
 
 <h2>Traffic by day</h2>
 <div class="bar"><?php foreach ($daysMap as $d => $n): ?><i title="<?= $esc($d) ?>: <?= $n ?>" style="height:<?= round($n / $maxDay * 100) ?>%"></i><?php endforeach; if (!$daysMap) echo '<span style="color:var(--mut);font-size:.85rem">No data yet — check back after some visits.</span>'; ?></div>
@@ -271,6 +318,28 @@ if (!$attn) {
 <h2>Broken links people hit (404)</h2>
 <div class="note">Real visitors landing on a URL that does not exist. Anything here with a meaningful count is either a wrong link on the site, or a page worth actually creating.</div>
 <?php $table($broken, 15, null, "None — no visitor hit a missing page"); ?>
+
+<h2>Enquiries</h2>
+<div class="note">Every message the contact form received, newest first, with what became of it. <b>sent</b> reached the mail server · <b>mail-failed</b> did not — reply to those by hand · <b>invalid</b> failed validation, but the phone number may still be good · <b>duplicate</b> is the same message submitted twice.</div>
+<?php if (!$enquiries): ?>
+<table><tr><td style="color:var(--mut)">No enquiries recorded yet</td></tr></table>
+<?php else: ?>
+<table>
+<?php foreach (array_slice($enquiries, 0, 25) as $e): [$when, $status, $nm, $em, $ph, $dt, $msg] = $e; ?>
+  <tr class="enq enq--<?= $esc($status) ?>">
+    <td>
+      <span class="tag tag--<?= $esc($status) ?>"><?= $esc($status) ?></span>
+      <b><?= $esc($nm) ?></b>
+      <a href="mailto:<?= $esc($em) ?>"><?= $esc($em) ?></a>
+      <?= $ph !== "" ? " · " . $esc($ph) : "" ?>
+      <?= $dt !== "" ? " · dates: " . $esc($dt) : "" ?>
+      <div class="enq-msg"><?= $esc($msg) ?></div>
+    </td>
+    <td class="n2"><?= $esc($when) ?></td>
+  </tr>
+<?php endforeach; ?>
+</table>
+<?php endif; ?>
 
 <div class="links">Range:
   <a href="?key=<?= $esc(ACCESS_KEY) ?>&days=7">7d</a> ·
