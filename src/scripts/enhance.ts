@@ -79,6 +79,31 @@ export const enhanceScript = `
     addEventListener('resize',function(){if(innerWidth>1080&&nl.classList.contains('open'))setMenu(false);});
   }
 
+  /* Nav dropdowns. Hover and keyboard focus are handled in CSS; this is only
+     for touch, where neither exists — the chevron beside each group label
+     toggles its panel, and opening one closes the others. */
+  var ddws=document.querySelectorAll('.ddw');
+  Array.prototype.forEach.call(ddws,function(w){
+    var t=w.querySelector('.ddtoggle');if(!t)return;
+    t.addEventListener('click',function(e){
+      e.preventDefault();e.stopPropagation();
+      var open=!w.classList.contains('open');
+      Array.prototype.forEach.call(ddws,function(o){
+        o.classList.remove('open');
+        var b=o.querySelector('.ddtoggle');if(b)b.setAttribute('aria-expanded','false');
+      });
+      if(open){w.classList.add('open');t.setAttribute('aria-expanded','true');KEV('nav-menu');}
+    });
+  });
+  document.addEventListener('click',function(e){
+    Array.prototype.forEach.call(ddws,function(w){
+      if(!w.contains(e.target)){
+        w.classList.remove('open');
+        var b=w.querySelector('.ddtoggle');if(b)b.setAttribute('aria-expanded','false');
+      }
+    });
+  });
+
   /* -------------------------------------------------------------------------
      First-party analytics → /k.php. Cookie-less, no third party, no raw IP;
      k.php also honours DNT/GPC server-side. Exactly two beacons per page —

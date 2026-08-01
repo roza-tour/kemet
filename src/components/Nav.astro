@@ -1,6 +1,19 @@
 ---
+// Nav — grouped dropdowns plus the search field, both in the bar itself.
+//
+// WHY DROPDOWNS
+// A flat bar of eight links could reach eight pages out of 192; everything
+// else was findable only from the footer. Four groups carry the whole site
+// without making the bar any wider, and they free the space the search field
+// needed.
+//
+// WHY THE RESULTS PANEL IS NOT IN HERE
+// The search INPUT sits in the bar, but the results panel is rendered at body
+// level by Base (components/search/SearchPanel) and positioned under the input
+// at runtime. Results are links, and any link inside .navlinks inherits the
+// nav's uppercase, letter-spacing and nowrap — which is exactly what wrecked
+// the first version of this.
 import { primaryNav } from "@/config/navigation";
-import SearchButton from "@/components/search/SearchButton.astro";
 
 interface Props {
   /** Route file of the active page, e.g. "tours.html". */
@@ -9,6 +22,10 @@ interface Props {
   base?: string;
 }
 const { active = "index.html", base = "" } = Astro.props;
+
+/** A group counts as current when the page is the parent or any of its children. */
+const isCurrent = (item: (typeof primaryNav)[number]) =>
+  item.href === active || item.children?.some((c) => c.href === active);
 ---
 <nav class="nav" id="nav">
   <a class="brand" href="/" aria-label="Kemet — Luxury Egypt Travel — home">
@@ -16,16 +33,139 @@ const { active = "index.html", base = "" } = Astro.props;
       <img src="/images/brand/kemet-logo-gold.webp" alt="Kemet — Luxury Egypt Travel" width="52" height="50" decoding="async" />
     </span>
   </a>
+
   <div class="navlinks" id="navlinks">
-    {primaryNav.map(({ href, label }) => (
-      <a href={`${base}${href}`} class={href === active ? "active" : undefined} aria-current={href === active ? "page" : undefined}>{label}</a>
+    {primaryNav.map((item) => (
+      item.children?.length ? (
+        <div class="ddw">
+          {/* The parent is a real link to the section hub, not a dead toggle.
+              The chevron beside it is what opens the panel on a touch device,
+              where there is no hover to rely on. */}
+          <a
+            href={`${base}${item.href}`}
+            class:list={["ddtop", isCurrent(item) && "active"]}
+            aria-current={item.href === active ? "page" : undefined}
+          >{item.label}</a>
+          <button
+            type="button"
+            class="ddtoggle"
+            aria-expanded="false"
+            aria-label={`Open the ${item.label} menu`}
+          ><span aria-hidden="true"></span></button>
+          <div class="dd">
+            <ul>
+              {item.children.map((c) => (
+                <li>
+                  <a
+                    href={`${base}${c.href}`}
+                    class={c.href === active ? "active" : undefined}
+                    aria-current={c.href === active ? "page" : undefined}
+                  >{c.label}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ) : (
+        <a
+          href={`${base}${item.href}`}
+          class={item.href === active ? "active" : undefined}
+          aria-current={item.href === active ? "page" : undefined}
+        >{item.label}</a>
+      )
     ))}
-    {/* Only the trigger belongs here, so it collapses into the burger menu
-        with the other links. The panel itself is rendered by Base at body
-        level — inside .navlinks it inherited the nav's uppercase, letter
-        spacing and nowrap, which wrecked the result list. */}
-    <SearchButton />
+
+    {/* Search lives in the bar. It is an <input>, so none of the .navlinks a
+        rules reach it — only the results panel had to move out. Without JS the
+        form submits to the site index, which lists every page. */}
+    <form class="nsearch" role="search" action={`${base}sitemap.html`} id="nsform">
+      <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+        <circle cx="8.5" cy="8.5" r="5.6" fill="none" stroke="currentColor" stroke-width="1.5" />
+        <line x1="12.7" y1="12.7" x2="17.4" y2="17.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+      </svg>
+      <input
+        id="sin"
+        type="search"
+        name="q"
+        autocomplete="off"
+        autocorrect="off"
+        spellcheck="false"
+        placeholder="Search"
+        aria-label="Search the site"
+        aria-controls="sres"
+        aria-expanded="false"
+      />
+    </form>
   </div>
+
   <a href={`${base}contact.html`} class="nav-cta">Contact</a>
   <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navlinks">&#9776;</button>
 </nav>
+
+<style is:global>
+  /* ===== dropdown groups ================================================= */
+  .ddw { position: relative; display: flex; align-items: center; gap: 5px; }
+  .ddtoggle { background: none; border: 0; padding: 6px 2px; cursor: pointer;
+    color: var(--muted); line-height: 0; transition: color .4s, transform .35s; }
+  .ddtoggle span { display: block; width: 6px; height: 6px;
+    border-right: 1px solid currentColor; border-bottom: 1px solid currentColor;
+    transform: rotate(45deg) translate(-1px, -1px); }
+  .ddw:hover .ddtoggle, .ddw:focus-within .ddtoggle { color: var(--gold); }
+  .ddw.open .ddtoggle { transform: rotate(180deg); }
+
+  /* The panel keeps a transparent gap above it (padding-top) so the pointer
+     can travel from the label into the menu without crossing dead space. */
+  .dd { position: absolute; top: 100%; left: -18px; min-width: 232px; z-index: 5;
+    padding-top: 16px; opacity: 0; visibility: hidden; transform: translateY(-6px);
+    transition: opacity .28s, transform .28s cubic-bezier(.22,.61,.36,1), visibility .28s; }
+  .ddw:hover .dd, .ddw:focus-within .dd, .ddw.open .dd {
+    opacity: 1; visibility: visible; transform: translateY(0); }
+  .dd ul { list-style: none; margin: 0; padding: 10px 0;
+    background: rgba(14,11,8,.97);
+    backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+    border: 1px solid var(--line-2); box-shadow: 0 26px 60px -26px rgba(0,0,0,.9); }
+  .dd li a { display: block; padding: 9px 20px; font-size: .7rem; letter-spacing: .18em;
+    text-transform: uppercase; color: var(--muted); white-space: nowrap;
+    transition: color .3s, background .3s; }
+  .dd li a::after { display: none; }             /* no underline sweep in here */
+  .dd li a:hover, .dd li a.active { color: var(--gold-bright); background: rgba(217,180,90,.08); }
+
+  /* ===== the search field, in the bar ==================================== */
+  .nsearch { display: flex; align-items: center; gap: 8px; margin-left: 4px;
+    border: 1px solid var(--line); padding: 0 12px; height: 34px;
+    min-width: 132px; flex: 0 1 180px;
+    background: rgba(255,255,255,.02); transition: border-color .4s, background .4s; }
+  .nsearch:focus-within { border-color: var(--line-2); background: rgba(255,255,255,.05); }
+  .nsearch svg { width: 14px; height: 14px; color: var(--gold); flex: none; opacity: .85; }
+  .nsearch input { flex: 1; min-width: 0; background: none; border: 0; outline: none;
+    color: var(--bone); font-family: var(--ff-body); font-size: .74rem;
+    letter-spacing: .08em; padding: 0; }
+  .nsearch input::placeholder { color: var(--muted-2); letter-spacing: .24em;
+    text-transform: uppercase; font-size: .62rem; }
+  .nsearch input::-webkit-search-cancel-button { -webkit-appearance: none; }
+
+  /* ===== phone: the burger menu becomes a proper stacked menu ============ */
+  @media(max-width:1080px){
+    /* Fully opaque. The inline style the menu script writes uses .97 alpha,
+       which was enough for the hero headline to read through a menu that is
+       now four groups tall. */
+    .navlinks.open { align-items: stretch !important; padding: 18px 22px !important;
+      right: 12px !important; left: 12px !important; max-height: 78vh;
+      overflow-y: auto; gap: 2px !important;
+      background: #0B0907 !important;
+      box-shadow: 0 30px 70px -20px rgba(0,0,0,.95) !important; }
+    .navlinks.open .ddw { display: block; }
+    .navlinks.open .ddtoggle { display: none; }   /* nothing to hover on a phone */
+    .navlinks.open .dd { position: static; opacity: 1; visibility: visible;
+      transform: none; padding-top: 0; min-width: 0; }
+    .navlinks.open .dd ul { background: none; border: 0; box-shadow: none;
+      padding: 2px 0 10px; backdrop-filter: none; }
+    .navlinks.open .dd li a { padding: 10px 0 10px 16px; font-size: .7rem;
+      letter-spacing: .16em; border-left: 1px solid var(--line); white-space: normal; }
+    .navlinks.open .ddtop { display: block; padding: 12px 0 2px; color: var(--gold);
+      font-size: .76rem; }
+    .navlinks.open .nsearch { flex: none; height: 44px; margin: 4px 0 10px; order: -1; }
+    .navlinks.open .nsearch input { font-size: 16px; letter-spacing: .04em; }
+    .navlinks.open .nsearch input::placeholder { font-size: .68rem; }
+  }
+</style>

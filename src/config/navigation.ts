@@ -22,20 +22,63 @@ export interface FooterColumn {
   links: NavItem[];
 }
 
-/** Primary navigation. The logo links Home; Contact is the nav CTA.
- *  Ordered as a traveller reads it: what you book (Journeys), what you do
- *  (Experiences, Activities), where you go (Destinations), then planning
- *  (Collections, Guides) and background (Cultures, About). Cuisine and The 8
- *  Identities stay in the footer — they are reading, not booking, pages. */
+/**
+ * Primary navigation — four groups, each a dropdown.
+ *
+ * The site outgrew a flat bar. Eight top-level links could reach eight pages
+ * out of 192, and everything else was only findable from the footer or by
+ * luck. Grouping instead lets the bar carry the whole site: a parent is still
+ * a real link to its hub, and its children are the pages underneath it.
+ *
+ * The grouping follows the order a traveller actually thinks in — what am I
+ * booking, where am I going, what do I need to settle — rather than how the
+ * content happens to be filed.
+ */
 export const primaryNav: NavItem[] = [
-  { label: "Journeys", href: "tours.html" },
-  { label: "Experiences", href: hubFor("experience") },
-  { label: "Activities", href: "activities.html" },
-  { label: "Destinations", href: hubFor("destination") },
-  { label: "Occasions", href: "occasions.html" },
-  { label: "Collections", href: hubFor("seasonal") },
-  { label: "Guides", href: hubFor("guide") },
-  { label: "About", href: "about.html" },
+  {
+    label: "Journeys",
+    href: "tours.html",
+    children: [
+      { label: "All journeys", href: "tours.html" },
+      { label: "By occasion", href: "occasions.html" },
+      { label: "Collections", href: hubFor("seasonal") },
+      { label: "Compare the options", href: "compare.html" },
+      { label: "What it costs", href: "egypt-tour-cost.html" },
+    ],
+  },
+  {
+    label: "Egypt",
+    href: hubFor("destination"),
+    children: [
+      { label: "Destinations", href: hubFor("destination") },
+      { label: "Experiences", href: hubFor("experience") },
+      { label: "Activities", href: "activities.html" },
+      { label: "The 8 Identities", href: "identities.html" },
+      { label: "Culture", href: "culture.html" },
+      { label: "Cuisine", href: "cuisine.html" },
+    ],
+  },
+  {
+    label: "Plan",
+    href: hubFor("guide"),
+    children: [
+      { label: "When to go", href: "when-to-go.html" },
+      { label: "Visa by nationality", href: "visa.html" },
+      { label: "Is Egypt safe?", href: "egypt-safety.html" },
+      { label: "Travel FAQ", href: "faq.html" },
+      { label: "Travel guides", href: hubFor("guide") },
+      { label: "Booking & cancellation", href: "booking.html" },
+    ],
+  },
+  {
+    label: "About",
+    href: "about.html",
+    children: [
+      { label: "About Kemet", href: "about.html" },
+      { label: "Our travellers", href: "about.html" },
+      { label: "Site index", href: "sitemap.html" },
+    ],
+  },
 ];
 
 /** Footer "Explore" column (the static link group). The Journeys column is
