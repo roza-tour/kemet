@@ -13,6 +13,26 @@ import type { BreadcrumbItem, Collection, ContentDomain, Destination, Experience
 const SCHEMA_CONTEXT = "https://schema.org";
 
 /**
+ * The single, stable identity of the business in the graph.
+ *
+ * WHY THIS EXISTS
+ * Google's Rich Results Test was reporting TWO "Kemet" TravelAgency entities on
+ * every page, and listing telephone, priceRange, address and image as missing.
+ * They were not missing — the FULL organisation node has all four. What it had
+ * found was the second entity: the shorthand `{ "@type": "TravelAgency", name,
+ * url }` that every provider/publisher/seller slot was repeating. Each of those
+ * looked to a validator like a separate, half-populated business.
+ *
+ * Those slots now emit a bare @id reference instead. JSON-LD merges nodes that
+ * share an @id, so the graph carries exactly one business — the complete one.
+ */
+export const ORG_ID = `${SITE_URL}#organization`;
+const orgRef = () => ({ "@id": ORG_ID });
+
+/** Site-relative asset path → absolute URL, as structured data requires. */
+const absolute = (path: string) => (path.startsWith("http") ? path : `${SITE_URL}${path}`);
+
+/**
  * A named person, as a schema.org Person.
  *
  * Given an @id anchored to the About page so every Article, WebPage and
@@ -31,17 +51,28 @@ export function personSchema(expert: Expert = reviewer, standalone = false): Jso
     description: expert.bio,
     nationality: { "@type": "Country", name: "Egypt" },
     knowsAbout: expert.knowsAbout,
-    worksFor: { "@type": "TravelAgency", name: site.name, url: SITE_URL },
+    worksFor: orgRef(),
     ...(expert.sameAs.length ? { sameAs: expert.sameAs } : {}),
   };
 }
 
-/** Compact reference to the same Person node, for author/reviewedBy slots. */
+/**
+ * Compact reference to the same Person node, for author/reviewedBy slots.
+ *
+ * The @id is what actually unifies these into one entity, but a validator —
+ * and a crawler — reads each page on its own and sees only what is on it. So
+ * the reference carries the job title and a link to the full profile: enough
+ * to identify the person without duplicating the whole node on 48 pages. The
+ * outbound profile link stays on the About page only, by design.
+ */
 export function personRef(expert: Expert = reviewer): JsonLd {
+  const profile = `${canonical("about.html")}#${expert.id}`;
   return {
     "@type": "Person",
-    "@id": `${canonical("about.html")}#${expert.id}`,
+    "@id": profile,
     name: expert.name,
+    jobTitle: expert.role,
+    url: profile,
   };
 }
 
@@ -101,7 +132,7 @@ export function tourSchema(tour: Tour): JsonLd[] {
     image,
     inLanguage: "en",
     touristType: "Luxury travellers",
-    provider: { "@type": "TravelAgency", name: site.name, url: SITE_URL },
+    provider: orgRef(),
     itinerary,
     offers: {
       "@type": "Offer",
@@ -122,7 +153,7 @@ export function tourSchema(tour: Tour): JsonLd[] {
         priceCurrency: CURRENCY,
         referenceQuantity: { "@type": "QuantitativeValue", value: 1, unitText: "person" },
       },
-      seller: { "@type": "TravelAgency", name: site.name, url: SITE_URL },
+      seller: orgRef(),
     },
   };
 
@@ -151,7 +182,7 @@ export function tourSchema(tour: Tour): JsonLd[] {
 export function destinationSchema(dest: Destination): JsonLd[] {
   const route = routeFor("destination", dest.slug);
   const url = canonical(route);
-  const org = { "@type": "TravelAgency", name: site.name, url: SITE_URL };
+  const org = orgRef();
 
   const touristDestination: JsonLd = {
     "@context": SCHEMA_CONTEXT,
@@ -213,7 +244,7 @@ export function destinationSchema(dest: Destination): JsonLd[] {
 export function guideSchema(guide: Guide): JsonLd[] {
   const route = routeFor("guide", guide.slug);
   const url = canonical(route);
-  const org = { "@type": "TravelAgency", name: site.name, url: SITE_URL };
+  const org = orgRef();
 
   const article: JsonLd = {
     "@context": SCHEMA_CONTEXT,
@@ -229,6 +260,12 @@ export function guideSchema(guide: Guide): JsonLd[] {
     // checked it is what makes a claim on this page quotable.
     author: personRef(),
     reviewedBy: personRef(),
+    // Google's Rich Results Test flags an Article with no image. The hero is
+    // already published on the page, so this is a field we simply were not
+    // passing through rather than one we lack. datePublished stays out: we have
+    // no true first-published date for these, and inventing one to silence a
+    // warning is worse than the warning.
+    ...(guide.hero?.src ? { image: absolute(guide.hero.src) } : {}),
     ...(guide.lastUpdated ? { dateModified: guide.lastUpdated } : {}),
   };
 
@@ -273,7 +310,7 @@ export function guideSchema(guide: Guide): JsonLd[] {
 export function experienceSchema(experience: Experience): JsonLd[] {
   const route = routeFor("experience", experience.slug);
   const url = canonical(route);
-  const org = { "@type": "TravelAgency", name: site.name, url: SITE_URL };
+  const org = orgRef();
 
   const touristAttraction: JsonLd = {
     "@context": SCHEMA_CONTEXT,
@@ -284,6 +321,19 @@ export function experienceSchema(experience: Experience): JsonLd[] {
     containedInPlace: { "@type": "Country", name: "Egypt" },
     provider: org,
     inLanguage: experience.languages ?? ["en"],
+    // Both of these come straight from data the page already renders. The
+    // Rich Results Test was reporting them missing on 70 pages purely because
+    // the builder never forwarded them.
+    ...(experience.hero?.src ? { image: absolute(experience.hero.src) } : {}),
+    ...(experience.location
+      ? {
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: experience.location,
+            addressCountry: "EG",
+          },
+        }
+      : {}),
     ...(experience.highlights?.length
       ? {
           amenityFeature: experience.highlights.map((name) => ({
@@ -369,7 +419,7 @@ export function collectionSchema(
     description,
     url,
     isPartOf: { "@type": "WebSite", name: `${site.name} — The Black Land`, url: SITE_URL },
-    publisher: { "@type": "TravelAgency", name: site.name, url: SITE_URL },
+    publisher: orgRef(),
   };
 
   return [collectionPage, itemList];
@@ -382,7 +432,7 @@ export function collectionSchema(
 export function collectionDetailSchema(col: Collection): JsonLd[] {
   const route = routeFor("seasonal", col.slug);
   const url = canonical(route);
-  const org = { "@type": "TravelAgency", name: site.name, url: SITE_URL };
+  const org = orgRef();
 
   const collectionPage: JsonLd = {
     "@context": SCHEMA_CONTEXT,
@@ -470,6 +520,7 @@ export function siteSchema(): JsonLd[] {
   const org: JsonLd = {
     "@context": SCHEMA_CONTEXT,
     "@type": ["TravelAgency", "LocalBusiness"],
+    "@id": ORG_ID,
     name: site.name,
     alternateName: "Kemet — Luxury Egypt Travel",
     url: SITE_URL,
@@ -529,7 +580,7 @@ export function siteSchema(): JsonLd[] {
     name: `${site.name} — The Black Land`,
     url: SITE_URL,
     inLanguage: "en",
-    publisher: { "@type": "TravelAgency", name: site.name, url: SITE_URL },
+    publisher: orgRef(),
   };
 
   return [org, webSite];
@@ -568,7 +619,7 @@ export function answerPageSchema(opts: {
     url,
     inLanguage: "en",
     isPartOf: { "@type": "WebSite", name: `${site.name} — The Black Land`, url: SITE_URL },
-    publisher: { "@type": "TravelAgency", name: site.name, url: SITE_URL },
+    publisher: orgRef(),
     reviewedBy: personRef(),
     speakable: SPEAKABLE,
     mainEntity: {
@@ -594,11 +645,7 @@ export function aboutPageSchema(): JsonLd {
       "Learn about Kemet — our mission, values, and why we design private, tailor-made Egypt journeys for discerning international travellers.",
     url,
     isPartOf: { "@type": "WebSite", name: `${site.name} — The Black Land`, url: SITE_URL },
-    about: {
-      "@type": "TravelAgency",
-      name: site.name,
-      url: SITE_URL,
-    },
+    about: orgRef(),
     // The About page is where the Person node lives in full — every byline
     // and every reviewedBy elsewhere on the site is a reference back to here.
     mainEntity: personSchema(),
