@@ -4,14 +4,29 @@
 // JSON-LD so the answers are eligible for rich results and AI-answer citation.
 import Base from "@/layouts/Base.astro";
 import PageHero from "@/components/PageHero.astro";
+import AnswerBox from "@/components/aeo/AnswerBox.astro";
 import Faq from "@/components/Faq.astro";
 import Frieze from "@/components/Frieze.astro";
 import CTABlock from "@/components/trust/CTABlock.astro";
 import { faqGroups, allFaqs } from "@/data/faq";
-import { faqPageSchema } from "@/schemas/jsonld";
+import { faqPageSchema, answerPageSchema } from "@/schemas/jsonld";
 
 const ROUTE = "faq.html";
-const jsonld = faqPageSchema(allFaqs);
+// The direct answer, written to survive being lifted out of the page: it
+// restates its subject, answers in the first sentence, and carries its own
+// figures. See components/aeo/AnswerBox for the rules.
+const ANSWER_Q = "How many days do you need in Egypt?";
+const ANSWER_A =
+  "A week is the most popular length for a first visit to Egypt — enough for Cairo and Giza, Luxor and Aswan, and a stretch of the Nile unhurried. Five days covers the essentials if time is short; ten to fourteen days adds Abu Simbel, Alexandria or the Red Sea without rushing.";
+const answerLd = answerPageSchema({
+  route: ROUTE,
+  name: "Egypt Travel FAQ",
+  description: "Straight answers to the questions travellers ask most about visiting Egypt.",
+  question: ANSWER_Q,
+  answer: ANSWER_A,
+});
+
+const jsonld = [answerLd, ...faqPageSchema(allFaqs)];
 
 const keywords = [
   "Egypt travel FAQ",
@@ -44,6 +59,8 @@ const keywords = [
 
   <section style="padding-top:30px">
     <div class="wrap faq-wrap">
+
+      <AnswerBox question={ANSWER_Q} answer={ANSWER_A} />
       {faqGroups.map((group, i) => (
         <Fragment>
           {i > 0 && <Frieze />}

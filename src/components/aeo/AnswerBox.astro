@@ -1,0 +1,86 @@
+---
+// AnswerBox — one self-contained, quotable answer at the top of a page that
+// exists to answer a question.
+//
+// WHY IT LOOKS LIKE THIS
+// Featured snippets, voice results and generative answers are all built the
+// same way: a system lifts a short passage out of a page and shows it with no
+// surrounding context. A passage only survives that treatment if it restates
+// its own subject, answers in one move, and carries its own numbers. Editorial
+// prose that opens with "Egypt is a country of contrasts…" never does.
+//
+// So the rules for the `answer` text are strict, and worth keeping to:
+//   · 40-60 words. Longer gets truncated mid-sentence; shorter says nothing.
+//   · The first sentence IS the answer. No preamble, no throat-clearing.
+//   · It repeats the subject rather than saying "it" or "this" — the passage
+//     is read on its own, so a pronoun has nothing to refer back to.
+//   · Concrete specifics — a figure, a month, a fee, a duration. Attributed,
+//     checkable numbers are what a generative engine will quote; adjectives
+//     are what it will skip.
+//
+// The `.answer-box h2` and `.answer-box .answer-body` selectors are the ones
+// declared in the page's speakable specification (schemas/jsonld → SPEAKABLE),
+// so the markup and the structured data cannot drift apart.
+import { reviewer } from "@/data/experts";
+import { monthYear } from "@/utils/format";
+
+interface Props {
+  /** The question, phrased the way a person asks it. Rendered as the H2. */
+  question: string;
+  /** The direct answer — 40-60 words. See the rules above. */
+  answer: string;
+  /** ISO date or year-month the answer was last checked. Never invented. */
+  updated?: string;
+  /** Link prefix back to the site root ("" at root, "../" in subfolders). */
+  base?: string;
+}
+const { question, answer, updated, base = "" } = Astro.props;
+const profile = `${base}about.html#${reviewer.id}`;
+---
+<div class="answer-box">
+  <h2>{question}</h2>
+  <p class="answer-body">{answer}</p>
+  <p class="answer-meta">
+    Checked by <a href={profile}>{reviewer.name}</a>, {reviewer.role}
+    {updated && <> · <time datetime={updated}>{monthYear(updated)}</time></>}
+  </p>
+</div>
+
+<style>
+  .answer-box {
+    position: relative;
+    margin: 0 0 54px;
+    padding: 32px 34px 28px;
+    border: 1px solid var(--line);
+    border-left: 2px solid var(--gold);
+    background: linear-gradient(120deg, rgba(217, 180, 90, .055), rgba(217, 180, 90, .015));
+  }
+  .answer-box h2 {
+    font-size: clamp(1.25rem, 2.1vw, 1.6rem);
+    color: var(--gold-bright);
+    margin: 0 0 14px;
+    font-weight: 400;
+    line-height: 1.34;
+  }
+  .answer-body {
+    margin: 0;
+    color: var(--bone);
+    font-size: 1.04rem;
+    line-height: 1.86;
+    max-width: 68ch;
+  }
+  .answer-meta {
+    margin: 18px 0 0;
+    font-size: .74rem;
+    letter-spacing: .04em;
+    color: var(--muted-2);
+  }
+  .answer-meta a { color: var(--gold); border-bottom: 1px solid rgba(217, 180, 90, .35); }
+  .answer-meta a:hover { color: var(--gold-bright); }
+
+  @media(max-width:680px){
+    .answer-box { padding: 24px 20px 22px; margin-bottom: 40px; }
+    .answer-body { font-size: 1rem; line-height: 1.8; }
+    .answer-meta { font-size: .78rem; }
+  }
+</style>

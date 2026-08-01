@@ -8,6 +8,7 @@ import SectionHeader from "@/components/SectionHeader.astro";
 import Frieze from "@/components/Frieze.astro";
 import TrustSignals from "@/components/trust/TrustSignals.astro";
 import CustomerGallery from "@/components/CustomerGallery.astro";
+import ExpertProfile from "@/components/trust/ExpertProfile.astro";
 import OurProcess from "@/components/trust/OurProcess.astro";
 import BookingConfidence from "@/components/trust/BookingConfidence.astro";
 import CTABlock from "@/components/trust/CTABlock.astro";
@@ -92,6 +93,15 @@ const jsonld = aboutPageSchema();
         text="What makes a Kemet journey different from any other Egypt tour."
       />
       <TrustSignals />
+    </div>
+  </section>
+
+  {/* The named specialist behind the written guidance. Anonymous travel advice
+      is the weakest kind there is — this is the entity every byline, every
+      "checked by" line and every reviewedBy on the site refers back to. */}
+  <section style="padding-top:0">
+    <div class="wrap">
+      <ExpertProfile />
     </div>
   </section>
 

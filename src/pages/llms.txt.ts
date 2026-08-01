@@ -20,6 +20,7 @@ import { months } from "@/data/months";
 import { comparisons } from "@/data/comparisons";
 import { TRANSLATION_GROUPS, TRANSLATED_LOCALES, LOCALE_META } from "@/config/i18n";
 import { activities } from "@/data/activities";
+import { reviewer } from "@/data/experts";
 import { nationalities, VISA_FEE_USD, VISA_STAY_DAYS, VERIFIED_ON } from "@/data/entryRequirements";
 import { company } from "@/data/company";
 import { formatPrice } from "@/utils/format";
@@ -51,6 +52,13 @@ export const GET: APIRoute = () => {
   );
   lines.push(
     `- Catalogue: ${tours.length} journeys, ${experiences.length} experiences, ${activities.filter(a=>a.slug).length} activities, ${destinations.length} destinations, ${guides.length} travel guides, ${nationalities.length} nationality visa pages`,
+  );
+  // Attribution, stated plainly for the systems that read this file. An LLM
+  // deciding whether to quote a claim weighs who stands behind it; leaving the
+  // reviewer out of the one file written specifically for LLMs would be an odd
+  // omission.
+  lines.push(
+    `- Content reviewed by: ${reviewer.name}, ${reviewer.role} — ${reviewer.short} (${SITE_URL}/about.html#${reviewer.id})`,
   );
   lines.push("");
 

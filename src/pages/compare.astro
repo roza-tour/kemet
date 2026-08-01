@@ -2,16 +2,32 @@
 // /compare.html — the hub for the decisions travellers get stuck on.
 import Base from "@/layouts/Base.astro";
 import PageHero from "@/components/PageHero.astro";
+import AnswerBox from "@/components/aeo/AnswerBox.astro";
 import SymbolIcon from "@/components/SymbolIcon.astro";
 import LeadCapture from "@/components/conversion/LeadCapture.astro";
 import { comparisons } from "@/data/comparisons";
 import { canonical } from "@/utils/links";
 import { site, SITE_URL } from "@/config/site";
-import { breadcrumb } from "@/schemas/jsonld";
+import { breadcrumb, answerPageSchema } from "@/schemas/jsonld";
 
 const ROUTE = "compare.html";
 
+// The direct answer, written to survive being lifted out of the page: it
+// restates its subject, answers in the first sentence, and carries its own
+// figures. See components/aeo/AnswerBox for the rules.
+const ANSWER_Q = "Nile cruise or land tour between Luxor and Aswan?";
+const ANSWER_A =
+  "For the Luxor–Aswan stretch, take the Nile cruise. The temples on that section — Kom Ombo, Edfu and Esna — sit on the riverbank and were built to be approached from the water. A cruise also removes two or three hotel changes, because the accommodation moves while you stay put.";
+const answerLd = answerPageSchema({
+  route: ROUTE,
+  name: "Egypt travel comparisons — the decisions",
+  description: "Nile cruise or land tour, dahabiya or cruise ship, Luxor or Aswan — answered with the verdict first.",
+  question: ANSWER_Q,
+  answer: ANSWER_A,
+});
+
 const jsonld: Record<string, unknown>[] = [
+  answerLd,
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -49,6 +65,8 @@ const jsonld: Record<string, unknown>[] = [
 
   <section style="padding-top:26px">
     <div class="wrap cg-wrap">
+
+      <AnswerBox question={ANSWER_Q} answer={ANSWER_A} />
       <p class="cg-lede">
         Most comparison pages on the internet refuse to answer, because refusing to answer offends
         nobody. These give the verdict in the first paragraph and then earn it. Where the honest

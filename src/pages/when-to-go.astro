@@ -3,13 +3,14 @@
 // visit Egypt" directly, then hands off to the month a reader actually has.
 import Base from "@/layouts/Base.astro";
 import PageHero from "@/components/PageHero.astro";
+import AnswerBox from "@/components/aeo/AnswerBox.astro";
 import Frieze from "@/components/Frieze.astro";
 import Faq from "@/components/Faq.astro";
 import LeadCapture from "@/components/conversion/LeadCapture.astro";
 import { months } from "@/data/months";
 import { canonical } from "@/utils/links";
 import { site, SITE_URL } from "@/config/site";
-import { breadcrumb } from "@/schemas/jsonld";
+import { breadcrumb, answerPageSchema } from "@/schemas/jsonld";
 
 const ROUTE = "when-to-go.html";
 
@@ -23,7 +24,22 @@ const faqs = [
   { q: "Is Egypt busy at Christmas and New Year?", a: "It is the peak of the year. Weather is excellent, and prices for Nile boats and good hotel rooms can double over the New Year week — which is booked up to a year ahead. Coptic Christmas on 7 January extends the season a further fortnight." },
 ];
 
+// The direct answer, written to survive being lifted out of the page: it
+// restates its subject, answers in the first sentence, and carries its own
+// figures. See components/aeo/AnswerBox for the rules.
+const ANSWER_Q = "When is the best time to visit Egypt?";
+const ANSWER_A =
+  "October to April is the best time to visit Egypt. The second half of October is the month we recommend most for a first visit, and the first three weeks of March are the best value in the Egyptian year. From May to September, Upper Egypt is punishing at midday but the Red Sea is at its best.";
+const answerLd = answerPageSchema({
+  route: ROUTE,
+  name: "When to visit Egypt, month by month",
+  description: "Egypt month by month — temperatures, crowds, prices and festivals, with a verdict on each of the twelve.",
+  question: ANSWER_Q,
+  answer: ANSWER_A,
+});
+
 const jsonld: Record<string, unknown>[] = [
+  answerLd,
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -70,6 +86,8 @@ const jsonld: Record<string, unknown>[] = [
 
   <section style="padding-top:26px">
     <div class="wrap wg-wrap">
+
+      <AnswerBox question={ANSWER_Q} answer={ANSWER_A} />
       <p class="wg-lede">
         The short answer is October to April. The useful answer is that Egypt has two climates running
         at once — the monuments inland and the reefs on the coast — and they peak at opposite ends of

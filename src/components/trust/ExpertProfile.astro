@@ -1,0 +1,76 @@
+---
+// ExpertProfile — the one place on the site where the reviewer is presented in
+// full, and the one place their own profile is linked outward.
+//
+// Everything else (the byline on each guide, the "checked by" line under each
+// answer block, the reviewedBy in every structured-data graph) points here, so
+// there is a single canonical description of this person rather than fifty
+// slightly different ones for a search engine to reconcile.
+//
+// The id on the wrapper is the anchor those links target, and is the same
+// fragment used for the Person node's @id in schemas/jsonld.
+import { reviewer } from "@/data/experts";
+import SymbolIcon from "@/components/SymbolIcon.astro";
+
+/** Name the network rather than labelling every profile "Profile". */
+function label(url: string): string {
+  try {
+    const host = new URL(url).hostname.replace(/^www\./, "");
+    const name = host.split(".")[0];
+    return name.charAt(0).toUpperCase() + name.slice(1);
+  } catch {
+    return "Profile";
+  }
+}
+---
+<div class="expert" id={reviewer.id}>
+  <div class="expert-sym" aria-hidden="true"><SymbolIcon name="eye" /></div>
+  <div class="expert-body">
+    <div class="eyebrow">Who checks what you read here</div>
+    <h2>{reviewer.name}</h2>
+    <div class="expert-role">{reviewer.role} · {reviewer.short}</div>
+    <p>{reviewer.bio}</p>
+    <ul class="expert-topics">
+      {reviewer.knowsAbout.map((t) => <li>{t}</li>)}
+    </ul>
+    {reviewer.sameAs.length > 0 && (
+      <p class="expert-links">
+        {reviewer.sameAs.map((url) => (
+          <a href={url} target="_blank" rel="me noopener">{reviewer.name} on {label(url)}</a>
+        ))}
+      </p>
+    )}
+  </div>
+</div>
+
+<style>
+  .expert {
+    display: grid; grid-template-columns: 64px 1fr; gap: 28px;
+    align-items: start;
+    border: 1px solid var(--line); border-left: 2px solid var(--gold);
+    padding: 36px 38px;
+    background: linear-gradient(150deg, rgba(30, 25, 18, .8), rgba(14, 17, 21, .6));
+    scroll-margin-top: 110px;
+  }
+  .expert-sym { width: 56px; height: 64px; opacity: .95;
+    filter: drop-shadow(0 6px 16px rgba(217, 180, 90, .24)); }
+  .expert-sym :global(svg) { width: 100%; height: 100%; }
+  .expert h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); color: var(--bone);
+    margin: 14px 0 6px; font-weight: 400; }
+  .expert-role { color: var(--gold); font-size: .82rem; letter-spacing: .06em;
+    margin-bottom: 18px; }
+  .expert p { color: var(--muted); line-height: 1.85; margin: 0; max-width: 68ch; }
+  .expert-topics { list-style: none; margin: 20px 0 0; padding: 0;
+    display: flex; flex-wrap: wrap; gap: 8px; }
+  .expert-topics li { font-size: .7rem; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--muted-2); border: 1px solid var(--line); padding: 6px 12px; }
+  .expert p.expert-links { margin-top: 22px; }
+  .expert-links a { font-size: .7rem; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--gold); border-bottom: 1px solid rgba(217, 180, 90, .4); }
+  .expert-links a:hover { color: var(--gold-bright); }
+
+  @media(max-width:680px){
+    .expert { grid-template-columns: 1fr; gap: 0; padding: 28px 22px; }
+    .expert-sym { width: 42px; height: 48px; margin-bottom: 16px; }
+  }
+</style>

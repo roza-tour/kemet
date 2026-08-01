@@ -13,6 +13,7 @@
 // the correct outcome for both of us.
 import Base from "@/layouts/Base.astro";
 import PageHero from "@/components/PageHero.astro";
+import AnswerBox from "@/components/aeo/AnswerBox.astro";
 import Frieze from "@/components/Frieze.astro";
 import Faq from "@/components/Faq.astro";
 import TourCard from "@/components/TourCard.astro";
@@ -22,7 +23,7 @@ import { tours } from "@/data/tours";
 import { bookingTerms } from "@/data/booking";
 import { canonical } from "@/utils/links";
 import { site, SITE_URL } from "@/config/site";
-import { breadcrumb } from "@/schemas/jsonld";
+import { breadcrumb, answerPageSchema } from "@/schemas/jsonld";
 import { formatPrice } from "@/utils/format";
 
 const ROUTE = "egypt-tour-cost.html";
@@ -139,7 +140,22 @@ const faqs = [
   },
 ];
 
+// The direct answer, written to survive being lifted out of the page: it
+// restates its subject, answers in the first sentence, and carries its own
+// figures. See components/aeo/AnswerBox for the rules.
+const ANSWER_Q = "How much does a private Egypt tour cost?";
+const ANSWER_A =
+  `A private, tailor-made Egypt tour with a licensed Egyptologist guide, a private vehicle and good hotels costs roughly €200–450 per person per day. Kemet's own journeys run from ${formatPrice(lowest)} per person for a single day to ${formatPrice(highest)} for a fourteen-day grand tour, and the per-person price falls as the party grows.`;
+const answerLd = answerPageSchema({
+  route: ROUTE,
+  name: "What a private Egypt journey costs",
+  description: "What a private, tailor-made Egypt journey costs per person per day, and the five things that move the price.",
+  question: ANSWER_Q,
+  answer: ANSWER_A,
+});
+
 const jsonld: Record<string, unknown>[] = [
+  answerLd,
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -179,6 +195,8 @@ const jsonld: Record<string, unknown>[] = [
 
   <section style="padding-top:26px">
     <div class="wrap ec-wrap">
+
+      <AnswerBox question={ANSWER_Q} answer={ANSWER_A} />
 
       <p class="ec-lede">
         Most pages answering this question are written for a different traveller — per-diems,

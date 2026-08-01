@@ -18,7 +18,8 @@ import {
 } from "@/data/entryRequirements";
 import { canonical } from "@/utils/links";
 import { site, SITE_URL } from "@/config/site";
-import { breadcrumb } from "@/schemas/jsonld";
+import { breadcrumb, answerPageSchema } from "@/schemas/jsonld";
+import AnswerBox from "@/components/aeo/AnswerBox.astro";
 
 const ROUTE = "visa.html";
 
@@ -66,7 +67,26 @@ const faqs = [
   },
 ];
 
+// The one-paragraph answer, written to be quoted out of context: it restates
+// its own subject, leads with the ruling, and carries the fee, the stay and
+// the official portal so nothing has to be looked up elsewhere.
+const ANSWER_Q = "Do you need a visa to visit Egypt?";
+const ANSWER_A =
+  `Most travellers need a visa for Egypt. UK, US, EU, Canadian and Australian ` +
+  `citizens can buy one on arrival at any Egyptian airport for US$${VISA_FEE_USD}, ` +
+  `valid for a single entry and a stay of up to ${VISA_STAY_DAYS} days, or apply ` +
+  `beforehand through the official e-Visa portal at visa2egypt.gov.eg. A few ` +
+  `nationalities enter Egypt visa-free.`;
+
 const jsonld: Record<string, unknown>[] = [
+  answerPageSchema({
+    route: ROUTE,
+    name: "Egypt Visa Requirements by Nationality",
+    description: `Egypt entry rules for ${nationalities.length} nationalities, checked ${verified}.`,
+    question: ANSWER_Q,
+    answer: ANSWER_A,
+    dateModified: VERIFIED_ON,
+  }),
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -116,6 +136,8 @@ const jsonld: Record<string, unknown>[] = [
 
   <section style="padding-top:26px">
     <div class="wrap vx-wrap">
+
+      <AnswerBox question={ANSWER_Q} answer={ANSWER_A} updated={VERIFIED_ON} />
 
       <div class="vx-summary">
         <div>

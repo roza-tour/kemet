@@ -7,9 +7,54 @@ import { canonical, phoneHref } from "@/utils/links";
 import { routeFor } from "@/config/routes";
 import { trailFor } from "@/config/navigation";
 import { company } from "@/data/company";
+import { reviewer, type Expert } from "@/data/experts";
 import type { BreadcrumbItem, Collection, ContentDomain, Destination, Experience, Guide, JsonLd, Tour } from "@/types";
 
 const SCHEMA_CONTEXT = "https://schema.org";
+
+/**
+ * A named person, as a schema.org Person.
+ *
+ * Given an @id anchored to the About page so every Article, WebPage and
+ * reviewedBy reference across the site resolves to ONE entity rather than a
+ * separate unlinked Person per page — that single node is what a knowledge
+ * graph (and an answer engine deciding whether a claim is attributable) can
+ * actually accumulate trust against.
+ */
+export function personSchema(expert: Expert = reviewer, standalone = false): JsonLd {
+  return {
+    ...(standalone ? { "@context": SCHEMA_CONTEXT } : {}),
+    "@type": "Person",
+    "@id": `${canonical("about.html")}#${expert.id}`,
+    name: expert.name,
+    jobTitle: expert.role,
+    description: expert.bio,
+    nationality: { "@type": "Country", name: "Egypt" },
+    knowsAbout: expert.knowsAbout,
+    worksFor: { "@type": "TravelAgency", name: site.name, url: SITE_URL },
+    ...(expert.sameAs.length ? { sameAs: expert.sameAs } : {}),
+  };
+}
+
+/** Compact reference to the same Person node, for author/reviewedBy slots. */
+export function personRef(expert: Expert = reviewer): JsonLd {
+  return {
+    "@type": "Person",
+    "@id": `${canonical("about.html")}#${expert.id}`,
+    name: expert.name,
+  };
+}
+
+/**
+ * speakable — marks the passage on a page that is a complete, self-contained
+ * answer to the page's question. Answer and voice engines lift these; the
+ * selector points at the AnswerBox component, which is written to be quotable
+ * on its own with no surrounding context.
+ */
+export const SPEAKABLE = {
+  "@type": "SpeakableSpecification",
+  cssSelector: [".answer-box h2", ".answer-box .answer-body"],
+};
 
 /** BreadcrumbList from [name, file] pairs (file relative to the site root). */
 export function breadcrumb(items: BreadcrumbItem[]): JsonLd {
@@ -174,6 +219,11 @@ export function guideSchema(guide: Guide): JsonLd[] {
     inLanguage: "en",
     about: { "@type": "Country", name: "Egypt" },
     publisher: org,
+    // Attribution. An unsigned travel article is the weakest thing a search
+    // system or an answer engine can be handed; naming the specialist who
+    // checked it is what makes a claim on this page quotable.
+    author: personRef(),
+    reviewedBy: personRef(),
     ...(guide.lastUpdated ? { dateModified: guide.lastUpdated } : {}),
   };
 
@@ -185,6 +235,7 @@ export function guideSchema(guide: Guide): JsonLd[] {
     url,
     isPartOf: { "@type": "WebSite", name: `${site.name} — The Black Land`, url: SITE_URL },
     publisher: org,
+    reviewedBy: personRef(),
   };
 
   const leaf: BreadcrumbItem = [guide.title, route];
@@ -480,6 +531,51 @@ export function siteSchema(): JsonLd[] {
 }
 
 /**
+ * WebPage node for a page whose job is to answer one question.
+ *
+ * Carries three things a plain page does not:
+ *   · `speakable`, pointing at the AnswerBox — the passage that is written to
+ *     survive being lifted out of the page and read on its own.
+ *   · `reviewedBy`, so the answer is attributable to a named specialist rather
+ *     than to nobody, which is what decides whether a generative engine will
+ *     quote it or paraphrase around it.
+ *   · `mainEntity` as a Question/Answer pair, restating the answer in machine
+ *     -readable form so it does not depend on the parser finding the prose.
+ *
+ * `dateModified` is passed through only when a real checked-on date exists.
+ * There is no build-date fallback: a rebuild is not a review, and stamping
+ * every page with today's date would be a freshness claim we cannot support.
+ */
+export function answerPageSchema(opts: {
+  route: string;
+  name: string;
+  description: string;
+  question: string;
+  answer: string;
+  dateModified?: string;
+}): JsonLd {
+  const url = canonical(opts.route);
+  return {
+    "@context": SCHEMA_CONTEXT,
+    "@type": "WebPage",
+    name: opts.name,
+    description: opts.description,
+    url,
+    inLanguage: "en",
+    isPartOf: { "@type": "WebSite", name: `${site.name} — The Black Land`, url: SITE_URL },
+    publisher: { "@type": "TravelAgency", name: site.name, url: SITE_URL },
+    reviewedBy: personRef(),
+    speakable: SPEAKABLE,
+    mainEntity: {
+      "@type": "Question",
+      name: opts.question,
+      acceptedAnswer: { "@type": "Answer", text: opts.answer },
+    },
+    ...(opts.dateModified ? { dateModified: opts.dateModified } : {}),
+  };
+}
+
+/**
  * Structured data for the About page.
  * AboutPage (WebPage subtype) referencing the Organization.
  */
@@ -498,6 +594,9 @@ export function aboutPageSchema(): JsonLd {
       name: site.name,
       url: SITE_URL,
     },
+    // The About page is where the Person node lives in full — every byline
+    // and every reviewedBy elsewhere on the site is a reference back to here.
+    mainEntity: personSchema(),
   };
 }
 

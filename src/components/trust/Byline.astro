@@ -1,0 +1,51 @@
+---
+// Byline — the visible half of the attribution.
+//
+// The schema.org Person on its own is not enough: Google's guidance is
+// explicit that authorship should be apparent to a reader, not only to a
+// parser, and a generative engine that quotes this page needs the attribution
+// in the text it actually reads. So the name appears on the page, linked to
+// the full profile on the About page, next to the date the content was checked.
+//
+// The outbound link to the reviewer's own profile lives on the About page
+// only — this byline points there, so one profile is not linked from every
+// article on the site.
+import { reviewer } from "@/data/experts";
+import { monthYear } from "@/utils/format";
+
+interface Props {
+  /** Link prefix back to the site root ("" at root, "../" in subfolders). */
+  base?: string;
+  /** ISO date or year-month, e.g. "2026-07". Omitted if absent — never faked. */
+  updated?: string;
+  /** Tighter spacing, for use directly under a hero. */
+  compact?: boolean;
+}
+const { base = "", updated, compact = false } = Astro.props;
+const profile = `${base}about.html#${reviewer.id}`;
+---
+<p class:list={["byline", compact && "byline--compact"]}>
+  <span class="byline-rule" aria-hidden="true"></span>
+  <span>
+    Reviewed by <a href={profile}>{reviewer.name}</a> · {reviewer.role}
+    {updated && <> — checked <time datetime={updated}>{monthYear(updated)}</time></>}
+  </span>
+</p>
+
+<style>
+  .byline {
+    display: flex; align-items: center; gap: 14px;
+    margin: 28px 0 0; font-size: .78rem; line-height: 1.7;
+    color: var(--muted-2); letter-spacing: .02em;
+  }
+  .byline--compact { margin-top: 18px; }
+  .byline-rule { flex: 0 0 34px; height: 1px; background: var(--gold); opacity: .6; }
+  .byline a { color: var(--gold); border-bottom: 1px solid rgba(217, 180, 90, .35);
+    transition: border-color .3s, color .3s; }
+  .byline a:hover { color: var(--gold-bright); border-color: var(--gold-bright); }
+  .byline time { white-space: nowrap; }
+  @media(max-width:680px){
+    .byline { font-size: .82rem; align-items: flex-start; gap: 12px; }
+    .byline-rule { flex-basis: 22px; margin-top: .7em; }
+  }
+</style>

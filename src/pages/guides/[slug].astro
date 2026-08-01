@@ -18,6 +18,7 @@ import FactList from "@/components/destination/FactList.astro";
 import HighlightList from "@/components/destination/HighlightList.astro";
 import DestinationCard from "@/components/destination/DestinationCard.astro";
 import GuideHero from "@/components/guide/GuideHero.astro";
+import Byline from "@/components/trust/Byline.astro";
 import GuideCard from "@/components/guide/GuideCard.astro";
 import ExperienceCard from "@/components/experience/ExperienceCard.astro";
 import { guides } from "@/data/guides";
@@ -56,6 +57,11 @@ const jsonld = entitySchema("guide", guide);
 
     <section style="padding-top:20px">
       <div class="wrap">
+        {/* Visible attribution. Google's guidance is explicit that authorship
+            should be apparent to a reader, not only to a parser — and a
+            generative engine quoting this page reads the text, not the JSON. */}
+        <Byline base={base} updated={guide.lastUpdated} />
+
         <div class="tdetail">
 
           {/* ---- Left column: main content ---- */}
