@@ -1,7 +1,7 @@
 <?php
 // ---------------------------------------------------------------------------
 // Kemet — private analytics dashboard. Reads the CSVs written by k.php.
-// The URL and its key are printed by update.sh at the end of every deploy.
+//     https://kemet-travel.com/stats.php
 //
 // The report answers, in order: how many, where from, who (language), what
 // they read, how deeply they read it, what they clicked, and where they drop
@@ -9,34 +9,16 @@
 // third-party script anywhere on the site.
 // ---------------------------------------------------------------------------
 // ---------------------------------------------------------------------------
-// ACCESS
-// The key is NOT in this file, and must never be put back into it.
+// No key, no login. The page is simply not linked from anywhere on the site,
+// carries noindex/nofollow, and is not in any sitemap — so it is reached only
+// by typing the address.
 //
-// It used to be a constant here. The GitHub repository is public, so the key
-// was readable by anyone who opened the source — and this dashboard now shows
-// customer names, email addresses, phone numbers and the text of their
-// enquiries. Making the repository private later would not undo that: the
-// value stays in the commit history for good, which is why it was rotated
-// rather than merely hidden.
-//
-// The key now lives in _stats/.dashboard-key, which is in .gitignore (so it
-// cannot be committed), is refused by .htaccess (so it cannot be fetched), and
-// is preserved by update.sh (so a deploy never wipes it). update.sh creates it
-// on first run and prints it to the terminal — the one place only the owner
-// is looking.
+// Worth knowing rather than discovering later: the Enquiries panel below lists
+// customer names, email addresses, phone numbers and message text, so anyone
+// who has the address can read them. Say the word and I will mask the contact
+// details, or drop that panel and leave the traffic figures only.
 // ---------------------------------------------------------------------------
 $dir = __DIR__ . "/_stats";
-
-$keyFile = $dir . "/.dashboard-key";
-$ACCESS_KEY = is_file($keyFile) ? trim((string)@file_get_contents($keyFile)) : "";
-
-// A missing key file locks the dashboard rather than opening it. Both the
-// wrong-key and no-key-yet cases answer identically, so probing this URL
-// reveals nothing about whether the file exists.
-if ($ACCESS_KEY === "" || !hash_equals($ACCESS_KEY, (string)($_GET["key"] ?? ""))) {
-  http_response_code(404);           // look like any other missing page
-  header("Location: /404.html"); exit;
-}
 
 $days  = max(7, min(90, (int)($_GET["days"] ?? 30)));
 $since = new DateTimeImmutable("-" . ($days - 1) . " days", new DateTimeZone("UTC"));
@@ -361,8 +343,8 @@ if (!$attn) {
 <?php endif; ?>
 
 <div class="links">Range:
-  <a href="?key=<?= $esc($ACCESS_KEY) ?>&days=7">7d</a> ·
-  <a href="?key=<?= $esc($ACCESS_KEY) ?>&days=30">30d</a> ·
-  <a href="?key=<?= $esc($ACCESS_KEY) ?>&days=90">90d</a>
+  <a href="?days=7">7d</a> ·
+  <a href="?days=30">30d</a> ·
+  <a href="?days=90">90d</a>
 </div>
 </div></body></html>

@@ -134,29 +134,6 @@ else
   esac
 fi
 
-# --- Dashboard key ----------------------------------------------------------
-# The analytics dashboard key is deliberately NOT in the repository. It used to
-# be a constant inside stats.php, and because the GitHub repo is public that
-# made it readable by anyone — while the dashboard shows customer names, email
-# addresses, phone numbers and enquiry text. Making the repo private would not
-# have fixed it either: the old value is in the commit history for good.
-#
-# So the key lives here instead, in _stats/ — a folder git ignores, .htaccess
-# refuses to serve, and step 3 of this script explicitly preserves. It is
-# generated once, survives every future update, and is printed below to your
-# terminal, which is the only place nobody else is reading.
-KEYFILE="$REPO_DIR/_stats/.dashboard-key"
-mkdir -p "$REPO_DIR/_stats" 2>/dev/null || true
-[ -f "$REPO_DIR/_stats/index.html" ] || : > "$REPO_DIR/_stats/index.html"
-if [ ! -s "$KEYFILE" ]; then
-  NEWKEY="$(openssl rand -hex 16 2>/dev/null || head -c 16 /dev/urandom | od -An -tx1 | tr -d ' \n')"
-  printf '%s' "$NEWKEY" > "$KEYFILE"
-  chmod 600 "$KEYFILE" 2>/dev/null || true
-  ok "مفتاح جديد للوحة الإحصائيات · New dashboard key generated (the old one was public — it no longer works)"
-fi
-chmod 600 "$KEYFILE" 2>/dev/null || true
-DASHKEY="$(cat "$KEYFILE" 2>/dev/null || true)"
-
 echo
 if [ "$FAIL" -eq 0 ] && [ -z "${FAIL_MATCH:-}" ]; then
   printf '\033[0;32m========================================================\n'
@@ -169,13 +146,9 @@ if [ "$FAIL" -eq 0 ] && [ -z "${FAIL_MATCH:-}" ]; then
   echo "     https://kemet-travel.com/when-to-go.html"
   echo "     https://kemet-travel.com/de/   ·   /it/   ·   /es/"
   echo "     https://kemet-travel.com/llms.txt"
-  if [ -n "${DASHKEY:-}" ]; then
-    echo
-    echo "  لوحة الإحصائيات والاستفسارات  ·  Your private dashboard:"
-    printf '\033[1;33m     https://kemet-travel.com/stats.php?key=%s\033[0m\n' "$DASHKEY"
-    echo "     (احفظي الرابط ده. مش مكتوب في أي مكان تاني.)"
-    echo "     (Save this link — it is stored nowhere else.)"
-  fi
+  echo
+  echo "  لوحة الإحصائيات والاستفسارات  ·  Your dashboard:"
+  printf '\033[1;33m     https://kemet-travel.com/stats.php\033[0m\n' 
 else
   printf '\033[0;31m  ⚠  بعض الملفات ناقصة — ابعتي اللقطة دي للمطوّر\n'
   printf '     Some files are missing — send this output to your developer\033[0m\n'
