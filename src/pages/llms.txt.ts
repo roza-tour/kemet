@@ -69,7 +69,7 @@ export const GET: APIRoute = () => {
   lines.push("## Start here");
   lines.push("");
   lines.push(item("Home", "index.html", "Overview of Kemet and the eight cultural worlds of Egypt."));
-  lines.push(item("Kemet VIP", "vip.html", "The tier above the published catalogue: full dahabiya charter, private aircraft, access to the great sites outside public hours and a personal attache. No published prices — each programme is quoted per brief."));
+  lines.push(item("Kemet VIP", "vip.html", "The tier above the published catalogue: full dahabiya charter, private aircraft, named sites reserved exclusively for a single party, and a personal attache. No published prices — each programme is quoted per brief."));
   lines.push(item("All journeys", "tours.html", `Every private journey, ${tours.length} in total, from day tours to a 14-day grand tour.`));
   lines.push(item("Egypt Travel FAQ", "faq.html", "Answers to the most common Egypt travel questions: safety, visas, best time to visit, how many days, costs, getting around, food."));
   lines.push(item("Is Egypt safe to visit?", "egypt-safety.html", "Safety in Egypt region by region: Cairo, Luxor, the Red Sea and the North Sinai advisory, plus solo female travel, water and the persistent-seller problem at Giza."));

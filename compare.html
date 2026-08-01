@@ -52,16 +52,20 @@
       // was gone until October, with no way to bring it back — indistinguishable
       // from the feature being broken, which is exactly how it was reported.
       // A dismissal now lapses after a week: long enough not to nag anyone,
-      // short enough that the season still gets announced. Legacy "1" values
-      // written by the old code are treated as a dismissal made just now, so
-      // nobody who already dismissed it gets the ribbon back in their face on
-      // the very next page view.
+      // short enough that the season still gets announced while it runs.
+      //
+      // Legacy "1" values are DISCARDED rather than migrated. They were written
+      // under the old permanent rule, and the first attempt at this converted
+      // them into "dismissed just now" — which meant anyone who had ever closed
+      // the ribbon still could not see it for another week, including while
+      // trying to check whether the fix had worked. A dismissal made under a
+      // rule that no longer exists should not survive the rule.
       var key = "kemet-season-" + slug + "-" + active[4];
       var SNOOZE = 7 * 24 * 60 * 60 * 1000;
       try {
         var seen = localStorage.getItem(key);
-        if (seen === "1") { localStorage.setItem(key, String(Date.now())); return; }
-        if (seen && Date.now() - Number(seen) < SNOOZE) return;
+        if (seen === "1") localStorage.removeItem(key);
+        else if (seen && Date.now() - Number(seen) < SNOOZE) return;
       } catch (e) {}
 
       var root = document.getElementById("season-ribbon");

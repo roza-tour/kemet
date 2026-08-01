@@ -11,7 +11,7 @@
 //
 // NO PRICES, ON PURPOSE
 // Explained in data/vip.ts: a dahabiya charter, a private aircraft leg or an
-// after-hours opening is quoted by date and by party. A published figure would
+// exclusive site booking is quoted by date and by party. A published figure would
 // be wrong for almost everyone reading it, and this is the tier where a wrong
 // number costs more than no number. There is therefore no Offer in the
 // structured data either — nothing is claimed that is not stated.
@@ -39,7 +39,7 @@ const jsonld: Record<string, unknown>[] = [
     "@type": "CollectionPage",
     name: "Kemet VIP — private Egypt programmes by arrangement",
     description:
-      "The tier above the catalogue: dahabiya charter, private aircraft, access outside public hours, and a personal attaché. Designed per party, quoted per brief.",
+      "The tier above the catalogue: full dahabiya charter, private aircraft, named sites reserved exclusively for your party, and a personal attaché. Designed per brief.",
     url: canonical(ROUTE),
     inLanguage: "en",
     isPartOf: { "@type": "WebSite", name: `${site.name} — The Black Land`, url: SITE_URL },
@@ -59,11 +59,11 @@ const jsonld: Record<string, unknown>[] = [
 ];
 ---
 <Base
-  title="Kemet VIP — Private Egypt Programmes by Arrangement"
-  description="The tier above the catalogue: full dahabiya charter, private aircraft, access to the great sites outside public hours, and a personal attaché. Designed per party, quoted per brief."
+  title="Private VIP Egypt Tours for Royalty, Heads of State & UHNW Travellers"
+  description="The tier above the catalogue: full dahabiya charter, private aircraft, named sites reserved exclusively for your party, and a personal attaché. Designed per brief."
   active={ROUTE}
   jsonld={jsonld}
-  keywords="vip egypt tours, luxury private egypt travel, dahabiya charter egypt, private jet egypt tour, private access pyramids, bespoke egypt itinerary, ultra luxury egypt"
+  keywords="vip egypt tours, royal egypt tour, egypt tours for royalty, private jet egypt tour, ultra luxury egypt travel, uhnw egypt travel, egypt travel for dignitaries, exclusive private access pyramids, dahabiya full charter egypt, discreet luxury egypt travel, egypt concierge travel, private egypt tour with security, protocol travel egypt"
   showCta={false}
 >
   <div class="vip">
@@ -71,22 +71,52 @@ const jsonld: Record<string, unknown>[] = [
     <header class="vhero">
       <div class="vhero-bg" aria-hidden="true"></div>
       <div class="vhero-veil" aria-hidden="true"></div>
+      <div class="vfoil" aria-hidden="true"></div>
+
+      {/* A drawn frame rather than a CSS border: mitred corners with a filled
+          lozenge at each turn. It is the single element that most separates
+          this page from a well-made ordinary one. */}
+      <div class="vframe" aria-hidden="true">
+        <span class="vc vc-tl"></span><span class="vc vc-tr"></span>
+        <span class="vc vc-bl"></span><span class="vc vc-br"></span>
+      </div>
+
       <div class="wrap vhero-in">
-        <div class="vseal" aria-hidden="true">
-          <span class="vseal-ring"></span>
+        <div class="vcrest" aria-hidden="true">
+          <span class="vcrest-halo"></span>
+          <span class="vcrest-ring"></span>
+          <span class="vcrest-ring vcrest-ring--in"></span>
           <SymbolIcon name="ankh" />
         </div>
-        <div class="vtag">By arrangement only</div>
-        <h1>Kemet <em>VIP</em></h1>
-        <p class="vlede">
-          A separate tier, and a separate way of working. Nothing on this page is
-          sold from a page — each programme is drawn from a brief, held under your
-          name before anything is paid, and never repeated in the same shape.
-        </p>
-        <div class="vhero-acts">
-          <a href={wa} class="vbtn vbtn-solid" target="_blank" rel="noopener">Speak to us on WhatsApp</a>
-          <a href={mail} class="vbtn vbtn-ghost">Send a brief by email</a>
+
+        <div class="vtag"><span></span>By invitation &amp; arrangement<span></span></div>
+
+        <h1><span class="vh1-k">Kemet</span><em>VIP</em></h1>
+
+        <div class="vdivide" aria-hidden="true">
+          <i></i><b></b><i></i>
         </div>
+
+        <p class="vlede">
+          Egypt for those who cannot travel the way everyone else does. Heads of
+          state and their delegations, royal households, principals with security
+          teams, and families for whom privacy is not a preference but a condition.
+        </p>
+        <p class="vlede vlede--sm">
+          Named sites reserved for your party alone. A dahabiya under full charter.
+          Private aircraft on every internal leg. One name answering, for the whole
+          time you are in the country.
+        </p>
+
+        <div class="vhero-acts">
+          <a href={wa} class="vbtn vbtn-solid" target="_blank" rel="noopener">Speak to us privately</a>
+          <a href={mail} class="vbtn vbtn-ghost">Send a confidential brief</a>
+        </div>
+
+        <p class="vdisc">
+          Enquiries are handled by one person and discussed with nobody outside
+          the team delivering the journey. Non-disclosure on request, as standard.
+        </p>
       </div>
       <div class="vrule" aria-hidden="true"></div>
     </header>
@@ -197,57 +227,114 @@ const jsonld: Record<string, unknown>[] = [
       var(--vink);
   }
 
-  /* ===== hero ============================================================ */
-  .vhero { position: relative; padding: 168px 0 96px; overflow: hidden; }
-  /* The first pass veiled this so heavily the plateau never appeared and the
-     hero read as a black rectangle. Lifted until the monument is legible
-     behind the type, with the crimson wash sitting over it rather than
-     instead of it. */
+  /* ===== hero ============================================================
+     The brief was "royal", and the first attempt was merely dark. What makes a
+     page read as expensive is not more colour — it is drawn ornament, a much
+     larger type scale, and restraint about how many things are asking for
+     attention. Hence: a struck crest, a mitred frame, one rule, one headline. */
+  .vhero { position: relative; padding: 190px 0 118px; overflow: hidden;
+    text-align: center; }
   .vhero-bg { position: absolute; inset: 0;
     background: url("/images/giza/giza-sound-and-light-show.webp") center/cover no-repeat;
-    opacity: .72; transform: scale(1.06); }
+    opacity: .66; transform: scale(1.08); }
   .vhero-veil { position: absolute; inset: 0;
     background:
-      linear-gradient(180deg, rgba(10,7,5,.5), rgba(10,7,5,.86)),
-      radial-gradient(70% 55% at 50% 42%, rgba(142,27,46,.42), transparent 72%),
-      radial-gradient(90% 70% at 50% 100%, rgba(14,92,70,.3), transparent 65%); }
-  .vhero-in { position: relative; z-index: 2; text-align: center; }
+      linear-gradient(180deg, rgba(8,5,4,.62), rgba(8,5,4,.9)),
+      radial-gradient(66% 52% at 50% 40%, rgba(142,27,46,.46), transparent 72%),
+      radial-gradient(90% 70% at 50% 104%, rgba(14,92,70,.34), transparent 62%); }
+  /* A slow gold sheen across the whole hero. One transform, GPU-only, and it
+     stops entirely under prefers-reduced-motion. */
+  .vfoil { position: absolute; inset: -30% -10%;
+    background: linear-gradient(104deg, transparent 42%, rgba(240,221,160,.09) 50%,
+      transparent 58%);
+    animation: vfoil 9s cubic-bezier(.45,0,.55,1) infinite; }
+  @keyframes vfoil { 0%,100% { transform: translateX(-26%); } 50% { transform: translateX(26%); } }
+  @media (prefers-reduced-motion: reduce) { .vfoil { animation: none; opacity: .4; } }
 
-  .vseal { position: relative; width: 92px; height: 92px; margin: 0 auto 30px;
+  /* The frame. Hairlines inset from the edge, with a filled lozenge struck at
+     each corner — drawn, not a border-radius. */
+  /* Top inset clears the fixed nav — at a flat 30px the corner lozenges sat
+     level with the logo and read as part of the header rather than the page. */
+  .vframe { position: absolute; inset: 104px 30px 30px; pointer-events: none;
+    border: 1px solid rgba(201,166,63,.34); }
+  .vframe::before { content: ""; position: absolute; inset: 7px;
+    border: 1px solid rgba(201,166,63,.16); }
+  .vc { position: absolute; width: 13px; height: 13px; transform: rotate(45deg);
+    background: var(--vgold); box-shadow: 0 0 18px rgba(201,166,63,.65); }
+  .vc-tl { top: -7px; left: -7px; } .vc-tr { top: -7px; right: -7px; }
+  .vc-bl { bottom: -7px; left: -7px; } .vc-br { bottom: -7px; right: -7px; }
+
+  .vhero-in { position: relative; z-index: 2; }
+
+  /* The crest: two struck rings, a halo, and the ankh at the centre. */
+  .vcrest { position: relative; width: 132px; height: 132px; margin: 0 auto 34px;
     display: grid; place-items: center; }
-  .vseal-ring { position: absolute; inset: 0; border-radius: 50%;
-    border: 1px solid var(--vline-2);
-    box-shadow: 0 0 0 6px rgba(142,27,46,.16), 0 0 46px rgba(201,166,63,.28) inset; }
-  .vseal :global(svg) { width: 40px; height: 46px;
-    filter: drop-shadow(0 4px 14px rgba(201,166,63,.5)); }
+  .vcrest-halo { position: absolute; inset: -26px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,166,63,.28), transparent 62%); }
+  .vcrest-ring { position: absolute; inset: 0; border-radius: 50%;
+    border: 1px solid rgba(201,166,63,.7);
+    box-shadow: 0 0 40px rgba(201,166,63,.3), inset 0 0 34px rgba(142,27,46,.5); }
+  .vcrest-ring--in { inset: 11px; border-color: rgba(201,166,63,.32);
+    box-shadow: none; }
+  .vcrest :global(svg) { width: 46px; height: 54px; position: relative;
+    filter: drop-shadow(0 4px 18px rgba(240,221,160,.7)); }
 
-  .vtag { display: inline-block; font-size: .58rem; letter-spacing: .42em;
-    text-transform: uppercase; color: var(--vgold-lit);
-    border: 1px solid var(--vline-2); padding: 8px 18px; margin-bottom: 26px;
-    background: rgba(142,27,46,.24); }
-  .vhero h1 { font-size: clamp(3rem, 8vw, 6rem); line-height: 1; margin: 0 0 24px;
-    color: #FBF6EC; font-weight: 300; letter-spacing: .02em; }
-  .vhero h1 em { font-style: italic; color: var(--vgold-lit);
-    text-shadow: 0 6px 40px rgba(201,166,63,.4); }
-  .vlede { max-width: 620px; margin: 0 auto; color: #C8BCA6;
-    font-size: 1.06rem; line-height: 1.9; }
-  .vhero-acts { display: flex; gap: 14px; justify-content: center;
-    flex-wrap: wrap; margin-top: 40px; }
+  .vtag { display: inline-flex; align-items: center; gap: 14px;
+    font-size: .56rem; letter-spacing: .46em; text-transform: uppercase;
+    color: var(--vgold-lit); margin-bottom: 34px; }
+  .vtag span { width: 34px; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--vgold)); }
+  .vtag span:last-child { background: linear-gradient(90deg, var(--vgold), transparent); }
 
-  .vbtn { display: inline-flex; align-items: center; padding: 15px 30px;
-    font-size: .64rem; letter-spacing: .3em; text-transform: uppercase;
-    border: 1px solid transparent; transition: all .45s cubic-bezier(.22,.61,.36,1); }
-  .vbtn-solid { background: var(--crimson); color: #FBF0DC;
-    border-color: var(--crimson-lit);
-    box-shadow: 0 16px 40px -18px rgba(192,57,47,.9); }
-  .vbtn-solid:hover { background: var(--crimson-lit); color: #fff;
-    box-shadow: 0 20px 50px -16px rgba(192,57,47,1); }
-  .vbtn-ghost { color: var(--vgold-lit); border-color: var(--vline-2); }
-  .vbtn-ghost:hover { background: rgba(201,166,63,.12); border-color: var(--vgold); }
+  /* The italic VIP has a real descender; at line-height .92 with overflow
+     hidden on the hero it was being sliced off at the baseline. */
+  .vhero h1 { margin: 0; font-weight: 300; line-height: 1;
+    display: flex; flex-direction: column; align-items: center; }
+  .vh1-k { font-size: clamp(2.6rem, 6.4vw, 5rem); color: #FBF6EC;
+    letter-spacing: .3em; text-indent: .3em; text-transform: uppercase;
+    font-family: var(--ff-body); font-weight: 200; }
+  .vhero h1 em { font-style: italic; font-size: clamp(4rem, 12vw, 9.4rem);
+    color: var(--vgold-lit); letter-spacing: .02em; margin-top: -.02em;
+    line-height: 1.16; padding-bottom: .06em;
+    background: linear-gradient(178deg, #FFF6DC 12%, #E2C264 52%, #A9822B 92%);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 10px 46px rgba(201,166,63,.42)); }
+
+  .vdivide { display: flex; align-items: center; justify-content: center;
+    gap: 14px; margin: 34px 0 30px; }
+  .vdivide i { width: clamp(46px, 12vw, 120px); height: 1px;
+    background: linear-gradient(90deg, transparent, var(--vgold)); }
+  .vdivide i:last-child { background: linear-gradient(90deg, var(--vgold), transparent); }
+  .vdivide b { width: 9px; height: 9px; transform: rotate(45deg);
+    background: var(--vgold); box-shadow: 0 0 16px rgba(201,166,63,.7); }
+
+  .vlede { max-width: 660px; margin: 0 auto; color: #D3C7B2;
+    font-size: 1.1rem; line-height: 1.95; }
+  .vlede--sm { margin-top: 20px; max-width: 620px; font-size: .95rem;
+    color: #A99C86; }
+  .vhero-acts { display: flex; gap: 16px; justify-content: center;
+    flex-wrap: wrap; margin-top: 46px; }
+  .vdisc { margin: 30px auto 0; max-width: 520px; font-size: .74rem;
+    line-height: 1.8; color: #8B8071; letter-spacing: .02em; }
+
+  .vbtn { display: inline-flex; align-items: center; padding: 17px 38px;
+    font-size: .62rem; letter-spacing: .34em; text-transform: uppercase;
+    border: 1px solid transparent; position: relative;
+    transition: all .5s cubic-bezier(.22,.61,.36,1); }
+  .vbtn-solid { background: linear-gradient(180deg, var(--crimson-lit), var(--crimson));
+    color: #FFF0DC; border-color: rgba(240,221,160,.4);
+    box-shadow: 0 20px 46px -20px rgba(192,57,47,.95),
+      inset 0 1px 0 rgba(255,255,255,.16); }
+  .vbtn-solid:hover { filter: brightness(1.12);
+    box-shadow: 0 26px 60px -18px rgba(192,57,47,1), inset 0 1px 0 rgba(255,255,255,.24); }
+  .vbtn-ghost { color: var(--vgold-lit); border-color: rgba(201,166,63,.5);
+    background: rgba(10,7,5,.4); }
+  .vbtn-ghost:hover { background: rgba(201,166,63,.14); border-color: var(--vgold); }
 
   .vrule { position: absolute; left: 0; right: 0; bottom: 0; height: 2px;
     background: linear-gradient(90deg, transparent, var(--crimson) 22%,
-      var(--vgold) 50%, var(--emerald) 78%, transparent); opacity: .75; }
+      var(--vgold) 50%, var(--emerald) 78%, transparent); opacity: .8; }
 
   /* ===== section heads =================================================== */
   .vhead { max-width: 640px; margin-bottom: 60px; }
@@ -351,14 +438,21 @@ const jsonld: Record<string, unknown>[] = [
     .is-emerald::before { right: auto; left: 0; }
   }
   @media(max-width:680px){
-    .vhero { padding: 132px 0 74px; }
-    .vseal { width: 74px; height: 74px; margin-bottom: 22px; }
+    .vhero { padding: 140px 0 84px; }
+    .vframe { inset: 14px; }
+    .vc { width: 10px; height: 10px; }
+    .vcrest { width: 96px; height: 96px; margin-bottom: 26px; }
+    .vcrest :global(svg) { width: 34px; height: 40px; }
+    .vtag { letter-spacing: .32em; gap: 9px; margin-bottom: 26px; }
+    .vtag span { width: 20px; }
+    .vh1-k { letter-spacing: .22em; text-indent: .22em; }
+    .vlede { font-size: 1rem; }
+    .vhero-acts { flex-direction: column; align-items: stretch; }
+    .vbtn { justify-content: center; padding: 16px 24px; letter-spacing: .26em; }
     .vplate-body { padding: 30px 22px; }
     .vplate-num { left: 20px; bottom: 14px; font-size: 3rem; }
     .vstd-grid { grid-template-columns: 1fr; }
     .vstd-card { padding: 26px 22px; }
     .vcta-in { padding: 44px 24px; }
-    .vhero-acts { flex-direction: column; align-items: stretch; }
-    .vbtn { justify-content: center; }
   }
 </style>

@@ -3,7 +3,7 @@
 //
 // WHY THESE CARRY NO PRICE
 // Not a coy sales tactic. Every element here is arranged individually: a
-// dahabiya charter, a private aircraft leg or an after-hours opening is
+// dahabiya charter, a private aircraft leg or an exclusive site booking is
 // quoted by date, by party size and by what is actually available that week.
 // A published figure would be wrong for almost everyone who read it, and this
 // is precisely the tier where a wrong number costs credibility. So each
@@ -11,8 +11,10 @@
 //
 // ACCURACY NOTE FOR WHOEVER MAINTAINS THIS
 // Everything listed below is genuinely arrangeable at the top of the Egyptian
-// market — private after-hours access at major sites is a real, permitted
-// arrangement; dahabiya full charter, private domestic aircraft, VIP airport
+// market — a named site can be reserved for a single party and closed to other
+// visitors while they are inside it, which is a real and permitted arrangement
+// (it is NOT "after hours"; the correction matters). Dahabiya full charter,
+// private domestic aircraft, VIP airport
 // handling and yacht charter all exist and are bookable. But they are
 // arranged per booking, not held on standing contract. Before this page goes
 // out in any advertising, confirm with operations that each element can still
@@ -72,18 +74,19 @@ export const vipProgrammes: VipProgramme[] = [
   {
     numeral: "II",
     title: "The Plateau, Privately",
-    kicker: "Giza and the Grand Egyptian Museum outside public hours",
+    kicker: "Sites reserved for your party alone, with nobody else admitted",
     duration: "5 days / 4 nights",
     route: "Cairo · Giza · Saqqara · Dahshur",
     body:
-      "The pyramids are extraordinary and the plateau at eleven in the morning is " +
-      "not. This programme is built around the hours nobody else has: a private " +
-      "opening arranged in advance, the Grand Egyptian Museum after the doors close, " +
-      "and Saqqara and Dahshur on a day when the coaches are elsewhere. What changes " +
-      "is not the monuments. It is the silence around them.",
+      "The pyramids are extraordinary and the plateau with four hundred other " +
+      "people on it is not. This programme is built on exclusivity rather than " +
+      "timing: named sites are reserved for your party and closed to everyone else " +
+      "while you are inside them. A chamber, a temple, a gallery — booked, and " +
+      "yours alone. What changes is not the monuments. It is that nobody else is " +
+      "standing in them.",
     includes: [
-      "Private access arranged outside public hours at the headline sites",
-      "The Grand Egyptian Museum after closing, with a curator-led route",
+      "Named sites booked exclusively — closed to other visitors while you are there",
+      "A reserved gallery at the Grand Egyptian Museum, walked with a curator",
       "An Egyptologist who specialises in the Old Kingdom",
       "Meet-and-greet at the aircraft door and VIP airport handling",
       "A suite with the plateau in the window, not a courtyard",
@@ -109,9 +112,9 @@ export const vipProgrammes: VipProgramme[] = [
       "Afternoons are left alone on purpose.",
     includes: [
       "Private aircraft on every internal leg, on your hours",
-      "The Valley of the Kings at opening, before the first coach",
+      "The Valley of the Kings at opening, and a tomb held for your party alone",
       "A private balloon basket over the west bank — not a shared one",
-      "Access to tombs that are closed on the standard ticket",
+      "Tombs that are not on the standard ticket, opened for you",
       "An Egyptologist and, for one session, a specialist academic",
       "A felucca held at Aswan for the evening you choose",
     ],
