@@ -1,0 +1,364 @@
+---
+// /vip.html — the tier above the published catalogue.
+//
+// THE PALETTE IS SCOPED, DELIBERATELY
+// Crimson and emerald against gold is a strong departure from the site's
+// restrained black-and-gold. Every rule below is namespaced under .vip, and
+// the accent variables are redeclared on that scope only — so this page can be
+// as regal as it likes without leaking a single colour into the other 192.
+// The seasonal skin still works here, because it sets --gold on :root and
+// nothing here overrides it globally.
+//
+// NO PRICES, ON PURPOSE
+// Explained in data/vip.ts: a dahabiya charter, a private aircraft leg or an
+// after-hours opening is quoted by date and by party. A published figure would
+// be wrong for almost everyone reading it, and this is the tier where a wrong
+// number costs more than no number. There is therefore no Offer in the
+// structured data either — nothing is claimed that is not stated.
+import Base from "@/layouts/Base.astro";
+import Frieze from "@/components/Frieze.astro";
+import SymbolIcon from "@/components/SymbolIcon.astro";
+import { vipProgrammes, vipStandard } from "@/data/vip";
+import { breadcrumb } from "@/schemas/jsonld";
+import { whatsappLink, mailtoLink, canonical } from "@/utils/links";
+import { site, SITE_URL } from "@/config/site";
+
+const ROUTE = "vip.html";
+
+const wa = whatsappLink(
+  "Hello Kemet — I would like to talk about a private VIP programme in Egypt.",
+);
+const mail = mailtoLink(
+  "Kemet — private VIP programme enquiry",
+  "Please tell us who is travelling, roughly when, and what the journey is for.\n\n",
+);
+
+const jsonld: Record<string, unknown>[] = [
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Kemet VIP — private Egypt programmes by arrangement",
+    description:
+      "The tier above the catalogue: dahabiya charter, private aircraft, access outside public hours, and a personal attaché. Designed per party, quoted per brief.",
+    url: canonical(ROUTE),
+    inLanguage: "en",
+    isPartOf: { "@type": "WebSite", name: `${site.name} — The Black Land`, url: SITE_URL },
+    about: { "@type": "Country", name: "Egypt" },
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: vipProgrammes.length,
+      itemListElement: vipProgrammes.map((p, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: p.title,
+        description: p.kicker,
+      })),
+    },
+  },
+  breadcrumb([["Home", "index.html"], ["VIP", ROUTE]]),
+];
+---
+<Base
+  title="Kemet VIP — Private Egypt Programmes by Arrangement"
+  description="The tier above the catalogue: full dahabiya charter, private aircraft, access to the great sites outside public hours, and a personal attaché. Designed per party, quoted per brief."
+  active={ROUTE}
+  jsonld={jsonld}
+  keywords="vip egypt tours, luxury private egypt travel, dahabiya charter egypt, private jet egypt tour, private access pyramids, bespoke egypt itinerary, ultra luxury egypt"
+  showCta={false}
+>
+  <div class="vip">
+    {/* ── The seal ───────────────────────────────────────────────────── */}
+    <header class="vhero">
+      <div class="vhero-bg" aria-hidden="true"></div>
+      <div class="vhero-veil" aria-hidden="true"></div>
+      <div class="wrap vhero-in">
+        <div class="vseal" aria-hidden="true">
+          <span class="vseal-ring"></span>
+          <SymbolIcon name="ankh" />
+        </div>
+        <div class="vtag">By arrangement only</div>
+        <h1>Kemet <em>VIP</em></h1>
+        <p class="vlede">
+          A separate tier, and a separate way of working. Nothing on this page is
+          sold from a page — each programme is drawn from a brief, held under your
+          name before anything is paid, and never repeated in the same shape.
+        </p>
+        <div class="vhero-acts">
+          <a href={wa} class="vbtn vbtn-solid" target="_blank" rel="noopener">Speak to us on WhatsApp</a>
+          <a href={mail} class="vbtn vbtn-ghost">Send a brief by email</a>
+        </div>
+      </div>
+      <div class="vrule" aria-hidden="true"></div>
+    </header>
+
+    {/* ── The programmes ─────────────────────────────────────────────── */}
+    <section class="vprogs">
+      <div class="wrap">
+        <div class="vhead">
+          <span class="veyebrow">The programmes</span>
+          <h2>Four ways to take Egypt at this level</h2>
+          <p>
+            Each of these is a starting shape, not a fixed package. The days move,
+            the length moves, and anything here can be built into any other. What
+            does not move is how they are run.
+          </p>
+        </div>
+      </div>
+
+      {vipProgrammes.map((p) => (
+        <article class:list={["vplate", `is-${p.accent}`]}>
+          <div class="vplate-media">
+            <img
+              src={p.image.src}
+              alt={p.image.alt}
+              width="1600"
+              height="1066"
+              loading="lazy"
+              decoding="async"
+            />
+            <span class="vplate-num" aria-hidden="true">{p.numeral}</span>
+          </div>
+          <div class="vplate-body">
+            <div class="vplate-meta">
+              <span>{p.duration}</span>
+              <span class="vdot" aria-hidden="true"></span>
+              <span>{p.route}</span>
+            </div>
+            <h3>{p.title}</h3>
+            <p class="vkicker">{p.kicker}</p>
+            <p class="vbody">{p.body}</p>
+            <ul class="vincl">
+              {p.includes.map((i) => <li>{i}</li>)}
+            </ul>
+            <div class="vplate-foot">
+              <span class="vprice">Price on application</span>
+              <a href={wa} class="vlink" target="_blank" rel="noopener">Ask about this programme <b>→</b></a>
+            </div>
+          </div>
+        </article>
+      ))}
+    </section>
+
+    <Frieze />
+
+    {/* ── What the tier means ────────────────────────────────────────── */}
+    <section class="vstd">
+      <div class="wrap">
+        <div class="vhead vhead--c">
+          <span class="veyebrow">The standard</span>
+          <h2>What is true of all four</h2>
+        </div>
+        <div class="vstd-grid">
+          {vipStandard.map((s) => (
+            <div class="vstd-card">
+              <h3>{s.title}</h3>
+              <p>{s.body}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ── The invitation ─────────────────────────────────────────────── */}
+    <section class="vcta">
+      <div class="wrap vcta-in">
+        <span class="veyebrow">Begin</span>
+        <h2>Tell us what the journey is for</h2>
+        <p>
+          Who is travelling, roughly when, and what the trip is marking. That is
+          enough to start. You will have a written outline before any figure is
+          discussed, and a figure before anything is committed.
+        </p>
+        <div class="vhero-acts">
+          <a href={wa} class="vbtn vbtn-solid" target="_blank" rel="noopener">WhatsApp</a>
+          <a href={mail} class="vbtn vbtn-ghost">Email</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</Base>
+
+<style>
+  /* ===== the royal palette, scoped to this page and nowhere else ========= */
+  .vip {
+    --crimson: #8E1B2E;
+    --crimson-lit: #C0392F;
+    --emerald: #0E5C46;
+    --emerald-lit: #1E8A66;
+    --vgold: #C9A63F;
+    --vgold-lit: #F0DDA0;
+    --vline: rgba(201, 166, 63, .3);
+    --vline-2: rgba(201, 166, 63, .55);
+    --vink: #0A0705;
+    position: relative;
+    background:
+      radial-gradient(120% 60% at 12% 0%, rgba(142, 27, 46, .22), transparent 62%),
+      radial-gradient(110% 55% at 92% 22%, rgba(14, 92, 70, .2), transparent 60%),
+      var(--vink);
+  }
+
+  /* ===== hero ============================================================ */
+  .vhero { position: relative; padding: 168px 0 96px; overflow: hidden; }
+  /* The first pass veiled this so heavily the plateau never appeared and the
+     hero read as a black rectangle. Lifted until the monument is legible
+     behind the type, with the crimson wash sitting over it rather than
+     instead of it. */
+  .vhero-bg { position: absolute; inset: 0;
+    background: url("/images/giza/giza-sound-and-light-show.webp") center/cover no-repeat;
+    opacity: .72; transform: scale(1.06); }
+  .vhero-veil { position: absolute; inset: 0;
+    background:
+      linear-gradient(180deg, rgba(10,7,5,.5), rgba(10,7,5,.86)),
+      radial-gradient(70% 55% at 50% 42%, rgba(142,27,46,.42), transparent 72%),
+      radial-gradient(90% 70% at 50% 100%, rgba(14,92,70,.3), transparent 65%); }
+  .vhero-in { position: relative; z-index: 2; text-align: center; }
+
+  .vseal { position: relative; width: 92px; height: 92px; margin: 0 auto 30px;
+    display: grid; place-items: center; }
+  .vseal-ring { position: absolute; inset: 0; border-radius: 50%;
+    border: 1px solid var(--vline-2);
+    box-shadow: 0 0 0 6px rgba(142,27,46,.16), 0 0 46px rgba(201,166,63,.28) inset; }
+  .vseal :global(svg) { width: 40px; height: 46px;
+    filter: drop-shadow(0 4px 14px rgba(201,166,63,.5)); }
+
+  .vtag { display: inline-block; font-size: .58rem; letter-spacing: .42em;
+    text-transform: uppercase; color: var(--vgold-lit);
+    border: 1px solid var(--vline-2); padding: 8px 18px; margin-bottom: 26px;
+    background: rgba(142,27,46,.24); }
+  .vhero h1 { font-size: clamp(3rem, 8vw, 6rem); line-height: 1; margin: 0 0 24px;
+    color: #FBF6EC; font-weight: 300; letter-spacing: .02em; }
+  .vhero h1 em { font-style: italic; color: var(--vgold-lit);
+    text-shadow: 0 6px 40px rgba(201,166,63,.4); }
+  .vlede { max-width: 620px; margin: 0 auto; color: #C8BCA6;
+    font-size: 1.06rem; line-height: 1.9; }
+  .vhero-acts { display: flex; gap: 14px; justify-content: center;
+    flex-wrap: wrap; margin-top: 40px; }
+
+  .vbtn { display: inline-flex; align-items: center; padding: 15px 30px;
+    font-size: .64rem; letter-spacing: .3em; text-transform: uppercase;
+    border: 1px solid transparent; transition: all .45s cubic-bezier(.22,.61,.36,1); }
+  .vbtn-solid { background: var(--crimson); color: #FBF0DC;
+    border-color: var(--crimson-lit);
+    box-shadow: 0 16px 40px -18px rgba(192,57,47,.9); }
+  .vbtn-solid:hover { background: var(--crimson-lit); color: #fff;
+    box-shadow: 0 20px 50px -16px rgba(192,57,47,1); }
+  .vbtn-ghost { color: var(--vgold-lit); border-color: var(--vline-2); }
+  .vbtn-ghost:hover { background: rgba(201,166,63,.12); border-color: var(--vgold); }
+
+  .vrule { position: absolute; left: 0; right: 0; bottom: 0; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--crimson) 22%,
+      var(--vgold) 50%, var(--emerald) 78%, transparent); opacity: .75; }
+
+  /* ===== section heads =================================================== */
+  .vhead { max-width: 640px; margin-bottom: 60px; }
+  .vhead--c { margin-left: auto; margin-right: auto; text-align: center; }
+  .veyebrow { display: inline-block; font-size: .6rem; letter-spacing: .42em;
+    text-transform: uppercase; color: var(--vgold); margin-bottom: 16px; }
+  .vhead h2 { font-size: clamp(1.9rem, 3.6vw, 2.9rem); color: #FBF6EC;
+    font-weight: 300; margin: 0 0 20px; line-height: 1.2; }
+  .vhead p { color: #B7AA93; line-height: 1.9; margin: 0; }
+
+  /* ===== programme plates ================================================ */
+  .vprogs { padding: 110px 0 40px; }
+  .vplate { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch;
+    margin: 0 auto 34px; max-width: 1360px;
+    border: 1px solid var(--vline); background: rgba(16,11,9,.72);
+    overflow: hidden; }
+  .vplate:nth-child(even) .vplate-media { order: 2; }
+
+  .vplate-media { position: relative; min-height: 440px; overflow: hidden; }
+  .vplate-media img { width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 1.2s cubic-bezier(.22,.61,.36,1); }
+  .vplate:hover .vplate-media img { transform: scale(1.05); }
+  .vplate-media::after { content: ""; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(10,7,5,.15), rgba(10,7,5,.6)); }
+  .vplate-num { position: absolute; left: 30px; bottom: 22px; z-index: 2;
+    font-family: var(--ff-display); font-size: 4.2rem; line-height: 1;
+    color: rgba(251,246,236,.9); letter-spacing: .04em;
+    text-shadow: 0 10px 40px rgba(0,0,0,.9); }
+
+  .vplate-body { padding: 46px 48px; display: flex; flex-direction: column; }
+  .vplate-meta { display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+    font-size: .6rem; letter-spacing: .26em; text-transform: uppercase;
+    color: var(--vgold); margin-bottom: 18px; }
+  .vdot { width: 4px; height: 4px; border-radius: 50%; background: currentColor;
+    opacity: .6; }
+  .vplate h3 { font-size: clamp(1.7rem, 2.8vw, 2.3rem); color: #FBF6EC;
+    font-weight: 300; margin: 0 0 10px; line-height: 1.18; }
+  .vkicker { color: var(--vgold-lit); font-size: .95rem; line-height: 1.7;
+    margin: 0 0 20px; font-style: italic; }
+  .vbody { color: #B7AA93; font-size: .95rem; line-height: 1.9; margin: 0 0 26px; }
+
+  .vincl { list-style: none; margin: 0 0 28px; padding: 0;
+    border-top: 1px solid var(--vline); padding-top: 22px; }
+  .vincl li { position: relative; padding-left: 22px; color: #C8BCA6;
+    font-size: .89rem; line-height: 1.7; margin-bottom: 10px; }
+  .vincl li:last-child { margin-bottom: 0; }
+  .vincl li::before { content: ""; position: absolute; left: 0; top: .62em;
+    width: 7px; height: 7px; transform: rotate(45deg); }
+  .is-crimson .vincl li::before { background: var(--crimson-lit); }
+  .is-emerald .vincl li::before { background: var(--emerald-lit); }
+
+  .vplate-foot { margin-top: auto; display: flex; align-items: center;
+    justify-content: space-between; gap: 18px; flex-wrap: wrap;
+    border-top: 1px solid var(--vline); padding-top: 22px; }
+  .vprice { font-size: .62rem; letter-spacing: .3em; text-transform: uppercase;
+    color: var(--vgold-lit); }
+  .vlink { font-size: .62rem; letter-spacing: .24em; text-transform: uppercase;
+    color: #FBF6EC; }
+  .vlink b { transition: margin .3s; }
+  .vlink:hover b { margin-left: 6px; }
+  .is-crimson .vlink { color: #F0A79B; }
+  .is-emerald .vlink { color: #8CD9BC; }
+
+  /* The accent bar that tells the two families apart at a glance. */
+  .vplate { position: relative; }
+  .vplate::before { content: ""; position: absolute; top: 0; bottom: 0; width: 3px;
+    z-index: 3; }
+  .is-crimson::before { left: 0; background: linear-gradient(180deg,
+    var(--crimson-lit), var(--crimson) 60%, transparent); }
+  .is-emerald::before { right: 0; background: linear-gradient(180deg,
+    var(--emerald-lit), var(--emerald) 60%, transparent); }
+
+  /* ===== the standard =================================================== */
+  .vstd { padding: 96px 0; }
+  .vstd-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+  .vstd-card { border: 1px solid var(--vline); padding: 32px 28px;
+    background: linear-gradient(165deg, rgba(142,27,46,.14), rgba(14,92,70,.1)); }
+  .vstd-card h3 { font-size: 1.1rem; color: var(--vgold-lit); font-weight: 400;
+    margin: 0 0 12px; }
+  .vstd-card p { color: #B7AA93; font-size: .89rem; line-height: 1.8; margin: 0; }
+
+  /* ===== the invitation ================================================= */
+  .vcta { padding: 20px 0 120px; }
+  .vcta-in { text-align: center; max-width: 660px; border: 1px solid var(--vline-2);
+    padding: 62px 44px; background:
+      radial-gradient(90% 100% at 50% 0%, rgba(142,27,46,.28), transparent 70%),
+      rgba(16,11,9,.7); }
+  .vcta h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); color: #FBF6EC;
+    font-weight: 300; margin: 14px 0 18px; }
+  .vcta p { color: #B7AA93; line-height: 1.9; margin: 0; }
+
+  /* ===== responsive ===================================================== */
+  @media(max-width:1080px){
+    .vstd-grid { grid-template-columns: repeat(2, 1fr); }
+    .vplate-body { padding: 38px 34px; }
+  }
+  @media(max-width:860px){
+    .vplate { grid-template-columns: 1fr; }
+    .vplate:nth-child(even) .vplate-media { order: 0; }
+    .vplate-media { min-height: 280px; }
+    .is-emerald::before { right: auto; left: 0; }
+  }
+  @media(max-width:680px){
+    .vhero { padding: 132px 0 74px; }
+    .vseal { width: 74px; height: 74px; margin-bottom: 22px; }
+    .vplate-body { padding: 30px 22px; }
+    .vplate-num { left: 20px; bottom: 14px; font-size: 3rem; }
+    .vstd-grid { grid-template-columns: 1fr; }
+    .vstd-card { padding: 26px 22px; }
+    .vcta-in { padding: 44px 24px; }
+    .vhero-acts { flex-direction: column; align-items: stretch; }
+    .vbtn { justify-content: center; }
+  }
+</style>

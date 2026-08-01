@@ -39,6 +39,7 @@ export const primaryNav: NavItem[] = [
     label: "Journeys",
     href: "tours.html",
     children: [
+      { label: "Kemet VIP", href: "vip.html" },
       { label: "All journeys", href: "tours.html" },
       { label: "By occasion", href: "occasions.html" },
       { label: "Collections", href: hubFor("seasonal") },
@@ -87,6 +88,7 @@ export const primaryNav: NavItem[] = [
 export const footerExplore: FooterColumn = {
   heading: "Explore",
   links: [
+    { label: "Kemet VIP", href: "vip.html" },
     { label: "Journeys", href: "tours.html" },
     { label: "Destinations", href: hubFor("destination") },
     { label: "Experiences", href: hubFor("experience") },
