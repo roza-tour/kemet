@@ -18,8 +18,8 @@
 import Base from "@/layouts/Base.astro";
 import Frieze from "@/components/Frieze.astro";
 import SymbolIcon from "@/components/SymbolIcon.astro";
-import { vipProgrammes, vipStandard } from "@/data/vip";
-import { breadcrumb } from "@/schemas/jsonld";
+import { vipProgrammes, vipStandard, vipFaqs, VIP_QUESTION, VIP_ANSWER } from "@/data/vip";
+import { breadcrumb, answerPageSchema, personRef, ORG_ID } from "@/schemas/jsonld";
 import { whatsappLink, mailtoLink, canonical } from "@/utils/links";
 import { site, SITE_URL } from "@/config/site";
 
@@ -34,26 +34,59 @@ const mail = mailtoLink(
 );
 
 const jsonld: Record<string, unknown>[] = [
+  // The same structural layer every planning page on this site carries — an
+  // answer node with speakable + reviewedBy, a Question/Answer restatement,
+  // a FAQPage, Service nodes typed to what is actually offered, and an
+  // audience declaration — not a keyword list bolted to a title.
+  answerPageSchema({
+    route: ROUTE,
+    name: "Private VIP Egypt travel for royalty, heads of state and UHNW families",
+    description:
+      "Named sites reserved for one party, full dahabiya charter, private aircraft, protocol and security coordination, and a single point of contact.",
+    question: VIP_QUESTION,
+    answer: VIP_ANSWER,
+  }),
   {
     "@context": "https://schema.org",
-    "@type": "CollectionPage",
+    "@type": "Service",
     name: "Kemet VIP — private Egypt programmes by arrangement",
-    description:
-      "The tier above the catalogue: full dahabiya charter, private aircraft, named sites reserved exclusively for your party, and a personal attaché. Designed per brief.",
-    url: canonical(ROUTE),
-    inLanguage: "en",
-    isPartOf: { "@type": "WebSite", name: `${site.name} — The Black Land`, url: SITE_URL },
-    about: { "@type": "Country", name: "Egypt" },
-    mainEntity: {
-      "@type": "ItemList",
-      numberOfItems: vipProgrammes.length,
-      itemListElement: vipProgrammes.map((p, i) => ({
-        "@type": "ListItem",
-        position: i + 1,
-        name: p.title,
-        description: p.kicker,
+    serviceType: "Ultra-luxury private travel design, protocol and VIP logistics in Egypt",
+    provider: { "@id": ORG_ID },
+    areaServed: { "@type": "Country", name: "Egypt" },
+    // Who this is FOR, stated in the graph the way it is stated on the page.
+    audience: {
+      "@type": "Audience",
+      audienceType:
+        "Heads of state and diplomatic delegations, royal households, ultra-high-net-worth families, principals travelling with security teams",
+    },
+    availableChannel: {
+      "@type": "ServiceChannel",
+      name: "Private enquiry",
+      description: "Handled by one person; non-disclosure on request.",
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "VIP programmes",
+      itemListElement: vipProgrammes.map((p) => ({
+        "@type": "Offer",
+        // No price and no priceSpecification — deliberately. Each is quoted
+        // per brief, and claiming otherwise in the graph would be false.
+        itemOffered: {
+          "@type": "Trip",
+          name: p.title,
+          description: p.kicker,
+        },
       })),
     },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: vipFaqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
   },
   breadcrumb([["Home", "index.html"], ["VIP", ROUTE]]),
 ];
@@ -67,141 +100,115 @@ const jsonld: Record<string, unknown>[] = [
   showCta={false}
 >
   <div class="vip">
-    {/* ── The seal ───────────────────────────────────────────────────── */}
+    {/* ── Hero. One image, one line of type, silence around both. ──────── */}
     <header class="vhero">
       <div class="vhero-bg" aria-hidden="true"></div>
       <div class="vhero-veil" aria-hidden="true"></div>
-      <div class="vfoil" aria-hidden="true"></div>
-
-      {/* A drawn frame rather than a CSS border: mitred corners with a filled
-          lozenge at each turn. It is the single element that most separates
-          this page from a well-made ordinary one. */}
-      <div class="vframe" aria-hidden="true">
-        <span class="vc vc-tl"></span><span class="vc vc-tr"></span>
-        <span class="vc vc-bl"></span><span class="vc vc-br"></span>
-      </div>
-
       <div class="wrap vhero-in">
-        <div class="vcrest" aria-hidden="true">
-          <span class="vcrest-halo"></span>
-          <span class="vcrest-ring"></span>
-          <span class="vcrest-ring vcrest-ring--in"></span>
-          <SymbolIcon name="ankh" />
-        </div>
-
-        <div class="vtag"><span></span>By invitation &amp; arrangement<span></span></div>
-
-        <h1><span class="vh1-k">Kemet</span><em>VIP</em></h1>
-
-        <div class="vdivide" aria-hidden="true">
-          <i></i><b></b><i></i>
-        </div>
-
+        <p class="vtag">Kemet · By private arrangement</p>
+        <h1>The quietest way<br />through Egypt</h1>
         <p class="vlede">
-          Egypt for those who cannot travel the way everyone else does. Heads of
-          state and their delegations, royal households, principals with security
-          teams, and families for whom privacy is not a preference but a condition.
+          For heads of state and their delegations, royal households, and families
+          for whom privacy is a condition rather than a preference. Programmes at
+          this tier are designed once, for one party, and never repeated.
         </p>
-        <p class="vlede vlede--sm">
-          Named sites reserved for your party alone. A dahabiya under full charter.
-          Private aircraft on every internal leg. One name answering, for the whole
-          time you are in the country.
-        </p>
-
         <div class="vhero-acts">
-          <a href={wa} class="vbtn vbtn-solid" target="_blank" rel="noopener">Speak to us privately</a>
-          <a href={mail} class="vbtn vbtn-ghost">Send a confidential brief</a>
+          <a href={wa} class="vbtn" target="_blank" rel="noopener">Speak to us privately</a>
+          <a href={mail} class="vlink-quiet">or send a confidential brief</a>
         </div>
-
-        <p class="vdisc">
-          Enquiries are handled by one person and discussed with nobody outside
-          the team delivering the journey. Non-disclosure on request, as standard.
-        </p>
       </div>
-      <div class="vrule" aria-hidden="true"></div>
     </header>
 
-    {/* ── The programmes ─────────────────────────────────────────────── */}
-    <section class="vprogs">
-      <div class="wrap">
-        <div class="vhead">
-          <span class="veyebrow">The programmes</span>
-          <h2>Four ways to take Egypt at this level</h2>
-          <p>
-            Each of these is a starting shape, not a fixed package. The days move,
-            the length moves, and anything here can be built into any other. What
-            does not move is how they are run.
-          </p>
-        </div>
+    {/* ── The three facts that define the tier, stated once, small. ────── */}
+    <section class="vfacts">
+      <div class="wrap vfacts-in">
+        <div><b>Named sites, reserved</b><span>closed to other visitors while your party is inside</span></div>
+        <div><b>Private aircraft &amp; full charter</b><span>every internal movement on your hours, nobody else aboard</span></div>
+        <div><b>One name answering</b><span>the person who designs the journey answers throughout it</span></div>
       </div>
-
-      {vipProgrammes.map((p) => (
-        <article class:list={["vplate", `is-${p.accent}`]}>
-          <div class="vplate-media">
-            <img
-              src={p.image.src}
-              alt={p.image.alt}
-              width="1600"
-              height="1066"
-              loading="lazy"
-              decoding="async"
-            />
-            <span class="vplate-num" aria-hidden="true">{p.numeral}</span>
-          </div>
-          <div class="vplate-body">
-            <div class="vplate-meta">
-              <span>{p.duration}</span>
-              <span class="vdot" aria-hidden="true"></span>
-              <span>{p.route}</span>
-            </div>
-            <h3>{p.title}</h3>
-            <p class="vkicker">{p.kicker}</p>
-            <p class="vbody">{p.body}</p>
-            <ul class="vincl">
-              {p.includes.map((i) => <li>{i}</li>)}
-            </ul>
-            <div class="vplate-foot">
-              <span class="vprice">Price on application</span>
-              <a href={wa} class="vlink" target="_blank" rel="noopener">Ask about this programme <b>→</b></a>
-            </div>
-          </div>
-        </article>
-      ))}
     </section>
 
-    <Frieze />
-
-    {/* ── What the tier means ────────────────────────────────────────── */}
-    <section class="vstd">
+    {/* ── The programmes: an index, not a grid of cards. ───────────────── */}
+    <section class="vindex">
       <div class="wrap">
-        <div class="vhead vhead--c">
-          <span class="veyebrow">The standard</span>
-          <h2>What is true of all four</h2>
-        </div>
-        <div class="vstd-grid">
-          {vipStandard.map((s) => (
-            <div class="vstd-card">
-              <h3>{s.title}</h3>
-              <p>{s.body}</p>
+        <p class="voverline">The programmes</p>
+        {vipProgrammes.map((p, idx) => (
+          <article class="ventry" id={`programme-${p.numeral.toLowerCase()}`}>
+            <div class="ventry-head">
+              <span class="ventry-no">{p.numeral}</span>
+              <div class="ventry-title">
+                <h2>{p.title}</h2>
+                <p>{p.kicker}</p>
+              </div>
+              <div class="ventry-meta">
+                <span>{p.duration}</span>
+                <span>{p.route}</span>
+              </div>
+            </div>
+            <div class="ventry-body">
+              <figure class="ventry-media">
+                <img src={p.image.src} alt={p.image.alt} width="1600" height="1066"
+                     loading={idx === 0 ? "eager" : "lazy"} decoding="async" />
+              </figure>
+              <div class="ventry-text">
+                <p class="ventry-lede">{p.body}</p>
+                <ul class="ventry-incl">
+                  {p.includes.map((i) => <li>{i}</li>)}
+                </ul>
+                <div class="ventry-foot">
+                  <span>Quoted per brief</span>
+                  <a href={wa} target="_blank" rel="noopener">Enquire about {p.title}</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    {/* ── How this tier is run ──────────────────────────────────────────── */}
+    <section class="vhow">
+      <div class="wrap">
+        <p class="voverline">How this tier is run</p>
+        <div class="vhow-grid">
+          {vipStandard.map((st, i) => (
+            <div class="vhow-item">
+              <span class="vhow-no">{String(i + 1).padStart(2, "0")}</span>
+              <h2>{st.title}</h2>
+              <p>{st.body}</p>
             </div>
           ))}
         </div>
       </div>
     </section>
 
-    {/* ── The invitation ─────────────────────────────────────────────── */}
-    <section class="vcta">
-      <div class="wrap vcta-in">
-        <span class="veyebrow">Begin</span>
-        <h2>Tell us what the journey is for</h2>
+    {/* ── The questions this clientele actually asks ───────────────────── */}
+    <section class="vfaq">
+      <div class="wrap">
+        <p class="voverline">Before you write</p>
+        <div class="vfaq-list">
+          {vipFaqs.map((f) => (
+            <details class="vfaq-item">
+              <summary>{f.q}</summary>
+              <p>{f.a}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ── The close ─────────────────────────────────────────────────────── */}
+    <section class="vclose">
+      <div class="wrap vclose-in">
+        <h2>Tell us what the journey is for.</h2>
         <p>
-          Who is travelling, roughly when, and what the trip is marking. That is
-          enough to start. You will have a written outline before any figure is
-          discussed, and a figure before anything is committed.
+          Who is travelling, roughly when, and what it should feel like. You will
+          have a written outline before any figure is discussed, and a figure
+          before anything is committed. Non-disclosure on request, as standard.
         </p>
         <div class="vhero-acts">
-          <a href={wa} class="vbtn vbtn-solid" target="_blank" rel="noopener">WhatsApp</a>
-          <a href={mail} class="vbtn vbtn-ghost">Email</a>
+          <a href={wa} class="vbtn" target="_blank" rel="noopener">WhatsApp, privately</a>
+          <a href={mail} class="vlink-quiet">or by email</a>
         </div>
       </div>
     </section>
@@ -209,250 +216,178 @@ const jsonld: Record<string, unknown>[] = [
 </Base>
 
 <style>
-  /* ===== the royal palette, scoped to this page and nowhere else ========= */
+  /* ==========================================================================
+     The reference here is a maison's print catalogue, not a travel website:
+     cream-on-near-black, hairline rules, one serif at very large sizes, and
+     space doing the work that boxes and glows were doing before. The crimson
+     and emerald the brief asked for are present the way they are in a royal
+     order — as a ribbon's edge, not as panels.
+     Everything is scoped under .vip; nothing leaks to the other 193 pages.
+     ========================================================================== */
   .vip {
-    --crimson: #8E1B2E;
-    --crimson-lit: #C0392F;
-    --emerald: #0E5C46;
-    --emerald-lit: #1E8A66;
-    --vgold: #C9A63F;
-    --vgold-lit: #F0DDA0;
-    --vline: rgba(201, 166, 63, .3);
-    --vline-2: rgba(201, 166, 63, .55);
-    --vink: #0A0705;
-    position: relative;
-    background:
-      radial-gradient(120% 60% at 12% 0%, rgba(142, 27, 46, .22), transparent 62%),
-      radial-gradient(110% 55% at 92% 22%, rgba(14, 92, 70, .2), transparent 60%),
-      var(--vink);
+    --v-ink: #060504;
+    --v-cream: #EFE6D5;
+    --v-cream-dim: #B9AD97;
+    --v-faint: #776F60;
+    --v-gold: #C2A24E;
+    --v-hair: rgba(194, 162, 78, .26);
+    --v-crimson: #7E1424;
+    --v-emerald: #0C4A39;
+    background: var(--v-ink);
+    font-feature-settings: "liga", "kern";
   }
+  .vip .wrap { max-width: 1180px; }
 
-  /* ===== hero ============================================================
-     The brief was "royal", and the first attempt was merely dark. What makes a
-     page read as expensive is not more colour — it is drawn ornament, a much
-     larger type scale, and restraint about how many things are asking for
-     attention. Hence: a struck crest, a mitred frame, one rule, one headline. */
-  .vhero { position: relative; padding: 190px 0 118px; overflow: hidden;
-    text-align: center; }
-  .vhero-bg { position: absolute; inset: 0;
-    background: url("/images/giza/giza-sound-and-light-show.webp") center/cover no-repeat;
-    opacity: .66; transform: scale(1.08); }
-  .vhero-veil { position: absolute; inset: 0;
-    background:
-      linear-gradient(180deg, rgba(8,5,4,.62), rgba(8,5,4,.9)),
-      radial-gradient(66% 52% at 50% 40%, rgba(142,27,46,.46), transparent 72%),
-      radial-gradient(90% 70% at 50% 104%, rgba(14,92,70,.34), transparent 62%); }
-  /* A slow gold sheen across the whole hero. One transform, GPU-only, and it
-     stops entirely under prefers-reduced-motion. */
-  .vfoil { position: absolute; inset: -30% -10%;
-    background: linear-gradient(104deg, transparent 42%, rgba(240,221,160,.09) 50%,
-      transparent 58%);
-    animation: vfoil 9s cubic-bezier(.45,0,.55,1) infinite; }
-  @keyframes vfoil { 0%,100% { transform: translateX(-26%); } 50% { transform: translateX(26%); } }
-  @media (prefers-reduced-motion: reduce) { .vfoil { animation: none; opacity: .4; } }
+  .voverline { font-size: .6rem; letter-spacing: .5em; text-transform: uppercase;
+    color: var(--v-gold); margin: 0 0 58px; }
 
-  /* The frame. Hairlines inset from the edge, with a filled lozenge struck at
-     each corner — drawn, not a border-radius. */
-  /* Top inset clears the fixed nav — at a flat 30px the corner lozenges sat
-     level with the logo and read as part of the header rather than the page. */
-  .vframe { position: absolute; inset: 104px 30px 30px; pointer-events: none;
-    border: 1px solid rgba(201,166,63,.34); }
-  .vframe::before { content: ""; position: absolute; inset: 7px;
-    border: 1px solid rgba(201,166,63,.16); }
-  .vc { position: absolute; width: 13px; height: 13px; transform: rotate(45deg);
-    background: var(--vgold); box-shadow: 0 0 18px rgba(201,166,63,.65); }
-  .vc-tl { top: -7px; left: -7px; } .vc-tr { top: -7px; right: -7px; }
-  .vc-bl { bottom: -7px; left: -7px; } .vc-br { bottom: -7px; right: -7px; }
-
-  .vhero-in { position: relative; z-index: 2; }
-
-  /* The crest: two struck rings, a halo, and the ankh at the centre. */
-  .vcrest { position: relative; width: 132px; height: 132px; margin: 0 auto 34px;
-    display: grid; place-items: center; }
-  .vcrest-halo { position: absolute; inset: -26px; border-radius: 50%;
-    background: radial-gradient(circle, rgba(201,166,63,.28), transparent 62%); }
-  .vcrest-ring { position: absolute; inset: 0; border-radius: 50%;
-    border: 1px solid rgba(201,166,63,.7);
-    box-shadow: 0 0 40px rgba(201,166,63,.3), inset 0 0 34px rgba(142,27,46,.5); }
-  .vcrest-ring--in { inset: 11px; border-color: rgba(201,166,63,.32);
-    box-shadow: none; }
-  .vcrest :global(svg) { width: 46px; height: 54px; position: relative;
-    filter: drop-shadow(0 4px 18px rgba(240,221,160,.7)); }
-
-  .vtag { display: inline-flex; align-items: center; gap: 14px;
-    font-size: .56rem; letter-spacing: .46em; text-transform: uppercase;
-    color: var(--vgold-lit); margin-bottom: 34px; }
-  .vtag span { width: 34px; height: 1px;
-    background: linear-gradient(90deg, transparent, var(--vgold)); }
-  .vtag span:last-child { background: linear-gradient(90deg, var(--vgold), transparent); }
-
-  /* The italic VIP has a real descender; at line-height .92 with overflow
-     hidden on the hero it was being sliced off at the baseline. */
-  .vhero h1 { margin: 0; font-weight: 300; line-height: 1;
-    display: flex; flex-direction: column; align-items: center; }
-  .vh1-k { font-size: clamp(2.6rem, 6.4vw, 5rem); color: #FBF6EC;
-    letter-spacing: .3em; text-indent: .3em; text-transform: uppercase;
-    font-family: var(--ff-body); font-weight: 200; }
-  .vhero h1 em { font-style: italic; font-size: clamp(4rem, 12vw, 9.4rem);
-    color: var(--vgold-lit); letter-spacing: .02em; margin-top: -.02em;
-    line-height: 1.16; padding-bottom: .06em;
-    background: linear-gradient(178deg, #FFF6DC 12%, #E2C264 52%, #A9822B 92%);
-    -webkit-background-clip: text; background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 10px 46px rgba(201,166,63,.42)); }
-
-  .vdivide { display: flex; align-items: center; justify-content: center;
-    gap: 14px; margin: 34px 0 30px; }
-  .vdivide i { width: clamp(46px, 12vw, 120px); height: 1px;
-    background: linear-gradient(90deg, transparent, var(--vgold)); }
-  .vdivide i:last-child { background: linear-gradient(90deg, var(--vgold), transparent); }
-  .vdivide b { width: 9px; height: 9px; transform: rotate(45deg);
-    background: var(--vgold); box-shadow: 0 0 16px rgba(201,166,63,.7); }
-
-  .vlede { max-width: 660px; margin: 0 auto; color: #D3C7B2;
-    font-size: 1.1rem; line-height: 1.95; }
-  .vlede--sm { margin-top: 20px; max-width: 620px; font-size: .95rem;
-    color: #A99C86; }
-  .vhero-acts { display: flex; gap: 16px; justify-content: center;
-    flex-wrap: wrap; margin-top: 46px; }
-  .vdisc { margin: 30px auto 0; max-width: 520px; font-size: .74rem;
-    line-height: 1.8; color: #8B8071; letter-spacing: .02em; }
-
-  .vbtn { display: inline-flex; align-items: center; padding: 17px 38px;
-    font-size: .62rem; letter-spacing: .34em; text-transform: uppercase;
-    border: 1px solid transparent; position: relative;
-    transition: all .5s cubic-bezier(.22,.61,.36,1); }
-  .vbtn-solid { background: linear-gradient(180deg, var(--crimson-lit), var(--crimson));
-    color: #FFF0DC; border-color: rgba(240,221,160,.4);
-    box-shadow: 0 20px 46px -20px rgba(192,57,47,.95),
-      inset 0 1px 0 rgba(255,255,255,.16); }
-  .vbtn-solid:hover { filter: brightness(1.12);
-    box-shadow: 0 26px 60px -18px rgba(192,57,47,1), inset 0 1px 0 rgba(255,255,255,.24); }
-  .vbtn-ghost { color: var(--vgold-lit); border-color: rgba(201,166,63,.5);
-    background: rgba(10,7,5,.4); }
-  .vbtn-ghost:hover { background: rgba(201,166,63,.14); border-color: var(--vgold); }
-
-  .vrule { position: absolute; left: 0; right: 0; bottom: 0; height: 2px;
-    background: linear-gradient(90deg, transparent, var(--crimson) 22%,
-      var(--vgold) 50%, var(--emerald) 78%, transparent); opacity: .8; }
-
-  /* ===== section heads =================================================== */
-  .vhead { max-width: 640px; margin-bottom: 60px; }
-  .vhead--c { margin-left: auto; margin-right: auto; text-align: center; }
-  .veyebrow { display: inline-block; font-size: .6rem; letter-spacing: .42em;
-    text-transform: uppercase; color: var(--vgold); margin-bottom: 16px; }
-  .vhead h2 { font-size: clamp(1.9rem, 3.6vw, 2.9rem); color: #FBF6EC;
-    font-weight: 300; margin: 0 0 20px; line-height: 1.2; }
-  .vhead p { color: #B7AA93; line-height: 1.9; margin: 0; }
-
-  /* ===== programme plates ================================================ */
-  .vprogs { padding: 110px 0 40px; }
-  .vplate { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch;
-    margin: 0 auto 34px; max-width: 1360px;
-    border: 1px solid var(--vline); background: rgba(16,11,9,.72);
+  /* ===== hero ============================================================ */
+  .vhero { position: relative; min-height: 92vh; display: flex; align-items: flex-end;
     overflow: hidden; }
-  .vplate:nth-child(even) .vplate-media { order: 2; }
-
-  .vplate-media { position: relative; min-height: 440px; overflow: hidden; }
-  .vplate-media img { width: 100%; height: 100%; object-fit: cover; display: block;
-    transition: transform 1.2s cubic-bezier(.22,.61,.36,1); }
-  .vplate:hover .vplate-media img { transform: scale(1.05); }
-  .vplate-media::after { content: ""; position: absolute; inset: 0;
-    background: linear-gradient(180deg, rgba(10,7,5,.15), rgba(10,7,5,.6)); }
-  .vplate-num { position: absolute; left: 30px; bottom: 22px; z-index: 2;
-    font-family: var(--ff-display); font-size: 4.2rem; line-height: 1;
-    color: rgba(251,246,236,.9); letter-spacing: .04em;
-    text-shadow: 0 10px 40px rgba(0,0,0,.9); }
-
-  .vplate-body { padding: 46px 48px; display: flex; flex-direction: column; }
-  .vplate-meta { display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
-    font-size: .6rem; letter-spacing: .26em; text-transform: uppercase;
-    color: var(--vgold); margin-bottom: 18px; }
-  .vdot { width: 4px; height: 4px; border-radius: 50%; background: currentColor;
-    opacity: .6; }
-  .vplate h3 { font-size: clamp(1.7rem, 2.8vw, 2.3rem); color: #FBF6EC;
-    font-weight: 300; margin: 0 0 10px; line-height: 1.18; }
-  .vkicker { color: var(--vgold-lit); font-size: .95rem; line-height: 1.7;
-    margin: 0 0 20px; font-style: italic; }
-  .vbody { color: #B7AA93; font-size: .95rem; line-height: 1.9; margin: 0 0 26px; }
-
-  .vincl { list-style: none; margin: 0 0 28px; padding: 0;
-    border-top: 1px solid var(--vline); padding-top: 22px; }
-  .vincl li { position: relative; padding-left: 22px; color: #C8BCA6;
-    font-size: .89rem; line-height: 1.7; margin-bottom: 10px; }
-  .vincl li:last-child { margin-bottom: 0; }
-  .vincl li::before { content: ""; position: absolute; left: 0; top: .62em;
-    width: 7px; height: 7px; transform: rotate(45deg); }
-  .is-crimson .vincl li::before { background: var(--crimson-lit); }
-  .is-emerald .vincl li::before { background: var(--emerald-lit); }
-
-  .vplate-foot { margin-top: auto; display: flex; align-items: center;
-    justify-content: space-between; gap: 18px; flex-wrap: wrap;
-    border-top: 1px solid var(--vline); padding-top: 22px; }
-  .vprice { font-size: .62rem; letter-spacing: .3em; text-transform: uppercase;
-    color: var(--vgold-lit); }
-  .vlink { font-size: .62rem; letter-spacing: .24em; text-transform: uppercase;
-    color: #FBF6EC; }
-  .vlink b { transition: margin .3s; }
-  .vlink:hover b { margin-left: 6px; }
-  .is-crimson .vlink { color: #F0A79B; }
-  .is-emerald .vlink { color: #8CD9BC; }
-
-  /* The accent bar that tells the two families apart at a glance. */
-  .vplate { position: relative; }
-  .vplate::before { content: ""; position: absolute; top: 0; bottom: 0; width: 3px;
-    z-index: 3; }
-  .is-crimson::before { left: 0; background: linear-gradient(180deg,
-    var(--crimson-lit), var(--crimson) 60%, transparent); }
-  .is-emerald::before { right: 0; background: linear-gradient(180deg,
-    var(--emerald-lit), var(--emerald) 60%, transparent); }
-
-  /* ===== the standard =================================================== */
-  .vstd { padding: 96px 0; }
-  .vstd-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
-  .vstd-card { border: 1px solid var(--vline); padding: 32px 28px;
-    background: linear-gradient(165deg, rgba(142,27,46,.14), rgba(14,92,70,.1)); }
-  .vstd-card h3 { font-size: 1.1rem; color: var(--vgold-lit); font-weight: 400;
-    margin: 0 0 12px; }
-  .vstd-card p { color: #B7AA93; font-size: .89rem; line-height: 1.8; margin: 0; }
-
-  /* ===== the invitation ================================================= */
-  .vcta { padding: 20px 0 120px; }
-  .vcta-in { text-align: center; max-width: 660px; border: 1px solid var(--vline-2);
-    padding: 62px 44px; background:
-      radial-gradient(90% 100% at 50% 0%, rgba(142,27,46,.28), transparent 70%),
-      rgba(16,11,9,.7); }
-  .vcta h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); color: #FBF6EC;
-    font-weight: 300; margin: 14px 0 18px; }
-  .vcta p { color: #B7AA93; line-height: 1.9; margin: 0; }
-
-  /* ===== responsive ===================================================== */
-  @media(max-width:1080px){
-    .vstd-grid { grid-template-columns: repeat(2, 1fr); }
-    .vplate-body { padding: 38px 34px; }
+  .vhero-bg { position: absolute; inset: 0;
+    background: url("/images/luxor/luxor-karnak-hypostyle-hall.webp") center 30%/cover no-repeat; }
+  .vhero-veil { position: absolute; inset: 0; background:
+    linear-gradient(180deg, rgba(6,5,4,.5) 0%, rgba(6,5,4,.24) 42%, rgba(6,5,4,.94) 88%);
   }
-  @media(max-width:860px){
-    .vplate { grid-template-columns: 1fr; }
-    .vplate:nth-child(even) .vplate-media { order: 0; }
-    .vplate-media { min-height: 280px; }
-    .is-emerald::before { right: auto; left: 0; }
+  /* The royal colours, present as a single woven band under the hero. */
+  .vhero::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0;
+    height: 1px; background: linear-gradient(90deg,
+      transparent, var(--v-crimson) 30%, var(--v-gold) 50%, var(--v-emerald) 70%, transparent); }
+
+  .vhero-in { position: relative; z-index: 2; padding: 0 0 96px; }
+  .vtag { font-size: .6rem; letter-spacing: .5em; text-transform: uppercase;
+    color: var(--v-cream-dim); margin: 0 0 34px; }
+  .vhero h1 { font-weight: 300; color: var(--v-cream); margin: 0;
+    font-size: clamp(3rem, 7.2vw, 6.4rem); line-height: 1.04; letter-spacing: .004em;
+    max-width: 12em; }
+  .vlede { max-width: 560px; margin: 36px 0 0; color: var(--v-cream-dim);
+    font-size: 1.02rem; line-height: 2; }
+  .vhero-acts { display: flex; align-items: center; gap: 30px; flex-wrap: wrap;
+    margin-top: 46px; }
+
+  .vbtn { display: inline-flex; padding: 17px 36px; border: 1px solid var(--v-gold);
+    color: var(--v-cream); font-size: .62rem; letter-spacing: .34em;
+    text-transform: uppercase; background: transparent;
+    transition: background .5s, color .5s; }
+  .vbtn:hover { background: var(--v-gold); color: var(--v-ink); }
+  .vlink-quiet { font-size: .78rem; color: var(--v-faint); letter-spacing: .04em;
+    border-bottom: 1px solid rgba(194,162,78,.35); padding-bottom: 2px;
+    transition: color .4s, border-color .4s; }
+  .vlink-quiet:hover { color: var(--v-cream); border-color: var(--v-gold); }
+
+  /* ===== the three facts ================================================= */
+  .vfacts { border-bottom: 1px solid var(--v-hair); }
+  .vfacts-in { display: grid; grid-template-columns: repeat(3, 1fr);
+    padding: 44px 0; gap: 40px; }
+  .vfacts b { display: block; font-weight: 400; color: var(--v-cream);
+    font-size: .92rem; letter-spacing: .04em; margin-bottom: 7px; }
+  .vfacts span { color: var(--v-faint); font-size: .8rem; line-height: 1.7; }
+
+  /* ===== programme index ================================================= */
+  .vindex { padding: 130px 0 40px; }
+  .ventry { border-top: 1px solid var(--v-hair); padding: 64px 0 88px; }
+
+  .ventry-head { display: grid; grid-template-columns: 90px 1fr auto;
+    gap: 20px 36px; align-items: baseline; margin-bottom: 54px; }
+  .ventry-no { font-family: var(--ff-display); font-weight: 300;
+    font-size: 3rem; line-height: 1; color: var(--v-gold); }
+  .ventry-title h2 { font-weight: 300; color: var(--v-cream); margin: 0;
+    font-size: clamp(2rem, 4.4vw, 3.4rem); line-height: 1.08; }
+  .ventry-title p { margin: 14px 0 0; color: var(--v-cream-dim);
+    font-style: italic; font-size: 1rem; }
+  .ventry-meta { text-align: right; display: flex; flex-direction: column;
+    gap: 8px; font-size: .62rem; letter-spacing: .3em; text-transform: uppercase;
+    color: var(--v-faint); }
+
+  .ventry-body { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    gap: 64px; align-items: start; }
+  .ventry:nth-of-type(even) .ventry-body { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
+  .ventry:nth-of-type(even) .ventry-media { order: 2; }
+
+  .ventry-media { margin: 0; position: relative; }
+  .ventry-media img { width: 100%; height: auto; display: block;
+    filter: saturate(.88) contrast(1.02); }
+  /* The ribbon edge: crimson for odd entries, emerald for even — the royal
+     colours as a bookbinder would use them. */
+  .ventry:nth-of-type(odd)  .ventry-media { border-left: 2px solid var(--v-crimson); padding-left: 14px; }
+  .ventry:nth-of-type(even) .ventry-media { border-right: 2px solid var(--v-emerald); padding-right: 14px; }
+
+  .ventry-lede { color: var(--v-cream-dim); font-size: 1.02rem; line-height: 2;
+    margin: 0 0 40px; }
+  .ventry-incl { list-style: none; margin: 0; padding: 0; }
+  .ventry-incl li { padding: 13px 0; border-top: 1px solid rgba(194,162,78,.14);
+    color: var(--v-cream-dim); font-size: .89rem; line-height: 1.7; }
+  .ventry-incl li:first-child { border-top: 0; padding-top: 0; }
+
+  .ventry-foot { display: flex; justify-content: space-between; align-items: baseline;
+    gap: 20px; flex-wrap: wrap; margin-top: 40px; padding-top: 22px;
+    border-top: 1px solid var(--v-hair); }
+  .ventry-foot span { font-size: .6rem; letter-spacing: .34em; text-transform: uppercase;
+    color: var(--v-faint); }
+  .ventry-foot a { font-size: .78rem; color: var(--v-gold); letter-spacing: .03em;
+    border-bottom: 1px solid rgba(194,162,78,.35); padding-bottom: 2px;
+    transition: color .4s, border-color .4s; }
+  .ventry-foot a:hover { color: var(--v-cream); border-color: var(--v-cream); }
+
+  /* ===== how the tier is run ============================================= */
+  .vhow { padding: 120px 0; border-top: 1px solid var(--v-hair); }
+  .vhow-grid { display: grid; grid-template-columns: repeat(2, 1fr);
+    gap: 72px 96px; }
+  .vhow-no { font-size: .62rem; letter-spacing: .34em; color: var(--v-gold); }
+  .vhow-item h2 { font-weight: 300; color: var(--v-cream); margin: 14px 0 16px;
+    font-size: 1.5rem; }
+  .vhow-item p { margin: 0; color: var(--v-cream-dim); font-size: .93rem;
+    line-height: 1.95; max-width: 44ch; }
+
+  /* ===== the questions ==================================================== */
+  .vfaq { padding: 120px 0; border-top: 1px solid var(--v-hair); }
+  .vfaq-list { max-width: 860px; }
+  .vfaq-item { border-top: 1px solid rgba(194,162,78,.14); }
+  .vfaq-item:last-child { border-bottom: 1px solid rgba(194,162,78,.14); }
+  .vfaq-item summary { list-style: none; cursor: pointer; padding: 26px 44px 26px 0;
+    position: relative; color: var(--v-cream); font-size: 1.04rem; font-weight: 300;
+    line-height: 1.6; font-family: var(--ff-display); transition: color .3s; }
+  .vfaq-item summary::-webkit-details-marker { display: none; }
+  .vfaq-item summary::after { content: "+"; position: absolute; right: 4px; top: 50%;
+    transform: translateY(-50%); color: var(--v-gold); font-size: 1.3rem;
+    font-weight: 200; transition: transform .35s; }
+  .vfaq-item[open] summary::after { transform: translateY(-50%) rotate(45deg); }
+  .vfaq-item summary:hover { color: var(--v-gold); }
+  .vfaq-item p { margin: 0; padding: 0 0 30px; color: var(--v-cream-dim);
+    font-size: .93rem; line-height: 1.95; max-width: 70ch; }
+
+  /* ===== close ============================================================ */
+  .vclose { padding: 140px 0 160px; border-top: 1px solid var(--v-hair);
+    position: relative; }
+  .vclose::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0;
+    height: 1px; background: linear-gradient(90deg,
+      transparent, var(--v-crimson) 30%, var(--v-gold) 50%, var(--v-emerald) 70%, transparent); }
+  .vclose-in { max-width: 720px; }
+  .vclose h2 { font-weight: 300; color: var(--v-cream); margin: 0 0 26px;
+    font-size: clamp(2.2rem, 4.6vw, 3.6rem); line-height: 1.1; }
+  .vclose p { color: var(--v-cream-dim); line-height: 2; margin: 0; max-width: 56ch; }
+
+  /* ===== responsive ======================================================= */
+  @media (max-width: 960px) {
+    .vfacts-in { grid-template-columns: 1fr; gap: 22px; padding: 34px 0; }
+    .ventry-head { grid-template-columns: 56px 1fr; }
+    .ventry-meta { grid-column: 2; text-align: left; flex-direction: row;
+      gap: 22px; }
+    .ventry-body,
+    .ventry:nth-of-type(even) .ventry-body { grid-template-columns: 1fr; gap: 40px; }
+    .ventry:nth-of-type(even) .ventry-media { order: 0; }
+    .vhow-grid { grid-template-columns: 1fr; gap: 52px; }
   }
-  @media(max-width:680px){
-    .vhero { padding: 140px 0 84px; }
-    .vframe { inset: 14px; }
-    .vc { width: 10px; height: 10px; }
-    .vcrest { width: 96px; height: 96px; margin-bottom: 26px; }
-    .vcrest :global(svg) { width: 34px; height: 40px; }
-    .vtag { letter-spacing: .32em; gap: 9px; margin-bottom: 26px; }
-    .vtag span { width: 20px; }
-    .vh1-k { letter-spacing: .22em; text-indent: .22em; }
-    .vlede { font-size: 1rem; }
-    .vhero-acts { flex-direction: column; align-items: stretch; }
-    .vbtn { justify-content: center; padding: 16px 24px; letter-spacing: .26em; }
-    .vplate-body { padding: 30px 22px; }
-    .vplate-num { left: 20px; bottom: 14px; font-size: 3rem; }
-    .vstd-grid { grid-template-columns: 1fr; }
-    .vstd-card { padding: 26px 22px; }
-    .vcta-in { padding: 44px 24px; }
+  @media (max-width: 680px) {
+    .vhero { min-height: 78vh; }
+    .vhero-in { padding-bottom: 64px; }
+    .vindex { padding-top: 90px; }
+    .ventry { padding: 44px 0 64px; }
+    .ventry-no { font-size: 2.1rem; }
+    .ventry:nth-of-type(odd)  .ventry-media { padding-left: 10px; }
+    .ventry:nth-of-type(even) .ventry-media { padding-right: 10px; }
+    .vhow, .vfaq { padding: 84px 0; }
+    .vclose { padding: 96px 0 110px; }
+    .vhero-acts { gap: 20px; }
   }
 </style>

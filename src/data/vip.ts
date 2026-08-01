@@ -184,3 +184,57 @@ export const vipStandard: Array<{ title: string; body: string }> = [
       "your itinerary is discussed outside the people delivering it.",
   },
 ];
+
+/**
+ * The direct answer, written to be lifted out of the page and quoted with no
+ * surrounding context — 40-60 words, the ruling in the first sentence, the
+ * subject restated rather than pronouned. See components/aeo/AnswerBox.
+ */
+export const VIP_QUESTION = "Can you arrange a private VIP tour of Egypt for a head of state or a royal household?";
+export const VIP_ANSWER =
+  "Yes. Kemet arranges private VIP travel in Egypt for heads of state and their " +
+  "delegations, royal households, and ultra-high-net-worth families. Named sites " +
+  "can be reserved for one party and closed to other visitors, movement is by " +
+  "private aircraft and full dahabiya charter, and arrangements are coordinated " +
+  "with the principal's own security team. No prices are published; each " +
+  "programme is quoted per brief.";
+
+/**
+ * The questions this clientele actually asks before they will engage — not the
+ * questions a leisure traveller asks. Each is answered plainly and none
+ * promises anything the business would have to improvise.
+ */
+export const vipFaqs: Array<{ q: string; a: string }> = [
+  {
+    q: "Can Kemet arrange travel for a head of state, a royal household or a diplomatic delegation?",
+    a: "Yes. Programmes at this tier are designed for heads of state and their delegations, royal households, government and diplomatic parties, and ultra-high-net-worth families. Planning starts from the protocol and privacy requirements rather than from an itinerary, because those requirements decide what the itinerary can be. Enquiries are handled by one person and are not discussed outside the team delivering the journey.",
+  },
+  {
+    q: "Can a monument or museum gallery be closed to other visitors for our party?",
+    a: "Named sites can be reserved for a single party and closed to other visitors for the duration of the visit. This is a permitted arrangement in Egypt, granted case by case by the antiquities authorities, and it needs lead time — typically four to eight weeks, longer in peak season. It is not the same as an after-hours opening, and we will tell you before you commit which specific sites can be secured for your dates rather than promising a category.",
+  },
+  {
+    q: "Do you work with our own security detail?",
+    a: "Yes, and it is the normal way we operate at this level. Kemet does not supply protection; we coordinate with the principal's own detail and with the Egyptian authorities on routing, timings, site access, vehicle arrangements and advance reconnaissance. Your team sets the security requirement and we build the programme inside it, rather than presenting an itinerary and asking them to make it work.",
+  },
+  {
+    q: "Will you sign a non-disclosure agreement?",
+    a: "Yes, on request and as a matter of course at this tier. Nothing about a client's identity, dates, routing or party is discussed outside the people delivering the journey, and no VIP itinerary is used as a reference, a case study or marketing material. If your office prefers its own form of agreement, we will work to it.",
+  },
+  {
+    q: "Can we arrive by private jet, and is VIP terminal handling arranged?",
+    a: "Yes. Private and government aircraft arrivals are handled through the VIP terminal with meet-and-greet at the aircraft door, immigration and customs cleared away from the public halls, and vehicles positioned airside where permitted. Internal movement between Cairo, Luxor, Aswan and Abu Simbel is by private aircraft on your hours rather than on a schedule.",
+  },
+  {
+    q: "Why are there no prices on this page?",
+    a: "Because a published figure would be wrong for almost everyone reading it. A dahabiya charter, a private aircraft leg and an exclusive site reservation are each quoted by date, by party size and by what is genuinely available that week. You receive a written outline first, a figure second, and nothing is committed until both are agreed.",
+  },
+  {
+    q: "Who will we actually deal with?",
+    a: "One person, from the first conversation to the last day in Egypt. The individual who designs the programme is the individual who answers while you are travelling — not a call centre, not a rota, and not a number that stops answering once a deposit clears. Where a family office, private secretary or executive assistant is managing the arrangements, they deal with the same person throughout.",
+  },
+  {
+    q: "How far in advance should this be arranged?",
+    a: "For exclusive site reservations and full dahabiya charter, allow four to eight weeks as a minimum and considerably longer for the October-to-April season, which is when both are most contested. Shorter notice is sometimes possible; what changes is which elements can be secured, and we will say plainly which ones can and cannot rather than accepting a booking we cannot deliver in full.",
+  },
+];
