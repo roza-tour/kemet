@@ -40,9 +40,9 @@ const jsonld: Record<string, unknown>[] = [
   // audience declaration — not a keyword list bolted to a title.
   answerPageSchema({
     route: ROUTE,
-    name: "Private VIP Egypt travel for royalty, heads of state and UHNW families",
+    name: "Kemet VIP — fully private Egypt, by arrangement",
     description:
-      "Named sites reserved for one party, full dahabiya charter, private aircraft, protocol and security coordination, and a single point of contact.",
+      "Named sites reserved for one party, full dahabiya charter, private aircraft between cities, and one person answering throughout.",
     question: VIP_QUESTION,
     answer: VIP_ANSWER,
   }),
@@ -50,14 +50,14 @@ const jsonld: Record<string, unknown>[] = [
     "@context": "https://schema.org",
     "@type": "Service",
     name: "Kemet VIP — private Egypt programmes by arrangement",
-    serviceType: "Ultra-luxury private travel design, protocol and VIP logistics in Egypt",
+    serviceType: "Fully private, tailor-made luxury travel in Egypt",
     provider: { "@id": ORG_ID },
     areaServed: { "@type": "Country", name: "Egypt" },
     // Who this is FOR, stated in the graph the way it is stated on the page.
     audience: {
       "@type": "Audience",
       audienceType:
-        "Heads of state and diplomatic delegations, royal households, ultra-high-net-worth families, principals travelling with security teams",
+        "Travellers and families seeking fully private, exclusive-use travel in Egypt",
     },
     availableChannel: {
       "@type": "ServiceChannel",
@@ -92,11 +92,11 @@ const jsonld: Record<string, unknown>[] = [
 ];
 ---
 <Base
-  title="Private VIP Egypt Tours for Royalty, Heads of State & UHNW Travellers"
+  title="Kemet VIP — Fully Private Egypt Tours, By Arrangement"
   description="The tier above the catalogue: full dahabiya charter, private aircraft, named sites reserved exclusively for your party, and a personal attaché. Designed per brief."
   active={ROUTE}
   jsonld={jsonld}
-  keywords="vip egypt tours, royal egypt tour, egypt tours for royalty, private jet egypt tour, ultra luxury egypt travel, uhnw egypt travel, egypt travel for dignitaries, exclusive private access pyramids, dahabiya full charter egypt, discreet luxury egypt travel, egypt concierge travel, private egypt tour with security, protocol travel egypt"
+  keywords="vip egypt tours, ultra luxury egypt travel, private egypt tour, exclusive pyramids visit, dahabiya full charter egypt, private jet egypt tour, egypt honeymoon luxury, discreet luxury travel egypt, bespoke egypt itinerary, egypt concierge travel"
   showCta={false}
 >
   <div class="vip">
@@ -108,9 +108,9 @@ const jsonld: Record<string, unknown>[] = [
         <p class="vtag">Kemet · By private arrangement</p>
         <h1>The quietest way<br />through Egypt</h1>
         <p class="vlede">
-          For heads of state and their delegations, royal households, and families
-          for whom privacy is a condition rather than a preference. Programmes at
-          this tier are designed once, for one party, and never repeated.
+          For guests who want Egypt entirely to themselves — the site, the boat,
+          the day. Programmes at this tier are designed once, for one party, and
+          never repeated in the same shape.
         </p>
         <div class="vhero-acts">
           <a href={wa} class="vbtn" target="_blank" rel="noopener">Speak to us privately</a>
@@ -204,7 +204,7 @@ const jsonld: Record<string, unknown>[] = [
         <p>
           Who is travelling, roughly when, and what it should feel like. You will
           have a written outline before any figure is discussed, and a figure
-          before anything is committed. Non-disclosure on request, as standard.
+          before anything is committed. Everything stays between us.
         </p>
         <div class="vhero-acts">
           <a href={wa} class="vbtn" target="_blank" rel="noopener">WhatsApp, privately</a>

@@ -190,14 +190,13 @@ export const vipStandard: Array<{ title: string; body: string }> = [
  * surrounding context — 40-60 words, the ruling in the first sentence, the
  * subject restated rather than pronouned. See components/aeo/AnswerBox.
  */
-export const VIP_QUESTION = "Can you arrange a private VIP tour of Egypt for a head of state or a royal household?";
+export const VIP_QUESTION = "Can you arrange a fully private VIP tour of Egypt?";
 export const VIP_ANSWER =
-  "Yes. Kemet arranges private VIP travel in Egypt for heads of state and their " +
-  "delegations, royal households, and ultra-high-net-worth families. Named sites " +
-  "can be reserved for one party and closed to other visitors, movement is by " +
-  "private aircraft and full dahabiya charter, and arrangements are coordinated " +
-  "with the principal's own security team. No prices are published; each " +
-  "programme is quoted per brief.";
+  "Yes. Kemet VIP arranges fully private travel in Egypt for guests who want " +
+  "complete privacy: named sites reserved for one party and closed to other " +
+  "visitors, a dahabiya under full charter, private aircraft between cities, " +
+  "and one person answering from the first conversation to the last day. No " +
+  "prices are published; each programme is quoted per brief.";
 
 /**
  * The questions this clientele actually asks before they will engage — not the
@@ -206,24 +205,24 @@ export const VIP_ANSWER =
  */
 export const vipFaqs: Array<{ q: string; a: string }> = [
   {
-    q: "Can Kemet arrange travel for a head of state, a royal household or a diplomatic delegation?",
-    a: "Yes. Programmes at this tier are designed for heads of state and their delegations, royal households, government and diplomatic parties, and ultra-high-net-worth families. Planning starts from the protocol and privacy requirements rather than from an itinerary, because those requirements decide what the itinerary can be. Enquiries are handled by one person and are not discussed outside the team delivering the journey.",
+    q: "Who is the VIP tier actually for?",
+    a: "For guests who want Egypt entirely to themselves: families marking something once-in-a-lifetime, hosts bringing a large private party, and travellers who simply do not want to share a site, a boat or a schedule with anyone. It is not defined by a title — it is defined by wanting the whole arrangement private, and being unhurried about how it is built.",
   },
   {
     q: "Can a monument or museum gallery be closed to other visitors for our party?",
     a: "Named sites can be reserved for a single party and closed to other visitors for the duration of the visit. This is a permitted arrangement in Egypt, granted case by case by the antiquities authorities, and it needs lead time — typically four to eight weeks, longer in peak season. It is not the same as an after-hours opening, and we will tell you before you commit which specific sites can be secured for your dates rather than promising a category.",
   },
   {
-    q: "Do you work with our own security detail?",
-    a: "Yes, and it is the normal way we operate at this level. Kemet does not supply protection; we coordinate with the principal's own detail and with the Egyptian authorities on routing, timings, site access, vehicle arrangements and advance reconnaissance. Your team sets the security requirement and we build the programme inside it, rather than presenting an itinerary and asking them to make it work.",
+    q: "We travel with our own staff — can they be accommodated?",
+    a: "Yes. Nannies, assistants, a photographer, a personal trainer or anyone else travelling with the party are planned for from the start — their rooms, their transport and their access at each site — so the journey works for the whole household rather than just the guests named on the booking.",
   },
   {
-    q: "Will you sign a non-disclosure agreement?",
-    a: "Yes, on request and as a matter of course at this tier. Nothing about a client's identity, dates, routing or party is discussed outside the people delivering the journey, and no VIP itinerary is used as a reference, a case study or marketing material. If your office prefers its own form of agreement, we will work to it.",
+    q: "How private is private, exactly?",
+    a: "Nothing about who you are, when you travel or where you go is discussed outside the small team delivering the journey, and no VIP itinerary is ever used as marketing material or shown to another client. If you would like that in writing, we are happy to sign a confidentiality agreement.",
   },
   {
     q: "Can we arrive by private jet, and is VIP terminal handling arranged?",
-    a: "Yes. Private and government aircraft arrivals are handled through the VIP terminal with meet-and-greet at the aircraft door, immigration and customs cleared away from the public halls, and vehicles positioned airside where permitted. Internal movement between Cairo, Luxor, Aswan and Abu Simbel is by private aircraft on your hours rather than on a schedule.",
+    a: "Yes. Private aircraft arrivals are handled through the VIP terminal with meet-and-greet at the aircraft door, immigration and customs cleared away from the public halls, and vehicles positioned airside where permitted. Internal movement between Cairo, Luxor, Aswan and Abu Simbel is by private aircraft on your hours rather than on a schedule.",
   },
   {
     q: "Why are there no prices on this page?",
