@@ -34,6 +34,17 @@ const isCurrent = (item: (typeof primaryNav)[number]) =>
     </span>
   </a>
 
+  {/* The season, stated permanently. The ribbon at the foot of the page can be
+      dismissed, and once it is there was nothing left anywhere on the site to
+      say which season was running — which is indistinguishable from the whole
+      seasonal system being switched off. This chip cannot be dismissed and
+      reads no storage: if a season is active, it is on screen. Filled in by
+      components/SeasonalSkin. */}
+  <a class="schip" id="season-chip" href="#" hidden>
+    <span class="smark schip-mark" aria-hidden="true"></span>
+    <span class="schip-label" id="schip-label"></span>
+  </a>
+
   <div class="navlinks" id="navlinks">
     {primaryNav.map((item) => (
       item.children?.length ? (

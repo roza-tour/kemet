@@ -19,7 +19,7 @@ const rows = seasonalCalendar.map((w) => [
 ---
 <div id="season-ribbon" class="srb" hidden>
   <a class="srb-in" href="#" id="srb-link">
-    <span class="srb-mark" aria-hidden="true"></span>
+    <span class="smark srb-mark" aria-hidden="true"></span>
     <span class="srb-text">
       <b id="srb-label"></b>
       <span id="srb-note"></span>
@@ -52,34 +52,40 @@ const rows = seasonalCalendar.map((w) => [
       // 1) Site-wide accent: everything reads through these custom properties.
       document.documentElement.setAttribute("data-season", theme);
 
-      // 2) The ribbon — unless this visitor dismissed it recently.
+      var depth = (location.pathname.match(/\//g) || []).length - 1;
+      var href = (depth > 0 ? "../".repeat(depth) : "") + "collections/" + slug + ".html";
+
+      // 2) The chip in the nav bar — ALWAYS, before any storage is consulted.
       //
-      // Dismissal used to be permanent for the whole window, which for the Red
-      // Sea season means five months. One stray click on the × and the ribbon
-      // was gone until October, with no way to bring it back — indistinguishable
-      // from the feature being broken, which is exactly how it was reported.
-      // A dismissal now lapses after a week: long enough not to nag anyone,
-      // short enough that the season still gets announced while it runs.
+      // This is the part that was missing. The ribbon is dismissible, and once
+      // dismissed nothing on the site said which season was running, so "the
+      // seasonal system is gone" and "I closed the ribbon once" looked exactly
+      // the same from the outside. The chip is not dismissible and reads no
+      // storage: if a window is active, the season is named in the bar on every
+      // page. Whether the system is working is now a glance, not an audit.
+      var chip = document.getElementById("season-chip");
+      if (chip) {
+        chip.setAttribute("href", href);
+        document.getElementById("schip-label").textContent = label;
+        chip.hidden = false;
+      }
+
+      // 3) The ribbon — unless this visitor dismissed it in this session.
       //
-      // Legacy "1" values are DISCARDED rather than migrated. They were written
-      // under the old permanent rule, and the first attempt at this converted
-      // them into "dismissed just now" — which meant anyone who had ever closed
-      // the ribbon still could not see it for another week, including while
-      // trying to check whether the fix had worked. A dismissal made under a
-      // rule that no longer exists should not survive the rule.
+      // Dismissal was permanent for the whole window (five months, for the Red
+      // Sea), then a seven-day snooze. Both outlived the act of checking
+      // whether the ribbon worked, and both were reported as the feature being
+      // broken. It is now sessionStorage: closing it clears the bar for as long
+      // as the tab is open and no longer. A dismissal should never be able to
+      // survive longer than the visit it was made in. Legacy localStorage keys
+      // from either older rule are cleared on sight.
       var key = "kemet-season-" + slug + "-" + active[4];
-      var SNOOZE = 7 * 24 * 60 * 60 * 1000;
-      try {
-        var seen = localStorage.getItem(key);
-        if (seen === "1") localStorage.removeItem(key);
-        else if (seen && Date.now() - Number(seen) < SNOOZE) return;
-      } catch (e) {}
+      try { localStorage.removeItem(key); } catch (e) {}
+      try { if (sessionStorage.getItem(key)) return; } catch (e) {}
 
       var root = document.getElementById("season-ribbon");
       if (!root) return;
-      var depth = (location.pathname.match(/\//g) || []).length - 1;
-      var prefix = depth > 0 ? "../".repeat(depth) : "";
-      document.getElementById("srb-link").setAttribute("href", prefix + "collections/" + slug + ".html");
+      document.getElementById("srb-link").setAttribute("href", href);
       document.getElementById("srb-label").textContent = when ? label + " · " + when : label;
       document.getElementById("srb-note").textContent = note;
       root.hidden = false;
@@ -87,7 +93,7 @@ const rows = seasonalCalendar.map((w) => [
       var close = document.getElementById("srb-close");
       if (close) close.addEventListener("click", function () {
         root.hidden = true;
-        try { localStorage.setItem(key, String(Date.now())); } catch (e) {}
+        try { sessionStorage.setItem(key, "1"); } catch (e) {}
       });
     } catch (e) {
       /* never let the seasonal layer break the page */
@@ -98,26 +104,70 @@ const rows = seasonalCalendar.map((w) => [
 <style is:global>
   /* ===== Site-wide accent per season =====================================
      Every component already reads --gold / --gold-bright / --line, so shifting
-     these four values re-tints the whole site with no component changes. */
-  :root[data-season="ramadan"]      { --gold:#E0BE6A; --gold-bright:#FBEFC4; --gold-deep:#9C7A2E; --line-2:rgba(224,190,106,.44); --srb:#2F7E66; }
-  :root[data-season="christmas"]    { --gold:#E3C579; --gold-bright:#FFF6DA; --gold-deep:#A8823A; --line-2:rgba(227,197,121,.46); --srb:#2F7E66; }
-  :root[data-season="sun-festival"] { --gold:#E8A33D; --gold-bright:#FBE2A6; --gold-deep:#A9631C; --line-2:rgba(232,163,61,.46); --srb:#A9631C; }
-  :root[data-season="spring"]       { --gold:#DCC06B; --gold-bright:#FBF3D2; --gold-deep:#9C8438; --line-2:rgba(220,192,107,.44); --srb:#7FB086; }
+     these four values re-tints the whole site with no component changes.
+
+     --srb is the season's own colour. It is deliberately NOT --gold: the brand
+     is gold all year, and the season is a light laid over it. --srb-bg is the
+     bar the ribbon and the chip sit on, tinted so the season is legible even
+     where the accent is close to the house gold. */
+  :root[data-season="ramadan"]      { --gold:#E0BE6A; --gold-bright:#FBEFC4; --gold-deep:#9C7A2E; --line-2:rgba(224,190,106,.44); --srb:#3E9E80; --srb-bg:14,26,22; }
+  :root[data-season="christmas"]    { --gold:#E3C579; --gold-bright:#FFF6DA; --gold-deep:#A8823A; --line-2:rgba(227,197,121,.46); --srb:#3E9E80; --srb-bg:12,24,21; }
+  :root[data-season="sun-festival"] { --gold:#E8A33D; --gold-bright:#FBE2A6; --gold-deep:#A9631C; --line-2:rgba(232,163,61,.46); --srb:#E0912F; --srb-bg:30,18,8; }
+  :root[data-season="spring"]       { --gold:#DCC06B; --gold-bright:#FBF3D2; --gold-deep:#9C8438; --line-2:rgba(220,192,107,.44); --srb:#8FC496; --srb-bg:14,26,17; }
   /* Red Sea runs May–September — five months. Repainting --gold teal turned
      the entire brand mint for nearly half the year: logo glow, buttons, rules,
-     the nav CTA. The season now shifts gold to a cooler, sea-lit tone and the
-     teal lives where it belongs — in the ribbon and the ornament layer. */
-  :root[data-season="red-sea"]      { --gold:#D6C588; --gold-bright:#F2EDD2; --gold-deep:#8E8244; --line-2:rgba(214,197,136,.44); --srb:#2C8E86; }
-  :root[data-season="honeymoon"]    { --gold:#E3B98C; --gold-bright:#FBE7D6; --gold-deep:#A9764B; --line-2:rgba(227,185,140,.46); --srb:#A9764B; }
-  :root[data-season="eid"]          { --gold:#E0BE6A; --gold-bright:#FBEFC4; --gold-deep:#9C7A2E; --line-2:rgba(224,190,106,.44); --srb:#2F7E66; }
+     the nav CTA. But the correction went too far the other way — gold moved to
+     #D6C588, four points off the house #D9B45A, which nobody can see. The gold
+     stays close to the brand; the sea now lives in the layer built for it, at
+     a strength that can actually be perceived. */
+  :root[data-season="red-sea"]      { --gold:#D6C588; --gold-bright:#F2EDD2; --gold-deep:#8E8244; --line-2:rgba(214,197,136,.44); --srb:#48C5C0; --srb-bg:6,28,32; }
+  :root[data-season="honeymoon"]    { --gold:#E3B98C; --gold-bright:#FBE7D6; --gold-deep:#A9764B; --line-2:rgba(227,185,140,.46); --srb:#D89C7E; --srb-bg:30,18,15; }
+  :root[data-season="eid"]          { --gold:#E0BE6A; --gold-bright:#FBEFC4; --gold-deep:#9C7A2E; --line-2:rgba(224,190,106,.44); --srb:#3E9E80; --srb-bg:14,26,22; }
+
+  /* ===== The chip in the nav bar =========================================
+     Small, permanent, and the single place a visitor — or the person who owns
+     the site — can confirm at a glance that a season is running. */
+  .schip { display: inline-flex; align-items: center; gap: 9px; flex: none;
+    margin-left: 18px; padding: 7px 14px 7px 11px; border-radius: 999px;
+    /* Plain fallback first: color-mix is unsupported before Safari 16.2, and a
+       chip with no border and no background would look like a mistake. */
+    border: 1px solid var(--line-2); background: rgba(255,255,255,.04);
+    border: 1px solid color-mix(in srgb, var(--srb) 40%, transparent);
+    background: linear-gradient(180deg,
+      color-mix(in srgb, var(--srb) 15%, transparent),
+      color-mix(in srgb, var(--srb) 7%, transparent));
+    text-decoration: none; white-space: nowrap;
+    transition: border-color .35s ease, background .35s ease, transform .35s ease; }
+  .schip[hidden] { display: none; }
+  .schip:hover { border-color: color-mix(in srgb, var(--srb) 72%, transparent);
+    background: linear-gradient(180deg,
+      color-mix(in srgb, var(--srb) 26%, transparent),
+      color-mix(in srgb, var(--srb) 12%, transparent)); }
+  .schip-label { font-size: .58rem; letter-spacing: .22em; text-transform: uppercase;
+    color: var(--bone); font-weight: 500;
+    color: color-mix(in srgb, var(--srb) 62%, #FFF); }
+  .schip-mark { width: 13px; height: 13px; }
+  /* A slow pulse so the eye finds it once, then leaves it alone. */
+  .schip-mark { animation: schip-pulse 3.4s ease-in-out infinite; }
+  @keyframes schip-pulse { 0%,100% { opacity: .78; } 50% { opacity: 1; } }
+  /* Below the desktop bar the nav is tight and the ribbon already carries the
+     season across the full width — the chip would only crowd the logo. */
+  @media (max-width: 1180px) { .schip { display: none; } }
 
   /* ===== The ribbon ===================================================== */
   /* Pinned to the BOTTOM so it never interferes with the hero or the nav. */
   .srb { position: fixed; bottom: 0; left: 0; right: 0; z-index: 115;
-    background: linear-gradient(90deg, rgba(11,9,7,.97), rgba(20,16,12,.97));
-    border-top: 1px solid var(--line-2);
+    background:
+      radial-gradient(600px 90px at 22% 100%, color-mix(in srgb, var(--srb) 22%, transparent), transparent 70%),
+      linear-gradient(90deg, rgba(var(--srb-bg, 11,9,7), .97), rgba(var(--srb-bg, 20,16,12), .93));
+    border-top: 1px solid color-mix(in srgb, var(--srb) 46%, transparent);
     box-shadow: 0 -10px 30px -18px rgba(0,0,0,.9);
     transform: translateY(100%); animation: srb-in .6s cubic-bezier(.22,.61,.36,1) .8s forwards; }
+  /* A hairline of the season's own colour along the top edge — the one line of
+     pure season colour on the page, so the bar is never mistaken for chrome. */
+  .srb::before { content: ""; position: absolute; top: -1px; left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--srb) 22%, var(--srb) 78%, transparent);
+    opacity: .85; }
   @keyframes srb-in { to { transform: translateY(0); } }
   @media (prefers-reduced-motion: reduce) { .srb { animation: none; transform: none; } }
   .srb[hidden] { display: none; }
@@ -133,7 +183,7 @@ const rows = seasonalCalendar.map((w) => [
   .srb-text b { color: var(--gold-bright); font-weight: 500; font-size: .82rem; letter-spacing: .04em; }
   .srb-text span { color: var(--muted-2); font-size: .8rem; }
   .srb-cta { flex: none; display: inline-flex; align-items: center; gap: 10px;
-    font-size: .6rem; letter-spacing: .28em; text-transform: uppercase; color: var(--gold); }
+    font-size: .6rem; letter-spacing: .28em; text-transform: uppercase; color: var(--srb, var(--gold)); }
   .srb-cta i { width: 24px; height: 1px; background: currentColor; transition: width .45s cubic-bezier(.22,.61,.36,1); }
   .srb-in:hover .srb-cta i { width: 40px; }
   .srb-close { position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
@@ -142,48 +192,60 @@ const rows = seasonalCalendar.map((w) => [
     justify-content: center; transition: color .3s; }
   .srb-close:hover { color: var(--gold-bright); }
 
-  /* Ornament mark, drawn per season. Default: a ring with a soft centre. */
-  .srb-mark { flex: none; width: 20px; height: 20px; border-radius: 50%;
-    border: 1px solid var(--gold); position: relative; }
-  .srb-mark::after { content: ""; position: absolute; inset: 5px; border-radius: 50%;
-    background: var(--gold); opacity: .4; }
+  /* ===== Ornament mark, drawn per season =================================
+     One set of rules, worn by both the ribbon and the nav chip — they are the
+     same mark at two sizes, so they must never drift apart. Sizing lives on
+     .srb-mark / .schip-mark; the drawing lives here on .smark.
+     The mark is drawn in the season's own colour, not the brand gold: it is
+     the one element that is allowed to say plainly which season this is. */
+  .smark { flex: none; position: relative; display: inline-block;
+    border-radius: 50%; border: 1px solid var(--srb, var(--gold)); }
+  .srb-mark { width: 20px; height: 20px; }
+  .smark::after { content: ""; position: absolute; inset: 26%; border-radius: 50%;
+    background: var(--srb, var(--gold)); opacity: .55; }
 
   /* Ramadan — a true crescent, masked out of a solid disc so it reads on any
      background (no colour-matched overlay to keep in sync). */
-  :root[data-season="ramadan"] .srb-mark {
-    border: 0; background: var(--gold);
+  :root[data-season="ramadan"] .smark,
+  :root[data-season="eid"] .smark {
+    border: 0; background: var(--gold-bright);
     -webkit-mask: radial-gradient(circle at 72% 50%, transparent 54%, #000 55%);
     mask: radial-gradient(circle at 72% 50%, transparent 54%, #000 55%);
   }
-  :root[data-season="ramadan"] .srb-mark::after { display: none; }
+  :root[data-season="ramadan"] .smark::after,
+  :root[data-season="eid"] .smark::after { display: none; }
 
   /* Christmas — a four-point star. */
-  :root[data-season="christmas"] .srb-mark {
+  :root[data-season="christmas"] .smark {
     border: 0; background: var(--gold-bright); border-radius: 0;
     clip-path: polygon(50% 0%, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0% 50%, 40% 40%);
   }
-  :root[data-season="christmas"] .srb-mark::after { display: none; }
+  :root[data-season="christmas"] .smark::after { display: none; }
+
+  /* Sun Festival — a disc with rays. */
+  :root[data-season="sun-festival"] .smark {
+    border: 0; background: var(--srb); border-radius: 50%;
+    box-shadow: 0 0 0 2px rgba(0,0,0,0), 0 0 10px 1px color-mix(in srgb, var(--srb) 70%, transparent);
+  }
+  :root[data-season="sun-festival"] .smark::after { display: none; }
 
   /* Spring — a leaf. */
-  :root[data-season="spring"] .srb-mark {
+  :root[data-season="spring"] .smark {
     border: 0; background: var(--srb); border-radius: 0 60% 0 60%;
   }
-  :root[data-season="spring"] .srb-mark::after { display: none; }
-
-  /* Eid — the same masked crescent as Ramadan. */
-  :root[data-season="eid"] .srb-mark {
-    border: 0; background: var(--gold);
-    -webkit-mask: radial-gradient(circle at 72% 50%, transparent 54%, #000 55%);
-    mask: radial-gradient(circle at 72% 50%, transparent 54%, #000 55%);
-  }
-  :root[data-season="eid"] .srb-mark::after { display: none; }
+  :root[data-season="spring"] .smark::after { display: none; }
 
   /* Red Sea — a droplet. */
-  :root[data-season="red-sea"] .srb-mark {
-    border: 0; background: var(--gold); border-radius: 50% 50% 50% 8%;
+  :root[data-season="red-sea"] .smark {
+    border: 0; background: var(--srb); border-radius: 50% 50% 50% 8%;
     transform: rotate(45deg);
+    box-shadow: 0 0 12px -1px color-mix(in srgb, var(--srb) 75%, transparent);
   }
-  :root[data-season="red-sea"] .srb-mark::after { display: none; }
+  :root[data-season="red-sea"] .smark::after { display: none; }
+
+  /* Honeymoon — a soft filled disc. */
+  :root[data-season="honeymoon"] .smark { border: 0; background: var(--srb); }
+  :root[data-season="honeymoon"] .smark::after { display: none; }
 
   /* Lift the floating WhatsApp button above the ribbon while it is showing. */
   body:has(#season-ribbon:not([hidden])) .wafab { bottom: max(78px, calc(env(safe-area-inset-bottom) + 74px)); }
@@ -208,13 +270,19 @@ const rows = seasonalCalendar.map((w) => [
      atmosphere there so motifs never double up. */
   [class*="themed-"] .phero::after { content: none; }
 
-  /* Ramadan — a crescent glow high in the sky + a lantern-warm horizon */
+  /* Ramadan — moonlight high in the sky + a lantern-warm horizon.
+     This used to draw a crescent by laying a near-black disc over a pale one.
+     That only works on a dark hero: over the daylight sky on the homepage the
+     occluding disc read as a grey smudge pasted on the photograph. The hero
+     now carries light rather than a shape — a high glow and a warm horizon —
+     and the crescent itself is drawn properly, with a mask, in the ribbon and
+     chip marks above, where it sits on a known background. */
   :root[data-season="ramadan"] .hero .veil::after,
   :root[data-season="ramadan"] .phero::after {
     background:
-      radial-gradient(circle 46px at 84% 106px, rgba(247,230,174,.5) 44px, transparent 47px),
-      radial-gradient(circle 46px at calc(84% + 26px) 96px, rgba(11,9,7,.92) 44px, transparent 47px),
-      radial-gradient(720px 300px at 50% 100%, rgba(47,126,102,.14), transparent 70%);
+      radial-gradient(circle 150px at 84% 92px, rgba(247,230,174,.20), transparent 72%),
+      radial-gradient(circle 46px at 84% 92px, rgba(247,230,174,.16), transparent 68%),
+      radial-gradient(720px 300px at 50% 100%, rgba(62,158,128,.16), transparent 70%);
   }
 
   /* Christmas — a sprinkle of still stars + pine-cool depth */
@@ -249,29 +317,95 @@ const rows = seasonalCalendar.map((w) => [
       radial-gradient(600px 260px at 80% 10%, rgba(251,243,210,.09), transparent 70%);
   }
 
-  /* Red Sea — light through water from above */
+  /* Red Sea — caustics: the moving net of light that water throws on
+     everything under it. Two repeating gradients at different angles and
+     periods, drifting at different speeds, which is what stops it reading as
+     wallpaper. The previous version was a flat 16%-alpha wash that nobody
+     could see — five months of "seasonal" that looked identical to no season
+     at all. Pure CSS: nothing to load, nothing to maintain.
+
+     Two sets of WIDE, FEATHERED bands crossing at a shallow angle. The stops
+     are soft on purpose: hard 2px lines look like scratches on the lens, not
+     light on water. Where the two sets overlap they brighten, which is the
+     lattice a caustic actually makes. Masked to the top of the hero, because
+     that is where the light comes from. */
   :root[data-season="red-sea"] .hero .veil::after,
   :root[data-season="red-sea"] .phero::after {
     background:
-      linear-gradient(180deg, rgba(44,142,134,.16), transparent 46%),
-      radial-gradient(760px 320px at 50% 0%, rgba(67,133,160,.14), transparent 72%);
+      repeating-linear-gradient(101deg,
+        transparent 0 44px, rgba(140,222,240,.055) 74px, transparent 104px 148px),
+      repeating-linear-gradient(63deg,
+        transparent 0 62px, rgba(140,222,240,.042) 96px, transparent 130px 196px),
+      linear-gradient(180deg, rgba(32,124,140,.28), transparent 54%),
+      radial-gradient(820px 340px at 50% 0%, rgba(72,150,178,.22), transparent 74%);
+    -webkit-mask: linear-gradient(180deg, #000 30%, transparent 88%);
+    mask: linear-gradient(180deg, #000 30%, transparent 88%);
+    animation: sea-drift 34s linear infinite;
+  }
+  /* The drift offsets are not arbitrary. Each layer is shifted along its own
+     gradient axis by exactly one period — 148px at 101°, 196px at 63° — so the
+     pattern lands back on itself and the loop has no visible restart:
+       (sin θ, −cos θ) × period  →  (145.3, 28.2) and (174.6, −88.9)
+     The first attempt used background-size to make the loop tile, which put a
+     hard 300px grid seam straight across every inner-page hero. A repeating
+     gradient does not need tiling; it needs the right offset. */
+  @keyframes sea-drift {
+    to { background-position: 145.3px 28.2px, 174.6px -88.9px, 0 0, 0 0; }
   }
 
-  /* Eid — festive warmth over the skyline */
+  /* Eid — festive warmth over the skyline. Same correction as Ramadan: light,
+     not a pasted-on shape. */
   :root[data-season="eid"] .hero .veil::after,
   :root[data-season="eid"] .phero::after {
     background:
-      radial-gradient(circle 40px at 82% 100px, rgba(247,230,174,.45) 38px, transparent 41px),
-      radial-gradient(circle 40px at calc(82% + 22px) 92px, rgba(11,9,7,.92) 38px, transparent 41px),
-      radial-gradient(700px 300px at 50% 100%, rgba(47,126,102,.13), transparent 70%);
+      radial-gradient(circle 140px at 82% 88px, rgba(247,230,174,.22), transparent 72%),
+      radial-gradient(700px 300px at 50% 100%, rgba(62,158,128,.17), transparent 70%);
   }
 
   /* Honeymoon — rose-gold warmth */
   :root[data-season="honeymoon"] .hero .veil::after,
   :root[data-season="honeymoon"] .phero::after {
     background:
-      radial-gradient(700px 300px at 50% 0%, rgba(232,180,160,.16), transparent 70%);
+      radial-gradient(700px 300px at 50% 0%, rgba(232,180,160,.20), transparent 70%);
   }
 
-  @media print { .srb { display: none !important; } }
+  /* ===== Movement =========================================================
+     A still gradient is decoration; a slow one is weather. Each season gets
+     the motion that belongs to it — light on water, a lantern breathing,
+     stars going in and out — at periods long enough (18-34s) that nobody
+     watching the page notices it working, only that the page is alive.
+     All of it is opacity or background-position: no layout, no paint storms,
+     and every one of them is switched off for prefers-reduced-motion below. */
+  :root[data-season="ramadan"] .hero .veil::after,
+  :root[data-season="ramadan"] .phero::after,
+  :root[data-season="eid"] .hero .veil::after,
+  :root[data-season="eid"] .phero::after,
+  :root[data-season="honeymoon"] .hero .veil::after,
+  :root[data-season="honeymoon"] .phero::after {
+    animation: season-breathe 18s ease-in-out infinite;
+  }
+  :root[data-season="christmas"] .hero .veil::after,
+  :root[data-season="christmas"] .phero::after {
+    animation: season-twinkle 9s ease-in-out infinite;
+  }
+  :root[data-season="sun-festival"] .hero .veil::after,
+  :root[data-season="sun-festival"] .phero::after {
+    animation: season-breathe 14s ease-in-out infinite;
+  }
+  :root[data-season="spring"] .hero .veil::after,
+  :root[data-season="spring"] .phero::after {
+    background-size: 300% 300%, 300% 300%;
+    animation: season-wander 30s ease-in-out infinite alternate;
+  }
+  @keyframes season-breathe { 0%,100% { opacity: .74; } 50% { opacity: 1; } }
+  @keyframes season-twinkle { 0%,100% { opacity: .55; } 40% { opacity: 1; } 70% { opacity: .72; } }
+  @keyframes season-wander  { to { background-position: 100% 40%, 0% 60%; } }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root[data-season] .hero .veil::after,
+    :root[data-season] .phero::after,
+    .schip-mark { animation: none !important; }
+  }
+
+  @media print { .srb, .schip { display: none !important; } }
 </style>
