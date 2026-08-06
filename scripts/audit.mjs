@@ -290,6 +290,42 @@ for (const k of keys) {
   for (const l of v.slice(0, 10)) console.log(`     ${l}`);
   if (v.length > 10) console.log(`     … ${v.length - 10} more`);
 }
+// --- Market targeting -----------------------------------------------------
+// Read back out of the BUILT pages, not out of the source that produced them:
+// the question this answers is "what did the site actually ship", and a source
+// file cannot answer that. Cross-checked against the entry-requirements pages
+// so a market can never be declared while the page for that passport is gone.
+{
+  const org = (() => {
+    const raw = readFileSync('index.html', 'utf8');
+    for (const m of raw.matchAll(/<script[^>]+application\/ld\+json[^>]*>([\s\S]*?)<\/script>/gi)) {
+      try {
+        const parsed = JSON.parse(m[1]);
+        for (const n of [].concat(parsed)) if (n.audience?.geographicArea) return n;
+      } catch {}
+    }
+    return null;
+  })();
+  console.log('\nMarket targeting (declared on every page):');
+  if (!org) {
+    console.log('   >> NONE. The organisation declares no audience.geographicArea.');
+  } else {
+    const countries = [].concat(org.audience.geographicArea);
+    console.log(`   ${countries.length} markets: ` +
+      countries.map((c) => c.identifier || c.name).join(' '));
+    const noVisaPage = countries.filter((c) => {
+      const slug = (c.name || '').toLowerCase().replace(/[^a-z]+/g, '-').replace(/^-|-$/g, '');
+      return !existsSync(`visa/${slug}.html`);
+    });
+    if (noVisaPage.length) {
+      console.log('   no entry-requirements page yet: ' +
+        noVisaPage.map((c) => c.name).join(', '));
+    } else {
+      console.log('   every declared market has an entry-requirements page.');
+    }
+  }
+}
+
 console.log('\nSchema types in use:');
 for (const [t, fs] of Object.entries(schemaTypes).sort((a,b) => b[1].size - a[1].size))
   console.log(`   ${String(fs.size).padStart(4)}  ${t}`);

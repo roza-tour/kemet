@@ -9,6 +9,7 @@ import { trailFor } from "@/config/navigation";
 import { company } from "@/data/company";
 import { reviewer, type Expert } from "@/data/experts";
 import { LOCALES, LOCALE_META } from "@/config/i18n";
+import { marketCountries } from "@/data/markets";
 
 /**
  * Languages the office can genuinely correspond in. A claim about PEOPLE, not
@@ -586,13 +587,26 @@ export function siteSchema(): JsonLd[] {
     // Conflating the two is how a business ends up promising a Russian-speaking
     // guide because it has a Russian landing page.
     areaServed: { "@type": "Country", name: "Egypt" },
-    // The service is delivered in Egypt; the clientele is worldwide. Stating
-    // both stops search engines reading this as an Egypt-local business that
-    // only serves people already in Egypt.
+    // WHERE THE SERVICE HAPPENS vs WHO IT IS FOR — two different statements.
+    //
+    // areaServed is Egypt: that is where the journeys are delivered, and saying
+    // so stops a search engine reading this as an Egypt-local business that
+    // only serves people already in the country.
+    //
+    // audience is the part that was doing no work. It used to say
+    // "International leisure travellers / Worldwide", which is what every
+    // travel site on earth says: it distinguishes nothing and gives an answer
+    // engine no reason to surface Kemet for someone asking in Riyadh, Zurich
+    // or Chicago. It now names the markets, as Country nodes with ISO codes,
+    // from data/markets.ts — where each one is listed with the reason it is a
+    // priority for this tier. serviceArea stays Worldwide because we genuinely
+    // will take a booking from anywhere; the audience is who we are built for.
     audience: {
       "@type": "Audience",
-      audienceType: "International leisure travellers",
-      geographicArea: { "@type": "AdministrativeArea", name: "Worldwide" },
+      audienceType:
+        "Private and luxury travellers — couples, families and small private parties " +
+        "buying guided, individually arranged travel rather than group departures",
+      geographicArea: marketCountries(),
     },
     serviceArea: { "@type": "AdministrativeArea", name: "Worldwide" },
     serviceType: "Luxury private tours, Nile cruises and tailor-made travel",

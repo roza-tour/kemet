@@ -20,6 +20,7 @@ import Base from "@/layouts/Base.astro";
 import SymbolIcon from "@/components/SymbolIcon.astro";
 import { vipProgrammes, vipStandard, vipFaqs, VIP_QUESTION, VIP_ANSWER } from "@/data/vip";
 import { breadcrumb, answerPageSchema, ORG_ID } from "@/schemas/jsonld";
+import { marketCountries } from "@/data/markets";
 import { whatsappLink, mailtoLink } from "@/utils/links";
 
 const ROUTE = "vip.html";
@@ -52,10 +53,15 @@ const jsonld: Record<string, unknown>[] = [
     serviceType: "Fully private, tailor-made luxury travel in Egypt",
     provider: { "@id": ORG_ID },
     areaServed: { "@type": "Country", name: "Egypt" },
+    // The same market list the organisation declares, so the top tier is not
+    // described as being for a vaguer audience than the business as a whole.
+    // A page that says "fully private, exclusive-use travel" and then names no
+    // market is asking an answer engine to guess who it is for.
     audience: {
       "@type": "Audience",
       audienceType:
         "Travellers and families seeking fully private, exclusive-use travel in Egypt",
+      geographicArea: marketCountries(),
     },
     availableChannel: {
       "@type": "ServiceChannel",
