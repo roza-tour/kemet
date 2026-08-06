@@ -174,7 +174,19 @@ export const GET: APIRoute = () => {
 
   lines.push("## Other languages");
   lines.push("");
-  lines.push("Six key pages are published in German, Italian and Spanish for Egypt's largest European source markets. The English site is the complete one; the translated pages carry the same facts, written for those markets.");
+  // Counted and named from the registry rather than written out, so this
+  // paragraph cannot say "German, Italian and Spanish" three languages after
+  // that stopped being true — which is exactly what it did say until now.
+  lines.push(
+    `Seven key pages — the home page, the journeys, the Nile cruise, what it costs, ` +
+    `when to go, whether Egypt is safe, and entry requirements — are published in ` +
+    `${TRANSLATED_LOCALES.length} languages besides English: ` +
+    `${TRANSLATED_LOCALES.map((l) => LOCALE_META[l].endonym).join(", ")}. ` +
+    `Each set is written for its market rather than translated word for word, so ` +
+    `the flight times, school holidays, entry rules and reference points differ ` +
+    `between them. The English site is the complete one; the translated pages ` +
+    `carry the same facts.`,
+  );
   lines.push("");
   for (const loc of TRANSLATED_LOCALES) {
     lines.push(`### ${LOCALE_META[loc].endonym} (${loc})`);

@@ -1,11 +1,32 @@
 // ---------------------------------------------------------------------------
 // Localisation — the registry that keeps translated pages honest.
 //
-// SCOPE (deliberately small)
-// English remains the full site. German, Italian and Spanish carry seven key
-// pages each — the funnel, not the catalogue. Those three are Egypt's largest
-// European source markets and the ones where travellers search in their own
-// language rather than in English.
+// SCOPE
+// English remains the full site. Each translated locale carries the same seven
+// key pages — the funnel, not the catalogue: the market's own home page, the
+// journeys, the Nile cruise, what it costs, when to go, whether Egypt is safe,
+// and the entry rules for that passport. Those seven answer the questions that
+// stop someone booking; the catalogue can be read in English once they have.
+//
+// WHICH LANGUAGES, AND WHY THESE
+//   de, it, es  Egypt's largest Western European source markets.
+//   fr          France, Belgium, Switzerland, Quebec and francophone Africa —
+//               the largest single gap in the original three.
+//   ru          Russia is one of Egypt's biggest inbound markets by volume;
+//               the Red Sea resorts are built around it. Almost none of that
+//               traffic searches in English.
+//   id, ms      Indonesia and Malaysia. Egypt is a major destination for both,
+//               and neither market searches in English by default.
+// Slugs are transliterated to Latin script even where the language is not
+// (Russian). A percent-encoded Cyrillic path is valid and Google reads it, but
+// it breaks in email clients, chat apps and analytics — and this site is
+// hand-deployed to shared hosting, where an unreadable filename is a hazard.
+//
+// A NOTE ON WHAT IS *NOT* HERE
+// Arabic is the highest-value language still missing — the Gulf is a top-three
+// market for Egypt — but it is right-to-left, and doing it properly means a
+// layout pass over every physical-direction rule in the stylesheet, not a data
+// file. It is deliberately left for its own change rather than bolted on here.
 //
 // THE RULE THAT MATTERS
 // hreflang is only valid when it is RECIPROCAL and SELF-REFERENTIAL: every page
@@ -22,14 +43,16 @@
 // language switcher is a link the visitor chooses, and nothing more.
 // ---------------------------------------------------------------------------
 
-export const LOCALES = ["en", "de", "it", "es"] as const;
+import registry from "./translation-groups.json";
+
+export const LOCALES = ["en", "de", "it", "es", "fr", "ru", "id", "ms"] as const;
 export type SiteLocale = (typeof LOCALES)[number];
 
 /** English is served unprefixed so no existing URL ever changes. */
 export const DEFAULT_LOCALE: SiteLocale = "en";
 
 /** Locales that have translated pages. */
-export const TRANSLATED_LOCALES = ["de", "it", "es"] as const;
+export const TRANSLATED_LOCALES = ["de", "it", "es", "fr", "ru", "id", "ms"] as const;
 export type TranslatedLocale = (typeof TRANSLATED_LOCALES)[number];
 
 export interface LocaleMeta {
@@ -52,6 +75,10 @@ export const LOCALE_META: Record<SiteLocale, LocaleMeta> = {
   de: { tag: "de", home: "Startseite", endonym: "Deutsch", short: "DE", formatLocale: "de-DE" },
   it: { tag: "it", home: "Home", endonym: "Italiano", short: "IT", formatLocale: "it-IT" },
   es: { tag: "es", home: "Inicio", endonym: "Español", short: "ES", formatLocale: "es-ES" },
+  fr: { tag: "fr", home: "Accueil", endonym: "Français", short: "FR", formatLocale: "fr-FR" },
+  ru: { tag: "ru", home: "Главная", endonym: "Русский", short: "RU", formatLocale: "ru-RU" },
+  id: { tag: "id", home: "Beranda", endonym: "Bahasa Indonesia", short: "ID", formatLocale: "id-ID" },
+  ms: { tag: "ms", home: "Utama", endonym: "Bahasa Melayu", short: "MS", formatLocale: "ms-MY" },
 };
 
 /**
@@ -61,69 +88,36 @@ export const LOCALE_META: Record<SiteLocale, LocaleMeta> = {
  * localised slugs, which live under /<locale>/. Localised slugs are used rather
  * than mirroring the English ones because the words in the URL are read by both
  * the search engine and the visitor in that market.
+ *
+ * The group's own identifier is `key`, not `id` — "id" is Indonesian's locale
+ * code, and a group object cannot hold both.
+ *
+ * Typed as a full record over SiteLocale rather than a hand-listed set of keys.
+ * Adding a locale to LOCALES then fails to compile until every group has a slug
+ * for it — which is the only way to guarantee the hreflang set stays complete.
+ * A group missing one language is exactly the partial declaration Google throws
+ * the whole cluster away for.
  */
-export interface TranslationGroup {
-  id: string;
-  en: string;
-  de: string;
-  it: string;
-  es: string;
+export type TranslationGroup = { key: string } & Record<SiteLocale, string>;
+
+export const TRANSLATION_GROUPS: TranslationGroup[] =
+  registry.groups as unknown as TranslationGroup[];
+
+// The JSON is data, not types: assert once, here, that it actually carries a
+// route for every locale in LOCALES. A missing route would otherwise surface as
+// `undefined` inside an hreflang href — a broken alternate that Google reads as
+// a broken cluster — and it would surface at runtime in a built page rather
+// than at build time where it can be fixed.
+for (const g of TRANSLATION_GROUPS) {
+  for (const loc of LOCALES) {
+    if (!g[loc]) {
+      throw new Error(
+        `translation-groups.json: group "${g.key}" has no route for locale "${loc}".`,
+      );
+    }
+  }
 }
 
-export const TRANSLATION_GROUPS: TranslationGroup[] = [
-  {
-    id: "home",
-    en: "index.html",
-    de: "de/index.html",
-    it: "it/index.html",
-    es: "es/index.html",
-  },
-  {
-    id: "journeys",
-    en: "tours.html",
-    de: "de/aegypten-reisen.html",
-    it: "it/viaggi-in-egitto.html",
-    es: "es/viajes-a-egipto.html",
-  },
-  {
-    id: "nile-cruise",
-    en: "tour-nile-cruise.html",
-    de: "de/nilkreuzfahrt.html",
-    it: "it/crociera-sul-nilo.html",
-    es: "es/crucero-por-el-nilo.html",
-  },
-  {
-    id: "cost",
-    en: "egypt-tour-cost.html",
-    de: "de/aegypten-reise-kosten.html",
-    it: "it/quanto-costa-viaggio-egitto.html",
-    es: "es/cuanto-cuesta-viajar-a-egipto.html",
-  },
-  {
-    id: "when-to-go",
-    en: "when-to-go.html",
-    de: "de/beste-reisezeit-aegypten.html",
-    it: "it/quando-andare-in-egitto.html",
-    es: "es/mejor-epoca-para-viajar-a-egipto.html",
-  },
-  {
-    // "is Egypt safe" is one of the highest-volume queries in the category and
-    // the same worry is searched in every market, phrased almost identically.
-    id: "safety",
-    en: "egypt-safety.html",
-    de: "de/ist-aegypten-sicher.html",
-    it: "it/e-sicuro-viaggiare-in-egitto.html",
-    es: "es/es-seguro-viajar-a-egipto.html",
-  },
-  {
-    id: "visa",
-    // Each market gets the entry rules for its own passport, not a generic page.
-    en: "visa.html",
-    de: "de/aegypten-visum.html",
-    it: "it/visto-egitto.html",
-    es: "es/visado-egipto.html",
-  },
-];
 
 /** Every route that belongs to any translation group, for fast lookup. */
 const ROUTE_TO_GROUP = new Map<string, TranslationGroup>();

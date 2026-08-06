@@ -2,6 +2,7 @@ import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import { loadEnv } from "vite";
 import { execSync } from "node:child_process";
+import { readFileSync } from "node:fs";
 
 // Deploy-time configuration is read from the environment (see .env.example),
 // with safe fallbacks so a default build is fully reproducible. `site` must
@@ -14,21 +15,30 @@ const SITE_URL = (PUBLIC_SITE_URL || "https://kemet-travel.com").replace(/\/$/, 
 // in the navigation; they are simply not submitted for indexing.
 const CANONICALISED_AWAY = ["/activities/hot-air-balloon-luxor.html"];
 
-// A locale home is published at the directory, not at its index.html.
-const LOCALE_HOME = /^\/(de|it|es)\/index$/;
+// Translation clusters. Read from the SAME file src/config/i18n.ts reads, not
+// copied. This block used to be a hand-maintained duplicate "mirrored from
+// src/config/i18n.ts" — and the moment four locales were added it was silently
+// wrong, which would have published a sitemap advertising alternates the pages
+// themselves never declared. astro.config.mjs cannot resolve the "@/" alias, so
+// the shared source is JSON rather than TypeScript.
+const REGISTRY = JSON.parse(readFileSync("./src/config/translation-groups.json", "utf8"));
+const LOCALES = REGISTRY.locales;
 
-// Translation clusters, mirrored from src/config/i18n.ts. Kept as literal data
-// here because astro.config.mjs is loaded before the TS path aliases resolve.
-const GROUPS = [
-  ["", "de/", "it/", "es/"],
-  ["tours.html", "de/aegypten-reisen.html", "it/viaggi-in-egitto.html", "es/viajes-a-egipto.html"],
-  ["tour-nile-cruise.html", "de/nilkreuzfahrt.html", "it/crociera-sul-nilo.html", "es/crucero-por-el-nilo.html"],
-  ["egypt-tour-cost.html", "de/aegypten-reise-kosten.html", "it/quanto-costa-viaggio-egitto.html", "es/cuanto-cuesta-viajar-a-egipto.html"],
-  ["when-to-go.html", "de/beste-reisezeit-aegypten.html", "it/quando-andare-in-egitto.html", "es/mejor-epoca-para-viajar-a-egipto.html"],
-  ["egypt-safety.html", "de/ist-aegypten-sicher.html", "it/e-sicuro-viaggiare-in-egitto.html", "es/es-seguro-viajar-a-egipto.html"],
-  ["visa.html", "de/aegypten-visum.html", "it/visto-egitto.html", "es/visado-egipto.html"],
-];
-const LANGS = ["en", "de", "it", "es"];
+// A locale home is published at the directory, not at its index.html.
+const LOCALE_HOME = new RegExp(`^/(${LOCALES.slice(1).join("|")})/index$`);
+// Any route that sits under a locale folder, for the freshness map below.
+const LOCALE_ROUTE = new RegExp(`^(${LOCALES.slice(1).join("|")})/`);
+
+// Sitemap wants the published URL of each member: the locale home is the bare
+// directory ("de/"), everything else is the .html file.
+const GROUPS = REGISTRY.groups.map((g) =>
+  LOCALES.map((loc) => {
+    const route = g[loc];
+    if (route === "index.html") return "";
+    return route.replace(/(^|\/)index\.html$/, "$1");
+  }),
+);
+const LANGS = LOCALES;
 
 // ---------------------------------------------------------------------------
 // lastmod — a real content date, or none at all.
@@ -79,7 +89,7 @@ const CONTENT_SOURCES = [
   [/^compare\//, ["src/pages/compare/[slug].astro", "src/data/comparisons.ts"]],
   [/^when-to-go\//, ["src/pages/when-to-go/[slug].astro", "src/data/months.ts"]],
   [/^occasions\//, ["src/pages/occasions/[slug].astro", "src/data/occasions.ts"]],
-  [/^(de|it|es)\//, ["src/pages/[locale]/[slug].astro"]],
+  [LOCALE_ROUTE, ["src/pages/[locale]/[slug].astro"]],
   [/^tour-/, ["src/pages/[slug].astro", "src/data/tours.ts"]],
 ];
 
@@ -90,7 +100,7 @@ function contentLastmod(route) {
     if (pattern.test(route)) {
       sources.push(...files);
       // A localised route's words live in its own locale module.
-      const locale = route.match(/^(de|it|es)\//);
+      const locale = route.match(LOCALE_ROUTE);
       if (locale) sources.push(`src/data/i18n/${locale[1]}.ts`);
       break;
     }

@@ -1,7 +1,7 @@
 ---
-// Localised pages — /de/…, /it/…, /es/…
+// Localised pages — /de/…, /it/…, /es/…, /fr/…, /ru/…, /id/…, /ms/…
 //
-// One template for all three languages. Every page is generated from a data
+// One template for every language. Every page is generated from a data
 // record whose route comes from the translation registry, so the URL, the
 // canonical, the hreflang set and the sitemap entry are all derived from the
 // same object and cannot disagree with each other.
@@ -13,6 +13,10 @@ import LangSwitch from "@/components/LangSwitch.astro";
 import { de } from "@/data/i18n/de";
 import { it } from "@/data/i18n/it";
 import { es } from "@/data/i18n/es";
+import { fr } from "@/data/i18n/fr";
+import { ru } from "@/data/i18n/ru";
+import { id } from "@/data/i18n/id";
+import { ms } from "@/data/i18n/ms";
 import type { LocalizedPage } from "@/data/i18n/types";
 import {
   TRANSLATION_GROUPS, TRANSLATED_LOCALES, LOCALE_META,
@@ -23,11 +27,11 @@ import { personRef } from "@/schemas/jsonld";
 import { site, SITE_URL } from "@/config/site";
 
 export function getStaticPaths() {
-  const sets: Record<TranslatedLocale, LocalizedPage[]> = { de, it, es };
+  const sets: Record<TranslatedLocale, LocalizedPage[]> = { de, it, es, fr, ru, id, ms };
   const paths: Array<{ params: { locale: string; slug: string }; props: Record<string, unknown> }> = [];
   for (const locale of TRANSLATED_LOCALES) {
     for (const page of sets[locale]) {
-      const group = TRANSLATION_GROUPS.find((g) => g.id === page.groupId);
+      const group = TRANSLATION_GROUPS.find((g) => g.key === page.groupId);
       if (!group) continue;
       // "de/aegypten-visum.html" → slug "aegypten-visum"
       const slug = group[locale].split("/")[1].replace(/\.html$/, "");
@@ -40,7 +44,7 @@ export function getStaticPaths() {
 interface Props { page: LocalizedPage; locale: TranslatedLocale }
 const { page, locale } = Astro.props;
 
-const group = TRANSLATION_GROUPS.find((g) => g.id === page.groupId)!;
+const group = TRANSLATION_GROUPS.find((g) => g.key === page.groupId)!;
 const route = group[locale];
 const base = "../";
 const lang = LOCALE_META[locale].tag;

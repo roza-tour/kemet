@@ -38,7 +38,17 @@
       loading = true;
       fetch(prefix + "search-index.json", { credentials: "omit" })
         .then(function (r) { return r.json(); })
-        .then(function (d) { docs = d; loading = false; run(); })
+        .then(function (d) {
+          // Fold once per document, here, rather than on every keystroke of
+          // every query. 278 records × three fields is a few milliseconds at
+          // load; doing it inside the scorer would repeat it on every letter.
+          for (var i = 0; i < d.length; i++) {
+            d[i]._t = fold(d[i].t);
+            d[i]._k = fold(d[i].k);
+            d[i]._d = fold(d[i].d);
+          }
+          docs = d; loading = false; run();
+        })
         .catch(function () { loading = false; });
     }
 
@@ -58,14 +68,34 @@
       panel.style.width = Math.round(Math.min(width, window.innerWidth - 24)) + "px";
     }
 
+    /* Accent folding. The site is published in eight languages, and nobody
+       reaches for the accent key in a search box: people type "croisiere",
+       "egypte", "espanol". Without folding, a French visitor searching the
+       French pages gets nothing — the index says "croisière" and the query
+       says "croisiere", and a substring test calls that a miss.
+
+       NFD splits an accented character into its base letter plus a combining
+       mark, and the range below strips the marks. It leaves Cyrillic, Arabic
+       and Latin-without-accents untouched, so the Russian pages are unaffected.
+       Folding is applied to BOTH sides — once per document at load, once per
+       keystroke for the query. */
+    function fold(s) {
+      return String(s).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+    }
+
     /* Ranking. Every word in the query must match something, and where it
        matched decides the score: a word that starts a title beats one buried
        in a description, so "luxor" returns Luxor before a journey that merely
-       mentions it. */
-    function score(doc, words) {
-      var t = doc.t.toLowerCase(), k = doc.k, d = doc.d.toLowerCase(), s = 0;
+       mentions it.
+
+       The last word of the query is matched as a PREFIX rather than whole,
+       because it is usually still being typed — "nile cru" should already be
+       showing the Nile cruise. Earlier words are treated as complete. */
+    function score(doc, words, lastIsPrefix) {
+      var t = doc._t, k = doc._k, d = doc._d, s = 0;
       for (var i = 0; i < words.length; i++) {
         var w = words[i], hit = 0;
+        var isLast = lastIsPrefix && i === words.length - 1;
         if (t === w) hit = 120;
         else if (t.indexOf(w) === 0) hit = 90;
         else if (t.indexOf(" " + w) > -1) hit = 70;
@@ -73,6 +103,13 @@
         else if (k.indexOf(w) === 0 || k.indexOf(" " + w) > -1) hit = 30;
         else if (k.indexOf(w) > -1) hit = 16;
         else if (d.indexOf(w) > -1) hit = 10;
+        // A prefix that matched nothing whole still counts, at a discount, so
+        // a half-typed word narrows the list instead of emptying it.
+        if (!hit && isLast) {
+          if (t.indexOf(w) > -1) hit = 40;
+          else if (k.indexOf(w) > -1) hit = 8;
+          else if (d.indexOf(w) > -1) hit = 5;
+        }
         if (!hit) return 0;
         s += hit;
       }
@@ -94,15 +131,18 @@
 
     function run() {
       var raw = input.value.trim();
-      var q = raw.toLowerCase();
+      var q = fold(raw);
       cursor = -1;
       if (q.length < 2) { hide(); return; }
       if (!docs) { load(); return; }
 
+      // The last word counts as a prefix unless the visitor typed a trailing
+      // space — that space is the signal that they consider the word finished.
+      var lastIsPrefix = !/\s$/.test(input.value);
       var words = q.split(/\s+/).filter(Boolean);
       var scored = [];
       for (var i = 0; i < docs.length; i++) {
-        var sc = score(docs[i], words);
+        var sc = score(docs[i], words, lastIsPrefix);
         if (sc > 0) scored.push([sc, docs[i]]);
       }
       scored.sort(function (a, b) { return b[0] - a[0]; });

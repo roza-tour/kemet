@@ -1,0 +1,99 @@
+{
+  "_comment": [
+    "SINGLE SOURCE OF TRUTH for the translation clusters. Read by BOTH",
+    "src/config/i18n.ts (which builds the hreflang sets and the page routes) and",
+    "astro.config.mjs (which builds the sitemap's alternate links and the",
+    "content-freshness map). It is JSON rather than TypeScript because",
+    "astro.config.mjs is plain ESM and cannot resolve the '@/' TypeScript path",
+    "aliases — so the config used to keep its own hand-copied duplicate of this",
+    "list. That duplicate silently went stale the moment a locale was added, and",
+    "a stale copy here means the sitemap advertises a translation cluster that",
+    "the pages themselves do not declare: exactly the partial, non-reciprocal",
+    "hreflang that makes Google discard the whole cluster. One file, both",
+    "readers, no drift.",
+    "",
+    "'locales' is ordered; 'en' must be first because it is the x-default.",
+    "Every group must carry a route for every locale — i18n.ts is typed to fail",
+    "the build if one is missing."
+  ],
+  "locales": ["en", "de", "it", "es", "fr", "ru", "id", "ms"],
+  "groups": [
+    {
+      "key": "home",
+      "en": "index.html",
+      "de": "de/index.html",
+      "it": "it/index.html",
+      "es": "es/index.html",
+      "fr": "fr/index.html",
+      "ru": "ru/index.html",
+      "id": "id/index.html",
+      "ms": "ms/index.html"
+    },
+    {
+      "key": "journeys",
+      "en": "tours.html",
+      "de": "de/aegypten-reisen.html",
+      "it": "it/viaggi-in-egitto.html",
+      "es": "es/viajes-a-egipto.html",
+      "fr": "fr/voyage-egypte.html",
+      "ru": "ru/tury-v-egipet.html",
+      "id": "id/paket-tour-mesir.html",
+      "ms": "ms/pakej-pelancongan-mesir.html"
+    },
+    {
+      "key": "nile-cruise",
+      "en": "tour-nile-cruise.html",
+      "de": "de/nilkreuzfahrt.html",
+      "it": "it/crociera-sul-nilo.html",
+      "es": "es/crucero-por-el-nilo.html",
+      "fr": "fr/croisiere-sur-le-nil.html",
+      "ru": "ru/kruiz-po-nilu.html",
+      "id": "id/pesiar-sungai-nil.html",
+      "ms": "ms/pelayaran-sungai-nil.html"
+    },
+    {
+      "key": "cost",
+      "en": "egypt-tour-cost.html",
+      "de": "de/aegypten-reise-kosten.html",
+      "it": "it/quanto-costa-viaggio-egitto.html",
+      "es": "es/cuanto-cuesta-viajar-a-egipto.html",
+      "fr": "fr/prix-voyage-egypte.html",
+      "ru": "ru/stoimost-tura-v-egipet.html",
+      "id": "id/biaya-liburan-ke-mesir.html",
+      "ms": "ms/kos-percutian-ke-mesir.html"
+    },
+    {
+      "key": "when-to-go",
+      "en": "when-to-go.html",
+      "de": "de/beste-reisezeit-aegypten.html",
+      "it": "it/quando-andare-in-egitto.html",
+      "es": "es/mejor-epoca-para-viajar-a-egipto.html",
+      "fr": "fr/quand-partir-en-egypte.html",
+      "ru": "ru/kogda-luchshe-ehat-v-egipet.html",
+      "id": "id/waktu-terbaik-ke-mesir.html",
+      "ms": "ms/masa-terbaik-ke-mesir.html"
+    },
+    {
+      "key": "safety",
+      "en": "egypt-safety.html",
+      "de": "de/ist-aegypten-sicher.html",
+      "it": "it/e-sicuro-viaggiare-in-egitto.html",
+      "es": "es/es-seguro-viajar-a-egipto.html",
+      "fr": "fr/securite-en-egypte.html",
+      "ru": "ru/bezopasnost-v-egipte.html",
+      "id": "id/apakah-mesir-aman.html",
+      "ms": "ms/adakah-mesir-selamat.html"
+    },
+    {
+      "key": "visa",
+      "en": "visa.html",
+      "de": "de/aegypten-visum.html",
+      "it": "it/visto-egitto.html",
+      "es": "es/visado-egipto.html",
+      "fr": "fr/visa-egypte.html",
+      "ru": "ru/viza-v-egipet.html",
+      "id": "id/visa-mesir.html",
+      "ms": "ms/visa-mesir-untuk-rakyat-malaysia.html"
+    }
+  ]
+}

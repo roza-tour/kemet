@@ -78,6 +78,21 @@ ErrorDocument 404 /404.html
   </FilesMatch>
   # Content-encoding varies by client — keep proxy caches honest.
   Header append Vary Accept-Encoding
+
+  # The PHP endpoints are machinery, not pages: the analytics collector, the
+  # contact-form handler and the private dashboard. None of them belongs in a
+  # search result, and the dashboard lists customer names, emails and phone
+  # numbers — a single external link to it is enough for a crawler to find it.
+  #
+  # Sent as a HEADER, not only as a <meta> tag, because a meta robots tag is
+  # only obeyed on an HTML response that the crawler renders; a POST handler or
+  # a redirect never gets that far. And deliberately NOT a robots.txt Disallow:
+  # that blocks the crawl, so the noindex would never be read, and Google can
+  # still list a blocked URL it found from an external link. Crawlable and
+  # explicitly noindex is the combination that actually keeps a URL out.
+  <FilesMatch "\.php$">
+    Header always set X-Robots-Tag "noindex, nofollow, noarchive"
+  </FilesMatch>
 </IfModule>
 
 # Send the first byte before the whole page is assembled.

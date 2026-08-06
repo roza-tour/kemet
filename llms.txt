@@ -209,7 +209,7 @@ Single-entry tourist visa: US$30, up to 30 days. Rules last verified 2026-07-27;
 
 ## Other languages
 
-Six key pages are published in German, Italian and Spanish for Egypt's largest European source markets. The English site is the complete one; the translated pages carry the same facts, written for those markets.
+Seven key pages — the home page, the journeys, the Nile cruise, what it costs, when to go, whether Egypt is safe, and entry requirements — are published in 7 languages besides English: Deutsch, Italiano, Español, Français, Русский, Bahasa Indonesia, Bahasa Melayu. Each set is written for its market rather than translated word for word, so the flight times, school holidays, entry rules and reference points differ between them. The English site is the complete one; the translated pages carry the same facts.
 
 ### Deutsch (de)
 
@@ -240,6 +240,46 @@ Six key pages are published in German, Italian and Spanish for Egypt's largest E
 - https://kemet-travel.com/es/mejor-epoca-para-viajar-a-egipto.html
 - https://kemet-travel.com/es/es-seguro-viajar-a-egipto.html
 - https://kemet-travel.com/es/visado-egipto.html
+
+### Français (fr)
+
+- https://kemet-travel.com/fr/
+- https://kemet-travel.com/fr/voyage-egypte.html
+- https://kemet-travel.com/fr/croisiere-sur-le-nil.html
+- https://kemet-travel.com/fr/prix-voyage-egypte.html
+- https://kemet-travel.com/fr/quand-partir-en-egypte.html
+- https://kemet-travel.com/fr/securite-en-egypte.html
+- https://kemet-travel.com/fr/visa-egypte.html
+
+### Русский (ru)
+
+- https://kemet-travel.com/ru/
+- https://kemet-travel.com/ru/tury-v-egipet.html
+- https://kemet-travel.com/ru/kruiz-po-nilu.html
+- https://kemet-travel.com/ru/stoimost-tura-v-egipet.html
+- https://kemet-travel.com/ru/kogda-luchshe-ehat-v-egipet.html
+- https://kemet-travel.com/ru/bezopasnost-v-egipte.html
+- https://kemet-travel.com/ru/viza-v-egipet.html
+
+### Bahasa Indonesia (id)
+
+- https://kemet-travel.com/id/
+- https://kemet-travel.com/id/paket-tour-mesir.html
+- https://kemet-travel.com/id/pesiar-sungai-nil.html
+- https://kemet-travel.com/id/biaya-liburan-ke-mesir.html
+- https://kemet-travel.com/id/waktu-terbaik-ke-mesir.html
+- https://kemet-travel.com/id/apakah-mesir-aman.html
+- https://kemet-travel.com/id/visa-mesir.html
+
+### Bahasa Melayu (ms)
+
+- https://kemet-travel.com/ms/
+- https://kemet-travel.com/ms/pakej-pelancongan-mesir.html
+- https://kemet-travel.com/ms/pelayaran-sungai-nil.html
+- https://kemet-travel.com/ms/kos-percutian-ke-mesir.html
+- https://kemet-travel.com/ms/masa-terbaik-ke-mesir.html
+- https://kemet-travel.com/ms/adakah-mesir-selamat.html
+- https://kemet-travel.com/ms/visa-mesir-untuk-rakyat-malaysia.html
 
 ## Policies
 

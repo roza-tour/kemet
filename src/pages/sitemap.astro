@@ -197,10 +197,14 @@ const pageCount =
       </div>
 
       <div class="sm-group reveal">
-        <h2>Andere Sprachen · Altre lingue · Otros idiomas</h2>
+        {/* Heading and note both built from the registry — the hand-written
+            versions said "German, Italian and Spanish" and "six key pages",
+            and both were wrong the moment a language or a page was added. */}
+        <h2>{TRANSLATED_LOCALES.map((loc) => LOCALE_META[loc].endonym).join(" · ")}</h2>
         <p class="sm-langnote">
-          Six key pages are published in German, Italian and Spanish — Egypt's largest European
-          source markets. The full catalogue remains in English.
+          {TRANSLATION_GROUPS.length} key pages are published in each of {TRANSLATED_LOCALES.length} languages
+          besides English, written for those markets rather than translated word for word.
+          The full catalogue remains in English.
         </p>
         {TRANSLATED_LOCALES.map((loc) => (
           <ul class="sm-list sm-cols">

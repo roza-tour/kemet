@@ -8,6 +8,23 @@ import { routeFor } from "@/config/routes";
 import { trailFor } from "@/config/navigation";
 import { company } from "@/data/company";
 import { reviewer, type Expert } from "@/data/experts";
+import { LOCALES, LOCALE_META } from "@/config/i18n";
+
+/**
+ * Languages the office can genuinely correspond in. A claim about PEOPLE, not
+ * about pages — see the note beside `areaServed` in the organisation schema.
+ * Add to this only when it is actually true; it is read by search engines and
+ * by assistants answering "do they speak X?".
+ */
+const SPOKEN_LANGUAGES = ["English", "French", "Arabic"] as const;
+
+/**
+ * Languages the site is PUBLISHED in — derived from the locale registry, so it
+ * is a fact rather than a claim and updates itself when a locale is added.
+ */
+const PUBLISHED_LANGUAGES = LOCALES.map((l) => LOCALE_META[l].tag);
+
+// (type-only import)
 import type { BreadcrumbItem, Collection, ContentDomain, Destination, Experience, Guide, JsonLd, Tour } from "@/types";
 
 const SCHEMA_CONTEXT = "https://schema.org";
@@ -551,9 +568,23 @@ export function siteSchema(): JsonLd[] {
         contactType: "customer service",
         email: site.email,
         telephone: phoneHref().replace("tel:", ""),
-        availableLanguage: ["English", "French", "Arabic"],
+        availableLanguage: [...SPOKEN_LANGUAGES],
       },
     ],
+    // TWO DIFFERENT CLAIMS, KEPT APART ON PURPOSE.
+    //
+    //   knowsLanguage / availableLanguage  = what the office actually speaks.
+    //     A claim about people. Extending it means someone can genuinely answer
+    //     the phone in that language, so it is NOT derived from the locale list
+    //     and must not be — publishing a page in Malay does not make anyone here
+    //     a Malay speaker. Edit SPOKEN_LANGUAGES below only when it is true.
+    //
+    //   WebSite.inLanguage                 = what the site is published in.
+    //     A claim about files, and therefore checkable: it is derived from the
+    //     locale registry, so it is right by construction and cannot drift.
+    //
+    // Conflating the two is how a business ends up promising a Russian-speaking
+    // guide because it has a Russian landing page.
     areaServed: { "@type": "Country", name: "Egypt" },
     // The service is delivered in Egypt; the clientele is worldwide. Stating
     // both stops search engines reading this as an Egypt-local business that
@@ -566,7 +597,7 @@ export function siteSchema(): JsonLd[] {
     serviceArea: { "@type": "AdministrativeArea", name: "Worldwide" },
     serviceType: "Luxury private tours, Nile cruises and tailor-made travel",
     priceRange: "€€€€",
-    knowsLanguage: ["en", "fr", "ar"],
+    knowsLanguage: [...SPOKEN_LANGUAGES],
     // Verified profiles that represent this same entity. Populated from
     // company data so adding a profile is a one-line change; omitted entirely
     // while empty rather than emitted as an empty array.
@@ -579,7 +610,12 @@ export function siteSchema(): JsonLd[] {
     "@type": "WebSite",
     name: `${site.name} — The Black Land`,
     url: SITE_URL,
-    inLanguage: "en",
+    // Every language the site is actually published in, not just English. This
+    // is the machine-readable half of the hreflang set: hreflang tells a
+    // crawler which URL serves which language, inLanguage tells it — and any
+    // assistant reading the graph rather than crawling — that this site has a
+    // version for these languages at all.
+    inLanguage: PUBLISHED_LANGUAGES,
     publisher: orgRef(),
   };
 
@@ -694,7 +730,7 @@ export function contactPageSchema(): JsonLd {
       contactType: "customer service",
       email: site.email,
       telephone: phoneHref().replace("tel:", ""),
-      availableLanguage: ["English", "French", "Arabic"],
+      availableLanguage: [...SPOKEN_LANGUAGES],
     },
   };
 }

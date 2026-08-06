@@ -24,19 +24,36 @@ const { route, label = "Language" } = Astro.props;
 const alternates = alternatesFor(route).filter((a) => a.hreflang !== "x-default");
 const current = localeOfRoute(route);
 const base = basePrefixFor(route);
+
+// TRANSLATED page → the switcher points at THIS page in each language, and
+// those links carry hreflang because they really are alternates of each other.
+//
+// UNTRANSLATED page → it used to render nothing at all, which meant that on
+// 190 of the site's 221 pages there was no way to discover that the site exists
+// in eight languages. A French visitor landing on a destination page from
+// search saw an English site and no exit. The switcher now falls back to
+// linking each locale's HOME page.
+//
+// Those fallback links deliberately carry NO hreflang attribute. A destination
+// page and a French home page are not translations of one another, and saying
+// otherwise is the false alternate declaration that gets a cluster discarded.
+// They are navigation, nothing more — which is exactly what they are for.
+const homes = alternatesFor("index.html").filter((a) => a.hreflang !== "x-default");
+const isTranslated = alternates.length > 1;
+const entries = isTranslated ? alternates : homes;
 ---
-{alternates.length > 1 && (
+{entries.length > 1 && (
   <nav class="lsw" aria-label={label}>
     <span class="lsw-label">Language</span>
     <ul>
-      {alternates.map((a) => {
+      {entries.map((a) => {
         const loc = a.hreflang as SiteLocale;
-        const isCurrent = loc === current;
+        const isCurrent = isTranslated ? loc === current : loc === current && current !== "en";
         return (
           <li>
             <a
               href={`${base}${publicPath(a.route)}` || "/"}
-              hreflang={a.hreflang}
+              hreflang={isTranslated ? a.hreflang : undefined}
               lang={a.hreflang}
               class={isCurrent ? "is-current" : undefined}
               aria-current={isCurrent ? "true" : undefined}

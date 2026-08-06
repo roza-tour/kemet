@@ -8,6 +8,15 @@
 // data modules the pages are generated from, so it can never describe a page
 // that does not exist or miss one that does.
 //
+// WHAT COUNTS AS A RECORD
+// Not only pages. A question is a record too: people type "do I need a visa"
+// and "is the tap water safe", not "FAQ". Each answered question is indexed
+// against the page that answers it, so the search returns the answer rather
+// than the section it lives in. Same for the individual gods, symbols, crafts
+// and dishes — "scarab" and "koshari" are things visitors search for, and
+// before this they matched nothing at all because only the hub pages were
+// indexed.
+//
 // WHY TITLES, SUMMARIES AND KEYWORDS — NOT FULL TEXT
 // Full body text across 192 pages would be well over a megabyte. Nobody
 // searching a travel site types a sentence from the middle of a paragraph;
@@ -32,6 +41,17 @@ import { months } from "@/data/months";
 import { comparisons } from "@/data/comparisons";
 import { nationalities } from "@/data/entryRequirements";
 import { identities } from "@/data/identities";
+import { symbols, crafts } from "@/data/culture";
+import { savoury, sweets } from "@/data/cuisine";
+import { allFaqs } from "@/data/faq";
+import { de } from "@/data/i18n/de";
+import { it as itPages } from "@/data/i18n/it";
+import { es as esPages } from "@/data/i18n/es";
+import { fr } from "@/data/i18n/fr";
+import { ru } from "@/data/i18n/ru";
+import { id as idPages } from "@/data/i18n/id";
+import { ms } from "@/data/i18n/ms";
+import type { LocalizedPage } from "@/data/i18n/types";
 import { TRANSLATION_GROUPS, TRANSLATED_LOCALES, LOCALE_META } from "@/config/i18n";
 import { formatPrice } from "@/utils/format";
 
@@ -88,7 +108,12 @@ export const GET: APIRoute = () => {
     docs.push({
       u: `${x.slug}.html`, t: x.title, s: "Journey", d: clean(x.summary),
       m: `${x.durationLabel} · from ${formatPrice(x.price)}`,
-      k: terms(x.title, x.summary, x.cities, x.durationLabel, x.tag, "tour trip itinerary package"),
+      // Itinerary day titles are where the specific places live — someone
+      // searching "Abu Simbel" should find the journeys that go there, not
+      // only the pages with it in the headline.
+      k: terms(x.title, x.summary, x.cities, x.durationLabel, x.tag,
+               x.itinerary.map((d) => d.title),
+               "tour trip itinerary package"),
     });
   }
   for (const x of destinations) {
@@ -154,13 +179,65 @@ export const GET: APIRoute = () => {
       k: terms(x.country, x.demonym, x.code, "visa passport entry requirements"),
     });
   }
-  // Translated pages, so a German visitor searching in German finds them.
+  // --- Translated pages -----------------------------------------------------
+  // These used to be indexed from their FILENAMES: title "aegypten reisen",
+  // description "Deutsch — journeys", keywords derived from the slug. A German
+  // visitor typing "Nilkreuzfahrt Kosten" matched nothing, because the words on
+  // the page were never in the index — only the URL was. They are now indexed
+  // from the same locale data the pages are rendered from, so every translated
+  // page is searchable in its own language, in its own words.
+  const LOCALE_PAGES: Record<string, LocalizedPage[]> = {
+    de, it: itPages, es: esPages, fr, ru, id: idPages, ms,
+  };
   for (const locale of TRANSLATED_LOCALES) {
-    for (const g of TRANSLATION_GROUPS) {
+    for (const page of LOCALE_PAGES[locale] ?? []) {
+      const group = TRANSLATION_GROUPS.find((g) => g.key === page.groupId);
+      if (!group) continue;
       docs.push({
-        u: g[locale], t: g[locale].split("/")[1].replace(/\.html$/, "").replace(/-/g, " "),
-        s: LOCALE_META[locale].endonym, d: `${LOCALE_META[locale].endonym} — ${g.id}`,
-        k: terms(g[locale].replace(/[/.]/g, " "), LOCALE_META[locale].endonym, g.id),
+        u: group[locale],
+        t: page.h1,
+        s: LOCALE_META[locale].endonym,
+        d: clean(page.standfirst || page.description),
+        // The page's own keyword line, its title, its section headings and the
+        // questions it answers — the vocabulary a reader of that language will
+        // actually type.
+        k: terms(page.title, page.keywords, page.crumb, page.h1,
+                 page.sections.map((x) => x.title), page.faqs.map((x) => x.q),
+                 LOCALE_META[locale].endonym),
+      });
+    }
+  }
+
+  // --- Answered questions ---------------------------------------------------
+  // A question is what people type. Indexed against the page that answers it,
+  // and pointed at the FAQ block so the answer is on screen on arrival.
+  for (const f of allFaqs) {
+    docs.push({
+      u: "faq.html#faq", t: clean(f.q), s: "Question",
+      d: clean(f.a).slice(0, 150), k: terms(f.q, clean(f.a).slice(0, 260)),
+    });
+  }
+
+  // --- Things, not only pages ----------------------------------------------
+  // "Ankh", "scarab", "koshari", "kunafa" are searched by name. Each resolves
+  // to the section of the hub page that explains it.
+  for (const x of symbols) {
+    docs.push({
+      u: "culture.html", t: x.name, s: "Symbol", d: clean(x.note), m: clean(x.nature),
+      k: terms(x.name, x.nature, x.note, "god goddess symbol hieroglyph meaning"),
+    });
+  }
+  for (const x of crafts) {
+    docs.push({
+      u: "culture.html", t: x.name, s: "Craft", d: clean(x.note),
+      k: terms(x.name, x.note, "craft handmade souvenir workshop"),
+    });
+  }
+  for (const [list, label] of [[savoury, "Dish"], [sweets, "Sweet"]] as const) {
+    for (const x of list) {
+      docs.push({
+        u: "cuisine.html", t: x.name, s: label, d: clean(x.note),
+        k: terms(x.name, x.note, "food eat egyptian dish restaurant"),
       });
     }
   }

@@ -67,11 +67,21 @@ const pageLd = jsonld ? (Array.isArray(jsonld) ? jsonld : [jsonld]) : [];
 // site-wide English/x-default pair.
 const pageLocale = localeOfRoute(active);
 const htmlLang = LOCALE_META[pageLocale].tag;
-const alternates = alternatesFor(active);
+// A page that is not itself indexable must not carry hreflang. Google only
+// honours hreflang on canonical, indexable pages, and a page that points its
+// canonical somewhere else while also declaring itself a language alternate is
+// sending two contradictory instructions about the same URL. Two pages were
+// doing exactly that: 404.html (noindex, canonical → home) and the activities
+// duplicate of the balloon experience (canonical → the experiences page). Both
+// declared alternates that nothing declared back.
+const selfCanonical = !Astro.props.noindex &&
+  (Astro.props.canonicalTo === undefined || Astro.props.canonicalTo === active);
+const alternates = selfCanonical ? alternatesFor(active) : [];
 // og:locale follows the page, and the other members of the group are declared
 // as og:locale:alternate so social previews resolve to the right language.
 const OG_LOCALE_BY_LANG: Record<string, string> = {
   en: OG_LOCALE, de: "de_DE", it: "it_IT", es: "es_ES",
+  fr: "fr_FR", ru: "ru_RU", id: "id_ID", ms: "ms_MY",
 };
 const ogLocale = OG_LOCALE_BY_LANG[pageLocale] ?? OG_LOCALE;
 const ogLocaleAlternates = alternates
@@ -137,7 +147,7 @@ const ogLocaleAlternates = alternates
     ? alternates.map((alt) => (
         <link rel="alternate" hreflang={alt.hreflang} href={canonical(alt.route)} />
       ))
-    : (
+    : selfCanonical && (
       <>
         <link rel="alternate" hreflang="en" href={canonicalUrl} />
         <link rel="alternate" hreflang="x-default" href={canonicalUrl} />
