@@ -3,6 +3,7 @@
 // collection type for scannability. Entirely data-driven: adding a collection
 // surfaces it here automatically — no edit to this page required.
 import Base from "@/layouts/Base.astro";
+import StandardOfTravel from "@/components/trust/StandardOfTravel.astro";
 import PageHero from "@/components/PageHero.astro";
 import SectionHeader from "@/components/SectionHeader.astro";
 import CollectionCard from "@/components/collection/CollectionCard.astro";
@@ -67,4 +68,12 @@ const jsonld = [
   ))}
 
   <Frieze />
+
+  {/* The tier, stated in specifics rather than adjectives — on every hub a
+      first-time visitor can land on, not only the home page. */}
+  <section style="padding-top:0">
+    <div class="wrap">
+      <StandardOfTravel compact={true} />
+    </div>
+  </section>
 </Base>

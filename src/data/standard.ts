@@ -48,7 +48,7 @@ export const alwaysTrue: StandardPoint[] = [
     symbol: "sun",
     title: "One price, itemised",
     body:
-      "The quote lists what is included and what is not, line by line, before you commit. Entrance fees, private air-conditioned transfers, your Egyptologist and lunch on touring days are inside the price — they are not add-ons revealed later.",
+      "The quote lists what is included and what is not, line by line, before you commit. Your Egyptologist, private air-conditioned transfers and lunch on touring days are inside the price on every journey, and entrance fees are inside it on every multi-day one. Where something sits outside — monument tickets on a day tour, for instance — it is named on the page you are reading, at the rate the ticket office charges, not discovered at the end.",
   },
   {
     symbol: "scarab",
@@ -86,6 +86,18 @@ export const ourTraveller: string[] = [
   "Repeat visitors who have done the headline sites and want the ones nobody queues for",
   "Anyone for whom the difference between a good guide and a great one is the whole trip",
 ];
+
+/**
+ * The tier in one sentence, for the places that have room for a line and not a
+ * section — the footer, which is on every page in the site. Deliberately says
+ * the unflattering half too: a brand that names the market it is not in is
+ * read as placing itself, while one that only says "luxury" is read as
+ * advertising.
+ */
+export const tierLine =
+  "Private, tailor-made travel at the upper end of the Egyptian market — your own licensed " +
+  "Egyptologist and car on every journey, never a seat on a coach. We are not the cheapest " +
+  "operator in Egypt and do not try to be.";
 
 /**
  * The honest sentence about price. A luxury brand that will not discuss money

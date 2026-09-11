@@ -4,6 +4,7 @@
 // ---------------------------------------------------------------------------
 import { SITE_URL, OG_IMAGE_PATH, CURRENCY, site } from "@/config/site";
 import { canonical, phoneHref } from "@/utils/links";
+import { priceBasis } from "@/utils/format";
 import { routeFor } from "@/config/routes";
 import { trailFor } from "@/config/navigation";
 import { company } from "@/data/company";
@@ -171,6 +172,20 @@ export function tourSchema(tour: Tour): JsonLd[] {
         priceCurrency: CURRENCY,
         referenceQuantity: { "@type": "QuantitativeValue", value: 1, unitText: "person" },
       },
+      // The conditions attached to the figure, machine-readable rather than
+      // prose only: the party size it assumes, and (day tours) that monument
+      // tickets are paid at the gate. An answer engine quoting this price
+      // then quotes its terms with it.
+      ...(tour.priceBasisPax
+        ? {
+            eligibleQuantity: {
+              "@type": "QuantitativeValue",
+              minValue: tour.priceBasisPax,
+              unitText: "person",
+            },
+          }
+        : {}),
+      ...(priceBasis(tour) ? { description: priceBasis(tour) } : {}),
       seller: orgRef(),
     },
   };

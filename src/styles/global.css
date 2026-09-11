@@ -157,6 +157,7 @@ section{position:relative;padding:100px 0}
 .pcard .big{font-family:var(--ff-display);font-size:2.6rem;margin:2px 0}
 .pcard .was{color:var(--muted-2);text-decoration:line-through;font-size:1.1rem;margin-left:8px}
 .pcard .pp{font-size:.8rem;color:var(--muted);margin-bottom:22px}
+.pcard .pbasis{font-size:.78rem;line-height:1.65;color:var(--muted-2);margin:-14px 0 20px;padding-left:11px;border-left:1px solid var(--line-2)}
 .pcard .btn{width:100%;text-align:center;margin-bottom:10px}
 .pcard-terms{display:inline-block;margin-top:16px;font-size:.78rem;letter-spacing:.04em;color:var(--muted);border-bottom:1px solid var(--line-2);padding-bottom:2px;transition:color .25s}
 .pcard-terms:hover{color:var(--gold-bright)}
@@ -245,6 +246,7 @@ footer{background:var(--ink-2);border-top:1px solid var(--line);padding:100px 0 
 .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:54px;margin-bottom:70px;position:relative;z-index:2}
 .foot-brand .brand{margin-bottom:20px}
 .foot-brand p{color:var(--muted);font-size:.9rem;font-weight:300;line-height:1.85;max-width:300px}
+.foot-brand .foot-tier{color:var(--muted-2);font-size:.8rem;line-height:1.8;margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
 .foot-col h3{font-weight:400;font-size:.64rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);margin-bottom:24px}
 .foot-col a{display:block;color:var(--muted);font-size:.88rem;font-weight:300;padding:7px 0;transition:color .4s,padding-left .4s}
 .foot-col a:hover{color:var(--gold-bright);padding-left:6px}

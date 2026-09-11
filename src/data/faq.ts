@@ -27,7 +27,7 @@ const planningAndBooking: Faq[] = [
   },
   {
     q: "How much does a private Egypt tour cost?",
-    a: "Kemet's journeys are priced per person and depend on length, season, accommodation level and party size. Private full-day excursions start from around €52 per person, most multi-day private journeys fall between roughly €479 and €2,000, and the 14-day grand tour is about €2,480 per person. Every quote is fully itemised — what is included and excluded is shown before you commit, with no hidden costs.",
+    a: "Kemet's journeys are priced per person and depend on length, season, accommodation level and party size. Private full-day excursions start from around €52 per person based on a private party of six, with monument tickets paid at the published gate rate; most multi-day private journeys fall between roughly €479 and €2,000 inclusive of entrance fees, and the 14-day grand tour is about €2,480 per person. We sit at the upper end of the Egyptian market rather than competing with coach operators. Every quote is fully itemised — what is included and excluded is shown before you commit, with no hidden costs.",
   },
   {
     q: "Is a private tour better than a group tour?",
@@ -35,7 +35,7 @@ const planningAndBooking: Faq[] = [
   },
   {
     q: "What is included in a Kemet journey?",
-    a: "Inclusions vary by itinerary and are listed in full on every tour page, but a private Kemet journey typically covers your licensed Egyptologist guide, private air-conditioned transfers, accommodation, monument and site entrance fees, and internal logistics such as domestic flights or Nile-cruise segments where the route calls for them. International flights, visa fees, travel insurance and personal spending are normally excluded — each tour states exactly which.",
+    a: "Inclusions vary by itinerary and are listed in full on every tour page. A multi-day Kemet journey typically covers your licensed Egyptologist guide, private air-conditioned transfers, accommodation, monument and site entrance fees, and internal logistics such as domestic flights or Nile-cruise segments where the route calls for them. Day tours cover the guide, the private car, lunch and transfers, and are priced from a private party of six — monument tickets are paid separately at the published gate rate, with nothing added by us. International flights, visa fees, travel insurance and personal spending are excluded throughout; each tour states exactly which.",
   },
   {
     q: "How do I book a trip with Kemet?",

@@ -6,6 +6,17 @@
 // already marked up by +20%, expressed in EUR, per person. Where a `was`
 // value exists it is shown struck-through.
 //
+// DAY TOURS are quoted on a different basis from the multi-day journeys, and
+// the difference is stated on the card, in the price block and in the
+// structured data rather than buried in an inclusion list:
+//   · `priceBasisPax: 6` — the per-person figure assumes a private party of
+//     six. A private Egyptologist and a private car cost the same for two as
+//     for six, so smaller parties are quoted individually, never averaged into
+//     a headline number we would have to walk back.
+//   · `ticketsExcluded: true` — monument and museum tickets are paid at the
+//     published gate rate with nothing added. Egypt raises them mid-season and
+//     we would rather charge them at cost than pad the price to absorb the risk.
+//
 // Types live in src/types; formatting/lookups in src/utils — this module is
 // pure content plus the derived lists used by listings.
 // ---------------------------------------------------------------------------
@@ -30,6 +41,18 @@ const baseExcluded = [
 ];
 
 const privateNote = "Yes — your party only";
+
+// Day-tour inclusion bases (see the DAY TOURS pricing note above). Tickets move
+// out of the price and to the top of the exclusions, where a reader looking for
+// the catch will find it first.
+const TICKETS_LINE =
+  "Entrance tickets to sites and monuments — paid at the published gate rate, with nothing added";
+
+const dayIncluded = baseIncluded.filter((x) => !x.startsWith("All entrance fees"));
+const dayExcluded = [TICKETS_LINE, ...baseExcluded];
+
+/** Party size every published day-tour price is based on. */
+const DAY_PRICE_PAX = 6;
 
 export const tours: Tour[] = [
   // ========================= MULTI-DAY =====================================
@@ -507,6 +530,8 @@ export const tours: Tour[] = [
     visiting: "Lake Qarun · Wadi El Rayan · Wadi Al-Hitan · Tunis village",
     isPrivate: privateNote,
     price: 126,
+    priceBasisPax: DAY_PRICE_PAX,
+    ticketsExcluded: true,
     summary:
       "Lake Qarun, the waterfalls and dunes of Wadi El Rayan, the fossil whales of Wadi Al-Hitan and the potters of Tunis village — Egypt's wild, green other half.",
     overview:
@@ -544,12 +569,12 @@ export const tours: Tour[] = [
       },
     ],
     included: [
-      ...baseIncluded.slice(0, 1),
+      ...dayIncluded.slice(0, 1),
       "4x4 desert transfer where required",
       "Lakeside fish lunch",
-      ...baseIncluded.slice(1),
+      ...dayIncluded.slice(1),
     ],
-    excluded: baseExcluded,
+    excluded: dayExcluded,
     faqs: [
       {
         q: "Is Fayoum suitable for families?",
@@ -586,6 +611,8 @@ export const tours: Tour[] = [
     visiting: "Giza plateau · Great Sphinx · GEM",
     isPrivate: privateNote,
     price: 72,
+    priceBasisPax: DAY_PRICE_PAX,
+    ticketsExcluded: true,
     summary:
       "The Great Pyramid, the panorama of all three pyramids, the Valley Temple and Sphinx, then the vast new Grand Egyptian Museum beside them.",
     overview:
@@ -616,10 +643,11 @@ export const tours: Tour[] = [
         text: "Cross to the Grand Egyptian Museum beside the plateau — its great staircase of statuary and the complete Tutankhamun galleries, the headline collection of modern Egypt.",
       },
     ],
-    included: [...baseIncluded],
+    included: [...dayIncluded],
     excluded: [
+      ...dayExcluded.slice(0, 1),
       "Entry inside the pyramid chambers (optional extra)",
-      ...baseExcluded,
+      ...dayExcluded.slice(1),
     ],
     faqs: [
       {
@@ -657,6 +685,8 @@ export const tours: Tour[] = [
     visiting: "Saqqara · Memphis · Dahshur",
     isPrivate: privateNote,
     price: 62,
+    priceBasisPax: DAY_PRICE_PAX,
+    ticketsExcluded: true,
     summary:
       "Djoser's Step Pyramid, the open-air ruins of Memphis, and the Bent and Red Pyramids of Dahshur — the story of how the pyramid was invented.",
     overview:
@@ -687,8 +717,8 @@ export const tours: Tour[] = [
         text: "The Red Pyramid nearby, the first successful true pyramid, which you can enter to descend into its corbelled chambers.",
       },
     ],
-    included: [...baseIncluded],
-    excluded: baseExcluded,
+    included: [...dayIncluded],
+    excluded: dayExcluded,
     faqs: [
       {
         q: "How does Saqqara compare with Giza?",
@@ -725,6 +755,8 @@ export const tours: Tour[] = [
     visiting: "Coptic Cairo · Saladin Citadel",
     isPrivate: privateNote,
     price: 73,
+    priceBasisPax: DAY_PRICE_PAX,
+    ticketsExcluded: true,
     summary:
       "The Hanging Church, Ben Ezra Synagogue and Abu Serga in Old Cairo, then Saladin's Citadel and the alabaster Mosque of Muhammad Ali.",
     overview:
@@ -755,8 +787,8 @@ export const tours: Tour[] = [
         text: "Finish inside the alabaster Mosque of Muhammad Ali, the Ottoman-style landmark whose domes define the Cairo skyline.",
       },
     ],
-    included: [...baseIncluded],
-    excluded: baseExcluded,
+    included: [...dayIncluded],
+    excluded: dayExcluded,
     faqs: [
       {
         q: "Is there a dress code?",
@@ -793,6 +825,8 @@ export const tours: Tour[] = [
     visiting: "Egyptian Museum · NMEC",
     isPrivate: privateNote,
     price: 58,
+    priceBasisPax: DAY_PRICE_PAX,
+    ticketsExcluded: true,
     summary:
       "The treasures of the Egyptian Museum in Tahrir, then the National Museum of Egyptian Civilization and its Royal Mummies Hall.",
     overview:
@@ -817,8 +851,8 @@ export const tours: Tour[] = [
         text: "Descend into the dimly lit Royal Mummies Hall, where the preserved bodies of pharaohs including Ramses II and Hatshepsut rest in dignified display.",
       },
     ],
-    included: [...baseIncluded],
-    excluded: baseExcluded,
+    included: [...dayIncluded],
+    excluded: dayExcluded,
     faqs: [
       {
         q: "Is the Royal Mummies Hall included?",
@@ -855,6 +889,8 @@ export const tours: Tour[] = [
     visiting: "Catacombs · Qaitbay · Bibliotheca Alexandrina",
     isPrivate: privateNote,
     price: 52,
+    priceBasisPax: DAY_PRICE_PAX,
+    ticketsExcluded: true,
     summary:
       "The Catacombs of Kom El Shoqafa, Pompey's Pillar, the Citadel of Qaitbay on the old Pharos site and the Bibliotheca Alexandrina, with a seafood lunch.",
     overview:
@@ -886,11 +922,11 @@ export const tours: Tour[] = [
       },
     ],
     included: [
-      ...baseIncluded.slice(0, 1),
+      ...dayIncluded.slice(0, 1),
       "Seafront seafood lunch",
-      ...baseIncluded.slice(1),
+      ...dayIncluded.slice(1),
     ],
-    excluded: baseExcluded,
+    excluded: dayExcluded,
     faqs: [
       {
         q: "How long is the drive from Cairo?",
@@ -927,6 +963,8 @@ export const tours: Tour[] = [
     visiting: "Giza plateau · Great Sphinx",
     isPrivate: privateNote,
     price: 60,
+    priceBasisPax: DAY_PRICE_PAX,
+    ticketsExcluded: true,
     summary:
       "The Great Pyramid, the pyramids of Khafre and Menkaure, the panoramic viewpoint and the Valley Temple with the Great Sphinx — Giza in a morning.",
     overview:
@@ -957,8 +995,9 @@ export const tours: Tour[] = [
         text: "End at the granite Valley Temple and the Great Sphinx, the colossal guardian carved from the plateau's bedrock.",
       },
     ],
-    included: [...baseIncluded.filter((x) => !x.startsWith("Lunch"))],
+    included: [...dayIncluded.filter((x) => !x.startsWith("Lunch"))],
     excluded: [
+      ...dayExcluded.slice(0, 1),
       "Lunch (half-day tour)",
       "Camel or horse rides (optional extra)",
       ...baseExcluded.filter((x) => !x.startsWith("Optional extras")),
@@ -994,6 +1033,7 @@ export const tours: Tour[] = [
     visiting: "Downtown Cairo · street-food quarters",
     isPrivate: privateNote,
     price: 54,
+    priceBasisPax: DAY_PRICE_PAX,
     summary:
       "A guided evening tasting of Cairo's best-loved dishes — koshari, ful and ta'meya, hawawshi and grilled pigeon, kunafa and basbousa, finished at a traditional ahwa.",
     overview:
@@ -2361,6 +2401,8 @@ export const tours: Tour[] = [
     visiting: "Great Temple · Temple of Nefertari",
     isPrivate: privateNote,
     price: 145,
+    priceBasisPax: DAY_PRICE_PAX,
+    ticketsExcluded: true,
     summary:
       "Ramesses II's colossal rock-cut temples — carved into a Nubian mountainside, moved block by block above the rising lake, and still aligned to the sun.",
     overview:
@@ -2394,11 +2436,11 @@ export const tours: Tour[] = [
     included: [
       ...baseIncluded.slice(0, 1),
       "Private air-conditioned vehicle for the desert road, both ways",
-      "All entrance fees to both temples",
       "Breakfast box and bottled water",
       "Hotel or cruise-ship pickup & drop-off in Aswan",
     ],
     excluded: [
+      "Entrance tickets to both temples — paid at the published gate rate, with nothing added",
       "Flight option Aswan–Abu Simbel (available on request, limited schedule)",
       "Lunch (returned to Aswan by early afternoon)",
       "Tipping (gratuities)",

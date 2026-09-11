@@ -1,5 +1,6 @@
 ---
 import Base from "@/layouts/Base.astro";
+import StandardOfTravel from "@/components/trust/StandardOfTravel.astro";
 import HubEditorial from "@/components/HubEditorial.astro";
 import { hubs } from "@/data/hubs";
 import PageHero from "@/components/PageHero.astro";
@@ -49,4 +50,12 @@ const faqLd = {
     </div>
   </section>
   <HubEditorial hub={hub} faqHeading="Activity questions, answered" />
+
+  {/* The tier, stated in specifics rather than adjectives — on every hub a
+      first-time visitor can land on, not only the home page. */}
+  <section style="padding-top:0">
+    <div class="wrap">
+      <StandardOfTravel compact={true} />
+    </div>
+  </section>
 </Base>

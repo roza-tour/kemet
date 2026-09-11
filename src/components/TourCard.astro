@@ -1,6 +1,6 @@
 ---
 import type { Tour } from "@/types";
-import { formatPrice } from "@/utils/format";
+import { formatPrice, priceBasis } from "@/utils/format";
 import Placeholder from "@/components/Placeholder.astro";
 
 interface Props {
@@ -10,6 +10,7 @@ interface Props {
 }
 const { tour, base = "" } = Astro.props;
 const href = `${base}${tour.slug}.html`;
+const basis = priceBasis(tour, true);
 ---
 <a class="jcard reveal" href={href} data-tilt aria-label={`${tour.title} — view journey`}>
   <div style="position:relative">
@@ -31,8 +32,24 @@ const href = `${base}${tour.slug}.html`;
         {formatPrice(tour.price)}
         {tour.was && <span class="was">{formatPrice(tour.was)}</span>}
         <small>/ person</small>
+        {basis && <span class="basis">{basis}</span>}
       </div>
       <span class="arrow" aria-hidden="true">→</span>
     </div>
   </div>
 </a>
+
+<style>
+  /* Qualifies the headline figure on the card itself, so the basis of the
+     price is never something a reader only discovers on the detail page. */
+  .price .basis {
+    display: block;
+    margin-top: 5px;
+    font-family: var(--ff-body);
+    font-size: .69rem;
+    letter-spacing: .08em;
+    line-height: 1.5;
+    color: var(--muted-2);
+    text-transform: none;
+  }
+</style>

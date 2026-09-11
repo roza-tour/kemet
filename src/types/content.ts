@@ -223,6 +223,19 @@ export interface Tour {
   price: number;
   /** Original price (struck-through) where given, in EUR. */
   was?: number;
+  /**
+   * Party size the published per-person price is based on. Day tours are
+   * quoted from six travellers; smaller parties are priced on enquiry because
+   * a private car and a private Egyptologist cost the same for two as for six.
+   */
+  priceBasisPax?: number;
+  /**
+   * True when monument and museum entrance tickets sit outside the quoted
+   * price and are charged at the published gate rate. Kept explicit rather
+   * than implied by the exclusion list so cards, price blocks and structured
+   * data all state the same thing.
+   */
+  ticketsExcluded?: boolean;
   flightsIncluded?: boolean;
   /** Card description. */
   summary: string;

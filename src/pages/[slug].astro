@@ -6,13 +6,14 @@ import Frieze from "@/components/Frieze.astro";
 import SectionHeader from "@/components/SectionHeader.astro";
 import TourCard from "@/components/TourCard.astro";
 import TourFit from "@/components/conversion/TourFit.astro";
+import StandardOfTravel from "@/components/trust/StandardOfTravel.astro";
 import LeadCapture from "@/components/conversion/LeadCapture.astro";
 import GuideCard from "@/components/guide/GuideCard.astro";
 import { tours } from "@/data/tours";
 import { getTourMeta } from "@/data/tours.taxonomy";
 import { findSimilarTours, findPreparationGuides } from "@/data/registry";
 import type { Tour } from "@/types";
-import { formatPrice } from "@/utils/format";
+import { formatPrice, priceBasis } from "@/utils/format";
 import { whatsappLink, mailtoLink } from "@/utils/links";
 import { tourStaticPaths } from "@/config/routes";
 import { entitySchema } from "@/schemas/jsonld";
@@ -75,6 +76,10 @@ const enquire = mailtoLink(
   `Hello Kemet,\n\nI'd like to request the "${tour.title}" journey (${tour.durationLabel}, from ${formatPrice(tour.price)} per person).\n\nPreferred dates:\nNumber of travellers:\n\nThank you.`,
 );
 const jsonld = entitySchema("tour", tour);
+
+// What the headline figure assumes — party size and, on day tours, tickets at
+// the gate rate. Stated beside the price rather than left to the exclusions.
+const priceBasisLine = priceBasis(tour);
 
 // Page-specific keywords and a share card that uses the tour's own hero photo.
 const keywords = [
@@ -174,6 +179,7 @@ const keywords = [
                 {tour.was && <span class="was">{formatPrice(tour.was)}</span>}
               </div>
               <div class="pp">per person · EUR</div>
+              {priceBasisLine && <p class="pbasis">{priceBasisLine}</p>}
               <a href={enquire} class="btn btn-solid">Request this Journey</a>
               <a href={wa} class="btn btn-ghost" target="_blank" rel="noopener">Ask on WhatsApp</a>
               <div class="facts">
@@ -191,6 +197,20 @@ const keywords = [
     </section>
 
     <Frieze />
+
+    {/* The tier, on the pages people actually land on from search. A tour page
+        is where a stranger meets the brand, and "private" alone does not tell
+        them which half of the Egyptian market they are looking at. */}
+    <section style="padding-top:0">
+      <div class="wrap">
+        <StandardOfTravel
+          eyebrow="The standard"
+          heading="What this journey is, without exception"
+          intro="Every operator in Egypt uses the word luxury. These are the specifics behind ours — checkable before you pay for anything."
+          compact={true}
+        />
+      </div>
+    </section>
 
     {tour.gallery && tour.gallery.length > 0 && (
       <section>

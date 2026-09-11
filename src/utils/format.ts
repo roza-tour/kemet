@@ -8,6 +8,28 @@ export function formatPrice(amount: number): string {
   return CURRENCY_SYMBOL + amount.toLocaleString(NUMBER_LOCALE);
 }
 
+/**
+ * The qualifying line under a published price: the party size it assumes and
+ * whether entrance tickets sit outside it. Returns `undefined` when a tour
+ * carries neither qualifier, so callers render nothing rather than an empty
+ * element. `short` is the card variant — the same facts, fewer words.
+ */
+export function priceBasis(
+  tour: { priceBasisPax?: number; ticketsExcluded?: boolean },
+  short = false,
+): string | undefined {
+  const parts: string[] = [];
+  if (tour.priceBasisPax) {
+    parts.push(short ? `from ${tour.priceBasisPax} travellers` : `Based on a private party of ${tour.priceBasisPax} or more`);
+  }
+  if (tour.ticketsExcluded) {
+    parts.push(short ? "tickets not included" : "entrance tickets not included");
+  }
+  if (parts.length === 0) return undefined;
+  const line = parts.join(" · ");
+  return short ? line : `${line[0].toUpperCase()}${line.slice(1)}.`;
+}
+
 /** Zero-pad a number to two digits, e.g. 3 → "03". */
 export function pad2(n: number): string {
   return String(n).padStart(2, "0");

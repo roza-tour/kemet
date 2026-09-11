@@ -43,6 +43,16 @@ export const DEFAULT_KEYWORDS = [
   "Egypt tours",
   "luxury Egypt travel",
   "private Egypt tours",
+  // Tier-qualifying intent. These are the phrases used by the traveller who
+  // has already decided not to buy a coach seat — they cost nothing to carry
+  // and they keep the site out of the budget-package result set.
+  "luxury Egypt tours",
+  "high-end Egypt travel",
+  "5-star Egypt tour packages",
+  "VIP Egypt tours",
+  "luxury Nile cruise",
+  "private Egyptologist guide",
+  "luxury Egypt honeymoon",
   "tailor-made Egypt holidays",
   "Egypt vacation packages", // US phrasing
   "Egypt holidays", // UK/AU phrasing
