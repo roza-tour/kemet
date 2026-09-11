@@ -1,0 +1,6 @@
+commit: 1ad8cd6 (+ uncommitted changes)
+built:  2026-09-11T23:57:07.619Z
+
+Compare `commit` with `git rev-parse --short HEAD` on the branch you
+published. If they differ, this server has not pulled the latest build —
+run `git pull origin main` in public_html before debugging anything else.
