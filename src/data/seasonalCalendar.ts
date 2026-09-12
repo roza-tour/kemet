@@ -200,39 +200,44 @@ const sunFestival = (y: number, month: 2 | 10): Occasion => {
 };
 
 /**
- * Coptic Easter and the Monday after it. They are one long weekend in practice
- * — Egypt's oldest festival lands the day after the Coptic Church's greatest
- * one — so the site wears them together rather than skinning a Sunday and
- * dropping it for a Monday.
+ * Easter, as the Western church dates it — Good Friday through Easter Monday.
+ *
+ * This replaces Sham El-Nessim, which was an Egyptian pharaonic festival rather
+ * than a holiday this site's markets take time off for. Ten of the markets in
+ * data/markets.ts are Western European and two North American: Easter is the
+ * spring week they actually travel in, and the window is the long weekend, not
+ * the Sunday alone.
  */
-const copticEaster = (sunday: string, monday: string, dates: string): Occasion => ({
-  theme: "spring", slug: "sham-el-nessim-egypt", label: "Coptic Easter & Sham El-Nessim",
-  note: "{dates} — Egypt's oldest festival, and the whole country outdoors the day after Easter.",
-  from: sunday, to: monday, dates, priority: 65,
+const easter = (friday: string, monday: string, sunday: string, alsoOrthodox: boolean): Occasion => ({
+  theme: "spring", slug: "sham-el-nessim-egypt", label: "Easter in Egypt",
+  note: alsoOrthodox
+    ? "Easter Sunday is {dates}, Western and Orthodox together this year — the Nile valley at its best, and booked early."
+    : "Easter Sunday is {dates} — spring on the Nile, warm days and cool evenings, and the long weekend most of Europe travels in.",
+  from: friday, to: monday, dates: sunday, priority: 65,
 });
 
 /**
- * 1 Muharram. Derived, not looked up: 1 Muharram is 236 days before 1 Ramadan
- * of the same Hijri year (Muharram 30, Safar 29, Rabi I 30, Rabi II 29, Jumada
- * I 30, Jumada II 29, Rajab 30, Sha'ban 29), so it rests on the same researched
- * Ramadan dates as everything else here and cannot drift away from them.
+ * Orthodox Easter, in the years it falls apart from the Western date — by as
+ * much as five weeks. It is on the calendar for two reasons at once: Russia and
+ * Ukraine are in the market list, and it is the date Egypt's own Coptic church
+ * keeps, so it is also what is happening on the ground. Emitted only when the
+ * two Easters differ; when they coincide the single Easter window says so.
  */
-const islamicNewYear = (day: string, hijri: number, dates: string): Occasion => ({
-  theme: "ramadan", slug: "ramadan-in-egypt", label: `Islamic New Year — ${hijri} AH`,
-  note: "Expected {dates}. A quiet public holiday; the monuments are at their emptiest.",
-  from: day, to: day, dates, priority: 55, moonSighted: true,
+const orthodoxEaster = (friday: string, monday: string, sunday: string): Occasion => ({
+  theme: "spring", slug: "sham-el-nessim-egypt", label: "Orthodox Easter",
+  note: "Orthodox and Coptic Easter falls on {dates} — Egypt's own Easter, and the spring weekend the country spends outdoors.",
+  from: friday, to: monday, dates: sunday, priority: 62,
 });
 
 /**
- * 12 Rabi' al-Awwal — the Prophet's birthday, and the most colourful week in
- * the Egyptian year: Sufi processions around Sayyidna al-Hussein, tented
- * streets, and the sugar dolls and nut brittle sold nowhere else. Same
- * derivation as above: 166 days before 1 Ramadan.
+ * US Thanksgiving — the fourth Thursday in November, and the week two North
+ * American markets travel long-haul in. It lands in the best month of the
+ * Egyptian year, which is the whole reason it is worth marking.
  */
-const mawlid = (day: string, dates: string): Occasion => ({
-  theme: "mawlid", slug: "ramadan-in-egypt", label: "Mawlid al-Nabi",
-  note: "Expected {dates} — Sufi processions in Islamic Cairo, tented streets and the sugar dolls of the mawlid.",
-  from: day, to: day, dates, priority: 68, moonSighted: true,
+const thanksgiving = (thursday: string, dates: string): Occasion => ({
+  theme: "autumn", slug: "egypt-in-winter", label: "Thanksgiving week",
+  note: "{dates} — the American long weekend, in the best month on the Nile. Book it a season ahead.",
+  from: thursday, to: thursday, dates, priority: 45, href: "when-to-go.html",
 });
 
 /**
@@ -255,94 +260,94 @@ const christmas = (y: number): Occasion => ({
 });
 
 const occasions: Occasion[] = [
-  // Ten occasions a year. What is deliberately NOT here: the national days
-  // (25 January, 25 April, 1 May, 23 July, 6 October). They are real public
-  // holidays and they matter to an itinerary — offices shut, traffic changes —
-  // but a military or political anniversary is not something a travel brand
-  // should dress its pages in, and the practical effect belongs in the
-  // planning guides, not in a skin.
+  // The holidays this site's markets actually take time off for — see
+  // data/markets.ts: ten Western European, six Gulf, three Northern European,
+  // two North American, plus Russia and Ukraine. Christmas and New Year,
+  // Easter (both dates, in the years they differ), Thanksgiving, Valentine's,
+  // Ramadan and the two Eids, and the one thing that is only in Egypt: the
+  // sun reaching the sanctuary at Abu Simbel, twice a year.
+  //
+  // Deliberately absent: Egypt's national days (25 January, 25 April, 1 May,
+  // 23 July, 6 October). They are real public holidays and they change what an
+  // itinerary can do, but a political or military anniversary is not something
+  // a travel brand should dress its pages in — that belongs in the planning
+  // guides. Also absent: Black Friday. A discount weekend is the wrong signal
+  // for a brand whose position is that it is not the cheapest.
 
   // ===== 2026 ==============================================================
   sunFestival(2026, 10),
+  thanksgiving("2026-11-26", "26 November 2026"),
   christmas(2026),
 
-  // ===== 2027 — Hijri 1448 into 1449 =======================================
+  // ===== 2027 ==============================================================
   ramadan("2027-02-08", "2027-03-08", "8 February – 8 March 2027"),
   eidAlFitr("2027-03-09", "2027-03-11", "9–11 March 2027"),
   valentines(2027),
   sunFestival(2027, 2),
-  // Coptic Easter 2 May 2027 → Sham El-Nessim 3 May 2027.
-  copticEaster("2027-05-02", "2027-05-03", "2–3 May 2027"),
+  easter("2027-03-26", "2027-03-29", "28 March 2027", false),
+  orthodoxEaster("2027-04-30", "2027-05-03", "2 May 2027"),
   eidAlAdha("2027-05-16", "2027-05-19", "16–19 May 2027"),
-  islamicNewYear("2027-06-06", 1449, "6 June 2027"),
-  mawlid("2027-08-15", "15 August 2027"),
   sunFestival(2027, 10),
+  thanksgiving("2027-11-25", "25 November 2027"),
   christmas(2027),
 
-  // ===== 2028 — Hijri 1449 into 1450 =======================================
+  // ===== 2028 ==============================================================
   ramadan("2028-01-28", "2028-02-27", "28 January – 27 February 2028"),
   eidAlFitr("2028-02-28", "2028-03-01", "28 February – 1 March 2028"),
   valentines(2028),
   sunFestival(2028, 2),
-  // Coptic Easter 16 April 2028 → Sham El-Nessim 17 April 2028.
-  copticEaster("2028-04-16", "2028-04-17", "16–17 April 2028"),
+  easter("2028-04-14", "2028-04-17", "16 April 2028", true),
   eidAlAdha("2028-05-05", "2028-05-08", "5–8 May 2028"),
-  islamicNewYear("2028-05-25", 1450, "25 May 2028"),
-  mawlid("2028-08-03", "3 August 2028"),
   sunFestival(2028, 10),
+  thanksgiving("2028-11-23", "23 November 2028"),
   christmas(2028),
 
-  // ===== 2029 — Hijri 1450 into 1451 =======================================
+  // ===== 2029 ==============================================================
   ramadan("2029-01-16", "2029-02-14", "16 January – 14 February 2029"),
   eidAlFitr("2029-02-15", "2029-02-17", "15–17 February 2029"),
   valentines(2029),
   sunFestival(2029, 2),
-  // Coptic Easter 8 April 2029 → Sham El-Nessim 9 April 2029.
-  copticEaster("2029-04-08", "2029-04-09", "8–9 April 2029"),
+  easter("2029-03-30", "2029-04-02", "1 April 2029", false),
+  orthodoxEaster("2029-04-06", "2029-04-09", "8 April 2029"),
   eidAlAdha("2029-04-25", "2029-04-28", "25–28 April 2029"),
-  islamicNewYear("2029-05-15", 1451, "15 May 2029"),
-  mawlid("2029-07-24", "24 July 2029"),
   sunFestival(2029, 10),
+  thanksgiving("2029-11-22", "22 November 2029"),
   christmas(2029),
 
-  // ===== 2030 — Hijri 1451 into 1452 =======================================
+  // ===== 2030 ==============================================================
   ramadan("2030-01-06", "2030-02-04", "6 January – 4 February 2030"),
   eidAlFitr("2030-02-05", "2030-02-07", "5–7 February 2030"),
   valentines(2030),
   sunFestival(2030, 2),
   eidAlAdha("2030-04-14", "2030-04-17", "14–17 April 2030"),
-  // Coptic Easter 28 April 2030 → Sham El-Nessim 29 April 2030.
-  copticEaster("2030-04-28", "2030-04-29", "28–29 April 2030"),
-  islamicNewYear("2030-05-04", 1452, "4 May 2030"),
-  mawlid("2030-07-13", "13 July 2030"),
+  easter("2030-04-19", "2030-04-22", "21 April 2030", false),
+  orthodoxEaster("2030-04-26", "2030-04-29", "28 April 2030"),
   sunFestival(2030, 10),
+  thanksgiving("2030-11-28", "28 November 2030"),
   christmas(2030),
   // Ramadan 1452 opens before the year is out.
   ramadan("2030-12-26", "2031-01-24", "26 December 2030 – 24 January 2031"),
 
-  // ===== 2031 — Hijri 1452 into 1453 =======================================
+  // ===== 2031 ==============================================================
   eidAlFitr("2031-01-25", "2031-01-27", "25–27 January 2031"),
   valentines(2031),
   sunFestival(2031, 2),
   eidAlAdha("2031-04-03", "2031-04-06", "3–6 April 2031"),
-  // Coptic Easter 13 April 2031 → Sham El-Nessim 14 April 2031.
-  copticEaster("2031-04-13", "2031-04-14", "13–14 April 2031"),
-  islamicNewYear("2031-04-23", 1453, "23 April 2031"),
-  mawlid("2031-07-02", "2 July 2031"),
+  easter("2031-04-11", "2031-04-14", "13 April 2031", true),
   sunFestival(2031, 10),
+  thanksgiving("2031-11-27", "27 November 2031"),
   christmas(2031),
   ramadan("2031-12-15", "2032-01-13", "15 December 2031 – 13 January 2032"),
 
-  // ===== 2032 — Hijri 1453 into 1454 =======================================
+  // ===== 2032 ==============================================================
   eidAlFitr("2032-01-14", "2032-01-16", "14–16 January 2032"),
   valentines(2032),
   sunFestival(2032, 2),
   eidAlAdha("2032-03-22", "2032-03-25", "22–25 March 2032"),
-  islamicNewYear("2032-04-11", 1454, "11 April 2032"),
-  // Coptic Easter 2 May 2032 → Sham El-Nessim 3 May 2032.
-  copticEaster("2032-05-02", "2032-05-03", "2–3 May 2032"),
-  mawlid("2032-06-20", "20 June 2032"),
+  easter("2032-03-26", "2032-03-29", "28 March 2032", false),
+  orthodoxEaster("2032-04-30", "2032-05-03", "2 May 2032"),
   sunFestival(2032, 10),
+  thanksgiving("2032-11-25", "25 November 2032"),
   christmas(2032),
 ];
 
