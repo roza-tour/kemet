@@ -549,6 +549,24 @@ export function entitySchema(domain: ContentDomain, entity: unknown): JsonLd[] {
 const socialProfiles: string[] = Object.values(company.socialProfiles ?? {})
   .filter((u): u is string => typeof u === "string" && /^https?:\/\//.test(u));
 
+/**
+ * Confirmed credentials only, as schema.org EducationalOccupationalCredential
+ * nodes. Placeholders are dropped rather than emitted with a hedge: structured
+ * data has no way to say "we think so", so an unverified entry would read to a
+ * search engine as an assertion of fact.
+ */
+const confirmedCredentials: JsonLd[] = (company.credentials ?? [])
+  .filter((c) => !c.placeholder)
+  .map((c) => ({
+    "@type": "EducationalOccupationalCredential",
+    name: c.name,
+    credentialCategory: c.type,
+    ...(c.issuedBy ? { recognizedBy: { "@type": "Organization", name: c.issuedBy } } : {}),
+    ...(c.identifier ? { identifier: c.identifier } : {}),
+    ...(c.year ? { dateCreated: String(c.year) } : {}),
+    ...(c.url ? { url: c.url } : {}),
+  }));
+
 export function siteSchema(): JsonLd[] {
   const org: JsonLd = {
     "@context": SCHEMA_CONTEXT,
@@ -631,7 +649,18 @@ export function siteSchema(): JsonLd[] {
     // company data so adding a profile is a one-line change; omitted entirely
     // while empty rather than emitted as an empty array.
     ...(socialProfiles.length ? { sameAs: socialProfiles } : {}),
-    // hasCredential: [] — future certifications/memberships
+    // Licences and memberships — CONFIRMED ONES ONLY.
+    //
+    // company.credentials carries four entries, every one of them still
+    // `placeholder: true` (an unconfirmed licence is a claim, and the editorial
+    // standard on the About page is that we do not publish credentials we have
+    // not verified). The filter is the whole point: a placeholder must never
+    // reach the graph, because a licence asserted in structured data and absent
+    // from the public register is worse than no licence stated at all.
+    //
+    // The moment a real registration number replaces a placeholder in
+    // src/data/company.ts, it appears here and nowhere else has to change.
+    ...(confirmedCredentials.length ? { hasCredential: confirmedCredentials } : {}),
   };
 
   const webSite: JsonLd = {

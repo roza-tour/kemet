@@ -54,6 +54,12 @@ export interface CompanyCredential {
   issuedBy?: string;
   year?: number;
   url?: string;
+  /**
+   * The registration/licence/membership number as it appears on the document.
+   * A credential a reader can check beats one they have to take on trust, and
+   * it is what a search engine can match against a public register.
+   */
+  identifier?: string;
   /** When true, the credential is not yet confirmed and renders as placeholder only. */
   placeholder: boolean;
 }
