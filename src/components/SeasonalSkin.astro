@@ -12,9 +12,10 @@
 // matches, so no visitor ever sees a wrong or empty season.
 import { seasonalCalendar } from "@/data/seasonalCalendar";
 
-// Serialised to the client as compact rows: [theme, slug, label, note, start, end, priority, eventDate]
+// Serialised to the client as compact rows:
+// [theme, slug, label, note, start, end, priority, eventDate, href]
 const rows = seasonalCalendar.map((w) => [
-  w.theme, w.slug, w.label, w.note, w.start, w.end, w.priority, w.eventDate ?? "",
+  w.theme, w.slug, w.label, w.note, w.start, w.end, w.priority, w.eventDate ?? "", w.href ?? "",
 ]);
 ---
 <div id="season-ribbon" class="srb" hidden>
@@ -47,13 +48,18 @@ const rows = seasonalCalendar.map((w) => [
       }
       if (!active) return;
 
-      var theme = active[0], slug = active[1], label = active[2], note = active[3], when = active[7];
+      var theme = active[0], slug = active[1], label = active[2], note = active[3];
+      var when = active[7], route = active[8];
 
       // 1) Site-wide accent: everything reads through these custom properties.
       document.documentElement.setAttribute("data-season", theme);
 
+      // A base season can point somewhere other than a collection page (the
+      // "when to go" guide, for instance), so the row carries its own route and
+      // the collection path is only the default.
       var depth = (location.pathname.match(/\//g) || []).length - 1;
-      var href = (depth > 0 ? "../".repeat(depth) : "") + "collections/" + slug + ".html";
+      var href = (depth > 0 ? "../".repeat(depth) : "") +
+        (route || "collections/" + slug + ".html");
 
       // 2) The chip in the nav bar — ALWAYS, before any storage is consulted.
       //
@@ -122,6 +128,18 @@ const rows = seasonalCalendar.map((w) => [
      a strength that can actually be perceived. */
   :root[data-season="red-sea"]      { --gold:#D6C588; --gold-bright:#F2EDD2; --gold-deep:#8E8244; --line-2:rgba(214,197,136,.44); --srb:#48C5C0; --srb-bg:6,28,32; }
   :root[data-season="honeymoon"]    { --gold:#E3B98C; --gold-bright:#FBE7D6; --gold-deep:#A9764B; --line-2:rgba(227,185,140,.46); --srb:#D89C7E; --srb-bg:30,18,15; }
+
+  /* ===== The four base seasons ===========================================
+     One of these is on every ordinary day of the year, so they are the most
+     seen palettes on the site and the most restrained. The house gold moves
+     only a few points — enough that the page feels different in November and
+     in June without the brand changing colour — and each season's own hue
+     lives in --srb, which is what the chip, the ribbon, the mark and the hero
+     atmosphere are drawn in. That is where a season is allowed to be obvious. */
+  :root[data-season="spring"]       { --gold:#DCC06B; --gold-bright:#FBF3D2; --gold-deep:#9C8438; --line-2:rgba(220,192,107,.44); --srb:#8FC496; --srb-bg:14,26,17; }
+  :root[data-season="summer"]       { --gold:#E2C070; --gold-bright:#FBEDC2; --gold-deep:#A47F31; --line-2:rgba(226,192,112,.46); --srb:#48C5C0; --srb-bg:6,28,32; }
+  :root[data-season="autumn"]       { --gold:#DDA95C; --gold-bright:#F8DFAE; --gold-deep:#9A6A28; --line-2:rgba(221,169,92,.46); --srb:#D8823C; --srb-bg:28,17,9; }
+  :root[data-season="winter"]       { --gold:#D6BC78; --gold-bright:#F4EBD2; --gold-deep:#93793A; --line-2:rgba(214,188,120,.44); --srb:#6FA8C9; --srb-bg:9,20,29; }
   :root[data-season="eid"]          { --gold:#E0BE6A; --gold-bright:#FBEFC4; --gold-deep:#9C7A2E; --line-2:rgba(224,190,106,.44); --srb:#3E9E80; --srb-bg:14,26,22; }
 
   /* ===== The chip in the nav bar =========================================
@@ -150,9 +168,18 @@ const rows = seasonalCalendar.map((w) => [
   /* A slow pulse so the eye finds it once, then leaves it alone. */
   .schip-mark { animation: schip-pulse 3.4s ease-in-out infinite; }
   @keyframes schip-pulse { 0%,100% { opacity: .78; } 50% { opacity: 1; } }
-  /* Below the desktop bar the nav is tight and the ribbon already carries the
-     season across the full width — the chip would only crowd the logo. */
-  @media (max-width: 1180px) { .schip { display: none; } }
+  /* The chip used to be hidden below 1180px on the grounds that the ribbon
+     already carried the season. But the ribbon is dismissible and most visits
+     are on a phone, so the effect was that on the devices most people use, a
+     dismissed ribbon left nothing on the site naming the season at all. It now
+     stays at every width: from 1080px down the nav is logo + burger and has the
+     room, and below 680px it drops to the mark alone — a small seasonal glyph
+     beside the wordmark, with the words still in the ribbon. */
+  @media (max-width: 1180px) { .schip { margin-left: 12px; padding: 6px 12px 6px 10px; } }
+  @media (max-width: 680px) {
+    .schip { margin-left: 10px; padding: 7px; gap: 0; }
+    .schip-label { display: none; }
+  }
 
   /* ===== The ribbon ===================================================== */
   /* Pinned to the BOTTOM so it never interferes with the hero or the nav. */
@@ -246,6 +273,28 @@ const rows = seasonalCalendar.map((w) => [
   /* Honeymoon — a soft filled disc. */
   :root[data-season="honeymoon"] .smark { border: 0; background: var(--srb); }
   :root[data-season="honeymoon"] .smark::after { display: none; }
+
+  /* Summer — the sun at its height: a filled disc with a hard halo. */
+  :root[data-season="summer"] .smark {
+    border: 0; background: var(--srb); border-radius: 50%;
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--srb) 22%, transparent),
+                0 0 12px 1px color-mix(in srgb, var(--srb) 65%, transparent);
+  }
+  :root[data-season="summer"] .smark::after { display: none; }
+
+  /* Autumn — a falling leaf, the spring leaf turned and tipped over. */
+  :root[data-season="autumn"] .smark {
+    border: 0; background: var(--srb); border-radius: 60% 0 60% 0;
+    transform: rotate(-18deg);
+  }
+  :root[data-season="autumn"] .smark::after { display: none; }
+
+  /* Winter — a six-point star, drawn as two crossed bars. */
+  :root[data-season="winter"] .smark {
+    border: 0; background: var(--srb); border-radius: 0;
+    clip-path: polygon(50% 0%, 62% 36%, 100% 26%, 74% 54%, 96% 88%, 50% 70%, 4% 88%, 26% 54%, 0% 26%, 38% 36%);
+  }
+  :root[data-season="winter"] .smark::after { display: none; }
 
   /* Lift the floating WhatsApp button above the ribbon while it is showing. */
   body:has(#season-ribbon:not([hidden])) .wafab { bottom: max(78px, calc(env(safe-area-inset-bottom) + 74px)); }
@@ -367,6 +416,45 @@ const rows = seasonalCalendar.map((w) => [
   :root[data-season="honeymoon"] .phero::after {
     background:
       radial-gradient(700px 300px at 50% 0%, rgba(232,180,160,.20), transparent 70%);
+  }
+
+  /* Summer — the white heat of an Egyptian noon at the top of the frame, and
+     the Red Sea's light below it. Deliberately the strongest of the four: June
+     to mid-September is when the page should feel like the country does. */
+  :root[data-season="summer"] .hero .veil::after,
+  :root[data-season="summer"] .phero::after {
+    background:
+      radial-gradient(420px 200px at 78% 6%, rgba(255,240,200,.20), transparent 70%),
+      repeating-linear-gradient(101deg,
+        transparent 0 44px, rgba(140,222,240,.05) 74px, transparent 104px 148px),
+      linear-gradient(180deg, rgba(36,132,146,.24), transparent 52%),
+      radial-gradient(820px 340px at 50% 0%, rgba(72,150,178,.20), transparent 74%);
+    -webkit-mask: linear-gradient(180deg, #000 32%, transparent 88%);
+    mask: linear-gradient(180deg, #000 32%, transparent 88%);
+    animation: sea-drift 34s linear infinite;
+  }
+
+  /* Autumn — low amber light raking in from one side, and the dust the season
+     actually carries. Warm, not orange: the palette is already gold. */
+  :root[data-season="autumn"] .hero .veil::after,
+  :root[data-season="autumn"] .phero::after {
+    background:
+      radial-gradient(560px 240px at 12% 4%, rgba(216,130,60,.20), transparent 72%),
+      radial-gradient(760px 300px at 88% 0%, rgba(247,206,150,.13), transparent 70%),
+      linear-gradient(180deg, rgba(120,66,26,.16), transparent 46%);
+    background-size: 160% 160%, 160% 160%, 100% 100%;
+    animation: season-wander 26s ease-in-out infinite alternate;
+  }
+
+  /* Winter — a cold clear sky over the valley: high blue light, nothing warm
+     in it, which is exactly what a Luxor morning in January looks like. */
+  :root[data-season="winter"] .hero .veil::after,
+  :root[data-season="winter"] .phero::after {
+    background:
+      radial-gradient(820px 320px at 50% 0%, rgba(111,168,201,.22), transparent 72%),
+      radial-gradient(340px 160px at 18% 8%, rgba(226,240,252,.12), transparent 70%),
+      linear-gradient(180deg, rgba(28,58,86,.20), transparent 50%);
+    animation: season-breathe 22s ease-in-out infinite;
   }
 
   /* ===== Movement =========================================================

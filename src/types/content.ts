@@ -120,13 +120,19 @@ export type CollectionType =
  * Christmas stars and evergreen, the solar burst of the Abu Simbel alignment.
  */
 export type SeasonalTheme =
+  // The four base seasons — one of these is always active (seasonalCalendar).
+  | "spring"
+  | "summer"
+  | "autumn"
+  | "winter"
+  // Occasions, which outrank the season underneath them while they run.
   | "ramadan"
+  | "eid"
   | "christmas"
   | "sun-festival"
-  | "spring"
+  // Collection-page identities that are not on the calendar.
   | "red-sea"
-  | "honeymoon"
-  | "eid";
+  | "honeymoon";
 
 export type CollectionAudience =
   | "everyone"
