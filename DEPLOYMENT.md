@@ -57,7 +57,7 @@ wrong folder, which is why this section now names the one command and nothing
 else. From cPanel → Terminal:
 
 ```bash
-bash ~/kemet/update.sh
+cd ~/kemet && bash update.sh
 ```
 
 That is the entire server-side workflow. `update.sh` ships with the site and
@@ -77,7 +77,7 @@ one:
 
 ```bash
 cd ~ && git clone https://github.com/roza-tour/kemet.git kemet \
-  && bash ~/kemet/update.sh
+  && cd ~/kemet && bash update.sh
 ```
 
 ### Confirm it worked
@@ -97,5 +97,5 @@ before debugging anything else.
 ```
 Develop:   edit src/ on main   →  npm run dev
 Publish:   ./scripts/publish.sh   (build + commit + push main)
-Go live:   bash ~/kemet/update.sh   (in cPanel Terminal)
+Go live:   cd ~/kemet && bash update.sh   (in cPanel Terminal)
 ```
