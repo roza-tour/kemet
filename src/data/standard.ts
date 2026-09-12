@@ -88,16 +88,16 @@ export const ourTraveller: string[] = [
 ];
 
 /**
- * The tier in one sentence, for the places that have room for a line and not a
- * section — the footer, which is on every page in the site. Deliberately says
- * the unflattering half too: a brand that names the market it is not in is
- * read as placing itself, while one that only says "luxury" is read as
- * advertising.
+ * The tier as a mark, not a paragraph — for the footer, which is on every page.
+ *
+ * This was three sentences arguing the position, and in the footer it read as
+ * fine print: the longest text on the page, set in grey under a rule, in the
+ * one place a luxury brand should be at its most economical. The argument
+ * belongs on the pages that have room for it (StandardOfTravel); down here the
+ * job is a single line that places the brand and then stops. Two facts, no
+ * adjectives, set like the site's other footer mark.
  */
-export const tierLine =
-  "Private, tailor-made travel at the upper end of the market for Egypt — your own licensed " +
-  "Egyptologist and car on every journey, never a seat on a coach. We are not the cheapest " +
-  "way to see Egypt and do not try to be.";
+export const tierLine = "Private · Tailor-made · Never a group";
 
 /**
  * The honest sentence about price. A luxury brand that will not discuss money
