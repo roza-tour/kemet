@@ -95,9 +95,9 @@ export const ourTraveller: string[] = [
  * advertising.
  */
 export const tierLine =
-  "Private, tailor-made travel at the upper end of the Egyptian market — your own licensed " +
+  "Private, tailor-made travel at the upper end of the market for Egypt — your own licensed " +
   "Egyptologist and car on every journey, never a seat on a coach. We are not the cheapest " +
-  "operator in Egypt and do not try to be.";
+  "way to see Egypt and do not try to be.";
 
 /**
  * The honest sentence about price. A luxury brand that will not discuss money

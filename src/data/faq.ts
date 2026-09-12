@@ -27,7 +27,7 @@ const planningAndBooking: Faq[] = [
   },
   {
     q: "How much does a private Egypt tour cost?",
-    a: "Kemet's journeys are priced per person and depend on length, season, accommodation level and party size. Private full-day excursions start from around €52 per person based on a private party of six, with monument tickets paid at the published gate rate; most multi-day private journeys fall between roughly €479 and €2,000 inclusive of entrance fees, and the 14-day grand tour is about €2,480 per person. We sit at the upper end of the Egyptian market rather than competing with coach operators. Every quote is fully itemised — what is included and excluded is shown before you commit, with no hidden costs.",
+    a: "Kemet's journeys are priced per person and depend on length, season, accommodation level and party size. Private full-day excursions start from around €52 per person based on a private party of six, with monument tickets paid at the published gate rate; most multi-day private journeys fall between roughly €479 and €2,000 inclusive of entrance fees, and the 14-day grand tour is about €2,480 per person. Our pricing sits at the upper end of the market for Egypt travel rather than competing with coach operators. Every quote is fully itemised — what is included and excluded is shown before you commit, with no hidden costs.",
   },
   {
     q: "Is a private tour better than a group tour?",
