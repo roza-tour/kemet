@@ -116,18 +116,18 @@ const rows = seasonalCalendar.map((w) => [
      is gold all year, and the season is a light laid over it. --srb-bg is the
      bar the ribbon and the chip sit on, tinted so the season is legible even
      where the accent is close to the house gold. */
-  :root[data-season="ramadan"]      { --gold:#E0BE6A; --gold-bright:#FBEFC4; --gold-deep:#9C7A2E; --line-2:rgba(224,190,106,.44); --srb:#3E9E80; --srb-bg:14,26,22; }
-  :root[data-season="christmas"]    { --gold:#E3C579; --gold-bright:#FFF6DA; --gold-deep:#A8823A; --line-2:rgba(227,197,121,.46); --srb:#3E9E80; --srb-bg:12,24,21; }
-  :root[data-season="sun-festival"] { --gold:#E8A33D; --gold-bright:#FBE2A6; --gold-deep:#A9631C; --line-2:rgba(232,163,61,.46); --srb:#E0912F; --srb-bg:30,18,8; }
-  :root[data-season="spring"]       { --gold:#DCC06B; --gold-bright:#FBF3D2; --gold-deep:#9C8438; --line-2:rgba(220,192,107,.44); --srb:#8FC496; --srb-bg:14,26,17; }
+  :root[data-season="ramadan"]      { --gold:#E0BE6A; --gold-bright:#FBEFC4; --gold-deep:#9C7A2E; --line-2:rgba(224,190,106,.44); --srb:#3E9E80; --srb-bg:14,26,22; --line:rgba(62,158,128,.20); --season-wash:rgba(30,90,75,.06); }
+  :root[data-season="christmas"]    { --gold:#E3C579; --gold-bright:#FFF6DA; --gold-deep:#A8823A; --line-2:rgba(227,197,121,.46); --srb:#3E9E80; --srb-bg:12,24,21; --line:rgba(62,158,128,.20); --season-wash:rgba(28,84,70,.06); }
+  :root[data-season="sun-festival"] { --gold:#E8A33D; --gold-bright:#FBE2A6; --gold-deep:#A9631C; --line-2:rgba(232,163,61,.46); --srb:#E0912F; --srb-bg:30,18,8; --line:rgba(232,163,61,.24); --season-wash:rgba(150,85,20,.08); }
+  :root[data-season="spring"]       { --gold:#DCC06B; --gold-bright:#FBF3D2; --gold-deep:#9C8438; --line-2:rgba(220,192,107,.44); --srb:#8FC496; --srb-bg:14,26,17; --line:rgba(143,196,150,.20); --season-wash:rgba(143,196,150,.055); }
   /* Red Sea runs May–September — five months. Repainting --gold teal turned
      the entire brand mint for nearly half the year: logo glow, buttons, rules,
      the nav CTA. But the correction went too far the other way — gold moved to
      #D6C588, four points off the house #D9B45A, which nobody can see. The gold
      stays close to the brand; the sea now lives in the layer built for it, at
      a strength that can actually be perceived. */
-  :root[data-season="red-sea"]      { --gold:#D6C588; --gold-bright:#F2EDD2; --gold-deep:#8E8244; --line-2:rgba(214,197,136,.44); --srb:#48C5C0; --srb-bg:6,28,32; }
-  :root[data-season="honeymoon"]    { --gold:#E3B98C; --gold-bright:#FBE7D6; --gold-deep:#A9764B; --line-2:rgba(227,185,140,.46); --srb:#D89C7E; --srb-bg:30,18,15; }
+  :root[data-season="red-sea"]      { --gold:#D6C588; --gold-bright:#F2EDD2; --gold-deep:#8E8244; --line-2:rgba(214,197,136,.44); --srb:#48C5C0; --srb-bg:6,28,32; --line:rgba(72,197,192,.20); --season-wash:rgba(30,120,130,.06); }
+  :root[data-season="honeymoon"]    { --gold:#E3B98C; --gold-bright:#FBE7D6; --gold-deep:#A9764B; --line-2:rgba(227,185,140,.46); --srb:#D89C7E; --srb-bg:30,18,15; --line:rgba(216,156,126,.22); --season-wash:rgba(150,90,70,.065); }
 
   /* ===== The four base seasons ===========================================
      One of these is on every ordinary day of the year, so they are the most
@@ -137,10 +137,24 @@ const rows = seasonalCalendar.map((w) => [
      lives in --srb, which is what the chip, the ribbon, the mark and the hero
      atmosphere are drawn in. That is where a season is allowed to be obvious. */
   :root[data-season="spring"]       { --gold:#DCC06B; --gold-bright:#FBF3D2; --gold-deep:#9C8438; --line-2:rgba(220,192,107,.44); --srb:#8FC496; --srb-bg:14,26,17; }
-  :root[data-season="summer"]       { --gold:#E2C070; --gold-bright:#FBEDC2; --gold-deep:#A47F31; --line-2:rgba(226,192,112,.46); --srb:#48C5C0; --srb-bg:6,28,32; }
-  :root[data-season="autumn"]       { --gold:#DDA95C; --gold-bright:#F8DFAE; --gold-deep:#9A6A28; --line-2:rgba(221,169,92,.46); --srb:#D8823C; --srb-bg:28,17,9; }
-  :root[data-season="winter"]       { --gold:#D6BC78; --gold-bright:#F4EBD2; --gold-deep:#93793A; --line-2:rgba(214,188,120,.44); --srb:#6FA8C9; --srb-bg:9,20,29; }
-  :root[data-season="eid"]          { --gold:#E0BE6A; --gold-bright:#FBEFC4; --gold-deep:#9C7A2E; --line-2:rgba(224,190,106,.44); --srb:#3E9E80; --srb-bg:14,26,22; }
+  :root[data-season="summer"]       { --gold:#E2C070; --gold-bright:#FBEDC2; --gold-deep:#A47F31; --line-2:rgba(226,192,112,.46); --srb:#48C5C0; --srb-bg:6,28,32; --line:rgba(72,197,192,.20); --season-wash:rgba(40,150,160,.06); }
+  :root[data-season="autumn"]       { --gold:#DDA95C; --gold-bright:#F8DFAE; --gold-deep:#9A6A28; --line-2:rgba(221,169,92,.46); --srb:#D8823C; --srb-bg:28,17,9; --line:rgba(216,130,60,.22); --season-wash:rgba(150,80,30,.075); }
+  :root[data-season="winter"]       { --gold:#D6BC78; --gold-bright:#F4EBD2; --gold-deep:#93793A; --line-2:rgba(214,188,120,.44); --srb:#6FA8C9; --srb-bg:9,20,29; --line:rgba(111,168,201,.20); --season-wash:rgba(50,95,140,.065); }
+  :root[data-season="eid"]          { --gold:#E0BE6A; --gold-bright:#FBEFC4; --gold-deep:#9C7A2E; --line-2:rgba(224,190,106,.44); --srb:#3E9E80; --srb-bg:14,26,22; --line:rgba(62,158,128,.20); --season-wash:rgba(30,90,75,.06); }
+
+  /* ===== The page ground =================================================
+     The complaint that landed this rewrite was that the season was "not on the
+     lines, not the colours, not the background" — and it was right: the accent
+     moved four points and the rest of the page was identical in June and in
+     December. It is now the ground itself. One still gradient over the body
+     background, so every page carries the season below the fold as well as in
+     the hero, and it costs one paint. */
+  :root[data-season] body::before {
+    content: ""; position: fixed; inset: 0; z-index: 0; pointer-events: none;
+    background:
+      radial-gradient(1200px 700px at 50% -10%, var(--season-wash, transparent), transparent 70%),
+      linear-gradient(180deg, var(--season-wash, transparent), transparent 40%);
+  }
 
   /* ===== The chip in the nav bar =========================================
      Small, permanent, and the single place a visitor — or the person who owns
@@ -389,7 +403,6 @@ const rows = seasonalCalendar.map((w) => [
       radial-gradient(820px 340px at 50% 0%, rgba(72,150,178,.22), transparent 74%);
     -webkit-mask: linear-gradient(180deg, #000 30%, transparent 88%);
     mask: linear-gradient(180deg, #000 30%, transparent 88%);
-    animation: sea-drift 34s linear infinite;
   }
   /* The drift offsets are not arbitrary. Each layer is shifted along its own
      gradient axis by exactly one period — 148px at 101°, 196px at 63° — so the
@@ -398,8 +411,6 @@ const rows = seasonalCalendar.map((w) => [
      The first attempt used background-size to make the loop tile, which put a
      hard 300px grid seam straight across every inner-page hero. A repeating
      gradient does not need tiling; it needs the right offset. */
-  @keyframes sea-drift {
-    to { background-position: 145.3px 28.2px, 174.6px -88.9px, 0 0, 0 0; }
   }
 
   /* Eid — festive warmth over the skyline. Same correction as Ramadan: light,
@@ -431,7 +442,6 @@ const rows = seasonalCalendar.map((w) => [
       radial-gradient(820px 340px at 50% 0%, rgba(72,150,178,.20), transparent 74%);
     -webkit-mask: linear-gradient(180deg, #000 32%, transparent 88%);
     mask: linear-gradient(180deg, #000 32%, transparent 88%);
-    animation: sea-drift 34s linear infinite;
   }
 
   /* Autumn — low amber light raking in from one side, and the dust the season
@@ -442,8 +452,6 @@ const rows = seasonalCalendar.map((w) => [
       radial-gradient(560px 240px at 12% 4%, rgba(216,130,60,.20), transparent 72%),
       radial-gradient(760px 300px at 88% 0%, rgba(247,206,150,.13), transparent 70%),
       linear-gradient(180deg, rgba(120,66,26,.16), transparent 46%);
-    background-size: 160% 160%, 160% 160%, 100% 100%;
-    animation: season-wander 26s ease-in-out infinite alternate;
   }
 
   /* Winter — a cold clear sky over the valley: high blue light, nothing warm
@@ -454,44 +462,24 @@ const rows = seasonalCalendar.map((w) => [
       radial-gradient(820px 320px at 50% 0%, rgba(111,168,201,.22), transparent 72%),
       radial-gradient(340px 160px at 18% 8%, rgba(226,240,252,.12), transparent 70%),
       linear-gradient(180deg, rgba(28,58,86,.20), transparent 50%);
-    animation: season-breathe 22s ease-in-out infinite;
   }
 
-  /* ===== Movement =========================================================
-     A still gradient is decoration; a slow one is weather. Each season gets
-     the motion that belongs to it — light on water, a lantern breathing,
-     stars going in and out — at periods long enough (18-34s) that nobody
-     watching the page notices it working, only that the page is alive.
-     All of it is opacity or background-position: no layout, no paint storms,
-     and every one of them is switched off for prefers-reduced-motion below. */
-  :root[data-season="ramadan"] .hero .veil::after,
-  :root[data-season="ramadan"] .phero::after,
-  :root[data-season="eid"] .hero .veil::after,
-  :root[data-season="eid"] .phero::after,
-  :root[data-season="honeymoon"] .hero .veil::after,
-  :root[data-season="honeymoon"] .phero::after {
-    animation: season-breathe 18s ease-in-out infinite;
-  }
-  :root[data-season="christmas"] .hero .veil::after,
-  :root[data-season="christmas"] .phero::after {
-    animation: season-twinkle 9s ease-in-out infinite;
-  }
-  :root[data-season="sun-festival"] .hero .veil::after,
-  :root[data-season="sun-festival"] .phero::after {
-    animation: season-breathe 14s ease-in-out infinite;
-  }
-  :root[data-season="spring"] .hero .veil::after,
-  :root[data-season="spring"] .phero::after {
-    background-size: 300% 300%, 300% 300%;
-    animation: season-wander 30s ease-in-out infinite alternate;
-  }
-  @keyframes season-breathe { 0%,100% { opacity: .74; } 50% { opacity: 1; } }
-  @keyframes season-twinkle { 0%,100% { opacity: .55; } 40% { opacity: 1; } 70% { opacity: .72; } }
-  @keyframes season-wander  { to { background-position: 100% 40%, 0% 60%; } }
+  /* ===== No movement, and why ============================================
+     Each season used to carry its own drift — light on water, a lantern
+     breathing, stars going in and out. It cost half the site's frame rate.
+     Every one of them animated background-position or background-size on a
+     pseudo-element the size of the viewport carrying three or four stacked
+     gradients and a mask, which is a full-screen repaint on every frame, for
+     ever, on every page. Measured at 1440px: 35 fps with the drift, 60 without
+     it (the other half was the dust canvas's blend mode, fixed in global.css).
+
+     A still gradient costs nothing once it is painted. So the season is now
+     carried by colour — the accent, the rules, the page ground and this layer
+     — and by nothing that moves. The chip's slow pulse is the one exception:
+     it animates opacity on a 13-pixel element, which composites and never
+     repaints. */
 
   @media (prefers-reduced-motion: reduce) {
-    :root[data-season] .hero .veil::after,
-    :root[data-season] .phero::after,
     .schip-mark { animation: none !important; }
   }
 

@@ -19,19 +19,12 @@
 //     event; the window around it is derived, never hand-typed. When one ends
 //     the site falls back to the season underneath it.
 //
-// WHERE THE SEASON DATES COME FROM
-// The seasons turn on the equinoxes and solstices, which are astronomical
-// events and move by up to two days from year to year — the September equinox
-// falls on the 23rd in 2026 and the 22nd in 2028. These are not "1 March, 1
-// June" placeholders and they are not remembered: every date in SOLAR below was
-// computed with Meeus, *Astronomical Algorithms* ch. 27, and converted to Egypt
-// local time (UTC+2, or UTC+3 under summer time, which is what June and
-// September fall inside). Recompute rather than extrapolate when extending.
-//
-// ⚠️ ISLAMIC DATES ARE EXPECTED, NOT FIXED. Ramadan and the Eids depend on the
-// sighting of the crescent moon and can shift by a day either way, so their
-// windows carry a day of tail slack and the copy says "expected".
-// ---------------------------------------------------------------------------
+// WHERE THE DATES COME FROM
+// The seasons are meteorological — see the note above layer 1. The occasions
+// are each dated from the real event: Ramadan and the Eids from researched
+// dates, Easter from the Gregorian computus and Orthodox Easter from the
+// Julian one plus the 13-day offset (verified against the Coptic Easter dates
+// this file already carried before it was trusted for the rest).
 import type { SeasonalTheme } from "@/types";
 
 export interface SeasonalWindow {
@@ -70,7 +63,6 @@ const shift = (day: string, by: number) => {
   d.setUTCDate(d.getUTCDate() + by);
   return iso(d);
 };
-const dayBefore = (day: string) => shift(day, -1);
 
 /**
  * How many days before an occasion the site starts dressing for it. One rule,
@@ -79,21 +71,22 @@ const dayBefore = (day: string) => shift(day, -1);
  */
 const PREP_DAYS = 3;
 
-// --- Layer 1: the four seasons, on the real solar dates ---------------------
+// --- Layer 1: the four seasons -------------------------------------------
+//
+// WHICH DEFINITION OF "SEASON"
+// This was built on the equinoxes and solstices first, computed properly, and
+// it was wrong in practice: it kept the site in summer until 23 September, when
+// nobody in Egypt or in the markets this site sells to thinks September is
+// summer. Astronomically right, experientially wrong — and the site is read by
+// people, not by astronomers.
+//
+// It now uses the METEOROLOGICAL seasons: three whole months each, starting on
+// 1 March, 1 June, 1 September and 1 December. That is the standard national
+// weather services use for exactly this reason — it matches how a season is
+// lived, it lines up with how travel is sold ("September departures"), and it
+// never drifts, so a season starts on the same date every year.
 
-/**
- * Equinoxes and solstices in Egypt local time — see the header note. The order
- * is [March equinox, June solstice, September equinox, December solstice].
- */
-const SOLAR: Record<number, [string, string, string, string]> = {
-  2026: ["2026-03-20", "2026-06-21", "2026-09-23", "2026-12-21"],
-  2027: ["2027-03-20", "2027-06-21", "2027-09-23", "2027-12-22"],
-  2028: ["2028-03-20", "2028-06-20", "2028-09-22", "2028-12-21"],
-  2029: ["2029-03-20", "2029-06-21", "2029-09-22", "2029-12-21"],
-  2030: ["2030-03-20", "2030-06-21", "2030-09-23", "2030-12-21"],
-  2031: ["2031-03-20", "2031-06-21", "2031-09-23", "2031-12-22"],
-  2032: ["2032-03-20", "2032-06-20", "2032-09-22", "2032-12-21"],
-};
+const BASE_YEARS = [2026, 2027, 2028, 2029, 2030, 2031, 2032];
 
 const WINTER = {
   theme: "winter" as const, slug: "egypt-in-winter", label: "Winter in Egypt",
@@ -115,25 +108,17 @@ const AUTUMN = {
 };
 
 /**
- * The year's four seasons, bounded by that year's own solar dates. Winter
- * appears twice because it straddles New Year: the tail of the winter that
- * began at last December's solstice, and the one that begins at this one.
+ * The year's seasons. Winter appears twice because it straddles New Year: the
+ * tail of the one that began last December, and the one that begins in this.
  */
 function baseSeasons(y: number): SeasonalWindow[] {
-  const [spring, summer, autumn, winter] = SOLAR[y];
-  const prevWinter = SOLAR[y - 1]?.[3];
-  const out: SeasonalWindow[] = [];
-
-  // 1 January until the equinox belongs to the winter that started in December.
-  // Only emitted when the previous year is on the calendar, so the first year
-  // covered does not claim a winter whose solstice is not recorded here.
-  if (prevWinter) out.push({ ...WINTER, start: `${y}-01-01`, end: dayBefore(spring), priority: 10 });
-
-  out.push({ ...SPRING, start: spring, end: dayBefore(summer), priority: 10 });
-  out.push({ ...SUMMER, start: summer, end: dayBefore(autumn), priority: 10 });
-  out.push({ ...AUTUMN, start: autumn, end: dayBefore(winter), priority: 10 });
-  out.push({ ...WINTER, start: winter, end: `${y}-12-31`, priority: 10 });
-  return out;
+  return [
+    { ...WINTER, start: `${y}-01-01`, end: `${y}-02-${y % 4 === 0 && (y % 100 !== 0 || y % 400 === 0) ? 29 : 28}`, priority: 10 },
+    { ...SPRING, start: `${y}-03-01`, end: `${y}-05-31`, priority: 10 },
+    { ...SUMMER, start: `${y}-06-01`, end: `${y}-08-31`, priority: 10 },
+    { ...AUTUMN, start: `${y}-09-01`, end: `${y}-11-30`, priority: 10 },
+    { ...WINTER, start: `${y}-12-01`, end: `${y}-12-31`, priority: 10 },
+  ];
 }
 
 // --- Layer 2: the occasions -------------------------------------------------
@@ -353,7 +338,7 @@ const occasions: Occasion[] = [
 
 /** Both layers, sorted by start date so the file reads as a timeline. */
 export const seasonalCalendar: SeasonalWindow[] = [
-  ...Object.keys(SOLAR).map(Number).flatMap(baseSeasons),
+  ...BASE_YEARS.flatMap(baseSeasons),
   ...occasions.map(toWindow),
 ].sort((a, b) => (a.start < b.start ? -1 : a.start > b.start ? 1 : b.priority - a.priority));
 
