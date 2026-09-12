@@ -29,8 +29,10 @@ folders from visitors, so the server can serve the repo root directly.
 1. Publish from the dev machine: `./scripts/publish.sh "release: message"`
    (runs `astro check` + `npm run build`, syncs `dist/` into the repo root,
    commits and pushes `main`).
-2. Update the live site on the server: `git pull origin main` inside
-   `public_html/`.
+2. Update the live site: `bash ~/kemet/update.sh` in cPanel Terminal. The
+   server checkout lives in `~/kemet` (not `public_html`), and the script does
+   the fetch, the AutoSSL `.htaccess` conflict, the page check and the IndexNow
+   ping in one step — see DEPLOYMENT.md.
 
 ## Architecture
 

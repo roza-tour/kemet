@@ -50,37 +50,45 @@ If nothing changed since the last publish, it stops without committing.
 
 ## Update the live server
 
-Because `main` already holds the finished HTML/CSS, the cPanel server never
-installs Node or builds anything:
+Because `main` already holds the finished HTML/CSS, the server never installs
+Node or builds anything. **The checkout lives in `~/kemet`, not `public_html`** —
+writing `cd ~/public_html && git pull` here once sent the site owner to the
+wrong folder, which is why this section now names the one command and nothing
+else. From cPanel → Terminal:
 
 ```bash
-cd ~/public_html
-git pull origin main
+bash ~/kemet/update.sh
 ```
 
-That's the entire server-side workflow.
+That is the entire server-side workflow. `update.sh` ships with the site and
+does more than a pull, which is why it is the method rather than a shortcut for
+one:
+
+- fetches `main`, retrying on network failure;
+- applies it with `git reset --hard` rather than a merge, so the `.htaccess`
+  that cPanel's AutoSSL rewrites in place can never block the update with a
+  conflict (`_stats/` is preserved — it holds the analytics and enquiry logs);
+- reports how many commits the server was behind, and proves the tree is
+  byte-for-byte identical to GitHub afterwards;
+- checks the key pages are present and non-empty;
+- pings IndexNow so Bing, Yandex and DuckDuckGo see the change in minutes.
 
 ### First-time server setup (once only)
 
-If `public_html` is not yet a checkout of `main`:
-
 ```bash
-cd ~/public_html
-mkdir -p ~/public_html_backup_$(date +%F)
-mv ~/public_html/* ~/public_html/.[!.]* ~/public_html_backup_$(date +%F)/ 2>/dev/null || true
-git init
-git remote add origin https://github.com/roza-tour/kemet.git
-git fetch origin main
-git checkout -b main origin/main
-git reset --hard origin/main
+cd ~ && git clone https://github.com/roza-tour/kemet.git kemet \
+  && bash ~/kemet/update.sh
 ```
 
-Confirm `index.html` sits directly inside `public_html`. From then on, every
-update is just `git pull origin main`.
+### Confirm it worked
 
-> If a future `git pull` ever reports a conflict because a file was changed on
-> the server, snap back to the exact published state with:
-> `git fetch origin main && git reset --hard origin/main`
+```
+https://kemet-travel.com/build.txt
+```
+
+`built:` is the timestamp of the build now being served. Older than the newest
+commit on `main` means the server has not been updated — run the command above
+before debugging anything else.
 
 ---
 
@@ -89,5 +97,5 @@ update is just `git pull origin main`.
 ```
 Develop:   edit src/ on main   →  npm run dev
 Publish:   ./scripts/publish.sh   (build + commit + push main)
-Go live:   git pull origin main   (on the cPanel server)
+Go live:   bash ~/kemet/update.sh   (in cPanel Terminal)
 ```
