@@ -141,6 +141,7 @@ const rows = seasonalCalendar.map((w) => [
   :root[data-season="autumn"]       { --gold:#DDA95C; --gold-bright:#F8DFAE; --gold-deep:#9A6A28; --line-2:rgba(221,169,92,.46); --srb:#D8823C; --srb-bg:28,17,9; }
   :root[data-season="winter"]       { --gold:#D6BC78; --gold-bright:#F4EBD2; --gold-deep:#93793A; --line-2:rgba(214,188,120,.44); --srb:#6FA8C9; --srb-bg:9,20,29; }
   :root[data-season="eid"]          { --gold:#E0BE6A; --gold-bright:#FBEFC4; --gold-deep:#9C7A2E; --line-2:rgba(224,190,106,.44); --srb:#3E9E80; --srb-bg:14,26,22; }
+  :root[data-season="mawlid"]       { --gold:#E6C070; --gold-bright:#FBEBC6; --gold-deep:#A3792F; --line-2:rgba(230,192,112,.46); --srb:#E0708E; --srb-bg:30,14,20; }
 
   /* ===== The chip in the nav bar =========================================
      Small, permanent, and the single place a visitor — or the person who owns
@@ -273,6 +274,15 @@ const rows = seasonalCalendar.map((w) => [
   /* Honeymoon — a soft filled disc. */
   :root[data-season="honeymoon"] .smark { border: 0; background: var(--srb); }
   :root[data-season="honeymoon"] .smark::after { display: none; }
+
+  /* Mawlid — a sugared rosette: the ring of a sweet, not a religious symbol. */
+  :root[data-season="mawlid"] .smark {
+    border: 2px solid var(--srb); background: transparent;
+    box-shadow: 0 0 9px -1px color-mix(in srgb, var(--srb) 70%, transparent);
+  }
+  :root[data-season="mawlid"] .smark::after {
+    inset: 28%; background: var(--gold-bright); opacity: .9;
+  }
 
   /* Summer — the sun at its height: a filled disc with a hard halo. */
   :root[data-season="summer"] .smark {
@@ -416,6 +426,17 @@ const rows = seasonalCalendar.map((w) => [
   :root[data-season="honeymoon"] .phero::after {
     background:
       radial-gradient(700px 300px at 50% 0%, rgba(232,180,160,.20), transparent 70%);
+  }
+
+  /* Mawlid — the coloured lamplight of a festival street: warm from below,
+     where the tents and the sweet stalls are, rather than from the sky. */
+  :root[data-season="mawlid"] .hero .veil::after,
+  :root[data-season="mawlid"] .phero::after {
+    background:
+      radial-gradient(420px 180px at 22% 100%, rgba(224,112,142,.22), transparent 72%),
+      radial-gradient(380px 170px at 78% 100%, rgba(247,214,150,.18), transparent 72%),
+      radial-gradient(700px 280px at 50% 0%, rgba(224,112,142,.10), transparent 70%);
+    animation: season-breathe 16s ease-in-out infinite;
   }
 
   /* Summer — the white heat of an Egyptian noon at the top of the frame, and

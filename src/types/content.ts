@@ -128,6 +128,7 @@ export type SeasonalTheme =
   // Occasions, which outrank the season underneath them while they run.
   | "ramadan"
   | "eid"
+  | "mawlid"
   | "christmas"
   | "sun-festival"
   // Collection-page identities that are not on the calendar.
