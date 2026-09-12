@@ -11,10 +11,10 @@
 //
 // This file makes the difference checkable in one request:
 //
-//     curl https://kemet-travel.com/build.txt     # what is live
-//     git rev-parse --short HEAD                  # what is committed
+//     curl https://kemet-travel.com/build.txt     # when the live build was made
+//     git log -1 --date=iso --format=%cd main     # when main last changed
 //
-// Same commit → the site is current. Different → the server needs `git pull`,
+// Live build newer → the site is current. Older → the server needs `git pull`,
 // and nothing about the code is worth debugging until it has had one.
 //
 // The commit is read from git at build time and degrades to "unknown" when the
@@ -34,26 +34,18 @@ function commit(): string {
   }
 }
 
-/** Whether that commit had uncommitted changes on top of it. */
-function dirty(): boolean {
-  try {
-    return execSync("git status --porcelain", { stdio: ["ignore", "pipe", "ignore"] })
-      .toString()
-      .trim().length > 0;
-  } catch {
-    return false;
-  }
-}
-
 export const GET: APIRoute = () => {
-  const sha = commit();
   const body = [
-    `commit: ${sha}${sha !== "unknown" && dirty() ? " (+ uncommitted changes)" : ""}`,
-    `built:  ${new Date().toISOString()}`,
+    `built:   ${new Date().toISOString()}`,
+    `from:    ${commit()}`,
     "",
-    "Compare `commit` with `git rev-parse --short HEAD` on the branch you",
-    "published. If they differ, this server has not pulled the latest build —",
+    "`built` is the decisive value: compare it with the date of the newest",
+    "commit on main. Older here than there means this server has not pulled —",
     "run `git pull origin main` in public_html before debugging anything else.",
+    "",
+    "`from` is the commit the build was made FROM, so it is always one behind",
+    "the commit that publishes it (the build runs, then the result is",
+    "committed). It identifies the build; it is not meant to match HEAD.",
     "",
   ].join("\n");
 
