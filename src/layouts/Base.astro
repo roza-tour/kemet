@@ -19,6 +19,7 @@ import CTA from "@/components/CTA.astro";
 import SvgDefs from "@/components/SvgDefs.astro";
 import WhatsAppButton from "@/components/conversion/WhatsAppButton.astro";
 import SeasonalSkin from "@/components/SeasonalSkin.astro";
+import AccessInvite from "@/components/conversion/AccessInvite.astro";
 import SearchPanel from "@/components/search/SearchPanel.astro";
 
 interface Props {
@@ -201,6 +202,7 @@ const ogLocaleAlternates = alternates
   <Footer base={base} route={active} />
   <SearchPanel />
   <WhatsAppButton />
+  <AccessInvite />
   <script is:inline set:html={enhanceScript}></script>
 </body>
 </html>
