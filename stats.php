@@ -32,51 +32,8 @@
 //
 // If the file is missing the page refuses to load rather than falling open.
 // ---------------------------------------------------------------------------
-(function () {
-  $file = __DIR__ . "/_stats/stats-password.txt";
-  $hash = is_readable($file) ? trim((string) @file_get_contents($file)) : "";
-
-  $deny = function ($msg) {
-    header("WWW-Authenticate: Basic realm=\"Kemet statistics\"");
-    header("HTTP/1.0 401 Unauthorized");
-    header("Content-Type: text/plain; charset=utf-8");
-    header("Cache-Control: no-store");
-    header("X-Robots-Tag: noindex, nofollow");
-    echo $msg;
-    exit;
-  };
-
-  if ($hash === "") {
-    $deny("No password is set for this dashboard.\n\n"
-        . "On the server, from the site folder, run:\n"
-        . "  php -r 'file_put_contents(\"_stats/stats-password.txt\", "
-        . "password_hash(\"YOUR PASSWORD\", PASSWORD_DEFAULT).\"\\n\");'\n");
-  }
-
-  // Under CGI/FastCGI, PHP_AUTH_PW is not populated and the credentials arrive
-  // in the Authorization header instead (passed through by .htaccess).
-  $pass = $_SERVER["PHP_AUTH_PW"] ?? null;
-  if ($pass === null) {
-    $auth = $_SERVER["HTTP_AUTHORIZATION"] ?? $_SERVER["REDIRECT_HTTP_AUTHORIZATION"] ?? "";
-    if (stripos($auth, "basic ") === 0) {
-      $decoded = base64_decode(substr($auth, 6), true);
-      if ($decoded !== false && strpos($decoded, ":") !== false) {
-        [, $pass] = explode(":", $decoded, 2);
-      }
-    }
-  }
-
-  if ($pass === null || !password_verify($pass, $hash)) {
-    // A wrong password costs a second. Enough to make guessing pointless at
-    // this scale, and unnoticeable when the password is right.
-    if ($pass !== null) { sleep(1); }
-    $deny("Not authorised.\n");
-  }
-})();
-
-// The dashboard must never be cached by a proxy or indexed by anything.
-header("Cache-Control: no-store, private");
-header("X-Robots-Tag: noindex, nofollow");
+require __DIR__ . "/lib-auth.php";
+kemet_require_login("Kemet statistics");
 
 $dir = __DIR__ . "/_stats";
 
@@ -310,7 +267,7 @@ td.n2{text-align:right;color:var(--mut);font-variant-numeric:tabular-nums;width:
 .tag--invalid{color:#E6CE8A;border-color:rgba(230,206,138,.45)}
 </style></head><body><div class="wrap">
 <h1>Kemet — التقرير · Site Stats</h1>
-<div class="sub">آخر <?= $days ?> يوم · Last <?= $days ?> days (UTC) — cookie-less, first-party, no third-party scripts</div>
+<div class="sub">آخر <?= $days ?> يوم · Last <?= $days ?> days (UTC) — cookie-less, first-party, no third-party scripts &nbsp;·&nbsp; <a href="desk.php" style="color:#D9B45A">المكتب · The desk</a> — follow-ups due and this season's dispatch</div>
 
 <div class="cards">
 <div class="card"><b><?= $fmt($pv) ?></b><span>Pageviews</span></div>

@@ -134,6 +134,12 @@ RewriteRule ^(?:package(?:-lock)?\.json|astro\.config\.mjs|tsconfig\.json|README
 # new source file ever lands outside the folders blocked above.
 RewriteRule \.(?:ts|astro|mjs|sh)$ - [R=404,L]
 
+# Shared PHP includes are never a URL. lib-auth.php holds the password gate; it
+# is meant to be included by the private pages, never fetched, and a 404 is the
+# right answer to anyone who asks for it directly. Including it still works —
+# an include reads the filesystem, not the web server.
+RewriteRule ^lib-[a-z-]+\.php$ - [R=404,L]
+
 # A directory index has ONE public URL: the directory. /index.html and
 # /de/index.html are 301'd to / and /de/ so the same document is never served
 # at two addresses. Every internal link, canonical, hreflang and sitemap entry

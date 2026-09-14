@@ -55,6 +55,7 @@ de/beste-reisezeit-aegypten.html
 de/index.html
 de/ist-aegypten-sicher.html
 de/nilkreuzfahrt.html
+desk.php
 destinations.html
 destinations/alexandria.html
 destinations/aswan.html
@@ -252,6 +253,7 @@ it/quanto-costa-viaggio-egitto.html
 it/viaggi-in-egitto.html
 it/visto-egitto.html
 k.php
+lib-auth.php
 llms-full.txt
 llms.txt
 ms/adakah-mesir-selamat.html
@@ -279,6 +281,7 @@ ru/stoimost-tura-v-egipet.html
 ru/tury-v-egipet.html
 ru/viza-v-egipet.html
 search-index.json
+seasons.json
 site.webmanifest
 sitemap-0.xml
 sitemap-images.xml
