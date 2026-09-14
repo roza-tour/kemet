@@ -1,0 +1,386 @@
+---
+// Trip designer — five questions, then the two or three journeys that actually
+// fit, with the reason each one was chosen shown beside it.
+//
+// WHY THIS RATHER THAN A CHAT BUBBLE
+// The alternative on the table was an assistant fed on the site's content. The
+// content is already prepared for that (llms.txt, llms-full.txt,
+// search-index.json) so it would have been cheap — but the bottleneck on a
+// journey costing thousands per person is not information, it is trust, and a
+// chat bubble spends the visitor's attention on questions the guides already
+// answer. This spends it on a recommendation instead, and ends somewhere: a
+// shortlist, and a reason to leave an address.
+//
+// THE RESULTS ARE NOT GATED. Asking for an email before showing the answer is
+// the standard move and it is the wrong one here: it reads as a toll, and the
+// traveller who would pay it is not the one this brand wants. The shortlist
+// appears immediately; the address is asked for afterwards, to send the plan
+// on and to keep in touch — which is a better offer once they have seen that
+// the recommendation is any good.
+import Base from "@/layouts/Base.astro";
+import PageHero from "@/components/PageHero.astro";
+import Frieze from "@/components/Frieze.astro";
+import StandardOfTravel from "@/components/trust/StandardOfTravel.astro";
+import { tours } from "@/data/tours";
+import { getTourMeta } from "@/data/tours.taxonomy";
+import { breadcrumb } from "@/schemas/jsonld";
+import { formatPrice, priceBasis } from "@/utils/format";
+
+// A compact index for the browser: everything the matcher needs and nothing
+// else, so the page carries a few KB rather than the whole catalogue.
+const index = tours.map((t) => {
+  const m = getTourMeta(t.slug)?.taxonomy;
+  return {
+    slug: t.slug,
+    title: t.title,
+    summary: t.summary,
+    tag: t.tag,
+    price: formatPrice(t.price),
+    basis: priceBasis(t, true) ?? "",
+    img: t.hero?.src ?? "",
+    alt: t.hero?.alt ?? t.title,
+    days: m?.durationDays ?? (t.kind === "day" ? 1 : 7),
+    styles: m?.travelStyles ?? [],
+    seasons: m?.seasons ?? [],
+    family: m?.features?.familyFriendly === true,
+    regions: m?.regions ?? [],
+  };
+});
+
+const jsonld = breadcrumb([["Home", "index.html"], ["Plan your journey", "plan.html"]]);
+---
+<Base
+  title="Plan Your Egypt Journey — Five Questions | Kemet"
+  description="Answer five questions and see the private Egypt journeys that actually fit — your party, your length of stay, what you care about and when you travel."
+  active="plan.html"
+  jsonld={jsonld}
+>
+  <PageHero
+    crumb="Plan"
+    symbol="ankh"
+    title="Which journey is yours"
+    text="Five questions, about a minute. You will see the journeys that fit and why each one was chosen — no form to fill in first, and nothing to pay to find out."
+    heroSrc="/images/aswan/aswan-felucca-sunset.webp"
+    heroAlt="A felucca under sail on the Nile at Aswan as the sun goes down"
+    heroWidth={1200}
+    heroHeight={800}
+  />
+
+  <section style="padding-top:24px">
+    <div class="wrap">
+      <div class="pl" id="planner" data-index={JSON.stringify(index)}>
+
+        <div class="pl-progress" aria-hidden="true"><i id="pl-bar"></i></div>
+
+        <div class="pl-stage" id="pl-stage">
+          <fieldset class="pl-q is-on" data-key="who">
+            <legend><span>01</span> Who is travelling?</legend>
+            <div class="pl-opts">
+              <button type="button" data-v="couple">Two of us</button>
+              <button type="button" data-v="family">A family</button>
+              <button type="button" data-v="solo">On my own</button>
+              <button type="button" data-v="group">A private group</button>
+            </div>
+          </fieldset>
+
+          <fieldset class="pl-q" data-key="days">
+            <legend><span>02</span> How long do you have?</legend>
+            <div class="pl-opts">
+              <button type="button" data-v="1">A day or two</button>
+              <button type="button" data-v="4">Three to five days</button>
+              <button type="button" data-v="8">A week or so</button>
+              <button type="button" data-v="13">Ten days or more</button>
+            </div>
+          </fieldset>
+
+          <fieldset class="pl-q" data-key="style">
+            <legend><span>03</span> What are you here for?</legend>
+            <div class="pl-opts">
+              <button type="button" data-v="historical">The ancient sites</button>
+              <button type="button" data-v="luxury">The Nile, slowly</button>
+              <button type="button" data-v="nature">The Red Sea and the desert</button>
+              <button type="button" data-v="cultural">Living Egypt — food, streets, people</button>
+              <button type="button" data-v="photography">Photography</button>
+            </div>
+          </fieldset>
+
+          <fieldset class="pl-q" data-key="season">
+            <legend><span>04</span> When are you thinking?</legend>
+            <div class="pl-opts">
+              <button type="button" data-v="winter">December – February</button>
+              <button type="button" data-v="spring">March – May</button>
+              <button type="button" data-v="summer">June – August</button>
+              <button type="button" data-v="autumn">September – November</button>
+              <button type="button" data-v="any">Not decided yet</button>
+            </div>
+          </fieldset>
+
+          <fieldset class="pl-q" data-key="pace">
+            <legend><span>05</span> And the pace?</legend>
+            <div class="pl-opts">
+              <button type="button" data-v="easy">Unhurried — fewer things, properly</button>
+              <button type="button" data-v="moderate">A full day, every day</button>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="pl-out" id="pl-out" hidden>
+          <div class="pl-outhead">
+            <div class="eyebrow">Your shortlist</div>
+            <h2 id="pl-title">Three that fit</h2>
+            <p id="pl-why"></p>
+            <button type="button" class="pl-again" id="pl-again">Start again</button>
+          </div>
+          <div class="grid-3" id="pl-cards"></div>
+
+          <div class="pl-send">
+            <h3>Send this shortlist to your inbox</h3>
+            <p>We will email these three with what is and is not included, and
+               write when the season turns in Egypt or the limited dates open.
+               A few times a year, never more.</p>
+            <form id="pl-form" method="post" action="/subscribe.php" novalidate>
+              <input type="hidden" name="source" value="designer" />
+              <input type="hidden" name="detail" id="pl-detail" />
+              <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="pl-hp" />
+              <div class="pl-row">
+                <label>
+                  <span>Your name</span>
+                  <input type="text" name="name" autocomplete="name" placeholder="Optional" />
+                </label>
+                <label>
+                  <span>Your email</span>
+                  <input type="email" name="email" required autocomplete="email" placeholder="you@example.com" />
+                </label>
+              </div>
+              <label class="pl-consent">
+                <input type="checkbox" name="consent" value="1" required />
+                <span>Yes — send me seasonal notes and first notice of limited dates.
+                      I can unsubscribe at any time.</span>
+              </label>
+              <button type="submit" class="btn btn-solid">Send me the shortlist</button>
+              <p class="pl-fine" id="pl-msg" role="status" aria-live="polite">
+                No offers, no forwarding your address. <a href="privacy.html">How we handle it</a>.
+              </p>
+            </form>
+          </div>
+        </div>
+
+        <noscript>
+          <p class="pl-nojs">This planner needs JavaScript. All twenty-five
+             journeys are listed on <a href="tours.html">the journeys page</a>,
+             and we will happily shortlist them for you by message.</p>
+        </noscript>
+      </div>
+    </div>
+  </section>
+
+  <Frieze />
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <StandardOfTravel compact={true} />
+    </div>
+  </section>
+</Base>
+
+<script is:inline>
+  (function () {
+    var root = document.getElementById("planner");
+    if (!root) return;
+    var TOURS = JSON.parse(root.dataset.index);
+    var answers = {}, order = ["who", "days", "style", "season", "pace"], step = 0;
+
+    var qs = [].slice.call(root.querySelectorAll(".pl-q"));
+    var bar = document.getElementById("pl-bar");
+    var stage = document.getElementById("pl-stage");
+    var out = document.getElementById("pl-out");
+
+    function show(i) {
+      qs.forEach(function (q, n) { q.classList.toggle("is-on", n === i); });
+      bar.style.width = (i / qs.length * 100) + "%";
+    }
+
+    qs.forEach(function (q) {
+      q.addEventListener("click", function (e) {
+        var b = e.target.closest("button[data-v]");
+        if (!b) return;
+        answers[q.dataset.key] = b.dataset.v;
+        step++;
+        if (step < qs.length) { show(step); }
+        else { finish(); }
+      });
+    });
+
+    // --- Scoring ------------------------------------------------------------
+    // Explainable on purpose: every point added is a sentence that can be shown
+    // to the traveller. A recommendation nobody can account for is worth less
+    // than a shorter list that explains itself.
+    function score(t) {
+      var s = 0, why = [];
+      var want = parseInt(answers.days, 10);
+
+      var gap = Math.abs(t.days - want);
+      if (gap === 0) { s += 5; why.push("the right length"); }
+      else if (gap <= 2) { s += 3.5; why.push("close to your dates"); }
+      else if (gap <= 4) { s += 1.5; }
+      else { s -= gap * 0.35; }
+
+      if (t.styles.indexOf(answers.style) > -1) { s += 4; why.push("built around " + label(answers.style)); }
+      if (answers.style === "luxury" && t.styles.indexOf("cultural") > -1) { s += 1; }
+
+      if (answers.season !== "any") {
+        if (t.seasons.indexOf(answers.season) > -1) { s += 2; why.push("in season when you travel"); }
+        else { s -= 2.5; }
+      }
+
+      if (answers.who === "family") {
+        if (t.family) { s += 2.5; why.push("works with children"); } else { s -= 3; }
+      }
+      if (answers.who === "couple" && t.styles.indexOf("luxury") > -1) { s += 1.2; }
+      if (answers.who === "solo" && t.days <= 5) { s += 0.6; }
+
+      // Pace: an unhurried traveller is better served by fewer days per site,
+      // so a long itinerary over the same ground scores up, not down.
+      if (answers.pace === "easy" && t.days >= 7) { s += 1; }
+      if (answers.pace === "moderate" && t.days <= 5) { s += 0.8; }
+
+      return { t: t, s: s, why: why };
+    }
+
+    function label(v) {
+      return { historical: "the ancient sites", luxury: "the Nile", nature: "the sea and the desert",
+               cultural: "living Egypt", photography: "photography" }[v] || v;
+    }
+
+    function finish() {
+      bar.style.width = "100%";
+      var ranked = TOURS.map(score).sort(function (a, b) { return b.s - a.s; }).slice(0, 3);
+
+      document.getElementById("pl-why").textContent =
+        "Chosen for " + ({ couple: "two travellers", family: "a family",
+          solo: "one traveller", group: "a private group" }[answers.who] || "you")
+        + ", " + ({ "1": "a day or two", "4": "three to five days",
+          "8": "about a week", "13": "ten days or more" }[answers.days])
+        + ", " + label(answers.style)
+        + (answers.season === "any" ? ", dates open." : ", travelling in " + answers.season + ".");
+
+      document.getElementById("pl-cards").innerHTML = ranked.map(function (r) {
+        var t = r.t;
+        var reason = r.why.length ? r.why.join(" · ") : "a strong all-round fit";
+        return '<a class="jcard pl-card" href="' + t.slug + '.html">'
+          + '<div style="position:relative"><span class="tag">' + t.tag + '</span>'
+          + (t.img ? '<img src="' + t.img + '" alt="' + t.alt.replace(/"/g, "&quot;") + '" loading="lazy" decoding="async" width="800" height="600">' : '')
+          + '</div><div class="body">'
+          + '<div class="pl-reason">' + reason + '</div>'
+          + '<h3>' + t.title + '</h3><p>' + t.summary + '</p>'
+          + '<div class="meta"><div class="price">' + t.price + ' <small>/ person</small>'
+          + (t.basis ? '<span class="basis">' + t.basis + '</span>' : '')
+          + '</div><span class="arrow" aria-hidden="true">→</span></div></div></a>';
+      }).join("");
+
+      document.getElementById("pl-detail").value =
+        order.map(function (k) { return k + "=" + (answers[k] || ""); }).join(" | ")
+        + " | picks: " + ranked.map(function (r) { return r.t.slug; }).join(", ");
+
+      stage.hidden = true;
+      out.hidden = false;
+      out.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    document.getElementById("pl-again").addEventListener("click", function () {
+      answers = {}; step = 0; out.hidden = true; stage.hidden = false; show(0);
+      root.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+
+    // --- Sending ------------------------------------------------------------
+    var form = document.getElementById("pl-form");
+    var msg = document.getElementById("pl-msg");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var email = form.email.value.trim();
+      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { msg.textContent = "That email address does not look right."; return; }
+      if (!form.consent.checked) { msg.textContent = "Please tick the box so we know you want to hear from us."; return; }
+      var btn = form.querySelector("button[type=submit]");
+      btn.disabled = true; btn.textContent = "Sending…";
+      var body = new FormData(form);
+      body.set("locale", document.documentElement.lang || "en");
+      fetch(form.action, { method: "POST", body: body, headers: { "X-Requested-With": "fetch" } })
+        .then(function (r) { return r.json(); })
+        .catch(function () { return { ok: false }; })
+        .then(function (r) {
+          if (r && r.ok) {
+            form.innerHTML = '<p class="pl-done">On its way — check your inbox.<br>'
+              + 'We will write again when the season turns, or when the limited dates open.</p>';
+          } else {
+            btn.disabled = false; btn.textContent = "Send me the shortlist";
+            msg.textContent = (r && r.message) || "That didn't go through — message us and we'll send it by hand.";
+          }
+        });
+    });
+
+    show(0);
+  })();
+</script>
+
+<style is:global>
+  .pl { max-width: 860px; margin: 0 auto; }
+  .pl-progress { height: 2px; background: var(--line); margin-bottom: 46px; }
+  .pl-progress i { display: block; height: 100%; width: 0;
+    background: linear-gradient(90deg, var(--gold-deep), var(--gold)); transition: width .45s ease; }
+
+  .pl-q { display: none; border: 0; padding: 0; }
+  .pl-q.is-on { display: block; }
+  .pl-q legend { font-family: var(--ff-display); font-weight: 300;
+    font-size: clamp(1.6rem, 3.6vw, 2.3rem); color: var(--bone); margin-bottom: 30px; padding: 0; }
+  .pl-q legend span { display: block; font-family: var(--ff-body); font-size: .62rem;
+    letter-spacing: .34em; color: var(--gold); margin-bottom: 14px; }
+
+  .pl-opts { display: grid; gap: 12px; }
+  .pl-opts button { text-align: left; padding: 20px 24px; cursor: pointer;
+    background: rgba(255,255,255,.02); border: 1px solid var(--line);
+    border-radius: 2px; color: var(--bone); font-family: var(--ff-body);
+    font-weight: 300; font-size: 1rem; transition: border-color .3s, background .3s, transform .3s; }
+  .pl-opts button:hover { border-color: var(--gold); background: rgba(217,180,90,.07); transform: translateX(3px); }
+
+  .pl-outhead { margin-bottom: 36px; }
+  .pl-outhead h2 { font-family: var(--ff-display); font-weight: 300;
+    font-size: clamp(1.8rem, 4vw, 2.5rem); color: var(--bone); margin: 14px 0 12px; }
+  .pl-outhead p { color: var(--muted); line-height: 1.8; margin: 0 0 18px; }
+  .pl-again { background: none; border: 0; border-bottom: 1px solid var(--line-2);
+    color: var(--muted); font-family: var(--ff-body); font-size: .78rem;
+    letter-spacing: .08em; padding: 0 0 3px; cursor: pointer; transition: color .25s; }
+  .pl-again:hover { color: var(--gold-bright); }
+
+  .pl-card .pl-reason { font-size: .64rem; letter-spacing: .16em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 10px; line-height: 1.6; }
+  .pl-card img { width: 100%; height: 210px; object-fit: cover; }
+
+  .pl-send { margin-top: 46px; padding: 36px 38px; border-left: 2px solid var(--gold);
+    background: rgba(217,180,90,.05); }
+  .pl-send h3 { font-family: var(--ff-display); font-weight: 300; font-size: 1.4rem;
+    color: var(--gold-bright); margin: 0 0 12px; }
+  .pl-send > p { color: var(--muted); font-size: .93rem; line-height: 1.8; margin: 0 0 24px; max-width: 620px; }
+  .pl-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .pl-row label { display: block; }
+  .pl-row span { display: block; font-size: .62rem; letter-spacing: .22em;
+    text-transform: uppercase; color: var(--muted-2); margin-bottom: 9px; }
+  .pl-row input { width: 100%; padding: 14px 16px; background: rgba(255,255,255,.04);
+    border: 1px solid var(--line-2); border-radius: 2px; color: var(--bone);
+    font-family: var(--ff-body); font-size: .95rem; transition: border-color .3s; }
+  .pl-row input:focus { outline: none; border-color: var(--gold); }
+  .pl-row input::placeholder { color: var(--muted-2); opacity: .7; }
+  .pl-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+  .pl-consent { display: flex; gap: 11px; align-items: flex-start; margin: 18px 0 22px;
+    color: var(--muted); font-size: .82rem; line-height: 1.6; cursor: pointer; }
+  .pl-consent input { margin-top: 3px; width: 16px; height: 16px; flex: none; accent-color: var(--gold); }
+  .pl-fine { color: var(--muted-2); font-size: .76rem; margin: 14px 0 0; }
+  .pl-fine a { color: var(--muted); border-bottom: 1px solid var(--line-2); }
+  .pl-done { color: var(--gold-bright); font-size: .98rem; line-height: 1.85; margin: 0; }
+  .pl-nojs { color: var(--muted); line-height: 1.85; }
+
+  @media (max-width: 680px) {
+    .pl-row { grid-template-columns: 1fr; }
+    .pl-send { padding: 26px 20px; }
+    .pl-opts button { padding: 17px 18px; font-size: .95rem; }
+  }
+</style>

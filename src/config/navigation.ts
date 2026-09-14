@@ -63,6 +63,9 @@ export const primaryNav: NavItem[] = [
     label: "Plan",
     href: hubFor("guide"),
     children: [
+      // First in the group on purpose: it is the one entry that ends in a
+      // shortlist rather than in more reading.
+      { label: "Which journey is yours", href: "plan.html" },
       { label: "When to go", href: "when-to-go.html" },
       { label: "Visa by nationality", href: "visa.html" },
       { label: "Is Egypt safe?", href: "egypt-safety.html" },
