@@ -9,15 +9,75 @@
 // third-party script anywhere on the site.
 // ---------------------------------------------------------------------------
 // ---------------------------------------------------------------------------
-// No key, no login. The page is simply not linked from anywhere on the site,
-// carries noindex/nofollow, and is not in any sitemap — so it is reached only
-// by typing the address.
+// PASSWORD GATE — everything below it is private.
 //
-// Worth knowing rather than discovering later: the Enquiries panel below lists
-// customer names, email addresses, phone numbers and message text, so anyone
-// who has the address can read them. Say the word and I will mask the contact
-// details, or drop that panel and leave the traffic figures only.
+// This page used to have no login at all. It was reachable by anyone who typed
+// the address, and the Enquiries panel lists customer names, email addresses,
+// phone numbers and message text: that is not a traffic report leaking, it is
+// personal data, belonging mostly to people in the EU.
+//
+// WHERE THE PASSWORD LIVES, AND WHY NOT HERE
+// This repository is public on GitHub, and the whole site is committed to it.
+// A password written into this file — or its hash — would be published with
+// the next release. So the hash lives in _stats/stats-password.txt, which is
+// the one directory on the server that is: ignored by git (.gitignore),
+// refused by the web server (.htaccess returns 404 for /_stats), and preserved
+// by update.sh, which excludes it from git clean. Nothing secret is ever
+// committed, and a deploy cannot wipe it.
+//
+// To set or change it, from the site folder on the server:
+//
+//   php -r 'file_put_contents("_stats/stats-password.txt",
+//           password_hash("YOUR PASSWORD HERE", PASSWORD_DEFAULT)."\n");'
+//
+// If the file is missing the page refuses to load rather than falling open.
 // ---------------------------------------------------------------------------
+(function () {
+  $file = __DIR__ . "/_stats/stats-password.txt";
+  $hash = is_readable($file) ? trim((string) @file_get_contents($file)) : "";
+
+  $deny = function ($msg) {
+    header("WWW-Authenticate: Basic realm=\"Kemet statistics\"");
+    header("HTTP/1.0 401 Unauthorized");
+    header("Content-Type: text/plain; charset=utf-8");
+    header("Cache-Control: no-store");
+    header("X-Robots-Tag: noindex, nofollow");
+    echo $msg;
+    exit;
+  };
+
+  if ($hash === "") {
+    $deny("No password is set for this dashboard.\n\n"
+        . "On the server, from the site folder, run:\n"
+        . "  php -r 'file_put_contents(\"_stats/stats-password.txt\", "
+        . "password_hash(\"YOUR PASSWORD\", PASSWORD_DEFAULT).\"\\n\");'\n");
+  }
+
+  // Under CGI/FastCGI, PHP_AUTH_PW is not populated and the credentials arrive
+  // in the Authorization header instead (passed through by .htaccess).
+  $pass = $_SERVER["PHP_AUTH_PW"] ?? null;
+  if ($pass === null) {
+    $auth = $_SERVER["HTTP_AUTHORIZATION"] ?? $_SERVER["REDIRECT_HTTP_AUTHORIZATION"] ?? "";
+    if (stripos($auth, "basic ") === 0) {
+      $decoded = base64_decode(substr($auth, 6), true);
+      if ($decoded !== false && strpos($decoded, ":") !== false) {
+        [, $pass] = explode(":", $decoded, 2);
+      }
+    }
+  }
+
+  if ($pass === null || !password_verify($pass, $hash)) {
+    // A wrong password costs a second. Enough to make guessing pointless at
+    // this scale, and unnoticeable when the password is right.
+    if ($pass !== null) { sleep(1); }
+    $deny("Not authorised.\n");
+  }
+})();
+
+// The dashboard must never be cached by a proxy or indexed by anything.
+header("Cache-Control: no-store, private");
+header("X-Robots-Tag: noindex, nofollow");
+
 $dir = __DIR__ . "/_stats";
 
 $days  = max(7, min(90, (int)($_GET["days"] ?? 30)));
