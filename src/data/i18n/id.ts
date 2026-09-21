@@ -475,4 +475,101 @@ export const id: LocalizedPage[] = [
     moreText:
       "Aturan masuk terperinci untuk setiap paspor yang telah kami verifikasi diterbitkan dalam Bahasa Inggris di situs utama. Portal resmi pemerintah Mesir tetap menjadi otoritas dalam hal ini.",
   },
+  // ===== Akses eksklusif ====================================================
+  // Pasar Indonesia untuk halaman ini bukan "wisata" melainkan ACARA: foto
+  // prewedding di luar negeri, akad atau resepsi kedua, ulang tahun pernikahan,
+  // dan insentif korporat — tiga hal yang di Indonesia memang dianggarkan
+  // serius dan sering digabung dengan rangkaian umrah. Karena itu penekanannya
+  // pada izin resmi dan kepastian tanggal, bukan pada daftar monumen.
+  {
+    groupId: "private-access",
+    symbol: "horus",
+    title: "Sewa Eksklusif Situs Mesir — Piramida & Karnak | Kemet",
+    description:
+      "Monumen Mesir ditutup untuk umum dan dipegang satu rombongan: Piramida Agung di luar jam buka, Karnak untuk jamuan malam, plateau Giza sebelum gerbang dibuka.",
+    keywords:
+      "sewa piramida untuk acara, akses eksklusif piramida giza, foto prewedding di mesir, resepsi pernikahan di mesir, acara korporat di mesir, sewa situs bersejarah mesir, private access piramida",
+    crumb: "Akses eksklusif",
+    h1: "Ditutup untuk siapa pun selain Anda",
+    standfirst:
+      "Bukan jam sepi, bukan pintu samping — monumennya, kosong, dan yang ada di dalamnya hanya rombongan Anda.",
+    lede:
+      "Ada tempat di Mesir yang bisa ditutup untuk umum dan dipegang satu rombongan selama beberapa jam. Piramida Agung dibuka kembali setelah jam kunjung berakhir; plateau Giza dimasuki sebelum gerbang dibuka; meja jamuan digelar di dalam kompleks Karnak. Semuanya bukan urusan membayar lebih mahal, melainkan urusan IZIN — dan izin itulah yang kami urus atas nama Anda.",
+    facts: [
+      { label: "Dasar", value: "Izin resmi, bukan pembayaran" },
+      { label: "Diajukan", value: "Atas nama Anda" },
+      { label: "Tenggat", value: "Beberapa minggu sampai beberapa bulan" },
+      { label: "Biaya", value: "Tidak ada sebelum izin terbit" },
+    ],
+    sections: [
+      {
+        title: "Piramida Agung, dua jam tanpa orang lain",
+        body:
+          "Piramida ditutup untuk umum lalu dibuka kembali untuk satu rombongan, dengan dua jam penuh di dalamnya. Anda menaiki Grand Gallery tanpa antrean di belakang dan tanpa suara di depan, dan bisa duduk diam di Kamar Raja — satu hal yang tidak pernah didapat siapa pun yang datang di siang hari. Izinnya melibatkan Kementerian Pariwisata dan Purbakala, Kementerian Dalam Negeri, serta pengawas kawasan piramida. Tidak bisa dibeli online berapa pun harganya.",
+      },
+      {
+        title: "Plateau Giza sebelum gerbang dibuka",
+        body:
+          "Foto plateau saat matahari terbit dengan empat ratus orang lain di dalamnya sudah dimiliki semua orang. Sebelum gerbang dibuka tempat itu berbeda: tidak ada bus, tidak ada penjaja unta, tidak ada antrean di Sphinx, dan cahaya datang mendatar dari timur. Jendela waktunya 05.00–07.00 (April–September) dan 06.00–08.00 (Oktober–Maret) — inilah pilihan yang paling sering diambil untuk sesi prewedding.",
+      },
+      {
+        title: "Jamuan malam di dalam Karnak",
+        body:
+          "Karnak adalah bangunan keagamaan terbesar yang pernah didirikan manusia, dan aula hypostyle-nya menampung seratus tiga puluh empat pilar setinggi gedung enam lantai. Setelah situs tutup, meja bisa digelar di dalam kompleks dan pilar-pilar disorot dari bawah — persis cara ia dimaksudkan untuk dilihat. Muat untuk jamuan kecil hingga sekitar dua ratus tamu, lengkap dengan tata cahaya, suara, panggung dan katering.",
+      },
+      {
+        title: "Bagi rombongan korporat dan keluarga besar",
+        body:
+          "Perjalanan insentif dari Jakarta atau Surabaya biasanya mendarat satu kali transit lewat Teluk, dan banyak rombongan menyambungnya dengan umrah. Untuk acara perusahaan, terasnya Benteng Salahuddin memandang seluruh Kairo sampai ke piramida pada sore yang cerah — satu-satunya tempat di ibu kota yang memperlihatkan semuanya sekaligus. Untuk keluarga besar, dahabiya disewa utuh: bukan kabin di kapal, melainkan kapalnya.",
+      },
+      {
+        title: "Kerahasiaan sebagai standar",
+        body:
+          "Tidak ada acara privat yang kami publikasikan, sebut namanya, atau foto. Tidak ada klien yang dijadikan referensi tanpa diminta izin lebih dulu, dan tidak ada satu pun malam yang muncul di situs ini. Bila acara Anda memerlukan perjanjian kerahasiaan sebelum percakapan pertama dan bukan sesudahnya, katakan saja — dokumennya kami kirim hari itu juga.",
+      },
+    ],
+    highlights: {
+      heading: "Situs yang bisa dipegang eksklusif",
+      items: [
+        "Piramida Agung Khufu — dua jam penuh di dalam, setelah jam kunjung",
+        "Plateau Giza — sebelum gerbang dibuka, untuk dua orang sampai rombongan besar",
+        "Kompleks Karnak, Luxor — jamuan malam hingga sekitar 200 tamu",
+        "Grand Egyptian Museum — galeri ditutup untuk satu rombongan",
+        "Benteng Salahuddin, Kairo — teras memandang seluruh ibu kota",
+        "Philae, Aswan — pulau kuil setelah perahu umum terakhir pergi",
+        "Teras Hatshepsut, Luxor — tiga undakan di kaki tebing Thebes",
+        "Dahabiya — disewa utuh, bukan per kabin",
+      ],
+    },
+    faqs: [
+      {
+        q: "Piramida Agung benar-benar bisa disewa privat?",
+        a: "Bisa, dan inilah pengaturan tersulit di Mesir. Piramida ditutup untuk umum lalu dibuka kembali untuk satu rombongan, dengan dua jam penuh di dalamnya. Dasarnya izin resmi dari Kementerian Pariwisata dan Purbakala, Kementerian Dalam Negeri, dan pengawas kawasan — atas permohonan tertulis yang menyebutkan tujuan, jam persis, dan jumlah orang. Siapa pun yang menawarkannya sebagai pemesanan instan tidak sedang menawarkan hal yang sebenarnya.",
+      },
+      {
+        q: "Berapa lama sebelum tanggalnya saya harus menghubungi?",
+        a: "Beberapa minggu untuk plateau Giza sebelum jam buka, Benteng, atau malam di museum. Dua sampai tiga bulan untuk acara penuh di dalam kompleks kuil, karena tata cahaya, suara, panggung dan katering masing-masing butuh persetujuan sendiri. Berbulan-bulan untuk Piramida Agung. Kalau tanggal Anda sudah pasti, itulah hal pertama yang perlu kami tahu — semua bisa dirancang mengikuti izin, tetapi izin tidak bisa dirancang mengikuti tanggal.",
+      },
+      {
+        q: "Bisa untuk foto prewedding atau resepsi?",
+        a: "Bisa. Sesi prewedding paling sering mengambil plateau Giza sebelum gerbang dibuka, karena cahayanya dan karena kawasannya benar-benar kosong. Untuk resepsi atau jamuan, kompleks Karnak dan teras Benteng adalah dua pilihan yang menampung banyak tamu. Pernikahan secara hukum diurus terpisah melalui kedutaan atau di Indonesia — umumnya pasangan menikah resmi lebih dulu, lalu menggelar upacaranya di sini.",
+      },
+      {
+        q: "Berapa biayanya?",
+        a: "Ditawarkan, bukan dipajang. Angkanya disusun dari biaya izin untuk situs tersebut, jumlah tamu, tanggal, dan apa yang malam itu perlukan — meja untuk delapan orang di dalam Karnak dan jamuan dua ratus tamu dengan panggung bukan dua versi dari satu harga. Kami mengajukan penawaran tertulis dan terperinci sebelum ada komitmen apa pun.",
+      },
+      {
+        q: "Bagaimana kalau izinnya ditolak?",
+        a: "Tidak ada biaya sebelum izin terbit, jadi penolakan tidak merugikan Anda. Sejak percakapan pertama kami akan mengatakan seberapa besar kemungkinannya, dan kalau menurut kami tanggal atau situsnya tidak realistis kami mengatakannya saat itu juga — bukan setelah uang muka. Bila penolakan mungkin terjadi, pilihan kedua sudah disepakati sebelum permohonan diajukan.",
+      },
+    ],
+    cta: {
+      heading: "Ceritakan acaranya",
+      text: "Tanggal lebih dulu kalau sudah ada — izin adalah bagian terpanjang, dan sisanya mengikuti. Kalau yang Anda bayangkan tidak mungkin, kami mengatakannya di balasan pertama, bukan di balasan keempat.",
+      whatsapp: "Halo Kemet — saya ingin menanyakan akses eksklusif ke situs di Mesir untuk sebuah acara. Bisakah kita bicarakan tanggalnya?",
+      emailSubject: "Akses eksklusif — pertanyaan",
+    },
+    moreLabel: "Selengkapnya dalam bahasa Inggris",
+    moreText: "Delapan situs, beserta jalur perizinan masing-masing, dijelaskan lengkap di halaman berbahasa Inggris.",
+  },
 ];

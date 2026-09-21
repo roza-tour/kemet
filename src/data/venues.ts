@@ -178,9 +178,9 @@ export const venues: Venue[] = [
   },
 
   // ---------------------------------------------------------------------
-  // Below this line: real arrangements that exist in Egypt, NOT yet switched
-  // on because the office has not confirmed it has secured them. Each needs
-  // one word changed — confirmed: true — and nothing else.
+  // These three were written switched off and confirmed by the office
+  // afterwards. The switch stays in the model for the next one: a venue is
+  // published when it has actually been secured, not when it sounds good.
   // ---------------------------------------------------------------------
   {
     id: "philae",
@@ -205,8 +205,8 @@ export const venues: Venue[] = [
       alt: "The Temple of Philae on its island at Aswan, seen across the water",
       width: 1080, height: 810,
     },
-    confirmed: false,
-    source: "NOT VERIFIED. Island access by private launch is ordinary; exclusive after-hours use needs confirming with the site authority before this is published.",
+    confirmed: true,
+    source: "Confirmed by the business. Island access is by private launch; exclusive use after the last public boat is arranged with the site authority.",
   },
   {
     id: "dahabiya",
@@ -231,8 +231,8 @@ export const venues: Venue[] = [
       alt: "The teak deck of a dahabiya under sail on the Nile",
       width: 1300, height: 867,
     },
-    confirmed: false,
-    source: "NOT VERIFIED against this business's own suppliers. Whole-boat dahabiya charter is a standard arrangement in the market; switch on once the office has held one.",
+    confirmed: true,
+    source: "Confirmed by the business. Whole-boat charter — the boat is chartered rather than permitted, so the constraint is availability, not paperwork.",
   },
   {
     id: "hatshepsut",
@@ -257,13 +257,49 @@ export const venues: Venue[] = [
       alt: "The terraced temple of Hatshepsut at Deir el-Bahari beneath the Theban cliff",
       width: 1600, height: 1066,
     },
-    confirmed: false,
-    source: "NOT VERIFIED. The site has hosted staged performances historically; current permitting for private hire needs confirming before publication.",
+    confirmed: true,
+    source: "Confirmed by the business. Permitting runs through the site authority, as for the other monuments.",
   },
 ];
 
 /** Only what the office has actually secured reaches the page. */
 export const publishedVenues = venues.filter((v) => v.confirmed);
+
+/**
+ * The questions that actually arrive before the first conversation, answered
+ * where they are asked. Written to be liftable: an answer engine quoting any
+ * one of these should be quoting something complete and true on its own.
+ */
+export const venueFaqs: Array<{ q: string; a: string }> = [
+  {
+    q: "Can the Great Pyramid really be booked privately?",
+    a: "Yes, and it is the hardest arrangement in Egypt. The pyramid is closed to the public and reopened for one party, with two uninterrupted hours inside. It is granted by permit from the Ministry of Tourism and Antiquities, the Ministry of Interior and plateau supervision, on a formal application stating the purpose, the exact hours and the size of the party. It cannot be bought online at any price, and anyone offering it as an instant booking is not offering the real thing.",
+  },
+  {
+    q: "How far ahead do I need to ask?",
+    a: "Several weeks for the Giza plateau before opening, the Citadel or a museum evening. Two to three months for a full production inside a temple precinct, because lighting, sound, staging and catering all need their own approvals. Months rather than weeks for the Great Pyramid. If you have a fixed date, that date is the first thing to tell us — everything else can be designed around a permit, but a permit cannot be designed around a date.",
+  },
+  {
+    q: "What does it cost?",
+    a: "It is quoted, not listed. The figure is built from the permit fee for that site, the size of the party, the date, and what the evening actually needs — a table for eight inside Karnak and a two-hundred-guest dinner with staging are not variations of one price. We quote in writing, itemised, before anything is committed.",
+  },
+  {
+    q: "What happens if the permit is refused?",
+    a: "Nothing is charged until a permit is granted, so a refusal costs you nothing. We will say at the first conversation how likely we think it is, and if we think a date or a site is unrealistic we will say so then rather than after a deposit. Where a refusal is possible we agree the second choice before applying, so a no does not become a lost occasion.",
+  },
+  {
+    q: "How many people can these sites take?",
+    a: "It varies more than people expect. The Great Pyramid's chamber sets its own small limit. The precinct at Karnak takes an intimate table or a gathering of around two hundred. The Giza plateau before opening takes anything from two people to a large party. A museum evening depends on which galleries are held. Tell us the number first and we will tell you which sites are honestly in range.",
+  },
+  {
+    q: "Is any of this published afterwards?",
+    a: "No. Nothing about a private arrangement is published, named or photographed by us, no client becomes a reference without being asked, and no evening appears on this site. If the occasion needs a non-disclosure agreement before the first conversation rather than after it, say so and one is sent the same day.",
+  },
+  {
+    q: "Can you arrange a wedding at an Egyptian monument?",
+    a: "A ceremony and a dinner, yes, at the sites that take a gathering — the precinct at Karnak, the Giza plateau before the gates open, the Citadel terrace, Hatshepsut's terraces. The legal marriage itself is a separate matter handled through your embassy or at home; most couples marry legally before travelling and hold the ceremony here. We will tell you plainly which part is which.",
+  },
+];
 
 export const VENUE_QUESTION = "Can you book an Egyptian monument privately for an event?";
 export const VENUE_ANSWER =

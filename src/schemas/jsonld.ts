@@ -696,6 +696,70 @@ export function siteSchema(): JsonLd[] {
  * There is no build-date fallback: a rebuild is not a review, and stamping
  * every page with today's date would be a freshness claim we cannot support.
  */
+/**
+ * Private-access venues, as structured data.
+ *
+ * Each monument is a TouristAttraction — a real, named place a search engine
+ * already has an entity for — and the private hire of it is a Service offered
+ * by Kemet, gathered into one OfferCatalog. Splitting it that way matters: the
+ * Great Pyramid is not our product, and claiming the monument as an Offer would
+ * be both wrong and the kind of thing a validator flags. What we sell is
+ * arranged exclusive access TO it, which is a Service whose areaServed is the
+ * place.
+ *
+ * No price is emitted. Every one of these is quoted from the permit fee, the
+ * party size and the date; schema.org has no honest way to say "it depends" and
+ * a made-up number would be published as fact.
+ */
+export function venueCatalogSchema(
+  route: string,
+  venues: Array<{ id: string; name: string; where: string; kicker: string; body: string; image: { src: string } }>,
+): JsonLd {
+  const url = canonical(route);
+  return {
+    "@context": SCHEMA_CONTEXT,
+    "@type": "Service",
+    "@id": `${url}#private-access`,
+    name: "Private access to Egyptian monuments",
+    serviceType: "Exclusive-use venue hire at heritage sites",
+    description:
+      "Arranged exclusive use of named Egyptian monuments and museums for a single party — "
+      + "granted by permit from the Ministry of Tourism and Antiquities and the relevant site "
+      + "authorities, applied for in the client's name.",
+    provider: orgRef(),
+    areaServed: { "@type": "Country", name: "Egypt" },
+    audience: {
+      "@type": "Audience",
+      audienceType: "Private clients arranging a wedding, proposal, milestone or private corporate occasion",
+    },
+    url,
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Sites available for exclusive use",
+      itemListElement: venues.map((v, i) => ({
+        "@type": "Offer",
+        position: i + 1,
+        // No price: quoted from permit, party size and date. See note above.
+        availability: "https://schema.org/LimitedAvailability",
+        itemOffered: {
+          "@type": "Service",
+          name: `${v.name} — exclusive use`,
+          description: v.kicker,
+          areaServed: {
+            "@type": "TouristAttraction",
+            name: v.name,
+            description: v.body,
+            image: absolute(v.image.src),
+            address: { "@type": "PostalAddress", addressLocality: v.where, addressCountry: "EG" },
+            isAccessibleForFree: false,
+          },
+          provider: orgRef(),
+        },
+      })),
+    },
+  };
+}
+
 export function answerPageSchema(opts: {
   route: string;
   name: string;

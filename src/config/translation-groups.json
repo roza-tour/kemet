@@ -30,6 +30,17 @@
       "ms": "ms/index.html"
     },
     {
+      "key": "private-access",
+      "en": "private-hire.html",
+      "de": "de/exklusive-nutzung-monumente-aegypten.html",
+      "it": "it/monumenti-in-esclusiva-egitto.html",
+      "es": "es/monumentos-en-exclusiva-egipto.html",
+      "fr": "fr/monuments-en-exclusivite-egypte.html",
+      "ru": "ru/ekskluzivnyy-dostup-k-pamyatnikam.html",
+      "id": "id/sewa-eksklusif-situs-mesir.html",
+      "ms": "ms/tempahan-eksklusif-tapak-mesir.html"
+    },
+    {
       "key": "journeys",
       "en": "tours.html",
       "de": "de/aegypten-reisen.html",

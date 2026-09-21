@@ -78,6 +78,7 @@ export const GET: APIRoute = () => {
   const staticPages: Array<[string, string, string, string]> = [
     ["", "Home", "Kemet", "Private luxury Egypt journeys through eight cultural worlds."],
     ["vip.html", "Kemet VIP", "VIP", "The tier above the catalogue — dahabiya charter, private aircraft, named sites reserved exclusively for your party, a personal attaché. By arrangement."],
+    ["private-hire.html", "Private access", "VIP", "Monuments closed to everyone else and held for one party — the Great Pyramid after hours, Karnak at night, the plateau before the gates."],
     ["tours.html", "All journeys", "Journeys", `Every private journey — ${tours.length} in total, day tours to a 14-day grand tour.`],
     ["experiences.html", "Experiences", "Experiences", "Private moments between the monuments — balloons, charters, dinners."],
     ["destinations.html", "Destinations", "Destinations", "Cairo, Giza, Luxor, Aswan, Alexandria, Hurghada and more."],

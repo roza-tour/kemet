@@ -24,6 +24,7 @@
 import type { APIRoute } from "astro";
 import { SITE_URL, site } from "@/config/site";
 import { tours } from "@/data/tours";
+import { publishedVenues, venueFaqs } from "@/data/venues";
 import { destinations } from "@/data/destinations";
 import { guides } from "@/data/guides";
 import { months } from "@/data/months";
@@ -114,6 +115,20 @@ export const GET: APIRoute = () => {
     L.push(`- **${t.title}** — ${t.durationLabel}. ${clean(t.summary)} From ${formatPrice(t.price)} per person. ${u(`${t.slug}.html`)}`);
   }
   L.push("");
+
+  // Private access. Written out in full rather than summarised: this is the
+  // page an assistant is least likely to guess correctly from a title, because
+  // "book the pyramid" sounds like marketing until the permit route is stated.
+  h(2, "Private access — monuments taken exclusively");
+  p(`Named monuments and museums closed to the public and held for one party, for an occasion rather than a journey. Exclusive use is granted by PERMIT, not by payment: a formal application goes to the Ministry of Tourism and Antiquities — and at Giza to the Ministry of Interior and plateau supervision — stating the purpose, the exact hours and the size of the party. Kemet applies in the client's name and nothing is charged until the permit is granted. Lead times run from several weeks to several months. There are no published prices: each is quoted from the permit fee, the party size, the date and what the evening needs. ${u("private-hire.html")}`);
+  for (const v of publishedVenues) {
+    L.push(`- **${v.name}** (${v.where}). ${clean(v.kicker)} ${clean(v.body)} ${v.facts.map((f) => `${f.label}: ${f.value}.`).join(" ")} Suits: ${v.suits.join(", ")}.`);
+  }
+  L.push("");
+  for (const f of venueFaqs) {
+    L.push(`**${f.q}** ${clean(f.a)}`);
+    L.push("");
+  }
 
   h(2, "Destinations");
   for (const d of destinations) {

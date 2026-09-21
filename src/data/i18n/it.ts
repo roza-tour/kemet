@@ -485,4 +485,90 @@ export const it: LocalizedPage[] = [
     moreText:
       "La versione integrale, con altre regioni e altre domande, è disponibile in inglese.",
   },
+  // ===== Uso esclusivo ======================================================
+  // Il mercato italiano ha il volo più breve verso l'Egitto fra i grandi
+  // mercati europei, il che rende praticabile un'occasione di due o tre notti:
+  // si parte giovedì, si cena dentro Karnak il venerdì, si rientra la domenica.
+  {
+    groupId: "private-access",
+    symbol: "horus",
+    title: "Monumenti in esclusiva in Egitto | Kemet",
+    description:
+      "Monumenti chiusi al pubblico e riservati a una sola compagnia: la Piramide di Cheope fuori orario, la piana di Giza prima dell'apertura, cena dentro Karnak.",
+    keywords:
+      "piramide in esclusiva, accesso privato piramide di cheope, matrimonio in egitto, evento aziendale egitto, cena privata karnak, affittare monumento egitto, location esclusiva egitto",
+    crumb: "Uso esclusivo",
+    h1: "Chiuso a tutti gli altri",
+    standfirst:
+      "Non un'ora tranquilla, non un ingresso laterale — il monumento, vuoto, e dentro solo la vostra compagnia.",
+    lede:
+      "Ci sono luoghi in Egitto che possono essere chiusi al pubblico e tenuti per una sola compagnia. La Piramide di Cheope viene riaperta dopo la chiusura; nella piana di Giza si entra prima che aprano i cancelli; dentro il recinto di Karnak si apparecchia. Non è questione di pagare di più: è questione di PERMESSO — e il permesso lo chiediamo a vostro nome.",
+    facts: [
+      { label: "Fondamento", value: "Un permesso, non un pagamento" },
+      { label: "Richiesto", value: "A vostro nome" },
+      { label: "Preavviso", value: "Settimane o mesi" },
+      { label: "Costi", value: "Nessuno prima del rilascio" },
+    ],
+    sections: [
+      {
+        title: "La Piramide di Cheope, due ore e nessun altro",
+        body:
+          "La piramide viene chiusa al pubblico e riaperta per una sola compagnia, con due ore ininterrotte all'interno. Si sale la Grande Galleria senza fila dietro e senza voci davanti, e ci si può sedere in silenzio nella Camera del Re: la cosa che nessuno, visitando di giorno, riesce mai a fare. Il permesso passa dal Ministero del Turismo e delle Antichità, dal Ministero dell'Interno e dalla sovrintendenza della piana. Online non si compra a nessun prezzo.",
+      },
+      {
+        title: "La piana prima dell'alba",
+        body:
+          "La piana alla prima luce con altre quattrocento persone è una fotografia che hanno già tutti. Prima dell'apertura è un altro luogo: niente pullman, niente venditori di cammelli, niente coda alla Sfinge, e la luce che entra radente da est. La finestra è 5–7 (aprile–settembre) e 6–8 (ottobre–marzo). La colazione si può apparecchiare sulla sabbia davanti a tutte e tre le piramidi.",
+      },
+      {
+        title: "Cena dentro il recinto di Karnak",
+        body:
+          "Karnak è il più grande edificio religioso mai costruito, e la sala ipostila regge centotrentaquattro colonne alte quanto un palazzo di sei piani. A sito chiuso si può apparecchiare dentro il recinto e illuminare le colonne dal basso — esattamente come dovevano essere viste. Da una tavola intima fino a circa duecento ospiti, con luci, audio, palco e catering.",
+      },
+      {
+        title: "La discrezione come regola",
+        body:
+          "Di un'occasione privata non pubblichiamo, non nominiamo e non fotografiamo nulla. Nessun cliente diventa una referenza senza che gli sia stato chiesto, e nessuna serata compare su questo sito. Se l'occasione richiede un accordo di riservatezza prima del primo colloquio e non dopo, ditelo: parte lo stesso giorno.",
+      },
+    ],
+    highlights: {
+      heading: "Luoghi che si possono tenere in esclusiva",
+      items: [
+        "Piramide di Cheope — due ore ininterrotte dopo la chiusura",
+        "Piana di Giza — prima dell'apertura, da due persone a una grande compagnia",
+        "Recinto di Karnak, Luxor — cena fino a circa 200 ospiti",
+        "Grand Egyptian Museum — gallerie chiuse per una sola compagnia",
+        "Cittadella di Saladino, Il Cairo — terrazza su tutta la città",
+        "File, Assuan — tempio sull'isola dopo l'ultima barca pubblica",
+        "Terrazze di Hatshepsut, Luxor — tre livelli nella roccia tebana",
+        "Dahabiya — la barca intera, non una cabina",
+      ],
+    },
+    faqs: [
+      {
+        q: "Si può davvero prenotare la Piramide di Cheope in privato?",
+        a: "Sì, ed è l'accordo più difficile d'Egitto. La piramide viene chiusa al pubblico e riaperta per una compagnia, con due ore ininterrotte all'interno. Si fonda su un permesso del Ministero del Turismo e delle Antichità, del Ministero dell'Interno e della sovrintendenza della piana, su domanda scritta che indica scopo, orari esatti e numero di persone. Chi lo offre come prenotazione immediata non sta offrendo la cosa vera.",
+      },
+      {
+        q: "Con quanto anticipo devo muovermi?",
+        a: "Qualche settimana per la piana prima dell'apertura, la Cittadella o una serata al museo. Due o tre mesi per una produzione completa dentro un recinto templare, perché luci, audio, palco e catering hanno ciascuno la propria autorizzazione. Mesi per la Piramide di Cheope. Se la data è fissa, è la prima cosa da dirci: tutto si può progettare attorno a un permesso, ma un permesso non si progetta attorno a una data.",
+      },
+      {
+        q: "Quanto costa?",
+        a: "Si quota, non si espone. La cifra nasce dal costo del permesso per quel luogo, dal numero di ospiti, dalla data e da ciò che la serata richiede — una tavola per otto dentro Karnak e una cena per duecento con palco non sono due versioni dello stesso prezzo. Preventivo scritto e dettagliato prima di qualunque impegno.",
+      },
+      {
+        q: "E se il permesso viene negato?",
+        a: "Prima del rilascio non si paga nulla, quindi un diniego non vi costa niente. Già al primo colloquio diciamo quanto lo riteniamo probabile, e se una data o un luogo ci sembrano irrealistici lo diciamo allora, non dopo un acconto. Dove il diniego è possibile, la seconda scelta si concorda prima di presentare la domanda.",
+      },
+    ],
+    cta: {
+      heading: "Raccontateci l'occasione",
+      text: "Prima le date, se le avete — il permesso è il passaggio lungo e tutto il resto lo segue. Se quello che avete in mente non è possibile, lo diciamo alla prima risposta e non alla quarta.",
+      whatsapp: "Salve Kemet — vorrei informazioni sull'uso esclusivo di un monumento per un'occasione. Possiamo parlare di date?",
+      emailSubject: "Uso esclusivo — richiesta",
+    },
+    moreLabel: "Di più in inglese",
+    moreText: "Otto luoghi, ciascuno con il proprio iter di permesso, spiegati per esteso nella pagina inglese.",
+  },
 ];

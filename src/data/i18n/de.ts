@@ -486,4 +486,91 @@ export const de: LocalizedPage[] = [
     moreText:
       "Die vollständige Fassung mit weiteren Regionen und Fragen steht auf Englisch zur Verfügung.",
   },
+  // ===== Exklusive Nutzung ==================================================
+  // Der deutschsprachige Markt fragt hier anders als der südostasiatische: die
+  // erste Frage ist nicht "geht das?", sondern "wie ist das geregelt?". Die
+  // Seite beantwortet deshalb zuerst den Genehmigungsweg und erst danach die
+  // Orte. Anlässe: runde Geburtstage, Hochzeitstage, Firmenjubiläen.
+  {
+    groupId: "private-access",
+    symbol: "horus",
+    title: "Monumente exklusiv mieten in Ägypten | Kemet",
+    description:
+      "Monumente, die für eine Gesellschaft geschlossen werden: die Cheops-Pyramide nach Besuchsschluss, das Giza-Plateau vor Toröffnung, Dinner im Karnak-Bezirk.",
+    keywords:
+      "pyramide exklusiv mieten, privater zugang cheops-pyramide, hochzeit in ägypten, firmenevent ägypten, karnak tempel privat, exklusive veranstaltung ägypten, monument mieten ägypten",
+    crumb: "Exklusive Nutzung",
+    h1: "Für alle anderen geschlossen",
+    standfirst:
+      "Keine ruhige Stunde, kein Seiteneingang — das Monument, leer, und drinnen steht nur Ihre Gesellschaft.",
+    lede:
+      "Es gibt Orte in Ägypten, die für die Öffentlichkeit geschlossen und für eine einzige Gesellschaft geöffnet werden können. Die Cheops-Pyramide wird nach Besuchsschluss wieder aufgeschlossen; das Giza-Plateau wird vor Toröffnung betreten; im Karnak-Bezirk wird eingedeckt. Das ist keine Frage des Preises, sondern der GENEHMIGUNG — und die beantragen wir in Ihrem Namen.",
+    facts: [
+      { label: "Grundlage", value: "Genehmigung, nicht Zahlung" },
+      { label: "Beantragt", value: "Auf Ihren Namen" },
+      { label: "Vorlauf", value: "Wochen bis Monate" },
+      { label: "Kosten", value: "Keine vor Erteilung" },
+    ],
+    sections: [
+      {
+        title: "Die Cheops-Pyramide, zwei Stunden allein",
+        body:
+          "Die Pyramide wird für die Öffentlichkeit geschlossen und für eine Gesellschaft wieder geöffnet — zwei ununterbrochene Stunden im Inneren. Sie gehen die Große Galerie hinauf ohne Warteschlange hinter sich und ohne Stimmen vor sich, und können in der Königskammer schweigend sitzen, was tagsüber niemandem möglich ist. Der Antrag geht an das Ministerium für Tourismus und Altertümer, das Innenministerium und die Plateau-Aufsicht. Online ist das zu keinem Preis zu kaufen.",
+      },
+      {
+        title: "Das Plateau vor Sonnenaufgang",
+        body:
+          "Das Plateau im ersten Licht mit vierhundert anderen Menschen darauf ist ein Foto, das jeder schon hat. Vor Toröffnung ist es ein anderer Ort: keine Busse, keine Kamelverkäufer, keine Schlange am Sphinx, und das Licht kommt flach von Osten herein. Das Zeitfenster liegt bei 5–7 Uhr (April–September) und 6–8 Uhr (Oktober–März). Das Frühstück kann im Sand vor allen drei Pyramiden aufgebaut werden.",
+      },
+      {
+        title: "Dinner im Karnak-Bezirk",
+        body:
+          "Karnak ist der größte jemals errichtete Sakralbau, und die Säulenhalle trägt hundertvierunddreißig Säulen in der Höhe eines sechsstöckigen Hauses. Nach Schließung kann im Bezirk eingedeckt und können die Säulen von unten angestrahlt werden — genau so, wie sie gedacht waren. Von der kleinen Tafel bis zu rund zweihundert Gästen, mit Licht, Ton, Bühne und Catering.",
+      },
+      {
+        title: "Verschwiegenheit als Standard",
+        body:
+          "Nichts an einer privaten Veranstaltung wird von uns veröffentlicht, genannt oder fotografiert. Kein Kunde wird ungefragt zur Referenz, und kein Abend erscheint auf dieser Website. Wenn der Anlass eine Vertraulichkeitsvereinbarung vor dem ersten Gespräch verlangt und nicht danach, sagen Sie es — sie geht am selben Tag hinaus.",
+      },
+    ],
+    highlights: {
+      heading: "Orte, die exklusiv gehalten werden können",
+      items: [
+        "Cheops-Pyramide — zwei ununterbrochene Stunden nach Besuchsschluss",
+        "Giza-Plateau — vor Toröffnung, von zwei Personen bis zur großen Gesellschaft",
+        "Karnak-Bezirk, Luxor — Dinner bis rund 200 Gäste",
+        "Grand Egyptian Museum — Galerien für eine Gesellschaft geschlossen",
+        "Zitadelle Saladins, Kairo — Terrasse über der ganzen Stadt",
+        "Philae, Assuan — Inseltempel nach dem letzten öffentlichen Boot",
+        "Hatschepsut-Terrassen, Luxor — drei Ebenen an der thebanischen Felswand",
+        "Dahabiya — das ganze Schiff, nicht eine Kabine",
+      ],
+    },
+    faqs: [
+      {
+        q: "Kann man die Cheops-Pyramide wirklich privat buchen?",
+        a: "Ja, und es ist die schwierigste Vereinbarung in Ägypten. Die Pyramide wird für die Öffentlichkeit geschlossen und für eine Gesellschaft wieder geöffnet, mit zwei ununterbrochenen Stunden im Inneren. Grundlage ist eine Genehmigung des Ministeriums für Tourismus und Altertümer, des Innenministeriums und der Plateau-Aufsicht, auf einen schriftlichen Antrag mit Zweck, genauen Zeiten und Personenzahl. Wer das als Sofortbuchung anbietet, bietet nicht die Sache selbst an.",
+      },
+      {
+        q: "Wie viel Vorlauf brauche ich?",
+        a: "Einige Wochen für das Plateau vor Toröffnung, die Zitadelle oder einen Museumsabend. Zwei bis drei Monate für eine vollständige Produktion im Tempelbezirk, weil Licht, Ton, Bühne und Catering jeweils eigene Freigaben brauchen. Monate für die Cheops-Pyramide. Wenn Ihr Datum feststeht, ist das die erste Information, die wir brauchen — alles lässt sich um eine Genehmigung herum planen, eine Genehmigung aber nicht um ein Datum.",
+      },
+      {
+        q: "Was kostet das?",
+        a: "Es wird angeboten, nicht ausgepreist. Die Zahl entsteht aus der Genehmigungsgebühr des Ortes, der Personenzahl, dem Datum und dem, was der Abend braucht — eine Tafel für acht im Karnak-Bezirk und ein Dinner für zweihundert mit Bühne sind keine zwei Varianten eines Preises. Wir bieten schriftlich und aufgeschlüsselt an, bevor irgendetwas verbindlich wird.",
+      },
+      {
+        q: "Und wenn die Genehmigung abgelehnt wird?",
+        a: "Vor der Erteilung wird nichts berechnet, eine Ablehnung kostet Sie also nichts. Wir sagen schon im ersten Gespräch, für wie wahrscheinlich wir sie halten, und wenn wir ein Datum oder einen Ort für unrealistisch halten, sagen wir das dann — nicht nach einer Anzahlung. Wo eine Ablehnung möglich ist, wird die zweite Wahl vor der Antragstellung vereinbart.",
+      },
+    ],
+    cta: {
+      heading: "Erzählen Sie uns vom Anlass",
+      text: "Zuerst das Datum, wenn es steht — die Genehmigung ist der lange Weg, alles andere richtet sich danach. Wenn das Gedachte nicht möglich ist, sagen wir es in der ersten Antwort und nicht in der vierten.",
+      whatsapp: "Hallo Kemet — ich interessiere mich für die exklusive Nutzung eines Monuments für einen Anlass. Können wir über Termine sprechen?",
+      emailSubject: "Exklusive Nutzung — Anfrage",
+    },
+    moreLabel: "Mehr auf Englisch",
+    moreText: "Acht Orte, jeweils mit ihrem Genehmigungsweg, ausführlich auf der englischen Seite.",
+  },
 ];

@@ -18,6 +18,7 @@
 
 - [Home](https://kemet-travel.com/index.html): Overview of Kemet and the eight cultural worlds of Egypt.
 - [Kemet VIP](https://kemet-travel.com/vip.html): The tier above the published catalogue: full dahabiya charter, private aircraft, named sites reserved exclusively for a single party, and a personal attache. No published prices — each programme is quoted per brief.
+- [Private access — monuments taken exclusively](https://kemet-travel.com/private-hire.html): Named Egyptian monuments closed to the public and held for one party, for an occasion rather than a journey: the Great Pyramid opened after hours for two uninterrupted hours, the Giza plateau before the gates open, dinner inside the precinct at Karnak for up to ~200, the Grand Egyptian Museum with galleries closed, the Citadel, Philae after the last launch, Hatshepsut's terraces, and whole-boat dahabiya charter. Granted by permit from the Ministry of Tourism and Antiquities (and at Giza the Ministry of Interior and plateau supervision), applied for in the client's name; nothing is charged until the permit is granted. Quoted, never listed.
 - [All journeys](https://kemet-travel.com/tours.html): Every private journey, 25 in total, from day tours to a 14-day grand tour.
 - [Egypt Travel FAQ](https://kemet-travel.com/faq.html): Answers to the most common Egypt travel questions: safety, visas, best time to visit, how many days, costs, getting around, food.
 - [Is Egypt safe to visit?](https://kemet-travel.com/egypt-safety.html): Safety in Egypt region by region: Cairo, Luxor, the Red Sea and the North Sinai advisory, plus solo female travel, water and the persistent-seller problem at Giza.
@@ -214,6 +215,7 @@ Seven key pages — the home page, the journeys, the Nile cruise, what it costs,
 ### Deutsch (de)
 
 - https://kemet-travel.com/de/
+- https://kemet-travel.com/de/exklusive-nutzung-monumente-aegypten.html
 - https://kemet-travel.com/de/aegypten-reisen.html
 - https://kemet-travel.com/de/nilkreuzfahrt.html
 - https://kemet-travel.com/de/aegypten-reise-kosten.html
@@ -224,6 +226,7 @@ Seven key pages — the home page, the journeys, the Nile cruise, what it costs,
 ### Italiano (it)
 
 - https://kemet-travel.com/it/
+- https://kemet-travel.com/it/monumenti-in-esclusiva-egitto.html
 - https://kemet-travel.com/it/viaggi-in-egitto.html
 - https://kemet-travel.com/it/crociera-sul-nilo.html
 - https://kemet-travel.com/it/quanto-costa-viaggio-egitto.html
@@ -234,6 +237,7 @@ Seven key pages — the home page, the journeys, the Nile cruise, what it costs,
 ### Español (es)
 
 - https://kemet-travel.com/es/
+- https://kemet-travel.com/es/monumentos-en-exclusiva-egipto.html
 - https://kemet-travel.com/es/viajes-a-egipto.html
 - https://kemet-travel.com/es/crucero-por-el-nilo.html
 - https://kemet-travel.com/es/cuanto-cuesta-viajar-a-egipto.html
@@ -244,6 +248,7 @@ Seven key pages — the home page, the journeys, the Nile cruise, what it costs,
 ### Français (fr)
 
 - https://kemet-travel.com/fr/
+- https://kemet-travel.com/fr/monuments-en-exclusivite-egypte.html
 - https://kemet-travel.com/fr/voyage-egypte.html
 - https://kemet-travel.com/fr/croisiere-sur-le-nil.html
 - https://kemet-travel.com/fr/prix-voyage-egypte.html
@@ -254,6 +259,7 @@ Seven key pages — the home page, the journeys, the Nile cruise, what it costs,
 ### Русский (ru)
 
 - https://kemet-travel.com/ru/
+- https://kemet-travel.com/ru/ekskluzivnyy-dostup-k-pamyatnikam.html
 - https://kemet-travel.com/ru/tury-v-egipet.html
 - https://kemet-travel.com/ru/kruiz-po-nilu.html
 - https://kemet-travel.com/ru/stoimost-tura-v-egipet.html
@@ -264,6 +270,7 @@ Seven key pages — the home page, the journeys, the Nile cruise, what it costs,
 ### Bahasa Indonesia (id)
 
 - https://kemet-travel.com/id/
+- https://kemet-travel.com/id/sewa-eksklusif-situs-mesir.html
 - https://kemet-travel.com/id/paket-tour-mesir.html
 - https://kemet-travel.com/id/pesiar-sungai-nil.html
 - https://kemet-travel.com/id/biaya-liburan-ke-mesir.html
@@ -274,6 +281,7 @@ Seven key pages — the home page, the journeys, the Nile cruise, what it costs,
 ### Bahasa Melayu (ms)
 
 - https://kemet-travel.com/ms/
+- https://kemet-travel.com/ms/tempahan-eksklusif-tapak-mesir.html
 - https://kemet-travel.com/ms/pakej-pelancongan-mesir.html
 - https://kemet-travel.com/ms/pelayaran-sungai-nil.html
 - https://kemet-travel.com/ms/kos-percutian-ke-mesir.html
