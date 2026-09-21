@@ -419,15 +419,24 @@ Two sunrises a year at Abu Simbel. One set of cabins at New Year.
 A few times a year. <a href="/privacy.html">How we handle it</a>.
 </p> </form> </div> </div> <script>
   (function () {
-    var KEY = "kemet-invite-v1";
+    var KEY = "kemet-invite-v1";      // joined or dismissed — never again here
+    var SPENT = "kemet-invite-spent";  // time on the site this visit, in ms
+    var WAIT = 120000;                 // two minutes, counted across pages
     var root = document.getElementById("access-invite");
     if (!root) return;
+
+    // "?invite=now" forces it open immediately, for looking at it on purpose.
+    // Without this the only way to see it again is to clear site data, which is
+    // how a working dialog gets reported as broken.
+    var preview = /[?&]invite=now/.test(location.search);
 
     // Never interrupt a visitor who is already in a transaction or reading the
     // terms — and never on a page reached from an email we sent.
     var path = location.pathname;
-    if (/(contact|booking|privacy|terms|unsubscribe)/.test(path)) return;
-    try { if (localStorage.getItem(KEY)) return; } catch (e) { return; }
+    if (!preview) {
+      if (/(contact|booking|privacy|terms|unsubscribe)/.test(path)) return;
+      try { if (localStorage.getItem(KEY)) return; } catch (e) { return; }
+    }
 
     var opened = false, lastFocus = null;
 
@@ -481,15 +490,40 @@ A few times a year. <a href="/privacy.html">How we handle it</a>.
       document.removeEventListener("mouseout", onOut);
       removeEventListener("scroll", onScroll);
     }
-    // Two minutes before anything can fire. Twenty seconds was still an
-    // interruption: it landed while the visitor was reading the first page they
-    // opened. At two minutes they have chosen to stay, which is the only point
-    // at which an invitation reads as one rather than as an advert.
-    setTimeout(function () {
+    // TWO MINUTES ON THE SITE, NOT TWO MINUTES ON A PAGE.
+    //
+    // The timer used to start again on every page load, which meant a visitor
+    // reading four pages for forty seconds each — nearly three minutes, exactly
+    // the engaged reader this is for — never saw it at all, because no single
+    // page ever reached two minutes. It was reported as the dialog being
+    // broken, and it was: the rule was written about pages when it was always
+    // meant to be about the visit.
+    //
+    // Time spent is now carried across pages in sessionStorage, so the two
+    // minutes accumulate however the visitor moves around, and reset when the
+    // tab closes — a new visit starts its own count.
+    function spent() { try { return parseInt(sessionStorage.getItem(SPENT), 10) || 0; } catch (e) { return 0; } }
+    function arm() {
       armed = true;
       document.addEventListener("mouseout", onOut);
       addEventListener("scroll", onScroll, { passive: true });
-    }, 120000);
+    }
+
+    if (preview) { arm(); open(); }
+    else {
+      var carried = spent();
+      var began = Date.now();
+      // Bank the time from this page as it is spent, so a visitor who leaves
+      // mid-page does not lose the seconds they were here.
+      var tick = setInterval(function () {
+        try { sessionStorage.setItem(SPENT, String(carried + (Date.now() - began))); } catch (e) {}
+      }, 5000);
+      addEventListener("pagehide", function () {
+        clearInterval(tick);
+        try { sessionStorage.setItem(SPENT, String(carried + (Date.now() - began))); } catch (e) {}
+      });
+      setTimeout(arm, Math.max(WAIT - carried, 1500));
+    }
 
     // --- Submitting ---------------------------------------------------------
     var form = document.getElementById("ainv-form");
