@@ -40,6 +40,10 @@ export const primaryNav: NavItem[] = [
     href: "tours.html",
     children: [
       { label: "Kemet VIP", href: "vip.html" },
+      // Directly under VIP: the two sit next to each other in a reader's mind,
+      // but they are different products — VIP is a journey with named sites
+      // reserved along it, this is a site taken for an evening.
+      { label: "Private access", href: "private-hire.html" },
       { label: "All journeys", href: "tours.html" },
       { label: "By occasion", href: "occasions.html" },
       { label: "Collections", href: hubFor("seasonal") },

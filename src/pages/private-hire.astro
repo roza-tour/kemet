@@ -1,0 +1,247 @@
+---
+// Private access — the venue page.
+//
+// Distinct from vip.html, which sells journeys with named sites reserved along
+// the route. This sells the site itself for an evening. The unit is a venue and
+// a date, and the reader is not choosing between itineraries — they have an
+// occasion and are asking whether the thing they have in mind is possible.
+//
+// So the page answers that first and sells second. The permit reality is stated
+// plainly at the top rather than buried: exclusive use is granted by permit and
+// not by payment, it is applied for in the client's name, and it takes weeks or
+// months. For this reader that is not a caveat — it is the proof that whoever
+// wrote the page has actually done it, which is the only thing they are trying
+// to establish before they make contact.
+import Base from "@/layouts/Base.astro";
+import PageHero from "@/components/PageHero.astro";
+import Frieze from "@/components/Frieze.astro";
+import SymbolIcon from "@/components/SymbolIcon.astro";
+import AnswerBox from "@/components/aeo/AnswerBox.astro";
+import LeadCapture from "@/components/conversion/LeadCapture.astro";
+import StandardOfTravel from "@/components/trust/StandardOfTravel.astro";
+import Placeholder from "@/components/Placeholder.astro";
+import { publishedVenues, VENUE_QUESTION, VENUE_ANSWER } from "@/data/venues";
+import { breadcrumb, answerPageSchema } from "@/schemas/jsonld";
+import { whatsappLink } from "@/utils/links";
+
+const jsonld = [
+  breadcrumb([["Home", "index.html"], ["Private access", "private-hire.html"]]),
+  answerPageSchema({
+    route: "private-hire.html",
+    name: "Private Access — Exclusive Use of Egypt's Monuments",
+    description: "Monuments and museums closed to everyone else and held for one party: the Great Pyramid after hours, the Giza plateau before the gates open, dinner inside Karnak, the Grand Egyptian Museum with the galleries closed.",
+    question: VENUE_QUESTION,
+    answer: VENUE_ANSWER,
+  }),
+];
+
+const wa = whatsappLink(
+  "Hello Kemet — I am enquiring about private access to a monument for an occasion. Could we discuss dates?",
+);
+
+// How it works, stated once. Four steps, because there are four.
+const process = [
+  { symbol: "eye", title: "The conversation",
+    body: "What the occasion is, roughly when, and how many. Some sites suit twelve people and some suit two hundred, and the honest answer sometimes is that a different monument fits better than the one you had in mind." },
+  { symbol: "scarab", title: "The application",
+    body: "A formal request goes to the Ministry of Tourism and Antiquities — and at Giza to the Ministry of Interior and plateau supervision too — stating the purpose, the exact hours and the size of the party. It is made in your name." },
+  { symbol: "ankh", title: "The grant",
+    body: "Nothing is confirmed and nothing is charged until the permit is granted. A date held against an application that has not been approved is not a booking, and we will not describe it as one." },
+  { symbol: "horus", title: "The evening",
+    body: "Lighting, sound, staging, catering, security, transport and an Egyptologist if the evening wants one. One person runs it and is there on the night." },
+];
+---
+<Base
+  title="Private Access — Egypt's Monuments, Exclusively | Kemet"
+  description="Monuments held for one party: the Great Pyramid opened after hours, the Giza plateau before the gates, dinner inside the precinct at Karnak, the Grand Egyptian Museum with the galleries closed."
+  active="private-hire.html"
+  jsonld={jsonld}
+  keywords="private access Egypt monuments, Great Pyramid private opening, exclusive use Karnak Temple, private event Giza pyramids, Grand Egyptian Museum private hire, Citadel Cairo private event, luxury Egypt private venue"
+  ogImage="/images/giza/giza-great-pyramid-khufu.webp"
+>
+  <PageHero
+    crumb="Private access"
+    symbol="horus"
+    title="Closed to everyone else"
+    text="There are places in Egypt that can be shut to the public and held for one party. Not a quiet hour or a side entrance — the monument, empty, and the only people inside it are yours."
+    heroSrc="/images/giza/giza-sound-and-light-show.webp"
+    heroAlt="The pyramids of Giza lit against the night sky"
+    heroWidth={1200}
+    heroHeight={800}
+  />
+
+  <section style="padding-top:24px">
+    <div class="wrap">
+      <AnswerBox question={VENUE_QUESTION} answer={VENUE_ANSWER} />
+    </div>
+  </section>
+
+  <Frieze />
+
+  {/* The venues. One per band, alternating, so each gets a full read. */}
+  {publishedVenues.map((v, i) => (
+    <section class:list={["pv", i % 2 === 1 && "pv--flip"]} style={i === 0 ? "padding-top:10px" : ""}>
+      <div class="wrap">
+        <div class="pv-row">
+          <div class="pv-shot">
+            <Placeholder
+              class="pv-img"
+              src={v.image.src}
+              alt={v.image.alt}
+              width={v.image.width}
+              height={v.image.height}
+              label={v.name}
+              loading={i === 0 ? "eager" : "lazy"}
+            />
+          </div>
+          <div class="pv-text">
+            <div class="eyebrow">{v.where}</div>
+            <h2>{v.name}</h2>
+            <p class="pv-kick">{v.kicker}</p>
+            <p class="pv-body">{v.body}</p>
+
+            <dl class="pv-facts">
+              {v.facts.map((f) => (
+                <div><dt>{f.label}</dt><dd>{f.value}</dd></div>
+              ))}
+            </dl>
+
+            <div class="pv-suits">
+              <span>Suits</span>
+              <ul>{v.suits.map((sx) => <li>{sx}</li>)}</ul>
+            </div>
+
+            <a href={wa} class="btn btn-ghost pv-cta" target="_blank" rel="noopener">Ask about this site</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <Frieze />
+
+  <section>
+    <div class="wrap">
+      <div class="pv-head reveal">
+        <div class="eyebrow">How it is arranged</div>
+        <h2>A permit, not a payment</h2>
+        <div class="rule"></div>
+        <p>Exclusive use of an Egyptian monument cannot be bought. It is granted,
+           in writing, by the authorities who hold the site — which is why it takes
+           weeks or months, and why nobody can sell it to you online.</p>
+      </div>
+      <div class="grid-2 pv-steps">
+        {process.map((p, i) => (
+          <div class="pv-step reveal">
+            <div class="pv-stepnum">{String(i + 1).padStart(2, "0")}</div>
+            <div class="pv-stepsym" aria-hidden="true"><SymbolIcon name={p.symbol} /></div>
+            <h3>{p.title}</h3>
+            <p>{p.body}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="pv-note reveal">
+        <h3>On discretion</h3>
+        <p>Nothing about a private arrangement is published, named or photographed
+           by us. No client is a reference without being asked, and no evening
+           appears on this site. If the occasion needs a non-disclosure agreement
+           before the first conversation rather than after it, say so and one will
+           be sent the same day.</p>
+      </div>
+    </div>
+  </section>
+
+  <Frieze />
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <StandardOfTravel
+        eyebrow="The standard"
+        heading="What is true of this as of everything else"
+        compact={true}
+      />
+    </div>
+  </section>
+
+  <LeadCapture
+    variant="consultation"
+    heading="Tell us the occasion"
+    subtext="Dates first, if you have them — the permit is the long pole and everything else follows it. If what you have in mind is not possible we will say so in the first reply rather than the fourth."
+    whatsappMessage="Hello Kemet — I am enquiring about private access to a monument for an occasion. Could we discuss dates?"
+    emailSubject="Private access — enquiry"
+  />
+</Base>
+
+<style is:global>
+  .pv { padding-top: 0; }
+  .pv-row { display: grid; grid-template-columns: 0.85fr 1fr; gap: 56px; align-items: center; }
+  .pv--flip .pv-row { direction: rtl; }
+  .pv--flip .pv-row > * { direction: ltr; }
+
+  .pv-shot { position: relative; }
+  /* .frame carries no height of its own — the site's aspect-ratio lives on
+     `.jcard .frame`, so a frame used outside a card collapses to zero and the
+     image, which is absolutely positioned inside it, never paints. Caught by
+     measuring the element rather than trusting the screenshot. A portrait crop
+     suits these: the monuments are all tall. */
+  .pv-img { width: 100%; aspect-ratio: 4 / 4.6; }
+  .pv-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  /* The inset rule the hero and the invite both use — one border language. */
+  .pv-shot::after { content: ""; position: absolute; inset: 12px;
+    border: 1px solid rgba(217,180,90,.3); pointer-events: none; }
+
+  .pv-text h2 { font-family: var(--ff-display); font-weight: 300;
+    font-size: clamp(1.9rem, 4vw, 2.7rem); color: var(--bone); margin: 12px 0 0; line-height: 1.15; }
+  .pv-kick { color: var(--gold-bright); font-size: 1.02rem; line-height: 1.7;
+    margin: 16px 0 0; font-style: italic; font-family: 'Cormorant Garamond', Georgia, serif; }
+  .pv-body { color: var(--muted); font-size: .96rem; line-height: 1.88; margin: 18px 0 0; }
+
+  .pv-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 28px;
+    margin: 28px 0 0; padding: 22px 0 0; border-top: 1px solid var(--line); }
+  .pv-facts dt { font-size: .6rem; letter-spacing: .24em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 5px; }
+  .pv-facts dd { color: var(--muted); font-size: .86rem; line-height: 1.65; margin: 0; }
+
+  .pv-suits { margin-top: 24px; display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap; }
+  .pv-suits > span { font-size: .6rem; letter-spacing: .24em; text-transform: uppercase;
+    color: var(--muted-2); flex: none; }
+  .pv-suits ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .pv-suits li { font-size: .78rem; color: var(--muted); padding: 5px 13px;
+    border: 1px solid var(--line); border-radius: 999px; }
+
+  .pv-cta { margin-top: 28px; }
+
+  .pv-head { margin-bottom: 44px; }
+  .pv-head h2 { font-family: var(--ff-display); font-weight: 300;
+    font-size: clamp(1.9rem, 3.4vw, 2.6rem); color: var(--bone); margin-top: 16px; }
+  .pv-head p { color: var(--muted); max-width: 640px; margin: 24px 0 0; line-height: 1.85; }
+
+  .pv-steps { gap: 24px; }
+  .pv-step { position: relative; border: 1px solid var(--line); border-radius: 2px;
+    padding: 30px 30px 28px;
+    background: linear-gradient(165deg, rgba(30,25,18,.85), rgba(14,17,21,.6)); }
+  .pv-stepnum { position: absolute; top: 22px; right: 26px;
+    font-family: var(--ff-display); font-size: 2.2rem; color: var(--gold); opacity: .18; }
+  .pv-stepsym { width: 34px; height: 40px; margin-bottom: 16px; }
+  .pv-stepsym svg { width: 100%; height: 100%; }
+  .pv-step h3 { font-size: 1.12rem; color: var(--bone); font-weight: 500; margin: 0 0 10px; }
+  .pv-step p { color: var(--muted); font-size: .92rem; line-height: 1.8; margin: 0; }
+
+  .pv-note { margin-top: 26px; padding: 30px 32px; border-left: 2px solid var(--gold);
+    background: rgba(217,180,90,.05); }
+  .pv-note h3 { font-family: var(--ff-display); font-weight: 300; font-size: 1.35rem;
+    color: var(--gold-bright); margin: 0 0 12px; }
+  .pv-note p { color: var(--muted); font-size: .95rem; line-height: 1.88; margin: 0; max-width: 760px; }
+
+  @media (max-width: 900px) {
+    .pv-row { grid-template-columns: 1fr; gap: 30px; }
+    .pv--flip .pv-row { direction: ltr; }
+    .pv-steps { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 560px) {
+    .pv-facts { grid-template-columns: 1fr; gap: 14px; }
+    .pv-step { padding: 24px 20px; }
+    .pv-note { padding: 24px 20px; }
+  }
+</style>
