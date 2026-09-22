@@ -183,6 +183,22 @@ for (const path of ["index.html", "tours.html", "vip.html", "plan.html", "privat
   await page.close();
 }
 
+// --- how long the seasonal calendar has left ---------------------------------
+// The base seasons and the computable occasions roll forward on every build.
+// Ramadan and the two Eids cannot be computed — the Islamic month turns on a
+// sighting — so they are typed in and they do run out. When they do, the site
+// keeps working and quietly stops marking Ramadan, which is not something
+// anyone would notice from the outside.
+{
+  const cal = await readFile(new URL("../src/data/seasonalCalendar.ts", import.meta.url), "utf8");
+  const islamic = [...cal.matchAll(/(?:ramadan|eidAlFitr|eidAlAdha)\("[\d-]+", "([\d-]+)"/g)]
+    .map((m) => m[1]).sort();
+  const last = islamic.at(-1) ?? "none";
+  const years = last === "none" ? 0 : (new Date(last) - Date.now()) / 31557600000;
+  console.log(`\nRamadan and Eid are entered through ${last} (${years.toFixed(1)} years)`);
+  if (years < 2) console.log("   ADD MORE — inside two years. Everything else in the calendar extends itself.");
+}
+
 // --- images that are referenced but not there --------------------------------
 // This check exists because the trip designer shipped with a hero pointing at
 // /images/aswan/aswan-felucca-sunset.webp, a file that has never existed. The

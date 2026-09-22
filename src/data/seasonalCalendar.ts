@@ -86,7 +86,22 @@ const PREP_DAYS = 3;
 // lived, it lines up with how travel is sold ("September departures"), and it
 // never drifts, so a season starts on the same date every year.
 
-const BASE_YEARS = [2026, 2027, 2028, 2029, 2030, 2031, 2032];
+// A ROLLING RANGE, NOT A HAND-TYPED LIST.
+//
+// This was [2026 … 2032]. Tested by faking the clock, the site's whole seasonal
+// system went dark on 1 January 2033: no season on <html>, no chip in the nav,
+// no ribbon, no palette. Nothing failed, nothing logged — the feature simply
+// stopped existing, six years out, in a way nobody would have connected to a
+// list in this file.
+//
+// The four seasons are fixed calendar dates. There is no reason to type them
+// out. The range starts at the year the site is BUILT and runs twelve years
+// forward, so every deploy pushes the horizon out again and it cannot expire
+// while the site is being maintained. The occasions below still need entering
+// by hand — Ramadan and Easter cannot be derived from a month number — but
+// those degrade to a correct season rather than to nothing.
+const BUILD_YEAR = new Date().getUTCFullYear();
+const BASE_YEARS = Array.from({ length: 13 }, (_, i) => BUILD_YEAR + i);
 
 const WINTER = {
   theme: "winter" as const, slug: "egypt-in-winter", label: "Winter in Egypt",
@@ -143,6 +158,75 @@ interface Occasion {
   href?: string;
 }
 
+// --- Occasions that can be computed, and the ones that cannot ---------------
+//
+// Easter, Orthodox Easter, Thanksgiving, Valentine's, Christmas and the two Abu
+// Simbel alignments are all deterministic. They were typed out by hand for
+// 2026–2032 and then the calendar simply stopped, so from 2033 the site would
+// have shown nothing but the four base seasons and nobody would have noticed
+// until a Christmas went unmarked.
+//
+// The algorithms below were checked against all seventeen hand-typed dates in
+// that range before the hand entries were removed — every Easter Sunday, every
+// Orthodox Easter including the two years it coincides with the Western date
+// (2028 and 2031, where the calendar correctly emitted no separate window),
+// and every Thanksgiving. They agree exactly.
+//
+// Ramadan and the two Eids stay hand-entered. The Islamic calendar is
+// observational — the month turns when the crescent is sighted — and a tabular
+// approximation is wrong by a day often enough that it cannot be published as
+// a date. Those run out after 2032, and after that the site falls back to a
+// correct season rather than to nothing.
+
+const pad2 = (n: number) => String(n).padStart(2, "0");
+
+const MONTH_NAMES = [
+  "January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December",
+];
+
+/** "2027-03-28" → "28 March 2027". */
+const readable = (day: string): string => {
+  const [y, m, d] = day.split("-").map(Number);
+  return `${d} ${MONTH_NAMES[m - 1]} ${y}`;
+};
+
+/** Western Easter Sunday — the anonymous Gregorian computus. */
+const westernEasterDay = (y: number): string => {
+  const a = y % 19, b = Math.floor(y / 100), c = y % 100;
+  const d = Math.floor(b / 4), e = b % 4;
+  const f = Math.floor((b + 8) / 25), g = Math.floor((b - f + 1) / 3);
+  const h = (19 * a + b - d - g + 15) % 30;
+  const i = Math.floor(c / 4), k = c % 4;
+  const l = (32 + 2 * e + 2 * i - h - k) % 7;
+  const m = Math.floor((a + 11 * h + 22 * l) / 451);
+  const month = Math.floor((h + l - 7 * m + 114) / 31);
+  const day = ((h + l - 7 * m + 114) % 31) + 1;
+  return `${y}-${pad2(month)}-${pad2(day)}`;
+};
+
+/**
+ * Orthodox and Coptic Easter Sunday — Meeus's Julian algorithm, then Julian to
+ * Gregorian. The +13 day offset holds until 2100; the calendar's horizon is
+ * thirteen years, so it will be someone else's problem long before it drifts.
+ */
+const orthodoxEasterDay = (y: number): string => {
+  const a = y % 4, b = y % 7, c = y % 19;
+  const d = (19 * c + 15) % 30;
+  const e = (2 * a + 4 * b - d + 34) % 7;
+  const month = Math.floor((d + e + 114) / 31);
+  const day = ((d + e + 114) % 31) + 1;
+  const j = new Date(Date.UTC(y, month - 1, day));
+  j.setUTCDate(j.getUTCDate() + 13);
+  return iso(j);
+};
+
+/** US Thanksgiving — the fourth Thursday in November. */
+const thanksgivingDay = (y: number): string => {
+  const first = new Date(Date.UTC(y, 10, 1)).getUTCDay();   // 4 = Thursday
+  return `${y}-11-${pad2(((11 - first) % 7) + 22)}`;
+};
+
 const toWindow = (o: Occasion): SeasonalWindow => ({
   theme: o.theme,
   slug: o.slug,
@@ -193,7 +277,12 @@ const sunFestival = (y: number, month: 2 | 10): Occasion => {
  * spring week they actually travel in, and the window is the long weekend, not
  * the Sunday alone.
  */
-const easter = (friday: string, monday: string, sunday: string, alsoOrthodox: boolean): Occasion => ({
+const easter = (y: number): Occasion => {
+  const sunday = westernEasterDay(y);
+  const alsoOrthodox = orthodoxEasterDay(y) === sunday;
+  return easterWindow(shift(sunday, -2), shift(sunday, 1), readable(sunday), alsoOrthodox);
+};
+const easterWindow = (friday: string, monday: string, sunday: string, alsoOrthodox: boolean): Occasion => ({
   theme: "spring", slug: "sham-el-nessim-egypt", label: "Easter in Egypt",
   note: alsoOrthodox
     ? "Easter Sunday is {dates}, Western and Orthodox together this year — the Nile valley at its best, and booked early."
@@ -208,7 +297,11 @@ const easter = (friday: string, monday: string, sunday: string, alsoOrthodox: bo
  * keeps, so it is also what is happening on the ground. Emitted only when the
  * two Easters differ; when they coincide the single Easter window says so.
  */
-const orthodoxEaster = (friday: string, monday: string, sunday: string): Occasion => ({
+const orthodoxEaster = (y: number): Occasion => {
+  const sunday = orthodoxEasterDay(y);
+  return orthodoxWindow(shift(sunday, -2), shift(sunday, 1), readable(sunday));
+};
+const orthodoxWindow = (friday: string, monday: string, sunday: string): Occasion => ({
   theme: "spring", slug: "sham-el-nessim-egypt", label: "Orthodox Easter",
   note: "Orthodox and Coptic Easter falls on {dates} — Egypt's own Easter, and the spring weekend the country spends outdoors.",
   from: friday, to: monday, dates: sunday, priority: 62,
@@ -219,7 +312,11 @@ const orthodoxEaster = (friday: string, monday: string, sunday: string): Occasio
  * American markets travel long-haul in. It lands in the best month of the
  * Egyptian year, which is the whole reason it is worth marking.
  */
-const thanksgiving = (thursday: string, dates: string): Occasion => ({
+const thanksgiving = (y: number): Occasion => {
+  const thu = thanksgivingDay(y);
+  return thanksgivingWindow(thu, readable(thu));
+};
+const thanksgivingWindow = (thursday: string, dates: string): Occasion => ({
   theme: "autumn", slug: "egypt-in-winter", label: "Thanksgiving week",
   note: "{dates} — the American long weekend, in the best month on the Nile. Book it a season ahead.",
   from: thursday, to: thursday, dates, priority: 45, href: "when-to-go.html",
@@ -260,88 +357,93 @@ const occasions: Occasion[] = [
   // for a brand whose position is that it is not the cheapest.
 
   // ===== 2026 ==============================================================
-  sunFestival(2026, 10),
-  thanksgiving("2026-11-26", "26 November 2026"),
-  christmas(2026),
 
   // ===== 2027 ==============================================================
   ramadan("2027-02-08", "2027-03-08", "8 February – 8 March 2027"),
   eidAlFitr("2027-03-09", "2027-03-11", "9–11 March 2027"),
-  valentines(2027),
-  sunFestival(2027, 2),
-  easter("2027-03-26", "2027-03-29", "28 March 2027", false),
-  orthodoxEaster("2027-04-30", "2027-05-03", "2 May 2027"),
   eidAlAdha("2027-05-16", "2027-05-19", "16–19 May 2027"),
-  sunFestival(2027, 10),
-  thanksgiving("2027-11-25", "25 November 2027"),
-  christmas(2027),
 
   // ===== 2028 ==============================================================
   ramadan("2028-01-28", "2028-02-27", "28 January – 27 February 2028"),
   eidAlFitr("2028-02-28", "2028-03-01", "28 February – 1 March 2028"),
-  valentines(2028),
-  sunFestival(2028, 2),
-  easter("2028-04-14", "2028-04-17", "16 April 2028", true),
   eidAlAdha("2028-05-05", "2028-05-08", "5–8 May 2028"),
-  sunFestival(2028, 10),
-  thanksgiving("2028-11-23", "23 November 2028"),
-  christmas(2028),
 
   // ===== 2029 ==============================================================
   ramadan("2029-01-16", "2029-02-14", "16 January – 14 February 2029"),
   eidAlFitr("2029-02-15", "2029-02-17", "15–17 February 2029"),
-  valentines(2029),
-  sunFestival(2029, 2),
-  easter("2029-03-30", "2029-04-02", "1 April 2029", false),
-  orthodoxEaster("2029-04-06", "2029-04-09", "8 April 2029"),
   eidAlAdha("2029-04-25", "2029-04-28", "25–28 April 2029"),
-  sunFestival(2029, 10),
-  thanksgiving("2029-11-22", "22 November 2029"),
-  christmas(2029),
 
   // ===== 2030 ==============================================================
   ramadan("2030-01-06", "2030-02-04", "6 January – 4 February 2030"),
   eidAlFitr("2030-02-05", "2030-02-07", "5–7 February 2030"),
-  valentines(2030),
-  sunFestival(2030, 2),
   eidAlAdha("2030-04-14", "2030-04-17", "14–17 April 2030"),
-  easter("2030-04-19", "2030-04-22", "21 April 2030", false),
-  orthodoxEaster("2030-04-26", "2030-04-29", "28 April 2030"),
-  sunFestival(2030, 10),
-  thanksgiving("2030-11-28", "28 November 2030"),
-  christmas(2030),
   // Ramadan 1452 opens before the year is out.
   ramadan("2030-12-26", "2031-01-24", "26 December 2030 – 24 January 2031"),
 
   // ===== 2031 ==============================================================
   eidAlFitr("2031-01-25", "2031-01-27", "25–27 January 2031"),
-  valentines(2031),
-  sunFestival(2031, 2),
   eidAlAdha("2031-04-03", "2031-04-06", "3–6 April 2031"),
-  easter("2031-04-11", "2031-04-14", "13 April 2031", true),
-  sunFestival(2031, 10),
-  thanksgiving("2031-11-27", "27 November 2031"),
-  christmas(2031),
   ramadan("2031-12-15", "2032-01-13", "15 December 2031 – 13 January 2032"),
 
   // ===== 2032 ==============================================================
   eidAlFitr("2032-01-14", "2032-01-16", "14–16 January 2032"),
-  valentines(2032),
-  sunFestival(2032, 2),
   eidAlAdha("2032-03-22", "2032-03-25", "22–25 March 2032"),
-  easter("2032-03-26", "2032-03-29", "28 March 2032", false),
-  orthodoxEaster("2032-04-30", "2032-05-03", "2 May 2032"),
-  sunFestival(2032, 10),
-  thanksgiving("2032-11-25", "25 November 2032"),
-  christmas(2032),
 ];
 
-/** Both layers, sorted by start date so the file reads as a timeline. */
+/**
+ * The occasions that are the same arithmetic every year, generated for the
+ * whole horizon instead of typed out. Orthodox Easter is emitted only in the
+ * years it falls apart from the Western date; when they coincide, the single
+ * Easter window says so itself.
+ */
+const computedOccasions = (y: number): Occasion[] => {
+  const out: Occasion[] = [
+    valentines(y),
+    sunFestival(y, 2),
+    easter(y),
+    sunFestival(y, 10),
+    thanksgiving(y),
+    christmas(y),
+  ];
+  if (orthodoxEasterDay(y) !== westernEasterDay(y)) out.push(orthodoxEaster(y));
+  return out;
+};
+
+/**
+ * Both layers, sorted by start date so the file reads as a timeline.
+ *
+ * Windows that have already ended are dropped. Without this the file would
+ * carry every Easter and Valentine's since the site was built — dead rows that
+ * can never match, and noise in the seasonal dispatch on the desk, which reads
+ * this same data to plan what to send.
+ */
+const TODAY = iso(new Date());
+
 export const seasonalCalendar: SeasonalWindow[] = [
   ...BASE_YEARS.flatMap(baseSeasons),
   ...occasions.map(toWindow),
-].sort((a, b) => (a.start < b.start ? -1 : a.start > b.start ? 1 : b.priority - a.priority));
+  ...BASE_YEARS.flatMap(computedOccasions).map(toWindow),
+]
+  .filter((w) => w.end >= TODAY)
+  .sort((a, b) => (a.start < b.start ? -1 : a.start > b.start ? 1 : b.priority - a.priority));
 
-/** The last date the calendar covers — used to warn when it needs extending. */
+/** The last date the calendar covers at all. Rolls forward with every build. */
 export const calendarCoverEnd =
   seasonalCalendar.map((w) => w.end).sort().slice(-1)[0] ?? "";
+
+/**
+ * The last date a hand-entered Islamic occasion covers.
+ *
+ * This is the one that can actually run out. Everything else in the calendar
+ * is arithmetic and extends itself on every build; Ramadan and the two Eids
+ * are observational and have to be typed in. When this date gets close, the
+ * site does not break — it falls back to the correct base season — but Ramadan
+ * stops being marked, which is a real loss on a site selling Egypt.
+ *
+ * `npm run audit:design` prints it and warns inside two years.
+ */
+export const islamicCoverEnd = occasions
+  .filter((o) => /Ramadan|Eid/.test(o.label))
+  .map((o) => o.to)
+  .sort()
+  .slice(-1)[0] ?? "";
