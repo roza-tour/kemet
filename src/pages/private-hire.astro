@@ -196,7 +196,7 @@ const process = [
      image, which is absolutely positioned inside it, never paints. Caught by
      measuring the element rather than trusting the screenshot. A portrait crop
      suits these: the monuments are all tall. */
-  .pv-img { width: 100%; aspect-ratio: 4 / 4.6; }
+  .pv-img { width: 100%; aspect-ratio: var(--ar-port); }
   .pv-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
   /* The inset rule the hero and the invite both use — one border language. */
   .pv-shot::after { content: ""; position: absolute; inset: 12px;

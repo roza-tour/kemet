@@ -1,8 +1,24 @@
 ---
-// Frieze — a thin, static hairline band of gold glyphs between sections.
+// ---------------------------------------------------------------------------
+// Frieze — a band of gold glyphs between sections.
+//
+// It used to be ten glyphs huddled in the middle of a 1440px band, which read
+// as a small cluster adrift rather than as a band. An Egyptian frieze is
+// architecture: it runs the whole width of the wall and repeats. So does this
+// one — the sequence repeats to fill the container, and the rules above and
+// below run full-bleed past it.
+//
+// Static. No animation: this sits on every page, and a full-width animated
+// band would repaint the viewport on every frame for decoration.
+// ---------------------------------------------------------------------------
 import SymbolIcon from "@/components/SymbolIcon.astro";
-const glyphs = ["ankh", "eye", "scarab", "lotus", "horus", "sun", "ankh", "eye", "scarab", "lotus"];
+
+/** One period of the pattern. Repeated, not randomised — a frieze is a repeat. */
+const PERIOD = ["ankh", "eye", "scarab", "lotus", "horus", "sun"];
+const glyphs = Array.from({ length: 24 }, (_, i) => PERIOD[i % PERIOD.length]);
 ---
 <div class="frieze" aria-hidden="true">
-  {glyphs.map((g) => <SymbolIcon name={g} />)}
+  <div class="frieze-band">
+    {glyphs.map((g) => <SymbolIcon name={g} />)}
+  </div>
 </div>
