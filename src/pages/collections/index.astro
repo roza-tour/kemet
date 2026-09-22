@@ -57,7 +57,7 @@ const jsonld = [
   {byType.map((group) => (
     <section style="padding-top:var(--s-5)">
       <div class="wrap">
-        <SectionHeader eyebrow="Theme" title={group.type.label} text={group.type.description} />
+        <SectionHeader sym="identities" eyebrow="Theme" title={group.type.label} text={group.type.description} />
         <div class="grid-3">
           {group.items.map((collection) => (
             <CollectionCard collection={collection} base={base} />

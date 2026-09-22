@@ -137,7 +137,7 @@ const jsonld = entitySchema("seasonal", col);
     {relTours.length > 0 && (
       <section>
         <div class="wrap">
-          <SectionHeader eyebrow="Journeys" title="Featured tours" text={`Private tours included in the ${col.title} collection.`} />
+          <SectionHeader sym="journeys" eyebrow="Journeys" title="Featured tours" text={`Private tours included in the ${col.title} collection.`} />
           <div class="grid-3">
             {relTours.map((tour) => <TourCard tour={tour} base={base} />)}
           </div>
@@ -148,7 +148,7 @@ const jsonld = entitySchema("seasonal", col);
     {relDestinations.length > 0 && (
       <section>
         <div class="wrap">
-          <SectionHeader eyebrow="Destinations" title="Featured destinations" />
+          <SectionHeader sym="destinations" eyebrow="Destinations" title="Featured destinations" />
           <div class="grid-3">
             {relDestinations.map((d) => <DestinationCard destination={d} base={base} />)}
           </div>
@@ -159,7 +159,7 @@ const jsonld = entitySchema("seasonal", col);
     {relExperiences.length > 0 && (
       <section>
         <div class="wrap">
-          <SectionHeader eyebrow="Experiences" title="Featured experiences" />
+          <SectionHeader sym="experiences" eyebrow="Experiences" title="Featured experiences" />
           <div class="grid-3">
             {relExperiences.map((e) => <ExperienceCard experience={e} base={base} />)}
           </div>
@@ -170,7 +170,7 @@ const jsonld = entitySchema("seasonal", col);
     {relGuides.length > 0 && (
       <section>
         <div class="wrap">
-          <SectionHeader eyebrow="Planning" title="Planning resources" text="Guides to help you plan and prepare." />
+          <SectionHeader sym="guides" eyebrow="Planning" title="Planning resources" text="Guides to help you plan and prepare." />
           <div class="grid-3">
             {relGuides.map((g) => <GuideCard guide={g} base={base} />)}
           </div>
@@ -181,7 +181,7 @@ const jsonld = entitySchema("seasonal", col);
     {relCollections.length > 0 && (
       <section>
         <div class="wrap">
-          <SectionHeader eyebrow="Continue exploring" title="Related collections" />
+          <SectionHeader sym="guides" eyebrow="Continue exploring" title="Related collections" />
           <div class="grid-3">
             {relCollections.map((c) => <CollectionCard collection={c} base={base} />)}
           </div>

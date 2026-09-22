@@ -1,17 +1,32 @@
 ---
 // SectionHeader — eyebrow + heading + gold rule + optional lede. When `no` is
 // given, a giant outlined numeral watermark floats behind the heading.
+//
+// `sym` takes a key from src/config/sectionSymbols.ts — not a glyph name — so
+// that every "destinations" heading on the site carries the same palm and no
+// page can quietly pick a different one.
+import Medallion from "@/components/marks/Medallion.astro";
+import { sectionGlyph } from "@/config/sectionSymbols";
+
 interface Props {
   eyebrow?: string;
   title: string;
   text?: string;
   /** Editorial section number, e.g. "01" — rendered as an outlined watermark. */
   no?: string;
+  /** Section kind, e.g. "destinations". See sectionSymbols.ts. */
+  sym?: string;
 }
-const { eyebrow, title, text = "", no } = Astro.props;
+const { eyebrow, title, text = "", no, sym } = Astro.props;
+const glyph = sectionGlyph(sym);
 ---
 <div class="sec-head reveal" data-no={no}>
-  {eyebrow && <div class="eyebrow">{eyebrow}</div>}
+  {(glyph || eyebrow) && (
+    <div class="sec-top">
+      {glyph && <Medallion name={glyph} size="sm" />}
+      {eyebrow && <div class="eyebrow">{eyebrow}</div>}
+    </div>
+  )}
   <h2>{title}</h2>
   <div class="rule"></div>
   {text && <p>{text}</p>}

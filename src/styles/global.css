@@ -84,7 +84,43 @@ h1,h2,h3{font-family:var(--ff-display);font-weight:300;line-height:1.1;letter-sp
    titles more presence so the hierarchy isn't weight-flat. */
 h3{font-weight:400}
 .jcard h3,.tease h3,.god h3,.eat h3,.sweet h3,.dpost h3{font-weight:500}
-.rule{height:1px;width:180px;margin-top:var(--s-4);background:linear-gradient(90deg,var(--line-2),transparent)}
+/* ── MEDALLION ───────────────────────────────────────────────────────────────
+   A glyph struck inside a double gold ring. Lifted out of vip.astro, where it
+   was three instances of a local class, so that the same mark can head every
+   section on the site. See src/config/sectionSymbols.ts for which glyph goes
+   with which kind of section — the pairing is fixed, because a symbol that
+   changes meaning page to page is just an ornament. */
+.medallion{display:grid;place-items:center;border-radius:50%;position:relative;flex:none;
+  border:1px solid var(--line-2);
+  background:radial-gradient(circle at 34% 28%,rgba(217,180,90,.2),rgba(7,5,3,.4) 70%);
+  /* 18px, not the VIP page's 30px. The dust canvas repaints the full viewport
+     every frame, so anything underneath it with a wide blur is re-composited
+     every frame too; a 30px glow on the section medallions cost about 2fps on
+     a 25-card listing. 18px is the same object at the same brightness. */
+  box-shadow:0 0 18px rgba(217,180,90,.2),inset 0 0 18px rgba(217,180,90,.14)}
+/* The inner hairline, 5px in. This is what makes it read as struck rather than
+   drawn: one ring is a circle, two rings are a seal. */
+.medallion::before{content:"";position:absolute;inset:5px;border-radius:50%;border:1px solid rgba(217,180,90,.22)}
+.medallion--md{width:64px;height:64px}
+.medallion--sm{width:44px;height:44px}
+.medallion svg{filter:drop-shadow(0 2px 8px rgba(247,230,174,.5))}
+.medallion--md svg{width:26px;height:30px}
+.medallion--sm svg{width:19px;height:22px}
+/* In a section heading the medallion sits above the eyebrow, on the same left
+   edge as the heading — never centred unless the whole header is. */
+/* The medallion sits BESIDE the eyebrow, not above it. Stacking it read well
+   on its own, but it added 82px above the heading, and on the pages that carry
+   an outlined numeral watermark that dropped the numeral straight onto the
+   glyph — two gold marks in the same place. Side by side, the header keeps its
+   original top edge and the numeral still sits behind the heading. */
+.sec-top{display:flex;align-items:center;gap:var(--s-3);margin-bottom:var(--s-2)}
+.sec-top .eyebrow{margin:0}
+
+/* The rule under every section heading, with the diamond joint the VIP page
+   uses between its facts. One shape, used in both places, is what makes it
+   read as a language rather than an ornament. */
+.rule{position:relative;height:1px;width:180px;margin-top:var(--s-4);background:linear-gradient(90deg,var(--line-2),transparent)}
+.rule::after{content:"";position:absolute;left:0;top:50%;width:7px;height:7px;transform:translate(-2px,-50%) rotate(45deg);background:var(--gold);opacity:.75}
 
 /* Navbar — fixed height so the logo, links and CTA share one baseline and
    stay perfectly centred; height (not padding) shrinks on scroll. */
@@ -160,6 +196,28 @@ section{position:relative;padding:var(--s-8) 0}
 .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s-3)}
 
 .frame{position:relative;overflow:hidden;background:linear-gradient(150deg,#1A1510,#0C0F13)}
+/* ── CORNER TICKS ────────────────────────────────────────────────────────────
+   Four L-shaped gold marks at the corners of every image on the site. They
+   came from the VIP page, where they were four <span>s per image; here they
+   are eight gradient layers on a single pseudo-element, so every frame on the
+   site gets them for no DOM and no repaint — a static background paints once.
+
+   This is the one device that makes the site look like itself from any page.
+   A tour card, a guide hero and the VIP plates now share a corner. */
+.frame::before{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;
+  --tk:26px;--tw:2px;--tc:var(--gold);
+  background:
+    linear-gradient(var(--tc),var(--tc)) 0 0/var(--tk) var(--tw) no-repeat,
+    linear-gradient(var(--tc),var(--tc)) 0 0/var(--tw) var(--tk) no-repeat,
+    linear-gradient(var(--tc),var(--tc)) 100% 0/var(--tk) var(--tw) no-repeat,
+    linear-gradient(var(--tc),var(--tc)) 100% 0/var(--tw) var(--tk) no-repeat,
+    linear-gradient(var(--tc),var(--tc)) 0 100%/var(--tk) var(--tw) no-repeat,
+    linear-gradient(var(--tc),var(--tc)) 0 100%/var(--tw) var(--tk) no-repeat,
+    linear-gradient(var(--tc),var(--tc)) 100% 100%/var(--tk) var(--tw) no-repeat,
+    linear-gradient(var(--tc),var(--tc)) 100% 100%/var(--tw) var(--tk) no-repeat}
+/* Cards carry a shorter tick — 26px on a 300px card reads as a border, not a
+   mark. The frame keeps the same gesture at every size. */
+.jcard .frame::before,.acard .frame::before{--tk:16px;--tw:1px}
 .frame .glow{position:absolute;inset:0;background:radial-gradient(90% 70% at 30% 20%,rgba(217,180,90,.18),transparent 60%)}
 .frame .wm{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:.16}
 .frame .wm svg{width:42%;height:42%}
@@ -521,7 +579,11 @@ footer{background:var(--ink-2);border-top:1px solid var(--line);padding:var(--s-
 
 /* giant outlined watermark numeral behind section headers */
 .sec-head{position:relative}
-.sec-head[data-no]::before{content:attr(data-no);position:absolute;top:-.62em;left:-.05em;z-index:-1;font-family:var(--ff-display);font-weight:400;font-size:clamp(6rem,13vw,11rem);line-height:1;color:transparent;-webkit-text-stroke:1px rgba(217,180,90,.13);pointer-events:none;user-select:none}
+/* The numeral watermark sits at the RIGHT of the header. It used to sit left,
+   which is where the section medallion now is — a glyph struck on top of a
+   numeral reads as neither. On the right it balances the heading instead, the
+   way the VIP plates already place theirs. */
+.sec-head[data-no]::before{content:attr(data-no);position:absolute;top:-.62em;right:-.05em;z-index:-1;font-family:var(--ff-display);font-weight:400;font-size:clamp(6rem,13vw,11rem);line-height:1;color:transparent;-webkit-text-stroke:1px rgba(217,180,90,.13);pointer-events:none;user-select:none}
 
 /* hero italic + stat numerals — static gold gradient (no perpetual shimmer) */
 .hero h1 em,.stat .num{background:linear-gradient(100deg,var(--gold),var(--gold-bright) 45%,#FFFDF5 60%,var(--gold-bright) 78%,var(--gold-deep));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}

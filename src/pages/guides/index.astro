@@ -78,7 +78,7 @@ const faqLd = {
   {byCategory.map((group) => (
     <section style="padding-top:var(--s-5)">
       <div class="wrap">
-        <SectionHeader eyebrow="Category" title={group.category.label} />
+        <SectionHeader sym="experiences" eyebrow="Category" title={group.category.label} />
         <div class="grid-3">
           {group.items.map((g) => (
             <GuideCard guide={g} base={base} />

@@ -1,0 +1,33 @@
+---
+// ---------------------------------------------------------------------------
+// Medallion — a glyph inside a double gold ring.
+//
+// This device started on the VIP page, where it marked the three promises
+// under the hero. It is the site's strongest single piece of identity: a
+// pharaonic symbol, struck like a coin, in the one metal the whole site uses.
+//
+// It is here rather than in vip.astro because a design language that lives on
+// one page is decoration; the same mark on every section heading is what makes
+// a visitor recognise the site from a screenshot.
+//
+// Sizes: `md` (64px) for section headings and hero promises, `sm` (44px) for
+// cards and anywhere several appear in a row.
+// ---------------------------------------------------------------------------
+import SymbolIcon from "@/components/SymbolIcon.astro";
+
+interface Props {
+  /** Glyph key — see SymbolIcon's G map (ankh, sun, lotus, eye, ...). */
+  name: string;
+  size?: "sm" | "md";
+  /** Accessible label; omitted means decorative, which is the usual case. */
+  title?: string;
+  class?: string;
+}
+const { name, size = "md", title = "", class: className = "" } = Astro.props;
+---
+<span
+  class:list={["medallion", `medallion--${size}`, className]}
+  aria-hidden={title ? undefined : "true"}
+>
+  <SymbolIcon name={name} title={title} />
+</span>

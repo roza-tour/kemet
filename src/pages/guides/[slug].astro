@@ -133,7 +133,7 @@ const jsonld = entitySchema("guide", guide);
     {relDestinations.length > 0 && (
       <section>
         <div class="wrap">
-          <SectionHeader
+          <SectionHeader sym="destinations"
             eyebrow="Destinations"
             title="Related destinations"
             text={`Places covered in this guide.`}
@@ -150,7 +150,7 @@ const jsonld = entitySchema("guide", guide);
     {relTours.length > 0 && (
       <section>
         <div class="wrap">
-          <SectionHeader eyebrow="Journeys" title="Related tours" />
+          <SectionHeader sym="journeys" eyebrow="Journeys" title="Related tours" />
           <div class="grid-3">
             {relTours.map((tour) => (
               <TourCard tour={tour} base={base} />
@@ -163,7 +163,7 @@ const jsonld = entitySchema("guide", guide);
     {relGuides.length > 0 && (
       <section>
         <div class="wrap">
-          <SectionHeader eyebrow="Further reading" title="Related guides" />
+          <SectionHeader sym="guides" eyebrow="Further reading" title="Related guides" />
           <div class="grid-3">
             {relGuides.map((g) => (
               <GuideCard guide={g} base={base} />
@@ -176,7 +176,7 @@ const jsonld = entitySchema("guide", guide);
     {relExperiences.length > 0 && (
       <section>
         <div class="wrap">
-          <SectionHeader eyebrow="Experiences" title="Related experiences" text="Private activities at the destinations covered in this guide." />
+          <SectionHeader sym="experiences" eyebrow="Experiences" title="Related experiences" text="Private activities at the destinations covered in this guide." />
           <div class="grid-3">
             {relExperiences.map((e) => (
               <ExperienceCard experience={e} base={base} />

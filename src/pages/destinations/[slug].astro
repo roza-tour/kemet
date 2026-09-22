@@ -160,7 +160,7 @@ const jsonld = entitySchema("destination", dest);
     {dest.gallery && dest.gallery.length > 0 && (
       <section>
         <div class="wrap">
-          <SectionHeader eyebrow="Gallery" title={`${dest.title} in photographs`} />
+          <SectionHeader sym="travellers" eyebrow="Gallery" title={`${dest.title} in photographs`} />
           <div class="grid-2">
             {dest.gallery.map((g) => (
               <Placeholder
@@ -180,7 +180,7 @@ const jsonld = entitySchema("destination", dest);
     {tours.length > 0 && (
       <section>
         <div class="wrap">
-          <SectionHeader eyebrow="Journeys" title="Featured tours" text={`Private journeys that visit ${dest.title}.`} />
+          <SectionHeader sym="journeys" eyebrow="Journeys" title="Featured tours" text={`Private journeys that visit ${dest.title}.`} />
           <div class="grid-3">
             {tours.map((tour) => <TourCard tour={tour} base={base} />)}
           </div>
@@ -191,7 +191,7 @@ const jsonld = entitySchema("destination", dest);
     {experiences.length > 0 && (
       <section>
         <div class="wrap">
-          <SectionHeader eyebrow="Experiences" title="Featured experiences" text={`Activities and private experiences based in ${dest.title}.`} />
+          <SectionHeader sym="experiences" eyebrow="Experiences" title="Featured experiences" text={`Activities and private experiences based in ${dest.title}.`} />
           <div class="grid-3">
             {experiences.map((exp) => (
               <ExperienceCard experience={exp} base={base} />
@@ -204,7 +204,7 @@ const jsonld = entitySchema("destination", dest);
     {nearby.length > 0 && (
       <section>
         <div class="wrap">
-          <SectionHeader eyebrow="Close by" title="Nearby destinations" />
+          <SectionHeader sym="destinations" eyebrow="Close by" title="Nearby destinations" />
           <div class="grid-3">
             {nearby.map((d) => <DestinationCard destination={d} base={base} />)}
           </div>

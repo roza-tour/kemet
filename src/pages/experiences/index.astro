@@ -57,7 +57,7 @@ const jsonld = [
   {byCategory.map((group) => (
     <section style="padding-top:var(--s-5)">
       <div class="wrap">
-        <SectionHeader eyebrow="Category" title={group.category.label} />
+        <SectionHeader sym="experiences" eyebrow="Category" title={group.category.label} />
         <div class="grid-3">
           {group.items.map((experience) => (
             <ExperienceCard experience={experience} base={base} />

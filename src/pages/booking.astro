@@ -45,7 +45,7 @@ const jsonld = [
   {/* How booking works */}
   <section style="padding-top:var(--s-5)">
     <div class="wrap">
-      <SectionHeader eyebrow="The process" title="How booking works" />
+      <SectionHeader sym="standard" eyebrow="The process" title="How booking works" />
       <div class="bk-steps">
         {steps.map((s) => (
           <div class="bk-step reveal">
@@ -65,7 +65,7 @@ const jsonld = [
   {/* Payment terms */}
   <section>
     <div class="wrap">
-      <SectionHeader eyebrow="Payment" title="Deposit & balance" />
+      <SectionHeader sym="standard" eyebrow="Payment" title="Deposit & balance" />
       <div class="bk-cards">
         <div class="bk-card reveal">
           <div class="bk-k">Deposit to confirm</div>
@@ -91,7 +91,7 @@ const jsonld = [
   {/* Cancellation policy */}
   <section>
     <div class="wrap">
-      <SectionHeader
+      <SectionHeader sym="questions"
         eyebrow="If plans change"
         title="Cancellation by you"
         text="If you need to cancel, the following charges apply based on how far ahead of departure you let us know. Charges reflect commitments we make to hotels, guides and operators on your behalf."
@@ -114,7 +114,7 @@ const jsonld = [
   {/* Other policies */}
   <section>
     <div class="wrap">
-      <SectionHeader eyebrow="Good to know" title="Changes, insurance & the unexpected" />
+      <SectionHeader sym="questions" eyebrow="Good to know" title="Changes, insurance & the unexpected" />
       <div class="grid-2 bk-policies">
         {policies.map((p) => (
           <div class="bk-policy reveal">
