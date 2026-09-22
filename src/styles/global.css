@@ -188,8 +188,26 @@ h3{font-weight:400}
 
 /* PAGE HERO */
 .phero{position:relative;padding:190px 0 84px;text-align:center;overflow:hidden;background:radial-gradient(800px 420px at 50% 0%,rgba(247,230,174,.1),transparent 60%)}
-.phero .sym{width:72px;height:84px;margin:0 auto 24px;filter:drop-shadow(0 8px 22px rgba(217,180,90,.28))}
+/* The page symbol is struck in a medallion, the same mark that heads every
+   section — one device, two sizes, so an inner page and the section headings
+   inside it are visibly the same system. */
+.phero .medallion{margin:0 auto var(--s-4)}
+/* The old bare-glyph form, still used by heroes that pass their own markup. */
+.phero .sym{width:72px;height:84px;margin:0 auto var(--s-4);filter:drop-shadow(0 8px 22px rgba(217,180,90,.28))}
 .phero .sym svg{width:100%;height:100%}
+/* The overline: a short line held between two rules. */
+.phero-over{display:flex;align-items:center;justify-content:center;gap:var(--s-3);margin-bottom:var(--s-4);font-size:var(--t-nano);letter-spacing:.42em;text-transform:uppercase;color:var(--gold)}
+.phero-over::before,.phero-over::after{content:"";width:54px;height:1px;background:linear-gradient(90deg,transparent,var(--line-2))}
+.phero-over::after{background:linear-gradient(90deg,var(--line-2),transparent)}
+/* The cartouche around the whole header — a double hairline, inset, exactly as
+   the VIP hero draws it. Reserved for the pages that sell exclusivity. */
+.phero--framed{padding-left:var(--s-6);padding-right:var(--s-6)}
+.phero-cart{position:absolute;inset:var(--s-6) var(--s-6) var(--s-5);pointer-events:none;border:1px solid var(--line)}
+.phero-cart::before{content:"";position:absolute;inset:8px;border:1px solid rgba(217,180,90,.13)}
+@media(max-width:680px){
+  .phero--framed{padding-left:var(--s-4);padding-right:var(--s-4)}
+  .phero-cart{inset:var(--s-4) var(--s-2) var(--s-3)}
+}
 .phero h1{font-size:clamp(2.7rem,6vw,4.6rem);color:var(--bone);margin-bottom:var(--s-3)}
 .phero p{color:var(--muted);max-width:640px;margin:0 auto;font-size:var(--t-base);font-weight:300;line-height:1.85}
 .crumb{margin-bottom:var(--s-4);font-size:var(--t-micro);letter-spacing:.3em;text-transform:uppercase;color:var(--muted-2)}.crumb a{color:var(--gold)}

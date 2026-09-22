@@ -2,7 +2,7 @@
 // PageHero — the centred header used by every inner page: breadcrumb, an
 // optional gold symbol, the H1 and a short lede. An optional hero image renders
 // full-width beneath the header when `heroSrc` is supplied.
-import SymbolIcon from "@/components/SymbolIcon.astro";
+import Medallion from "@/components/marks/Medallion.astro";
 import Placeholder from "@/components/Placeholder.astro";
 
 interface Props {
@@ -20,6 +20,13 @@ interface Props {
   /** Accepted for call-site consistency with the other hero components.
    *  No longer used here: the Home link is the absolute "/" at every depth. */
   base?: string;
+  /** Short line above the H1, set between two rules — the device the VIP hero
+   *  uses for "BY PRIVATE ARRANGEMENT". For pages that are an offer rather
+   *  than a topic; a guide page does not need announcing. */
+  overline?: string;
+  /** Draws the double-hairline cartouche frame around the header. Reserved for
+   *  the two pages that sell exclusivity, so that it stays a signal. */
+  framed?: boolean;
   /** Optional hero photo shown beneath the header. */
   heroSrc?: string;
   heroAlt?: string;
@@ -27,19 +34,21 @@ interface Props {
   heroHeight?: number;
 }
 const {
-  title, text = "", symbol = "", crumb = "",
+  title, text = "", symbol = "", crumb = "", overline = "", framed = false,
   rootLabel = "Home", rootHref = "/",
   heroSrc, heroAlt, heroWidth, heroHeight,
 } = Astro.props;
 ---
-<header class="phero">
+<header class:list={["phero", framed && "phero--framed"]}>
+  {framed && <span class="phero-cart" aria-hidden="true"></span>}
   <div class="wrap">
     {crumb && (
       <nav class="crumb" aria-label="Breadcrumb">
         <a href={rootHref}>{rootLabel}</a> · <span>{crumb}</span>
       </nav>
     )}
-    {symbol && <div class="sym"><SymbolIcon name={symbol} /></div>}
+    {symbol && <Medallion name={symbol} size="md" class="phero-med" />}
+    {overline && <div class="phero-over">{overline}</div>}
     <h1>{title}</h1>
     {text && <p>{text}</p>}
   </div>

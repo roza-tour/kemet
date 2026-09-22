@@ -183,6 +183,38 @@ for (const path of ["index.html", "tours.html", "vip.html", "plan.html", "privat
   await page.close();
 }
 
+// --- images that are referenced but not there --------------------------------
+// This check exists because the trip designer shipped with a hero pointing at
+// /images/aswan/aswan-felucca-sunset.webp, a file that has never existed. The
+// page rendered its alt text instead, and nothing failed: not the build, not
+// astro check, not the SEO audit. A missing photograph on a page selling
+// photography is invisible to every check that does not look for it.
+{
+  const { readdir } = await import("node:fs/promises");
+  const { existsSync } = await import("node:fs");
+  const SRC = new URL("../src/", import.meta.url).pathname;
+  const PUB = new URL("../public/", import.meta.url).pathname;
+  const walk = async (dir) => {
+    const out = [];
+    for (const e of await readdir(dir, { withFileTypes: true })) {
+      const p = join(dir, e.name);
+      if (e.isDirectory()) out.push(...await walk(p));
+      else if (/\.(astro|ts)$/.test(e.name)) out.push(p);
+    }
+    return out;
+  };
+  const refs = new Map();
+  for (const file of await walk(SRC)) {
+    const text = await readFile(file, "utf8");
+    for (const m of text.matchAll(/["'](\/images\/[^"']+\.(?:webp|jpg|jpeg|png|svg))["']/g)) {
+      if (!refs.has(m[1])) refs.set(m[1], file.replace(SRC, "src/"));
+    }
+  }
+  const missing = [...refs].filter(([p]) => !existsSync(join(PUB, p)));
+  console.log("\nimage references:", refs.size, " missing:", missing.length);
+  for (const [p, file] of missing) console.log("   MISSING", p, "←", file);
+}
+
 const pct = (100 * onScale / (onScale + offScale)).toFixed(1);
 console.log("\n── across all pages ──");
 console.log("distinct font sizes rendered:", allSizes.size, " (was 62 before the scale)");

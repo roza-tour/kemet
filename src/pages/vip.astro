@@ -349,22 +349,31 @@ const jsonld: Record<string, unknown>[] = [
   .vhero { position: relative; min-height: 100vh; display: flex;
     align-items: center; justify-content: center; overflow: hidden;
     text-align: center; }
+  /* ── WHY THIS HERO DOES NOT MOVE ─────────────────────────────────────────
+     It used to: a 26s Ken Burns zoom (`vzoom`) on this layer and an 11s light
+     sweep (`vsheen`) over it. Measured, they cost this page 23 of its 53
+     frames per second — and the zoom's cost did not end with the animation.
+     `forwards` leaves the final transform applied, which keeps a
+     full-viewport layer promoted at a non-integer scale; the dust canvas
+     composites over it on every frame, so every frame resamples it, forever.
+     Stopping the transform entirely took the page from 30 to 53fps.
+
+     30fps is a visible stutter. This is the page that says nothing here is
+     rushed, written for the clients least willing to overlook a cheap finish —
+     a hero that judders is worse than a hero that is still. The sheen stays as
+     a fixed band of light across the engraving, which is what it looked like
+     for most of its cycle anyway. */
   .vhero-bg { position: absolute; inset: 0;
-    background: url("/images/luxor/luxor-karnak-hypostyle-hall.webp") center 30%/cover no-repeat;
-    animation: vzoom 26s ease-out forwards; }
-  @keyframes vzoom { from { transform: scale(1.12); } to { transform: scale(1.02); } }
+    background: url("/images/luxor/luxor-karnak-hypostyle-hall.webp") center 30%/cover no-repeat; }
   .vhero-veil { position: absolute; inset: 0; background:
     radial-gradient(120% 90% at 50% 30%, rgba(7,5,3,.32) 0%, rgba(7,5,3,.86) 78%),
     linear-gradient(180deg, rgba(7,5,3,.55), rgba(7,5,3,.35) 40%, rgba(7,5,3,.96) 92%); }
-  /* One slow pass of light across the engraving. */
-  .vsheen { position: absolute; inset: -20%; pointer-events: none;
-    background: linear-gradient(105deg, transparent 44%,
-      rgba(239, 217, 160, .07) 50%, transparent 56%);
-    animation: vsheen 11s cubic-bezier(.45, 0, .55, 1) infinite; }
-  @keyframes vsheen { 0%,100% { transform: translateX(-30%); } 50% { transform: translateX(30%); } }
-  @media (prefers-reduced-motion: reduce) {
-    .vsheen, .vhero-bg { animation: none; }
-  }
+  /* A fixed band of light across the engraving, struck a little off-centre so
+     it reads as a shaft rather than a gradient. Wider and slightly stronger
+     than the moving version, because it no longer has motion to be noticed by. */
+  .vsheen { position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(105deg, transparent 38%,
+      rgba(239, 217, 160, .09) 50%, transparent 62%); }
 
   .vcart { position: absolute; inset: 118px 44px 44px; pointer-events: none;
     border: 1px solid var(--v-hair);
