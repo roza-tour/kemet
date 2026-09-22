@@ -313,6 +313,18 @@ section{position:relative;padding:var(--s-8) 0}
 .jcard .price{font-family:var(--ff-display);font-size:var(--t-lg);color:var(--gold-bright);font-weight:300}
 .jcard .price .was{font-size:var(--t-sm);color:var(--muted-2);text-decoration:line-through;margin-left:var(--s-1)}
 .jcard .price small{font-family:var(--ff-body);font-size:var(--t-nano);color:var(--muted-2);letter-spacing:.22em;text-transform:uppercase;font-weight:300;margin-left:var(--s-1)}
+/* Qualifies the headline figure on the card itself, so the basis of the price
+   is never something a reader only discovers on the detail page.
+
+   This rule used to live in TourCard.astro's scoped <style>, where it compiled
+   to `.price .basis[data-astro-cid-…]` and therefore matched only the markup
+   Astro itself rendered. The trip designer builds its result cards in
+   JavaScript from a data index, so its cards carry no cid and never matched:
+   "from 6 travellers · tickets not included" rendered in the display face at
+   the price's own size, straight across the card. A shared component's styling
+   belongs in the shared stylesheet the moment a second renderer emits the same
+   markup. */
+.jcard .price .basis,.price .basis{display:block;margin-top:var(--s-1);font-family:var(--ff-body);font-size:var(--t-micro);letter-spacing:.08em;line-height:1.5;color:var(--muted-2);text-transform:none}
 .jcard .arrow{color:var(--gold);font-size:var(--t-base);transition:transform .5s cubic-bezier(.22,.61,.36,1)}
 .jcard:hover .arrow{transform:translateX(8px)}
 
