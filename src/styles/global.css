@@ -7,7 +7,10 @@
   --gold:#D9B45A;--gold-bright:#F7E6AE;--gold-deep:#A87E32;
   --pharaonic:#3E6E96;--nubian:#C06B3A;--coptic:#9A4456;--islamic:#2F7E66;
   --bedouin:#B0512F;--greco:#4385A0;--siwan:#51578F;--redsea:#2C8E86;
-  --ff-display:'Fraunces',serif;--ff-body:'Outfit',system-ui,sans-serif;--ff-hiero:'Noto Sans Egyptian Hieroglyphs',serif;
+  /* 'X Fallback' is the metric-matched stand-in defined in styles/fonts.css.
+     It holds exactly the space the real font will take, so the swap changes the
+     letterforms and moves nothing. */
+  --ff-display:'Fraunces','Fraunces Fallback',serif;--ff-body:'Outfit','Outfit Fallback',system-ui,sans-serif;--ff-hiero:'Noto Sans Egyptian Hieroglyphs',serif;
   --maxw:1180px;
 
   /* ── THE SCALE ────────────────────────────────────────────────────────

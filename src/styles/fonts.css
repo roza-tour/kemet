@@ -228,3 +228,62 @@
   src: url(/fonts/QGYvz_MVcBeNP4NJtEtq.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
+/* ===========================================================================
+   METRIC-MATCHED FALLBACKS
+   ===========================================================================
+   The site deliberately does NOT preload its fonts — see the benchmark in
+   layouts/Base.astro, where preloading made LCP 200-550ms worse on every page
+   because the font requests outrank the stylesheet and the hero image on a
+   bandwidth-limited connection. That benchmark also recorded CLS at 0.0218 and
+   concluded it was an order of magnitude inside the 0.1 threshold, so the swap
+   reflow was not worth paying LCP for.
+
+   That was true of the English pages and false of the localised ones. Measured
+   on /id/: CLS 0.2947 — a Core Web Vitals FAIL, on the pages built to rank in
+   new markets. The lede paragraph rendered at 131px in the fallback serif and
+   reflowed to 163px when Fraunces arrived, one extra line, pushing the whole
+   page down. Reproduced on 2 of 3 loads, and on /de/ as well.
+
+   The fix is neither preloading nor accepting the shift: it is making the
+   fallback occupy exactly the space the real font will. Both families below
+   are the platform default, rescaled so their line boxes and average advance
+   width match. The swap then changes the shapes and moves nothing.
+
+   THE NUMBERS ARE MEASURED FROM THE SITE'S OWN TEXT
+   A first pass used one 170-character sample of made-up text spanning Latin,
+   Latin-Ext and Cyrillic, and it was wrong by 1.5%: enough that the Indonesian
+   lede still gained a line on swap. The ratios below come from 47 real strings
+   — every H1, lede and H2 on the English, Indonesian, German and Russian home
+   pages plus /tours and /vip — summed and compared:
+
+     Fraunces / Times New Roman = 0.9091   → size-adjust 90.91%
+     Outfit   / Arial           = 0.9684   → size-adjust 96.84%
+
+   The ascent and descent overrides are the real font's metrics divided by that
+   same size-adjust, because an override is relative to the ADJUSTED em:
+
+     Fraunces  asc .98 / .9091 = 107.8%   desc .26 / .9091 = 28.6%
+     Outfit    asc 1.00 / .9684 = 103.3%  desc .26 / .9684 = 26.8%
+
+   Re-measure if either family is ever changed or subset differently, and
+   measure against real page text, not a sample. A stale size-adjust is worse
+   than none: it holds the wrong amount of space with complete confidence. */
+
+@font-face {
+  font-family: 'Fraunces Fallback';
+  src: local('Times New Roman'), local('Liberation Serif'), local('DejaVu Serif'), local('Georgia');
+  size-adjust: 90.91%;
+  ascent-override: 107.8%;
+  descent-override: 28.6%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: 'Outfit Fallback';
+  src: local('Arial'), local('Liberation Sans'), local('Helvetica'), local('DejaVu Sans');
+  size-adjust: 96.84%;
+  ascent-override: 103.3%;
+  descent-override: 26.8%;
+  line-gap-override: 0%;
+}
