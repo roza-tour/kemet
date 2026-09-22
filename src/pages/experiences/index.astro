@@ -57,7 +57,11 @@ const jsonld = [
   {byCategory.map((group) => (
     <section style="padding-top:var(--s-5)">
       <div class="wrap">
-        <SectionHeader sym="experiences" eyebrow="Category" title={group.category.label} />
+        {/* No medallion here. These headings are siblings — eleven categories of
+            the same kind of thing — so eleven identical suns down one page is
+            repetition, not a system. The symbol marks a KIND of section; it
+            earns nothing by marking every member of one list. */}
+        <SectionHeader eyebrow="Category" title={group.category.label} />
         <div class="grid-3">
           {group.items.map((experience) => (
             <ExperienceCard experience={experience} base={base} />
