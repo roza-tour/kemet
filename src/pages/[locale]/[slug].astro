@@ -100,6 +100,11 @@ const jsonld: Record<string, unknown>[] = [
   active={route}
   jsonld={jsonld}
   keywords={page.keywords}
+  {/* No site-wide CTA here. It is written in English, and these pages already
+      end with `.lz-cta` — the same ask, in the language the reader has just
+      read three thousand words of. Two calls to action is one too many; a
+      second one in the wrong language is worse than none. */}
+  showCta={false}
 >
   <PageHero
     rootLabel={LOCALE_META[locale].home}
