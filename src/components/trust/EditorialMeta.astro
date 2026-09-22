@@ -13,7 +13,7 @@ const hasAnyMeta =
   meta.authorName || meta.reviewerName || meta.lastUpdated || meta.reviewDate;
 ---
 {hasAnyMeta && (
-  <div style="display:flex;flex-wrap:wrap;gap:16px;font-size:0.82em;opacity:0.6;margin-top:8px;margin-bottom:4px">
+  <div style="display:flex;flex-wrap:wrap;gap:var(--s-3);font-size:0.82em;opacity:0.6;margin-top:var(--s-1);margin-bottom:4px">
     {meta.authorName && (
       <span>By <b>{meta.authorName}</b></span>
     )}

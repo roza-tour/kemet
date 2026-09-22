@@ -130,7 +130,7 @@ const jsonld: Record<string, unknown>[] = [
     text="The honest version — what is genuinely worth knowing, what is noise, and the one part of the country that is a real exception."
   />
 
-  <section style="padding-top:26px">
+  <section style="padding-top:var(--s-4)">
     <div class="wrap sf-wrap">
 
       <AnswerBox question={ANSWER_Q} answer={ANSWER_A} />
@@ -221,27 +221,27 @@ const jsonld: Record<string, unknown>[] = [
   .sf-wrap { max-width: 900px; }
   .sf-facts {
     display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
-    border: 1px solid var(--line); margin: 34px 0 40px;
+    border: 1px solid var(--line); margin:var(--s-5) 0 var(--s-6);
   }
-  .sf-facts > div { padding: 20px 22px; border-left: 1px solid var(--line); }
+  .sf-facts > div { padding:var(--s-3) var(--s-4); border-left: 1px solid var(--line); }
   .sf-facts > div:first-child { border-left: 0; }
-  .sf-k { display: block; font-size: .6rem; letter-spacing: .28em; text-transform: uppercase;
-    color: var(--gold); margin-bottom: 8px; }
-  .sf-facts b { font-weight: 400; color: var(--bone); font-size: .92rem; line-height: 1.6; }
-  .sf-lede { color: var(--muted); font-size: 1.02rem; line-height: 1.9; margin: 0 0 22px; }
+  .sf-k { display: block; font-size:var(--t-nano); letter-spacing: .28em; text-transform: uppercase;
+    color: var(--gold); margin-bottom:var(--s-1); }
+  .sf-facts b { font-weight: 400; color: var(--bone); font-size:var(--t-sm); line-height: 1.6; }
+  .sf-lede { color: var(--muted); font-size:var(--t-base); line-height: 1.9; margin:0 0 var(--s-4); }
 
-  .sf-regions { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 34px; }
-  .sf-region { border: 1px solid var(--line); padding: 28px 30px;
+  .sf-regions { display: grid; grid-template-columns: 1fr 1fr; gap:var(--s-4); margin-top:var(--s-5); }
+  .sf-region { border: 1px solid var(--line); padding:var(--s-5) var(--s-5);
     background: linear-gradient(165deg, rgba(30,25,18,.7), rgba(14,17,21,.5)); }
   .sf-region-head { display: flex; align-items: baseline; justify-content: space-between;
-    gap: 16px; margin-bottom: 12px; flex-wrap: wrap; }
-  .sf-region h3 { font-size: 1.22rem; color: var(--bone); margin: 0; font-weight: 400; }
-  .sf-verdict { font-size: .6rem; letter-spacing: .22em; text-transform: uppercase;
-    color: var(--gold); border: 1px solid var(--line); padding: 5px 10px; white-space: nowrap; }
+    gap:var(--s-3); margin-bottom:var(--s-2); flex-wrap: wrap; }
+  .sf-region h3 { font-size:var(--t-md); color: var(--bone); margin: 0; font-weight: 400; }
+  .sf-verdict { font-size:var(--t-nano); letter-spacing: .22em; text-transform: uppercase;
+    color: var(--gold); border: 1px solid var(--line); padding:var(--s-1) var(--s-2); white-space: nowrap; }
   .sf-verdict.is-warn { color: #E8B4A0; border-color: rgba(232,180,160,.4); }
-  .sf-region p { color: var(--muted); font-size: .93rem; line-height: 1.8; margin: 0; }
-  .sf-note { margin-top: 28px; padding: 22px 26px; border-left: 2px solid var(--gold);
-    background: rgba(217,180,90,.05); color: var(--muted); font-size: .95rem; line-height: 1.85; }
+  .sf-region p { color: var(--muted); font-size:var(--t-sm); line-height: 1.8; margin: 0; }
+  .sf-note { margin-top:var(--s-5); padding:var(--s-4) var(--s-4); border-left: 2px solid var(--gold);
+    background: rgba(217,180,90,.05); color: var(--muted); font-size:var(--t-sm); line-height: 1.85; }
 
   @media(max-width:900px){
     .sf-facts { grid-template-columns: 1fr 1fr; }
@@ -253,7 +253,7 @@ const jsonld: Record<string, unknown>[] = [
     .sf-facts { grid-template-columns: 1fr; }
     .sf-facts > div { border-left: 0; border-top: 1px solid var(--line); }
     .sf-facts > div:first-child { border-top: 0; }
-    .sf-region { padding: 24px 20px; }
-    .sf-note { padding: 20px 20px; }
+    .sf-region { padding:var(--s-4) var(--s-3); }
+    .sf-note { padding:var(--s-3) var(--s-3); }
   }
 </style>

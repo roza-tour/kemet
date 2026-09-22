@@ -159,8 +159,8 @@ const rows = seasonalCalendar.map((w) => [
   /* ===== The chip in the nav bar =========================================
      Small, permanent, and the single place a visitor — or the person who owns
      the site — can confirm at a glance that a season is running. */
-  .schip { display: inline-flex; align-items: center; gap: 9px; flex: none;
-    margin-left: 18px; padding: 7px 14px 7px 11px; border-radius: 999px;
+  .schip { display: inline-flex; align-items: center; gap:var(--s-1); flex: none;
+    margin-left:var(--s-3); padding:var(--s-1) var(--s-2) var(--s-1) var(--s-2); border-radius: 999px;
     /* Plain fallback first: color-mix is unsupported before Safari 16.2, and a
        chip with no border and no background would look like a mistake. */
     border: 1px solid var(--line-2); background: rgba(255,255,255,.04);
@@ -175,7 +175,7 @@ const rows = seasonalCalendar.map((w) => [
     background: linear-gradient(180deg,
       color-mix(in srgb, var(--srb) 26%, transparent),
       color-mix(in srgb, var(--srb) 12%, transparent)); }
-  .schip-label { font-size: .58rem; letter-spacing: .22em; text-transform: uppercase;
+  .schip-label { font-size:var(--t-nano); letter-spacing: .22em; text-transform: uppercase;
     color: var(--bone); font-weight: 500;
     color: color-mix(in srgb, var(--srb) 62%, #FFF); }
   .schip-mark { width: 13px; height: 13px; }
@@ -189,9 +189,9 @@ const rows = seasonalCalendar.map((w) => [
      stays at every width: from 1080px down the nav is logo + burger and has the
      room, and below 680px it drops to the mark alone — a small seasonal glyph
      beside the wordmark, with the words still in the ribbon. */
-  @media (max-width: 1180px) { .schip { margin-left: 12px; padding: 6px 12px 6px 10px; } }
+  @media (max-width: 1180px) { .schip { margin-left:var(--s-2); padding:var(--s-1) var(--s-2) var(--s-1) var(--s-2); } }
   @media (max-width: 680px) {
-    .schip { margin-left: 10px; padding: 7px; gap: 0; }
+    .schip { margin-left:var(--s-2); padding:var(--s-1); gap: 0; }
     .schip-label { display: none; }
   }
 
@@ -218,17 +218,17 @@ const rows = seasonalCalendar.map((w) => [
      the moment a visitor dismisses the ribbon it drops back down. */
   html:has(.srb:not([hidden])) .wafab { bottom: max(66px, calc(env(safe-area-inset-bottom) + 62px)); }
 
-  .srb-in { display: flex; align-items: center; gap: 16px; max-width: var(--maxw);
-    margin: 0 auto; padding: 11px 104px 11px 28px; }
-  .srb-text { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; flex: 1; min-width: 0; }
-  .srb-text b { color: var(--gold-bright); font-weight: 500; font-size: .82rem; letter-spacing: .04em; }
-  .srb-text span { color: var(--muted-2); font-size: .8rem; }
-  .srb-cta { flex: none; display: inline-flex; align-items: center; gap: 10px;
-    font-size: .6rem; letter-spacing: .28em; text-transform: uppercase; color: var(--srb, var(--gold)); }
+  .srb-in { display: flex; align-items: center; gap:var(--s-3); max-width: var(--maxw);
+    margin: 0 auto; padding:var(--s-2) 104px var(--s-2) var(--s-5); }
+  .srb-text { display: flex; flex-wrap: wrap; align-items: baseline; gap:4px var(--s-2); flex: 1; min-width: 0; }
+  .srb-text b { color: var(--gold-bright); font-weight: 500; font-size:var(--t-tiny); letter-spacing: .04em; }
+  .srb-text span { color: var(--muted-2); font-size:var(--t-tiny); }
+  .srb-cta { flex: none; display: inline-flex; align-items: center; gap:var(--s-2);
+    font-size:var(--t-nano); letter-spacing: .28em; text-transform: uppercase; color: var(--srb, var(--gold)); }
   .srb-cta i { width: 24px; height: 1px; background: currentColor; transition: width .45s cubic-bezier(.22,.61,.36,1); }
   .srb-in:hover .srb-cta i { width: 40px; }
   .srb-close { position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
-    background: none; border: 0; color: var(--muted-2); font-size: 1.4rem; line-height: 1;
+    background: none; border: 0; color: var(--muted-2); font-size:var(--t-lg); line-height: 1;
     cursor: pointer; width: 44px; height: 44px; display: flex; align-items: center;
     justify-content: center; transition: color .3s; }
   .srb-close:hover { color: var(--gold-bright); }
@@ -314,7 +314,7 @@ const rows = seasonalCalendar.map((w) => [
   body:has(#season-ribbon:not([hidden])) .wafab { bottom: max(78px, calc(env(safe-area-inset-bottom) + 74px)); }
 
   @media(max-width:900px){
-    .srb-in { padding: 10px 92px 10px 18px; gap: 11px; }
+    .srb-in { padding:var(--s-2) var(--s-8) var(--s-2) var(--s-3); gap:var(--s-2); }
     .srb-cta { display: none; }
     .srb-text span { display: none; }
     .srb-close { right: 62px; }
@@ -404,14 +404,16 @@ const rows = seasonalCalendar.map((w) => [
     -webkit-mask: linear-gradient(180deg, #000 30%, transparent 88%);
     mask: linear-gradient(180deg, #000 30%, transparent 88%);
   }
-  /* The drift offsets are not arbitrary. Each layer is shifted along its own
-     gradient axis by exactly one period — 148px at 101°, 196px at 63° — so the
-     pattern lands back on itself and the loop has no visible restart:
-       (sin θ, −cos θ) × period  →  (145.3, 28.2) and (174.6, −88.9)
-     The first attempt used background-size to make the loop tile, which put a
-     hard 300px grid seam straight across every inner-page hero. A repeating
-     gradient does not need tiling; it needs the right offset. */
-  }
+  /* The 148px and 196px periods are what is left of a drifting version of this
+     layer, removed when it turned out that animating background-position on a
+     full-viewport pseudo-element repaints the whole screen and cost the site
+     half its frame rate. The periods stay because they are what makes the two
+     band sets cross at an interval that reads as water rather than as a grid.
+     Nothing here animates; do not put it back.
+
+     The stray `}` that used to close this comment block was a leftover from
+     that removal. It ended the @media-less rule early, so esbuild warned on
+     every build and everything after it was at the mercy of the parser. */
 
   /* Eid — festive warmth over the skyline. Same correction as Ramadan: light,
      not a pasted-on shape. */

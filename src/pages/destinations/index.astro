@@ -71,7 +71,7 @@ const faqLd = {
   />
 
   {byRegion.map((group) => (
-    <section style="padding-top:30px">
+    <section style="padding-top:var(--s-5)">
       <div class="wrap">
         <SectionHeader eyebrow="Region" title={labelOf(regions, group.region.id) ?? group.region.id} />
         <div class="grid-3">

@@ -45,7 +45,7 @@ function label(url: string): string {
 
 <style>
   .expert {
-    display: grid; grid-template-columns: 64px 1fr; gap: 28px;
+    display: grid; grid-template-columns: 64px 1fr; gap:var(--s-5);
     align-items: start;
     border: 1px solid var(--line); border-left: 2px solid var(--gold);
     padding: 36px 38px;
@@ -56,21 +56,21 @@ function label(url: string): string {
     filter: drop-shadow(0 6px 16px rgba(217, 180, 90, .24)); }
   .expert-sym :global(svg) { width: 100%; height: 100%; }
   .expert h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); color: var(--bone);
-    margin: 14px 0 6px; font-weight: 400; }
-  .expert-role { color: var(--gold); font-size: .82rem; letter-spacing: .06em;
-    margin-bottom: 18px; }
+    margin:var(--s-2) 0 var(--s-1); font-weight: 400; }
+  .expert-role { color: var(--gold); font-size:var(--t-tiny); letter-spacing: .06em;
+    margin-bottom:var(--s-3); }
   .expert p { color: var(--muted); line-height: 1.85; margin: 0; max-width: 68ch; }
-  .expert-topics { list-style: none; margin: 20px 0 0; padding: 0;
-    display: flex; flex-wrap: wrap; gap: 8px; }
-  .expert-topics li { font-size: .7rem; letter-spacing: .14em; text-transform: uppercase;
-    color: var(--muted-2); border: 1px solid var(--line); padding: 6px 12px; }
-  .expert p.expert-links { margin-top: 22px; }
-  .expert-links a { font-size: .7rem; letter-spacing: .18em; text-transform: uppercase;
+  .expert-topics { list-style: none; margin:var(--s-3) 0 0; padding: 0;
+    display: flex; flex-wrap: wrap; gap:var(--s-1); }
+  .expert-topics li { font-size:var(--t-micro); letter-spacing: .14em; text-transform: uppercase;
+    color: var(--muted-2); border: 1px solid var(--line); padding:var(--s-1) var(--s-2); }
+  .expert p.expert-links { margin-top:var(--s-4); }
+  .expert-links a { font-size:var(--t-micro); letter-spacing: .18em; text-transform: uppercase;
     color: var(--gold); border-bottom: 1px solid rgba(217, 180, 90, .4); }
   .expert-links a:hover { color: var(--gold-bright); }
 
   @media(max-width:680px){
-    .expert { grid-template-columns: 1fr; gap: 0; padding: 28px 22px; }
-    .expert-sym { width: 42px; height: 48px; margin-bottom: 16px; }
+    .expert { grid-template-columns: 1fr; gap: 0; padding:var(--s-5) var(--s-4); }
+    .expert-sym { width: 42px; height: 48px; margin-bottom:var(--s-3); }
   }
 </style>

@@ -16,9 +16,9 @@ const points = company.bookingConfidence ?? [];
 ---
 {points.length > 0 && (
   <div>
-    {eyebrow && <div class="eyebrow" style="margin-bottom:8px">{eyebrow}</div>}
-    {heading && <h2 style="margin-bottom:28px">{heading}</h2>}
-    <div class="grid-3" style="gap:24px">
+    {eyebrow && <div class="eyebrow" style="margin-bottom:var(--s-1)">{eyebrow}</div>}
+    {heading && <h2 style="margin-bottom:var(--s-5)">{heading}</h2>}
+    <div class="grid-3" style="gap:var(--s-4)">
       {points.map((point) => (
         <div class="tblock reveal">
           <h3>{point.headline}</h3>

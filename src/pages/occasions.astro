@@ -48,7 +48,7 @@ const jsonld: Record<string, unknown>[] = [
     text="Some journeys are a holiday. Others are marking something — and that changes what the itinerary should be, not just where it goes."
   />
 
-  <section style="padding-top:26px">
+  <section style="padding-top:var(--s-4)">
     <div class="wrap">
       <p class="oh-lede">
         A proposal is planned backwards from a quarter of an hour. A sixtieth birthday wants fewer
@@ -89,12 +89,12 @@ const jsonld: Record<string, unknown>[] = [
 </Base>
 
 <style>
-  .oh-lede { font-family: var(--ff-display); font-weight: 300; font-size: 1.3rem;
-    line-height: 1.7; color: var(--bone); max-width: 820px; margin: 0 0 44px; }
+  .oh-lede { font-family: var(--ff-display); font-weight: 300; font-size:var(--t-md);
+    line-height: 1.7; color: var(--bone); max-width: 820px; margin:0 0 var(--s-6); }
 
-  .oh-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .oh-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap:var(--s-4); }
   .oh-card {
-    display: block; padding: 34px 30px 30px; border: 1px solid var(--line);
+    display: block; padding:var(--s-5) var(--s-5) var(--s-5); border: 1px solid var(--line);
     border-radius: 2px; position: relative; overflow: hidden;
     background: linear-gradient(165deg, rgba(30,25,18,.92), rgba(14,17,21,.72));
     transition: transform .5s cubic-bezier(.22,.61,.36,1), border-color .5s, box-shadow .5s;
@@ -107,13 +107,13 @@ const jsonld: Record<string, unknown>[] = [
   .oh-card:hover { transform: translateY(-6px); border-color: var(--gold);
     box-shadow: 0 24px 60px rgba(0,0,0,.5); }
   .oh-card:hover::before { opacity: 1; }
-  .oh-sym { width: 50px; height: 58px; margin-bottom: 18px;
+  .oh-sym { width: 50px; height: 58px; margin-bottom:var(--s-3);
     filter: drop-shadow(0 6px 16px rgba(217,180,90,.24)); }
   .oh-sym :global(svg) { width: 100%; height: 100%; }
-  .oh-card h2 { font-size: 1.28rem; color: var(--bone); margin: 0 0 9px; }
-  .oh-card p { color: var(--muted); font-size: .93rem; line-height: 1.72; margin: 0; }
-  .oh-more { display: inline-flex; align-items: center; gap: 12px; margin-top: 20px;
-    font-size: .64rem; letter-spacing: .3em; text-transform: uppercase; color: var(--gold); }
+  .oh-card h2 { font-size:var(--t-md); color: var(--bone); margin:0 0 var(--s-1); }
+  .oh-card p { color: var(--muted); font-size:var(--t-sm); line-height: 1.72; margin: 0; }
+  .oh-more { display: inline-flex; align-items: center; gap:var(--s-2); margin-top:var(--s-3);
+    font-size:var(--t-nano); letter-spacing: .3em; text-transform: uppercase; color: var(--gold); }
   .oh-more i { width: 30px; height: 1px; background: currentColor;
     transition: width .5s cubic-bezier(.22,.61,.36,1); }
   .oh-card:hover .oh-more i { width: 52px; }
@@ -121,7 +121,7 @@ const jsonld: Record<string, unknown>[] = [
   @media(max-width:1000px){ .oh-grid { grid-template-columns: repeat(2, 1fr); } }
   @media(max-width:640px){ .oh-grid { grid-template-columns: 1fr; } }
   @media(max-width:680px){
-    .oh-lede { font-size: 1.15rem; margin-bottom: 32px; }
-    .oh-card { padding: 26px 20px 24px; }
+    .oh-lede { font-size:var(--t-md); margin-bottom:var(--s-5); }
+    .oh-card { padding:var(--s-4) var(--s-3) var(--s-4); }
   }
 </style>

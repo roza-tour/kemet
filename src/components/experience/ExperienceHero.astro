@@ -16,7 +16,7 @@ const { experience, base = "" } = Astro.props;
 const categoryLabel = labelOf(experienceCategories, experience.category) ?? experience.category;
 const hub = hubFor("experience");
 ---
-<header class="phero" style="padding-bottom:34px">
+<header class="phero" style="padding-bottom:var(--s-5)">
   <div class="wrap">
     <nav class="crumb" aria-label="Breadcrumb">
       <a href="/">Home</a> ·
@@ -29,7 +29,7 @@ const hub = hubFor("experience");
   </div>
 </header>
 {experience.hero && (
-  <section style="padding-top:18px;padding-bottom:0">
+  <section style="padding-top:var(--s-3);padding-bottom:0">
     <div class="wrap">
       <Placeholder
         class="tgallery reveal cur"

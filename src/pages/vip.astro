@@ -327,8 +327,8 @@ const jsonld: Record<string, unknown>[] = [
 
   /* Overlines with flanking hairlines — nothing on this page is a bare label. */
   .voverline { display: flex; align-items: center; justify-content: center;
-    gap: 22px; font-size: .6rem; letter-spacing: .5em; text-transform: uppercase;
-    color: var(--v-gold); margin: 0 0 62px; }
+    gap:var(--s-4); font-size:var(--t-nano); letter-spacing: .5em; text-transform: uppercase;
+    color: var(--v-gold); margin:0 0 var(--s-7); }
   .voverline span { width: 72px; height: 1px; flex: none;
     background: linear-gradient(90deg, transparent, var(--v-hair-2)); }
   .voverline span:last-child {
@@ -375,17 +375,21 @@ const jsonld: Record<string, unknown>[] = [
   .vcrest { width: clamp(210px, 26vw, 320px); height: auto; aspect-ratio: 340/72;
     color: var(--v-gold); margin: 0 auto 30px; display: block;
     filter: drop-shadow(0 6px 26px rgba(194, 162, 78, .38)); }
-  .vcrest-sm { width: 190px; margin-bottom: 26px; }
+  .vcrest-sm { width: 190px; margin-bottom:var(--s-4); }
 
-  .vtag { display: inline-flex; align-items: center; gap: 16px;
-    font-size: .58rem; letter-spacing: .52em; text-transform: uppercase;
-    color: var(--v-gold-lit); margin: 0 0 40px; }
+  .vtag { display: inline-flex; align-items: center; gap:var(--s-3);
+    font-size:var(--t-nano); letter-spacing: .52em; text-transform: uppercase;
+    color: var(--v-gold-lit); margin:0 0 var(--s-6); }
   .vtag span { width: 44px; height: 1px; flex: none;
     background: linear-gradient(90deg, transparent, var(--v-hair-2)); }
   .vtag span:last-child { background: linear-gradient(90deg, var(--v-hair-2), transparent); }
 
   .vhero h1 { margin: 0; font-weight: 300;
-    font-size: clamp(3rem, 7.6vw, 6.6rem); line-height: 1.04;
+    /* Same clamp as `.hero h1` in global.css, to the decimal. It used to be
+       6.6rem against the site's 6.8rem, which rendered 105.6px here and
+       108.8px on the home page — a 3px difference nobody chose and nobody
+       could see, but it meant the site had three H1 sizes instead of two. */
+    font-size: clamp(3rem, 7.6vw, 6.8rem); line-height: 1.03;
     color: var(--v-cream); letter-spacing: .01em;
     text-shadow: 0 4px 60px rgba(0,0,0,.6); }
   .vhero h1 em { font-style: italic; font-weight: 300;
@@ -400,21 +404,21 @@ const jsonld: Record<string, unknown>[] = [
   .vdiv-sec { margin: 96px auto 0; opacity: .55; width: min(480px, 72vw); }
 
   .vlede { max-width: 620px; margin: 0 auto; color: var(--v-cream-dim);
-    font-size: 1.08rem; line-height: 2; }
+    font-size:var(--t-base); line-height: 2; }
 
   .vhero-acts { display: flex; align-items: center; justify-content: center;
-    gap: 28px; flex-wrap: wrap; margin-top: 46px; }
+    gap:var(--s-5); flex-wrap: wrap; margin-top:var(--s-6); }
   /* The button is a jewel: gold bevel border, dark body, gold sheen on hover. */
   .vbtn { position: relative; display: inline-flex; padding: 1px;
     background: linear-gradient(160deg, var(--v-gold-lit), var(--v-gold-deep) 55%, var(--v-gold-lit));
     box-shadow: 0 18px 44px -18px rgba(194, 162, 78, .55); }
-  .vbtn span { display: inline-flex; align-items: center; padding: 16px 40px;
+  .vbtn span { display: inline-flex; align-items: center; padding:var(--s-3) var(--s-6);
     background: linear-gradient(180deg, #191308, #0C0905);
-    color: var(--v-gold-lit); font-size: .62rem; letter-spacing: .34em;
+    color: var(--v-gold-lit); font-size:var(--t-nano); letter-spacing: .34em;
     text-transform: uppercase; transition: background .5s, color .5s; }
   .vbtn:hover span { background: linear-gradient(180deg, var(--v-gold-lit), var(--v-gold));
     color: #14100A; }
-  .vlink-quiet { color: var(--v-faint); font-size: .78rem; letter-spacing: .06em;
+  .vlink-quiet { color: var(--v-faint); font-size:var(--t-tiny); letter-spacing: .06em;
     border-bottom: 1px solid rgba(194, 162, 78, .3); padding-bottom: 3px;
     transition: color .4s, border-color .4s; }
   .vlink-quiet:hover { color: var(--v-gold-lit); border-color: var(--v-gold); }
@@ -428,7 +432,7 @@ const jsonld: Record<string, unknown>[] = [
     background: linear-gradient(180deg, var(--v-ink-2), transparent); }
   .vfacts-in { display: grid; grid-template-columns: repeat(3, 1fr);
     padding: 58px 0; }
-  .vfact { text-align: center; padding: 8px 34px; position: relative; }
+  .vfact { text-align: center; padding:var(--s-1) var(--s-5); position: relative; }
   .vfact + .vfact::before { content: ""; position: absolute; left: 0; top: 50%;
     transform: translateY(-50%) rotate(45deg); width: 7px; height: 7px;
     background: var(--v-gold); opacity: .7; }
@@ -445,17 +449,17 @@ const jsonld: Record<string, unknown>[] = [
   .vmed :global(svg) { width: 26px; height: 30px;
     filter: drop-shadow(0 2px 8px rgba(239,217,160,.5)); }
   .vfact b { display: block; font-family: var(--ff-display); font-weight: 400;
-    font-size: 1.18rem; color: var(--v-cream); margin-bottom: 8px; }
-  .vfact-sub { color: var(--v-faint); font-size: .84rem; line-height: 1.7; }
+    font-size:var(--t-md); color: var(--v-cream); margin-bottom:var(--s-1); }
+  .vfact-sub { color: var(--v-faint); font-size:var(--t-tiny); line-height: 1.7; }
 
   /* ===== programmes ====================================================== */
-  .vprogs { padding: 130px 0 40px; position: relative; }
-  .vhead { text-align: center; margin-bottom: 100px; }
-  .vhead .voverline { margin-bottom: 30px; }
+  .vprogs { padding:130px 0 var(--s-6); position: relative; }
+  .vhead { text-align: center; margin-bottom:var(--s-8); }
+  .vhead .voverline { margin-bottom:var(--s-5); }
   .vhead h2 { font-size: clamp(2.2rem, 4.6vw, 3.6rem); font-weight: 300;
     color: var(--v-cream); line-height: 1.14; margin: 0; }
 
-  .vplate { position: relative; padding: 40px 0 0; }
+  .vplate { position: relative; padding:var(--s-6) 0 0; }
   /* The engraved numeral behind each plate — outline only, enormous. */
   .vplate-ghost { position: absolute; top: -30px; z-index: 0;
     font-family: var(--ff-display); font-size: clamp(12rem, 26vw, 24rem);
@@ -467,12 +471,12 @@ const jsonld: Record<string, unknown>[] = [
 
   .vplate-in { position: relative; z-index: 1; display: grid;
     grid-template-columns: 1.02fr .98fr; gap: clamp(40px, 5vw, 84px);
-    align-items: center; padding-top: 40px; padding-bottom: 40px; }
+    align-items: center; padding-top:var(--s-6); padding-bottom:var(--s-6); }
   .vplate.is-flip .vframe { order: 2; }
 
   /* The frame: image in a double gold hairline with corner ticks and a silk
      ribbon down the outer edge in the plate's accent. */
-  .vframe { position: relative; margin: 0; padding: 14px;
+  .vframe { position: relative; margin: 0; padding:var(--s-2);
     border: 1px solid var(--v-hair-2);
     background: linear-gradient(160deg, rgba(194,162,78,.06), transparent 60%); }
   .vframe::before { content: ""; position: absolute; inset: 6px;
@@ -500,27 +504,27 @@ const jsonld: Record<string, unknown>[] = [
   .vplate.is-flip.is-emerald .vframe { box-shadow: 6px 0 0 -3px var(--v-emerald); }
 
   .vframe-no { position: absolute; bottom: 22px; left: 26px;
-    font-family: var(--ff-display); font-size: 2.6rem; line-height: 1;
+    font-family: var(--ff-display); font-size:var(--t-2xl); line-height: 1;
     color: var(--v-cream);
     text-shadow: 0 4px 24px rgba(0,0,0,.95); }
 
-  .vmeta { display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
-    margin: 0 0 20px; font-size: .6rem; letter-spacing: .3em;
+  .vmeta { display: flex; align-items: center; gap:var(--s-2); flex-wrap: wrap;
+    margin:0 0 var(--s-3); font-size:var(--t-nano); letter-spacing: .3em;
     text-transform: uppercase; color: var(--v-gold); }
   .vmeta i { width: 7px; height: 7px; transform: rotate(45deg); flex: none;
     background: linear-gradient(135deg, var(--v-gold-lit), var(--v-gold-deep)); }
   .vtext h3 { font-size: clamp(2rem, 3.6vw, 3rem); font-weight: 300;
-    color: var(--v-cream); margin: 0 0 12px; line-height: 1.12; }
-  .vkick { font-style: italic; color: var(--v-gold-lit); font-size: 1.02rem;
-    line-height: 1.7; margin: 0 0 22px; }
-  .vbody { color: var(--v-cream-dim); font-size: .96rem; line-height: 1.95;
-    margin: 0 0 28px; }
+    color: var(--v-cream); margin:0 0 var(--s-2); line-height: 1.12; }
+  .vkick { font-style: italic; color: var(--v-gold-lit); font-size:var(--t-base);
+    line-height: 1.7; margin:0 0 var(--s-4); }
+  .vbody { color: var(--v-cream-dim); font-size:var(--t-base); line-height: 1.95;
+    margin:0 0 var(--s-5); }
 
-  .vincl { list-style: none; margin: 0 0 30px; padding: 24px 0 0;
+  .vincl { list-style: none; margin:0 0 var(--s-5); padding:var(--s-4) 0 0;
     border-top: 1px solid var(--v-hair);
-    display: grid; grid-template-columns: 1fr 1fr; gap: 12px 28px; }
-  .vincl li { position: relative; padding-left: 20px; color: var(--v-cream-dim);
-    font-size: .86rem; line-height: 1.65; }
+    display: grid; grid-template-columns: 1fr 1fr; gap:var(--s-2) var(--s-5); }
+  .vincl li { position: relative; padding-left:var(--s-3); color: var(--v-cream-dim);
+    font-size:var(--t-sm); line-height: 1.65; }
   .vincl li::before { content: ""; position: absolute; left: 0; top: .58em;
     width: 7px; height: 7px; transform: rotate(45deg); }
   .is-crimson .vincl li::before {
@@ -529,11 +533,11 @@ const jsonld: Record<string, unknown>[] = [
     background: linear-gradient(135deg, var(--v-emerald-lit), var(--v-emerald)); }
 
   .vfoot { display: flex; align-items: center; justify-content: space-between;
-    gap: 18px; flex-wrap: wrap; border-top: 1px solid var(--v-hair);
-    padding-top: 22px; }
-  .vfoot-note { font-size: .6rem; letter-spacing: .32em; text-transform: uppercase;
+    gap:var(--s-3); flex-wrap: wrap; border-top: 1px solid var(--v-hair);
+    padding-top:var(--s-4); }
+  .vfoot-note { font-size:var(--t-nano); letter-spacing: .32em; text-transform: uppercase;
     color: var(--v-gold-lit); }
-  .vfoot-link { font-size: .62rem; letter-spacing: .22em; text-transform: uppercase;
+  .vfoot-link { font-size:var(--t-nano); letter-spacing: .22em; text-transform: uppercase;
     color: var(--v-cream); transition: color .4s; }
   .vfoot-link b { display: inline-block; transition: transform .35s; }
   .vfoot-link:hover { color: var(--v-gold-lit); }
@@ -544,17 +548,17 @@ const jsonld: Record<string, unknown>[] = [
     background: linear-gradient(180deg, var(--v-ink-2), transparent 55%); }
   .vhow-grid { display: grid; grid-template-columns: repeat(4, 1fr);
     gap: 0; border-left: 1px solid var(--v-hair); }
-  .vhow-item { padding: 8px 34px 8px 30px; border-right: 1px solid var(--v-hair);
+  .vhow-item { padding:var(--s-1) var(--s-5) var(--s-1) var(--s-5); border-right: 1px solid var(--v-hair);
     position: relative; }
   .vhow-item::before { content: ""; position: absolute; left: -4px; top: 0;
     width: 7px; height: 7px; transform: rotate(45deg); background: var(--v-gold);
     opacity: .8; }
   .vhow-no { display: block; font-family: var(--ff-display);
     font-size: 3.4rem; line-height: 1; color: transparent;
-    -webkit-text-stroke: 1px var(--v-gold); margin-bottom: 20px; opacity: .85; }
-  .vhow-item h2 { font-size: 1.2rem; font-weight: 400; color: var(--v-cream);
-    margin: 0 0 12px; }
-  .vhow-item p { color: var(--v-faint); font-size: .87rem; line-height: 1.85;
+    -webkit-text-stroke: 1px var(--v-gold); margin-bottom:var(--s-3); opacity: .85; }
+  .vhow-item h2 { font-size:var(--t-md); font-weight: 400; color: var(--v-cream);
+    margin:0 0 var(--s-2); }
+  .vhow-item p { color: var(--v-faint); font-size:var(--t-sm); line-height: 1.85;
     margin: 0; }
 
   /* ===== faq ============================================================= */
@@ -563,8 +567,8 @@ const jsonld: Record<string, unknown>[] = [
     border-top: 1px solid var(--v-hair); }
   .vfaq-item { border-bottom: 1px solid var(--v-hair); }
   .vfaq-item summary { position: relative; list-style: none; cursor: pointer;
-    padding: 26px 54px 26px 4px; color: var(--v-cream);
-    font-family: var(--ff-display); font-size: 1.18rem; font-weight: 400;
+    padding:var(--s-4) 54px var(--s-4) 4px; color: var(--v-cream);
+    font-family: var(--ff-display); font-size:var(--t-md); font-weight: 400;
     transition: color .35s; }
   .vfaq-item summary::-webkit-details-marker { display: none; }
   .vfaq-item summary:hover { color: var(--v-gold-lit); }
@@ -575,13 +579,13 @@ const jsonld: Record<string, unknown>[] = [
   .vfaq-item summary i::before { left: 0; right: 0; top: 6px; height: 1px; }
   .vfaq-item summary i::after { top: 0; bottom: 0; left: 6px; width: 1px; }
   .vfaq-item[open] summary i::after { transform: scaleY(0); }
-  .vfaq-item > p { margin: 0; padding: 0 54px 28px 4px;
-    color: var(--v-cream-dim); font-size: .93rem; line-height: 1.95; }
+  .vfaq-item > p { margin: 0; padding:0 54px var(--s-5) 4px;
+    color: var(--v-cream-dim); font-size:var(--t-sm); line-height: 1.95; }
 
   /* ===== the close ======================================================= */
-  .vclose { padding: 40px 0 150px; }
+  .vclose { padding:var(--s-6) 0 150px; }
   .vcard { position: relative; max-width: 760px; margin: 0 auto;
-    text-align: center; padding: 74px 58px 66px;
+    text-align: center; padding:74px 58px var(--s-7);
     border: 1px solid var(--v-hair-2);
     background:
       radial-gradient(90% 90% at 50% 0%, rgba(126, 20, 36, .16), transparent 62%),
@@ -590,37 +594,37 @@ const jsonld: Record<string, unknown>[] = [
   .vcard::before { content: ""; position: absolute; inset: 8px;
     border: 1px solid rgba(194, 162, 78, .16); pointer-events: none; }
   .vcard h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); font-weight: 300;
-    color: var(--v-cream); margin: 0 0 20px; }
+    color: var(--v-cream); margin:0 0 var(--s-3); }
   .vcard p { color: var(--v-cream-dim); line-height: 2; margin: 0 auto;
-    max-width: 540px; font-size: .97rem; }
+    max-width: 540px; font-size:var(--t-base); }
 
   /* ===== responsive ====================================================== */
   @media (max-width: 1080px) {
     .vhow-grid { grid-template-columns: 1fr 1fr; border-left: 0; }
-    .vhow-item { border-left: 1px solid var(--v-hair); margin-bottom: 44px; }
+    .vhow-item { border-left: 1px solid var(--v-hair); margin-bottom:var(--s-6); }
   }
   @media (max-width: 920px) {
     .vplate-in { grid-template-columns: 1fr; gap: 36px; }
     .vplate.is-flip .vframe { order: 0; }
     .vincl { grid-template-columns: 1fr; }
-    .vfacts-in { grid-template-columns: 1fr; gap: 34px; padding: 44px 0; }
+    .vfacts-in { grid-template-columns: 1fr; gap:var(--s-5); padding:var(--s-6) 0; }
     .vfact + .vfact::before, .vfact + .vfact::after { display: none; }
   }
   @media (max-width: 680px) {
     .vcart { inset: 96px 14px 14px; }
-    .vhero-in { padding: 150px 0 96px; }
-    .vhero h1 { font-size: clamp(2.5rem, 11vw, 3.4rem); }
-    .vhead { margin-bottom: 64px; }
+    .vhero-in { padding:150px 0 var(--s-8); }
+    .vhero h1 { font-size: clamp(2.6rem, 11.5vw, 3.6rem); }
+    .vhead { margin-bottom:var(--s-7); }
     .vplate-ghost { font-size: 9rem; top: -12px; }
-    .vframe { padding: 9px; }
-    .vframe-no { bottom: 14px; left: 16px; font-size: 1.9rem; }
+    .vframe { padding:var(--s-1); }
+    .vframe-no { bottom: 14px; left: 16px; font-size:var(--t-xl); }
     .vhow { padding: 84px 0; }
     .vhow-grid { grid-template-columns: 1fr; }
-    .vhow-item { padding: 6px 4px 6px 24px; border-right: 0; }
-    .vfaq-item summary { font-size: 1.05rem; padding-right: 44px; }
-    .vfaq-item > p { padding-right: 8px; }
-    .vcard { padding: 52px 24px 48px; }
+    .vhow-item { padding:var(--s-1) 4px var(--s-1) var(--s-4); border-right: 0; }
+    .vfaq-item summary { font-size:var(--t-base); padding-right:var(--s-6); }
+    .vfaq-item > p { padding-right:var(--s-1); }
+    .vcard { padding:52px var(--s-4) var(--s-6); }
     .vcrest { width: 200px; }
-    .vhero-acts { flex-direction: column; gap: 20px; }
+    .vhero-acts { flex-direction: column; gap:var(--s-3); }
   }
 </style>

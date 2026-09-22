@@ -69,16 +69,16 @@ const entries = isTranslated ? alternates : homes;
 )}
 
 <style>
-  .lsw { display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
-    padding: 14px 0 4px; border-bottom: 1px solid var(--line); margin-bottom: 6px; }
-  .lsw-label { font-size: .6rem; letter-spacing: .28em; text-transform: uppercase;
+  .lsw { display: flex; align-items: center; gap:var(--s-3); flex-wrap: wrap;
+    padding:var(--s-2) 0 4px; border-bottom: 1px solid var(--line); margin-bottom:var(--s-1); }
+  .lsw-label { font-size:var(--t-nano); letter-spacing: .28em; text-transform: uppercase;
     color: var(--muted-2); }
-  .lsw ul { list-style: none; display: flex; gap: 8px; margin: 0; padding: 0; flex-wrap: wrap; }
-  .lsw a { display: inline-flex; align-items: baseline; gap: 7px;
-    padding: 9px 13px; min-height: 44px; align-content: center; border-radius: 20px;
+  .lsw ul { list-style: none; display: flex; gap:var(--s-1); margin: 0; padding: 0; flex-wrap: wrap; }
+  .lsw a { display: inline-flex; align-items: baseline; gap:var(--s-1);
+    padding:var(--s-1) var(--s-2); min-height: 44px; align-content: center; border-radius: 20px;
     border: 1px solid var(--line); transition: border-color .3s, color .3s, background .3s; }
-  .lsw a b { font-weight: 500; font-size: .72rem; letter-spacing: .12em; color: var(--muted); }
-  .lsw a span { font-size: .78rem; color: var(--muted-2); }
+  .lsw a b { font-weight: 500; font-size:var(--t-micro); letter-spacing: .12em; color: var(--muted); }
+  .lsw a span { font-size:var(--t-tiny); color: var(--muted-2); }
   .lsw a:hover { border-color: var(--gold); }
   .lsw a:hover b, .lsw a:hover span { color: var(--gold-bright); }
   .lsw a.is-current { border-color: var(--gold); background: rgba(217,180,90,.08); }
@@ -87,6 +87,6 @@ const entries = isTranslated ? alternates : homes;
 
   @media(max-width:520px){
     .lsw a span { display: none; }
-    .lsw a { padding: 9px 15px; }
+    .lsw a { padding:var(--s-1) var(--s-2); }
   }
 </style>

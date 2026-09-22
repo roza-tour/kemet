@@ -57,7 +57,7 @@ const keywords = [
     heroHeight={736}
   />
 
-  <section style="padding-top:30px">
+  <section style="padding-top:var(--s-5)">
     <div class="wrap faq-wrap">
 
       <AnswerBox question={ANSWER_Q} answer={ANSWER_A} />
@@ -93,18 +93,18 @@ const keywords = [
 
 <style>
   .faq-wrap{max-width:880px}
-  .faq-group{padding:6px 0}
-  .faq-grouphead{display:flex;gap:22px;align-items:baseline;margin-bottom:14px;padding-bottom:16px;border-bottom:1px solid var(--line-2)}
+  .faq-group{padding:var(--s-1) 0}
+  .faq-grouphead{display:flex;gap:var(--s-4);align-items:baseline;margin-bottom:var(--s-2);padding-bottom:var(--s-3);border-bottom:1px solid var(--line-2)}
   /* Fraunces has no tabular figures, so `tabular-nums` is ignored and 01/02/03
      each measured a different width — pushing every group heading to a
      slightly different left edge. A fixed box makes the column true. */
-  .faq-gnum{font-family:var(--ff-display);font-size:1.9rem;line-height:1;color:var(--gold);flex:none;width:44px;text-align:right}
-  .faq-grouphead h2{font-size:1.5rem;color:var(--bone);margin:0}
-  .faq-grouphead p{margin:7px 0 0;color:var(--muted);font-size:.95rem;line-height:1.7}
+  .faq-gnum{font-family:var(--ff-display);font-size:var(--t-xl);line-height:1;color:var(--gold);flex:none;width:44px;text-align:right}
+  .faq-grouphead h2{font-size:var(--t-lg);color:var(--bone);margin:0}
+  .faq-grouphead p{margin:var(--s-1) 0 0;color:var(--muted);font-size:var(--t-sm);line-height:1.7}
   /* On a phone the numeral + gap pushed the heading to a third left edge.
      Stacking it returns the heading to the page gutter. */
   @media(max-width:680px){
     .faq-grouphead{display:block}
-    .faq-gnum{display:block;width:auto;text-align:left;font-size:1.4rem;margin-bottom:6px}
+    .faq-gnum{display:block;width:auto;text-align:left;font-size:var(--t-lg);margin-bottom:var(--s-1)}
   }
 </style>

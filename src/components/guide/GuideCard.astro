@@ -14,11 +14,11 @@ const categoryLabel = labelOf(guideCategories, guide.category) ?? guide.category
 const href = `${base}guides/${guide.slug}.html`;
 ---
 <a class="tease reveal" href={href} aria-label={`${guide.title} — travel guide`}>
-  <div class="eyebrow" style="margin-bottom:8px">{categoryLabel}</div>
+  <div class="eyebrow" style="margin-bottom:var(--s-1)">{categoryLabel}</div>
   <h3>{guide.title}</h3>
   <p>{guide.shortSummary}</p>
   {guide.readingTimeMinutes && (
-    <div class="eyebrow" style="margin-top:10px;opacity:0.65;font-size:0.8em">
+    <div class="eyebrow" style="margin-top:var(--s-2);opacity:0.65;font-size:0.8em">
       {guide.readingTimeMinutes} min read
     </div>
   )}

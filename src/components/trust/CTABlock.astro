@@ -54,9 +54,9 @@ function isExternal(type: CTAType): boolean {
 }
 ---
 <div class="reveal" style="text-align:center">
-  <div class="eyebrow" style="margin-bottom:8px">{eyebrow}</div>
-  <h2 style="margin-bottom:12px">{heading}</h2>
-  {subtext && <p style="margin-bottom:24px;opacity:0.8;max-width:540px;margin-left:auto;margin-right:auto">{subtext}</p>}
+  <div class="eyebrow" style="margin-bottom:var(--s-1)">{eyebrow}</div>
+  <h2 style="margin-bottom:var(--s-2)">{heading}</h2>
+  {subtext && <p style="margin-bottom:var(--s-4);opacity:0.8;max-width:540px;margin-left:auto;margin-right:auto">{subtext}</p>}
   <div class="hero-actions" style="justify-content:center">
     {types.map((type, i) => (
       <a

@@ -58,7 +58,7 @@ const jsonld = entitySchema("seasonal", col);
   <article class={col.theme ? `themed-${col.theme}` : undefined}>
     <CollectionHero collection={col} base={base} />
 
-    <section style="padding-top:20px">
+    <section style="padding-top:var(--s-3)">
       <div class="wrap">
         <div class="tdetail">
 
@@ -100,27 +100,27 @@ const jsonld = entitySchema("seasonal", col);
           {/* ---- Right sidebar: quick signals ---- */}
           <aside class="side">
             <div class="pcard reveal">
-              <div class="eyebrow" style="margin-bottom:8px">About this collection</div>
+              <div class="eyebrow" style="margin-bottom:var(--s-1)">About this collection</div>
               {col.seasons && col.seasons.length > 0 && (
-                <div style="margin-bottom:10px">
-                  <span style="font-size:.8rem;color:var(--muted)">Best seasons: </span>
-                  <span style="font-size:.85rem">
+                <div style="margin-bottom:var(--s-2)">
+                  <span style="font-size:var(--t-tiny);color:var(--muted)">Best seasons: </span>
+                  <span style="font-size:var(--t-sm)">
                     {col.seasons.map((s) => s.charAt(0).toUpperCase() + s.slice(1)).join(", ")}
                   </span>
                 </div>
               )}
               {col.travelStyles && col.travelStyles.length > 0 && (
-                <div style="margin-bottom:10px">
-                  <span style="font-size:.8rem;color:var(--muted)">Travel styles: </span>
-                  <span style="font-size:.85rem">
+                <div style="margin-bottom:var(--s-2)">
+                  <span style="font-size:var(--t-tiny);color:var(--muted)">Travel styles: </span>
+                  <span style="font-size:var(--t-sm)">
                     {col.travelStyles.map((s) => s.charAt(0).toUpperCase() + s.slice(1)).join(" · ")}
                   </span>
                 </div>
               )}
               {col.audience && col.audience.length > 0 && (
                 <div>
-                  <span style="font-size:.8rem;color:var(--muted)">Ideal for: </span>
-                  <span style="font-size:.85rem">
+                  <span style="font-size:var(--t-tiny);color:var(--muted)">Ideal for: </span>
+                  <span style="font-size:var(--t-sm)">
                     {col.audience.map((a) => a.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())).join(", ")}
                   </span>
                 </div>

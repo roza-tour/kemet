@@ -64,7 +64,7 @@ const title = `${c.title} | Kemet`;
 >
   <PageHero crumb={c.label} symbol={c.symbol} base={base} title={c.title} text={c.shortSummary} />
 
-  <section style="padding-top:26px">
+  <section style="padding-top:var(--s-4)">
     <div class="wrap cp-wrap">
 
       {/* The answer first. A comparison page that withholds its verdict is worse
@@ -167,71 +167,71 @@ const title = `${c.title} | Kemet`;
 <style>
   .cp-wrap { max-width: 940px; }
 
-  .cp-verdict { border: 1px solid var(--gold); border-radius: 2px; padding: 28px 30px;
+  .cp-verdict { border: 1px solid var(--gold); border-radius: 2px; padding:var(--s-5) var(--s-5);
     background: rgba(217,180,90,.07); position: relative; overflow: hidden; }
   .cp-verdict::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 2px;
     background: linear-gradient(90deg, transparent, var(--gold), transparent); }
-  .cp-vlabel { display: inline-block; font-size: .64rem; letter-spacing: .3em;
+  .cp-vlabel { display: inline-block; font-size:var(--t-nano); letter-spacing: .3em;
     text-transform: uppercase; color: var(--ink); background: var(--gold);
-    padding: 6px 13px; border-radius: 2px; font-weight: 500; margin-bottom: 16px; }
-  .cp-verdict p { margin: 0; color: var(--bone); font-size: 1.04rem; line-height: 1.82; }
+    padding:var(--s-1) var(--s-2); border-radius: 2px; font-weight: 500; margin-bottom:var(--s-3); }
+  .cp-verdict p { margin: 0; color: var(--bone); font-size:var(--t-base); line-height: 1.82; }
 
-  .cp-lede { font-family: var(--ff-display); font-weight: 300; font-size: 1.22rem;
-    line-height: 1.7; color: var(--muted); margin: 30px 0 30px; }
+  .cp-lede { font-family: var(--ff-display); font-weight: 300; font-size:var(--t-md);
+    line-height: 1.7; color: var(--muted); margin:var(--s-5) 0 var(--s-5); }
 
   /* Wide table scrolls inside its own box — the page never scrolls sideways. */
-  .cp-scroll { overflow-x: auto; margin-bottom: 30px; }
+  .cp-scroll { overflow-x: auto; margin-bottom:var(--s-5); }
   .cp-table { width: 100%; border-collapse: collapse; min-width: 620px; }
   .cp-table th, .cp-table td { text-align: left; vertical-align: top;
-    padding: 14px 16px 14px 0; border-bottom: 1px solid var(--line); }
-  .cp-table thead th { font-family: var(--ff-display); font-weight: 400; font-size: 1.05rem;
-    color: var(--gold-bright); border-bottom-color: var(--line-2); padding-bottom: 12px; }
-  .cp-table tbody th { font-weight: 400; color: var(--muted-2); font-size: .78rem;
+    padding:var(--s-2) var(--s-3) var(--s-2) 0; border-bottom: 1px solid var(--line); }
+  .cp-table thead th { font-family: var(--ff-display); font-weight: 400; font-size:var(--t-base);
+    color: var(--gold-bright); border-bottom-color: var(--line-2); padding-bottom:var(--s-2); }
+  .cp-table tbody th { font-weight: 400; color: var(--muted-2); font-size:var(--t-tiny);
     letter-spacing: .1em; text-transform: uppercase; width: 26%; }
-  .cp-table td { color: var(--muted); font-size: .93rem; line-height: 1.7; }
+  .cp-table td { color: var(--muted); font-size:var(--t-sm); line-height: 1.7; }
 
-  .cp-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
-  .cp-col { border: 1px solid var(--line); border-radius: 2px; padding: 26px 24px;
+  .cp-cols { display: grid; grid-template-columns: 1fr 1fr; gap:var(--s-4); }
+  .cp-col { border: 1px solid var(--line); border-radius: 2px; padding:var(--s-4) var(--s-4);
     background: rgba(217,180,90,.05); }
   .cp-col--b { background: rgba(255,255,255,.015); }
-  .cp-col h2 { font-size: .68rem; letter-spacing: .28em; text-transform: uppercase;
-    font-family: var(--ff-body); font-weight: 400; color: var(--gold); margin: 0 0 16px; }
+  .cp-col h2 { font-size:var(--t-micro); letter-spacing: .28em; text-transform: uppercase;
+    font-family: var(--ff-body); font-weight: 400; color: var(--gold); margin:0 0 var(--s-3); }
   .cp-col--b h2 { color: var(--muted-2); }
   .cp-col ul { list-style: none; margin: 0; padding: 0; }
-  .cp-col li { position: relative; padding-left: 18px; color: var(--muted);
-    font-size: .93rem; line-height: 1.75; margin-bottom: 12px; }
+  .cp-col li { position: relative; padding-left:var(--s-3); color: var(--muted);
+    font-size:var(--t-sm); line-height: 1.75; margin-bottom:var(--s-2); }
   .cp-col li:last-child { margin-bottom: 0; }
   .cp-col li::before { content: ""; position: absolute; left: 0; top: .68em;
     width: 5px; height: 5px; border-radius: 50%; background: var(--gold); opacity: .8; }
   .cp-col--b li::before { background: var(--muted-2); opacity: .55; }
 
-  .cp-sec { display: grid; grid-template-columns: 58px 1fr; gap: 22px;
-    padding: 26px 0; border-bottom: 1px solid var(--line); }
+  .cp-sec { display: grid; grid-template-columns: 58px 1fr; gap:var(--s-4);
+    padding:var(--s-4) 0; border-bottom: 1px solid var(--line); }
   .cp-sec:last-child { border-bottom: 0; }
   .cp-n { font-family: var(--ff-display); font-size: 1.7rem; color: var(--gold);
     line-height: 1.2; width: 58px; }
-  .cp-sec h2 { font-size: 1.24rem; color: var(--bone); margin: 0 0 10px; }
-  .cp-sec p { color: var(--muted); font-size: .96rem; line-height: 1.88; margin: 0; }
+  .cp-sec h2 { font-size:var(--t-md); color: var(--bone); margin:0 0 var(--s-2); }
+  .cp-sec p { color: var(--muted); font-size:var(--t-base); line-height: 1.88; margin: 0; }
 
-  .cp-others { margin-top: 40px; }
-  .cp-others h2 { font-size: 1.4rem; color: var(--bone); margin-bottom: 20px; }
-  .cp-others-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .cp-others { margin-top:var(--s-6); }
+  .cp-others h2 { font-size:var(--t-lg); color: var(--bone); margin-bottom:var(--s-3); }
+  .cp-others-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap:var(--s-3); }
   .cp-other { display: block; border: 1px solid var(--line); border-radius: 2px;
-    padding: 22px 20px; transition: border-color .4s, transform .4s cubic-bezier(.22,.61,.36,1); }
+    padding:var(--s-4) var(--s-3); transition: border-color .4s, transform .4s cubic-bezier(.22,.61,.36,1); }
   .cp-other:hover { border-color: var(--gold); transform: translateY(-4px); }
-  .cp-other h3 { font-size: 1rem; color: var(--bone); margin: 0 0 7px; font-weight: 500; }
+  .cp-other h3 { font-size:var(--t-base); color: var(--bone); margin:0 0 var(--s-1); font-weight: 500; }
   .cp-other:hover h3 { color: var(--gold-bright); }
-  .cp-other p { color: var(--muted-2); font-size: .86rem; line-height: 1.65; margin: 0; }
+  .cp-other p { color: var(--muted-2); font-size:var(--t-sm); line-height: 1.65; margin: 0; }
 
   @media(max-width:680px){
-    .cp-verdict { padding: 24px 20px; }
-    .cp-verdict p { font-size: .99rem; }
+    .cp-verdict { padding:var(--s-4) var(--s-3); }
+    .cp-verdict p { font-size:var(--t-base); }
     .cp-lede { font-size: 1.1rem; }
-    .cp-cols { grid-template-columns: 1fr; gap: 16px; }
-    .cp-col { padding: 22px 20px; }
+    .cp-cols { grid-template-columns: 1fr; gap:var(--s-3); }
+    .cp-col { padding:var(--s-4) var(--s-3); }
     .cp-others-grid { grid-template-columns: 1fr; }
     /* Site-wide phone rule: the numeral goes above its heading. */
-    .cp-sec { display: block; padding: 22px 0; }
-    .cp-n { display: block; width: auto; font-size: 1.25rem; margin-bottom: 8px; }
+    .cp-sec { display: block; padding:var(--s-4) 0; }
+    .cp-n { display: block; width: auto; font-size:var(--t-md); margin-bottom:var(--s-1); }
   }
 </style>

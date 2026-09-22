@@ -86,10 +86,10 @@ const picked: Collection[] = collections
 
 <style>
   .sstrip-sec { padding-top: 0; }
-  .sstrip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 40px; }
+  .sstrip { display: grid; grid-template-columns: repeat(3, 1fr); gap:var(--s-4); margin-top:var(--s-6); }
 
   .sstrip-card {
-    position: relative; display: block; padding: 34px 30px 30px;
+    position: relative; display: block; padding:var(--s-5) var(--s-5) var(--s-5);
     border: 1px solid var(--line); border-radius: 2px; overflow: hidden;
     background: linear-gradient(165deg, rgba(30,25,18,.92), rgba(14,17,21,.72));
     transition: transform .5s cubic-bezier(.22,.61,.36,1), border-color .5s, box-shadow .5s;
@@ -103,10 +103,10 @@ const picked: Collection[] = collections
     box-shadow: 0 24px 60px rgba(0,0,0,.5); }
   .sstrip-card:hover::before { opacity: 1; }
 
-  .sstrip-card h3 { font-size: 1.3rem; color: var(--bone); margin: 0 0 8px; }
-  .sstrip-card p { color: var(--muted); font-size: .93rem; line-height: 1.7; margin: 0; }
-  .sstrip-more { display: inline-flex; align-items: center; gap: 12px; margin-top: 20px;
-    font-size: .64rem; letter-spacing: .3em; text-transform: uppercase; color: var(--st, var(--gold)); }
+  .sstrip-card h3 { font-size:var(--t-md); color: var(--bone); margin:0 0 var(--s-1); }
+  .sstrip-card p { color: var(--muted); font-size:var(--t-sm); line-height: 1.7; margin: 0; }
+  .sstrip-more { display: inline-flex; align-items: center; gap:var(--s-2); margin-top:var(--s-3);
+    font-size:var(--t-nano); letter-spacing: .3em; text-transform: uppercase; color: var(--st, var(--gold)); }
   .sstrip-more i { width: 30px; height: 1px; background: currentColor; transition: width .5s cubic-bezier(.22,.61,.36,1); }
   .sstrip-card:hover .sstrip-more i { width: 52px; }
 
@@ -120,7 +120,7 @@ const picked: Collection[] = collections
   .st-eid          { --st: #E0BE6A; }
 
   /* Glyph mark, drawn per theme with pure CSS */
-  .sstrip-glyph { display: block; width: 30px; height: 30px; margin-bottom: 16px;
+  .sstrip-glyph { display: block; width: 30px; height: 30px; margin-bottom:var(--s-3);
     border-radius: 50%; border: 1px solid var(--st, var(--gold)); opacity: .8; position: relative; }
   .sstrip-glyph::after { content: ""; position: absolute; inset: 7px; border-radius: 50%;
     background: var(--st, var(--gold)); opacity: .35; }
@@ -131,19 +131,19 @@ const picked: Collection[] = collections
   .sstrip-card.is-now { border-color: var(--st, var(--gold)); }
   .sstrip-card.is-now::before { opacity: 1; height: 3px; }
   .sstrip-badge {
-    position: absolute; top: 16px; right: 16px; font-size: .7rem; letter-spacing: .14em;
+    position: absolute; top: 16px; right: 16px; font-size:var(--t-micro); letter-spacing: .14em;
     text-transform: uppercase; color: var(--ink); background: var(--st, var(--gold));
-    padding: 5px 11px; border-radius: 20px; font-weight: 600;
+    padding:var(--s-1) var(--s-2); border-radius: 20px; font-weight: 600;
   }
 
   @media(max-width:1000px){ .sstrip { grid-template-columns: repeat(2, 1fr); } }
-  @media(max-width:640px){ .sstrip { grid-template-columns: 1fr; gap: 16px; } }
+  @media(max-width:640px){ .sstrip { grid-template-columns: 1fr; gap:var(--s-3); } }
   /* Match the single card inset the rest of the site uses on a phone, so this
      strip's text lands on the same left edge as every other card. */
   @media(max-width:680px){
-    .sstrip-card { padding: 26px 20px 24px; }
-    .sstrip-glyph { margin-bottom: 13px; }
-    .sstrip-more { font-size: .74rem; letter-spacing: .22em; }
-    .sstrip-badge { font-size: .72rem; }
+    .sstrip-card { padding:var(--s-4) var(--s-3) var(--s-4); }
+    .sstrip-glyph { margin-bottom:var(--s-2); }
+    .sstrip-more { font-size:var(--t-tiny); letter-spacing: .22em; }
+    .sstrip-badge { font-size:var(--t-micro); }
   }
 </style>

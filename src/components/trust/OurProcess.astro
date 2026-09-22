@@ -16,12 +16,12 @@ const steps = company.process ?? [];
 ---
 {steps.length > 0 && (
   <div>
-    <div class="eyebrow" style="margin-bottom:8px">{eyebrow}</div>
-    <h2 style="margin-bottom:28px">{heading}</h2>
-    <div class="grid-3" style="gap:24px">
+    <div class="eyebrow" style="margin-bottom:var(--s-1)">{eyebrow}</div>
+    <h2 style="margin-bottom:var(--s-5)">{heading}</h2>
+    <div class="grid-3" style="gap:var(--s-4)">
       {steps.map((step) => (
         <div class="tblock reveal">
-          <div class="eyebrow" style="margin-bottom:6px">Step {step.step}</div>
+          <div class="eyebrow" style="margin-bottom:var(--s-1)">Step {step.step}</div>
           <h3>{step.heading}</h3>
           <p>{step.body}</p>
         </div>

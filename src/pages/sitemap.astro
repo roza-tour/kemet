@@ -79,7 +79,7 @@ const pageCount =
     text={`Every page on this site in one place — ${pageCount} in total. If you prefer a machine-readable version, there is an XML sitemap and an llms.txt.`}
   />
 
-  <section style="padding-top:26px">
+  <section style="padding-top:var(--s-4)">
     <div class="wrap sm-wrap">
 
       <div class="sm-group reveal">
@@ -227,20 +227,20 @@ const pageCount =
 
 <style>
   .sm-wrap { max-width: 940px; }
-  .sm-group { margin-bottom: 46px; }
-  .sm-group h2 { font-size: 1.35rem; margin: 0 0 6px; }
-  .sm-group h2 em { font-style: normal; font-size: .8rem; color: var(--muted-2); letter-spacing: .1em; }
-  .sm-list { list-style: none; margin: 14px 0 0; padding: 0; }
-  .sm-list li { padding: 11px 0; border-bottom: 1px solid var(--line); display: flex;
-    flex-wrap: wrap; gap: 4px 16px; align-items: baseline; }
+  .sm-group { margin-bottom:var(--s-6); }
+  .sm-group h2 { font-size: 1.35rem; margin:0 0 var(--s-1); }
+  .sm-group h2 em { font-style: normal; font-size:var(--t-tiny); color: var(--muted-2); letter-spacing: .1em; }
+  .sm-list { list-style: none; margin:var(--s-2) 0 0; padding: 0; }
+  .sm-list li { padding:var(--s-2) 0; border-bottom: 1px solid var(--line); display: flex;
+    flex-wrap: wrap; gap:4px var(--s-3); align-items: baseline; }
   .sm-list li:last-child { border-bottom: 0; }
-  .sm-list a { color: var(--bone); font-size: 1rem; transition: color .3s; }
+  .sm-list a { color: var(--bone); font-size:var(--t-base); transition: color .3s; }
   .sm-list a:hover { color: var(--gold-bright); }
-  .sm-list span { color: var(--muted-2); font-size: .86rem; flex: 1 1 300px; }
-  .sm-cols { columns: 2; column-gap: 46px; }
+  .sm-list span { color: var(--muted-2); font-size:var(--t-sm); flex: 1 1 300px; }
+  .sm-cols { columns: 2; column-gap:var(--s-6); }
   .sm-cols li { break-inside: avoid; }
-  .sm-langnote { color: var(--muted-2); font-size: .88rem; line-height: 1.7; margin: 10px 0 4px; max-width: 640px; }
-  .sm-machine { margin-top: 8px; font-size: .84rem; color: var(--muted-2); }
+  .sm-langnote { color: var(--muted-2); font-size:var(--t-sm); line-height: 1.7; margin:var(--s-2) 0 4px; max-width: 640px; }
+  .sm-machine { margin-top:var(--s-1); font-size:var(--t-tiny); color: var(--muted-2); }
   .sm-machine a { color: var(--gold); border-bottom: 1px solid var(--line-2); }
   @media(max-width:700px){ .sm-cols { columns: 1; } }
 </style>

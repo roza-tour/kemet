@@ -17,7 +17,7 @@ const { collection, base = "" } = Astro.props;
 const typeLabel = labelOf(collectionTypes, collection.collectionType) ?? collection.collectionType;
 const hub = hubFor("seasonal");
 ---
-<header class="phero" style="padding-bottom:34px">
+<header class="phero" style="padding-bottom:var(--s-5)">
   {collection.theme && <SeasonalTheme theme={collection.theme} />}
   <div class="wrap">
     <nav class="crumb" aria-label="Breadcrumb">
@@ -31,7 +31,7 @@ const hub = hubFor("seasonal");
   </div>
 </header>
 {collection.hero && (
-  <section style="padding-top:18px;padding-bottom:0">
+  <section style="padding-top:var(--s-3);padding-bottom:0">
     <div class="wrap">
       <Placeholder
         class="tgallery reveal cur"

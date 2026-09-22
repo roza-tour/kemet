@@ -34,18 +34,18 @@ const profile = `${base}about.html#${reviewer.id}`;
 
 <style>
   .byline {
-    display: flex; align-items: center; gap: 14px;
-    margin: 28px 0 0; font-size: .78rem; line-height: 1.7;
+    display: flex; align-items: center; gap:var(--s-2);
+    margin:var(--s-5) 0 0; font-size:var(--t-tiny); line-height: 1.7;
     color: var(--muted-2); letter-spacing: .02em;
   }
-  .byline--compact { margin-top: 18px; }
+  .byline--compact { margin-top:var(--s-3); }
   .byline-rule { flex: 0 0 34px; height: 1px; background: var(--gold); opacity: .6; }
   .byline a { color: var(--gold); border-bottom: 1px solid rgba(217, 180, 90, .35);
     transition: border-color .3s, color .3s; }
   .byline a:hover { color: var(--gold-bright); border-color: var(--gold-bright); }
   .byline time { white-space: nowrap; }
   @media(max-width:680px){
-    .byline { font-size: .82rem; align-items: flex-start; gap: 12px; }
+    .byline { font-size:var(--t-tiny); align-items: flex-start; gap:var(--s-2); }
     .byline-rule { flex-basis: 22px; margin-top: .7em; }
   }
 </style>

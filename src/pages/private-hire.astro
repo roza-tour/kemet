@@ -73,7 +73,7 @@ const process = [
     heroHeight={800}
   />
 
-  <section style="padding-top:24px">
+  <section style="padding-top:var(--s-4)">
     <div class="wrap">
       <AnswerBox question={VENUE_QUESTION} answer={VENUE_ANSWER} />
     </div>
@@ -83,7 +83,7 @@ const process = [
 
   {/* The venues. One per band, alternating, so each gets a full read. */}
   {publishedVenues.map((v, i) => (
-    <section class:list={["pv", i % 2 === 1 && "pv--flip"]} style={i === 0 ? "padding-top:10px" : ""}>
+    <section class:list={["pv", i % 2 === 1 && "pv--flip"]} style={i === 0 ? "padding-top:var(--s-2)" : ""}>
       <div class="wrap">
         <div class="pv-row">
           <div class="pv-shot">
@@ -203,56 +203,56 @@ const process = [
     border: 1px solid rgba(217,180,90,.3); pointer-events: none; }
 
   .pv-text h2 { font-family: var(--ff-display); font-weight: 300;
-    font-size: clamp(1.9rem, 4vw, 2.7rem); color: var(--bone); margin: 12px 0 0; line-height: 1.15; }
-  .pv-kick { color: var(--gold-bright); font-size: 1.02rem; line-height: 1.7;
-    margin: 16px 0 0; font-style: italic; font-family: 'Cormorant Garamond', Georgia, serif; }
-  .pv-body { color: var(--muted); font-size: .96rem; line-height: 1.88; margin: 18px 0 0; }
+    font-size: clamp(1.9rem, 4vw, 2.7rem); color: var(--bone); margin:var(--s-2) 0 0; line-height: 1.15; }
+  .pv-kick { color: var(--gold-bright); font-size:var(--t-base); line-height: 1.7;
+    margin:var(--s-3) 0 0; font-style: italic; font-family: 'Cormorant Garamond', Georgia, serif; }
+  .pv-body { color: var(--muted); font-size:var(--t-base); line-height: 1.88; margin:var(--s-3) 0 0; }
 
-  .pv-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 28px;
-    margin: 28px 0 0; padding: 22px 0 0; border-top: 1px solid var(--line); }
-  .pv-facts dt { font-size: .6rem; letter-spacing: .24em; text-transform: uppercase;
-    color: var(--gold); margin-bottom: 5px; }
-  .pv-facts dd { color: var(--muted); font-size: .86rem; line-height: 1.65; margin: 0; }
+  .pv-facts { display: grid; grid-template-columns: 1fr 1fr; gap:var(--s-3) var(--s-5);
+    margin:var(--s-5) 0 0; padding:var(--s-4) 0 0; border-top: 1px solid var(--line); }
+  .pv-facts dt { font-size:var(--t-nano); letter-spacing: .24em; text-transform: uppercase;
+    color: var(--gold); margin-bottom:var(--s-1); }
+  .pv-facts dd { color: var(--muted); font-size:var(--t-sm); line-height: 1.65; margin: 0; }
 
-  .pv-suits { margin-top: 24px; display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap; }
-  .pv-suits > span { font-size: .6rem; letter-spacing: .24em; text-transform: uppercase;
+  .pv-suits { margin-top:var(--s-4); display: flex; gap:var(--s-2); align-items: baseline; flex-wrap: wrap; }
+  .pv-suits > span { font-size:var(--t-nano); letter-spacing: .24em; text-transform: uppercase;
     color: var(--muted-2); flex: none; }
-  .pv-suits ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
-  .pv-suits li { font-size: .78rem; color: var(--muted); padding: 5px 13px;
+  .pv-suits ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap:var(--s-1); }
+  .pv-suits li { font-size:var(--t-tiny); color: var(--muted); padding:var(--s-1) var(--s-2);
     border: 1px solid var(--line); border-radius: 999px; }
 
-  .pv-cta { margin-top: 28px; }
+  .pv-cta { margin-top:var(--s-5); }
 
-  .pv-head { margin-bottom: 44px; }
+  .pv-head { margin-bottom:var(--s-6); }
   .pv-head h2 { font-family: var(--ff-display); font-weight: 300;
-    font-size: clamp(1.9rem, 3.4vw, 2.6rem); color: var(--bone); margin-top: 16px; }
-  .pv-head p { color: var(--muted); max-width: 640px; margin: 24px 0 0; line-height: 1.85; }
+    font-size: clamp(1.9rem, 3.4vw, 2.6rem); color: var(--bone); margin-top:var(--s-3); }
+  .pv-head p { color: var(--muted); max-width: 640px; margin:var(--s-4) 0 0; line-height: 1.85; }
 
-  .pv-steps { gap: 24px; }
+  .pv-steps { gap:var(--s-4); }
   .pv-step { position: relative; border: 1px solid var(--line); border-radius: 2px;
-    padding: 30px 30px 28px;
+    padding:var(--s-5) var(--s-5) var(--s-5);
     background: linear-gradient(165deg, rgba(30,25,18,.85), rgba(14,17,21,.6)); }
   .pv-stepnum { position: absolute; top: 22px; right: 26px;
     font-family: var(--ff-display); font-size: 2.2rem; color: var(--gold); opacity: .18; }
-  .pv-stepsym { width: 34px; height: 40px; margin-bottom: 16px; }
+  .pv-stepsym { width: 34px; height: 40px; margin-bottom:var(--s-3); }
   .pv-stepsym svg { width: 100%; height: 100%; }
-  .pv-step h3 { font-size: 1.12rem; color: var(--bone); font-weight: 500; margin: 0 0 10px; }
-  .pv-step p { color: var(--muted); font-size: .92rem; line-height: 1.8; margin: 0; }
+  .pv-step h3 { font-size:var(--t-md); color: var(--bone); font-weight: 500; margin:0 0 var(--s-2); }
+  .pv-step p { color: var(--muted); font-size:var(--t-sm); line-height: 1.8; margin: 0; }
 
-  .pv-note { margin-top: 26px; padding: 30px 32px; border-left: 2px solid var(--gold);
+  .pv-note { margin-top:var(--s-4); padding:var(--s-5) var(--s-5); border-left: 2px solid var(--gold);
     background: rgba(217,180,90,.05); }
   .pv-note h3 { font-family: var(--ff-display); font-weight: 300; font-size: 1.35rem;
-    color: var(--gold-bright); margin: 0 0 12px; }
-  .pv-note p { color: var(--muted); font-size: .95rem; line-height: 1.88; margin: 0; max-width: 760px; }
+    color: var(--gold-bright); margin:0 0 var(--s-2); }
+  .pv-note p { color: var(--muted); font-size:var(--t-sm); line-height: 1.88; margin: 0; max-width: 760px; }
 
   @media (max-width: 900px) {
-    .pv-row { grid-template-columns: 1fr; gap: 30px; }
+    .pv-row { grid-template-columns: 1fr; gap:var(--s-5); }
     .pv--flip .pv-row { direction: ltr; }
     .pv-steps { grid-template-columns: 1fr; }
   }
   @media (max-width: 560px) {
-    .pv-facts { grid-template-columns: 1fr; gap: 14px; }
-    .pv-step { padding: 24px 20px; }
-    .pv-note { padding: 24px 20px; }
+    .pv-facts { grid-template-columns: 1fr; gap:var(--s-2); }
+    .pv-step { padding:var(--s-4) var(--s-3); }
+    .pv-note { padding:var(--s-4) var(--s-3); }
   }
 </style>

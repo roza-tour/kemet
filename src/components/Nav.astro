@@ -115,8 +115,8 @@ const isCurrent = (item: (typeof primaryNav)[number]) =>
 
 <style is:global>
   /* ===== dropdown groups ================================================= */
-  .ddw { position: relative; display: flex; align-items: center; gap: 5px; }
-  .ddtoggle { background: none; border: 0; padding: 6px 2px; cursor: pointer;
+  .ddw { position: relative; display: flex; align-items: center; gap:var(--s-1); }
+  .ddtoggle { background: none; border: 0; padding:var(--s-1) 2px; cursor: pointer;
     color: var(--muted); line-height: 0; transition: color .4s, transform .35s; }
   .ddtoggle span { display: block; width: 6px; height: 6px;
     border-right: 1px solid currentColor; border-bottom: 1px solid currentColor;
@@ -127,32 +127,37 @@ const isCurrent = (item: (typeof primaryNav)[number]) =>
   /* The panel keeps a transparent gap above it (padding-top) so the pointer
      can travel from the label into the menu without crossing dead space. */
   .dd { position: absolute; top: 100%; left: -18px; min-width: 232px; z-index: 5;
-    padding-top: 16px; opacity: 0; visibility: hidden; transform: translateY(-6px);
+    padding-top:var(--s-3); opacity: 0; visibility: hidden; transform: translateY(-6px);
     transition: opacity .28s, transform .28s cubic-bezier(.22,.61,.36,1), visibility .28s; }
   .ddw:hover .dd, .ddw:focus-within .dd, .ddw.open .dd {
     opacity: 1; visibility: visible; transform: translateY(0); }
-  .dd ul { list-style: none; margin: 0; padding: 10px 0;
+  .dd ul { list-style: none; margin: 0; padding:var(--s-2) 0;
     background: rgba(14,11,8,.97);
     backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
     border: 1px solid var(--line-2); box-shadow: 0 26px 60px -26px rgba(0,0,0,.9); }
-  .dd li a { display: block; padding: 9px 20px; font-size: .7rem; letter-spacing: .18em;
+  .dd li a { display: block; padding:var(--s-1) var(--s-3); font-size:var(--t-micro); letter-spacing: .18em;
     text-transform: uppercase; color: var(--muted); white-space: nowrap;
     transition: color .3s, background .3s; }
   .dd li a::after { display: none; }             /* no underline sweep in here */
   .dd li a:hover, .dd li a.active { color: var(--gold-bright); background: rgba(217,180,90,.08); }
 
   /* ===== the search field, in the bar ==================================== */
-  .nsearch { display: flex; align-items: center; gap: 8px; margin-left: 4px;
-    border: 1px solid var(--line); padding: 0 12px; height: 34px;
+  .nsearch { display: flex; align-items: center; gap:var(--s-1); margin-left: 4px;
+    border: 1px solid var(--line); padding:0 var(--s-2); height: 34px;
     min-width: 132px; flex: 0 1 180px;
     background: rgba(255,255,255,.02); transition: border-color .4s, background .4s; }
-  .nsearch:focus-within { border-color: var(--line-2); background: rgba(255,255,255,.05); }
+  /* The input suppresses its own outline so the field reads as one control.
+     That left a keyboard user with no focus indication at all, so the ring
+     moves to the wrapper: the whole field lights, which is clearer than an
+     outline drawn inside a border. */
+  .nsearch:focus-within { border-color: var(--gold); background: rgba(255,255,255,.05);
+    box-shadow: 0 0 0 2px rgba(247,230,174,.35); }
   .nsearch svg { width: 14px; height: 14px; color: var(--gold); flex: none; opacity: .85; }
   .nsearch input { flex: 1; min-width: 0; background: none; border: 0; outline: none;
-    color: var(--bone); font-family: var(--ff-body); font-size: .74rem;
+    color: var(--bone); font-family: var(--ff-body); font-size:var(--t-tiny);
     letter-spacing: .08em; padding: 0; }
   .nsearch input::placeholder { color: var(--muted-2); letter-spacing: .24em;
-    text-transform: uppercase; font-size: .62rem; }
+    text-transform: uppercase; font-size:var(--t-nano); }
   .nsearch input::-webkit-search-cancel-button { -webkit-appearance: none; }
 
   /* ===== phone: the burger menu becomes a proper stacked menu ============ */
@@ -170,13 +175,13 @@ const isCurrent = (item: (typeof primaryNav)[number]) =>
     .navlinks.open .dd { position: static; opacity: 1; visibility: visible;
       transform: none; padding-top: 0; min-width: 0; }
     .navlinks.open .dd ul { background: none; border: 0; box-shadow: none;
-      padding: 2px 0 10px; backdrop-filter: none; }
-    .navlinks.open .dd li a { padding: 10px 0 10px 16px; font-size: .7rem;
+      padding:2px 0 var(--s-2); backdrop-filter: none; }
+    .navlinks.open .dd li a { padding:var(--s-2) 0 var(--s-2) var(--s-3); font-size:var(--t-micro);
       letter-spacing: .16em; border-left: 1px solid var(--line); white-space: normal; }
-    .navlinks.open .ddtop { display: block; padding: 12px 0 2px; color: var(--gold);
-      font-size: .76rem; }
-    .navlinks.open .nsearch { flex: none; height: 44px; margin: 4px 0 10px; order: -1; }
-    .navlinks.open .nsearch input { font-size: 16px; letter-spacing: .04em; }
-    .navlinks.open .nsearch input::placeholder { font-size: .68rem; }
+    .navlinks.open .ddtop { display: block; padding:var(--s-2) 0 2px; color: var(--gold);
+      font-size:var(--t-tiny); }
+    .navlinks.open .nsearch { flex: none; height: 44px; margin:4px 0 var(--s-2); order: -1; }
+    .navlinks.open .nsearch input { font-size:var(--t-base); letter-spacing: .04em; }
+    .navlinks.open .nsearch input::placeholder { font-size:var(--t-micro); }
   }
 </style>

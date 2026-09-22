@@ -119,7 +119,7 @@ const jsonld = breadcrumb([["Home", "index.html"]]);
           </div>
         </div>
       </div>
-      <div class="grid-4 grid-tease" style="margin-top:96px">
+      <div class="grid-4 grid-tease" style="margin-top:var(--s-8)">
         {pillars.map(([sym, name, blurb, href]) => (
           <a class="tease reveal" href={href} data-tilt>
             <div class="sym"><SymbolIcon name={sym} /></div>
@@ -299,31 +299,31 @@ const jsonld = breadcrumb([["Home", "index.html"]]);
        long each answer runs — five ragged baselines is exactly the kind of
        untidiness this section is meant to avoid. */
     display: flex; flex-direction: column; position: relative;
-    padding: 4px 24px 30px;
+    padding:4px var(--s-4) var(--s-5);
     border-left: 1px solid var(--line);
     transition: border-color .5s;
   }
   .dec:first-child { border-left: 0; padding-left: 0; }
   .dec:hover { border-color: rgba(217, 180, 90, .5); }
-  .dec-sym { width: 34px; height: 40px; margin-bottom: 16px; opacity: .9;
+  .dec-sym { width: 34px; height: 40px; margin-bottom:var(--s-3); opacity: .9;
     filter: drop-shadow(0 5px 14px rgba(217, 180, 90, .22));
     transition: transform .5s cubic-bezier(.22,.61,.36,1); }
   .dec-sym :global(svg) { width: 100%; height: 100%; }
   .dec:hover .dec-sym { transform: translateY(-3px); }
-  .dec .k { display: block; font-size: .6rem; letter-spacing: .3em;
+  .dec .k { display: block; font-size:var(--t-nano); letter-spacing: .3em;
     text-transform: uppercase; color: var(--gold-bright); font-weight: 500;
-    margin-bottom: 10px; }
-  .dec h3 { font-size: 1.16rem; color: var(--bone); margin: 0 0 10px;
+    margin-bottom:var(--s-2); }
+  .dec h3 { font-size:var(--t-md); color: var(--bone); margin:0 0 var(--s-2);
     font-weight: 400; line-height: 1.35; }
-  .dec p { font-size: .88rem; color: var(--muted); line-height: 1.75;
-    margin: 0 0 16px; }
-  .dec .more { margin-top: auto; font-size: .66rem; letter-spacing: .18em;
+  .dec p { font-size:var(--t-sm); color: var(--muted); line-height: 1.75;
+    margin:0 0 var(--s-3); }
+  .dec .more { margin-top: auto; font-size:var(--t-micro); letter-spacing: .18em;
     text-transform: uppercase; color: var(--gold); font-weight: 500; }
-  .dec:hover .more b { margin-left: 6px; transition: margin .3s; }
+  .dec:hover .more b { margin-left:var(--s-1); transition: margin .3s; }
 
   @media(max-width:1080px){
-    .dec-grid { grid-template-columns: repeat(3, 1fr); row-gap: 34px; }
-    .dec:first-child { border-left: 1px solid var(--line); padding-left: 24px; }
+    .dec-grid { grid-template-columns: repeat(3, 1fr); row-gap:var(--s-5); }
+    .dec:first-child { border-left: 1px solid var(--line); padding-left:var(--s-4); }
     .dec:nth-child(3n+1) { border-left: 0; padding-left: 0; }
   }
   @media(max-width:680px){
@@ -331,14 +331,14 @@ const jsonld = breadcrumb([["Home", "index.html"]]);
        its spine instead of dissolving into five unrelated blocks. */
     .dec-grid { grid-template-columns: 1fr; row-gap: 0; }
     .dec, .dec:first-child, .dec:nth-child(3n+1) {
-      border-left: 0; padding: 26px 0 26px 46px;
+      border-left: 0; padding:var(--s-4) 0 var(--s-4) var(--s-6);
       border-top: 1px solid var(--line);
     }
     .dec:first-child { border-top: 0; padding-top: 4px; }
     .dec-sym { position: absolute; left: 0; top: 28px; width: 28px; height: 33px;
       margin: 0; }
     .dec:first-child .dec-sym { top: 6px; }
-    .dec h3 { font-size: 1.22rem; }
-    .dec p { font-size: .92rem; }
+    .dec h3 { font-size:var(--t-md); }
+    .dec p { font-size:var(--t-sm); }
   }
 </style>

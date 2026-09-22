@@ -50,7 +50,7 @@ const profile = `${base}about.html#${reviewer.id}`;
   .answer-box {
     position: relative;
     margin: 0 0 54px;
-    padding: 32px 34px 28px;
+    padding:var(--s-5) var(--s-5) var(--s-5);
     border: 1px solid var(--line);
     border-left: 2px solid var(--gold);
     background: linear-gradient(120deg, rgba(217, 180, 90, .055), rgba(217, 180, 90, .015));
@@ -58,20 +58,20 @@ const profile = `${base}about.html#${reviewer.id}`;
   .answer-box h2 {
     font-size: clamp(1.25rem, 2.1vw, 1.6rem);
     color: var(--gold-bright);
-    margin: 0 0 14px;
+    margin:0 0 var(--s-2);
     font-weight: 400;
     line-height: 1.34;
   }
   .answer-body {
     margin: 0;
     color: var(--bone);
-    font-size: 1.04rem;
+    font-size:var(--t-base);
     line-height: 1.86;
     max-width: 68ch;
   }
   .answer-meta {
-    margin: 18px 0 0;
-    font-size: .74rem;
+    margin:var(--s-3) 0 0;
+    font-size:var(--t-tiny);
     letter-spacing: .04em;
     color: var(--muted-2);
   }
@@ -79,8 +79,8 @@ const profile = `${base}about.html#${reviewer.id}`;
   .answer-meta a:hover { color: var(--gold-bright); }
 
   @media(max-width:680px){
-    .answer-box { padding: 24px 20px 22px; margin-bottom: 40px; }
-    .answer-body { font-size: 1rem; line-height: 1.8; }
-    .answer-meta { font-size: .78rem; }
+    .answer-box { padding:var(--s-4) var(--s-3) var(--s-4); margin-bottom:var(--s-6); }
+    .answer-body { font-size:var(--t-base); line-height: 1.8; }
+    .answer-meta { font-size:var(--t-tiny); }
   }
 </style>

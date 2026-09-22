@@ -36,34 +36,34 @@ const pad2 = (n: number) => String(n).padStart(2, "0");
 </div>
 
 <style>
-  .legal-layout{display:grid;grid-template-columns:250px 1fr;gap:64px;align-items:start;max-width:1000px;margin:0 auto}
+  .legal-layout{display:grid;grid-template-columns:250px 1fr;gap:var(--s-7);align-items:start;max-width:1000px;margin:0 auto}
 
   /* Sticky numbered table of contents */
   .legal-toc-inner{position:sticky;top:110px}
-  .legal-toc .eyebrow{margin-bottom:20px}
+  .legal-toc .eyebrow{margin-bottom:var(--s-3)}
   .legal-toc ol{list-style:none;margin:0;padding:0;counter-reset:none}
   .legal-toc li{margin:0}
-  .legal-toc a{display:flex;gap:12px;align-items:baseline;padding:9px 0;font-size:.86rem;color:var(--muted-2);border-bottom:1px solid var(--line);transition:color .3s}
+  .legal-toc a{display:flex;gap:var(--s-2);align-items:baseline;padding:var(--s-1) 0;font-size:var(--t-sm);color:var(--muted-2);border-bottom:1px solid var(--line);transition:color .3s}
   .legal-toc a:hover{color:var(--gold-bright)}
-  .legal-tnum{font-family:var(--ff-display);font-size:.8rem;color:var(--gold-deep);min-width:22px;font-variant-numeric:tabular-nums}
-  .legal-updated{margin-top:26px;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted-2);line-height:2}
+  .legal-tnum{font-family:var(--ff-display);font-size:var(--t-tiny);color:var(--gold-deep);min-width:22px;font-variant-numeric:tabular-nums}
+  .legal-updated{margin-top:var(--s-4);font-size:var(--t-micro);letter-spacing:.14em;text-transform:uppercase;color:var(--muted-2);line-height:2}
   .legal-updated b{color:var(--gold);letter-spacing:.06em}
 
   /* Body */
   .legal-body{max-width:680px}
-  .legal-intro{font-family:var(--ff-display);font-size:1.35rem;line-height:1.6;color:var(--bone);font-weight:300;margin-bottom:16px;padding-bottom:36px;border-bottom:1px solid var(--line)}
+  .legal-intro{font-family:var(--ff-display);font-size:1.35rem;line-height:1.6;color:var(--bone);font-weight:300;margin-bottom:var(--s-3);padding-bottom:36px;border-bottom:1px solid var(--line)}
   .legal-sec{padding:38px 0;border-bottom:1px solid var(--line)}
   .legal-sec:last-child{border-bottom:0}
-  .legal-sec-head{display:flex;align-items:baseline;gap:18px;margin-bottom:18px}
-  .legal-num{font-family:var(--ff-display);font-size:1.5rem;color:var(--gold);line-height:1;font-variant-numeric:tabular-nums;flex:none}
-  .legal-sec-head h2{font-size:1.4rem;color:var(--bone);margin:0}
-  .legal-sec p{color:var(--muted);margin:0 0 14px;line-height:1.9}
+  .legal-sec-head{display:flex;align-items:baseline;gap:var(--s-3);margin-bottom:var(--s-3)}
+  .legal-num{font-family:var(--ff-display);font-size:var(--t-lg);color:var(--gold);line-height:1;font-variant-numeric:tabular-nums;flex:none}
+  .legal-sec-head h2{font-size:var(--t-lg);color:var(--bone);margin:0}
+  .legal-sec p{color:var(--muted);margin:0 0 var(--s-2);line-height:1.9}
   .legal-sec p:last-child{margin-bottom:0}
 
   @media(max-width:860px){
-    .legal-layout{grid-template-columns:1fr;gap:34px}
+    .legal-layout{grid-template-columns:1fr;gap:var(--s-5)}
     .legal-toc-inner{position:static}
-    .legal-toc ol{columns:2;column-gap:26px}
+    .legal-toc ol{columns:2;column-gap:var(--s-4)}
     .legal-body{max-width:none}
   }
   /* Fraunces ships no tabular figures, so `tabular-nums` above is ignored and
@@ -73,8 +73,8 @@ const pad2 = (n: number) => String(n).padStart(2, "0");
   .legal-num{width:38px;text-align:right}
   @media(max-width:680px){
     .legal-sec-head{display:block}
-    .legal-num{display:block;width:auto;text-align:left;font-size:1.2rem;margin-bottom:6px}
-    .legal-sec{padding:30px 0}
+    .legal-num{display:block;width:auto;text-align:left;font-size:var(--t-md);margin-bottom:var(--s-1)}
+    .legal-sec{padding:var(--s-5) 0}
   }
   @media(max-width:520px){.legal-toc ol{columns:1}}
 </style>

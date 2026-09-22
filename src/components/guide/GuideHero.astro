@@ -16,7 +16,7 @@ const { guide, base = "" } = Astro.props;
 const categoryLabel = labelOf(guideCategories, guide.category) ?? guide.category;
 const hub = hubFor("guide");
 ---
-<header class="phero" style="padding-bottom:34px">
+<header class="phero" style="padding-bottom:var(--s-5)">
   <div class="wrap">
     <nav class="crumb" aria-label="Breadcrumb">
       <a href="/">Home</a> ·
@@ -27,7 +27,7 @@ const hub = hubFor("guide");
     <h1>{guide.title}</h1>
     <p>{guide.shortSummary}</p>
     {(guide.readingTimeMinutes || guide.lastUpdated) && (
-      <p class="eyebrow" style="margin-top:12px;opacity:0.65;font-size:0.8em">
+      <p class="eyebrow" style="margin-top:var(--s-2);opacity:0.65;font-size:0.8em">
         {guide.readingTimeMinutes && <span>{guide.readingTimeMinutes} min read</span>}
         {guide.readingTimeMinutes && guide.lastUpdated && <span> · </span>}
         {guide.lastUpdated && <span>Updated {guide.lastUpdated}</span>}
@@ -36,7 +36,7 @@ const hub = hubFor("guide");
   </div>
 </header>
 {guide.hero && (
-  <section style="padding-top:18px;padding-bottom:0">
+  <section style="padding-top:var(--s-3);padding-bottom:0">
     <div class="wrap">
       <Placeholder
         class="tgallery reveal cur"

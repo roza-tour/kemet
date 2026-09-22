@@ -16,7 +16,7 @@ const href = `${base}destinations/${destination.slug}.html`;
 ---
 <a class="tease reveal" href={href} data-tilt aria-label={`${destination.title} — explore destination`}>
   {destination.symbol && <div class="sym"><SymbolIcon name={destination.symbol} title={destination.title} /></div>}
-  <div class="eyebrow" style="margin-bottom:8px">{regionLabel}</div>
+  <div class="eyebrow" style="margin-bottom:var(--s-1)">{regionLabel}</div>
   <h3>{destination.title}</h3>
   <p>{destination.shortSummary}</p>
   <span class="more">Explore <b>→</b></span>

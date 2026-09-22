@@ -218,7 +218,7 @@ import SymbolIcon from "@/components/SymbolIcon.astro";
      this costs nothing on a page where it never fires. */
   .ainv[hidden] { display: none !important; }
   .ainv { position: fixed; inset: 0; z-index: 300; display: flex;
-    align-items: center; justify-content: center; padding: 24px; }
+    align-items: center; justify-content: center; padding:var(--s-4); }
   .ainv-scrim { position: absolute; inset: 0; background: rgba(6,5,3,.78);
     backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px);
     opacity: 0; transition: opacity .3s ease; }
@@ -229,7 +229,7 @@ import SymbolIcon from "@/components/SymbolIcon.astro";
      centred on an axis. Egyptian design is symmetry and a border — not textures
      of sandstone, which on a dark screen only ever look like a stock image. */
   .ainv-box { position: relative; width: min(440px, 100%);
-    padding: 52px 46px 40px; text-align: center;
+    padding:52px var(--s-6) var(--s-6); text-align: center;
     border: 1px solid var(--line-2); border-radius: 0;
     background:
       radial-gradient(420px 220px at 50% 0%, rgba(217,180,90,.09), transparent 70%),
@@ -244,7 +244,7 @@ import SymbolIcon from "@/components/SymbolIcon.astro";
     pointer-events: none; }
 
   .ainv-x { position: absolute; top: 2px; right: 2px; width: 44px; height: 44px;
-    background: none; border: 0; color: var(--muted-2); font-size: 1.4rem;
+    background: none; border: 0; color: var(--muted-2); font-size:var(--t-lg);
     line-height: 1; cursor: pointer; transition: color .25s; z-index: 2; }
   .ainv-x:hover { color: var(--gold-bright); }
 
@@ -252,44 +252,44 @@ import SymbolIcon from "@/components/SymbolIcon.astro";
     filter: drop-shadow(0 6px 18px rgba(217,180,90,.3)); }
   .ainv-sym svg { width: 100%; height: 100%; }
 
-  .ainv-box > .eyebrow { font-size: .6rem; letter-spacing: .38em; }
+  .ainv-box > .eyebrow { font-size:var(--t-nano); letter-spacing: .38em; }
   .ainv-box h2 { font-family: var(--ff-display); font-weight: 300;
     font-size: clamp(1.55rem, 3.6vw, 1.95rem); color: var(--bone);
-    margin: 12px 0 0; line-height: 1.22; }
+    margin:var(--s-2) 0 0; line-height: 1.22; }
 
   /* A five-glyph band, the site's frieze cut to the width of a dialog. */
   .ainv-frieze { display: flex; justify-content: center; align-items: center;
-    gap: 26px; margin: 22px 0; padding: 14px 0;
+    gap:var(--s-4); margin:var(--s-4) 0; padding:var(--s-2) 0;
     border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
     background: linear-gradient(90deg, transparent, rgba(217,180,90,.05), transparent); }
   .ainv-frieze svg { width: 14px; height: 18px; flex: 0 0 auto; opacity: .45; }
 
-  .ainv-box p { color: var(--muted); font-size: .92rem; line-height: 1.85;
+  .ainv-box p { color: var(--muted); font-size:var(--t-sm); line-height: 1.85;
     margin: 0 auto 28px; max-width: 320px; }
 
   .ainv-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
-  .ainv-label { display: block; font-size: .6rem; letter-spacing: .24em;
-    text-transform: uppercase; color: var(--muted-2); margin-bottom: 9px; text-align: left; }
-  .ainv-field input { width: 100%; padding: 14px 16px; text-align: center; background: rgba(255,255,255,.04);
+  .ainv-label { display: block; font-size:var(--t-nano); letter-spacing: .24em;
+    text-transform: uppercase; color: var(--muted-2); margin-bottom:var(--s-1); text-align: left; }
+  .ainv-field input { width: 100%; padding:var(--s-2) var(--s-3); text-align: center; background: rgba(255,255,255,.04);
     border: 1px solid var(--line-2); border-radius: 2px; color: var(--bone);
-    font-family: var(--ff-body); font-size: .95rem; transition: border-color .3s; }
+    font-family: var(--ff-body); font-size:var(--t-sm); transition: border-color .3s; }
   .ainv-field input:focus { outline: none; border-color: var(--gold); }
   .ainv-field input::placeholder { color: var(--muted-2); opacity: .7; }
 
-  .ainv-consent { display: flex; gap: 10px; align-items: center; justify-content: center;
-    margin: 16px 0 20px; color: var(--muted); font-size: .8rem; line-height: 1.6;
+  .ainv-consent { display: flex; gap:var(--s-2); align-items: center; justify-content: center;
+    margin:var(--s-3) 0 var(--s-3); color: var(--muted); font-size:var(--t-tiny); line-height: 1.6;
     cursor: pointer; text-align: left; }
   .ainv-consent input { width: 15px; height: 15px; flex: none; accent-color: var(--gold); }
 
   .ainv-go { width: 100%; text-align: center; }
-  .ainv-fine { color: var(--muted-2); font-size: .76rem; line-height: 1.65;
+  .ainv-fine { color: var(--muted-2); font-size:var(--t-tiny); line-height: 1.65;
     margin: 16px 0 0 !important; text-align: center; }
   .ainv-fine a { color: var(--muted); border-bottom: 1px solid var(--line-2); }
-  .ainv-done { color: var(--gold-bright); font-size: .95rem; line-height: 1.85;
+  .ainv-done { color: var(--gold-bright); font-size:var(--t-sm); line-height: 1.85;
     text-align: center; margin: 0 !important; }
 
   @media (max-width: 520px) {
-    .ainv-box { padding: 40px 22px 28px; }
+    .ainv-box { padding:var(--s-6) var(--s-4) var(--s-5); }
     .ainv-frame { inset: 7px; }
   }
   @media (prefers-reduced-motion: reduce) {

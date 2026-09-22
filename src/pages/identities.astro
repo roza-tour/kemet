@@ -21,7 +21,7 @@ const jsonld = breadcrumb([["Home", "index.html"], ["The 8 Identities", "identit
     text="One country, eight overlapping cultural worlds. Each has its own colour, symbol and experiences — and any Kemet journey can be woven from several at once."
   />
 
-  <section style="padding-top:20px">
+  <section style="padding-top:var(--s-3)">
     <div class="wrap">
       {identities.map((identity, i) => (
         <div class={`eg-row reveal${i % 2 ? " rev" : ""}`} style={`--c:var(${identity.accentVar})`}>
