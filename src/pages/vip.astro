@@ -305,7 +305,11 @@ const jsonld: Record<string, unknown>[] = [
     --v-ink-2: #0D0A07;
     --v-cream: #F0E7D6;
     --v-cream-dim: #BCB09A;
-    --v-faint: #7A7263;
+    /* #8A8172, not #7A7263. The darker value measured 4.05:1 against this
+       page's ground — under the 4.5:1 floor for text below 24px, on the page
+       written for the clients least likely to forgive a squint. This one
+       measures 5.01:1 and is the same grey to look at. */
+    --v-faint: #8A8172;
     --v-gold-deep: #8A6D2A;
     --v-gold: #C2A24E;
     --v-gold-lit: #EFD9A0;
