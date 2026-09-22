@@ -41,10 +41,16 @@ const base = basePrefixFor(route);
 const homes = alternatesFor("index.html").filter((a) => a.hreflang !== "x-default");
 const isTranslated = alternates.length > 1;
 const entries = isTranslated ? alternates : homes;
+
+// The visible word, in the language of the page it sits on. It used to be the
+// literal string "Language" on every page, so an Indonesian page headed a
+// block of Indonesian with an English label — the one word on the page that
+// announced the translation was not itself translated.
+const heading = LOCALE_META[(current ?? "en") as SiteLocale].language;
 ---
 {entries.length > 1 && (
   <nav class="lsw" aria-label={label}>
-    <span class="lsw-label">Language</span>
+    <span class="lsw-label">{heading}</span>
     <ul>
       {entries.map((a) => {
         const loc = a.hreflang as SiteLocale;

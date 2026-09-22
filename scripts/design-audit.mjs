@@ -158,6 +158,34 @@ for (const path of PAGES) {
   await page.close();
 }
 
+// --- Core Web Vitals ---------------------------------------------------------
+// Added because the localised pages shipped with CLS 0.2947 — a failing Core
+// Web Vital, on the pages built to rank in new markets — and nothing in this
+// repository would have noticed: not the build, not astro check, not the SEO
+// audit, not a screenshot. The cause was a web font swapping in and adding a
+// line to a paragraph, which is invisible unless something is watching for it.
+//
+// Thresholds are Google's: LCP good under 2500ms, CLS good under 0.1, poor at
+// 0.25. Served from localhost, so LCP here measures the page's own work rather
+// than the network — a regression shows up as a change, not as an absolute.
+console.log("\nCore Web Vitals (localhost — watch for CHANGES, not absolutes)");
+console.log("  page".padEnd(28), "LCP", "     CLS");
+for (const path of [...PAGES.slice(0, 5), "de/index.html", "id/index.html"]) {
+  const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
+  await page.goto(base + path, { waitUntil: "networkidle" });
+  const v = await page.evaluate(() => new Promise((res) => {
+    let lcp = 0, cls = 0;
+    new PerformanceObserver((l) => { for (const e of l.getEntries()) lcp = Math.max(lcp, e.startTime); })
+      .observe({ type: "largest-contentful-paint", buffered: true });
+    new PerformanceObserver((l) => { for (const e of l.getEntries()) if (!e.hadRecentInput) cls += e.value; })
+      .observe({ type: "layout-shift", buffered: true });
+    setTimeout(() => res({ lcp: Math.round(lcp), cls: +cls.toFixed(4) }), 900);
+  }));
+  const flag = v.cls >= 0.25 ? "  ✗ POOR" : v.cls >= 0.1 ? "  ! needs work" : "";
+  console.log("  " + path.padEnd(26), String(v.lcp + "ms").padEnd(8), String(v.cls).padEnd(8) + flag);
+  await page.close();
+}
+
 // --- focus: real Tab presses, never el.focus() ------------------------------
 console.log("\nfocus ring, 25 Tab stops");
 for (const path of ["index.html", "tours.html", "vip.html", "plan.html", "private-hire.html"]) {

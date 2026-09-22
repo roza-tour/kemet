@@ -64,6 +64,8 @@ export interface LocaleMeta {
    *  in BreadcrumbList. A German page whose crumb trail reads "HOME" is a
    *  small but real tell that the page is a translation of an English one. */
   home: string;
+  /** The word "Language", for the switcher's own visible label. */
+  language: string;
   /** Short label for the switcher chip. */
   short: string;
   /** Locale used for number and date formatting. */
@@ -71,14 +73,14 @@ export interface LocaleMeta {
 }
 
 export const LOCALE_META: Record<SiteLocale, LocaleMeta> = {
-  en: { tag: "en", home: "Home", endonym: "English", short: "EN", formatLocale: "en-IE" },
-  de: { tag: "de", home: "Startseite", endonym: "Deutsch", short: "DE", formatLocale: "de-DE" },
-  it: { tag: "it", home: "Home", endonym: "Italiano", short: "IT", formatLocale: "it-IT" },
-  es: { tag: "es", home: "Inicio", endonym: "Español", short: "ES", formatLocale: "es-ES" },
-  fr: { tag: "fr", home: "Accueil", endonym: "Français", short: "FR", formatLocale: "fr-FR" },
-  ru: { tag: "ru", home: "Главная", endonym: "Русский", short: "RU", formatLocale: "ru-RU" },
-  id: { tag: "id", home: "Beranda", endonym: "Bahasa Indonesia", short: "ID", formatLocale: "id-ID" },
-  ms: { tag: "ms", home: "Utama", endonym: "Bahasa Melayu", short: "MS", formatLocale: "ms-MY" },
+  en: { tag: "en", home: "Home", language: "Language", endonym: "English", short: "EN", formatLocale: "en-IE" },
+  de: { tag: "de", home: "Startseite", language: "Sprache", endonym: "Deutsch", short: "DE", formatLocale: "de-DE" },
+  it: { tag: "it", home: "Home", language: "Lingua", endonym: "Italiano", short: "IT", formatLocale: "it-IT" },
+  es: { tag: "es", home: "Inicio", language: "Idioma", endonym: "Español", short: "ES", formatLocale: "es-ES" },
+  fr: { tag: "fr", home: "Accueil", language: "Langue", endonym: "Français", short: "FR", formatLocale: "fr-FR" },
+  ru: { tag: "ru", home: "Главная", language: "Язык", endonym: "Русский", short: "RU", formatLocale: "ru-RU" },
+  id: { tag: "id", home: "Beranda", language: "Bahasa", endonym: "Bahasa Indonesia", short: "ID", formatLocale: "id-ID" },
+  ms: { tag: "ms", home: "Utama", language: "Bahasa", endonym: "Bahasa Melayu", short: "MS", formatLocale: "ms-MY" },
 };
 
 /**
