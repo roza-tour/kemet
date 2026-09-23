@@ -293,8 +293,12 @@ for (const k of keys) {
 // --- Market targeting -----------------------------------------------------
 // Read back out of the BUILT pages, not out of the source that produced them:
 // the question this answers is "what did the site actually ship", and a source
-// file cannot answer that. Cross-checked against the entry-requirements pages
-// so a market can never be declared while the page for that passport is gone.
+// file cannot answer that.
+//
+// This used to cross-check each declared market against its per-nationality
+// entry-requirements page. That section was removed, so the check went with
+// it — a test whose subject no longer exists reports a failure on every row
+// and teaches you to ignore the report.
 {
   const org = (() => {
     const raw = readFileSync('index.html', 'utf8');
@@ -313,16 +317,6 @@ for (const k of keys) {
     const countries = [].concat(org.audience.geographicArea);
     console.log(`   ${countries.length} markets: ` +
       countries.map((c) => c.identifier || c.name).join(' '));
-    const noVisaPage = countries.filter((c) => {
-      const slug = (c.name || '').toLowerCase().replace(/[^a-z]+/g, '-').replace(/^-|-$/g, '');
-      return !existsSync(`visa/${slug}.html`);
-    });
-    if (noVisaPage.length) {
-      console.log('   no entry-requirements page yet: ' +
-        noVisaPage.map((c) => c.name).join(', '));
-    } else {
-      console.log('   every declared market has an entry-requirements page.');
-    }
   }
 }
 
