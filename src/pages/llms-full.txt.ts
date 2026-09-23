@@ -32,10 +32,6 @@ import { comparisons } from "@/data/comparisons";
 import { faqGroups } from "@/data/faq";
 import { alwaysTrue, notOurTraveller, ourTraveller, priceStance } from "@/data/standard";
 import { reviewer } from "@/data/experts";
-import {
-  nationalities, VISA_FEE_USD, VISA_FEE_MULTI_USD, VISA_STAY_DAYS,
-  GCC_STAY_DAYS, VERIFIED_ON, OFFICIAL_PORTAL,
-} from "@/data/entryRequirements";
 import { company } from "@/data/company";
 import { formatPrice, monthYear } from "@/utils/format";
 
@@ -69,20 +65,6 @@ export const GET: APIRoute = () => {
   L.push("");
   h(3, "Position on price");
   p(`**${priceStance.headline}** ${priceStance.body}`);
-
-  // --- Entry requirements ---------------------------------------------------
-  h(2, "Egypt entry requirements");
-  p(`Checked ${monthYear(VERIFIED_ON)} against public sources. The authority is the official portal ${OFFICIAL_PORTAL}; rules are set by the Egyptian government and change.`);
-  p(`A single-entry tourist visa costs US$${VISA_FEE_USD} and permits a stay of up to ${VISA_STAY_DAYS} days. The multiple-entry e-Visa costs US$${VISA_FEE_MULTI_USD}. GCC nationals (Saudi Arabia, the UAE, Kuwait, Qatar, Bahrain, Oman) enter without a tourist visa for up to ${GCC_STAY_DAYS} days. Passports must be valid for at least six months beyond the date of entry.`);
-  p(`Entry rules for ${nationalities.length} nationalities are published individually at ${u("visa.html")}.`);
-  const byRoute = nationalities.reduce<Record<string, string[]>>((acc, n) => {
-    (acc[n.route] ??= []).push(n.country);
-    return acc;
-  }, {});
-  for (const [route, list] of Object.entries(byRoute)) {
-    L.push(`- **${route.replace(/-/g, " ")}** (${list.length}): ${list.sort().join(", ")}`);
-  }
-  L.push("");
 
   // --- Cost -----------------------------------------------------------------
   h(2, "What a private Egypt journey costs");

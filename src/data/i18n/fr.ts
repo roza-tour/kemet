@@ -409,65 +409,6 @@ export const fr: LocalizedPage[] = [
   },
 
   // ===== Visa ==============================================================
-  {
-    groupId: "visa",
-    symbol: "ankh",
-    title: "Visa pour l'Égypte — démarches et tarifs 2026 | Kemet",
-    description:
-      "Visa pour l'Égypte : 30 dollars à l'arrivée ou e-Visa en ligne, séjour de 30 jours, passeport valable six mois. Ce qu'il faut savoir avant de partir.",
-    keywords:
-      "visa egypte, visa egypte prix, e-visa egypte, visa a l'arrivee egypte, formalites egypte",
-    crumb: "Visa",
-    h1: "Le visa pour l'Égypte",
-    standfirst:
-      "Simple pour la plupart des passeports européens : 30 dollars, à l'arrivée ou en ligne.",
-    lede:
-      "Pour les ressortissants français, belges, suisses, luxembourgeois et canadiens, l'Égypte délivre un visa touristique de 30 jours. Il s'achète soit à l'arrivée à l'aéroport, soit en ligne avant le départ. Les deux voies aboutissent au même document ; la seule vraie différence est de savoir si vous voulez faire la queue ou non.",
-    facts: [
-      { label: "Tarif", value: "30 USD (entrée simple)" },
-      { label: "Séjour", value: "30 jours" },
-      { label: "Passeport", value: "valable 6 mois" },
-      { label: "e-Visa", value: "visa2egypt.gov.eg" },
-    ],
-    sections: [
-      {
-        title: "À l'arrivée, ou en ligne ?",
-        body:
-          "À l'arrivée : vous achetez la vignette au guichet bancaire de l'aéroport avant le contrôle des passeports, en dollars américains de préférence en espèces, puis vous passez l'immigration. Cela prend en général quelques minutes. En ligne : l'e-Visa se demande sur le portail officiel du gouvernement égyptien, se paie par carte et arrive par courriel ; vous l'imprimez et vous présentez directement à l'immigration. En haute saison, l'e-Visa fait gagner du temps.",
-      },
-      {
-        title: "Le seul site officiel",
-        body:
-          "L'e-Visa se demande uniquement sur visa2egypt.gov.eg, le portail du gouvernement égyptien. De nombreux sites intermédiaires d'apparence officielle facturent trois à cinq fois le tarif pour remplir le même formulaire. Si l'adresse ne se termine pas par gov.eg, ce n'est pas le service officiel.",
-      },
-      {
-        title: "Le permis Sinaï, et sa limite",
-        body:
-          "Si vous entrez par Charm el-Cheikh ou Taba et que vous restez sur la côte du Sinaï du Sud, un permis gratuit de 15 jours est délivré à l'arrivée. Il ne couvre PAS le reste du pays : avec ce permis, vous ne pouvez aller ni au Caire, ni à Louxor. Une excursion au mont Sinaï et à Sainte-Catherine reste possible. Dès que l'itinéraire quitte le Sinaï, il faut le visa complet.",
-      },
-      {
-        title: "Ce que nous faisons, et ce que nous ne faisons pas",
-        body:
-          "Nous vous disons exactement quelle voie choisir pour votre passeport et vos dates, et notre représentant vous accueille à l'aéroport pour vous accompagner jusqu'au guichet. Nous ne demandons pas le visa à votre place et nous ne facturons rien pour cela : la démarche est personnelle et bon marché, et vous n'avez aucune raison de payer un intermédiaire.",
-      },
-    ],
-    faqs: [
-      { q: "Faut-il des dollars en espèces à l'arrivée ?", a: "C'est le plus simple : le guichet accepte les dollars américains sans difficulté, et souvent les euros à un taux moins favorable. Prévoyez des billets en bon état. Si vous préférez ne rien avoir à gérer, prenez l'e-Visa avant de partir." },
-      { q: "Combien de temps à l'avance demander l'e-Visa ?", a: "Le portail officiel recommande au moins sept jours avant le départ. En pratique, l'approbation arrive souvent en un à trois jours ouvrés, mais ne vous y prenez pas la veille." },
-      { q: "Mon passeport doit-il être valable six mois ?", a: "Oui, six mois après la date d'entrée en Égypte. C'est le motif de refus le plus fréquent à l'embarquement, et il est entièrement évitable : vérifiez la date avant de réserver, pas la semaine du départ." },
-      { q: "Les enfants ont-ils besoin d'un visa ?", a: "Oui. Tout voyageur avec son propre passeport a besoin de son propre visa, quel que soit son âge, au même tarif. Un enfant inscrit sur le passeport d'un parent — cas devenu rare — est couvert par celui-ci." },
-      { q: "Peut-on prolonger son séjour ?", a: "Oui, auprès des services de l'immigration en Égypte, mais c'est une démarche administrative qui prend du temps. Si vous savez d'avance que vous restez plus de 30 jours, demandez directement le visa à entrées multiples." },
-    ],
-    cta: {
-      heading: "Un doute sur votre passeport ?",
-      text: "Dites-nous votre nationalité et vos dates ; nous vous confirmons la voie exacte à suivre — gratuitement, avant même toute réservation.",
-      whatsapp: "Bonjour Kemet — une question sur le visa pour l'Égypte.",
-      emailSubject: "Question — visa pour l'Égypte",
-    },
-    moreLabel: "Les règles par nationalité",
-    moreText:
-      "Les règles d'entrée détaillées, passeport par passeport, sont publiées en anglais sur le site principal. Le portail officiel du gouvernement égyptien reste l'autorité en la matière.",
-  },
   // ===== Usage exclusif =====================================================
   // Le marché français est celui de Champollion : la première question porte
   // moins sur la fête que sur l'accès au monument lui-même. La page ouvre donc

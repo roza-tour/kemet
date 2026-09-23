@@ -21,7 +21,6 @@ import { comparisons } from "@/data/comparisons";
 import { TRANSLATION_GROUPS, TRANSLATED_LOCALES, LOCALE_META } from "@/config/i18n";
 import { activities } from "@/data/activities";
 import { reviewer } from "@/data/experts";
-import { nationalities, VISA_FEE_USD, VISA_STAY_DAYS, VERIFIED_ON } from "@/data/entryRequirements";
 import { company } from "@/data/company";
 import { formatPrice } from "@/utils/format";
 import { publicPath } from "@/utils/links";
@@ -51,7 +50,7 @@ export const GET: APIRoute = () => {
     `- Model: 100% private, tailor-made itineraries (no shared coaches, no fixed departures)`,
   );
   lines.push(
-    `- Catalogue: ${tours.length} journeys, ${experiences.length} experiences, ${activities.filter(a=>a.slug).length} activities, ${destinations.length} destinations, ${guides.length} travel guides, ${nationalities.length} nationality visa pages`,
+    `- Catalogue: ${tours.length} journeys, ${experiences.length} experiences, ${activities.filter(a=>a.slug).length} activities, ${destinations.length} destinations, ${guides.length} travel guides`,
   );
   // Attribution, stated plainly for the systems that read this file. An LLM
   // deciding whether to quote a claim weighs who stands behind it; leaving the
@@ -78,7 +77,6 @@ export const GET: APIRoute = () => {
   lines.push(item("Booking, payment & cancellation", "booking.html", "How booking works, deposit and balance terms, accepted payment methods and the cancellation schedule."));
   lines.push(item("About Kemet", "about.html", "Who we are, how we design journeys, and our editorial standards."));
   lines.push(item("Contact", "contact.html", "Enquiry form, WhatsApp, email and business hours."));
-  lines.push(item("Egypt visa requirements by nationality", "visa.html", `Entry rules for ${nationalities.length} passports: visa on arrival, e-Visa or visa-free, with fees and permitted stay.`));
   lines.push("");
 
   lines.push("## Journeys (private, per person, from-prices in EUR)");
@@ -151,20 +149,6 @@ export const GET: APIRoute = () => {
   }
   lines.push("");
 
-  lines.push("## Egypt entry requirements, by nationality");
-  lines.push("");
-  lines.push(`Single-entry tourist visa: US$${VISA_FEE_USD}, up to ${VISA_STAY_DAYS} days. Rules last verified ${VERIFIED_ON}; the authority is https://visa2egypt.gov.eg.`);
-  lines.push("");
-  for (const n of nationalities) {
-    lines.push(
-      item(
-        `Egypt visa for ${n.demonym}`,
-        `visa/${n.slug}.html`,
-        `${n.route === "visa-free" ? "No tourist visa required" : n.route === "visa-on-arrival" ? "Visa on arrival available" : "e-Visa required in advance"}; up to ${n.stayDays} days. Flight time: ${n.flightTime}.`,
-      ),
-    );
-  }
-  lines.push("");
 
   lines.push("## Travel guides (planning references)");
   lines.push("");

@@ -116,10 +116,10 @@ const ogLocaleAlternates = alternates
     and then benchmarked against the alternatives on a throttled 1.6 Mbps / 70ms
     connection, median of three runs per page:
 
-                          /            /tours.html   /visa.html
-      no preload          1412ms       1312ms        1128ms      <- shipped
-      Fraunces + Outfit   1800ms       1868ms        1732ms
-      Outfit only         1584ms       1532ms        1276ms
+                          /            /tours.html
+      no preload          1412ms       1312ms       <- shipped
+      Fraunces + Outfit   1800ms       1868ms
+      Outfit only         1584ms       1532ms
 
     Preloading made LCP 200-550ms WORSE on every page. On a bandwidth-limited
     connection the font requests are promoted above the stylesheet and the hero

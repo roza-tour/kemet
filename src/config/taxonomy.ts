@@ -107,7 +107,6 @@ export const guideCategories: GuideCategory[] = [
   { id: "travel-styles", label: "Travel Styles" },
 
   // Under planning-your-trip
-  { id: "visa-entry", label: "Visa & Entry", parentId: "planning-your-trip" },
   { id: "transportation", label: "Transportation", parentId: "planning-your-trip" },
   { id: "weather-seasons", label: "Weather & Seasons", parentId: "planning-your-trip" },
   { id: "money-budget", label: "Money & Budget", parentId: "planning-your-trip" },

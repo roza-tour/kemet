@@ -39,7 +39,6 @@ import { activities } from "@/data/activities";
 import { occasions } from "@/data/occasions";
 import { months } from "@/data/months";
 import { comparisons } from "@/data/comparisons";
-import { nationalities } from "@/data/entryRequirements";
 import { identities } from "@/data/identities";
 import { symbols, crafts } from "@/data/culture";
 import { savoury, sweets } from "@/data/cuisine";
@@ -91,7 +90,6 @@ export const GET: APIRoute = () => {
     ["identities.html", "The 8 Identities", "Culture", "Pharaonic, Nubian, Coptic, Islamic, Greco-Roman, Bedouin, Siwan, Red Sea."],
     ["when-to-go.html", "When to visit Egypt", "Planning", "Month by month — heat, crowds, prices and festivals."],
     ["egypt-tour-cost.html", "What a private Egypt journey costs", "Planning", "Price bands per person per day and the five things that move them."],
-    ["visa.html", "Egypt visa by nationality", "Planning", `Entry rules for ${nationalities.length} passports — visa on arrival, e-Visa or visa-free.`],
     ["egypt-safety.html", "Is Egypt safe to visit?", "Planning", "Region by region, solo female travel, water, and the Sinai advisory."],
     ["compare.html", "Compare the options", "Planning", "Nile cruise or land tour, dahabiya or ship, Luxor or Aswan."],
     ["faq.html", "Egypt travel FAQ", "Planning", "Straight answers to what travellers ask us most."],
@@ -171,13 +169,6 @@ export const GET: APIRoute = () => {
     docs.push({
       u: "identities.html", t: x.name, s: "Identity", d: clean(x.intro),
       k: terms(x.name, x.intro),
-    });
-  }
-  // Visa pages are the long tail — someone types their nationality, not "visa".
-  for (const x of nationalities) {
-    docs.push({
-      u: `visa/${x.slug}.html`, t: `Egypt visa for ${x.demonym}`, s: "Visa", d: clean(x.route.replace(/-/g, " ")),
-      k: terms(x.country, x.demonym, x.code, "visa passport entry requirements"),
     });
   }
   // --- Translated pages -----------------------------------------------------

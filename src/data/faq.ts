@@ -84,7 +84,6 @@ export const faqGroups: FaqGroup[] = [
     items: planningAndBooking,
   },
   { heading: "Egypt travel basics", items: fromGuide("egypt-travel-guide") },
-  { heading: "Visas & entry", items: fromGuide("egypt-visa-guide") },
   { heading: "When to go & weather", items: fromGuide("best-time-to-visit-egypt") },
   { heading: "Getting around Egypt", items: fromGuide("transportation-in-egypt") },
   { heading: "Food & drink", items: fromGuide("egyptian-food-guide") },

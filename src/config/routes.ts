@@ -69,7 +69,6 @@ export const RESERVED_ROOT_SLUGS: ReadonlySet<string> = new Set([
   "support",
   "search",
   "sitemap",
-  "visa",
   "occasions",
   "when-to-go",
   "compare",

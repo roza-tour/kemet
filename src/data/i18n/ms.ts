@@ -9,9 +9,6 @@
 // Al-Azhar and the tomb of Imam al-Shafi'i alongside Giza, halal as an assumed
 // baseline rather than a special request, and a great many journeys attached
 // to an Umrah in Saudi Arabia.
-//
-// VISA: Malaysia IS corroborated in data/entryRequirements (visa on arrival,
-// 30 days), so the visa page states it plainly — unlike the Indonesian one.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
 
@@ -413,70 +410,6 @@ export const ms: LocalizedPage[] = [
   },
 
   // ===== Visa ==============================================================
-  {
-    groupId: "visa",
-    symbol: "ankh",
-    title: "Visa Mesir untuk Rakyat Malaysia 2026 | Kemet",
-    description:
-      "Visa Mesir untuk pemegang pasport Malaysia: visa on arrival 30 dolar, tinggal sehingga 30 hari, pasport sah enam bulan. Apa yang perlu disediakan.",
-    keywords:
-      "visa mesir untuk rakyat malaysia, visa on arrival mesir, e-visa mesir, syarat masuk mesir malaysia",
-    crumb: "Visa",
-    h1: "Visa Mesir untuk rakyat Malaysia",
-    standfirst:
-      "Mudah bagi pasport Malaysia: 30 dolar, dibeli di lapangan terbang ketika tiba.",
-    lede:
-      "Pemegang pasport Malaysia boleh membeli visa pelancong Mesir ketika tiba di lapangan terbang, dengan bayaran 30 dolar Amerika dan kebenaran tinggal sehingga 30 hari. Tiada permohonan awal yang diperlukan. Yang perlu diperiksa sebelum menempah tiket bukan visa, tetapi tarikh luput pasport anda.",
-    facts: [
-      { label: "Laluan", value: "Visa ketika tiba" },
-      { label: "Bayaran", value: "30 USD (sekali masuk)" },
-      { label: "Tinggal", value: "sehingga 30 hari" },
-      { label: "Pasport", value: "sah 6 bulan" },
-    ],
-    sections: [
-      {
-        title: "Bagaimana ia berjalan di lapangan terbang",
-        body:
-          "Selepas turun dari pesawat dan sebelum kaunter imigresen, terdapat kaunter bank yang menjual pelekat visa. Anda membayar 30 dolar Amerika — tunai adalah paling lancar — pelekat itu dilekatkan pada pasport, dan anda terus ke imigresen. Lazimnya prosesnya beberapa minit sahaja. Wakil kami menyambut anda di lapangan terbang dan mengiringi anda ke kaunter yang betul.",
-      },
-      {
-        title: "Kalau anda lebih suka menguruskannya awal",
-        body:
-          "E-Visa dalam talian juga tersedia pada harga yang sama dan menjimatkan masa pada musim sibuk. Ia dipohon di portal kerajaan Mesir, dibayar dengan kad, dan sampai melalui e-mel untuk dicetak. Kedua-dua laluan menghasilkan dokumen yang sama; bezanya hanya sama ada anda mahu beratur atau tidak.",
-      },
-      {
-        title: "Hanya satu laman yang rasmi",
-        body:
-          "E-Visa dipohon hanya melalui visa2egypt.gov.eg, portal kerajaan Mesir. Banyak laman perantara yang kelihatan rasmi mengenakan tiga hingga lima kali ganda untuk mengisikan borang yang sama. Jika alamatnya tidak berakhir dengan gov.eg, itu bukan perkhidmatan rasmi.",
-      },
-      {
-        title: "Permit Sinai dan hadnya",
-        body:
-          "Jika anda masuk melalui Sharm El Sheikh atau Taba dan kekal di pesisir Sinai Selatan, terdapat permit percuma 15 hari yang diberi ketika tiba. Permit ini TIDAK merangkumi wilayah Mesir yang lain: dengannya anda tidak boleh pergi ke Kaherah mahupun Luxor. Lawatan ke Gunung Sinai dan Biara Saint Catherine masih dibenarkan. Sebaik sahaja laluan keluar dari Sinai, visa penuh diperlukan.",
-      },
-      {
-        title: "Apa yang kami buat, dan apa yang tidak",
-        body:
-          "Kami memberitahu dengan tepat laluan mana yang sesuai untuk pasport dan tarikh anda, dan wakil kami mengiringi anda di lapangan terbang. Kami tidak memohon visa bagi pihak anda dan tidak mengenakan sebarang caj untuk itu: prosesnya peribadi dan murah, dan tiada sebab untuk anda membayar orang tengah.",
-      },
-    ],
-    faqs: [
-      { q: "Perlukah tunai dolar ketika tiba?", a: "Itu paling mudah: kaunter menerima dolar Amerika tanpa masalah, dan kadangkala euro pada kadar yang kurang baik. Bawa not dalam keadaan elok. Jika anda tidak mahu menguruskan apa-apa di sana, mohon e-Visa sebelum berangkat." },
-      { q: "Betulkah pasport perlu sah enam bulan?", a: "Ya, enam bulan dari tarikh masuk ke Mesir. Inilah punca penolakan paling kerap di kaunter berlepas, dan ia boleh dielakkan sepenuhnya: semak tarikhnya semasa menempah, bukan seminggu sebelum terbang." },
-      { q: "Adakah kanak-kanak juga memerlukan visa?", a: "Ya. Setiap orang yang memegang pasport sendiri memerlukan visanya sendiri, berapa pun usianya, pada bayaran yang sama." },
-      { q: "Berapa awal e-Visa perlu dipohon?", a: "Portal rasmi mencadangkan sekurang-kurangnya tujuh hari sebelum berangkat. Pada praktiknya kelulusan kerap tiba dalam satu hingga tiga hari bekerja, tetapi jangan tangguh sehingga malam sebelum terbang." },
-      { q: "Bolehkah tempoh tinggal dilanjutkan?", a: "Boleh, melalui pejabat imigresen di Mesir, tetapi ia urusan pentadbiran yang memakan masa. Jika anda sudah tahu akan tinggal melebihi 30 hari, mohon visa masuk berbilang dari awal." },
-    ],
-    cta: {
-      heading: "Ragu tentang pasport anda?",
-      text: "Nyatakan kewarganegaraan dan tarikh perjalanan; kami sahkan laluan yang tepat — percuma, sebelum sebarang tempahan.",
-      whatsapp: "Salam Kemet — saya ada soalan tentang visa Mesir.",
-      emailSubject: "Pertanyaan — visa Mesir",
-    },
-    moreLabel: "Peraturan mengikut kewarganegaraan",
-    moreText:
-      "Peraturan kemasukan terperinci bagi setiap pasport diterbitkan dalam Bahasa Inggeris di laman utama. Portal rasmi kerajaan Mesir kekal sebagai pihak berkuasa dalam hal ini.",
-  },
   // ===== Akses eksklusif ====================================================
   // Pasaran Malaysia untuk halaman ini ialah ACARA, bukan percutian: sesi
   // pertunangan dan prewedding di luar negara, majlis kedua, ulang tahun

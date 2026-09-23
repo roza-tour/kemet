@@ -144,128 +144,9 @@ export const guides: Guide[] = [
     },
   },
 
-  // -------------------------------------------------------------------------
-  // 2. Egypt Visa Guide
-  // -------------------------------------------------------------------------
-  {
-    id: "egypt-visa-guide",
-    slug: "egypt-visa-guide",
-    domain: "guide",
-    title: "Egypt Visa Guide",
-    locales: ["en"],
-    guideType: "planning",
-    category: "visa-entry",
-    parentGuideId: "egypt-travel-guide",
-    shortSummary:
-      "How to get an Egypt tourist visa — visa on arrival, e-Visa, eligibility by nationality, costs, and what to expect at immigration.",
-    difficulty: "easy",
-    readingTimeMinutes: 5,
-    lastUpdated: "2026-01",
-    keyFacts: [
-      { label: "Visa on arrival cost", value: "USD 25 per person" },
-      { label: "e-Visa processing", value: "3–7 business days" },
-      { label: "Passport validity required", value: "At least 6 months beyond entry" },
-      { label: "On-arrival airports", value: "Cairo, Hurghada, Sharm el-Sheikh" },
-      { label: "Stay permitted", value: "30 days (extendable to 6 months)" },
-      { label: "Extension office", value: "Mogamma Building, Tahrir Square, Cairo" },
-    ],
-    keyTakeaways: [
-      "Most western nationalities qualify for visa on arrival — no advance application required",
-      "The e-Visa is convenient for travellers who prefer paperwork confirmed before flying",
-      "Have USD 25 in cash ready for visa on arrival; ATMs are available after immigration",
-      "Keep a photocopy of your passport and visa page separately throughout your stay",
-    ],
-    sections: [
-      {
-        heading: "Egypt visa options at a glance",
-        paragraphs: [
-          "Egypt offers two main routes for tourist entry: visa on arrival and e-Visa. Both grant the same 30-day stay and conditions — the difference is when and how you apply. A small number of nationalities require a full embassy visa in advance.",
-        ],
-      },
-      {
-        heading: "Visa on arrival",
-        paragraphs: [
-          "Citizens of most European, North American, Australian and many other countries can obtain a tourist visa on arrival at Cairo International Airport (Terminals 1 and 2), Hurghada International Airport and Sharm el-Sheikh International Airport.",
-          "The process: on arrival, proceed to the bank counter in the arrivals hall before reaching passport control. Pay USD 25 per person in cash (euros and GBP are accepted at variable exchange rates, so USD is cleaner). You receive a visa sticker to paste into your passport, then present it at the immigration desk as normal.",
-          "Processing is straightforward and typically takes under 30 minutes. Peak arrival periods — early morning long-haul flights — can add 20–40 minutes to the queue.",
-        ],
-      },
-      {
-        heading: "e-Visa",
-        paragraphs: [
-          "Egypt's e-Visa portal allows citizens of eligible countries to apply online before travel. Applications are typically processed within 3–7 business days. The approved e-Visa arrives by email as a PDF — print it and present it alongside your passport at immigration.",
-          "The advantage of the e-Visa is having documentation confirmed before departure, which can reduce time at the airport. The cost is similar to the on-arrival fee.",
-        ],
-        note: "Always use the official government portal for e-Visa applications. Multiple third-party sites mimic the official one and charge unnecessary service fees for the same result.",
-        noteType: "warning",
-      },
-      {
-        heading: "Eligible nationalities",
-        paragraphs: [
-          "Visa on arrival is available to citizens of all EU member states, the United Kingdom, the United States, Canada, Australia, New Zealand, Japan, South Korea, Norway, Switzerland and many others. Some nationalities — including Jordanians and certain Gulf GCC nationals — may enter visa-free.",
-          "Nationalities not covered by on-arrival or e-Visa must apply at the Egyptian embassy or consulate in their country. Allow at least two to four weeks for processing.",
-        ],
-      },
-      {
-        heading: "Entry at land borders",
-        paragraphs: [
-          "Visa on arrival is generally not available at land border crossings. Travellers entering from Israel (Taba border), Libya or Sudan should confirm current entry procedures with the Egyptian embassy well before travel — conditions at these crossings change separately from airports.",
-        ],
-      },
-      {
-        heading: "Extending your stay",
-        paragraphs: [
-          "A standard 30-day tourist visa can be extended to a maximum of six months at the Mogamma building on Tahrir Square in Cairo, or at regional passport offices in Luxor, Aswan and Alexandria. Apply before your current visa expires. Bring your passport, a passport photograph and, at some offices, a letter from your hotel confirming your accommodation.",
-        ],
-      },
-    ],
-    planningTips: [
-      "If applying for an e-Visa, submit at least two weeks before departure to allow for processing and any unforeseen delays.",
-      "Keep a printed copy of your hotel booking confirmation — immigration may request it alongside your visa.",
-      "Obtain comprehensive travel insurance before departure; Egyptian hospitals require upfront payment from uninsured foreign nationals.",
-    ],
-    importantNotes: [
-      "Your passport must be valid for at least 6 months beyond your planned entry date.",
-      "Have USD 25 in cash for visa on arrival — card payment is not consistently available at airport bank counters.",
-      "Travellers with prior Israel entry stamps should check current guidance — this occasionally attracts additional scrutiny at immigration.",
-    ],
-    faqs: [
-      {
-        q: "Can I get an Egypt visa on arrival?",
-        a: "Yes. Citizens of most European, North American, Australian and many other nationalities qualify for visa on arrival at Cairo, Hurghada and Sharm el-Sheikh airports. The fee is USD 25 per person, paid in cash at the bank counter before immigration.",
-      },
-      {
-        q: "How long does the Egypt e-Visa take?",
-        a: "Standard e-Visa applications are processed within 3–7 business days through the official government portal.",
-      },
-      {
-        q: "Can I extend my Egyptian tourist visa?",
-        a: "Yes. A 30-day tourist visa can be extended at the Mogamma building in Cairo or at regional passport offices, allowing stays of up to six months in total.",
-      },
-      {
-        q: "What documents do I need at Egyptian immigration?",
-        a: "Your passport (valid for at least 6 months beyond entry), your visa sticker or printed e-Visa, and your hotel booking confirmation. A return or onward ticket may be requested.",
-      },
-    ],
-    hero: {
-      alt: "The Cairo Tower rising above the Nile and the city skyline",
-      label: "Egypt entry",
-      src: "/images/cairo/cairo-tower-nile-skyline.webp",
-      width: 736,
-      height: 981,
-    },
-    seo: {
-      title: "Egypt Visa Guide — On Arrival, e-Visa & Requirements | Kemet",
-      description:
-        "How to get an Egypt tourist visa. Visa on arrival at airports, e-Visa online application, eligible nationalities, costs and what to expect at immigration.",
-    },
-    relationships: {
-      relatedGuides: guide("egypt-travel-guide"),
-    },
-  },
 
   // -------------------------------------------------------------------------
-  // 3. Best Time to Visit Egypt
+  // 2. Best Time to Visit Egypt
   // -------------------------------------------------------------------------
   {
     id: "best-time-to-visit-egypt",
@@ -393,7 +274,7 @@ export const guides: Guide[] = [
   },
 
   // -------------------------------------------------------------------------
-  // 4. Transportation in Egypt
+  // 3. Transportation in Egypt
   // -------------------------------------------------------------------------
   {
     id: "transportation-in-egypt",
@@ -523,7 +404,7 @@ export const guides: Guide[] = [
   },
 
   // -------------------------------------------------------------------------
-  // 5. Egyptian Food Guide
+  // 4. Egyptian Food Guide
   // -------------------------------------------------------------------------
   {
     id: "egyptian-food-guide",
@@ -661,7 +542,7 @@ export const guides: Guide[] = [
     },
   },
   // -------------------------------------------------------------------------
-  // 6. The Ideal 10-Day Egypt Itinerary
+  // 5. The Ideal 10-Day Egypt Itinerary
   // -------------------------------------------------------------------------
   {
     id: "10-day-egypt-itinerary",
@@ -786,7 +667,7 @@ export const guides: Guide[] = [
   },
 
   // -------------------------------------------------------------------------
-  // 7. What to Pack for Egypt
+  // 6. What to Pack for Egypt
   // -------------------------------------------------------------------------
   {
     id: "egypt-packing-list",
@@ -909,7 +790,7 @@ export const guides: Guide[] = [
     relationships: {
       tours: tour("tour-10-day", "tour-7-day", "tour-nile-cruise"),
       destinations: dest("cairo", "giza", "luxor", "aswan"),
-      relatedGuides: guide("egypt-travel-guide", "best-time-to-visit-egypt", "egypt-visa-guide", "10-day-egypt-itinerary"),
+      relatedGuides: guide("egypt-travel-guide", "best-time-to-visit-egypt", "10-day-egypt-itinerary"),
     },
   },
 ];

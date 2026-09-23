@@ -71,7 +71,6 @@ export const primaryNav: NavItem[] = [
       // shortlist rather than in more reading.
       { label: "Which journey is yours", href: "plan.html" },
       { label: "When to go", href: "when-to-go.html" },
-      { label: "Visa by nationality", href: "visa.html" },
       { label: "Is Egypt safe?", href: "egypt-safety.html" },
       { label: "Travel FAQ", href: "faq.html" },
       { label: "Travel guides", href: hubFor("guide") },
@@ -110,7 +109,6 @@ export const footerExplore: FooterColumn = {
     { label: "Compare", href: "compare.html" },
     { label: "Travel FAQ", href: "faq.html" },
     { label: "Is Egypt safe?", href: "egypt-safety.html" },
-    { label: "Egypt Visa by Nationality", href: "visa.html" },
   ],
 };
 

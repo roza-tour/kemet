@@ -148,6 +148,27 @@ RewriteRule ^lib-[a-z-]+\.php$ - [R=404,L]
 RewriteRule ^index(?:\.html)?$ / [R=301,L]
 RewriteRule ^([a-z]{2})/index\.html$ /$1/ [R=301,L]
 
+# ── RETIRED: the visa section ───────────────────────────────────────────────
+# visa.html, 50 per-nationality pages under visa/, the English visa guide and
+# seven localised visa pages were removed. All 59 were indexed, so they are
+# 301'd rather than left to 404: a redirect passes on whatever authority the
+# URL had, a 404 throws it away, and Search Console counts 59 errors either
+# way until the index catches up.
+#
+# The nationality pages go to the FAQ, which still answers "do I need a visa";
+# each localised page goes to its own language's home page, because sending a
+# Russian or Indonesian reader to an English FAQ is worse than the 404.
+RewriteRule ^visa/[a-z-]+\.html$ /faq.html [R=301,L]
+RewriteRule ^visa\.html$ /faq.html [R=301,L]
+RewriteRule ^guides/egypt-visa-guide\.html$ /guides/egypt-travel-guide.html [R=301,L]
+RewriteRule ^de/aegypten-visum\.html$ /de/ [R=301,L]
+RewriteRule ^it/visto-egitto\.html$ /it/ [R=301,L]
+RewriteRule ^es/visado-egipto\.html$ /es/ [R=301,L]
+RewriteRule ^fr/visa-egypte\.html$ /fr/ [R=301,L]
+RewriteRule ^ru/viza-v-egipet\.html$ /ru/ [R=301,L]
+RewriteRule ^id/visa-mesir\.html$ /id/ [R=301,L]
+RewriteRule ^ms/visa-mesir-untuk-rakyat-malaysia\.html$ /ms/ [R=301,L]
+
 # Section names are BOTH a page and a folder: destinations.html is the page,
 # destinations/ holds the detail pages. Left alone, Apache answers a bare
 # /destinations by redirecting to /destinations/, finding no index.html inside,

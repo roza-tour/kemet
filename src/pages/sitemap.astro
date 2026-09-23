@@ -15,7 +15,6 @@ import { occasions } from "@/data/occasions";
 import { months } from "@/data/months";
 import { comparisons } from "@/data/comparisons";
 import { TRANSLATION_GROUPS, TRANSLATED_LOCALES, LOCALE_META } from "@/config/i18n";
-import { nationalities } from "@/data/entryRequirements";
 import { canonical, publicPath } from "@/utils/links";
 import { site, SITE_URL } from "@/config/site";
 import { breadcrumb } from "@/schemas/jsonld";
@@ -43,7 +42,6 @@ const main = [
 const support = [
   ["Contact", "contact.html", "Start a conversation about your journey."],
   ["Egypt Travel FAQ", "faq.html", "Safety, visas, timing, cost, and more."],
-  ["Egypt Visa by Nationality", "visa.html", `Entry rules for ${nationalities.length} passports.`],
   ["What a private journey costs", "egypt-tour-cost.html", "Real numbers, and what moves them."],
   ["Booking & Cancellation", "booking.html", "Deposit, balance and cancellation terms."],
   ["Privacy Policy", "privacy.html", "What we collect and how we use it."],
@@ -64,7 +62,7 @@ const jsonld = [
 const pageCount =
   main.length + support.length + tours.length + collections.length +
   destinations.length + experiences.length + guides.length +
-  activities.filter((a) => a.slug).length + nationalities.length + occasions.length + months.length + comparisons.length + TRANSLATION_GROUPS.length * TRANSLATED_LOCALES.length;
+  activities.filter((a) => a.slug).length + occasions.length + months.length + comparisons.length + TRANSLATION_GROUPS.length * TRANSLATED_LOCALES.length;
 ---
 <Base
   title={`Site Index — Every Page on Kemet | Kemet`}
@@ -174,15 +172,6 @@ const pageCount =
         <ul class="sm-list">
           {occasions.map((o) => (
             <li><a href={`occasions/${o.slug}.html`}>{o.title}</a><span>{o.shortSummary}</span></li>
-          ))}
-        </ul>
-      </div>
-
-      <div class="sm-group reveal">
-        <h2>Egypt visa by nationality <em>({nationalities.length})</em></h2>
-        <ul class="sm-list sm-cols">
-          {nationalities.map((n) => (
-            <li><a href={`visa/${n.slug}.html`}>Visa for {n.demonym}</a></li>
           ))}
         </ul>
       </div>

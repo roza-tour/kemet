@@ -16,7 +16,16 @@
     "Every group must carry a route for every locale — i18n.ts is typed to fail",
     "the build if one is missing."
   ],
-  "locales": ["en", "de", "it", "es", "fr", "ru", "id", "ms"],
+  "locales": [
+    "en",
+    "de",
+    "it",
+    "es",
+    "fr",
+    "ru",
+    "id",
+    "ms"
+  ],
   "groups": [
     {
       "key": "home",
@@ -94,17 +103,6 @@
       "ru": "ru/bezopasnost-v-egipte.html",
       "id": "id/apakah-mesir-aman.html",
       "ms": "ms/adakah-mesir-selamat.html"
-    },
-    {
-      "key": "visa",
-      "en": "visa.html",
-      "de": "de/aegypten-visum.html",
-      "it": "it/visto-egitto.html",
-      "es": "es/visado-egipto.html",
-      "fr": "fr/visa-egypte.html",
-      "ru": "ru/viza-v-egipet.html",
-      "id": "id/visa-mesir.html",
-      "ms": "ms/visa-mesir-untuk-rakyat-malaysia.html"
     }
   ]
 }

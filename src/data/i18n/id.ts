@@ -8,13 +8,6 @@
 // great many trips are built around an Umrah in Saudi Arabia. The copy reflects
 // that ordering. Reference points: Jakarta and Surabaya, one-stop routings
 // through the Gulf, Lebaran and the June–July school holidays.
-//
-// ⚠️ VISA ACCURACY
-// Indonesia is NOT yet in data/entryRequirements, so no route is asserted for
-// the Indonesian passport on the visa page below — it explains both routes and
-// sends the reader to the Egyptian government portal, which is the site's
-// standing policy for passports we have not corroborated. Once Indonesia is
-// added to that file with a verified route, tighten this page to state it.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
 
@@ -416,65 +409,6 @@ export const id: LocalizedPage[] = [
   },
 
   // ===== Visa ==============================================================
-  {
-    groupId: "visa",
-    symbol: "ankh",
-    title: "Visa Mesir — cara mengurus dan biayanya 2026 | Kemet",
-    description:
-      "Visa Mesir: visa on arrival atau e-Visa daring, izin tinggal 30 hari, paspor berlaku enam bulan. Cara memastikan aturan untuk paspor Anda.",
-    keywords:
-      "visa mesir, visa on arrival mesir, e-visa mesir, syarat masuk mesir, paspor untuk mesir",
-    crumb: "Visa",
-    h1: "Visa masuk Mesir",
-    standfirst:
-      "Dua jalur, satu otoritas — dan satu hal yang wajib diperiksa sebelum memesan tiket.",
-    lede:
-      "Mesir menerbitkan visa turis 30 hari melalui dua jalur: dibeli setibanya di bandara, atau diurus daring sebelum berangkat sebagai e-Visa. Jalur mana yang terbuka untuk Anda ditentukan oleh paspor Anda, bukan oleh maskapai atau agen perjalanan — dan hanya satu situs yang berwenang menjawabnya.",
-    facts: [
-      { label: "Biaya", value: "30 USD (sekali masuk)" },
-      { label: "Izin tinggal", value: "30 hari" },
-      { label: "Paspor", value: "berlaku 6 bulan" },
-      { label: "Portal resmi", value: "visa2egypt.gov.eg" },
-    ],
-    sections: [
-      {
-        title: "Aturan untuk paspor Indonesia",
-        body:
-          "Kami tidak mencantumkan jalur tertentu untuk paspor Indonesia di halaman ini, dan itu disengaja. Ketentuan masuk berubah, dan menebak dapat membuat seseorang kehilangan perjalanannya. Yang kami lakukan: memeriksakan paspor dan tanggal Anda terhadap portal resmi pemerintah Mesir, lalu memberi tahu Anda jalur yang berlaku — tanpa biaya dan sebelum ada pemesanan apa pun. Portal pemerintah Mesir tetap menjadi satu-satunya pihak yang memutuskan.",
-      },
-      {
-        title: "Visa on arrival dan e-Visa",
-        body:
-          "Visa on arrival dibeli di loket bank bandara sebelum pemeriksaan imigrasi, sebaiknya dengan uang tunai dolar AS, lalu Anda lanjut ke imigrasi — biasanya hanya beberapa menit. E-Visa diajukan daring, dibayar dengan kartu, dan tiba melalui surel untuk dicetak. Bila paspor Anda memenuhi syarat keduanya, e-Visa menghemat waktu pada musim ramai.",
-      },
-      {
-        title: "Hanya satu situs yang resmi",
-        body:
-          "E-Visa hanya diajukan melalui visa2egypt.gov.eg, portal pemerintah Mesir. Banyak situs perantara berpenampilan resmi menagih tiga sampai lima kali lipat untuk mengisikan formulir yang sama. Bila alamatnya tidak berakhiran gov.eg, itu bukan layanan resmi.",
-      },
-      {
-        title: "Izin Sinai dan batasnya",
-        body:
-          "Bila Anda masuk melalui Sharm El Sheikh atau Taba dan tetap di pesisir Sinai Selatan, tersedia izin gratis 15 hari saat kedatangan. Izin ini TIDAK mencakup wilayah Mesir lainnya: dengan izin tersebut Anda tidak dapat pergi ke Kairo maupun Luxor. Kunjungan ke Gunung Sinai dan Biara Santa Katarina tetap dimungkinkan. Begitu rute keluar dari Sinai, visa penuh diperlukan.",
-      },
-    ],
-    faqs: [
-      { q: "Bagaimana memastikan aturan untuk paspor saya?", a: "Kirimkan kewarganegaraan dan tanggal perjalanan Anda kepada kami; kami periksakan terhadap portal resmi pemerintah Mesir dan menjawab dengan jalur yang tepat, tanpa biaya dan tanpa keharusan memesan. Anda juga dapat memeriksanya sendiri di visa2egypt.gov.eg." },
-      { q: "Apakah paspor harus berlaku enam bulan?", a: "Ya, enam bulan terhitung sejak tanggal masuk ke Mesir. Ini penyebab penolakan paling umum di konter keberangkatan, dan sepenuhnya dapat dihindari: periksa tanggalnya saat memesan, bukan sepekan sebelum terbang." },
-      { q: "Apakah anak-anak juga memerlukan visa?", a: "Ya. Setiap orang yang memegang paspor sendiri memerlukan visanya sendiri, berapa pun usianya, dengan biaya yang sama." },
-      { q: "Berapa lama sebelumnya e-Visa diajukan?", a: "Portal resmi menganjurkan sekurang-kurangnya tujuh hari sebelum keberangkatan. Dalam praktiknya persetujuan sering datang dalam satu sampai tiga hari kerja, tetapi jangan menundanya sampai malam sebelum terbang." },
-      { q: "Bisakah masa tinggal diperpanjang?", a: "Bisa, melalui kantor imigrasi di Mesir, tetapi itu urusan administratif yang memakan waktu. Bila sejak awal Anda tahu akan tinggal lebih dari 30 hari, ajukan visa multiple entry sejak awal." },
-    ],
-    cta: {
-      heading: "Ragu soal paspor Anda?",
-      text: "Sebutkan kewarganegaraan dan tanggal perjalanan; kami konfirmasikan jalur yang tepat — gratis, bahkan sebelum ada pemesanan.",
-      whatsapp: "Halo Kemet — saya ingin bertanya soal visa Mesir.",
-      emailSubject: "Pertanyaan — visa Mesir",
-    },
-    moreLabel: "Aturan per kewarganegaraan",
-    moreText:
-      "Aturan masuk terperinci untuk setiap paspor yang telah kami verifikasi diterbitkan dalam Bahasa Inggris di situs utama. Portal resmi pemerintah Mesir tetap menjadi otoritas dalam hal ini.",
-  },
   // ===== Akses eksklusif ====================================================
   // Pasar Indonesia untuk halaman ini bukan "wisata" melainkan ACARA: foto
   // prewedding di luar negeri, akad atau resepsi kedua, ulang tahun pernikahan,

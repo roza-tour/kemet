@@ -222,7 +222,7 @@ export const collections: Collection[] = [
       tours: tour("tour-10-day", "tour-7-day", "tour-nile-cruise", "tour-3-day", "tour-giza-museum"),
       destinations: dest("cairo", "giza", "luxor", "aswan", "alexandria"),
       experiences: exp("sunrise-giza-pyramids", "grand-egyptian-museum-private", "luxor-temple-night", "old-cairo-walking"),
-      guides: guide("egypt-travel-guide", "egypt-visa-guide", "best-time-to-visit-egypt", "transportation-in-egypt"),
+      guides: guide("egypt-travel-guide", "best-time-to-visit-egypt", "transportation-in-egypt"),
       relatedCollections: col("egypt-in-winter", "luxury-egypt"),
     },
     seo: {
