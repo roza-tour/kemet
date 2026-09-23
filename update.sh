@@ -96,10 +96,10 @@ say "4/5  التحقق من الموقع  ·  Verifying site"
 FAIL=0
 for f in index.html tours.html contact.html faq.html booking.html privacy.html terms.html \
          sitemap.html 404.html robots.txt llms.txt sitemap-index.xml sitemap-images.xml .htaccess \
-         contact-handler.php visa.html visa/united-states.html BingSiteAuth.xml \
+         contact-handler.php BingSiteAuth.xml guides.html guides/egypt-travel-guide.html \
          occasions.html egypt-tour-cost.html when-to-go.html compare.html \
          when-to-go/october.html compare/luxor-vs-aswan.html occasions/proposal-in-egypt.html \
-         de/index.html it/index.html es/index.html \
+         de/index.html it/index.html es/index.html ru/index.html \
          activities/hot-air-balloon-luxor.html collections/ramadan-in-egypt.html; do
   if [ -s "$f" ]; then ok "$f"; else bad "MISSING: $f"; FAIL=1; fi
 done
