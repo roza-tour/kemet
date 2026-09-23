@@ -24,7 +24,7 @@ import { bookingTerms } from "@/data/booking";
 import { canonical } from "@/utils/links";
 import { site, SITE_URL } from "@/config/site";
 import { breadcrumb, answerPageSchema } from "@/schemas/jsonld";
-import { formatPrice } from "@/utils/format";
+import { formatPrice, BUILD_YEAR } from "@/utils/format";
 
 const ROUTE = "egypt-tour-cost.html";
 
@@ -204,7 +204,7 @@ const jsonld: Record<string, unknown>[] = [
 ];
 ---
 <Base
-  title="How Much a Private Egypt Tour Costs (2026) | Kemet"
+  title={`How Much a Private Egypt Tour Costs (${BUILD_YEAR}) | Kemet`}
   description="What a private, tailor-made Egypt journey costs per person per day, the five things that move the price, and exactly where Kemet sits in the market."
   active={ROUTE}
   jsonld={jsonld}

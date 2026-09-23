@@ -10,6 +10,7 @@
 // through the Gulf, Lebaran and the June–July school holidays.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { BUILD_YEAR } from "@/utils/format";
 
 export const id: LocalizedPage[] = [
   // ===== Beranda ===========================================================
@@ -212,7 +213,7 @@ export const id: LocalizedPage[] = [
   {
     groupId: "cost",
     symbol: "scales",
-    title: "Biaya Liburan ke Mesir — perkiraan nyata 2026 | Kemet",
+    title: `Biaya Liburan ke Mesir — perkiraan nyata ${BUILD_YEAR} | Kemet`,
     description:
       "Berapa biaya liburan privat ke Mesir: kisaran per orang per hari, lima hal yang menggerakkan harga, dan apa saja yang sudah termasuk.",
     keywords:

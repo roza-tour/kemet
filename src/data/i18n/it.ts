@@ -8,6 +8,7 @@
 // than German school terms, Rome and Milan rather than Frankfurt.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { BUILD_YEAR } from "@/utils/format";
 
 export const it: LocalizedPage[] = [
   // ===== Home ==============================================================
@@ -208,7 +209,7 @@ export const it: LocalizedPage[] = [
   {
     groupId: "cost",
     symbol: "sun",
-    title: "Quanto costa un viaggio in Egitto? (2026) | Kemet",
+    title: `Quanto costa un viaggio in Egitto? (${BUILD_YEAR}) | Kemet`,
     description:
       "Quanto costa davvero un viaggio privato in Egitto — le fasce reali del mercato, i cinque fattori che muovono il prezzo e dove si colloca Kemet.",
     keywords:

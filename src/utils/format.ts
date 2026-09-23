@@ -54,3 +54,15 @@ export function monthYear(iso: string): string {
   if (!name) return iso;
   return day ? `${Number(day)} ${name} ${year}` : `${name} ${year}`;
 }
+
+/**
+ * The year this build was made.
+ *
+ * Nine page titles carried a hand-typed "2026" — "Is Egypt Safe to Visit in
+ * 2026?", "How Much a Private Egypt Tour Costs (2026)" and their translations.
+ * Those are exactly the searches where the year decides the click, and on
+ * 1 January every one of them would have read a year out of date in the
+ * results until somebody noticed. Stamping the build year instead means every
+ * publish re-dates them, the same way the seasonal calendar rolls its windows.
+ */
+export const BUILD_YEAR = new Date().getUTCFullYear();

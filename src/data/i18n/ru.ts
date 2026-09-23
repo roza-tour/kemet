@@ -11,6 +11,7 @@
 // Slugs are transliterated to Latin — see config/i18n for why.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { BUILD_YEAR } from "@/utils/format";
 
 export const ru: LocalizedPage[] = [
   // ===== Главная ===========================================================
@@ -213,7 +214,7 @@ export const ru: LocalizedPage[] = [
   {
     groupId: "cost",
     symbol: "scales",
-    title: "Сколько стоит поездка в Египет — расчёт 2026 | Kemet",
+    title: `Сколько стоит поездка в Египет — расчёт ${BUILD_YEAR} | Kemet`,
     description:
       "Сколько на самом деле стоит индивидуальная поездка в Египет: диапазоны на человека в день, пять факторов цены и что в неё уже включено.",
     keywords:

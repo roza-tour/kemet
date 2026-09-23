@@ -8,6 +8,7 @@
 // charter traffic that dominates the market.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { BUILD_YEAR } from "@/utils/format";
 
 export const de: LocalizedPage[] = [
   // ===== Startseite ========================================================
@@ -208,7 +209,7 @@ export const de: LocalizedPage[] = [
   {
     groupId: "cost",
     symbol: "sun",
-    title: "Was kostet eine Ägypten-Reise? (2026) | Kemet",
+    title: `Was kostet eine Ägypten-Reise? (${BUILD_YEAR}) | Kemet`,
     description:
       "Was eine private Ägypten-Reise wirklich kostet — Preisspannen des Marktes, die fünf Faktoren, die den Preis bestimmen, und wo Kemet steht.",
     keywords:

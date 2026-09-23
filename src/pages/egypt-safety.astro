@@ -10,6 +10,7 @@
 // parts of the country that carry a genuine advisory from the parts that do
 // not, and tells the reader to check their own government's current advice
 // rather than taking ours as the last word.
+import { BUILD_YEAR } from "@/utils/format";
 import Base from "@/layouts/Base.astro";
 import PageHero from "@/components/PageHero.astro";
 import Frieze from "@/components/Frieze.astro";
@@ -58,7 +59,7 @@ const regions = [
 
 const faqs = [
   {
-    q: "Is Egypt safe for tourists in 2026?",
+    q: `Is Egypt safe for tourists in ${BUILD_YEAR}?`,
     a: "The tourist regions — Cairo, Giza, Luxor, Aswan, Alexandria and the Red Sea coast — are heavily policed and visited by millions of travellers a year without incident. The practical nuisances are persistent touts at the major sites and heavy Cairo traffic, both of which a private guide and driver remove almost entirely. North Sinai and remote border areas carry standing advisories and are not visited on any itinerary. Check your own government's current travel advice before you book.",
   },
   {
@@ -117,11 +118,11 @@ const jsonld: Record<string, unknown>[] = [
 ];
 ---
 <Base
-  title="Is Egypt Safe to Visit in 2026? An Honest Answer | Kemet"
+  title={`Is Egypt Safe to Visit in ${BUILD_YEAR}? An Honest Answer | Kemet`}
   description="Is Egypt safe? A straight answer region by region — Cairo, Luxor, the Red Sea and Sinai — plus solo female travel, water, touts and the areas to avoid."
   active={ROUTE}
   jsonld={jsonld}
-  keywords="is egypt safe, is egypt safe to visit 2026, egypt safety for tourists, is egypt safe for solo female travellers, is sharm el sheikh safe, egypt travel advice"
+  keywords={`is egypt safe, is egypt safe to visit ${BUILD_YEAR}, egypt safety for tourists, is egypt safe for solo female travellers, is sharm el sheikh safe, egypt travel advice`}
 >
   <PageHero
     crumb="Is Egypt safe?"

@@ -8,6 +8,7 @@
 // a Latin American reader is well used to reading peninsular Spanish.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { BUILD_YEAR } from "@/utils/format";
 
 export const es: LocalizedPage[] = [
   // ===== Inicio ============================================================
@@ -208,7 +209,7 @@ export const es: LocalizedPage[] = [
   {
     groupId: "cost",
     symbol: "sun",
-    title: "¿Cuánto cuesta viajar a Egipto? (2026) | Kemet",
+    title: `¿Cuánto cuesta viajar a Egipto? (${BUILD_YEAR}) | Kemet`,
     description:
       "Cuánto cuesta de verdad un viaje privado a Egipto — las franjas reales del mercado, los cinco factores que mueven el precio y dónde está Kemet.",
     keywords:

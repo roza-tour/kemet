@@ -11,6 +11,7 @@
 // to an Umrah in Saudi Arabia.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { BUILD_YEAR } from "@/utils/format";
 
 export const ms: LocalizedPage[] = [
   // ===== Utama =============================================================
@@ -213,7 +214,7 @@ export const ms: LocalizedPage[] = [
   {
     groupId: "cost",
     symbol: "scales",
-    title: "Kos Percutian ke Mesir — anggaran sebenar 2026 | Kemet",
+    title: `Kos Percutian ke Mesir — anggaran sebenar ${BUILD_YEAR} | Kemet`,
     description:
       "Berapa kos percutian persendirian ke Mesir: julat seorang sehari, lima perkara yang menggerakkan harga, dan apa yang sudah termasuk.",
     keywords:
