@@ -1,10 +1,21 @@
 // ---------------------------------------------------------------------------
-// Kemet — tour catalogue. All 12 journeys live here; pages are rendered from
+// Kemet — tour catalogue. All 25 journeys live here; pages are rendered from
 // this data by src/pages/[slug].astro and listed on tours.html / index.html.
 //
-// PRICING NOTE: every `price` and `was` value is the source-operator price
-// already marked up by +20%, expressed in EUR, per person. Where a `was`
-// value exists it is shown struck-through.
+// PRICING NOTE: every `price` and `was` value is in EUR, per person.
+//
+// The base was the source-operator price marked up by +20%. On 23 September
+// 2026 every figure was raised a further 10%, so the markup over source now
+// compounds to +32%, not +30% — 1.20 × 1.10, not 1.20 + 0.10. Worth stating
+// because the two are easy to confuse and the difference is real money.
+//
+// The `was` values were raised by the same 10% rather than left alone. Leaving
+// them would have quietly widened every advertised discount, which is a claim
+// nobody made: the struck-through figure is a reference price, not a ceiling.
+// Every discount percentage is unchanged, and no `was` is now at or below its
+// own `price`.
+//
+// Where a `was` value exists it is shown struck-through.
 //
 // DAY TOURS are quoted on a different basis from the multi-day journeys, and
 // the difference is stated on the card, in the price block and in the
@@ -75,8 +86,8 @@ export const tours: Tour[] = [
     cities: ["Cairo", "Giza", "Alexandria", "Aswan", "Luxor"],
     visiting: "Cairo · Giza · Alexandria · Aswan · Luxor",
     isPrivate: privateNote,
-    price: 1741,
-    was: 2263,
+    price: 1915,
+    was: 2489,
     summary:
       "Our most complete journey: Cairo, Alexandria, a sleeper train south, and a three-night Nile cruise from Aswan to Luxor — every layer of Egypt in one arc.",
     overview:
@@ -231,8 +242,8 @@ export const tours: Tour[] = [
     cities: ["Cairo", "Giza", "Alexandria", "Luxor"],
     visiting: "Cairo · Giza · Alexandria · Luxor",
     isPrivate: privateNote,
-    price: 1072,
-    was: 1392,
+    price: 1179,
+    was: 1531,
     summary:
       "The headline acts of Egypt in seven days — the Egyptian Museum, Alexandria, the temples and tombs of Luxor, and the Pyramids of Giza.",
     overview:
@@ -351,8 +362,8 @@ export const tours: Tour[] = [
     cities: ["Cairo", "Giza", "Alexandria"],
     visiting: "Cairo · Giza · Alexandria",
     isPrivate: privateNote,
-    price: 562,
-    was: 730,
+    price: 618,
+    was: 803,
     summary:
       "A compact northern journey — the Egyptian Museum, Alexandria's Greco-Roman layers, the Pyramids of Giza and medieval Cairo.",
     overview:
@@ -440,8 +451,8 @@ export const tours: Tour[] = [
     cities: ["Cairo", "Luxor", "Aswan"],
     visiting: "Luxor · Aswan",
     isPrivate: privateNote,
-    price: 479,
-    was: 540,
+    price: 527,
+    was: 594,
     flightsIncluded: true,
     summary:
       "A fast, flight-included loop through Luxor and Aswan — Karnak, the Valley of the Kings, Philae and the High Dam — out and back from Cairo.",
@@ -529,7 +540,7 @@ export const tours: Tour[] = [
     cities: ["Fayoum"],
     visiting: "Lake Qarun · Wadi El Rayan · Wadi Al-Hitan · Tunis village",
     isPrivate: privateNote,
-    price: 126,
+    price: 139,
     priceBasisPax: DAY_PRICE_PAX,
     ticketsExcluded: true,
     summary:
@@ -610,7 +621,7 @@ export const tours: Tour[] = [
     cities: ["Giza"],
     visiting: "Giza plateau · Great Sphinx · GEM",
     isPrivate: privateNote,
-    price: 72,
+    price: 79,
     priceBasisPax: DAY_PRICE_PAX,
     ticketsExcluded: true,
     summary:
@@ -684,7 +695,7 @@ export const tours: Tour[] = [
     cities: ["Saqqara", "Memphis", "Dahshur"],
     visiting: "Saqqara · Memphis · Dahshur",
     isPrivate: privateNote,
-    price: 62,
+    price: 68,
     priceBasisPax: DAY_PRICE_PAX,
     ticketsExcluded: true,
     summary:
@@ -754,7 +765,7 @@ export const tours: Tour[] = [
     cities: ["Cairo"],
     visiting: "Coptic Cairo · Saladin Citadel",
     isPrivate: privateNote,
-    price: 73,
+    price: 80,
     priceBasisPax: DAY_PRICE_PAX,
     ticketsExcluded: true,
     summary:
@@ -824,7 +835,7 @@ export const tours: Tour[] = [
     cities: ["Cairo"],
     visiting: "Egyptian Museum · NMEC",
     isPrivate: privateNote,
-    price: 58,
+    price: 64,
     priceBasisPax: DAY_PRICE_PAX,
     ticketsExcluded: true,
     summary:
@@ -888,7 +899,7 @@ export const tours: Tour[] = [
     cities: ["Alexandria"],
     visiting: "Catacombs · Qaitbay · Bibliotheca Alexandrina",
     isPrivate: privateNote,
-    price: 52,
+    price: 57,
     priceBasisPax: DAY_PRICE_PAX,
     ticketsExcluded: true,
     summary:
@@ -962,7 +973,7 @@ export const tours: Tour[] = [
     cities: ["Giza"],
     visiting: "Giza plateau · Great Sphinx",
     isPrivate: privateNote,
-    price: 60,
+    price: 66,
     priceBasisPax: DAY_PRICE_PAX,
     ticketsExcluded: true,
     summary:
@@ -1032,7 +1043,7 @@ export const tours: Tour[] = [
     cities: ["Cairo"],
     visiting: "Downtown Cairo · street-food quarters",
     isPrivate: privateNote,
-    price: 54,
+    price: 59,
     priceBasisPax: DAY_PRICE_PAX,
     summary:
       "A guided evening tasting of Cairo's best-loved dishes — koshari, ful and ta'meya, hawawshi and grilled pigeon, kunafa and basbousa, finished at a traditional ahwa.",
@@ -1128,8 +1139,8 @@ export const tours: Tour[] = [
     cities: ["Aswan", "Kom Ombo", "Edfu", "Luxor"],
     visiting: "Aswan · Kom Ombo · Edfu · Luxor",
     isPrivate: privateNote,
-    price: 745,
-    was: 968,
+    price: 820,
+    was: 1065,
     summary:
       "The essential Nile cruise, done properly — Philae and the High Dam, three nights afloat past Kom Ombo and Edfu, and Luxor's East and West Banks with your own Egyptologist.",
     overview:
@@ -1219,7 +1230,7 @@ export const tours: Tour[] = [
     cities: ["Luxor", "Edfu", "Kom Ombo", "Aswan"],
     visiting: "Luxor · Edfu · Kom Ombo · Aswan",
     isPrivate: privateNote,
-    price: 925,
+    price: 1018,
     summary:
       "The deep-history heart of Egypt by private road journey — Karnak, the Valley of the Kings, Edfu, Kom Ombo and Philae, with time to actually absorb them.",
     overview:
@@ -1322,8 +1333,8 @@ export const tours: Tour[] = [
     cities: ["Cairo", "Giza", "Aswan", "Luxor"],
     visiting: "Cairo · Giza · Aswan · Luxor",
     isPrivate: privateNote,
-    price: 1690,
-    was: 2140,
+    price: 1859,
+    was: 2354,
     summary:
       "Egypt as a honeymoon should be — private sunrise at the pyramids, a felucca at golden hour, three nights on the Nile and suites chosen for the view.",
     overview:
@@ -1464,8 +1475,8 @@ export const tours: Tour[] = [
     cities: ["Cairo", "Giza", "Luxor", "Aswan"],
     visiting: "Cairo · Giza · Luxor · Aswan",
     isPrivate: privateNote,
-    price: 1385,
-    was: 1690,
+    price: 1524,
+    was: 1859,
     summary:
       "Egypt with children done right: short guided mornings, family-specialist Egyptologists, pool afternoons, and the moments no classroom can match.",
     overview:
@@ -1595,7 +1606,7 @@ export const tours: Tour[] = [
     cities: ["Cairo", "Giza", "Luxor", "Aswan"],
     visiting: "Cairo · Giza · Luxor · Aswan",
     isPrivate: privateNote,
-    price: 1290,
+    price: 1419,
     summary:
       "An itinerary built backwards from the light: early-access Giza at sunrise, Karnak before the crowds, balloons over Thebes and feluccas at golden hour.",
     overview:
@@ -1720,8 +1731,8 @@ export const tours: Tour[] = [
     cities: ["Cairo", "Giza", "Alexandria", "Aswan", "Abu Simbel", "Luxor", "Sharm El Sheikh"],
     visiting: "Cairo · Alexandria · Aswan · Abu Simbel · Luxor · Red Sea",
     isPrivate: privateNote,
-    price: 2480,
-    was: 2980,
+    price: 2728,
+    was: 3278,
     flightsIncluded: true,
     summary:
       "Our most complete journey: two capitals, a Nile cruise, Ramesses II's mountain temple at Abu Simbel, and four Red Sea days to absorb it all.",
@@ -1858,7 +1869,7 @@ export const tours: Tour[] = [
     cities: ["Cairo", "Giza", "Saqqara", "Memphis"],
     visiting: "Cairo · Giza · Saqqara · Memphis",
     isPrivate: privateNote,
-    price: 795,
+    price: 875,
     summary:
       "A deep, slow reading of the world's greatest layered city — its two museums, three faiths, medieval streets and the necropolis where the pyramid was invented.",
     overview:
@@ -1965,7 +1976,7 @@ export const tours: Tour[] = [
     cities: ["Sharm El Sheikh", "Ras Mohammed"],
     visiting: "Sharm El Sheikh · Ras Mohammed",
     isPrivate: privateNote,
-    price: 890,
+    price: 979,
     summary:
       "The Red Sea done with intent — a private reef-boat day in Ras Mohammed, a Sinai desert evening under the stars, and space left deliberately empty.",
     overview:
@@ -2072,7 +2083,7 @@ export const tours: Tour[] = [
     cities: ["Sharm El Sheikh", "Ras Mohammed", "Tiran"],
     visiting: "Ras Mohammed · Strait of Tiran",
     isPrivate: privateNote,
-    price: 720,
+    price: 792,
     summary:
       "Six guided boat dives across the two best site groups in Sinai — Ras Mohammed and Tiran — with a PADI centre we have vetted, plus a shore warm-up.",
     overview:
@@ -2166,7 +2177,7 @@ export const tours: Tour[] = [
     cities: ["Luxor"],
     visiting: "Karnak · Luxor Temple · West Bank",
     isPrivate: privateNote,
-    price: 495,
+    price: 544,
     summary:
       "Luxor without the sprint: Karnak at opening, the Valley of the Kings before the heat, Hatshepsut's terraces and the Avenue of Sphinxes after dark.",
     overview:
@@ -2249,7 +2260,7 @@ export const tours: Tour[] = [
     cities: ["Cairo", "Giza"],
     visiting: "Giza · GEM · Islamic Cairo",
     isPrivate: privateNote,
-    price: 545,
+    price: 600,
     summary:
       "The essential Cairo, concierge-run: fast-track immigration, private plateau morning, the Grand Egyptian Museum, and lantern-lit Islamic Cairo by night.",
     overview:
@@ -2329,7 +2340,7 @@ export const tours: Tour[] = [
     cities: ["Alexandria"],
     visiting: "Catacombs · Qaitbay · Bibliotheca · Montaza",
     isPrivate: privateNote,
-    price: 365,
+    price: 402,
     summary:
       "Alexandria with its missing half restored: the Greco-Roman sites by day, then the corniche at dusk, seafood by the water and the morning light day-trips never catch.",
     overview:
@@ -2400,7 +2411,7 @@ export const tours: Tour[] = [
     cities: ["Abu Simbel"],
     visiting: "Great Temple · Temple of Nefertari",
     isPrivate: privateNote,
-    price: 145,
+    price: 160,
     priceBasisPax: DAY_PRICE_PAX,
     ticketsExcluded: true,
     summary:

@@ -32,8 +32,32 @@ const ROUTE = "egypt-tour-cost.html";
 const prices = tours.map((t) => t.price).sort((a, b) => a - b);
 const lowest = prices[0];
 const highest = prices[prices.length - 1];
-const multiDay = tours.filter((t) => /day/i.test(t.durationLabel) && t.price >= 900);
+// `kind`, not a €900 threshold. The old filter used an absolute price to mean
+// "multi-day", which is a proxy that silently changes membership every time
+// prices move — the 10% rise of 23 September 2026 would have pulled two more
+// journeys in. The field that actually says what a journey is, says it.
+const multiDay = tours.filter((t) => t.kind === "multiday");
 const signature = [...multiDay].sort((a, b) => b.price - a.price).slice(0, 3);
+
+// WHAT KEMET ACTUALLY COSTS PER DAY, COMPUTED.
+//
+// The band table below places Kemet in "private, tailor-made, €200–450 per
+// person per day". That is the right tier, and until now it was also the only
+// per-day figure on a page that lists Kemet's real prices a paragraph later —
+// so a reader who divided got a different number and the page contradicted
+// itself. Every multi-day journey worked out between €140 and €188 a day.
+//
+// The honest version is to say what the division actually gives, and to
+// compute it, so the sentence cannot go stale the next time a price changes.
+// Multi-day prices are fully inclusive — 5-star hotels, every entrance fee,
+// the Egyptologist, transfers and lunch — so this is comparable with the band.
+const nightsOf = (label: string) => {
+  const m = /^(\d+)\s*Days?/i.exec(label);
+  return m ? Number(m[1]) : 1;
+};
+const perDay = multiDay.map((t) => t.price / nightsOf(t.durationLabel));
+const perDayLow = Math.round(Math.min(...perDay));
+const perDayHigh = Math.round(Math.max(...perDay));
 
 /** What actually moves the number, in the order it moves it. */
 const drivers = [
@@ -92,7 +116,7 @@ const bands = [
     range: "€200–450",
     per: "per person, per day",
     body:
-      "Where Kemet sits. Your own licensed Egyptologist, your own vehicle and driver, hotels chosen for the room rather than the star rating, and an itinerary written for you. Per-person cost falls as the party grows.",
+      `Where Kemet sits. Your own licensed Egyptologist, your own vehicle and driver, hotels chosen for the room rather than the star rating, and an itinerary written for you. Kemet's own multi-day journeys work out at ${formatPrice(perDayLow)}–${perDayHigh} per person per day, at the entry to this band rather than the middle of it; the figure climbs with hotel tier and charter, and per-person cost falls as the party grows.`,
     us: true,
   },
   {
