@@ -190,10 +190,29 @@ export function tourSchema(tour: Tour): JsonLd[] {
     },
   };
 
+  // "What is included?" and "Are flights included?" are the first two questions
+  // anyone asks about a tour, and the page answers both — in the Included & not
+  // included block, as two plain <ul>s. A list is readable by a person and
+  // invisible as an ANSWER: an assistant asked "does the 10-day trip include
+  // domestic flights?" had nothing to quote and would say it did not know.
+  //
+  // These two entries carry the same lines the page already shows, which is
+  // also what FAQPage requires — the answer must be visible on the page, and
+  // it is, a few centimetres above. Nothing here is written for the schema.
+  const listed = (xs: readonly string[]) => xs.join("; ") + ".";
+  const derivedFaqs = [
+    ...(tour.included?.length
+      ? [{ q: `What is included in ${tour.title}?`, a: `Included: ${listed(tour.included)}` }]
+      : []),
+    ...(tour.excluded?.length
+      ? [{ q: `What is not included in ${tour.title}?`, a: `Not included: ${listed(tour.excluded)}` }]
+      : []),
+  ];
+
   const faqPage: JsonLd = {
     "@context": SCHEMA_CONTEXT,
     "@type": "FAQPage",
-    mainEntity: tour.faqs.map((f) => ({
+    mainEntity: [...tour.faqs, ...derivedFaqs].map((f) => ({
       "@type": "Question",
       name: f.q,
       acceptedAnswer: { "@type": "Answer", text: f.a },
