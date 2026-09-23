@@ -1,5 +1,12 @@
 // ---------------------------------------------------------------------------
-// Progressive-enhancement script, inlined once by Base.astro.
+// Progressive-enhancement script, bundled once by Base.astro.
+//
+// This used to be a template literal exported as a string and written into
+// every page with `set:html`. It is identical on all 171 of them, so that
+// shipped the same 12KB in 171 documents — about 2MB of duplicate bytes, and
+// not one of them cacheable. As a real module Astro hoists it into
+// /_astro/*.js: fetched once, cached for the visit, and the constants below
+// are now referenced directly instead of interpolated into a string.
 //
 // Deliberately minimal (RC9). Pages render fully without JS — there are no
 // loading or scroll-reveal animations. This script only:
@@ -11,11 +18,11 @@
 // All motion is disabled under prefers-reduced-motion.
 // ---------------------------------------------------------------------------
 
+
 const NAV_SCROLL_THRESHOLD = 40; // px before the nav gains its glass background
 const DUST_MAX = 120; // particle ceiling on large screens
 const DUST_DENSITY = 15000; // px² of viewport per particle
 
-export const enhanceScript = `
 (function(){
   var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -38,7 +45,7 @@ export const enhanceScript = `
     function sz(){var d=Math.min(devicePixelRatio||1,1.5);W=innerWidth;H=innerHeight;
       cv.width=W*d;cv.height=H*d;cv.style.width=W+'px';cv.style.height=H+'px';
       cx.setTransform(d,0,0,d,0,0);
-      var n=Math.min(${DUST_MAX},Math.round(W*H/${DUST_DENSITY}));
+      var n=Math.min(DUST_MAX,Math.round(W*H/DUST_DENSITY));
       stars=[];for(var i=0;i<n;i++)stars.push(mk());}
     sz();addEventListener('resize',sz);
     var last=performance.now(),running=true;
@@ -62,7 +69,7 @@ export const enhanceScript = `
   /* nav glass — one passive scroll listener */
   var nav=document.getElementById('nav');
   addEventListener('scroll',function(){var y=scrollY;
-    if(nav)nav.classList.toggle('scrolled',y>${NAV_SCROLL_THRESHOLD});
+    if(nav)nav.classList.toggle('scrolled',y>NAV_SCROLL_THRESHOLD);
   },{passive:true});
 
   /* mobile menu — toggle, close on Escape, reset when resizing to desktop */
@@ -123,7 +130,7 @@ export const enhanceScript = `
      ------------------------------------------------------------------------- */
   try{
     var KP='/k.php', PATH=location.pathname;
-    var QS=location.search.replace(/^\\?/,'').slice(0,80);   /* campaign tag */
+    var QS=location.search.replace(/^\?/,'').slice(0,80);   /* campaign tag */
     var LANG=(navigator.language||'').slice(0,5);            /* nationality signal */
     /* The 404 document is served under whatever URL was requested, so without
        this flag a broken link is indistinguishable from a real page. */
@@ -178,7 +185,7 @@ export const enhanceScript = `
       /* Which card pulled the click. Cards are the whole anchor, so closest()
          returns the link itself; the href identifies the journey. */
       if(a.closest('.jcard,.tile,.dpost,.tease,.god,.sstrip-card,.pick'))
-        KEV('pick',h.replace(/^\\.\\//,'').replace(/\\.html$/,''));
+        KEV('pick',h.replace(/^\.\//,'').replace(/\.html$/,''));
     },true);
 
     /* Enquiry funnel: a form that is started but not sent is the single most
@@ -248,4 +255,3 @@ export const enhanceScript = `
     if(pv)pv.addEventListener('click',function(){strip.scrollBy({left:-360,behavior:'smooth'});KEV('strip')});
     if(nx)nx.addEventListener('click',function(){strip.scrollBy({left:360,behavior:'smooth'});KEV('strip')});}
 })();
-`;

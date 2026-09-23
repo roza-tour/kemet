@@ -85,7 +85,6 @@ const CONTENT_SOURCES = [
   [/^activities\//, ["src/pages/activities/[slug].astro", "src/data/activities.ts"]],
   [/^collections\//, ["src/pages/collections/[slug].astro", "src/data/collections.ts"]],
   [/^guides\//, ["src/pages/guides/[slug].astro", "src/data/guides.ts"]],
-  [/^visa\//, ["src/pages/visa/[slug].astro", "src/data/entryRequirements.ts"]],
   [/^compare\//, ["src/pages/compare/[slug].astro", "src/data/comparisons.ts"]],
   [/^when-to-go\//, ["src/pages/when-to-go/[slug].astro", "src/data/months.ts"]],
   [/^occasions\//, ["src/pages/occasions/[slug].astro", "src/data/occasions.ts"]],

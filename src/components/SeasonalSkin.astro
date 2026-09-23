@@ -51,20 +51,34 @@ function localDates(from?: string, to?: string, fallback = ""): string {
   }
 }
 
-// Serialised to the client as compact rows:
-// [theme, slug, label, note, start, end, priority, eventDate, href]
+// Serialised to the client in two parts, because the one-row-per-window shape
+// this replaced shipped 35KB to every page.
 //
-// The label and note are resolved HERE, at build time, because this component
-// is rendered once per page and the page already knows its language. The
-// client receives one language's worth of strings, not eight.
-const rows = seasonalCalendar.map((w) => {
-  const t = text[w.key];
-  const dates = localDates(w.eventFrom, w.eventTo, w.eventDate ?? "");
-  return [
-    w.theme, w.slug, t.label, t.note.replace("{dates}", dates),
-    w.start, w.end, w.priority, dates, w.href ?? "",
-  ];
+// The calendar holds one window per occasion PER YEAR, thirteen years deep, so
+// that a page built today still knows its season three years from now without a
+// rebuild. Fourteen occasions times thirteen years is 182 windows — and the old
+// format wrote the occasion's label and its whole sentence of prose into every
+// one of them. "Autumn in Egypt" and its note were serialised thirteen times.
+// The prose is 90% of the payload and none of it varies by year.
+//
+// So: `seasonDefs` carries each occasion once, and `seasonWindows` only what
+// actually changes between years — the dates. Same data, same behaviour, 35KB
+// down to about 5KB.
+//
+//   seasonDefs[i]    = [theme, slug, label, noteTemplate, href]
+//   seasonWindows[j] = [seasonIndex, start, end, priority, dates]
+//
+// The label and note are still resolved HERE, at build time: the page already
+// knows its language, so the client receives one language's strings, not eight.
+const keys = [...new Set(seasonalCalendar.map((w) => w.key))];
+const seasonDefs = keys.map((k) => {
+  const w = seasonalCalendar.find((x) => x.key === k)!;
+  return [w.theme, w.slug, text[k].label, text[k].note, w.href ?? ""];
 });
+const seasonWindows = seasonalCalendar.map((w) => [
+  keys.indexOf(w.key), w.start, w.end, w.priority,
+  localDates(w.eventFrom, w.eventTo, w.eventDate ?? ""),
+]);
 ---
 <div id="season-ribbon" class="srb" hidden>
   <a class="srb-in" href="#" id="srb-link">
@@ -78,7 +92,7 @@ const rows = seasonalCalendar.map((w) => {
   <button type="button" class="srb-close" id="srb-close" aria-label={ui.dismiss}>×</button>
 </div>
 
-<script is:inline define:vars={{ rows }}>
+<script is:inline define:vars={{ seasonDefs, seasonWindows }}>
   (function () {
     try {
       var today = new Date();
@@ -88,16 +102,19 @@ const rows = seasonalCalendar.map((w) => {
 
       // Highest-priority window containing today.
       var active = null;
-      for (var i = 0; i < rows.length; i++) {
-        var r = rows[i];
-        if (iso >= r[4] && iso <= r[5]) {
-          if (!active || r[6] > active[6]) active = r;
+      for (var i = 0; i < seasonWindows.length; i++) {
+        var w = seasonWindows[i];
+        if (iso >= w[1] && iso <= w[2]) {
+          if (!active || w[3] > active[3]) active = w;
         }
       }
       if (!active) return;
 
-      var theme = active[0], slug = active[1], label = active[2], note = active[3];
-      var when = active[7], route = active[8];
+      var season = seasonDefs[active[0]];
+      var theme = season[0], slug = season[1], label = season[2];
+      var when = active[4];
+      var note = season[3].replace("{dates}", when);
+      var route = season[4];
 
       // 1) Site-wide accent: everything reads through these custom properties.
       document.documentElement.setAttribute("data-season", theme);
@@ -133,7 +150,7 @@ const rows = seasonalCalendar.map((w) => {
       // as the tab is open and no longer. A dismissal should never be able to
       // survive longer than the visit it was made in. Legacy localStorage keys
       // from either older rule are cleared on sight.
-      var key = "kemet-season-" + slug + "-" + active[4];
+      var key = "kemet-season-" + slug + "-" + active[1];
       try { localStorage.removeItem(key); } catch (e) {}
       try { if (sessionStorage.getItem(key)) return; } catch (e) {}
 

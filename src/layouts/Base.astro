@@ -9,7 +9,6 @@ import {
 import { relativePrefix } from "@/config/routes";
 import { buildPageSeo } from "@/utils/seo";
 import { siteSchema } from "@/schemas/jsonld";
-import { enhanceScript } from "@/scripts/enhance";
 import type { JsonLd } from "@/types";
 import { localeOfRoute, alternatesFor, LOCALE_META } from "@/config/i18n";
 import { canonical } from "@/utils/links";
@@ -203,6 +202,6 @@ const ogLocaleAlternates = alternates
   <SearchPanel />
   <WhatsAppButton />
   <AccessInvite />
-  <script is:inline set:html={enhanceScript}></script>
+  <script>import "../scripts/enhance.client.js";</script>
 </body>
 </html>
