@@ -49,6 +49,18 @@ const route = group[locale];
 const base = "../";
 /** This page IS the locale's own front page — it is not below anything. */
 const isLocaleHome = page.groupId === "home";
+
+// NO SITE-WIDE CTA ON THESE PAGES (`showCta={false}` below).
+// It is written in English, and these pages already end with `.lz-cta` — the
+// same ask, in the language the reader has just read three thousand words of.
+// Two calls to action is one too many; a second one in the wrong language is
+// worse than none.
+//
+// This note lives here rather than beside the prop because a `{/* … */}` in an
+// Astro tag's ATTRIBUTE list is not a comment. The compiler tolerates it and
+// the page renders, but astro check's parser stops reading the template there
+// and then reports every import below as unused — twelve phantom errors, and,
+// far worse, no type checking at all on the rest of the file.
 const lang = LOCALE_META[locale].tag;
 
 const wa = whatsappLink(page.cta.whatsapp);
@@ -100,10 +112,6 @@ const jsonld: Record<string, unknown>[] = [
   active={route}
   jsonld={jsonld}
   keywords={page.keywords}
-  {/* No site-wide CTA here. It is written in English, and these pages already
-      end with `.lz-cta` — the same ask, in the language the reader has just
-      read three thousand words of. Two calls to action is one too many; a
-      second one in the wrong language is worse than none. */}
   showCta={false}
 >
   <PageHero

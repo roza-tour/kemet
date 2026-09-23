@@ -196,7 +196,7 @@ const ogLocaleAlternates = alternates
   <canvas id="dust" aria-hidden="true"></canvas>
   <SvgDefs />
   <Nav active={active} base={base} />
-  <SeasonalSkin />
+  <SeasonalSkin locale={pageLocale} />
   <main id="main"><slot /></main>
   {showCta && <CTA base={base} />}
   <Footer base={base} route={active} />

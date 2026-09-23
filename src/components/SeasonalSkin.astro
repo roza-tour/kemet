@@ -11,12 +11,60 @@
 // shown — the ribbon is hidden by default and only revealed when a window
 // matches, so no visitor ever sees a wrong or empty season.
 import { seasonalCalendar } from "@/data/seasonalCalendar";
+import { SEASON_TEXT, SEASON_UI } from "@/data/i18n/seasons";
+import { LOCALE_META } from "@/config/i18n";
+import type { SiteLocale } from "@/config/i18n";
+
+interface Props {
+  /** The page's language. Base passes the locale it already derived. */
+  locale?: SiteLocale;
+}
+const { locale = "en" } = Astro.props;
+
+const text = SEASON_TEXT[locale];
+const ui = SEASON_UI[locale];
+// `formatLocale`, not `tag`. Plain "en" makes Intl choose US conventions, so
+// the ribbon read "December 24, 2026" while the rest of the site writes
+// "24 December 2026" — the site is registered as en-IE precisely for this.
+const tag = LOCALE_META[locale].formatLocale;
+
+/**
+ * The event's dates, written the way this language writes dates.
+ *
+ * Every note used to carry one hand-typed English string — "9–11 March 2027" —
+ * and show it to every reader in every language. Intl.DateTimeFormat renders
+ * the same two ISO values as "9.–11. März 2027" or "9–11 Maret 2027" instead,
+ * and `formatRange` collapses a same-month range on its own, the way each
+ * language actually collapses it.
+ */
+const fmt = new Intl.DateTimeFormat(tag, { day: "numeric", month: "long", year: "numeric" });
+function localDates(from?: string, to?: string, fallback = ""): string {
+  if (!from) return fallback;
+  const a = new Date(`${from}T12:00:00Z`);
+  const b = new Date(`${to ?? from}T12:00:00Z`);
+  try {
+    return from === (to ?? from) ? fmt.format(a) : fmt.formatRange(a, b);
+  } catch {
+    // formatRange is unavailable on very old runtimes; two formatted dates is
+    // still correct, just less tidy than the language would write it.
+    return from === (to ?? from) ? fmt.format(a) : `${fmt.format(a)} – ${fmt.format(b)}`;
+  }
+}
 
 // Serialised to the client as compact rows:
 // [theme, slug, label, note, start, end, priority, eventDate, href]
-const rows = seasonalCalendar.map((w) => [
-  w.theme, w.slug, w.label, w.note, w.start, w.end, w.priority, w.eventDate ?? "", w.href ?? "",
-]);
+//
+// The label and note are resolved HERE, at build time, because this component
+// is rendered once per page and the page already knows its language. The
+// client receives one language's worth of strings, not eight.
+const rows = seasonalCalendar.map((w) => {
+  const t = text[w.key];
+  const dates = localDates(w.eventFrom, w.eventTo, w.eventDate ?? "");
+  return [
+    w.theme, w.slug, t.label, t.note.replace("{dates}", dates),
+    w.start, w.end, w.priority, dates, w.href ?? "",
+  ];
+});
 ---
 <div id="season-ribbon" class="srb" hidden>
   <a class="srb-in" href="#" id="srb-link">
@@ -25,9 +73,9 @@ const rows = seasonalCalendar.map((w) => [
       <b id="srb-label"></b>
       <span id="srb-note"></span>
     </span>
-    <span class="srb-cta">Explore <i aria-hidden="true"></i></span>
+    <span class="srb-cta">{ui.explore} <i aria-hidden="true"></i></span>
   </a>
-  <button type="button" class="srb-close" id="srb-close" aria-label="Dismiss seasonal notice">×</button>
+  <button type="button" class="srb-close" id="srb-close" aria-label={ui.dismiss}>×</button>
 </div>
 
 <script is:inline define:vars={{ rows }}>

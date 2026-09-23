@@ -27,7 +27,26 @@
 // this file already carried before it was trusted for the rest).
 import type { SeasonalTheme } from "@/types";
 
+/**
+ * Every kind of window the calendar can produce. The wording for each lives in
+ * src/data/i18n/seasons.ts, in all eight languages.
+ */
+export type SeasonKey =
+  | "winter" | "spring" | "summer" | "autumn"
+  | "ramadan" | "eid-fitr" | "eid-adha"
+  | "easter" | "easter-both" | "orthodox-easter"
+  | "sun-festival" | "thanksgiving" | "valentines" | "christmas";
+
 export interface SeasonalWindow {
+  /**
+   * Stable identifier for WHAT this window is, independent of its wording.
+   *
+   * The label and note are translated into eight languages (see
+   * src/data/i18n/seasons.ts) and keying that off the English label would mean
+   * a copy edit in one language silently dropping the other seven. This never
+   * changes and is never shown to anyone.
+   */
+  key: SeasonKey;
   /** Visual identity to apply while this window is active. */
   theme: SeasonalTheme;
   /** Collection page this window links to. */
@@ -44,8 +63,15 @@ export interface SeasonalWindow {
    * occasion outranks them; a dated one-off outranks a religious month.
    */
   priority: number;
-  /** The event's own date(s), for the ribbon copy. Optional. */
+  /**
+   * The event's own dates. `eventDate` is the English rendering; `eventFrom`
+   * and `eventTo` are the ISO values it was rendered from, kept so the ribbon
+   * can format them in the reader's own language and calendar conventions
+   * rather than showing "9–11 March 2027" to a German or Indonesian reader.
+   */
   eventDate?: string;
+  eventFrom?: string;
+  eventTo?: string;
   /**
    * Route to link to, relative to the site root, when the destination is not a
    * collection page. Defaults to `collections/<slug>.html`.
@@ -104,19 +130,23 @@ const BUILD_YEAR = new Date().getUTCFullYear();
 const BASE_YEARS = Array.from({ length: 13 }, (_, i) => BUILD_YEAR + i);
 
 const WINTER = {
+  key: "winter" as const,
   theme: "winter" as const, slug: "egypt-in-winter", label: "Winter in Egypt",
   note: "Peak season — clear skies, 22 °C on the Theban west bank, and the Nile at its best.",
 };
 const SPRING = {
+  key: "spring" as const,
   theme: "spring" as const, slug: "sham-el-nessim-egypt", label: "Spring in Egypt",
   note: "Warm days, cool evenings, and the desert in flower before the summer heat arrives.",
   href: "when-to-go.html",
 };
 const SUMMER = {
+  key: "summer" as const,
   theme: "summer" as const, slug: "egypt-in-summer", label: "Summer in Egypt",
   note: "Luxor at its hottest, so the touring day starts at dawn — and the Red Sea is at its warmest.",
 };
 const AUTUMN = {
+  key: "autumn" as const,
   theme: "autumn" as const, slug: "egypt-in-winter", label: "Autumn in Egypt",
   note: "The heat breaks and the season reopens — the best light of the year on the Nile, before the winter crowds.",
   href: "when-to-go.html",
@@ -142,15 +172,25 @@ function baseSeasons(y: number): SeasonalWindow[] {
 // before it opens, and — for the moon-sighting ones — a day of tail slack.
 
 interface Occasion {
+  key: SeasonKey;
   theme: SeasonalTheme;
   slug: string;
   label: string;
   /** Note text; `{dates}` is replaced with the human-readable event dates. */
   note: string;
-  /** First and last day of the event itself. */
+  /** First and last day of the event itself — this drives the WINDOW. */
   from: string;
   to: string;
-  /** Human-readable event dates for the ribbon. */
+  /**
+   * The dates to SHOW, when they are narrower than the window. Easter's window
+   * runs Good Friday to Easter Monday but the sentence says "Easter Sunday is
+   * …", and the Abu Simbel alignment is one morning inside a two-day window.
+   * Defaults to from/to. Getting this wrong is not cosmetic: the ribbon told
+   * readers Easter Sunday was "26–29 March" when it is the 28th.
+   */
+  showFrom?: string;
+  showTo?: string;
+  /** Human-readable event dates for the ribbon (English fallback). */
   dates: string;
   priority: number;
   /** Islamic dates shift with the crescent — hold the skin a day longer. */
@@ -228,6 +268,7 @@ const thanksgivingDay = (y: number): string => {
 };
 
 const toWindow = (o: Occasion): SeasonalWindow => ({
+  key: o.key,
   theme: o.theme,
   slug: o.slug,
   label: o.label,
@@ -236,22 +277,27 @@ const toWindow = (o: Occasion): SeasonalWindow => ({
   end: o.moonSighted ? shift(o.to, 1) : o.to,
   priority: o.priority,
   eventDate: o.dates,
+  eventFrom: o.showFrom ?? o.from,
+  eventTo: o.showTo ?? o.to,
   ...(o.href ? { href: o.href } : {}),
 });
 
 const ramadan = (from: string, to: string, dates: string): Occasion => ({
+  key: "ramadan",
   theme: "ramadan", slug: "ramadan-in-egypt", label: "Ramadan in Egypt",
   note: "Expected {dates}. Islamic Cairo is lantern-lit until dawn.",
   from, to, dates, priority: 70, moonSighted: true,
 });
 
 const eidAlFitr = (from: string, to: string, dates: string): Occasion => ({
+  key: "eid-fitr",
   theme: "eid", slug: "ramadan-in-egypt", label: "Eid al-Fitr",
   note: "Expected {dates} — the feast that closes Ramadan; festive cities, quiet monuments.",
   from, to, dates, priority: 75, moonSighted: true,
 });
 
 const eidAlAdha = (from: string, to: string, dates: string): Occasion => ({
+  key: "eid-adha",
   theme: "eid", slug: "eid-al-adha-egypt", label: "Eid al-Adha",
   note: "Expected {dates} — Egypt's biggest holiday; quiet monuments, festive cities.",
   from, to, dates, priority: 75, moonSighted: true,
@@ -262,9 +308,12 @@ const sunFestival = (y: number, month: 2 | 10): Occasion => {
   const mm = String(month).padStart(2, "0");
   const name = month === 2 ? "February" : "October";
   return {
+    key: "sun-festival",
     theme: "sun-festival", slug: "abu-simbel-sun-festival", label: "Abu Simbel Sun Festival",
     note: `Sunrise reaches the inner sanctuary on 22 ${name}.`,
-    from: `${y}-${mm}-22`, to: `${y}-${mm}-23`, dates: `22 ${name} ${y}`, priority: 80,
+    from: `${y}-${mm}-22`, to: `${y}-${mm}-23`,
+    showFrom: `${y}-${mm}-22`, showTo: `${y}-${mm}-22`,
+    dates: `22 ${name} ${y}`, priority: 80,
   };
 };
 
@@ -280,9 +329,14 @@ const sunFestival = (y: number, month: 2 | 10): Occasion => {
 const easter = (y: number): Occasion => {
   const sunday = westernEasterDay(y);
   const alsoOrthodox = orthodoxEasterDay(y) === sunday;
-  return easterWindow(shift(sunday, -2), shift(sunday, 1), readable(sunday), alsoOrthodox);
+  return { ...easterWindow(shift(sunday, -2), shift(sunday, 1), readable(sunday), alsoOrthodox),
+           showFrom: sunday, showTo: sunday };
 };
 const easterWindow = (friday: string, monday: string, sunday: string, alsoOrthodox: boolean): Occasion => ({
+  // Two keys, because the two readings are different sentences, not one
+  // sentence with a variable in it: in the years the calendars coincide the
+  // note says so, and that is the whole point of the distinction.
+  key: alsoOrthodox ? "easter-both" : "easter",
   theme: "spring", slug: "sham-el-nessim-egypt", label: "Easter in Egypt",
   note: alsoOrthodox
     ? "Easter Sunday is {dates}, Western and Orthodox together this year — the Nile valley at its best, and booked early."
@@ -299,9 +353,11 @@ const easterWindow = (friday: string, monday: string, sunday: string, alsoOrthod
  */
 const orthodoxEaster = (y: number): Occasion => {
   const sunday = orthodoxEasterDay(y);
-  return orthodoxWindow(shift(sunday, -2), shift(sunday, 1), readable(sunday));
+  return { ...orthodoxWindow(shift(sunday, -2), shift(sunday, 1), readable(sunday)),
+           showFrom: sunday, showTo: sunday };
 };
 const orthodoxWindow = (friday: string, monday: string, sunday: string): Occasion => ({
+  key: "orthodox-easter",
   theme: "spring", slug: "sham-el-nessim-egypt", label: "Orthodox Easter",
   note: "Orthodox and Coptic Easter falls on {dates} — Egypt's own Easter, and the spring weekend the country spends outdoors.",
   from: friday, to: monday, dates: sunday, priority: 62,
@@ -317,6 +373,7 @@ const thanksgiving = (y: number): Occasion => {
   return thanksgivingWindow(thu, readable(thu));
 };
 const thanksgivingWindow = (thursday: string, dates: string): Occasion => ({
+  key: "thanksgiving",
   theme: "autumn", slug: "egypt-in-winter", label: "Thanksgiving week",
   note: "{dates} — the American long weekend, in the best month on the Nile. Book it a season ahead.",
   from: thursday, to: thursday, dates, priority: 45, href: "when-to-go.html",
@@ -328,6 +385,7 @@ const thanksgivingWindow = (thursday: string, dates: string): Occasion => ({
  * alignment all take the site back off it.
  */
 const valentines = (y: number): Occasion => ({
+  key: "valentines",
   theme: "honeymoon", slug: "honeymoon-egypt", label: "Valentine's on the Nile",
   note: `14 February ${y} — a felucca at sunset and dinner on the water, in the best month of the year for it.`,
   from: `${y}-02-14`, to: `${y}-02-14`, dates: `14 February ${y}`, priority: 40,
@@ -335,6 +393,7 @@ const valentines = (y: number): Occasion => ({
 
 /** Western Christmas through Coptic Christmas on 7 January. */
 const christmas = (y: number): Occasion => ({
+  key: "christmas",
   theme: "christmas", slug: "christmas-new-year-egypt", label: "Christmas & New Year in Egypt",
   note: "Winter sun, New Year's Eve on the Nile, Coptic Christmas on 7 January.",
   from: `${y}-12-24`, to: `${y + 1}-01-07`, dates: `24 December ${y} – 7 January ${y + 1}`,
