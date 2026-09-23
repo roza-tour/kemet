@@ -343,7 +343,7 @@ export const de: LocalizedPage[] = [
     symbol: "horus",
     title: "Ist Ägypten sicher? Eine ehrliche Antwort | Kemet",
     description:
-      "Ist Ägypten sicher? Region für Region — Kairo, Luxor, Rotes Meer und Sinai — dazu Alleinreisende Frauen, Wasser, Aufdringlichkeit und die Gebiete mit Reisewarnung.",
+      "Ist Ägypten sicher? Region für Region — Kairo, Luxor, Rotes Meer und Sinai — dazu alleinreisende Frauen, Wasser und die Gebiete mit Reisewarnung.",
     keywords:
       "ist ägypten sicher, ägypten sicherheit, ägypten reisewarnung, sharm el sheikh sicher, hurghada sicher, ägypten alleine reisen frau, ägypten urlaub sicher 2026",
     crumb: "Sicherheit",

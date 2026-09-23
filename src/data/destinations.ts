@@ -606,7 +606,7 @@ export const destinations: Destination[] = [
     seo: {
       title: "Sharm El Sheikh — Ras Mohammed, Reefs & Sinai Desert | Kemet",
       description:
-        "Sharm El Sheikh travel guide: Ras Mohammed National Park, Tiran reefs, shore snorkelling, Bedouin stargazing nights — and how to fit Sinai into an Egypt itinerary.",
+        "Sharm El Sheikh travel guide: Ras Mohammed National Park, the Tiran reefs, shore snorkelling, Bedouin stargazing — and how Sinai fits an itinerary.",
     },
     relationships: { nearbyDestinations: near("hurghada") },
   },

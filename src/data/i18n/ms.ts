@@ -420,7 +420,7 @@ export const ms: LocalizedPage[] = [
     symbol: "horus",
     title: "Tempahan Eksklusif Tapak Mesir — Piramid & Karnak | Kemet",
     description:
-      "Monumen Mesir ditutup kepada orang awam dan dipegang satu rombongan: Piramid Agung selepas waktu lawatan, Karnak untuk jamuan malam, dataran Giza sebelum pintu dibuka.",
+      "Monumen Mesir dipegang untuk satu rombongan: Piramid Agung selepas waktu lawatan, Karnak untuk jamuan malam, dataran Giza sebelum pintu dibuka.",
     keywords:
       "tempah piramid untuk majlis, akses eksklusif piramid giza, fotografi prewedding di mesir, majlis perkahwinan di mesir, acara korporat mesir, sewa tapak bersejarah mesir",
     crumb: "Akses eksklusif",

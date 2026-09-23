@@ -342,7 +342,7 @@ export const es: LocalizedPage[] = [
     symbol: "horus",
     title: "¿Es seguro viajar a Egipto? Respuesta honesta | Kemet",
     description:
-      "¿Es seguro Egipto? Región por región — El Cairo, Luxor, mar Rojo y Sinaí — con mujeres que viajan solas, agua, vendedores insistentes y las zonas desaconsejadas.",
+      "¿Es seguro Egipto? Región por región — El Cairo, Luxor, mar Rojo y Sinaí — con mujeres que viajan solas, el agua y las zonas desaconsejadas.",
     keywords:
       "es seguro viajar a egipto, seguridad en egipto, egipto es peligroso, sharm el sheikh seguro, hurghada seguro, viajar sola a egipto, egipto 2026 seguridad",
     crumb: "Seguridad",

@@ -727,7 +727,7 @@ export const collections: Collection[] = [
     seo: {
       title: "Sham El-Nessim & Spring in Egypt — 2027 Date & Guide | Kemet",
       description:
-        "Sham El-Nessim, Egypt's 4,700-year-old spring festival, falls on 3 May 2027. What it is, how it's celebrated, and why March–May is one of the best times to visit.",
+        "Sham El-Nessim, Egypt's 4,700-year-old spring festival, falls on 3 May 2027. What it is, how it is celebrated, and why March–May is a fine time to go.",
     },
   },
 
@@ -811,7 +811,7 @@ export const collections: Collection[] = [
     seo: {
       title: "The Red Sea, Egypt — Diving, Snorkelling & Resorts | Kemet",
       description:
-        "Egypt's Red Sea: Ras Mohammed, the Tiran reefs and Hurghada. Water at 22–28 °C year-round, 20–30 m visibility, and how to combine the coast with a Nile itinerary.",
+        "Egypt's Red Sea: Ras Mohammed, the Tiran reefs and Hurghada. Water at 22–28 °C year-round, 20–30 m visibility, and how to add the coast to the Nile.",
     },
   },
 
@@ -895,7 +895,7 @@ export const collections: Collection[] = [
     seo: {
       title: "Honeymoons in Egypt — Private Dahabiya, Nile & Red Sea | Kemet",
       description:
-        "Egypt honeymoons designed privately: a dahabiya under sail, sunrise at the pyramids, a felucca at golden hour and a Red Sea finish. When to go and how long to stay.",
+        "Egypt honeymoons designed privately: a dahabiya under sail, sunrise at the pyramids, a felucca at golden hour, a Red Sea finish. When to go, how long.",
     },
   },
   // ---------------------------------------------------------------------------

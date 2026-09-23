@@ -137,7 +137,7 @@ export const guides: Guide[] = [
     seo: {
       title: "Egypt Travel Guide — Visa, When to Go & Transport | Kemet",
       description:
-        "Everything you need to plan a trip to Egypt. Visa requirements, best time to go, getting around, top destinations and practical advice from Egypt travel specialists.",
+        "Everything you need to plan a trip to Egypt: the best time to go, getting around, the destinations worth the days, and advice from Egypt specialists.",
     },
     relationships: {
       destinations: dest("cairo", "giza", "luxor", "aswan", "alexandria"),
@@ -265,7 +265,7 @@ export const guides: Guide[] = [
     seo: {
       title: "Best Time to Visit Egypt — Season-by-Season Guide | Kemet",
       description:
-        "When to go to Egypt. October to April is the peak season for the Nile Valley. Season-by-season breakdown covering Cairo, Luxor, Aswan, Alexandria and the Red Sea.",
+        "When to go to Egypt. October to April is peak season in the Nile Valley. A season-by-season read on Cairo, Luxor, Aswan, Alexandria and the Red Sea.",
     },
     relationships: {
       destinations: dest("cairo", "giza", "luxor", "aswan", "alexandria"),
@@ -395,7 +395,7 @@ export const guides: Guide[] = [
     seo: {
       title: "Getting Around Egypt — Trains, Flights & Cruises | Kemet",
       description:
-        "How to travel between Egypt's cities. Domestic flights, high-speed trains, Nile cruises, the Cairo Metro and private transfers explained for the main tourist route.",
+        "How to travel between Egypt's cities: domestic flights, high-speed trains, Nile cruises, the Cairo Metro and private transfers on the tourist route.",
     },
     relationships: {
       destinations: dest("cairo", "giza", "luxor", "aswan"),

@@ -103,7 +103,7 @@ export const experiences: Experience[] = [
     seo: {
       title: "Sunrise at the Giza Pyramids — Private Dawn Experience | Kemet",
       description:
-        "Private early-access dawn experience at the Giza Plateau with a licensed Egyptologist. Watch first light break over the Great Pyramid before the day-visitors arrive.",
+        "Private early-access dawn visit to the Giza Plateau with a licensed Egyptologist — first light over the Great Pyramid, before the day-visitors.",
     },
     relationships: {
       destinations: [{ domain: "destination", id: "giza" }],
@@ -298,7 +298,7 @@ export const experiences: Experience[] = [
     seo: {
       title: "Old Cairo Walking Experience — Private Historian Tour | Kemet",
       description:
-        "Private walking tour of Islamic Cairo and the Coptic quarter with a historian guide. Roman fortress of Babylon, Ibn Tulun Mosque, Hanging Church and Khan el-Khalili.",
+        "Private walking tour of Islamic Cairo and the Coptic quarter: the fortress of Babylon, Ibn Tulun Mosque, the Hanging Church and Khan el-Khalili.",
     },
     relationships: {
       destinations: [{ domain: "destination", id: "cairo" }],
@@ -673,7 +673,7 @@ export const experiences: Experience[] = [
     seo: {
       title: "Hot-Air Balloon over Luxor — Private Dawn Flight | Kemet",
       description:
-        "Sunrise balloon flight over Luxor's West Bank — the Valley of the Kings, Hatshepsut's temple and the Nile at dawn, with licensed pilots and flexible-date booking.",
+        "Sunrise balloon flight over Luxor's West Bank — the Valley of the Kings, Hatshepsut's temple and the Nile at dawn, with licensed pilots.",
     },
     relationships: {
       destinations: [{ domain: "destination", id: "luxor" }],

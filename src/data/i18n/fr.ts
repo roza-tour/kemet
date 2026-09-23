@@ -349,7 +349,7 @@ export const fr: LocalizedPage[] = [
     symbol: "eye",
     title: "L'Égypte est-elle sûre ? Réponse région par région | Kemet",
     description:
-      "L'Égypte est-elle sûre ? Région par région — Le Caire, Louxor, la mer Rouge et le Sinaï — avec les femmes seules, l'eau, les rabatteurs et les zones déconseillées.",
+      "L'Égypte est-elle sûre ? Région par région — Le Caire, Louxor, la mer Rouge et le Sinaï — avec les femmes seules, l'eau et les zones déconseillées.",
     keywords:
       "egypte securite, est-ce que l'egypte est sure, voyage egypte danger, sinai securite, femme seule egypte",
     crumb: "Sécurité",
@@ -418,7 +418,7 @@ export const fr: LocalizedPage[] = [
     symbol: "horus",
     title: "Monuments en exclusivité en Égypte | Kemet",
     description:
-      "Des monuments fermés au public et réservés à un seul groupe : la Grande Pyramide hors horaires, le plateau de Gizeh avant l'ouverture, dîner dans l'enceinte de Karnak.",
+      "Des monuments réservés à un seul groupe : la Grande Pyramide hors horaires, le plateau de Gizeh avant l'ouverture, dîner dans l'enceinte de Karnak.",
     keywords:
       "privatiser la grande pyramide, accès privé pyramide de kheops, mariage en égypte, événement d'entreprise égypte, dîner privé karnak, privatiser un monument égypte",
     crumb: "Usage exclusif",

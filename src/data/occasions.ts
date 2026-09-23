@@ -348,7 +348,7 @@ export const occasions: Occasion[] = [
     symbol: "palm",
     shortSummary: "Grandparents, parents and children in one country, at one pace that works.",
     metaDescription:
-      "Planning an Egypt journey across three generations — pace, access, room configurations and the sites that hold a nine-year-old and a seventy-nine-year-old at once.",
+      "Planning an Egypt journey across three generations — pace, access, rooms, and the sites that hold a nine-year-old and a seventy-nine-year-old at once.",
     lede:
       "This is the hardest trip to plan well and the one people are most glad they did. A nine-year-old and a seventy-nine-year-old want genuinely different things from a Tuesday, and the failure mode is not disagreement — it is a compromise that suits neither, with everyone politely exhausted by day four. It is entirely solvable, but not by an itinerary bought off a page.",
     whatChanges:
