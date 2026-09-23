@@ -2,6 +2,16 @@
 // Shared SVG <defs> rendered once per page by Base.astro. Every inline gold
 // glyph (BrandMark, SymbolIcon, the hero plaque) paints itself with this
 // gradient via url(#g), so it only needs to be defined here.
+//
+// The SymbolIcon glyphs are defined here too, as <symbol> elements each icon
+// then references with <use>. All thirteen are emitted whether the page uses
+// them or not: about 5KB, fixed. The alternative — tracking which glyphs a
+// page asked for and emitting only those — needs per-request state in a
+// module that Astro renders before the page body, and the failure mode is an
+// icon that silently renders nothing. 5KB is the cheaper answer, and it pays
+// for itself on any page drawing more than a dozen icons, which is all but
+// six of them.
+import { GLYPHS } from "@/data/glyphs";
 ---
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
@@ -27,4 +37,7 @@
       <stop offset="1" stop-color="#A87E32" />
     </linearGradient>
   </defs>
+  {Object.entries(GLYPHS).map(([name, body]) => (
+    <symbol id={`sym-${name}`} viewBox="0 0 100 100" set:html={body} />
+  ))}
 </svg>

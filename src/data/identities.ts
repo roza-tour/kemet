@@ -109,7 +109,7 @@ export const identities: Identity[] = [
   {
     id: "greco",
     name: "Greco-Roman",
-    symbol: "column",
+    symbol: "greco",  // the glyph is keyed "greco"; "column" matched nothing
     accentVar: "--greco",
     intro:
       "Alexander's Mediterranean Egypt — Hellenistic cities, Roman ruins and the memory of the great Library.",
