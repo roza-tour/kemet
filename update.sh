@@ -31,6 +31,13 @@ bad()  { printf '\033[0;31m   ✘ %s\033[0m\n' "$1"; }
 
 cd "$REPO_DIR" || { bad "Cannot enter $REPO_DIR"; exit 1; }
 
+# This script updates ITSELF in step 3, and bash reads a script this size into
+# memory in one go — so the rest of the run keeps executing the OLD text even
+# though the new file is already on disk. That is how a corrected file list
+# still reported the files it was corrected to stop looking for. Remember the
+# current contents now; step 3 re-executes the new version if they changed.
+SELF_SUM="$(sha256sum "$0" 2>/dev/null | cut -d" " -f1)"
+
 # --- 1. Make sure this is the right git checkout ----------------------------
 say "1/5  التحقق من المستودع  ·  Checking repository"
 if [ ! -d .git ]; then
@@ -71,6 +78,14 @@ if ! git reset --hard "origin/$BRANCH" --quiet 2>/dev/null; then
 fi
 # -e _stats: NEVER delete the analytics + enquiry logs the site writes at runtime
 git clean -fd --quiet -e node_modules -e _stats 2>/dev/null || true
+
+# Did the update replace this script? Then finish the run as the new one,
+# once. KEMET_REEXEC stops it looping if the file somehow keeps changing.
+if [ "${KEMET_REEXEC:-}" != "1" ] \
+   && [ "$SELF_SUM" != "$(sha256sum "$0" 2>/dev/null | cut -d" " -f1)" ]; then
+  ok "هذا الملف نفسه اتحدّث · this script was updated — running the new version"
+  KEMET_REEXEC=1 exec bash "$0" "$@"
+fi
 
 AFTER="$(git rev-parse --short HEAD)"
 if [ "$BEFORE" = "none" ]; then
