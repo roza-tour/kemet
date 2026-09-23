@@ -18,6 +18,7 @@
 // on and to keep in touch — which is a better offer once they have seen that
 // the recommendation is any good.
 import Base from "@/layouts/Base.astro";
+import { srcsetFor, SIZES } from "@/utils/images";
 import PageHero from "@/components/PageHero.astro";
 import Frieze from "@/components/Frieze.astro";
 import StandardOfTravel from "@/components/trust/StandardOfTravel.astro";
@@ -38,6 +39,9 @@ const index = tours.map((t) => {
     price: formatPrice(t.price),
     basis: priceBasis(t, true) ?? "",
     img: t.hero?.src ?? "",
+    // computed here, where the variant manifest can be read; the card itself
+    // is assembled in the browser from this record
+    srcset: srcsetFor(t.hero?.src) ?? "",
     alt: t.hero?.alt ?? t.title,
     days: m?.durationDays ?? (t.kind === "day" ? 1 : 7),
     styles: m?.travelStyles ?? [],
@@ -68,7 +72,7 @@ const jsonld = breadcrumb([["Home", "index.html"], ["Plan your journey", "plan.h
 
   <section style="padding-top:var(--s-4)">
     <div class="wrap">
-      <div class="pl" id="planner" data-index={JSON.stringify(index)}>
+      <div class="pl" id="planner" data-index={JSON.stringify(index)} data-card-sizes={SIZES.card}>
 
         <div class="pl-progress" aria-hidden="true"><i id="pl-bar"></i></div>
 
@@ -188,6 +192,8 @@ const jsonld = breadcrumb([["Home", "index.html"], ["Plan your journey", "plan.h
     var root = document.getElementById("planner");
     if (!root) return;
     var TOURS = JSON.parse(root.dataset.index);
+    // the same measured card width the server-rendered cards use
+    var CARD_SIZES = root.dataset.cardSizes || "100vw";
     var answers = {}, order = ["who", "days", "style", "season", "pace"], step = 0;
 
     var qs = [].slice.call(root.querySelectorAll(".pl-q"));
@@ -269,7 +275,7 @@ const jsonld = breadcrumb([["Home", "index.html"], ["Plan your journey", "plan.h
         var reason = r.why.length ? r.why.join(" · ") : "a strong all-round fit";
         return '<a class="jcard pl-card" href="' + t.slug + '.html">'
           + '<div style="position:relative"><span class="tag">' + t.tag + '</span>'
-          + (t.img ? '<img src="' + t.img + '" alt="' + t.alt.replace(/"/g, "&quot;") + '" loading="lazy" decoding="async" width="800" height="600">' : '')
+          + (t.img ? '<img src="' + t.img + '"' + (t.srcset ? ' srcset="' + t.srcset + '" sizes="' + CARD_SIZES + '"' : '') + ' alt="' + t.alt.replace(/"/g, "&quot;") + '" loading="lazy" decoding="async" width="800" height="600">' : '')
           + '</div><div class="body">'
           + '<div class="pl-reason">' + reason + '</div>'
           + '<h3>' + t.title + '</h3><p>' + t.summary + '</p>'

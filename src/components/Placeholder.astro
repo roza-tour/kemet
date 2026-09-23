@@ -4,6 +4,7 @@
 // With no `src` it falls back to the branded gradient placeholder — so any
 // page that has not yet been assigned photography still renders correctly.
 import BrandMark from "@/components/BrandMark.astro";
+import { srcsetFor, SIZES, type SizesKey } from "@/utils/images";
 
 interface Props {
   class?: string;
@@ -17,6 +18,12 @@ interface Props {
   height?: number;
   /** Eager-load above-the-fold heroes; defaults to lazy. */
   loading?: "lazy" | "eager";
+  /**
+   * How wide this frame is drawn — a key into the measured SIZES table. The
+   * default, "full", is the viewport: it can only ever over-estimate, so a
+   * frame nobody has measured still gets every pixel it did before.
+   */
+  sizes?: SizesKey;
 }
 const {
   class: className = "",
@@ -26,12 +33,16 @@ const {
   width,
   height,
   loading = "lazy",
+  sizes = "full",
 } = Astro.props;
+const srcset = srcsetFor(src);
 ---
 <div class={`frame ${className}`}>
   {src ? (
     <img
       src={src}
+      srcset={srcset}
+      sizes={srcset ? SIZES[sizes] : undefined}
       alt={alt ?? label}
       width={width}
       height={height}

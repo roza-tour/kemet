@@ -17,6 +17,7 @@
 // wrong number costs more than no number. There is therefore no price in the
 // structured data either — nothing is claimed that is not stated.
 import Base from "@/layouts/Base.astro";
+import { srcsetFor, SIZES } from "@/utils/images";
 import SymbolIcon from "@/components/SymbolIcon.astro";
 import { vipProgrammes, vipStandard, vipFaqs, VIP_QUESTION, VIP_ANSWER } from "@/data/vip";
 import { breadcrumb, answerPageSchema, ORG_ID } from "@/schemas/jsonld";
@@ -208,7 +209,7 @@ const jsonld: Record<string, unknown>[] = [
               <span class="vframe-tick vt-tr" aria-hidden="true"></span>
               <span class="vframe-tick vt-bl" aria-hidden="true"></span>
               <span class="vframe-tick vt-br" aria-hidden="true"></span>
-              <img src={p.image.src} alt={p.image.alt} width="1600" height="1066"
+              <img src={p.image.src} srcset={srcsetFor(p.image.src)} sizes={srcsetFor(p.image.src) ? SIZES.beside : undefined} alt={p.image.alt} width="1600" height="1066"
                    loading={idx === 0 ? "eager" : "lazy"} decoding="async" />
               <figcaption class="vframe-no" aria-hidden="true">{p.numeral}</figcaption>
             </figure>

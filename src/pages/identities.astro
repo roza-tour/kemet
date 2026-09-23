@@ -1,5 +1,6 @@
 ---
 import Base from "@/layouts/Base.astro";
+import { srcsetFor, SIZES } from "@/utils/images";
 import PageHero from "@/components/PageHero.astro";
 import SymbolIcon from "@/components/SymbolIcon.astro";
 import { identities } from "@/data/identities";
@@ -29,6 +30,8 @@ const jsonld = breadcrumb([["Home", "index.html"], ["The 8 Identities", "identit
             {identity.image?.src ? (
               <img
                 src={identity.image.src}
+                srcset={srcsetFor(identity.image.src)}
+                sizes={srcsetFor(identity.image.src) ? SIZES.beside : undefined}
                 alt={identity.image.alt}
                 width={identity.image.width}
                 height={identity.image.height}

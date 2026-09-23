@@ -5,6 +5,7 @@
 // with no gaps. Pure CSS motion (one GPU transform), paused on hover, frozen
 // under prefers-reduced-motion. No controls, no JS.
 import SectionHeader from "@/components/SectionHeader.astro";
+import { srcsetFor, SIZES } from "@/utils/images";
 
 interface Props {
   no?: string;
@@ -52,10 +53,10 @@ const photos: Array<{ src: string; alt: string }> = [
   <div class="cgal" role="img" aria-label="A continuous gallery of photographs of Kemet guests travelling across Egypt">
     <div class="cgal-track">
       {photos.map((p) => (
-        <figure class="cgal-item"><img src={p.src} alt={p.alt} width="680" height="680" loading="lazy" decoding="async" /></figure>
+        <figure class="cgal-item"><img src={p.src} srcset={srcsetFor(p.src)} sizes={srcsetFor(p.src) ? SIZES.thumb : undefined} alt={p.alt} width="680" height="680" loading="lazy" decoding="async" /></figure>
       ))}
       {photos.map((p) => (
-        <figure class="cgal-item" aria-hidden="true"><img src={p.src} alt="" width="680" height="680" loading="lazy" decoding="async" /></figure>
+        <figure class="cgal-item" aria-hidden="true"><img src={p.src} srcset={srcsetFor(p.src)} sizes={srcsetFor(p.src) ? SIZES.thumb : undefined} alt="" width="680" height="680" loading="lazy" decoding="async" /></figure>
       ))}
     </div>
   </div>

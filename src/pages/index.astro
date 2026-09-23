@@ -1,5 +1,6 @@
 ---
 import Base from "@/layouts/Base.astro";
+import { srcsetFor, SIZES } from "@/utils/images";
 import Hero from "@/components/Hero.astro";
 import Frieze from "@/components/Frieze.astro";
 import CustomerGallery from "@/components/CustomerGallery.astro";
@@ -110,10 +111,10 @@ const jsonld = breadcrumb([["Home", "index.html"]]);
         </div>
         <div class="ov-media reveal cur" data-glare>
           <div class="main">
-            <img src="/images/cairo/cairo-citadel-mosque-dusk.webp" alt="The Mosque of Muhammad Ali crowning the Saladin Citadel in Cairo at dusk" width="1600" height="1066" loading="lazy" decoding="async" />
+            <img src="/images/cairo/cairo-citadel-mosque-dusk.webp" srcset={srcsetFor("/images/cairo/cairo-citadel-mosque-dusk.webp")} sizes={srcsetFor("/images/cairo/cairo-citadel-mosque-dusk.webp") ? SIZES.beside : undefined} alt="The Mosque of Muhammad Ali crowning the Saladin Citadel in Cairo at dusk" width="1600" height="1066" loading="lazy" decoding="async" />
           </div>
           <div class="over">
-            <img src="/images/aswan/aswan-felucca-sailing-nile.webp" alt="A felucca under white sail on the Nile at Aswan" width="736" height="981" loading="lazy" decoding="async" />
+            <img src="/images/aswan/aswan-felucca-sailing-nile.webp" srcset={srcsetFor("/images/aswan/aswan-felucca-sailing-nile.webp")} sizes={srcsetFor("/images/aswan/aswan-felucca-sailing-nile.webp") ? SIZES.inset : undefined} alt="A felucca under white sail on the Nile at Aswan" width="736" height="981" loading="lazy" decoding="async" />
           </div>
         </div>
       </div>
@@ -209,7 +210,7 @@ const jsonld = breadcrumb([["Home", "index.html"]]);
         {mosaic.map((exp, i) => (
           <a class={`tile reveal cur ${mosaicShape[i] ?? ""}`} href={`experiences/${exp.slug}.html`} data-glare>
             <div class="timg">
-              <img src={exp.hero!.src} alt={exp.hero!.alt} width={exp.hero!.width} height={exp.hero!.height} loading="lazy" decoding="async" />
+              <img src={exp.hero!.src} srcset={srcsetFor(exp.hero!.src)} sizes={srcsetFor(exp.hero!.src) ? SIZES.mosaic : undefined} alt={exp.hero!.alt} width={exp.hero!.width} height={exp.hero!.height} loading="lazy" decoding="async" />
               <div class="tframe" aria-hidden="true"></div>
             </div>
             <div class="tcap">
@@ -237,7 +238,7 @@ const jsonld = breadcrumb([["Home", "index.html"]]);
         {strip.map((d, i) => (
           <a class="dpost" href={`destinations/${d.slug}.html`} data-glare>
             <div class="dimg">
-              <img src={d.hero!.src} alt={d.hero!.alt} width={d.hero!.width} height={d.hero!.height} loading="lazy" decoding="async" />
+              <img src={d.hero!.src} srcset={srcsetFor(d.hero!.src)} sizes={srcsetFor(d.hero!.src) ? SIZES.strip : undefined} alt={d.hero!.alt} width={d.hero!.width} height={d.hero!.height} loading="lazy" decoding="async" />
             </div>
             <div class="dcap">
               <span class="k"><i aria-hidden="true">{roman[i]}</i> · {stripKicker[d.id] ?? ""}</span>

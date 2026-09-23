@@ -116,6 +116,7 @@ const keywords = [
     <section style="padding-top:var(--s-3)">
       <div class="wrap">
         <Placeholder
+          sizes="wide"
           class="tgallery reveal cur"
           label={tour.title}
           src={tour.hero?.src}
@@ -218,7 +219,7 @@ const keywords = [
           <SectionHeader sym="travellers" eyebrow="Gallery" title="Moments from this journey" />
           <div class="grid-2">
             {tour.gallery.map((g) => (
-              <Placeholder class="tgallery reveal" src={g.src} alt={g.alt} width={g.width} height={g.height} label={g.label ?? tour.title} />
+              <Placeholder sizes="half" class="tgallery reveal" src={g.src} alt={g.alt} width={g.width} height={g.height} label={g.label ?? tour.title} />
             ))}
           </div>
         </div>
