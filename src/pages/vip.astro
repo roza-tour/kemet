@@ -137,6 +137,7 @@ const jsonld: Record<string, unknown>[] = [
       <div class="vhero-bg" aria-hidden="true"></div>
       <div class="vhero-veil" aria-hidden="true"></div>
       <div class="vsheen" aria-hidden="true"></div>
+      <div class="lumen" style="--gx:50%;--gy:33%" aria-hidden="true"></div>
 
       {/* The cartouche: double hairline with cut corners and diamond joints. */}
       <div class="vcart" aria-hidden="true">
@@ -348,7 +349,7 @@ const jsonld: Record<string, unknown>[] = [
   /* ===== hero ============================================================ */
   .vhero { position: relative; min-height: 100vh; display: flex;
     align-items: center; justify-content: center; overflow: hidden;
-    text-align: center; }
+    text-align: center; isolation: isolate; }
   /* ── WHY THIS HERO DOES NOT MOVE ─────────────────────────────────────────
      It used to: a 26s Ken Burns zoom (`vzoom`) on this layer and an 11s light
      sweep (`vsheen`) over it. Measured, they cost this page 23 of its 53
@@ -366,7 +367,7 @@ const jsonld: Record<string, unknown>[] = [
   .vhero-bg { position: absolute; inset: 0;
     background: url("/images/luxor/luxor-karnak-hypostyle-hall.webp") center 30%/cover no-repeat; }
   .vhero-veil { position: absolute; inset: 0; background:
-    radial-gradient(120% 90% at 50% 30%, rgba(7,5,3,.32) 0%, rgba(7,5,3,.86) 78%),
+    radial-gradient(120% 90% at 50% 30%, rgba(7,5,3,.26) 0%, rgba(7,5,3,.70) 78%),
     linear-gradient(180deg, rgba(7,5,3,.55), rgba(7,5,3,.35) 40%, rgba(7,5,3,.96) 92%); }
   /* A fixed band of light across the engraving, struck a little off-centre so
      it reads as a shaft rather than a gradient. Wider and slightly stronger
