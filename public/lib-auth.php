@@ -38,12 +38,6 @@ function kemet_require_login(string $realm = "Kemet", bool $allowAgent = false):
     exit;
   };
 
-  if ($hash === "") {
-    $deny("No password is set.\n\nOn the server, from the site folder, run:\n"
-        . "  php -r 'file_put_contents(\"_stats/stats-password.txt\", "
-        . "password_hash(\"YOUR PASSWORD\", PASSWORD_DEFAULT).\"\\n\");'\n");
-  }
-
   // Under CGI/FastCGI PHP_AUTH_PW is never populated; the credentials arrive in
   // the Authorization header, passed through by .htaccess.
   $user = $_SERVER["PHP_AUTH_USER"] ?? null;
@@ -68,6 +62,13 @@ function kemet_require_login(string $realm = "Kemet", bool $allowAgent = false):
     }
     if ($pass !== null) { sleep(1); }
     $deny("Not authorised.\n");
+  }
+
+  // Checked only now, so a missing owner password never locks out the agent key.
+  if ($hash === "") {
+    $deny("No password is set.\n\nOn the server, from the site folder, run:\n"
+        . "  php -r 'file_put_contents(\"_stats/stats-password.txt\", "
+        . "password_hash(\"YOUR PASSWORD\", PASSWORD_DEFAULT).\"\\n\");'\n");
   }
 
   if ($pass === null || !password_verify($pass, $hash)) {
