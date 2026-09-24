@@ -195,6 +195,9 @@ export const tours: Tour[] = [
         ],
       },
     ],
+    // Both sleeper-train nights replaced by domestic flights and two hotel
+    // nights — the version for the traveller who puts comfort before cost.
+    flyOption: { extra: 130, replaces: "the two sleeper-train nights" },
     included: [
       ...baseIncluded.slice(0, 1),
       "9 nights' accommodation — 5-star hotels and a deluxe Nile cruise",
@@ -320,6 +323,9 @@ export const tours: Tour[] = [
         ],
       },
     ],
+    // Both sleeper-train nights replaced by domestic flights and two hotel
+    // nights — the version for the traveller who puts comfort before cost.
+    flyOption: { extra: 130, replaces: "the two sleeper-train nights" },
     included: [
       ...baseIncluded.slice(0, 1),
       "6 nights' accommodation in 5-star hotels",

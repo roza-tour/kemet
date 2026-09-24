@@ -73,12 +73,19 @@ export const BUILD_YEAR = new Date().getUTCFullYear();
  * the two must say the same thing — schema whose answer differs from the page
  * is exactly what the FAQ rich-result rules exclude.
  */
-export function flyFaq(tour: { title: string; flyOption?: { price: number; replaces: string } }) {
+type FlyTour = { title: string; price: number; flyOption?: { extra: number; replaces: string } };
+
+/** Per-person "from" price of a journey's flight version, or undefined. */
+export function flyPrice(tour: FlyTour): number | undefined {
+  return tour.flyOption ? tour.price + tour.flyOption.extra : undefined;
+}
+
+export function flyFaq(tour: FlyTour) {
   if (!tour.flyOption) return undefined;
   return {
     q: "Can we fly instead of taking the sleeper train?",
     a: `Yes. ${tour.title} is also arranged with domestic flights in place of ${tour.flyOption.replaces}, ` +
-       `with those nights in hotels instead — from ${formatPrice(tour.flyOption.price)} per person. ` +
+       `with those nights in hotels instead — from ${formatPrice(flyPrice(tour)!)} per person. ` +
        `Ask for the flight version when you enquire.`,
   };
 }

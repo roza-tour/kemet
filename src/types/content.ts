@@ -256,8 +256,12 @@ export interface Tour {
    * instead of leaving them to ask. Omit it and nothing renders.
    */
   flyOption?: {
-    /** Per-person "from" price of the flight version, EUR. */
-    price: number;
+    /**
+     * What the flight version adds per person, EUR — a difference, not a
+     * price, so the flight version moves with the journey when prices move
+     * (they rose 10% across the catalogue in September 2026).
+     */
+    extra: number;
     /** What the flights replace, as the page should say it. */
     replaces: string;
   };

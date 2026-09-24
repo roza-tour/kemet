@@ -4,7 +4,7 @@
 // ---------------------------------------------------------------------------
 import { SITE_URL, OG_IMAGE_PATH, CURRENCY, site } from "@/config/site";
 import { canonical, phoneHref } from "@/utils/links";
-import { priceBasis, flyFaq } from "@/utils/format";
+import { priceBasis, flyFaq, flyPrice } from "@/utils/format";
 import { routeFor } from "@/config/routes";
 import { trailFor } from "@/config/navigation";
 import { company } from "@/data/company";
@@ -194,8 +194,8 @@ export function tourSchema(tour: Tour): JsonLd[] {
     const fly = {
       ...base,
       name: `${tour.title} — flight version, private, per person`,
-      price: String(tour.flyOption.price),
-      priceSpecification: { ...base.priceSpecification, price: String(tour.flyOption.price) },
+      price: String(flyPrice(tour)!),
+      priceSpecification: { ...base.priceSpecification, price: String(flyPrice(tour)!) },
       description: `Domestic flights in place of ${tour.flyOption.replaces}, with those nights in hotels.`,
     };
     return [base, fly];

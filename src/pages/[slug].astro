@@ -13,7 +13,7 @@ import { tours } from "@/data/tours";
 import { getTourMeta } from "@/data/tours.taxonomy";
 import { findSimilarTours, findPreparationGuides } from "@/data/registry";
 import type { Tour } from "@/types";
-import { formatPrice, priceBasis, flyFaq } from "@/utils/format";
+import { formatPrice, priceBasis, flyFaq, flyPrice } from "@/utils/format";
 import { whatsappLink, mailtoLink } from "@/utils/links";
 import { tourStaticPaths } from "@/config/routes";
 import { entitySchema } from "@/schemas/jsonld";
@@ -73,7 +73,7 @@ const wa = whatsappLink(
 );
 const enquire = mailtoLink(
   `Request: ${tour.title}`,
-  `Hello Kemet,\n\nI'd like to request the "${tour.title}" journey (${tour.durationLabel}, from ${formatPrice(tour.price)} per person).\n\n${tour.flyOption ? `Train or flight version (from ${formatPrice(tour.flyOption.price)}):\n` : ""}Preferred dates:\nNumber of travellers:\n\nThank you.`,
+  `Hello Kemet,\n\nI'd like to request the "${tour.title}" journey (${tour.durationLabel}, from ${formatPrice(tour.price)} per person).\n\n${tour.flyOption ? `Train or flight version (from ${formatPrice(flyPrice(tour)!)}):\n` : ""}Preferred dates:\nNumber of travellers:\n\nThank you.`,
 );
 const jsonld = entitySchema("tour", tour);
 
@@ -182,7 +182,7 @@ const keywords = [
               <div class="pp">per person · EUR</div>
               {priceBasisLine && <p class="pbasis">{priceBasisLine}</p>}
               {tour.flyOption && (
-                <p class="pbasis">Prefer to fly? The same journey with flights in place of {tour.flyOption.replaces} — from {formatPrice(tour.flyOption.price)} pp.</p>
+                <p class="pbasis">Prefer to fly? The same journey with flights in place of {tour.flyOption.replaces} — from {formatPrice(flyPrice(tour)!)} pp.</p>
               )}
               <a href={enquire} class="btn btn-solid">Request this Journey</a>
               <a href={wa} class="btn btn-ghost" target="_blank" rel="noopener">Ask on WhatsApp</a>

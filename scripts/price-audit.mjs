@@ -52,6 +52,10 @@ const days = (label) => {
 
 const prices = new Set(tours.map((t) => t.price));
 const wases = new Set(tours.filter((t) => t.was).map((t) => t.was));
+// Flight versions are priced as the journey plus a stated difference, so they
+// are computed here the same way the pages compute them — never listed by hand,
+// which is how a quoted figure falls behind the moment prices move.
+const flies = new Set(tours.filter((t) => t.flyOption).map((t) => t.price + t.flyOption.extra));
 const multi = tours.filter((t) => t.kind === "multiday");
 const perDay = multi.map((t) => t.price / days(t.durationLabel));
 // The computed per-day range the cost page prints, so it is not "unexplained".
@@ -84,6 +88,7 @@ for (const n of [...seen.keys()].sort((a, b) => a - b)) {
   const where = [...seen.get(n)];
   const kind = prices.has(n) ? "tour price"
     : wases.has(n) ? "struck-through 'was'"
+    : flies.has(n) ? "flight version (price + stated difference)"
     : KNOWN.has(n) ? KNOWN.get(n)
     : (unexplained.push([n, where]), "*** UNEXPLAINED ***");
   console.log(`€${String(n).padEnd(7)} ${kind.padEnd(38)} ${where.length}`);

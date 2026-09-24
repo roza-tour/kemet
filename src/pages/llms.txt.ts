@@ -23,7 +23,7 @@ import { activities } from "@/data/activities";
 import { reviewer } from "@/data/experts";
 import { company } from "@/data/company";
 import { ourTraveller, notOurTraveller, priceStance } from "@/data/standard";
-import { formatPrice } from "@/utils/format";
+import { formatPrice, flyPrice } from "@/utils/format";
 import { publicPath } from "@/utils/links";
 
 const u = (path: string) => `${SITE_URL}/${path}`;
@@ -96,7 +96,7 @@ export const GET: APIRoute = () => {
         t.title,
         `${t.slug}.html`,
         `${t.durationLabel}. ${t.summary} From ${formatPrice(t.price)} per person.` +
-          (t.flyOption ? ` Also available with flights in place of ${t.flyOption.replaces}, from ${formatPrice(t.flyOption.price)}.` : ""),
+          (t.flyOption ? ` Also available with flights in place of ${t.flyOption.replaces}, from ${formatPrice(flyPrice(t)!)}.` : ""),
       ),
     );
   }
