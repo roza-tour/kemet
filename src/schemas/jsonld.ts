@@ -4,7 +4,7 @@
 // ---------------------------------------------------------------------------
 import { SITE_URL, OG_IMAGE_PATH, CURRENCY, site } from "@/config/site";
 import { canonical, phoneHref } from "@/utils/links";
-import { priceBasis } from "@/utils/format";
+import { priceBasis, flyFaq } from "@/utils/format";
 import { routeFor } from "@/config/routes";
 import { trailFor } from "@/config/navigation";
 import { company } from "@/data/company";
@@ -153,7 +153,7 @@ export function tourSchema(tour: Tour): JsonLd[] {
     touristType: "Luxury travellers",
     provider: orgRef(),
     itinerary,
-    offers: {
+    offers: (() => { const base = {
       "@type": "Offer",
       name: `${tour.title} — private, per person`,
       price: String(tour.price),
@@ -187,7 +187,19 @@ export function tourSchema(tour: Tour): JsonLd[] {
         : {}),
       ...(priceBasis(tour) ? { description: priceBasis(tour) } : {}),
       seller: orgRef(),
-    },
+    };
+    if (!tour.flyOption) return base;
+    // The flight version as its own Offer: its own price, and a description
+    // an assistant can quote when asked for "the version without the train".
+    const fly = {
+      ...base,
+      name: `${tour.title} — flight version, private, per person`,
+      price: String(tour.flyOption.price),
+      priceSpecification: { ...base.priceSpecification, price: String(tour.flyOption.price) },
+      description: `Domestic flights in place of ${tour.flyOption.replaces}, with those nights in hotels.`,
+    };
+    return [base, fly];
+    })(),
   };
 
   // "What is included?" and "Are flights included?" are the first two questions
@@ -201,6 +213,7 @@ export function tourSchema(tour: Tour): JsonLd[] {
   // it is, a few centimetres above. Nothing here is written for the schema.
   const listed = (xs: readonly string[]) => xs.join("; ") + ".";
   const derivedFaqs = [
+    ...(flyFaq(tour) ? [flyFaq(tour)!] : []),
     ...(tour.included?.length
       ? [{ q: `What is included in ${tour.title}?`, a: `Included: ${listed(tour.included)}` }]
       : []),

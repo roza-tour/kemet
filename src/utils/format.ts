@@ -66,3 +66,19 @@ export function monthYear(iso: string): string {
  * publish re-dates them, the same way the seasonal calendar rolls its windows.
  */
 export const BUILD_YEAR = new Date().getUTCFullYear();
+
+/**
+ * The question a flight version answers, as a FAQ entry. Built in one place
+ * because it is shown in the page's FAQ and emitted in its FAQPage schema, and
+ * the two must say the same thing — schema whose answer differs from the page
+ * is exactly what the FAQ rich-result rules exclude.
+ */
+export function flyFaq(tour: { title: string; flyOption?: { price: number; replaces: string } }) {
+  if (!tour.flyOption) return undefined;
+  return {
+    q: "Can we fly instead of taking the sleeper train?",
+    a: `Yes. ${tour.title} is also arranged with domestic flights in place of ${tour.flyOption.replaces}, ` +
+       `with those nights in hotels instead — from ${formatPrice(tour.flyOption.price)} per person. ` +
+       `Ask for the flight version when you enquire.`,
+  };
+}

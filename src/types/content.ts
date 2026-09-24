@@ -248,6 +248,19 @@ export interface Tour {
   /** Overview paragraph on the detail page. */
   overview: string;
   itinerary: ItineraryStep[];
+  /**
+   * The same journey with domestic flights in place of the sleeper trains.
+   * Offered on the journeys whose published route uses the overnight train;
+   * the traveller who puts comfort before cost will not spend twelve hours on
+   * a train to save a flight, so the page names the alternative and its price
+   * instead of leaving them to ask. Omit it and nothing renders.
+   */
+  flyOption?: {
+    /** Per-person "from" price of the flight version, EUR. */
+    price: number;
+    /** What the flights replace, as the page should say it. */
+    replaces: string;
+  };
   included: string[];
   excluded: string[];
   faqs: Faq[];

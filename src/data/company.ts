@@ -228,7 +228,11 @@ export const company: CompanyProfile = {
   ],
 
   // Future fields — populated when data is confirmed
-  socialProfiles: {}, // e.g. { instagram: "https://...", facebook: "https://..." }
+  // The one profile Kemet keeps. It goes out as schema `sameAs` on every page —
+  // the link that tells a search engine or an assistant that kemet-travel.com
+  // and @kemet.travels are the same business. Add others here only when they
+  // exist and are run by Kemet.
+  socialProfiles: { instagram: "https://www.instagram.com/kemet.travels/" },
   teamMembers: [],
   partners: [],
   paymentMethods: [], // e.g. ["Bank transfer", "Credit card"]

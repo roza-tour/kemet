@@ -51,6 +51,9 @@ export const GET: APIRoute = () => {
   // German pages sitting on the domain.
   if (company.languages?.length) lines.push(`- Spoken with clients: ${company.languages.join(", ")}`);
   lines.push(`- Site published in: ${LOCALES.map((l) => `${LOCALE_META[l].endonym} (${l})`).join(", ")}`);
+  for (const [name, url] of Object.entries(company.socialProfiles ?? {})) {
+    lines.push(`- ${name[0].toUpperCase()}${name.slice(1)}: ${url}`);
+  }
   lines.push(`- Contact: ${site.email} · WhatsApp ${site.phoneDisplay}`);
   lines.push(
     `- Model: 100% private, tailor-made itineraries (no shared coaches, no fixed departures)`,
@@ -92,7 +95,8 @@ export const GET: APIRoute = () => {
       item(
         t.title,
         `${t.slug}.html`,
-        `${t.durationLabel}. ${t.summary} From ${formatPrice(t.price)} per person.`,
+        `${t.durationLabel}. ${t.summary} From ${formatPrice(t.price)} per person.` +
+          (t.flyOption ? ` Also available with flights in place of ${t.flyOption.replaces}, from ${formatPrice(t.flyOption.price)}.` : ""),
       ),
     );
   }
