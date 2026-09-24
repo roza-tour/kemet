@@ -564,10 +564,14 @@ footer{background:var(--ink-2);border-top:1px solid var(--line);padding:var(--s-
 .cform-full{grid-column:1/-1}
 .cform label{display:block}
 .cform label span{display:block;font-size:var(--t-nano);letter-spacing:.28em;text-transform:uppercase;color:var(--gold-bright);font-weight:500;margin-bottom:var(--s-2)}
-.cform input,.cform textarea{width:100%;background:rgba(10,8,5,.55);border:1px solid var(--line-2);border-radius:2px;color:var(--bone);font-family:var(--ff-body);font-size:var(--t-sm);font-weight:300;padding:var(--s-2) var(--s-3);transition:border-color .3s,box-shadow .3s}
+.cform input,.cform textarea,.cform select{width:100%;background:rgba(10,8,5,.55);border:1px solid var(--line-2);border-radius:2px;color:var(--bone);font-family:var(--ff-body);font-size:var(--t-sm);font-weight:300;padding:var(--s-2) var(--s-3);transition:border-color .3s,box-shadow .3s}
 .cform input::placeholder,.cform textarea::placeholder{color:var(--muted-2);opacity:.7}
-.cform input:focus,.cform textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(217,180,90,.14)}
+.cform input:focus,.cform textarea:focus,.cform select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(217,180,90,.14)}
 .cform textarea{resize:vertical;min-height:140px}
+.cform select{color-scheme:dark;cursor:pointer}
+/* unanswered reads like an empty field's placeholder, not like an answer */
+.cform select:has(option[value=""]:checked){color:var(--muted-2)}
+.cform select option{color:var(--bone)}
 .cform-hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
 .cform-note{border:1px solid var(--line-2);border-radius:2px;padding:var(--s-3) var(--s-4);margin-bottom:var(--s-4);font-size:var(--t-sm);color:var(--bone)}
 .cform-note--ok{border-color:rgba(140,190,120,.5);background:rgba(60,110,50,.16)}

@@ -42,16 +42,17 @@ function clean_line($v) {
 // expensive failure this file can have, so the record is now written whatever
 // happens and the status says what became of it.
 // Columns 7 and 8 (source, first page) were added when enquiries began to
-// record how the person found the site. Older rows have seven columns and
-// stats.php pads them, so both report together.
-function log_enquiry($status, $name, $email, $phone, $dates, $message, $source = "", $first = "") {
+// record how the person found the site; 9-11 (party, pace, priority) when the
+// form began to ask. Older rows are shorter and stats.php pads them, so all
+// of them report together.
+function log_enquiry($status, $name, $email, $phone, $dates, $message, $source = "", $first = "", $party = "", $pace = "", $priority = "") {
   $dir = __DIR__ . "/_stats";
   if (!is_dir($dir)) { @mkdir($dir, 0755, true); @file_put_contents("$dir/index.html", ""); }
   $q = function ($v) { return str_replace('"', "'", (string)$v); };
-  $row = sprintf("%s,%s,\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\"\n",
+  $row = sprintf("%s,%s,\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\"\n",
     gmdate("Y-m-d H:i"), $status,
     $q($name), $q($email), $q($phone), $q($dates), $q(mb_substr($message, 0, 500)),
-    $q($source), $q($first));
+    $q($source), $q($first), $q($party), $q($pace), $q($priority));
   @file_put_contents($dir . "/enquiries.csv", $row, FILE_APPEND | LOCK_EX);
 }
 
@@ -69,6 +70,22 @@ $phone   = mb_substr(clean_line($_POST["phone"] ?? ""), 0, 40);
 $dates   = mb_substr(clean_line($_POST["dates"] ?? ""), 0, 120);
 $message = mb_substr(trim((string)($_POST["message"] ?? "")), 0, 5000);
 
+// The three optional questions. Only the form's own values are accepted and
+// turned back into words here, so nothing a bot posts reaches the email or log.
+$CHOICES = [
+  "party" => ["couple" => "Two of us", "family" => "A family with children",
+              "generations" => "Three generations, or older travellers",
+              "group" => "A private group", "solo" => "Just me"],
+  "pace" => ["unhurried" => "Unhurried — late starts, fewer sites a day",
+             "balanced" => "Balanced", "full" => "Full days — as much as possible"],
+  "priority" => ["comfort" => "Comfort first", "balance" => "A balance of comfort and cost",
+                 "cost" => "Keeping the cost down"],
+];
+$pick = fn($k) => $CHOICES[$k][(string)($_POST[$k] ?? "")] ?? "";
+$party    = $pick("party");
+$pace     = $pick("pace");
+$priority = $pick("priority");
+
 // How this person found us — read from today's analytics log on the server,
 // through the anonymous daily visitor hash. Nothing was stored on their device
 // and nothing extra was sent by the form; see lib-source.php.
@@ -81,7 +98,7 @@ $readTxt = implode(", ", array_slice(array_values(array_filter($trail["pages"],
 if ($name === "" || $message === "" || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
   // Still recorded: a mistyped email address is a real person who tried to
   // reach us, and the phone number they left may be perfectly good.
-  log_enquiry("invalid", $name, $email, $phone, $dates, $message, $srcTxt, $trail["first"]);
+  log_enquiry("invalid", $name, $email, $phone, $dates, $message, $srcTxt, $trail["first"], $party, $pace, $priority);
   respond(false, $wantsJson);
 }
 
@@ -104,7 +121,7 @@ if ($ip !== "") {
   if (is_file($mark) && (time() - @filemtime($mark)) < 60) {
     // Answered "ok": from the visitor's side the message did get through the
     // first time, and a second confirmation is the truthful reply.
-    log_enquiry("duplicate", $name, $email, $phone, $dates, $message, $srcTxt, $trail["first"]);
+    log_enquiry("duplicate", $name, $email, $phone, $dates, $message, $srcTxt, $trail["first"], $party, $pace, $priority);
     respond(true, $wantsJson);
   }
   @touch($mark);
@@ -120,6 +137,9 @@ $body =
   "Email:   " . $email . "\n" .
   ($phone !== "" ? "Phone:   " . $phone . "\n" : "") .
   ($dates !== "" ? "Dates:   " . $dates . "\n" : "") .
+  ($party !== "" ? "Party:   " . $party . "\n" : "") .
+  ($pace !== "" ? "Pace:    " . $pace . "\n" : "") .
+  ($priority !== "" ? "Priority: " . $priority . "\n" : "") .
   "----------------------------------\n\n" .
   $message . "\n\n" .
   "----------------------------------\n" .
@@ -144,6 +164,6 @@ $ok = @mail($to, $subject, $body, $headers, "-fno-reply@kemet-travel.com");
 // returning true only means the message was handed to the local MTA — it can
 // still bounce later — so this file, not the inbox, is the record of record.
 // Read it from the dashboard at /stats.php.
-log_enquiry($ok ? "sent" : "mail-failed", $name, $email, $phone, $dates, $message, $srcTxt, $trail["first"]);
+log_enquiry($ok ? "sent" : "mail-failed", $name, $email, $phone, $dates, $message, $srcTxt, $trail["first"], $party, $pace, $priority);
 
 respond($ok, $wantsJson);

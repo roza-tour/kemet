@@ -194,8 +194,8 @@ if (is_file($enqFile)) {
     $c = str_getcsv($line);
     if (count($c) < 6) continue;
     if (!in_array($c[1] ?? "", ENQ_STATUS, true)) array_splice($c, 1, 0, "sent");
-    // 9 columns since enquiries record their source; older rows have 7
-    $enquiries[] = array_pad(array_slice($c, 0, 9), 9, "");
+    // 12 columns since the form asks party / pace / priority; older rows have 7 or 9
+    $enquiries[] = array_pad(array_slice($c, 0, 12), 12, "");
   }
 }
 // Sort by timestamp, not by file order: a hand-restored or back-filled row
@@ -417,7 +417,7 @@ if (!$attn) {
 <table><tr><td style="color:var(--mut)">No enquiries recorded yet</td></tr></table>
 <?php else: ?>
 <table>
-<?php foreach (array_slice($enquiries, 0, 25) as $e): [$when, $status, $nm, $em, $ph, $dt, $msg, $src, $first] = $e; ?>
+<?php foreach (array_slice($enquiries, 0, 25) as $e): [$when, $status, $nm, $em, $ph, $dt, $msg, $src, $first, $party, $pace, $prio] = $e; ?>
   <tr class="enq enq--<?= $esc($status) ?>">
     <td>
       <span class="tag tag--<?= $esc($status) ?>"><?= $esc($status) ?></span>
@@ -425,6 +425,7 @@ if (!$attn) {
       <span class="enq-masked"><?= $esc(maskEmail($em)) ?></span>
       <?= $ph !== "" ? ' · <span class="enq-masked">' . $esc(maskPhone($ph)) . "</span>" : "" ?>
       <?= $dt !== "" ? " · dates: " . $esc($dt) : "" ?>
+      <?php $ans = array_filter([$party, $pace, $prio]); if ($ans): ?><div class="enq-msg"><?= $esc(implode(" · ", $ans)) ?></div><?php endif; ?>
       <div class="enq-msg"><?= $esc($msg) ?></div>
       <?php if ($src !== ""): ?><div class="enq-msg">Found us via <b><?= $esc($src) ?></b><?= $first !== "" ? " · first page " . $esc($first) : "" ?></div><?php endif; ?>
     </td>

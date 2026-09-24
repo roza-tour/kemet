@@ -53,9 +53,44 @@ const {
         <span>Travel dates</span>
         <input type="text" name="dates" maxlength="120" placeholder="e.g. 10–20 October, flexible" />
       </label>
+      {/* Three optional questions that decide the shape of a reply: who the
+          journey has to suit, how fast it can go, and whether comfort or cost
+          leads. The last one is the one this business is built around — a
+          traveller who answers "comfort first" is quoted the flight version
+          and the late starts before they have to ask. The values are fixed and
+          re-checked by contact-handler.php, which ignores anything else. */}
+      <label>
+        <span>Who is travelling</span>
+        <select name="party">
+          <option value="">Choose, if you like</option>
+          <option value="couple">Two of us</option>
+          <option value="family">A family with children</option>
+          <option value="generations">Three generations, or older travellers</option>
+          <option value="group">A private group</option>
+          <option value="solo">Just me</option>
+        </select>
+      </label>
+      <label>
+        <span>Pace</span>
+        <select name="pace">
+          <option value="">Choose, if you like</option>
+          <option value="unhurried">Unhurried — late starts, fewer sites a day</option>
+          <option value="balanced">Balanced</option>
+          <option value="full">Full days — as much as we can see</option>
+        </select>
+      </label>
+      <label class="cform-full">
+        <span>What matters more</span>
+        <select name="priority">
+          <option value="">Choose, if you like</option>
+          <option value="comfort">Comfort first</option>
+          <option value="balance">A balance of comfort and cost</option>
+          <option value="cost">Keeping the cost down</option>
+        </select>
+      </label>
       <label class="cform-full">
         <span>Your message *</span>
-        <textarea name="message" required rows="6" maxlength="5000" placeholder="Tell us where you want to go, who is travelling and what you would love to see."></textarea>
+        <textarea name="message" required rows="6" maxlength="5000" placeholder="Tell us where you want to go and what you would love to see."></textarea>
       </label>
     </div>
 
