@@ -89,3 +89,53 @@ export function flyFaq(tour: FlyTour) {
        `Ask for the flight version when you enquire.`,
   };
 }
+
+/**
+ * The direct answer at the top of a journey page — what it is, where it goes,
+ * what it costs and what it includes, in the 40-60 words the AnswerBox rules
+ * ask for. Built from the journey's own data, so it cannot quote a price or an
+ * inclusion the page itself does not state.
+ */
+export function tourAnswer(tour: {
+  title: string; kind?: string; durationLabel: string; visiting: string; cities?: string[]; price: number;
+  included: string[]; excluded: string[]; priceBasisPax?: number; ticketsExcluded?: boolean;
+  flyOption?: { extra: number; replaces: string };
+}): string {
+  const list = (xs: string[]) => xs.length < 2 ? xs.join("") : `${xs.slice(0, -1).join(", ")} and ${xs.at(-1)}`;
+  // A list whose items carry their own commas ("…the desert road, both ways")
+  // needs semicolons between items, or the reader cannot see where one ends.
+  const items = (xs: string[]) => xs.some((x) => /,| and /.test(x)) && xs.length > 2
+    ? `${xs.slice(0, -1).join("; ")}; and ${xs.at(-1)}`
+    : list(xs);
+  // Lower-case the label's first letter for mid-sentence use — unless the first
+  // word is a name ("Sinai desert evening", "Nubian village visit").
+  const NAMES = /^(Sinai|Nile|Nubian|Egyptian|Egypt|Red|Bedouin|Aswan|Luxor|Cairo|Giza|Sufi|Alexandria|Abu|Karnak|Coptic|Islamic|Fayoum|Saqqara)\b/;
+  const lower = (s: string) => NAMES.test(s) ? s : s.replace(/^([A-Z])(?=[a-z])/, (c) => c.toLowerCase());
+  // Inclusions are written as labels ("Private Egyptologist guide throughout");
+  // in a sentence the singular ones need their article back.
+  const phrase = (s: string) => {
+    const l = lower(s);
+    return /^private [^,—]*\b(guide|egyptologist|historian|vehicle|car|driver|cabin|boat|dahabiya|transfer)\b/i.test(l) ? `a ${l}` : l;
+  };
+  const m = /(\d+)\s*Days?\s*\/\s*(\d+)\s*Nights?/i.exec(tour.durationLabel);
+  // Places, not sights: "through Luxor", not "through Karnak, Luxor Temple and
+  // West Bank" — the sights are listed on the page itself.
+  const places = list(tour.cities?.length ? tour.cities : tour.visiting.split(/\s*·\s*/));
+  const when = tour.durationLabel.replace(/\s*\(.*\)$/, "").replace(/^(Full|Half) day$/i, (x) => x.replace(" ", "-"));
+  const lead = m
+    ? `${tour.title} is a private ${m[1]}-day, ${m[2]}-night journey through ${places}, from ${formatPrice(tour.price)} per person.`
+    : `${tour.title} is a private ${lower(when)} tour of ${places}, from ${formatPrice(tour.price)} per person${tour.priceBasisPax ? ` for a party of ${tour.priceBasisPax} or more` : ""}.`;
+  const tickets = tour.ticketsExcluded ? " Entrance tickets are paid at the gate." : "";
+  // Worth saying on a journey someone flies in for; noise on an afternoon in Giza.
+  const flights = m && tour.excluded.some((x) => /international flights/i.test(x)) ? " International flights are not included." : "";
+  const fly = tour.flyOption
+    ? ` A flight version, in place of ${tour.flyOption.replaces}, is from ${formatPrice(tour.price + tour.flyOption.extra)}.`
+    : "";
+  const words = (s: string) => s.split(/\s+/).filter(Boolean).length;
+  // As many inclusions as fit under 60 words, never fewer than one.
+  for (let k = Math.min(4, tour.included.length); k >= 1; k--) {
+    const text = `${lead} It includes ${items(tour.included.slice(0, k).map(phrase))}.${tickets}${flights}${fly}`;
+    if (words(text) <= 60 || k === 1) return text;
+  }
+  return lead;
+}

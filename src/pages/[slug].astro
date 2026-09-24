@@ -2,6 +2,7 @@
 import Base from "@/layouts/Base.astro";
 import Placeholder from "@/components/Placeholder.astro";
 import Faq from "@/components/Faq.astro";
+import AnswerBox from "@/components/aeo/AnswerBox.astro";
 import Frieze from "@/components/Frieze.astro";
 import SectionHeader from "@/components/SectionHeader.astro";
 import TourCard from "@/components/TourCard.astro";
@@ -13,7 +14,7 @@ import { tours } from "@/data/tours";
 import { getTourMeta } from "@/data/tours.taxonomy";
 import { findSimilarTours, findPreparationGuides } from "@/data/registry";
 import type { Tour } from "@/types";
-import { formatPrice, priceBasis, flyFaq, flyPrice } from "@/utils/format";
+import { formatPrice, priceBasis, flyFaq, flyPrice, tourAnswer } from "@/utils/format";
 import { whatsappLink, mailtoLink } from "@/utils/links";
 import { tourStaticPaths } from "@/config/routes";
 import { entitySchema } from "@/schemas/jsonld";
@@ -128,6 +129,11 @@ const keywords = [
 
         <div class="tdetail">
           <div>
+            <AnswerBox
+              question={`What does ${tour.title} include, and what does it cost?`}
+              answer={tourAnswer(tour)}
+              checked={false}
+            />
             <div class="tblock reveal">
               <h2>Overview</h2>
               <p>{tour.overview}</p>

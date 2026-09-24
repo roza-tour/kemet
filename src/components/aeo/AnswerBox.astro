@@ -33,17 +33,26 @@ interface Props {
   updated?: string;
   /** Link prefix back to the site root ("" at root, "../" in subfolders). */
   base?: string;
+  /**
+   * Whether to print "Checked by <reviewer>". Only for answers a person has
+   * actually checked. An answer assembled from a page's own data (a journey's
+   * price, route and inclusions) was never read by the reviewer as a passage,
+   * so it does not carry her name or a checked date.
+   */
+  checked?: boolean;
 }
-const { question, answer, updated, base = "" } = Astro.props;
+const { question, answer, updated, base = "", checked = true } = Astro.props;
 const profile = `${base}about.html#${reviewer.id}`;
 ---
 <div class="answer-box">
   <h2>{question}</h2>
   <p class="answer-body">{answer}</p>
-  <p class="answer-meta">
-    Checked by <a href={profile}>{reviewer.name}</a>, {reviewer.role}
-    {updated && <> · <time datetime={updated}>{monthYear(updated)}</time></>}
-  </p>
+  {checked && (
+    <p class="answer-meta">
+      Checked by <a href={profile}>{reviewer.name}</a>, {reviewer.role}
+      {updated && <> · <time datetime={updated}>{monthYear(updated)}</time></>}
+    </p>
+  )}
 </div>
 
 <style>
