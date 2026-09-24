@@ -15,7 +15,16 @@
 // reasoning and the command that sets it.
 // ---------------------------------------------------------------------------
 
-function kemet_require_login(string $realm = "Kemet"): void {
+// A SECOND, SEPARATE KEY — for the assistant that reads the numbers.
+//
+// Sign in as user "agent" and the password is checked against
+// _stats/agent-password.txt instead of the owner's. It exists so the owner
+// never has to paste her own password into a chat: the key is generated
+// elsewhere, only its hash is placed on the server, and deleting that one
+// file revokes it without touching her own login. It is accepted only where
+// the calling page allows it — stats.php, which only reads. desk.php, which
+// can send mail to the list, does not.
+function kemet_require_login(string $realm = "Kemet", bool $allowAgent = false): void {
   $file = __DIR__ . "/_stats/stats-password.txt";
   $hash = is_readable($file) ? trim((string) @file_get_contents($file)) : "";
 
@@ -37,15 +46,28 @@ function kemet_require_login(string $realm = "Kemet"): void {
 
   // Under CGI/FastCGI PHP_AUTH_PW is never populated; the credentials arrive in
   // the Authorization header, passed through by .htaccess.
+  $user = $_SERVER["PHP_AUTH_USER"] ?? null;
   $pass = $_SERVER["PHP_AUTH_PW"] ?? null;
   if ($pass === null) {
     $auth = $_SERVER["HTTP_AUTHORIZATION"] ?? $_SERVER["REDIRECT_HTTP_AUTHORIZATION"] ?? "";
     if (stripos($auth, "basic ") === 0) {
       $decoded = base64_decode(substr($auth, 6), true);
       if ($decoded !== false && strpos($decoded, ":") !== false) {
-        [, $pass] = explode(":", $decoded, 2);
+        [$user, $pass] = explode(":", $decoded, 2);
       }
     }
+  }
+
+  if ($allowAgent && $user === "agent") {
+    $agentFile = __DIR__ . "/_stats/agent-password.txt";
+    $agentHash = is_readable($agentFile) ? trim((string) @file_get_contents($agentFile)) : "";
+    if ($agentHash !== "" && $pass !== null && password_verify($pass, $agentHash)) {
+      header("Cache-Control: no-store, private");
+      header("X-Robots-Tag: noindex, nofollow");
+      return;
+    }
+    if ($pass !== null) { sleep(1); }
+    $deny("Not authorised.\n");
   }
 
   if ($pass === null || !password_verify($pass, $hash)) {

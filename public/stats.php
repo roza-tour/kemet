@@ -34,7 +34,7 @@
 // ---------------------------------------------------------------------------
 require __DIR__ . "/lib-auth.php";
 require __DIR__ . "/lib-source.php";
-kemet_require_login("Kemet statistics");
+kemet_require_login("Kemet statistics", true);   // read-only: the agent key is accepted here
 
 $dir = __DIR__ . "/_stats";
 
