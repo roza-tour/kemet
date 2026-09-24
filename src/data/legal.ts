@@ -28,7 +28,7 @@ export const privacyPolicy: LegalDoc = {
   title: "Privacy Policy",
   intro:
     "This policy explains what personal information Kemet collects when you contact us or use this website, how we use it, and the rights you have over it. We collect as little as possible and never sell it.",
-  lastUpdated: "July 2026",
+  lastUpdated: "September 2026",
   sections: [
     {
       heading: "Who we are",
@@ -42,6 +42,7 @@ export const privacyPolicy: LegalDoc = {
       body: [
         "When you send us a message through the contact form, we collect the details you choose to provide: your name, email address, and — if you enter them — your phone number, intended travel dates and the content of your message.",
         "Like almost all websites, our server also records standard technical information (such as IP address, browser type and the pages requested) in its logs. We do not use this to identify you personally.",
+        "If you join our list — from the invitation on this site or from the trip designer — we keep your email address, your name if you give it, the page and language you signed up from, and a record of your consent: when you gave it, the wording you agreed to and the IP address it came from. You can leave the list at any time through the unsubscribe link in our emails, or by writing to us.",
         "We do not operate user accounts and we do not take payments on this website, so we never collect passwords or card details here.",
       ],
     },
@@ -55,8 +56,11 @@ export const privacyPolicy: LegalDoc = {
     {
       heading: "Cookies and analytics",
       body: [
-        "This website does not use advertising cookies or third-party tracking cookies. It does not build a marketing profile of you.",
-        "If we add privacy-respecting analytics or embedded content in future, we will update this policy first.",
+        "This website does not use cookies for advertising or tracking, and it loads no third-party analytics or advertising scripts. It does not build a marketing profile of you.",
+        "We measure how the site is used with our own simple analytics, which run only on our server. For each page viewed they record the page, the website or search engine that linked to it, the kind of device (phone, tablet or computer, judged from the screen width), your browser's language setting, and actions such as tapping WhatsApp or searching this site — including the words searched for. Visits are counted with an anonymous code made from your connection and browser that changes every day and cannot be traced back to you; your IP address itself is not stored.",
+        "If your browser sends a Do Not Track or Global Privacy Control signal, none of this is recorded.",
+        "When you send us an enquiry, we note how you reached the site that day — for example through a search engine or an AI assistant — and which pages you read, so that we can reply about the journey you were looking at. This is kept with your enquiry.",
+        "The site also remembers a few display choices in your browser, such as that you closed the seasonal banner or the invitation to our list. These stay on your device and are never sent to us.",
       ],
     },
     {
