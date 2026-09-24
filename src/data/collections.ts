@@ -7,6 +7,19 @@
 // ever required. Relationships propagate automatically through the registry.
 // ---------------------------------------------------------------------------
 import type { Collection } from "@/types";
+import { tours as allTours } from "@/data/tours";
+
+// Read from the journeys, not typed here: the flight-version difference, and
+// the journeys that keep you in one bed — both change when the catalogue does.
+const FLY_EXTRA = allTours.find((t) => t.flyOption)?.flyOption?.extra ?? 0;
+const ONE_BED = allTours
+  // one bed AND no long drive — a single hotel with a day on the desert road
+  // to Alexandria is not "the least moving around"
+  .filter((t) => t.comfort && /^(One |On the Nile cruise for all)/.test(t.comfort.sleep)
+    && t.comfort.walking === "Moderate" && !t.comfort.drives)
+  .map((t) => t.title);
+const LIGHT = allTours.filter((t) => t.comfort?.walking === "Light").map((t) => t.title);
+const andList = (xs: string[]) => xs.length < 2 ? xs.join("") : `${xs.slice(0, -1).join(", ")} and ${xs.at(-1)}`;
 
 const tour = (...ids: string[]) =>
   ids.map((id) => ({ domain: "tour" as const, id }));
@@ -24,6 +37,89 @@ const col = (...ids: string[]) =>
   ids.map((id) => ({ domain: "seasonal" as const, id }));
 
 export const collections: Collection[] = [
+  // ---------------------------------------------------------------------------
+  // For the traveller who puts comfort before cost. Every claim here is either
+  // read from the journeys' own comfort profiles (walking, where you sleep,
+  // long drives, early starts — confirmed by Kemet, September 2026) or from
+  // the fly-or-sleeper comparison, whose train times were checked against the
+  // current timetable. Grandparents travelling WITH grandchildren have their
+  // own page (occasions/three-generations-egypt); this one does not compete
+  // with it, and says so.
+  {
+    id: "egypt-at-an-easy-pace",
+    slug: "egypt-at-an-easy-pace",
+    domain: "seasonal",
+    title: "Egypt at an Easy Pace",
+    subtitle: "Fewer hotel changes, no night trains, no pre-dawn alarms — Egypt for travellers who put comfort first.",
+    shortSummary:
+      "Private journeys for travellers who would rather see less and rest more: one bed for several nights, flights instead of the sleeper train, and days that start after breakfast.",
+    editorialIntro:
+      "Most Egypt itineraries are built to fit the most into the fewest days, and they feel like it: a new hotel every night, a sleeper train that arrives in Luxor at half past five, a balloon that needs you in the lobby at four. None of that is required to see Egypt properly. The same temples are there at ten in the morning, and a private guide and car mean the day bends around your energy rather than a coach timetable. This collection gathers the journeys that are gentlest on the body — and says plainly, for each one, how much walking there is and where you will sleep.",
+    collectionType: "travel-inspiration",
+    seasons: ["autumn", "winter", "spring"],
+    travelStyles: ["relaxed", "luxury", "cultural"],
+    audience: ["couples", "luxury-travellers", "everyone"],
+    priority: 7,
+    highlights: [
+      `One bed for the whole stay: ${andList(ONE_BED)}`,
+      "The Nile cruise is the most restful way between Aswan and Luxor — unpack once, and the temples come to you",
+      `Fly instead of the sleeper train: under an hour to Luxor against around ten on the rails, and €${FLY_EXTRA} per person more on the journeys that use the train`,
+      "No pre-dawn starts built into the journeys chosen here; sunrise sessions and balloons are offered, never required",
+      `Where rest is the whole point: ${andList(LIGHT)} — one resort, light walking`,
+    ],
+    planningNotes: [
+      "Travel between October and April — Luxor and Aswan reach 40–45 °C in high summer, and heat is what tires people most",
+      "Where a journey uses the sleeper train, ask for the flight version; it replaces those two nights with hotels",
+      "Tell us about mobility when you enquire — the form asks who is travelling, and we plan the days around the answer",
+      "Two nights in each place as a minimum — one-night stops are where tiredness builds",
+    ],
+    travelTips: [
+      "Every journey page has a Comfort & pace section: walking level, where you sleep, long drives and early starts, stated plainly",
+      "A private felucca at Aswan is the most restful hour in Egypt — no walking, no crowds, just the river",
+      "Plan the Grand Egyptian Museum as a morning with a sit-down lunch, not a sprint through every gallery",
+    ],
+    faqs: [
+      {
+        q: "Is Egypt suitable for older travellers?",
+        a: "Yes, when the journey is planned for it. A private guide and private car set the pace to your party rather than a group, flights replace the long train journeys, and travelling between October and April avoids the summer heat. Walking at the monuments is moderate — uneven ground and some steps — and every Kemet journey states its walking level and where you will sleep on its own page.",
+      },
+      {
+        q: "Which Kemet journeys involve the least moving around?",
+        a: `For sightseeing, ${andList(ONE_BED)} keep you in one hotel or one cabin for the whole stay. For rest, ${andList(LIGHT)} are one resort with light walking.`,
+      },
+      {
+        q: "Can we avoid early mornings?",
+        a: "Yes. The journeys in this collection have no pre-dawn starts built in, and optional ones — a sunrise at Giza, a balloon over Luxor — are exactly that. Where a journey page lists an early start, it says so under Comfort & pace, and we can plan around it.",
+      },
+      {
+        q: "Should we fly or take the sleeper train to Luxor and Aswan?",
+        a: "If comfort comes first, fly. Cairo to Luxor is under an hour in the air against around ten hours on the train, and the southbound sleeper reaches Luxor at about half past five in the morning. Our full comparison is on the Fly or sleeper train page.",
+      },
+      {
+        q: "We are travelling with grandchildren too — is this the right page?",
+        a: "Our Three generations page is written for exactly that: rooms, pace and the sites that work for a nine-year-old and a seventy-nine-year-old at once. This page is for journeys where everyone is an adult and comfort leads.",
+      },
+    ],
+    hero: {
+      alt: "The teak sun-deck of a Nile cruise vessel set for the day",
+      src: "/images/cruise/nile-dahabiya-deck.webp",
+      width: 1200,
+      height: 900,
+    },
+    lastReviewed: "2026-09",
+    relationships: {
+      tours: tour("tour-nile-cruise", "tour-cairo-culture-5day", "tour-luxor-3day", "tour-cairo-vip-3day", "tour-upper-egypt-5day", "tour-sharm-5day"),
+      destinations: dest("aswan", "luxor", "cairo"),
+      experiences: exp("private-felucca-nile", "private-nile-dinner-cruise", "grand-egyptian-museum-private", "vip-airport-service"),
+      guides: guide("best-time-to-visit-egypt", "transportation-in-egypt"),
+      relatedCollections: col("luxury-egypt", "egypt-in-winter"),
+    },
+    seo: {
+      title: "Egypt at an Easy Pace — Comfortable Private Tours | Kemet",
+      description:
+        "Egypt for travellers who put comfort first: fewer hotel changes, flights not night trains, no pre-dawn starts, and the walking level stated for every journey.",
+    },
+  },
   // ---------------------------------------------------------------------------
   // 1. Egypt in Winter
   // ---------------------------------------------------------------------------
