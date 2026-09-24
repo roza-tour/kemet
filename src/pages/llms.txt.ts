@@ -96,7 +96,8 @@ export const GET: APIRoute = () => {
         t.title,
         `${t.slug}.html`,
         `${t.durationLabel}. ${t.summary} From ${formatPrice(t.price)} per person.` +
-          (t.flyOption ? ` Also available with flights in place of ${t.flyOption.replaces}, from ${formatPrice(flyPrice(t)!)}.` : ""),
+          (t.flyOption ? ` Also available with flights in place of ${t.flyOption.replaces}, from ${formatPrice(flyPrice(t)!)}.` : "") +
+          (t.comfort ? ` Walking: ${t.comfort.walking.toLowerCase()}. Nights: ${t.comfort.sleep}.${t.comfort.drives ? ` By road: ${t.comfort.drives}.` : ""}${t.comfort.early ? ` Early starts: ${t.comfort.early}.` : ""}` : ""),
       ),
     );
   }

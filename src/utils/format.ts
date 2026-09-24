@@ -139,3 +139,24 @@ export function tourAnswer(tour: {
   }
   return lead;
 }
+
+/**
+ * "How demanding is it?" — the comfort profile as a FAQ entry. Shown in the
+ * page's FAQ and emitted in its FAQPage schema from this one function, so the
+ * two cannot say different things.
+ */
+export function comfortFaq(tour: {
+  title: string;
+  comfort?: { walking: "Light" | "Moderate"; sleep: string; drives?: string; early?: string };
+}) {
+  const c = tour.comfort;
+  if (!c) return undefined;
+  const walk = c.walking === "Light"
+    ? `The walking on ${tour.title} is light — it is a journey for resting.`
+    : `The walking on ${tour.title} is moderate, as on any journey built around monuments.`;
+  return {
+    q: `How demanding is ${tour.title}?`,
+    a: `${walk} Nights: ${c.sleep}. ${c.drives ? `By road: ${c.drives}.` : "There are no long drives."} ` +
+       `${c.early ? `Early starts: ${c.early}.` : "There are no pre-dawn starts."}`,
+  };
+}

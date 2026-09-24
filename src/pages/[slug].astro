@@ -14,7 +14,7 @@ import { tours } from "@/data/tours";
 import { getTourMeta } from "@/data/tours.taxonomy";
 import { findSimilarTours, findPreparationGuides } from "@/data/registry";
 import type { Tour } from "@/types";
-import { formatPrice, priceBasis, flyFaq, flyPrice, tourAnswer } from "@/utils/format";
+import { formatPrice, priceBasis, flyFaq, flyPrice, tourAnswer, comfortFaq } from "@/utils/format";
 import { whatsappLink, mailtoLink } from "@/utils/links";
 import { tourStaticPaths } from "@/config/routes";
 import { entitySchema } from "@/schemas/jsonld";
@@ -171,8 +171,25 @@ const keywords = [
               </div>
             </div>
 
+            {/* How the journey feels to do. In the reading column, not the price
+                card: the card is sticky, and 300px more of it put these lines
+                below the fold for most of the page on a 900px-tall laptop —
+                the one thing a comfort-first reader came to check. Drawn with
+                the existing block and stacked-facts styles; nothing new. */}
+            {tour.comfort && (
+              <div class="tblock reveal">
+                <h2>Comfort &amp; pace</h2>
+                <div class="facts facts-stacked">
+                  <div><span>Walking</span><b>{tour.comfort.walking}</b></div>
+                  <div><span>Where you sleep</span><b>{tour.comfort.sleep}</b></div>
+                  {tour.comfort.drives && <div><span>Long drives</span><b>{tour.comfort.drives}</b></div>}
+                  {tour.comfort.early && <div><span>Early starts</span><b>{tour.comfort.early}</b></div>}
+                </div>
+              </div>
+            )}
+
             <div class="reveal">
-              <Faq items={[...tour.faqs, ...(flyFaq(tour) ? [flyFaq(tour)!] : [])]} />
+              <Faq items={[...tour.faqs, ...(comfortFaq(tour) ? [comfortFaq(tour)!] : []), ...(flyFaq(tour) ? [flyFaq(tour)!] : [])]} />
             </div>
 
             <TourFit />

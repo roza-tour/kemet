@@ -249,6 +249,21 @@ export interface Tour {
   overview: string;
   itinerary: ItineraryStep[];
   /**
+   * How the journey feels to do, not what it sees — read from the itinerary
+   * day by day and confirmed by Kemet. The traveller who puts comfort before
+   * cost decides on exactly these: where they will sleep, how long they will
+   * sit in a car, how early they will be woken, and how much walking there is.
+   */
+  comfort?: {
+    walking: "Light" | "Moderate";
+    /** Where the nights are spent, in order. */
+    sleep: string;
+    /** Long stretches by road, if any. */
+    drives?: string;
+    /** Starts before breakfast, if any. */
+    early?: string;
+  };
+  /**
    * The same journey with domestic flights in place of the sleeper trains.
    * Offered on the journeys whose published route uses the overnight train;
    * the traveller who puts comfort before cost will not spend twelve hours on

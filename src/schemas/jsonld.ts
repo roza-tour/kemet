@@ -4,7 +4,7 @@
 // ---------------------------------------------------------------------------
 import { SITE_URL, OG_IMAGE_PATH, CURRENCY, site } from "@/config/site";
 import { canonical, phoneHref } from "@/utils/links";
-import { priceBasis, flyFaq, flyPrice } from "@/utils/format";
+import { priceBasis, flyFaq, flyPrice, comfortFaq } from "@/utils/format";
 import { routeFor } from "@/config/routes";
 import { trailFor } from "@/config/navigation";
 import { company } from "@/data/company";
@@ -213,6 +213,7 @@ export function tourSchema(tour: Tour): JsonLd[] {
   // it is, a few centimetres above. Nothing here is written for the schema.
   const listed = (xs: readonly string[]) => xs.join("; ") + ".";
   const derivedFaqs = [
+    ...(comfortFaq(tour) ? [comfortFaq(tour)!] : []),
     ...(flyFaq(tour) ? [flyFaq(tour)!] : []),
     ...(tour.included?.length
       ? [{ q: `What is included in ${tour.title}?`, a: `Included: ${listed(tour.included)}` }]

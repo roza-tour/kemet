@@ -198,6 +198,11 @@ export const tours: Tour[] = [
     // Both sleeper-train nights replaced by domestic flights and two hotel
     // nights — the version for the traveller who puts comfort before cost.
     flyOption: { extra: 130, replaces: "the two sleeper-train nights" },
+    comfort: {
+      walking: "Moderate",
+      sleep: "Hotels in Cairo and Luxor, three nights on the Nile cruise, and two nights on the sleeper train — hotels instead on the flight version",
+      drives: "A day trip from Cairo to Alexandria and back by road",
+    },
     included: [
       ...baseIncluded.slice(0, 1),
       "9 nights' accommodation — 5-star hotels and a deluxe Nile cruise",
@@ -326,6 +331,11 @@ export const tours: Tour[] = [
     // Both sleeper-train nights replaced by domestic flights and two hotel
     // nights — the version for the traveller who puts comfort before cost.
     flyOption: { extra: 130, replaces: "the two sleeper-train nights" },
+    comfort: {
+      walking: "Moderate",
+      sleep: "Hotels in Cairo and Luxor, and two nights on the sleeper train — hotels instead on the flight version",
+      drives: "A day trip from Cairo to Alexandria and back by road",
+    },
     included: [
       ...baseIncluded.slice(0, 1),
       "6 nights' accommodation in 5-star hotels",
@@ -416,6 +426,11 @@ export const tours: Tour[] = [
         ],
       },
     ],
+    comfort: {
+      walking: "Moderate",
+      sleep: "One hotel in Cairo for all three nights",
+      drives: "A day trip from Cairo to Alexandria and back by road",
+    },
     included: [
       ...baseIncluded.slice(0, 1),
       "3 nights' accommodation in 5-star hotels",
@@ -496,6 +511,11 @@ export const tours: Tour[] = [
         ],
       },
     ],
+    comfort: {
+      walking: "Moderate",
+      sleep: "A hotel in Luxor, then one in Aswan",
+      drives: "Luxor to Aswan by road",
+    },
     included: [
       ...baseIncluded.slice(0, 1),
       "Domestic flights Cairo–Luxor and Aswan–Cairo",
@@ -1193,6 +1213,10 @@ export const tours: Tour[] = [
         ],
       },
     ],
+    comfort: {
+      walking: "Moderate",
+      sleep: "On the Nile cruise for all three nights",
+    },
     included: [
       ...baseIncluded.slice(0, 1),
       "3-night full-board Nile cruise, Aswan to Luxor",
@@ -1292,6 +1316,12 @@ export const tours: Tour[] = [
         ],
       },
     ],
+    comfort: {
+      walking: "Moderate",
+      sleep: "A hotel in Luxor, then one in Aswan",
+      drives: "Luxor to Aswan by road, with stops at Edfu and Kom Ombo",
+      early: "Only if you choose the optional Abu Simbel excursion on the last day",
+    },
     included: [
       ...baseIncluded.slice(0, 1),
       "4 nights' accommodation in 5-star hotels (Luxor & Aswan)",
@@ -1433,6 +1463,11 @@ export const tours: Tour[] = [
         ],
       },
     ],
+    comfort: {
+      walking: "Moderate",
+      sleep: "A Nile-view suite in Cairo, a hotel in Aswan, three nights on the Nile cruise, then a hotel in Luxor",
+      early: "Sunrise at Giza, a dawn balloon over Luxor's West Bank, and Karnak in the early morning",
+    },
     included: [
       ...baseIncluded.slice(0, 1),
       "8 nights — Nile-view suites, 5-star hotels and a 3-night full-board cruise",
@@ -1565,6 +1600,12 @@ export const tours: Tour[] = [
         ],
       },
     ],
+    comfort: {
+      walking: "Moderate",
+      sleep: "Hotels in Cairo, Luxor and Aswan",
+      drives: "Luxor to Aswan by road, with a stop at Edfu",
+      early: "An early start for the Valley of the Kings",
+    },
     included: [
       "Private family-specialist Egyptologist throughout",
       "7 nights' accommodation — family suites or connecting rooms, 5-star",
@@ -1687,6 +1728,12 @@ export const tours: Tour[] = [
         ],
       },
     ],
+    comfort: {
+      walking: "Moderate",
+      sleep: "Hotels in Cairo, Luxor and Aswan",
+      drives: "Luxor to Aswan by road",
+      early: "Sunrise at Giza, a dawn balloon over the West Bank, and early light in a Nubian village",
+    },
     included: [
       "Private photography-aware Egyptologist guide throughout",
       "6 nights' accommodation in 5-star hotels",
@@ -1830,6 +1877,12 @@ export const tours: Tour[] = [
         items: ["Fly to Cairo connecting to your international departure"],
       },
     ],
+    comfort: {
+      walking: "Moderate",
+      sleep: "Hotels in Cairo and Aswan, three nights on the Nile cruise, a hotel in Luxor, then a Red Sea resort",
+      drives: "A day trip to Alexandria, and Aswan to Abu Simbel and back by road",
+      early: "A pre-dawn road journey to Abu Simbel",
+    },
     included: [
       ...baseIncluded.slice(0, 1),
       "13 nights — 5-star hotels, a 3-night full-board Nile cruise and a Red Sea resort",
@@ -1932,6 +1985,10 @@ export const tours: Tour[] = [
         ],
       },
     ],
+    comfort: {
+      walking: "Moderate",
+      sleep: "One hotel in Cairo for all four nights",
+    },
     included: [
       "Private historian-Egyptologist guide throughout",
       "4 nights' accommodation in a 5-star hotel",
@@ -2034,6 +2091,10 @@ export const tours: Tour[] = [
         ],
       },
     ],
+    comfort: {
+      walking: "Light",
+      sleep: "One Red Sea resort for all four nights",
+    },
     included: [
       "4 nights' accommodation in a 5-star Red Sea resort (half board)",
       "Private full-day Ras Mohammed boat charter with snorkelling equipment",
@@ -2132,6 +2193,10 @@ export const tours: Tour[] = [
         ],
       },
     ],
+    comfort: {
+      walking: "Light",
+      sleep: "One Red Sea resort for all three nights",
+    },
     included: [
       "3 nights' accommodation in a 5-star Red Sea resort (half board)",
       "5 guided dives (1 check dive + 2 two-dive boat days) with a licensed PADI centre",
@@ -2219,6 +2284,11 @@ export const tours: Tour[] = [
         ],
       },
     ],
+    comfort: {
+      walking: "Moderate",
+      sleep: "One hotel in Luxor for both nights",
+      early: "Only if you choose the optional dawn balloon on the last morning",
+    },
     included: [
       ...baseIncluded.slice(0, 1),
       "2 nights' accommodation in a 5-star Luxor hotel",
@@ -2303,6 +2373,10 @@ export const tours: Tour[] = [
         ],
       },
     ],
+    comfort: {
+      walking: "Moderate",
+      sleep: "One hotel in Cairo for both nights",
+    },
     included: [
       ...baseIncluded.slice(0, 1),
       "2 nights' accommodation in a 5-star hotel",
@@ -2374,6 +2448,11 @@ export const tours: Tour[] = [
         ],
       },
     ],
+    comfort: {
+      walking: "Moderate",
+      sleep: "One night in a seafront hotel in Alexandria",
+      drives: "Cairo to Alexandria and back by road",
+    },
     included: [
       ...baseIncluded.slice(0, 1),
       "1 night's accommodation in a seafront 4/5-star hotel",
