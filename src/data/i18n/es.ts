@@ -8,6 +8,10 @@
 // a Latin American reader is well used to reading peninsular Spanish.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { tours } from "@/data/tours";
+
+// Read from the journeys, so the figure follows the catalogue when prices move.
+const FLY_EXTRA = tours.find((t) => t.flyOption)?.flyOption?.extra ?? 0;
 import { BUILD_YEAR } from "@/utils/format";
 
 export const es: LocalizedPage[] = [
@@ -193,6 +197,10 @@ export const es: LocalizedPage[] = [
       { q: "¿Qué es una dahabiya?", a: "Un velero tradicional del Nilo, con dos mástiles y normalmente de ocho a doce camarotes, que navega el río como se hacía antes de los motores. Fondea en bancos de arena y aldeas inalcanzables para los barcos grandes y no tiene programa de animación. Cuesta bastante más por noche que un barco de crucero convencional." },
       { q: "¿Se marea uno en un crucero por el Nilo?", a: "Prácticamente nunca. El Nilo es agua interior en calma, los barcos van despacio y no hay oleaje. Quien no soporta una travesía marítima suele estar perfectamente cómodo en el río." },
       { q: "¿Con cuánta antelación reservar un crucero por el Nilo?", a: "Tres o cuatro meses para hoteles y barcos convencionales; seis meses si hay una dahabiya concreta en el plan. Para Navidad, Nochevieja y Semana Santa, hasta un año antes: solo hay unas decenas de dahabiyas y se ocupan las primeras." },
+      {
+        q: "¿Avión o tren nocturno a Luxor y Asuán?",
+        a: `Si la comodidad va antes que el precio, mejor volar: El Cairo–Luxor es menos de una hora de vuelo y El Cairo–Asuán, alrededor de una hora y cuarto. El tren tarda unas diez horas hasta Luxor y trece hasta Asuán, por eso suele hacerse de noche: en compartimento de dos camas con lavabo, con cena y desayuno, pero con baños compartidos; en dirección sur llega a Luxor hacia las cinco y media de la mañana. Nuestros viajes con tren nocturno también se ofrecen con vuelos internos y noches de hotel, por ${FLY_EXTRA} € más por persona.`,
+      },
     ],
     cta: {
       heading: "Planificar el crucero",

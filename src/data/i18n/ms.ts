@@ -11,6 +11,10 @@
 // to an Umrah in Saudi Arabia.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { tours } from "@/data/tours";
+
+// Read from the journeys, so the figure follows the catalogue when prices move.
+const FLY_EXTRA = tours.find((t) => t.flyOption)?.flyOption?.extra ?? 0;
 import { BUILD_YEAR } from "@/utils/format";
 
 export const ms: LocalizedPage[] = [
@@ -198,6 +202,10 @@ export const ms: LocalizedPage[] = [
       { q: "Bagaimana dengan makanan di atas kapal?", a: "Dapur kapal Mesir memasak masakan Mesir, dan dagingnya halal sebagaimana lazimnya di Mesir. Bagi kapal antarabangsa yang turut menghidangkan alkohol, kami memberitahu lebih awal supaya anda boleh memilih dengan sedar." },
       { q: "Adakah Egyptologist bersama kami di kapal?", a: "Dalam perjalanan kami, Egyptologist anda menyertai sepanjang pelayaran dan mengiringi di setiap kuil — bukan pemandu baharu di setiap persinggahan. Inilah beza utamanya berbanding membeli pakej pelayaran secara berasingan." },
       { q: "Adakah kami akan mabuk laut?", a: "Tidak. Sungai Nil tidak berombak dan tidak menyebabkan mabuk laut — airnya tenang. Satu-satunya pergerakan yang terasa ialah ketika melalui pintu air Esna, dan ia pun perlahan." },
+      {
+        q: "Naik kapal terbang atau kereta api tidur ke Luxor dan Aswan?",
+        a: `Jika keselesaan lebih penting daripada harga, lebih baik terbang: Kaherah–Luxor kurang daripada sejam, Kaherah–Aswan kira-kira sejam suku. Kereta api mengambil masa kira-kira sepuluh jam ke Luxor dan tiga belas jam ke Aswan, jadi biasanya ia dinaiki pada waktu malam — dalam kabin dua katil dengan sinki, termasuk makan malam dan sarapan, tetapi tandasnya dikongsi; menuju ke selatan ia tiba di Luxor sekitar jam lima setengah pagi. Pakej kami yang menggunakan kereta api tidur juga ditawarkan dengan penerbangan domestik dan bermalam di hotel, dengan tambahan ${FLY_EXTRA} € seorang.`,
+      },
     ],
     cta: {
       heading: "Mari pilih kapalnya bersama",

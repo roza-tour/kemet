@@ -8,6 +8,10 @@
 // charter traffic that dominates the market.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { tours } from "@/data/tours";
+
+// Read from the journeys, so the figure follows the catalogue when prices move.
+const FLY_EXTRA = tours.find((t) => t.flyOption)?.flyOption?.extra ?? 0;
 import { BUILD_YEAR } from "@/utils/format";
 
 export const de: LocalizedPage[] = [
@@ -193,6 +197,10 @@ export const de: LocalizedPage[] = [
       { q: "Was ist eine Dahabiya?", a: "Ein traditionelles Nilsegelschiff mit zwei Masten und meist acht bis zwölf Kabinen, das den Fluss so befährt wie vor der Zeit der Motoren. Es ankert an Sandbänken und Dörfern, die große Schiffe nicht erreichen, und hat kein Unterhaltungsprogramm. Es kostet deutlich mehr pro Nacht als ein normales Kreuzfahrtschiff." },
       { q: "Wird man auf einer Nilkreuzfahrt seekrank?", a: "Praktisch nie. Der Nil ist flaches Binnengewässer, die Schiffe fahren langsam, es gibt keinen Seegang. Reisende, die eine Seeüberfahrt nicht vertragen, sind auf dem Fluss fast immer völlig beschwerdefrei." },
       { q: "Wann sollte man eine Nilkreuzfahrt buchen?", a: "Drei bis vier Monate im Voraus für Hotels und übliche Kreuzfahrtschiffe; sechs Monate, wenn eine bestimmte Dahabiya Teil des Plans ist. Für Weihnachten, Neujahr und Ostern gilt: bis zu ein Jahr vorher — es gibt nur wenige Dahabiyas und sie sind zuerst vergeben." },
+      {
+        q: "Fliegen oder Schlafwagen nach Luxor und Assuan?",
+        a: `Wer Komfort vor den Preis stellt, sollte fliegen: Kairo–Luxor dauert unter einer Stunde, Kairo–Assuan etwa eine Stunde und fünfzehn Minuten. Der Zug braucht rund zehn Stunden bis Luxor und dreizehn bis Assuan und fährt deshalb meist über Nacht – im Zweibettabteil mit Waschbecken, Abendessen und Frühstück, aber mit Gemeinschaftstoiletten; Richtung Süden erreicht er Luxor gegen halb sechs Uhr morgens. Unsere Reisen mit Schlafwagen gibt es auch mit Inlandsflügen und Hotelnächten, für ${FLY_EXTRA} € mehr pro Person.`,
+      },
     ],
     cta: {
       heading: "Nilkreuzfahrt planen",

@@ -10,6 +10,10 @@
 // avoids France-only administrative detail where a neutral wording works.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { tours } from "@/data/tours";
+
+// Read from the journeys, so the figure follows the catalogue when prices move.
+const FLY_EXTRA = tours.find((t) => t.flyOption)?.flyOption?.extra ?? 0;
 
 export const fr: LocalizedPage[] = [
   // ===== Accueil ===========================================================
@@ -196,6 +200,10 @@ export const fr: LocalizedPage[] = [
       { q: "Y a-t-il un égyptologue à bord ?", a: "Sur nos voyages, votre égyptologue vous accompagne pendant toute la croisière et fait chaque temple avec vous — ce n'est pas un guide différent à chaque escale. C'est la principale différence avec une croisière achetée seule." },
       { q: "La croisière convient-elle aux enfants ?", a: "Très bien, à condition d'adapter le rythme. Un dahabieh plaît particulièrement aux familles : les enfants circulent librement à bord, les journées sont courtes et il y a des heures entières sans rien à faire d'autre que regarder le fleuve." },
       { q: "Le Nil est-il calme ?", a: "Oui. Il n'y a ni houle ni mal de mer sur le fleuve : c'est une eau plate. Le seul mouvement notable est celui du passage de l'écluse d'Esna, et il est lent." },
+      {
+        q: "Avion ou train de nuit pour Louxor et Assouan ?",
+        a: `Si le confort passe avant le prix, mieux vaut prendre l'avion : Le Caire–Louxor, c'est moins d'une heure de vol, Le Caire–Assouan environ une heure et quart. Le train met une dizaine d'heures jusqu'à Louxor et treize jusqu'à Assouan ; on le prend donc généralement de nuit — compartiment à deux couchettes avec lavabo, dîner et petit-déjeuner compris, mais toilettes partagées — et vers le sud il arrive à Louxor vers cinq heures et demie du matin. Nos circuits avec train de nuit existent aussi avec vols intérieurs et nuits d'hôtel, pour ${FLY_EXTRA} € de plus par personne.`,
+      },
     ],
     cta: {
       heading: "Choisissons le bateau ensemble",

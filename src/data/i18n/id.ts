@@ -10,6 +10,10 @@
 // through the Gulf, Lebaran and the June–July school holidays.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { tours } from "@/data/tours";
+
+// Read from the journeys, so the figure follows the catalogue when prices move.
+const FLY_EXTRA = tours.find((t) => t.flyOption)?.flyOption?.extra ?? 0;
 import { BUILD_YEAR } from "@/utils/format";
 
 export const id: LocalizedPage[] = [
@@ -197,6 +201,10 @@ export const id: LocalizedPage[] = [
       { q: "Bagaimana dengan makanan di kapal?", a: "Dapur kapal Mesir memasak masakan Mesir, dan dagingnya halal sebagaimana umumnya di Mesir. Pada kapal internasional yang juga menyajikan alkohol, kami sampaikan hal itu sejak awal agar Anda dapat memilih dengan sadar, bukan mengetahuinya di meja makan." },
       { q: "Apakah Egyptologist ikut di kapal?", a: "Pada perjalanan kami, Egyptologist Anda ikut sepanjang pesiar dan mendampingi di setiap kuil — bukan pemandu baru di setiap persinggahan. Inilah beda utamanya dengan membeli paket pesiar secara terpisah." },
       { q: "Apakah bisa mabuk laut?", a: "Tidak. Sungai Nil tidak berombak dan tidak menimbulkan mabuk laut — airnya tenang. Satu-satunya gerakan yang terasa adalah saat melewati pintu air Esna, dan itu pun pelan." },
+      {
+        q: "Naik pesawat atau kereta tidur ke Luxor dan Aswan?",
+        a: `Jika kenyamanan lebih penting daripada harga, lebih baik terbang: Kairo–Luxor kurang dari satu jam, Kairo–Aswan sekitar satu jam seperempat. Kereta memakan waktu sekitar sepuluh jam ke Luxor dan tiga belas jam ke Aswan, sehingga biasanya ditempuh malam hari — di kabin dua tempat tidur dengan wastafel, termasuk makan malam dan sarapan, tetapi toiletnya dipakai bersama; ke arah selatan kereta tiba di Luxor sekitar pukul setengah enam pagi. Perjalanan kami yang memakai kereta tidur juga tersedia dengan penerbangan domestik dan menginap di hotel, dengan tambahan ${FLY_EXTRA} € per orang.`,
+      },
     ],
     cta: {
       heading: "Mari pilih kapalnya bersama",

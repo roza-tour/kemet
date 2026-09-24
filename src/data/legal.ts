@@ -58,7 +58,7 @@ export const privacyPolicy: LegalDoc = {
       body: [
         "This website does not use cookies for advertising or tracking, and it loads no third-party analytics or advertising scripts. It does not build a marketing profile of you.",
         "We measure how the site is used with our own simple analytics, which run only on our server. For each page viewed they record the page, the website or search engine that linked to it, the kind of device (phone, tablet or computer, judged from the screen width), your browser's language setting, and actions such as tapping WhatsApp or searching this site — including the words searched for. Visits are counted with an anonymous code made from your connection and browser that changes every day and cannot be traced back to you; your IP address itself is not stored.",
-        "If your browser sends a Do Not Track or Global Privacy Control signal, none of this is recorded.",
+        "If your browser sends a Do Not Track or Global Privacy Control signal, none of this is recorded. These analytics records are deleted automatically after 13 months.",
         "When you send us an enquiry, we note how you reached the site that day — for example through a search engine or an AI assistant — and which pages you read, so that we can reply about the journey you were looking at. This is kept with your enquiry.",
         "The site also remembers a few display choices in your browser, such as that you closed the seasonal banner or the invitation to our list. These stay on your device and are never sent to us.",
       ],

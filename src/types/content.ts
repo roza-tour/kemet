@@ -463,6 +463,8 @@ export interface GuideSection {
   /** Advisory callout (tip, warning, or informational note). */
   note?: string;
   noteType?: "tip" | "warning" | "info";
+  /** A page that takes this section further, shown at the end of its note. */
+  noteLink?: { label: string; href: string };
 }
 
 /**

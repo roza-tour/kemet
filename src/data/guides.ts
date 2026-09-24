@@ -327,6 +327,7 @@ export const guides: Guide[] = [
         ],
         note: "Train booking is available online via Egyptian National Railways, but the booking interface is inconsistent. Your tour operator or a specialist booking service can confirm reservations more reliably.",
         noteType: "tip",
+        noteLink: { label: "Fly or take the sleeper train? Our comparison", href: "compare/fly-or-sleeper-train.html" },
       },
       {
         heading: "Nile cruise",

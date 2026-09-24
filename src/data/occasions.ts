@@ -48,6 +48,11 @@ export interface Occasion {
   /** Tour categories that suit — used to surface real journeys. */
   suitedCategories: string[];
   faqs: Array<{ q: string; a: string }>;
+  /**
+   * Other pages worth reading next — a collection or a comparison that answers
+   * the same traveller. Shown first in the closing grid, in the same cards.
+   */
+  seeAlso?: Array<{ title: string; summary: string; href: string }>;
   /** Search terms this page is written to answer. */
   keywords: string[];
 }
@@ -389,6 +394,10 @@ export const occasions: Occasion[] = [
       "Per person, this is the cheapest way for a large family to travel privately: the guide and the vehicle are split across everyone.",
     ],
     suitedCategories: ["Family Journey", "Nile Cruise", "Signature Journey", "Grand Tour"],
+    seeAlso: [
+      { title: "Egypt at an Easy Pace", summary: "For the journeys where everyone is an adult and comfort leads.", href: "collections/egypt-at-an-easy-pace.html" },
+      { title: "Fly or sleeper train?", summary: "Ten hours on the rails or an hour in the air — and what each does to the next morning.", href: "compare/fly-or-sleeper-train.html" },
+    ],
     faqs: [
       {
         q: "Is Egypt suitable for grandparents and young children together?",

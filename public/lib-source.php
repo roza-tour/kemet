@@ -39,9 +39,25 @@ function kemet_vid(): string {
   if (!is_file($saltFile)) {
     foreach (glob("$dir/.salt-*") as $old) @unlink($old);   // keep only today's
     @file_put_contents($saltFile, bin2hex(random_bytes(16)));
+    kemet_prune_stats($dir);                                 // once a day, on the first hit
   }
   $salt = (string)@file_get_contents($saltFile);
   return substr(hash("sha256", $salt . ($_SERVER["REMOTE_ADDR"] ?? "") . ($_SERVER["HTTP_USER_AGENT"] ?? "")), 0, 12);
+}
+
+/**
+ * Delete monthly analytics files older than 13 months — the retention period
+ * the privacy policy states. Only the collector's own YYYY-MM.csv files: the
+ * enquiry log and the mailing list are Kemet's business records and are never
+ * touched here. Runs once a day, when the day's salt is created.
+ */
+function kemet_prune_stats(string $dir): int {
+  $keepFrom = gmdate("Y-m", strtotime(gmdate("Y-m-01") . " -12 months"));   // this month + 12 before it
+  $gone = 0;
+  foreach (glob("$dir/[0-9][0-9][0-9][0-9]-[0-9][0-9].csv") ?: [] as $f) {
+    if (basename($f, ".csv") < $keepFrom && @unlink($f)) $gone++;
+  }
+  return $gone;
 }
 
 /**

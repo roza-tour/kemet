@@ -148,8 +148,14 @@ const title = `${o.title} | Kemet`;
   <section style="padding-top:0">
     <div class="wrap">
       <div class="oc-others reveal">
-        <h2>Other occasions</h2>
+        <h2>{o.seeAlso?.length ? "Keep reading" : "Other occasions"}</h2>
         <div class="oc-others-grid">
+          {(o.seeAlso ?? []).map((x) => (
+            <a href={`${base}${x.href}`} class="oc-other">
+              <h3>{x.title}</h3>
+              <p>{x.summary}</p>
+            </a>
+          ))}
           {others.map((x) => (
             <a href={`${x.slug}.html`} class="oc-other">
               <h3>{x.title}</h3>

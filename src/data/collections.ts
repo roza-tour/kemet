@@ -179,7 +179,7 @@ export const collections: Collection[] = [
       destinations: dest("luxor", "aswan", "cairo", "giza"),
       experiences: exp("sunrise-giza-pyramids", "luxor-temple-night", "private-felucca-nile", "hot-air-balloon-luxor"),
       guides: guide("best-time-to-visit-egypt", "egypt-travel-guide"),
-      relatedCollections: col("luxury-egypt", "first-time-egypt"),
+      relatedCollections: col("luxury-egypt", "first-time-egypt", "egypt-at-an-easy-pace"),
     },
     seo: {
       title: "Egypt in Winter — The Best Season for Travel | Kemet",
@@ -387,7 +387,7 @@ export const collections: Collection[] = [
       destinations: dest("luxor", "aswan", "cairo", "giza"),
       experiences: exp("sunrise-giza-pyramids", "private-nile-dinner-cruise", "red-sea-yacht-day", "hot-air-balloon-luxor", "vip-airport-service"),
       guides: guide("egypt-travel-guide", "best-time-to-visit-egypt"),
-      relatedCollections: col("egypt-in-winter", "first-time-egypt"),
+      relatedCollections: col("egypt-in-winter", "first-time-egypt", "egypt-at-an-easy-pace"),
     },
     seo: {
       title: "Luxury Egypt — Private Tours & Nile Cruises | Kemet",

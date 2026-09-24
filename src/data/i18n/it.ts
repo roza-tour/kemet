@@ -8,6 +8,10 @@
 // than German school terms, Rome and Milan rather than Frankfurt.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { tours } from "@/data/tours";
+
+// Read from the journeys, so the figure follows the catalogue when prices move.
+const FLY_EXTRA = tours.find((t) => t.flyOption)?.flyOption?.extra ?? 0;
 import { BUILD_YEAR } from "@/utils/format";
 
 export const it: LocalizedPage[] = [
@@ -193,6 +197,10 @@ export const it: LocalizedPage[] = [
       { q: "Cos'è una dahabeya?", a: "Una barca a vela tradizionale del Nilo, con due alberi e di norma otto-dodici cabine, che naviga il fiume come si faceva prima dei motori. Ormeggia su banchi di sabbia e presso villaggi irraggiungibili per le navi grandi e non ha programma di intrattenimento. Costa sensibilmente di più a notte rispetto a una motonave." },
       { q: "Si soffre il mal di mare in crociera sul Nilo?", a: "Praticamente mai. Il Nilo è acqua interna piatta, le barche vanno lente e non c'è onda. Chi non regge una traversata in mare sul fiume sta quasi sempre benissimo." },
       { q: "Con quanto anticipo prenotare una crociera sul Nilo?", a: "Tre-quattro mesi per alberghi e motonavi consuete; sei mesi se nel piano c'è una dahabeya specifica. Per Natale, Capodanno e Pasqua vale fino a un anno prima: le dahabeye sono poche decine e vengono prese per prime." },
+      {
+        q: "Aereo o treno notte per Luxor e Assuan?",
+        a: `Se il comfort viene prima del prezzo, conviene volare: Il Cairo–Luxor è meno di un'ora di volo, Il Cairo–Assuan circa un'ora e un quarto. In treno servono circa dieci ore fino a Luxor e tredici fino ad Assuan, per questo di solito si viaggia di notte — in compartimento a due letti con lavabo, cena e colazione inclusi, ma con i bagni in comune; verso sud il treno arriva a Luxor verso le cinque e mezza del mattino. I nostri viaggi con il treno notte sono disponibili anche con voli interni e notti in hotel, a ${FLY_EXTRA} € in più a persona.`,
+      },
     ],
     cta: {
       heading: "Progettare la crociera",
