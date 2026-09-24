@@ -53,14 +53,11 @@ $num    = (int)($_GET["n"] ?? 0);
 if ($num < 0 || $num > 100000) $num = 0;
 
 // Daily-rotating anonymous visitor hash: salt(day) + IP + UA → 12 hex chars.
-// Not stored anywhere in reversible form; changes every midnight.
-$saltFile = "$dir/.salt-" . gmdate("Y-m-d");
-if (!is_file($saltFile)) {
-  foreach (glob("$dir/.salt-*") as $old) @unlink($old);   // keep only today's
-  @file_put_contents($saltFile, bin2hex(random_bytes(16)));
-}
-$salt = (string)@file_get_contents($saltFile);
-$vid  = substr(hash("sha256", $salt . ($_SERVER["REMOTE_ADDR"] ?? "") . ($_SERVER["HTTP_USER_AGENT"] ?? "")), 0, 12);
+// Not stored anywhere in reversible form; changes every midnight. Computed in
+// lib-source.php so the enquiry handler derives exactly the same value when it
+// looks up how an enquirer arrived.
+require __DIR__ . "/lib-source.php";
+$vid = kemet_vid();
 
 // Very light bot filter.
 $ua = strtolower($_SERVER["HTTP_USER_AGENT"] ?? "");

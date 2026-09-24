@@ -41,13 +41,17 @@ function clean_line($v) {
 // log directory stayed empty. Losing a customer to a mail outage is the most
 // expensive failure this file can have, so the record is now written whatever
 // happens and the status says what became of it.
-function log_enquiry($status, $name, $email, $phone, $dates, $message) {
+// Columns 7 and 8 (source, first page) were added when enquiries began to
+// record how the person found the site. Older rows have seven columns and
+// stats.php pads them, so both report together.
+function log_enquiry($status, $name, $email, $phone, $dates, $message, $source = "", $first = "") {
   $dir = __DIR__ . "/_stats";
   if (!is_dir($dir)) { @mkdir($dir, 0755, true); @file_put_contents("$dir/index.html", ""); }
   $q = function ($v) { return str_replace('"', "'", (string)$v); };
-  $row = sprintf("%s,%s,\"%s\",\"%s\",\"%s\",\"%s\",\"%s\"\n",
+  $row = sprintf("%s,%s,\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\"\n",
     gmdate("Y-m-d H:i"), $status,
-    $q($name), $q($email), $q($phone), $q($dates), $q(mb_substr($message, 0, 500)));
+    $q($name), $q($email), $q($phone), $q($dates), $q(mb_substr($message, 0, 500)),
+    $q($source), $q($first));
   @file_put_contents($dir . "/enquiries.csv", $row, FILE_APPEND | LOCK_EX);
 }
 
@@ -65,10 +69,19 @@ $phone   = mb_substr(clean_line($_POST["phone"] ?? ""), 0, 40);
 $dates   = mb_substr(clean_line($_POST["dates"] ?? ""), 0, 120);
 $message = mb_substr(trim((string)($_POST["message"] ?? "")), 0, 5000);
 
+// How this person found us — read from today's analytics log on the server,
+// through the anonymous daily visitor hash. Nothing was stored on their device
+// and nothing extra was sent by the form; see lib-source.php.
+require __DIR__ . "/lib-source.php";
+$trail  = kemet_visit_trail();
+$srcTxt = kemet_source_label($trail["source"]);
+$readTxt = implode(", ", array_slice(array_values(array_filter($trail["pages"],
+  fn($p) => $p !== "/contact.html")), 0, 8));
+
 if ($name === "" || $message === "" || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
   // Still recorded: a mistyped email address is a real person who tried to
   // reach us, and the phone number they left may be perfectly good.
-  log_enquiry("invalid", $name, $email, $phone, $dates, $message);
+  log_enquiry("invalid", $name, $email, $phone, $dates, $message, $srcTxt, $trail["first"]);
   respond(false, $wantsJson);
 }
 
@@ -91,7 +104,7 @@ if ($ip !== "") {
   if (is_file($mark) && (time() - @filemtime($mark)) < 60) {
     // Answered "ok": from the visitor's side the message did get through the
     // first time, and a second confirmation is the truthful reply.
-    log_enquiry("duplicate", $name, $email, $phone, $dates, $message);
+    log_enquiry("duplicate", $name, $email, $phone, $dates, $message, $srcTxt, $trail["first"]);
     respond(true, $wantsJson);
   }
   @touch($mark);
@@ -108,7 +121,11 @@ $body =
   ($phone !== "" ? "Phone:   " . $phone . "\n" : "") .
   ($dates !== "" ? "Dates:   " . $dates . "\n" : "") .
   "----------------------------------\n\n" .
-  $message . "\n";
+  $message . "\n\n" .
+  "----------------------------------\n" .
+  "Found us via: " . $srcTxt . "\n" .
+  ($trail["first"] !== "" ? "First page:   " . $trail["first"] . "\n" : "") .
+  ($readTxt !== "" ? "Also read:    " . $readTxt . "\n" : "");
 
 // From must be a domain address for SPF/DMARC; the visitor goes in Reply-To
 // so hitting "Reply" in the inbox answers the customer directly. The display
@@ -127,6 +144,6 @@ $ok = @mail($to, $subject, $body, $headers, "-fno-reply@kemet-travel.com");
 // returning true only means the message was handed to the local MTA — it can
 // still bounce later — so this file, not the inbox, is the record of record.
 // Read it from the dashboard at /stats.php.
-log_enquiry($ok ? "sent" : "mail-failed", $name, $email, $phone, $dates, $message);
+log_enquiry($ok ? "sent" : "mail-failed", $name, $email, $phone, $dates, $message, $srcTxt, $trail["first"]);
 
 respond($ok, $wantsJson);

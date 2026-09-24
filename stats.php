@@ -33,6 +33,7 @@
 // If the file is missing the page refuses to load rather than falling open.
 // ---------------------------------------------------------------------------
 require __DIR__ . "/lib-auth.php";
+require __DIR__ . "/lib-source.php";
 kemet_require_login("Kemet statistics");
 
 $dir = __DIR__ . "/_stats";
@@ -70,6 +71,7 @@ $visitors = $seenVisit = $hitsPerVisit = [];
 $depthSum = $depthN = $timeSum = $timeN = [];
 $engTotal = $engCount = $depthTotal = $depthCount = 0;
 
+$visitSrc = []; $visitContact = [];
 foreach ($rows as $c) {
   [$dt, $t, $vid, $page, $extra, $dev, $lang, $query, $detail, $num] = $c;
   $day   = substr($dt, 0, 10);
@@ -89,6 +91,10 @@ foreach ($rows as $c) {
     if ($extra !== "") $refs[$extra] = ($refs[$extra] ?? 0) + 1;
     if ($lang  !== "") $langs[substr($lang, 0, 2)] = ($langs[substr($lang, 0, 2)] ?? 0) + 1;
     if ($query !== "") $camps[$query] = ($camps[$query] ?? 0) + 1;
+    // Where the visit came from: its first arrival from outside the site.
+    if (!isset($visitSrc[$visit]) && ($extra !== "" || $query !== "")) {
+      $visitSrc[$visit] = kemet_source_label(kemet_source($extra, $query));
+    }
     // First page of the visit — what actually brings people to the site.
     if (!isset($seenVisit[$visit])) {
       $seenVisit[$visit] = 1;
@@ -99,6 +105,7 @@ foreach ($rows as $c) {
 
   // --- events ---------------------------------------------------------------
   $events[$extra] = ($events[$extra] ?? 0) + 1;
+  if (in_array($extra, ["whatsapp", "email", "phone", "form-submit"], true)) $visitContact[$visit] = 1;
   if ($extra === "search" && $detail !== "") {
     $searches[$detail] = ($searches[$detail] ?? 0) + 1;
   } elseif ($extra === "search-none" && $detail !== "") {
@@ -120,6 +127,19 @@ foreach ($rows as $c) {
     }
   }
 }
+
+// Visits and contacts per source. A "contact" is a visit that tapped WhatsApp,
+// email or phone, or sent the form — the same four actions as the funnel.
+$bySrc = [];
+foreach ($visitors as $v => $_) {
+  $label = $visitSrc[$v] ?? "Direct / typed";
+  $bySrc[$label] ??= ["v" => 0, "c" => 0];
+  $bySrc[$label]["v"]++;
+  if (isset($visitContact[$v])) $bySrc[$label]["c"]++;
+}
+uasort($bySrc, fn($a, $b) => [$b["c"], $b["v"]] <=> [$a["c"], $a["v"]]);
+$aiVisits = 0; $aiContacts = 0;
+foreach ($bySrc as $label => $n) if (strpos($label, "AI assistant") === 0) { $aiVisits += $n["v"]; $aiContacts += $n["c"]; }
 
 arsort($pages); arsort($refs); arsort($events); arsort($langs);
 arsort($camps); arsort($landing); arsort($picks); arsort($broken);
@@ -174,7 +194,8 @@ if (is_file($enqFile)) {
     $c = str_getcsv($line);
     if (count($c) < 6) continue;
     if (!in_array($c[1] ?? "", ENQ_STATUS, true)) array_splice($c, 1, 0, "sent");
-    $enquiries[] = array_pad(array_slice($c, 0, 7), 7, "");
+    // 9 columns since enquiries record their source; older rows have 7
+    $enquiries[] = array_pad(array_slice($c, 0, 9), 9, "");
   }
 }
 // Sort by timestamp, not by file order: a hand-restored or back-filled row
@@ -302,6 +323,19 @@ td.n2{text-align:right;color:var(--mut);font-variant-numeric:tabular-nums;width:
   <div><b><?= $fmt($reach) ?></b><span>Any contact</span><em><?= $pct($reach, $uv) ?> of visits</em></div>
 </div>
 
+<h2>Where the enquiries come from · منين بيجي الزباين</h2>
+<div class="note">Each visit filed under how it first arrived — an AI assistant, a search engine, social, another site, or typed in. <b>Contacted</b> means the visit tapped WhatsApp, email or phone, or sent the form. Matched on the server through the anonymous daily visitor hash, so a person who reads about Kemet today and writes tomorrow is counted as direct.<?php if ($aiVisits): ?> AI assistants: <b><?= $fmt($aiVisits) ?></b> visits, <b><?= $fmt($aiContacts) ?></b> contacted.<?php endif; ?></div>
+<?php if (!$bySrc): ?>
+<table><tr><td style="color:var(--mut)">No visits recorded yet</td></tr></table>
+<?php else: $maxV = max(array_column($bySrc, "v")); ?>
+<table>
+<tr><td style="color:var(--mut);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase">Source</td><td class="n2">Visits</td><td class="n2">Contacted</td><td class="n2">Rate</td></tr>
+<?php foreach (array_slice($bySrc, 0, 20, true) as $label => $n): ?>
+<tr><td><?= $esc($label) ?><i class="in" style="width:<?= max(1, round($n["v"] / $maxV * 100)) ?>%"></i></td><td class="n2"><?= $fmt($n["v"]) ?></td><td class="n"><?= $fmt($n["c"]) ?></td><td class="n2"><?= $pct($n["c"], $n["v"]) ?></td></tr>
+<?php endforeach; ?>
+</table>
+<?php endif; ?>
+
 <div class="cols">
 <div>
   <h2>Landing pages</h2>
@@ -383,7 +417,7 @@ if (!$attn) {
 <table><tr><td style="color:var(--mut)">No enquiries recorded yet</td></tr></table>
 <?php else: ?>
 <table>
-<?php foreach (array_slice($enquiries, 0, 25) as $e): [$when, $status, $nm, $em, $ph, $dt, $msg] = $e; ?>
+<?php foreach (array_slice($enquiries, 0, 25) as $e): [$when, $status, $nm, $em, $ph, $dt, $msg, $src, $first] = $e; ?>
   <tr class="enq enq--<?= $esc($status) ?>">
     <td>
       <span class="tag tag--<?= $esc($status) ?>"><?= $esc($status) ?></span>
@@ -392,6 +426,7 @@ if (!$attn) {
       <?= $ph !== "" ? ' · <span class="enq-masked">' . $esc(maskPhone($ph)) . "</span>" : "" ?>
       <?= $dt !== "" ? " · dates: " . $esc($dt) : "" ?>
       <div class="enq-msg"><?= $esc($msg) ?></div>
+      <?php if ($src !== ""): ?><div class="enq-msg">Found us via <b><?= $esc($src) ?></b><?= $first !== "" ? " · first page " . $esc($first) : "" ?></div><?php endif; ?>
     </td>
     <td class="n2"><?= $esc($when) ?></td>
   </tr>
