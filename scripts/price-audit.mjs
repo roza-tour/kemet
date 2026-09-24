@@ -56,6 +56,10 @@ const wases = new Set(tours.filter((t) => t.was).map((t) => t.was));
 // are computed here the same way the pages compute them — never listed by hand,
 // which is how a quoted figure falls behind the moment prices move.
 const flies = new Set(tours.filter((t) => t.flyOption).map((t) => t.price + t.flyOption.extra));
+// …and the difference itself, which the fly-or-sleeper comparison states.
+for (const t of tours.filter((t) => t.flyOption)) {
+  KNOWN.set(t.flyOption.extra, "flight-version difference, read from tours.ts");
+}
 const multi = tours.filter((t) => t.kind === "multiday");
 const perDay = multi.map((t) => t.price / days(t.durationLabel));
 // The computed per-day range the cost page prints, so it is not "unexplained".

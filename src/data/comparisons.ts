@@ -49,7 +49,90 @@ export interface Comparison {
   keywords: string[];
 }
 
+import { tours } from "@/data/tours";
+
+// The flight-version difference, read from the journeys that offer it rather
+// than typed here — prices moved 10% once already and will move again.
+const FLY_EXTRA = tours.find((t) => t.flyOption)?.flyOption?.extra ?? 0;
+const FLY_TOURS = tours.filter((t) => t.flyOption).map((t) => t.title);
+
 export const comparisons: Comparison[] = [
+  // =========================================================================
+  // Train times and sleeper details checked in September 2026 against the
+  // current timetable (seat61.com, Egypt Trains): Cairo 19:20 → Luxor 05:35,
+  // → Aswan 08:35; two-berth cabins with a washbasin, two shared toilets per
+  // carriage, dinner and breakfast included; run by Abela Trains since 2023.
+  // No high-speed service reaches Luxor or Aswan yet.
+  {
+    slug: "fly-or-sleeper-train",
+    title: "Fly or take the sleeper train to Luxor and Aswan?",
+    label: "Fly or sleeper train",
+    symbol: "boat",
+    optionA: "Fly",
+    optionB: "Sleeper train",
+    shortSummary: "An hour in the air against a night on the rails — and what each one costs you in sleep.",
+    metaDescription:
+      "Flying or the overnight sleeper from Cairo to Luxor and Aswan: journey times, what the sleeper cabin is really like, and which one suits a comfortable trip.",
+    verdict:
+      "If comfort comes before cost, fly. Cairo to Luxor is under an hour in the air and Aswan an hour and a quarter, you sleep in a hotel bed, and you arrive rested. The sleeper is a genuine experience and good value — dinner, breakfast and a private two-berth cabin — but it is ten to thirteen hours on a train, the toilets are shared, and the southbound train reaches Luxor at about half past five in the morning. Take it for the experience, not for the rest.",
+    lede:
+      "Every itinerary that goes south from Cairo has to make this choice once in each direction. It is usually framed as time against money. For most travellers it is really a question of how the next morning feels.",
+    rows: [
+      { aspect: "Cairo to Luxor", a: "About 55 minutes in the air", b: "About 10 hours overnight" },
+      { aspect: "Cairo to Aswan", a: "About 1 hour 15 minutes in the air", b: "About 13 hours overnight" },
+      { aspect: "Where you sleep", a: "A hotel room", b: "A two-berth cabin with a washbasin" },
+      { aspect: "Bathroom", a: "Your own", b: "Two shared toilets per carriage" },
+      { aspect: "Arrival", a: "Whenever the flight lands — mid-morning is easy", b: "Luxor around 05:35, Aswan around 08:35" },
+      { aspect: "Meals", a: "Your hotel's", b: "Dinner and breakfast served in the cabin" },
+      { aspect: "Daylight used", a: "Part of a morning or an afternoon", b: "None — you travel while you sleep" },
+      { aspect: "Luggage", a: "Checked in, weight limits apply", b: "With you in the cabin" },
+      { aspect: "Suits", a: "Older travellers, light sleepers, anyone short of energy", b: "Travellers who like trains and do not mind an early start" },
+    ],
+    chooseA: {
+      heading: "Fly if",
+      points: [
+        "You would rather arrive rested than save a night",
+        "Anyone in the party is older, a light sleeper, or finds narrow berths hard",
+        "A private bathroom matters more to you than the romance of the rails",
+        "The day after the journey is one you want to enjoy, not recover from",
+      ],
+    },
+    chooseB: {
+      heading: "Take the sleeper if",
+      points: [
+        "The train is part of the adventure for you, not just the way south",
+        "You sleep well anywhere and an early arrival does not bother you",
+        "You would rather not give up any daylight to airports",
+        "You are travelling light and like keeping your bags beside you",
+      ],
+    },
+    sections: [
+      {
+        title: "The real cost is the next morning",
+        body:
+          "The case for the sleeper is that it saves a hotel night and a daytime transfer. Both are true. What it costs is harder to see on an itinerary: a night of broken sleep in a moving train, and — heading south — an arrival in Luxor before dawn. Most people who take it once enjoy it. Fewer choose it the second time, and hardly anyone travelling with parents in their seventies does.",
+      },
+      {
+        title: "What the flight really takes",
+        body:
+          "The time in the air is short, but the journey is not only the flight. Allow for the drive to the airport, check-in and the transfer on arrival, and a flight south takes most of a morning or an afternoon. That is the trade: some daylight given up, in exchange for a night in a proper bed and a first morning in Upper Egypt that starts at breakfast rather than at half past five.",
+      },
+      {
+        title: "How we arrange it",
+        body: FLY_TOURS.length
+          ? `Two of our longer journeys — ${FLY_TOURS.join(" and ")} — use the sleeper in both directions as published. Both are also arranged with flights instead, with those two nights in hotels, for €${FLY_EXTRA} more per person; ask for the flight version when you enquire. Every other journey that goes south is already built around flights.`
+          : "Every journey that goes south can be arranged either way — ask when you enquire.",
+      },
+    ],
+    faqs: [
+      { q: "How long is the train from Cairo to Luxor?", a: "About ten hours. The overnight sleeper leaves Cairo in the evening and reaches Luxor around 05:35 the next morning; the day trains take a similar time. There is no high-speed service to Luxor yet." },
+      { q: "How long is the train from Cairo to Aswan?", a: "About thirteen hours. The sleeper leaves Cairo in the evening and reaches Aswan around 08:35. Flying takes about an hour and a quarter." },
+      { q: "What is the sleeper train cabin like?", a: "A private two-berth compartment with a washbasin, clean bedding and towels, and dinner and breakfast served in the cabin. The toilets are shared — two per carriage — and it is a moving train, so light sleepers often find the night long." },
+      { q: "Is there a high-speed train to Luxor or Aswan?", a: "Not yet. Egypt is building a high-speed line along the Nile to Luxor, Aswan and Abu Simbel, but it is not running. Today the choice is the conventional train, usually overnight, or a flight." },
+      { q: "Which is better for older travellers?", a: "Flying, in almost every case. It is under an hour and a quarter to either city, you sleep in a hotel bed, and there are no narrow berths, shared bathrooms or pre-dawn arrivals to manage." },
+    ],
+    keywords: ["cairo to luxor train or flight", "sleeper train egypt", "cairo to aswan train", "cairo to luxor flight time", "egypt sleeper train review", "is the sleeper train in egypt worth it"],
+  },
   // =========================================================================
   {
     slug: "nile-cruise-vs-land-tour",

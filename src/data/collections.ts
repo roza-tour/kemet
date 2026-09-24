@@ -52,7 +52,7 @@ export const collections: Collection[] = [
     ],
     planningNotes: [
       "Book 3–6 months ahead for peak winter (December–February) — prime Nile cruise dates sell out",
-      "High-speed train Cairo–Luxor runs in under three hours; overnight sleeper is an alternative",
+      "Fly Cairo–Luxor in under an hour; the train takes nine to ten, so it is usually the overnight sleeper",
       "Luxor's East and West Banks warrant two full days each — plan at least four nights in Luxor",
       "Aswan in winter is 5–8 °C cooler than Luxor, making it the most comfortable desert city",
     ],

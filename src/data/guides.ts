@@ -289,7 +289,7 @@ export const guides: Guide[] = [
       "How to travel between Egypt's cities and sites — domestic flights, high-speed trains, Nile cruises, the Cairo Metro, taxis and private transfers explained.",
     difficulty: "moderate",
     readingTimeMinutes: 7,
-    lastUpdated: "2026-01",
+    lastUpdated: "2026-09",
     keyFacts: [
       { label: "Cairo → Luxor (flight)", value: "~55 minutes" },
       { label: "Cairo → Luxor (Talgo train)", value: "~4.5 hours" },
@@ -300,7 +300,7 @@ export const guides: Guide[] = [
     ],
     keyTakeaways: [
       "EgyptAir connects Cairo to Luxor and Aswan in under an hour — the fastest option when time is short",
-      "The Talgo high-speed train is comfortable, reliable and a genuinely scenic experience",
+      "The train is comfortable and genuinely scenic, but slow — around ten hours to Luxor and thirteen to Aswan, usually overnight",
       "A Nile cruise between Luxor and Aswan is one of Egypt's most distinctive journeys",
       "Uber operates in Cairo and is far more predictable than street taxis for tourist journeys",
       "Private transfers between cities offer full flexibility and are standard on guided tours",
@@ -320,10 +320,10 @@ export const guides: Guide[] = [
         ],
       },
       {
-        heading: "High-speed trains",
+        heading: "Trains",
         paragraphs: [
-          "Egypt's Spanish-built Talgo trains on the Cairo–Luxor–Aswan corridor are one of the country's great travel options. Air-conditioned, comfortable and reliable, they reduce the Cairo-to-Luxor journey to around four and a half hours and Cairo-to-Aswan to around six. First-class service includes meal options and is very reasonably priced by international standards.",
-          "The overnight sleeper between Cairo and Luxor or Aswan is a legitimate itinerary piece: board in the evening, wake up in Upper Egypt. The Watania Wattrains wagons-lits service caters primarily to foreign visitors and includes dinner and breakfast. Book well in advance during peak months.",
+          "Egypt's Spanish-built Talgo trains on the Cairo–Luxor–Aswan corridor are air-conditioned, comfortable and reliable, and first class is very reasonably priced by international standards. They are not fast: Cairo to Luxor takes around nine to ten hours and Cairo to Aswan around thirteen, which is why most people ride them overnight. Egypt is building a high-speed line along the Nile, but it is not yet running to Luxor or Aswan.",
+          "The overnight sleeper between Cairo and Luxor or Aswan is a legitimate itinerary piece: board in the evening, wake up in Upper Egypt, with dinner and breakfast served aboard. It is a night on a train rather than in a hotel, so travellers who put comfort first usually fly instead — under an hour and a quarter to either city. Book the sleeper well in advance during peak months.",
         ],
         note: "Train booking is available online via Egyptian National Railways, but the booking interface is inconsistent. Your tour operator or a specialist booking service can confirm reservations more reliably.",
         noteType: "tip",
@@ -374,7 +374,7 @@ export const guides: Guide[] = [
     faqs: [
       {
         q: "Is it easy to travel between Cairo, Luxor and Aswan?",
-        a: "Yes. Flights take under an hour; the high-speed Talgo train is around four and a half hours to Luxor and six hours to Aswan. The overnight sleeper is comfortable and saves a hotel night. A Nile cruise is the most atmospheric option if time allows.",
+        a: "Yes. Flights take under an hour and a quarter to either city; the train takes around nine to ten hours to Luxor and thirteen to Aswan, so it is usually taken overnight in a sleeper cabin, which saves a hotel night. A Nile cruise is the most atmospheric way to travel between Luxor and Aswan if time allows.",
       },
       {
         q: "Is Uber available in Egypt?",
