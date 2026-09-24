@@ -33,6 +33,7 @@
 // the point of the fix. If this script reports something surprising, suspect
 // the script first — it has been wrong before.
 // ---------------------------------------------------------------------------
+import { gzipSync } from 'node:zlib';
 import { readFileSync, existsSync, statSync } from 'fs';
 import { execSync } from 'child_process';
 
@@ -122,8 +123,15 @@ for (const f of html) {
   }
 
   // --- weight -------------------------------------------------------------
-  const kb = statSync(f).size / 1024;
-  if (kb > 120) add('page-heavy', `${kb.toFixed(0)}KB  ${f}`);
+  // Measured as it TRAVELS, gzipped — the server deflates HTML (see
+  // public/.htaccess), and that is the weight a visitor waits for. Raw bytes
+  // were the proxy until responsive images put a srcset on every photo: the
+  // home page grew 105 → 128KB raw and 23 → 24KB on the wire, because a list
+  // of near-identical URLs compresses to almost nothing. Raw size flagged it;
+  // transfer size says the page gained one kilobyte to save up to 935KB of
+  // images. 30KB sits ~20% above today's heaviest page (25KB).
+  const kb = gzipSync(readFileSync(f), { level: 6 }).length / 1024;
+  if (kb > 30) add('page-heavy', `${kb.toFixed(1)}KB gzip  ${f}`);
 }
 
 for (const [t, fs] of Object.entries(titles)) if (fs.length > 1) add('dup-title', `${fs.length}×  "${t}"  ${fs.join(', ')}`);
