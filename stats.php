@@ -186,7 +186,7 @@ const LANG_NAMES = [
 //
 // Rows written before the status column existed have six fields and were only
 // ever written on success, so they are read as "sent".
-const ENQ_STATUS = ["sent", "mail-failed", "invalid", "duplicate", "throttled"];
+const ENQ_STATUS = ["sent", "mail-failed", "invalid", "duplicate", "throttled", "spam"];
 $enquiries = [];
 $enqFile = $dir . "/enquiries.csv";
 if (is_file($enqFile)) {
@@ -201,6 +201,10 @@ if (is_file($enqFile)) {
 // Sort by timestamp, not by file order: a hand-restored or back-filled row
 // would otherwise jump to the top purely because it was appended last.
 usort($enquiries, fn($a, $b) => strcmp($b[0], $a[0]));        // newest first
+// Posts held as spam by contact-handler.php are kept apart: counted and listed
+// on their own, never in the enquiry total or the main list.
+$enqSpam   = array_values(array_filter($enquiries, fn($e) => $e[1] === "spam"));
+$enquiries = array_values(array_filter($enquiries, fn($e) => $e[1] !== "spam"));
 $enqRecent = array_filter($enquiries, fn($e) => $e[0] >= $since->format("Y-m-d"));
 $enqFailed = array_values(array_filter($enquiries, fn($e) => $e[1] === "mail-failed"));
 
@@ -412,7 +416,7 @@ if (!$attn) {
 <?php $table($broken, 15, null, "None — no visitor hit a missing page"); ?>
 
 <h2>Enquiries</h2>
-<div class="note">Every message the contact form received, newest first, with what became of it. Email addresses and phone numbers are masked because this page opens without a key — the full details are in <code>_stats/enquiries.csv</code> on the server.  <b>sent</b> reached the mail server · <b>mail-failed</b> did not — reply to those by hand · <b>invalid</b> failed validation, but the phone number may still be good · <b>duplicate</b> is the same message submitted twice.</div>
+<div class="note">Every message the contact form received, newest first, with what became of it. Email addresses and phone numbers are masked because this page opens without a key — the full details are in <code>_stats/enquiries.csv</code> on the server.  <b>sent</b> reached the mail server · <b>mail-failed</b> did not — reply to those by hand · <b>invalid</b> failed validation, but the phone number may still be good · <b>duplicate</b> is the same message submitted twice. Posts that did not come from the site's own form are held as spam, below, and were not emailed.</div>
 <?php if (!$enquiries): ?>
 <table><tr><td style="color:var(--mut)">No enquiries recorded yet</td></tr></table>
 <?php else: ?>
@@ -433,6 +437,16 @@ if (!$attn) {
   </tr>
 <?php endforeach; ?>
 </table>
+<?php endif; ?>
+
+<?php if ($enqSpam): ?>
+<details style="margin-top:14px"><summary class="note" style="cursor:pointer"><?= $fmt(count($enqSpam)) ?> held as spam · رسايل اتحجزت كسبام — not emailed. Open to check nothing real was caught.</summary>
+<table>
+<?php foreach (array_slice($enqSpam, 0, 25) as $e): [$when, , $nm, $em, , , $msg] = $e; ?>
+  <tr class="enq"><td><b><?= $esc($nm) ?></b> <span class="enq-masked"><?= $esc(maskEmail($em)) ?></span><div class="enq-msg"><?= $esc(mb_substr($msg, 0, 160)) ?></div></td><td class="n2"><?= $esc($when) ?></td></tr>
+<?php endforeach; ?>
+</table>
+</details>
 <?php endif; ?>
 
 <div class="links">Range:

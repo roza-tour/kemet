@@ -35,6 +35,10 @@ const {
       Website
       <input type="text" name="website" tabindex="-1" autocomplete="off" />
     </label>
+    {/* Filled in by the page's own script at the moment of sending: seconds
+        the visitor spent on the page. A bot posting straight to the handler
+        never runs the script, so it arrives empty — see contact-handler.php. */}
+    <input type="hidden" name="kt" value="" />
 
     <div class="cform-grid">
       <label>
@@ -118,6 +122,15 @@ const {
       var target = document.getElementById("message-us");
       if (target) target.scrollIntoView({ block: "start" });
     }
+
+    // Time on the page, written into the hidden field as the form is sent.
+    // Registered before the enhanced handler below so FormData picks it up;
+    // it also runs on a plain submit when fetch is unavailable.
+    var t0 = Date.now();
+    var fk = document.querySelector(".cform");
+    if (fk && fk.kt) fk.addEventListener("submit", function () {
+      fk.kt.value = String(Math.round((Date.now() - t0) / 1000));
+    });
 
     // Enhanced path — submit in place, no page reload.
     var form = document.querySelector(".cform");

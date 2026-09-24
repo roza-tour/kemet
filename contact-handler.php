@@ -62,6 +62,18 @@ if (!empty($_POST["website"])) {
   respond(true, $wantsJson); // pretend success to the bot
 }
 
+// Held as spam: every "enquiry" in the first month of the dashboard was an
+// advert (prize draws, proxy servers) posted straight to this handler — none of
+// them had opened the contact page, and the funnel recorded 0 forms started.
+// The form's own script writes the seconds spent on the page into "kt" as it
+// sends, so a post without it never came from the page, and one sent within
+// 3 seconds was not typed by a person. These are answered "ok" like the
+// honeypot (a bot learns nothing) but, unlike the honeypot, they ARE logged,
+// as "spam", with no email sent: a visitor whose browser runs no script at all
+// still has their message on the dashboard, under "held as spam".
+$kt = trim((string)($_POST["kt"] ?? ""));
+$spam = ($kt === "" || !ctype_digit($kt) || (int)$kt < 3);
+
 // Server-side length caps (the form's maxlength is client-only) — mirror it and
 // hard-cap the message so nobody can post a giant payload.
 $name    = mb_substr(clean_line($_POST["name"] ?? ""), 0, 120);
@@ -94,6 +106,11 @@ $trail  = kemet_visit_trail();
 $srcTxt = kemet_source_label($trail["source"]);
 $readTxt = implode(", ", array_slice(array_values(array_filter($trail["pages"],
   fn($p) => $p !== "/contact.html")), 0, 8));
+
+if ($spam) {
+  log_enquiry("spam", $name, $email, $phone, $dates, $message, $srcTxt, $trail["first"], $party, $pace, $priority);
+  respond(true, $wantsJson);
+}
 
 if ($name === "" || $message === "" || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
   // Still recorded: a mistyped email address is a real person who tried to
