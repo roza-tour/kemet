@@ -38,19 +38,64 @@ kemet_require_login("Kemet statistics", true);   // read-only: the agent key is 
 
 $dir = __DIR__ . "/_stats";
 
-$days  = max(7, min(90, (int)($_GET["days"] ?? 30)));
-$since = new DateTimeImmutable("-" . ($days - 1) . " days", new DateTimeZone("UTC"));
+// --- The period ------------------------------------------------------------
+// Days are Cairo days: "today" is today in Egypt, where the business runs, not
+// in UTC — at 1 a.m. in Cairo a UTC "today" would still be showing yesterday.
+// The log is written in UTC, so the Cairo boundaries are converted to UTC and
+// compared with the log's "Y-m-d H:i" strings directly.
+$tz    = new DateTimeZone("Africa/Cairo");
+$utc   = new DateTimeZone("UTC");
+$today = new DateTimeImmutable("today", $tz);
+// key => [label, first day back, last day back]
+$RANGES = [
+  "today"     => ["Today · النهارده", 0, 0],
+  "yesterday" => ["Yesterday · امبارح", 1, 1],
+  "2d"        => ["2 days · يومين", 1, 0],
+  "7d"        => ["7 days · أسبوع", 6, 0],
+  "30d"       => ["30 days · شهر", 29, 0],
+  "90d"       => ["90 days · 3 شهور", 89, 0],
+];
+$asDate = fn($v) => (is_string($v) && preg_match('/^\d{4}-\d{2}-\d{2}$/', $v))
+  ? (DateTimeImmutable::createFromFormat("!Y-m-d", $v, $tz) ?: null) : null;
+$rangeKey = (string)($_GET["range"] ?? "");
+if ($rangeKey === "" && isset($_GET["days"])) $rangeKey = (int)$_GET["days"] . "d";   // old ?days=N links
+$fromD = $asDate($_GET["from"] ?? null);
+$toD   = $asDate($_GET["to"] ?? null);
+if ($fromD && $toD) {
+  if ($toD < $fromD) [$fromD, $toD] = [$toD, $fromD];
+  $oldest = $today->modify("-13 months");          // nothing older is kept
+  if ($fromD < $oldest) $fromD = $oldest;
+  if ($toD > $today) $toD = $today;
+  if ($fromD > $toD) $fromD = $toD;
+  $rangeKey = "custom";
+  $rangeLabel = $fromD->format("j M Y") . ($fromD == $toD ? "" : " – " . $toD->format("j M Y"));
+} else {
+  if (!isset($RANGES[$rangeKey])) $rangeKey = "30d";
+  [$rangeLabel, $back, $end] = $RANGES[$rangeKey];
+  $fromD = $today->modify("-$back days");
+  $toD   = $today->modify("-$end days");
+}
+$fromUtc = $fromD->setTimezone($utc)->format("Y-m-d H:i");
+$toUtc   = $toD->modify("+1 day")->setTimezone($utc)->format("Y-m-d H:i");   // exclusive
+$days    = $fromD->diff($toD)->days + 1;
+$hourly  = $days <= 2;          // a day or two reads better hour by hour
+
+/** A UTC log timestamp as Cairo time, in the given format. */
+$cairo = function (string $dt, string $f) use ($tz, $utc): string {
+  static $memo = [];
+  return $memo[$f . $dt] ??= (new DateTimeImmutable($dt, $utc))->setTimezone($tz)->format($f);
+};
 
 // Load the CSV months that overlap the window. Rows written before the schema
 // widened carry only six columns, so every row is padded to ten — old and new
 // data report side by side rather than the older half silently dropping out.
 $rows = [];
-for ($m = 0; $m <= 3; $m++) {
-  $f = $dir . "/" . gmdate("Y-m", strtotime("-$m month")) . ".csv";
+for ($m = new DateTimeImmutable(substr($fromUtc, 0, 7) . "-01", $utc); $m->format("Y-m") <= substr($toUtc, 0, 7); $m = $m->modify("+1 month")) {
+  $f = $dir . "/" . $m->format("Y-m") . ".csv";
   if (!is_file($f)) continue;
   foreach (file($f, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) as $line) {
     $c = str_getcsv($line);
-    if (count($c) < 6 || $c[0] < $since->format("Y-m-d")) continue;
+    if (count($c) < 6 || $c[0] < $fromUtc || $c[0] >= $toUtc) continue;
     $rows[] = array_pad($c, 10, "");
   }
 }
@@ -71,7 +116,7 @@ $visitors = $seenVisit = $hitsPerVisit = [];
 $depthSum = $depthN = $timeSum = $timeN = [];
 $engTotal = $engCount = $depthTotal = $depthCount = 0;
 
-$visitSrc = []; $visitContact = [];
+$visitSrc = []; $visitContact = []; $visitFirst = []; $contactEv = [];
 foreach ($rows as $c) {
   [$dt, $t, $vid, $page, $extra, $dev, $lang, $query, $detail, $num] = $c;
   $day   = substr($dt, 0, 10);
@@ -83,7 +128,8 @@ foreach ($rows as $c) {
   }
 
   if ($t === "pv") {
-    $daysMap[$day] = ($daysMap[$day] ?? 0) + 1;
+    $slot = $cairo($dt, $hourly ? "Y-m-d H:00" : "Y-m-d");
+    $daysMap[$slot] = ($daysMap[$slot] ?? 0) + 1;
     $pages[$page]  = ($pages[$page] ?? 0) + 1;
     $devices[$dev] = ($devices[$dev] ?? 0) + 1;
     $visitors[$visit] = 1;
@@ -98,6 +144,7 @@ foreach ($rows as $c) {
     // First page of the visit — what actually brings people to the site.
     if (!isset($seenVisit[$visit])) {
       $seenVisit[$visit] = 1;
+      $visitFirst[$visit] = $page;
       $landing[$page] = ($landing[$page] ?? 0) + 1;
     }
     continue;
@@ -105,7 +152,10 @@ foreach ($rows as $c) {
 
   // --- events ---------------------------------------------------------------
   $events[$extra] = ($events[$extra] ?? 0) + 1;
-  if (in_array($extra, ["whatsapp", "email", "phone", "form-submit"], true)) $visitContact[$visit] = 1;
+  if (in_array($extra, ["whatsapp", "email", "phone", "form-submit"], true)) {
+    $visitContact[$visit] = 1;
+    $contactEv[] = [$visit, $extra, $dt, $page];
+  }
   if ($extra === "search" && $detail !== "") {
     $searches[$detail] = ($searches[$detail] ?? 0) + 1;
   } elseif ($extra === "search-none" && $detail !== "") {
@@ -140,6 +190,19 @@ foreach ($visitors as $v => $_) {
 uasort($bySrc, fn($a, $b) => [$b["c"], $b["v"]] <=> [$a["c"], $a["v"]]);
 $aiVisits = 0; $aiContacts = 0;
 foreach ($bySrc as $label => $n) if (strpos($label, "AI assistant") === 0) { $aiVisits += $n["v"]; $aiContacts += $n["c"]; }
+
+// Each WhatsApp / email / phone tap and form sent, filed under the source of
+// the visit it happened in. Runs after the loop: a tap can be logged before a
+// later page of the same visit, so the source is only settled once all is read.
+const CONTACT_TYPES = ["whatsapp" => "WhatsApp", "email" => "Email", "phone" => "Phone", "form-submit" => "Form sent"];
+$tapsBySrc = [];
+foreach ($contactEv as [$v, $type]) {
+  $label = $visitSrc[$v] ?? "Direct / typed";
+  $tapsBySrc[$label] ??= array_fill_keys(array_keys(CONTACT_TYPES), 0);
+  $tapsBySrc[$label][$type]++;
+}
+uasort($tapsBySrc, fn($a, $b) => [$b["whatsapp"], array_sum($b)] <=> [$a["whatsapp"], array_sum($a)]);
+$waLatest = array_slice(array_reverse(array_values(array_filter($contactEv, fn($e) => $e[1] === "whatsapp"))), 0, 20);
 
 arsort($pages); arsort($refs); arsort($events); arsort($langs);
 arsort($camps); arsort($landing); arsort($picks); arsort($broken);
@@ -205,7 +268,7 @@ usort($enquiries, fn($a, $b) => strcmp($b[0], $a[0]));        // newest first
 // on their own, never in the enquiry total or the main list.
 $enqSpam   = array_values(array_filter($enquiries, fn($e) => $e[1] === "spam"));
 $enquiries = array_values(array_filter($enquiries, fn($e) => $e[1] !== "spam"));
-$enqRecent = array_filter($enquiries, fn($e) => $e[0] >= $since->format("Y-m-d"));
+$enqRecent = array_filter($enquiries, fn($e) => $e[0] >= $fromUtc && $e[0] < $toUtc);
 $enqFailed = array_values(array_filter($enquiries, fn($e) => $e[1] === "mail-failed"));
 
 /**
@@ -277,7 +340,15 @@ td.n2{text-align:right;color:var(--mut);font-variant-numeric:tabular-nums;width:
 .fun em{font-style:normal;color:var(--gold);font-size:.74rem}
 .cols{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
 @media(max-width:760px){.cols{grid-template-columns:1fr}}
-.links{margin-top:26px;font-size:.8rem}.links a{color:var(--gold)}
+.range{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:22px}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.pills a{color:var(--bone);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:6px 13px;font-size:.84rem}
+.pills a.on{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+.pick{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end;font-size:.78rem;color:var(--mut)}
+.pick label{display:flex;flex-direction:column;gap:4px}
+.pick input{background:var(--ink);color:var(--bone);border:1px solid var(--line);border-radius:6px;padding:6px 8px;font:inherit;font-size:.88rem;color-scheme:dark}
+.pick button{background:transparent;color:var(--gold);border:1px solid var(--gold);border-radius:6px;padding:7px 14px;font:inherit;font-size:.86rem;cursor:pointer}
+.now{margin-top:12px;font-size:.84rem;color:var(--mut)}.now b{color:var(--bright);font-weight:500}
 .card--alarm{border-color:rgba(224,122,95,.65);background:rgba(224,122,95,.09)}
 .card--alarm b{color:#F0A88F}
 .alarm{background:rgba(224,122,95,.1);border:1px solid rgba(224,122,95,.5);border-radius:10px;padding:14px 18px;margin-bottom:22px;font-size:.86rem;line-height:1.65;color:#F3CBBC}
@@ -292,7 +363,17 @@ td.n2{text-align:right;color:var(--mut);font-variant-numeric:tabular-nums;width:
 .tag--invalid{color:#E6CE8A;border-color:rgba(230,206,138,.45)}
 </style></head><body><div class="wrap">
 <h1>Kemet — التقرير · Site Stats</h1>
-<div class="sub">آخر <?= $days ?> يوم · Last <?= $days ?> days (UTC) — cookie-less, first-party, no third-party scripts &nbsp;·&nbsp; <a href="desk.php" style="color:#D9B45A">المكتب · The desk</a> — follow-ups due and this season's dispatch</div>
+<div class="sub">Cookie-less, first-party, no third-party scripts &nbsp;·&nbsp; <a href="desk.php" style="color:#D9B45A">المكتب · The desk</a> — follow-ups due and this season's dispatch</div>
+
+<form class="range" method="get">
+  <div class="pills"><?php foreach ($RANGES as $k => [$lbl]): ?><a href="?range=<?= $k ?>"<?= $k === $rangeKey ? ' class="on"' : '' ?>><?= $esc($lbl) ?></a><?php endforeach; ?></div>
+  <div class="pick">
+    <label>From · من <input type="date" name="from" value="<?= $fromD->format("Y-m-d") ?>" max="<?= $today->format("Y-m-d") ?>"></label>
+    <label>To · لحد <input type="date" name="to" value="<?= $toD->format("Y-m-d") ?>" max="<?= $today->format("Y-m-d") ?>"></label>
+    <button type="submit">Show · اعرض</button>
+  </div>
+  <div class="now">Showing: <b><bdi><?= $esc($rangeLabel) ?></bdi></b> <span>(Cairo time)</span></div>
+</form>
 
 <div class="cards">
 <div class="card"><b><?= $fmt($pv) ?></b><span>Pageviews</span></div>
@@ -314,7 +395,7 @@ td.n2{text-align:right;color:var(--mut);font-variant-numeric:tabular-nums;width:
 </div>
 <?php endif; ?>
 
-<h2>Traffic by day</h2>
+<h2><?= $hourly ? "Traffic by hour (Cairo)" : "Traffic by day" ?></h2>
 <div class="bar"><?php foreach ($daysMap as $d => $n): ?><i title="<?= $esc($d) ?>: <?= $n ?>" style="height:<?= round($n / $maxDay * 100) ?>%"></i><?php endforeach; if (!$daysMap) echo '<span style="color:var(--mut);font-size:.85rem">No data yet — check back after some visits.</span>'; ?></div>
 
 <h2>Enquiry funnel</h2>
@@ -336,6 +417,29 @@ td.n2{text-align:right;color:var(--mut);font-variant-numeric:tabular-nums;width:
 <tr><td style="color:var(--mut);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase">Source</td><td class="n2">Visits</td><td class="n2">Contacted</td><td class="n2">Rate</td></tr>
 <?php foreach (array_slice($bySrc, 0, 20, true) as $label => $n): ?>
 <tr><td><?= $esc($label) ?><i class="in" style="width:<?= max(1, round($n["v"] / $maxV * 100)) ?>%"></i></td><td class="n2"><?= $fmt($n["v"]) ?></td><td class="n"><?= $fmt($n["c"]) ?></td><td class="n2"><?= $pct($n["c"], $n["v"]) ?></td></tr>
+<?php endforeach; ?>
+</table>
+<?php endif; ?>
+
+<h2>WhatsApp &amp; contact taps by source · الواتساب جاي منين</h2>
+<div class="note">Every tap on WhatsApp, email or phone, and every form sent, counted under where that visitor came from. A visitor who arrived one day and tapped the next shows as Direct.</div>
+<?php if (!$tapsBySrc): ?>
+<table><tr><td style="color:var(--mut)">No taps in this period</td></tr></table>
+<?php else: ?>
+<table>
+<tr><td style="color:var(--mut);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase">Source</td><?php foreach (CONTACT_TYPES as $t): ?><td class="n2"><?= $t ?></td><?php endforeach; ?></tr>
+<?php foreach ($tapsBySrc as $label => $n): ?>
+<tr><td><?= $esc($label) ?></td><?php foreach (array_keys(CONTACT_TYPES) as $k): ?><td class="<?= $k === "whatsapp" ? "n" : "n2" ?>"><?= $n[$k] ? $fmt($n[$k]) : "·" ?></td><?php endforeach; ?></tr>
+<?php endforeach; ?>
+</table>
+<?php endif; ?>
+
+<?php if ($waLatest): ?>
+<h2>Latest WhatsApp taps · آخر ضغطات الواتساب</h2>
+<div class="note">Newest first, Cairo time. The page is where the button was tapped; <b>arrived on</b> is the first page of that visit.</div>
+<table>
+<?php foreach ($waLatest as [$v, , $when, $pg]): ?>
+<tr><td class="n2" style="text-align:left;white-space:nowrap"><?= $esc($cairo($when, "j M, H:i")) ?></td><td><?= $esc($visitSrc[$v] ?? "Direct / typed") ?></td><td><?= $esc(pageLabel($pg)) ?><?php $fp = $visitFirst[$v] ?? ""; if ($fp !== "" && $fp !== $pg): ?> <span style="color:var(--mut)">· arrived on <?= $esc(pageLabel($fp)) ?></span><?php endif; ?></td></tr>
 <?php endforeach; ?>
 </table>
 <?php endif; ?>
@@ -449,9 +553,4 @@ if (!$attn) {
 </details>
 <?php endif; ?>
 
-<div class="links">Range:
-  <a href="?days=7">7d</a> ·
-  <a href="?days=30">30d</a> ·
-  <a href="?days=90">90d</a>
-</div>
 </div></body></html>
