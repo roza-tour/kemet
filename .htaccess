@@ -93,6 +93,18 @@ ErrorDocument 404 /404.html
   <FilesMatch "\.php$">
     Header always set X-Robots-Tag "noindex, nofollow, noarchive"
   </FilesMatch>
+
+  # The machine-readable files — the sitemaps, llms.txt and llms-full.txt, the
+  # search index, the season feed and the build stamp — are read by crawlers
+  # and assistants, never meant to be a search result. Without this Search
+  # Console files them under "Crawled – currently not indexed" beside real
+  # pages, which reads like a problem and hides the pages that are one.
+  # "noindex" alone (links still followed): Google keeps processing a sitemap
+  # that carries it, and it has no bearing on assistants that fetch llms.txt.
+  # robots.txt and the site-verification files are deliberately left alone.
+  <FilesMatch "^(?:sitemap[a-z0-9-]*\.xml|llms(?:-full)?\.txt|search-index\.json|seasons\.json|build\.txt)$">
+    Header set X-Robots-Tag "noindex"
+  </FilesMatch>
 </IfModule>
 
 # Send the first byte before the whole page is assembled.
