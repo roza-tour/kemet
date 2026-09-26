@@ -11,6 +11,7 @@
 // actually serve, which means it filters as hard as it attracts: someone
 // looking to do Egypt on €40 a day reads the first band and leaves, which is
 // the correct outcome for both of us.
+import { ULTRA_PER_DAY } from "@/data/ultra/journeys";
 import Base from "@/layouts/Base.astro";
 import PageHero from "@/components/PageHero.astro";
 import AnswerBox from "@/components/aeo/AnswerBox.astro";
@@ -124,7 +125,7 @@ const bands = [
     range: "€600+",
     per: "per person, per day",
     body:
-      "Private charter between cities, a chartered dahabiya on the Nile, suites at the landmark hotels, private after-hours access where it can be arranged. We plan at this level when it is asked for.",
+      `Private charter between cities, a chartered dahabiya on the Nile, suites at the landmark hotels, private openings of the monuments. Kemet plans at this level too: the four Kemet Ultra journeys work out at ${formatPrice(ULTRA_PER_DAY.low)}–${ULTRA_PER_DAY.high.toLocaleString("en-GB")} per person per day for a party of two, and are priced on their own page.`,
     us: false,
   },
 ];

@@ -103,6 +103,17 @@
       "ru": "ru/bezopasnost-v-egipte.html",
       "id": "id/apakah-mesir-aman.html",
       "ms": "ms/adakah-mesir-selamat.html"
+    },
+    {
+      "key": "ultra",
+      "en": "ultra-luxury-egypt.html",
+      "de": "de/ultra-luxusreisen-aegypten.html",
+      "it": "it/viaggi-ultra-lusso-egitto.html",
+      "es": "es/viajes-ultra-lujo-egipto.html",
+      "fr": "fr/voyages-ultra-luxe-egypte.html",
+      "ru": "ru/ultra-lyuks-tury-v-egipet.html",
+      "id": "id/tur-ultra-mewah-mesir.html",
+      "ms": "ms/percutian-ultra-mewah-mesir.html"
     }
   ]
 }

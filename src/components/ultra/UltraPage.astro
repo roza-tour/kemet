@@ -1,108 +1,135 @@
 ---
-// /vip.html — the tier above the published catalogue.
+// Kemet Ultra — the top tier, in every language the site is published in.
+// Rendered by src/pages/ultra-luxury-egypt.astro (English) and by one small
+// route file per locale (src/pages/<locale>/<slug>.astro).
 //
 // THE DESIGN LANGUAGE
-// The reference is an engraved invitation from a maison, not a travel website:
-// drawn ornament instead of boxes, metal instead of colour fields. Every
-// decorative element here is constructed — cartouche frames with cut corners,
-// a winged-sun crest, lotus dividers, silk ribbon edges in crimson and
-// emerald, engraved numerals behind the plates — because ornament that is
-// drawn reads as craft, and craft is what this tier is selling.
-// Everything is scoped under .vip; nothing leaks to the other 193 pages.
+// Inherited whole from the former VIP page, which this replaces: an engraved
+// invitation rather than a travel website — drawn ornament instead of boxes,
+// metal instead of colour fields, cartouche frames with cut corners, a
+// winged-sun crest, lotus dividers, and silk edges in crimson and emerald.
+// Everything is scoped under .vip; nothing leaks to the other pages.
 //
-// NO PRICES, ON PURPOSE
-// Explained in data/vip.ts: a dahabiya charter, a private aircraft leg or an
-// exclusive site booking is quoted by date and by party. A published figure
-// would be wrong for almost everyone reading it, and this is the tier where a
-// wrong number costs more than no number. There is therefore no price in the
-// structured data either — nothing is claimed that is not stated.
+// WHY THIS PAGE NOW STATES PRICES, WHEN VIP DID NOT
+// VIP described four programmes and quoted each per brief. A page at the top
+// of the market that names no figure reads, to a person and to an answer
+// engine alike, as a page with something to hide — and the engines filled the
+// silence by describing another company's products under our name. These four
+// journeys are built from priced components (see data/ultra/journeys.ts), so
+// the figure is stated, per person, for two and for four. Anything beyond them
+// is still arranged per brief, and the page says so.
 import Base from "@/layouts/Base.astro";
 import { srcsetFor, SIZES } from "@/utils/images";
 import SymbolIcon from "@/components/SymbolIcon.astro";
-import { vipProgrammes, vipStandard, vipFaqs, VIP_QUESTION, VIP_ANSWER } from "@/data/vip";
-import { breadcrumb, answerPageSchema, ORG_ID } from "@/schemas/jsonld";
+import { ultraJourneys, PEAK, ULTRA_PER_DAY } from "@/data/ultra/journeys";
+import type { UltraText } from "@/data/ultra/types";
+import { answerPageSchema, ORG_ID } from "@/schemas/jsonld";
+
 import { marketCountries } from "@/data/markets";
-import { whatsappLink, mailtoLink } from "@/utils/links";
+import { whatsappLink, mailtoLink, canonical } from "@/utils/links";
+import { LOCALE_META, type SiteLocale } from "@/config/i18n";
 
-const ROUTE = "vip.html";
+interface Props {
+  locale: SiteLocale;
+  /** This page's route, e.g. "ultra-luxury-egypt.html" or "de/ultra-luxusreisen-aegypten.html". */
+  route: string;
+  text: UltraText;
+}
+const { locale, route, text: T } = Astro.props;
+const meta = LOCALE_META[locale];
 
-const wa = whatsappLink(
-  "Hello Kemet — I would like to talk about a private VIP programme in Egypt.",
-);
-const mail = mailtoLink(
-  "Kemet — private VIP programme enquiry",
-  "Please tell us who is travelling, roughly when, and what the journey is for.\n\n",
-);
+const money = new Intl.NumberFormat(meta.formatLocale, { style: "currency", currency: "EUR", maximumFractionDigits: 0 });
+const eur = (n: number) => money.format(n);
+const p2 = ultraJourneys.map((j) => j.price2);
+const p4 = ultraJourneys.map((j) => j.price4);
+const figures = {
+  from2: eur(Math.min(...p2)), to2: eur(Math.max(...p2)),
+  from4: eur(Math.min(...p4)), to4: eur(Math.max(...p4)),
+  perDayLow: eur(ULTRA_PER_DAY.low), perDayHigh: eur(ULTRA_PER_DAY.high),
+  peak: PEAK,
+};
+const answer = T.answer(figures);
+const faqs = T.faqs(figures);
+
+const wa = whatsappLink(T.whatsapp);
+const mail = mailtoLink(T.mailSubject, T.mailBody);
+const stayName = (hotel: string) => (hotel === "Dahabiya" ? T.dahabiya : hotel);
+
+const homeRoute = locale === "en" ? "index.html" : `${locale}/index.html`;
+const pageUrl = canonical(route);
 
 const jsonld: Record<string, unknown>[] = [
-  // The same structural layer every planning page on this site carries — an
-  // answer node with speakable + reviewedBy, a Question/Answer restatement,
-  // a FAQPage, a Service node typed to what is actually offered, and an
-  // audience declaration — not a keyword list bolted to a title.
-  answerPageSchema({
-    route: ROUTE,
-    name: "Kemet VIP — fully private Egypt, by arrangement",
-    description:
-      "Named sites reserved for one party, full dahabiya charter, private aircraft between cities, and one person answering throughout.",
-    question: VIP_QUESTION,
-    answer: VIP_ANSWER,
-  }),
+  { ...answerPageSchema({ route, name: T.metaTitle, description: T.metaDescription, question: T.question, answer }), inLanguage: meta.tag },
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "Kemet VIP — private Egypt programmes by arrangement",
-    serviceType: "Fully private, tailor-made luxury travel in Egypt",
+    name: `Kemet Ultra — ${T.metaTitle.split("|")[0].trim()}`,
+    serviceType: "Fully private, ultra-luxury travel in Egypt",
     provider: { "@id": ORG_ID },
     areaServed: { "@type": "Country", name: "Egypt" },
-    // The same market list the organisation declares, so the top tier is not
-    // described as being for a vaguer audience than the business as a whole.
-    // A page that says "fully private, exclusive-use travel" and then names no
-    // market is asking an answer engine to guess who it is for.
-    audience: {
-      "@type": "Audience",
-      audienceType:
-        "Travellers and families seeking fully private, exclusive-use travel in Egypt",
-      geographicArea: marketCountries(),
-    },
-    availableChannel: {
-      "@type": "ServiceChannel",
-      name: "Private enquiry",
-      description: "Handled by one person; non-disclosure on request.",
-    },
+    url: pageUrl,
+    inLanguage: meta.tag,
+    audience: { "@type": "Audience", audienceType: "Travellers seeking fully private, exclusive-use luxury travel in Egypt", geographicArea: marketCountries() },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "VIP programmes",
-      itemListElement: vipProgrammes.map((p) => ({
-        "@type": "Offer",
-        // No price and no priceSpecification — deliberately. Each is quoted
-        // per brief, and claiming otherwise in the graph would be false.
-        itemOffered: { "@type": "Trip", name: p.title, description: p.kicker },
-      })),
+      name: "Kemet Ultra journeys",
+      itemListElement: ultraJourneys.map((j) => {
+        const jt = T.journeys[j.id];
+        return {
+          "@type": "Offer",
+          url: `${pageUrl}#${j.id}`,
+          price: j.price2,
+          priceCurrency: "EUR",
+          priceSpecification: {
+            "@type": "UnitPriceSpecification",
+            price: j.price2,
+            priceCurrency: "EUR",
+            referenceQuantity: { "@type": "QuantitativeValue", value: 1, unitText: "person (party of two)" },
+          },
+          availability: "https://schema.org/InStock",
+          itemOffered: {
+            "@type": "TouristTrip",
+            name: jt.title,
+            description: jt.kicker,
+            touristType: "Luxury private travel",
+            itinerary: {
+              "@type": "ItemList",
+              numberOfItems: jt.days.length,
+              itemListElement: jt.days.map((d, i) => ({ "@type": "ListItem", position: i + 1, name: `${T.labels.day} ${i + 1}: ${d.t}`, description: d.d })),
+            },
+          },
+        };
+      }),
     },
   },
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: vipFaqs.map((f) => ({
-      "@type": "Question",
-      name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
-    })),
+    inLanguage: meta.tag,
+    mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
   },
-  breadcrumb([["Home", "index.html"], ["VIP", ROUTE]]),
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: meta.home, item: canonical(homeRoute) },
+      { "@type": "ListItem", position: 2, name: T.crumb, item: pageUrl },
+    ],
+  },
 ];
 ---
 <Base
-  title="Kemet VIP — Fully Private Egypt Tours, By Arrangement"
-  description="The tier above the catalogue: full dahabiya charter, private aircraft, named sites reserved for your party alone, and a personal attaché."
-  active={ROUTE}
+  title={T.metaTitle}
+  description={T.metaDescription}
+  active={route}
   jsonld={jsonld}
-  keywords="vip egypt tours, ultra luxury egypt travel, private egypt tour, exclusive pyramids visit, dahabiya full charter egypt, private jet egypt tour, egypt honeymoon luxury, discreet luxury travel egypt, bespoke egypt itinerary, egypt concierge travel"
+  keywords={T.keywords}
   showCta={false}
+  ogImage="/images/luxor/luxor-karnak-hypostyle-hall.webp"
+  ogImageAlt="The hypostyle hall of Karnak Temple in low light"
 >
   <div class="vip">
 
-    {/* Drawn ornament, defined once and stamped wherever it recurs. */}
     <svg class="vdefs" aria-hidden="true" focusable="false">
       {/* Winged sun — the crest. Two swept wings, a disk, twin uraei drops. */}
       <symbol id="v-wing" viewBox="0 0 340 72">
@@ -138,34 +165,19 @@ const jsonld: Record<string, unknown>[] = [
       <div class="vhero-bg" aria-hidden="true"></div>
       <div class="vhero-veil" aria-hidden="true"></div>
       <div class="vsheen" aria-hidden="true"></div>
-
-      {/* The cartouche: double hairline with cut corners and diamond joints. */}
       <div class="vcart" aria-hidden="true">
         <i class="vd vd-tl"></i><i class="vd vd-tr"></i>
         <i class="vd vd-bl"></i><i class="vd vd-br"></i>
       </div>
-
       <div class="wrap vhero-in">
         <svg class="vcrest" aria-hidden="true"><use href="#v-wing" /></svg>
-
-        <p class="vtag"><span></span>By private arrangement<span></span></p>
-
-        <h1>
-          The quietest way<br />
-          <em>through Egypt</em>
-        </h1>
-
+        <p class="vtag"><span></span>{T.heroTag}<span></span></p>
+        <h1>{T.h1[0]}<br /><em>{T.h1[1]}</em></h1>
         <svg class="vdiv" aria-hidden="true"><use href="#v-lotus" /></svg>
-
-        <p class="vlede">
-          For guests who want Egypt entirely to themselves — the site, the boat,
-          the day. Programmes at this tier are designed once, for one party, and
-          never repeated in the same shape.
-        </p>
-
+        <p class="vlede">{T.lede}</p>
         <div class="vhero-acts">
-          <a href={wa} class="vbtn" target="_blank" rel="noopener"><span>Speak to us privately</span></a>
-          <a href={mail} class="vlink-quiet">or send a confidential brief</a>
+          <a href={wa} class="vbtn" target="_blank" rel="noopener"><span>{T.ctaPrimary}</span></a>
+          <a href={mail} class="vlink-quiet">{T.ctaQuiet}</a>
         </div>
       </div>
       <div class="vband" aria-hidden="true"></div>
@@ -174,13 +186,9 @@ const jsonld: Record<string, unknown>[] = [
     {/* ── The three facts, set as engraved medallions ───────────────────── */}
     <section class="vfacts">
       <div class="wrap vfacts-in">
-        {[
-          ["ankh", "Named sites, reserved", "closed to other visitors while your party is inside"],
-          ["sun", "Private aircraft & full charter", "every internal movement on your hours, nobody else aboard"],
-          ["eye", "One name answering", "the person who designs the journey answers throughout it"],
-        ].map(([sym, head, sub]) => (
+        {T.facts.map(([head, sub], i) => (
           <div class="vfact">
-            <span class="vmed" aria-hidden="true"><SymbolIcon name={sym} /></span>
+            <span class="vmed" aria-hidden="true"><SymbolIcon name={["ankh", "sun", "eye"][i]} /></span>
             <b>{head}</b>
             <span class="vfact-sub">{sub}</span>
           </div>
@@ -188,65 +196,109 @@ const jsonld: Record<string, unknown>[] = [
       </div>
     </section>
 
-    {/* ── The programmes: framed plates with silk edges ─────────────────── */}
+    {/* ── The answer, quotable on its own (speakable: .answer-box) ──────── */}
+    <section class="answer-box vanswer">
+      <div class="wrap">
+        <div class="vanswer-in">
+          <h2>{T.question}</h2>
+          <p class="answer-body">{answer}</p>
+        </div>
+      </div>
+    </section>
+
+    {/* ── The journeys: framed plates with silk edges ───────────────────── */}
     <section class="vprogs">
       <div class="wrap">
         <div class="vhead">
-          <p class="voverline"><span></span>The programmes<span></span></p>
-          <h2>Four ways to take Egypt<br />at this level</h2>
+          <p class="voverline"><span></span>{T.journeysOverline}<span></span></p>
+          <h2>{T.journeysTitle[0]}<br />{T.journeysTitle[1]}</h2>
         </div>
       </div>
 
-      {vipProgrammes.map((p, idx) => (
-        <article
-          class:list={["vplate", `is-${p.accent}`, idx % 2 === 1 && "is-flip"]}
-          id={`programme-${p.numeral.toLowerCase()}`}
-        >
-          <span class="vplate-ghost" aria-hidden="true">{p.numeral}</span>
-          <div class="wrap vplate-in">
-            <figure class="vframe">
-              <span class="vframe-tick vt-tl" aria-hidden="true"></span>
-              <span class="vframe-tick vt-tr" aria-hidden="true"></span>
-              <span class="vframe-tick vt-bl" aria-hidden="true"></span>
-              <span class="vframe-tick vt-br" aria-hidden="true"></span>
-              <img src={p.image.src} srcset={srcsetFor(p.image.src)} sizes={srcsetFor(p.image.src) ? SIZES.beside : undefined} alt={p.image.alt} width="1600" height="1066"
-                   loading={idx === 0 ? "eager" : "lazy"} decoding="async" />
-              <figcaption class="vframe-no" aria-hidden="true">{p.numeral}</figcaption>
-            </figure>
+      {ultraJourneys.map((j, idx) => {
+        const jt = T.journeys[j.id];
+        return (
+          <article class:list={["vplate", `is-${j.accent}`, idx % 2 === 1 && "is-flip"]} id={j.id}>
+            <span class="vplate-ghost" aria-hidden="true">{j.numeral}</span>
+            <div class="wrap vplate-in">
+              <figure class="vframe">
+                <span class="vframe-tick vt-tl" aria-hidden="true"></span>
+                <span class="vframe-tick vt-tr" aria-hidden="true"></span>
+                <span class="vframe-tick vt-bl" aria-hidden="true"></span>
+                <span class="vframe-tick vt-br" aria-hidden="true"></span>
+                <img src={j.image.src} srcset={srcsetFor(j.image.src)} sizes={srcsetFor(j.image.src) ? SIZES.beside : undefined}
+                     alt={jt.title} width={j.image.width} height={j.image.height}
+                     loading={idx === 0 ? "eager" : "lazy"} decoding="async" />
+                <figcaption class="vframe-no" aria-hidden="true">{j.numeral}</figcaption>
+              </figure>
 
-            <div class="vtext">
-              <p class="vmeta">
-                <span>{p.duration}</span>
-                <i aria-hidden="true"></i>
-                <span>{p.route}</span>
-              </p>
-              <h3>{p.title}</h3>
-              <p class="vkick">{p.kicker}</p>
-              <p class="vbody">{p.body}</p>
-              <ul class="vincl">
-                {p.includes.map((i) => <li>{i}</li>)}
-              </ul>
+              <div class="vtext">
+                <p class="vmeta">
+                  <span>{T.labels.duration(j.days, j.nights)}</span>
+                  <i aria-hidden="true"></i>
+                  <span>{jt.route}</span>
+                </p>
+                <h3>{jt.title}</h3>
+                <p class="vkick">{jt.kicker}</p>
+                <p class="vbody">{jt.body}</p>
+
+                <div class="vprice">
+                  <span class="vprice-from">{T.labels.from}</span>
+                  <b>{eur(j.price2)}</b>
+                  <span class="vprice-pp">{T.labels.perPersonTwo}</span>
+                  <span class="vprice-four">{T.labels.perPersonFour(eur(j.price4))}</span>
+                </div>
+
+                <ul class="vincl">
+                  {jt.highlights.map((h) => <li>{h}</li>)}
+                </ul>
+              </div>
+            </div>
+
+            <div class="wrap vdetail">
+              <div class="vstays">
+                <p class="vsub">{T.labels.stays}</p>
+                <ol>
+                  {j.stays.map((s) => (
+                    <li>
+                      <span class="vstay-n">{T.labels.nights(s.nights)}</span>
+                      <b>{stayName(s.hotel)}</b>
+                      <span class="vstay-where">{T.place[s.place]} · {T.room[s.room]}</span>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+              <details class="vdays">
+                <summary>{T.labels.dayByDay} <span>· {T.labels.duration(j.days, j.nights)}</span><i aria-hidden="true"></i></summary>
+                <ol>
+                  {jt.days.map((d, i) => (
+                    <li><span class="vday-no">{T.labels.day} {i + 1}</span><b>{d.t}</b><p>{d.d}</p></li>
+                  ))}
+                </ol>
+              </details>
               <div class="vfoot">
-                <span class="vfoot-note">Quoted per brief</span>
-                <a href={wa} target="_blank" rel="noopener" class="vfoot-link">
-                  Enquire about {p.title} <b>→</b>
+                <span class="vfoot-note">{T.labels.duration(j.days, j.nights)}</span>
+                <a href={whatsappLink(T.whatsappJourney(jt.title))} target="_blank" rel="noopener" class="vfoot-link">
+                  {T.labels.enquire(jt.title)} <b>→</b>
                 </a>
               </div>
             </div>
-          </div>
-          {idx < vipProgrammes.length - 1 && (
-            <svg class="vdiv vdiv-sec" aria-hidden="true"><use href="#v-lotus" /></svg>
-          )}
-        </article>
-      ))}
+            {idx < ultraJourneys.length - 1 && (
+              <svg class="vdiv vdiv-sec" aria-hidden="true"><use href="#v-lotus" /></svg>
+            )}
+          </article>
+        );
+      })}
+
+      <div class="wrap"><p class="vnote">{T.labels.priceNote(PEAK)}</p></div>
     </section>
 
     {/* ── How this tier is run ──────────────────────────────────────────── */}
     <section class="vhow">
       <div class="wrap">
-        <p class="voverline"><span></span>How this tier is run<span></span></p>
+        <p class="voverline"><span></span>{T.standardOverline}<span></span></p>
         <div class="vhow-grid">
-          {vipStandard.map((st, i) => (
+          {T.standard.map((st, i) => (
             <div class="vhow-item">
               <span class="vhow-no" aria-hidden="true">{String(i + 1).padStart(2, "0")}</span>
               <h2>{st.title}</h2>
@@ -260,9 +312,9 @@ const jsonld: Record<string, unknown>[] = [
     {/* ── The questions this clientele actually asks ────────────────────── */}
     <section class="vfaq">
       <div class="wrap">
-        <p class="voverline"><span></span>Before you write<span></span></p>
+        <p class="voverline"><span></span>{T.faqOverline}<span></span></p>
         <div class="vfaq-list">
-          {vipFaqs.map((f) => (
+          {faqs.map((f) => (
             <details class="vfaq-item">
               <summary>{f.q}<i aria-hidden="true"></i></summary>
               <p>{f.a}</p>
@@ -279,15 +331,11 @@ const jsonld: Record<string, unknown>[] = [
           <i class="vd vd-tl"></i><i class="vd vd-tr"></i>
           <i class="vd vd-bl"></i><i class="vd vd-br"></i>
           <svg class="vcrest vcrest-sm" aria-hidden="true"><use href="#v-wing" /></svg>
-          <h2>Tell us what the journey is for.</h2>
-          <p>
-            Who is travelling, roughly when, and what it should feel like. You
-            will have a written outline before any figure is discussed, and a
-            figure before anything is committed. Everything stays between us.
-          </p>
+          <h2>{T.closeTitle}</h2>
+          <p>{T.closeBody}</p>
           <div class="vhero-acts">
-            <a href={wa} class="vbtn" target="_blank" rel="noopener"><span>WhatsApp, privately</span></a>
-            <a href={mail} class="vlink-quiet">or by email</a>
+            <a href={wa} class="vbtn" target="_blank" rel="noopener"><span>{T.closeCta}</span></a>
+            <a href={mail} class="vlink-quiet">{T.closeQuiet}</a>
           </div>
         </div>
       </div>
@@ -640,5 +688,81 @@ const jsonld: Record<string, unknown>[] = [
     .vcard { padding:52px var(--s-4) var(--s-6); }
     .vcrest { width: 200px; }
     .vhero-acts { flex-direction: column; gap:var(--s-3); }
+  }
+
+  /* ===== added for Kemet Ultra: the answer, the price, stays, day by day == */
+  .vanswer { padding: 64px 0 0; }
+  .vanswer-in { max-width: 860px; margin: 0 auto; text-align: center;
+    padding: var(--s-5) var(--s-6); border-top: 1px solid var(--v-hair);
+    border-bottom: 1px solid var(--v-hair); }
+  .vanswer h2 { font-size: var(--t-nano); letter-spacing: .5em; text-transform: uppercase;
+    color: var(--v-gold); font-weight: 400; margin: 0 0 var(--s-3);
+    font-family: inherit; }
+  .vanswer .answer-body { color: var(--v-cream); font-family: var(--ff-display);
+    font-weight: 300; font-size: var(--t-md); line-height: 1.75; margin: 0; }
+
+  .vprice { display: grid; grid-template-columns: auto 1fr; align-items: baseline;
+    column-gap: var(--s-3); margin: 0 0 var(--s-5); padding: var(--s-4) 0 0;
+    border-top: 1px solid var(--v-hair); }
+  .vprice-from { font-size: var(--t-nano); letter-spacing: .32em; text-transform: uppercase;
+    color: var(--v-gold); grid-column: 1 / -1; margin-bottom: var(--s-1); }
+  .vprice b { font-family: var(--ff-display); font-weight: 300;
+    font-size: clamp(2rem, 3.4vw, 2.8rem); line-height: 1;
+    background: linear-gradient(176deg, #FFF4D6 8%, #E3C36A 48%, #A5822F 90%);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+    font-variant-numeric: lining-nums; }
+  .vprice-pp { color: var(--v-cream-dim); font-size: var(--t-sm); }
+  .vprice-four { grid-column: 1 / -1; color: var(--v-faint); font-size: var(--t-tiny);
+    margin-top: var(--s-1); letter-spacing: .02em; }
+
+  .vdetail { position: relative; z-index: 1; display: grid;
+    grid-template-columns: .9fr 1.1fr; gap: 0 clamp(40px, 5vw, 84px);
+    align-items: start; padding-bottom: var(--s-4); }
+  .vdetail .vfoot { grid-column: 1 / -1; margin-top: var(--s-5); }
+  .vsub { font-size: var(--t-nano); letter-spacing: .32em; text-transform: uppercase;
+    color: var(--v-gold); margin: 0 0 var(--s-3); }
+  .vstays ol { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--v-hair); }
+  .vstays li { display: grid; grid-template-columns: 5.5em 1fr; column-gap: var(--s-3);
+    padding: var(--s-3) 0; border-bottom: 1px solid var(--v-hair); }
+  .vstay-n { grid-row: span 2; color: var(--v-gold-lit); font-size: var(--t-tiny);
+    letter-spacing: .08em; padding-top: .2em; }
+  .vstays b { font-family: var(--ff-display); font-weight: 400; color: var(--v-cream);
+    font-size: var(--t-base); line-height: 1.35; }
+  .vstay-where { color: var(--v-faint); font-size: var(--t-tiny); line-height: 1.6; }
+
+  .vdays { border-top: 1px solid var(--v-hair); border-bottom: 1px solid var(--v-hair); }
+  .vdays summary { position: relative; list-style: none; cursor: pointer;
+    padding: var(--s-4) 44px var(--s-4) 0; font-size: var(--t-nano); letter-spacing: .32em;
+    text-transform: uppercase; color: var(--v-gold); transition: color .35s; }
+  .vdays summary span { color: var(--v-faint); letter-spacing: .16em; }
+  .vdays summary::-webkit-details-marker { display: none; }
+  .vdays summary:hover { color: var(--v-gold-lit); }
+  .vdays summary i { position: absolute; right: 6px; top: 50%; width: 13px; height: 13px;
+    transform: translateY(-50%); }
+  .vdays summary i::before, .vdays summary i::after { content: ""; position: absolute;
+    background: var(--v-gold); transition: transform .35s; }
+  .vdays summary i::before { left: 0; right: 0; top: 6px; height: 1px; }
+  .vdays summary i::after { top: 0; bottom: 0; left: 6px; width: 1px; }
+  .vdays[open] summary i::after { transform: scaleY(0); }
+  .vdays ol { list-style: none; margin: 0; padding: 0 0 var(--s-3); }
+  .vdays li { display: grid; grid-template-columns: 4.6em 1fr; column-gap: var(--s-3);
+    padding: var(--s-2) 0; border-top: 1px solid rgba(194, 162, 78, .12); }
+  .vday-no { grid-row: span 2; color: var(--v-gold); font-size: var(--t-nano);
+    letter-spacing: .2em; text-transform: uppercase; padding-top: .35em; }
+  .vdays li b { font-family: var(--ff-display); font-weight: 400; color: var(--v-cream);
+    font-size: var(--t-base); line-height: 1.4; }
+  .vdays li p { margin: .15em 0 0; color: var(--v-cream-dim); font-size: var(--t-sm); line-height: 1.7; }
+
+  .vnote { max-width: 860px; margin: 72px auto 0; text-align: center; color: var(--v-faint);
+    font-size: var(--t-tiny); line-height: 1.9; }
+
+  @media (max-width: 920px) {
+    .vdetail { grid-template-columns: 1fr; gap: var(--s-5); }
+  }
+  @media (max-width: 680px) {
+    .vanswer-in { padding: var(--s-4) var(--s-1); }
+    .vanswer .answer-body { font-size: var(--t-base); }
+    .vstays li, .vdays li { grid-template-columns: 1fr; }
+    .vstay-n, .vday-no { grid-row: auto; padding-top: 0; }
   }
 </style>

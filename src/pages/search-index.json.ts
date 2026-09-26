@@ -76,7 +76,7 @@ export const GET: APIRoute = () => {
   // --- The pages that are not generated from a catalogue --------------------
   const staticPages: Array<[string, string, string, string]> = [
     ["", "Home", "Kemet", "Private luxury Egypt journeys through eight cultural worlds."],
-    ["vip.html", "Kemet VIP", "VIP", "The tier above the catalogue — dahabiya charter, private aircraft, named sites reserved exclusively for your party, a personal attaché. By arrangement."],
+    ["ultra-luxury-egypt.html", "Kemet Ultra — ultra-luxury Egypt", "Ultra", "Four fully private journeys, 7 to 15 days: the Great Pyramid opened for you, dinner inside Karnak, a chartered dahabiya or yacht, private aircraft, the finest suites. VIP."],
     ["private-hire.html", "Private access", "VIP", "Monuments closed to everyone else and held for one party — the Great Pyramid after hours, Karnak at night, the plateau before the gates."],
     ["tours.html", "All journeys", "Journeys", `Every private journey — ${tours.length} in total, day tours to a 14-day grand tour.`],
     ["experiences.html", "Experiences", "Experiences", "Private moments between the monuments — balloons, charters, dinners."],

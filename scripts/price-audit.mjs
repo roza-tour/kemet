@@ -25,6 +25,7 @@
 import { readFile, readdir } from "node:fs/promises";
 import { join, extname } from "node:path";
 import { tours } from "../src/data/tours.ts";
+import { ultraJourneys, ULTRA_PER_DAY } from "../src/data/ultra/journeys.ts";
 
 const DIST = new URL("../dist/", import.meta.url).pathname;
 
@@ -36,6 +37,7 @@ const KNOWN = new Map([
   [200,  "market band — private tailor-made floor, per day"],
   [450,  "market band — private tailor-made ceiling, per day"],
   [600,  "market band — top of market, per day"],
+  [300,  "market band — mid-point of the private band, per day (fr/id/ms cost pages)"],
   [2800, "market figure — a week for two, total"],
   [6000, "market figure — a week for two, total"],
   [400,  "rounded prose in faq.ts: 'roughly €400 and €1,950'"],
@@ -51,6 +53,11 @@ const days = (label) => {
 };
 
 const prices = new Set(tours.map((t) => t.price));
+// Kemet Ultra: per person for two and for four, and the per-day range the
+// cost page and the Ultra page both compute from them.
+const ultra = new Set(ultraJourneys.flatMap((j) => [j.price2, j.price4]));
+KNOWN.set(ULTRA_PER_DAY.low, "Kemet Ultra — computed per-day floor, party of two");
+KNOWN.set(ULTRA_PER_DAY.high, "Kemet Ultra — computed per-day ceiling, party of two");
 const wases = new Set(tours.filter((t) => t.was).map((t) => t.was));
 // Flight versions are priced as the journey plus a stated difference, so they
 // are computed here the same way the pages compute them — never listed by hand,
@@ -79,8 +86,17 @@ async function walk(dir) {
 const seen = new Map();
 for (const f of await walk(DIST)) {
   const s = await readFile(f, "utf8");
-  for (const m of s.matchAll(/€\s?(\d[\d,]*)/g)) {
-    const n = Number(m[1].replace(/,/g, ""));
+  // Every language's way of writing a euro figure: "€17,400" (en), "€ 17.400"
+  // (id), "17.400 €" (de, it, es), "17 400 €" (fr, ru, with a narrow space).
+  // Reading only the English form let a translated page state any number at
+  // all without this audit ever seeing it.
+  const NUM = String.raw`\d{1,3}(?:[.,\u00a0\u202f ]\d{3})+|\d+`;
+  const found = [
+    ...[...s.matchAll(new RegExp(`€\\s?(${NUM})`, "g"))].map((m) => m[1]),
+    ...[...s.matchAll(new RegExp(`(${NUM})[\\s\u00a0\u202f]?€`, "g"))].map((m) => m[1]),
+  ];
+  for (const raw of found) {
+    const n = Number(raw.replace(/[^\d]/g, ""));
     if (!seen.has(n)) seen.set(n, new Set());
     seen.get(n).add(f.replace(DIST, ""));
   }
@@ -91,6 +107,7 @@ console.log("figure   kind                                   pages");
 for (const n of [...seen.keys()].sort((a, b) => a - b)) {
   const where = [...seen.get(n)];
   const kind = prices.has(n) ? "tour price"
+    : ultra.has(n) ? "Kemet Ultra price (for two / for four)"
     : wases.has(n) ? "struck-through 'was'"
     : flies.has(n) ? "flight version (price + stated difference)"
     : KNOWN.has(n) ? KNOWN.get(n)

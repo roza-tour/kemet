@@ -3,7 +3,6 @@
 22ec2ad73324afe14c2b7badc0edb43f.txt
 404.html
 BingSiteAuth.xml
-_astro/_slug_.BFzYPDDJ.css
 _astro/_slug_.Bxz8ATbR.css
 _astro/_slug_.DZMFfmgO.css
 _astro/_slug_.Dok7lQyC.css
@@ -11,7 +10,8 @@ _astro/_slug_.fNBy3009.css
 _astro/hoisted.Q4PnKhPJ.js
 _astro/index.COGUg4Qt.css
 _astro/page.DCTgdEH6.js
-_astro/vip.CdBkZ__1.css
+_astro/ultra-luxusreisen-aegypten.BFzYPDDJ.css
+_astro/ultra-luxusreisen-aegypten.CQ5W_rDb.css
 about.html
 activities.html
 activities/banana-boat-sharm.html
@@ -57,6 +57,7 @@ de/exklusive-nutzung-monumente-aegypten.html
 de/index.html
 de/ist-aegypten-sicher.html
 de/nilkreuzfahrt.html
+de/ultra-luxusreisen-aegypten.html
 desk.php
 destinations.html
 destinations/alexandria.html
@@ -76,6 +77,7 @@ es/index.html
 es/mejor-epoca-para-viajar-a-egipto.html
 es/monumentos-en-exclusiva-egipto.html
 es/viajes-a-egipto.html
+es/viajes-ultra-lujo-egipto.html
 experiences.html
 experiences/alexandria-heritage-walk.html
 experiences/egyptian-cooking.html
@@ -108,6 +110,7 @@ fr/prix-voyage-egypte.html
 fr/quand-partir-en-egypte.html
 fr/securite-en-egypte.html
 fr/voyage-egypte.html
+fr/voyages-ultra-luxe-egypte.html
 guides.html
 guides/10-day-egypt-itinerary.html
 guides/best-time-to-visit-egypt.html
@@ -121,6 +124,7 @@ id/index.html
 id/paket-tour-mesir.html
 id/pesiar-sungai-nil.html
 id/sewa-eksklusif-situs-mesir.html
+id/tur-ultra-mewah-mesir.html
 id/waktu-terbaik-ke-mesir.html
 identities.html
 images/activities/act-balloon-luxor-320w.webp
@@ -631,6 +635,7 @@ it/monumenti-in-esclusiva-egitto.html
 it/quando-andare-in-egitto.html
 it/quanto-costa-viaggio-egitto.html
 it/viaggi-in-egitto.html
+it/viaggi-ultra-lusso-egitto.html
 k.php
 lib-auth.php
 lib-source.php
@@ -642,6 +647,7 @@ ms/kos-percutian-ke-mesir.html
 ms/masa-terbaik-ke-mesir.html
 ms/pakej-pelancongan-mesir.html
 ms/pelayaran-sungai-nil.html
+ms/percutian-ultra-mewah-mesir.html
 ms/tempahan-eksklusif-tapak-mesir.html
 occasions.html
 occasions/anniversary-in-egypt.html
@@ -661,6 +667,7 @@ ru/kogda-luchshe-ehat-v-egipet.html
 ru/kruiz-po-nilu.html
 ru/stoimost-tura-v-egipet.html
 ru/tury-v-egipet.html
+ru/ultra-lyuks-tury-v-egipet.html
 search-index.json
 seasons.json
 site.webmanifest
@@ -697,8 +704,8 @@ tour-saqqara.html
 tour-sharm-5day.html
 tour-upper-egypt-5day.html
 tours.html
+ultra-luxury-egypt.html
 unsubscribe.php
-vip.html
 when-to-go.html
 when-to-go/april.html
 when-to-go/august.html
