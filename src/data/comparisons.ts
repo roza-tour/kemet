@@ -354,12 +354,12 @@ export const comparisons: Comparison[] = [
     metaDescription:
       "Egyptian Museum on Tahrir or the Grand Egyptian Museum at Giza? What is in each, how long each takes, and which to choose if you only have time for one.",
     verdict:
-      "If you have one visit, the Grand Egyptian Museum — it holds the complete Tutankhamun collection, it is purpose-built, and the grand staircase of royal statuary with the Pyramids framed at the top is the single most impressive museum space in the world. But do not write off the old museum. It holds the Royal Mummies, a density of objects the new building deliberately avoids, and an atmosphere that a modern museum cannot manufacture. They are twenty kilometres apart and both deserve a half-day.",
+      "If you have one visit, the Grand Egyptian Museum — it holds the complete Tutankhamun collection, it is purpose-built, and the grand staircase of royal statuary with the Pyramids framed at the top is the single most impressive museum space in the world. But do not write off the old museum. It holds the royal gold of Tanis, the burial goods of Yuya and Tjuyu, a density of objects the new building deliberately avoids, and an atmosphere that a modern museum cannot manufacture. They are twenty kilometres apart and both deserve a half-day.",
     lede:
       "For a century the Egyptian Museum on Tahrir Square held essentially everything, in glass cases, with handwritten labels, packed to the ceiling. The Grand Egyptian Museum on the edge of the Giza plateau changed that — and the question of which to visit is now the most common Cairo planning question we are asked.",
     rows: [
       { aspect: "Where", a: "Tahrir Square, central Cairo", b: "Giza plateau edge, ~20km west" },
-      { aspect: "Opened", a: "1902", b: "Progressively from 2021" },
+      { aspect: "Opened", a: "1902", b: "November 2025" },
       { aspect: "Tutankhamun", a: "A small selection remains", b: "The complete collection — over 5,000 objects" },
       { aspect: "Royal Mummies", a: "Moved to the National Museum of Egyptian Civilisation (Fustat)", b: "Not held here" },
       { aspect: "The building", a: "A historic museum, dense and atmospheric", b: "Purpose-built, vast, with the Pyramids in the sightline" },
@@ -403,7 +403,7 @@ export const comparisons: Comparison[] = [
       },
     ],
     faqs: [
-      { q: "What is the difference between the Egyptian Museum and the Grand Egyptian Museum?", a: "The Egyptian Museum on Tahrir Square opened in 1902 and is dense, historic and packed with objects. The Grand Egyptian Museum, on the edge of the Giza plateau, opened progressively from 2021 and is purpose-built, vast, and holds the complete Tutankhamun collection of over 5,000 objects. They are twenty kilometres apart and hold different things." },
+      { q: "What is the difference between the Egyptian Museum and the Grand Egyptian Museum?", a: "The Egyptian Museum on Tahrir Square opened in 1902 and is dense, historic and packed with objects. The Grand Egyptian Museum, on the edge of the Giza plateau, officially opened in November 2025 and is purpose-built, vast, and holds the complete Tutankhamun collection of over 5,000 objects. They are twenty kilometres apart and hold different things." },
       { q: "Where is Tutankhamun's treasure now?", a: "At the Grand Egyptian Museum in Giza, where the complete collection — over 5,000 objects, many never previously displayed — is shown together for the first time since its discovery. A small selection remains at the Tahrir museum." },
       { q: "Where are the Royal Mummies?", a: "At the National Museum of Egyptian Civilisation in Fustat, in a dedicated hall, since the 2021 transfer. They are in neither the Tahrir museum nor the Grand Egyptian Museum. Seeing them is a separate half-day and well worth planning in." },
       { q: "How long do you need at the Grand Egyptian Museum?", a: "Three to four hours as a minimum and a full day if you are genuinely interested. It is very large, the Tutankhamun galleries alone absorb over an hour, and rushing it defeats the purpose. Go at opening or in the late afternoon — the middle of the day is the busiest." },

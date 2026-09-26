@@ -417,7 +417,7 @@ export const collections: Collection[] = [
     featured: true,
     highlights: [
       "Giza Pyramids and the Sphinx — no child forgets the scale of the Great Pyramid up close",
-      "Grand Egyptian Museum's dedicated children's areas and interactive mummy galleries",
+      "The Grand Egyptian Museum's own children's museum, built for younger visitors",
       "Fayoum oasis: desert wildlife, whale fossils and the freshwater lake at Wadi El-Rayan",
       "Felucca sailing on the Nile: the gentlest, most memorable way to introduce children to the river",
       "Egyptian cooking class: children's version available — making kofta and koshari hands-on",
@@ -430,7 +430,7 @@ export const collections: Collection[] = [
     ],
     travelTips: [
       "Let children carry the site plan / map — it gives them a role and helps orient the visit",
-      "The Egyptian Museum's mummy room (separate ticket) is the highlight for most children aged 8+",
+      "The Royal Mummies Hall at the National Museum of Egyptian Civilization is the highlight for most children aged 8+",
       "Fayoum makes an excellent day trip from Cairo — desert and wildlife without a long flight",
     ],
     faqs: [

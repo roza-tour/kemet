@@ -1374,7 +1374,7 @@ export const experiences: Experience[] = [
       "Escort to your driver or onward connection",
     ],
     whatsExcluded: [
-      "Visa fee itself (USD 25, handled but not covered)",
+      "Visa fee itself (handled, but not covered)",
       "Airline lounge access (arranged on request)",
       "Gratuities",
     ],

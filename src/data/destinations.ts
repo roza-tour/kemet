@@ -88,7 +88,7 @@ export const destinations: Destination[] = [
       },
       {
         q: "What is the difference between the Egyptian Museum and the Grand Egyptian Museum?",
-        a: "The Egyptian Museum on Tahrir Square is the century-old original — dense, atmospheric, and holding the bulk of Egypt's pharaonic collection across its packed galleries. The Grand Egyptian Museum (GEM), opened progressively from 2021, is the new purpose-built museum on the Giza plateau edge, with the complete Tutankhamun gallery as its centrepiece and a grand staircase of royal statuary. They are 20 kilometres apart. Both are worth visiting; the GEM is the better introduction, the old museum the deeper archive.",
+        a: "The Egyptian Museum on Tahrir Square is the century-old original — dense, atmospheric, and holding the bulk of Egypt's pharaonic collection across its packed galleries. The Grand Egyptian Museum (GEM), officially opened in November 2025, is the new purpose-built museum on the Giza plateau edge, with the complete Tutankhamun gallery as its centrepiece and a grand staircase of royal statuary. They are 20 kilometres apart. Both are worth visiting; the GEM is the better introduction, the old museum the deeper archive.",
       },
       {
         q: "Is Cairo safe for tourists?",
@@ -116,7 +116,7 @@ export const destinations: Destination[] = [
     shortSummary:
       "Home of the Great Pyramid and the Sphinx, on the desert plateau across the Nile from Cairo.",
     longDescription:
-      "The Giza plateau rises from the edge of greater Cairo on the west bank of the Nile, a limestone escarpment where the Sahara begins. The three pyramids built here during Egypt's Fourth Dynasty — for the pharaohs Khufu (c. 2560 BCE), his son Khafre, and grandson Menkaure — are the only surviving wonder of the ancient world. Khufu's Great Pyramid stood as the tallest structure on earth for nearly four thousand years, built from an estimated 2.3 million stone blocks averaging 2.5 tonnes each. Khafre's pyramid retains a band of the original polished limestone casing at its apex; the Great Sphinx, 73 metres long and 20 metres tall, was carved from the plateau's living bedrock and guards the approach to Khafre's Valley Temple — a mortuary complex of red Aswan granite and alabaster that remains one of the finest examples of Old Kingdom stonework in existence. The Grand Egyptian Museum, opened progressively from 2021, was built specifically on the plateau's edge to display the antiquities of Giza and to give Tutankhamun's complete treasure — over 5,000 objects — a permanent, purpose-designed home beside the monuments that inspired them.",
+      "The Giza plateau rises from the edge of greater Cairo on the west bank of the Nile, a limestone escarpment where the Sahara begins. The three pyramids built here during Egypt's Fourth Dynasty — for the pharaohs Khufu (c. 2560 BCE), his son Khafre, and grandson Menkaure — are the only surviving wonder of the ancient world. Khufu's Great Pyramid stood as the tallest structure on earth for nearly four thousand years, built from an estimated 2.3 million stone blocks averaging 2.5 tonnes each. Khafre's pyramid retains a band of the original polished limestone casing at its apex; the Great Sphinx, 73 metres long and 20 metres tall, was carved from the plateau's living bedrock and guards the approach to Khafre's Valley Temple — a mortuary complex of red Aswan granite and alabaster that remains one of the finest examples of Old Kingdom stonework in existence. The Grand Egyptian Museum, officially opened in November 2025, was built specifically on the plateau's edge to display the antiquities of Giza and to give Tutankhamun's complete treasure — over 5,000 objects — a permanent, purpose-designed home beside the monuments that inspired them.",
     region: "cairo",
     coordinates: { lat: 29.9773, lng: 31.1325 },
     unesco: {
@@ -338,7 +338,7 @@ export const destinations: Destination[] = [
       "Philae Temple rising from the water as the motorboat approaches",
     ],
     thingsToKnow: [
-      "Abu Simbel is a half-day trip south by early-morning road convoy (3.5 hours each way, departing around 4 am) or a short EgyptAir flight (45 minutes, limited schedule).",
+      "Abu Simbel is a half-day trip south by private car (3.5 hours each way, leaving around 4 am to arrive before the heat) or a short EgyptAir flight (45 minutes, limited schedule).",
       "Philae, Elephantine Island and Kitchener's Botanical Garden are all reached by short motorboat transfer from the Aswan corniche.",
       "Aswan is the standard embarkation or disembarkation point for Nile cruises between Aswan and Luxor.",
       "Temperatures in Aswan are the highest in Egypt; October to February is the most comfortable window for outdoor sightseeing.",
@@ -367,7 +367,7 @@ export const destinations: Destination[] = [
     faqs: [
       {
         q: "How do I get to Abu Simbel from Aswan?",
-        a: "By road: a 3.5-hour drive each way through open desert, departing at 3–4 am to join the organised convoy that operates for security reasons. By air: EgyptAir operates a limited number of flights (approximately 45 minutes) from Aswan Airport — advance booking is essential and seats sell out quickly. Most visitors make Abu Simbel a day trip from Aswan. Those who stay overnight at Abu Simbel can attend the early-morning Sun Festival illumination, when the rising sun penetrates the inner sanctuary and illuminates the four seated statues — a remarkable and rarely seen event.",
+        a: "By road: a 3.5-hour drive each way through open desert, leaving Aswan at 3–4 am to arrive before the heat. There are police checkpoints on the way, so carry your passport. By air: EgyptAir operates a limited number of flights (approximately 45 minutes) from Aswan Airport — advance booking is essential and seats sell out quickly. Most visitors make Abu Simbel a day trip from Aswan. Those who stay overnight at Abu Simbel can attend the early-morning Sun Festival illumination, when the rising sun penetrates the inner sanctuary and illuminates the four seated statues — a remarkable and rarely seen event.",
       },
       {
         q: "What is Nubian culture?",

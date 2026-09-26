@@ -100,7 +100,7 @@ export const tours: Tour[] = [
         items: [
           "Private meet-and-greet at Cairo International Airport",
           "Transfer to your hotel and welcome briefing",
-          "Afternoon at the Egyptian Museum in Tahrir — the royal collections and gold of the New Kingdom",
+          "Afternoon at the Egyptian Museum in Tahrir — the royal gold of Tanis and the masterpieces of the Old Kingdom",
         ],
       },
       {
@@ -222,7 +222,7 @@ export const tours: Tour[] = [
       },
       {
         q: "Can Abu Simbel be added?",
-        a: "Yes. Abu Simbel is offered as an optional extra from Aswan, by short flight or road convoy, and is best added on the Aswan day. We arrange it on request.",
+        a: "Yes. Abu Simbel is offered as an optional extra from Aswan, by short flight or by private car, and is best added on the Aswan day. We arrange it on request.",
       },
       {
         q: "What is the best time of year to travel?",
@@ -534,7 +534,7 @@ export const tours: Tour[] = [
       },
       {
         q: "Can I add Abu Simbel from Aswan?",
-        a: "Yes, as an optional extra by early flight or road convoy. It adds a few hours to the Aswan morning, so we plan it in advance.",
+        a: "Yes, as an optional extra by early flight or by private car. It adds a few hours to the Aswan morning, so we plan it in advance.",
       },
     ],
     order: 4,
@@ -1339,7 +1339,7 @@ export const tours: Tour[] = [
       },
       {
         q: "Does this journey include Abu Simbel?",
-        a: "Not by default — but it slots in cleanly as an early-morning excursion from Aswan on the final day, by road convoy or short flight. Tell us at booking so we can hold the timing.",
+        a: "Not by default — but it slots in cleanly as an early-morning excursion from Aswan on the final day, by private car or short flight. Tell us at booking so we can hold the timing.",
       },
       {
         q: "How do I reach Luxor to start?",

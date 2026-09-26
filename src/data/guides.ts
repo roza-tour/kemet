@@ -39,7 +39,7 @@ export const guides: Guide[] = [
       { label: "Capital", value: "Cairo" },
       { label: "Currency", value: "Egyptian Pound (EGP)" },
       { label: "Language", value: "Arabic (English widely spoken in tourism)" },
-      { label: "Time zone", value: "UTC+2 (EET, no daylight saving)" },
+      { label: "Time zone", value: "UTC+2; UTC+3 in summer (last Friday of April to last Thursday of October)" },
       { label: "Visa", value: "On arrival or e-Visa for most nationalities" },
       { label: "Religion", value: "Predominantly Sunni Muslim; Coptic Christian minority" },
       { label: "Emergency", value: "Police 122 · Ambulance 123 · Tourism Police 126" },
@@ -76,7 +76,7 @@ export const guides: Guide[] = [
       {
         heading: "Visa and entry",
         paragraphs: [
-          "Most western European, North American and many other nationalities can obtain a tourist visa on arrival at Cairo International, Hurghada or Sharm el-Sheikh airports. The single-entry visa costs USD 25 and allows a 30-day stay. Egypt's e-Visa system also allows pre-travel online applications for around the same cost, with processing typically taking 3–7 business days.",
+          "Most western European, North American and many other nationalities can obtain a tourist visa on arrival at Cairo International, Hurghada or Sharm el-Sheikh airports. The tourist visa allows a 30-day stay, and Egypt's e-Visa lets you apply online before you travel, with processing typically taking 3–7 business days. Fees are set by the Egyptian government and have changed several times since 2025, so check the official portal for the current figure.",
           "Entry via land borders (Sinai crossing from Israel, or the Libyan and Sudanese frontiers) operates under separate rules. Check your government's current travel guidance before travelling overland.",
         ],
       },
@@ -90,7 +90,7 @@ export const guides: Guide[] = [
       {
         heading: "Money and payments",
         paragraphs: [
-          "Egypt's currency is the Egyptian Pound (EGP). ATMs are widely available in Cairo and tourist centres and give competitive rates. Keep small notes for tipping, entrance extras and markets — USD 1 and USD 5 notes are also accepted at many tourist sites. Most hotels and larger restaurants take international cards; smaller places are cash-only.",
+          "Egypt's currency is the Egyptian Pound (EGP). ATMs are widely available in Cairo and tourist centres and give competitive rates. Monument and museum tickets are now paid by card only — cash is no longer taken at the Pyramids, Karnak or the major museums — so carry a Visa or Mastercard. Keep small pound notes for tipping and markets. Most hotels and larger restaurants take international cards; smaller places are cash-only.",
         ],
       },
       {
@@ -339,7 +339,7 @@ export const guides: Guide[] = [
       {
         heading: "Cairo Metro",
         paragraphs: [
-          "Cairo's Metro is clean, inexpensive and efficient for navigating the city on north–south axes. Three lines cover 61 stations, connecting Heliopolis, downtown, Tahrir Square, Giza and suburbs to the south. A single journey costs around EGP 10–15 depending on distance. Women-only carriages operate at the front and back of each train.",
+          "Cairo's Metro is clean, inexpensive and efficient for navigating the city on north–south axes. Three lines and close to 90 stations connect Heliopolis, downtown, Tahrir Square, Giza and the southern suburbs. A single journey costs EGP 10–20 depending on distance (2026 fares). Women-only carriages operate at the front and back of each train.",
           "The Metro does not reach the Pyramids directly. The nearest station (Giza on Line 2) leaves a 5-kilometre gap to the plateau — a taxi or Uber completes the journey in 10–15 minutes.",
         ],
       },
@@ -736,7 +736,7 @@ export const guides: Guide[] = [
         items: [
           "Type C/F adapter (Egypt runs European two-pin at 220V) — one per person plus a spare",
           "Power bank — long site days, phone as camera",
-          "Passport valid 6+ months, a printed copy kept separately, and your e-Visa confirmation or USD 25 in cash for the visa on arrival",
+          "Passport valid 6+ months, a printed copy kept separately, and your e-Visa confirmation, or the fee for a visa on arrival",
           "A modest amount of small-denomination cash for tips — see the money guide for how tipping actually works",
         ],
       },

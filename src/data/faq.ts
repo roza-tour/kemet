@@ -53,7 +53,7 @@ const planningAndBooking: Faq[] = [
 const practicalities: Faq[] = [
   {
     q: "What currency is used in Egypt, and should I bring cash?",
-    a: "The Egyptian pound (EGP). Cards are accepted at hotels, cruise vessels and larger restaurants, but Egypt remains a cash-friendly country: bazaars, cafés, small shops and tips all run on cash. ATMs are plentiful in cities and dispense pounds at fair rates — drawing a modest amount on arrival and topping up as you go works better than carrying large sums. Euros and dollars are easily exchanged, and our quotes are settled before travel, so day-to-day cash needs stay small.",
+    a: "The Egyptian pound (EGP). Cards are accepted at hotels, cruise vessels and larger restaurants — and monument and museum tickets are now card only — but Egypt remains a cash-friendly country: bazaars, cafés, small shops and tips all run on cash. ATMs are plentiful in cities and dispense pounds at fair rates — drawing a modest amount on arrival and topping up as you go works better than carrying large sums. Euros and dollars are easily exchanged, and our quotes are settled before travel, so day-to-day cash needs stay small.",
   },
   {
     q: "How does tipping work in Egypt?",
