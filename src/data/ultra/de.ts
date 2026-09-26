@@ -8,7 +8,7 @@ export const de: UltraText = {
     "ultra luxusreise ägypten, private luxusreise ägypten, cheops pyramide private öffnung, dinner karnak tempel, dahabiya charter privat, privatjacht rotes meer, mena house suite, old cataract assuan, oberoi philae",
   crumb: "Kemet Ultra",
 
-  heroTag: "Kemet Ultra · auf private Anfrage",
+  heroTag: "Kemet Ultra · die Stufe über VIP",
   h1: ["Ägypten, geöffnet", "nur für Sie"],
   lede:
     "Vier private Reisen an der Spitze des ägyptischen Marktes: die Cheops-Pyramide für Ihre Gruppe geöffnet, ein Dinner in Karnak, nachdem die Tore geschlossen sind, eine Dahabiya oder eine Jacht ohne andere Gäste und die großen Hotels in ihren besten Zimmern. Mit offenen Preisen — und jedes Element schriftlich bestätigt, bevor Sie etwas bezahlen.",
@@ -171,7 +171,7 @@ export const de: UltraText = {
 
   standardOverline: "Wie diese Stufe geführt wird",
   standard: [
-    { title: "Erst der Preis, dann der Beweis", body: "Jeder Preis steht auf dieser Seite. Bevor Geld fließt, wird jedes Element — die Genehmigung, der Charter, die Suite — schriftlich und auf Ihren Namen bestätigt." },
+    { title: "Erst der Preis, dann der Beweis", body: "Jeder Preis steht auf dieser Seite, und jedes Element der Reise wird schriftlich und auf Ihren Namen bestätigt, bevor Geld fließt." },
     { title: "Ein Ansprechpartner", body: "Wer die Reise entwirft, antwortet auch, während Sie in Ägypten sind. Kein Callcenter und keine Nummer, die nach der Anzahlung schweigt." },
     { title: "Änderungen ohne Umstände", body: "Jede Reise lässt sich umgestalten — Tage, Hotels, Tempo, eine größere Gruppe oder mitreisendes Personal — und wird nach derselben Grundlage neu berechnet." },
     { title: "Diskretion als Standard", body: "Keine Gruppe, kein geteiltes Fahrzeug, keine veröffentlichte Abfahrtsliste. Nichts darüber, wer Sie sind oder wohin Sie reisen, wird außerhalb des ausführenden Teams besprochen." },
@@ -180,10 +180,10 @@ export const de: UltraText = {
   faqOverline: "Bevor Sie schreiben",
   faqs: ({ from2, to2, from4, to4, peak }) => [
     { q: "Was kostet eine Ultra-Luxusreise in Ägypten?", a: `Die vier Kemet-Ultra-Reisen kosten zu zweit ${from2} pro Person für sieben Tage bis ${to2} für fünfzehn. Zu viert sinkt der Preis pro Person auf ${from4} bis ${to4}, weil Charter, Flugzeug und private Öffnungen geteilt werden. In den Spitzenwochen zu Weihnachten, Neujahr und Ostern gilt ein Zuschlag von ${peak} %.` },
-    { q: "Kann die Cheops-Pyramide wirklich nur für uns geöffnet werden?", a: "Ja. Das Ministerium für Tourismus und Altertümer genehmigt private Öffnungen der Cheops-Pyramide für eine einzelne Gruppe, meist für zwei Stunden außerhalb der Öffnungszeiten. Sie wird auf Ihren Namen beantragt, braucht vier bis acht Wochen Vorlauf, und nichts davon wird berechnet, bevor die Genehmigung vorliegt." },
-    { q: "Wie funktioniert ein Dinner in Karnak?", a: "Karnak wird für Ihre Gruppe geöffnet, nachdem die Besucher gegangen sind; Sie gehen mit Ihrem Ägyptologen durch den Säulensaal, und das Dinner wird im Tempelbezirk gedeckt. Dafür sind eine Genehmigung und Sicherheitsvorkehrungen nötig, die mit Ihrer Buchung beantragt werden. Wird ein Termin abgelehnt, erfahren Sie es vor der Zahlung und erhalten die nächstmögliche Alternative." },
+    { q: "Kann die Cheops-Pyramide wirklich nur für uns geöffnet werden?", a: "Ja. Zwei Stunden lang wird die Cheops-Pyramide außerhalb der Öffnungszeiten nur für Ihre Gruppe geöffnet — Ihr Ägyptologe an Ihrer Seite, sonst niemand darin. Wir kümmern uns um alles; Sie kommen einfach." },
+    { q: "Wie funktioniert ein Dinner in Karnak?", a: "Wenn die letzten Besucher gegangen sind, wird Karnak für Ihre Gruppe geöffnet. Sie gehen mit Ihrem Ägyptologen durch den Säulensaal, und das Dinner wird im Tempelbezirk serviert. Für Sie gibt es nichts zu organisieren." },
     { q: "Warum ist das Winter Palace nicht dabei?", a: "Das Winter Palace in Luxor ist seit Anfang 2026 für eine vollständige Restaurierung geschlossen und öffnet im Juli 2027 als Mandarin Oriental Winter Palace wieder. Bis dahin wohnen Sie in Luxor im Al Moudira am Westufer. Das Old Cataract in Assuan bleibt in seinem historischen Palastflügel geöffnet, während der Nilflügel renoviert wird." },
-    { q: "Welche Dahabiya wird gechartert?", a: "Eine erstklassige Dahabiya mit sechs bis zehn Kabinen, vollständig gechartert — etwa die Sanctuary Zein Nile Chateau oder die Meroe von Nour el Nil, je nach Termin. Das Boot wird in Ihrem schriftlichen Angebot genannt, bevor Sie etwas bezahlen." },
+    { q: "Welche Dahabiya wird gechartert?", a: "Eine erstklassige Dahabiya mit sechs bis zehn Kabinen, vollständig gechartert, mit eigener Crew und eigenem Koch — passend zu Ihren Daten ausgewählt und in Ihrem schriftlichen Angebot genannt." },
     { q: "Kann eine Reise geändert oder verlängert werden?", a: "Jede. Tage, Hotels, Reihenfolge und Tempo lassen sich ändern, und der Preis wird nach derselben Grundlage neu berechnet. Größere Gruppen, mitreisendes Personal und die Ankunft im Privatjet werden von Anfang an eingeplant." },
     { q: "Wie früh sollten wir buchen?", a: "Acht bis zwölf Wochen für Reisen zwischen Oktober und April, wenn private Öffnungen und Dahabiya-Charter am gefragtesten sind. Kürzere Fristen sind manchmal möglich; Sie erfahren vor der Zusage, welche Elemente sich noch sichern lassen." },
     { q: "Mit wem haben wir zu tun?", a: "Mit einer Person, von der ersten Nachricht bis zum letzten Tag in Ägypten. Wenn ein Family Office oder eine Assistenz die Planung übernimmt, bleibt auch für sie dieselbe Person zuständig." },

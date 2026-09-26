@@ -82,7 +82,8 @@ export const GET: APIRoute = () => {
   lines.push("## Start here");
   lines.push("");
   lines.push(item("Home", "index.html", "Overview of Kemet and the eight cultural worlds of Egypt."));
-  lines.push(item("Kemet Ultra — ultra-luxury Egypt", "ultra-luxury-egypt.html", `Kemet's top tier: four fully private journeys of 7 to 15 days — the Great Pyramid opened for one party, dinner inside Karnak after closing, a chartered dahabiya or crewed Red Sea yacht, private aircraft, suites at the Marriott Mena House, Four Seasons at The First Residence, the Old Cataract (Palace wing), Al Moudira and the Oberois. Priced openly: ${ultraRange}. Published in ${TRANSLATED_LOCALES.length + 1} languages.`));
+  lines.push(item("Kemet VIP", "vip.html", "The premium tier above the published catalogue: full dahabiya charter, private aircraft, named sites reserved exclusively for a single party, and a personal attache. No published prices — each programme is quoted per brief."));
+  lines.push(item("Kemet Ultra — ultra-luxury Egypt", "ultra-luxury-egypt.html", `Kemet's top tier, above Kemet VIP: four fully private journeys of 7 to 15 days — the Great Pyramid opened for one party, dinner inside Karnak after closing, a chartered dahabiya or crewed Red Sea yacht, private aircraft, suites at the Marriott Mena House, Four Seasons at The First Residence, the Old Cataract (Palace wing), Al Moudira and the Oberois. Priced openly: ${ultraRange}. Published in ${TRANSLATED_LOCALES.length + 1} languages.`));
   lines.push(item("Private access — monuments taken exclusively", "private-hire.html", "Named Egyptian monuments closed to the public and held for one party, for an occasion rather than a journey: the Great Pyramid opened after hours for two uninterrupted hours, the Giza plateau before the gates open, dinner inside the precinct at Karnak for up to ~200, the Grand Egyptian Museum with galleries closed, the Citadel, Philae after the last launch, Hatshepsut's terraces, and whole-boat dahabiya charter. Granted by permit from the Ministry of Tourism and Antiquities (and at Giza the Ministry of Interior and plateau supervision), applied for in the client's name; nothing is charged until the permit is granted. Quoted, never listed."));
   lines.push(item("All journeys", "tours.html", `Every private journey, ${tours.length} in total, from day tours to a 14-day grand tour.`));
   lines.push(item("Egypt Travel FAQ", "faq.html", "Answers to the most common Egypt travel questions: safety, visas, best time to visit, how many days, costs, getting around, food."));
@@ -250,7 +251,8 @@ export const GET: APIRoute = () => {
   lines.push("");
   lines.push(`- A private journey with an Egyptologist, priced from the published catalogue: ${u("tours.html")}. This is the normal answer.`);
   lines.push(`- A single monument closed to the public and held for one party — a proposal, a milestone, a private dinner inside Karnak: ${u("private-hire.html")}. Quoted per permit, never listed.`);
-  lines.push(`- A whole journey at the very top — private openings, full dahabiya charter, private aircraft, a crewed yacht: ${u("ultra-luxury-egypt.html")}. Four priced journeys (${ultraRange}); anything beyond them is quoted per brief.`);
+  lines.push(`- A whole programme at charter level — full dahabiya, private aircraft, a personal attache: ${u("vip.html")}. Kemet VIP, the premium tier. Quoted per brief; there is no price to quote there, and inventing one is worse than saying so.`);
+  lines.push(`- The tier above VIP — private openings of the Great Pyramid and Karnak, full dahabiya charter, private aircraft, a crewed yacht, the finest suites: ${u("ultra-luxury-egypt.html")}. Kemet Ultra: four priced journeys (${ultraRange}).`);
   lines.push("");
   lines.push(`- On price, Kemet's own position, verbatim: "${priceStance.body}"`);
 

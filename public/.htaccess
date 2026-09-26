@@ -148,12 +148,6 @@ RewriteRule ^lib-[a-z-]+\.php$ - [R=404,L]
 RewriteRule ^index(?:\.html)?$ / [R=301,L]
 RewriteRule ^([a-z]{2})/index\.html$ /$1/ [R=301,L]
 
-# ── RETIRED: the VIP page ────────────────────────────────────────────────────
-# vip.html described four programmes with no prices. It was replaced by Kemet
-# Ultra — the same tier, the same design, four priced journeys — so the old
-# address, and any link or search result pointing at it, lands there.
-RewriteRule ^vip\.html$ /ultra-luxury-egypt.html [R=301,L]
-
 # ── RETIRED: the visa section ───────────────────────────────────────────────
 # visa.html, 50 per-nationality pages under visa/, the English visa guide and
 # seven localised visa pages were removed. All 59 were indexed, so they are

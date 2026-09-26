@@ -8,7 +8,7 @@ export const ms: UltraText = {
     "percutian ultra mewah mesir, perjalanan peribadi mewah mesir, piramid agung dibuka peribadi, makan malam kuil karnak, sewa dahabiya peribadi, kapal layar peribadi laut merah, suite mena house, old cataract aswan, oberoi philae",
   crumb: "Kemet Ultra",
 
-  heroTag: "Kemet Ultra · atas permintaan peribadi",
+  heroTag: "Kemet Ultra · peringkat di atas VIP",
   h1: ["Mesir, dibuka", "hanya untuk anda"],
   lede:
     "Empat perjalanan peribadi di puncak pasaran Mesir: Piramid Agung dibuka untuk rombongan anda, makan malam di dalam Karnak selepas pintu ditutup, dahabiya atau kapal layar tanpa tetamu lain, dan hotel-hotel ternama di bilik terbaiknya. Harga dinyatakan secara terbuka, dan setiap unsur disahkan secara bertulis sebelum apa-apa bayaran.",
@@ -171,7 +171,7 @@ export const ms: UltraText = {
 
   standardOverline: "Cara peringkat ini dikendalikan",
   standard: [
-    { title: "Harga dahulu, kemudian bukti", body: "Setiap harga ada di halaman ini. Sebelum wang berpindah tangan, setiap unsur — permit, sewaan kapal, suite — disahkan secara bertulis atas nama anda." },
+    { title: "Harga dahulu, kemudian bukti", body: "Setiap harga ada di halaman ini, dan setiap unsur perjalanan disahkan secara bertulis atas nama anda sebelum wang berpindah tangan." },
     { title: "Seorang wakil", body: "Orang yang mereka bentuk perjalanan ialah orang yang menjawab anda semasa di Mesir. Bukan pusat panggilan, dan bukan nombor yang berhenti menjawab selepas deposit." },
     { title: "Perubahan tanpa kerumitan", body: "Setiap perjalanan boleh diubah — hari, hotel, rentak, rombongan lebih besar atau kakitangan yang turut serta — dan dikira semula dengan asas yang sama." },
     { title: "Kerahsiaan sebagai amalan", body: "Tiada kumpulan, tiada kenderaan dikongsi, tiada senarai pelepasan diterbitkan. Tiada apa-apa tentang siapa anda atau ke mana anda pergi dibincangkan di luar pasukan pelaksana." },
@@ -180,10 +180,10 @@ export const ms: UltraText = {
   faqOverline: "Sebelum anda menulis",
   faqs: ({ from2, to2, from4, to4, peak }) => [
     { q: "Berapakah kos perjalanan ultra mewah ke Mesir?", a: `Empat perjalanan Kemet Ultra untuk dua orang bermula dari ${from2} seorang bagi tujuh hari hingga ${to2} bagi lima belas hari. Untuk empat orang, harga seorang turun kepada ${from4}–${to4}, kerana sewaan kapal, pesawat dan pembukaan peribadi dikongsi bersama. Minggu Krismas, Tahun Baharu dan Easter dikenakan caj tambahan ${peak}%.` },
-    { q: "Benarkah Piramid Agung boleh dibuka hanya untuk kami?", a: "Ya. Kementerian Pelancongan dan Barang Purba memberikan kebenaran pembukaan peribadi Piramid Agung kepada satu rombongan, biasanya selama dua jam di luar waktu awam. Permohonan dibuat atas nama anda, memerlukan empat hingga lapan minggu, dan tiada caj dikenakan sebelum permit diluluskan." },
-    { q: "Bagaimanakah makan malam di dalam Karnak?", a: "Karnak dibuka untuk rombongan anda selepas orang ramai beredar; anda menyusuri dewan hipostil bersama ahli Egyptologi, kemudian makan malam dihidangkan di dalam kawasan kuil. Permit dan kawalan keselamatan diperlukan, dan dipohon bersama tempahan anda. Jika sesuatu tarikh ditolak, anda dimaklumkan sebelum membayar dan ditawarkan alternatif terdekat." },
+    { q: "Benarkah Piramid Agung boleh dibuka hanya untuk kami?", a: "Ya. Selama dua jam, Piramid Agung dibuka hanya untuk rombongan anda di luar waktu awam, dengan ahli Egyptologi di sisi anda dan tiada orang lain di dalam. Semuanya kami uruskan; anda hanya perlu datang." },
+    { q: "Bagaimanakah makan malam di dalam Karnak?", a: "Selepas pelawat terakhir beredar, Karnak dibuka untuk rombongan anda. Anda menyusuri dewan hipostil bersama ahli Egyptologi, kemudian makan malam dihidangkan di dalam kawasan kuil. Tiada apa-apa yang perlu anda uruskan." },
     { q: "Mengapa Winter Palace tidak termasuk?", a: "Winter Palace di Luxor ditutup sejak awal 2026 untuk pemulihan menyeluruh dan akan dibuka semula pada Julai 2027 sebagai Mandarin Oriental Winter Palace. Sehingga itu, di Luxor anda menginap di Al Moudira di Tebing Barat. Old Cataract di Aswan kekal dibuka di sayap bersejarah Palace sementara sayap Nil diubah suai." },
-    { q: "Dahabiya manakah yang disewa?", a: "Dahabiya kelas utama dengan enam hingga sepuluh kabin, disewa sepenuhnya — seperti Sanctuary Zein Nile Chateau atau Meroe milik Nour el Nil, bergantung pada tarikh. Nama kapal dinyatakan dalam cadangan bertulis sebelum apa-apa bayaran." },
+    { q: "Dahabiya manakah yang disewa?", a: "Dahabiya kelas utama dengan enam hingga sepuluh kabin, disewa sepenuhnya, dengan kru dan tukang masak sendiri — dipilih mengikut tarikh anda dan dinyatakan dalam cadangan bertulis." },
     { q: "Bolehkah perjalanan diubah atau dipanjangkan?", a: "Semuanya boleh. Hari, hotel, susunan laluan dan rentak boleh diubah, dan harga dikira semula dengan asas yang sama. Rombongan lebih besar, kakitangan yang turut serta dan ketibaan dengan jet peribadi dirancang dari awal." },
     { q: "Berapa awal perlu menempah?", a: "Lapan hingga dua belas minggu untuk perjalanan antara Oktober dan April, apabila pembukaan peribadi dan sewaan dahabiya paling diminati. Kadangkala boleh lebih singkat; sebelum anda komited, kami nyatakan unsur mana yang masih boleh dipastikan." },
     { q: "Dengan siapa kami akan berurusan?", a: "Dengan seorang sahaja, dari mesej pertama hingga hari terakhir di Mesir. Jika perancangan diuruskan oleh pejabat keluarga atau pembantu, mereka juga sentiasa berurusan dengan orang yang sama." },

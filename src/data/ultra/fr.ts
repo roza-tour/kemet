@@ -8,7 +8,7 @@ export const fr: UltraText = {
     "voyage ultra luxe égypte, voyage privé de luxe égypte, ouverture privée grande pyramide, dîner temple de karnak, dahabeya privatisée, yacht privé mer rouge, mena house suite, old cataract assouan, oberoi philae",
   crumb: "Kemet Ultra",
 
-  heroTag: "Kemet Ultra · sur demande privée",
+  heroTag: "Kemet Ultra · au-dessus de VIP",
   h1: ["L'Égypte, ouverte", "pour vous seuls"],
   lede:
     "Quatre voyages privés au sommet du marché égyptien : la Grande Pyramide ouverte pour votre groupe, un dîner dans Karnak une fois les portes fermées, une dahabeya ou un yacht sans autres passagers, et les grands hôtels dans leurs plus belles chambres. Des prix affichés, et chaque élément confirmé par écrit avant tout paiement.",
@@ -171,7 +171,7 @@ export const fr: UltraText = {
 
   standardOverline: "Comment ce niveau fonctionne",
   standard: [
-    { title: "Le prix, puis la preuve", body: "Chaque prix figure sur cette page. Avant tout mouvement d'argent, chaque élément — l'autorisation, la privatisation, la suite — est confirmé par écrit, à votre nom." },
+    { title: "Le prix, puis la preuve", body: "Chaque prix figure sur cette page, et chaque élément du voyage est confirmé par écrit, à votre nom, avant tout mouvement d'argent." },
     { title: "Un seul interlocuteur", body: "Celui qui conçoit le voyage est celui qui vous répond pendant votre séjour en Égypte. Pas de centre d'appels, pas de numéro qui se tait après l'acompte." },
     { title: "Des changements sans histoires", body: "Chaque voyage peut être remanié — jours, hôtels, rythme, un groupe plus nombreux ou du personnel qui vous accompagne — et il est recalculé sur la même base." },
     { title: "La discrétion pour règle", body: "Pas de groupe, pas de véhicule partagé, pas de liste de départs publiée. Rien sur qui vous êtes ni où vous allez n'est évoqué en dehors de l'équipe qui organise." },
@@ -180,10 +180,10 @@ export const fr: UltraText = {
   faqOverline: "Avant de nous écrire",
   faqs: ({ from2, to2, from4, to4, peak }) => [
     { q: "Combien coûte un voyage ultra-luxe en Égypte ?", a: `Les quatre voyages Kemet Ultra coûtent, à deux, de ${from2} par personne pour sept jours à ${to2} pour quinze. À quatre, le prix par personne descend entre ${from4} et ${to4}, car la privatisation, l'avion et les ouvertures privées sont partagés. Les semaines de Noël, du Nouvel An et de Pâques sont majorées de ${peak} %.` },
-    { q: "La Grande Pyramide peut-elle vraiment être ouverte pour nous seuls ?", a: "Oui. Le ministère du Tourisme et des Antiquités accorde des ouvertures privées de la Grande Pyramide à un seul groupe, généralement pour deux heures en dehors des horaires publics. La demande est faite à votre nom, il faut compter quatre à huit semaines, et rien n'est facturé avant l'obtention de l'autorisation." },
-    { q: "Comment se passe le dîner dans Karnak ?", a: "Karnak s'ouvre pour votre groupe une fois le public parti ; vous parcourez la salle hypostyle avec votre égyptologue, puis le dîner est dressé dans l'enceinte. Il faut une autorisation et un dispositif de sécurité, demandés avec votre réservation. Si une date est refusée, vous le savez avant de payer et l'on vous propose l'alternative la plus proche." },
+    { q: "La Grande Pyramide peut-elle vraiment être ouverte pour nous seuls ?", a: "Oui. Pendant deux heures, la Grande Pyramide est ouverte pour votre seul groupe, en dehors des horaires publics, votre égyptologue à vos côtés et personne d'autre à l'intérieur. Nous nous occupons de tout ; il vous suffit de venir." },
+    { q: "Comment se passe le dîner dans Karnak ?", a: "Une fois les derniers visiteurs partis, Karnak s'ouvre pour votre groupe. Vous parcourez la salle hypostyle avec votre égyptologue, puis le dîner est servi dans l'enceinte du temple. Vous n'avez rien à organiser." },
     { q: "Pourquoi le Winter Palace n'y figure-t-il pas ?", a: "Le Winter Palace de Louxor a fermé début 2026 pour une restauration complète et rouvrira en juillet 2027 sous le nom de Mandarin Oriental Winter Palace. D'ici là, à Louxor, vous séjournez à Al Moudira, sur la rive ouest. L'Old Cataract d'Assouan reste ouvert dans son aile historique Palace pendant la rénovation de l'aile sur le Nil." },
-    { q: "Quelle dahabeya est privatisée ?", a: "Une dahabeya de premier rang de six à dix cabines, privatisée en entier — comme la Sanctuary Zein Nile Chateau ou la Meroe de Nour el Nil, selon les dates. Le bateau est nommé dans votre proposition écrite avant tout paiement." },
+    { q: "Quelle dahabeya est privatisée ?", a: "Une dahabeya de premier rang de six à dix cabines, privatisée en entier, avec son propre équipage et son chef — choisie pour vos dates et nommée dans votre proposition écrite." },
     { q: "Peut-on modifier ou allonger un voyage ?", a: "Tous. Les jours, les hôtels, l'ordre du parcours et le rythme peuvent changer, et le prix est recalculé sur la même base. Groupes plus nombreux, personnel qui vous accompagne et arrivée en jet privé sont prévus dès le départ." },
     { q: "Combien de temps à l'avance réserver ?", a: "Huit à douze semaines pour un voyage entre octobre et avril, période où les ouvertures privées et les dahabeyas sont les plus demandées. Un délai plus court est parfois possible ; vous saurez avant de vous engager quels éléments peuvent encore être garantis." },
     { q: "Qui sera notre interlocuteur ?", a: "Une seule personne, du premier message au dernier jour en Égypte. Si un family office ou un assistant organise le voyage, il traite lui aussi toujours avec la même personne." },

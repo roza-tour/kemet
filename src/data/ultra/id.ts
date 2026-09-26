@@ -8,7 +8,7 @@ export const id: UltraText = {
     "tur ultra mewah mesir, perjalanan privat mewah mesir, piramida agung dibuka privat, makan malam kuil karnak, sewa dahabiya privat, yacht privat laut merah, suite mena house, old cataract aswan, oberoi philae",
   crumb: "Kemet Ultra",
 
-  heroTag: "Kemet Ultra · atas permintaan privat",
+  heroTag: "Kemet Ultra · tingkat di atas VIP",
   h1: ["Mesir, dibuka", "hanya untuk Anda"],
   lede:
     "Empat perjalanan privat di puncak pasar Mesir: Piramida Agung dibuka untuk rombongan Anda, makan malam di dalam Karnak setelah gerbang ditutup, dahabiya atau yacht tanpa tamu lain, dan hotel-hotel legendaris di kamar terbaiknya. Harga dicantumkan terbuka, dan setiap unsur dikonfirmasi tertulis sebelum apa pun dibayar.",
@@ -171,7 +171,7 @@ export const id: UltraText = {
 
   standardOverline: "Cara tingkat ini dijalankan",
   standard: [
-    { title: "Harga dulu, lalu bukti", body: "Setiap harga ada di halaman ini. Sebelum uang berpindah, setiap unsur — izin, sewa kapal, suite — dikonfirmasi tertulis atas nama Anda." },
+    { title: "Harga dulu, lalu bukti", body: "Setiap harga ada di halaman ini, dan setiap unsur perjalanan dikonfirmasi tertulis atas nama Anda sebelum uang berpindah." },
     { title: "Satu kontak", body: "Orang yang merancang perjalanan adalah orang yang menjawab Anda selama di Mesir. Bukan pusat panggilan, dan bukan nomor yang berhenti menjawab setelah uang muka." },
     { title: "Perubahan tanpa repot", body: "Setiap perjalanan bisa diubah — hari, hotel, ritme, rombongan lebih besar, atau staf yang ikut — dan dihitung ulang dengan dasar yang sama." },
     { title: "Kerahasiaan sebagai standar", body: "Tanpa grup, tanpa kendaraan bersama, tanpa daftar keberangkatan yang dipublikasikan. Tidak ada yang dibicarakan tentang siapa Anda atau ke mana Anda pergi di luar tim pelaksana." },
@@ -180,10 +180,10 @@ export const id: UltraText = {
   faqOverline: "Sebelum Anda menulis",
   faqs: ({ from2, to2, from4, to4, peak }) => [
     { q: "Berapa biaya perjalanan ultra mewah ke Mesir?", a: `Empat perjalanan Kemet Ultra untuk dua orang berkisar dari ${from2} per orang untuk tujuh hari hingga ${to2} untuk lima belas hari. Untuk empat orang, harga per orang turun menjadi ${from4}–${to4}, karena sewa kapal, pesawat, dan pembukaan privat ditanggung bersama. Pekan Natal, Tahun Baru, dan Paskah dikenakan tambahan ${peak}%.` },
-    { q: "Benarkah Piramida Agung bisa dibuka hanya untuk kami?", a: "Ya. Kementerian Pariwisata dan Purbakala memberikan izin pembukaan privat Piramida Agung untuk satu rombongan, biasanya dua jam di luar jam umum. Permohonan diajukan atas nama Anda, butuh empat hingga delapan minggu, dan tidak ada yang ditagih sebelum izin keluar." },
-    { q: "Bagaimana makan malam di dalam Karnak?", a: "Karnak dibuka untuk rombongan Anda setelah pengunjung umum pergi; Anda menyusuri aula hipostil bersama Egyptologist, lalu makan malam disajikan di dalam kompleks kuil. Diperlukan izin dan pengamanan yang diajukan bersama pemesanan. Jika suatu tanggal ditolak, Anda diberi tahu sebelum membayar dan ditawari alternatif terdekat." },
+    { q: "Benarkah Piramida Agung bisa dibuka hanya untuk kami?", a: "Ya. Selama dua jam, Piramida Agung dibuka hanya untuk rombongan Anda di luar jam umum, dengan Egyptologist di samping Anda dan tak ada orang lain di dalam. Semuanya kami urus; Anda cukup datang." },
+    { q: "Bagaimana makan malam di dalam Karnak?", a: "Setelah pengunjung terakhir pergi, Karnak dibuka untuk rombongan Anda. Anda menyusuri aula hipostil bersama Egyptologist, lalu makan malam disajikan di dalam kompleks kuil. Tak ada yang perlu Anda urus." },
     { q: "Mengapa Winter Palace tidak termasuk?", a: "Winter Palace di Luxor tutup sejak awal 2026 untuk restorasi total dan dibuka kembali pada Juli 2027 sebagai Mandarin Oriental Winter Palace. Hingga saat itu, di Luxor Anda menginap di Al Moudira di Tepi Barat. Old Cataract di Aswan tetap buka di sayap bersejarah Palace selama sayap Nil direnovasi." },
-    { q: "Dahabiya mana yang disewa?", a: "Dahabiya kelas utama dengan enam hingga sepuluh kabin, disewa penuh — seperti Sanctuary Zein Nile Chateau atau Meroe milik Nour el Nil, tergantung tanggal. Nama kapal dicantumkan dalam penawaran tertulis sebelum apa pun dibayar." },
+    { q: "Dahabiya mana yang disewa?", a: "Dahabiya kelas utama dengan enam hingga sepuluh kabin, disewa penuh, dengan awak dan koki sendiri — dipilih sesuai tanggal Anda dan disebutkan dalam penawaran tertulis." },
     { q: "Bisakah perjalanan diubah atau diperpanjang?", a: "Semuanya bisa. Hari, hotel, urutan rute, dan ritme bisa diubah, dan harga dihitung ulang dengan dasar yang sama. Rombongan besar, staf yang ikut, dan kedatangan dengan jet pribadi direncanakan sejak awal." },
     { q: "Berapa lama sebelumnya harus memesan?", a: "Delapan hingga dua belas minggu untuk perjalanan antara Oktober dan April, saat pembukaan privat dan sewa dahabiya paling diminati. Kadang bisa lebih singkat; sebelum Anda berkomitmen, kami sampaikan unsur mana yang masih bisa dipastikan." },
     { q: "Dengan siapa kami berurusan?", a: "Dengan satu orang, dari pesan pertama hingga hari terakhir di Mesir. Jika perencanaan diurus oleh family office atau asisten, mereka juga selalu berhubungan dengan orang yang sama." },

@@ -8,7 +8,7 @@ export const es: UltraText = {
     "viaje ultra lujo egipto, viaje privado de lujo egipto, apertura privada gran pirámide, cena templo de karnak, dahabiya chárter privado, yate privado mar rojo, mena house suite, old cataract asuán, oberoi philae",
   crumb: "Kemet Ultra",
 
-  heroTag: "Kemet Ultra · por encargo privado",
+  heroTag: "Kemet Ultra · el nivel por encima de VIP",
   h1: ["Egipto, abierto", "solo para ustedes"],
   lede:
     "Cuatro viajes privados en lo más alto del mercado egipcio: la Gran Pirámide abierta para su grupo, una cena dentro de Karnak cuando ya han cerrado las puertas, una dahabiya o un yate sin otros huéspedes y los grandes hoteles en sus mejores habitaciones. Con precios a la vista, y cada elemento confirmado por escrito antes de pagar nada.",
@@ -171,7 +171,7 @@ export const es: UltraText = {
 
   standardOverline: "Cómo funciona este nivel",
   standard: [
-    { title: "Primero el precio, luego la prueba", body: "Cada precio está en esta página. Antes de mover dinero, cada elemento — el permiso, el chárter, la suite — se confirma por escrito, a su nombre." },
+    { title: "Primero el precio, luego la prueba", body: "Cada precio está en esta página, y cada elemento del viaje se confirma por escrito, a su nombre, antes de mover dinero." },
     { title: "Un solo interlocutor", body: "Quien diseña el viaje es quien les responde mientras están en Egipto. Ni un centro de llamadas ni un número que deja de contestar después del depósito." },
     { title: "Cambios sin complicaciones", body: "Cada viaje puede rehacerse — días, hoteles, ritmo, un grupo mayor o personal que les acompaña — y se recalcula con el mismo criterio." },
     { title: "Discreción por norma", body: "Sin grupos, sin vehículos compartidos, sin listas de salidas publicadas. Nada sobre quiénes son o adónde van se comenta fuera del equipo que lo organiza." },
@@ -180,10 +180,10 @@ export const es: UltraText = {
   faqOverline: "Antes de escribirnos",
   faqs: ({ from2, to2, from4, to4, peak }) => [
     { q: "¿Cuánto cuesta un viaje de ultra lujo a Egipto?", a: `Los cuatro viajes Kemet Ultra cuestan, para dos, desde ${from2} por persona por siete días hasta ${to2} por quince. Para cuatro, el precio por persona baja a entre ${from4} y ${to4}, porque el chárter, el avión y las aperturas privadas se comparten. Las semanas de Navidad, Año Nuevo y Semana Santa llevan un suplemento del ${peak} %.` },
-    { q: "¿De verdad pueden abrir la Gran Pirámide solo para nosotros?", a: "Sí. El Ministerio de Turismo y Antigüedades concede aperturas privadas de la Gran Pirámide a un solo grupo, normalmente durante dos horas fuera del horario público. Se solicita a su nombre, requiere de cuatro a ocho semanas y no se cobra nada hasta que el permiso está concedido." },
-    { q: "¿Cómo es la cena dentro de Karnak?", a: "Karnak se abre para su grupo cuando el público ya se ha marchado; recorren la sala hipóstila con su egiptólogo y la cena se sirve dentro del recinto. Hace falta un permiso y un dispositivo de seguridad, que se solicitan con la reserva. Si una fecha se deniega, lo sabrán antes de pagar y se les ofrecerá la alternativa más cercana." },
+    { q: "¿De verdad pueden abrir la Gran Pirámide solo para nosotros?", a: "Sí. Durante dos horas la Gran Pirámide se abre solo para su grupo, fuera del horario público, con su egiptólogo al lado y nadie más dentro. Nos ocupamos de todo; ustedes solo tienen que llegar." },
+    { q: "¿Cómo es la cena dentro de Karnak?", a: "Cuando se han ido los últimos visitantes, Karnak se abre para su grupo. Recorren la sala hipóstila con su egiptólogo y la cena se sirve dentro del recinto del templo. No tienen nada que organizar." },
     { q: "¿Por qué no está el Winter Palace?", a: "El Winter Palace de Luxor cerró a principios de 2026 para una restauración completa y reabrirá en julio de 2027 como Mandarin Oriental Winter Palace. Hasta entonces, en Luxor se alojan en Al Moudira, en la orilla oeste. El Old Cataract de Asuán sigue abierto en su histórica ala Palace mientras se renueva el ala del Nilo." },
-    { q: "¿Qué dahabiya se fleta?", a: "Una dahabiya de primer nivel de seis a diez camarotes, fletada entera — como la Sanctuary Zein Nile Chateau o la Meroe de Nour el Nil, según las fechas. El barco figura en su propuesta escrita antes de pagar nada." },
+    { q: "¿Qué dahabiya se fleta?", a: "Una dahabiya de primer nivel de seis a diez camarotes, fletada entera, con tripulación y cocinero propios — elegida para sus fechas y nombrada en su propuesta escrita." },
     { q: "¿Se puede cambiar o alargar un viaje?", a: "Todos. Días, hoteles, el orden del recorrido y el ritmo pueden cambiar, y el precio se recalcula con el mismo criterio. Grupos más grandes, personal que viaja con ustedes y llegadas en jet privado se planifican desde el principio." },
     { q: "¿Con cuánta antelación reservar?", a: "De ocho a doce semanas para viajar entre octubre y abril, cuando las aperturas privadas y los chárteres de dahabiya están más solicitados. A veces es posible con menos margen; antes de comprometerse sabrán qué elementos pueden asegurarse todavía." },
     { q: "¿Con quién trataremos?", a: "Con una sola persona, desde el primer mensaje hasta el último día en Egipto. Si la organización la lleva una family office o un asistente, también ellos tratan siempre con la misma persona." },

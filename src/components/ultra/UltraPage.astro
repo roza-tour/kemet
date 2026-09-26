@@ -3,21 +3,22 @@
 // Rendered by src/pages/ultra-luxury-egypt.astro (English) and by one small
 // route file per locale (src/pages/<locale>/<slug>.astro).
 //
-// THE DESIGN LANGUAGE
-// Inherited whole from the former VIP page, which this replaces: an engraved
-// invitation rather than a travel website — drawn ornament instead of boxes,
-// metal instead of colour fields, cartouche frames with cut corners, a
-// winged-sun crest, lotus dividers, and silk edges in crimson and emerald.
-// Everything is scoped under .vip; nothing leaks to the other pages.
+// TWO TIERS, TWO PAGES
+// Kemet VIP (vip.html) is the premium tier; Kemet Ultra is the tier above it.
+// Ultra shares VIP's drawn vocabulary — the engraved invitation, cartouche
+// frames with cut corners, the winged-sun crest, lotus dividers — so the two
+// read as one house. It is dressed one step richer, and the step has to be
+// visible at a glance, or the two tiers look like the same page twice:
+//   · VIP is crimson and emerald silk on warm black. Ultra is the palette of
+//     Tutankhamun's mask — lapis lazuli and turquoise with gold leaf, on a
+//     blue-black ground: the costliest materials the pharaohs had.
+//   · Where VIP draws gold as a hairline, Ultra lays it as leaf: gilded frames,
+//     gilded titles and prices, a solid gold button.
+//   · VIP's tricolour rule becomes the striped band of the nemes headdress.
+// Styles are Astro-scoped to this component, so none of it touches vip.html.
 //
-// WHY THIS PAGE NOW STATES PRICES, WHEN VIP DID NOT
-// VIP described four programmes and quoted each per brief. A page at the top
-// of the market that names no figure reads, to a person and to an answer
-// engine alike, as a page with something to hide — and the engines filled the
-// silence by describing another company's products under our name. These four
-// journeys are built from priced components (see data/ultra/journeys.ts), so
-// the figure is stated, per person, for two and for four. Anything beyond them
-// is still arranged per brief, and the page says so.
+// Ultra states its prices, per person for two and for four; VIP is quoted per
+// brief. Both are true to how each tier is sold.
 import Base from "@/layouts/Base.astro";
 import { srcsetFor, SIZES } from "@/utils/images";
 import SymbolIcon from "@/components/SymbolIcon.astro";
@@ -350,8 +351,8 @@ const jsonld: Record<string, unknown>[] = [
      crimson and emerald are dark enough to read as silk, not paint.
      ========================================================================== */
   .vip {
-    --v-ink: #070503;
-    --v-ink-2: #0D0A07;
+    --v-ink: #03050B;
+    --v-ink-2: #080C18;
     --v-cream: #F0E7D6;
     --v-cream-dim: #BCB09A;
     /* #8A8172, not #7A7263. The darker value measured 4.05:1 against this
@@ -364,10 +365,11 @@ const jsonld: Record<string, unknown>[] = [
     --v-gold-lit: #EFD9A0;
     --v-hair: rgba(194, 162, 78, .28);
     --v-hair-2: rgba(194, 162, 78, .55);
-    --v-crimson: #7E1424;
-    --v-crimson-lit: #A62436;
-    --v-emerald: #0C4A39;
-    --v-emerald-lit: #1A6B52;
+    --v-lapis: #1C3A8C;
+    --v-lapis-lit: #3A63D6;
+    --v-turquoise: #0E6A6E;
+    --v-turquoise-lit: #22A3A3;
+    --v-leaf: linear-gradient(176deg, #FFF6DA 6%, #F0D183 30%, #C9A24A 58%, #8F6C22 86%);
     background:
       radial-gradient(110% 50% at 8% 4%, rgba(126, 20, 36, .12), transparent 60%),
       radial-gradient(110% 50% at 94% 30%, rgba(12, 74, 57, .1), transparent 60%),
@@ -487,7 +489,7 @@ const jsonld: Record<string, unknown>[] = [
 
   .vband { position: absolute; left: 0; right: 0; bottom: 0; height: 3px;
     background: linear-gradient(90deg, transparent,
-      var(--v-crimson) 25%, var(--v-gold) 50%, var(--v-emerald) 75%, transparent); }
+      var(--v-lapis) 25%, var(--v-gold) 50%, var(--v-turquoise) 75%, transparent); }
 
   /* ===== the three facts ================================================= */
   .vfacts { border-bottom: 1px solid var(--v-hair);
@@ -560,10 +562,10 @@ const jsonld: Record<string, unknown>[] = [
   .vt-bl::before, .vt-bl::after { top: 0; left: 0; }
   .vt-br::before, .vt-br::after { top: 0; left: 0; }
   /* The silk edge: a band of the plate's accent laid against the frame. */
-  .is-crimson .vframe { box-shadow: -6px 0 0 -3px var(--v-crimson); }
-  .is-emerald .vframe { box-shadow: -6px 0 0 -3px var(--v-emerald); }
-  .vplate.is-flip.is-crimson .vframe { box-shadow: 6px 0 0 -3px var(--v-crimson); }
-  .vplate.is-flip.is-emerald .vframe { box-shadow: 6px 0 0 -3px var(--v-emerald); }
+  .is-lapis .vframe { box-shadow: -6px 0 0 -3px var(--v-lapis); }
+  .is-turquoise .vframe { box-shadow: -6px 0 0 -3px var(--v-turquoise); }
+  .vplate.is-flip.is-lapis .vframe { box-shadow: 6px 0 0 -3px var(--v-lapis); }
+  .vplate.is-flip.is-turquoise .vframe { box-shadow: 6px 0 0 -3px var(--v-turquoise); }
 
   .vframe-no { position: absolute; bottom: 22px; left: 26px;
     font-family: var(--ff-display); font-size:var(--t-2xl); line-height: 1;
@@ -589,10 +591,10 @@ const jsonld: Record<string, unknown>[] = [
     font-size:var(--t-sm); line-height: 1.65; }
   .vincl li::before { content: ""; position: absolute; left: 0; top: .58em;
     width: 7px; height: 7px; transform: rotate(45deg); }
-  .is-crimson .vincl li::before {
-    background: linear-gradient(135deg, var(--v-crimson-lit), var(--v-crimson)); }
-  .is-emerald .vincl li::before {
-    background: linear-gradient(135deg, var(--v-emerald-lit), var(--v-emerald)); }
+  .is-lapis .vincl li::before {
+    background: linear-gradient(135deg, var(--v-lapis-lit), var(--v-lapis)); }
+  .is-turquoise .vincl li::before {
+    background: linear-gradient(135deg, var(--v-turquoise-lit), var(--v-turquoise)); }
 
   .vfoot { display: flex; align-items: center; justify-content: space-between;
     gap:var(--s-3); flex-wrap: wrap; border-top: 1px solid var(--v-hair);
@@ -765,4 +767,76 @@ const jsonld: Record<string, unknown>[] = [
     .vstays li, .vdays li { grid-template-columns: 1fr; }
     .vstay-n, .vday-no { grid-row: auto; padding-top: 0; }
   }
+
+  /* ===== Kemet Ultra: one step above VIP — lapis, turquoise, gold leaf ====== */
+  .vip {
+    background:
+      radial-gradient(90% 45% at 12% 6%, rgba(28, 58, 140, .22), transparent 62%),
+      radial-gradient(90% 45% at 90% 34%, rgba(14, 106, 110, .14), transparent 62%),
+      radial-gradient(70% 30% at 50% 70%, rgba(201, 162, 74, .06), transparent 70%),
+      var(--v-ink);
+  }
+  .vhero-veil { background:
+    radial-gradient(120% 90% at 50% 30%, rgba(3,5,11,.28) 0%, rgba(3,5,11,.86) 78%),
+    linear-gradient(180deg, rgba(8,16,44,.62), rgba(3,5,11,.32) 42%, rgba(3,5,11,.97) 92%); }
+  .vsheen { background: linear-gradient(105deg, transparent 36%,
+    rgba(255, 236, 180, .12) 50%, transparent 64%); }
+
+  /* the cartouche, gilded: a gold-leaf rule with a lapis inner line */
+  .vcart { border: 2px solid transparent;
+    border-image: linear-gradient(135deg, #F7E6AE, #9C7A2E 30%, #F2D98E 55%, #8A6D2A 80%, #F7E6AE) 1; }
+  .vcart::before { border-color: rgba(58, 99, 214, .35); }
+
+  .vhero h1 { color: #FBF3DF; }
+  .vhero h1 em { background: var(--v-leaf); -webkit-background-clip: text; background-clip: text;
+    filter: drop-shadow(0 10px 48px rgba(240, 209, 131, .45)); }
+  .vcrest { width: clamp(240px, 30vw, 380px); color: #E8C877;
+    filter: drop-shadow(0 6px 30px rgba(240, 209, 131, .5)) drop-shadow(0 0 60px rgba(58, 99, 214, .35)); }
+
+  /* the button is solid gold leaf; it turns to lapis under the hand */
+  .vbtn { padding: 1px; background: linear-gradient(160deg, #FFF3CC, #9C7A2E 55%, #F7E6AE);
+    box-shadow: 0 20px 50px -18px rgba(240, 209, 131, .6); }
+  .vbtn span { background: var(--v-leaf); color: #120D04; font-weight: 500; }
+  .vbtn:hover span { background: linear-gradient(180deg, #2E5BD0, #1C3A8C); color: #FFF6DA; }
+
+  /* the nemes band: gold and lapis stripes, faded at both ends */
+  .vband { height: 6px; background: repeating-linear-gradient(90deg,
+      #D9B45A 0 14px, #1C3A8C 14px 28px);
+    -webkit-mask: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent);
+            mask: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent); }
+
+  .vmed { background: radial-gradient(circle at 34% 28%, rgba(58,99,214,.35), rgba(3,5,11,.5) 72%);
+    border-color: rgba(240, 209, 131, .6);
+    box-shadow: 0 0 34px rgba(58,99,214,.25), inset 0 0 18px rgba(240,209,131,.18); }
+
+  /* plates: gilded frames, gilded titles, a stronger engraved numeral */
+  .vframe { border: 2px solid transparent;
+    border-image: linear-gradient(135deg, #F7E6AE, #9C7A2E 35%, #F2D98E 60%, #8A6D2A) 1;
+    background: linear-gradient(160deg, rgba(58,99,214,.10), transparent 60%); }
+  .vframe::before { border-color: rgba(240, 209, 131, .28); }
+  .vframe-tick::before, .vframe-tick::after { background: #F0D183; }
+  .is-lapis .vframe { box-shadow: -7px 0 0 -3px var(--v-lapis), 0 40px 90px -40px rgba(28,58,140,.7); }
+  .is-turquoise .vframe { box-shadow: -7px 0 0 -3px var(--v-turquoise), 0 40px 90px -40px rgba(14,106,110,.6); }
+  .vplate.is-flip.is-lapis .vframe { box-shadow: 7px 0 0 -3px var(--v-lapis), 0 40px 90px -40px rgba(28,58,140,.7); }
+  .vplate.is-flip.is-turquoise .vframe { box-shadow: 7px 0 0 -3px var(--v-turquoise), 0 40px 90px -40px rgba(14,106,110,.6); }
+  .vplate-ghost { -webkit-text-stroke: 1px rgba(240, 209, 131, .2); }
+  .vtext h3 { background: var(--v-leaf); -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent; padding-bottom: .06em; }
+  .vprice b { background: var(--v-leaf); -webkit-background-clip: text; background-clip: text; }
+  .vhow-no { -webkit-text-stroke: 1px #E8C877; }
+  .vhow-item::before { background: #E8C877; }
+
+  /* the answer sits on a lapis panel between two gilded rules */
+  .vanswer-in { border: 0; position: relative;
+    background: linear-gradient(180deg, rgba(28,58,140,.16), rgba(28,58,140,.06)); }
+  .vanswer-in::before, .vanswer-in::after { content: ""; position: absolute; left: 0; right: 0;
+    height: 1px; background: linear-gradient(90deg, transparent, #E8C877, transparent); }
+  .vanswer-in::before { top: 0; } .vanswer-in::after { bottom: 0; }
+
+  .vcard { border: 2px solid transparent;
+    border-image: linear-gradient(135deg, #F7E6AE, #9C7A2E 35%, #F2D98E 60%, #8A6D2A) 1;
+    background:
+      radial-gradient(90% 90% at 50% 0%, rgba(28, 58, 140, .28), transparent 62%),
+      radial-gradient(90% 90% at 50% 100%, rgba(14, 106, 110, .16), transparent 62%),
+      var(--v-ink-2); }
 </style>

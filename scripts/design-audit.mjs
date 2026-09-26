@@ -67,7 +67,7 @@ const ROOT = new URL("../dist/", import.meta.url).pathname;
 const PORT = 8790;
 
 const PAGES = [
-  "index.html", "tours.html", "tour-10-day.html", "ultra-luxury-egypt.html", "private-hire.html",
+  "index.html", "tours.html", "tour-10-day.html", "vip.html", "ultra-luxury-egypt.html", "private-hire.html",
   "destinations/aswan.html", "experiences/sunrise-giza-pyramids.html",
   "guides/egypt-travel-guide.html", "faq.html", "about.html", "plan.html",
   "collections/luxury-egypt.html",
@@ -188,7 +188,7 @@ for (const path of [...PAGES.slice(0, 5), "de/index.html", "id/index.html"]) {
 
 // --- focus: real Tab presses, never el.focus() ------------------------------
 console.log("\nfocus ring, 25 Tab stops");
-for (const path of ["index.html", "tours.html", "ultra-luxury-egypt.html", "plan.html", "private-hire.html"]) {
+for (const path of ["index.html", "tours.html", "vip.html", "plan.html", "private-hire.html"]) {
   const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
   await page.goto(base + path, { waitUntil: "networkidle" });
   await page.waitForTimeout(300);

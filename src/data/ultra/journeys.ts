@@ -51,7 +51,7 @@ export interface UltraJourney {
   price4: number;
   stays: UltraStay[];
   image: { src: string; width: number; height: number };
-  accent: "crimson" | "emerald";
+  accent: "lapis" | "turquoise";
 }
 
 /** Supplement for the peak weeks (20 Dec – 5 Jan, and Easter week), as a percentage. */
@@ -70,7 +70,7 @@ export const ultraJourneys: UltraJourney[] = [
       { hotel: "Al Moudira", place: "luxor", nights: 3, room: "suite" },
     ],
     image: { src: "/images/giza/giza-great-pyramid-clear-sky.webp", width: 1600, height: 1062 },
-    accent: "crimson",
+    accent: "lapis",
   },
   {
     id: "royal-nile",
@@ -86,7 +86,7 @@ export const ultraJourneys: UltraJourney[] = [
       { hotel: "Al Moudira", place: "luxor", nights: 1, room: "suite" },
     ],
     image: { src: "/images/cruise/nile-dahabiya-deck.webp", width: 1200, height: 900 },
-    accent: "emerald",
+    accent: "turquoise",
   },
   {
     id: "karnak-to-coral-sea",
@@ -102,7 +102,7 @@ export const ultraJourneys: UltraJourney[] = [
       { hotel: "The Oberoi Beach Resort, Sahl Hasheesh", place: "redsea", nights: 2, room: "poolSuite" },
     ],
     image: { src: "/images/redsea/red-sea-coral-reef-fish.webp", width: 764, height: 458 },
-    accent: "crimson",
+    accent: "lapis",
   },
   {
     id: "grand-odyssey",
@@ -119,7 +119,7 @@ export const ultraJourneys: UltraJourney[] = [
       { hotel: "The Oberoi Beach Resort, Sahl Hasheesh", place: "redsea", nights: 3, room: "poolSuite" },
     ],
     image: { src: "/images/aswan/aswan-philae-temple-island.webp", width: 1080, height: 810 },
-    accent: "emerald",
+    accent: "turquoise",
   },
 ];
 

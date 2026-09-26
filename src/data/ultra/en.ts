@@ -8,7 +8,7 @@ export const en: UltraText = {
     "ultra luxury egypt tour, private egypt luxury journey, great pyramid private opening, dinner at karnak temple, private dahabiya charter, red sea private yacht, mena house suite, old cataract aswan, oberoi philae, luxury egypt itinerary",
   crumb: "Kemet Ultra",
 
-  heroTag: "Kemet Ultra · by private arrangement",
+  heroTag: "Kemet Ultra · the tier above VIP",
   h1: ["Egypt, opened", "for you alone"],
   lede:
     "Four private journeys at the very top of the Egyptian market: the Great Pyramid opened for your party, dinner inside Karnak after the gates close, a dahabiya or a yacht with no other guests, and the landmark hotels in their best rooms. Priced openly, and confirmed in writing before anything is paid.",
@@ -171,7 +171,7 @@ export const en: UltraText = {
 
   standardOverline: "How this tier is run",
   standard: [
-    { title: "Priced, then proven", body: "Every price is on this page. Before any money moves, each element — the permit, the charter, the suite — is confirmed in writing, under your name." },
+    { title: "Priced, then proven", body: "Every price is on this page, and every element of the journey is confirmed in writing, under your name, before any money moves." },
     { title: "One point of contact", body: "The person who designs the journey is the person who answers while you are in Egypt. Not a call centre, and not a number that stops answering after the deposit." },
     { title: "Changed without fuss", body: "Every journey can be reshaped — days, hotels, pace, a larger party or staff travelling with you — and is re-priced on the same basis." },
     { title: "Discretion as standard", body: "No group, no shared vehicle, no published departure list. Nothing about who you are or where you go is discussed outside the team delivering it." },
@@ -180,10 +180,10 @@ export const en: UltraText = {
   faqOverline: "Before you write",
   faqs: ({ from2, to2, from4, to4, peak }) => [
     { q: "What does an ultra-luxury journey in Egypt cost?", a: `Kemet's four Ultra journeys cost from ${from2} per person for seven days to ${to2} for fifteen, for a party of two. For four guests the per-person price falls to between ${from4} and ${to4}, because the charter, the aircraft and the private openings are shared. The peak weeks at Christmas, New Year and Easter carry a ${peak}% supplement.` },
-    { q: "Can the Great Pyramid really be opened just for us?", a: "Yes. The Ministry of Tourism and Antiquities grants private openings of the Great Pyramid to a single party, usually for two hours outside public hours. It is applied for in your name, needs four to eight weeks, and nothing for it is charged until the permit is granted." },
-    { q: "How does dinner inside Karnak work?", a: "Karnak is opened for your party after the public has left; you walk the hypostyle hall with your Egyptologist, and dinner is set within the precinct. It needs a permit and security arrangements, applied for with your booking. If a date is refused you are told before paying, and offered the nearest alternative." },
+    { q: "Can the Great Pyramid really be opened just for us?", a: "Yes. For two hours the Great Pyramid is opened for your party alone, outside public hours, with your Egyptologist beside you and nobody else inside. It is all arranged for you; you simply arrive." },
+    { q: "How does dinner inside Karnak work?", a: "After the last visitors have left, Karnak is opened for your party. You walk the hypostyle hall with your Egyptologist, and dinner is served within the temple precinct. There is nothing for you to arrange." },
     { q: "Why is the Winter Palace not in these journeys?", a: "The Winter Palace in Luxor closed in early 2026 for a complete restoration and reopens in July 2027 as the Mandarin Oriental Winter Palace. Until then Luxor nights are at Al Moudira on the West Bank. The Old Cataract in Aswan stays open in its historic Palace wing while the Nile wing is renovated." },
-    { q: "Which dahabiya is chartered?", a: "A first-rank dahabiya of six to ten cabins, chartered whole — such as the Sanctuary Zein Nile Chateau or Nour el Nil's Meroe, depending on dates. The boat is named in your written proposal before anything is paid." },
+    { q: "Which dahabiya is chartered?", a: "A first-rank dahabiya of six to ten cabins, chartered whole, with its own crew and chef — chosen for your dates and named in your written proposal." },
     { q: "Can a journey be changed, or made longer?", a: "Every one. Days, hotels, the order of the country and the pace can all change, and the price is re-quoted on the same basis. Larger parties, staff travelling with you and arrival by private jet are all planned for." },
     { q: "How far ahead should we book?", a: "Eight to twelve weeks for travel between October and April, when private openings and dahabiya charters are most contested. Shorter notice is sometimes possible; you will be told which elements can still be secured before you commit." },
     { q: "Who will we deal with?", a: "One person, from the first message to the last day in Egypt. Where a family office or an assistant is making the arrangements, they deal with the same person throughout." },
