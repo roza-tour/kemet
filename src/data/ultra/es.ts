@@ -8,22 +8,28 @@ export const es: UltraText = {
     "viaje ultra lujo egipto, viaje privado de lujo egipto, apertura privada gran pirámide, cena templo de karnak, dahabiya chárter privado, yate privado mar rojo, mena house suite, old cataract asuán, oberoi philae",
   crumb: "Kemet Ultra",
 
-  heroTag: "Kemet Ultra · el nivel por encima de VIP",
+  heroTag: "Kemet Ultra · por encargo privado",
   h1: ["Egipto, abierto", "solo para ustedes"],
   lede:
     "Cuatro viajes privados en lo más alto del mercado egipcio: la Gran Pirámide abierta para su grupo, una cena dentro de Karnak cuando ya han cerrado las puertas, una dahabiya o un yate sin otros huéspedes y los grandes hoteles en sus mejores habitaciones. Con precios a la vista, y cada elemento confirmado por escrito antes de pagar nada.",
   ctaPrimary: "Hablemos en privado",
   ctaQuiet: "o envíe una consulta confidencial",
 
-  facts: [
-    ["Abierto para ustedes", "la Gran Pirámide y Karnak, sin otros visitantes dentro"],
-    ["Nadie más a bordo", "una dahabiya fletada en el Nilo, un yate con tripulación en el mar Rojo"],
-    ["Primero el precio, luego la prueba", "cada precio publicado, cada elemento confirmado por escrito antes del depósito"],
+  signaturesOverline: "Las firmas",
+  signatures: [
+    ["La Gran Pirámide, a solas", "dos horas dentro, sin ningún otro visitante"],
+    ["Cena dentro de Karnak", "el templo abierto de noche para su grupo"],
+    ["El Nilo, fletado", "una dahabiya propia, o el Oberoi Philae en suite"],
+    ["El mar Rojo, en yate", "un yate con tripulación entre los arrecifes de Giftun"],
+    ["El cielo, en privado", "avión privado a Abu Simbel y a la costa"],
   ],
 
   question: "¿Qué es Kemet Ultra?",
   answer: ({ from2, to2, from4 }) =>
     `Kemet Ultra es el nivel más alto de Kemet: cuatro viajes por Egipto totalmente privados, de 7 a 15 días, con la Gran Pirámide abierta solo para su grupo, cena dentro de Karnak tras el cierre, una dahabiya o un yate fletados y suites en el Mena House, el Old Cataract y los Oberoi. Para dos, de ${from2} a ${to2} por persona; para cuatro, desde ${from4}.`,
+
+  glanceOverline: "De un vistazo",
+  glanceTitle: "Elija su viaje",
 
   journeysOverline: "Los viajes",
   journeysTitle: ["Cuatro maneras de vivir Egipto", "a este nivel"],
@@ -35,6 +41,7 @@ export const es: UltraText = {
     perPersonFour: (p) => `${p} por persona para cuatro`,
     stays: "Dónde se alojan",
     nights: (n) => (n === 1 ? "1 noche" : `${n} noches`),
+    view: "Ver el viaje",
     dayByDay: "Día a día",
     day: "Día",
     enquire: (t) => `Consultar ${t}`,

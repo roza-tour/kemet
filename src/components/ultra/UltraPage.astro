@@ -1,24 +1,21 @@
 ---
 // Kemet Ultra — the top tier, in every language the site is published in.
-// Rendered by src/pages/ultra-luxury-egypt.astro (English) and by one small
+// Rendered by src/pages/vip.astro (English, at /vip.html) and by one small
 // route file per locale (src/pages/<locale>/<slug>.astro).
 //
-// TWO TIERS, TWO PAGES
-// Kemet VIP (vip.html) is the premium tier; Kemet Ultra is the tier above it.
-// Ultra shares VIP's drawn vocabulary — the engraved invitation, cartouche
-// frames with cut corners, the winged-sun crest, lotus dividers — so the two
-// read as one house. It is dressed one step richer, and the step has to be
-// visible at a glance, or the two tiers look like the same page twice:
-//   · VIP is crimson and emerald silk on warm black. Ultra is the palette of
-//     Tutankhamun's mask — lapis lazuli and turquoise with gold leaf, on a
-//     blue-black ground: the costliest materials the pharaohs had.
-//   · Where VIP draws gold as a hairline, Ultra lays it as leaf: gilded frames,
-//     gilded titles and prices, a solid gold button.
-//   · VIP's tricolour rule becomes the striped band of the nemes headdress.
-// Styles are Astro-scoped to this component, so none of it touches vip.html.
-//
-// Ultra states its prices, per person for two and for four; VIP is quoted per
-// brief. Both are true to how each tier is sold.
+// THE TOP TIER
+// Kemet Ultra is Kemet VIP upgraded in place, at the same address. It keeps VIP's
+// drawn vocabulary — the engraved invitation, cartouche frames with cut
+// corners, the winged-sun crest, lotus dividers — dressed one step richer:
+//   · The palette of Tutankhamun's mask — lapis lazuli and turquoise with gold
+//     leaf, on a blue-black ground: the costliest materials the pharaohs had.
+//   · Gold laid as leaf rather than drawn as a hairline: gilded frames, titles,
+//     prices and a solid gold button.
+//   · The striped band of the nemes headdress in place of a plain rule.
+// The order of the page is the order of a decision: what only this tier does
+// (the signatures), the four journeys side by side (at a glance), then each
+// journey in full, how the tier is run, the questions, the invitation.
+// Styles are Astro-scoped to this component.
 import Base from "@/layouts/Base.astro";
 import { srcsetFor, SIZES } from "@/utils/images";
 import SymbolIcon from "@/components/SymbolIcon.astro";
@@ -32,7 +29,7 @@ import { LOCALE_META, type SiteLocale } from "@/config/i18n";
 
 interface Props {
   locale: SiteLocale;
-  /** This page's route, e.g. "ultra-luxury-egypt.html" or "de/ultra-luxusreisen-aegypten.html". */
+  /** This page's route, e.g. "vip.html" or "de/ultra-luxusreisen-aegypten.html". */
   route: string;
   text: UltraText;
 }
@@ -184,16 +181,19 @@ const jsonld: Record<string, unknown>[] = [
       <div class="vband" aria-hidden="true"></div>
     </header>
 
-    {/* ── The three facts, set as engraved medallions ───────────────────── */}
-    <section class="vfacts">
-      <div class="wrap vfacts-in">
-        {T.facts.map(([head, sub], i) => (
-          <div class="vfact">
-            <span class="vmed" aria-hidden="true"><SymbolIcon name={["ankh", "sun", "eye"][i]} /></span>
-            <b>{head}</b>
-            <span class="vfact-sub">{sub}</span>
-          </div>
-        ))}
+    {/* ── The five signatures, set as engraved medallions ───────────────── */}
+    <section class="vfacts vsigs">
+      <div class="wrap">
+        <p class="voverline"><span></span>{T.signaturesOverline}<span></span></p>
+        <div class="vsigs-in">
+          {T.signatures.map(([head, sub], i) => (
+            <div class="vfact">
+              <span class="vmed" aria-hidden="true"><SymbolIcon name={["ankh", "scarab", "boat", "fish", "horus"][i]} /></span>
+              <b>{head}</b>
+              <span class="vfact-sub">{sub}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
 
@@ -203,6 +203,32 @@ const jsonld: Record<string, unknown>[] = [
         <div class="vanswer-in">
           <h2>{T.question}</h2>
           <p class="answer-body">{answer}</p>
+        </div>
+      </div>
+    </section>
+
+    {/* ── At a glance: the four journeys side by side ───────────────────── */}
+    <section class="vglance">
+      <div class="wrap">
+        <div class="vhead">
+          <p class="voverline"><span></span>{T.glanceOverline}<span></span></p>
+          <h2>{T.glanceTitle}</h2>
+        </div>
+        <div class="vglance-grid">
+          {ultraJourneys.map((j) => {
+            const jt = T.journeys[j.id];
+            return (
+              <a class:list={["vcardj", `is-${j.accent}`]} href={`#${j.id}`}>
+                <span class="vcardj-no" aria-hidden="true">{j.numeral}</span>
+                <span class="vcardj-dur">{T.labels.duration(j.days, j.nights)}</span>
+                <b class="vcardj-title">{jt.title}</b>
+                <span class="vcardj-route">{jt.route}</span>
+                <span class="vcardj-price"><em>{T.labels.from}</em> {eur(j.price2)}</span>
+                <span class="vcardj-pp">{T.labels.perPersonTwo}</span>
+                <span class="vcardj-go">{T.labels.view} <b aria-hidden="true">→</b></span>
+              </a>
+            );
+          })}
         </div>
       </div>
     </section>
@@ -839,4 +865,71 @@ const jsonld: Record<string, unknown>[] = [
       radial-gradient(90% 90% at 50% 0%, rgba(28, 58, 140, .28), transparent 62%),
       radial-gradient(90% 90% at 50% 100%, rgba(14, 106, 110, .16), transparent 62%),
       var(--v-ink-2); }
+
+  /* ===== signatures, at a glance, finish ================================ */
+  .vsigs { padding: 72px 0 64px; }
+  .vsigs .voverline { margin-bottom: var(--s-6); }
+  .vsigs-in { display: flex; flex-wrap: wrap; justify-content: center; }
+  .vsigs .vfact { flex: 0 0 20%; }
+  .vsigs .vfact b { font-size: var(--t-base); }
+
+  .vglance { padding: 110px 0 20px; }
+  .vglance .vhead h2 { background: var(--v-leaf); -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent; }
+  .vglance-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s-4); }
+  .vcardj { position: relative; display: flex; flex-direction: column; gap: 6px;
+    padding: 34px 26px 26px; text-decoration: none; color: inherit; overflow: hidden;
+    border: 1px solid transparent;
+    border-image: linear-gradient(160deg, #F7E6AE, #8A6D2A 45%, #F2D98E 70%, #6E5620) 1;
+    background: linear-gradient(180deg, rgba(8, 12, 24, .9), rgba(3, 5, 11, .95));
+    transition: transform .5s cubic-bezier(.2,.7,.2,1), box-shadow .5s; }
+  .vcardj::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px; }
+  .vcardj.is-lapis::before { background: linear-gradient(90deg, var(--v-lapis), var(--v-lapis-lit)); }
+  .vcardj.is-turquoise::before { background: linear-gradient(90deg, var(--v-turquoise), var(--v-turquoise-lit)); }
+  .vcardj:hover { transform: translateY(-4px); box-shadow: 0 30px 70px -30px rgba(58, 99, 214, .55); }
+  .vcardj-no { position: absolute; right: 18px; top: 10px; font-family: var(--ff-display);
+    font-size: 4.2rem; line-height: 1; color: transparent;
+    -webkit-text-stroke: 1px rgba(240, 209, 131, .35); }
+  .vcardj-dur, .vcardj-title { padding-right: 3.6rem; }
+  .vcardj-dur { font-size: var(--t-nano); letter-spacing: .3em; text-transform: uppercase; color: var(--v-gold); }
+  .vcardj-title { font-family: var(--ff-display); font-weight: 400; font-size: var(--t-lg);
+    line-height: 1.2; color: var(--v-cream); margin: 4px 0 2px; }
+  .vcardj-route { color: var(--v-faint); font-size: var(--t-tiny); line-height: 1.6; flex: 1; }
+  .vcardj-price { margin-top: var(--s-3); padding-top: var(--s-3); border-top: 1px solid var(--v-hair);
+    font-family: var(--ff-display); font-size: 1.75rem; line-height: 1;
+    background: var(--v-leaf); -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent; }
+  .vcardj-price em { font-style: normal; font-family: var(--ff-body); font-size: var(--t-nano);
+    letter-spacing: .28em; text-transform: uppercase; }
+  .vcardj-pp { color: var(--v-cream-dim); font-size: var(--t-tiny); }
+  .vcardj-go { margin-top: var(--s-3); font-size: var(--t-nano); letter-spacing: .24em;
+    text-transform: uppercase; color: var(--v-cream); }
+  .vcardj-go b { display: inline-block; transition: transform .35s; }
+  .vcardj:hover .vcardj-go { color: var(--v-gold-lit); }
+  .vcardj:hover .vcardj-go b { transform: translateX(5px); }
+
+  /* every plate's photograph at the same proportion, drifting in on hover */
+  .vframe { overflow: hidden; }
+  .vframe img { aspect-ratio: 4 / 3; object-fit: cover; transition: transform 1.2s cubic-bezier(.2,.7,.2,1); }
+  .vplate:hover .vframe img { transform: scale(1.035); }
+
+  .vprogs .vhead h2, .vhow .voverline + .vhow-grid h2 { background: var(--v-leaf);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .vhero-in { padding: 150px 0 96px; }
+  .vcrest { margin-bottom: 22px; }
+  .vdiv { margin: 26px auto 22px; }
+
+  @media (max-width: 1080px) {
+    .vglance-grid { grid-template-columns: 1fr 1fr; }
+    .vsigs-in { row-gap: var(--s-6); }
+    .vsigs .vfact { flex-basis: 33.333%; }
+    .vsigs .vfact:nth-child(4)::before, .vsigs .vfact:nth-child(4)::after { display: none; }
+  }
+  @media (max-width: 680px) {
+    .vglance { padding-top: 72px; }
+    .vglance-grid { grid-template-columns: 1fr; }
+    .vsigs .vfact { flex-basis: 50%; }
+    .vsigs .vfact::before, .vsigs .vfact::after { display: none; }
+    .vhero-in { padding: 140px 0 var(--s-8); }
+  }
 </style>

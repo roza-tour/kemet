@@ -67,7 +67,7 @@ const ROOT = new URL("../dist/", import.meta.url).pathname;
 const PORT = 8790;
 
 const PAGES = [
-  "index.html", "tours.html", "tour-10-day.html", "vip.html", "ultra-luxury-egypt.html", "private-hire.html",
+  "index.html", "tours.html", "tour-10-day.html", "vip.html", "private-hire.html",
   "destinations/aswan.html", "experiences/sunrise-giza-pyramids.html",
   "guides/egypt-travel-guide.html", "faq.html", "about.html", "plan.html",
   "collections/luxury-egypt.html",

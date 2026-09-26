@@ -40,7 +40,13 @@ export interface UltraText {
   ctaPrimary: string;
   ctaQuiet: string;
 
-  facts: Array<[head: string, sub: string]>;
+  /** The five things only this tier does — one line each, set as gold medallions. */
+  signaturesOverline: string;
+  signatures: Array<[head: string, sub: string]>;
+
+  /** The four journeys side by side, before the long plates. */
+  glanceOverline: string;
+  glanceTitle: string;
 
   question: string;
   /** 40–60 words; receives the formatted figures it quotes. */
@@ -56,6 +62,8 @@ export interface UltraText {
     perPersonFour: (price: string) => string;
     stays: string;
     nights: (n: number) => string;
+    /** Link from a glance card down to its journey. */
+    view: string;
     dayByDay: string;
     day: string;
     enquire: (title: string) => string;

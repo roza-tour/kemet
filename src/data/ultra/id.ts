@@ -8,22 +8,28 @@ export const id: UltraText = {
     "tur ultra mewah mesir, perjalanan privat mewah mesir, piramida agung dibuka privat, makan malam kuil karnak, sewa dahabiya privat, yacht privat laut merah, suite mena house, old cataract aswan, oberoi philae",
   crumb: "Kemet Ultra",
 
-  heroTag: "Kemet Ultra · tingkat di atas VIP",
+  heroTag: "Kemet Ultra · atas permintaan privat",
   h1: ["Mesir, dibuka", "hanya untuk Anda"],
   lede:
     "Empat perjalanan privat di puncak pasar Mesir: Piramida Agung dibuka untuk rombongan Anda, makan malam di dalam Karnak setelah gerbang ditutup, dahabiya atau yacht tanpa tamu lain, dan hotel-hotel legendaris di kamar terbaiknya. Harga dicantumkan terbuka, dan setiap unsur dikonfirmasi tertulis sebelum apa pun dibayar.",
   ctaPrimary: "Bicara secara privat",
   ctaQuiet: "atau kirim permintaan rahasia",
 
-  facts: [
-    ["Dibuka untuk Anda", "Piramida Agung dan Karnak, tanpa pengunjung lain di dalam"],
-    ["Tak ada orang lain di kapal", "dahabiya sewaan di Sungai Nil, yacht berawak di Laut Merah"],
-    ["Harga dulu, lalu bukti", "setiap harga dipublikasikan, setiap unsur dikonfirmasi tertulis sebelum uang muka"],
+  signaturesOverline: "Ciri khas",
+  signatures: [
+    ["Piramida Agung, hanya Anda", "dua jam di dalam, tanpa pengunjung lain"],
+    ["Makan malam di Karnak", "kuil dibuka setelah gelap untuk rombongan Anda"],
+    ["Sungai Nil, disewa", "dahabiya milik Anda sendiri, atau Oberoi Philae di suite"],
+    ["Laut Merah, dengan yacht", "yacht berawak di terumbu Giftun"],
+    ["Langit, secara privat", "pesawat privat ke Abu Simbel dan ke pantai"],
   ],
 
   question: "Apa itu Kemet Ultra?",
   answer: ({ from2, to2, from4 }) =>
     `Kemet Ultra adalah tingkat tertinggi Kemet: empat perjalanan Mesir yang sepenuhnya privat selama 7 hingga 15 hari, dengan Piramida Agung dibuka hanya untuk rombongan Anda, makan malam di dalam Karnak setelah tutup, dahabiya atau yacht sewaan, dan suite di Mena House, Old Cataract, serta Oberoi. Untuk dua orang ${from2}–${to2} per orang; untuk empat orang mulai ${from4}.`,
+
+  glanceOverline: "Sekilas",
+  glanceTitle: "Pilih perjalanan Anda",
 
   journeysOverline: "Perjalanan",
   journeysTitle: ["Empat cara menjelajah Mesir", "di tingkat ini"],
@@ -35,6 +41,7 @@ export const id: UltraText = {
     perPersonFour: (p) => `${p} per orang untuk empat orang`,
     stays: "Tempat menginap",
     nights: (n) => `${n} malam`,
+    view: "Lihat perjalanan",
     dayByDay: "Hari demi hari",
     day: "Hari",
     enquire: (t) => `Tanyakan ${t}`,

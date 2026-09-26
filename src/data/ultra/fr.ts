@@ -8,22 +8,28 @@ export const fr: UltraText = {
     "voyage ultra luxe égypte, voyage privé de luxe égypte, ouverture privée grande pyramide, dîner temple de karnak, dahabeya privatisée, yacht privé mer rouge, mena house suite, old cataract assouan, oberoi philae",
   crumb: "Kemet Ultra",
 
-  heroTag: "Kemet Ultra · au-dessus de VIP",
+  heroTag: "Kemet Ultra · sur demande privée",
   h1: ["L'Égypte, ouverte", "pour vous seuls"],
   lede:
     "Quatre voyages privés au sommet du marché égyptien : la Grande Pyramide ouverte pour votre groupe, un dîner dans Karnak une fois les portes fermées, une dahabeya ou un yacht sans autres passagers, et les grands hôtels dans leurs plus belles chambres. Des prix affichés, et chaque élément confirmé par écrit avant tout paiement.",
   ctaPrimary: "Parlons en privé",
   ctaQuiet: "ou envoyez une demande confidentielle",
 
-  facts: [
-    ["Ouvert pour vous", "la Grande Pyramide et Karnak, sans aucun autre visiteur"],
-    ["Personne d'autre à bord", "une dahabeya privatisée sur le Nil, un yacht avec équipage en mer Rouge"],
-    ["Le prix, puis la preuve", "chaque prix publié, chaque élément confirmé par écrit avant l'acompte"],
+  signaturesOverline: "Les signatures",
+  signatures: [
+    ["La Grande Pyramide, seuls", "deux heures à l'intérieur, sans aucun autre visiteur"],
+    ["Dîner dans Karnak", "le temple ouvert à la nuit pour votre groupe"],
+    ["Le Nil, privatisé", "une dahabeya à vous seuls, ou l'Oberoi Philae en suite"],
+    ["La mer Rouge, en yacht", "un yacht avec équipage parmi les récifs de Giftun"],
+    ["Le ciel, en privé", "avion privé vers Abou Simbel et la côte"],
   ],
 
   question: "Qu'est-ce que Kemet Ultra ?",
   answer: ({ from2, to2, from4 }) =>
     `Kemet Ultra est le plus haut niveau de Kemet : quatre voyages entièrement privés en Égypte, de 7 à 15 jours, avec la Grande Pyramide ouverte pour votre seul groupe, un dîner dans Karnak après la fermeture, une dahabeya ou un yacht privatisés et des suites au Mena House, à l'Old Cataract et chez Oberoi. À deux, de ${from2} à ${to2} par personne ; à quatre, dès ${from4}.`,
+
+  glanceOverline: "En un coup d'œil",
+  glanceTitle: "Choisissez votre voyage",
 
   journeysOverline: "Les voyages",
   journeysTitle: ["Quatre façons de vivre l'Égypte", "à ce niveau"],
@@ -35,6 +41,7 @@ export const fr: UltraText = {
     perPersonFour: (p) => `${p} par personne à quatre`,
     stays: "Où vous séjournez",
     nights: (n) => (n === 1 ? "1 nuit" : `${n} nuits`),
+    view: "Voir le voyage",
     dayByDay: "Jour après jour",
     day: "Jour",
     enquire: (t) => `Se renseigner sur ${t}`,

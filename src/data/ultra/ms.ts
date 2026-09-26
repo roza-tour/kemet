@@ -8,22 +8,28 @@ export const ms: UltraText = {
     "percutian ultra mewah mesir, perjalanan peribadi mewah mesir, piramid agung dibuka peribadi, makan malam kuil karnak, sewa dahabiya peribadi, kapal layar peribadi laut merah, suite mena house, old cataract aswan, oberoi philae",
   crumb: "Kemet Ultra",
 
-  heroTag: "Kemet Ultra · peringkat di atas VIP",
+  heroTag: "Kemet Ultra · atas permintaan peribadi",
   h1: ["Mesir, dibuka", "hanya untuk anda"],
   lede:
     "Empat perjalanan peribadi di puncak pasaran Mesir: Piramid Agung dibuka untuk rombongan anda, makan malam di dalam Karnak selepas pintu ditutup, dahabiya atau kapal layar tanpa tetamu lain, dan hotel-hotel ternama di bilik terbaiknya. Harga dinyatakan secara terbuka, dan setiap unsur disahkan secara bertulis sebelum apa-apa bayaran.",
   ctaPrimary: "Berbual secara peribadi",
   ctaQuiet: "atau hantar pertanyaan sulit",
 
-  facts: [
-    ["Dibuka untuk anda", "Piramid Agung dan Karnak, tanpa pengunjung lain di dalam"],
-    ["Tiada orang lain di atas kapal", "dahabiya sewaan di Sungai Nil, kapal layar berkru di Laut Merah"],
-    ["Harga dahulu, kemudian bukti", "setiap harga diterbitkan, setiap unsur disahkan bertulis sebelum deposit"],
+  signaturesOverline: "Ciri istimewa",
+  signatures: [
+    ["Piramid Agung, hanya anda", "dua jam di dalam, tanpa pelawat lain"],
+    ["Makan malam di Karnak", "kuil dibuka selepas gelap untuk rombongan anda"],
+    ["Sungai Nil, disewa", "dahabiya milik anda sendiri, atau Oberoi Philae di dalam suite"],
+    ["Laut Merah, dengan kapal layar", "kapal layar berkru di terumbu Giftun"],
+    ["Langit, secara peribadi", "pesawat peribadi ke Abu Simbel dan ke pantai"],
   ],
 
   question: "Apakah Kemet Ultra?",
   answer: ({ from2, to2, from4 }) =>
     `Kemet Ultra ialah peringkat tertinggi Kemet: empat perjalanan Mesir yang sepenuhnya peribadi selama 7 hingga 15 hari, dengan Piramid Agung dibuka hanya untuk rombongan anda, makan malam di dalam Karnak selepas tutup, dahabiya atau kapal layar sewaan, dan suite di Mena House, Old Cataract serta Oberoi. Untuk dua orang ${from2}–${to2} seorang; untuk empat orang dari ${from4}.`,
+
+  glanceOverline: "Sepintas lalu",
+  glanceTitle: "Pilih perjalanan anda",
 
   journeysOverline: "Perjalanan",
   journeysTitle: ["Empat cara menjelajah Mesir", "pada tahap ini"],
@@ -35,6 +41,7 @@ export const ms: UltraText = {
     perPersonFour: (p) => `${p} seorang untuk empat orang`,
     stays: "Tempat penginapan",
     nights: (n) => `${n} malam`,
+    view: "Lihat perjalanan",
     dayByDay: "Hari demi hari",
     day: "Hari",
     enquire: (t) => `Tanya tentang ${t}`,

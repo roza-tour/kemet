@@ -39,8 +39,7 @@ export const primaryNav: NavItem[] = [
     label: "Journeys",
     href: "tours.html",
     children: [
-      { label: "Kemet VIP", href: "vip.html" },
-      { label: "Kemet Ultra", href: "ultra-luxury-egypt.html" },
+      { label: "Kemet Ultra", href: "vip.html" },
       // Directly under VIP: the two sit next to each other in a reader's mind,
       // but they are different products — VIP is a journey with named sites
       // reserved along it, this is a site taken for an evening.
@@ -95,8 +94,7 @@ export const primaryNav: NavItem[] = [
 export const footerExplore: FooterColumn = {
   heading: "Explore",
   links: [
-    { label: "Kemet VIP", href: "vip.html" },
-    { label: "Kemet Ultra", href: "ultra-luxury-egypt.html" },
+    { label: "Kemet Ultra", href: "vip.html" },
     { label: "Journeys", href: "tours.html" },
     { label: "Destinations", href: hubFor("destination") },
     { label: "Experiences", href: hubFor("experience") },

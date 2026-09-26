@@ -8,22 +8,28 @@ export const de: UltraText = {
     "ultra luxusreise ägypten, private luxusreise ägypten, cheops pyramide private öffnung, dinner karnak tempel, dahabiya charter privat, privatjacht rotes meer, mena house suite, old cataract assuan, oberoi philae",
   crumb: "Kemet Ultra",
 
-  heroTag: "Kemet Ultra · die Stufe über VIP",
+  heroTag: "Kemet Ultra · auf private Anfrage",
   h1: ["Ägypten, geöffnet", "nur für Sie"],
   lede:
     "Vier private Reisen an der Spitze des ägyptischen Marktes: die Cheops-Pyramide für Ihre Gruppe geöffnet, ein Dinner in Karnak, nachdem die Tore geschlossen sind, eine Dahabiya oder eine Jacht ohne andere Gäste und die großen Hotels in ihren besten Zimmern. Mit offenen Preisen — und jedes Element schriftlich bestätigt, bevor Sie etwas bezahlen.",
   ctaPrimary: "Vertraulich sprechen",
   ctaQuiet: "oder eine vertrauliche Anfrage senden",
 
-  facts: [
-    ["Für Sie geöffnet", "die Cheops-Pyramide und Karnak, ohne andere Besucher"],
-    ["Niemand sonst an Bord", "eine gecharterte Dahabiya auf dem Nil, eine Jacht mit Crew am Roten Meer"],
-    ["Erst der Preis, dann der Beweis", "jeder Preis veröffentlicht, jedes Element vor der Anzahlung schriftlich bestätigt"],
+  signaturesOverline: "Die Signaturen",
+  signatures: [
+    ["Die Cheops-Pyramide, allein", "zwei Stunden darin, ohne einen anderen Besucher"],
+    ["Dinner in Karnak", "der Tempel nach Einbruch der Dunkelheit für Sie geöffnet"],
+    ["Der Nil, gechartert", "eine eigene Dahabiya oder die Oberoi Philae in einer Suite"],
+    ["Das Rote Meer, per Jacht", "eine Jacht mit Crew an den Riffen von Giftun"],
+    ["Der Himmel, privat", "Privatflugzeug nach Abu Simbel und an die Küste"],
   ],
 
   question: "Was ist Kemet Ultra?",
   answer: ({ from2, to2, from4 }) =>
     `Kemet Ultra ist die höchste Stufe von Kemet: vier vollständig private Ägypten-Reisen von 7 bis 15 Tagen — die Cheops-Pyramide nur für Ihre Gruppe geöffnet, ein Dinner in Karnak nach Schließung, eine gecharterte Dahabiya oder Jacht und Suiten im Mena House, im Old Cataract und bei Oberoi. Zu zweit ${from2} bis ${to2} pro Person; zu viert ab ${from4}.`,
+
+  glanceOverline: "Auf einen Blick",
+  glanceTitle: "Wählen Sie Ihre Reise",
 
   journeysOverline: "Die Reisen",
   journeysTitle: ["Vier Wege, Ägypten", "auf diesem Niveau zu erleben"],
@@ -35,6 +41,7 @@ export const de: UltraText = {
     perPersonFour: (p) => `${p} pro Person zu viert`,
     stays: "Wo Sie wohnen",
     nights: (n) => (n === 1 ? "1 Nacht" : `${n} Nächte`),
+    view: "Zur Reise",
     dayByDay: "Tag für Tag",
     day: "Tag",
     enquire: (t) => `Anfrage: ${t}`,

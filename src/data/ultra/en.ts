@@ -8,22 +8,28 @@ export const en: UltraText = {
     "ultra luxury egypt tour, private egypt luxury journey, great pyramid private opening, dinner at karnak temple, private dahabiya charter, red sea private yacht, mena house suite, old cataract aswan, oberoi philae, luxury egypt itinerary",
   crumb: "Kemet Ultra",
 
-  heroTag: "Kemet Ultra · the tier above VIP",
+  heroTag: "Kemet Ultra · by private arrangement",
   h1: ["Egypt, opened", "for you alone"],
   lede:
     "Four private journeys at the very top of the Egyptian market: the Great Pyramid opened for your party, dinner inside Karnak after the gates close, a dahabiya or a yacht with no other guests, and the landmark hotels in their best rooms. Priced openly, and confirmed in writing before anything is paid.",
   ctaPrimary: "Speak to us privately",
   ctaQuiet: "or send a confidential brief",
 
-  facts: [
-    ["Opened for you", "the Great Pyramid and Karnak, with no other visitors inside"],
-    ["Nobody else aboard", "a dahabiya chartered on the Nile, a crewed yacht on the Red Sea"],
-    ["Priced, then proven", "every price published, every element confirmed in writing before deposit"],
+  signaturesOverline: "The signatures",
+  signatures: [
+    ["The Great Pyramid, alone", "two hours inside, with no other visitor"],
+    ["Dinner inside Karnak", "the temple opened after dark for your party"],
+    ["The Nile, chartered", "a dahabiya of your own, or the Oberoi Philae in a suite"],
+    ["The Red Sea, by yacht", "a crewed yacht among the Giftun reefs"],
+    ["The sky, privately", "private aircraft to Abu Simbel and the coast"],
   ],
 
   question: "What is Kemet Ultra?",
   answer: ({ from2, to2, from4 }) =>
     `Kemet Ultra is Kemet's top tier: four fully private Egypt journeys of 7 to 15 days, with the Great Pyramid opened for your party, dinner inside Karnak after closing, a chartered dahabiya or yacht, and suites at the Mena House, the Old Cataract and the Oberoi. From ${from2} to ${to2} per person for two; from ${from4} for four.`,
+
+  glanceOverline: "At a glance",
+  glanceTitle: "Choose your journey",
 
   journeysOverline: "The journeys",
   journeysTitle: ["Four ways to take Egypt", "at this level"],
@@ -35,6 +41,7 @@ export const en: UltraText = {
     perPersonFour: (p) => `${p} per person for four`,
     stays: "Where you stay",
     nights: (n) => (n === 1 ? "1 night" : `${n} nights`),
+    view: "View the journey",
     dayByDay: "Day by day",
     day: "Day",
     enquire: (t) => `Enquire about ${t}`,
