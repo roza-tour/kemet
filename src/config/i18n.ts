@@ -17,6 +17,10 @@
 //               traffic searches in English.
 //   id, ms      Indonesia and Malaysia. Egypt is a major destination for both,
 //               and neither market searches in English by default.
+//   pt          Brazil first, Portugal second. Brazil is a large long-haul
+//               market that buys guided travel and searches in Portuguese; the
+//               copy is Brazilian Portuguese, and hreflang is plain "pt" so the
+//               same pages also serve Portugal.
 // Slugs are transliterated to Latin script even where the language is not
 // (Russian). A percent-encoded Cyrillic path is valid and Google reads it, but
 // it breaks in email clients, chat apps and analytics — and this site is
@@ -45,14 +49,14 @@
 
 import registry from "./translation-groups.json";
 
-export const LOCALES = ["en", "de", "it", "es", "fr", "ru", "id", "ms"] as const;
+export const LOCALES = ["en", "de", "it", "es", "fr", "ru", "id", "ms", "pt"] as const;
 export type SiteLocale = (typeof LOCALES)[number];
 
 /** English is served unprefixed so no existing URL ever changes. */
 export const DEFAULT_LOCALE: SiteLocale = "en";
 
 /** Locales that have translated pages. */
-export const TRANSLATED_LOCALES = ["de", "it", "es", "fr", "ru", "id", "ms"] as const;
+export const TRANSLATED_LOCALES = ["de", "it", "es", "fr", "ru", "id", "ms", "pt"] as const;
 export type TranslatedLocale = (typeof TRANSLATED_LOCALES)[number];
 
 export interface LocaleMeta {
@@ -81,6 +85,7 @@ export const LOCALE_META: Record<SiteLocale, LocaleMeta> = {
   ru: { tag: "ru", home: "Главная", language: "Язык", endonym: "Русский", short: "RU", formatLocale: "ru-RU" },
   id: { tag: "id", home: "Beranda", language: "Bahasa", endonym: "Bahasa Indonesia", short: "ID", formatLocale: "id-ID" },
   ms: { tag: "ms", home: "Utama", language: "Bahasa", endonym: "Bahasa Melayu", short: "MS", formatLocale: "ms-MY" },
+  pt: { tag: "pt", home: "Início", language: "Idioma", endonym: "Português", short: "PT", formatLocale: "pt-BR" },
 };
 
 /**

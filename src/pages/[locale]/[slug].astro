@@ -1,5 +1,5 @@
 ---
-// Localised pages — /de/…, /it/…, /es/…, /fr/…, /ru/…, /id/…, /ms/…
+// Localised pages — /de/…, /it/…, /es/…, /fr/…, /ru/…, /id/…, /ms/…, /pt/…
 //
 // One template for every language. Every page is generated from a data
 // record whose route comes from the translation registry, so the URL, the
@@ -17,6 +17,7 @@ import { fr } from "@/data/i18n/fr";
 import { ru } from "@/data/i18n/ru";
 import { id } from "@/data/i18n/id";
 import { ms } from "@/data/i18n/ms";
+import { pt } from "@/data/i18n/pt";
 import type { LocalizedPage } from "@/data/i18n/types";
 import {
   TRANSLATION_GROUPS, TRANSLATED_LOCALES, LOCALE_META,
@@ -27,7 +28,7 @@ import { personRef } from "@/schemas/jsonld";
 import { site, SITE_URL } from "@/config/site";
 
 export function getStaticPaths() {
-  const sets: Record<TranslatedLocale, LocalizedPage[]> = { de, it, es, fr, ru, id, ms };
+  const sets: Record<TranslatedLocale, LocalizedPage[]> = { de, it, es, fr, ru, id, ms, pt };
   const paths: Array<{ params: { locale: string; slug: string }; props: Record<string, unknown> }> = [];
   for (const locale of TRANSLATED_LOCALES) {
     for (const page of sets[locale]) {

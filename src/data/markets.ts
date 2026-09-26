@@ -40,6 +40,7 @@ export type MarketRegion =
   | "Central & Eastern Europe"
   | "Gulf"
   | "North America"
+  | "Latin America"
   | "Asia-Pacific";
 
 export interface SourceMarket {
@@ -143,6 +144,12 @@ export const sourceMarkets: SourceMarket[] = [
     why: "Strong guided-travel culture and a growing appetite for private rather than coach arrangements.",
   },
   {
+    code: "PT", country: "Portugal", demonym: "Portuguese travellers", region: "Western Europe",
+    searchLanguage: "pt",
+    season: "October to April, with Easter and the Christmas break as the peaks.",
+    why: "Reads the Portuguese pages written for Brazil — the same language, with European flight times a short hop away.",
+  },
+  {
     code: "CH", country: "Switzerland", demonym: "Swiss travellers", region: "Western Europe",
     searchLanguage: "de",
     season: "October to April.",
@@ -231,6 +238,14 @@ export const sourceMarkets: SourceMarket[] = [
     searchLanguage: "en",
     season: "November to March.",
     why: "Same buying habits as the US market, with a francophone segment served by the French material.",
+  },
+
+  // ===== Latin America =====================================================
+  {
+    code: "BR", country: "Brazil", demonym: "Brazilian travellers", region: "Latin America",
+    searchLanguage: "pt",
+    season: "December to February and the July school holidays; Carnival and Easter are the peak windows.",
+    why: "A large long-haul market that buys guided, fully arranged travel and reaches Cairo on one stop through the Gulf, Istanbul or Addis Ababa. Searches in Portuguese, and finds very little written for it at this level.",
   },
 
   // ===== Asia-Pacific ======================================================

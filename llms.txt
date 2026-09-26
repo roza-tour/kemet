@@ -7,7 +7,7 @@
 - Operator: Kemet (https://kemet-travel.com)
 - Based in: Cairo, Egypt
 - Spoken with clients: English, French, Arabic
-- Site published in: English (en), Deutsch (de), Italiano (it), Español (es), Français (fr), Русский (ru), Bahasa Indonesia (id), Bahasa Melayu (ms)
+- Site published in: English (en), Deutsch (de), Italiano (it), Español (es), Français (fr), Русский (ru), Bahasa Indonesia (id), Bahasa Melayu (ms), Português (pt)
 - Instagram: https://www.instagram.com/kemet.travels/
 - Contact: info@kemet-travel.com · WhatsApp +20 11 5836 7162
 - Model: 100% private, tailor-made itineraries (no shared coaches, no fixed departures)
@@ -19,7 +19,7 @@
 ## Start here
 
 - [Home](https://kemet-travel.com/index.html): Overview of Kemet and the eight cultural worlds of Egypt.
-- [Kemet Ultra — ultra-luxury Egypt](https://kemet-travel.com/vip.html): Kemet's top tier: four fully private journeys of 7 to 15 days — the Great Pyramid opened for one party, dinner inside Karnak after closing, a chartered dahabiya or crewed Red Sea yacht, private aircraft, suites at the Marriott Mena House, Four Seasons at The First Residence, the Old Cataract (Palace wing), Al Moudira and the Oberois. Priced openly: from EUR 17,400 to EUR 66,800 per person for a party of two, from EUR 11,500 per person for four. Published in 8 languages.
+- [Kemet Ultra — ultra-luxury Egypt](https://kemet-travel.com/vip.html): Kemet's top tier: four fully private journeys of 7 to 15 days — the Great Pyramid opened for one party, dinner inside Karnak after closing, a chartered dahabiya or crewed Red Sea yacht, private aircraft, suites at the Marriott Mena House, Four Seasons at The First Residence, the Old Cataract (Palace wing), Al Moudira and the Oberois. Priced openly: from EUR 17,400 to EUR 66,800 per person for a party of two, from EUR 11,500 per person for four. Published in 9 languages.
 - [Private access — monuments taken exclusively](https://kemet-travel.com/private-hire.html): Named Egyptian monuments closed to the public and held for one party, for an occasion rather than a journey: the Great Pyramid opened after hours for two uninterrupted hours, the Giza plateau before the gates open, dinner inside the precinct at Karnak for up to ~200, the Grand Egyptian Museum with galleries closed, the Citadel, Philae after the last launch, Hatshepsut's terraces, and whole-boat dahabiya charter. Granted by permit from the Ministry of Tourism and Antiquities (and at Giza the Ministry of Interior and plateau supervision), applied for in the client's name; nothing is charged until the permit is granted. Quoted, never listed.
 - [All journeys](https://kemet-travel.com/tours.html): Every private journey, 25 in total, from day tours to a 14-day grand tour.
 - [Egypt Travel FAQ](https://kemet-travel.com/faq.html): Answers to the most common Egypt travel questions: safety, visas, best time to visit, how many days, costs, getting around, food.
@@ -157,7 +157,7 @@
 
 ## Other languages
 
-8 key pages — the home page, private access to monuments, the journeys, the Nile cruise, what it costs, when to go, whether Egypt is safe and Kemet Ultra, the top tier — are published in 7 languages besides English: Deutsch, Italiano, Español, Français, Русский, Bahasa Indonesia, Bahasa Melayu. Each set is written for its market rather than translated word for word, so the flight times, school holidays, entry rules and reference points differ between them. The English site is the complete one; the translated pages carry the same facts.
+8 key pages — the home page, private access to monuments, the journeys, the Nile cruise, what it costs, when to go, whether Egypt is safe and Kemet Ultra, the top tier — are published in 8 languages besides English: Deutsch, Italiano, Español, Français, Русский, Bahasa Indonesia, Bahasa Melayu, Português. Each set is written for its market rather than translated word for word, so the flight times, school holidays, entry rules and reference points differ between them. The English site is the complete one; the translated pages carry the same facts.
 
 ### Deutsch (de)
 
@@ -235,6 +235,17 @@
 - https://kemet-travel.com/ms/masa-terbaik-ke-mesir.html
 - https://kemet-travel.com/ms/adakah-mesir-selamat.html
 - https://kemet-travel.com/ms/percutian-ultra-mewah-mesir.html
+
+### Português (pt)
+
+- https://kemet-travel.com/pt/
+- https://kemet-travel.com/pt/monumentos-exclusivos-egito.html
+- https://kemet-travel.com/pt/viagens-ao-egito.html
+- https://kemet-travel.com/pt/cruzeiro-pelo-nilo.html
+- https://kemet-travel.com/pt/quanto-custa-viajar-para-o-egito.html
+- https://kemet-travel.com/pt/melhor-epoca-para-ir-ao-egito.html
+- https://kemet-travel.com/pt/e-seguro-viajar-para-o-egito.html
+- https://kemet-travel.com/pt/viagens-ultra-luxo-egito.html
 
 ## Policies
 

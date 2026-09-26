@@ -50,6 +50,7 @@ import { fr } from "@/data/i18n/fr";
 import { ru } from "@/data/i18n/ru";
 import { id as idPages } from "@/data/i18n/id";
 import { ms } from "@/data/i18n/ms";
+import { pt } from "@/data/i18n/pt";
 import type { LocalizedPage } from "@/data/i18n/types";
 import { TRANSLATION_GROUPS, TRANSLATED_LOCALES, LOCALE_META } from "@/config/i18n";
 import { formatPrice } from "@/utils/format";
@@ -179,7 +180,7 @@ export const GET: APIRoute = () => {
   // from the same locale data the pages are rendered from, so every translated
   // page is searchable in its own language, in its own words.
   const LOCALE_PAGES: Record<string, LocalizedPage[]> = {
-    de, it: itPages, es: esPages, fr, ru, id: idPages, ms,
+    de, it: itPages, es: esPages, fr, ru, id: idPages, ms, pt,
   };
   for (const locale of TRANSLATED_LOCALES) {
     for (const page of LOCALE_PAGES[locale] ?? []) {

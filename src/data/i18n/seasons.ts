@@ -175,6 +175,23 @@ export const SEASON_TEXT: Record<SiteLocale, Record<SeasonKey, SeasonText>> = {
     christmas: { label: "Krismas & Tahun Baharu di Mesir", note: "Matahari musim sejuk, malam Tahun Baharu di Sungai Nil, Krismas Koptik pada 7 Januari." },
     "christmas-booking": { label: "Krismas & Tahun Baharu", note: "Minggu pertama dalam setahun yang habis ditempah di Mesir — kabin terbaik di Sungai Nil dan bilik menghadap piramid paling cepat habis." },
   },
+  pt: {
+    winter:  { label: "Inverno no Egito", note: "O auge da temporada — céu limpo, 22 °C na margem oeste de Tebas e o Nilo no seu melhor." },
+    spring:  { label: "Primavera no Egito", note: "Dias quentes, noites agradáveis e o deserto em flor antes do calor do verão." },
+    summer:  { label: "Verão no Egito", note: "Luxor no pico do calor, então os dias de visita começam ao amanhecer — e o Mar Vermelho está no seu mais quente." },
+    autumn:  { label: "Outono no Egito", note: "O calor cede e a temporada recomeça — a melhor luz do ano no Nilo, antes do movimento do inverno." },
+    ramadan: { label: "Ramadã no Egito", note: "Previsto para {dates}. O Cairo islâmico se ilumina de lanternas até pouco antes do amanhecer." },
+    "eid-fitr": { label: "Eid al-Fitr", note: "Previsto para {dates} — a festa que encerra o Ramadã: cidades em festa, sítios arqueológicos vazios." },
+    "eid-adha": { label: "Eid al-Adha", note: "Previsto para {dates} — a maior festa do Egito: sítios vazios, cidades em festa." },
+    easter:  { label: "Páscoa no Egito", note: "O domingo de Páscoa cai em {dates} — primavera no Nilo, dias quentes e noites agradáveis, e um feriado prolongado." },
+    "easter-both": { label: "Páscoa no Egito", note: "O domingo de Páscoa cai em {dates}, este ano junto com a Páscoa ortodoxa — o Vale do Nilo no seu melhor, e reservado com antecedência." },
+    "orthodox-easter": { label: "Páscoa Ortodoxa", note: "A Páscoa ortodoxa e copta cai em {dates} — a Páscoa do próprio Egito, um fim de semana de primavera que o país inteiro passa ao ar livre." },
+    "sun-festival": { label: "Festival do Sol de Abu Simbel", note: "Em {dates} o sol nascente alcança a câmara mais profunda do templo." },
+    thanksgiving: { label: "Semana de Ação de Graças", note: "{dates} — o feriado prolongado americano, no melhor mês do Nilo. Reservado com uma temporada de antecedência." },
+    valentines: { label: "Dia dos Namorados no Nilo", note: "{dates} — faluca ao pôr do sol e jantar sobre a água, no melhor mês do ano para isso." },
+    christmas: { label: "Natal e Réveillon no Egito", note: "Sol de inverno, Réveillon no Nilo, Natal copta em 7 de janeiro." },
+    "christmas-booking": { label: "Natal e Réveillon", note: "A primeira semana do ano a esgotar no Egito — as melhores cabines no Nilo e os quartos com vista para as pirâmides saem primeiro." },
+  },
 };
 
 /** "Explore" on the ribbon's call to action, and the close button's label. */
@@ -187,4 +204,5 @@ export const SEASON_UI: Record<SiteLocale, { explore: string; dismiss: string }>
   ru: { explore: "Смотреть",  dismiss: "Закрыть сезонное уведомление" },
   id: { explore: "Jelajahi",  dismiss: "Tutup pemberitahuan musim" },
   ms: { explore: "Terokai",   dismiss: "Tutup notis bermusim" },
+  pt: { explore: "Descobrir", dismiss: "Fechar o aviso da temporada" },
 };

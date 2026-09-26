@@ -83,6 +83,7 @@ const WA_TEXT: Record<string, [greeting: string, reading: string]> = {
   ru: ["Здравствуйте, Kemet! Хочу спланировать поездку в Египет.", "Страница:"],
   id: ["Halo Kemet — saya ingin merencanakan perjalanan ke Mesir.", "Saya sedang membaca:"],
   ms: ["Helo Kemet — saya ingin merancang perjalanan ke Mesir.", "Saya sedang membaca:"],
+  pt: ["Olá Kemet — gostaria de planejar uma viagem ao Egito.", "Eu estava lendo:"],
 };
 const [waGreeting, waReading] = WA_TEXT[pageLocale] ?? WA_TEXT.en;
 const isHome = /^(?:[a-z]{2}\/)?index\.html$/.test(active);
@@ -102,7 +103,7 @@ const alternates = selfCanonical ? alternatesFor(active) : [];
 // as og:locale:alternate so social previews resolve to the right language.
 const OG_LOCALE_BY_LANG: Record<string, string> = {
   en: OG_LOCALE, de: "de_DE", it: "it_IT", es: "es_ES",
-  fr: "fr_FR", ru: "ru_RU", id: "id_ID", ms: "ms_MY",
+  fr: "fr_FR", ru: "ru_RU", id: "id_ID", ms: "ms_MY", pt: "pt_BR",
 };
 const ogLocale = OG_LOCALE_BY_LANG[pageLocale] ?? OG_LOCALE;
 const ogLocaleAlternates = alternates
