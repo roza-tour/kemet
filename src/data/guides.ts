@@ -62,7 +62,7 @@ export const guides: Guide[] = [
       {
         heading: "Top destinations",
         paragraphs: [
-          "Most itineraries are anchored by four cities. Cairo and Giza sit together at the northern end: Cairo for Islamic architecture, the Egyptian Museum and the Grand Egyptian Museum; Giza for the Pyramids and the Sphinx. Luxor, five hours south by high-speed train or one hour by air, holds the greatest concentration of ancient monuments anywhere — Karnak, Luxor Temple and the Valley of the Kings. Aswan, further south still, marks the Nile at its most serene and is the gateway to Abu Simbel and living Nubian culture.",
+          "Most itineraries are anchored by four cities. Cairo and Giza sit together at the northern end: Cairo for Islamic architecture, the Egyptian Museum and the Grand Egyptian Museum; Giza for the Pyramids and the Sphinx. Luxor, about ten hours south by train or an hour by air, holds the greatest concentration of ancient monuments anywhere — Karnak, Luxor Temple and the Valley of the Kings. Aswan, further south still, marks the Nile at its most serene and is the gateway to Abu Simbel and living Nubian culture.",
           "Alexandria, on the Mediterranean coast, offers a completely different Egypt — Greco-Roman ruins, the modern Bibliotheca Alexandrina and a relaxed seafront pace that contrasts with the heat of the desert interior.",
         ],
       },
@@ -286,7 +286,7 @@ export const guides: Guide[] = [
     category: "transportation",
     parentGuideId: "egypt-travel-guide",
     shortSummary:
-      "How to travel between Egypt's cities and sites — domestic flights, high-speed trains, Nile cruises, the Cairo Metro, taxis and private transfers explained.",
+      "How to travel between Egypt's cities and sites — domestic flights, the sleeper train, Nile cruises, the Cairo Metro, taxis and private transfers explained.",
     difficulty: "moderate",
     readingTimeMinutes: 7,
     lastUpdated: "2026-09",
@@ -396,7 +396,7 @@ export const guides: Guide[] = [
     seo: {
       title: "Getting Around Egypt — Trains, Flights & Cruises | Kemet",
       description:
-        "How to travel between Egypt's cities: domestic flights, high-speed trains, Nile cruises, the Cairo Metro and private transfers on the tourist route.",
+        "How to travel between Egypt's cities: domestic flights, the sleeper train, Nile cruises, the Cairo Metro and private transfers on the tourist route.",
     },
     relationships: {
       destinations: dest("cairo", "giza", "luxor", "aswan"),

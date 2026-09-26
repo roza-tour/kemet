@@ -66,7 +66,13 @@ function localDates(from?: string, to?: string, fallback = ""): string {
 // down to about 5KB.
 //
 //   seasonDefs[i]    = [theme, slug, label, noteTemplate, href]
-//   seasonWindows[j] = [seasonIndex, start, end, priority, dates]
+//   seasonWindows[j] = [seasonIndex, start, end, priority, dates, theme?]
+//
+// The sixth slot is set only when a window wears a different theme from the
+// first window of its kind: "Christmas & New Year, while it can still be
+// booked" keeps the autumn palette in October and November and the winter one
+// from 1 December, under the same wording. Without it the theme was read once
+// per kind, and December stayed dressed for autumn.
 //
 // The label and note are still resolved HERE, at build time: the page already
 // knows its language, so the client receives one language's strings, not eight.
@@ -75,10 +81,12 @@ const seasonDefs = keys.map((k) => {
   const w = seasonalCalendar.find((x) => x.key === k)!;
   return [w.theme, w.slug, text[k].label, text[k].note, w.href ?? ""];
 });
-const seasonWindows = seasonalCalendar.map((w) => [
-  keys.indexOf(w.key), w.start, w.end, w.priority,
-  localDates(w.eventFrom, w.eventTo, w.eventDate ?? ""),
-]);
+const seasonWindows = seasonalCalendar.map((w) => {
+  const i = keys.indexOf(w.key);
+  const row: (string | number)[] = [i, w.start, w.end, w.priority, localDates(w.eventFrom, w.eventTo, w.eventDate ?? "")];
+  if (w.theme !== seasonDefs[i][0]) row.push(w.theme);
+  return row;
+});
 ---
 <div id="season-ribbon" class="srb" hidden>
   <a class="srb-in" href="#" id="srb-link">
@@ -111,7 +119,7 @@ const seasonWindows = seasonalCalendar.map((w) => [
       if (!active) return;
 
       var season = seasonDefs[active[0]];
-      var theme = season[0], slug = season[1], label = season[2];
+      var theme = active[5] || season[0], slug = season[1], label = season[2];
       var when = active[4];
       var note = season[3].replace("{dates}", when);
       var route = season[4];

@@ -47,6 +47,7 @@ export const SEASON_TEXT: Record<SiteLocale, Record<SeasonKey, SeasonText>> = {
     thanksgiving: { label: "Thanksgiving week", note: "{dates} — the American long weekend, in the best month on the Nile. Book it a season ahead." },
     valentines: { label: "Valentine's on the Nile", note: "{dates} — a felucca at sunset and dinner on the water, in the best month of the year for it." },
     christmas: { label: "Christmas & New Year in Egypt", note: "Winter sun, New Year's Eve on the Nile, Coptic Christmas on 7 January." },
+    "christmas-booking": { label: "Christmas & New Year", note: "The first week of Egypt's year to sell out — the best Nile cabins and Giza-view rooms go first." },
   },
 
   de: {
@@ -64,6 +65,7 @@ export const SEASON_TEXT: Record<SiteLocale, Record<SeasonKey, SeasonText>> = {
     thanksgiving: { label: "Thanksgiving-Woche", note: "{dates} — das lange amerikanische Wochenende, im besten Monat am Nil. Eine Saison im Voraus buchen." },
     valentines: { label: "Valentinstag am Nil", note: "{dates} — eine Feluke im Sonnenuntergang und Abendessen auf dem Wasser, im schönsten Monat dafür." },
     christmas: { label: "Weihnachten & Neujahr in Ägypten", note: "Wintersonne, Silvester auf dem Nil, koptisches Weihnachten am 7. Januar." },
+    "christmas-booking": { label: "Weihnachten & Neujahr", note: "Die erste Woche des Jahres, die in Ägypten ausgebucht ist — die besten Nilkabinen und Zimmer mit Pyramidenblick sind zuerst weg." },
   },
 
   it: {
@@ -81,6 +83,7 @@ export const SEASON_TEXT: Record<SiteLocale, Record<SeasonKey, SeasonText>> = {
     thanksgiving: { label: "Settimana del Ringraziamento", note: "{dates} — il lungo fine settimana americano, nel mese migliore sul Nilo. Si prenota con una stagione di anticipo." },
     valentines: { label: "San Valentino sul Nilo", note: "{dates} — una feluca al tramonto e cena sull'acqua, nel mese più bello per farlo." },
     christmas: { label: "Natale e Capodanno in Egitto", note: "Sole d'inverno, notte di Capodanno sul Nilo, Natale copto il 7 gennaio." },
+    "christmas-booking": { label: "Natale e Capodanno", note: "La prima settimana dell'anno a esaurirsi in Egitto — le cabine migliori sul Nilo e le camere vista piramidi vanno via per prime." },
   },
 
   es: {
@@ -98,6 +101,7 @@ export const SEASON_TEXT: Record<SiteLocale, Record<SeasonKey, SeasonText>> = {
     thanksgiving: { label: "Semana de Acción de Gracias", note: "{dates} — el puente largo estadounidense, en el mejor mes del Nilo. Se reserva con una temporada de antelación." },
     valentines: { label: "San Valentín en el Nilo", note: "{dates} — una faluca al atardecer y cena sobre el agua, en el mejor mes del año para ello." },
     christmas: { label: "Navidad y Año Nuevo en Egipto", note: "Sol de invierno, Nochevieja en el Nilo, Navidad copta el 7 de enero." },
+    "christmas-booking": { label: "Navidad y Año Nuevo", note: "La primera semana del año que se agota en Egipto — los mejores camarotes del Nilo y las habitaciones con vista a las pirámides se van primero." },
   },
 
   fr: {
@@ -115,6 +119,7 @@ export const SEASON_TEXT: Record<SiteLocale, Record<SeasonKey, SeasonText>> = {
     thanksgiving: { label: "Semaine de Thanksgiving", note: "{dates} — le long week-end américain, au meilleur mois sur le Nil. À réserver une saison à l'avance." },
     valentines: { label: "La Saint-Valentin sur le Nil", note: "{dates} — une félouque au coucher du soleil et un dîner sur l'eau, au plus beau mois pour cela." },
     christmas: { label: "Noël et Nouvel An en Égypte", note: "Soleil d'hiver, réveillon sur le Nil, Noël copte le 7 janvier." },
+    "christmas-booking": { label: "Noël et Nouvel An", note: "La première semaine de l'année à afficher complet en Égypte — les meilleures cabines sur le Nil et les chambres face aux pyramides partent d'abord." },
   },
 
   ru: {
@@ -132,6 +137,7 @@ export const SEASON_TEXT: Record<SiteLocale, Record<SeasonKey, SeasonText>> = {
     thanksgiving: { label: "Неделя Дня благодарения", note: "{dates} — американские длинные выходные, в лучший месяц на Ниле. Бронировать за сезон." },
     valentines: { label: "День святого Валентина на Ниле", note: "{dates} — фелука на закате и ужин на воде, в лучший месяц года для этого." },
     christmas: { label: "Рождество и Новый год в Египте", note: "Зимнее солнце, Новый год на Ниле, коптское Рождество 7 января." },
+    "christmas-booking": { label: "Рождество и Новый год", note: "Первая неделя года, которая распродаётся в Египте, — лучшие каюты на Ниле и номера с видом на пирамиды уходят первыми." },
   },
 
   id: {
@@ -149,6 +155,7 @@ export const SEASON_TEXT: Record<SiteLocale, Record<SeasonKey, SeasonText>> = {
     thanksgiving: { label: "Pekan Thanksgiving", note: "{dates} — akhir pekan panjang Amerika, di bulan terbaik di Sungai Nil. Dipesan satu musim sebelumnya." },
     valentines: { label: "Valentine di Sungai Nil", note: "{dates} — felucca saat matahari terbenam dan makan malam di atas air, di bulan terbaik sepanjang tahun untuk itu." },
     christmas: { label: "Natal & Tahun Baru di Mesir", note: "Matahari musim dingin, malam Tahun Baru di Sungai Nil, Natal Koptik pada 7 Januari." },
+    "christmas-booking": { label: "Natal & Tahun Baru", note: "Pekan pertama dalam setahun yang habis dipesan di Mesir — kabin terbaik di Sungai Nil dan kamar menghadap piramida paling cepat habis." },
   },
 
   ms: {
@@ -166,6 +173,7 @@ export const SEASON_TEXT: Record<SiteLocale, Record<SeasonKey, SeasonText>> = {
     thanksgiving: { label: "Minggu Thanksgiving", note: "{dates} — hujung minggu panjang Amerika, pada bulan terbaik di Sungai Nil. Ditempah satu musim lebih awal." },
     valentines: { label: "Valentine di Sungai Nil", note: "{dates} — felucca ketika matahari terbenam dan makan malam di atas air, pada bulan terbaik sepanjang tahun untuknya." },
     christmas: { label: "Krismas & Tahun Baharu di Mesir", note: "Matahari musim sejuk, malam Tahun Baharu di Sungai Nil, Krismas Koptik pada 7 Januari." },
+    "christmas-booking": { label: "Krismas & Tahun Baharu", note: "Minggu pertama dalam setahun yang habis ditempah di Mesir — kabin terbaik di Sungai Nil dan bilik menghadap piramid paling cepat habis." },
   },
 };
 

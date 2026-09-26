@@ -35,7 +35,7 @@ export type SeasonKey =
   | "winter" | "spring" | "summer" | "autumn"
   | "ramadan" | "eid-fitr" | "eid-adha"
   | "easter" | "easter-both" | "orthodox-easter"
-  | "sun-festival" | "thanksgiving" | "valentines" | "christmas";
+  | "sun-festival" | "thanksgiving" | "valentines" | "christmas" | "christmas-booking";
 
 export interface SeasonalWindow {
   /**
@@ -151,6 +151,37 @@ const AUTUMN = {
   note: "The heat breaks and the season reopens — the best light of the year on the Nile, before the winter crowds.",
   href: "when-to-go.html",
 };
+
+/**
+ * CHRISTMAS & NEW YEAR, WHILE IT CAN STILL BE BOOKED
+ *
+ * The Christmas occasion below dresses the site for the event itself, three
+ * days before 24 December — correct for the event, and useless for selling
+ * it: the best Nile cabins and Giza-view rooms for that fortnight are gone
+ * six to nine months ahead, so by 21 December the ribbon was announcing a
+ * week nobody could still book.
+ *
+ * This is the other half: from 1 October to 20 December the ribbon points at
+ * the Christmas page with a line about booking, not about tinsel. It does NOT
+ * put the site in Christmas colours in October — that was the mistake the
+ * two-layer design removed ("Christmas & New Year started on 24 October") —
+ * it keeps the season's own theme underneath (autumn, then winter) and only
+ * changes what the ribbon says and where it leads. Priority 20: above the
+ * base seasons, below every real occasion, so the Abu Simbel sun festival and
+ * Thanksgiving still take their own days.
+ */
+const XMAS_BOOKING = {
+  key: "christmas-booking" as const,
+  slug: "christmas-new-year-egypt",
+  label: "Christmas & New Year",
+  note: "The first week of Egypt's year to sell out — the best Nile cabins and Giza-view rooms go first.",
+};
+function christmasBooking(y: number): SeasonalWindow[] {
+  return [
+    { ...XMAS_BOOKING, theme: "autumn", start: `${y}-10-01`, end: `${y}-11-30`, priority: 20 },
+    { ...XMAS_BOOKING, theme: "winter", start: `${y}-12-01`, end: `${y}-12-20`, priority: 20 },
+  ];
+}
 
 /**
  * The year's seasons. Winter appears twice because it straddles New Year: the
@@ -480,6 +511,7 @@ const TODAY = iso(new Date());
 
 export const seasonalCalendar: SeasonalWindow[] = [
   ...BASE_YEARS.flatMap(baseSeasons),
+  ...BASE_YEARS.flatMap(christmasBooking),
   ...occasions.map(toWindow),
   ...BASE_YEARS.flatMap(computedOccasions).map(toWindow),
 ]

@@ -284,7 +284,7 @@ export const collections: Collection[] = [
     ],
     planningNotes: [
       "Minimum recommended first visit: 7 days. 10 days allows Cairo, Giza, Luxor, Aswan and Abu Simbel.",
-      "Fly Cairo in, fly Luxor or Aswan out — the high-speed train covers the Cairo–Luxor leg comfortably",
+      "Fly Cairo in, fly Luxor or Aswan out — an hour's domestic flight covers the Cairo–Luxor leg; the overnight sleeper is the slower alternative",
       "A Nile cruise between Aswan and Luxor (3–4 nights) covers the monuments with no packing and unpacking",
       "Book a private Egyptologist guide for every monument visit — context transforms what you see",
     ],
@@ -486,14 +486,14 @@ export const collections: Collection[] = [
     highlights: [
       "Daytime temperatures of 19–24 °C in Cairo and 22–26 °C in Luxor and Aswan — the northern winter's best-value warmth",
       "New Year's Eve aboard a Nile cruise, moored alongside the fleet at Luxor or Edfu with a gala dinner on deck",
-      "Christmas Day itself is a normal working day in Egypt — the Pyramids and Karnak are noticeably calmer than the days either side",
+      "25 December is not a public holiday in Egypt — every site keeps its normal hours, and a Christmas morning at the Pyramids is an ordinary working morning there",
       "Coptic Christmas on 7 January — midnight liturgy at the Hanging Church and Abu Serga in Old Cairo",
       "Clear, low-angle winter light: the best photography conditions of the year at Giza and on the West Bank",
     ],
     planningNotes: [
       "This is the single most competitive window of the Egyptian year — the best Nile cruise cabins and Giza-view rooms are typically gone 6–9 months ahead",
-      "Expect peak-season supplements over the 24 December – 2 January period at most hotels and on every cruise vessel",
-      "Domestic flights (Cairo–Luxor, Cairo–Aswan) fill early over the holiday; the high-speed and sleeper trains are useful alternatives",
+      "Expect peak-season supplements from about 20 December to 5 January at most hotels and on every cruise vessel",
+      "Domestic flights (Cairo–Luxor, Cairo–Aswan) fill early over the holiday, and so do the sleeper-train cabins — book whichever you choose at the same time as the hotels",
       "Egyptian schools break for a mid-year holiday in late January, not December, so domestic crowding is low over Christmas week",
       "Coptic Christmas Eve (6 January) sees heightened security and some road closures around Old Cairo's churches — worth planning around, not avoiding",
     ],
@@ -506,11 +506,11 @@ export const collections: Collection[] = [
     faqs: [
       {
         q: "Is Egypt a good place to spend Christmas and New Year?",
-        a: "Yes — it is one of the strongest winter-sun options within a short flight of Europe. Daytime temperatures sit around 19–24 °C in Cairo and a few degrees higher in Luxor and Aswan, the light is exceptional, and every major site is fully open. Egypt is a majority-Muslim country, so 25 December is an ordinary working day, which means the monuments are often quieter on Christmas Day itself than in the days around it. International hotels and Nile cruise vessels lay on full festive programmes for guests.",
+        a: "Yes — it is one of the strongest winter-sun options within a short flight of Europe. Daytime temperatures sit around 19–24 °C in Cairo and a few degrees higher in Luxor and Aswan, the light is exceptional, and every major site is fully open. Egypt is a majority-Muslim country, so 25 December is not a public holiday and every site keeps its normal hours. International hotels and Nile cruise vessels lay on full festive programmes for guests.",
       },
       {
         q: "How far in advance should I book Christmas or New Year in Egypt?",
-        a: "Six to nine months for the 24 December – 2 January window. This is the peak of Egypt's peak season: the well-run Nile cruise vessels, the Giza-view hotel rooms and the domestic flights south all sell out first, and prices carry a holiday supplement. Three months out you can usually still build an excellent trip, but the specific cruise or hotel you had in mind may no longer be available.",
+        a: "Six to nine months for the 20 December – 5 January window. This is the peak of Egypt's peak season: the well-run Nile cruise vessels, the Giza-view hotel rooms and the domestic flights south all sell out first, and prices carry a holiday supplement. Three months out you can usually still build an excellent trip, but the specific cruise or hotel you had in mind may no longer be available.",
       },
       {
         q: "What is New Year's Eve like on a Nile cruise?",
@@ -533,7 +533,7 @@ export const collections: Collection[] = [
       height: 500,
     },
     theme: "christmas",
-    lastReviewed: "2026-07",
+    lastReviewed: "2026-09",
     relationships: {
       tours: tour(
         "tour-nile-cruise",
