@@ -48,6 +48,11 @@ export interface LocalizedPage {
   /** Label above the "see the full English site" link. */
   moreLabel: string;
   moreText: string;
+  /** Where the "more" link points, when it is not the English original (a
+   *  page with no English original has none). Route relative to the site root. */
+  moreRoute?: string;
+  /** Related pages in the same language, listed above the "more" link. */
+  links?: Array<{ label: string; route: string }>;
 }
 
 export type LocalePageSet = Record<TranslatedLocale, LocalizedPage[]>;

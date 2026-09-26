@@ -19,6 +19,7 @@ import { id } from "@/data/i18n/id";
 import { ms } from "@/data/i18n/ms";
 import { pt } from "@/data/i18n/pt";
 import type { LocalizedPage } from "@/data/i18n/types";
+import { STANDALONE_PAGES, standaloneRoute } from "@/data/i18n/standalone";
 import {
   TRANSLATION_GROUPS, TRANSLATED_LOCALES, LOCALE_META,
 } from "@/config/i18n";
@@ -36,17 +37,22 @@ export function getStaticPaths() {
       if (!group) continue;
       // "de/aegypten-visum.html" → slug "aegypten-visum"
       const slug = group[locale].split("/")[1].replace(/\.html$/, "");
-      paths.push({ params: { locale, slug }, props: { page, locale } });
+      paths.push({ params: { locale, slug }, props: { page, locale, route: group[locale] } });
     }
+  }
+  // Pages in one language only — see data/i18n/standalone.ts.
+  for (const p of STANDALONE_PAGES) {
+    paths.push({ params: { locale: p.locale, slug: p.slug }, props: { page: p.page, locale: p.locale, route: standaloneRoute(p) } });
   }
   return paths;
 }
 
-interface Props { page: LocalizedPage; locale: TranslatedLocale }
-const { page, locale } = Astro.props;
+interface Props { page: LocalizedPage; locale: TranslatedLocale; route: string }
+const { page, locale, route } = Astro.props;
 
-const group = TRANSLATION_GROUPS.find((g) => g.key === page.groupId)!;
-const route = group[locale];
+// Undefined for a page that exists in this language only.
+const group = TRANSLATION_GROUPS.find((g) => g.key === page.groupId);
+const moreRoute = page.moreRoute ?? group?.en ?? "index.html";
 const base = "../";
 /** This page IS the locale's own front page — it is not below anything. */
 const isLocaleHome = page.groupId === "home";
@@ -174,8 +180,15 @@ const jsonld: Record<string, unknown>[] = [
       <div class="lz-more reveal">
         <h2>{page.moreLabel}</h2>
         <p>{page.moreText}</p>
-        <a class="lz-morelink" href={`${base}${publicPath(group.en)}` || "/"}>
-          {group.en === "index.html" ? "kemet-travel.com" : `kemet-travel.com/${group.en}`}
+        {page.links && (
+          <ul class="lz-links">
+            {page.links.map((l) => (
+              <li><a class="lz-morelink" href={`${base}${publicPath(l.route)}`}>{l.label}<i aria-hidden="true"></i></a></li>
+            ))}
+          </ul>
+        )}
+        <a class="lz-morelink" href={`${base}${publicPath(moreRoute)}` || "/"}>
+          {moreRoute === "index.html" ? "kemet-travel.com" : `kemet-travel.com/${publicPath(moreRoute)}`}
           <i aria-hidden="true"></i>
         </a>
       </div>
@@ -231,6 +244,7 @@ const jsonld: Record<string, unknown>[] = [
     max-width: 680px; }
   .lz-morelink { display: inline-flex; align-items: center; gap:var(--s-2); color: var(--gold);
     font-size:var(--t-sm); }
+  .lz-links { list-style: none; margin:0 0 var(--s-3); padding: 0; display: grid; gap:var(--s-2); }
   .lz-morelink i { width: 30px; height: 1px; background: currentColor; transition: width .5s; }
   .lz-morelink:hover i { width: 50px; }
 

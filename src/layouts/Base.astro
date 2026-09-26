@@ -164,12 +164,14 @@ const ogLocaleAlternates = alternates
   {/* hreflang. Where a page has translations the set is generated from the
       registry in config/i18n and is self-referential and reciprocal — the
       requirement Google enforces before it will honour any of it. Pages with no
-      translations keep the site-wide English/x-default pair. */}
+      translations keep the site-wide English/x-default pair — if they are
+      English. A page in one other language only declares nothing: calling it
+      the English page would be false, and a cluster of one says nothing. */}
   {alternates.length > 0
     ? alternates.map((alt) => (
         <link rel="alternate" hreflang={alt.hreflang} href={canonical(alt.route)} />
       ))
-    : selfCanonical && (
+    : selfCanonical && pageLocale === "en" && (
       <>
         <link rel="alternate" hreflang="en" href={canonicalUrl} />
         <link rel="alternate" hreflang="x-default" href={canonicalUrl} />

@@ -51,6 +51,7 @@ import { ru } from "@/data/i18n/ru";
 import { id as idPages } from "@/data/i18n/id";
 import { ms } from "@/data/i18n/ms";
 import { pt } from "@/data/i18n/pt";
+import { STANDALONE_PAGES, standaloneRoute } from "@/data/i18n/standalone";
 import type { LocalizedPage } from "@/data/i18n/types";
 import { TRANSLATION_GROUPS, TRANSLATED_LOCALES, LOCALE_META } from "@/config/i18n";
 import { formatPrice } from "@/utils/format";
@@ -199,6 +200,20 @@ export const GET: APIRoute = () => {
                  LOCALE_META[locale].endonym),
       });
     }
+  }
+
+  // Pages in one language only (data/i18n/standalone.ts), indexed the same way.
+  for (const p of STANDALONE_PAGES) {
+    const page = p.page;
+    docs.push({
+      u: standaloneRoute(p),
+      t: page.h1,
+      s: LOCALE_META[p.locale].endonym,
+      d: clean(page.standfirst || page.description),
+      k: terms(page.title, page.keywords, page.crumb, page.h1,
+               page.sections.map((x) => x.title), page.faqs.map((x) => x.q),
+               LOCALE_META[p.locale].endonym),
+    });
   }
 
   // --- Answered questions ---------------------------------------------------

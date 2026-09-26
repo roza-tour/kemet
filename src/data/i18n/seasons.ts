@@ -188,7 +188,7 @@ export const SEASON_TEXT: Record<SiteLocale, Record<SeasonKey, SeasonText>> = {
     "orthodox-easter": { label: "Páscoa Ortodoxa", note: "A Páscoa ortodoxa e copta cai em {dates} — a Páscoa do próprio Egito, um fim de semana de primavera que o país inteiro passa ao ar livre." },
     "sun-festival": { label: "Festival do Sol de Abu Simbel", note: "Em {dates} o sol nascente alcança a câmara mais profunda do templo." },
     thanksgiving: { label: "Semana de Ação de Graças", note: "{dates} — o feriado prolongado americano, no melhor mês do Nilo. Reservado com uma temporada de antecedência." },
-    valentines: { label: "Dia dos Namorados no Nilo", note: "{dates} — faluca ao pôr do sol e jantar sobre a água, no melhor mês do ano para isso." },
+    valentines: { label: "São Valentim no Nilo", note: "{dates} — faluca ao pôr do sol e jantar sobre a água, no melhor mês do ano para isso." },
     christmas: { label: "Natal e Réveillon no Egito", note: "Sol de inverno, Réveillon no Nilo, Natal copta em 7 de janeiro." },
     "christmas-booking": { label: "Natal e Réveillon", note: "A primeira semana do ano a esgotar no Egito — as melhores cabines no Nilo e os quartos com vista para as pirâmides saem primeiro." },
   },

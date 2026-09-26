@@ -20,6 +20,7 @@ import { months } from "@/data/months";
 import { comparisons } from "@/data/comparisons";
 import { TRANSLATION_GROUPS, TRANSLATED_LOCALES, LOCALE_META, LOCALES } from "@/config/i18n";
 import { ultraJourneys } from "@/data/ultra/journeys";
+import { STANDALONE_PAGES, standaloneRoute } from "@/data/i18n/standalone";
 
 // Kemet's own per-day range, computed from the catalogue the same way the cost
 // page computes it. This line used to say Kemet "sits" at EUR 200-450 a day —
@@ -214,6 +215,10 @@ export const GET: APIRoute = () => {
     lines.push("");
     for (const g of TRANSLATION_GROUPS) {
       lines.push(`- ${u(publicPath(g[loc]))}`);
+    }
+    // Pages written for this market only, with no English original.
+    for (const p of STANDALONE_PAGES.filter((x) => x.locale === loc)) {
+      lines.push(`- ${u(standaloneRoute(p))} — ${p.page.h1}: ${p.page.standfirst}`);
     }
     lines.push("");
   }

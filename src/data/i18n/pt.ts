@@ -97,6 +97,7 @@ export const pt: LocalizedPage[] = [
     moreLabel: "O site completo",
     moreText:
       "Estas páginas são uma seleção em português. O catálogo completo da Kemet — todas as viagens, destinos, experiências e guias — está em inglês. E respondemos, naturalmente, em português.",
+    links: [{ label: "Carnaval no Egito", route: "pt/carnaval-no-egito.html" }],
   },
 
   // ===== Viagens ===========================================================
@@ -346,6 +347,7 @@ export const pt: LocalizedPage[] = [
     moreLabel: "Os doze meses em detalhe",
     moreText:
       "Um detalhamento de cada mês — temperaturas, movimento, preços e veredito — está disponível em inglês.",
+    links: [{ label: "Carnaval no Egito", route: "pt/carnaval-no-egito.html" }],
   },
 
   // ===== É seguro? =========================================================
