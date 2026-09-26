@@ -351,7 +351,7 @@ export const collections: Collection[] = [
       "Private monument access: pre-opening entry and after-hours visits arranged on request",
       "Exclusive Nile cruising: boutique dahabiyas and private-charter cruises between Luxor and Aswan",
       "Senior Egyptologist guides — specialists rather than licensed generalists",
-      "Five-star properties with genuine Nile, pyramid or temple views",
+      "Four- and five-star properties with genuine Nile, pyramid or temple views",
       "Completely private itineraries: your party, your schedule, your pace",
     ],
     planningNotes: [
@@ -392,7 +392,7 @@ export const collections: Collection[] = [
     seo: {
       title: "Luxury Egypt — Private Tours & Nile Cruises | Kemet",
       description:
-        "Luxury Egypt travel by Kemet — private Egyptologist guides, exclusive dahabiya Nile cruises, pre-opening monument access and bespoke five-star itineraries.",
+        "Luxury Egypt travel by Kemet — private Egyptologist guides, exclusive dahabiya Nile cruises, pre-opening monument access and bespoke luxury itineraries.",
     },
   },
 

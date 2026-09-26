@@ -99,7 +99,7 @@ export const tours: Tour[] = [
         title: "Cairo & the Egyptian Museum",
         items: [
           "Private meet-and-greet at Cairo International Airport",
-          "Transfer to your 5-star hotel and welcome briefing",
+          "Transfer to your hotel and welcome briefing",
           "Afternoon at the Egyptian Museum in Tahrir — the royal collections and gold of the New Kingdom",
         ],
       },
@@ -205,7 +205,7 @@ export const tours: Tour[] = [
     },
     included: [
       ...baseIncluded.slice(0, 1),
-      "9 nights' accommodation — 5-star hotels and a deluxe Nile cruise",
+      "9 nights' accommodation — 4- or 5-star hotels and a deluxe Nile cruise",
       "3-night full-board Nile cruise, Aswan to Luxor",
       "Sleeper-train berths Cairo↔Upper Egypt (both directions)",
       ...baseIncluded.slice(1),
@@ -255,14 +255,14 @@ export const tours: Tour[] = [
     summary:
       "The headline acts of Egypt in seven days — the Egyptian Museum, Alexandria, the temples and tombs of Luxor, and the Pyramids of Giza.",
     overview:
-      "For travellers with a week to give, this journey distils Egypt to its greatest hits without rushing them. Cairo opens with the Egyptian Museum; a full day on the Mediterranean takes in Alexandria; then the sleeper train carries you to Luxor for the temples of the living and the tombs of the dead. You return north for the Pyramids of Giza, Saqqara and the medieval heart of Islamic Cairo. Private throughout, with your own Egyptologist and five-star hotels.",
+      "For travellers with a week to give, this journey distils Egypt to its greatest hits without rushing them. Cairo opens with the Egyptian Museum; a full day on the Mediterranean takes in Alexandria; then the sleeper train carries you to Luxor for the temples of the living and the tombs of the dead. You return north for the Pyramids of Giza, Saqqara and the medieval heart of Islamic Cairo. Private throughout, with your own Egyptologist and four- or five-star hotels.",
     itinerary: [
       {
         label: "Day",
         num: "01",
         title: "Cairo & the Egyptian Museum",
         items: [
-          "Private airport welcome and transfer to your 5-star hotel",
+          "Private airport welcome and transfer to your hotel",
           "Afternoon at the Egyptian Museum in Tahrir",
           "Evening orientation with your guide",
         ],
@@ -338,7 +338,7 @@ export const tours: Tour[] = [
     },
     included: [
       ...baseIncluded.slice(0, 1),
-      "6 nights' accommodation in 5-star hotels",
+      "6 nights' accommodation in 4- or 5-star hotels",
       "Sleeper-train berths Cairo↔Luxor (both directions)",
       ...baseIncluded.slice(1),
     ],
@@ -433,7 +433,7 @@ export const tours: Tour[] = [
     },
     included: [
       ...baseIncluded.slice(0, 1),
-      "3 nights' accommodation in 5-star hotels",
+      "3 nights' accommodation in 4- or 5-star hotels",
       ...baseIncluded.slice(1),
     ],
     excluded: baseExcluded,
@@ -519,7 +519,7 @@ export const tours: Tour[] = [
     included: [
       ...baseIncluded.slice(0, 1),
       "Domestic flights Cairo–Luxor and Aswan–Cairo",
-      "2 nights' accommodation in 5-star hotels",
+      "2 nights' accommodation in 4- or 5-star hotels",
       ...baseIncluded.slice(1),
     ],
     excluded: baseExcluded,
@@ -1264,7 +1264,7 @@ export const tours: Tour[] = [
     summary:
       "The deep-history heart of Egypt by private road journey — Karnak, the Valley of the Kings, Edfu, Kom Ombo and Philae, with time to actually absorb them.",
     overview:
-      "Upper Egypt holds the country's densest concentration of monuments, and most itineraries sprint through it. This one doesn't. Two full days in Luxor split the East Bank's temples from the West Bank's necropolis, so neither is rushed. The drive south to Aswan then becomes part of the journey rather than a transfer: Edfu and Kom Ombo break the road exactly where the ancient river traffic once paused. Aswan closes the journey at a gentler register — Philae by motorboat, the granite quarries, and a felucca hour under sail before you fly or train back. Five-star hotels throughout, private Egyptologist from first day to last.",
+      "Upper Egypt holds the country's densest concentration of monuments, and most itineraries sprint through it. This one doesn't. Two full days in Luxor split the East Bank's temples from the West Bank's necropolis, so neither is rushed. The drive south to Aswan then becomes part of the journey rather than a transfer: Edfu and Kom Ombo break the road exactly where the ancient river traffic once paused. Aswan closes the journey at a gentler register — Philae by motorboat, the granite quarries, and a felucca hour under sail before you fly or train back. Four- and five-star hotels throughout, private Egyptologist from first day to last.",
     itinerary: [
       {
         label: "Day",
@@ -1324,7 +1324,7 @@ export const tours: Tour[] = [
     },
     included: [
       ...baseIncluded.slice(0, 1),
-      "4 nights' accommodation in 5-star hotels (Luxor & Aswan)",
+      "4 nights' accommodation in 4- or 5-star hotels (Luxor & Aswan)",
       "Private felucca sail in Aswan",
       ...baseIncluded.slice(1),
     ],
@@ -1470,7 +1470,7 @@ export const tours: Tour[] = [
     },
     included: [
       ...baseIncluded.slice(0, 1),
-      "8 nights — Nile-view suites, 5-star hotels and a 3-night full-board cruise",
+      "8 nights — Nile-view suites, 4- or 5-star hotels and a 3-night full-board cruise",
       "Domestic flights Cairo–Aswan and Luxor–Cairo",
       "Private early-access Giza sunrise session",
       "Sunset felucca charter in Aswan",
@@ -1608,7 +1608,7 @@ export const tours: Tour[] = [
     },
     included: [
       "Private family-specialist Egyptologist throughout",
-      "7 nights' accommodation — family suites or connecting rooms, 5-star",
+      "7 nights' accommodation — family suites or connecting rooms, 4- or 5-star",
       "Domestic flights Cairo–Luxor and Aswan–Cairo",
       "Felucca sail and Nubian village visit in Aswan",
       ...baseIncluded.slice(1),
@@ -1736,7 +1736,7 @@ export const tours: Tour[] = [
     },
     included: [
       "Private photography-aware Egyptologist guide throughout",
-      "6 nights' accommodation in 5-star hotels",
+      "6 nights' accommodation in 4- or 5-star hotels",
       "Domestic flights Cairo–Luxor and Aswan–Cairo",
       "Private early-access Giza sunrise session",
       "Golden-hour felucca charter in Aswan",
@@ -1796,7 +1796,7 @@ export const tours: Tour[] = [
         label: "Day",
         num: "01",
         title: "Arrival in Cairo",
-        items: ["Private airport welcome and transfer to your 5-star hotel", "Evening orientation with your planner"],
+        items: ["Private airport welcome and transfer to your hotel", "Evening orientation with your planner"],
       },
       {
         label: "Day",
@@ -1885,7 +1885,7 @@ export const tours: Tour[] = [
     },
     included: [
       ...baseIncluded.slice(0, 1),
-      "13 nights — 5-star hotels, a 3-night full-board Nile cruise and a Red Sea resort",
+      "13 nights — 4- or 5-star hotels, a 3-night full-board Nile cruise and a Red Sea resort",
       "All domestic flights (Cairo–Aswan, Luxor–Sharm El Sheikh, Sharm–Cairo)",
       "Abu Simbel excursion by private vehicle",
       "Ras Mohammed boat day with snorkelling equipment",
@@ -1991,7 +1991,7 @@ export const tours: Tour[] = [
     },
     included: [
       "Private historian-Egyptologist guide throughout",
-      "4 nights' accommodation in a 5-star hotel",
+      "4 nights' accommodation in a 4- or 5-star hotel",
       "Sufi tanoura performance tickets",
       ...baseIncluded.slice(1),
     ],
@@ -2096,7 +2096,7 @@ export const tours: Tour[] = [
       sleep: "One Red Sea resort for all four nights",
     },
     included: [
-      "4 nights' accommodation in a 5-star Red Sea resort (half board)",
+      "4 nights' accommodation in a 4- or 5-star Red Sea resort (half board)",
       "Private full-day Ras Mohammed boat charter with snorkelling equipment",
       "Sinai desert evening with Bedouin dinner",
       "Private air-conditioned transfers",
@@ -2198,7 +2198,7 @@ export const tours: Tour[] = [
       sleep: "One Red Sea resort for all three nights",
     },
     included: [
-      "3 nights' accommodation in a 5-star Red Sea resort (half board)",
+      "3 nights' accommodation in a 4- or 5-star Red Sea resort (half board)",
       "5 guided dives (1 check dive + 2 two-dive boat days) with a licensed PADI centre",
       "Full equipment rental, tanks and weights",
       "Marine park fees for Ras Mohammed",
@@ -2291,7 +2291,7 @@ export const tours: Tour[] = [
     },
     included: [
       ...baseIncluded.slice(0, 1),
-      "2 nights' accommodation in a 5-star Luxor hotel",
+      "2 nights' accommodation in a 4- or 5-star Luxor hotel",
       "Evening entry to Luxor Temple and the Avenue of Sphinxes",
       ...baseIncluded.slice(1),
     ],
@@ -2379,7 +2379,7 @@ export const tours: Tour[] = [
     },
     included: [
       ...baseIncluded.slice(0, 1),
-      "2 nights' accommodation in a 5-star hotel",
+      "2 nights' accommodation in a 4- or 5-star hotel",
       "VIP airport meet & assist with fast-track, both directions",
       ...baseIncluded.slice(1),
     ],

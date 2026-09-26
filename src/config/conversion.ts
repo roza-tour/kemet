@@ -73,7 +73,7 @@ export const enquiryTypes: EnquiryType[] = [
   {
     id: "luxury-travel",
     label: "Luxury Travel",
-    description: "Five-star hotels, private Nile cruises and exclusive access.",
+    description: "Four- and five-star hotels, private Nile cruises and exclusive access.",
     icon: "𓂋",
     whatsappMessage:
       "Hello Kemet — I'd like to discuss a luxury Egypt journey.",

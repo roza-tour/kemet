@@ -48,7 +48,7 @@ export const DEFAULT_KEYWORDS = [
   // and they keep the site out of the budget-package result set.
   "luxury Egypt tours",
   "high-end Egypt travel",
-  "5-star Egypt tour packages",
+  "4 and 5-star Egypt tour packages",
   "VIP Egypt tours",
   "luxury Nile cruise",
   "private Egyptologist guide",

@@ -50,7 +50,7 @@ const signature = [...multiDay].sort((a, b) => b.price - a.price).slice(0, 3);
 //
 // The honest version is to say what the division actually gives, and to
 // compute it, so the sentence cannot go stale the next time a price changes.
-// Multi-day prices are fully inclusive — 5-star hotels, every entrance fee,
+// Multi-day prices are fully inclusive — 4- and 5-star hotels, every entrance fee,
 // the Egyptologist, transfers and lunch — so this is comparable with the band.
 const nightsOf = (label: string) => {
   const m = /^(\d+)\s*Days?/i.exec(label);
