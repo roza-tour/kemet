@@ -35,7 +35,7 @@ const eurFmt = (n: number) => `EUR ${n.toLocaleString("en-GB")}`;
 const ultraRange = `from ${eurFmt(Math.min(...ultraJourneys.map((j) => j.price2)))} to ${eurFmt(Math.max(...ultraJourneys.map((j) => j.price2)))} per person for a party of two, from ${eurFmt(Math.min(...ultraJourneys.map((j) => j.price4)))} per person for four`;
 import { activities } from "@/data/activities";
 import { reviewer } from "@/data/experts";
-import { company } from "@/data/company";
+import { company, socialLabel } from "@/data/company";
 import { ourTraveller, notOurTraveller, priceStance } from "@/data/standard";
 import { formatPrice, flyPrice } from "@/utils/format";
 import { publicPath } from "@/utils/links";
@@ -66,7 +66,7 @@ export const GET: APIRoute = () => {
   if (company.languages?.length) lines.push(`- Spoken with clients: ${company.languages.join(", ")}`);
   lines.push(`- Site published in: ${LOCALES.map((l) => `${LOCALE_META[l].endonym} (${l})`).join(", ")}`);
   for (const [name, url] of Object.entries(company.socialProfiles ?? {})) {
-    lines.push(`- ${name[0].toUpperCase()}${name.slice(1)}: ${url}`);
+    lines.push(`- ${socialLabel(name)}: ${url}`);
   }
   lines.push(`- Contact: ${site.email} · WhatsApp ${site.phoneDisplay}`);
   lines.push(

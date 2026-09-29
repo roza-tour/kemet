@@ -240,7 +240,22 @@ export const company: CompanyProfile = {
   // it actively asks Google to merge this business with a competitor's
   // entity. Open the profile, confirm it links back to kemet-travel.com, then
   // add it here.
-  socialProfiles: { instagram: "https://www.instagram.com/kemet.travels/" },
+  socialProfiles: {
+    instagram: "https://www.instagram.com/kemet.travels/",
+    // The Giza listing (g294202 / d34709973), supplied by the owner. NOTE it
+    // is NOT the older Cairo listing "Kemet Travel Egypt — Day Tours"
+    // (g294201 / d3870730) that a search for the brand name turns up first —
+    // that is a different company, and pointing sameAs at it would ask Google
+    // to merge this business with a competitor.
+    tripadvisor:
+      "https://www.tripadvisor.com/Attraction_Review-g294202-d34709973-Reviews-Kemet_travel-Giza_Giza_Governorate.html",
+    // facebook: pending. The link to hand was a /share/r/ reel link, which
+    // points at one post rather than at the page, and share links are
+    // short-lived redirects. sameAs has to be the page's own permanent URL —
+    // https://www.facebook.com/<page name or profile.php?id=…>. Add it here
+    // and it appears in the footer, the schema and llms.txt with no other
+    // change.
+  },
   teamMembers: [],
   partners: [],
   paymentMethods: [], // e.g. ["Bank transfer", "Credit card"]
@@ -253,6 +268,28 @@ export const company: CompanyProfile = {
 // business with somebody else's. A bare domain is the most likely slip —
 // "https://instagram.com" says nothing about who we are — so it is rejected.
 // ---------------------------------------------------------------------------
+/**
+ * How each profile is NAMED in public — the footer link and llms.txt both read
+ * this, so the brand is spelled the way its owner spells it in both places.
+ * Capitalising the object key instead produced "Tripadvisor".
+ * A key with no entry falls back to the capitalised key, so adding a network
+ * can never render a blank label.
+ */
+export const SOCIAL_LABELS: Record<string, string> = {
+  instagram: "Instagram",
+  facebook: "Facebook",
+  tripadvisor: "TripAdvisor",
+  youtube: "YouTube",
+  tiktok: "TikTok",
+  pinterest: "Pinterest",
+  linkedin: "LinkedIn",
+  x: "X",
+};
+
+/** The public name for a profile key. */
+export const socialLabel = (key: string): string =>
+  SOCIAL_LABELS[key] ?? key.charAt(0).toUpperCase() + key.slice(1);
+
 const PROFILE_HOSTS: Record<string, RegExp> = {
   instagram: /(^|\.)instagram\.com$/i,
   facebook: /(^|\.)facebook\.com$/i,
