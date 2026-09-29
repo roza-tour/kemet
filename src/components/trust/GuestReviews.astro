@@ -1,0 +1,156 @@
+---
+// GuestReviews — what guests actually said, when any have said it.
+//
+// RENDERS NOTHING WHILE data/reviews.ts IS EMPTY. That is the normal state
+// today and it is a complete one: no heading, no empty grid, no "reviews
+// coming soon" placeholder. A section that announces its own absence is worse
+// than no section, and a placeholder is the first step towards someone filling
+// it with something invented to make the page look finished.
+//
+// WHY THERE IS NO AVERAGE AND NO STAR SUMMARY AT THE TOP
+// Two reasons, and the second is the real one. Google discounts reviews a
+// business publishes about itself, so a headline average would never appear in
+// a search result. And a rating is only allowed here when a guest actually
+// gave one — see data/reviews.ts — so an average across a set where some
+// people simply wrote a warm paragraph would be an average of a number nobody
+// stated. Each review shows its own rating if it has one, and says nothing if
+// it does not.
+import { reviews } from "@/data/reviews";
+import { tours } from "@/data/tours";
+import { publicPath } from "@/utils/links";
+
+interface Props {
+  eyebrow?: string;
+  heading?: string;
+  intro?: string;
+  /** Link prefix back to the site root, for pages inside a folder. */
+  base?: string;
+  /** Show at most this many, newest first. */
+  limit?: number;
+}
+const {
+  eyebrow = "In their words",
+  heading = "What guests have said",
+  intro,
+  base = "",
+  limit = 6,
+} = Astro.props;
+
+const shown = [...reviews]
+  .sort((a, b) => b.date.localeCompare(a.date))
+  .slice(0, limit);
+
+const tourOf = (slug?: string) => (slug ? tours.find((t) => t.slug === slug) : undefined);
+const monthYear = (iso: string) =>
+  new Date(`${iso}T00:00:00Z`).toLocaleDateString("en-GB", {
+    month: "long", year: "numeric", timeZone: "UTC",
+  });
+---
+{shown.length > 0 && (
+  <div class="grv">
+    <div class="grv-head reveal">
+      <div class="eyebrow">{eyebrow}</div>
+      <h2>{heading}</h2>
+      <div class="rule"></div>
+      {intro && <p>{intro}</p>}
+    </div>
+
+    <div class="grv-grid">
+      {shown.map((r) => {
+        const tour = tourOf(r.tourSlug);
+        return (
+          <figure class="grv-card reveal">
+            {/* A drawn quote mark rather than a typographic one: it sits where
+                we want it and it scales with the card. */}
+            <svg class="grv-q" viewBox="0 0 40 30" aria-hidden="true" focusable="false">
+              <path
+                d="M16 30V17C16 8 11 2 2 0v6c4 1 6 4 6 8H2v16h14Zm22 0V17c0-9-5-15-14-17v6c4 1 6 4 6 8h-6v16h14Z"
+                fill="currentColor"
+              />
+            </svg>
+
+            {r.rating !== undefined && (
+              <div class="grv-rate" aria-label={`${r.rating} out of 5`}>
+                {[1, 2, 3, 4, 5].map((n) => (
+                  <span class:list={["grv-star", n <= r.rating! && "on"]} aria-hidden="true"></span>
+                ))}
+              </div>
+            )}
+
+            <blockquote>{r.body}</blockquote>
+
+            <figcaption>
+              <b>{r.author}</b>
+              {r.from && <span class="grv-from">{r.from}</span>}
+              <span class="grv-meta">
+                <time datetime={r.date}>{monthYear(r.date)}</time>
+                {tour && (
+                  <>
+                    {" · "}
+                    <a href={`${base}${publicPath(`${tour.slug}.html`)}`}>{tour.title}</a>
+                  </>
+                )}
+              </span>
+            </figcaption>
+          </figure>
+        );
+      })}
+    </div>
+  </div>
+)}
+
+<style>
+  .grv-head { max-width: 640px; margin-bottom: 40px; }
+  .grv-head p { color: var(--muted); font-weight: 300; line-height: 1.85; margin-top: 16px; }
+
+  .grv-grid {
+    display: grid; gap: 18px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .grv-card {
+    position: relative; margin: 0; padding: 30px 28px 26px;
+    border: 1px solid var(--line);
+    background: linear-gradient(180deg, rgba(255,255,255,.028), rgba(255,255,255,.008));
+    display: flex; flex-direction: column; gap: 16px;
+  }
+  /* Corner ticks, the same drawn detail the journey plates use — it is what
+     stops a plain bordered box reading as a default card. */
+  .grv-card::before, .grv-card::after {
+    content: ""; position: absolute; width: 12px; height: 12px; border: 1px solid var(--gold);
+    opacity: .5; pointer-events: none;
+  }
+  .grv-card::before { top: -1px; left: -1px; border-width: 1px 0 0 1px; }
+  .grv-card::after  { bottom: -1px; right: -1px; border-width: 0 1px 1px 0; }
+
+  .grv-q { width: 26px; height: 20px; color: var(--gold); opacity: .38; flex: none; }
+
+  .grv-rate { display: flex; gap: 5px; }
+  .grv-star {
+    width: 11px; height: 11px; background: var(--line-2, rgba(255,255,255,.14));
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  }
+  .grv-star.on { background: var(--gold); }
+
+  .grv-card blockquote {
+    margin: 0; color: var(--bone); font-size: .95rem; font-weight: 300;
+    line-height: 1.85; flex: 1;
+  }
+
+  .grv-card figcaption {
+    display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px;
+    padding-top: 16px; border-top: 1px solid var(--line);
+  }
+  .grv-card figcaption b { color: var(--gold-bright); font-weight: 500; font-size: .86rem; }
+  .grv-from { color: var(--muted); font-size: .82rem; }
+  .grv-meta {
+    width: 100%; color: var(--muted-2); font-size: .72rem;
+    letter-spacing: .06em; margin-top: 2px;
+  }
+  .grv-meta a { color: var(--gold); text-decoration: none; border-bottom: 1px solid transparent; }
+  .grv-meta a:hover { border-bottom-color: currentColor; }
+
+  @media (max-width: 680px) {
+    .grv-card { padding: 24px 20px 20px; }
+  }
+</style>

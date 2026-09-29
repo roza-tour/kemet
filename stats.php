@@ -272,6 +272,45 @@ $enqRecent = array_filter($enquiries, fn($e) => $e[0] >= $fromUtc && $e[0] < $to
 $enqFailed = array_values(array_filter($enquiries, fn($e) => $e[1] === "mail-failed"));
 
 /**
+ * How long ago an enquiry arrived, in words, plus the raw age in seconds.
+ *
+ * WHY THIS MATTERS MORE THAN IT LOOKS
+ * At this end of the market the reply time IS the product. Someone who writes
+ * about a private dahabiya and hears nothing for two days has already written
+ * to somebody else. This page could always tell you an enquiry had ARRIVED and
+ * could shout when one FAILED to send; it could not tell you that a perfectly
+ * delivered one had been sitting there since Tuesday.
+ *
+ * Timestamps are written by contact-handler in UTC, so they are compared in
+ * UTC — reading them as local time would make every row look two or three
+ * hours older or newer than it is.
+ */
+function ago(string $utc): array {
+  $t = strtotime($utc . " UTC");
+  if (!$t) return ["", 0];
+  $s = max(0, time() - $t);
+  $h = (int)floor($s / 3600);
+  if ($h < 1)  return [max(1, (int)floor($s / 60)) . " min ago", $s];
+  if ($h < 24) return [$h . ($h === 1 ? " hour ago" : " hours ago"), $s];
+  $d = (int)floor($h / 24);
+  return [$d . ($d === 1 ? " day ago" : " days ago"), $s];
+}
+
+// Enquiries worth chasing. Delivered or not, each is a person waiting.
+//   · "invalid" is INCLUDED on purpose — a mistyped email address is still
+//     somebody who tried, and the phone number they left usually works.
+//   · "duplicate" is excluded: the same person is already counted one row up.
+//   · "spam" never reaches here; it was split out above.
+//   · Older than 14 days is history, not a queue — desk.php handles the long
+//     follow-up rhythm, this is only about answering the first time.
+$enqOpen  = array_values(array_filter(
+  $enquiries,
+  fn($e) => $e[1] !== "duplicate" && ago($e[0])[1] < 14 * 86400,
+));
+$enqLate  = array_values(array_filter($enqOpen, fn($e) => ago($e[0])[1] >= 86400));
+$enqToday = array_values(array_filter($enqOpen, fn($e) => ago($e[0])[1] < 86400));
+
+/**
  * Contact details are masked here on purpose: this page opens without a key,
  * so the enquiry list should not hand a stranger a customer's email address
  * and phone number. Enough is left to recognise a returning enquirer and to
@@ -361,6 +400,33 @@ td.n2{text-align:right;color:var(--mut);font-variant-numeric:tabular-nums;width:
 .tag--sent{color:#9FD4A8;border-color:rgba(159,212,168,.45)}
 .tag--mail-failed{color:#F0A88F;border-color:rgba(240,168,143,.6)}
 .tag--invalid{color:#E6CE8A;border-color:rgba(230,206,138,.45)}
+/* Waiting-for-a-reply layer. Amber, not red: an unanswered enquiry is urgent,
+   an undelivered one is broken, and the page must not shout the same way
+   about both. */
+.card--warn{border-color:rgba(230,206,138,.55);background:rgba(230,206,138,.07)}
+.card--warn b{color:#E6CE8A}
+.wait{background:rgba(159,212,168,.08);border:1px solid rgba(159,212,168,.4);border-radius:10px;padding:14px 18px;margin-bottom:22px;font-size:.86rem;line-height:1.65;color:var(--mut)}
+.wait b{display:block;color:#9FD4A8;margin-bottom:4px}
+.wait--warn{background:rgba(230,206,138,.08);border-color:rgba(230,206,138,.45)}
+.wait--warn b{color:#E6CE8A}
+.enq--late td.n2{color:#E6CE8A}
+/* The age column needs more room than the numeric columns elsewhere: at the
+   shared width "22 min ago" wrapped onto three lines. */
+.enq td.n2{width:132px;white-space:nowrap;line-height:1.5}
+.enq-when{color:var(--mut);font-size:.78em}
+/* A real checkbox, visually hidden, so it stays keyboard reachable and
+   announces its state to a screen reader. */
+.enq-done{float:right;margin-left:14px;cursor:pointer;line-height:1}
+.enq-done input{position:absolute;opacity:0;width:0;height:0}
+.enq-done span{display:inline-block;width:19px;height:19px;border:1px solid var(--line);border-radius:5px;position:relative;transition:border-color .2s,background .2s}
+.enq-done:hover span{border-color:var(--gold)}
+.enq-done input:focus-visible + span{outline:2px solid var(--gold);outline-offset:2px}
+.enq-done input:checked + span{background:rgba(159,212,168,.22);border-color:rgba(159,212,168,.6)}
+.enq-done input:checked + span::after{content:"";position:absolute;left:6px;top:2px;width:5px;height:10px;border:solid #9FD4A8;border-width:0 2px 2px 0;transform:rotate(42deg)}
+/* An answered enquiry stays on the page — it is still the record — but it
+   stops competing for attention with the ones that still need something. */
+.enq--done{opacity:.42}
+.enq--done .enq-msg{display:none}
 </style></head><body><div class="wrap">
 <h1>Kemet — التقرير · Site Stats</h1>
 <div class="sub">Cookie-less, first-party, no third-party scripts &nbsp;·&nbsp; <a href="desk.php" style="color:#D9B45A">المكتب · The desk</a> — follow-ups due and this season's dispatch</div>
@@ -385,7 +451,18 @@ td.n2{text-align:right;color:var(--mut);font-variant-numeric:tabular-nums;width:
 <div class="card"><b><?= $fmt($devices["m"] ?? 0) ?> / <?= $fmt($devices["t"] ?? 0) ?> / <?= $fmt($devices["d"] ?? 0) ?></b><span>Mobile / Tablet / Desktop</span></div>
 <div class="card"><b><?= $pct($oneAndOut, $uv) ?></b><span>Single-page visits</span></div>
 <div class="card<?= $enqFailed ? ' card--alarm' : '' ?>"><b><?= $fmt(count($enqRecent)) ?><?= $enqFailed ? ' / ' . $fmt(count($enqFailed)) : '' ?></b><span>Enquiries<?= $enqFailed ? ' / undelivered' : '' ?></span></div>
+<div class="card<?= $enqLate ? ' card--warn' : '' ?>" id="waitcard"><b><span id="waitn"><?= $fmt(count($enqOpen)) ?></span></b><span>Waiting for a reply<?= $enqLate ? ' · ' . $fmt(count($enqLate)) . ' over 24h' : '' ?></span></div>
 </div>
+
+<?php if ($enqToday || $enqLate): ?>
+<div class="wait<?= $enqLate ? ' wait--warn' : '' ?>" id="waitbar">
+  <b><?= $enqLate
+      ? '&#9200; ' . $fmt(count($enqLate)) . ' enquir' . (count($enqLate) === 1 ? 'y has' : 'ies have') . ' been waiting more than 24 hours.'
+      : '&#9993; ' . $fmt(count($enqToday)) . ' new enquir' . (count($enqToday) === 1 ? 'y' : 'ies') . ' in the last 24 hours.' ?></b>
+  Tick one off in the list below once you have answered it. The tick is stored
+  in this browser only — so it can never hide an enquiry from you somewhere else.
+</div>
+<?php endif; ?>
 
 <?php if ($enqFailed): ?>
 <div class="alarm">
@@ -525,9 +602,12 @@ if (!$attn) {
 <table><tr><td style="color:var(--mut)">No enquiries recorded yet</td></tr></table>
 <?php else: ?>
 <table>
-<?php foreach (array_slice($enquiries, 0, 25) as $e): [$when, $status, $nm, $em, $ph, $dt, $msg, $src, $first, $party, $pace, $prio] = $e; ?>
-  <tr class="enq enq--<?= $esc($status) ?>">
+<?php foreach (array_slice($enquiries, 0, 25) as $e): [$when, $status, $nm, $em, $ph, $dt, $msg, $src, $first, $party, $pace, $prio] = $e;
+      [$agoText, $agoSecs] = ago($when);
+      $chaseable = $status !== "duplicate" && $agoSecs < 14 * 86400; ?>
+  <tr class="enq enq--<?= $esc($status) ?><?= $chaseable && $agoSecs >= 86400 ? ' enq--late' : '' ?>" data-enq="<?= $esc(md5($when . $em . $msg)) ?>">
     <td>
+      <?php if ($chaseable): ?><label class="enq-done" title="Mark as answered (this browser only)"><input type="checkbox" class="enq-tick"><span></span></label><?php endif; ?>
       <span class="tag tag--<?= $esc($status) ?>"><?= $esc($status) ?></span>
       <b><?= $esc($nm) ?></b>
       <span class="enq-masked"><?= $esc(maskEmail($em)) ?></span>
@@ -537,7 +617,7 @@ if (!$attn) {
       <div class="enq-msg"><?= $esc($msg) ?></div>
       <?php if ($src !== ""): ?><div class="enq-msg">Found us via <b><?= $esc($src) ?></b><?= $first !== "" ? " · first page " . $esc($first) : "" ?></div><?php endif; ?>
     </td>
-    <td class="n2"><?= $esc($when) ?></td>
+    <td class="n2"><?= $esc($agoText) ?><br><span class="enq-when"><?= $esc($when) ?></span></td>
   </tr>
 <?php endforeach; ?>
 </table>
@@ -552,5 +632,59 @@ if (!$attn) {
 </table>
 </details>
 <?php endif; ?>
+<script>
+/* Answered-ticks.
+ *
+ * WHY THIS IS IN THE BROWSER AND NOT ON THE SERVER
+ * Anything this page can WRITE, anyone who can open it can write too. A
+ * server-side "answered" flag would hand them the ability to mark real
+ * enquiries as handled and quietly empty the one list here that costs money
+ * to miss. localStorage makes that impossible: the worst anyone can do is
+ * tidy their own copy of the page.
+ *
+ * The cost of that choice, stated in the UI rather than hidden: the ticks
+ * live in ONE browser, so the dashboard on a phone will still show them as
+ * waiting. The list itself always comes from the server — only the ticks are
+ * local — so the failure mode is seeing too much, never too little. For this
+ * particular list that is the right way round.
+ */
+(function () {
+  var KEY = "kemet-enq-answered";
+  var done = {};
+  try { done = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) {}
 
+  var rows = document.querySelectorAll("tr.enq[data-enq]");
+  var counter = document.getElementById("waitn");
+  var card = document.getElementById("waitcard");
+  var bar = document.getElementById("waitbar");
+
+  function refresh() {
+    var waiting = 0, late = 0;
+    rows.forEach(function (tr) {
+      var box = tr.querySelector(".enq-tick");
+      if (!box) return;                       // duplicate, or older than 14 days
+      var isDone = !!done[tr.dataset.enq];
+      box.checked = isDone;
+      tr.classList.toggle("enq--done", isDone);
+      if (!isDone) { waiting++; if (tr.classList.contains("enq--late")) late++; }
+    });
+    if (counter) counter.textContent = waiting;
+    if (card) card.classList.toggle("card--warn", late > 0);
+    // Nothing waiting: the banner has no job, so it goes rather than sitting
+    // there announcing a number that is now zero.
+    if (bar) bar.style.display = waiting ? "" : "none";
+  }
+
+  rows.forEach(function (tr) {
+    var box = tr.querySelector(".enq-tick");
+    if (!box) return;
+    box.addEventListener("change", function () {
+      if (box.checked) done[tr.dataset.enq] = 1; else delete done[tr.dataset.enq];
+      try { localStorage.setItem(KEY, JSON.stringify(done)); } catch (e) {}
+      refresh();
+    });
+  });
+  refresh();
+})();
+</script>
 </div></body></html>

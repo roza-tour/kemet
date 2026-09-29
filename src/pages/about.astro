@@ -11,6 +11,7 @@ import CustomerGallery from "@/components/CustomerGallery.astro";
 import ExpertProfile from "@/components/trust/ExpertProfile.astro";
 import OurProcess from "@/components/trust/OurProcess.astro";
 import BookingConfidence from "@/components/trust/BookingConfidence.astro";
+import GuestReviews from "@/components/trust/GuestReviews.astro";
 import CTABlock from "@/components/trust/CTABlock.astro";
 import { company } from "@/data/company";
 import { aboutPageSchema, breadcrumb } from "@/schemas/jsonld";
@@ -116,6 +117,17 @@ const jsonld = [aboutPageSchema(), breadcrumb([["Home", "index.html"], ["About",
   <section>
     <div class="wrap">
       <OurProcess />
+    </div>
+  </section>
+
+  {/* Guest reviews. Renders nothing at all while data/reviews.ts is empty —
+      which it is, and correctly so: there is nothing here that was not
+      written by a real guest. */}
+  <section>
+    <div class="wrap">
+      <GuestReviews
+        intro="Unedited, and only from guests who agreed to be quoted. We do not write these ourselves and we do not publish a composite of several people."
+      />
     </div>
   </section>
 

@@ -11,6 +11,7 @@ import { company } from "@/data/company";
 import { reviewer, type Expert } from "@/data/experts";
 import { LOCALES, LOCALE_META } from "@/config/i18n";
 import { marketCountries } from "@/data/markets";
+import { reviews } from "@/data/reviews";
 
 /**
  * Languages the office can genuinely correspond in. A claim about PEOPLE, not
@@ -710,7 +711,49 @@ export function siteSchema(): JsonLd[] {
     publisher: orgRef(),
   };
 
-  return [org, webSite];
+  return [org, webSite, ...reviewNodes()];
+}
+
+/**
+ * Guest reviews as schema.org Review nodes attached to the organisation.
+ *
+ * Returns an empty array while data/reviews.ts is empty, so this costs nothing
+ * and claims nothing until there is something real to say.
+ *
+ * NO aggregateRating IS EMITTED, deliberately. Google discounts reviews a
+ * business publishes about itself — its rich-results guidance calls them
+ * self-serving and excludes them for LocalBusiness and Organization — so an
+ * average here could never be shown to anyone. Emitting one anyway would be
+ * publishing a number for no reader, and it would invite whoever maintains
+ * this next to wonder why the stars never appear. The individual reviews are
+ * still worth marking up: an answer engine asked whether this company is any
+ * good can quote a named guest with a date, and it cannot quote what is not
+ * in the graph.
+ *
+ * Stars in search results come from a Google Business Profile, not from here.
+ */
+function reviewNodes(): JsonLd[] {
+  return reviews.map((r) => ({
+    "@context": SCHEMA_CONTEXT,
+    "@type": "Review",
+    itemReviewed: orgRef(),
+    author: {
+      "@type": "Person",
+      name: r.from ? `${r.author}, ${r.from}` : r.author,
+    },
+    datePublished: r.date,
+    reviewBody: r.body,
+    ...(r.rating !== undefined
+      ? {
+          reviewRating: {
+            "@type": "Rating",
+            ratingValue: r.rating,
+            bestRating: 5,
+            worstRating: 1,
+          },
+        }
+      : {}),
+  }));
 }
 
 /**
