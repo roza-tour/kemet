@@ -255,6 +255,14 @@ export const company: CompanyProfile = {
     // https://www.facebook.com/<page name or profile.php?id=…>. Add it here
     // and it appears in the footer, the schema and llms.txt with no other
     // change.
+    //
+    // Supplied as web.facebook.com and normalised to www: `web.` is one of
+    // Facebook's alternate hosts, and sameAs should carry the canonical one.
+    // The numeric profile.php?id= form is permanent and correct — it is what
+    // a page has before it is given a username. If a username is ever set
+    // (facebook.com/KemetTravel), replace this with it; the id form will keep
+    // working either way.
+    facebook: "https://www.facebook.com/profile.php?id=61591936196547",
   },
   teamMembers: [],
   partners: [],
@@ -320,6 +328,25 @@ for (const [key, url] of Object.entries(company.socialProfiles ?? {})) {
   if (expected && !expected.test(parsed.hostname)) {
     throw new Error(
       `company.socialProfiles.${key}: "${url}" is not on a ${key} domain.`,
+    );
+  }
+  // Facebook's numeric form carries the identity in the QUERY, not the path,
+  // so the bare-domain check above cannot catch a truncated one: plain
+  // "/profile.php" has a path, looks fine, and identifies nobody. Losing the
+  // query string is the likeliest way to copy this URL wrongly.
+  if (parsed.pathname === "/profile.php" && !parsed.searchParams.get("id")) {
+    throw new Error(
+      `company.socialProfiles.${key}: "${url}" is missing its ?id= — ` +
+        `profile.php on its own points at no page.`,
+    );
+  }
+  // A link to a POST is not a link to the account. sameAs is a claim about
+  // identity, and these paths are all content: a share redirect, a reel, a
+  // single post, a photo, a story.
+  if (/^\/(share|reel|reels|posts|photo|photos|videos|stories|p)\//.test(parsed.pathname)) {
+    throw new Error(
+      `company.socialProfiles.${key}: "${url}" points at a post, not the profile. ` +
+        `sameAs must be the account's own permanent URL.`,
     );
   }
 }
