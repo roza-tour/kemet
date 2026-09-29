@@ -475,6 +475,12 @@ footer{background:var(--ink-2);border-top:1px solid var(--line);padding:var(--s-
 .foot-col h3{font-weight:400;font-size:var(--t-nano);letter-spacing:.34em;text-transform:uppercase;color:var(--gold);margin-bottom:var(--s-4)}
 .foot-col a{display:block;color:var(--muted);font-size:var(--t-sm);font-weight:300;padding:var(--s-1) 0;transition:color .4s,padding-left .4s}
 .foot-col a:hover{color:var(--gold-bright);padding-left:var(--s-1)}
+/* Profile links sit apart from the contact actions above them: they are a
+   different kind of thing (where to find us, not how to reach us) and the
+   hairline says so without needing another heading. */
+.foot-social{display:flex;flex-wrap:wrap;gap:0 var(--s-3);margin-top:var(--s-3);padding-top:var(--s-3);border-top:1px solid var(--line)}
+.foot-social a{padding:var(--s-1) 0;font-size:var(--t-nano);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.foot-social a:hover{color:var(--gold-bright);padding-left:0}
 .foot-bottom{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;padding-top:var(--s-5);border-top:1px solid var(--line);color:var(--muted-2);font-size:var(--t-nano);letter-spacing:.22em;text-transform:uppercase;flex-wrap:wrap;gap:var(--s-2)}
 .foot-ghost{position:absolute;left:50%;bottom:-4vw;transform:translateX(-50%);font-family:var(--ff-display);font-weight:400;font-size:20vw;line-height:1;letter-spacing:.08em;color:transparent;-webkit-text-stroke:1px rgba(217,180,90,.08);user-select:none;pointer-events:none;z-index:1}
 

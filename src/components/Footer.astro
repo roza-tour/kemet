@@ -5,6 +5,7 @@ import { multidayTours } from "@/data/tours";
 import { footerExplore, footerCompany } from "@/config/navigation";
 import { tierLine } from "@/data/standard";
 import LangSwitch from "@/components/LangSwitch.astro";
+import { company } from "@/data/company";
 
 interface Props {
   /** Link prefix back to the site root ("" at root, "../" in subfolders). */
@@ -15,6 +16,26 @@ interface Props {
 const { base = "", route = "index.html" } = Astro.props;
 const enquire = mailtoLink("Kemet enquiry");
 const wa = whatsappLink("Hello Kemet — I'd like to plan a journey to Egypt.");
+
+/** Display names for the profiles. A key with no entry here still renders,
+ *  capitalised — so adding a network to company.socialProfiles never silently
+ *  produces a blank link. */
+const SOCIAL_LABELS: Record<string, string> = {
+  instagram: "Instagram",
+  facebook: "Facebook",
+  tripadvisor: "TripAdvisor",
+  youtube: "YouTube",
+  tiktok: "TikTok",
+  pinterest: "Pinterest",
+  linkedin: "LinkedIn",
+  x: "X",
+};
+const socials = Object.entries(company.socialProfiles ?? {})
+  .filter(([, url]) => typeof url === "string" && /^https:\/\//.test(url))
+  .map(([key, url]) => ({
+    label: SOCIAL_LABELS[key] ?? key.charAt(0).toUpperCase() + key.slice(1),
+    url,
+  }));
 ---
 <footer>
   <div class="wrap">
@@ -52,6 +73,24 @@ const wa = whatsappLink("Hello Kemet — I'd like to plan a journey to Egypt.");
         <a href={enquire}>Enquire</a>
         <a href={wa} rel="noopener" target="_blank">WhatsApp</a>
         <a href={`mailto:${site.email}`}>{site.email}</a>
+        {/* The profiles, VISIBLE.
+            These URLs were already going out as schema `sameAs` on every page
+            — the machine-readable claim that kemet-travel.com and the profile
+            are the same business — but they appeared nowhere a person or a
+            crawler could actually follow them. A sameAs nobody can click is a
+            one-way assertion; the same URL as a real outbound link, with the
+            profile linking back to the site, is a corroborated pair, and that
+            is what a search engine is looking for before it merges the two
+            into one entity.
+            Driven by the same company.socialProfiles the schema reads, so the
+            visible links and the structured data can never disagree. */}
+        {socials.length > 0 && (
+          <div class="foot-social">
+            {socials.map(({ label, url }) => (
+              <a href={url} rel="me noopener" target="_blank">{label}</a>
+            ))}
+          </div>
+        )}
       </div>
     </div>
     {/* Renders only on pages that actually have translations, so the English

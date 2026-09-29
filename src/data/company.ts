@@ -228,12 +228,61 @@ export const company: CompanyProfile = {
   ],
 
   // Future fields — populated when data is confirmed
-  // The one profile Kemet keeps. It goes out as schema `sameAs` on every page —
-  // the link that tells a search engine or an assistant that kemet-travel.com
-  // and @kemet.travels are the same business. Add others here only when they
-  // exist and are run by Kemet.
+  // The profiles Kemet keeps. Each one goes out as schema `sameAs` on every
+  // page AND as a visible link in the footer — the pair of signals that tells
+  // a search engine kemet-travel.com and the profile are one business.
+  //
+  // ⚠️ ADD ONLY PROFILES KEMET ACTUALLY RUNS, AND CHECK THE URL TWICE.
+  // "Kemet" is a crowded name in Egyptian travel: kemet.travel,
+  // kemetexperience.com, kemetegypttravel.net, travelkemet.com and a separate
+  // "Kemet Travel Egypt — Day Tours" on TripAdvisor are all different
+  // companies. A sameAs pointing at one of THEM does not just fail to help —
+  // it actively asks Google to merge this business with a competitor's
+  // entity. Open the profile, confirm it links back to kemet-travel.com, then
+  // add it here.
   socialProfiles: { instagram: "https://www.instagram.com/kemet.travels/" },
   teamMembers: [],
   partners: [],
   paymentMethods: [], // e.g. ["Bank transfer", "Credit card"]
 };
+
+// ---------------------------------------------------------------------------
+// Profile URLs are validated here rather than trusted, because a wrong one is
+// worse than a missing one: `sameAs` is an assertion that two things are the
+// same entity, and a typo or a competitor's page asks Google to merge this
+// business with somebody else's. A bare domain is the most likely slip —
+// "https://instagram.com" says nothing about who we are — so it is rejected.
+// ---------------------------------------------------------------------------
+const PROFILE_HOSTS: Record<string, RegExp> = {
+  instagram: /(^|\.)instagram\.com$/i,
+  facebook: /(^|\.)facebook\.com$/i,
+  tripadvisor: /(^|\.)tripadvisor\.[a-z.]+$/i,
+  youtube: /(^|\.)youtube\.com$/i,
+  tiktok: /(^|\.)tiktok\.com$/i,
+  pinterest: /(^|\.)pinterest\.[a-z.]+$/i,
+  linkedin: /(^|\.)linkedin\.com$/i,
+  x: /(^|\.)(x|twitter)\.com$/i,
+};
+for (const [key, url] of Object.entries(company.socialProfiles ?? {})) {
+  let parsed: URL;
+  try {
+    parsed = new URL(url);
+  } catch {
+    throw new Error(`company.socialProfiles.${key}: "${url}" is not a valid URL.`);
+  }
+  if (parsed.protocol !== "https:") {
+    throw new Error(`company.socialProfiles.${key}: must be https, got "${url}".`);
+  }
+  if (parsed.pathname.replace(/\/+$/, "") === "") {
+    throw new Error(
+      `company.socialProfiles.${key}: "${url}" is a bare domain, not a profile. ` +
+        `sameAs must point at the account itself.`,
+    );
+  }
+  const expected = PROFILE_HOSTS[key];
+  if (expected && !expected.test(parsed.hostname)) {
+    throw new Error(
+      `company.socialProfiles.${key}: "${url}" is not on a ${key} domain.`,
+    );
+  }
+}
