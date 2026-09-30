@@ -67,6 +67,9 @@ const pageLd = jsonld ? (Array.isArray(jsonld) ? jsonld : [jsonld]) : [];
 // site-wide English/x-default pair.
 const pageLocale = localeOfRoute(active);
 const htmlLang = LOCALE_META[pageLocale].tag;
+// Only emitted for a right-to-left language — not written as dir="ltr" on 181
+// pages to say nothing.
+const htmlDir = LOCALE_META[pageLocale].dir;
 
 // The floating WhatsApp button opens a chat with a message already written.
 // It names the page the visitor was reading, so the first message tells Kemet
@@ -103,7 +106,7 @@ const alternates = selfCanonical ? alternatesFor(active) : [];
 // as og:locale:alternate so social previews resolve to the right language.
 const OG_LOCALE_BY_LANG: Record<string, string> = {
   en: OG_LOCALE, de: "de_DE", it: "it_IT", es: "es_ES",
-  fr: "fr_FR", ru: "ru_RU", id: "id_ID", ms: "ms_MY", pt: "pt_BR",
+  fr: "fr_FR", ru: "ru_RU", id: "id_ID", ms: "ms_MY", pt: "pt_BR", ar: "ar_EG",
 };
 const ogLocale = OG_LOCALE_BY_LANG[pageLocale] ?? OG_LOCALE;
 const ogLocaleAlternates = alternates
@@ -112,7 +115,7 @@ const ogLocaleAlternates = alternates
   .filter(Boolean);
 ---
 <!doctype html>
-<html lang={htmlLang}>
+<html lang={htmlLang} dir={htmlDir}>
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />

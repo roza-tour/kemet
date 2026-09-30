@@ -18,6 +18,7 @@ import { ru } from "@/data/i18n/ru";
 import { id } from "@/data/i18n/id";
 import { ms } from "@/data/i18n/ms";
 import { pt } from "@/data/i18n/pt";
+import { ar } from "@/data/i18n/ar";
 import type { LocalizedPage } from "@/data/i18n/types";
 import { STANDALONE_PAGES, standaloneRoute } from "@/data/i18n/standalone";
 import {
@@ -29,7 +30,7 @@ import { personRef } from "@/schemas/jsonld";
 import { site, SITE_URL } from "@/config/site";
 
 export function getStaticPaths() {
-  const sets: Record<TranslatedLocale, LocalizedPage[]> = { de, it, es, fr, ru, id, ms, pt };
+  const sets: Record<TranslatedLocale, LocalizedPage[]> = { de, it, es, fr, ru, id, ms, pt, ar };
   const paths: Array<{ params: { locale: string; slug: string }; props: Record<string, unknown> }> = [];
   for (const locale of TRANSLATED_LOCALES) {
     for (const page of sets[locale]) {
@@ -219,15 +220,19 @@ const jsonld: Record<string, unknown>[] = [
   .lz-sec h2 { font-size:var(--t-md); color: var(--bone); margin:0 0 var(--s-2); }
   .lz-sec p { color: var(--muted); font-size:var(--t-base); line-height: 1.88; margin: 0; }
 
-  .lz-high { margin-top:var(--s-4); padding:var(--s-4) var(--s-5); border-left: 2px solid var(--gold);
+  /* Logical, not physical: border-inline-start, padding-inline-start and
+     inset-inline-start mirror themselves under dir="rtl". The Arabic pages had
+     the accent rule and the bullets stranded on the far side of the panel from
+     the text. Identical rendering in LTR, so nothing else changes. */
+  .lz-high { margin-top:var(--s-4); padding:var(--s-4) var(--s-5); border-inline-start: 2px solid var(--gold);
     background: rgba(217,180,90,.05); }
   .lz-high h2 { font-size:var(--t-micro); letter-spacing: .28em; text-transform: uppercase;
     font-family: var(--ff-body); font-weight: 400; color: var(--gold); margin:0 0 var(--s-2); }
   .lz-high ul { list-style: none; margin: 0; padding: 0; }
-  .lz-high li { position: relative; padding-left:var(--s-3); color: var(--muted);
+  .lz-high li { position: relative; padding-inline-start:var(--s-3); color: var(--muted);
     font-size:var(--t-sm); line-height: 1.75; margin-bottom:var(--s-2); }
   .lz-high li:last-child { margin-bottom: 0; }
-  .lz-high li::before { content: ""; position: absolute; left: 0; top: .68em;
+  .lz-high li::before { content: ""; position: absolute; inset-inline-start: 0; top: .68em;
     width: 5px; height: 5px; border-radius: 50%; background: var(--gold); opacity: .8; }
 
   .lz-cta { margin-top:var(--s-5); padding:var(--s-5) var(--s-5); border: 1px solid var(--line-2);

@@ -287,3 +287,48 @@
   descent-override: 26.8%;
   line-gap-override: 0%;
 }
+
+/* ===========================================================================
+   ARABIC — Amiri for display, IBM Plex Sans Arabic for text.
+
+   WHY AMIRI. It is the revival of the Naskh cut by the Bulaq Press in Cairo,
+   the first printing house in Egypt. For an Egyptian house selling Egypt to
+   Arabic readers, setting the headlines in the type Egypt set its own books
+   in is the right answer — and it sits beside Fraunces without either looking
+   like the other's fallback.
+
+   EVERY RULE IS unicode-range'd TO THE ARABIC BLOCKS. A browser fetches a
+   face only when it has to render a character inside that range, so the 181
+   non-Arabic pages never download a byte of this. That is what makes it safe
+   to declare site-wide instead of conditionally loading a second stylesheet.
+   =========================================================================== */
+@font-face {
+  font-family: 'Amiri';
+  font-style: normal; font-weight: 400; font-display: swap;
+  src: url(/fonts/amiri-arabic-400.woff2) format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0898-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FEFF;
+}
+@font-face {
+  font-family: 'Amiri';
+  font-style: normal; font-weight: 700; font-display: swap;
+  src: url(/fonts/amiri-arabic-700.woff2) format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0898-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FEFF;
+}
+@font-face {
+  font-family: 'Plex Arabic';
+  font-style: normal; font-weight: 300; font-display: swap;
+  src: url(/fonts/plex-arabic-300.woff2) format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0898-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FEFF;
+}
+@font-face {
+  font-family: 'Plex Arabic';
+  font-style: normal; font-weight: 400; font-display: swap;
+  src: url(/fonts/plex-arabic-400.woff2) format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0898-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FEFF;
+}
+@font-face {
+  font-family: 'Plex Arabic';
+  font-style: normal; font-weight: 500; font-display: swap;
+  src: url(/fonts/plex-arabic-500.woff2) format('woff2');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0898-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FEFF;
+}

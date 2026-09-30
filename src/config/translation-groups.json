@@ -25,7 +25,8 @@
     "ru",
     "id",
     "ms",
-    "pt"
+    "pt",
+    "ar"
   ],
   "groups": [
     {
@@ -38,7 +39,8 @@
       "ru": "ru/index.html",
       "id": "id/index.html",
       "ms": "ms/index.html",
-      "pt": "pt/index.html"
+      "pt": "pt/index.html",
+      "ar": "ar/index.html"
     },
     {
       "key": "private-access",
@@ -50,7 +52,8 @@
       "ru": "ru/ekskluzivnyy-dostup-k-pamyatnikam.html",
       "id": "id/sewa-eksklusif-situs-mesir.html",
       "ms": "ms/tempahan-eksklusif-tapak-mesir.html",
-      "pt": "pt/monumentos-exclusivos-egito.html"
+      "pt": "pt/monumentos-exclusivos-egito.html",
+      "ar": "ar/hajz-mawaqea-athariya-khas.html"
     },
     {
       "key": "journeys",
@@ -62,7 +65,8 @@
       "ru": "ru/tury-v-egipet.html",
       "id": "id/paket-tour-mesir.html",
       "ms": "ms/pakej-pelancongan-mesir.html",
-      "pt": "pt/viagens-ao-egito.html"
+      "pt": "pt/viagens-ao-egito.html",
+      "ar": "ar/rehlat-masr-khassa.html"
     },
     {
       "key": "nile-cruise",
@@ -74,7 +78,8 @@
       "ru": "ru/kruiz-po-nilu.html",
       "id": "id/pesiar-sungai-nil.html",
       "ms": "ms/pelayaran-sungai-nil.html",
-      "pt": "pt/cruzeiro-pelo-nilo.html"
+      "pt": "pt/cruzeiro-pelo-nilo.html",
+      "ar": "ar/rehla-niliya-khassa.html"
     },
     {
       "key": "cost",
@@ -86,7 +91,8 @@
       "ru": "ru/stoimost-tura-v-egipet.html",
       "id": "id/biaya-liburan-ke-mesir.html",
       "ms": "ms/kos-percutian-ke-mesir.html",
-      "pt": "pt/quanto-custa-viajar-para-o-egito.html"
+      "pt": "pt/quanto-custa-viajar-para-o-egito.html",
+      "ar": "ar/taklifat-rehla-ila-masr.html"
     },
     {
       "key": "when-to-go",
@@ -98,7 +104,8 @@
       "ru": "ru/kogda-luchshe-ehat-v-egipet.html",
       "id": "id/waktu-terbaik-ke-mesir.html",
       "ms": "ms/masa-terbaik-ke-mesir.html",
-      "pt": "pt/melhor-epoca-para-ir-ao-egito.html"
+      "pt": "pt/melhor-epoca-para-ir-ao-egito.html",
+      "ar": "ar/afdal-waqt-lizyarat-masr.html"
     },
     {
       "key": "safety",
@@ -110,7 +117,8 @@
       "ru": "ru/bezopasnost-v-egipte.html",
       "id": "id/apakah-mesir-aman.html",
       "ms": "ms/adakah-mesir-selamat.html",
-      "pt": "pt/e-seguro-viajar-para-o-egito.html"
+      "pt": "pt/e-seguro-viajar-para-o-egito.html",
+      "ar": "ar/hal-masr-amina.html"
     },
     {
       "key": "ultra",
@@ -122,7 +130,8 @@
       "ru": "ru/ultra-lyuks-tury-v-egipet.html",
       "id": "id/tur-ultra-mewah-mesir.html",
       "ms": "ms/percutian-ultra-mewah-mesir.html",
-      "pt": "pt/viagens-ultra-luxo-egito.html"
+      "pt": "pt/viagens-ultra-luxo-egito.html",
+      "ar": "ar/rehlat-fakhira-jiddan-fi-masr.html"
     }
   ]
 }

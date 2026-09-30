@@ -914,3 +914,82 @@ footer{background:var(--ink-2);border-top:1px solid var(--line);padding:var(--s-
    keeps the outline continuous (no h1→h3 jump) without adding visual noise. */
 .sr-head{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
   clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
+
+/* ===========================================================================
+   ARABIC / RIGHT-TO-LEFT
+   ---------------------------------------------------------------------------
+   dir="rtl" on <html> already does most of the work: every flex row, grid and
+   logical margin in this stylesheet mirrors on its own. What it cannot do is
+   typography, and Arabic typography is not Latin typography with the boxes
+   flipped.
+
+   WHY THE FONT STACK PUTS ARABIC FIRST AND KEEPS LATIN BEHIND IT
+   The Arabic faces are declared with unicode-range covering only the Arabic
+   blocks (see fonts.css), so a Latin character never matches them and falls
+   through to Fraunces and Outfit. That matters here because the navigation,
+   the footer headings and the buttons on these pages are still English — one
+   stack serves both scripts and neither is rendered in the other's fallback.
+
+   WHY LETTER-SPACING IS REMOVED
+   Arabic is cursive: letters join. The site's display idiom — .3em tracking
+   on eyebrows, buttons and headings — pulls those joins apart and produces
+   something that reads as broken rather than as styled. It is zeroed inside
+   the Arabic content only; the English chrome above and below keeps it.
+   =========================================================================== */
+[lang="ar"] {
+  --ff-display: 'Amiri', 'Fraunces', 'Fraunces Fallback', serif;
+  --ff-body: 'Plex Arabic', 'Outfit', 'Outfit Fallback', system-ui, sans-serif;
+}
+
+/* Arabic runs taller than Latin at the same size: the ascenders and the dots
+   need the room, and 1.85 that reads as generous in English reads as cramped
+   here. */
+[lang="ar"] .lz-wrap,
+[lang="ar"] .phero { line-height: 1.95; }
+
+[lang="ar"] .lz-wrap h1, [lang="ar"] .lz-wrap h2, [lang="ar"] .lz-wrap h3,
+[lang="ar"] .lz-wrap p,  [lang="ar"] .lz-wrap li, [lang="ar"] .lz-wrap span,
+[lang="ar"] .lz-wrap b,  [lang="ar"] .lz-wrap a,
+[lang="ar"] .phero h1,   [lang="ar"] .phero p {
+  letter-spacing: 0;
+}
+
+/* Amiri's x-height is small next to Fraunces, so a headline set at the Latin
+   size reads a step too quiet. Nudged rather than restyled. */
+[lang="ar"] .phero h1 { font-size: clamp(2.5rem, 5.4vw, 4.1rem); line-height: 1.35; }
+[lang="ar"] .lz-sec h2 { line-height: 1.5; }
+
+/* The section numerals (01, 02 …) stay Latin digits and keep their tracking;
+   forced back to LTR so a number never reverses beside Arabic text. */
+[lang="ar"] .lz-n { direction: ltr; unicode-bidi: isolate; letter-spacing: .2em; }
+
+/* Prices, dates and durations are Latin digits inside Arabic sentences. The
+   bidi algorithm gets "€200–450" right on its own, but an isolate stops a
+   trailing bracket or dash from jumping to the wrong end of the line. */
+[lang="ar"] .lz-facts b, [lang="ar"] time { unicode-bidi: isolate; }
+
+/* --- Direction, for the few places that are positioned rather than laid out */
+/* The seasonal ribbon's dismiss button is pinned to the right edge in px. */
+[dir="rtl"] .srb-close { right: auto; left: 10px; }
+[dir="rtl"] .srb-in { padding: 11px 28px 11px 104px; }
+@media (max-width: 900px) {
+  [dir="rtl"] .srb-in { padding: 10px 18px 10px 92px; }
+  [dir="rtl"] .srb-close { right: auto; left: 62px; }
+}
+/* Display headlines. Fraunces is set at line-height 1.03–1.14 because a Latin
+   display face can be packed that tightly. Amiri cannot: Arabic carries
+   descenders below the baseline and diacritics above it, and at 1.03 the two
+   lines of a headline physically collide — the tail of تفتح lands in the
+   middle of لكم. These are the site's tight display line-heights, opened up
+   for the one script that needs the room. */
+[lang="ar"] .vhero h1,
+[lang="ar"] .hero h1,
+[lang="ar"] h1, [lang="ar"] h2 { line-height: 1.45; }
+[lang="ar"] .vhero h1 { font-size: clamp(2.5rem, 5.8vw, 5rem); line-height: 1.8; }
+/* The overline and the small-caps labels keep their tracking in Latin but not
+   in Arabic, where it breaks the cursive join. */
+[lang="ar"] .vtag, [lang="ar"] .eyebrow, [lang="ar"] .vfact-sub,
+[lang="ar"] .btn { letter-spacing: 0; }
+
+/* The footer link hover nudges text to the right in LTR; mirror it. */
+[dir="rtl"] .foot-col a:hover { padding-left: 0; padding-right: var(--s-1); }

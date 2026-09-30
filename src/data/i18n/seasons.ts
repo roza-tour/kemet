@@ -192,6 +192,28 @@ export const SEASON_TEXT: Record<SiteLocale, Record<SeasonKey, SeasonText>> = {
     christmas: { label: "Natal e Réveillon no Egito", note: "Sol de inverno, Réveillon no Nilo, Natal copta em 7 de janeiro." },
     "christmas-booking": { label: "Natal e Réveillon", note: "A primeira semana do ano a esgotar no Egito — as melhores cabines no Nilo e os quartos com vista para as pirâmides saem primeiro." },
   },
+  // Written for a Gulf reader, not translated from the English. Two lines
+  // differ in substance rather than wording: SUMMER is not framed as a
+  // compromise (it is this market's season, and it arrives from hotter
+  // places), and the Ramadan and Eid lines are written from inside rather
+  // than as an explanation of somebody else's calendar.
+  ar: {
+    winter:  { label: "الشتاء في مصر", note: "ذروة الموسم — سماء صافية، و٢٢ درجة في البرّ الغربي بالأقصر، والنيل في أبهى حالاته." },
+    spring:  { label: "الربيع في مصر", note: "نهار دافئ وليل لطيف، والصحراء تزهر قبل حرّ الصيف." },
+    summer:  { label: "الصيف في مصر", note: "الزيارات تبدأ مع الفجر وتنتهي قبل الظهيرة، والمعابد شبه خالية — والبحر الأحمر في أفضل أوقاته." },
+    autumn:  { label: "الخريف في مصر", note: "ينكسر الحرّ ويعود الموسم — أجمل ضوء في السنة على النيل، قبل زحام الشتاء." },
+    ramadan: { label: "رمضان في مصر", note: "يُتوقَّع في {dates}. القاهرة المعزّية تضيء بالفوانيس حتى ما قبل الفجر." },
+    "eid-fitr": { label: "عيد الفطر", note: "يُتوقَّع في {dates} — المدن في احتفال، والمواقع الأثرية شبه خالية." },
+    "eid-adha": { label: "عيد الأضحى", note: "يُتوقَّع في {dates} — أكبر أعياد مصر: مواقع خالية ومدن محتفلة." },
+    easter:  { label: "عطلة الفصح في مصر", note: "أحد الفصح في {dates} — ربيع النيل، نهار دافئ وليل لطيف، وعطلة ممتدة." },
+    "easter-both": { label: "عطلة الفصح في مصر", note: "أحد الفصح في {dates}، ويوافق هذا العام الفصح الشرقي — وادي النيل في أحسن أحواله، ويُحجز مبكراً." },
+    "orthodox-easter": { label: "عيد القيامة القبطي", note: "يوافق {dates} — عيد مصر نفسها، وعطلة ربيعية يقضيها البلد كله في الهواء الطلق." },
+    "sun-festival": { label: "تعامد الشمس على أبو سمبل", note: "في {dates} تبلغ شمس الشروق قدس الأقداس في عمق المعبد." },
+    thanksgiving: { label: "عطلة عيد الشكر", note: "{dates} — العطلة الأمريكية الممتدة، في أفضل شهور النيل. تُحجز قبل موسم كامل." },
+    valentines: { label: "عيد الحب على النيل", note: "{dates} — فلوكة عند الغروب وعشاء على الماء، في أنسب شهور السنة لذلك." },
+    christmas: { label: "أعياد الميلاد ورأس السنة", note: "شمس الشتاء، ليلة رأس السنة على النيل، وعيد الميلاد القبطي في ٧ يناير." },
+    "christmas-booking": { label: "أعياد الميلاد ورأس السنة", note: "أول أسبوع يمتلئ في مصر — أفضل الغرف على النيل والمطلّة على الأهرامات تُحجز أولاً." },
+  },
 };
 
 /** "Explore" on the ribbon's call to action, and the close button's label. */
@@ -205,4 +227,5 @@ export const SEASON_UI: Record<SiteLocale, { explore: string; dismiss: string }>
   id: { explore: "Jelajahi",  dismiss: "Tutup pemberitahuan musim" },
   ms: { explore: "Terokai",   dismiss: "Tutup notis bermusim" },
   pt: { explore: "Descobrir", dismiss: "Fechar o aviso da temporada" },
+  ar: { explore: "اكتشفوا", dismiss: "إغلاق إشعار الموسم" },
 };

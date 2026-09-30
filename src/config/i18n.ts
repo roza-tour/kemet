@@ -49,14 +49,14 @@
 
 import registry from "./translation-groups.json";
 
-export const LOCALES = ["en", "de", "it", "es", "fr", "ru", "id", "ms", "pt"] as const;
+export const LOCALES = ["en", "de", "it", "es", "fr", "ru", "id", "ms", "pt", "ar"] as const;
 export type SiteLocale = (typeof LOCALES)[number];
 
 /** English is served unprefixed so no existing URL ever changes. */
 export const DEFAULT_LOCALE: SiteLocale = "en";
 
 /** Locales that have translated pages. */
-export const TRANSLATED_LOCALES = ["de", "it", "es", "fr", "ru", "id", "ms", "pt"] as const;
+export const TRANSLATED_LOCALES = ["de", "it", "es", "fr", "ru", "id", "ms", "pt", "ar"] as const;
 export type TranslatedLocale = (typeof TRANSLATED_LOCALES)[number];
 
 export interface LocaleMeta {
@@ -74,6 +74,12 @@ export interface LocaleMeta {
   short: string;
   /** Locale used for number and date formatting. */
   formatLocale: string;
+  /**
+   * Writing direction. Omitted for every left-to-right language, so <html dir>
+   * is only emitted where it changes something — and adding a second RTL
+   * language later is one field rather than a new branch.
+   */
+  dir?: "rtl";
 }
 
 export const LOCALE_META: Record<SiteLocale, LocaleMeta> = {
@@ -86,6 +92,7 @@ export const LOCALE_META: Record<SiteLocale, LocaleMeta> = {
   id: { tag: "id", home: "Beranda", language: "Bahasa", endonym: "Bahasa Indonesia", short: "ID", formatLocale: "id-ID" },
   ms: { tag: "ms", home: "Utama", language: "Bahasa", endonym: "Bahasa Melayu", short: "MS", formatLocale: "ms-MY" },
   pt: { tag: "pt", home: "Início", language: "Idioma", endonym: "Português", short: "PT", formatLocale: "pt-BR" },
+  ar: { tag: "ar", home: "الرئيسية", language: "اللغة", endonym: "العربية", short: "AR", formatLocale: "ar-EG", dir: "rtl" },
 };
 
 /**
