@@ -1,0 +1,66 @@
+---
+// SocialIcon — the profile marks, drawn in the site's own line idiom.
+//
+// WHY DRAWN RATHER THAN A LOGO FONT OR AN ICON PACK
+// Every other ornament on this site is a stroked SVG path — the winged sun,
+// the lotus divider, the corner ticks. A downloaded icon pack would be the
+// only filled, foreign-weight artwork in the footer, and it would mean a
+// dependency for three shapes. These are the same 1.4px stroke as everything
+// else and inherit currentColor, so they pick up the gold and the hover with
+// no extra rule.
+//
+// They are still each platform's mark — that is the point of an icon, and
+// linking to a profile with its own mark is what every brand guideline these
+// platforms publish expects. What is avoided is a full-colour lockup, which
+// would be wrong on this footer and is what those guidelines actually
+// restrict.
+//
+// ACCESSIBILITY: the icon is aria-hidden and the link keeps a visible text
+// label beside it. An icon-only row would need the name in an aria-label and
+// would still leave TripAdvisor's owl unreadable to anyone who does not
+// already know it at 17px.
+interface Props {
+  /** Key from company.socialProfiles. Unknown keys render nothing. */
+  name: string;
+}
+const { name } = Astro.props;
+---
+{name === "instagram" && (
+  <svg class="soc-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5.2" />
+    <circle cx="12" cy="12" r="4.1" />
+    <circle cx="17.1" cy="6.9" r="1.15" class="soc-dot" />
+  </svg>
+)}
+{name === "facebook" && (
+  <svg class="soc-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5.2" />
+    {/* The f: a stem that hooks over at the top, and its crossbar. */}
+    <path d="M14.6 7.9h-1.3c-1.1 0-1.9.8-1.9 1.9v7.4" />
+    <path d="M9.6 12.2h4.6" />
+  </svg>
+)}
+{name === "tripadvisor" && (
+  <svg class="soc-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    {/* The owl: a wide face with two eyes and a small beak above. */}
+    <path d="M12 6.4c3.1 0 5.2.5 5.2.5h3.9s-1.4 1-1.9 2.2" />
+    <path d="M12 6.4c-3.1 0-5.2.5-5.2.5H2.9s1.4 1 1.9 2.2" />
+    <circle cx="6.7" cy="13" r="3.9" />
+    <circle cx="17.3" cy="13" r="3.9" />
+    <circle cx="6.7" cy="13" r="1.4" class="soc-dot" />
+    <circle cx="17.3" cy="13" r="1.4" class="soc-dot" />
+    <path d="M10.4 10.6 12 8.6l1.6 2" />
+  </svg>
+)}
+
+<style is:global>
+  /* Sized and stroked to sit on the same optical weight as the small-caps
+     label beside it — a heavier icon next to 10px letterspaced text reads as
+     two different designs. */
+  .soc-i {
+    width: 17px; height: 17px; flex: none;
+    fill: none; stroke: currentColor; stroke-width: 1.4;
+    stroke-linecap: round; stroke-linejoin: round;
+  }
+  .soc-i .soc-dot { fill: currentColor; stroke: none; }
+</style>

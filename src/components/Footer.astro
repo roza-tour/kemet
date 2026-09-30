@@ -6,6 +6,7 @@ import { footerExplore, footerCompany } from "@/config/navigation";
 import { tierLine } from "@/data/standard";
 import LangSwitch from "@/components/LangSwitch.astro";
 import { company, socialLabel } from "@/data/company";
+import SocialIcon from "@/components/SocialIcon.astro";
 
 interface Props {
   /** Link prefix back to the site root ("" at root, "../" in subfolders). */
@@ -20,6 +21,7 @@ const wa = whatsappLink("Hello Kemet — I'd like to plan a journey to Egypt.");
 const socials = Object.entries(company.socialProfiles ?? {})
   .filter(([, url]) => typeof url === "string" && /^https:\/\//.test(url))
   .map(([key, url]) => ({
+    key,
     label: socialLabel(key),
     url,
   }));
@@ -73,8 +75,11 @@ const socials = Object.entries(company.socialProfiles ?? {})
             visible links and the structured data can never disagree. */}
         {socials.length > 0 && (
           <div class="foot-social">
-            {socials.map(({ label, url }) => (
-              <a href={url} rel="me noopener" target="_blank">{label}</a>
+            {socials.map(({ key, label, url }) => (
+              <a href={url} rel="me noopener" target="_blank">
+                <SocialIcon name={key} />
+                <span>{label}</span>
+              </a>
             ))}
           </div>
         )}
