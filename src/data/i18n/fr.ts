@@ -88,6 +88,7 @@ export const fr: LocalizedPage[] = [
     moreLabel: "Le site complet",
     moreText:
       "Ces pages sont une sélection en français. Le catalogue complet de Kemet — tous les voyages, destinations, expériences et guides pratiques — est disponible en anglais. Nous vous répondons évidemment en français.",
+    links: [{ label: "La Toussaint en Égypte", route: "fr/toussaint-en-egypte.html" }],
   },
 
   // ===== Voyages ===========================================================

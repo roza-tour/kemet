@@ -87,6 +87,7 @@ export const it: LocalizedPage[] = [
     moreLabel: "Il sito completo",
     moreText:
       "Queste pagine sono una selezione in italiano. Il catalogo completo di Kemet — tutti i viaggi, le destinazioni, le esperienze e le guide — è disponibile in inglese. Rispondiamo naturalmente in italiano.",
+    links: [{ label: "Ferragosto in Egitto", route: "it/ferragosto-in-egitto.html" }],
   },
 
   // ===== Viaggi ============================================================

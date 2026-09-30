@@ -253,7 +253,7 @@ export const idHalal: LocalizedPage = {
   symbol: "lotus",
   title: "Makanan Halal & Waktu Salat di Mesir | Kemet",
   description:
-    "Makanan di Mesir pada dasarnya halal karena negaranya mayoritas Muslim. Yang perlu dicek hanya beberapa hal kecil, dan bagaimana salat masuk dalam hari kunjungan.",
+    "Makanan di Mesir pada dasarnya halal karena negaranya mayoritas Muslim. Yang perlu dicek hanya beberapa hal, dan bagaimana salat masuk dalam hari kunjungan.",
   keywords:
     "makanan halal di mesir, apakah makanan mesir halal, waktu salat di mesir, masjid dekat piramida, kuliner mesir",
   crumb: "Halal & waktu salat",

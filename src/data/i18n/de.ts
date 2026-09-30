@@ -87,6 +87,7 @@ export const de: LocalizedPage[] = [
     moreLabel: "Die vollständige Website",
     moreText:
       "Diese Seiten sind eine Auswahl auf Deutsch. Der vollständige Kemet-Katalog — alle Reisen, Reiseziele, Erlebnisse und Reiseführer — steht auf Englisch zur Verfügung. Wir antworten selbstverständlich auf Deutsch.",
+    links: [{ label: "Weihnachten & Silvester in Ägypten", route: "de/weihnachten-in-aegypten.html" }],
   },
 
   // ===== Reisen ============================================================

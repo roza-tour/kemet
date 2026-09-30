@@ -87,6 +87,7 @@ export const es: LocalizedPage[] = [
     moreLabel: "El sitio completo",
     moreText:
       "Estas páginas son una selección en español. El catálogo completo de Kemet — todos los viajes, destinos, experiencias y guías — está disponible en inglés. Respondemos, naturalmente, en español.",
+    links: [{ label: "Semana Santa en Egipto", route: "es/semana-santa-en-egipto.html" }],
   },
 
   // ===== Viajes ============================================================

@@ -13,6 +13,7 @@ import type { LocalizedPage } from "./types";
 import { carnaval } from "./pt-carnaval";
 import { idUmrah, idZiarah, idSinai, idHalal } from "./id-extra";
 import { msUmrah, msZiarah, msSinai, msHalal } from "./ms-extra";
+import { frToussaint, esSemanaSanta, itFerragosto, deWeihnachten, ruNovyGod } from "./eu-holidays";
 
 export interface StandalonePage {
   locale: TranslatedLocale;
@@ -40,6 +41,16 @@ export const STANDALONE_PAGES: StandalonePage[] = [
   { locale: "ms", slug: "ziarah-kaherah-islam", page: msZiarah },
   { locale: "ms", slug: "bukit-tursina", page: msSinai },
   { locale: "ms", slug: "halal-dan-waktu-solat", page: msHalal },
+
+  // Europe. One holiday window per market — the thing a European types three
+  // months before booking is the name of their own holiday next to the word
+  // Egypt, and no English page can answer that. Five holidays, five seasons,
+  // five different arguments; none is a translation of another.
+  { locale: "fr", slug: "toussaint-en-egypte", page: frToussaint },
+  { locale: "es", slug: "semana-santa-en-egipto", page: esSemanaSanta },
+  { locale: "it", slug: "ferragosto-in-egitto", page: itFerragosto },
+  { locale: "de", slug: "weihnachten-in-aegypten", page: deWeihnachten },
+  { locale: "ru", slug: "novyy-god-v-egipte", page: ruNovyGod },
 ];
 
 export const standaloneRoute = (p: StandalonePage) => `${p.locale}/${p.slug}.html`;
