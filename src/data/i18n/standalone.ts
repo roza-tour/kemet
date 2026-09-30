@@ -11,6 +11,8 @@
 import type { TranslatedLocale } from "@/config/i18n";
 import type { LocalizedPage } from "./types";
 import { carnaval } from "./pt-carnaval";
+import { idUmrah, idZiarah, idSinai, idHalal } from "./id-extra";
+import { msUmrah, msZiarah, msSinai, msHalal } from "./ms-extra";
 
 export interface StandalonePage {
   locale: TranslatedLocale;
@@ -21,6 +23,23 @@ export interface StandalonePage {
 
 export const STANDALONE_PAGES: StandalonePage[] = [
   { locale: "pt", slug: "carnaval-no-egito", page: carnaval },
+
+  // Indonesia and Malaysia. Four each, and none of them a translation of an
+  // English page — these answer what those two markets search and the English
+  // site does not address at all: whether Egypt can be attached to an Umrah,
+  // what a ziarah route through Islamic Cairo contains, how to reach Mount
+  // Sinai, and how food and prayer work across a touring day. Translating four
+  // English pages instead would have competed for terms the site already ranks
+  // for in English.
+  { locale: "id", slug: "umrah-plus-mesir", page: idUmrah },
+  { locale: "id", slug: "ziarah-kairo-islam", page: idZiarah },
+  { locale: "id", slug: "gunung-sinai", page: idSinai },
+  { locale: "id", slug: "halal-dan-waktu-salat", page: idHalal },
+
+  { locale: "ms", slug: "umrah-plus-mesir", page: msUmrah },
+  { locale: "ms", slug: "ziarah-kaherah-islam", page: msZiarah },
+  { locale: "ms", slug: "bukit-tursina", page: msSinai },
+  { locale: "ms", slug: "halal-dan-waktu-solat", page: msHalal },
 ];
 
 export const standaloneRoute = (p: StandalonePage) => `${p.locale}/${p.slug}.html`;

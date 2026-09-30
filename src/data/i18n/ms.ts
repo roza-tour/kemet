@@ -91,6 +91,11 @@ export const ms: LocalizedPage[] = [
     moreLabel: "Laman penuh",
     moreText:
       "Halaman-halaman ini ialah pilihan dalam Bahasa Melayu. Katalog penuh Kemet — semua laluan, destinasi, pengalaman dan panduan praktikal — tersedia dalam Bahasa Inggeris. Kami tetap membalas mesej anda dalam Bahasa Melayu.",
+    links: [
+      { label: "Umrah plus Mesir", route: "ms/umrah-plus-mesir.html" },
+      { label: "Ziarah Kaherah Islam", route: "ms/ziarah-kaherah-islam.html" },
+      { label: "Makanan halal dan waktu solat", route: "ms/halal-dan-waktu-solat.html" },
+    ],
   },
 
   // ===== Pakej =============================================================
@@ -151,6 +156,11 @@ export const ms: LocalizedPage[] = [
     moreLabel: "Katalog penuh",
     moreText:
       "Kesemua dua puluh lima laluan berserta perincian harian, hotel dan harga tersedia dalam Bahasa Inggeris di laman utama. Hantarkan pertanyaan anda dalam Bahasa Melayu — kami balas dalam Bahasa Melayu.",
+    links: [
+      { label: "Ziarah Kaherah Islam", route: "ms/ziarah-kaherah-islam.html" },
+      { label: "Bukit Tursina dan Biara Saint Catherine", route: "ms/bukit-tursina.html" },
+      { label: "Umrah plus Mesir", route: "ms/umrah-plus-mesir.html" },
+    ],
   },
 
   // ===== Pelayaran Sungai Nil ==============================================

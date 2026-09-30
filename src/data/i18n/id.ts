@@ -90,6 +90,11 @@ export const id: LocalizedPage[] = [
     moreLabel: "Situs lengkap",
     moreText:
       "Halaman-halaman ini adalah ringkasan dalam Bahasa Indonesia. Katalog lengkap Kemet — seluruh rute, destinasi, pengalaman dan panduan praktis — tersedia dalam Bahasa Inggris. Kami tetap membalas pesan Anda dalam Bahasa Indonesia.",
+    links: [
+      { label: "Umrah plus Mesir", route: "id/umrah-plus-mesir.html" },
+      { label: "Ziarah Kairo Islam", route: "id/ziarah-kairo-islam.html" },
+      { label: "Makanan halal dan waktu salat", route: "id/halal-dan-waktu-salat.html" },
+    ],
   },
 
   // ===== Paket / rute ======================================================
@@ -150,6 +155,11 @@ export const id: LocalizedPage[] = [
     moreLabel: "Katalog lengkap",
     moreText:
       "Dua puluh lima rute lengkap dengan rincian harian, hotel dan harga tersedia dalam Bahasa Inggris di situs utama. Kirim pertanyaan Anda dalam Bahasa Indonesia — kami balas dalam Bahasa Indonesia.",
+    links: [
+      { label: "Ziarah Kairo Islam", route: "id/ziarah-kairo-islam.html" },
+      { label: "Gunung Sinai dan Biara Santa Katarina", route: "id/gunung-sinai.html" },
+      { label: "Umrah plus Mesir", route: "id/umrah-plus-mesir.html" },
+    ],
   },
 
   // ===== Pesiar Sungai Nil =================================================
