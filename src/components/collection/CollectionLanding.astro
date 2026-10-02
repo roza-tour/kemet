@@ -33,22 +33,42 @@ const journeys = registry.resolve<Tour>(landing.journeys);
 const selfRoute = `/${routeFor("seasonal", collection.slug)}`;
 ---
 
-{/* ---- 1. The booking window. Recomputed every build; see the data file. ---- */}
+{/* ---- 1. The fortnight, as four dated moments.
+         This is what somebody who has just arrived wants: not an argument,
+         just what the holiday consists of. Four dates read in a glance; the
+         paragraph behind each one is waiting at the foot of the page. ---- */}
+{landing.moments.length > 0 && (
+  <section class="lp-rail" aria-label="The festive fortnight, day by day">
+    <div class="wrap">
+      <ol class="lp-moments">
+        {landing.moments.map((m) => (
+          <li class="reveal">
+            <span class="lp-m-date">{m.date}</span>
+            <h2 class="lp-m-title">{m.title}</h2>
+            <p>{m.line}</p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+)}
+
+{/* ---- 2. The booking window — ONE sentence. Recomputed every build; the
+         reasoning behind it is in the detail section below the form. ---- */}
 <section class="lp-window" aria-labelledby="lp-window-h">
   <div class="wrap">
     <div class="lp-win-inner reveal">
-      <div class="eyebrow">{landing.window.eyebrow}</div>
-      <h2 id="lp-window-h">{landing.window.heading}</h2>
-      <p class="lp-lede">{landing.window.body}</p>
-      <ul class="lp-bullets">
-        {landing.window.bullets.map((b) => <li>{b}</li>)}
-      </ul>
+      <div class="lp-win-text">
+        <div class="eyebrow">{landing.window.eyebrow}</div>
+        <h2 id="lp-window-h">{landing.window.heading}</h2>
+        <p>{landing.window.line}</p>
+      </div>
       <a href="#plan" class="btn btn-solid lp-cta">{landing.ctaLabel}</a>
     </div>
   </div>
 </section>
 
-{/* ---- 2. The journeys, with their prices. ---- */}
+{/* ---- 3. The journeys, with their prices. ---- */}
 {journeys.length > 0 && (
   <section id="journeys">
     <div class="wrap">
@@ -65,7 +85,7 @@ const selfRoute = `/${routeFor("seasonal", collection.slug)}`;
   </section>
 )}
 
-{/* ---- 3. The form. The CTA target, and the point of the page. ---- */}
+{/* ---- 4. The form. The CTA target, and the point of the page. ---- */}
 <section id="plan" class="lp-plan">
   <div class="wrap">
     <div class="lp-plan-grid">
@@ -89,15 +109,22 @@ const selfRoute = `/${routeFor("seasonal", collection.slug)}`;
   </div>
 </section>
 
-{/* ---- 4. The argument. Below the form on purpose: whoever is still reading
-         at this point wants the reasons, and whoever was not is already in
-         the form above. ---- */}
-<section>
+{/* ---- 5. The detail: every paragraph the page owes the reader, all of it
+         below the form on purpose. Whoever is still here wants the reasons;
+         whoever was not is already in the form above. Nothing was cut to get
+         the top of the page short — it was moved here. ---- */}
+<section class="lp-detail">
   <div class="wrap">
+    <SectionHeader
+      sym="guides"
+      eyebrow="In full"
+      title={landing.detailIntro.heading}
+      text={landing.detailIntro.text}
+    />
     <div class="lp-arg">
-      {landing.argument.map((a) => (
+      {landing.detail.map((a) => (
         <div class="lp-arg-block reveal">
-          <h2>{a.heading}</h2>
+          <h3>{a.heading}</h3>
           <p>{a.body}</p>
         </div>
       ))}
@@ -105,7 +132,7 @@ const selfRoute = `/${routeFor("seasonal", collection.slug)}`;
   </div>
 </section>
 
-{/* ---- 5. The same subject in another language. Plain links, deliberately
+{/* ---- 6. The same subject in another language. Plain links, deliberately
          NOT hreflang: these are separate arguments written for their own
          markets, not translations of this page, and an hreflang cluster that
          claims otherwise is worse than none. ---- */}
@@ -123,10 +150,6 @@ const selfRoute = `/${routeFor("seasonal", collection.slug)}`;
 )}
 
 <style>
-  /* The window block carries the page's one piece of urgency, so it is the
-     only section allowed to look like a notice. The accent colour comes from
-     the collection's own theme (SeasonalTheme sets --gold), so this reads as
-     Christmas on the Christmas page and would read correctly on another. */
   /* The nav is fixed at 86px (70px on a phone), and the site sets no
      scroll-padding, so an anchor jump lands the target UNDER it — the "Plan
      these dates" button scrolled the form's heading behind the header.
@@ -135,20 +158,85 @@ const selfRoute = `/${routeFor("seasonal", collection.slug)}`;
   #plan, #journeys { scroll-margin-top: 110px; }
   @media (max-width: 680px) { #plan, #journeys { scroll-margin-top: 90px; } }
 
+  /* --- The dated moments ------------------------------------------------
+     A rail rather than four cards: a hairline runs behind the row and each
+     date sits on it, so the eye reads them as one fortnight in sequence
+     instead of four unrelated boxes. Typographic on purpose — the page is
+     already carrying a hero photograph and six photographed journey cards,
+     and four more images here would be the same note struck again.
+     It also loads instantly, which matters on the one page paying for its
+     own traffic. */
+  .lp-rail { padding-top: var(--s-5); padding-bottom: var(--s-3); }
+  .lp-moments {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--s-5);
+  }
+  @media (min-width: 760px) {
+    .lp-moments { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s-4); }
+  }
+  .lp-moments li {
+    position: relative;
+    padding-top: var(--s-4);
+    border-top: 1px solid var(--line-2);
+  }
+  /* The marker that sits the date on the rail. */
+  .lp-moments li::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    inset-inline-start: 0;
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--gold);
+    box-shadow: 0 0 0 4px color-mix(in oklab, var(--gold) 18%, transparent);
+  }
+  .lp-m-date {
+    display: block;
+    font-size: var(--t-micro);
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--gold-bright);
+  }
+  .lp-m-title {
+    font-size: var(--t-lg);
+    line-height: 1.25;
+    margin: var(--s-2) 0 var(--s-1);
+  }
+  .lp-moments p { font-size: var(--t-sm); color: var(--muted); margin: 0; }
+
+  /* --- The booking window ------------------------------------------------
+     The page's one piece of urgency, and now one sentence of it. The accent
+     comes from the collection's own theme (SeasonalTheme sets --gold), so it
+     reads as Christmas here and would read correctly on another collection.
+     Text and button sit on one line on a desk so the whole notice is about
+     the height of a paragraph, not of a page. */
   .lp-window { padding-top: var(--s-4); }
   .lp-win-inner {
     border: 1px solid color-mix(in oklab, var(--gold) 38%, transparent);
     border-inline-start: 3px solid var(--gold);
     border-radius: 2px;
     background: color-mix(in oklab, var(--gold) 5%, transparent);
-    padding: var(--s-5) var(--s-5) var(--s-4);
+    padding: var(--s-5);
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-4);
   }
-  .lp-win-inner h2 { margin-top: var(--s-1); margin-bottom: var(--s-3); }
-  .lp-lede { font-size: var(--t-lg); max-width: 62ch; }
-  .lp-cta { margin-top: var(--s-4); }
+  @media (min-width: 900px) {
+    .lp-win-inner { flex-direction: row; align-items: center; gap: var(--s-6); }
+    .lp-cta { flex: none; }
+  }
+  .lp-win-text { min-width: 0; }
+  .lp-win-inner h2 {
+    font-size: var(--t-xl);
+    margin: var(--s-1) 0 var(--s-2);
+  }
+  .lp-win-inner p { margin: 0; max-width: 72ch; }
 
-  /* One shared list style for the window bullets and the assurances — both
-     are "things you need to know", and giving them two looks said nothing. */
+  /* One shared list style for the assurances. */
   .lp-bullets { list-style: none; margin: var(--s-3) 0 0; padding: 0; }
   .lp-bullets li {
     position: relative;
@@ -188,8 +276,10 @@ const selfRoute = `/${routeFor("seasonal", collection.slug)}`;
   @media (min-width: 900px) {
     .lp-arg { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-6) var(--s-5); }
   }
-  .lp-arg-block h2 { font-size: var(--t-xl); margin-bottom: var(--s-2); }
-  .lp-arg-block p { max-width: 62ch; }
+  /* h3, not h2: these sit under the section's own heading, and a page where
+     every block is an h2 gives a screen reader no shape to navigate by. */
+  .lp-arg-block h3 { font-size: var(--t-lg); margin-bottom: var(--s-2); }
+  .lp-arg-block p { max-width: 62ch; font-size: var(--t-sm); }
 
   .lp-langs { padding-top: 0; }
   .lp-lang-row {
