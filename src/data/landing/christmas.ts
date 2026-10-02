@@ -197,6 +197,51 @@ const WINDOW_DETAIL: Record<Stage, { heading: string; body: string }> = {
 
 // --- the page ---------------------------------------------------------------
 export const christmasLanding: LandingPage = {
+  // Chrome, in this page's language. English here; see christmas-de.ts for
+  // the same object in German. Required rather than defaulted, so a new
+  // language cannot ship with an English form by accident.
+  ui: {
+    seeJourneys: "See the journeys",
+    journeysEyebrow: "Journeys",
+    assurancesHeading: "What happens next",
+    detailEyebrow: "In full",
+    otherLanguagesLabel: "Also written for",
+    form: {
+      nameLabel: "Your name *",
+      emailLabel: "Email *",
+      phoneLabel: "Phone / WhatsApp",
+      datesLabel: "Travel dates",
+      messageLabel: "Your message *",
+      partyLabel: "Who is travelling",
+      paceLabel: "Pace",
+      priorityLabel: "What matters more",
+      chooseLabel: "Choose, if you like",
+      partyOptions: [
+        "Two of us",
+        "A family with children",
+        "Three generations, or older travellers",
+        "A private group",
+        "Just me",
+      ],
+      paceOptions: [
+        "Unhurried — late starts, fewer sites a day",
+        "Balanced",
+        "Full days — as much as we can see",
+      ],
+      priorityOptions: [
+        "Comfort first",
+        "A balance of comfort and cost",
+        "Keeping the cost down",
+      ],
+      submit: "Send message",
+      sending: "Sending…",
+      okNote: "Thank you — your message has been sent. We will reply within one business day.",
+      errNote:
+        "Something went wrong and the message was not sent. Please check your name, email and message — or write to us on WhatsApp instead.",
+      honeypotLabel: "Website",
+    },
+  },
+
   eyebrow: `${DATES} · private journeys`,
   h1: `Christmas & New Year in Egypt, ${SEASON_Y}`,
   // Three short sentences. Everything this used to also say — the flight, the

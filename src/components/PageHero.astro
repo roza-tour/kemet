@@ -51,6 +51,9 @@ const {
     {overline && <div class="phero-over">{overline}</div>}
     <h1>{title}</h1>
     {text && <p>{text}</p>}
+    {/* Call-to-action buttons, for a page that is an offer. Empty on every
+        page that passes no children, so nothing changes where it is unused. */}
+    <slot />
   </div>
 </header>
 {heroSrc && (

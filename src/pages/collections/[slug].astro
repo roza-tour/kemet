@@ -67,7 +67,7 @@ const jsonld = entitySchema("seasonal", col);
         The only thing suppressed is the generic "Featured tours" grid further
         down, because the landing run has already shown the same journeys with
         their prices. See types/content.ts → LandingPage. */}
-    {col.landing && <CollectionLanding collection={col} landing={col.landing} base={base} />}
+    {col.landing && <CollectionLanding landing={col.landing} route={route} base={base} />}
 
     <section style="padding-top:var(--s-3)">
       <div class="wrap">

@@ -9,6 +9,7 @@
 // file; the words are not.
 // ---------------------------------------------------------------------------
 import type { TranslatedLocale } from "@/config/i18n";
+import type { LandingPage } from "@/types";
 
 export interface LocalizedSection {
   title: string;
@@ -53,6 +54,18 @@ export interface LocalizedPage {
   moreRoute?: string;
   /** Related pages in the same language, listed above the "more" link. */
   links?: Array<{ label: string; route: string }>;
+  /**
+   * Present only on a localised page that is ALSO a campaign destination.
+   *
+   * It does not replace anything: the page keeps its hero, its facts, its
+   * numbered sections, its highlights and its FAQ. The landing run — the four
+   * dated moments, the booking window in a sentence, the journeys with their
+   * prices and an enquiry form in this language — is inserted high on the
+   * page, above all of it. Same URL, same canonical, same sitemap entry, so a
+   * campaign never creates a second page competing with the one that already
+   * ranks. See types/content.ts → LandingPage and data/landing/.
+   */
+  landing?: LandingPage;
 }
 
 export type LocalePageSet = Record<TranslatedLocale, LocalizedPage[]>;

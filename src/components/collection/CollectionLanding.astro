@@ -9,28 +9,34 @@
 // across four components would let that order drift apart from the reasoning
 // behind it.
 //
-// Nothing here is collection-specific: every string comes from the
-// LandingPage data (src/data/landing/*), which is also where every date and
-// price is computed. A second campaign is a second data file.
+// Nothing here is collection-specific — and nothing is English-specific
+// either. Every string, down to the form's labels and its submit button,
+// comes from the LandingPage data (src/data/landing/*), which is also where
+// every date and price is computed. So the same component renders the English
+// collection page and the German localised one, and a third campaign in a
+// fourth language is a data file and nothing else.
 import SectionHeader from "@/components/SectionHeader.astro";
 import TourCard from "@/components/TourCard.astro";
 import ContactForm from "@/components/conversion/ContactForm.astro";
 import { registry } from "@/data/registry";
-import { routeFor } from "@/config/routes";
-import type { Collection, LandingPage, Tour } from "@/types";
+import type { LandingPage, Tour } from "@/types";
 
 interface Props {
-  collection: Collection;
   landing: LandingPage;
-  /** Link prefix back to the site root — "../" from inside /collections/. */
+  /**
+   * The route file of the page this is rendered on, e.g.
+   * "collections/christmas-new-year-egypt.html". Posted with the form so a
+   * visitor whose browser runs no JavaScript lands back HERE after sending,
+   * rather than on the English contact page.
+   */
+  route: string;
+  /** Link prefix back to the site root — "../" from inside a subfolder. */
   base?: string;
 }
-const { collection, landing, base = "" } = Astro.props;
+const { landing, route, base = "" } = Astro.props;
 
 const journeys = registry.resolve<Tour>(landing.journeys);
-// The page's own route, posted with the form so a visitor whose browser runs
-// no JavaScript lands back HERE after sending rather than on the contact page.
-const selfRoute = `/${routeFor("seasonal", collection.slug)}`;
+const selfRoute = `/${route}`;
 ---
 
 {/* ---- 1. The fortnight, as four dated moments.
@@ -74,7 +80,7 @@ const selfRoute = `/${routeFor("seasonal", collection.slug)}`;
     <div class="wrap">
       <SectionHeader
         sym="journeys"
-        eyebrow="Journeys"
+        eyebrow={landing.ui.journeysEyebrow}
         title={landing.journeysIntro.heading}
         text={landing.journeysIntro.text}
       />
@@ -95,11 +101,12 @@ const selfRoute = `/${routeFor("seasonal", collection.slug)}`;
         returnTo={selfRoute}
         context={landing.h1}
         datesPlaceholder={landing.form.datesPlaceholder}
+        labels={landing.ui.form}
         messagePlaceholder={landing.form.messagePlaceholder}
       />
       <aside class="lp-assure">
         <div class="pcard reveal">
-          <div class="eyebrow" style="margin-bottom:var(--s-2)">What happens next</div>
+          <div class="eyebrow" style="margin-bottom:var(--s-2)">{landing.ui.assurancesHeading}</div>
           <ul class="lp-bullets">
             {landing.assurances.map((a) => <li>{a}</li>)}
           </ul>
@@ -113,24 +120,29 @@ const selfRoute = `/${routeFor("seasonal", collection.slug)}`;
          below the form on purpose. Whoever is still here wants the reasons;
          whoever was not is already in the form above. Nothing was cut to get
          the top of the page short — it was moved here. ---- */}
-<section class="lp-detail">
-  <div class="wrap">
-    <SectionHeader
-      sym="guides"
-      eyebrow="In full"
-      title={landing.detailIntro.heading}
-      text={landing.detailIntro.text}
-    />
-    <div class="lp-arg">
-      {landing.detail.map((a) => (
-        <div class="lp-arg-block reveal">
-          <h3>{a.heading}</h3>
-          <p>{a.body}</p>
-        </div>
-      ))}
+{/* Omitted on a page that already carries its own long-form sections — a
+    localised page does, and a second set under a second heading would be the
+    same essay twice. */}
+{landing.detail && landing.detailIntro && landing.detail.length > 0 && (
+  <section class="lp-detail">
+    <div class="wrap">
+      <SectionHeader
+        sym="guides"
+        eyebrow={landing.ui.detailEyebrow}
+        title={landing.detailIntro.heading}
+        text={landing.detailIntro.text}
+      />
+      <div class="lp-arg">
+        {landing.detail.map((a) => (
+          <div class="lp-arg-block reveal">
+            <h3>{a.heading}</h3>
+            <p>{a.body}</p>
+          </div>
+        ))}
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+)}
 
 {/* ---- 6. The same subject in another language. Plain links, deliberately
          NOT hreflang: these are separate arguments written for their own
@@ -140,7 +152,7 @@ const selfRoute = `/${routeFor("seasonal", collection.slug)}`;
   <section class="lp-langs">
     <div class="wrap">
       <div class="lp-lang-row reveal">
-        <span class="eyebrow">Also written for</span>
+        <span class="eyebrow">{landing.ui.otherLanguagesLabel}</span>
         {landing.otherLanguages.map((l) => (
           <a href={`${base}${l.route}`} lang={l.lang}>{l.label}</a>
         ))}

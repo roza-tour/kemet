@@ -3,6 +3,8 @@
 // Posts to /contact-handler.php (public/contact-handler.php), which delivers
 // to the site mailbox via the cPanel server. Success/failure comes back as
 // ?sent=1|0#message-us and is shown by the small inline script below.
+import type { LandingFormLabels } from "@/types";
+
 interface Props {
   heading?: string;
   subtext?: string;
@@ -28,7 +30,50 @@ interface Props {
   /** Placeholders worth tailoring when the page is about specific dates. */
   datesPlaceholder?: string;
   messagePlaceholder?: string;
+  /**
+   * Every label, option and button, for a page that is not in English. The
+   * default below is the English contact page's own wording, so nothing
+   * changes where this prop is not passed. The select VALUES are fixed
+   * English keys either way — contact-handler.php re-checks them and writes
+   * the enquiry to the inbox in English whichever language it was sent in.
+   */
+  labels?: LandingFormLabels;
 }
+const EN: LandingFormLabels = {
+  nameLabel: "Your name *",
+  emailLabel: "Email *",
+  phoneLabel: "Phone / WhatsApp",
+  datesLabel: "Travel dates",
+  messageLabel: "Your message *",
+  partyLabel: "Who is travelling",
+  paceLabel: "Pace",
+  priorityLabel: "What matters more",
+  chooseLabel: "Choose, if you like",
+  partyOptions: [
+    "Two of us",
+    "A family with children",
+    "Three generations, or older travellers",
+    "A private group",
+    "Just me",
+  ],
+  paceOptions: [
+    "Unhurried — late starts, fewer sites a day",
+    "Balanced",
+    "Full days — as much as we can see",
+  ],
+  priorityOptions: [
+    "Comfort first",
+    "A balance of comfort and cost",
+    "Keeping the cost down",
+  ],
+  submit: "Send message",
+  sending: "Sending…",
+  okNote: "Thank you — your message has been sent. We will reply within one business day.",
+  errNote:
+    "Something went wrong and the message was not sent. Please check your name, email and message — or write to us on WhatsApp instead.",
+  honeypotLabel: "Website",
+};
+
 const {
   heading = "Send us a message",
   subtext = "Write to us directly — your message lands in our inbox and we reply within one business day.",
@@ -36,7 +81,18 @@ const {
   context,
   datesPlaceholder = "e.g. 10–20 October, flexible",
   messagePlaceholder = "Tell us where you want to go and what you would love to see.",
+  labels,
 } = Astro.props;
+
+const t = labels ?? EN;
+
+// The option VALUES, in the order their labels are given. Fixed English keys,
+// never translated: contact-handler.php accepts only these and maps them back
+// to English words for the email, so a German enquiry still reads correctly
+// in an inbox nobody reads German in.
+const PARTY_VALUES = ["couple", "family", "generations", "group", "solo"] as const;
+const PACE_VALUES = ["unhurried", "balanced", "full"] as const;
+const PRIORITY_VALUES = ["comfort", "balance", "cost"] as const;
 ---
 <div class="enq-panel reveal" id="message-us">
   <div class="enq-head">
@@ -47,18 +103,13 @@ const {
   {/* role/aria-live so the outcome is announced. A visually-revealed <div>
       tells a sighted visitor the message was sent and tells a screen-reader
       user nothing at all. */}
-  <div class="cform-note cform-note--ok" role="status" aria-live="polite" hidden>
-    Thank you — your message has been sent. We will reply within one business day.
-  </div>
-  <div class="cform-note cform-note--err" role="alert" hidden>
-    Something went wrong and the message was not sent. Please check your name,
-    email and message — or write to us on WhatsApp instead.
-  </div>
+  <div class="cform-note cform-note--ok" role="status" aria-live="polite" hidden>{t.okNote}</div>
+  <div class="cform-note cform-note--err" role="alert" hidden>{t.errNote}</div>
 
   <form class="cform" method="post" action="/contact-handler.php">
     {/* Honeypot — hidden from humans, bots fill it and get silently dropped. */}
     <label class="cform-hp" aria-hidden="true">
-      Website
+      {t.honeypotLabel}
       <input type="text" name="website" tabindex="-1" autocomplete="off" />
     </label>
     {/* Filled in by the page's own script at the moment of sending: seconds
@@ -70,19 +121,19 @@ const {
 
     <div class="cform-grid">
       <label>
-        <span>Your name *</span>
+        <span>{t.nameLabel}</span>
         <input type="text" name="name" required maxlength="120" autocomplete="name" />
       </label>
       <label>
-        <span>Email *</span>
+        <span>{t.emailLabel}</span>
         <input type="email" name="email" required maxlength="200" autocomplete="email" />
       </label>
       <label>
-        <span>Phone / WhatsApp</span>
+        <span>{t.phoneLabel}</span>
         <input type="tel" name="phone" maxlength="40" autocomplete="tel" />
       </label>
       <label>
-        <span>Travel dates</span>
+        <span>{t.datesLabel}</span>
         <input type="text" name="dates" maxlength="120" placeholder={datesPlaceholder} />
       </label>
       {/* Three optional questions that decide the shape of a reply: who the
@@ -92,41 +143,35 @@ const {
           and the late starts before they have to ask. The values are fixed and
           re-checked by contact-handler.php, which ignores anything else. */}
       <label>
-        <span>Who is travelling</span>
+        <span>{t.partyLabel}</span>
         <select name="party">
-          <option value="">Choose, if you like</option>
-          <option value="couple">Two of us</option>
-          <option value="family">A family with children</option>
-          <option value="generations">Three generations, or older travellers</option>
-          <option value="group">A private group</option>
-          <option value="solo">Just me</option>
+          <option value="">{t.chooseLabel}</option>
+          {PARTY_VALUES.map((v, i) => <option value={v}>{t.partyOptions[i]}</option>)}
         </select>
       </label>
       <label>
-        <span>Pace</span>
+        <span>{t.paceLabel}</span>
         <select name="pace">
-          <option value="">Choose, if you like</option>
-          <option value="unhurried">Unhurried — late starts, fewer sites a day</option>
-          <option value="balanced">Balanced</option>
-          <option value="full">Full days — as much as we can see</option>
+          <option value="">{t.chooseLabel}</option>
+          {PACE_VALUES.map((v, i) => <option value={v}>{t.paceOptions[i]}</option>)}
         </select>
       </label>
       <label class="cform-full">
-        <span>What matters more</span>
+        <span>{t.priorityLabel}</span>
         <select name="priority">
-          <option value="">Choose, if you like</option>
-          <option value="comfort">Comfort first</option>
-          <option value="balance">A balance of comfort and cost</option>
-          <option value="cost">Keeping the cost down</option>
+          <option value="">{t.chooseLabel}</option>
+          {PRIORITY_VALUES.map((v, i) => <option value={v}>{t.priorityOptions[i]}</option>)}
         </select>
       </label>
       <label class="cform-full">
-        <span>Your message *</span>
+        <span>{t.messageLabel}</span>
         <textarea name="message" required rows="6" maxlength="5000" placeholder={messagePlaceholder}></textarea>
       </label>
     </div>
 
-    <button type="submit" class="btn btn-solid">Send message</button>
+    {/* The "Sending…" label is read by the script below from this attribute,
+        so the button's busy state is in the page's own language too. */}
+    <button type="submit" class="btn btn-solid" data-sending={t.sending}>{t.submit}</button>
   </form>
 </div>
 
@@ -179,7 +224,7 @@ const {
     form.addEventListener("submit", function (ev) {
       if (!form.checkValidity()) return;      // let the browser show its message
       ev.preventDefault();
-      if (btn) { btn.disabled = true; btn.textContent = "Sending…"; }
+      if (btn) { btn.disabled = true; btn.textContent = btn.dataset.sending || "Sending…"; }
       if (ok) ok.hidden = true; if (err) err.hidden = true;
 
       fetch(form.action, {

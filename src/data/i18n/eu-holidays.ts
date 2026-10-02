@@ -31,6 +31,7 @@
 import type { LocalizedPage } from "./types";
 import { tours } from "@/data/tours";
 import { findMonth } from "@/data/months";
+import { weihnachtenLanding, SEASON_Y } from "@/data/landing/christmas-de";
 
 // --- date machinery ---------------------------------------------------------
 const DAY = 86_400_000;
@@ -318,7 +319,11 @@ export const itFerragosto: LocalizedPage = {
 };
 
 // ===== DEUTSCH — Weihnachten & Silvester ===================================
-const XMAS_Y = yearOf(12, 26, 10);
+// The season year comes from the landing layer this page carries, not from
+// yearOf(): the two used different rollover dates, so between 1 and 7 January
+// the <title> was offering next December while the landing run on the same
+// page was still selling the week that was running. One rule, one place.
+const XMAS_Y = SEASON_Y;
 const deDateY = fmt("de-DE", { day: "numeric", month: "long", year: "numeric" });
 const NYE = new Date(Date.UTC(XMAS_Y, 11, 31));
 
@@ -331,6 +336,11 @@ export const deWeihnachten: LocalizedPage = {
   keywords:
     "weihnachten in aegypten, silvester aegypten, aegypten winterurlaub, nilkreuzfahrt weihnachten, aegypten rundreise dezember",
   crumb: "Weihnachten & Silvester",
+  // The campaign face of this page — see data/landing/christmas-de.ts. The
+  // whole German page below is unchanged; the landing run is inserted above
+  // it. This is the only localised page that carries one, because it is the
+  // only one the site advertises in its own language.
+  landing: weihnachtenLanding,
   h1: "Weihnachten und Silvester in Ägypten",
   standfirst:
     `${dec.temps.luxor} in Luxor, während es zu Hause dunkel ist — und die am stärksten umkämpften zwei Wochen des ägyptischen Jahres.`,

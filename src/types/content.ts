@@ -185,7 +185,62 @@ export interface CollectionRelationships {
  * `detail`, under the form, for the reader who wants it. The page still says
  * every honest thing it said before; it just stops saying all of it at once.
  */
+/**
+ * Every word of chrome on a landing page, in the page's own language.
+ *
+ * REQUIRED, not optional with English defaults. A German landing page whose
+ * form still said "Your name *" and "Send message" would convert worse than
+ * no German page at all, and an optional field with a fallback is exactly how
+ * that ships unnoticed. Making it mandatory means a half-translated landing
+ * page does not compile.
+ *
+ * The SELECT VALUES are deliberately not in here. They are fixed English keys
+ * ("couple", "unhurried", "comfort") that contact-handler.php re-checks and
+ * turns back into English for the inbox — the labels are translated, the
+ * values are not, so an enquiry from the German page is still readable by the
+ * people who answer it.
+ */
+export interface LandingFormLabels {
+  nameLabel: string;
+  emailLabel: string;
+  phoneLabel: string;
+  datesLabel: string;
+  messageLabel: string;
+  partyLabel: string;
+  paceLabel: string;
+  priorityLabel: string;
+  /** The empty first option on every select. */
+  chooseLabel: string;
+  /** In the fixed order of the form's own option values. */
+  partyOptions: [couple: string, family: string, generations: string, group: string, solo: string];
+  paceOptions: [unhurried: string, balanced: string, full: string];
+  priorityOptions: [comfort: string, balance: string, cost: string];
+  submit: string;
+  sending: string;
+  /** Shown after a successful send, and after a failed one. */
+  okNote: string;
+  errNote: string;
+  /** The honeypot's label — hidden from people, read by screen readers. */
+  honeypotLabel: string;
+}
+
+export interface LandingUi {
+  /** Second, quieter button in the hero. */
+  seeJourneys: string;
+  /** Eyebrow above the journeys grid. */
+  journeysEyebrow: string;
+  /** Heading on the reassurance card beside the form. */
+  assurancesHeading: string;
+  /** Eyebrow above the detail section, when there is one. */
+  detailEyebrow: string;
+  /** Label before the other-language links. */
+  otherLanguagesLabel: string;
+  form: LandingFormLabels;
+}
+
 export interface LandingPage {
+  /** Every string of chrome, in this page's language. */
+  ui: LandingUi;
   /** Small line above the h1. */
   eyebrow: string;
   /** Replaces the collection title as the page's h1. */
@@ -223,13 +278,18 @@ export interface LandingPage {
   };
   /** What happens after they send it — stated, not implied. */
   assurances: string[];
-  /** Heading and supporting line above the detail blocks. */
-  detailIntro: { heading: string; text: string };
+  /**
+   * Heading and supporting line above the detail blocks. Omitted, with
+   * `detail`, when the page the landing layer sits on already carries its own
+   * long-form sections — on a localised page it does, and repeating them
+   * under a second heading would be the same essay twice.
+   */
+  detailIntro?: { heading: string; text: string };
   /**
    * Everything that needs more than a line: the booking-window reasoning, the
    * costs, the occasion in full. Rendered BELOW the form, on purpose.
    */
-  detail: { heading: string; body: string }[];
+  detail?: { heading: string; body: string }[];
   /** Same subject, other languages. Route files, with a native label. */
   otherLanguages?: { route: string; label: string; lang: string }[];
 }
