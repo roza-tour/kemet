@@ -8,6 +8,7 @@
 // ---------------------------------------------------------------------------
 import type { Collection } from "@/types";
 import { tours as allTours } from "@/data/tours";
+import { christmasLanding } from "@/data/landing/christmas";
 
 // Read from the journeys, not typed here: the flight-version difference, and
 // the journeys that keep you in one bed — both change when the catalogue does.
@@ -533,6 +534,11 @@ export const collections: Collection[] = [
       height: 500,
     },
     theme: "christmas",
+    // The campaign face of this page — see data/landing/christmas.ts. It does
+    // not replace anything below: every editorial section still renders, under
+    // the offer instead of above it. This is the only collection that carries
+    // one, because it is the only one the site advertises.
+    landing: christmasLanding,
     lastReviewed: "2026-09",
     relationships: {
       tours: tour(

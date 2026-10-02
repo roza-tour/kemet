@@ -16,6 +16,14 @@ interface Props {
 const { collection, base = "" } = Astro.props;
 const typeLabel = labelOf(collectionTypes, collection.collectionType) ?? collection.collectionType;
 const hub = hubFor("seasonal");
+
+// A collection that is also a campaign destination leads with its offer
+// instead of its title: the ad click has about one screen to be convinced, and
+// "Seasonal Collection" is not what convinces it. The breadcrumb, the theme
+// and the hero image are unchanged — only the words and the call to action
+// differ, so the organic visitor arrives somewhere that still looks like the
+// rest of the site. See types/content.ts → LandingPage.
+const lp = collection.landing;
 ---
 <header class="phero" style="padding-bottom:var(--s-5)">
   {collection.theme && <SeasonalTheme theme={collection.theme} />}
@@ -25,9 +33,28 @@ const hub = hubFor("seasonal");
       <a href={`${base}${hub}`}>Collections</a> ·
       <span>{collection.title}</span>
     </nav>
-    <div class="eyebrow">{typeLabel}</div>
-    <h1>{collection.title}</h1>
-    <p>{collection.subtitle}</p>
+    <div class="eyebrow">{lp ? lp.eyebrow : typeLabel}</div>
+    <h1>{lp ? lp.h1 : collection.title}</h1>
+    <p>{lp ? lp.standfirst : collection.subtitle}</p>
+    {lp && (
+      <>
+        <div class="hero-actions" style="justify-content:center;margin-top:var(--s-5)">
+          <a href="#plan" class="btn btn-solid">{lp.ctaLabel}</a>
+          <a href="#journeys" class="btn btn-ghost">See the journeys</a>
+        </div>
+        {/* Figures, not adjectives — and every one of them read from the month
+            guide, the catalogue or the calendar (data/landing/). A fact strip
+            whose numbers were typed here would be stale within a season. */}
+        <dl class="lp-facts">
+          {lp.facts.map((f) => (
+            <div>
+              <dt>{f.label}</dt>
+              <dd>{f.value}</dd>
+            </div>
+          ))}
+        </dl>
+      </>
+    )}
   </div>
 </header>
 {collection.hero && (
@@ -46,3 +73,41 @@ const hub = hubFor("seasonal");
     </div>
   </section>
 )}
+
+<style>
+  /* The fact strip under a landing hero. A <dl> because that is what it is —
+     six label/value pairs — and it keeps the labels available to a screen
+     reader as labels rather than as six orphaned fragments. */
+  .lp-facts {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1px;
+    /* Centred, because the hero above it is: a left-aligned strip under a
+       centred headline reads as a mistake rather than as a choice. */
+    margin: var(--s-5) auto 0;
+    background: var(--line);
+    border: 1px solid var(--line);
+    max-width: 760px;
+    text-align: center;
+  }
+  @media (min-width: 720px) {
+    .lp-facts { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  }
+  .lp-facts > div {
+    background: rgba(13, 16, 20, .55);
+    padding: var(--s-3) var(--s-3) calc(var(--s-3) - 2px);
+  }
+  .lp-facts dt {
+    font-size: var(--t-micro);
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--muted-2);
+  }
+  .lp-facts dd {
+    margin: 4px 0 0;
+    font-family: var(--ff-display);
+    font-size: var(--t-lg);
+    line-height: 1.25;
+    color: var(--gold-bright);
+  }
+</style>

@@ -6,10 +6,36 @@
 interface Props {
   heading?: string;
   subtext?: string;
+  /**
+   * Where a NO-JAVASCRIPT submit should land. The handler redirects to
+   * /contact.html by default, which is right when the form IS the contact
+   * page and wrong everywhere else — a visitor who sends an enquiry from a
+   * campaign page and is dropped onto a different page has lost the thread,
+   * and the enquiry they can no longer see is the one they send again. Posted
+   * as a field and re-checked against a strict pattern server-side; see
+   * contact-handler.php.
+   */
+  returnTo?: string;
+  /**
+   * What the visitor was looking at, written into the email. The handler
+   * already works out how someone found the site from the server's own
+   * analytics trail, but that trail is empty for anyone whose browser blocks
+   * the script — and on a page carrying ad spend, "which page produced this
+   * enquiry" is the question the money depends on. Stated by the page itself,
+   * it is always there.
+   */
+  context?: string;
+  /** Placeholders worth tailoring when the page is about specific dates. */
+  datesPlaceholder?: string;
+  messagePlaceholder?: string;
 }
 const {
   heading = "Send us a message",
   subtext = "Write to us directly — your message lands in our inbox and we reply within one business day.",
+  returnTo,
+  context,
+  datesPlaceholder = "e.g. 10–20 October, flexible",
+  messagePlaceholder = "Tell us where you want to go and what you would love to see.",
 } = Astro.props;
 ---
 <div class="enq-panel reveal" id="message-us">
@@ -39,6 +65,8 @@ const {
         the visitor spent on the page. A bot posting straight to the handler
         never runs the script, so it arrives empty — see contact-handler.php. */}
     <input type="hidden" name="kt" value="" />
+    {returnTo && <input type="hidden" name="return" value={returnTo} />}
+    {context && <input type="hidden" name="context" value={context} />}
 
     <div class="cform-grid">
       <label>
@@ -55,7 +83,7 @@ const {
       </label>
       <label>
         <span>Travel dates</span>
-        <input type="text" name="dates" maxlength="120" placeholder="e.g. 10–20 October, flexible" />
+        <input type="text" name="dates" maxlength="120" placeholder={datesPlaceholder} />
       </label>
       {/* Three optional questions that decide the shape of a reply: who the
           journey has to suit, how fast it can go, and whether comfort or cost
@@ -94,7 +122,7 @@ const {
       </label>
       <label class="cform-full">
         <span>Your message *</span>
-        <textarea name="message" required rows="6" maxlength="5000" placeholder="Tell us where you want to go and what you would love to see."></textarea>
+        <textarea name="message" required rows="6" maxlength="5000" placeholder={messagePlaceholder}></textarea>
       </label>
     </div>
 

@@ -159,6 +159,62 @@ export interface CollectionRelationships {
 }
 
 /**
+ * A LANDING LAYER for a collection — the campaign face of a page that already
+ * exists.
+ *
+ * WHY THIS IS A LAYER AND NOT A SECOND PAGE
+ * A paid campaign and an organic search want different things from the same
+ * subject: the ad click wants one promise, one price and one form, and the
+ * search result wants the whole argument. The obvious move is two URLs, and it
+ * is the wrong one — two English pages about Christmas in Egypt split their own
+ * ranking signal, and the one carrying the ad spend is the one with no links to
+ * it. So the landing page IS the collection page: same URL, same canonical,
+ * same place in the sitemap and in the seasonal ribbon. When a collection
+ * carries this field the template leads with the offer and the form and keeps
+ * every editorial section below it; when it does not, nothing changes.
+ *
+ * Everything time-sensitive in here is COMPUTED at build time (see
+ * data/landing/) — a landing page that names a year or counts weeks cannot be
+ * typed by hand or it is wrong by the next campaign.
+ */
+export interface LandingPage {
+  /** Small line above the h1. */
+  eyebrow: string;
+  /** Replaces the collection title as the page's h1. */
+  h1: string;
+  /** The one paragraph that has to earn the scroll. */
+  standfirst: string;
+  /** The primary call to action, as it reads on the button. */
+  ctaLabel: string;
+  /** Four to six hard facts under the hero. Values, not claims. */
+  facts: { label: string; value: string }[];
+  /**
+   * The honest state of the booking window, recomputed every build: how long
+   * until the dates, and what is realistically still available. This is the
+   * block that makes the page convert, and the one that would do the most
+   * damage if it were written once and left.
+   */
+  window: { eyebrow: string; heading: string; body: string; bullets: string[] };
+  /** The argument, in a few headed blocks. */
+  argument: { heading: string; body: string }[];
+  /** Journeys shown with their price, in campaign order. */
+  journeys: Ref<"tour">[];
+  /** Heading and supporting line above the journey cards. */
+  journeysIntro: { heading: string; text: string };
+  /** The enquiry form's own words. */
+  form: {
+    heading: string;
+    subtext: string;
+    datesPlaceholder: string;
+    messagePlaceholder: string;
+  };
+  /** What happens after they send it — stated, not implied. */
+  assurances: string[];
+  /** Same subject, other languages. Route files, with a native label. */
+  otherLanguages?: { route: string; label: string; lang: string }[];
+}
+
+/**
  * An Editorial Collection — a first-class content domain that curates existing
  * entities around a travel theme, season or visitor intent. Collections do NOT
  * duplicate content; they reference it. They are presentation-independent:
@@ -197,6 +253,12 @@ export interface Collection extends ContentEntity {
    * Omit for the default Kemet gold treatment.
    */
   theme?: SeasonalTheme;
+  /**
+   * Present only on a collection that is also a campaign destination. See
+   * LandingPage: the page keeps its URL and all of its editorial content, and
+   * leads with the offer instead of the essay.
+   */
+  landing?: LandingPage;
   relationships?: CollectionRelationships;
 }
 
