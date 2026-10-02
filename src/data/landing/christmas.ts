@@ -125,66 +125,73 @@ const DATES = `${dY(EVE)} – ${dY(COPTIC)}`;
 const PEAK = `${d(PEAK_FROM)} to ${d(PEAK_TO)}`;
 const TIER = tierFor(DAYS_OUT);
 
+/**
+ * ONE SENTENCE PER STAGE, above the fold.
+ *
+ * The first version of this page put the whole honest explanation here, four
+ * or five lines of it, between the hero and the journeys — which is a wall of
+ * text in the exact place a visitor is deciding whether to keep going. The
+ * reasoning did not get cut; it moved to DETAIL, below the form, where
+ * somebody who wants it will read it properly instead of skimming past it.
+ */
 const WINDOWS: Record<Stage, LandingPage["window"]> = {
   early: {
     eyebrow: `About ${MONTHS_OUT} months out`,
-    heading: "Nothing is gone yet — which is the whole advantage",
-    body:
-      `This is the earliest anyone sensibly plans ${SEASON_Y}'s festive fortnight, and it is the only point at which you choose rather than accept. The small dahabiyas, the Giza-facing rooms and the ${d(NYE)} sailings are all still open. Tell us the shape you want and we build it around the vessel, not the other way round.`,
-    bullets: [
-      `Christmas Eve falls on ${EVE.toLocaleDateString("en-GB", { timeZone: "UTC", weekday: "long" })} in ${SEASON_Y}`,
-      `Book the Nile cruise first and the land days around its fixed departure day — that order matters more at Christmas than at any other time of year`,
-      `${PEAK} carries a holiday supplement at every hotel and on every vessel; booking early does not remove it, but it does get you the room worth paying it for`,
-    ],
+    heading: "Nothing is gone yet",
+    line: `Which is the whole advantage: this is the only point in the year at which you choose the vessel and the room, rather than take what is left.`,
   },
   prime: {
     eyebrow: `${MONTHS_OUT} months out`,
     heading: "This is the window the good boats are booked in",
-    body:
-      `Four to nine months is when ${SEASON_Y}'s festive fortnight is actually decided. The best-run vessels still have cabins and the landmark hotels still have their good rooms, but both are going, and the ${d(NYE)} sailing is always the first cabin to sell on any Egyptian itinerary. There is still room to design the trip properly; in two months there will be room to fit it around what is left.`,
-    bullets: [
-      `Christmas Eve falls on ${EVE.toLocaleDateString("en-GB", { timeZone: "UTC", weekday: "long" })} in ${SEASON_Y}`,
-      `Domestic flights to Luxor and Aswan and the sleeper-train cabins fill as early as the hotels — they are booked at the same time, not afterwards`,
-      `${PEAK} carries a holiday supplement at every hotel and on every vessel; we put it in the quote, itemised, before you commit to anything`,
-    ],
+    line: `The best vessels still have cabins and the landmark hotels still have their good rooms — but both are going, and ${d(NYE)} always sells first.`,
   },
   late: {
     eyebrow: `${WEEKS_OUT} weeks out`,
-    heading: "Late, but genuinely workable — here is what that means",
-    body:
-      `At ${WEEKS_OUT} weeks the honest position is this: the small dahabiyas and most Giza-facing rooms for ${PEAK} are gone, and the ${d(NYE)} sailings are close to it. What is still entirely possible is a very good ${SEASON_Y} Christmas built around what is actually free — and because we hold nothing in advance and quote from live availability, we can tell you within a day which of the journeys below can still be run on your dates, rather than taking the booking and finding out afterwards.`,
-    bullets: [
-      `Flexibility on the cruise departure day is worth more than flexibility on anything else at this range`,
-      `If New Year's Eve on the river is the one non-negotiable, say so in the form — it changes what we look for first`,
-      // The tier at this range is the mildest one, so it is stated as the
-      // reassurance it actually is. The WARNING version of this line belongs
-      // to the "last" stage below, where the tier genuinely bites — reading a
-      // 45-days-out notice as a threat three months out is the kind of
-      // manufactured urgency that gets a page distrusted.
-      `${PEAK} carries a holiday supplement at every hotel and on every vessel, itemised in your quote; and ${bookingTerms.cancellationTiers[0].window.toLowerCase()}, cancelling costs the ${bookingTerms.cancellationTiers[0].charge.toLowerCase()}`,
-    ],
+    heading: "Late, but genuinely workable",
+    line: `The small dahabiyas and most Giza-facing rooms are gone. A very good ${SEASON_Y} Christmas is still entirely possible, and we can tell you within a day exactly which one.`,
   },
   last: {
     eyebrow: `${DAYS_OUT} days out`,
-    heading: "This is late. We will say so, and then say what still works",
-    body:
-      `${DAYS_OUT} days before Christmas Eve, ${PEAK} is close to full and anything we can still arrange will be shaped by availability rather than by preference. We will look, and we will tell you plainly what is there. But the alternative deserves saying: from about ${d(EASES)} the same weather costs materially less — ${jan.temps.luxor} in Luxor, ${jan.temps.cairo} in Cairo, the same clear winter light, and the New Year pricing gone. If your dates can move two weeks, they should.`,
-    bullets: [
-      `Tell us in the form whether the dates are fixed or movable — it is the single most useful thing you can say at this range`,
-      `Cancellation, on a booking confirmed this close: ${TIER.charge.toLowerCase()} (${TIER.window.toLowerCase()})`,
-      `Mid-January instead: the first ten days are still ${jan.crowds.toLowerCase()} season at ${jan.prices.toLowerCase()} prices, and then it eases noticeably while the weather does not change at all`,
-    ],
+    heading: "This is late, and we will say so",
+    line: `We will look, and tell you plainly what is there. But if your dates can move two weeks, mid-January is the same weather for materially less.`,
   },
   live: {
     eyebrow: "The window is running now",
-    heading: `${DATES} — and then the best-value weeks of the winter`,
+    heading: "These dates are sold — the next three weeks are not",
+    line: `From about ${d(EASES)} the holiday supplement comes off and the weather does not change: ${jan.temps.luxor} in Luxor, ${jan.temps.cairo} in Cairo, the same clear light.`,
+  },
+};
+
+/**
+ * The reasoning behind the sentence above, in full, for the detail section.
+ * Separated from it deliberately: the short line and the long explanation go
+ * stale together, so they are written together and rendered far apart.
+ */
+const WINDOW_DETAIL: Record<Stage, { heading: string; body: string }> = {
+  early: {
+    heading: "How far ahead this needs booking",
     body:
-      `Egypt's festive season is under way: ${d(NYE)} on the river, and Coptic Christmas on ${d(COPTIC)}, when midnight liturgy at the Hanging Church in Old Cairo marks one of the oldest continuous Christmas observances anywhere. For travel, two things are true at once — these exact dates are effectively sold, and the fortnight that follows is one of the best-value stretches of the Egyptian year. From about ${d(EASES)} the New Year supplement comes off and the weather stays exactly as it is.`,
-    bullets: [
-      `Coptic Christmas on ${d(COPTIC)} — visitors are welcome; it is worship rather than a spectacle, so modest dress and an early arrival`,
-      `From ${d(EASES)}: ${jan.temps.luxor} in Luxor and ${jan.temps.cairo} in Cairo, the same light, without the holiday supplement`,
-      `For next Christmas — ${dY(new Date(Date.UTC(SEASON_Y + 1, 11, 24)))} — this is the earliest and best moment to start, and the only one at which you choose the vessel`,
-    ],
+      `Six to nine months is the honest answer, and at ${MONTHS_OUT} months you are ahead of it. Christmas Eve falls on a ${EVE.toLocaleDateString("en-GB", { timeZone: "UTC", weekday: "long" })} in ${SEASON_Y}. Book the Nile cruise first and build the land days around its fixed departure day — that order matters more over Christmas than at any other time of year, because the vessel is the part with no alternative. ${PEAK} carries a holiday supplement at every hotel and on every vessel in the country; booking early does not remove it, but it is what gets you the room worth paying it for.`,
+  },
+  prime: {
+    heading: "How far ahead this needs booking",
+    body:
+      `Four to nine months is when ${SEASON_Y}'s festive fortnight is actually decided, so this is the moment. Christmas Eve falls on a ${EVE.toLocaleDateString("en-GB", { timeZone: "UTC", weekday: "long" })}. Domestic flights to Luxor and Aswan and the sleeper-train cabins fill as early as the hotels do — they are booked at the same time, not afterwards. And ${PEAK} carries a holiday supplement at every hotel and on every vessel; we put it in the quote, itemised, before you commit to anything.`,
+  },
+  late: {
+    heading: `What ${WEEKS_OUT} weeks out actually means`,
+    body:
+      `The small dahabiyas and most Giza-facing rooms for ${PEAK} are gone, and the ${d(NYE)} sailings are close to it. What is still entirely possible is a very good Christmas built around what is actually free — and because we hold nothing in advance and quote from live availability, we can tell you within a day which of the journeys above can still be run on your dates, rather than taking the booking and finding out afterwards. Flexibility on the cruise departure day is worth more than flexibility on anything else at this range; if New Year's Eve on the river is the one non-negotiable, say so and it changes what we look for first. The supplement for ${PEAK} is itemised in your quote — and ${bookingTerms.cancellationTiers[0].window.toLowerCase()}, cancelling costs the ${bookingTerms.cancellationTiers[0].charge.toLowerCase()}.`,
+  },
+  last: {
+    heading: `What ${DAYS_OUT} days out actually means`,
+    body:
+      `${PEAK} is close to full, and anything we can still arrange will be shaped by availability rather than by preference. We will look, and we will tell you plainly what is there. But the alternative deserves saying properly: from about ${d(EASES)} the same weather costs materially less — ${jan.temps.luxor} in Luxor, ${jan.temps.cairo} in Cairo, the same clear winter light, and the New Year pricing gone. The first ten days of January are still ${jan.crowds.toLowerCase()} season at ${jan.prices.toLowerCase()} prices; after that it eases noticeably while the weather does not change at all. Tell us in the form whether your dates are fixed or movable — at this range it is the single most useful thing you can say. And cancellation on a booking confirmed this close is ${TIER.charge.toLowerCase()} (${TIER.window.toLowerCase()}).`,
+  },
+  live: {
+    heading: "Travelling now, or planning the next one",
+    body:
+      `Two things are true at once. These exact dates are effectively sold — ${DATES} is the most contested fortnight of the Egyptian year and it goes six to twelve months ahead. And the stretch that follows is one of the best-value of the whole winter: from about ${d(EASES)} the New Year supplement comes off, ${jan.temps.luxor} in Luxor and ${jan.temps.cairo} in Cairo, the same low clear light. For next Christmas — ${dY(new Date(Date.UTC(SEASON_Y + 1, 11, 24)))} — this is the earliest and best moment to start, and the only one at which you choose the vessel rather than accept one.`,
   },
 };
 
@@ -192,8 +199,11 @@ const WINDOWS: Record<Stage, LandingPage["window"]> = {
 export const christmasLanding: LandingPage = {
   eyebrow: `${DATES} · private journeys`,
   h1: `Christmas & New Year in Egypt, ${SEASON_Y}`,
+  // Three short sentences. Everything this used to also say — the flight, the
+  // time difference, why Christmas Day is different here — is either in the
+  // fact strip below it or in the detail section at the foot of the page.
   standfirst:
-    `Northern Europe is dark by four. Cairo is ${dec.temps.cairo} under a clear sky, Luxor and Aswan warmer still, every monument open on Christmas Day, and on ${d(NYE)} the Nile cruise fleet moors together for one of the more extraordinary New Year's Eves available anywhere. Three hours' flight from Rome, under five from London, and an hour's time difference. Private journeys only — your party, your Egyptologist, your pace.`,
+    `Northern Europe is dark by four. Cairo is ${dec.temps.cairo} under a clear sky, and on ${d(NYE)} the cruise fleet moors together on the Nile. Private journeys only — your party, your Egyptologist, your pace.`,
   ctaLabel: "Plan these dates",
 
   // Values, not adjectives. Every one of these is read from the data above.
@@ -206,11 +216,83 @@ export const christmasLanding: LandingPage = {
     { label: "Private journeys from", value: formatPrice(FROM_PRICE) },
   ],
 
+  // The fortnight itself, in four dated lines. This is the part a visitor
+  // actually wants in the first ten seconds — what the holiday consists of —
+  // and four dates read in a glance where four paragraphs do not. Each one has
+  // its paragraph waiting in `detail`, for whoever wants it.
+  moments: [
+    {
+      // "24 – 25 December", not "24 December – 25 Dec": the month is named
+      // once, at the end, the way a date range is actually written.
+      date: `${EVE.getUTCDate()} – ${d(new Date(Date.UTC(SEASON_Y, 11, 25)))}`,
+      title: "Christmas at the Pyramids",
+      line: "Not a public holiday in Egypt. The plateau keeps its ordinary hours.",
+    },
+    {
+      date: d(NYE),
+      title: "New Year's Eve on the river",
+      line: "The fleet moors together at Luxor or Edfu. Gala dinner on the top deck.",
+    },
+    {
+      date: `1 – ${d(new Date(Date.UTC(SEASON_Y + 1, 0, 6)))}`,
+      title: "The temples, in winter light",
+      line: `${dec.temps.luxor} in Luxor, low sun, the clearest air of the year.`,
+    },
+    {
+      date: d(COPTIC),
+      title: "Coptic Christmas, Old Cairo",
+      line: "Midnight liturgy at the Hanging Church. Visitors are welcome.",
+    },
+  ],
+
   window: WINDOWS[STAGE],
 
-  argument: [
+  journeys: JOURNEY_SLUGS.map((id) => ({ domain: "tour" as const, id })),
+  journeysIntro: {
+    heading: "Journeys that work over the holiday",
+    text:
+      `Private, your party only, and adaptable to your dates. Prices per person, standard season — the ${PEAK} supplement is itemised in your quote.`,
+  },
+
+  form: {
+    // Naming the season is the right heading while it is still ahead; once it
+    // is running, the enquiry in front of us is for mid-January or for next
+    // December, and a heading naming dates that have started is wrong.
+    heading: STAGE === "live"
+      ? "Tell us your dates"
+      : `Tell us your dates for ${SEASON_Y}–${String(SEASON_Y + 1).slice(2)}`,
+    subtext:
+      `One business day, an itemised quote, no obligation${STAGE === "late" || STAGE === "last" ? " — and if the honest answer is that the dates no longer work, we will say that instead" : ""}.`,
+    datesPlaceholder: `e.g. ${d(PEAK_FROM)} – ${d(PEAK_TO)}, or flexible`,
+    messagePlaceholder:
+      "Party size, whether New Year's Eve on the Nile is the priority, and whether your dates can move.",
+  },
+
+  // Read from the booking terms, so the deposit and the balance on a landing
+  // page can never drift from the ones on the booking page. Stitching one
+  // sentence out of another needs the joins lowercased — a sentence reading
+  // "the booking — It is applied" is a tell that nobody read the output.
+  assurances: [
+    bookingTerms.steps[0].body,
+    `${bookingTerms.deposit.label} confirms the booking, and ${lower(bookingTerms.deposit.note.replace(/^Payable to confirm your booking\. /, ""))} Balance ${bookingTerms.balance.label.toLowerCase()}.`,
+    `${bookingTerms.paymentMethods.map((m, i) => (i === 0 ? m : lower(m))).join(" or ")}. Priced per person in euros, itemised, with what is and is not included stated.`,
+    "Your party only, with a private Egyptologist and a private vehicle throughout — no seat-in-coach, no joining a group at the gate.",
+  ],
+
+  // ---- below the form: everything that needs more than a line -------------
+  // Nothing here was cut from the page; it was moved. The four dated moments
+  // near the top are the headlines, and these are the same four subjects at
+  // full length, plus the booking-window reasoning. A reader who has got this
+  // far wants the paragraphs — a reader who has not is already in the form.
+  detailIntro: {
+    heading: "The detail, for whoever wants it",
+    text: "Four things that decide whether this fortnight is right for you, and one that decides when to book it.",
+  },
+
+  detail: [
+    WINDOW_DETAIL[STAGE],
     {
-      heading: "25 December is a working day in Egypt — which is why it is worth being here",
+      heading: "25 December is a working day in Egypt",
       body:
         "Egypt is a majority-Muslim country, so Christmas Day is not a public holiday and nothing closes for it. Every site keeps its normal hours, and a Christmas morning at the Pyramids is an ordinary working morning on the plateau — no queue built by a holiday, no reduced opening, no closed museum. The festive part happens where you sleep: international hotels and every Nile vessel put on a full programme. You get the day, and the monuments, and neither interferes with the other.",
     },
@@ -229,38 +311,6 @@ export const christmasLanding: LandingPage = {
       body:
         `The prices on the journeys above are the catalogue's standard-season rates per person. ${PEAK} carries a holiday supplement at every hotel and on every vessel in the country — not a small one — and the quote we send you itemises it rather than folding it in. ${dec.prices === "Highest" ? "December is the most expensive month of the Egyptian year and we are not going to pretend otherwise." : ""} If the budget leads and the dates can move, the month guide's own verdict is worth reading: the first week of December, or the second half of January, gives you nearly the same weather for considerably less.`,
     },
-  ],
-
-  journeys: JOURNEY_SLUGS.map((id) => ({ domain: "tour" as const, id })),
-  journeysIntro: {
-    heading: "Journeys that work over the holiday",
-    text:
-      `Private, your party only, each one adaptable to your dates. Prices are per person in euros at standard-season rates; the ${PEAK} supplement is confirmed in your quote before anything is committed.`,
-  },
-
-  form: {
-    // Naming the season is the right heading while it is still ahead; once it
-    // is running, the enquiry in front of us is for mid-January or for next
-    // December, and a heading naming dates that have started is wrong.
-    heading: STAGE === "live"
-      ? "Tell us your dates"
-      : `Tell us your dates for ${SEASON_Y}–${String(SEASON_Y + 1).slice(2)}`,
-    subtext:
-      `We reply within one business day with what is actually available on those dates and an itemised quote. Free, and without obligation${STAGE === "late" || STAGE === "last" ? " — including, if that is the honest answer, telling you the dates no longer work" : ""}.`,
-    datesPlaceholder: `e.g. ${d(PEAK_FROM)} – ${d(PEAK_TO)}, or flexible`,
-    messagePlaceholder:
-      "Party size, whether New Year's Eve on the Nile is the priority, and whether your dates can move.",
-  },
-
-  // Read from the booking terms, so the deposit and the balance on a landing
-  // page can never drift from the ones on the booking page. Stitching one
-  // sentence out of another needs the joins lowercased — a sentence reading
-  // "the booking — It is applied" is a tell that nobody read the output.
-  assurances: [
-    bookingTerms.steps[0].body,
-    `${bookingTerms.deposit.label} confirms the booking, and ${lower(bookingTerms.deposit.note.replace(/^Payable to confirm your booking\. /, ""))} Balance ${bookingTerms.balance.label.toLowerCase()}.`,
-    `${bookingTerms.paymentMethods.map((m, i) => (i === 0 ? m : lower(m))).join(" or ")}. Priced per person in euros, itemised, with what is and is not included stated.`,
-    "Your party only, with a private Egyptologist and a private vehicle throughout — no seat-in-coach, no joining a group at the gate.",
   ],
 
   // The same subject in two more European languages. These are not

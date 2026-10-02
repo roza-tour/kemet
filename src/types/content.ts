@@ -176,27 +176,40 @@ export interface CollectionRelationships {
  * Everything time-sensitive in here is COMPUTED at build time (see
  * data/landing/) — a landing page that names a year or counts weeks cannot be
  * typed by hand or it is wrong by the next campaign.
+ *
+ * SHORT ABOVE, LONG BELOW
+ * The shape of this type enforces the one rule that makes the page pleasant to
+ * read: nothing above the form is allowed to be an essay. The hero gets a few
+ * lines, the holiday itself is told as four dated moments, the booking window
+ * gets ONE sentence — and everything that genuinely needs a paragraph lives in
+ * `detail`, under the form, for the reader who wants it. The page still says
+ * every honest thing it said before; it just stops saying all of it at once.
  */
 export interface LandingPage {
   /** Small line above the h1. */
   eyebrow: string;
   /** Replaces the collection title as the page's h1. */
   h1: string;
-  /** The one paragraph that has to earn the scroll. */
+  /** Two or three sentences. Not a paragraph — the detail blocks are below. */
   standfirst: string;
   /** The primary call to action, as it reads on the button. */
   ctaLabel: string;
   /** Four to six hard facts under the hero. Values, not claims. */
   facts: { label: string; value: string }[];
   /**
-   * The honest state of the booking window, recomputed every build: how long
-   * until the dates, and what is realistically still available. This is the
-   * block that makes the page convert, and the one that would do the most
-   * damage if it were written once and left.
+   * The occasion told as dated moments rather than described in prose — what
+   * the fortnight actually consists of, read in about ten seconds. One line
+   * each; anything longer belongs in `detail`.
    */
-  window: { eyebrow: string; heading: string; body: string; bullets: string[] };
-  /** The argument, in a few headed blocks. */
-  argument: { heading: string; body: string }[];
+  moments: { date: string; title: string; line: string }[];
+  /**
+   * The honest state of the booking window, recomputed every build. ONE
+   * sentence: how long until the dates and what is realistically still
+   * available. The reasoning behind it goes in `detail`, where a reader who
+   * wants it will look — put here, it is a wall of text between a visitor and
+   * the thing they came to see.
+   */
+  window: { eyebrow: string; heading: string; line: string };
   /** Journeys shown with their price, in campaign order. */
   journeys: Ref<"tour">[];
   /** Heading and supporting line above the journey cards. */
@@ -210,6 +223,13 @@ export interface LandingPage {
   };
   /** What happens after they send it — stated, not implied. */
   assurances: string[];
+  /** Heading and supporting line above the detail blocks. */
+  detailIntro: { heading: string; text: string };
+  /**
+   * Everything that needs more than a line: the booking-window reasoning, the
+   * costs, the occasion in full. Rendered BELOW the form, on purpose.
+   */
+  detail: { heading: string; body: string }[];
   /** Same subject, other languages. Route files, with a native label. */
   otherLanguages?: { route: string; label: string; lang: string }[];
 }
