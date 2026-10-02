@@ -10,12 +10,31 @@ $to = "info@kemet-travel.com"; // ← the real cPanel mailbox
 
 // AJAX requests (the enhanced form) get JSON back instead of a redirect.
 $wantsJson = (($_SERVER["HTTP_X_REQUESTED_WITH"] ?? "") === "fetch");
+
+// Where a non-JavaScript submit is sent back to. The form may name its own
+// page (ContactForm's `returnTo`), because the form is no longer only on
+// contact.html: a visitor who sends an enquiry from a campaign page and is
+// dropped onto the contact page has lost the page they were reading, and the
+// enquiry they can no longer see is the one they send a second time.
+//
+// The posted value is NEVER used as given — it is a redirect target, so it is
+// re-checked here against the only shape the site actually has: a site-rooted
+// path of lowercase slug segments ending in .html. That rejects an absolute
+// URL, a protocol-relative "//host" (the first segment cannot be empty),
+// anything with a dot in a segment so "../" cannot be built, and anything
+// carrying CR or LF. Anything that does not match falls back to contact.html
+// rather than being patched up.
+function return_path() {
+  $p = (string)($_POST["return"] ?? "");
+  return preg_match('#^/(?:[a-z0-9-]+/)*[a-z0-9-]+\.html$#', $p) ? $p : "/contact.html";
+}
+
 function respond($ok, $wantsJson) {
   if ($wantsJson) {
     header("Content-Type: application/json; charset=UTF-8");
     echo json_encode(["ok" => (bool)$ok]);
   } else {
-    header("Location: /contact.html?sent=" . ($ok ? "1" : "0") . "#message-us");
+    header("Location: " . return_path() . "?sent=" . ($ok ? "1" : "0") . "#message-us");
   }
   exit;
 }
@@ -81,6 +100,15 @@ $email   = mb_substr(clean_line($_POST["email"] ?? ""), 0, 200);
 $phone   = mb_substr(clean_line($_POST["phone"] ?? ""), 0, 40);
 $dates   = mb_substr(clean_line($_POST["dates"] ?? ""), 0, 120);
 $message = mb_substr(trim((string)($_POST["message"] ?? "")), 0, 5000);
+
+// The page's own description of itself (ContactForm's `context`), for the
+// email only. It tells the inbox which page — and so which campaign — produced
+// the enquiry even when the visitor's browser never ran the analytics script,
+// which is exactly the visitor whose origin would otherwise be unknown.
+// Deliberately NOT added to the CSV: the log's columns are read positionally
+// by the dashboard, and the page is already recorded there as the first page
+// of the visit.
+$context = mb_substr(clean_line($_POST["context"] ?? ""), 0, 160);
 
 // The three optional questions. Only the form's own values are accepted and
 // turned back into words here, so nothing a bot posts reaches the email or log.
@@ -160,6 +188,7 @@ $body =
   "----------------------------------\n\n" .
   $message . "\n\n" .
   "----------------------------------\n" .
+  ($context !== "" ? "Sent from:    " . $context . "\n" : "") .
   "Found us via: " . $srcTxt . "\n" .
   ($trail["first"] !== "" ? "First page:   " . $trail["first"] . "\n" : "") .
   ($readTxt !== "" ? "Also read:    " . $readTxt . "\n" : "");
