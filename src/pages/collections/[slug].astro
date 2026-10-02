@@ -18,6 +18,7 @@ import ExperienceCard from "@/components/experience/ExperienceCard.astro";
 import GuideCard from "@/components/guide/GuideCard.astro";
 import CollectionHero from "@/components/collection/CollectionHero.astro";
 import CollectionCard from "@/components/collection/CollectionCard.astro";
+import CollectionLanding from "@/components/collection/CollectionLanding.astro";
 import LeadCapture from "@/components/conversion/LeadCapture.astro";
 import { collections } from "@/data/collections";
 import { registry, resolveRelatedCollections, findRelatedCollections } from "@/data/registry";
@@ -57,6 +58,16 @@ const jsonld = entitySchema("seasonal", col);
 <Base title={title} description={description} active={route} jsonld={jsonld}>
   <article class={col.theme ? `themed-${col.theme}` : undefined}>
     <CollectionHero collection={col} base={base} />
+
+    {/* A collection that carries a landing layer puts the offer, the journeys
+        with their prices and the enquiry form here — above the essay, because
+        an ad click is not reading the essay. Nothing below is removed: the
+        editorial sections follow exactly as they do on every other collection,
+        which is what lets one URL serve the campaign and the search result.
+        The only thing suppressed is the generic "Featured tours" grid further
+        down, because the landing run has already shown the same journeys with
+        their prices. See types/content.ts → LandingPage. */}
+    {col.landing && <CollectionLanding collection={col} landing={col.landing} base={base} />}
 
     <section style="padding-top:var(--s-3)">
       <div class="wrap">
@@ -134,7 +145,7 @@ const jsonld = entitySchema("seasonal", col);
 
     <Frieze />
 
-    {relTours.length > 0 && (
+    {relTours.length > 0 && !col.landing && (
       <section>
         <div class="wrap">
           <SectionHeader sym="journeys" eyebrow="Journeys" title="Featured tours" text={`Private tours included in the ${col.title} collection.`} />

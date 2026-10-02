@@ -1,0 +1,205 @@
+---
+// CollectionLanding — the campaign run of a collection page: the booking
+// window, the journeys with their prices, the enquiry form, and the argument.
+//
+// It is one component rather than four because the ORDER is the point. A
+// landing page is not a collection page with extra blocks; it is the same
+// material in the order a buying decision is actually made — what is still
+// available, what it costs, how to ask, and only then why. Spreading these
+// across four components would let that order drift apart from the reasoning
+// behind it.
+//
+// Nothing here is collection-specific: every string comes from the
+// LandingPage data (src/data/landing/*), which is also where every date and
+// price is computed. A second campaign is a second data file.
+import SectionHeader from "@/components/SectionHeader.astro";
+import TourCard from "@/components/TourCard.astro";
+import ContactForm from "@/components/conversion/ContactForm.astro";
+import { registry } from "@/data/registry";
+import { routeFor } from "@/config/routes";
+import type { Collection, LandingPage, Tour } from "@/types";
+
+interface Props {
+  collection: Collection;
+  landing: LandingPage;
+  /** Link prefix back to the site root — "../" from inside /collections/. */
+  base?: string;
+}
+const { collection, landing, base = "" } = Astro.props;
+
+const journeys = registry.resolve<Tour>(landing.journeys);
+// The page's own route, posted with the form so a visitor whose browser runs
+// no JavaScript lands back HERE after sending rather than on the contact page.
+const selfRoute = `/${routeFor("seasonal", collection.slug)}`;
+---
+
+{/* ---- 1. The booking window. Recomputed every build; see the data file. ---- */}
+<section class="lp-window" aria-labelledby="lp-window-h">
+  <div class="wrap">
+    <div class="lp-win-inner reveal">
+      <div class="eyebrow">{landing.window.eyebrow}</div>
+      <h2 id="lp-window-h">{landing.window.heading}</h2>
+      <p class="lp-lede">{landing.window.body}</p>
+      <ul class="lp-bullets">
+        {landing.window.bullets.map((b) => <li>{b}</li>)}
+      </ul>
+      <a href="#plan" class="btn btn-solid lp-cta">{landing.ctaLabel}</a>
+    </div>
+  </div>
+</section>
+
+{/* ---- 2. The journeys, with their prices. ---- */}
+{journeys.length > 0 && (
+  <section id="journeys">
+    <div class="wrap">
+      <SectionHeader
+        sym="journeys"
+        eyebrow="Journeys"
+        title={landing.journeysIntro.heading}
+        text={landing.journeysIntro.text}
+      />
+      <div class="grid-3">
+        {journeys.map((tour) => <TourCard tour={tour} base={base} />)}
+      </div>
+    </div>
+  </section>
+)}
+
+{/* ---- 3. The form. The CTA target, and the point of the page. ---- */}
+<section id="plan" class="lp-plan">
+  <div class="wrap">
+    <div class="lp-plan-grid">
+      <ContactForm
+        heading={landing.form.heading}
+        subtext={landing.form.subtext}
+        returnTo={selfRoute}
+        context={landing.h1}
+        datesPlaceholder={landing.form.datesPlaceholder}
+        messagePlaceholder={landing.form.messagePlaceholder}
+      />
+      <aside class="lp-assure">
+        <div class="pcard reveal">
+          <div class="eyebrow" style="margin-bottom:var(--s-2)">What happens next</div>
+          <ul class="lp-bullets">
+            {landing.assurances.map((a) => <li>{a}</li>)}
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+{/* ---- 4. The argument. Below the form on purpose: whoever is still reading
+         at this point wants the reasons, and whoever was not is already in
+         the form above. ---- */}
+<section>
+  <div class="wrap">
+    <div class="lp-arg">
+      {landing.argument.map((a) => (
+        <div class="lp-arg-block reveal">
+          <h2>{a.heading}</h2>
+          <p>{a.body}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+{/* ---- 5. The same subject in another language. Plain links, deliberately
+         NOT hreflang: these are separate arguments written for their own
+         markets, not translations of this page, and an hreflang cluster that
+         claims otherwise is worse than none. ---- */}
+{landing.otherLanguages && landing.otherLanguages.length > 0 && (
+  <section class="lp-langs">
+    <div class="wrap">
+      <div class="lp-lang-row reveal">
+        <span class="eyebrow">Also written for</span>
+        {landing.otherLanguages.map((l) => (
+          <a href={`${base}${l.route}`} lang={l.lang}>{l.label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+)}
+
+<style>
+  /* The window block carries the page's one piece of urgency, so it is the
+     only section allowed to look like a notice. The accent colour comes from
+     the collection's own theme (SeasonalTheme sets --gold), so this reads as
+     Christmas on the Christmas page and would read correctly on another. */
+  /* The nav is fixed at 86px (70px on a phone), and the site sets no
+     scroll-padding, so an anchor jump lands the target UNDER it — the "Plan
+     these dates" button scrolled the form's heading behind the header.
+     Corrected on this page's own anchor targets rather than globally: a
+     site-wide scroll-padding would shift every in-page link on 210 pages. */
+  #plan, #journeys { scroll-margin-top: 110px; }
+  @media (max-width: 680px) { #plan, #journeys { scroll-margin-top: 90px; } }
+
+  .lp-window { padding-top: var(--s-4); }
+  .lp-win-inner {
+    border: 1px solid color-mix(in oklab, var(--gold) 38%, transparent);
+    border-inline-start: 3px solid var(--gold);
+    border-radius: 2px;
+    background: color-mix(in oklab, var(--gold) 5%, transparent);
+    padding: var(--s-5) var(--s-5) var(--s-4);
+  }
+  .lp-win-inner h2 { margin-top: var(--s-1); margin-bottom: var(--s-3); }
+  .lp-lede { font-size: var(--t-lg); max-width: 62ch; }
+  .lp-cta { margin-top: var(--s-4); }
+
+  /* One shared list style for the window bullets and the assurances — both
+     are "things you need to know", and giving them two looks said nothing. */
+  .lp-bullets { list-style: none; margin: var(--s-3) 0 0; padding: 0; }
+  .lp-bullets li {
+    position: relative;
+    padding-inline-start: 1.35em;
+    margin-bottom: var(--s-2);
+    font-size: var(--t-sm);
+    max-width: 72ch;
+  }
+  .lp-bullets li::before {
+    content: "";
+    position: absolute;
+    inset-inline-start: 0;
+    top: .55em;
+    width: .45em; height: .45em;
+    border-radius: 50%;
+    background: var(--gold);
+  }
+  .lp-bullets li:last-child { margin-bottom: 0; }
+
+  /* Form and reassurance side by side on a desk, form first on a phone —
+     the order in the markup is already the mobile order, so no reordering. */
+  .lp-plan-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--s-5);
+    align-items: start;
+  }
+  @media (min-width: 900px) {
+    .lp-plan-grid { grid-template-columns: minmax(0, 1.5fr) minmax(260px, 1fr); }
+  }
+
+  .lp-arg {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--s-5);
+  }
+  @media (min-width: 900px) {
+    .lp-arg { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-6) var(--s-5); }
+  }
+  .lp-arg-block h2 { font-size: var(--t-xl); margin-bottom: var(--s-2); }
+  .lp-arg-block p { max-width: 62ch; }
+
+  .lp-langs { padding-top: 0; }
+  .lp-lang-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--s-2) var(--s-4);
+    padding-top: var(--s-4);
+    border-top: 1px solid var(--line);
+  }
+  .lp-lang-row .eyebrow { margin: 0; }
+  .lp-lang-row a { font-size: var(--t-sm); }
+</style>
