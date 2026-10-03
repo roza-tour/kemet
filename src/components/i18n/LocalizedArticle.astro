@@ -1,0 +1,209 @@
+---
+// A translated page's ARTICLE body — hero, facts, lede, numbered sections,
+// highlights, FAQ, the enquiry block and the way out to the English original.
+//
+// One template for every language. The page is generated from a data record
+// whose route comes from the translation registry, so the URL, the canonical,
+// the hreflang set and the sitemap entry are all derived from the same object
+// and cannot disagree with each other.
+//
+// WHY IT IS A COMPONENT AND NOT THE ROUTE
+// Translated JOURNEYS live at the same URL shape (/de/luxor-3-tage.html) and
+// are rendered by components/tour/LocalizedTour instead. Keeping both bodies
+// in the route file meant guarding every `page.` in two hundred lines of
+// template against the page being a journey. The route is now a two-line
+// switch and each body is whole.
+import Base from "@/layouts/Base.astro";
+import PageHero from "@/components/PageHero.astro";
+import Frieze from "@/components/Frieze.astro";
+import Faq from "@/components/Faq.astro";
+import LangSwitch from "@/components/LangSwitch.astro";
+import CollectionLanding from "@/components/collection/CollectionLanding.astro";
+import type { LocalizedPage } from "@/data/i18n/types";
+import { TRANSLATION_GROUPS, LOCALE_META } from "@/config/i18n";
+import type { TranslatedLocale } from "@/config/i18n";
+import { canonical, publicPath, whatsappLink, mailtoLink } from "@/utils/links";
+import { personRef } from "@/schemas/jsonld";
+import { site, SITE_URL } from "@/config/site";
+
+interface Props { page: LocalizedPage; locale: TranslatedLocale; route: string }
+const { page, locale, route } = Astro.props;
+
+// Undefined for a page that exists in this language only.
+const group = TRANSLATION_GROUPS.find((g) => g.key === page.groupId);
+const moreRoute = page.moreRoute ?? group?.en ?? "index.html";
+const base = "../";
+/** This page IS the locale's own front page — it is not below anything. */
+const isLocaleHome = page.groupId === "home";
+
+// NO SITE-WIDE CTA ON THESE PAGES (`showCta={false}` below).
+// It is written in English, and these pages already end with `.lz-cta` — the
+// same ask, in the language the reader has just read three thousand words of.
+// Two calls to action is one too many; a second one in the wrong language is
+// worse than none.
+//
+// This note lives here rather than beside the prop because a `{/* … */}` in an
+// Astro tag's ATTRIBUTE list is not a comment. The compiler tolerates it and
+// the page renders, but astro check's parser stops reading the template there
+// and then reports every import below as unused — twelve phantom errors, and,
+// far worse, no type checking at all on the rest of the file.
+const lang = LOCALE_META[locale].tag;
+
+/** The landing layer's fact strip wins where there is one — see the markup. */
+const facts = page.landing?.facts ?? page.facts;
+
+const wa = whatsappLink(page.cta.whatsapp);
+const mail = mailtoLink(page.cta.emailSubject, `${page.cta.whatsapp}\n\n`);
+
+const jsonld: Record<string, unknown>[] = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: page.h1,
+    description: page.description,
+    url: canonical(route),
+    inLanguage: lang,
+    about: { "@type": "Country", name: "Egypt" },
+    isPartOf: { "@type": "WebSite", name: `${site.name} — The Black Land`, url: SITE_URL },
+    publisher: { "@type": "TravelAgency", name: site.name, url: SITE_URL },
+    reviewedBy: personRef(),
+  },
+  // Breadcrumbs in the page's own language. These pages render a visible
+  // crumb trail but had no BreadcrumbList behind it, so the trail was invisible
+  // to a crawler — 21 of the 24 pages missing breadcrumb markup were localised.
+  //
+  // A locale's own home page gets none. Its crumb label and its root label are
+  // the same word, so the trail read "Beranda · Beranda" on screen and shipped
+  // a two-item BreadcrumbList whose two items had the same name and different
+  // URLs — which is not a trail, it is a page pointing at itself.
+  ...(isLocaleHome ? [] : [{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: LOCALE_META[locale].home, item: canonical(`${locale}/index.html`) },
+      { "@type": "ListItem", position: 2, name: page.crumb, item: canonical(route) },
+    ],
+  }]),
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    inLanguage: lang,
+    mainEntity: page.faqs.map((f) => ({
+      "@type": "Question", name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  },
+];
+---
+<Base
+  title={page.title}
+  description={page.description}
+  active={route}
+  jsonld={jsonld}
+  keywords={page.keywords}
+  showCta={false}
+>
+  {/* On a page carrying a landing layer the hero speaks for the campaign: the
+      dates as an overline, the layer's shorter standfirst, and two buttons.
+      The H1 is still the page's own — it is what the page ranks for, and a
+      campaign is not a reason to change it. */}
+  <PageHero
+    rootLabel={LOCALE_META[locale].home}
+    rootHref={`/${locale}/`}
+    crumb={isLocaleHome ? undefined : page.crumb}
+    symbol={page.symbol}
+    base={base}
+    overline={page.landing?.eyebrow}
+    title={page.h1}
+    text={page.landing?.standfirst ?? page.standfirst}
+  >
+    {page.landing && (
+      <div class="hero-actions" style="justify-content:center;margin-top:var(--s-5)">
+        <a href="#plan" class="btn btn-solid">{page.landing.ctaLabel}</a>
+        <a href="#journeys" class="btn btn-ghost">{page.landing.ui.seeJourneys}</a>
+      </div>
+    )}
+  </PageHero>
+
+  <section style="padding-top:var(--s-4)">
+    <div class="wrap lz-wrap">
+      <LangSwitch route={route} />
+
+      {/* The landing layer brings its own, richer fact strip (six figures, not
+          four) — it replaces the page's rather than stacking a second one.
+          Six wants three columns; four wants four, which is the default. */}
+      {facts && facts.length > 0 && (
+        <div class:list={["lz-facts", facts.length % 3 === 0 && "lz-facts--3"]}>
+          {facts.map((f) => (
+            <div><span>{f.label}</span><b>{f.value}</b></div>
+          ))}
+        </div>
+      )}
+
+      <p class="lz-lede">{page.lede}</p>
+    </div>
+  </section>
+
+  {/* A localised page that is also a campaign destination gets the landing
+      run here — the dated moments, the booking window in a sentence, the
+      journeys with their prices and an enquiry form IN THIS LANGUAGE. It sits
+      above the numbered sections, not instead of them: an ad click decides in
+      one screen, and the long German argument below is what the organic
+      visitor came for. The run breaks out of .lz-wrap's 940px measure on
+      purpose, because the journey cards are a three-up grid.
+      See data/i18n/types.ts → landing. */}
+  {page.landing && <CollectionLanding landing={page.landing} route={route} base={base} locale={locale} />}
+
+  <section style="padding-top:0">
+    <div class="wrap lz-wrap">
+
+      <div class="lz-sections">
+        {page.sections.map((s, i) => (
+          <div class="lz-sec reveal">
+            <span class="lz-n">{String(i + 1).padStart(2, "0")}</span>
+            <div>
+              <h2>{s.title}</h2>
+              <p>{s.body}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {page.highlights && (
+        <div class="lz-high reveal">
+          <h2>{page.highlights.heading}</h2>
+          <ul>{page.highlights.items.map((i) => <li>{i}</li>)}</ul>
+        </div>
+      )}
+
+      <Frieze />
+
+      <Faq items={page.faqs} heading={page.crumb} />
+
+      <div class="lz-cta reveal" id="enquire">
+        <h2>{page.cta.heading}</h2>
+        <p>{page.cta.text}</p>
+        <div class="lz-actions">
+          <a class="btn btn-solid" href={wa} target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn btn-ghost" href={mail}>E-Mail</a>
+        </div>
+      </div>
+
+      <div class="lz-more reveal">
+        <h2>{page.moreLabel}</h2>
+        <p>{page.moreText}</p>
+        {page.links && (
+          <ul class="lz-links">
+            {page.links.map((l) => (
+              <li><a class="lz-morelink" href={`${base}${publicPath(l.route)}`}>{l.label}<i aria-hidden="true"></i></a></li>
+            ))}
+          </ul>
+        )}
+        <a class="lz-morelink" href={`${base}${publicPath(moreRoute)}` || "/"}>
+          {moreRoute === "index.html" ? "kemet-travel.com" : `kemet-travel.com/${publicPath(moreRoute)}`}
+          <i aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+</Base>

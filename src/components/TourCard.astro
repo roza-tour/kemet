@@ -3,7 +3,8 @@ import type { Tour } from "@/types";
 import { formatPrice, priceBasis } from "@/utils/format";
 import Placeholder from "@/components/Placeholder.astro";
 import { ui, UI_DEFAULT, tourTag, placeName } from "@/config/ui";
-import type { SiteLocale } from "@/config/i18n";
+import { tourRouteFor } from "@/config/tour-i18n";
+import type { SiteLocale, TranslatedLocale } from "@/config/i18n";
 
 interface Props {
   tour: Tour;
@@ -15,7 +16,13 @@ interface Props {
 }
 const { tour, base = "", locale = UI_DEFAULT } = Astro.props;
 const t = ui(locale);
-const href = `${base}${tour.slug}.html`;
+// On a localised page the card opens the journey IN THAT LANGUAGE where the
+// translation exists, and the English page where it does not — which is the
+// honest fallback, and the note under the grid says so.
+const localised = locale === UI_DEFAULT
+  ? undefined
+  : tourRouteFor(tour.slug, locale as TranslatedLocale);
+const href = `${base}${localised ?? `${tour.slug}.html`}`;
 const basis = priceBasis(tour, true);
 const chip = tourTag(tour.tag, t);
 const route = tour.cities.map((c) => placeName(c, t)).join(" · ");

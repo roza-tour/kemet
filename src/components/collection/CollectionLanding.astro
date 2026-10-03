@@ -20,6 +20,8 @@ import TourCard from "@/components/TourCard.astro";
 import ContactForm from "@/components/conversion/ContactForm.astro";
 import { registry } from "@/data/registry";
 import { ui, UI_DEFAULT } from "@/config/ui";
+import { tourRouteFor } from "@/config/tour-i18n";
+import type { TranslatedLocale } from "@/config/i18n";
 import type { SiteLocale } from "@/config/i18n";
 import type { LandingPage, Tour } from "@/types";
 
@@ -41,6 +43,13 @@ const { landing, route, base = "", locale = UI_DEFAULT } = Astro.props;
 const t = ui(locale);
 
 const journeys = registry.resolve<Tour>(landing.journeys);
+// Said only when it is TRUE. Once every card on this page opens a page in the
+// reader's own language — which is now the case in German — the note is not
+// honest housekeeping any more, it is an apology for a problem that has been
+// fixed, and it talks the reader out of clicking.
+const someStillEnglish =
+  locale !== UI_DEFAULT &&
+  journeys.some((t) => !tourRouteFor(t.slug, locale as TranslatedLocale));
 const selfRoute = `/${route}`;
 ---
 
@@ -96,7 +105,7 @@ const selfRoute = `/${route}`;
           English catalogue. The alternative — a German card opening an
           English page with nothing said — is the thing this whole pass was
           about. */}
-      {locale !== UI_DEFAULT && <p class="lp-ennote">{t.englishNote}</p>}
+      {someStillEnglish && <p class="lp-ennote">{t.englishNote}</p>}
     </div>
   </section>
 )}
