@@ -11,7 +11,8 @@ import { buildPageSeo } from "@/utils/seo";
 import { ui } from "@/config/ui";
 import { siteSchema } from "@/schemas/jsonld";
 import type { JsonLd } from "@/types";
-import { localeOfRoute, alternatesFor, LOCALE_META } from "@/config/i18n";
+import { localeOfRoute, LOCALE_META } from "@/config/i18n";
+import { allAlternatesFor } from "@/config/alternates";
 import { canonical } from "@/utils/links";
 import Nav from "@/components/Nav.astro";
 import Footer from "@/components/Footer.astro";
@@ -104,7 +105,7 @@ const waMessage = isHome || !pageName ? waGreeting : `${waGreeting} ${waReading}
 // declared alternates that nothing declared back.
 const selfCanonical = !Astro.props.noindex &&
   (Astro.props.canonicalTo === undefined || Astro.props.canonicalTo === active);
-const alternates = selfCanonical ? alternatesFor(active) : [];
+const alternates = selfCanonical ? allAlternatesFor(active) : [];
 // og:locale follows the page, and the other members of the group are declared
 // as og:locale:alternate so social previews resolve to the right language.
 const OG_LOCALE_BY_LANG: Record<string, string> = {

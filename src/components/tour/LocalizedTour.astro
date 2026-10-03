@@ -1,0 +1,319 @@
+---
+// A journey page in a language other than English.
+//
+// WHY NOT THE ENGLISH TEMPLATE WITH STRINGS SWAPPED
+// pages/[slug].astro is 284 lines and pulls in TourFit, StandardOfTravel,
+// LeadCapture and the similar-journeys engine — every one of them carrying
+// English copy of its own. Reusing it would have put four English blocks on
+// a German page, which is the problem this whole pass exists to remove. This
+// template renders only what a translated journey actually has: the facts,
+// the overview, the itinerary, what is and is not included, how hard it is,
+// the questions, and an enquiry in the reader's own language.
+//
+// Numbers, photographs and prices come from the ENGLISH journey record —
+// there is one price for a journey, not one per language.
+import Base from "@/layouts/Base.astro";
+import PageHero from "@/components/PageHero.astro";
+import Placeholder from "@/components/Placeholder.astro";
+import Frieze from "@/components/Frieze.astro";
+import Faq from "@/components/Faq.astro";
+import LangSwitch from "@/components/LangSwitch.astro";
+import type { Tour } from "@/types";
+import type { TourText } from "@/data/tours-i18n/types";
+import type { TranslatedLocale } from "@/config/i18n";
+import { LOCALE_META } from "@/config/i18n";
+import { TOUR_PHRASEBOOK } from "@/data/tours-i18n/phrasebook";
+import { ui, placeName } from "@/config/ui";
+import { formatPrice } from "@/utils/format";
+import { canonical, whatsappLink, mailtoLink, publicPath } from "@/utils/links";
+import { TRANSLATION_GROUPS } from "@/config/i18n";
+import { site, SITE_URL } from "@/config/site";
+
+interface Props {
+  tour: Tour;
+  text: TourText;
+  locale: TranslatedLocale;
+  route: string;
+}
+const { tour, text, locale, route } = Astro.props;
+
+const base = "../";
+const t = ui(locale);
+// Guaranteed present: config/tour-i18n.ts refuses to register a translation
+// whose language has no phrasebook.
+const p = TOUR_PHRASEBOOK[locale]!;
+
+const visiting = tour.cities.map((c) => placeName(c, t)).join(" · ");
+const category = p.categories[tour.category] ?? tour.category;
+const walking = tour.comfort?.walking ? p.walking[tour.comfort.walking] ?? tour.comfort.walking : undefined;
+
+/** This language's own journeys page, for the way back up. */
+const journeysRoute = TRANSLATION_GROUPS.find((g) => g.key === "journeys")?.[locale];
+
+const wa = whatsappLink(`${p.cta.whatsapp} — ${text.title}`);
+const mail = mailtoLink(`${text.title} — ${p.h.enquire}`, `${p.cta.whatsapp}\n\n`);
+
+const facts: Array<[string, string]> = [
+  [p.f.duration, text.durationLabel],
+  [p.f.startPoint, text.startPoint],
+  [p.f.visiting, visiting],
+  [p.f.isPrivate, p.privateYes],
+];
+
+const comfortRows: Array<[string, string]> = [];
+if (walking) comfortRows.push([p.f.walking, walking]);
+if (text.comfort?.sleep) comfortRows.push([p.f.sleep, text.comfort.sleep]);
+if (text.comfort?.drives) comfortRows.push([p.f.drives, text.comfort.drives]);
+if (text.comfort?.early) comfortRows.push([p.f.early, text.comfort.early]);
+
+// The itinerary is rendered against the ENGLISH record, which carries the
+// numbering and whether a row is a Day or a Stop. tour-i18n.ts has already
+// refused to build if the two differ in length.
+const days = tour.itinerary.map((en, i) => ({
+  num: en.num,
+  label: en.label === "Stop" ? p.stopLabel : p.dayLabel,
+  title: text.itinerary[i].title,
+  items: text.itinerary[i].items,
+}));
+
+const included = (tour.included ?? []).map((l) => p.lines[l]);
+const excluded = (tour.excluded ?? []).map((l) => p.lines[l]);
+
+const lang = LOCALE_META[locale].tag;
+const jsonld: Record<string, unknown>[] = [
+  {
+    "@context": "https://schema.org",
+    "@type": "TouristTrip",
+    name: text.title,
+    description: text.summary,
+    url: canonical(route),
+    inLanguage: lang,
+    touristType: category,
+    itinerary: {
+      "@type": "ItemList",
+      numberOfItems: days.length,
+      itemListElement: days.map((d, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        item: { "@type": "TouristAttraction", name: d.title },
+      })),
+    },
+    offers: {
+      "@type": "Offer",
+      price: tour.price,
+      priceCurrency: "EUR",
+      url: canonical(route),
+      availability: "https://schema.org/InStock",
+    },
+    provider: { "@type": "TravelAgency", name: site.name, url: SITE_URL },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: LOCALE_META[locale].home, item: canonical(`${locale}/index.html`) },
+      ...(journeysRoute
+        ? [{ "@type": "ListItem", position: 2, name: t.navJourneys, item: canonical(journeysRoute) }]
+        : []),
+      { "@type": "ListItem", position: journeysRoute ? 3 : 2, name: text.crumb, item: canonical(route) },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    inLanguage: lang,
+    mainEntity: text.faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  },
+];
+---
+<Base
+  title={text.metaTitle}
+  description={text.metaDescription}
+  active={route}
+  jsonld={jsonld}
+  keywords={text.keywords}
+  showCta={false}
+>
+  <PageHero
+    rootLabel={LOCALE_META[locale].home}
+    rootHref={`/${locale}/`}
+    crumb={text.crumb}
+    base={base}
+    overline={category}
+    title={text.title}
+    text={text.subtitle}
+  >
+    <div class="hero-actions" style="justify-content:center;margin-top:var(--s-5)">
+      <a href="#enquire" class="btn btn-solid">{p.h.enquire}</a>
+      {journeysRoute && (
+        <a href={`${base}${publicPath(journeysRoute)}`} class="btn btn-ghost">{p.allJourneys}</a>
+      )}
+    </div>
+  </PageHero>
+
+  {tour.hero && (
+    <section style="padding-top:var(--s-3);padding-bottom:0">
+      <div class="wrap">
+        <Placeholder
+          sizes="wide"
+          class="tgallery reveal cur"
+          src={tour.hero.src}
+          alt={tour.hero.alt}
+          width={tour.hero.width}
+          height={tour.hero.height}
+          loading="eager"
+        />
+      </div>
+    </section>
+  )}
+
+  <section style="padding-top:var(--s-4)">
+    <div class="wrap lz-wrap">
+      <LangSwitch route={route} />
+
+      {/* The price, and what it is — said in the same breath, because the
+          number alone invites the question the note answers. */}
+      <div class="lt-price reveal">
+        <div>
+          <span class="lt-from">{p.f.from}</span>
+          <span class="lt-amount">{formatPrice(tour.price)}</span>
+          <span class="lt-pp">{t.perPerson}</span>
+        </div>
+        <p>{p.priceNote}</p>
+      </div>
+
+      <div class="lz-facts lz-facts--4">
+        {facts.map(([label, value]) => (
+          <div><span>{label}</span><b>{value}</b></div>
+        ))}
+      </div>
+
+      <p class="lz-lede">{text.summary}</p>
+
+      <div class="lz-sec reveal" style="border-bottom:0">
+        <span class="lz-n">01</span>
+        <div>
+          <h2>{p.h.overview}</h2>
+          <p>{text.overview}</p>
+        </div>
+      </div>
+
+      <Frieze />
+
+      <h2 class="lt-h">{p.h.itinerary}</h2>
+      <div class="lz-sections">
+        {days.map((d) => (
+          <div class="lz-sec reveal">
+            <span class="lz-n">{d.num}</span>
+            <div>
+              <h3 class="lt-day">{d.label} {Number(d.num)} — {d.title}</h3>
+              <ul class="lt-items">{d.items.map((i) => <li>{i}</li>)}</ul>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="lt-two">
+        <div class="lz-high reveal">
+          <h2>{p.h.included}</h2>
+          <ul>{included.map((i) => <li>{i}</li>)}</ul>
+        </div>
+        <div class="lz-high lz-high--out reveal">
+          <h2>{p.h.excluded}</h2>
+          <ul>{excluded.map((i) => <li>{i}</li>)}</ul>
+        </div>
+      </div>
+
+      {comfortRows.length > 0 && (
+        <div class="lt-comfort reveal">
+          <h2>{p.h.comfort}</h2>
+          <dl>
+            {comfortRows.map(([label, value]) => (
+              <div><dt>{label}</dt><dd>{value}</dd></div>
+            ))}
+          </dl>
+        </div>
+      )}
+
+      <Faq items={text.faqs} heading={p.h.faq} />
+
+      <div class="lz-cta reveal" id="enquire">
+        <h2>{p.cta.heading}</h2>
+        <p>{p.cta.text}</p>
+        <div class="lz-actions">
+          <a class="btn btn-solid" href={wa} target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn btn-ghost" href={mail}>E-Mail</a>
+        </div>
+      </div>
+
+      <div class="lz-more reveal">
+        <h2>{t.footExplore}</h2>
+        <p>{t.englishNote}</p>
+        <a class="lz-morelink" href={`${base}${tour.slug}.html`}>
+          kemet-travel.com/{tour.slug}.html<i aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .lz-wrap { max-width: 940px; }
+
+  .lt-price {
+    display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--s-2) var(--s-4);
+    padding: var(--s-4) 0 var(--s-4);
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    margin-top: var(--s-4);
+  }
+  .lt-from { font-size: var(--t-micro); letter-spacing: .18em; text-transform: uppercase; color: var(--muted-2); }
+  .lt-amount { font-family: var(--ff-display); font-size: var(--t-2xl); color: var(--gold-bright); margin-inline-start: var(--s-2); }
+  .lt-pp { font-size: var(--t-tiny); color: var(--muted); margin-inline-start: 4px; }
+  .lt-price p { margin: 0; font-size: var(--t-sm); color: var(--muted-2); max-width: 54ch; }
+
+  .lt-h {
+    font-size: var(--t-xl); margin: var(--s-6) 0 var(--s-3);
+    padding-bottom: var(--s-2); border-bottom: 1px solid var(--line);
+  }
+  .lt-day { font-size: var(--t-md); color: var(--bone); margin: 0 0 var(--s-2); font-weight: 400; }
+  .lt-items { list-style: none; margin: 0; padding: 0; }
+  .lt-items li {
+    position: relative; padding-inline-start: var(--s-3); color: var(--muted);
+    font-size: var(--t-sm); line-height: 1.8; margin-bottom: 6px;
+  }
+  .lt-items li::before {
+    content: ""; position: absolute; inset-inline-start: 0; top: .72em;
+    width: 4px; height: 4px; border-radius: 50%; background: var(--gold); opacity: .75;
+  }
+
+  /* Included and excluded side by side: they are read against each other, and
+     stacking them puts a screen between the two halves of one answer. */
+  .lt-two { display: grid; grid-template-columns: 1fr; gap: var(--s-4); margin-top: var(--s-5); }
+  @media (min-width: 820px) { .lt-two { grid-template-columns: 1fr 1fr; gap: var(--s-5); } }
+  .lt-two .lz-high { margin-top: 0; }
+  /* The exclusions take a muted accent — the same device, stated more quietly,
+     because the list is honest housekeeping rather than a selling point. */
+  .lz-high--out { border-inline-start-color: var(--line-2); background: rgba(255,255,255,.02); }
+  .lz-high--out h2 { color: var(--muted-2); }
+  .lz-high--out li::before { background: var(--muted-2); }
+
+  .lt-comfort { margin-top: var(--s-5); }
+  .lt-comfort h2 {
+    font-size: var(--t-micro); letter-spacing: .28em; text-transform: uppercase;
+    font-family: var(--ff-body); font-weight: 400; color: var(--gold); margin: 0 0 var(--s-3);
+  }
+  .lt-comfort dl { margin: 0; display: grid; gap: 0; }
+  .lt-comfort dl > div {
+    display: grid; grid-template-columns: 1fr; gap: 2px;
+    padding: var(--s-3) 0; border-bottom: 1px solid var(--line);
+  }
+  @media (min-width: 620px) {
+    .lt-comfort dl > div { grid-template-columns: 180px 1fr; gap: var(--s-4); align-items: baseline; }
+  }
+  .lt-comfort dt { font-size: var(--t-micro); letter-spacing: .16em; text-transform: uppercase; color: var(--muted-2); }
+  .lt-comfort dd { margin: 0; color: var(--muted); font-size: var(--t-sm); line-height: 1.8; }
+</style>

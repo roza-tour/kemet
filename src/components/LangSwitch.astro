@@ -8,7 +8,8 @@
 // visitor chooses; nothing chooses for them.
 //
 // Renders nothing at all on pages with no translations.
-import { alternatesFor, LOCALE_META, localeOfRoute, basePrefixFor } from "@/config/i18n";
+import { LOCALE_META, localeOfRoute, basePrefixFor } from "@/config/i18n";
+import { allAlternatesFor } from "@/config/alternates";
 import { publicPath } from "@/utils/links";
 import type { SiteLocale } from "@/config/i18n";
 
@@ -21,7 +22,7 @@ interface Props {
 }
 const { route, label = "Language" } = Astro.props;
 
-const alternates = alternatesFor(route).filter((a) => a.hreflang !== "x-default");
+const alternates = allAlternatesFor(route).filter((a) => a.hreflang !== "x-default");
 const current = localeOfRoute(route);
 const base = basePrefixFor(route);
 
@@ -38,7 +39,7 @@ const base = basePrefixFor(route);
 // page and a French home page are not translations of one another, and saying
 // otherwise is the false alternate declaration that gets a cluster discarded.
 // They are navigation, nothing more — which is exactly what they are for.
-const homes = alternatesFor("index.html").filter((a) => a.hreflang !== "x-default");
+const homes = allAlternatesFor("index.html").filter((a) => a.hreflang !== "x-default");
 const isTranslated = alternates.length > 1;
 const entries = isTranslated ? alternates : homes;
 
