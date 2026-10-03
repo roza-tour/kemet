@@ -8,6 +8,7 @@ import {
 } from "@/config/site";
 import { relativePrefix } from "@/config/routes";
 import { buildPageSeo } from "@/utils/seo";
+import { ui } from "@/config/ui";
 import { siteSchema } from "@/schemas/jsonld";
 import type { JsonLd } from "@/types";
 import { localeOfRoute, alternatesFor, LOCALE_META } from "@/config/i18n";
@@ -70,6 +71,8 @@ const htmlLang = LOCALE_META[pageLocale].tag;
 // Only emitted for a right-to-left language — not written as dir="ltr" on 181
 // pages to say nothing.
 const htmlDir = LOCALE_META[pageLocale].dir;
+// The chrome, in this page's language.
+const t = ui(pageLocale);
 
 // The floating WhatsApp button opens a chat with a message already written.
 // It names the page the visitor was reading, so the first message tells Kemet
@@ -218,17 +221,20 @@ const ogLocaleAlternates = alternates
   {pageLd.map((ld) => <script type="application/ld+json" is:inline set:html={JSON.stringify(ld)} />)}
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  {/* Every piece of furniture takes the page's language. A translated page
+      inside an English frame is a translated brochure stapled to an English
+      website; see config/ui.ts. */}
+  <a class="skip-link" href="#main">{t.skipToContent}</a>
   <canvas id="dust" aria-hidden="true"></canvas>
   <SvgDefs />
-  <Nav active={active} base={base} />
+  <Nav active={active} base={base} locale={pageLocale} />
   <SeasonalSkin locale={pageLocale} />
   <main id="main"><slot /></main>
   {showCta && <CTA base={base} />}
-  <Footer base={base} route={active} />
-  <SearchPanel />
-  <WhatsAppButton message={waMessage} />
-  <AccessInvite />
+  <Footer base={base} route={active} locale={pageLocale} />
+  <SearchPanel label={t.searchResults} />
+  <WhatsAppButton message={waMessage} label={t.whatsappAria} />
+  <AccessInvite locale={pageLocale} />
   <script>import "../scripts/enhance.client.js";</script>
 </body>
 </html>

@@ -175,7 +175,7 @@ const jsonld: Record<string, unknown>[] = [
       visitor came for. The run breaks out of .lz-wrap's 940px measure on
       purpose, because the journey cards are a three-up grid.
       See data/i18n/types.ts → landing. */}
-  {page.landing && <CollectionLanding landing={page.landing} route={route} base={base} />}
+  {page.landing && <CollectionLanding landing={page.landing} route={route} base={base} locale={locale} />}
 
   <section style="padding-top:0">
     <div class="wrap lz-wrap">
@@ -203,7 +203,7 @@ const jsonld: Record<string, unknown>[] = [
 
       <Faq items={page.faqs} heading={page.crumb} />
 
-      <div class="lz-cta reveal">
+      <div class="lz-cta reveal" id="enquire">
         <h2>{page.cta.heading}</h2>
         <p>{page.cta.text}</p>
         <div class="lz-actions">

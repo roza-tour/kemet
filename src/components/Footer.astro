@@ -7,14 +7,29 @@ import { tierLine } from "@/data/standard";
 import LangSwitch from "@/components/LangSwitch.astro";
 import { company, socialLabel } from "@/data/company";
 import SocialIcon from "@/components/SocialIcon.astro";
+import { localeNav } from "@/config/nav-i18n";
+import { ui, UI_DEFAULT } from "@/config/ui";
+import type { SiteLocale, TranslatedLocale } from "@/config/i18n";
 
 interface Props {
   /** Link prefix back to the site root ("" at root, "../" in subfolders). */
   base?: string;
   /** Route file of the current page, so the language switcher knows where it is. */
   route?: string;
+  /** The page's language. Drives the labels and, off English, the link set. */
+  locale?: SiteLocale;
 }
-const { base = "", route = "index.html" } = Astro.props;
+const { base = "", route = "index.html", locale = UI_DEFAULT } = Astro.props;
+const t = ui(locale);
+const isEn = locale === UI_DEFAULT;
+
+// Off English the footer carries the same pages the bar does — the ones that
+// exist in this language — rather than fifteen English links under a
+// translated heading. The last item of localeNav is the way out to the
+// English site, which the footer shows on its own line.
+const localeItems = isEn ? [] : localeNav(locale as TranslatedLocale);
+const localeLinks = localeItems.flatMap((i) => i.children ?? []);
+const englishWayOut = localeItems.find((i) => !i.children);
 const enquire = mailtoLink("Kemet enquiry");
 const wa = whatsappLink("Hello Kemet — I'd like to plan a journey to Egypt.");
 
@@ -35,31 +50,45 @@ const socials = Object.entries(company.socialProfiles ?? {})
             <img src="/images/brand/kemet-logo-gold.webp" alt="Kemet — Luxury Egypt Travel" width="116" height="112" loading="lazy" decoding="async" />
           </span>
         </a>
-        <p>Private luxury travel through every layer of Egypt — the Black Land, in full colour.</p>
-        <p class="foot-tier">{tierLine}</p>
+        <p>{t.brandBlurb}</p>
+        <p class="foot-tier">{isEn ? tierLine : t.tierLine}</p>
       </div>
+      {isEn ? (
+        <>
+          <div class="foot-col">
+            <h3>{footerExplore.heading}</h3>
+            {footerExplore.links.map(({ href, label }, i) => (
+              <Fragment>{i > 0 ? " " : ""}<a href={`${base}${href}`}>{label}</a></Fragment>
+            ))}
+          </div>
+          <div class="foot-col">
+            <h3>{t.footJourneys}</h3>
+            {multidayTours.slice(0, 6).map((tour) => (
+              <a href={`${base}${tour.slug}.html`}>{tour.title}</a>
+            ))}
+            <a href={`${base}tours.html`}>All 25 journeys</a>
+          </div>
+          <div class="foot-col">
+            <h3>{footerCompany.heading}</h3>
+            {footerCompany.links.map(({ href, label }, i) => (
+              <Fragment>{i > 0 ? " " : ""}<a href={`${base}${href}`}>{label}</a></Fragment>
+            ))}
+          </div>
+        </>
+      ) : (
+        <div class="foot-col foot-col--2">
+          <h3>{t.footExplore}</h3>
+          {localeLinks.map(({ href, label }, i) => (
+            <Fragment>{i > 0 ? " " : ""}<a href={`${base}${href}`}>{label}</a></Fragment>
+          ))}
+          {englishWayOut && (
+            <a class="foot-en" href={`${base}${englishWayOut.href}`}>{t.fullSiteEnglish}</a>
+          )}
+        </div>
+      )}
       <div class="foot-col">
-        <h3>{footerExplore.heading}</h3>
-        {footerExplore.links.map(({ href, label }, i) => (
-          <Fragment>{i > 0 ? " " : ""}<a href={`${base}${href}`}>{label}</a></Fragment>
-        ))}
-      </div>
-      <div class="foot-col">
-        <h3>Journeys</h3>
-        {multidayTours.slice(0, 6).map((t) => (
-          <a href={`${base}${t.slug}.html`}>{t.title}</a>
-        ))}
-        <a href={`${base}tours.html`}>All 25 journeys</a>
-      </div>
-      <div class="foot-col">
-        <h3>{footerCompany.heading}</h3>
-        {footerCompany.links.map(({ href, label }, i) => (
-          <Fragment>{i > 0 ? " " : ""}<a href={`${base}${href}`}>{label}</a></Fragment>
-        ))}
-      </div>
-      <div class="foot-col">
-        <h3>Contact</h3>
-        <a href={enquire}>Enquire</a>
+        <h3>{t.footContact}</h3>
+        <a href={enquire}>{t.enquire}</a>
         <a href={wa} rel="noopener" target="_blank">WhatsApp</a>
         <a href={`mailto:${site.email}`}>{site.email}</a>
         {/* The profiles, VISIBLE.
@@ -92,7 +121,7 @@ const socials = Object.entries(company.socialProfiles ?? {})
 
     <div class="foot-bottom">
       <span>{site.copyright}</span>
-      <span>The Land · The Legacy · The Journey</span>
+      <span>{isEn ? "The Land · The Legacy · The Journey" : t.motto}</span>
     </div>
   </div>
   <div class="foot-ghost" aria-hidden="true">KEMET</div>
