@@ -19,6 +19,8 @@ import SectionHeader from "@/components/SectionHeader.astro";
 import TourCard from "@/components/TourCard.astro";
 import ContactForm from "@/components/conversion/ContactForm.astro";
 import { registry } from "@/data/registry";
+import { ui, UI_DEFAULT } from "@/config/ui";
+import type { SiteLocale } from "@/config/i18n";
 import type { LandingPage, Tour } from "@/types";
 
 interface Props {
@@ -32,8 +34,11 @@ interface Props {
   route: string;
   /** Link prefix back to the site root — "../" from inside a subfolder. */
   base?: string;
+  /** The page's language, for the journey cards and the note under them. */
+  locale?: SiteLocale;
 }
-const { landing, route, base = "" } = Astro.props;
+const { landing, route, base = "", locale = UI_DEFAULT } = Astro.props;
+const t = ui(locale);
 
 const journeys = registry.resolve<Tour>(landing.journeys);
 const selfRoute = `/${route}`;
@@ -85,8 +90,13 @@ const selfRoute = `/${route}`;
         text={landing.journeysIntro.text}
       />
       <div class="grid-3">
-        {journeys.map((tour) => <TourCard tour={tour} base={base} />)}
+        {journeys.map((tour) => <TourCard tour={tour} base={base} locale={locale} />)}
       </div>
+      {/* Said once, here, where a localised page sends a reader into the
+          English catalogue. The alternative — a German card opening an
+          English page with nothing said — is the thing this whole pass was
+          about. */}
+      {locale !== UI_DEFAULT && <p class="lp-ennote">{t.englishNote}</p>}
     </div>
   </section>
 )}
@@ -304,4 +314,9 @@ const selfRoute = `/${route}`;
   }
   .lp-lang-row .eyebrow { margin: 0; }
   .lp-lang-row a { font-size: var(--t-sm); }
+  .lp-ennote {
+    margin: var(--s-4) 0 0;
+    font-size: var(--t-sm);
+    color: var(--muted-2);
+  }
 </style>

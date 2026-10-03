@@ -1,4 +1,9 @@
 ---
+interface Props {
+  /** "Search results", in the page's language. */
+  label?: string;
+}
+const { label = "Search results" } = Astro.props;
 // SearchPanel — the results list for the search field in the nav.
 //
 // It is rendered here, at body level, rather than beside the input: results
@@ -18,7 +23,7 @@
 // their own words, what they came for and did not find.
 ---
 <div class="sp" id="sp" hidden>
-  <ul class="sres" id="sres" role="listbox" aria-label="Search results"></ul>
+  <ul class="sres" id="sres" role="listbox" aria-label={label}></ul>
 </div>
 
 <script>import "../../scripts/search.client.js";</script>

@@ -469,6 +469,12 @@ section{position:relative;padding:var(--s-8) 0}
 
 footer{background:var(--ink-2);border-top:1px solid var(--line);padding:var(--s-8) 0 var(--s-6);overflow:hidden}
 .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:54px;margin-bottom:70px;position:relative;z-index:2}
+/* A localised footer has one link column instead of three — the pages that
+   exist in that language — so it spans the width the other two would have
+   taken and lays its links out in two tracks rather than leaving a hole. */
+.foot-col--2{grid-column:span 2;display:grid;grid-template-columns:1fr 1fr;gap:0 var(--s-5);align-content:start}
+.foot-col--2 h3{grid-column:1/-1}
+.foot-col--2 .foot-en{grid-column:1/-1;margin-top:var(--s-3)}
 .foot-brand .brand{margin-bottom:var(--s-3)}
 .foot-brand p{color:var(--muted);font-size:var(--t-sm);font-weight:300;line-height:1.85;max-width:300px}
 .foot-brand .foot-tier{color:var(--gold);opacity:.72;font-size:var(--t-nano);letter-spacing:.2em;text-transform:uppercase;line-height:1.9;margin-top:var(--s-3);max-width:none;text-wrap:balance}
@@ -668,7 +674,7 @@ footer{background:var(--ink-2);border-top:1px solid var(--line);padding:var(--s-
   section{padding:var(--s-7) 0}
   .grid-2,.grid-3,.gods-grid,.grid-4{grid-template-columns:1fr}
   .grid-4{grid-template-columns:repeat(2,1fr)}
-  .foot-grid{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}.foot-col--2{grid-column:auto;grid-template-columns:1fr}
   .enq-grid{grid-template-columns:1fr}
   .cform-grid{grid-template-columns:1fr}
   .cform{padding:var(--s-5) var(--s-3)}

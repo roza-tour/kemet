@@ -22,6 +22,21 @@
 // contact pages where a visitor is already mid-task. Dismissing it or joining
 // puts it away for good on that device.
 import SymbolIcon from "@/components/SymbolIcon.astro";
+import { ui, UI_DEFAULT } from "@/config/ui";
+import type { SiteLocale } from "@/config/i18n";
+
+interface Props {
+  /** The page's language — this is the one interruption on the site, and it
+   *  should not be the one thing on a German page that arrives in English. */
+  locale?: SiteLocale;
+}
+const { locale = UI_DEFAULT } = Astro.props;
+const t = ui(locale);
+const v = t.invite;
+/** The privacy page is English-only; the link text says so by being the only
+ *  English word in the block on a localised page is not acceptable, so the
+ *  label itself is translated and the page it opens is the English one. */
+const privacyHref = "/privacy.html";
 ---
 <div class="ainv" id="access-invite" hidden aria-hidden="true">
   <div class="ainv-scrim" data-close></div>
@@ -30,43 +45,40 @@ import SymbolIcon from "@/components/SymbolIcon.astro";
         this scale — the site's existing pharaonic furniture rather than a new
         decorative language invented for one dialog. */}
     <span class="ainv-frame" aria-hidden="true"></span>
-    <button type="button" class="ainv-x" data-close aria-label="Close">×</button>
+    <button type="button" class="ainv-x" data-close aria-label={t.close}>×</button>
 
     {/* The sun, because the sun is literally the offer: the two mornings a year
         it reaches the sanctuary at Abu Simbel. */}
     <div class="ainv-sym" aria-hidden="true"><SymbolIcon name="sun" /></div>
 
-    <div class="eyebrow">By invitation</div>
-    <h2 id="ainv-h">The dates that run out</h2>
+    <div class="eyebrow">{v.eyebrow}</div>
+    <h2 id="ainv-h">{v.heading}</h2>
 
     <div class="ainv-frieze" aria-hidden="true">
       <SymbolIcon name="ankh" /><SymbolIcon name="lotus" /><SymbolIcon name="scarab" />
       <SymbolIcon name="lotus" /><SymbolIcon name="ankh" />
     </div>
 
-    <p id="ainv-p">
-      Two sunrises a year at Abu Simbel. One set of cabins at New Year.
-      We write when they open.
-    </p>
+    <p id="ainv-p">{v.text}</p>
 
     <form class="ainv-form" id="ainv-form" method="post" action="/subscribe.php" novalidate>
       <input type="hidden" name="source" value="invite" />
       <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="ainv-hp" />
 
       <label class="ainv-field">
-        <span class="ainv-label">Your email</span>
+        <span class="ainv-label">{v.emailLabel}</span>
         <input type="email" name="email" required autocomplete="email"
                placeholder="you@example.com" inputmode="email" />
       </label>
 
       <label class="ainv-consent">
         <input type="checkbox" name="consent" value="1" required />
-        <span>Yes — write to me. I can unsubscribe at any time.</span>
+        <span>{v.consent}</span>
       </label>
 
-      <button type="submit" class="btn btn-solid ainv-go">Keep me posted</button>
+      <button type="submit" class="btn btn-solid ainv-go">{v.submit}</button>
       <p class="ainv-fine" id="ainv-msg" role="status" aria-live="polite">
-        A few times a year. <a href="/privacy.html">How we handle it</a>.
+        {v.note} <a href={privacyHref}>{v.privacy}</a>.
       </p>
     </form>
   </div>
