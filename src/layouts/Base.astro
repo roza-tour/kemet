@@ -19,6 +19,7 @@ import Footer from "@/components/Footer.astro";
 import CTA from "@/components/CTA.astro";
 import SvgDefs from "@/components/SvgDefs.astro";
 import GoogleTag from "@/components/GoogleTag.astro";
+import ConsentBanner from "@/components/ConsentBanner.astro";
 import WhatsAppButton from "@/components/conversion/WhatsAppButton.astro";
 import SeasonalSkin from "@/components/SeasonalSkin.astro";
 import AccessInvite from "@/components/conversion/AccessInvite.astro";
@@ -240,6 +241,9 @@ const ogLocaleAlternates = alternates
   <SearchPanel label={t.searchResults} />
   <WhatsAppButton message={waMessage} label={t.whatsappAria} />
   <AccessInvite locale={pageLocale} />
+  {/* Last element before the scripts: it is anchored to the viewport,
+      so it costs no layout, and it asks nothing until the page is up. */}
+  <ConsentBanner locale={pageLocale} />
   <script>import "../scripts/enhance.client.js";</script>
 </body>
 </html>
