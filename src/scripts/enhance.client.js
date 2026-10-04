@@ -200,7 +200,14 @@ const DUST_DENSITY = 15000; // px² of viewport per particle
        dashboard read better than reality. ContactForm dispatches this once it
        knows what actually happened. */
     document.addEventListener('kemet:enquiry',function(e){
-      KEV(e.detail&&e.detail.ok?'form-submit':'form-failed');
+      var ok=!!(e.detail&&e.detail.ok);
+      KEV(ok?'form-submit':'form-failed');
+      /* Google Ads hears about the same outcome, and only the good one. The
+         form posts over fetch, so the URL never changes and Google has no
+         page view to count — this event is the only signal it gets. */
+      if(ok&&window.KEMET_ADS_SEND_TO&&typeof window.gtag==='function'){
+        window.gtag('event','conversion',{send_to:window.KEMET_ADS_SEND_TO});
+      }
     });
 
     /* Site search. A query that found nothing is recorded under its own event

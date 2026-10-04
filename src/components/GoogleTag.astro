@@ -1,0 +1,82 @@
+---
+// ---------------------------------------------------------------------------
+// The Google Ads tag, with Consent Mode v2 set before it loads.
+//
+// ORDER IS THE WHOLE POINT
+// gtag('consent','default',…) has to run BEFORE gtag.js has a chance to fire
+// anything, or the first hit of the session leaves with full identifiers from
+// a visitor in Frankfurt who was never asked. That is why this is an inline
+// script in <head> and not an import: Astro would bundle an imported module
+// and move it to the end of the body, which is several hundred milliseconds
+// and one page view too late.
+//
+// WHAT A DENIED DEFAULT ACTUALLY DOES
+// It does not block the tag. gtag.js still loads and still sends a hit — but
+// a cookieless one, with no identifiers and no storage written. Google counts
+// those into modelled conversions. Modelling needs volume to work, so at the
+// handful of enquiries a month this account expects, "denied everywhere in
+// Europe" means in practice "no usable conversion data from Europe". The fix
+// is a consent banner calling gtag('consent','update',…) on accept; until
+// that exists, this is the honest setting rather than the convenient one.
+// ---------------------------------------------------------------------------
+import { GOOGLE_ADS_ID, CONSENT_DENIED_REGIONS, GOOGLE_ADS_ENQUIRY_LABEL, enquirySendTo } from "@/config/ads";
+
+// Once per build, not once per page: 282 copies of the same warning is how a
+// warning stops being read.
+const g = globalThis as { __kemetAdsLabelWarned?: boolean };
+if (!GOOGLE_ADS_ENQUIRY_LABEL && !g.__kemetAdsLabelWarned) {
+  g.__kemetAdsLabelWarned = true;
+  // Not a build failure: the tag is still worth having without it. But this
+  // should be loud, because a campaign optimising on nothing is expensive.
+  console.warn(
+    "\n  [ads] GOOGLE_ADS_ENQUIRY_LABEL is empty in src/config/ads.ts —\n" +
+    "        the tag loads, but no enquiry conversion will be reported.\n"
+  );
+}
+
+const regions = JSON.stringify(CONSENT_DENIED_REGIONS);
+---
+
+<script
+  is:inline
+  set:html={`
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+
+/* Europe: denied until asked. Region rules win over the global default below. */
+gtag('consent','default',{
+  region:${regions},
+  ad_storage:'denied',
+  ad_user_data:'denied',
+  ad_personalization:'denied',
+  analytics_storage:'denied',
+  wait_for_update:500
+});
+/* Everywhere else. */
+gtag('consent','default',{
+  ad_storage:'granted',
+  ad_user_data:'granted',
+  ad_personalization:'granted',
+  analytics_storage:'granted'
+});
+
+/* Keep the click id for the length of the visit. A visitor lands on the
+   Christmas page carrying ?gclid=…, reads three journeys, and only then
+   opens the form — by which point the parameter is long gone from the URL.
+   ContactForm posts whatever is parked here, which is what lets a booking
+   that closes weeks later be uploaded against the click that earned it. */
+try{
+  var q=new URLSearchParams(location.search);
+  var id=q.get('gclid')||q.get('wbraid')||q.get('gbraid');
+  if(id) sessionStorage.setItem('kemet_gclid',id);
+}catch(e){}
+
+/* Read by scripts/enhance.client.js when the enquiry succeeds. Empty while
+   the conversion label is unknown, and that script checks before firing. */
+window.KEMET_ADS_SEND_TO='${enquirySendTo}';
+
+gtag('js',new Date());
+gtag('config','${GOOGLE_ADS_ID}');
+`}
+/>
+<script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`}></script>

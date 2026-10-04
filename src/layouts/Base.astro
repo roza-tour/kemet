@@ -18,6 +18,7 @@ import Nav from "@/components/Nav.astro";
 import Footer from "@/components/Footer.astro";
 import CTA from "@/components/CTA.astro";
 import SvgDefs from "@/components/SvgDefs.astro";
+import GoogleTag from "@/components/GoogleTag.astro";
 import WhatsAppButton from "@/components/conversion/WhatsAppButton.astro";
 import SeasonalSkin from "@/components/SeasonalSkin.astro";
 import AccessInvite from "@/components/conversion/AccessInvite.astro";
@@ -123,6 +124,9 @@ const ogLocaleAlternates = alternates
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  {/* Consent Mode defaults, then the Google Ads tag. First script in the
+      document on purpose — see components/GoogleTag.astro. */}
+  <GoogleTag />
   <!-- Google Search Console — site ownership verification (HTML-tag method). -->
   <meta name="google-site-verification" content="KpsvY-0-G6RYJRLd8UJLs2pI5eBHZPFHsaWbJIEhDIw" />
   <!--
