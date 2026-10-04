@@ -19,6 +19,12 @@ import Frieze from "@/components/Frieze.astro";
 import Faq from "@/components/Faq.astro";
 import LangSwitch from "@/components/LangSwitch.astro";
 import CollectionLanding from "@/components/collection/CollectionLanding.astro";
+import TourCard from "@/components/TourCard.astro";
+import SectionHeader from "@/components/SectionHeader.astro";
+import { TRANSLATED_TOURS } from "@/config/tour-i18n";
+import { tours as allTours } from "@/data/tours";
+import { ui } from "@/config/ui";
+import type { Tour } from "@/types";
 import type { LocalizedPage } from "@/data/i18n/types";
 import { TRANSLATION_GROUPS, LOCALE_META } from "@/config/i18n";
 import type { TranslatedLocale } from "@/config/i18n";
@@ -48,6 +54,23 @@ const isLocaleHome = page.groupId === "home";
 // and then reports every import below as unused — twelve phantom errors, and,
 // far worse, no type checking at all on the rest of the file.
 const lang = LOCALE_META[locale].tag;
+
+// THE CATALOGUE, ON THE PAGE THAT IS THE CATALOGUE.
+//
+// Without this, every translated journey had exactly one inbound link — the
+// hreflang alternate on its English original — which makes the whole set an
+// island: a German reader could not reach a single German journey from any
+// German page. The locale's own journeys page is where they belong, and
+// putting them here means a new language gets its catalogue automatically.
+//
+// Ordered by the English catalogue's own `order`, so the German hub reads in
+// the same sequence as the English one.
+const t = ui(locale);
+const localeJourneys: Tour[] = page.groupId !== "journeys" ? [] :
+  TRANSLATED_TOURS
+    .filter((x) => x.locale === locale)
+    .map((x) => allTours.find((a) => a.slug === x.slug)!)
+    .sort((a, b) => (a.order ?? 999) - (b.order ?? 999));
 
 /** The landing layer's fact strip wins where there is one — see the markup. */
 const facts = page.landing?.facts ?? page.facts;
@@ -168,6 +191,20 @@ const jsonld: Record<string, unknown>[] = [
           </div>
         ))}
       </div>
+
+      {localeJourneys.length > 0 && (
+        <div class="lz-journeys">
+          <SectionHeader
+            sym="journeys"
+            eyebrow={t.navJourneys}
+            title={t.allJourneys}
+            text={t.tierLine}
+          />
+          <div class="grid-3">
+            {localeJourneys.map((tour) => <TourCard tour={tour} base={base} locale={locale} />)}
+          </div>
+        </div>
+      )}
 
       {page.highlights && (
         <div class="lz-high reveal">

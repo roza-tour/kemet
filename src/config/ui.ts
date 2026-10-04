@@ -57,6 +57,10 @@ export interface UiStrings {
 
   // --- journey cards -----------------------------------------------------
   perPerson: string;
+  /** The qualifier under a price: "%n" is the party size it assumes. */
+  priceBasisPax: string;
+  /** Said beside it when gate tickets sit outside the published price. */
+  priceBasisTickets: string;
   /** The duration chip on a journey card, which is built from data. */
   tag: { days: string; fullDay: string; halfDay: string; evening: string };
   /**
@@ -111,6 +115,8 @@ export const UI: Record<SiteLocale, UiStrings> = {
     tierLine: "Private · Tailor-made · Never a group",
     motto: "The Land · The Legacy · The Journey",
     perPerson: "/ person",
+    priceBasisPax: "from %n travellers",
+    priceBasisTickets: "tickets not included",
     englishNote: "The journey pages themselves are in English.",
     tag: { days: "Days", fullDay: "Full Day", halfDay: "Half Day", evening: "Evening" },
     places: {},
@@ -151,6 +157,8 @@ export const UI: Record<SiteLocale, UiStrings> = {
     tierLine: "Privat · Maßgeschneidert · Nie in der Gruppe",
     motto: "Das Land · Das Erbe · Die Reise",
     perPerson: "/ Person",
+    priceBasisPax: "ab %n Reisenden",
+    priceBasisTickets: "Eintritte nicht enthalten",
     englishNote: "Die Reiseverläufe im Detail sind auf Englisch.",
     tag: { days: "Tage", fullDay: "Ganzer Tag", halfDay: "Halber Tag", evening: "Abend" },
     places: {
@@ -194,6 +202,8 @@ export const UI: Record<SiteLocale, UiStrings> = {
     tierLine: "Privato · Su misura · Mai in gruppo",
     motto: "La Terra · L'Eredità · Il Viaggio",
     perPerson: "/ persona",
+    priceBasisPax: "da %n viaggiatori",
+    priceBasisTickets: "biglietti non inclusi",
     englishNote: "Le pagine dei singoli viaggi sono in inglese.",
     tag: { days: "Giorni", fullDay: "Giornata intera", halfDay: "Mezza giornata", evening: "Serata" },
     places: {
@@ -237,6 +247,8 @@ export const UI: Record<SiteLocale, UiStrings> = {
     tierLine: "Privado · A medida · Nunca en grupo",
     motto: "La Tierra · El Legado · El Viaje",
     perPerson: "/ persona",
+    priceBasisPax: "desde %n viajeros",
+    priceBasisTickets: "entradas no incluidas",
     englishNote: "Las páginas de cada viaje están en inglés.",
     tag: { days: "Días", fullDay: "Día completo", halfDay: "Medio día", evening: "Noche" },
     places: {
@@ -280,6 +292,8 @@ export const UI: Record<SiteLocale, UiStrings> = {
     tierLine: "Privé · Sur mesure · Jamais en groupe",
     motto: "La Terre · L'Héritage · Le Voyage",
     perPerson: "/ personne",
+    priceBasisPax: "à partir de %n voyageurs",
+    priceBasisTickets: "billets non inclus",
     englishNote: "Les pages de chaque voyage sont en anglais.",
     tag: { days: "Jours", fullDay: "Journée entière", halfDay: "Demi-journée", evening: "Soirée" },
     places: {
@@ -324,6 +338,8 @@ export const UI: Record<SiteLocale, UiStrings> = {
     tierLine: "Частно · По вашей мерке · Никогда не в группе",
     motto: "Земля · Наследие · Путешествие",
     perPerson: "/ чел.",
+    priceBasisPax: "от %n человек",
+    priceBasisTickets: "билеты не включены",
     englishNote: "Страницы отдельных маршрутов — на английском.",
     tag: { days: "дней", fullDay: "Весь день", halfDay: "Полдня", evening: "Вечер" },
     places: {
@@ -371,6 +387,8 @@ export const UI: Record<SiteLocale, UiStrings> = {
     tierLine: "Privado · Sob medida · Nunca em grupo",
     motto: "A Terra · O Legado · A Viagem",
     perPerson: "/ pessoa",
+    priceBasisPax: "a partir de %n viajantes",
+    priceBasisTickets: "ingressos não incluídos",
     englishNote: "As páginas de cada viagem estão em inglês.",
     tag: { days: "Dias", fullDay: "Dia inteiro", halfDay: "Meio dia", evening: "Noite" },
     places: {
@@ -413,6 +431,8 @@ export const UI: Record<SiteLocale, UiStrings> = {
     tierLine: "Privat · Dirancang khusus · Tidak pernah rombongan",
     motto: "Negeri · Warisan · Perjalanan",
     perPerson: "/ orang",
+    priceBasisPax: "mulai %n orang",
+    priceBasisTickets: "tiket masuk tidak termasuk",
     englishNote: "Halaman rincian tiap perjalanan berbahasa Inggris.",
     tag: { days: "Hari", fullDay: "Sehari penuh", halfDay: "Setengah hari", evening: "Malam" },
     places: { Cairo: "Kairo", Alexandria: "Aleksandria" },
@@ -453,6 +473,8 @@ export const UI: Record<SiteLocale, UiStrings> = {
     tierLine: "Privat · Direka khas · Tidak pernah berkumpulan",
     motto: "Negeri · Warisan · Perjalanan",
     perPerson: "/ seorang",
+    priceBasisPax: "dari %n orang",
+    priceBasisTickets: "tiket masuk tidak termasuk",
     englishNote: "Halaman butiran setiap percutian dalam bahasa Inggeris.",
     tag: { days: "Hari", fullDay: "Sehari penuh", halfDay: "Setengah hari", evening: "Malam" },
     places: { Cairo: "Kaherah", Alexandria: "Iskandariah" },
@@ -493,6 +515,8 @@ export const UI: Record<SiteLocale, UiStrings> = {
     tierLine: "خاص · مُصمَّم لكم · بلا مجموعات",
     motto: "الأرض · الإرث · الرحلة",
     perPerson: "/ للفرد",
+    priceBasisPax: "من %n أفراد",
+    priceBasisTickets: "التذاكر غير مشمولة",
     englishNote: "صفحات تفاصيل كل رحلة بالإنجليزية.",
     tag: { days: "أيام", fullDay: "يوم كامل", halfDay: "نصف يوم", evening: "مسائية" },
     places: {
@@ -534,6 +558,21 @@ export function tourTag(tag: string, t: UiStrings): string {
   if (/^half day$/i.test(tag)) return t.tag.halfDay;
   if (/^evening$/i.test(tag)) return t.tag.evening;
   return tag;  // an unrecognised shape stays as written rather than guessed at
+}
+
+/**
+ * The short qualifier under a card's price, in this language. Built here
+ * rather than in utils/format, which returns English and is also used by the
+ * English tour pages in their longer, sentence form.
+ */
+export function priceBasisShort(
+  tour: { priceBasisPax?: number; ticketsExcluded?: boolean },
+  t: UiStrings,
+): string | undefined {
+  const parts: string[] = [];
+  if (tour.priceBasisPax) parts.push(t.priceBasisPax.replace("%n", String(tour.priceBasisPax)));
+  if (tour.ticketsExcluded) parts.push(t.priceBasisTickets);
+  return parts.length ? parts.join(" · ") : undefined;
 }
 
 /** A place name in this language, or the English spelling where they match. */

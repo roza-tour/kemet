@@ -74,6 +74,7 @@ const days = tour.itinerary.map((en, i) => ({
   label: en.label === "Stop" ? p.stopLabel : p.dayLabel,
   title: text.itinerary[i].title,
   items: text.itinerary[i].items,
+  text: text.itinerary[i].text,
 }));
 
 const included = (tour.included ?? []).map((l) => p.lines[l]);
@@ -211,7 +212,9 @@ const jsonld: Record<string, unknown>[] = [
             <span class="lz-n">{d.num}</span>
             <div>
               <h3 class="lt-day">{d.label} {Number(d.num)} — {d.title}</h3>
-              <ul class="lt-items">{d.items.map((i) => <li>{i}</li>)}</ul>
+              {d.items
+                ? <ul class="lt-items">{d.items.map((i) => <li>{i}</li>)}</ul>
+                : <p class="lt-text">{d.text}</p>}
             </div>
           </div>
         ))}
@@ -285,6 +288,7 @@ const jsonld: Record<string, unknown>[] = [
     position: relative; padding-inline-start: var(--s-3); color: var(--muted);
     font-size: var(--t-sm); line-height: 1.8; margin-bottom: 6px;
   }
+  .lt-text { color: var(--muted); font-size: var(--t-sm); line-height: 1.85; margin: 0; }
   .lt-items li::before {
     content: ""; position: absolute; inset-inline-start: 0; top: .72em;
     width: 4px; height: 4px; border-radius: 50%; background: var(--gold); opacity: .75;
