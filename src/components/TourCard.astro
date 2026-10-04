@@ -1,9 +1,9 @@
 ---
 import type { Tour } from "@/types";
-import { formatPrice, priceBasis } from "@/utils/format";
+import { formatPrice } from "@/utils/format";
 import Placeholder from "@/components/Placeholder.astro";
-import { ui, UI_DEFAULT, tourTag, placeName } from "@/config/ui";
-import { tourRouteFor } from "@/config/tour-i18n";
+import { ui, UI_DEFAULT, tourTag, placeName, priceBasisShort } from "@/config/ui";
+import { tourRouteFor, tourTextFor } from "@/config/tour-i18n";
 import type { SiteLocale, TranslatedLocale } from "@/config/i18n";
 
 interface Props {
@@ -23,16 +23,22 @@ const localised = locale === UI_DEFAULT
   ? undefined
   : tourRouteFor(tour.slug, locale as TranslatedLocale);
 const href = `${base}${localised ?? `${tour.slug}.html`}`;
-const basis = priceBasis(tour, true);
+// Title and summary come from the translation where there is one. A card
+// that opened a German page under an English headline was the last English
+// left on a German hub.
+const text = locale === UI_DEFAULT ? undefined : tourTextFor(tour.slug, locale as TranslatedLocale);
+const cardTitle = text?.title ?? tour.title;
+const cardSummary = text?.summary ?? tour.summary;
+const basis = priceBasisShort(tour, t);
 const chip = tourTag(tour.tag, t);
 const route = tour.cities.map((c) => placeName(c, t)).join(" · ");
 ---
-<a class="jcard reveal" href={href} data-tilt aria-label={`${tour.title} — view journey`}>
+<a class="jcard reveal" href={href} data-tilt aria-label={cardTitle}>
   <div style="position:relative">
     <span class="tag">{chip}</span>
     <Placeholder
       sizes="card"
-      label={tour.title}
+      label={cardTitle}
       src={tour.hero?.src}
       alt={tour.hero?.alt}
       width={tour.hero?.width}
@@ -40,9 +46,9 @@ const route = tour.cities.map((c) => placeName(c, t)).join(" · ");
     />
   </div>
   <div class="body">
-    <h3>{tour.title}</h3>
+    <h3>{cardTitle}</h3>
     <div class="route">{route}</div>
-    <p>{tour.summary}</p>
+    <p>{cardSummary}</p>
     <div class="meta">
       <div class="price">
         {formatPrice(tour.price)}

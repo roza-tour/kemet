@@ -25,11 +25,20 @@
 // translations exist.
 // ---------------------------------------------------------------------------
 
+/**
+ * A row of the itinerary. The catalogue writes multi-day journeys as a list
+ * of lines per day and day tours as a paragraph per stop, so a translation
+ * carries whichever its English original has — and config/tour-i18n.ts
+ * refuses to build if the two disagree, because a day that quietly lost its
+ * list would render as an empty row.
+ */
 export interface TourDayText {
-  /** The day's heading. */
+  /** The day's or stop's heading. */
   title: string;
-  /** What happens, one line each. Same count as the English day. */
-  items: string[];
+  /** Multi-day journeys: what happens, one line each, same count as English. */
+  items?: string[];
+  /** Day tours: the stop in a sentence or two. */
+  text?: string;
 }
 
 export interface TourText {

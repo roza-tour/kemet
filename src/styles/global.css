@@ -1078,3 +1078,7 @@ footer{background:var(--ink-2);border-top:1px solid var(--line);padding:var(--s-
     .lz-sec { display: block; padding:var(--s-4) 0; }
     .lz-n { display: block; width: auto; font-size:var(--t-md); margin-bottom:var(--s-1); }
   }
+/* The locale's journeys page carries its own catalogue, and the card grid
+   needs more room than .lz-wrap's 940px reading measure. */
+.lz-journeys{margin:var(--s-6) calc(50% - 50vw) 0;padding:0 max(20px,calc(50vw - 620px));max-width:100vw}
+@media(max-width:680px){.lz-journeys{margin-inline:0;padding-inline:0}}

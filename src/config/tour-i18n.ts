@@ -74,6 +74,27 @@ for (const locale of TRANSLATED_LOCALES) {
         `Remove it here; a second page would compete with that one.`,
       );
     }
+    // A multi-day journey writes each day as a list of lines; a day tour
+    // writes each stop as a paragraph. A translation that used the other
+    // shape would render an empty row, so the shapes are checked per row
+    // rather than assumed from the journey's kind.
+    tour.itinerary.forEach((en, i) => {
+      const got = text.itinerary[i];
+      const wantsList = Array.isArray(en.items);
+      if (wantsList && (!got.items || got.items.length !== en.items!.length)) {
+        throw new Error(
+          `tours-i18n/${locale}.ts: "${text.slug}" row ${i + 1} needs ` +
+          `${en.items!.length} items to match the English day; it has ` +
+          `${got.items?.length ?? 0}.`,
+        );
+      }
+      if (!wantsList && !got.text) {
+        throw new Error(
+          `tours-i18n/${locale}.ts: "${text.slug}" row ${i + 1} is a day-tour ` +
+          `stop and needs \`text\`, not \`items\`.`,
+        );
+      }
+    });
     assertPhrasebook(locale, text.slug, [...(tour.included ?? []), ...(tour.excluded ?? [])]);
     TRANSLATED_TOURS.push({ locale, slug: text.slug, route: `${locale}/${text.localeSlug}.html`, text });
   }
@@ -85,6 +106,14 @@ for (const t of TRANSLATED_TOURS) {
   if (!BY_SLUG.has(t.slug)) BY_SLUG.set(t.slug, new Map());
   BY_SLUG.get(t.slug)!.set(t.locale, t.route);
 }
+
+/** English slug + locale → the translated text, for cards and listings. */
+const TEXT_BY = new Map<string, TourText>();
+for (const t of TRANSLATED_TOURS) TEXT_BY.set(`${t.locale}|${t.slug}`, t.text);
+
+/** The translated words for a journey, where that language has them. */
+export const tourTextFor = (slug: string, locale: TranslatedLocale): TourText | undefined =>
+  TEXT_BY.get(`${locale}|${slug}`);
 
 /** Route file → the English journey slug it translates. */
 const BY_ROUTE = new Map<string, string>();

@@ -162,6 +162,115 @@ const de: TourPhrasebook = {
       "Ballonfahrt (optionale Zusatzleistung)",
     "Special tombs requiring separate tickets (Tutankhamun, Seti I — arranged on request)":
       "Gräber mit gesondertem Ticket (Tutanchamun, Sethos I. — auf Wunsch arrangiert)",
+
+    // --- the rest of the catalogue ---
+    "3 nights' accommodation in 4- or 5-star hotels":
+      "3 Übernachtungen in 4- oder 5-Sterne-Hotels",
+    "2 nights' accommodation in 4- or 5-star hotels":
+      "2 Übernachtungen in 4- oder 5-Sterne-Hotels",
+    "4 nights' accommodation in 4- or 5-star hotels (Luxor & Aswan)":
+      "4 Übernachtungen in 4- oder 5-Sterne-Hotels (Luxor und Assuan)",
+    "4 nights' accommodation in a 4- or 5-star hotel":
+      "4 Übernachtungen in einem 4- oder 5-Sterne-Hotel",
+    "1 night's accommodation in a seafront 4/5-star hotel":
+      "1 Übernachtung in einem 4- oder 5-Sterne-Hotel direkt am Meer",
+    "7 nights' accommodation — family suites or connecting rooms, 4- or 5-star":
+      "7 Übernachtungen — Familiensuiten oder Verbindungszimmer, 4 oder 5 Sterne",
+    "8 nights — Nile-view suites, 4- or 5-star hotels and a 3-night full-board cruise":
+      "8 Übernachtungen — Suiten mit Nilblick, 4- oder 5-Sterne-Hotels und eine dreitägige Nilkreuzfahrt mit Vollpension",
+    "4 nights' accommodation in a 4- or 5-star Red Sea resort (half board)":
+      "4 Übernachtungen in einem 4- oder 5-Sterne-Resort am Roten Meer (Halbpension)",
+    "3 nights' accommodation in a 4- or 5-star Red Sea resort (half board)":
+      "3 Übernachtungen in einem 4- oder 5-Sterne-Resort am Roten Meer (Halbpension)",
+    "Domestic flights Cairo–Luxor and Aswan–Cairo":
+      "Inlandsflüge Kairo–Luxor und Assuan–Kairo",
+    "Domestic flights Cairo–Aswan and Luxor–Cairo":
+      "Inlandsflüge Kairo–Assuan und Luxor–Kairo",
+    "4x4 desert transfer where required":
+      "Geländewagen für die Wüstenabschnitte, wo nötig",
+    "Lakeside fish lunch": "Fischessen am See",
+    "Seafront seafood lunch": "Fischessen direkt am Meer",
+    "Private local food guide for the evening":
+      "Privater lokaler Food-Guide für den Abend",
+    "All food tastings listed in the itinerary":
+      "Alle im Programm genannten Verkostungen",
+    "Bottled water and tea/coffee at the ahwa":
+      "Wasser in Flaschen sowie Tee oder Kaffee im Ahwa",
+    "Private felucca sail in Aswan": "Private Felukenfahrt in Assuan",
+    "Sunset felucca charter in Aswan":
+      "Private Felukenfahrt zum Sonnenuntergang in Assuan",
+    "Golden-hour felucca charter in Aswan":
+      "Private Felukenfahrt zur goldenen Stunde in Assuan",
+    "Felucca sail and Nubian village visit in Aswan":
+      "Felukenfahrt und Besuch eines nubischen Dorfes in Assuan",
+    "Private early-access Giza sunrise session":
+      "Privater Zugang zum Plateau von Gizeh zum Sonnenaufgang",
+    "Private family-specialist Egyptologist throughout":
+      "Durchgehend ein auf Familien spezialisierter privater Ägyptologe",
+    "Private photography-aware Egyptologist guide throughout":
+      "Durchgehend ein privater Ägyptologe mit Blick für die Fotografie",
+    "Private historian-Egyptologist guide throughout":
+      "Durchgehend ein privater Ägyptologe und Historiker",
+    "Photography permits where required (tripod/site)":
+      "Fotogenehmigungen, wo erforderlich (Stativ bzw. Stätte)",
+    "Sufi tanoura performance tickets":
+      "Eintritt zur Sufi-Tanoura-Vorführung",
+    "Private full-day Ras Mohammed boat charter with snorkelling equipment":
+      "Privat gecharterter Bootstag im Ras-Mohammed-Nationalpark inklusive Schnorchelausrüstung",
+    "Sinai desert evening with Bedouin dinner":
+      "Abend in der Sinai-Wüste mit beduinischem Abendessen",
+    "5 guided dives (1 check dive + 2 two-dive boat days) with a licensed PADI centre":
+      "5 geführte Tauchgänge (1 Check-Dive und 2 Bootstage mit je zwei Tauchgängen) mit einem lizenzierten PADI-Center",
+    "Full equipment rental, tanks and weights":
+      "Komplette Ausrüstung, Flaschen und Blei",
+    "Marine park fees for Ras Mohammed":
+      "Nationalparkgebühren für Ras Mohammed",
+    "Seafood dinner on the first evening":
+      "Fischessen am ersten Abend",
+    "Private air-conditioned vehicle for the desert road, both ways":
+      "Privates, klimatisiertes Fahrzeug für die Wüstenstraße, hin und zurück",
+    "Breakfast box and bottled water":
+      "Frühstückspaket und Wasser in Flaschen",
+    "Hotel or cruise-ship pickup & drop-off in Aswan":
+      "Abholung und Rückbringung am Hotel oder Schiff in Assuan",
+
+    // --- excluded, the rest ---
+    "Entrance tickets to sites and monuments — paid at the published gate rate, with nothing added":
+      "Eintrittskarten für Stätten und Monumente — zum offiziellen Kassenpreis, ohne Aufschlag",
+    "Entrance tickets to both temples — paid at the published gate rate, with nothing added":
+      "Eintrittskarten für beide Tempel — zum offiziellen Kassenpreis, ohne Aufschlag",
+    "Entry inside the pyramid chambers (optional extra)":
+      "Zutritt zu den Kammern im Inneren der Pyramiden (optionale Zusatzleistung)",
+    "Lunch (half-day tour)": "Mittagessen (Halbtagestour)",
+    "Lunch (returned to Aswan by early afternoon)":
+      "Mittagessen (Rückkehr nach Assuan am frühen Nachmittag)",
+    "Camel or horse rides (optional extra)":
+      "Kamel- oder Pferderitte (optionale Zusatzleistung)",
+    "Other optional extras — dinner cruise, drinks":
+      "Weitere optionale Zusatzleistungen — Dinner-Cruise, Getränke",
+    "Alcoholic drinks": "Alkoholische Getränke",
+    "Additional dishes beyond the tasting menu":
+      "Zusätzliche Gerichte über das Verkostungsmenü hinaus",
+    "Abu Simbel excursion (optional extra)":
+      "Ausflug nach Abu Simbel (optionale Zusatzleistung)",
+    "Hot-air balloon flight (booked on request, ~EUR 120 per person)":
+      "Ballonfahrt (auf Anfrage buchbar, ca. 120 € pro Person)",
+    "Hot-air balloon flight (booked on request)":
+      "Ballonfahrt (auf Anfrage buchbar)",
+    "Sound & Light show and camel rides (optional extras)":
+      "Ton-und-Licht-Show und Kamelritte (optionale Zusatzleistungen)",
+    "Camera equipment and drone permits (drones are effectively prohibited in Egypt)":
+      "Fotoausrüstung und Drohnengenehmigungen (Drohnen sind in Ägypten faktisch verboten)",
+    "Scuba diving (arranged on request with licensed centres)":
+      "Gerätetauchen (auf Anfrage mit lizenzierten Centern arrangiert)",
+    "Marine park fees where applicable":
+      "Nationalparkgebühren, wo sie anfallen",
+    "Dive insurance (mandatory — arranged at booking if you have none)":
+      "Tauchversicherung (verpflichtend — bei der Buchung arrangiert, falls nicht vorhanden)",
+    "Certification courses (available as an alternative programme)":
+      "Tauchkurse mit Zertifikat (als alternatives Programm verfügbar)",
+    "Flight option Aswan–Abu Simbel (available on request, limited schedule)":
+      "Flugvariante Assuan–Abu Simbel (auf Anfrage, eingeschränkter Flugplan)",
   },
 };
 
