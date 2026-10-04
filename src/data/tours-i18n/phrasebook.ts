@@ -274,8 +274,362 @@ const de: TourPhrasebook = {
   },
 };
 
+
+const fr: TourPhrasebook = {
+  h: {
+    overview: "Le voyage",
+    itinerary: "Jour après jour",
+    included: "Compris",
+    excluded: "Non compris",
+    faq: "Questions fréquentes",
+    atAGlance: "En bref",
+    comfort: "Le rythme",
+    enquire: "Demander",
+  },
+  f: {
+    duration: "Durée",
+    startPoint: "Départ",
+    visiting: "Étapes",
+    isPrivate: "Privé",
+    from: "à partir de",
+    walking: "À pied",
+    sleep: "Nuits",
+    early: "Départ matinal",
+    drives: "Longues routes",
+  },
+  dayLabel: "Jour",
+  stopLabel: "Étape",
+  privateYes: "Oui — votre groupe seul",
+  categories: {
+    "Signature Journey": "Voyage signature",
+    "Short Break": "Court séjour",
+    "Day Tour": "Excursion à la journée",
+    "Nile Cruise": "Croisière sur le Nil",
+    "Honeymoon": "Voyage de noces",
+    "Family Journey": "Voyage en famille",
+    "Photography Journey": "Voyage photo",
+    "Grand Tour": "Grand tour",
+    "Cultural Journey": "Voyage culturel",
+    "Red Sea": "Mer Rouge",
+  },
+  walking: { Moderate: "Modéré", Light: "Léger" },
+  cta: {
+    heading: "Donnez-nous vos dates",
+    text: "Vos dates et le nombre de voyageurs suffisent. Nous répondons sous un jour ouvré avec un itinéraire réel et un prix détaillé — sans engagement.",
+    button: "Envoyer la demande",
+    whatsapp: "Bonjour Kemet — ce voyage nous intéresse.",
+  },
+  priceNote: "Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.",
+  allJourneys: "Voir tous les voyages",
+  lines: {
+    "Private Egyptologist guide throughout": "Un égyptologue privé tout au long du voyage",
+    "All entrance fees to sites and monuments": "Tous les droits d'entrée aux sites et monuments",
+    "Lunch on each touring day": "Le déjeuner chaque jour de visite",
+    "Private air-conditioned transfers": "Transferts privés climatisés",
+    "Hotel pickup & drop-off": "Prise en charge et retour à l'hôtel",
+    "Bottled water every day": "De l'eau en bouteille chaque jour",
+    "9 nights' accommodation — 4- or 5-star hotels and a deluxe Nile cruise":
+      "9 nuits — hôtels 4 ou 5 étoiles et une croisière de luxe sur le Nil",
+    "3-night full-board Nile cruise, Aswan to Luxor":
+      "Croisière de 3 nuits en pension complète, d'Assouan à Louxor",
+    "Sleeper-train berths Cairo↔Upper Egypt (both directions)":
+      "Couchettes de train de nuit Le Caire↔Haute-Égypte (aller et retour)",
+    "6 nights' accommodation in 4- or 5-star hotels": "6 nuits en hôtels 4 ou 5 étoiles",
+    "Sleeper-train berths Cairo↔Luxor (both directions)":
+      "Couchettes de train de nuit Le Caire↔Louxor (aller et retour)",
+    "All shore excursions as private visits with your own guide":
+      "Toutes les escales en visites privées avec votre propre guide",
+    "13 nights — 4- or 5-star hotels, a 3-night full-board Nile cruise and a Red Sea resort":
+      "13 nuits — hôtels 4 ou 5 étoiles, croisière de 3 nuits en pension complète et un resort en mer Rouge",
+    "All domestic flights (Cairo–Aswan, Luxor–Sharm El Sheikh, Sharm–Cairo)":
+      "Tous les vols intérieurs (Le Caire–Assouan, Louxor–Charm el-Cheikh, Charm–Le Caire)",
+    "Abu Simbel excursion by private vehicle": "Excursion à Abou Simbel en véhicule privé",
+    "Ras Mohammed boat day with snorkelling equipment":
+      "Journée en bateau à Ras Mohammed, équipement de snorkeling compris",
+    "2 nights' accommodation in a 4- or 5-star Luxor hotel":
+      "2 nuits dans un hôtel 4 ou 5 étoiles à Louxor",
+    "Evening entry to Luxor Temple and the Avenue of Sphinxes":
+      "Entrée en soirée au temple de Louxor et à l'allée des Sphinx",
+    "2 nights' accommodation in a 4- or 5-star hotel": "2 nuits dans un hôtel 4 ou 5 étoiles",
+    "VIP airport meet & assist with fast-track, both directions":
+      "Accueil VIP à l'aéroport avec passage prioritaire, à l'arrivée et au départ",
+    "3 nights' accommodation in 4- or 5-star hotels": "3 nuits en hôtels 4 ou 5 étoiles",
+    "2 nights' accommodation in 4- or 5-star hotels": "2 nuits en hôtels 4 ou 5 étoiles",
+    "4 nights' accommodation in 4- or 5-star hotels (Luxor & Aswan)":
+      "4 nuits en hôtels 4 ou 5 étoiles (Louxor et Assouan)",
+    "4 nights' accommodation in a 4- or 5-star hotel": "4 nuits dans un hôtel 4 ou 5 étoiles",
+    "1 night's accommodation in a seafront 4/5-star hotel":
+      "1 nuit dans un hôtel 4 ou 5 étoiles en bord de mer",
+    "7 nights' accommodation — family suites or connecting rooms, 4- or 5-star":
+      "7 nuits — suites familiales ou chambres communicantes, 4 ou 5 étoiles",
+    "8 nights — Nile-view suites, 4- or 5-star hotels and a 3-night full-board cruise":
+      "8 nuits — suites avec vue sur le Nil, hôtels 4 ou 5 étoiles et une croisière de 3 nuits en pension complète",
+    "4 nights' accommodation in a 4- or 5-star Red Sea resort (half board)":
+      "4 nuits dans un resort 4 ou 5 étoiles en mer Rouge (demi-pension)",
+    "3 nights' accommodation in a 4- or 5-star Red Sea resort (half board)":
+      "3 nuits dans un resort 4 ou 5 étoiles en mer Rouge (demi-pension)",
+    "Domestic flights Cairo–Luxor and Aswan–Cairo":
+      "Vols intérieurs Le Caire–Louxor et Assouan–Le Caire",
+    "Domestic flights Cairo–Aswan and Luxor–Cairo":
+      "Vols intérieurs Le Caire–Assouan et Louxor–Le Caire",
+    "4x4 desert transfer where required": "Transfert en 4x4 sur les sections désertiques",
+    "Lakeside fish lunch": "Déjeuner de poisson au bord du lac",
+    "Seafront seafood lunch": "Déjeuner de fruits de mer face à la Méditerranée",
+    "Private local food guide for the evening": "Un guide culinaire local privé pour la soirée",
+    "All food tastings listed in the itinerary": "Toutes les dégustations indiquées au programme",
+    "Bottled water and tea/coffee at the ahwa": "Eau en bouteille et thé ou café à l'ahwa",
+    "Private felucca sail in Aswan": "Navigation privée en felouque à Assouan",
+    "Sunset felucca charter in Aswan": "Felouque privée au coucher du soleil à Assouan",
+    "Golden-hour felucca charter in Aswan": "Felouque privée à l'heure dorée à Assouan",
+    "Felucca sail and Nubian village visit in Aswan":
+      "Felouque et visite d'un village nubien à Assouan",
+    "Private early-access Giza sunrise session":
+      "Accès privé anticipé au plateau de Gizeh au lever du soleil",
+    "Private family-specialist Egyptologist throughout":
+      "Un égyptologue privé spécialiste des familles tout au long du voyage",
+    "Private photography-aware Egyptologist guide throughout":
+      "Un égyptologue privé habitué aux photographes tout au long du voyage",
+    "Private historian-Egyptologist guide throughout":
+      "Un guide égyptologue et historien privé tout au long du voyage",
+    "Photography permits where required (tripod/site)":
+      "Permis de photographie lorsqu'ils sont exigés (trépied ou site)",
+    "Sufi tanoura performance tickets": "Billets pour le spectacle soufi de tanoura",
+    "Private full-day Ras Mohammed boat charter with snorkelling equipment":
+      "Bateau privé pour la journée à Ras Mohammed, équipement de snorkeling compris",
+    "Sinai desert evening with Bedouin dinner":
+      "Soirée dans le désert du Sinaï avec dîner bédouin",
+    "5 guided dives (1 check dive + 2 two-dive boat days) with a licensed PADI centre":
+      "5 plongées guidées (1 plongée de contrôle et 2 journées bateau de deux plongées) avec un centre PADI agréé",
+    "Full equipment rental, tanks and weights": "Location de l'équipement complet, blocs et plombs",
+    "Marine park fees for Ras Mohammed": "Droits du parc marin de Ras Mohammed",
+    "Seafood dinner on the first evening": "Dîner de fruits de mer le premier soir",
+    "Private air-conditioned vehicle for the desert road, both ways":
+      "Véhicule privé climatisé pour la route du désert, aller et retour",
+    "Breakfast box and bottled water": "Panier petit-déjeuner et eau en bouteille",
+    "Hotel or cruise-ship pickup & drop-off in Aswan":
+      "Prise en charge et retour à l'hôtel ou au bateau à Assouan",
+
+    "Entrance tickets to sites and monuments — paid at the published gate rate, with nothing added":
+      "Les billets d'entrée aux sites et monuments — réglés au tarif officiel affiché, sans majoration",
+    "Entrance tickets to both temples — paid at the published gate rate, with nothing added":
+      "Les billets d'entrée aux deux temples — réglés au tarif officiel affiché, sans majoration",
+    "Entry inside the pyramid chambers (optional extra)":
+      "L'entrée dans les chambres intérieures des pyramides (en option)",
+    "Lunch (half-day tour)": "Le déjeuner (excursion d'une demi-journée)",
+    "Lunch (returned to Aswan by early afternoon)":
+      "Le déjeuner (retour à Assouan en début d'après-midi)",
+    "Camel or horse rides (optional extra)": "Les promenades à dos de chameau ou à cheval (en option)",
+    "Other optional extras — dinner cruise, drinks":
+      "Les autres options — dîner-croisière, boissons",
+    "Alcoholic drinks": "Les boissons alcoolisées",
+    "Additional dishes beyond the tasting menu": "Les plats supplémentaires hors menu de dégustation",
+    "Abu Simbel excursion (optional extra)": "L'excursion à Abou Simbel (en option)",
+    "Hot-air balloon flight (booked on request, ~EUR 120 per person)":
+      "Le vol en montgolfière (sur demande, environ 120 € par personne)",
+    "Hot-air balloon flight (booked on request)": "Le vol en montgolfière (sur demande)",
+    "Hot-air balloon flight (optional extra)": "Le vol en montgolfière (en option)",
+    "Special tombs requiring separate tickets (Tutankhamun, Seti I — arranged on request)":
+      "Les tombes à billet séparé (Toutânkhamon, Séthi Ier — organisées sur demande)",
+    "Sound & Light show and camel rides (optional extras)":
+      "Le spectacle son et lumière et les promenades à dos de chameau (en option)",
+    "Camera equipment and drone permits (drones are effectively prohibited in Egypt)":
+      "Le matériel photo et les autorisations de drone (les drones sont de fait interdits en Égypte)",
+    "Scuba diving (arranged on request with licensed centres)":
+      "La plongée bouteille (organisée sur demande avec des centres agréés)",
+    "Marine park fees where applicable": "Les droits de parc marin, le cas échéant",
+    "Dive insurance (mandatory — arranged at booking if you have none)":
+      "L'assurance plongée (obligatoire — souscrite à la réservation si vous n'en avez pas)",
+    "Certification courses (available as an alternative programme)":
+      "Les cours de certification (proposés comme programme alternatif)",
+    "Flight option Aswan–Abu Simbel (available on request, limited schedule)":
+      "L'option avion Assouan–Abou Simbel (sur demande, vols limités)",
+    "International flights to and from Egypt": "Les vols internationaux à destination et au départ de l'Égypte",
+    "Egypt entry visa": "Le visa d'entrée en Égypte",
+    "Tipping (gratuities)": "Les pourboires",
+    "Personal expenses": "Les dépenses personnelles",
+    "Optional extras — Abu Simbel, camel rides, dinner cruise, drinks":
+      "Les options — Abou Simbel, promenades à dos de chameau, dîner-croisière, boissons",
+  },
+};
+
+const it: TourPhrasebook = {
+  h: {
+    overview: "Il viaggio",
+    itinerary: "Giorno per giorno",
+    included: "Incluso",
+    excluded: "Non incluso",
+    faq: "Domande frequenti",
+    atAGlance: "In breve",
+    comfort: "Il ritmo",
+    enquire: "Richiedi",
+  },
+  f: {
+    duration: "Durata",
+    startPoint: "Partenza",
+    visiting: "Tappe",
+    isPrivate: "Privato",
+    from: "da",
+    walking: "A piedi",
+    sleep: "Pernottamenti",
+    early: "Partenza all'alba",
+    drives: "Tratti lunghi in auto",
+  },
+  dayLabel: "Giorno",
+  stopLabel: "Tappa",
+  privateYes: "Sì — solo il vostro gruppo",
+  categories: {
+    "Signature Journey": "Viaggio signature",
+    "Short Break": "Viaggio breve",
+    "Day Tour": "Escursione in giornata",
+    "Nile Cruise": "Crociera sul Nilo",
+    "Honeymoon": "Viaggio di nozze",
+    "Family Journey": "Viaggio in famiglia",
+    "Photography Journey": "Viaggio fotografico",
+    "Grand Tour": "Gran tour",
+    "Cultural Journey": "Viaggio culturale",
+    "Red Sea": "Mar Rosso",
+  },
+  walking: { Moderate: "Moderato", Light: "Leggero" },
+  cta: {
+    heading: "Diteci le vostre date",
+    text: "Bastano il periodo e il numero di persone. Rispondiamo entro un giorno lavorativo con un itinerario vero e un prezzo dettagliato — senza impegno.",
+    button: "Invia la richiesta",
+    whatsapp: "Buongiorno Kemet — questo viaggio ci interessa.",
+  },
+  priceNote: "A persona, in stagione normale. I supplementi delle festività sono indicati separatamente nel preventivo.",
+  allJourneys: "Vedi tutti i viaggi",
+  lines: {
+    "Private Egyptologist guide throughout": "Un egittologo privato per tutto il viaggio",
+    "All entrance fees to sites and monuments": "Tutti i biglietti d'ingresso a siti e monumenti",
+    "Lunch on each touring day": "Il pranzo in ogni giornata di visita",
+    "Private air-conditioned transfers": "Trasferimenti privati con aria condizionata",
+    "Hotel pickup & drop-off": "Prelievo e rientro in hotel",
+    "Bottled water every day": "Acqua in bottiglia ogni giorno",
+    "9 nights' accommodation — 4- or 5-star hotels and a deluxe Nile cruise":
+      "9 notti — hotel 4 o 5 stelle e una crociera deluxe sul Nilo",
+    "3-night full-board Nile cruise, Aswan to Luxor":
+      "Crociera di 3 notti in pensione completa, da Assuan a Luxor",
+    "Sleeper-train berths Cairo↔Upper Egypt (both directions)":
+      "Cuccette sul treno notturno Il Cairo↔Alto Egitto (andata e ritorno)",
+    "6 nights' accommodation in 4- or 5-star hotels": "6 notti in hotel 4 o 5 stelle",
+    "Sleeper-train berths Cairo↔Luxor (both directions)":
+      "Cuccette sul treno notturno Il Cairo↔Luxor (andata e ritorno)",
+    "All shore excursions as private visits with your own guide":
+      "Tutte le escursioni a terra come visite private con la vostra guida",
+    "13 nights — 4- or 5-star hotels, a 3-night full-board Nile cruise and a Red Sea resort":
+      "13 notti — hotel 4 o 5 stelle, crociera di 3 notti in pensione completa e un resort sul Mar Rosso",
+    "All domestic flights (Cairo–Aswan, Luxor–Sharm El Sheikh, Sharm–Cairo)":
+      "Tutti i voli interni (Il Cairo–Assuan, Luxor–Sharm el-Sheikh, Sharm–Il Cairo)",
+    "Abu Simbel excursion by private vehicle": "Escursione ad Abu Simbel in veicolo privato",
+    "Ras Mohammed boat day with snorkelling equipment":
+      "Giornata in barca a Ras Mohammed, attrezzatura da snorkeling inclusa",
+    "2 nights' accommodation in a 4- or 5-star Luxor hotel":
+      "2 notti in un hotel 4 o 5 stelle a Luxor",
+    "Evening entry to Luxor Temple and the Avenue of Sphinxes":
+      "Ingresso serale al Tempio di Luxor e al Viale delle Sfingi",
+    "2 nights' accommodation in a 4- or 5-star hotel": "2 notti in un hotel 4 o 5 stelle",
+    "VIP airport meet & assist with fast-track, both directions":
+      "Accoglienza VIP in aeroporto con corsia preferenziale, all'arrivo e alla partenza",
+    "3 nights' accommodation in 4- or 5-star hotels": "3 notti in hotel 4 o 5 stelle",
+    "2 nights' accommodation in 4- or 5-star hotels": "2 notti in hotel 4 o 5 stelle",
+    "4 nights' accommodation in 4- or 5-star hotels (Luxor & Aswan)":
+      "4 notti in hotel 4 o 5 stelle (Luxor e Assuan)",
+    "4 nights' accommodation in a 4- or 5-star hotel": "4 notti in un hotel 4 o 5 stelle",
+    "1 night's accommodation in a seafront 4/5-star hotel":
+      "1 notte in un hotel 4 o 5 stelle fronte mare",
+    "7 nights' accommodation — family suites or connecting rooms, 4- or 5-star":
+      "7 notti — suite familiari o camere comunicanti, 4 o 5 stelle",
+    "8 nights — Nile-view suites, 4- or 5-star hotels and a 3-night full-board cruise":
+      "8 notti — suite con vista sul Nilo, hotel 4 o 5 stelle e una crociera di 3 notti in pensione completa",
+    "4 nights' accommodation in a 4- or 5-star Red Sea resort (half board)":
+      "4 notti in un resort 4 o 5 stelle sul Mar Rosso (mezza pensione)",
+    "3 nights' accommodation in a 4- or 5-star Red Sea resort (half board)":
+      "3 notti in un resort 4 o 5 stelle sul Mar Rosso (mezza pensione)",
+    "Domestic flights Cairo–Luxor and Aswan–Cairo":
+      "Voli interni Il Cairo–Luxor e Assuan–Il Cairo",
+    "Domestic flights Cairo–Aswan and Luxor–Cairo":
+      "Voli interni Il Cairo–Assuan e Luxor–Il Cairo",
+    "4x4 desert transfer where required": "Trasferimento in 4x4 nei tratti desertici",
+    "Lakeside fish lunch": "Pranzo di pesce in riva al lago",
+    "Seafront seafood lunch": "Pranzo di pesce sul lungomare",
+    "Private local food guide for the evening": "Una guida gastronomica locale privata per la serata",
+    "All food tastings listed in the itinerary": "Tutte le degustazioni indicate nel programma",
+    "Bottled water and tea/coffee at the ahwa": "Acqua in bottiglia e tè o caffè all'ahwa",
+    "Private felucca sail in Aswan": "Navigazione privata in feluca ad Assuan",
+    "Sunset felucca charter in Aswan": "Feluca privata al tramonto ad Assuan",
+    "Golden-hour felucca charter in Aswan": "Feluca privata nell'ora d'oro ad Assuan",
+    "Felucca sail and Nubian village visit in Aswan":
+      "Giro in feluca e visita a un villaggio nubiano ad Assuan",
+    "Private early-access Giza sunrise session":
+      "Accesso privato anticipato alla piana di Giza all'alba",
+    "Private family-specialist Egyptologist throughout":
+      "Un egittologo privato specializzato in famiglie per tutto il viaggio",
+    "Private photography-aware Egyptologist guide throughout":
+      "Un egittologo privato abituato ai fotografi per tutto il viaggio",
+    "Private historian-Egyptologist guide throughout":
+      "Una guida egittologa e storica privata per tutto il viaggio",
+    "Photography permits where required (tripod/site)":
+      "I permessi fotografici dove richiesti (treppiede o sito)",
+    "Sufi tanoura performance tickets": "Biglietti per lo spettacolo sufi di tanoura",
+    "Private full-day Ras Mohammed boat charter with snorkelling equipment":
+      "Barca privata per l'intera giornata a Ras Mohammed, attrezzatura da snorkeling inclusa",
+    "Sinai desert evening with Bedouin dinner": "Serata nel deserto del Sinai con cena beduina",
+    "5 guided dives (1 check dive + 2 two-dive boat days) with a licensed PADI centre":
+      "5 immersioni guidate (1 di prova e 2 giornate in barca con due immersioni ciascuna) con un centro PADI autorizzato",
+    "Full equipment rental, tanks and weights": "Noleggio dell'attrezzatura completa, bombole e zavorra",
+    "Marine park fees for Ras Mohammed": "Le tasse del parco marino di Ras Mohammed",
+    "Seafood dinner on the first evening": "Cena di pesce la prima sera",
+    "Private air-conditioned vehicle for the desert road, both ways":
+      "Veicolo privato con aria condizionata per la strada del deserto, andata e ritorno",
+    "Breakfast box and bottled water": "Cestino per la colazione e acqua in bottiglia",
+    "Hotel or cruise-ship pickup & drop-off in Aswan":
+      "Prelievo e rientro in hotel o sulla motonave ad Assuan",
+
+    "Entrance tickets to sites and monuments — paid at the published gate rate, with nothing added":
+      "I biglietti d'ingresso a siti e monumenti — pagati alla tariffa ufficiale, senza ricarichi",
+    "Entrance tickets to both temples — paid at the published gate rate, with nothing added":
+      "I biglietti d'ingresso ai due templi — pagati alla tariffa ufficiale, senza ricarichi",
+    "Entry inside the pyramid chambers (optional extra)":
+      "L'ingresso nelle camere interne delle piramidi (supplemento facoltativo)",
+    "Lunch (half-day tour)": "Il pranzo (escursione di mezza giornata)",
+    "Lunch (returned to Aswan by early afternoon)":
+      "Il pranzo (rientro ad Assuan nel primo pomeriggio)",
+    "Camel or horse rides (optional extra)": "I giri in cammello o a cavallo (supplemento facoltativo)",
+    "Other optional extras — dinner cruise, drinks":
+      "Gli altri supplementi facoltativi — cena-crociera, bevande",
+    "Alcoholic drinks": "Le bevande alcoliche",
+    "Additional dishes beyond the tasting menu": "I piatti aggiuntivi oltre al menu di degustazione",
+    "Abu Simbel excursion (optional extra)": "L'escursione ad Abu Simbel (supplemento facoltativo)",
+    "Hot-air balloon flight (booked on request, ~EUR 120 per person)":
+      "Il volo in mongolfiera (su richiesta, circa 120 € a persona)",
+    "Hot-air balloon flight (booked on request)": "Il volo in mongolfiera (su richiesta)",
+    "Hot-air balloon flight (optional extra)": "Il volo in mongolfiera (supplemento facoltativo)",
+    "Special tombs requiring separate tickets (Tutankhamun, Seti I — arranged on request)":
+      "Le tombe con biglietto separato (Tutankhamon, Seti I — organizzate su richiesta)",
+    "Sound & Light show and camel rides (optional extras)":
+      "Lo spettacolo Suoni e Luci e i giri in cammello (supplementi facoltativi)",
+    "Camera equipment and drone permits (drones are effectively prohibited in Egypt)":
+      "L'attrezzatura fotografica e i permessi per droni (in Egitto i droni sono di fatto vietati)",
+    "Scuba diving (arranged on request with licensed centres)":
+      "Le immersioni (organizzate su richiesta con centri autorizzati)",
+    "Marine park fees where applicable": "Le tasse dei parchi marini, dove previste",
+    "Dive insurance (mandatory — arranged at booking if you have none)":
+      "L'assicurazione subacquea (obbligatoria — stipulata alla prenotazione se non ne avete una)",
+    "Certification courses (available as an alternative programme)":
+      "I corsi di certificazione (disponibili come programma alternativo)",
+    "Flight option Aswan–Abu Simbel (available on request, limited schedule)":
+      "L'opzione aereo Assuan–Abu Simbel (su richiesta, voli limitati)",
+    "International flights to and from Egypt": "I voli internazionali da e per l'Egitto",
+    "Egypt entry visa": "Il visto d'ingresso in Egitto",
+    "Tipping (gratuities)": "Le mance",
+    "Personal expenses": "Le spese personali",
+    "Optional extras — Abu Simbel, camel rides, dinner cruise, drinks":
+      "I supplementi facoltativi — Abu Simbel, giri in cammello, cena-crociera, bevande",
+  },
+};
+
 /** Only the languages a journey has actually been translated into. */
-export const TOUR_PHRASEBOOK: Partial<Record<TranslatedLocale, TourPhrasebook>> = { de };
+export const TOUR_PHRASEBOOK: Partial<Record<TranslatedLocale, TourPhrasebook>> = { de, fr, it };
 
 /**
  * Every repeated line a translated journey uses must be in its phrasebook.
