@@ -110,6 +110,12 @@ $message = mb_substr(trim((string)($_POST["message"] ?? "")), 0, 5000);
 // of the visit.
 $context = mb_substr(clean_line($_POST["context"] ?? ""), 0, 160);
 
+// The Google Ads click id, when the visit began on an ad. Same reasoning as
+// $context: the email only, never the CSV. Whitelisted rather than escaped —
+// Google's ids are base64url and nothing else ever legitimately arrives here.
+$gclid = (string)($_POST["gclid"] ?? "");
+$gclid = preg_match('/^[A-Za-z0-9_-]{1,120}$/', $gclid) ? $gclid : "";
+
 // The three optional questions. Only the form's own values are accepted and
 // turned back into words here, so nothing a bot posts reaches the email or log.
 $CHOICES = [
@@ -189,6 +195,7 @@ $body =
   $message . "\n\n" .
   "----------------------------------\n" .
   ($context !== "" ? "Sent from:    " . $context . "\n" : "") .
+  ($gclid !== "" ? "Google Ads:   " . $gclid . "  <- paid click, keep for conversion upload\n" : "") .
   "Found us via: " . $srcTxt . "\n" .
   ($trail["first"] !== "" ? "First page:   " . $trail["first"] . "\n" : "") .
   ($readTxt !== "" ? "Also read:    " . $readTxt . "\n" : "");

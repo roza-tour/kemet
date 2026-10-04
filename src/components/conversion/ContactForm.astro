@@ -118,6 +118,11 @@ const PRIORITY_VALUES = ["comfort", "balance", "cost"] as const;
     <input type="hidden" name="kt" value="" />
     {returnTo && <input type="hidden" name="return" value={returnTo} />}
     {context && <input type="hidden" name="context" value={context} />}
+    {/* The Google Ads click id, parked in sessionStorage by GoogleTag.astro
+        when the visitor arrived and filled in below at send time. It reaches
+        the enquiry email only, so that a booking which closes six weeks later
+        can still be uploaded against the click that paid for it. */}
+    <input type="hidden" name="gclid" value="" />
 
     <div class="cform-grid">
       <label>
@@ -203,6 +208,11 @@ const PRIORITY_VALUES = ["comfort", "balance", "cost"] as const;
     var fk = document.querySelector(".cform");
     if (fk && fk.kt) fk.addEventListener("submit", function () {
       fk.kt.value = String(Math.round((Date.now() - t0) / 1000));
+      // Same moment, same reason: both paths below pick it up from the field.
+      try {
+        var gid = sessionStorage.getItem("kemet_gclid");
+        if (gid && fk.gclid) fk.gclid.value = gid;
+      } catch (e) {}
     });
 
     // Enhanced path — submit in place, no page reload.
