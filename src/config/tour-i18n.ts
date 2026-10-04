@@ -22,10 +22,12 @@ import type { TranslatedLocale } from "@/config/i18n";
 import type { TourText } from "@/data/tours-i18n/types";
 import { assertPhrasebook } from "@/data/tours-i18n/phrasebook";
 import { de } from "@/data/tours-i18n/de";
+import { fr } from "@/data/tours-i18n/fr";
+import { it } from "@/data/tours-i18n/it";
 import { tours } from "@/data/tours";
 
 /** Every language a journey has been translated into. Add a file, add it here. */
-const SETS: Partial<Record<TranslatedLocale, TourText[]>> = { de };
+const SETS: Partial<Record<TranslatedLocale, TourText[]>> = { de, fr, it };
 
 export interface TranslatedTour {
   locale: TranslatedLocale;
