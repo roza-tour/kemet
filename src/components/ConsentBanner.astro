@@ -1,0 +1,172 @@
+---
+// ---------------------------------------------------------------------------
+// The consent bar — shown only where the law asks for it.
+//
+// WHY A BAR AND NOT A MODAL
+// Google treats a full-screen interstitial that hides content on mobile as a
+// ranking problem, and explicitly exempts "banners that use a reasonable
+// amount of screen space", naming cookie consent among them. So this is a
+// panel anchored to the bottom edge, never an overlay across the page, and it
+// never traps focus. The site's indexing was the one thing we were told not
+// to risk; this is the shape that does not risk it.
+//
+// WHY THE BUTTONS ARE THE SAME SIZE
+// European regulators have been consistent that refusing must be no harder
+// than accepting. Agree is the filled one because it is the primary action,
+// but both are the same element, the same padding and the same type — not a
+// gold button beside a grey hyperlink.
+//
+// HOW IT DECIDES WHO SEES IT — and where that code lives
+// By the browser's own time zone. No IP lookup, which would mean shipping
+// every visitor's address to a third party in order to ask whether we may
+// set a cookie — an absurd order of operations. A time zone is already in
+// the browser, costs nothing and discloses nothing.
+//
+// The logic is in scripts/enhance.client.js, not inline here, and that is a
+// deliberate trade. Inline, the zone list was re-sent with all 282 pages and
+// pushed the heaviest of them over the audit's 30KB budget. In the shared
+// bundle it is fetched once and cached for the rest of the visit. The cost
+// is that the bar cannot appear until that script runs; since the Consent
+// Mode default is already "denied" for these regions, nothing is measured in
+// the meantime either way, so the only thing late is the question.
+// ---------------------------------------------------------------------------
+import { ui } from "@/config/ui";
+import type { SiteLocale } from "@/config/i18n";
+
+interface Props { locale: SiteLocale }
+const { locale } = Astro.props;
+const t = ui(locale);
+
+---
+
+<div class="cbar" id="cbar" hidden role="region" aria-label={t.consentTitle}>
+  <div class="cbar-in">
+    <div class="cbar-txt">
+      <p class="cbar-h">{t.consentTitle}</p>
+      <p class="cbar-b">{t.consentBody}</p>
+    </div>
+    <div class="cbar-act">
+      <button type="button" class="cbar-btn cbar-btn--no" data-consent="denied">{t.consentReject}</button>
+      <button type="button" class="cbar-btn cbar-btn--yes" data-consent="granted">{t.consentAccept}</button>
+      <a class="cbar-more" href="/privacy.html">{t.consentMore}</a>
+    </div>
+  </div>
+</div>
+
+<style>
+  .cbar {
+    position: fixed;
+    inset-inline: 0;
+    /* Sits on top of the seasonal ribbon rather than across it — the script
+       below measures the ribbon and lifts the panel clear of it. */
+    bottom: var(--cbar-lift, 0px);
+    z-index: 121;
+    padding: 0 var(--s-3, 16px) max(var(--s-3, 16px), env(safe-area-inset-bottom));
+    pointer-events: none;
+  }
+  .cbar[hidden] { display: none; }
+
+  .cbar-in {
+    pointer-events: auto;
+    max-width: 920px;
+    margin-inline: auto;
+    display: grid;
+    gap: 18px 32px;
+    align-items: center;
+    padding: 20px 24px;
+    /* The brand's ink, not a system grey. A hairline of gold along the top
+       so the panel reads as part of the site rather than bolted to it. */
+    background:
+      linear-gradient(to bottom, var(--line-2, rgba(217,180,90,.42)), transparent) top / 100% 1px no-repeat,
+      color-mix(in srgb, var(--ink, #0B0907) 94%, transparent);
+    border: 1px solid var(--line, rgba(217,180,90,.22));
+    border-bottom: 0;
+    border-radius: 3px 3px 0 0;
+    box-shadow: 0 -24px 60px -24px rgba(0, 0, 0, .7);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+  @supports not (background: color-mix(in srgb, red 50%, transparent)) {
+    .cbar-in { background: var(--ink, #0B0907); }
+  }
+  @media (min-width: 760px) {
+    .cbar-in { grid-template-columns: 1fr auto; padding: 22px 28px; }
+  }
+
+  .cbar-h {
+    margin: 0 0 6px;
+    font-family: var(--ff-display, serif);
+    font-weight: 400;
+    font-size: var(--t-md, 1.2rem);
+    line-height: 1.2;
+    color: var(--gold-bright, #F7E6AE);
+    text-wrap: balance;
+  }
+  .cbar-b {
+    margin: 0;
+    font-size: var(--t-sm, .9rem);
+    line-height: 1.55;
+    color: var(--muted, #DAD0BB);
+    max-width: 62ch;
+  }
+
+  /* Phone: the two answers share a row, so neither is the one you reach for
+     first. The privacy link drops below them rather than crowding either. */
+  .cbar-act {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: stretch;
+    gap: 12px 14px;
+  }
+  .cbar-act .cbar-more { grid-column: 1 / -1; justify-self: start; }
+  @media (min-width: 760px) {
+    .cbar-act { display: flex; flex-wrap: wrap; justify-content: flex-end; }
+    .cbar-btn { min-width: 140px; padding-inline: 26px; }
+  }
+
+  /* Both buttons are the same control. Only the fill differs. */
+  .cbar-btn {
+    font-family: var(--ff-body, system-ui, sans-serif);
+    font-size: var(--t-micro, .69rem);
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    padding: 12px 22px;
+    min-width: 0;
+    cursor: pointer;
+    border-radius: 2px;
+    border: 1px solid var(--line-2, rgba(217,180,90,.42));
+    background: transparent;
+    color: var(--gold-bright, #F7E6AE);
+    transition: background .4s, color .4s, border-color .4s, transform .4s;
+  }
+  .cbar-btn--yes {
+    background: var(--gold, #D9B45A);
+    border-color: var(--gold, #D9B45A);
+    color: var(--ink, #0B0907);
+  }
+  .cbar-btn:hover { transform: translateY(-1px); }
+  .cbar-btn--no:hover { border-color: var(--gold, #D9B45A); background: rgba(217,180,90,.1); }
+  .cbar-btn--yes:hover { background: var(--gold-bright, #F7E6AE); border-color: var(--gold-bright, #F7E6AE); }
+  .cbar-btn:focus-visible,
+  .cbar-more:focus-visible { outline: 2px solid var(--gold-bright, #F7E6AE); outline-offset: 3px; }
+
+  .cbar-more {
+    font-size: var(--t-tiny, .78rem);
+    color: var(--muted-2, #BEB399);
+    text-decoration: none;
+    border-bottom: 1px solid var(--line, rgba(217,180,90,.22));
+    padding-bottom: 1px;
+  }
+  .cbar-more:hover { color: var(--gold-bright, #F7E6AE); border-color: currentColor; }
+
+  /* Arrives rather than appears. Skipped entirely for anyone who asked for
+     less motion — the panel is simply there. */
+  @media (prefers-reduced-motion: no-preference) {
+    .cbar-in { animation: cbar-rise .5s cubic-bezier(.22, .61, .36, 1) both; }
+    @keyframes cbar-rise {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: none; }
+    }
+  }
+</style>

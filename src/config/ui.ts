@@ -74,6 +74,18 @@ export interface UiStrings {
   /** Said once, where a localised page links into the English catalogue. */
   englishNote: string;
 
+  // --- consent banner (EEA, the UK and Switzerland only) -----------------
+  /** Heading of the consent bar. Short — it sits on one line. */
+  consentTitle: string;
+  /** One sentence: what is set, and that declining costs the visitor nothing. */
+  consentBody: string;
+  /** The agree button. Must read as plainly as the decline one. */
+  consentAccept: string;
+  /** The decline button. Same size and prominence as agree, by law. */
+  consentReject: string;
+  /** Link text to /privacy.html. */
+  consentMore: string;
+
   // --- floating button ---------------------------------------------------
   whatsappAria: string;
 
@@ -118,6 +130,12 @@ export const UI: Record<SiteLocale, UiStrings> = {
     priceBasisPax: "from %n travellers",
     priceBasisTickets: "tickets not included",
     englishNote: "The journey pages themselves are in English.",
+    consentTitle: "Before we count anything",
+    consentBody:
+      "We would like to use Google Ads cookies to see which advertisements bring travellers to us. Nothing is stored unless you agree, and declining changes nothing about your visit.",
+    consentAccept: "Agree",
+    consentReject: "Decline",
+    consentMore: "Privacy notice",
     tag: { days: "Days", fullDay: "Full Day", halfDay: "Half Day", evening: "Evening" },
     places: {},
     whatsappAria: "Chat with us on WhatsApp",
@@ -160,6 +178,12 @@ export const UI: Record<SiteLocale, UiStrings> = {
     priceBasisPax: "ab %n Reisenden",
     priceBasisTickets: "Eintritte nicht enthalten",
     englishNote: "Die Reiseverläufe im Detail sind auf Englisch.",
+    consentTitle: "Bevor wir etwas zählen",
+    consentBody:
+      "Wir möchten Google-Ads-Cookies verwenden, um zu sehen, welche Anzeigen Reisende zu uns bringen. Ohne Ihre Zustimmung wird nichts gespeichert, und eine Ablehnung ändert nichts an Ihrem Besuch.",
+    consentAccept: "Einverstanden",
+    consentReject: "Ablehnen",
+    consentMore: "Datenschutz",
     tag: { days: "Tage", fullDay: "Ganzer Tag", halfDay: "Halber Tag", evening: "Abend" },
     places: {
       Cairo: "Kairo", Giza: "Gizeh", Aswan: "Assuan", Saqqara: "Sakkara",
@@ -205,6 +229,12 @@ export const UI: Record<SiteLocale, UiStrings> = {
     priceBasisPax: "da %n viaggiatori",
     priceBasisTickets: "biglietti non inclusi",
     englishNote: "Le pagine dei singoli viaggi sono in inglese.",
+    consentTitle: "Prima di contare qualcosa",
+    consentBody:
+      "Vorremmo usare i cookie di Google Ads per capire quali annunci portano qui i viaggiatori. Senza il vostro consenso non viene salvato nulla, e rifiutare non cambia nulla della vostra visita.",
+    consentAccept: "Accetto",
+    consentReject: "Rifiuto",
+    consentMore: "Privacy",
     tag: { days: "Giorni", fullDay: "Giornata intera", halfDay: "Mezza giornata", evening: "Serata" },
     places: {
       Cairo: "Il Cairo", Aswan: "Assuan", Alexandria: "Alessandria",
@@ -250,6 +280,12 @@ export const UI: Record<SiteLocale, UiStrings> = {
     priceBasisPax: "desde %n viajeros",
     priceBasisTickets: "entradas no incluidas",
     englishNote: "Las páginas de cada viaje están en inglés.",
+    consentTitle: "Antes de contar nada",
+    consentBody:
+      "Nos gustaría usar cookies de Google Ads para saber qué anuncios traen viajeros hasta aquí. Sin su consentimiento no se guarda nada, y rechazar no cambia nada de su visita.",
+    consentAccept: "Acepto",
+    consentReject: "Rechazo",
+    consentMore: "Privacidad",
     tag: { days: "Días", fullDay: "Día completo", halfDay: "Medio día", evening: "Noche" },
     places: {
       Cairo: "El Cairo", Giza: "Guiza", Aswan: "Asuán", Alexandria: "Alejandría",
@@ -295,6 +331,12 @@ export const UI: Record<SiteLocale, UiStrings> = {
     priceBasisPax: "à partir de %n voyageurs",
     priceBasisTickets: "billets non inclus",
     englishNote: "Les pages de chaque voyage sont en anglais.",
+    consentTitle: "Avant de compter quoi que ce soit",
+    consentBody:
+      "Nous aimerions utiliser les cookies Google Ads pour savoir quelles annonces amènent des voyageurs jusqu'ici. Rien n'est enregistré sans votre accord, et refuser ne change rien à votre visite.",
+    consentAccept: "J'accepte",
+    consentReject: "Je refuse",
+    consentMore: "Confidentialité",
     tag: { days: "Jours", fullDay: "Journée entière", halfDay: "Demi-journée", evening: "Soirée" },
     places: {
       Cairo: "Le Caire", Giza: "Gizeh", Aswan: "Assouan", Luxor: "Louxor",
@@ -341,6 +383,12 @@ export const UI: Record<SiteLocale, UiStrings> = {
     priceBasisPax: "от %n человек",
     priceBasisTickets: "билеты не включены",
     englishNote: "Страницы отдельных маршрутов — на английском.",
+    consentTitle: "Прежде чем что-то считать",
+    consentBody:
+      "Мы хотели бы использовать файлы cookie Google Ads, чтобы понимать, какие объявления приводят к нам путешественников. Без вашего согласия ничего не сохраняется, а отказ никак не повлияет на ваш визит.",
+    consentAccept: "Согласен",
+    consentReject: "Отказаться",
+    consentMore: "Конфиденциальность",
     tag: { days: "дней", fullDay: "Весь день", halfDay: "Полдня", evening: "Вечер" },
     places: {
       Cairo: "Каир", Giza: "Гиза", Aswan: "Асуан", Luxor: "Луксор",
@@ -390,6 +438,12 @@ export const UI: Record<SiteLocale, UiStrings> = {
     priceBasisPax: "a partir de %n viajantes",
     priceBasisTickets: "ingressos não incluídos",
     englishNote: "As páginas de cada viagem estão em inglês.",
+    consentTitle: "Antes de contarmos seja o que for",
+    consentBody:
+      "Gostaríamos de usar cookies do Google Ads para saber que anúncios trazem viajantes até aqui. Nada é guardado sem o seu consentimento, e recusar não altera nada na sua visita.",
+    consentAccept: "Aceito",
+    consentReject: "Recuso",
+    consentMore: "Privacidade",
     tag: { days: "Dias", fullDay: "Dia inteiro", halfDay: "Meio dia", evening: "Noite" },
     places: {
       Giza: "Gizé", Aswan: "Assuã", Memphis: "Mênfis", Saqqara: "Sacará", Fayoum: "Faium",
@@ -434,6 +488,12 @@ export const UI: Record<SiteLocale, UiStrings> = {
     priceBasisPax: "mulai %n orang",
     priceBasisTickets: "tiket masuk tidak termasuk",
     englishNote: "Halaman rincian tiap perjalanan berbahasa Inggris.",
+    consentTitle: "Sebelum kami menghitung apa pun",
+    consentBody:
+      "Kami ingin menggunakan cookie Google Ads untuk melihat iklan mana yang membawa wisatawan ke sini. Tidak ada yang disimpan tanpa persetujuan Anda, dan menolak tidak mengubah apa pun dalam kunjungan Anda.",
+    consentAccept: "Setuju",
+    consentReject: "Tolak",
+    consentMore: "Privasi",
     tag: { days: "Hari", fullDay: "Sehari penuh", halfDay: "Setengah hari", evening: "Malam" },
     places: { Cairo: "Kairo", Alexandria: "Aleksandria" },
     whatsappAria: "Hubungi kami lewat WhatsApp",
@@ -476,6 +536,12 @@ export const UI: Record<SiteLocale, UiStrings> = {
     priceBasisPax: "dari %n orang",
     priceBasisTickets: "tiket masuk tidak termasuk",
     englishNote: "Halaman butiran setiap percutian dalam bahasa Inggeris.",
+    consentTitle: "Sebelum kami mengira apa-apa",
+    consentBody:
+      "Kami ingin menggunakan kuki Google Ads untuk melihat iklan mana yang membawa pengembara ke sini. Tiada apa-apa disimpan tanpa persetujuan anda, dan menolak tidak mengubah apa-apa tentang lawatan anda.",
+    consentAccept: "Setuju",
+    consentReject: "Tolak",
+    consentMore: "Privasi",
     tag: { days: "Hari", fullDay: "Sehari penuh", halfDay: "Setengah hari", evening: "Malam" },
     places: { Cairo: "Kaherah", Alexandria: "Iskandariah" },
     whatsappAria: "Hubungi kami di WhatsApp",
@@ -518,6 +584,12 @@ export const UI: Record<SiteLocale, UiStrings> = {
     priceBasisPax: "من %n أفراد",
     priceBasisTickets: "التذاكر غير مشمولة",
     englishNote: "صفحات تفاصيل كل رحلة بالإنجليزية.",
+    consentTitle: "قبل أن نحصي أي شيء",
+    consentBody:
+      "نودّ استخدام ملفات تعريف الارتباط الخاصة بإعلانات Google لنعرف أي إعلان يقود المسافرين إلينا. لا يُحفظ شيء دون موافقتك، والرفض لا يغيّر شيئًا في زيارتك.",
+    consentAccept: "أوافق",
+    consentReject: "أرفض",
+    consentMore: "الخصوصية",
     tag: { days: "أيام", fullDay: "يوم كامل", halfDay: "نصف يوم", evening: "مسائية" },
     places: {
       Cairo: "القاهرة", Giza: "الجيزة", Aswan: "أسوان", Luxor: "الأقصر",

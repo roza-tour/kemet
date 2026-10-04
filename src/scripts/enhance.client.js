@@ -261,4 +261,75 @@ const DUST_DENSITY = 15000; // px² of viewport per particle
   if(strip){var pv=document.getElementById('dprev'),nx=document.getElementById('dnext');
     if(pv)pv.addEventListener('click',function(){strip.scrollBy({left:-360,behavior:'smooth'});KEV('strip')});
     if(nx)nx.addEventListener('click',function(){strip.scrollBy({left:360,behavior:'smooth'});KEV('strip')});}
+
+  /* ---------------------------------------------------------------------
+     Consent bar. Markup and styling are in components/ConsentBanner.astro;
+     this is here rather than inline on the page because the zone list, sent
+     with all 282 pages, pushed the heaviest of them past the audit's budget.
+
+     Which zones. Everything under Europe/ counts as "ask", minus the ones
+     outside the EEA, plus the handful of EEA places filed elsewhere in the
+     tz database. The list that must be right is the SUBTRACTION, because a
+     name missing from it only means someone is asked who need not have been
+     — a shrug. Getting the addition wrong is the one that silently loses an
+     EEA visitor's consent prompt, so the broad Europe/ prefix carries it.
+     --------------------------------------------------------------------- */
+  try{
+    var KEY='kemet_consent_v1';
+    /* European, but not EEA/UK/CH. */
+    var NOT_EEA={'Europe/Moscow':1,'Europe/Istanbul':1,'Europe/Kiev':1,'Europe/Kyiv':1,
+      'Europe/Minsk':1,'Europe/Belgrade':1,'Europe/Sarajevo':1,'Europe/Skopje':1,
+      'Europe/Tirane':1,'Europe/Podgorica':1,'Europe/Chisinau':1,'Europe/Kaliningrad':1,
+      'Europe/Samara':1,'Europe/Simferopol':1,'Europe/Volgograd':1,'Europe/Saratov':1,
+      'Europe/Astrakhan':1,'Europe/Ulyanovsk':1,'Europe/Kirov':1,'Europe/Uzhgorod':1,
+      'Europe/Zaporozhye':1};
+    /* EEA, but not filed under Europe/. */
+    var ALSO={'Atlantic/Azores':1,'Atlantic/Madeira':1,'Atlantic/Canary':1,
+      'Atlantic/Reykjavik':1,'Africa/Ceuta':1,'Asia/Nicosia':1,'Arctic/Longyearbyen':1};
+
+    var bar=document.getElementById('cbar');
+    if(bar){
+      var tell=function(state){
+        if(typeof window.gtag==='function'){
+          window.gtag('consent','update',{ad_storage:state,ad_user_data:state,
+            ad_personalization:state,analytics_storage:state});
+        }
+      };
+      var saved=null;
+      try{saved=localStorage.getItem(KEY)}catch(e){}
+      if(saved==='granted'||saved==='denied'){ tell(saved); }
+      else{
+        var tz='';
+        try{tz=Intl.DateTimeFormat().resolvedOptions().timeZone||''}catch(e){}
+        var ask=(tz.indexOf('Europe/')===0&&!NOT_EEA[tz])||!!ALSO[tz];
+        if(ask){
+          /* Clear the seasonal ribbon. It is position:fixed, so offsetParent
+             is null even when plainly on screen — measure the box instead. */
+          var lift=function(){
+            var rb=document.querySelector('.srb'),h=0;
+            if(rb&&!rb.hidden&&getComputedStyle(rb).display!=='none')
+              h=Math.round(rb.getBoundingClientRect().height);
+            bar.style.setProperty('--cbar-lift',h+'px');
+          };
+          lift();
+          addEventListener('resize',lift,{passive:true});
+          addEventListener('load',lift);
+          setTimeout(lift,1200);
+          var rbEl=document.querySelector('.srb');
+          if(rbEl)rbEl.addEventListener('click',function(){setTimeout(lift,50)});
+
+          bar.hidden=false;
+          bar.addEventListener('click',function(ev){
+            var btn=ev.target.closest('[data-consent]');
+            if(!btn)return;
+            var state=btn.getAttribute('data-consent');
+            try{localStorage.setItem(KEY,state)}catch(e){}
+            tell(state);
+            bar.hidden=true;
+            KEV(state==='granted'?'consent-yes':'consent-no');
+          });
+        }
+      }
+    }
+  }catch(e){}
 })();
