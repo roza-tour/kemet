@@ -25,10 +25,13 @@
 export const GOOGLE_ADS_ID = "AW-18494288275";
 
 /**
- * The conversion label for "enquiry form submitted".
- * Empty until the conversion action is created in Google Ads.
+ * The conversion label for "enquiry form submitted" — the "Website enquiry
+ * form" action (id 7820730872). The second character is a lowercase L, not
+ * a capital i: the two are pixel-identical in the Google Ads UI font, which
+ * is why this was copied as text rather than read off a screenshot. A wrong
+ * label raises no error anywhere; conversions are simply dropped.
  */
-export const GOOGLE_ADS_ENQUIRY_LABEL = "";
+export const GOOGLE_ADS_ENQUIRY_LABEL = "XlAkCPjDm5EdEJPj4fJE";
 
 /** `AW-xxxx/label`, or "" while the label is unknown. */
 export const enquirySendTo = GOOGLE_ADS_ENQUIRY_LABEL
