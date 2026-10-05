@@ -4,9 +4,12 @@
 #
 # `main` holds BOTH the Astro source and, at the repo root, the built website
 # (index.html, _astro/, images/, ...). The cPanel server is a checkout of
-# `main`, so updating the live site is always just:
+# `main` in ~/kemet, so updating the live site is always just:
 #
-#     git pull origin main
+#     cd ~/kemet && bash update.sh
+#
+# (update.sh pulls with a hard reset so cPanel's AutoSSL .htaccess rewrite
+# cannot block it, keeps _stats/, and verifies the tree — see DEPLOYMENT.md.)
 #
 # public/.htaccess ships with the build and blocks public access to the source
 # folders (src/, scripts/, ...) so only the website itself is ever served.
@@ -68,4 +71,4 @@ git push origin main
 
 echo ""
 echo "==> Publish complete: $(git rev-parse --short HEAD)  ($COMMIT_MSG)"
-echo "    Update the live site with:   git pull origin main"
+echo "    Update the live site with:   cd ~/kemet && bash update.sh"
