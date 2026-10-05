@@ -2,9 +2,10 @@
 // /build.txt — which build is actually on the server.
 //
 // WHY THIS EXISTS
-// The live site is a `git pull` inside public_html, which means "the fix is
-// committed" and "the fix is live" are two different facts with nothing on the
-// site to tell them apart. That gap cost a season: the work that made the
+// The live site is a checkout in ~/kemet on the server, brought up to date by
+// `bash update.sh` (see DEPLOYMENT.md) — which means "the fix is committed"
+// and "the fix is live" are two different facts with nothing on the site to
+// tell them apart. That gap cost a season: the work that made the
 // seasonal skin visible was committed on 5 August and the server was still
 // serving the 1 August build five weeks later, so from the outside the whole
 // seasonal system looked broken while the code was fine.
@@ -14,8 +15,15 @@
 //     curl https://kemet-travel.com/build.txt     # when the live build was made
 //     git log -1 --date=iso --format=%cd main     # when main last changed
 //
-// Live build newer → the site is current. Older → the server needs `git pull`,
-// and nothing about the code is worth debugging until it has had one.
+// Live build newer → the site is current. Older → the server needs
+// `cd ~/kemet && bash update.sh`, and nothing about the code is worth
+// debugging until it has had one.
+//
+// The body is kept to plain ASCII on purpose. This file is the one people
+// open when something looks wrong, and it once told the owner to pull inside
+// public_html — the wrong folder — with its dash rendered as "â€”" because the
+// server sent no charset. .htaccess now declares UTF-8 for .txt; ASCII here
+// means it reads correctly even on a server that has not picked that up yet.
 //
 // The commit is read from git at build time and degrades to "unknown" when the
 // build runs outside a checkout — never fabricated, never a stale constant.
@@ -40,8 +48,13 @@ export const GET: APIRoute = () => {
     `from:    ${commit()}`,
     "",
     "`built` is the decisive value: compare it with the date of the newest",
-    "commit on main. Older here than there means this server has not pulled —",
-    "run `git pull origin main` in public_html before debugging anything else.",
+    "commit on main. Older here than there means this server has not been",
+    "updated. On the server, run:",
+    "",
+    "    cd ~/kemet && bash update.sh",
+    "",
+    "before debugging anything else. (Not public_html, and not a bare git pull:",
+    "update.sh also keeps _stats/ and the .htaccess AutoSSL rewrites intact.)",
     "",
     "`from` is the commit the build was made FROM, so it is always one behind",
     "the commit that publishes it (the build runs, then the result is",

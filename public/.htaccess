@@ -107,6 +107,16 @@ ErrorDocument 404 /404.html
   </FilesMatch>
 </IfModule>
 
+# Plain-text files are UTF-8; say so. Without a charset Apache sends
+# "text/plain" bare, and a client is entitled to read that as Latin-1 — which
+# is how build.txt showed its dash as "â€”", and how llms.txt (126 lines with
+# an em dash, Español, Français…) reaches any assistant that does not guess.
+# HTML declares its own charset in <meta>; XML in its prolog; JSON is UTF-8
+# by definition. Only .txt was left to chance.
+<IfModule mod_mime.c>
+  AddCharset utf-8 .txt
+</IfModule>
+
 # Send the first byte before the whole page is assembled.
 <IfModule mod_env.c>
   SetEnv no-gzip-flush 0
