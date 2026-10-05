@@ -190,6 +190,9 @@ foreach ($visitors as $v => $_) {
 uasort($bySrc, fn($a, $b) => [$b["c"], $b["v"]] <=> [$a["c"], $a["v"]]);
 $aiVisits = 0; $aiContacts = 0;
 foreach ($bySrc as $label => $n) if (strpos($label, "AI assistant") === 0) { $aiVisits += $n["v"]; $aiContacts += $n["c"]; }
+// What the ad budget bought, in the same terms: visits and contacts.
+$paidVisits = 0; $paidContacts = 0;
+foreach ($bySrc as $label => $n) if (strpos($label, "Paid ad") === 0) { $paidVisits += $n["v"]; $paidContacts += $n["c"]; }
 
 // Each WhatsApp / email / phone tap and form sent, filed under the source of
 // the visit it happened in. Runs after the loop: a tap can be logged before a
@@ -486,7 +489,7 @@ td.n2{text-align:right;color:var(--mut);font-variant-numeric:tabular-nums;width:
 </div>
 
 <h2>Where the enquiries come from · منين بيجي الزباين</h2>
-<div class="note">Each visit filed under how it first arrived — an AI assistant, a search engine, social, another site, or typed in. <b>Contacted</b> means the visit tapped WhatsApp, email or phone, or sent the form. Matched on the server through the anonymous daily visitor hash, so a person who reads about Kemet today and writes tomorrow is counted as direct.<?php if ($aiVisits): ?> AI assistants: <b><?= $fmt($aiVisits) ?></b> visits, <b><?= $fmt($aiContacts) ?></b> contacted.<?php endif; ?></div>
+<div class="note">Each visit filed under how it first arrived — a paid ad, an AI assistant, a search engine, social, another site, or typed in. A click on a Google ad is filed as <b>Paid ad</b>, never as Google search, and named by campaign. <b>Contacted</b> means the visit tapped WhatsApp, email or phone, or sent the form. Matched on the server through the anonymous daily visitor hash, so a person who reads about Kemet today and writes tomorrow is counted as direct.<?php if ($paidVisits): ?> Paid ads: <b><?= $fmt($paidVisits) ?></b> visits, <b><?= $fmt($paidContacts) ?></b> contacted.<?php endif; ?><?php if ($aiVisits): ?> AI assistants: <b><?= $fmt($aiVisits) ?></b> visits, <b><?= $fmt($aiContacts) ?></b> contacted.<?php endif; ?></div>
 <?php if (!$bySrc): ?>
 <table><tr><td style="color:var(--mut)">No visits recorded yet</td></tr></table>
 <?php else: $maxV = max(array_column($bySrc, "v")); ?>

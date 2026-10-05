@@ -63,13 +63,27 @@ function kemet_prune_stats(string $dir): int {
 /**
  * Classify one arrival: the referrer host and the query string it landed with.
  * Returns [group, name] — group is one of
- *   "AI assistant" · "Search" · "Social" · "Other site" · "Tagged link" · "Direct".
+ *   "Paid ad" · "AI assistant" · "Search" · "Social" · "Other site" ·
+ *   "Tagged link" · "Direct".
  */
 function kemet_source(string $host, string $query = ""): array {
   $host = strtolower(preg_replace('/^www\./', '', trim($host)));
   $qs = [];
   parse_str(ltrim($query, "?"), $qs);
   $utm = strtolower(trim((string)($qs["utm_source"] ?? "")));
+
+  // Paid clicks first. A Google Ads click comes FROM google.com, so read in
+  // the order below it would be filed as unpaid Google search and the two
+  // would be indistinguishable — the one comparison the ad budget depends
+  // on. The client reduces a paid landing URL to src=google-ads&cid=…; the
+  // raw markers are honoured too, for rows logged by an older cached script.
+  $src = strtolower(trim((string)($qs["src"] ?? "")));
+  if ($src === "google-ads" || isset($qs["gclid"]) || isset($qs["gbraid"])
+      || isset($qs["wbraid"]) || isset($qs["gad_source"])) {
+    $cid = preg_replace('/\D/', '', (string)($qs["cid"] ?? $qs["gad_campaignid"] ?? ""));
+    return ["Paid ad", "Google Ads" . kemet_ads_campaign($cid)];
+  }
+  if ($src === "microsoft-ads" || isset($qs["msclkid"])) return ["Paid ad", "Microsoft Ads"];
 
   // ChatGPT marks the links it cites with utm_source=chatgpt.com, and a click
   // from its app often arrives with no referrer at all — so the tag is read
@@ -114,6 +128,19 @@ function kemet_source(string $host, string $query = ""): array {
   }
   if ($host !== "") return ["Other site", $host];
   return ["Direct", "Direct / typed"];
+}
+
+/**
+ * " — Kemet Ultra" for a campaign we know by name, " — campaign 123" for one
+ * we do not, "" when Google sent no campaign id. Add a line here when a new
+ * campaign launches, or it reports under its number until someone does.
+ */
+function kemet_ads_campaign(string $cid): string {
+  if ($cid === "") return "";
+  $names = [
+    "24319438448" => "Kemet Ultra",   // Search · EN · UK, US, CA, AU · from Oct 2026
+  ];
+  return " — " . ($names[$cid] ?? "campaign " . $cid);
 }
 
 /** "AI assistant · ChatGPT" */
