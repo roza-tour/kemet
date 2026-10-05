@@ -130,7 +130,27 @@ const DUST_DENSITY = 15000; // px² of viewport per particle
      ------------------------------------------------------------------------- */
   try{
     var KP='/k.php', PATH=location.pathname;
-    var QS=location.search.replace(/^\?/,'').slice(0,80);   /* campaign tag */
+    /* The campaign tag on the landing URL. A Google Ads click arrives as
+       ?gad_source=1&gad_campaignid=…&gclid=<~90 opaque chars>, which the
+       80-character cut below used to slice through — and, read as-is, the
+       visit came from google.com and was filed as unpaid Google search. So a
+       paid click is reduced to what the dashboard needs: that it was paid,
+       and which campaign. The click id itself is deliberately NOT written to
+       the analytics log, which by design holds nothing that can be tied back
+       to a person; it reaches the enquiry email instead, where the visitor
+       has chosen to identify themselves (GoogleTag.astro → ContactForm). */
+    var QS=(function(){
+      var raw=location.search.replace(/^\?/,'');
+      try{
+        var u=new URLSearchParams(raw);
+        if(u.get('gclid')||u.get('gbraid')||u.get('wbraid')||u.get('gad_source')){
+          var cid=(u.get('gad_campaignid')||'').replace(/\D/g,'').slice(0,20);
+          return 'src=google-ads'+(cid?'&cid='+cid:'');
+        }
+        if(u.get('msclkid'))return 'src=microsoft-ads';
+      }catch(e){}
+      return raw.slice(0,80);
+    })();
     var LANG=(navigator.language||'').slice(0,5);            /* nationality signal */
     /* The 404 document is served under whatever URL was requested, so without
        this flag a broken link is indistinguishable from a real page. */
