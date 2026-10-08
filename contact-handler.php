@@ -165,6 +165,21 @@ $party    = $pick("party");
 $pace     = $pick("pace");
 $priority = $pick("priority");
 
+// Kemet Ultra's brief (components/ultra/UltraBrief.astro) asks which of the
+// four journeys instead of asking for a message, so the journey becomes the
+// first line of the message — in the email AND in the CSV, whose columns are
+// read positionally and so get no new one. A name, an email and this choice
+// are a complete enquiry. The keys are the ids in data/ultra/journeys.ts;
+// anything else posted here is ignored. The subject says "Kemet Ultra" so the
+// top tier is the first thing seen in the inbox.
+$ULTRA = ["undecided" => "journey not decided yet",
+          "private-pharaoh" => "The Private Pharaoh", "royal-nile" => "The Royal Nile",
+          "karnak-to-coral-sea" => "Karnak to the Coral Sea", "grand-odyssey" => "The Grand Private Odyssey"];
+$journey = $ULTRA[(string)($_POST["journey"] ?? "")] ?? "";
+if ($journey !== "") {
+  $message = mb_substr("Kemet Ultra brief: " . $journey . ($message !== "" ? "\n\n" . $message : ""), 0, 5000);
+}
+
 // How this person found us — read from today's analytics log on the server,
 // through the anonymous daily visitor hash. Nothing was stored on their device
 // and nothing extra was sent by the form; see lib-source.php.
@@ -212,7 +227,7 @@ if ($ip !== "") {
 }
 
 // UTF-8-safe subject (visitor names may be Arabic, French, ...).
-$subject = "=?UTF-8?B?" . base64_encode("Website enquiry — " . $name) . "?=";
+$subject = "=?UTF-8?B?" . base64_encode(($journey !== "" ? "Kemet Ultra enquiry — " : "Website enquiry — ") . $name) . "?=";
 
 $body =
   "New enquiry from kemet-travel.com\n" .
