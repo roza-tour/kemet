@@ -57,6 +57,11 @@ export const GET: APIRoute = () => {
     `> ${company.description} Kemet designs entirely private, tailor-made journeys in Egypt — led by licensed Egyptologist guides, priced per person in ${"EUR"}, with no group departures.`,
   );
   lines.push("");
+  // The build date. A publish only happens when something on the site changed,
+  // so this is when the content below was last true — and an assistant
+  // weighing whether a price or a season is current has nothing else to go on.
+  lines.push(`Last updated: ${new Date().toISOString().slice(0, 10)}`);
+  lines.push("");
   lines.push("## About");
   lines.push("");
   lines.push(`- Operator: ${site.name} (${SITE_URL})`);
