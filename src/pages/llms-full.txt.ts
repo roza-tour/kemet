@@ -57,7 +57,7 @@ export const GET: APIRoute = () => {
   L.push(`# ${site.name} — Luxury Egypt Travel: full content`);
   L.push("");
   p(`${company.description} Kemet designs entirely private, tailor-made journeys in Egypt, led by licensed Egyptologist guides, priced per person in EUR, with no group departures and no fixed dates.`);
-  p(`Source: ${SITE_URL}. Index version: ${SITE_URL}/llms.txt`);
+  p(`Source: ${SITE_URL}. Index version: ${SITE_URL}/llms.txt. Last updated: ${new Date().toISOString().slice(0, 10)}.`);
   p(`Editorial review: ${reviewer.name}, ${reviewer.role} — ${reviewer.short}. Profile: ${u(`about.html#${reviewer.id}`)}`);
   p(`This document restates content published on the site. Where a figure carries a checked-on date, that date is given with it.`);
 
