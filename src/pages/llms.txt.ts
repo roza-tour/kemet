@@ -21,6 +21,9 @@ import { comparisons } from "@/data/comparisons";
 import { TRANSLATION_GROUPS, TRANSLATED_LOCALES, LOCALE_META, LOCALES } from "@/config/i18n";
 import { ultraJourneys } from "@/data/ultra/journeys";
 import { STANDALONE_PAGES, standaloneRoute } from "@/data/i18n/standalone";
+import { TRANSLATED_TOURS } from "@/config/tour-i18n";
+import { existsSync } from "node:fs";
+import { join } from "node:path";
 
 // Kemet's own per-day range, computed from the catalogue the same way the cost
 // page computes it. This line used to say Kemet "sits" at EUR 200-450 a day —
@@ -206,10 +209,32 @@ export const GET: APIRoute = () => {
     `${TRANSLATED_LOCALES.map((l) => LOCALE_META[l].endonym).join(", ")}. ` +
     `Each set is written for its market rather than translated word for word, so ` +
     `the flight times, school holidays, entry rules and reference points differ ` +
-    `between them. The English site is the complete one; the translated pages ` +
-    `carry the same facts.`,
+    `between them. The translated pages carry the same facts and the same prices.`,
   );
   lines.push("");
+  // THE CATALOGUE, PER LANGUAGE. Until 8 Oct 2026 this section listed only the
+  // eight key pages per language and said "the English site is the complete
+  // one" — while 72 translated journey pages (24 each in German, French and
+  // Italian) sat on the domain with nothing here pointing at them. An
+  // assistant answering a German traveller then recommended the English page
+  // for a journey that exists in German. Which languages carry the catalogue,
+  // and whether that is every journey, is computed from the registry.
+  const tourLocales = TRANSLATED_LOCALES.filter((l) => TRANSLATED_TOURS.some((t) => t.locale === l));
+  if (tourLocales.length) {
+    const groupTourSlugs = TRANSLATION_GROUPS
+      .map((g) => g.en.replace(/\.html$/, ""))
+      .filter((slug) => tours.some((t) => t.slug === slug));
+    const every = tourLocales.every((l) =>
+      new Set([...TRANSLATED_TOURS.filter((t) => t.locale === l).map((t) => t.slug), ...groupTourSlugs]).size === tours.length);
+    const names = tourLocales.map((l) => LOCALE_META[l].endonym);
+    const list = names.length > 1 ? `${names.slice(0, -1).join(", ")} and ${names.at(-1)}` : names[0];
+    lines.push(
+      `${every ? "The whole journey catalogue" : "Part of the journey catalogue"} is also published in ${list}: ` +
+      `each journey page is listed under its language below, in that language, with a link to its English original. ` +
+      `Experiences, activities, guides and the month-by-month pages are in English only.`,
+    );
+    lines.push("");
+  }
   for (const loc of TRANSLATED_LOCALES) {
     lines.push(`### ${LOCALE_META[loc].endonym} (${loc})`);
     lines.push("");
@@ -220,8 +245,54 @@ export const GET: APIRoute = () => {
     for (const p of STANDALONE_PAGES.filter((x) => x.locale === loc)) {
       lines.push(`- ${u(standaloneRoute(p))} — ${p.page.h1}: ${p.page.standfirst}`);
     }
+    const here = TRANSLATED_TOURS
+      .filter((t) => t.locale === loc)
+      .map((t) => ({ t, tour: tours.find((x) => x.slug === t.slug)! }))
+      .sort((a, b) => a.tour.price - b.tour.price);
+    if (here.length) {
+      lines.push("");
+      lines.push(`Journeys in ${LOCALE_META[loc].endonym} (${here.length}), from-prices per person, the same as in English:`);
+      lines.push("");
+      for (const { t, tour } of here) {
+        lines.push(
+          item(t.text.title, publicPath(t.route),
+            `${t.text.durationLabel}. ${t.text.summary} From ${formatPrice(tour.price)}. English original: ${u(`${tour.slug}.html`)}`),
+        );
+      }
+    }
     lines.push("");
   }
+
+  // The hub pages. Everything they link to is listed above; they are listed
+  // too so an assistant asked "what experiences does Kemet offer?" can cite
+  // the page that answers it in one place. Each must exist in src/pages, or
+  // the build stops rather than publishing a link that 404s.
+  const HUBS: Array<[string, string, string]> = [
+    ["Destinations", "destinations.html", "The eight destinations, from Cairo and Giza to Aswan, the Red Sea and the Fayoum."],
+    ["Experiences", "experiences.html", "Every private experience in one place, from a sunrise session at Giza to a Nile dinner cruise."],
+    ["Activities", "activities.html", "Activities bookable within any journey: balloon, felucca, diving, desert."],
+    ["Collections", "collections.html", "Journeys grouped by season and theme: winter, summer, Christmas, Ramadan, honeymoons, families."],
+    ["Occasions", "occasions.html", "Journeys planned around what is being marked: proposals, anniversaries, private groups."],
+    ["Comparisons", "compare.html", "The common Egypt travel decisions, with the verdict stated first."],
+    ["Travel guides", "guides.html", "Planning references: the travel guide, best time to visit, getting around, food, packing."],
+    ["Plan your journey", "plan.html", "Five questions that narrow the catalogue to the right journey."],
+    ["The 8 identities of Egypt", "identities.html", "Egypt's eight cultural layers — Pharaonic, Coptic, Islamic, Nubian and more — and where to meet each."],
+    ["Egyptian culture", "culture.html", "Symbols, gods and crafts of Egypt."],
+    ["Egyptian cuisine", "cuisine.html", "The Egyptian table, dish by dish."],
+    ["Site index", "sitemap.html", "Every page on the site, in one list."],
+  ];
+  // build.format is "file", so a folder index (collections/index.astro) is
+  // published as collections.html — the same URL a flat collections.astro gets.
+  for (const [, path] of HUBS) {
+    const base = path.replace(/\.html$/, "");
+    const found = [join("src/pages", `${base}.astro`), join("src/pages", base, "index.astro")]
+      .some((f) => existsSync(join(process.cwd(), f)));
+    if (!found) throw new Error(`llms.txt: hub page ${path} has no source in src/pages`);
+  }
+  lines.push("## Index pages");
+  lines.push("");
+  for (const [title, path, desc] of HUBS) lines.push(item(title, path, desc));
+  lines.push("");
 
   lines.push("## Policies");
   lines.push("");
