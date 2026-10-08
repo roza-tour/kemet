@@ -172,23 +172,16 @@ const jsonld: Record<string, unknown>[] = [
         <p class="vtag"><span></span>{T.heroTag}<span></span></p>
         <h1>{T.h1[0]}<br /><em>{T.h1[1]}</em></h1>
         <svg class="vdiv" aria-hidden="true"><use href="#v-lotus" /></svg>
-        {/* The price and the way down, on the first screen. Measured on 8 Oct
-            2026: visitors read 13% of this page on average and the first price
-            sat at 15% (3 screens down on a phone) — they were leaving just
-            short of it, after clicking an ad that is meant to filter on price.
-            Built from labels every locale already carries, so all ten
-            languages get it without a new string to translate. It sits ABOVE
-            the lede, not below it: under it, it fell off the first screen on a
-            1366x768 laptop and a small phone. */}
+        {/* The price, on the first screen. Measured on 8 Oct 2026: visitors
+            read 13% of this page on average and the first price sat at 15%
+            (3 screens down on a phone) — they were leaving just short of it,
+            after clicking an ad that is meant to filter on price. Built from
+            labels every locale already carries, so all ten languages get it
+            without a new string to translate. The four journeys, each with
+            its own price, follow directly under the hero. */}
         <p class="vprice-line">
           <span class="vprice-from">{T.labels.from} <b>{eur(Math.min(...p2))}</b> {T.labels.perPersonTwo}</span>
-          <a class="vprice-go" href="#glance">{T.glanceTitle} <b aria-hidden="true">↓</b></a>
         </p>
-        <p class="vlede">{T.lede}</p>
-        <div class="vhero-acts">
-          <a href={wa} class="vbtn" target="_blank" rel="noopener"><span>{T.ctaPrimary}</span></a>
-          <a href={mail} class="vlink-quiet">{T.ctaQuiet}</a>
-        </div>
       </div>
       <div class="vband" aria-hidden="true"></div>
     </header>
@@ -216,6 +209,17 @@ const jsonld: Record<string, unknown>[] = [
               </a>
             );
           })}
+        </div>
+        {/* The lede and the call to action, after the four journeys rather
+            than before them: since 8 Oct 2026 the cards are what a visitor
+            meets on opening the page, then the summary, then the way to ask.
+            The floating WhatsApp button is on screen throughout. */}
+        <div class="vglance-after">
+          <p class="vlede">{T.lede}</p>
+          <div class="vhero-acts">
+            <a href={wa} class="vbtn" target="_blank" rel="noopener"><span>{T.ctaPrimary}</span></a>
+            <a href={mail} class="vlink-quiet">{T.ctaQuiet}</a>
+          </div>
         </div>
       </div>
     </section>
@@ -948,36 +952,89 @@ const jsonld: Record<string, unknown>[] = [
   .vprice-from b { font-family: var(--ff-display); font-weight: 400; font-size: 1.35rem;
     background: var(--v-leaf); -webkit-background-clip: text; background-clip: text;
     -webkit-text-fill-color: transparent; }
-  .vprice-go { color: var(--v-gold-lit); text-decoration: none; font-size: var(--t-nano);
-    letter-spacing: .26em; text-transform: uppercase;
-    border-bottom: 1px solid rgba(194, 162, 78, .4); padding-bottom: 3px; }
-  .vprice-go b { display: inline-block; transition: transform .35s; }
-  .vprice-go:hover b { transform: translateY(3px); }
   /* The fixed nav would cover the heading when "Choose your journey" jumps here. */
   .vglance { scroll-margin-top: 96px; }
 
+  /* CARDS ON THE FIRST SCREEN (8 Oct 2026). The hero no longer claims a full
+     viewport: it carries the crest, the line, the headline and the price, and
+     the four journeys follow straight under it, prices included, on the
+     screen a visitor lands on — down to a 1366x768 laptop and a 390px phone.
+
+     The one real cost is the H1. At the home page's clamp it was 214px of a
+     768px laptop screen and the cards could not fit under it, so here it
+     takes the inner pages' size instead (`.phero h1` in global.css) — the
+     site still has two H1 sizes, not three. Everything
+     else here is spacing, a smaller crest and divider, a quieter section
+     heading, and each card's route held to two lines — the full route is in
+     the journey's plate further down. */
+  .vhero { min-height: auto; }
+  .vhero-in { padding-top: 116px; padding-bottom: 46px; }
+  /* The gold frame closes 18px under the price rather than 44px: with the
+     hero this short, the old inset drew its bottom edge through the price. */
+  .vcart { bottom: 18px; }
+  .vcrest { width: clamp(190px, 17vw, 250px); margin-bottom: 14px; }
+  .vtag { margin-bottom: 18px; }
+  .vhero h1 { font-size: clamp(2.7rem, 6vw, 4.6rem); }
+  .vdiv { width: clamp(220px, 26vw, 320px); margin: 14px auto 10px; }
+  .vprice-line { margin-bottom: 0; }
+  .vglance { padding: 22px 0 20px; }
+  .vglance .vhead { margin-bottom: 20px; }
+  .vglance .vhead .voverline { margin-bottom: 8px; }
+  .vglance .vhead h2 { font-size: clamp(1.5rem, 2.2vw, 2rem); }
+  .vcardj { padding: 24px 22px 20px; gap: 4px; }
+  .vcardj-no { font-size: 3.2rem; }
+  .vcardj-dur, .vcardj-title { padding-right: 2.8rem; }
+  .vcardj-route { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .vcardj-price { margin-top: 10px; padding-top: 10px; font-size: 1.6rem; }
+  .vcardj-go { margin-top: 10px; }
+  /* Short screens — a 1366x768 laptop, a 375x667 phone — give up the two
+     purely ornamental lines (the lotus divider and the section overline)
+     before they give up a price. */
+  @media (max-height: 820px) and (min-width: 681px), (max-height: 700px) and (max-width: 680px) {
+    .vdiv { display: none; }
+    .vprice-line { margin-top: 16px; }
+    .vglance .vhead .voverline { display: none; }
+  }
+  /* A laptop also carries the seasonal ribbon across its bottom 45px, so
+     the prices have to clear that too: the headline scales with the screen's
+     height here as well as its width, and the gaps tighten. */
+  @media (max-height: 820px) and (min-width: 681px) {
+    .vhero h1 { font-size: clamp(2.6rem, min(6vw, 8.4vh), 4.6rem); }
+    .vcrest { margin-bottom: 8px; }
+    .vtag { margin-bottom: 12px; }
+    .vglance { padding-top: 14px; }
+    .vglance .vhead { margin-bottom: 14px; }
+    .vcardj { padding-top: 20px; }
+  }
+  .vglance-after { max-width: 760px; margin: var(--s-6) auto 0; text-align: center; }
+
   @media (max-width: 680px) {
-    .vglance { padding-top: 56px; }
-    /* Four cards one under another were two full screens on a phone, each
-       half empty. Same content — duration, title, route, price, the link —
-       at a size that keeps all four within about one screen. */
-    .vglance .vhead { margin-bottom: var(--s-5); }
-    .vglance-grid { gap: var(--s-3); }
-    .vcardj { padding: 22px 20px 18px; gap: 3px; }
-    .vcardj-no { font-size: 2.8rem; top: 8px; right: 14px; }
-    .vcardj-dur, .vcardj-title { padding-right: 2.6rem; }
-    .vcardj-title { font-size: 1.3rem; margin: 2px 0 0; }
-    .vcardj-price { margin-top: var(--s-2); padding-top: var(--s-2); font-size: 1.5rem; }
-    .vcardj-go { margin-top: var(--s-2); }
+    .vglance { padding-top: 22px; }
+    /* Two by two on a phone, so all four journeys and their prices are on
+       the first screen together. The route and the "view" link go: the whole
+       card is the link, and each route is in its plate further down. */
+    .vglance .vhead { margin-bottom: var(--s-3); }
+    .vglance-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .vcardj { padding: 16px 12px 14px; gap: 2px; }
+    .vcardj-no { font-size: 1.9rem; top: 6px; right: 8px; }
+    .vcardj-dur, .vcardj-title { padding-right: 1.6rem; }
+    .vcardj-dur { font-size: .56rem; letter-spacing: .16em; }
+    .vcardj-title { font-size: 1.02rem; margin: 2px 0 0; }
+    .vcardj-route, .vcardj-go { display: none; }
+    .vcardj-price { margin-top: 8px; padding-top: 8px; font-size: 1.22rem; }
+    .vcardj-price em { font-size: .52rem; letter-spacing: .18em; }
+    .vcardj-pp { font-size: .68rem; }
+    .vhero h1 { font-size: clamp(2.6rem, 11.5vw, 3.6rem); }
+    .vcrest { width: 150px; margin-bottom: 12px; }
+    .vtag { margin-bottom: var(--s-3); }
+    .vdiv { margin: 12px auto 12px; }
     /* On a phone the hero takes the height of what is in it, not a forced
        full screen plus padding: at 100vh it ran past the first screen, and
        everything that sells the page started after it. */
     .vhero { min-height: auto; }
     .vlede { line-height: 1.8; }
-    .vprice-line { margin-bottom: var(--s-4); }
-    .vglance-grid { grid-template-columns: 1fr; }
     .vsigs .vfact { flex-basis: 50%; }
     .vsigs .vfact::before, .vsigs .vfact::after { display: none; }
-    .vhero-in { padding: 128px 28px var(--s-7); }
+    .vhero-in { padding: 118px 24px var(--s-4); }
   }
 </style>
