@@ -113,8 +113,19 @@ ErrorDocument 404 /404.html
 # an em dash, Español, Français…) reaches any assistant that does not guess.
 # HTML declares its own charset in <meta>; XML in its prolog; JSON is UTF-8
 # by definition. Only .txt was left to chance.
+#
+# The server is LiteSpeed, not Apache (it answers "server: LiteSpeed"), and
+# LiteSpeed ignores AddCharset: after the first fix the live llms.txt still
+# came back as bare "text/plain". It DOES honour Header — the X-Robots-Tag
+# and Cache-Control set further up in this file arrive on every response —
+# so the type is set outright with Header. AddCharset stays for Apache.
 <IfModule mod_mime.c>
   AddCharset utf-8 .txt
+</IfModule>
+<IfModule mod_headers.c>
+  <FilesMatch "\.txt$">
+    Header set Content-Type "text/plain; charset=utf-8"
+  </FilesMatch>
 </IfModule>
 
 # Send the first byte before the whole page is assembled.
