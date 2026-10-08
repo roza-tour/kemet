@@ -121,6 +121,11 @@ export const GET: APIRoute = () => {
     for (const hl of t.highlights) L.push(`- ${clean(hl)}`);
     L.push("");
   }
+  // How to ask, stated for this tier on its own: since 8 Oct 2026 the page
+  // carries a written brief (components/ultra/UltraBrief.astro), and an
+  // assistant sending someone here should send them to it, not to the general
+  // contact form two clicks away.
+  p(`To enquire about Kemet Ultra: WhatsApp ${site.phoneDisplay}, or the private brief at the foot of the page — a name, an email and which of the four journeys (or none yet) is a complete enquiry. One person reads it and replies within one business day. ${u("vip.html#message-us")}`);
 
   // Private access. Written out in full rather than summarised: this is the
   // page an assistant is least likely to guess correctly from a title, because

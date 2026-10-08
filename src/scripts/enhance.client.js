@@ -239,6 +239,55 @@ const DUST_DENSITY = 15000; // px² of viewport per particle
     });
   }catch(e){}
 
+  /* Kemet Ultra's written brief (components/ultra/UltraBrief.astro). The same
+     four behaviours as ContactForm's inline script — time on page, the ad
+     click id, the outcome event, sending in place — kept here rather than in
+     the page: inline, it pushed the heaviest Ultra page over the 30KB budget,
+     and here it is fetched once and cached. Placed after the 'kemet:enquiry'
+     listener above, so even the ?sent= fallback is counted. */
+  try{
+    var bf=document.querySelector('.vbrief-form');
+    if(bf){
+      var bbox=bf.parentNode,bok=bbox.querySelector('.cform-note--ok'),berr=bbox.querySelector('.cform-note--err');
+      var breport=function(sent){document.dispatchEvent(new CustomEvent('kemet:enquiry',{detail:{ok:sent}}));};
+      var bsent=new URLSearchParams(location.search).get('sent');
+      if(bsent!==null){
+        breport(bsent==='1');
+        (bsent==='1'?bok:berr).hidden=false;
+        var bt=document.getElementById('message-us');if(bt)bt.scrollIntoView({block:'start'});
+      }
+      var bt0=Date.now();
+      bf.addEventListener('submit',function(){
+        bf.kt.value=String(Math.round((Date.now()-bt0)/1000));
+        try{var gid=sessionStorage.getItem('kemet_gclid');if(gid)bf.gclid.value=gid;}catch(e){}
+      });
+      if(window.fetch){
+        var bbtn=bf.querySelector('.vbrief-send'),blab=bbtn.querySelector('span'),bidle=blab.textContent;
+        bf.querySelectorAll('input[required], input[type=email]').forEach(function(el){
+          el.addEventListener('blur',function(){el.classList.toggle('cform-bad',!el.checkValidity()&&el.value!=='');});
+          el.addEventListener('input',function(){el.classList.remove('cform-bad');});
+        });
+        bf.addEventListener('submit',function(ev){
+          if(!bf.checkValidity())return;
+          ev.preventDefault();
+          bbtn.disabled=true;blab.textContent=bbtn.dataset.sending||'Sending…';
+          bok.hidden=true;berr.hidden=true;
+          fetch(bf.action,{method:'POST',body:new FormData(bf),headers:{'X-Requested-With':'fetch'}})
+            .then(function(r){return r.json();})
+            .then(function(d){
+              var good=!!(d&&d.ok);
+              breport(good);
+              if(good)bf.reset();
+              var note=good?bok:berr;note.hidden=false;
+              note.scrollIntoView({block:'center',behavior:'smooth'});
+            })
+            .catch(function(){bf.submit();})   /* network hiccup: the classic full-page send */
+            .finally(function(){bbtn.disabled=false;blab.textContent=bidle;});
+        });
+      }
+    }
+  }catch(e){}
+
   /* lightbox — click any gallery/hero photo to view it full-screen.
      Builds one overlay per page, arrow keys + swipe-free prev/next, Esc/backdrop
      to close. Only binds to real photographs (.frame img inside .tgallery or

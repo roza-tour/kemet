@@ -11,13 +11,14 @@
 //
 // WHY NOT ContactForm
 // It posts to the same handler with the same field names, and its behaviour
-// is copied here unchanged (time-on-page, the ad click id, the outcome event,
-// the no-JavaScript fallback). What differs is what it asks. The contact
-// page asks about pace and whether cost or comfort leads; on this page the
-// second question is an insult and the first is answered by the journey. This
-// one asks which of the four journeys, and makes the message optional — the
-// journey key is turned into the message server-side, so a name, an email and
-// one choice are a complete enquiry.
+// is ContactForm's, unchanged (time-on-page, the ad click id, the outcome
+// event, the no-JavaScript fallback) — kept in scripts/enhance.client.js.
+// What differs is what it asks. The contact page asks about pace and
+// whether cost or comfort leads; on this page the second question is an
+// insult and the first is answered by the journey. This one asks which of
+// the four journeys, and makes the message optional — the journey key is
+// turned into the message server-side, so a name, an email and one choice
+// are a complete enquiry.
 //
 // The journey and party VALUES are fixed English keys. contact-handler.php
 // accepts only those and writes the enquiry to the inbox in English, so a
@@ -95,85 +96,11 @@ const PARTY_VALUES = ["couple", "family", "generations", "group", "solo"] as con
   </form>
 </div>
 
-<script is:inline>
-  // The same four behaviours as ContactForm's script, for this form only.
-  (function () {
-    var form = document.querySelector(".vbrief-form");
-    if (!form) return;
-    var box = form.parentNode;
-    var ok = box.querySelector(".cform-note--ok");
-    var err = box.querySelector(".cform-note--err");
+{/* Its behaviour — time on page, the ad click id, the outcome event that
+    reports the conversion, sending in place — is in scripts/enhance.client.js
+    (search "vbrief"). Inline here it pushed the heaviest Ultra page over the
+    30KB budget; in the shared bundle it is fetched once and cached. */}
 
-    // Dispatched only where the outcome is KNOWN; scripts/enhance.client.js
-    // counts it and, on success, reports the Google Ads conversion.
-    var report = function (sent) {
-      document.dispatchEvent(new CustomEvent("kemet:enquiry", { detail: { ok: sent } }));
-    };
-
-    // No-JavaScript and fallback sends land back here with ?sent=1|0.
-    var sent = new URLSearchParams(location.search).get("sent");
-    if (sent !== null) {
-      report(sent === "1");
-      (sent === "1" ? ok : err).hidden = false;
-      var target = document.getElementById("message-us");
-      if (target) target.scrollIntoView({ block: "start" });
-    }
-
-    // Seconds on the page (the handler holds anything under 3 as a bot) and
-    // the ad click id, both written at the moment of sending.
-    var t0 = Date.now();
-    form.addEventListener("submit", function () {
-      form.kt.value = String(Math.round((Date.now() - t0) / 1000));
-      try {
-        var gid = sessionStorage.getItem("kemet_gclid");
-        if (gid) form.gclid.value = gid;
-      } catch (e) {}
-    });
-
-    if (!window.fetch) return;
-    var btn = form.querySelector(".vbrief-send");
-    var label = btn.querySelector("span");
-    var idle = label.textContent;
-
-    form.querySelectorAll("input[required], input[type=email]").forEach(function (el) {
-      el.addEventListener("blur", function () {
-        el.classList.toggle("cform-bad", !el.checkValidity() && el.value !== "");
-      });
-      el.addEventListener("input", function () { el.classList.remove("cform-bad"); });
-    });
-
-    form.addEventListener("submit", function (ev) {
-      if (!form.checkValidity()) return;
-      ev.preventDefault();
-      btn.disabled = true;
-      label.textContent = btn.dataset.sending || "Sending…";
-      ok.hidden = true; err.hidden = true;
-
-      fetch(form.action, {
-        method: "POST",
-        body: new FormData(form),
-        headers: { "X-Requested-With": "fetch" },
-      })
-        .then(function (r) { return r.json(); })
-        .then(function (d) {
-          var good = !!(d && d.ok);
-          report(good);
-          if (good) form.reset();
-          var note = good ? ok : err;
-          note.hidden = false;
-          note.scrollIntoView({ block: "center", behavior: "smooth" });
-        })
-        .catch(function () {
-          // Network hiccup: fall back to the classic full-page send.
-          form.submit();
-        })
-        .finally(function () {
-          btn.disabled = false;
-          label.textContent = idle;
-        });
-    });
-  })();
-</script>
 
 <style>
   .vbrief { max-width: 600px; margin: 0 auto; text-align: start; }
