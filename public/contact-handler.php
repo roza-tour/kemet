@@ -6,7 +6,40 @@
 // server (MX → jellyfish.systems), so local delivery needs no SMTP config.
 // ---------------------------------------------------------------------------
 
-$to = "info@kemet-travel.com"; // ← the real cPanel mailbox
+$to = "info@kemet-travel.com"; // ← the site mailbox on the cPanel server
+
+// A second delivery address, read from a file OUTSIDE the site folder and
+// outside this repository. Why both conditions:
+//
+//   · On 8 Oct 2026 the enquiry log held a real customer — a party of three
+//     wanting a private sunrise photography morning at Giza — logged "sent"
+//     ten days earlier and never read, plus the owner's own test from 7 Oct,
+//     also "sent" and also never received. "sent" only means the local mail
+//     server accepted the message; whatever happens to the info@ mailbox
+//     after that, nobody was looking at it. A copy straight to the inbox the
+//     owner actually reads is the fix, and it must not depend on info@
+//     existing or forwarding correctly.
+//   · The repository is public, so a personal address written here would be
+//     harvested by spammers; and update.sh runs `git clean` inside ~/kemet,
+//     so a file kept there would be deleted by the next deploy. ~/.kemet-notify
+//     (one level above this file) survives both.
+//
+// Set it once from the cPanel terminal:   echo "you@gmail.com" > ~/.kemet-notify
+// Up to three addresses, separated by spaces, commas or new lines. A missing
+// or empty file simply means info@ alone, as before.
+function notify_addresses(string $primary): array {
+  $file = dirname(__DIR__) . "/.kemet-notify";
+  if (!is_readable($file)) return [];
+  $out = [];
+  foreach (preg_split('/[\s,;]+/', (string)@file_get_contents($file)) as $a) {
+    $a = trim($a);
+    if ($a === "" || strcasecmp($a, $primary) === 0) continue;
+    if (!filter_var($a, FILTER_VALIDATE_EMAIL)) continue;
+    if (!in_array($a, $out, true)) $out[] = $a;
+    if (count($out) === 3) break;
+  }
+  return $out;
+}
 
 // AJAX requests (the enhanced form) get JSON back instead of a redirect.
 $wantsJson = (($_SERVER["HTTP_X_REQUESTED_WITH"] ?? "") === "fetch");
@@ -70,7 +103,7 @@ function log_enquiry($status, $name, $email, $phone, $dates, $message, $source =
   $q = function ($v) { return str_replace('"', "'", (string)$v); };
   $row = sprintf("%s,%s,\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\"\n",
     gmdate("Y-m-d H:i"), $status,
-    $q($name), $q($email), $q($phone), $q($dates), $q(mb_substr($message, 0, 500)),
+    $q($name), $q($email), $q($phone), $q($dates), $q(mb_substr($message, 0, 5000)),
     $q($source), $q($first), $q($party), $q($pace), $q($priority));
   @file_put_contents($dir . "/enquiries.csv", $row, FILE_APPEND | LOCK_EX);
 }
@@ -211,7 +244,13 @@ $headers =
   "MIME-Version: 1.0\r\n" .
   "Content-Type: text/plain; charset=UTF-8\r\n";
 
+// One message per address rather than one message to all of them: if the
+// info@ mailbox is missing or full, its bounce cannot take the inbox copy down
+// with it. The enquiry counts as delivered if ANY address accepted it.
 $ok = @mail($to, $subject, $body, $headers, "-fno-reply@kemet-travel.com");
+foreach (notify_addresses($to) as $copyTo) {
+  $ok = @mail($copyTo, $subject, $body, $headers, "-fno-reply@kemet-travel.com") || $ok;
+}
 
 // The local safety copy, written whether or not delivery succeeded. mail()
 // returning true only means the message was handed to the local MTA — it can

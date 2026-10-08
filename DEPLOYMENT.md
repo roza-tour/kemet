@@ -92,6 +92,29 @@ before debugging anything else.
 
 ---
 
+## Where enquiries arrive (set once per server)
+
+The contact form sends every enquiry to `info@kemet-travel.com`, the mailbox
+on the cPanel server, **and** to whatever addresses are listed in
+`~/.kemet-notify` — the inbox someone actually reads. Set it once from the
+cPanel terminal:
+
+```bash
+echo "kemet.travel.egy@gmail.com" > ~/.kemet-notify
+```
+
+Up to three addresses, separated by spaces, commas or new lines. The file
+lives in the home folder on purpose: not in `~/kemet`, because `update.sh`
+runs `git clean` there and would delete it; and not in this repository,
+because the repository is public and an address written into it is an address
+handed to spammers. Each address gets its own message, so a missing or full
+`info@` mailbox cannot stop the inbox copy.
+
+Why this exists: on 8 Oct 2026 the enquiry log held a real customer enquiry
+logged "sent" ten days earlier that nobody had seen — "sent" only means the
+server's mail system accepted it. Every enquiry is also kept in
+`~/kemet/_stats/enquiries.csv` (full message text) and listed on `/stats.php`.
+
 ## Summary
 
 ```
