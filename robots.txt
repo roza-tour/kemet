@@ -23,6 +23,14 @@ Allow: /
 User-agent: anthropic-ai
 Allow: /
 
+# Anthropic's current agents (Claude-Web and anthropic-ai above are the
+# retired names, kept so nothing that still sends them is turned away).
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
 User-agent: PerplexityBot
 Allow: /
 
@@ -45,6 +53,18 @@ User-agent: Bingbot
 Allow: /
 
 User-agent: cohere-ai
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: MistralAI-User
 Allow: /
 
 # @astrojs/sitemap emits sitemap-index.xml at the site root.
