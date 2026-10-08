@@ -19,6 +19,7 @@
 import Base from "@/layouts/Base.astro";
 import { srcsetFor, SIZES } from "@/utils/images";
 import SymbolIcon from "@/components/SymbolIcon.astro";
+import UltraBrief from "@/components/ultra/UltraBrief.astro";
 import { ultraJourneys, PEAK, ULTRA_PER_DAY } from "@/data/ultra/journeys";
 import type { UltraText } from "@/data/ultra/types";
 import { answerPageSchema, ORG_ID } from "@/schemas/jsonld";
@@ -218,7 +219,7 @@ const jsonld: Record<string, unknown>[] = [
           <p class="vlede">{T.lede}</p>
           <div class="vhero-acts">
             <a href={wa} class="vbtn" target="_blank" rel="noopener"><span>{T.ctaPrimary}</span></a>
-            <a href={mail} class="vlink-quiet">{T.ctaQuiet}</a>
+            <a href="#message-us" class="vlink-quiet">{T.ctaQuiet}</a>
           </div>
         </div>
       </div>
@@ -369,8 +370,12 @@ const jsonld: Record<string, unknown>[] = [
       </div>
     </section>
 
-    {/* ── The close: an invitation card ─────────────────────────────────── */}
-    <section class="vclose">
+    {/* ── The close: an invitation card, with the written brief ─────────────
+         WhatsApp first, as everywhere on this page; the brief under it for
+         the visitor who would rather write — and the only route from this
+         page that Google Ads can count (see UltraBrief.astro). The id is the
+         one contact-handler.php returns a no-JavaScript send to. */}
+    <section class="vclose" id="message-us">
       <div class="wrap">
         <div class="vcard">
           <i class="vd vd-tl"></i><i class="vd vd-tr"></i>
@@ -382,6 +387,8 @@ const jsonld: Record<string, unknown>[] = [
             <a href={wa} class="vbtn" target="_blank" rel="noopener"><span>{T.closeCta}</span></a>
             <a href={mail} class="vlink-quiet">{T.closeQuiet}</a>
           </div>
+          <p class="voverline vbrief-or"><span></span>{T.brief.divider}<span></span></p>
+          <UltraBrief text={T} route={route} />
         </div>
       </div>
     </section>
@@ -705,6 +712,21 @@ const jsonld: Record<string, unknown>[] = [
     color: var(--v-cream); margin:0 0 var(--s-3); }
   .vcard p { color: var(--v-cream-dim); line-height: 2; margin: 0 auto;
     max-width: 540px; font-size:var(--t-base); }
+  .vcard .vbrief-or { margin: var(--s-7) auto var(--s-5); max-width: 600px;
+    letter-spacing: .32em; line-height: 1.6; }
+  .vcard .vbrief-or span { flex: 1 1 40px; width: auto; }
+  @media (max-width: 680px) {
+    .vcard .vbrief-or { letter-spacing: .2em; gap: var(--s-3); margin-top: var(--s-6); }
+    .vcard .vbrief-or span { display: none; }
+  }
+  /* global.css drops the tracking on Arabic labels because it breaks the
+     cursive join, but this page's scoped rules came later and put it back.
+     Restated here, where it wins. */
+  :global([lang="ar"]) .vtag, :global([lang="ar"]) .voverline,
+  :global([lang="ar"]) .vcard .vbrief-or { letter-spacing: 0; }
+  /* The fixed nav would cover the card's top when "send a confidential
+     brief" jumps here. */
+  .vclose { scroll-margin-top: 80px; }
 
   /* ===== responsive ====================================================== */
   @media (max-width: 1080px) {

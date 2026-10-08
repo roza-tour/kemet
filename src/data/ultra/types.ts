@@ -88,6 +88,41 @@ export interface UltraText {
   closeCta: string;
   closeQuiet: string;
 
+  /**
+   * The written brief inside the closing card (components/ultra/UltraBrief.astro).
+   * The option VALUES behind `partyOptions` and the journey select are fixed
+   * English keys; contact-handler.php accepts only those and writes the
+   * enquiry to the inbox in English, whichever language it was sent in.
+   */
+  brief: {
+    /** The line between the WhatsApp button and the form. */
+    divider: string;
+    name: string;
+    email: string;
+    phone: string;
+    /** Shown, quieter, after the label of every field that can be left empty. */
+    optional: string;
+    journey: string;
+    undecided: string;
+    when: string;
+    whenPlaceholder: string;
+    party: string;
+    /** The empty first option of the "who is travelling" select. */
+    choose: string;
+    /** In the fixed order couple, family, generations, group, solo. */
+    partyOptions: [couple: string, family: string, generations: string, group: string, solo: string];
+    note: string;
+    notePlaceholder: string;
+    submit: string;
+    sending: string;
+    /** One line under the button: who reads it, and how soon they answer. */
+    promise: string;
+    ok: string;
+    err: string;
+    /** The honeypot's label — hidden from people, read by screen readers. */
+    honeypot: string;
+  };
+
   /** Pre-filled WhatsApp message and email subject/body, in this language. */
   whatsapp: string;
   whatsappJourney: (title: string) => string;

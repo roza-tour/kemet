@@ -1,0 +1,247 @@
+---
+// UltraBrief — the written brief inside Kemet Ultra's closing card.
+//
+// WHY THIS PAGE HAS ITS OWN FORM
+// Until 8 Oct 2026 every way to reach us from this page was WhatsApp or a
+// mailto: link. That page is where the Google Ads campaign sends every click,
+// and the campaign's conversion is "enquiry form sent" — so the one page the
+// ad money lands on could never report a single result, however many people
+// it brought to us. And a mailto: link on a desktop with no mail client set up
+// does nothing at all; the visitor clicks, nothing opens, and they leave.
+//
+// WHY NOT ContactForm
+// It posts to the same handler with the same field names, and its behaviour
+// is copied here unchanged (time-on-page, the ad click id, the outcome event,
+// the no-JavaScript fallback). What differs is what it asks. The contact
+// page asks about pace and whether cost or comfort leads; on this page the
+// second question is an insult and the first is answered by the journey. This
+// one asks which of the four journeys, and makes the message optional — the
+// journey key is turned into the message server-side, so a name, an email and
+// one choice are a complete enquiry.
+//
+// The journey and party VALUES are fixed English keys. contact-handler.php
+// accepts only those and writes the enquiry to the inbox in English, so a
+// brief sent from the Arabic page reads the same as one sent from vip.html.
+import { ultraJourneys } from "@/data/ultra/journeys";
+import type { UltraText } from "@/data/ultra/types";
+
+interface Props {
+  text: UltraText;
+  /** This page's route, e.g. "vip.html" — where a no-JavaScript send lands. */
+  route: string;
+}
+const { text: T, route } = Astro.props;
+const B = T.brief;
+
+const PARTY_VALUES = ["couple", "family", "generations", "group", "solo"] as const;
+---
+<div class="vbrief">
+  {/* role/aria-live so the outcome is announced, not only shown. */}
+  <div class="cform-note cform-note--ok" role="status" aria-live="polite" hidden>{B.ok}</div>
+  <div class="cform-note cform-note--err" role="alert" hidden>{B.err}</div>
+
+  {/* `cform` as well as `vbrief-form`: the analytics layer counts a started
+      form by that class (scripts/enhance.client.js), and the global input
+      styles are the base the Ultra palette below is laid over. */}
+  <form class="cform vbrief-form" method="post" action="/contact-handler.php">
+    <label class="cform-hp" aria-hidden="true">
+      {B.honeypot}
+      <input type="text" name="website" tabindex="-1" autocomplete="off" />
+    </label>
+    <input type="hidden" name="kt" value="" />
+    <input type="hidden" name="return" value={`/${route}`} />
+    <input type="hidden" name="context" value={`Kemet Ultra brief (/${route})`} />
+    <input type="hidden" name="gclid" value="" />
+
+    <div class="vbrief-grid">
+      <label>
+        <span>{B.name}</span>
+        <input type="text" name="name" required maxlength="120" autocomplete="name" />
+      </label>
+      <label>
+        <span>{B.email}</span>
+        <input type="email" name="email" required maxlength="200" autocomplete="email" />
+      </label>
+      <label>
+        <span>{B.journey}</span>
+        <select name="journey">
+          <option value="undecided">{B.undecided}</option>
+          {ultraJourneys.map((j) => <option value={j.id}>{T.journeys[j.id].title}</option>)}
+        </select>
+      </label>
+      <label>
+        <span>{B.when} <i>{B.optional}</i></span>
+        <input type="text" name="dates" maxlength="120" placeholder={B.whenPlaceholder} />
+      </label>
+      <label>
+        <span>{B.party} <i>{B.optional}</i></span>
+        <select name="party">
+          <option value="">{B.choose}</option>
+          {PARTY_VALUES.map((v, i) => <option value={v}>{B.partyOptions[i]}</option>)}
+        </select>
+      </label>
+      <label>
+        <span>{B.phone} <i>{B.optional}</i></span>
+        <input type="tel" name="phone" maxlength="40" autocomplete="tel" />
+      </label>
+      <label class="vbrief-full">
+        <span>{B.note} <i>{B.optional}</i></span>
+        <textarea name="message" rows="3" maxlength="5000" placeholder={B.notePlaceholder}></textarea>
+      </label>
+    </div>
+
+    <button type="submit" class="vbrief-send" data-sending={B.sending}><span>{B.submit}</span></button>
+    <p class="vbrief-promise">{B.promise}</p>
+  </form>
+</div>
+
+<script is:inline>
+  // The same four behaviours as ContactForm's script, for this form only.
+  (function () {
+    var form = document.querySelector(".vbrief-form");
+    if (!form) return;
+    var box = form.parentNode;
+    var ok = box.querySelector(".cform-note--ok");
+    var err = box.querySelector(".cform-note--err");
+
+    // Dispatched only where the outcome is KNOWN; scripts/enhance.client.js
+    // counts it and, on success, reports the Google Ads conversion.
+    var report = function (sent) {
+      document.dispatchEvent(new CustomEvent("kemet:enquiry", { detail: { ok: sent } }));
+    };
+
+    // No-JavaScript and fallback sends land back here with ?sent=1|0.
+    var sent = new URLSearchParams(location.search).get("sent");
+    if (sent !== null) {
+      report(sent === "1");
+      (sent === "1" ? ok : err).hidden = false;
+      var target = document.getElementById("message-us");
+      if (target) target.scrollIntoView({ block: "start" });
+    }
+
+    // Seconds on the page (the handler holds anything under 3 as a bot) and
+    // the ad click id, both written at the moment of sending.
+    var t0 = Date.now();
+    form.addEventListener("submit", function () {
+      form.kt.value = String(Math.round((Date.now() - t0) / 1000));
+      try {
+        var gid = sessionStorage.getItem("kemet_gclid");
+        if (gid) form.gclid.value = gid;
+      } catch (e) {}
+    });
+
+    if (!window.fetch) return;
+    var btn = form.querySelector(".vbrief-send");
+    var label = btn.querySelector("span");
+    var idle = label.textContent;
+
+    form.querySelectorAll("input[required], input[type=email]").forEach(function (el) {
+      el.addEventListener("blur", function () {
+        el.classList.toggle("cform-bad", !el.checkValidity() && el.value !== "");
+      });
+      el.addEventListener("input", function () { el.classList.remove("cform-bad"); });
+    });
+
+    form.addEventListener("submit", function (ev) {
+      if (!form.checkValidity()) return;
+      ev.preventDefault();
+      btn.disabled = true;
+      label.textContent = btn.dataset.sending || "Sending…";
+      ok.hidden = true; err.hidden = true;
+
+      fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { "X-Requested-With": "fetch" },
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (d) {
+          var good = !!(d && d.ok);
+          report(good);
+          if (good) form.reset();
+          var note = good ? ok : err;
+          note.hidden = false;
+          note.scrollIntoView({ block: "center", behavior: "smooth" });
+        })
+        .catch(function () {
+          // Network hiccup: fall back to the classic full-page send.
+          form.submit();
+        })
+        .finally(function () {
+          btn.disabled = false;
+          label.textContent = idle;
+        });
+    });
+  })();
+</script>
+
+<style>
+  .vbrief { max-width: 600px; margin: 0 auto; text-align: start; }
+
+  /* The global .cform is a framed panel; inside the invitation card that
+     would be a box in a box, so only its field styles are kept. */
+  .vbrief-form { border: 0; padding: 0; background: none; }
+
+  .vbrief-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 16px; margin-bottom: 26px; }
+  .vbrief-full { grid-column: 1 / -1; }
+
+  .vbrief-form label span {
+    display: block; margin-bottom: 8px;
+    font-size: var(--t-nano); letter-spacing: .24em; text-transform: uppercase;
+    color: var(--v-gold-lit); font-weight: 400;
+  }
+  .vbrief-form label span i {
+    font-style: normal; text-transform: none; letter-spacing: .04em;
+    color: var(--v-faint); margin-inline-start: 4px;
+  }
+  .vbrief-form input, .vbrief-form select, .vbrief-form textarea {
+    background: rgba(3, 5, 11, .62);
+    border: 1px solid var(--v-hair);
+    color: var(--v-cream);
+    padding: 12px 14px;
+    font-size: var(--t-sm);
+  }
+  .vbrief-form textarea { min-height: 96px; }
+  .vbrief-form input:focus, .vbrief-form select:focus, .vbrief-form textarea:focus {
+    border-color: var(--v-gold);
+    box-shadow: 0 0 0 3px rgba(194, 162, 78, .14);
+  }
+  .vbrief-form input::placeholder, .vbrief-form textarea::placeholder { color: var(--v-faint); opacity: 1; }
+  .vbrief-form select:has(option[value=""]:checked) { color: var(--v-faint); }
+  .vbrief-form input.cform-bad { border-color: #C0564A; box-shadow: 0 0 0 1px rgba(192, 86, 74, .35); }
+
+  /* The page's solid gold button, drawn here because the page's own button
+     styles are scoped to it and do not reach into this component. */
+  .vbrief-send {
+    display: flex; width: 100%; padding: 1px; border: 0; cursor: pointer;
+    background: linear-gradient(160deg, var(--v-gold-lit), var(--v-gold-deep) 55%, var(--v-gold-lit));
+    box-shadow: 0 18px 44px -18px rgba(194, 162, 78, .55);
+  }
+  .vbrief-send span {
+    flex: 1; padding: 16px 24px;
+    background: linear-gradient(180deg, var(--v-gold-lit), var(--v-gold));
+    color: #14100A; font-family: var(--ff-body); font-size: var(--t-nano);
+    letter-spacing: .34em; text-transform: uppercase; transition: filter .4s;
+  }
+  .vbrief-send:hover span { filter: brightness(1.08); }
+  .vbrief-send:focus-visible { outline: 2px solid var(--v-gold-lit); outline-offset: 3px; }
+  .vbrief-send[disabled] { opacity: .65; cursor: wait; }
+
+  .vbrief-promise {
+    margin: 14px 0 0; text-align: center;
+    color: var(--v-faint); font-size: var(--t-tiny); letter-spacing: .04em; line-height: 1.7;
+  }
+
+  .vbrief .cform-note { text-align: center; line-height: 1.7; }
+
+  /* Tracking breaks the cursive join in Arabic; the labels and the button
+     keep it in Latin only (as global.css does for the site's own labels). */
+  :global([lang="ar"]) .vbrief-form label span,
+  :global([lang="ar"]) .vbrief-form label span i,
+  :global([lang="ar"]) .vbrief-send span { letter-spacing: 0; }
+
+  @media (max-width: 680px) {
+    .vbrief-grid { grid-template-columns: 1fr; gap: 16px; }
+    .vbrief-form label span { font-size: var(--t-tiny); letter-spacing: .18em; }
+  }
+</style>
