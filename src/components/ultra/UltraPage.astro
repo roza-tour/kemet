@@ -172,6 +172,18 @@ const jsonld: Record<string, unknown>[] = [
         <p class="vtag"><span></span>{T.heroTag}<span></span></p>
         <h1>{T.h1[0]}<br /><em>{T.h1[1]}</em></h1>
         <svg class="vdiv" aria-hidden="true"><use href="#v-lotus" /></svg>
+        {/* The price and the way down, on the first screen. Measured on 8 Oct
+            2026: visitors read 13% of this page on average and the first price
+            sat at 15% (3 screens down on a phone) — they were leaving just
+            short of it, after clicking an ad that is meant to filter on price.
+            Built from labels every locale already carries, so all ten
+            languages get it without a new string to translate. It sits ABOVE
+            the lede, not below it: under it, it fell off the first screen on a
+            1366x768 laptop and a small phone. */}
+        <p class="vprice-line">
+          <span class="vprice-from">{T.labels.from} <b>{eur(Math.min(...p2))}</b> {T.labels.perPersonTwo}</span>
+          <a class="vprice-go" href="#glance">{T.glanceTitle} <b aria-hidden="true">↓</b></a>
+        </p>
         <p class="vlede">{T.lede}</p>
         <div class="vhero-acts">
           <a href={wa} class="vbtn" target="_blank" rel="noopener"><span>{T.ctaPrimary}</span></a>
@@ -180,6 +192,33 @@ const jsonld: Record<string, unknown>[] = [
       </div>
       <div class="vband" aria-hidden="true"></div>
     </header>
+
+    {/* ── At a glance: the four journeys, straight after the hero (moved up
+         from fourth place on 8 Oct 2026 — see the price line above)  ───────────────────── */}
+    <section class="vglance" id="glance">
+      <div class="wrap">
+        <div class="vhead">
+          <p class="voverline"><span></span>{T.glanceOverline}<span></span></p>
+          <h2>{T.glanceTitle}</h2>
+        </div>
+        <div class="vglance-grid">
+          {ultraJourneys.map((j) => {
+            const jt = T.journeys[j.id];
+            return (
+              <a class:list={["vcardj", `is-${j.accent}`]} href={`#${j.id}`}>
+                <span class="vcardj-no" aria-hidden="true">{j.numeral}</span>
+                <span class="vcardj-dur">{T.labels.duration(j.days, j.nights)}</span>
+                <b class="vcardj-title">{jt.title}</b>
+                <span class="vcardj-route">{jt.route}</span>
+                <span class="vcardj-price"><em>{T.labels.from}</em> {eur(j.price2)}</span>
+                <span class="vcardj-pp">{T.labels.perPersonTwo}</span>
+                <span class="vcardj-go">{T.labels.view} <b aria-hidden="true">→</b></span>
+              </a>
+            );
+          })}
+        </div>
+      </div>
+    </section>
 
     {/* ── The five signatures, set as engraved medallions ───────────────── */}
     <section class="vfacts vsigs">
@@ -207,31 +246,6 @@ const jsonld: Record<string, unknown>[] = [
       </div>
     </section>
 
-    {/* ── At a glance: the four journeys side by side ───────────────────── */}
-    <section class="vglance">
-      <div class="wrap">
-        <div class="vhead">
-          <p class="voverline"><span></span>{T.glanceOverline}<span></span></p>
-          <h2>{T.glanceTitle}</h2>
-        </div>
-        <div class="vglance-grid">
-          {ultraJourneys.map((j) => {
-            const jt = T.journeys[j.id];
-            return (
-              <a class:list={["vcardj", `is-${j.accent}`]} href={`#${j.id}`}>
-                <span class="vcardj-no" aria-hidden="true">{j.numeral}</span>
-                <span class="vcardj-dur">{T.labels.duration(j.days, j.nights)}</span>
-                <b class="vcardj-title">{jt.title}</b>
-                <span class="vcardj-route">{jt.route}</span>
-                <span class="vcardj-price"><em>{T.labels.from}</em> {eur(j.price2)}</span>
-                <span class="vcardj-pp">{T.labels.perPersonTwo}</span>
-                <span class="vcardj-go">{T.labels.view} <b aria-hidden="true">→</b></span>
-              </a>
-            );
-          })}
-        </div>
-      </div>
-    </section>
 
     {/* ── The journeys: framed plates with silk edges ───────────────────── */}
     <section class="vprogs">
@@ -927,11 +941,43 @@ const jsonld: Record<string, unknown>[] = [
     .vsigs .vfact { flex-basis: 33.333%; }
     .vsigs .vfact:nth-child(4)::before, .vsigs .vfact:nth-child(4)::after { display: none; }
   }
+  /* The price line: one quiet row under the lede, not a banner. */
+  .vprice-line { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: center;
+    gap: 6px var(--s-4); margin: 0 auto var(--s-5); color: var(--v-cream-dim);
+    font-size: var(--t-sm); letter-spacing: .02em; }
+  .vprice-from b { font-family: var(--ff-display); font-weight: 400; font-size: 1.35rem;
+    background: var(--v-leaf); -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent; }
+  .vprice-go { color: var(--v-gold-lit); text-decoration: none; font-size: var(--t-nano);
+    letter-spacing: .26em; text-transform: uppercase;
+    border-bottom: 1px solid rgba(194, 162, 78, .4); padding-bottom: 3px; }
+  .vprice-go b { display: inline-block; transition: transform .35s; }
+  .vprice-go:hover b { transform: translateY(3px); }
+  /* The fixed nav would cover the heading when "Choose your journey" jumps here. */
+  .vglance { scroll-margin-top: 96px; }
+
   @media (max-width: 680px) {
-    .vglance { padding-top: 72px; }
+    .vglance { padding-top: 56px; }
+    /* Four cards one under another were two full screens on a phone, each
+       half empty. Same content — duration, title, route, price, the link —
+       at a size that keeps all four within about one screen. */
+    .vglance .vhead { margin-bottom: var(--s-5); }
+    .vglance-grid { gap: var(--s-3); }
+    .vcardj { padding: 22px 20px 18px; gap: 3px; }
+    .vcardj-no { font-size: 2.8rem; top: 8px; right: 14px; }
+    .vcardj-dur, .vcardj-title { padding-right: 2.6rem; }
+    .vcardj-title { font-size: 1.3rem; margin: 2px 0 0; }
+    .vcardj-price { margin-top: var(--s-2); padding-top: var(--s-2); font-size: 1.5rem; }
+    .vcardj-go { margin-top: var(--s-2); }
+    /* On a phone the hero takes the height of what is in it, not a forced
+       full screen plus padding: at 100vh it ran past the first screen, and
+       everything that sells the page started after it. */
+    .vhero { min-height: auto; }
+    .vlede { line-height: 1.8; }
+    .vprice-line { margin-bottom: var(--s-4); }
     .vglance-grid { grid-template-columns: 1fr; }
     .vsigs .vfact { flex-basis: 50%; }
     .vsigs .vfact::before, .vsigs .vfact::after { display: none; }
-    .vhero-in { padding: 140px 28px var(--s-8); }
+    .vhero-in { padding: 128px 28px var(--s-7); }
   }
 </style>
