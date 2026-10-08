@@ -34,6 +34,13 @@ import { alwaysTrue, notOurTraveller, ourTraveller, priceStance } from "@/data/s
 import { reviewer } from "@/data/experts";
 import { company } from "@/data/company";
 import { formatPrice, monthYear } from "@/utils/format";
+import { ultraJourneys } from "@/data/ultra/journeys";
+import { en as ultraEn } from "@/data/ultra/en";
+import { experiences } from "@/data/experiences";
+import { collectionsByPriority } from "@/data/collections";
+import { occasions } from "@/data/occasions";
+import { TRANSLATED_LOCALES, LOCALE_META, LOCALES } from "@/config/i18n";
+import { TRANSLATED_TOURS } from "@/config/tour-i18n";
 
 const u = (path: string) => `${SITE_URL}/${path}`;
 const clean = (s: string) => s.replace(/\s+/g, " ").trim();
@@ -98,6 +105,23 @@ export const GET: APIRoute = () => {
   }
   L.push("");
 
+  // Kemet Ultra. Absent from this file until 8 Oct 2026 — the top tier, the
+  // product the paid campaign sells, and the one an assistant asked for
+  // "the most exclusive way to see Egypt" most needs to know exists. Read from
+  // the same data the page renders: prices from ultra/journeys.ts, words from
+  // ultra/en.ts, so neither can drift from vip.html.
+  const eur = (n: number) => `EUR ${n.toLocaleString("en-GB")}`;
+  h(2, "Kemet Ultra — the top tier");
+  p(`Four fully private journeys at the very top of the Egyptian market: the Great Pyramid opened for one party, Karnak held after closing for dinner in the precinct, a chartered dahabiya or a crewed Red Sea yacht, private aircraft, and the landmark hotels in their best rooms. Priced openly and confirmed in writing before anything is paid. ${u("vip.html")}`);
+  for (const j of ultraJourneys) {
+    const t = ultraEn.journeys[j.id];
+    h(3, `${t.title} — ${j.days} days / ${j.nights} nights`);
+    p(`${t.kicker}. Route: ${t.route}. From ${eur(j.price2)} per person for a party of two; from ${eur(j.price4)} per person for four. ${u(`vip.html#${j.id}`)}`);
+    p(t.body);
+    for (const hl of t.highlights) L.push(`- ${clean(hl)}`);
+    L.push("");
+  }
+
   // Private access. Written out in full rather than summarised: this is the
   // page an assistant is least likely to guess correctly from a title, because
   // "book the pyramid" sounds like marketing until the permit route is stated.
@@ -109,6 +133,31 @@ export const GET: APIRoute = () => {
   L.push("");
   for (const f of venueFaqs) {
     L.push(`**${f.q}** ${clean(f.a)}`);
+    L.push("");
+  }
+
+  // Experiences, collections and occasions — the other half of what the site
+  // sells. Missing until 8 Oct 2026, which meant an assistant reading only
+  // this file had never heard of the private sunrise session at Giza, the
+  // Christmas collection or the proposal page.
+  h(2, "Private experiences");
+  p(`Single experiences, each private to one party, bookable on their own or inside any journey.`);
+  for (const e of experiences) {
+    L.push(`- **${e.title}** — ${e.durationLabel}. ${clean(e.shortSummary)}${e.priceNote ? ` ${clean(e.priceNote)}` : ""} ${u(`experiences/${e.slug}.html`)}`);
+  }
+  L.push("");
+
+  h(2, "Collections — by season and theme");
+  for (const c of collectionsByPriority) {
+    L.push(`- **${c.title}.** ${clean(c.shortSummary)} ${u(`collections/${c.slug}.html`)}`);
+  }
+  L.push("");
+
+  h(2, "Journeys planned around an occasion");
+  for (const o of occasions) {
+    h(3, o.title);
+    p(`${o.shortSummary} ${u(`occasions/${o.slug}.html`)}`);
+    for (const i of o.ideas) L.push(`- **${clean(i.title)}.** ${clean(i.body)}`);
     L.push("");
   }
 
@@ -134,6 +183,15 @@ export const GET: APIRoute = () => {
       p(f.a);
     }
   }
+
+  // Languages, computed: which locales exist, and which carry the catalogue.
+  h(2, "Languages");
+  const tourLocales = TRANSLATED_LOCALES.filter((l) => TRANSLATED_TOURS.some((t) => t.locale === l));
+  p(`The site is published in ${LOCALES.length} languages: ${LOCALES.map((l) => LOCALE_META[l].endonym).join(", ")}. ` +
+    (tourLocales.length
+      ? `The journey catalogue is also published in ${tourLocales.map((l) => LOCALE_META[l].endonym).join(", ")}, each journey in that language with its own address. `
+      : "") +
+    `Every translated address is listed, language by language, in ${u("llms.txt")}. Prices are the same in every language.`);
 
   h(2, "Contact");
   p(`Email ${site.email}. WhatsApp ${site.phoneDisplay}. Enquiries: ${u("contact.html")}. Based in Cairo, Egypt; clients travel from worldwide.`);
