@@ -9,6 +9,7 @@
 // by the registry. Never store the inverse here.
 // ---------------------------------------------------------------------------
 import type { Guide } from "@/types";
+import { PEAK } from "@/data/ultra/journeys";
 
 const dest = (...ids: string[]) =>
   ids.map((id) => ({ domain: "destination" as const, id }));
@@ -791,6 +792,158 @@ export const guides: Guide[] = [
     relationships: {
       tours: tour("tour-10-day", "tour-7-day", "tour-nile-cruise"),
       destinations: dest("cairo", "giza", "luxor", "aswan"),
+      relatedGuides: guide("egypt-travel-guide", "best-time-to-visit-egypt", "10-day-egypt-itinerary"),
+    },
+  },
+  // =========================================================================
+  // Where to stay. Written 9 Oct 2026 from the hotel status checked in
+  // September 2026 (data/ultra/journeys.ts, HOTEL STATUS) — the one place on
+  // the web, as far as we know, that says plainly which of Egypt's landmark
+  // hotels can actually be booked for the 2026–27 season. Only hotels Kemet
+  // books are named; nothing is said about a hotel we have not stayed guests in.
+  {
+    id: "where-to-stay-in-egypt",
+    slug: "where-to-stay-in-egypt",
+    domain: "guide",
+    title: "Where to Stay in Egypt: The Best Hotels, City by City",
+    locales: ["en"],
+    guideType: "planning",
+    category: "luxury-travel",
+    parentGuideId: "egypt-travel-guide",
+    shortSummary:
+      "The hotels worth building an Egypt journey around — Giza, Cairo, Luxor, Aswan, the Nile and the Red Sea — and which of the famous ones can actually be booked for the 2026–27 season.",
+    difficulty: "easy",
+    readingTimeMinutes: 6,
+    lastUpdated: "2026-10",
+    keyTakeaways: [
+      "In Egypt the room matters more than the brand: a pyramid view at Giza and a Nile view in Aswan are the point, so ask for the room by name",
+      "The Winter Palace in Luxor is closed for the 2026–27 season — it reopens in July 2027 as the Mandarin Oriental Winter Palace",
+      "The Old Cataract in Aswan is open, under Mandarin Oriental since May 2026, with guests in the historic Palace wing",
+      "On Luxor's West Bank, Al Moudira puts you among the fields a short drive from the Valley of the Kings",
+      `Book eight to twelve weeks ahead for October to April; the peak weeks (20 December – 5 January and Easter week) carry a supplement of around ${PEAK}% and sell out first`,
+    ],
+    keyFacts: [
+      { label: "Giza", value: "Marriott Mena House — pyramid-view suite" },
+      { label: "Cairo", value: "Four Seasons at The First Residence — Nile-view suite" },
+      { label: "Luxor", value: "Al Moudira, West Bank (Winter Palace closed until July 2027)" },
+      { label: "Aswan", value: "Old Cataract — historic Palace wing" },
+      { label: "On the Nile", value: "A chartered dahabiya, or The Oberoi Philae" },
+      { label: "Red Sea", value: "The Oberoi Beach Resort, Sahl Hasheesh" },
+      { label: "Status checked", value: "September 2026" },
+    ],
+    sections: [
+      {
+        heading: "How to choose: the room before the brand",
+        paragraphs: [
+          "Egypt has fewer truly great hotels than its fame suggests, and the ones that matter are great for a reason you can see from the window: the pyramids from a balcony at Giza, the Nile and Elephantine Island from a terrace in Aswan. The same hotel without that view is a different stay. So the useful question is never only which hotel, but which room in it — and whether that room can be had on your dates.",
+          "The second question, this season more than most, is whether the hotel is open at all. Two of the country's landmark hotels are in the middle of restorations, and a booking site will not always tell you.",
+        ],
+      },
+      {
+        heading: "Giza: Marriott Mena House",
+        paragraphs: [
+          "A nineteenth-century royal lodge at the foot of the Giza plateau, and the hotel where the 1943 Cairo Conference brought Churchill, Roosevelt and Chiang Kai-shek together. Its reason to exist is the view: from a pyramid-view suite the Great Pyramid fills the window at breakfast. It is also the practical base for an early private entry to the plateau, which is minutes away rather than an hour across Cairo traffic.",
+        ],
+        note: "Ask for a pyramid-view room by name. A garden-view room here is a pleasant hotel room; a pyramid-view one is the reason people come.",
+        noteType: "tip",
+      },
+      {
+        heading: "Cairo: Four Seasons Hotel Cairo at The First Residence",
+        paragraphs: [
+          "When the journey needs Cairo itself — the Egyptian Museum, Islamic and Coptic Cairo, dinner in the city — the Four Seasons at The First Residence is the calm address on the Nile, its Nile-view suites looking over the river. It suits a stay that starts or ends in the capital, or a party that would rather not be out at Giza every evening.",
+        ],
+      },
+      {
+        heading: "Luxor: Al Moudira — and the Winter Palace this season",
+        paragraphs: [
+          "Al Moudira sits on the West Bank among the sugarcane between the Nile and the Theban hills, a short drive from the Valley of the Kings and Hatshepsut's temple — garden suites, quiet, and the tombs reachable before the coaches arrive. For a journey built around the West Bank it is the stay we choose.",
+          "The Winter Palace, Luxor's historic hotel on the East Bank, closed in early 2026 for a complete restoration. It reopens in July 2027 as the Mandarin Oriental Winter Palace, and cannot be booked for the 2026–27 season.",
+        ],
+        note: "Status checked September 2026. If you see the Winter Palace offered for winter 2026–27, ask the seller to confirm in writing before paying.",
+        noteType: "warning",
+      },
+      {
+        heading: "Aswan: the Old Cataract",
+        paragraphs: [
+          "Opened in 1899 on the granite bank above the first cataract, the Old Cataract is the most atmospheric hotel in Egypt: Agatha Christie stayed here, the 1978 film of Death on the Nile was shot here, and its terrace looks straight across the river to Elephantine Island as the feluccas turn at sunset.",
+          "It has been under Mandarin Oriental management since May 2026. Guests stay in the historic Palace wing — the original building, and the one with the view — while the newer Nile wing is renovated, reopening fully in July 2027. It is open and bookable.",
+        ],
+      },
+      {
+        heading: "On the Nile: a chartered dahabiya, or The Oberoi Philae",
+        paragraphs: [
+          "Between Aswan and Luxor the best hotel is a boat. A dahabiya taken whole — a sailing vessel of a few cabins, crewed for your party alone — moors at sandbanks and villages the large ships cannot reach, and stops when you want to swim. For a party that prefers a ship's comforts on a fixed route, The Oberoi Philae is the luxury cruiser we book, with suites and Oberoi service.",
+        ],
+        noteLink: { label: "Dahabiya or cruise ship?", href: "/compare/dahabiya-vs-cruise-ship.html" },
+        note: "The difference between a dahabiya and a cruise ship is not size alone — it is where the boat can moor.",
+        noteType: "info",
+      },
+      {
+        heading: "The Red Sea: The Oberoi Beach Resort, Sahl Hasheesh",
+        paragraphs: [
+          "To end a journey with the sea, the Oberoi at Sahl Hasheesh, south of Hurghada, is an all-suite resort on its own stretch of coast; its grand suites have private pools. It is also the base for a crewed yacht day among the reefs.",
+        ],
+      },
+      {
+        heading: "When to book",
+        items: [
+          "October to April: eight to twelve weeks ahead, for the room you actually want rather than the one that is left",
+          `Christmas, New Year and Easter week: earlier still — these weeks carry a supplement of around ${PEAK}% and the best rooms go first`,
+          "A chartered dahabiya: six months ahead for most of the season, longer for the holidays — it is the booking the rest of the journey is built around",
+          "Summer: the hotels are quieter and the light at Giza and Aswan is extraordinary, but plan the days around the heat",
+        ],
+        noteLink: { label: "The four Kemet Ultra journeys", href: "/vip.html" },
+        note: "On Kemet Ultra journeys every hotel and room category is named in the itinerary before anything is paid.",
+        noteType: "tip",
+      },
+    ],
+    planningTips: [
+      "Name the room, not only the hotel, when you book — or ask us to",
+      "Two nights in the same place beat one night in two: Egypt's great hotels are part of the journey, not a bed between sites",
+      "If a hotel matters to the trip, fix it first and build the dates around it",
+    ],
+    importantNotes: [
+      "Winter Palace, Luxor: closed until July 2027 (reopening as the Mandarin Oriental Winter Palace)",
+      "Old Cataract, Aswan: open — Palace wing only while the Nile wing is renovated (to July 2027)",
+      "Hotel status checked September 2026; renovation dates can move",
+    ],
+    faqs: [
+      {
+        q: "Is the Winter Palace in Luxor open?",
+        a: "Not for the 2026–27 season. The Winter Palace closed in early 2026 for a complete restoration and is due to reopen in July 2027 as the Mandarin Oriental Winter Palace. For a luxury stay in Luxor this season, Al Moudira on the West Bank is the hotel we book. (Status checked September 2026.)",
+      },
+      {
+        q: "Is the Old Cataract in Aswan open?",
+        a: "Yes. The Old Cataract has been under Mandarin Oriental management since May 2026 and is open, with guests staying in the historic Palace wing — the original 1899 building, facing the Nile and Elephantine Island — while the Nile wing is renovated until July 2027.",
+      },
+      {
+        q: "Which hotel in Giza has a view of the pyramids?",
+        a: "The Marriott Mena House, at the foot of the Giza plateau, is the hotel whose pyramid-view rooms and suites look directly at the Great Pyramid. Ask for a pyramid-view room by name: the garden-view rooms do not have it.",
+      },
+      {
+        q: "Should I stay on the East Bank or the West Bank in Luxor?",
+        a: "The West Bank, for a journey built around the Valley of the Kings, the Valley of the Queens and Hatshepsut's temple: it is quieter and puts the tombs minutes away in the early morning. The East Bank puts Karnak, Luxor Temple and the town closer. With the Winter Palace closed until July 2027, the West Bank is where we stay guests this season.",
+      },
+      {
+        q: "What is the best hotel in Egypt?",
+        a: "For most first journeys, the two stays that are part of the experience itself are a pyramid-view suite at the Marriott Mena House in Giza and the historic Palace wing of the Old Cataract in Aswan — and between them, a chartered dahabiya on the Nile.",
+      },
+    ],
+    hero: {
+      alt: "The shaded deck of a Nile dahabiya, set for a private party",
+      label: "Where to stay in Egypt",
+      src: "/images/cruise/nile-dahabiya-deck.webp",
+      width: 1200,
+      height: 900,
+    },
+    seo: {
+      title: "Best Hotels in Egypt, City by City (2026–27) | Kemet",
+      description:
+        "Where to stay in Egypt — Giza, Cairo, Luxor, Aswan, the Nile and the Red Sea — and which landmark hotels are open for 2026–27. Status checked September 2026.",
+    },
+    relationships: {
+      tours: tour("tour-10-day", "tour-nile-cruise"),
+      destinations: dest("giza", "cairo", "luxor", "aswan"),
       relatedGuides: guide("egypt-travel-guide", "best-time-to-visit-egypt", "10-day-egypt-itinerary"),
     },
   },
