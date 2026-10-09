@@ -263,6 +263,14 @@ export const company: CompanyProfile = {
     // (facebook.com/KemetTravel), replace this with it; the id form will keep
     // working either way.
     facebook: "https://www.facebook.com/profile.php?id=61591936196547",
+    // The Google Business Profile, supplied by the owner on 9 Oct 2026 as a
+    // share.google link. Like Facebook's share links, that is a short-lived
+    // redirect; it resolves to a search carrying the profile's Knowledge
+    // Graph id (kgmid), and the id is the permanent part. A search URL with
+    // only the kgmid opens this profile and nothing else — a plain search for
+    // "kemet travel" would also turn up the unrelated Cairo day-tour company
+    // noted above.
+    google: "https://www.google.com/search?kgmid=/g/11zy30n66w",
   },
   teamMembers: [],
   partners: [],
@@ -287,6 +295,7 @@ export const SOCIAL_LABELS: Record<string, string> = {
   instagram: "Instagram",
   facebook: "Facebook",
   tripadvisor: "TripAdvisor",
+  google: "Google",
   youtube: "YouTube",
   tiktok: "TikTok",
   pinterest: "Pinterest",
@@ -302,6 +311,8 @@ const PROFILE_HOSTS: Record<string, RegExp> = {
   instagram: /(^|\.)instagram\.com$/i,
   facebook: /(^|\.)facebook\.com$/i,
   tripadvisor: /(^|\.)tripadvisor\.[a-z.]+$/i,
+  // google.com, not share.google: the share host is the short-lived redirect.
+  google: /(^|\.)google\.[a-z.]+$/i,
   youtube: /(^|\.)youtube\.com$/i,
   tiktok: /(^|\.)tiktok\.com$/i,
   pinterest: /(^|\.)pinterest\.[a-z.]+$/i,
@@ -338,6 +349,14 @@ for (const [key, url] of Object.entries(company.socialProfiles ?? {})) {
     throw new Error(
       `company.socialProfiles.${key}: "${url}" is missing its ?id= — ` +
         `profile.php on its own points at no page.`,
+    );
+  }
+  // A Google profile is identified by its query, never its path: /search or
+  // /maps on its own is every business on Earth. Same slip as profile.php.
+  if (key === "google" && !parsed.searchParams.get("kgmid") && !parsed.searchParams.get("cid")) {
+    throw new Error(
+      `company.socialProfiles.${key}: "${url}" carries no kgmid= or cid= — ` +
+        `without one it points at no profile.`,
     );
   }
   // A link to a POST is not a link to the account. sameAs is a claim about

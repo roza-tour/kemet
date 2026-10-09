@@ -40,6 +40,12 @@ const { name } = Astro.props;
     <path d="M9.6 12.2h4.6" />
   </svg>
 )}
+{name === "google" && (
+  <svg class="soc-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    {/* The G: a ring open at the upper right, closing on its crossbar. */}
+    <path d="M17.4 6.6A7.6 7.6 0 1 0 19.6 12h-7" />
+  </svg>
+)}
 {name === "tripadvisor" && (
   <svg class="soc-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
     {/* The owl: a wide face with two eyes and a small beak above. */}
