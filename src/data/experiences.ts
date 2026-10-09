@@ -666,10 +666,26 @@ export const experiences: Experience[] = [
       width: 736,
       height: 981,
     },
+    // The first two and the last are our own: taken from a basket over the
+    // West Bank on 9 Oct 2026 and sent by the owner, as is the film. Cropped
+    // to the gallery's 16:9 so nothing is cut by the frame instead — and so
+    // no operator's name on a balloon, no basket rail and no passenger is in
+    // the picture.
     gallery: [
+      { alt: "Hot-air balloons at sunrise over the villages and green fields of Luxor's West Bank, seen from a basket", label: "From the basket", src: "/images/activities/balloons-luxor-sunrise-west-bank.webp", width: 814, height: 458 },
+      { alt: "Balloons in silhouette as the sun clears the horizon over Luxor", label: "Sunrise", src: "/images/activities/balloons-luxor-silhouettes-dawn.webp", width: 743, height: 418 },
       { alt: "A fleet of hot-air balloons rising over the Nile valley and temples of Luxor at dawn", label: "Dawn fleet", src: "/images/activities/balloons-over-luxor.webp", width: 1500, height: 1000 },
       { alt: "Balloons drifting above the West Bank and the green Nile floodplain", label: "Above Thebes", src: "/images/activities/act-balloon-luxor.webp", width: 1300, height: 867 },
+      { alt: "Balloons rising into the first light over the Nile valley at Luxor", label: "First light", src: "/images/activities/balloons-luxor-first-light.webp", width: 885, height: 498 },
     ],
+    film: {
+      src: "/media/balloons-luxor-sunrise.mp4",
+      poster: "/media/balloons-luxor-sunrise-poster.webp",
+      width: 640,
+      height: 360,
+      label: "Twenty seconds at dawn",
+      alt: "Film: balloons drifting at sunrise over the fields of Luxor's West Bank",
+    },
     seo: {
       title: "Hot-Air Balloon over Luxor — Private Dawn Flight | Kemet",
       description:

@@ -182,6 +182,23 @@ const jsonld = entitySchema("experience", experience);
                 label={g.label ?? experience.title}
               />
             ))}
+            {experience.film && (
+              <div class="frame tgallery reveal efilm">
+                <video
+                  controls
+                  loop
+                  playsinline
+                  preload="none"
+                  poster={experience.film.poster}
+                  width={experience.film.width}
+                  height={experience.film.height}
+                  aria-label={experience.film.alt}
+                >
+                  <source src={experience.film.src} type="video/mp4" />
+                </video>
+                <span class="efilm-lab">{experience.film.label}</span>
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -236,3 +253,17 @@ const jsonld = entitySchema("experience", experience);
     />
   </article>
 </Base>
+
+<style>
+  /* The film tile: the same 16:9 frame as the photographs beside it, so the
+     grid reads as one gallery. The label sits top-left, clear of the native
+     controls along the bottom, and says what the poster alone cannot — that
+     this one moves. */
+  .efilm video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; background: #0C0F13; }
+  .efilm-lab {
+    position: absolute; top: 12px; inset-inline-start: 14px; pointer-events: none;
+    font-size: var(--t-nano); letter-spacing: .26em; text-transform: uppercase;
+    color: var(--gold-bright); padding: 6px 10px;
+    background: rgba(8, 6, 4, .55); border: 1px solid var(--line);
+  }
+</style>
