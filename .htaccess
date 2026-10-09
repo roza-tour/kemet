@@ -63,10 +63,11 @@ ErrorDocument 404 /404.html
   ExpiresByType image/png                 "access plus 1 year"
   ExpiresByType image/svg+xml             "access plus 1 year"
   ExpiresByType image/x-icon              "access plus 1 year"
+  ExpiresByType video/mp4                 "access plus 1 year"
   ExpiresByType text/html                 "access plus 0 seconds"
 </IfModule>
 <IfModule mod_headers.c>
-  <FilesMatch "\.(?:css|js|woff2|webp|avif|jpe?g|png|svg|ico)$">
+  <FilesMatch "\.(?:css|js|woff2|webp|avif|jpe?g|png|svg|ico|mp4)$">
     Header set Cache-Control "public, max-age=31536000, immutable"
   </FilesMatch>
   <FilesMatch "\.html$">

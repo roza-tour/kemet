@@ -516,6 +516,16 @@
       <image:title>Hot-Air Balloon over Luxor</image:title>
     </image:image>
     <image:image>
+      <image:loc>https://kemet-travel.com/images/activities/balloons-luxor-sunrise-west-bank.webp</image:loc>
+      <image:caption>Hot-air balloons at sunrise over the villages and green fields of Luxor&apos;s West Bank, seen from a basket</image:caption>
+      <image:title>From the basket</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/activities/balloons-luxor-silhouettes-dawn.webp</image:loc>
+      <image:caption>Balloons in silhouette as the sun clears the horizon over Luxor</image:caption>
+      <image:title>Sunrise</image:title>
+    </image:image>
+    <image:image>
       <image:loc>https://kemet-travel.com/images/activities/balloons-over-luxor.webp</image:loc>
       <image:caption>A fleet of hot-air balloons rising over the Nile valley and temples of Luxor at dawn</image:caption>
       <image:title>Dawn fleet</image:title>
@@ -524,6 +534,11 @@
       <image:loc>https://kemet-travel.com/images/activities/act-balloon-luxor.webp</image:loc>
       <image:caption>Balloons drifting above the West Bank and the green Nile floodplain</image:caption>
       <image:title>Above Thebes</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/activities/balloons-luxor-first-light.webp</image:loc>
+      <image:caption>Balloons rising into the first light over the Nile valley at Luxor</image:caption>
+      <image:title>First light</image:title>
     </image:image>
   </url>
   <url>
