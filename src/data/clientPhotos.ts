@@ -1,0 +1,35 @@
+// ---------------------------------------------------------------------------
+// Photographs of our own guests — read by the moving strip on the home and
+// About pages (components/CustomerGallery.astro) and by travellers.html.
+// Square, 680px. Not stock: every one is a Kemet journey.
+// ---------------------------------------------------------------------------
+export const clientPhotos: Array<{ src: string; alt: string }> = [
+  { src: "/images/clients/clients-01-giza-selfie.webp", alt: "Kemet guests taking a laughing group selfie at the Pyramids of Giza" },
+  { src: "/images/clients/clients-02-sphinx-group.webp", alt: "Guests smiling before the Great Sphinx and the pyramids at Giza" },
+  { src: "/images/clients/clients-03-giza-wedding.webp", alt: "A newly-wed couple celebrating at the Pyramids of Giza" },
+  { src: "/images/clients/clients-04-citadel-steps.webp", alt: "A group of Kemet guests on the steps of the Saladin Citadel in Cairo" },
+  { src: "/images/clients/clients-05-nile-gardens.webp", alt: "A family of guests in the riverside gardens beside the Nile" },
+  { src: "/images/clients/clients-06-giza-jump.webp", alt: "Guests jumping for joy above the Giza pyramid panorama" },
+  { src: "/images/clients/clients-07-saqqara-family.webp", alt: "A large family group celebrating at the Step Pyramid of Saqqara" },
+  { src: "/images/clients/clients-08-mosque-courtyard.webp", alt: "Guests in the marble courtyard of a historic Cairo mosque" },
+  { src: "/images/clients/clients-09-giza-panorama.webp", alt: "Guests at the Giza panorama viewpoint with the pyramids behind them" },
+  { src: "/images/clients/clients-10-giza-hats-group.webp", alt: "A group of guests in sun hats before the Giza pyramids" },
+  { src: "/images/clients/clients-11-sphinx-laughs.webp", alt: "Guests laughing together beside the Great Sphinx" },
+  { src: "/images/clients/clients-12-winter-group.webp", alt: "A travel group on the desert plateau at Giza" },
+  { src: "/images/clients/clients-13-citadel-performer.webp", alt: "Guests with a traditional performer at the Mosque of Muhammad Ali" },
+  { src: "/images/clients/clients-14-palm-obelisk-group.webp", alt: "Guests among the palms beside an ancient obelisk" },
+  { src: "/images/clients/clients-15-dahshur-bent-pyramid.webp", alt: "Kemet guests at the Bent Pyramid of Dahshur" },
+  { src: "/images/clients/clients-16-thumbs-up-group.webp", alt: "A cheerful group of guests giving a thumbs-up at Giza" },
+  { src: "/images/clients/clients-17-giza-friends.webp", alt: "Three friends at the Giza plateau" },
+  { src: "/images/clients/clients-18-citadel-gate.webp", alt: "Guests at the gateway of a historic Cairo landmark" },
+  { src: "/images/clients/clients-19-red-pyramid.webp", alt: "A family cheering at the base of the Red Pyramid of Dahshur" },
+  { src: "/images/clients/clients-20-cave-church.webp", alt: "Guests visiting the rock-cut Cave Church of Cairo" },
+  { src: "/images/clients/clients-21-temple-explorers.webp", alt: "Guests exploring an ancient Egyptian temple" },
+  { src: "/images/clients/clients-22-mosque-group.webp", alt: "A large group of guests at a historic Egyptian mosque" },
+  { src: "/images/clients/clients-23-group-sign.webp", alt: "A joyful group of guests holding a sign at the Giza pyramids" },
+  { src: "/images/clients/clients-24-family-citadel.webp", alt: "A family of guests at the Cairo Citadel" },
+  { src: "/images/clients/clients-25-desert-group.webp", alt: "A group of Kemet guests on the desert plateau at Giza" },
+  { src: "/images/clients/clients-26-giza-pose.webp", alt: "Guests posing playfully before the Pyramids of Giza" },
+  { src: "/images/clients/clients-27-hands-up.webp", alt: "Guests celebrating with hands raised at the Giza pyramids" },
+  { src: "/images/clients/clients-28-flag-group.webp", alt: "An international group of Kemet guests at the Giza plateau" },
+];

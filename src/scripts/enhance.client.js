@@ -322,7 +322,83 @@ const DUST_DENSITY = 15000; // px² of viewport per particle
       document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;
         if(e.key==='Escape')hide();if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1);});
       if(imgs.length<2){lb.querySelector('.lb-p').style.display='none';lb.querySelector('.lb-n').style.display='none';}
+      /* Swipe between photographs on a phone, as the arrows do. */
+      var tx=null;
+      lb.addEventListener('touchstart',function(e){tx=e.touches[0].clientX;},{passive:true});
+      lb.addEventListener('touchend',function(e){if(tx===null)return;var dx=e.changedTouches[0].clientX-tx;tx=null;
+        if(Math.abs(dx)>40&&imgs.length>1)show(cur+(dx<0?1:-1));});
     }
+  }catch(e){}
+
+  /* ---------------------------------------------------------------------
+     Rails. global.css turns a crowded gallery or card grid into a sideways
+     strip (see RAILS there); this adds two arrows, a count under cards, and,
+     for photographs only, a slow advance every 4.5s — so a phone visitor
+     sees the gallery move without having to ask for it.
+
+     The advance is a courtesy, never a fight: it waits until the strip is
+     mostly on screen, holds while a pointer or focus is on it, and stops for
+     good the first time the visitor swipes, scrolls or presses an arrow —
+     they have taken the wheel. It never starts for anyone who has asked for
+     reduced motion. Cards (prices, routes) are never advanced for the
+     reader: moving a card away while someone reads its price is the thing
+     that makes a carousel infuriating.
+     --------------------------------------------------------------------- */
+  try{
+    var reduceMo=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var railed=false;
+    [].forEach.call(document.querySelectorAll('.grid-2,.grid-3,.grid-4'),function(g){
+      if(g.children.length<4||!g.querySelector(':scope > .tgallery, :scope > .jcard, :scope > .tease, :scope > .eat'))return;
+      var photo=!!g.querySelector(':scope > .tgallery');
+      var box=document.createElement('div');box.className='rail-box'+(photo?' rail-box--photo':'');
+      g.parentNode.insertBefore(box,g);box.appendChild(g);
+      var nav=document.createElement('div');nav.className='rail-nav';
+      nav.innerHTML='<button type="button" class="rail-btn rail-prev" aria-label="Previous"><span>‹</span></button>'+
+        '<span class="rail-count" aria-hidden="true"></span>'+
+        '<button type="button" class="rail-btn rail-next" aria-label="Next"><span>›</span></button>';
+      box.appendChild(nav);
+      var prev=nav.querySelector('.rail-prev'),next=nav.querySelector('.rail-next'),count=nav.querySelector('.rail-count');
+      var rtl=getComputedStyle(g).direction==='rtl';
+      function on(){return getComputedStyle(g).overflowX==='auto'&&g.scrollWidth>g.clientWidth+4;}
+      function step(){var a=g.children[0],b=g.children[1];
+        return b?Math.abs(b.getBoundingClientRect().left-a.getBoundingClientRect().left):g.clientWidth;}
+      function pos(){return Math.abs(g.scrollLeft);}
+      function atEnd(){return pos()>g.scrollWidth-g.clientWidth-4;}
+      function sync(){var r=on();box.classList.toggle('is-rail',r);if(!r)return;
+        prev.disabled=pos()<4;next.disabled=atEnd();
+        var n=g.children.length,st=step(),vis=Math.max(1,Math.round(g.clientWidth/st));
+        count.textContent=(atEnd()?n:Math.min(n,Math.round(pos()/st)+vis))+' / '+n;}
+      function go(d){g.scrollBy({left:(rtl?-d:d)*step(),behavior:reduceMo?'auto':'smooth'});}
+      var stop=false,hold=false,seen=false,raf=0;
+      function took(){stop=true;if(!railed){railed=true;KEV('rail');}}
+      prev.addEventListener('click',function(){took();go(-1);});
+      next.addEventListener('click',function(){took();go(1);});
+      g.addEventListener('scroll',function(){if(!raf)raf=requestAnimationFrame(function(){raf=0;sync();});},{passive:true});
+      window.addEventListener('resize',sync);
+      sync();
+      if(photo&&!reduceMo){
+        /* Only a SIDEWAYS gesture counts as taking over: a thumb that lands
+           on the gallery while scrolling down the page is not a choice. */
+        var t0x=0,t0y=0;
+        g.addEventListener('touchstart',function(e){t0x=e.touches[0].clientX;t0y=e.touches[0].clientY;},{passive:true});
+        g.addEventListener('touchmove',function(e){var dx=Math.abs(e.touches[0].clientX-t0x),dy=Math.abs(e.touches[0].clientY-t0y);
+          if(dx>10&&dx>dy)stop=true;},{passive:true});
+        g.addEventListener('wheel',function(e){if(Math.abs(e.deltaX)>Math.abs(e.deltaY))stop=true;},{passive:true});
+        g.addEventListener('pointerdown',function(e){if(e.pointerType==='mouse')stop=true;});
+        g.addEventListener('keydown',function(){stop=true;});
+        g.addEventListener('pointerenter',function(e){if(e.pointerType==='mouse')hold=true;});
+        g.addEventListener('pointerleave',function(){hold=false;});
+        box.addEventListener('focusin',function(){hold=true;});
+        box.addEventListener('focusout',function(){hold=false;});
+        if('IntersectionObserver' in window){
+          new IntersectionObserver(function(es){seen=es[0].isIntersecting;},{threshold:.6}).observe(g);
+        }else seen=true;
+        setInterval(function(){
+          if(stop||hold||!seen||document.hidden||!on()||document.querySelector('.lb.open'))return;
+          if(atEnd())g.scrollTo({left:0,behavior:'smooth'});else go(1);
+        },4500);
+      }
+    });
   }catch(e){}
 
   /* destination strip arrows (homepage) */

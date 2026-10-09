@@ -29,6 +29,7 @@ const PUBLISHED_LANGUAGES = LOCALES.map((l) => LOCALE_META[l].tag);
 
 // (type-only import)
 import type { BreadcrumbItem, Collection, ContentDomain, Destination, Experience, Guide, JsonLd, Tour } from "@/types";
+import type { Film } from "@/types/primitives";
 
 const SCHEMA_CONTEXT = "https://schema.org";
 
@@ -106,6 +107,28 @@ export const SPEAKABLE = {
   "@type": "SpeakableSpecification",
   cssSelector: [".answer-box h2", ".answer-box .answer-body"],
 };
+
+/**
+ * VideoObject for one of our own films (data/films.ts) — what a search engine
+ * needs to list it as a video: a name, what it shows, a thumbnail and the date
+ * it was taken. contentUrl lets it fetch the file itself; the duration is
+ * what a video result prints on the thumbnail.
+ */
+export function videoObject(f: Film): JsonLd {
+  return {
+    "@context": SCHEMA_CONTEXT,
+    "@type": "VideoObject",
+    name: f.label,
+    description: f.alt,
+    thumbnailUrl: absolute(f.poster),
+    contentUrl: absolute(f.src),
+    uploadDate: f.date,
+    duration: f.duration,
+    width: f.width,
+    height: f.height,
+    publisher: orgRef(),
+  };
+}
 
 /** BreadcrumbList from [name, file] pairs (file relative to the site root). */
 export function breadcrumb(items: BreadcrumbItem[]): JsonLd {

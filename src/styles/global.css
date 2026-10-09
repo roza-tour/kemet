@@ -721,6 +721,8 @@ footer{background:var(--ink-2);border-top:1px solid var(--line);padding:var(--s-
    so the loop is infinite with no gaps or duplicated-looking seams. One GPU
    transform; paused on hover; frozen under reduced-motion. */
 .cgal-sec{padding-bottom:var(--s-8)}
+.cgal-more{margin-top:var(--s-5);text-align:center}
+.cgal-more .more{display:inline-flex;align-items:center;gap:var(--s-2);min-height:44px;font-size:var(--t-micro);letter-spacing:.32em;text-transform:uppercase;color:var(--gold)}
 .cgal{overflow:hidden;margin-top:var(--s-1);-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
 .cgal-track{display:flex;gap:var(--s-3);width:max-content;animation:cgalmove 90s linear infinite}
 .cgal:hover .cgal-track{animation-play-state:paused}
@@ -1082,3 +1084,78 @@ footer{background:var(--ink-2);border-top:1px solid var(--line);padding:var(--s-
    needs more room than .lz-wrap's 940px reading measure. */
 .lz-journeys{margin:var(--s-6) calc(50% - 50vw) 0;padding:0 max(20px,calc(50vw - 620px));max-width:100vw}
 @media(max-width:680px){.lz-journeys{margin-inline:0;padding-inline:0}}
+
+/* ==========================================================================
+   RAILS — a crowded grid becomes one swipeable strip (9 Oct 2026)
+
+   Measured at 390px before this: a journey's "Tours that visit this area"
+   ran to 13 cards and 7,600px — nine screens of the same card shape — and the
+   German and French journey pages stacked 24 cards in 14,800px. Photo
+   galleries were a column of 4–6 frames. A visitor scrolling past all of that
+   to reach the next idea is the visitor who leaves.
+
+   So on a phone, any gallery of 4+ photographs and any grid of 4+ journey,
+   destination or dish cards is laid out as one row that swipes sideways, the
+   next card peeking in at the edge so it is obvious there is more. On a wide
+   screen the same happens only where a grid is genuinely long — 5+ photos, or
+   7+ cards (three full rows) — except on the catalogue pages (`.grid-all`),
+   whose whole purpose is to show every journey at once.
+
+   Pure CSS, and keyed on what a grid CONTAINS (`:has`), so every template
+   that uses these grids gets it without being edited, and a browser without
+   `:has` simply keeps the grid. Nothing is hidden from a crawler: every card
+   is still in the page, in order. scripts/enhance.client.js adds the arrows,
+   the count and — for photographs only — a slow advance.
+   ========================================================================== */
+@media(max-width:680px){
+  .grid-2:has(> .tgallery:nth-child(4)),
+  .grid-3:has(> :is(.jcard,.tease,.eat,.tgallery):nth-child(4)),
+  .grid-4:has(> .tease:nth-child(4)){
+    grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:84%;gap:var(--s-3);
+    overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;
+    margin-inline:calc(-1 * var(--s-4));padding:2px var(--s-4) 8px;scroll-padding-inline:var(--s-4);
+    scrollbar-width:none}
+  .grid-2:has(> .tgallery:nth-child(4))::-webkit-scrollbar,
+  .grid-3:has(> :is(.jcard,.tease,.eat,.tgallery):nth-child(4))::-webkit-scrollbar,
+  .grid-4:has(> .tease:nth-child(4))::-webkit-scrollbar{display:none}
+  .grid-2:has(> .tgallery:nth-child(4)) > *,
+  .grid-3:has(> :is(.jcard,.tease,.eat,.tgallery):nth-child(4)) > *,
+  .grid-4:has(> .tease:nth-child(4)) > *{scroll-snap-align:start;margin-bottom:0}
+}
+@media(min-width:681px){
+  .grid-2:has(> .tgallery:nth-child(5)),
+  .grid-3:not(.grid-all):has(> :is(.jcard,.tease,.tgallery):nth-child(7)){
+    grid-template-columns:none;grid-auto-flow:column;
+    overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;
+    padding-bottom:8px;scrollbar-width:none}
+  .grid-2:has(> .tgallery:nth-child(5)){grid-auto-columns:calc((100% - var(--s-4)) / 2)}
+  .grid-3:not(.grid-all):has(> :is(.jcard,.tease,.tgallery):nth-child(7)){grid-auto-columns:calc((100% - 2 * var(--s-4)) / 3)}
+  .grid-2:has(> .tgallery:nth-child(5))::-webkit-scrollbar,
+  .grid-3:not(.grid-all):has(> :is(.jcard,.tease,.tgallery):nth-child(7))::-webkit-scrollbar{display:none}
+  .grid-2:has(> .tgallery:nth-child(5)) > *,
+  .grid-3:not(.grid-all):has(> :is(.jcard,.tease,.tgallery):nth-child(7)) > *{scroll-snap-align:start;margin-bottom:0}
+}
+
+/* The controls the script adds. Hidden until the script has confirmed the
+   grid really is scrolling at this width (`.is-rail`), so a grid that fits
+   never shows arrows that do nothing. On photographs the arrows sit on the
+   pictures; under cards they sit in a row beneath, with a count, so they
+   never cover a price. */
+.rail-box{position:relative}
+.rail-nav{display:none;align-items:center;justify-content:flex-end;gap:var(--s-2);margin-top:var(--s-3)}
+.rail-box.is-rail .rail-nav{display:flex}
+.rail-count{font-size:var(--t-nano);letter-spacing:.24em;color:var(--muted-2);min-width:5.5em;text-align:center;font-variant-numeric:tabular-nums}
+.rail-btn{width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;
+  border:1px solid var(--line-2);background:rgba(11,9,7,.72);color:var(--gold-bright);font-size:1.35rem;line-height:1;cursor:pointer;
+  transition:background .4s cubic-bezier(.22,.61,.36,1),color .4s,opacity .4s}
+.rail-btn:hover:not([disabled]){background:var(--gold);color:var(--ink)}
+.rail-btn[disabled]{opacity:.3;cursor:default}
+.rail-btn:focus-visible{outline:2px solid var(--gold-bright);outline-offset:2px}
+[dir="rtl"] .rail-btn span{display:inline-block;transform:scaleX(-1)}
+.rail-box--photo .rail-nav{position:absolute;inset:0;margin:0;pointer-events:none;justify-content:space-between;padding:0 10px 8px}
+.rail-box--photo .rail-btn{pointer-events:auto;border-radius:50%;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.rail-box--photo .rail-count{display:none}
+@media(max-width:680px){.rail-box--photo .rail-nav{padding:0 4px 8px}}
+/* Square frames, for portraits of people: a 16:9 crop of a square photo of a
+   group takes off the top of their heads. */
+.tgallery.tg-sq{aspect-ratio:1/1}

@@ -63,6 +63,30 @@ export interface MediaPlaceholder {
   height?: number;
 }
 
+/**
+ * A short film of our own. Rendered by components/FilmRow.astro — always in a
+ * row of its own, never inside a photo gallery — and described to search
+ * engines as a VideoObject (schemas/jsonld → videoObject). It loads nothing
+ * but its poster until somebody presses play (preload="none").
+ */
+export interface Film {
+  /** Root-absolute, under /media/ (outside the responsive-image ladder). */
+  src: string;
+  poster: string;
+  width: number;
+  height: number;
+  /** The short caption under the film. */
+  label: string;
+  /** What the film shows: the accessible name and the VideoObject description. */
+  alt: string;
+  /** ISO 8601, e.g. "PT1M12S". */
+  duration: string;
+  /** YYYY-MM-DD the footage was taken. */
+  date: string;
+  /** Carries a sound track (otherwise it was stripped). */
+  sound?: boolean;
+}
+
 /** SEO/meta any page-backed entity can carry; unset fields inherit defaults. */
 export interface SeoMeta {
   title?: string;

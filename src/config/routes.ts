@@ -30,6 +30,7 @@ export const MAIN_PAGES = [
   "cuisine.html",
   "culture.html",
   "about.html",
+  "travellers.html",
   "contact.html",
   "booking.html",
   "faq.html",

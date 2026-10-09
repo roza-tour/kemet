@@ -20,10 +20,11 @@ import DestinationCard from "@/components/destination/DestinationCard.astro";
 import ExperienceHero from "@/components/experience/ExperienceHero.astro";
 import ExperienceCard from "@/components/experience/ExperienceCard.astro";
 import LeadCapture from "@/components/conversion/LeadCapture.astro";
+import FilmRow from "@/components/FilmRow.astro";
 import { experiences } from "@/data/experiences";
 import { registry, resolveRelatedExperiences, relatedTours } from "@/data/registry";
 import { entityStaticPaths, relativePrefix, routeFor } from "@/config/routes";
-import { entitySchema } from "@/schemas/jsonld";
+import { entitySchema, videoObject } from "@/schemas/jsonld";
 import type { Destination, Tour, Experience } from "@/types";
 
 interface Props {
@@ -59,7 +60,7 @@ for (const dest of relDestinations) {
 
 const title = experience.seo?.title ?? `${experience.title} — ${experience.durationLabel} | Kemet`;
 const description = experience.seo?.description ?? experience.shortSummary;
-const jsonld = entitySchema("experience", experience);
+const jsonld = [entitySchema("experience", experience), ...(experience.films ?? []).map(videoObject)].flat();
 ---
 <Base title={title} description={description} active={route} jsonld={jsonld}>
   <article>
@@ -182,24 +183,16 @@ const jsonld = entitySchema("experience", experience);
                 label={g.label ?? experience.title}
               />
             ))}
-            {experience.film && (
-              <div class="frame tgallery reveal efilm">
-                <video
-                  controls
-                  loop
-                  playsinline
-                  preload="none"
-                  poster={experience.film.poster}
-                  width={experience.film.width}
-                  height={experience.film.height}
-                  aria-label={experience.film.alt}
-                >
-                  <source src={experience.film.src} type="video/mp4" />
-                </video>
-                <span class="efilm-lab">{experience.film.label}</span>
-              </div>
-            )}
           </div>
+        </div>
+      </section>
+    )}
+
+    {experience.films && experience.films.length > 0 && (
+      <section>
+        <div class="wrap">
+          <SectionHeader sym="travellers" eyebrow="On film" title="Filmed on the day" />
+          <FilmRow films={experience.films} />
         </div>
       </section>
     )}
@@ -254,16 +247,3 @@ const jsonld = entitySchema("experience", experience);
   </article>
 </Base>
 
-<style>
-  /* The film tile: the same 16:9 frame as the photographs beside it, so the
-     grid reads as one gallery. The label sits top-left, clear of the native
-     controls along the bottom, and says what the poster alone cannot — that
-     this one moves. */
-  .efilm video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; background: #0C0F13; }
-  .efilm-lab {
-    position: absolute; top: 12px; inset-inline-start: 14px; pointer-events: none;
-    font-size: var(--t-nano); letter-spacing: .26em; text-transform: uppercase;
-    color: var(--gold-bright); padding: 6px 10px;
-    background: rgba(8, 6, 4, .55); border: 1px solid var(--line);
-  }
-</style>

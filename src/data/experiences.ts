@@ -8,6 +8,7 @@
 // by registry.ts — never hand-maintained here.
 // ---------------------------------------------------------------------------
 import type { Experience } from "@/types";
+import { balloonFilms } from "@/data/films";
 
 export const experiences: Experience[] = [
   // ── 1. Sunrise at the Giza Pyramids ──────────────────────────────────────
@@ -667,7 +668,7 @@ export const experiences: Experience[] = [
       height: 981,
     },
     // The first two and the last are our own: taken from a basket over the
-    // West Bank on 9 Oct 2026 and sent by the owner, as is the film. Cropped
+    // West Bank on 9 Oct 2026 and sent by the owner, as are the films. Cropped
     // to the gallery's 16:9 so nothing is cut by the frame instead — and so
     // no operator's name on a balloon, no basket rail and no passenger is in
     // the picture.
@@ -678,14 +679,7 @@ export const experiences: Experience[] = [
       { alt: "Balloons drifting above the West Bank and the green Nile floodplain", label: "Above Thebes", src: "/images/activities/act-balloon-luxor.webp", width: 1300, height: 867 },
       { alt: "Balloons rising into the first light over the Nile valley at Luxor", label: "First light", src: "/images/activities/balloons-luxor-first-light.webp", width: 885, height: 498 },
     ],
-    film: {
-      src: "/media/balloons-luxor-sunrise.mp4",
-      poster: "/media/balloons-luxor-sunrise-poster.webp",
-      width: 640,
-      height: 360,
-      label: "Twenty seconds at dawn",
-      alt: "Film: balloons drifting at sunrise over the fields of Luxor's West Bank",
-    },
+    films: balloonFilms,
     seo: {
       title: "Hot-Air Balloon over Luxor — Private Dawn Flight | Kemet",
       description:

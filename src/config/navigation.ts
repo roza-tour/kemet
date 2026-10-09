@@ -82,7 +82,7 @@ export const primaryNav: NavItem[] = [
     href: "about.html",
     children: [
       { label: "About Kemet", href: "about.html" },
-      { label: "Our travellers", href: "about.html" },
+      { label: "Our travellers", href: "travellers.html" },
       { label: "Site index", href: "sitemap.html" },
     ],
   },
@@ -117,6 +117,7 @@ export const footerCompany: FooterColumn = {
   heading: "Company",
   links: [
     { label: "About Kemet", href: "about.html" },
+    { label: "Our travellers", href: "travellers.html" },
     { label: "Contact", href: "contact.html" },
     { label: "What a journey costs", href: "egypt-tour-cost.html" },
     { label: "Booking & Cancellation", href: "booking.html" },

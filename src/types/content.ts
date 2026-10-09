@@ -11,6 +11,7 @@ import type {
   ContentEntity,
   GeoPoint,
   MediaPlaceholder,
+  Film,
   Ref,
   SeoMeta,
 } from "@/types/primitives";
@@ -579,14 +580,8 @@ export interface Experience extends ContentEntity {
   // Future media (placeholders until photography is sourced)
   hero?: MediaPlaceholder;
   gallery?: MediaPlaceholder[];
-  /**
-   * A short silent clip, shown as one more tile at the end of the gallery.
-   * It only plays when pressed (preload="none"), so a page that has one
-   * downloads nothing for it but the poster until somebody asks to watch.
-   * Root-absolute paths under /media/ — outside /images/, so the responsive-
-   * image script does not make srcset rungs of a poster that never uses them.
-   */
-  film?: { src: string; poster: string; width: number; height: number; label: string; alt: string };
+  /** Our own footage, shown in a row of its own after the gallery. */
+  films?: Film[];
 
   // Future reviews & ratings (intentionally omitted — Phase 9+)
 

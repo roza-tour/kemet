@@ -1,0 +1,129 @@
+---
+// Our travellers — our own footage and photographs, in one place.
+//
+// Asked for by the owner on 9 Oct 2026: a page for what our clients' journeys
+// actually look like. Everything on it is ours — the films were shot from a
+// basket over Luxor's West Bank that morning, and the photographs are the
+// same guests the moving strip on the home page shows. Nothing is a quote,
+// a rating or a review written here: reviews are linked where they were
+// written, on TripAdvisor and Google, where we cannot edit them.
+//
+// Films first, in a row of their own; then the photographs, which on a phone
+// (and on a wide screen, there being 28) run as one strip that advances on its
+// own and opens full-size on a tap — global.css RAILS and the lightbox in
+// scripts/enhance.client.js. English only for now, like the experience pages.
+import Base from "@/layouts/Base.astro";
+import PageHero from "@/components/PageHero.astro";
+import SectionHeader from "@/components/SectionHeader.astro";
+import Placeholder from "@/components/Placeholder.astro";
+import FilmRow from "@/components/FilmRow.astro";
+import Frieze from "@/components/Frieze.astro";
+import SocialIcon from "@/components/SocialIcon.astro";
+import CTABlock from "@/components/trust/CTABlock.astro";
+import { balloonFilms } from "@/data/films";
+import { clientPhotos } from "@/data/clientPhotos";
+import { company, socialLabel } from "@/data/company";
+import { breadcrumb, videoObject, ORG_ID } from "@/schemas/jsonld";
+import { canonical } from "@/utils/links";
+import { SITE_URL, site } from "@/config/site";
+
+const ROUTE = "travellers.html";
+const TITLE = "Our Travellers — Kemet Journeys on Film and in Photographs";
+const DESCRIPTION =
+  "Our own footage and photographs of Kemet journeys: a sunrise balloon flight over Luxor's West Bank, filmed from the basket, and our guests across Egypt.";
+
+/** Independent reviews, linked rather than quoted — only profiles we hold. */
+const reviewLinks = (["tripadvisor", "google"] as const)
+  .map((key) => ({ key, url: company.socialProfiles?.[key] }))
+  .filter((r): r is { key: "tripadvisor" | "google"; url: string } => typeof r.url === "string");
+
+const jsonld = [
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: TITLE,
+    description: DESCRIPTION,
+    url: canonical(ROUTE),
+    isPartOf: { "@type": "WebSite", name: `${site.name} — The Black Land`, url: SITE_URL },
+    about: { "@id": ORG_ID },
+  },
+  ...balloonFilms.map(videoObject),
+  breadcrumb([["Home", "index.html"], ["About", "about.html"], ["Our travellers", ROUTE]]),
+];
+---
+<Base title={TITLE} description={DESCRIPTION} active={ROUTE} showCta={false} jsonld={jsonld}>
+  <PageHero
+    crumb="Our travellers"
+    symbol="lotus"
+    title="Our travellers"
+    text="Not stock footage and not a showreel: Kemet journeys as the people on them saw them — filmed and photographed on the day."
+  />
+
+  <section style="padding-top:var(--s-5)">
+    <div class="wrap">
+      <SectionHeader
+        sym="travellers"
+        eyebrow="On film"
+        title="A balloon flight over Luxor's West Bank"
+        text="Filmed from the basket at sunrise on 9 October 2026: the palm groves and the temple ruins under the Theban hills, then the balloons rising over the villages."
+      />
+      <FilmRow films={balloonFilms} />
+      <p class="trav-more"><a class="more" href="/experiences/hot-air-balloon-luxor.html">The balloon flight, in full <span aria-hidden="true">→</span></a></p>
+    </div>
+  </section>
+
+  <Frieze />
+
+  <section>
+    <div class="wrap">
+      <SectionHeader
+        sym="travellers"
+        eyebrow="In photographs"
+        title="Real journeys, real joy"
+        text="Our guests at the Pyramids, at Saqqara and Dahshur, at the Citadel and beside the Nile. Tap any photograph to see it full size."
+      />
+      <div class="grid-3">
+        {clientPhotos.map((p) => (
+          <Placeholder sizes="card" class="tgallery tg-sq reveal" src={p.src} alt={p.alt} width={680} height={680} label={p.alt} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {reviewLinks.length > 0 && (
+    <section>
+      <div class="wrap">
+        <SectionHeader
+          sym="travellers"
+          eyebrow="In their own words"
+          title="Read what travellers wrote"
+          text="Reviews belong where we cannot edit them. Read them there, in full."
+        />
+        <div class="trav-reviews">
+          {reviewLinks.map(({ key, url }) => (
+            <a class="btn btn-ghost" href={url} rel="noopener" target="_blank">
+              <SocialIcon name={key} />
+              <span>Reviews on {socialLabel(key)}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <CTABlock
+    eyebrow="Your journey"
+    heading="The next film could be yours"
+    subtext="Tell us who is travelling and roughly when — we design the whole journey privately, around you."
+  />
+</Base>
+
+<style>
+  .trav-more { margin-top: var(--s-5); }
+  .trav-more .more {
+    display: inline-flex; align-items: center; gap: var(--s-2); min-height: 44px;
+    font-size: var(--t-micro); letter-spacing: .32em; text-transform: uppercase; color: var(--gold);
+  }
+  .trav-reviews { display: flex; flex-wrap: wrap; gap: var(--s-3); }
+  .trav-reviews .btn { display: inline-flex; align-items: center; gap: var(--s-2); }
+</style>

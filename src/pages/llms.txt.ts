@@ -107,6 +107,7 @@ export const GET: APIRoute = () => {
   lines.push(item("What a private Egypt journey costs", "egypt-tour-cost.html", `Honest price bands for the Egyptian market and where Kemet sits: its multi-day journeys work out at EUR ${perDayLow}-${perDayHigh} per person per day, fully inclusive — the entry to the private, tailor-made band (EUR 200-450) rather than its middle — plus the five variables that move a quote.`));
   lines.push(item("Booking, payment & cancellation", "booking.html", "How booking works, deposit and balance terms, accepted payment methods and the cancellation schedule."));
   lines.push(item("About Kemet", "about.html", "Who we are, how we design journeys, and our editorial standards."));
+  lines.push(item("Our travellers", "travellers.html", "Our own footage and photographs of Kemet journeys — a sunrise balloon flight over Luxor's West Bank, filmed from the basket, and our guests across Egypt. Links to independent reviews on TripAdvisor and Google."));
   lines.push(item("Contact", "contact.html", "Enquiry form, WhatsApp, email and business hours."));
   lines.push("");
 
