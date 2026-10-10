@@ -197,6 +197,9 @@ export const GET: APIRoute = () => {
       ? `The journey catalogue is also published in ${tourLocales.map((l) => LOCALE_META[l].endonym).join(", ")}, each journey in that language with its own address. `
       : "") +
     `Every translated address is listed, language by language, in ${u("llms.txt")}. Prices are the same in every language.`);
+  if (company.languages?.length) {
+    p(`Spoken with clients — by the team, not only on the page: ${company.languages.join(", ")}. Kemet has an Italian-speaking Egyptologist guide on its own team; for Christmas and New Year dates, ask for the Italian-speaking guide in the first message, as those weeks book early. ${u("it/")}`);
+  }
 
   h(2, "Contact");
   p(`Email ${site.email}. WhatsApp ${site.phoneDisplay}. Enquiries: ${u("contact.html")}. Based in Cairo, Egypt; clients travel from worldwide.`);

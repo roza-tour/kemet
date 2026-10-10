@@ -42,8 +42,12 @@ export const company: CompanyProfile = {
 
   serviceArea: ["Egypt"],
 
-  languages: ["English", "French", "Arabic"],
-  languageCodes: ["en", "fr", "ar"],
+  // Languages the team genuinely corresponds and guides in — a claim about
+  // people, not pages (the site is published in ten). Italian added 10 Oct
+  // 2026: the owner confirmed an Italian-speaking Egyptologist guide on
+  // Kemet's own team.
+  languages: ["English", "French", "Arabic", "Italian"],
+  languageCodes: ["en", "fr", "ar", "it"],
 
   businessHours: [
     {

@@ -16,10 +16,11 @@ import { reviews } from "@/data/reviews";
 /**
  * Languages the office can genuinely correspond in. A claim about PEOPLE, not
  * about pages — see the note beside `areaServed` in the organisation schema.
- * Add to this only when it is actually true; it is read by search engines and
- * by assistants answering "do they speak X?".
+ * Read from company.languages, the one list — it was typed here separately
+ * and the two could disagree. Add to it only when it is actually true; it is
+ * read by search engines and by assistants answering "do they speak X?".
  */
-const SPOKEN_LANGUAGES = ["English", "French", "Arabic"] as const;
+const SPOKEN_LANGUAGES: readonly string[] = company.languages ?? ["English"];
 
 /**
  * Languages the site is PUBLISHED in — derived from the locale registry, so it
@@ -668,7 +669,7 @@ export function siteSchema(): JsonLd[] {
     //     A claim about people. Extending it means someone can genuinely answer
     //     the phone in that language, so it is NOT derived from the locale list
     //     and must not be — publishing a page in Malay does not make anyone here
-    //     a Malay speaker. Edit SPOKEN_LANGUAGES below only when it is true.
+    //     a Malay speaker. Edit company.languages only when it is true.
     //
     //   WebSite.inLanguage                 = what the site is published in.
     //     A claim about files, and therefore checkable: it is derived from the
