@@ -13,7 +13,7 @@ import type { LocalizedPage } from "./types";
 import { carnaval } from "./pt-carnaval";
 import { idUmrah, idZiarah, idSinai, idHalal } from "./id-extra";
 import { msUmrah, msZiarah, msSinai, msHalal } from "./ms-extra";
-import { frToussaint, esSemanaSanta, itFerragosto, deWeihnachten, ruNovyGod } from "./eu-holidays";
+import { frToussaint, esSemanaSanta, itFerragosto, itCapodanno, deWeihnachten, ruNovyGod } from "./eu-holidays";
 
 export interface StandalonePage {
   locale: TranslatedLocale;
@@ -49,6 +49,10 @@ export const STANDALONE_PAGES: StandalonePage[] = [
   { locale: "fr", slug: "toussaint-en-egypte", page: frToussaint },
   { locale: "es", slug: "semana-santa-en-egipto", page: esSemanaSanta },
   { locale: "it", slug: "ferragosto-in-egitto", page: itFerragosto },
+  // Italy is the one market with two: Italian is the second language among
+  // the site's visitors (46 in the 30 days to 10 Oct 2026, ahead of German),
+  // and Christmas-to-Epiphany is the window Italians most often give to Egypt.
+  { locale: "it", slug: "natale-e-capodanno-in-egitto", page: itCapodanno },
   { locale: "de", slug: "weihnachten-in-aegypten", page: deWeihnachten },
   { locale: "ru", slug: "novyy-god-v-egipte", page: ruNovyGod },
 ];
