@@ -35,7 +35,7 @@ export const ms: LocalizedPage[] = [
       "Mesir bukan satu negara, tetapi lapan dunia budaya yang bertindan di sepanjang satu sungai. Kemet menyusun perjalanan persendirian yang tidak tergesa-gesa merentasi dunia-dunia itu — dari Piramid Giza dan Al-Azhar hingga kuil-kuil Luxor dan pelayaran Sungai Nil ke Aswan. Setiap perjalanan dibawa oleh Egyptologist berlesen Kementerian Pelancongan Mesir, dan disusun sepenuhnya mengikut anda.",
     facts: [
       { label: "Bentuk", value: "Persendirian sepenuhnya" },
-      { label: "Pemandu", value: "Egyptologist berlesen" },
+      { label: "Pemandu", value: "Berlesen, berbahasa Melayu" },
       { label: "Dari KLIA", value: "±13 jam, satu transit" },
       { label: "Masa terbaik", value: "Oktober – April" },
     ],

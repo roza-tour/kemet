@@ -14,6 +14,7 @@ import { identities } from "@/data/identities";
 import { destinations } from "@/data/destinations";
 import { getExperience } from "@/data/experiences";
 import { breadcrumb } from "@/schemas/jsonld";
+import { company } from "@/data/company";
 import { pad2 } from "@/utils/format";
 
 // Six featured cards: the four flagship multi-day journeys plus two day tours.
@@ -106,7 +107,7 @@ const jsonld = breadcrumb([["Home", "index.html"]]);
           <span class="eyebrow">01 · The Premise</span>
           <h2>Egypt is not one country. It is eight.</h2>
           <p>Most itineraries show you one Egypt — a pyramid, a temple, a photograph — and move on. We plan for the others: the Nubian south around Aswan, Coptic and Islamic Cairo, the Greco-Roman Mediterranean at Alexandria, the Bedouin deserts of Sinai, the palm-shaded oasis of Siwa and the coral coast of the Red Sea.</p>
-          <p>A single private journey can hold several of these worlds at once, led throughout by a licensed Egyptologist.</p>
+          <p>A single private journey can hold several of these worlds at once, led throughout by a licensed Egyptologist — in your language: {(company.languages ?? []).slice(0, -1).join(", ")} or {(company.languages ?? []).slice(-1)}.</p>
           <a class="more" href="identities.html">Discover the Eight Identities <i aria-hidden="true"></i></a>
         </div>
         <div class="ov-media reveal cur" data-glare>

@@ -72,9 +72,12 @@ export const GET: APIRoute = () => {
   // all. An assistant asked "do they work in German?" answered no, with seven
   // German pages sitting on the domain.
   if (company.languages?.length) lines.push(`- Spoken with clients: ${company.languages.join(", ")}`);
-  // Said outright, because "do they have a guide who speaks X?" is a question
-  // assistants are asked, and the answer is yes for every language here.
-  lines.push(`- Guides: Kemet publishes a language only where its own team has an Egyptologist guide who works in it — so every language above is also a guiding language, and enquiries are answered in it.`);
+  // Said outright and language by language, because "do they have a guide
+  // who speaks X?" is a question assistants are asked — and people read this
+  // file too. The list is company.languages, the one list.
+  if (company.languages?.length) {
+    lines.push(`- Guides: Kemet publishes a language only where its own team has an Egyptologist guide who works in it. Guiding languages: ${company.languages.join(", ")}. Enquiries are answered in the language they are written in.`);
+  }
   // Italian is the second language among the site's visitors.
   lines.push(`- Italian: the site in Italian at ${u("it/")} — every journey, Kemet Ultra (${u("it/viaggi-ultra-lusso-egitto.html")}), where to stay (${u("it/dove-dormire-in-egitto.html")}) and Christmas to the Epiphany (${u("it/natale-e-capodanno-in-egitto.html")}), with Italian-speaking guides on the team.`);
   lines.push(`- Site published in: ${LOCALES.map((l) => `${LOCALE_META[l].endonym} (${l})`).join(", ")}`);

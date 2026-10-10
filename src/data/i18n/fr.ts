@@ -33,7 +33,7 @@ export const fr: LocalizedPage[] = [
       "L'Égypte n'est pas un pays mais huit mondes culturels superposés le long d'un même fleuve. Kemet conçoit des voyages privés et sans hâte à travers ces mondes — des pyramides de Gizeh aux temples de Louxor, puis la descente du Nil jusqu'à Assouan. Chaque voyage est accompagné d'un égyptologue agréé par le ministère égyptien du Tourisme, et construit entièrement autour de vous.",
     facts: [
       { label: "Formule", value: "Exclusivement privé" },
-      { label: "Guide", value: "Égyptologue diplômé" },
+      { label: "Guide", value: "Licence officielle, en français" },
       { label: "Vol depuis Paris", value: "environ 4 h 30" },
       { label: "Meilleure période", value: "d'octobre à avril" },
     ],

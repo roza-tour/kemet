@@ -34,7 +34,7 @@ export const id: LocalizedPage[] = [
       "Mesir bukan satu negeri, melainkan delapan dunia budaya yang bertumpuk di sepanjang satu sungai. Kemet merancang perjalanan privat yang tidak terburu-buru melintasi dunia-dunia itu — dari Piramida Giza dan Al-Azhar hingga kuil-kuil Luxor dan pelayaran Nil menuju Aswan. Setiap perjalanan dipandu Egyptologist berlisensi Kementerian Pariwisata Mesir, dan disusun sepenuhnya di sekitar Anda.",
     facts: [
       { label: "Format", value: "Privat sepenuhnya" },
-      { label: "Pemandu", value: "Egyptologist berlisensi" },
+      { label: "Pemandu", value: "Berlisensi, berbahasa Indonesia" },
       { label: "Dari Jakarta", value: "±13 jam, satu transit" },
       { label: "Waktu terbaik", value: "Oktober – April" },
     ],

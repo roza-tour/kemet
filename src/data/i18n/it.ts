@@ -32,7 +32,7 @@ export const it: LocalizedPage[] = [
       "L'Egitto non è un paese solo: sono otto mondi culturali stratificati lungo un unico fiume. Kemet progetta viaggi privati e senza fretta attraverso questi mondi — dalle Piramidi di Giza ai templi di Luxor, fino alla navigazione del Nilo verso Assuan. Ogni viaggio è accompagnato da un egittologo autorizzato dal Ministero del Turismo egiziano ed è costruito interamente attorno a voi.",
     facts: [
       { label: "Formula", value: "Esclusivamente privato" },
-      { label: "Guida", value: "Con licenza, anche in italiano" },
+      { label: "Guida", value: "Con licenza, in italiano" },
       { label: "Volo da Roma", value: "circa 3 ore e 15" },
       { label: "Periodo migliore", value: "da ottobre ad aprile" },
     ],

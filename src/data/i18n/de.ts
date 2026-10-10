@@ -32,7 +32,7 @@ export const de: LocalizedPage[] = [
       "Ägypten ist nicht ein Land, sondern acht kulturelle Welten entlang eines einzigen Flusses. Kemet plant private, unaufgeregte Reisen durch diese Welten — von den Pyramiden von Gizeh über die Tempel von Luxor bis zur Nilfahrt nach Assuan. Jede Reise wird von einem staatlich lizenzierten Ägyptologen begleitet und vollständig um Sie herum entworfen.",
     facts: [
       { label: "Reiseform", value: "Ausschließlich privat" },
-      { label: "Reiseleitung", value: "Lizenzierter Ägyptologe" },
+      { label: "Reiseleitung", value: "Lizenziert, auf Deutsch" },
       { label: "Flugzeit ab Frankfurt", value: "ca. 4 Std. 15 Min." },
       { label: "Beste Reisezeit", value: "Oktober bis April" },
     ],

@@ -42,7 +42,7 @@ export const pt: LocalizedPage[] = [
       "O Egito não é um país só: são oito mundos culturais sobrepostos ao longo de um único rio. A Kemet desenha viagens privadas e sem pressa por esses mundos — das Pirâmides de Gizé aos templos de Luxor e à navegação pelo Nilo até Assuã. Toda viagem é conduzida por um egiptólogo credenciado pelo Ministério do Turismo do Egito e construída inteiramente em torno de vocês.",
     facts: [
       { label: "Formato", value: "Exclusivamente privado" },
-      { label: "Guia", value: "Egiptólogo credenciado" },
+      { label: "Guia", value: "Com credencial, em português" },
       { label: "Voo desde São Paulo", value: "uma conexão, cerca de 17–20 h" },
       { label: "Melhor época", value: "outubro a abril" },
     ],
