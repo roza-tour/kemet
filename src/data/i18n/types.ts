@@ -10,6 +10,7 @@
 // ---------------------------------------------------------------------------
 import type { TranslatedLocale } from "@/config/i18n";
 import type { LandingPage } from "@/types";
+import type { MediaPlaceholder, Film } from "@/types/primitives";
 
 export interface LocalizedSection {
   title: string;
@@ -66,6 +67,15 @@ export interface LocalizedPage {
    * ranks. See types/content.ts → LandingPage and data/landing/.
    */
   landing?: LandingPage;
+  /**
+   * Photographs, shown after the numbered sections. Four or more become a
+   * swipeable strip on a phone (global.css RAILS) and open full-size on a tap,
+   * exactly as on the English pages. Added for the Italian editions of the
+   * experiences, which are nothing without their pictures.
+   */
+  photos?: MediaPlaceholder[];
+  /** Our own films (data/films.ts), in a row of their own after the photographs. */
+  films?: Film[];
 }
 
 export type LocalePageSet = Record<TranslatedLocale, LocalizedPage[]>;

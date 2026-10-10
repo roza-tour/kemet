@@ -14,7 +14,7 @@ import { carnaval } from "./pt-carnaval";
 import { idUmrah, idZiarah, idSinai, idHalal } from "./id-extra";
 import { msUmrah, msZiarah, msSinai, msHalal } from "./ms-extra";
 import { frToussaint, esSemanaSanta, itFerragosto, itCapodanno, deWeihnachten, ruNovyGod } from "./eu-holidays";
-import { itDoveDormire } from "./it-extra";
+import { itDoveDormire, itMongolfiera, itAlbaPiramidi } from "./it-extra";
 
 export interface StandalonePage {
   locale: TranslatedLocale;
@@ -57,6 +57,9 @@ export const STANDALONE_PAGES: StandalonePage[] = [
   // The Italian edition of guides/where-to-stay-in-egypt.html — standalone
   // because a translation group needs all ten locales (see it-extra.ts).
   { locale: "it", slug: "dove-dormire-in-egitto", page: itDoveDormire },
+  // Italian editions of two experiences, with their photographs and films.
+  { locale: "it", slug: "mongolfiera-luxor-alba", page: itMongolfiera },
+  { locale: "it", slug: "alba-alle-piramidi-di-giza", page: itAlbaPiramidi },
   { locale: "de", slug: "weihnachten-in-aegypten", page: deWeihnachten },
   { locale: "ru", slug: "novyy-god-v-egipte", page: ruNovyGod },
 ];

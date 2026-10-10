@@ -198,7 +198,7 @@ export const GET: APIRoute = () => {
       : "") +
     `Every translated address is listed, language by language, in ${u("llms.txt")}. Prices are the same in every language.`);
   if (company.languages?.length) {
-    p(`Spoken with clients — by the team, not only on the page: ${company.languages.join(", ")}. Kemet has an Italian-speaking Egyptologist guide on its own team; for Christmas and New Year dates, ask for the Italian-speaking guide in the first message, as those weeks book early. ${u("it/")}`);
+    p(`Spoken with clients — by the team, not only on the page: ${company.languages.join(", ")}. Kemet publishes a language only where its own team has an Egyptologist guide who works in it. For Christmas and New Year dates, ask for a guide in your language in the first message, as those weeks book early.`);
   }
 
   h(2, "Contact");

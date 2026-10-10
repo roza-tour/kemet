@@ -9,6 +9,14 @@
 // ---------------------------------------------------------------------------
 import type { Experience } from "@/types";
 import { balloonFilms } from "@/data/films";
+import { company } from "@/data/company";
+
+// The languages our own Egyptologists guide in — one list, company.languages,
+// so an experience led by the team can never claim fewer (or more) than the
+// team speaks. Experiences run by others keep their own: the balloon pilots,
+// the Sound and Light commentary, the dive centre, a Nubian family at home.
+const GUIDE_LANGUAGE_CODES = company.languageCodes ?? ["en"];
+const GUIDE_LANGUAGES = (company.languages ?? ["English"]).join(", ");
 
 export const experiences: Experience[] = [
   // ── 1. Sunrise at the Giza Pyramids ──────────────────────────────────────
@@ -34,7 +42,7 @@ export const experiences: Experience[] = [
     meetingPointNote:
       "Confirmed at booking. Your private vehicle collects you from your Cairo or Giza hotel.",
     isPrivate: true,
-    languages: ["en", "fr", "ar"],
+    languages: [...GUIDE_LANGUAGE_CODES],
     groupSizeNote: "Your private party only — no shared groups.",
     availabilityNote:
       "Available most mornings year-round, subject to seasonal access restrictions and official closures.",
@@ -53,7 +61,7 @@ export const experiences: Experience[] = [
       { label: "Start time", value: "Before sunrise (time confirmed at booking)" },
       { label: "Location", value: "Giza Plateau" },
       { label: "Group type", value: "Private — your party only" },
-      { label: "Languages", value: "English, French, Arabic" },
+      { label: "Languages", value: GUIDE_LANGUAGES },
       { label: "Suitable for", value: "All ages" },
     ],
     whatsIncluded: [
@@ -137,7 +145,7 @@ export const experiences: Experience[] = [
     meetingPointNote:
       "The felucca departs from the Aswan corniche. Your hotel and exact departure point are confirmed at booking.",
     isPrivate: true,
-    languages: ["en", "fr", "ar"],
+    languages: [...GUIDE_LANGUAGE_CODES],
     groupSizeNote: "Entire vessel chartered for your party — maximum 8 people.",
     availabilityNote:
       "Available daily in season. Wind conditions occasionally affect timing; your captain advises on the day.",
@@ -155,7 +163,7 @@ export const experiences: Experience[] = [
       { label: "Difficulty", value: "Easy" },
       { label: "Departure", value: "Aswan corniche (confirmed at booking)" },
       { label: "Group type", value: "Private charter — up to 8 guests" },
-      { label: "Languages", value: "English, French, Arabic" },
+      { label: "Languages", value: GUIDE_LANGUAGES },
       { label: "Best season", value: "October – April" },
     ],
     whatsIncluded: [
@@ -237,7 +245,7 @@ export const experiences: Experience[] = [
     meetingPointNote:
       "Meeting point is the Roman fortress of Babylon, Coptic Cairo. Hotel pickup available on request.",
     isPrivate: true,
-    languages: ["en", "fr", "ar"],
+    languages: [...GUIDE_LANGUAGE_CODES],
     groupSizeNote: "Private — your party only. Maximum 8 people for comfortable lane navigation.",
     availabilityNote:
       "Available most mornings. Friday prayers affect access to some mosques; alternative timings arranged.",
@@ -254,7 +262,7 @@ export const experiences: Experience[] = [
       { label: "Difficulty", value: "Moderate (cobblestones and uneven surfaces)" },
       { label: "Start point", value: "Coptic Cairo (Babylon fortress)" },
       { label: "Group type", value: "Private — your party only" },
-      { label: "Languages", value: "English, French, Arabic" },
+      { label: "Languages", value: GUIDE_LANGUAGES },
       { label: "Suitable for", value: "Ages 8 and above" },
     ],
     whatsIncluded: [
@@ -333,7 +341,7 @@ export const experiences: Experience[] = [
     meetingPointNote:
       "The session begins at a neighbourhood market; hotel pickup is included.",
     isPrivate: true,
-    languages: ["en", "fr", "ar"],
+    languages: [...GUIDE_LANGUAGE_CODES],
     groupSizeNote: "Private — your party only. Maximum 6 people for kitchen comfort.",
     availabilityNote:
       "Available most mornings and some evenings, year-round.",
@@ -351,7 +359,7 @@ export const experiences: Experience[] = [
       { label: "Difficulty", value: "Easy — no prior cooking experience required" },
       { label: "Location", value: "Central Cairo (confirmed at booking)" },
       { label: "Group type", value: "Private — maximum 6 guests" },
-      { label: "Languages", value: "English, French, Arabic" },
+      { label: "Languages", value: GUIDE_LANGUAGES },
       { label: "Dietary notes", value: "Vegetarian options available; advise at booking" },
     ],
     whatsIncluded: [
@@ -426,7 +434,7 @@ export const experiences: Experience[] = [
     meetingPointNote:
       "The walk begins at the northern end of the Avenue of Sphinxes, near Karnak. Hotel pickup available.",
     isPrivate: true,
-    languages: ["en", "fr", "ar"],
+    languages: [...GUIDE_LANGUAGE_CODES],
     groupSizeNote: "Private — your party only.",
     availabilityNote:
       "Available most evenings. The temple opens to visitors after dark from approximately 6 pm.",
@@ -445,7 +453,7 @@ export const experiences: Experience[] = [
       { label: "Start time", value: "After sunset (approx. 7 pm, confirmed at booking)" },
       { label: "Location", value: "Luxor Temple, Luxor" },
       { label: "Group type", value: "Private — your party only" },
-      { label: "Languages", value: "English, French, Arabic" },
+      { label: "Languages", value: GUIDE_LANGUAGES },
     ],
     whatsIncluded: [
       "Private licensed Egyptologist guide",
@@ -521,7 +529,7 @@ export const experiences: Experience[] = [
     meetingPointNote:
       "Boarding point on the central Cairo corniche, confirmed at booking. Hotel pickup and drop-off included.",
     isPrivate: true,
-    languages: ["en", "fr", "ar"],
+    languages: [...GUIDE_LANGUAGE_CODES],
     groupSizeNote: "Vessel reserved for your party — from 2 up to 12 guests.",
     availabilityNote: "Sails nightly, year-round; earlier family departures available.",
     priceNote: "Pricing confirmed on enquiry. Full vessel reservation and set dinner included.",
@@ -537,7 +545,7 @@ export const experiences: Experience[] = [
       { label: "Departure", value: "After sunset (time varies by season)" },
       { label: "Group type", value: "Private — up to 12 guests" },
       { label: "Dietary", value: "Vegetarian and allergies accommodated with notice" },
-      { label: "Languages", value: "English, French, Arabic" },
+      { label: "Languages", value: GUIDE_LANGUAGES },
     ],
     whatsIncluded: [
       "Private vessel reservation",
@@ -716,7 +724,7 @@ export const experiences: Experience[] = [
     location: "Grand Egyptian Museum, Giza plateau edge",
     meetingPointNote: "Hotel pickup from Cairo or Giza included; the museum sits beside the plateau.",
     isPrivate: true,
-    languages: ["en", "fr", "ar"],
+    languages: [...GUIDE_LANGUAGE_CODES],
     groupSizeNote: "Private — your party only.",
     availabilityNote: "Available daily; morning and afternoon sessions.",
     priceNote: "Pricing confirmed on enquiry. Entrance fees and Egyptologist included.",
@@ -732,7 +740,7 @@ export const experiences: Experience[] = [
       { label: "Location", value: "Giza plateau edge" },
       { label: "Group type", value: "Private — your party only" },
       { label: "Best combined with", value: "A Giza plateau morning" },
-      { label: "Languages", value: "English, French, Arabic" },
+      { label: "Languages", value: GUIDE_LANGUAGES },
     ],
     whatsIncluded: [
       "Private senior Egyptologist guide",
@@ -1270,7 +1278,7 @@ export const experiences: Experience[] = [
     location: "Downtown Alexandria & the corniche",
     meetingPointNote: "Meeting point downtown, confirmed at booking; easily combined with any Alexandria day.",
     isPrivate: true,
-    languages: ["en", "fr", "ar"],
+    languages: [...GUIDE_LANGUAGE_CODES],
     groupSizeNote: "Private — your party only.",
     availabilityNote: "Mornings and late afternoons; summer evenings are especially good.",
     priceNote: "Pricing confirmed on enquiry. Entrances and café stop included.",
@@ -1286,7 +1294,7 @@ export const experiences: Experience[] = [
       { label: "Distance", value: "≈3 km at a strolling pace" },
       { label: "Group type", value: "Private — your party only" },
       { label: "Best light", value: "Late afternoon into dusk" },
-      { label: "Languages", value: "English, French, Arabic" },
+      { label: "Languages", value: GUIDE_LANGUAGES },
     ],
     whatsIncluded: [
       "Private guide throughout",
@@ -1359,7 +1367,7 @@ export const experiences: Experience[] = [
     meetingPointNote:
       "Arrivals: met at the aircraft door or jet bridge. Departures: met at the terminal kerb.",
     isPrivate: true,
-    languages: ["en", "fr", "ar"],
+    languages: [...GUIDE_LANGUAGE_CODES],
     groupSizeNote: "Private — priced per party, not per traveller.",
     availabilityNote: "All flights, all terminals, 24/7 with advance booking.",
     priceNote: "Pricing confirmed on enquiry; included automatically in our VIP itineraries.",

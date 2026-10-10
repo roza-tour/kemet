@@ -1035,6 +1035,9 @@ footer{background:var(--ink-2);border-top:1px solid var(--line);padding:var(--s-
     line-height: 1.2; width: 58px; }
   .lz-sec h2 { font-size:var(--t-md); color: var(--bone); margin:0 0 var(--s-2); }
   .lz-sec p { color: var(--muted); font-size:var(--t-base); line-height: 1.88; margin: 0; }
+  /* Photographs and films on a localised page (types.ts → photos, films). */
+  .lz-photos, .lz-films { margin-top:var(--s-6); }
+  .lz-photos .tgallery { margin-bottom: var(--s-3); }
 
   /* Logical, not physical: border-inline-start, padding-inline-start and
      inset-inline-start mirror themselves under dir="rtl". The Arabic pages had

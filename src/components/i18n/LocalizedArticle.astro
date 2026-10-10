@@ -29,7 +29,9 @@ import type { LocalizedPage } from "@/data/i18n/types";
 import { TRANSLATION_GROUPS, LOCALE_META } from "@/config/i18n";
 import type { TranslatedLocale } from "@/config/i18n";
 import { canonical, publicPath, whatsappLink, mailtoLink } from "@/utils/links";
-import { personRef } from "@/schemas/jsonld";
+import { personRef, videoObject } from "@/schemas/jsonld";
+import Placeholder from "@/components/Placeholder.astro";
+import FilmRow from "@/components/FilmRow.astro";
 import { site, SITE_URL } from "@/config/site";
 
 interface Props { page: LocalizedPage; locale: TranslatedLocale; route: string }
@@ -107,6 +109,7 @@ const jsonld: Record<string, unknown>[] = [
       { "@type": "ListItem", position: 2, name: page.crumb, item: canonical(route) },
     ],
   }]),
+  ...(page.films ?? []).map(videoObject),
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -191,6 +194,20 @@ const jsonld: Record<string, unknown>[] = [
           </div>
         ))}
       </div>
+
+      {page.photos && page.photos.length > 0 && (
+        <div class="lz-photos">
+          <div class="grid-2">
+            {page.photos.map((g) => (
+              <Placeholder sizes="half" class="tgallery reveal cur" src={g.src} alt={g.alt} width={g.width} height={g.height} label={g.label ?? page.crumb} />
+            ))}
+          </div>
+        </div>
+      )}
+
+      {page.films && page.films.length > 0 && (
+        <div class="lz-films"><FilmRow films={page.films} /></div>
+      )}
 
       {localeJourneys.length > 0 && (
         <div class="lz-journeys">
