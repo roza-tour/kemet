@@ -408,6 +408,52 @@ const DUST_DENSITY = 15000; // px² of viewport per particle
     if(nx)nx.addEventListener('click',function(){strip.scrollBy({left:360,behavior:'smooth'});KEV('strip')});}
 
   /* ---------------------------------------------------------------------
+     Language hint (Oct 2026). Italian was the second language among the
+     site's visitors in the 30 days to 10 Oct 2026 (46, ahead of German), yet
+     the Italian home page had 9 views: Italian readers were landing on
+     English pages and staying there. Where the page they are on HAS a
+     version in the language their browser asks for first — its hreflang
+     alternate — say so, once, in that language.
+
+     Never a redirect: the page they asked for is the page they get, and a
+     search engine sees exactly the same HTML, which is what Google asks of
+     any language detection. Followed or dismissed, it does not come back,
+     and it steps out of the way once the reader scrolls past the first
+     screen.
+     --------------------------------------------------------------------- */
+  try{
+    var LHK='kemet_langhint_v1';
+    var LHT={
+      it:['Questa pagina è disponibile anche in italiano.','Leggi in italiano'],
+      de:['Diese Seite gibt es auch auf Deutsch.','Auf Deutsch lesen'],
+      fr:['Cette page existe aussi en français.','Lire en français'],
+      es:['Esta página también está en español.','Leer en español'],
+      pt:['Esta página também está em português.','Ler em português'],
+      ru:['Эта страница есть и на русском языке.','Читать на русском'],
+      ar:['هذه الصفحة متاحة أيضًا باللغة العربية.','اقرأ بالعربية'],
+      id:['Halaman ini juga tersedia dalam bahasa Indonesia.','Baca dalam bahasa Indonesia'],
+      ms:['Halaman ini juga tersedia dalam bahasa Melayu.','Baca dalam bahasa Melayu']
+    };
+    var lhSeen=null;try{lhSeen=localStorage.getItem(LHK);}catch(e){}
+    var lhPref=((navigator.languages&&navigator.languages[0])||navigator.language||'').slice(0,2).toLowerCase();
+    var lhAlt=LHT[lhPref]&&document.querySelector('link[rel="alternate"][hreflang="'+lhPref+'"]');
+    if(!lhSeen&&lhAlt&&/^en/i.test(document.documentElement.lang)){
+      var lh=document.createElement('div');
+      lh.className='lhint';lh.setAttribute('role','note');lh.lang=lhPref;if(lhPref==='ar')lh.dir='rtl';
+      lh.innerHTML='<p></p><a></a><button type="button" aria-label="Close">×</button>';
+      lh.querySelector('p').textContent=LHT[lhPref][0];
+      var lhA=lh.querySelector('a');lhA.textContent=LHT[lhPref][1]+(lhPref==='ar'?' ←':' →');
+      lhA.href=lhAlt.getAttribute('href');lhA.hreflang=lhPref;
+      document.body.appendChild(lh);
+      var lhKeep=function(){try{localStorage.setItem(LHK,'1');}catch(e){}};
+      lhA.addEventListener('click',function(){lhKeep();KEV('lang-switch',lhPref);});
+      lh.querySelector('button').addEventListener('click',function(){lhKeep();lh.remove();});
+      window.addEventListener('scroll',function(){lh.classList.toggle('lhint--away',scrollY>innerHeight*.8);},{passive:true});
+      KEV('lang-hint',lhPref);
+    }
+  }catch(e){}
+
+  /* ---------------------------------------------------------------------
      Consent bar. Markup and styling are in components/ConsentBanner.astro;
      this is here rather than inline on the page because the zone list, sent
      with all 282 pages, pushed the heaviest of them past the audit's budget.

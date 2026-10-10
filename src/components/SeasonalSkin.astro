@@ -10,7 +10,7 @@
 // the right season months from now without rebuilding. Without JS nothing is
 // shown — the ribbon is hidden by default and only revealed when a window
 // matches, so no visitor ever sees a wrong or empty season.
-import { seasonalCalendar } from "@/data/seasonalCalendar";
+import { seasonalCalendar, type SeasonKey } from "@/data/seasonalCalendar";
 import { SEASON_TEXT, SEASON_UI } from "@/data/i18n/seasons";
 import { LOCALE_META } from "@/config/i18n";
 import type { SiteLocale } from "@/config/i18n";
@@ -76,10 +76,24 @@ function localDates(from?: string, to?: string, fallback = ""): string {
 //
 // The label and note are still resolved HERE, at build time: the page already
 // knows its language, so the client receives one language's strings, not eight.
+// Where an occasion has a page written in the reader's own language, the chip
+// and the ribbon lead there rather than to the English collection: an Italian
+// reader told "Natale e Capodanno" in Italian was then dropped onto an English
+// page, with the Italian one sitting unlinked beside it.
+const LOCAL_SEASON_ROUTES: Partial<Record<SiteLocale, Partial<Record<SeasonKey, string>>>> = {
+  it: {
+    christmas: "it/natale-e-capodanno-in-egitto.html",
+    "christmas-booking": "it/natale-e-capodanno-in-egitto.html",
+    summer: "it/ferragosto-in-egitto.html",
+  },
+  de: { christmas: "de/weihnachten-in-aegypten.html", "christmas-booking": "de/weihnachten-in-aegypten.html" },
+  ru: { christmas: "ru/novyy-god-v-egipte.html", "christmas-booking": "ru/novyy-god-v-egipte.html" },
+  es: { easter: "es/semana-santa-en-egipto.html", "easter-both": "es/semana-santa-en-egipto.html" },
+};
 const keys = [...new Set(seasonalCalendar.map((w) => w.key))];
 const seasonDefs = keys.map((k) => {
   const w = seasonalCalendar.find((x) => x.key === k)!;
-  return [w.theme, w.slug, text[k].label, text[k].note, w.href ?? ""];
+  return [w.theme, w.slug, text[k].label, text[k].note, LOCAL_SEASON_ROUTES[locale]?.[k] ?? w.href ?? ""];
 });
 const seasonWindows = seasonalCalendar.map((w) => {
   const i = keys.indexOf(w.key);

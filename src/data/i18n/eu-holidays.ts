@@ -17,9 +17,11 @@
 //                      most contested fortnight in Egypt
 //   ru  Новый год      the ten-day Russian holiday, the country's biggest
 //                      travel window of the year
+//   it  Natale–Epifania added Oct 2026 as Italy's second page: the schools
+//                      stay shut until 6 January, after Egypt's peak ends
 //
-// Five holidays, five seasons, five arguments. None is a translation of
-// another, and the German and Russian pages — both in winter — are arguing
+// Six holidays, five seasons, six arguments. None is a translation of
+// another, and the German, Russian and Italian winter pages are arguing
 // different things to different readers.
 //
 // EVERY DATE AND FIGURE IS READ, NOT TYPED. Easter comes from the computus,
@@ -146,7 +148,7 @@ export const frToussaint: LocalizedPage = {
   moreLabel: "Aller plus loin",
   moreRoute: "fr/voyage-egypte.html",
   moreText:
-    "Tous nos itinéraires, avec leur déroulé jour par jour, sont sur la page des voyages. Le catalogue complet est en anglais.",
+    "Tous nos itinéraires, avec leur déroulé jour par jour et en français, sont sur la page des voyages.",
   links: [
     { label: "Quand partir en Égypte", route: "fr/quand-partir-en-egypte.html" },
     { label: "Prix d'un voyage en Égypte", route: "fr/prix-voyage-egypte.html" },
@@ -311,9 +313,97 @@ export const itFerragosto: LocalizedPage = {
   moreLabel: "Continuare",
   moreRoute: "it/viaggi-in-egitto.html",
   moreText:
-    "Tutti i nostri itinerari, giorno per giorno, sono nella pagina dei viaggi. Il catalogo completo è in inglese.",
+    "Tutti i nostri itinerari, giorno per giorno e in italiano, sono nella pagina dei viaggi.",
   links: [
     { label: "Quando andare in Egitto", route: "it/quando-andare-in-egitto.html" },
+    { label: "Crociera sul Nilo", route: "it/crociera-sul-nilo.html" },
+  ],
+};
+
+// ===== ITALIANO — Natale, Capodanno ed Epifania ============================
+// Italy's second window, and the one that matters more for this business:
+// Ferragosto is the contrarian summer argument, this is the winter one — the
+// fortnight Italians most often give to Egypt. What is particular to Italy is
+// how it ends: the schools stay closed until the Epiphany (6 January), and in
+// Egypt the peak prices fall away after the 3rd or 4th. A trip that slides
+// toward the Epiphany puts part of the holiday after the peak, with the same
+// weather. Same season year as the German page (SEASON_Y), for the same
+// reason given there.
+const IT_XMAS_Y = SEASON_Y;
+const itDate = fmt("it-IT", { day: "numeric", month: "long" });
+const IT_EPIPH = new Date(Date.UTC(IT_XMAS_Y + 1, 0, 6));
+const IT_SEASON = `${IT_XMAS_Y}–${String(IT_XMAS_Y + 1).slice(2)}`;
+
+export const itCapodanno: LocalizedPage = {
+  groupId: "standalone-it-capodanno",
+  symbol: "sun",
+  title: `Natale e Capodanno in Egitto ${IT_SEASON} | Kemet`,
+  description:
+    `Natale e Capodanno in Egitto: ${dec.temps.luxor} a Luxor, il Capodanno sul Nilo, viaggi privati con i prezzi — e perché i giorni dell'Epifania costano meno.`,
+  keywords:
+    "capodanno in egitto, natale in egitto, capodanno sul nilo, crociera sul nilo capodanno, egitto epifania, viaggio egitto dicembre, capodanno mar rosso",
+  crumb: "Natale e Capodanno",
+  h1: "Natale, Capodanno ed Epifania in Egitto",
+  standfirst:
+    `${dec.temps.luxor} a Luxor mentre a casa fa buio alle cinque — e le scuole italiane che riaprono solo dopo l'Epifania, il ${itDate(IT_EPIPH)}.`,
+  lede:
+    `Le due settimane di fine anno sono le più contese del calendario egiziano, e c'è un motivo: dicembre è, per il clima, quasi perfetto. Luxor sta a ${dec.temps.luxor}, l'aria è asciutta e a Karnak si cammina anche alle tre del pomeriggio. Il rovescio è che lo sanno tutti: le navi migliori e le camere sul Nilo si esauriscono mesi prima. Ma il calendario italiano ha un dettaglio che gioca a vostro favore, e lo spieghiamo qui sotto.`,
+  facts: [
+    { label: "Luxor di giorno", value: dec.temps.luxor },
+    { label: "Il Cairo di giorno", value: dec.temps.cairo },
+    { label: "Mar Rosso, acqua", value: dec.seaTemp },
+    { label: "Prenotare", value: "4–6 mesi prima" },
+  ],
+  sections: [
+    {
+      title: "I giorni dell'Epifania: il vantaggio del calendario italiano",
+      body:
+        `In Egitto il picco dei prezzi va dall'ultima settimana di dicembre al 3 o 4 gennaio. Dopo, alberghi e navi scendono in modo sensibile, mentre il clima resta identico. In Italia le scuole restano chiuse fino all'Epifania: più il viaggio scivola verso il ${itDate(IT_EPIPH)}, più notti cadono dopo il picco. Partire il 28 dicembre invece del 23, per esempio, fa cadere gli ultimi giorni del viaggio dopo il picco. E chi può aggiungere un giorno trova, il 7 gennaio, il Natale copto al Cairo vecchio.`,
+    },
+    {
+      title: "Capodanno sul Nilo",
+      body:
+        "Le navi e i grandi alberghi di Luxor e Assuan fanno del 31 dicembre una serata a sé, e una cena sul ponte con la riva occidentale al buio è un'altra cosa rispetto a una sala d'albergo. È però la prima data a esaurirsi: chi vuole passare il Capodanno sull'acqua lo decide d'estate o all'inizio dell'autunno. Se state leggendo a ottobre, è il momento — non tra un mese.",
+    },
+    {
+      title: "Nilo o Mar Rosso a Capodanno?",
+      body:
+        `Non è una scelta obbligata. A dicembre il Mar Rosso è caldo senza essere torrido, con l'acqua a ${dec.seaTemp}, e la valle del Nilo ha il clima migliore dell'anno per le visite. La forma che funziona meglio sono una settimana tra Il Cairo, Luxor e il Nilo, e poi tre giorni di mare alla fine, quando non si ha più voglia di camminare.`,
+    },
+    {
+      title: "Quanto costa, e perché",
+      body:
+        `Il nostro viaggio di ${/^(\d+)/.exec(tour("tour-10-day").durationLabel)?.[1]} giorni parte da ${price("tour-10-day")} a persona. Tra Natale e Capodanno si aggiungono i supplementi che alberghi e navi applicano a noi: li riportiamo a parte nel preventivo, senza nasconderli nel totale. Chi è flessibile trova i primi di dicembre e la seconda metà di gennaio sensibilmente più economici, con lo stesso clima.`,
+    },
+  ],
+  highlights: {
+    heading: "In breve",
+    items: [
+      `Luxor a ${dec.temps.luxor}: visite anche nel pomeriggio`,
+      "Capodanno sul ponte di una nave: la prima data a esaurirsi",
+      "Dopo il 3–4 gennaio i prezzi scendono, e le scuole italiane riaprono solo dopo l'Epifania",
+      `Mar Rosso a ${dec.seaTemp}: tre giorni di mare alla fine del viaggio`,
+      "La sera fa fresco: sul ponte serve una giacca",
+    ],
+  },
+  faqs: [
+    { q: "Con quanto anticipo si prenota il Capodanno in Egitto?", a: "Quattro-sei mesi, e per una dahabiya intera o una suite sul Nilo anche prima. Non è una tecnica di vendita: le buone navi sono poche e d'estate sono già assegnate." },
+    { q: "A Capodanno si fa il bagno in Egitto?", a: `Sul Mar Rosso sì: l'acqua è a ${dec.seaTemp}, piacevole per quasi tutti. Nel Nilo non si fa il bagno, e le piscine dell'Alto Egitto a dicembre, se non sono riscaldate, sono una questione di coraggio.` },
+    { q: "Conviene partire dopo Capodanno?", a: `Per il prezzo sì: dal 4 gennaio le tariffe scendono, con lo stesso clima. Con le scuole chiuse fino all'Epifania, una famiglia italiana può far cadere una parte del viaggio dopo il picco e rientrare il ${itDate(IT_EPIPH)}.` },
+    { q: "Ci sono guide che parlano italiano?", a: "Sì: l'italiano è una delle lingue più diffuse tra gli egittologi con licenza in Egitto. A Capodanno sono richiesti quanto le navi — ditecelo nel primo messaggio, non alla conferma." },
+  ],
+  cta: {
+    heading: "Diteci le vostre date",
+    text: "Periodo e numero di persone bastano per un itinerario vero, con il prezzo dettagliato — senza impegno.",
+    whatsapp: "Buongiorno Kemet — stiamo pensando all'Egitto per Natale o Capodanno.",
+    emailSubject: "Natale e Capodanno in Egitto — richiesta itinerario",
+  },
+  moreLabel: "Continuare",
+  moreRoute: "it/viaggi-in-egitto.html",
+  moreText: "Tutti i nostri itinerari, giorno per giorno e in italiano, sono nella pagina dei viaggi.",
+  links: [
+    { label: "Quando andare in Egitto", route: "it/quando-andare-in-egitto.html" },
+    { label: "Quanto costa un viaggio in Egitto", route: "it/quanto-costa-viaggio-egitto.html" },
     { label: "Crociera sul Nilo", route: "it/crociera-sul-nilo.html" },
   ],
 };
@@ -399,7 +489,7 @@ export const deWeihnachten: LocalizedPage = {
   moreLabel: "Weiterlesen",
   moreRoute: "de/aegypten-reisen.html",
   moreText:
-    "Alle Reiseverläufe Tag für Tag finden Sie auf der Reisen-Seite. Der vollständige Katalog ist auf Englisch.",
+    "Alle Reiseverläufe Tag für Tag und auf Deutsch finden Sie auf der Reisen-Seite.",
   links: [
     { label: "Beste Reisezeit für Ägypten", route: "de/beste-reisezeit-aegypten.html" },
     { label: "Was eine Ägypten-Reise kostet", route: "de/aegypten-reise-kosten.html" },
