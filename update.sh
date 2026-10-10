@@ -62,8 +62,20 @@ ok "downloaded"
 say "3/5  تطبيق التحديث  ·  Applying update"
 
 # Where the server was before, so we can report exactly what changed. This
-# matters because nobody remembers when they last pulled.
-BEFORE="$(git rev-parse HEAD 2>/dev/null || echo none)"
+# matters because nobody remembers when they last pulled. Carried across the
+# re-exec below in KEMET_BEFORE: the re-run starts after the reset, so its own
+# `git rev-parse HEAD` is already the new version — which read as "already
+# current, nothing to change", and gave step 5 nothing to report to IndexNow.
+# A re-run started by an OLDER copy of this script (one that predates
+# KEMET_BEFORE) falls back to the reflog: right after the reset, HEAD@{1} is
+# where HEAD stood before it.
+if [ -n "${KEMET_BEFORE:-}" ]; then
+  BEFORE="$KEMET_BEFORE"
+elif [ "${KEMET_REEXEC:-}" = "1" ]; then
+  BEFORE="$(git rev-parse -q --verify 'HEAD@{1}' 2>/dev/null || echo none)"
+else
+  BEFORE="$(git rev-parse HEAD 2>/dev/null || echo none)"
+fi
 BEHIND="$(git rev-list --count "HEAD..origin/$BRANCH" 2>/dev/null || echo '?')"
 if [ "$BEHIND" != "0" ] && [ "$BEHIND" != "?" ]; then
   echo "     كنتِ متأخرة بـ $BEHIND تحديث · you were $BEHIND commit(s) behind"
@@ -84,7 +96,7 @@ git clean -fd --quiet -e node_modules -e _stats 2>/dev/null || true
 if [ "${KEMET_REEXEC:-}" != "1" ] \
    && [ "$SELF_SUM" != "$(sha256sum "$0" 2>/dev/null | cut -d" " -f1)" ]; then
   ok "هذا الملف نفسه اتحدّث · this script was updated — running the new version"
-  KEMET_REEXEC=1 exec bash "$0" "$@"
+  KEMET_BEFORE="$BEFORE" KEMET_REEXEC=1 exec bash "$0" "$@"
 fi
 
 AFTER="$(git rev-parse --short HEAD)"
@@ -121,32 +133,47 @@ done
 PAGES=$(find . -name '*.html' -not -path './node_modules/*' -not -path './.git/*' | wc -l)
 echo "     صفحات منشورة · pages published: $PAGES"
 
-# --- 5. Tell the non-Google engines the site changed ------------------------
-# IndexNow notifies Bing, Yandex and DuckDuckGo within minutes instead of
-# waiting for a crawl. Bing also feeds ChatGPT search and Copilot, so this is
-# the fastest route into AI answers. Google ignores IndexNow and uses the
-# sitemap, which it already has.
+# --- 5. Tell the non-Google engines what changed ---------------------------
+# IndexNow notifies Bing, Yandex and the other IndexNow engines within minutes
+# instead of waiting for a crawl. Bing also feeds ChatGPT search, Copilot and
+# DuckDuckGo, so this is the fastest route into AI answers. Google ignores
+# IndexNow and uses the sitemap, which it already has.
+#
+# Only the pages that changed in THIS update are sent — added, edited in
+# content, or removed — and only by their canonical address, as listed in the
+# sitemap. scripts/indexnow-urls.sh decides which, and explains why. Running
+# this script again with nothing new to apply sends nothing at all.
 #
 # This step can never fail the update: any network problem is reported and
 # skipped, because the site is already live by this point.
 say "5/5  إبلاغ محركات البحث  ·  Notifying search engines"
-INDEXNOW_KEY="$(ls -1 [0-9a-f][0-9a-f]*.txt 2>/dev/null | head -1 | sed 's/\.txt$//')"
+INDEXNOW_KEY="$(ls -1 [0-9a-f][0-9a-f]*.txt 2>/dev/null | grep -E '^[0-9a-f]{32}\.txt$' | head -1 | sed 's/\.txt$//')"
 if [ -z "$INDEXNOW_KEY" ]; then
   bad "IndexNow key file not found — skipping (site is live regardless)."
+elif [ ! -f scripts/indexnow-urls.sh ]; then
+  bad "scripts/indexnow-urls.sh not found — skipping (site is live regardless)."
 else
-  URLS="$(find . -name '*.html' -not -path './node_modules/*' -not -path './.git/*' \
-            -not -name '404.html' 2>/dev/null \
-          | sed 's|^\./||' | sed 's|^|"https://kemet-travel.com/|; s|$|"|' \
-          | paste -sd, -)"
-  PAYLOAD="{\"host\":\"kemet-travel.com\",\"key\":\"$INDEXNOW_KEY\",\"keyLocation\":\"https://kemet-travel.com/$INDEXNOW_KEY.txt\",\"urlList\":[$URLS]}"
-  CODE="$(printf '%s' "$PAYLOAD" | curl -s -o /dev/null -w '%{http_code}' -m 25 \
-           -X POST 'https://api.indexnow.org/indexnow' \
-           -H 'Content-Type: application/json; charset=utf-8' --data-binary @- 2>/dev/null)"
-  case "$CODE" in
-    200|202) ok "IndexNow accepted the update (HTTP $CODE) — Bing, Yandex, DuckDuckGo notified." ;;
-    "")      bad "Could not reach IndexNow (no network) — skipped, site is live." ;;
-    *)       bad "IndexNow replied HTTP $CODE — skipped, site is live." ;;
-  esac
+  CHANGED_URLS="$(bash scripts/indexnow-urls.sh "$BEFORE" HEAD 2>/dev/null)"
+  N_URLS="$(printf '%s\n' "$CHANGED_URLS" | grep -c . || true)"
+  if [ "$N_URLS" -eq 0 ]; then
+    ok "لا صفحات اتغيرت · no page content changed in this update — nothing to report"
+  else
+    URLS="$(printf '%s\n' "$CHANGED_URLS" | grep . | sed 's|^|"|; s|$|"|' | paste -sd, -)"
+    PAYLOAD="{\"host\":\"kemet-travel.com\",\"key\":\"$INDEXNOW_KEY\",\"keyLocation\":\"https://kemet-travel.com/$INDEXNOW_KEY.txt\",\"urlList\":[$URLS]}"
+    CODE="$(printf '%s' "$PAYLOAD" | curl -s -o /dev/null -w '%{http_code}' -m 25 \
+             -X POST 'https://api.indexnow.org/indexnow' \
+             -H 'Content-Type: application/json; charset=utf-8' --data-binary @- 2>/dev/null)"
+    case "$CODE" in
+      200|202) ok "IndexNow accepted $N_URLS changed page(s) (HTTP $CODE) — Bing, Yandex and the IndexNow engines notified:"
+               printf '%s\n' "$CHANGED_URLS" | grep . | head -8 | sed 's/^/       /'
+               [ "$N_URLS" -gt 8 ] && echo "       … and $((N_URLS - 8)) more" ;;
+      "")      bad "Could not reach IndexNow (no network) — skipped, site is live." ;;
+      403)     bad "IndexNow says the key is not valid (HTTP 403) — check https://kemet-travel.com/$INDEXNOW_KEY.txt" ;;
+      422)     bad "IndexNow rejected the URLs (HTTP 422: wrong host, or key file mismatch) — skipped, site is live." ;;
+      429)     bad "IndexNow asked us to slow down (HTTP 429) — skipped this time, site is live." ;;
+      *)       bad "IndexNow replied HTTP $CODE — skipped, site is live." ;;
+    esac
+  fi
 fi
 
 echo
