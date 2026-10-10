@@ -16,7 +16,7 @@ Last updated: 2026-10-10
 - Google: https://www.google.com/search?kgmid=/g/11zy30n66w
 - Contact: info@kemet-travel.com · WhatsApp +20 11 5836 7162
 - Model: 100% private, tailor-made itineraries (no shared coaches, no fixed departures)
-- Catalogue: 25 journeys, 15 experiences, 8 activities, 8 destinations, 6 travel guides
+- Catalogue: 25 journeys, 15 experiences, 8 activities, 8 destinations, 7 travel guides
 - Content reviewed by: Mervat Farouk, Egyptologist guide — Egyptian tour guide and specialist in Egyptology (https://kemet-travel.com/about.html#mervat-farouk)
 
 - Full content as a single Markdown document: https://kemet-travel.com/llms-full.txt — the substance of these pages in one file, for when fetching each page individually is not practical.
@@ -160,6 +160,7 @@ Last updated: 2026-10-10
 - [Egyptian Food Guide](https://kemet-travel.com/guides/egyptian-food-guide.html): A practical guide to Egyptian cuisine — the dishes to seek out, how Egyptians eat, where to find the best food, and what to expect for dietary requirements.
 - [The Ideal 10-Day Egypt Itinerary](https://kemet-travel.com/guides/10-day-egypt-itinerary.html): A field-tested 10-day Egypt route — Cairo and Giza, a flight south, Luxor's two banks, a three-night Nile cruise to Aswan and Abu Simbel — with the pacing mistakes to avoid.
 - [What to Pack for Egypt](https://kemet-travel.com/guides/egypt-packing-list.html): The Egypt packing list that actually matches the trip: what the desert, the monuments, the mosques and the Nile each demand — by season, with the five things everyone forgets.
+- [Where to Stay in Egypt: The Best Hotels, City by City](https://kemet-travel.com/guides/where-to-stay-in-egypt.html): The hotels worth building an Egypt journey around — Giza, Cairo, Luxor, Aswan, the Nile and the Red Sea — and which of the famous ones can actually be booked for the 2026–27 season.
 
 ## Other languages
 
@@ -218,6 +219,7 @@ Journeys in Deutsch (24), from-prices per person, the same as in English:
 - https://kemet-travel.com/it/viaggi-ultra-lusso-egitto.html
 - https://kemet-travel.com/it/ferragosto-in-egitto.html — Ferragosto in Egitto: metà sì, metà no: 15 agosto 2027 — il Mar Rosso è al suo meglio assoluto, la valle del Nilo è a 42–44°C. Sono due viaggi diversi.
 - https://kemet-travel.com/it/natale-e-capodanno-in-egitto.html — Natale, Capodanno ed Epifania in Egitto: 24–26°C a Luxor mentre a casa fa buio alle cinque — e le scuole italiane che riaprono solo dopo l'Epifania, il 6 gennaio.
+- https://kemet-travel.com/it/dove-dormire-in-egitto.html — Dove dormire in Egitto: i migliori hotel, città per città: Gli alberghi su cui vale la pena costruire un viaggio — e quali dei più famosi si possono davvero prenotare per la stagione 2026–27.
 
 Journeys in Italiano (24), from-prices per person, the same as in English:
 
