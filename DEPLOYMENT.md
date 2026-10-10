@@ -71,7 +71,10 @@ one:
 - reports how many commits the server was behind, and proves the tree is
   byte-for-byte identical to GitHub afterwards;
 - checks the key pages are present and non-empty;
-- pings IndexNow so Bing, Yandex and DuckDuckGo see the change in minutes.
+- pings IndexNow with the pages whose content changed in this update (by their
+  canonical address, from the sitemap) so Bing — and through it ChatGPT search,
+  Copilot and DuckDuckGo — and Yandex see the change in minutes. A run with
+  nothing new sends nothing. See `scripts/indexnow-urls.sh`.
 
 ### First-time server setup (once only)
 
