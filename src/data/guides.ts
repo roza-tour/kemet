@@ -872,7 +872,7 @@ export const guides: Guide[] = [
       {
         heading: "On the Nile: a chartered dahabiya, or The Oberoi Philae",
         paragraphs: [
-          "Between Aswan and Luxor the best hotel is a boat. A dahabiya taken whole — a sailing vessel of a few cabins, crewed for your party alone — moors at sandbanks and villages the large ships cannot reach, and stops when you want to swim. For a party that prefers a ship's comforts on a fixed route, The Oberoi Philae is the luxury cruiser we book, with suites and Oberoi service.",
+          "Between Aswan and Luxor the best hotel is a boat. A dahabiya taken whole — a sailing vessel of a few cabins, crewed for your party alone — moors at sandbanks and villages the large ships cannot reach, and stops where you want it to. For a party that prefers a ship's comforts on a fixed route, The Oberoi Philae is the luxury cruiser we book, with suites and Oberoi service.",
         ],
         noteLink: { label: "Dahabiya or cruise ship?", href: "/compare/dahabiya-vs-cruise-ship.html" },
         note: "The difference between a dahabiya and a cruise ship is not size alone — it is where the boat can moor.",

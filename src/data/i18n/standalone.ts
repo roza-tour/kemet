@@ -14,6 +14,7 @@ import { carnaval } from "./pt-carnaval";
 import { idUmrah, idZiarah, idSinai, idHalal } from "./id-extra";
 import { msUmrah, msZiarah, msSinai, msHalal } from "./ms-extra";
 import { frToussaint, esSemanaSanta, itFerragosto, itCapodanno, deWeihnachten, ruNovyGod } from "./eu-holidays";
+import { itDoveDormire } from "./it-extra";
 
 export interface StandalonePage {
   locale: TranslatedLocale;
@@ -53,6 +54,9 @@ export const STANDALONE_PAGES: StandalonePage[] = [
   // the site's visitors (46 in the 30 days to 10 Oct 2026, ahead of German),
   // and Christmas-to-Epiphany is the window Italians most often give to Egypt.
   { locale: "it", slug: "natale-e-capodanno-in-egitto", page: itCapodanno },
+  // The Italian edition of guides/where-to-stay-in-egypt.html — standalone
+  // because a translation group needs all ten locales (see it-extra.ts).
+  { locale: "it", slug: "dove-dormire-in-egitto", page: itDoveDormire },
   { locale: "de", slug: "weihnachten-in-aegypten", page: deWeihnachten },
   { locale: "ru", slug: "novyy-god-v-egipte", page: ruNovyGod },
 ];
