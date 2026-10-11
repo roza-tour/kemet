@@ -243,28 +243,38 @@ export const itMongolfiera: LocalizedPage = {
 export const itAlbaPiramidi: LocalizedPage = {
   groupId: "standalone-it-alba-piramidi",
   symbol: "eye",
-  title: "Alba alle Piramidi di Giza, in privato | Kemet",
+  title: "Alba alle Piramidi di Giza: yoga e servizio fotografico | Kemet",
   description:
-    "Le Piramidi di Giza all'alba, con accesso anticipato prima dell'apertura al pubblico e la vostra guida con licenza: la prima luce su Cheope, senza folla.",
+    "Prima dell'alba, un punto panoramico tranquillo sulle nove piramidi di Giza — tempo per lo yoga o un servizio fotografico — poi l'altopiano prima dell'apertura.",
   keywords:
-    "alba piramidi giza, piramidi all'alba, visita privata piramidi, accesso anticipato giza, sfinge all'alba",
+    "alba piramidi giza, yoga alle piramidi, servizio fotografico piramidi, punto panoramico nove piramidi, visita privata piramidi all'alba, accesso anticipato giza",
   crumb: "Alba alle Piramidi",
-  h1: "L'alba alle Piramidi di Giza",
+  h1: "L'alba sulle nove piramidi di Giza",
   standfirst:
-    "La prima luce sulla Grande Piramide, con l'altopiano ancora chiuso al pubblico — e una guida egittologica con licenza solo per voi, anche in italiano.",
+    "Prima dell'alba, in un punto panoramico tranquillo da cui si vedono tutte e nove le piramidi — la prima ora è vostra: yoga, un servizio fotografico o semplicemente la vista.",
   lede:
-    "Pochi momenti di viaggio valgono il silenzio dell'altopiano di Giza all'alba. Mentre il cielo a est passa dal viola profondo all'ambra, le sagome di Cheope, Chefren e Micerino emergono dal buio — tra loro la Grande Piramide, l'unica delle Sette Meraviglie del mondo antico ancora in piedi.",
+    "Pochi momenti di viaggio valgono il silenzio dell'altopiano di Giza all'alba. Arriviamo prima del sorgere del sole in un punto panoramico tranquillo da cui si vedono insieme tutte e nove le piramidi di Giza: le tre grandi e le sei piramidi minori delle regine accanto a loro. Mentre il cielo a est passa dal viola profondo all'ambra, le sagome di Cheope, Chefren e Micerino emergono dal buio — tra loro la Grande Piramide, l'unica delle Sette Meraviglie del mondo antico ancora in piedi.",
   facts: [
     { label: "Durata", value: "3–4 ore" },
     { label: "Partenza", value: "prima dell'alba" },
-    { label: "Luogo", value: "Altopiano di Giza" },
+    { label: "La vista", value: "le nove piramidi di Giza" },
     { label: "Guida", value: "con licenza, anche in italiano" },
   ],
   sections: [
     {
-      title: "Un'ora che quasi nessuno vede",
+      title: "Nove piramidi su una sola linea",
       body:
-        "L'accesso anticipato porta sull'altopiano prima che apra ai visitatori della giornata. Con il sito quasi vuoto ci si muove al proprio ritmo, si fotografa senza folla e si misura in silenzio la scala di monumenti che hanno quattromilacinquecento anni.",
+        "Da questo punto del deserto le nove piramidi di Giza stanno una accanto all'altra: Cheope, Chefren e Micerino, più tre piramidi delle regine accanto a quella di Cheope e tre accanto a quella di Micerino. A quell'ora il luogo è tranquillo — niente pullman né venditori, solo la luce che scivola lentamente sulla pietra.",
+    },
+    {
+      title: "La prima ora è vostra",
+      body:
+        "Siete voi a decidere: stendere un tappetino e fare yoga davanti al sole che sorge, un servizio fotografico nella luce morbida del mattino — con la vostra macchina o con un vostro fotografo — oppure sedersi e guardare. La vostra guida si fa da parte e vi lascia spazio e tempo.",
+    },
+    {
+      title: "Poi l'altopiano, prima dell'apertura",
+      body:
+        "L'accesso anticipato vi porta quindi sull'altopiano prima che apra ai visitatori della giornata. Con il sito quasi vuoto ci si muove al proprio ritmo, si fotografa senza folla e si misura in silenzio la scala di monumenti che hanno quattromilacinquecento anni.",
     },
     {
       title: "Con una guida egittologica, solo per voi",
@@ -279,11 +289,11 @@ export const itAlbaPiramidi: LocalizedPage = {
     {
       title: "Come prepararsi",
       body:
-        "Vestitevi a strati: d'inverno le mattine nel deserto sono fredde, anche quando a mezzogiorno fa caldo. Portate una piccola torcia per il tratto a piedi prima dell'alba, e scarpe chiuse e basse, perché il terreno è ghiaia e sabbia. Un grandangolo prende le tre piramidi in un solo scatto dal punto panoramico.",
+        "Vestitevi a strati: d'inverno le mattine nel deserto sono fredde, anche quando a mezzogiorno fa caldo. Portate una piccola torcia per il tratto a piedi prima dell'alba, e scarpe chiuse e basse, perché il terreno è ghiaia e sabbia. Per lo yoga portate il vostro tappetino; per le foto, un grandangolo prende tutte e nove le piramidi in un solo scatto.",
     },
   ],
   photos: [
-    { alt: "La Grande Piramide di Cheope sull'altopiano di Giza", label: "La Grande Piramide", src: "/images/giza/giza-great-pyramid-khufu.webp", width: 736, height: 981 },
+    { alt: "Ospiti Kemet al punto panoramico di Giza, con le piramidi in fila alle loro spalle", label: "Il punto panoramico", src: "/images/clients/clients-26-giza-pose.webp", width: 680, height: 680 },
     { alt: "Un cammello addobbato a riposo davanti alle Piramidi di Giza nella luce calda del mattino", label: "Il mattino", src: "/images/giza/giza-camel-pyramids-sunrise.webp", width: 736, height: 736 },
     { alt: "La Grande Sfinge di Giza rivolta verso l'alba", label: "La Sfinge", src: "/images/giza/giza-great-sphinx-frontal.webp", width: 736, height: 920 },
     { alt: "La Grande Piramide di Cheope sull'altopiano di Giza", label: "Cheope", src: "/images/giza/giza-great-pyramid-khufu.webp", width: 736, height: 981 },
@@ -291,6 +301,8 @@ export const itAlbaPiramidi: LocalizedPage = {
   highlights: {
     heading: "In breve",
     items: [
+      "Prima dell'alba, in un punto panoramico tranquillo con tutte e nove le piramidi",
+      "Tempo libero alla prima luce — per lo yoga, un servizio fotografico o la vista",
       "Accesso anticipato all'altopiano, prima dell'apertura al pubblico",
       "Guida egittologica privata con licenza del Ministero del Turismo, anche in italiano",
       "Fotografie senza folla — le tre piramidi e la Sfinge",
@@ -310,6 +322,14 @@ export const itAlbaPiramidi: LocalizedPage = {
     {
       q: "Si può entrare in una piramide?",
       a: "Sì, con un biglietto separato e un costo aggiuntivo. Va chiesto in anticipo, perché gli ingressi giornalieri sono rigorosamente limitati.",
+    },
+    {
+      q: "Quali sono le nove piramidi?",
+      a: "Le tre grandi — Cheope, Chefren e Micerino — e sei piramidi minori delle regine: tre accanto a quella di Cheope e tre accanto a quella di Micerino. Dal punto panoramico dove vi portiamo prima dell'alba si vedono tutte e nove insieme.",
+    },
+    {
+      q: "Si può fare yoga o un servizio fotografico?",
+      a: "Sì — il tempo al punto panoramico serve proprio a questo. Portate un tappetino per lo yoga, oppure la vostra macchina fotografica o un vostro fotografo per un servizio. A quell'ora il luogo è tranquillo, e la guida vi lascia spazio e tempo prima della visita all'altopiano.",
     },
     {
       q: "La guida parla italiano?",

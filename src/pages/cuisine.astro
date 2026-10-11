@@ -46,7 +46,7 @@ const faqLd = {
       <div class="grid-3">
         {savoury.map((d) => (
           <article class="eat reveal">
-            <Placeholder label={d.name} />
+            <Placeholder label={d.name} src={d.image?.src} alt={d.image?.alt} width={d.image?.width} height={d.image?.height} sizes="card" />
             <div class="body">
               <h3>{d.name}</h3>
               <p>{d.note}</p>
@@ -67,7 +67,7 @@ const faqLd = {
       <div class="grid-4">
         {sweets.map((d) => (
           <article class="sweet reveal">
-            <Placeholder label={d.name} />
+            <Placeholder label={d.name} src={d.image?.src} alt={d.image?.alt} width={d.image?.width} height={d.image?.height} sizes="card" />
             <div class="body">
               <h3>{d.name}</h3>
               <span>{d.note}</span>

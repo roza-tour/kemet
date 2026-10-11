@@ -279,6 +279,12 @@ section{position:relative;padding:var(--s-8) 0}
 /* Cards carry a shorter tick — 26px on a 300px card reads as a border, not a
    mark. The frame keeps the same gesture at every size. */
 .jcard .frame::before,.acard .frame::before{--tk:16px;--tw:1px}
+/* Credit on a borrowed photograph (data/photoCredits.ts) — required by its
+   licence, kept small and out of the way of the corner ticks. */
+.frame .pcredit{position:absolute;right:var(--s-2);bottom:var(--s-2);z-index:4;max-width:calc(100% - 2 * var(--s-2));
+  font-size:var(--t-micro);line-height:1.4;color:#fff;background:rgba(0,0,0,.66);padding:1px var(--s-1);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-decoration:none}
+.frame .pcredit:hover,.frame .pcredit:focus-visible{text-decoration:underline}
 .frame .glow{position:absolute;inset:0;background:radial-gradient(90% 70% at 30% 20%,rgba(217,180,90,.18),transparent 60%)}
 .frame .wm{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:.16}
 .frame .wm svg{width:42%;height:42%}

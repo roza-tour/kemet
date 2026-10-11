@@ -507,7 +507,7 @@ export const it: TourText[] = [
         "Serata libera — consigli per la cena dal vostro consulente",
       ]},
       { title: "Alba a Giza & il museo", items: [
-        "Accesso privato anticipato alla piana di Giza all'alba, prima dell'apertura",
+        "Alba al punto panoramico delle nove piramidi, poi accesso privato alla piana prima dell'apertura",
         "Colazione tarda, poi il Grand Egyptian Museum con i vostri tempi",
         "Riposo nel pomeriggio; aperitivo in feluca sul Nilo del Cairo in serata",
       ]},
@@ -633,7 +633,7 @@ export const it: TourText[] = [
         "Controllo dell'attrezzatura — permessi per i cavalletti dove richiesti",
       ]},
       { title: "Giza alla prima luce", items: [
-        "Sessione all'alba sulla piana con accesso anticipato, prima dell'apertura",
+        "Alba al punto panoramico delle nove piramidi — il tempo di fotografare —, poi la piana prima dell'apertura",
         "A metà mattina: il punto panoramico e gli angoli del recinto della Sfinge",
         "Pomeriggio dedicato alla post-produzione; skyline nell'ora blu dal parco di Al-Azhar",
       ]},

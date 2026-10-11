@@ -835,7 +835,7 @@ export const de: TourText[] = [
       {
         title: "Sonnenaufgang in Gizeh & das Museum",
         items: [
-          "Privater Zugang zum Plateau von Gizeh zum Sonnenaufgang, vor der öffentlichen Öffnung",
+          "Sonnenaufgang am Aussichtspunkt der neun Pyramiden, danach privater Zugang zum Plateau vor der öffentlichen Öffnung",
           "Spätes Frühstück, danach das Grand Egyptian Museum in Ihrem eigenen Tempo",
           "Nachmittags Ruhe; abends Drinks auf einer Feluke auf dem Kairoer Nil",
         ],
@@ -1044,7 +1044,7 @@ export const de: TourText[] = [
       {
         title: "Gizeh im ersten Licht",
         items: [
-          "Privater Frühzugang zum Plateau zum Sonnenaufgang, vor der Öffnung",
+          "Sonnenaufgang am Aussichtspunkt der neun Pyramiden — Zeit zum Fotografieren —, danach das Plateau vor der Öffnung",
           "Am späten Vormittag: der Panoramapunkt und die Blickachsen am Sphinx-Hof",
           "Nachmittags Pause zum Sichten; zur blauen Stunde die Stadtsilhouette vom Al-Azhar-Park",
         ],

@@ -5,6 +5,7 @@
 // page that has not yet been assigned photography still renders correctly.
 import BrandMark from "@/components/BrandMark.astro";
 import { srcsetFor, SIZES, type SizesKey } from "@/utils/images";
+import { creditFor } from "@/data/photoCredits";
 
 interface Props {
   class?: string;
@@ -36,6 +37,9 @@ const {
   sizes = "full",
 } = Astro.props;
 const srcset = srcsetFor(src);
+// A borrowed photograph whose licence asks for a credit carries it on the
+// photograph itself — data/photoCredits.ts. Our own photographs have none.
+const credit = creditFor(src);
 ---
 <div class={`frame ${className}`}>
   {src ? (
@@ -56,5 +60,8 @@ const srcset = srcsetFor(src);
       <div class="wm"><BrandMark class="" /></div>
       <span class="lab">{label}</span>
     </>
+  )}
+  {credit && (
+    <a class="pcredit" href={credit.source} target="_blank" rel="noopener nofollow">{credit.creator} · {credit.license}</a>
   )}
 </div>

@@ -15,6 +15,7 @@ import { idUmrah, idZiarah, idSinai, idHalal } from "./id-extra";
 import { msUmrah, msZiarah, msSinai, msHalal } from "./ms-extra";
 import { frToussaint, esSemanaSanta, itFerragosto, itCapodanno, deWeihnachten, ruNovyGod } from "./eu-holidays";
 import { itDoveDormire, itMongolfiera, itAlbaPiramidi } from "./it-extra";
+import { deSunrise, frSunrise, esSunrise, ruSunrise, ptSunrise, idSunrise, msSunrise, arSunrise } from "./sunrise";
 
 export interface StandalonePage {
   locale: TranslatedLocale;
@@ -62,6 +63,18 @@ export const STANDALONE_PAGES: StandalonePage[] = [
   { locale: "it", slug: "alba-alle-piramidi-di-giza", page: itAlbaPiramidi },
   { locale: "de", slug: "weihnachten-in-aegypten", page: deWeihnachten },
   { locale: "ru", slug: "novyy-god-v-egipte", page: ruNovyGod },
+
+  // Sunrise at the nine pyramids of Giza, with time for yoga or a photo
+  // session — confirmed by the owner on 11 Oct 2026 and wanted "in every
+  // language". The Italian edition is alba-alle-piramidi-di-giza above.
+  { locale: "de", slug: "sonnenaufgang-pyramiden-gizeh", page: deSunrise },
+  { locale: "fr", slug: "lever-du-soleil-pyramides-gizeh", page: frSunrise },
+  { locale: "es", slug: "amanecer-en-las-piramides-de-giza", page: esSunrise },
+  { locale: "ru", slug: "rassvet-u-piramid-gizy", page: ruSunrise },
+  { locale: "pt", slug: "nascer-do-sol-nas-piramides-de-gize", page: ptSunrise },
+  { locale: "id", slug: "matahari-terbit-di-piramida-giza", page: idSunrise },
+  { locale: "ms", slug: "matahari-terbit-di-piramid-giza", page: msSunrise },
+  { locale: "ar", slug: "shorouq-al-shams-ind-al-ahramat", page: arSunrise },
 ];
 
 export const standaloneRoute = (p: StandalonePage) => `${p.locale}/${p.slug}.html`;

@@ -133,6 +133,12 @@ export const identities: Identity[] = [
     accentVar: "--siwan",
     intro:
       "Egypt's remote western oasis — Berber-rooted Siwa, salt lakes, palm groves and the oracle that once received Alexander.",
+    image: {
+      src: "/images/stock/siwa-shali-fortress.webp",
+      alt: "The mudbrick ruins of the Shali fortress above the town of Siwa",
+      width: 1280,
+      height: 960,
+    },
     experiences: [
       "The mudbrick fortress of Shali at Siwa",
       "The Temple of the Oracle of Amun",

@@ -735,6 +735,8 @@ export interface Activity {
 export interface Dish {
   name: string;
   note: string;
+  /** The dish in a photograph — data/photoCredits.ts while it is not ours. */
+  image?: MediaPlaceholder;
 }
 
 export interface CultureSymbol {

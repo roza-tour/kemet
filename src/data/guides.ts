@@ -530,8 +530,11 @@ export const guides: Guide[] = [
       },
     ],
     hero: {
-      alt: "Egyptian mezze spread with ful, ta'amiya and flatbread",
+      alt: "A plate of ful medames with boiled eggs, olives, pickles and flatbread",
       label: "Egyptian cuisine",
+      src: "/images/stock/ful-medames.webp",
+      width: 1280,
+      height: 1305,
     },
     seo: {
       title: "Egyptian Food Guide — What to Eat, Where & Cuisine Tips | Kemet",
@@ -656,6 +659,13 @@ export const guides: Guide[] = [
         a: "Moderate and manageable. The big days — Giza with Saqqara, the West Bank, Abu Simbel — each involve two to three hours on your feet over uneven ground, usually in the morning. Because the trip is private, the pace is yours: more rest stops, shorter site visits or a car repositioned closer are all trivially arranged.",
       },
     ],
+    hero: {
+      alt: "The island Temple of Philae rising from the Nile near Aswan",
+      label: "10 days in Egypt",
+      src: "/images/aswan/aswan-philae-temple-island.webp",
+      width: 1080,
+      height: 810,
+    },
     seo: {
       title: "10-Day Egypt Itinerary — Cairo, Luxor & Nile Cruise | Kemet",
       description:
@@ -784,6 +794,13 @@ export const guides: Guide[] = [
         a: "Almost everything, easily. Pharmacies are excellent, ubiquitous and inexpensive; sunscreen, adapters, hats and clothing are all readily available in Cairo, Luxor and the resort towns. The two things genuinely worth bringing from home are specific prescription medication and broken-in walking shoes.",
       },
     ],
+    hero: {
+      alt: "Travellers on a camel caravan before the Pyramids of Giza",
+      label: "Packing for Egypt",
+      src: "/images/activities/act-camel-pyramids.webp",
+      width: 1300,
+      height: 934,
+    },
     seo: {
       title: "What to Pack for Egypt — Season-by-Season Packing List | Kemet",
       description:

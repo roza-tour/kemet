@@ -532,7 +532,7 @@ export const fr: TourText[] = [
         "Soirée libre — suggestions de dîner de votre conseiller",
       ]},
       { title: "Lever de soleil à Gizeh & le musée", items: [
-        "Accès privé anticipé au plateau de Gizeh au lever du soleil, avant l'ouverture",
+        "Lever du soleil au point de vue des neuf pyramides, puis accès privé au plateau avant l'ouverture",
         "Petit-déjeuner tardif, puis le Grand Musée égyptien à votre rythme",
         "Repos l'après-midi ; apéritif en felouque sur le Nil du Caire en soirée",
       ]},
@@ -660,7 +660,7 @@ export const fr: TourText[] = [
         "Vérification du matériel — permis de trépied organisés là où ils sont exigés",
       ]},
       { title: "Gizeh à la première lumière", items: [
-        "Accès anticipé au plateau au lever du soleil, avant l'ouverture",
+        "Lever du soleil au point de vue des neuf pyramides — le temps de photographier —, puis le plateau avant l'ouverture",
         "En fin de matinée : le point panoramique et les angles de l'enceinte du Sphinx",
         "Pause tri l'après-midi ; silhouette de la ville à l'heure bleue depuis le parc Al-Azhar",
       ]},

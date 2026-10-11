@@ -894,6 +894,10 @@ export const tours: Tour[] = [
       width: 1067,
       height: 1600,
     },
+    gallery: [
+      { alt: "A triad statue of King Menkaure with the goddess Hathor in the Egyptian Museum, Cairo", label: "Egyptian Museum", src: "/images/stock/egyptian-museum-menkaure-triad.webp", width: 1280, height: 1707 },
+      { alt: "The main hall of the National Museum of Egyptian Civilization, Cairo", label: "NMEC", src: "/images/stock/nmec-main-hall.webp", width: 1280, height: 722 },
+    ],
     title: "Cairo Museums",
     subtitle:
       "Two great collections in one day — the historic Egyptian Museum and the National Museum of Egyptian Civilization, with the Royal Mummies.",
@@ -1114,6 +1118,19 @@ export const tours: Tour[] = [
   },
   {
     slug: "tour-cairo-food",
+    hero: {
+      alt: "A bowl of koshari topped with tomato sauce, fried onions and parsley",
+      src: "/images/stock/koshari.webp",
+      width: 736,
+      height: 736,
+    },
+    gallery: [
+      { alt: "Ta'meya \u2014 Egyptian falafel \u2014 frying in a street-stall pan", label: "Ta'meya", src: "/images/stock/tameya-frying.webp", width: 800, height: 600 },
+      { alt: "Hawawshi: crisp bread baked around spiced minced meat, cut into wedges", label: "Hawawshi", src: "/images/stock/hawawshi.webp", width: 1280, height: 960 },
+      { alt: "Stuffed pigeons (hamam mahshi) in a pan", label: "Stuffed pigeon", src: "/images/stock/stuffed-pigeon.webp", width: 1280, height: 960 },
+      { alt: "A tray of kunafa, its shredded pastry baked golden", label: "Kunafa", src: "/images/stock/kunafa.webp", width: 1280, height: 911 },
+      { alt: "Squares of basbousa, the syrup-soaked semolina cake, topped with almonds", label: "Basbousa", src: "/images/stock/basbousa.webp", width: 1280, height: 853 },
+    ],
     title: "Cairo Authentic Food",
     subtitle:
       "An evening walking the flavours of Cairo — koshari, street classics, grilled pigeon and honey-soaked sweets.",
@@ -1460,7 +1477,7 @@ export const tours: Tour[] = [
         num: "02",
         title: "Sunrise at Giza & the museum",
         items: [
-          "Early-access sunrise session on the Giza plateau, before public opening",
+          "Sunrise at the nine-pyramid viewpoint, then early access to the plateau before public opening",
           "Late breakfast, then the Grand Egyptian Museum at your own pace",
           "Afternoon rest; evening felucca drinks on the Cairo Nile",
         ],
@@ -1759,7 +1776,7 @@ export const tours: Tour[] = [
         num: "02",
         title: "Giza at first light",
         items: [
-          "Early-access sunrise session on the plateau, pre-opening",
+          "Sunrise at the nine-pyramid viewpoint — time to shoot — then the plateau before it opens",
           "Mid-morning: the panorama point and Sphinx enclosure angles",
           "Afternoon edit break; blue-hour cityscape from Al-Azhar Park",
         ],
@@ -2603,6 +2620,12 @@ export const tours: Tour[] = [
       width: 736,
       height: 1308,
     },
+    gallery: [
+      { alt: "The two rock-cut temples of Abu Simbel: the Great Temple beyond, the Temple of Nefertari in front", label: "Both temples", src: "/images/stock/abu-simbel-both-temples.webp", width: 1024, height: 768 },
+      { alt: "The facade of the Temple of Nefertari and Hathor at Abu Simbel", label: "Temple of Nefertari", src: "/images/stock/abu-simbel-nefertari-temple.webp", width: 1024, height: 768 },
+      { alt: "Standing statues of Nefertari and Ramesses II on the facade of the smaller temple at Abu Simbel", label: "Nefertari", src: "/images/stock/abu-simbel-nefertari-facade.webp", width: 768, height: 1024 },
+      { alt: "Hathor-headed pillars in the hall of the Temple of Nefertari, Abu Simbel", label: "Hathor hall", src: "/images/stock/abu-simbel-hathor-hall.webp", width: 768, height: 1024 },
+    ],
     title: "Abu Simbel Private Excursion",
     subtitle:
       "The mountain temples of Ramesses II above Lake Nasser — a dawn desert road, two rock-cut sanctuaries, and back in Aswan for lunch.",

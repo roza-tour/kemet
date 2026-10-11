@@ -26,9 +26,9 @@ export const experiences: Experience[] = [
     domain: "experience",
     title: "Sunrise at the Giza Pyramids",
     shortSummary:
-      "Watch the first light of dawn break over the Great Pyramid in an exclusive early-access session before the plateau opens to day visitors — led by a licensed Egyptologist.",
+      "Be in place before sunrise at a quiet viewpoint where all nine pyramids of Giza stand in one line, with time of your own for sunrise yoga, a photo session or simply the view — then the plateau with a licensed Egyptologist before it opens to day visitors.",
     longDescription:
-      "Few moments in travel match the silence of the Giza Plateau at dawn. As the eastern sky shifts from deep violet to amber, the silhouettes of Khufu, Khafre and Menkaure gradually resolve from the darkness — the Great Pyramid among them, the only one of the Seven Wonders of the Ancient World still standing. This private early-access experience is led by a licensed Egyptologist who tailors their commentary to your interests — from royal mythology and construction logistics to the astronomical alignments the ancient builders encoded into the plateau's geometry. With the site nearly empty, you can move at your own pace, photograph without crowds and appreciate the sheer scale of these 4,500-year-old monuments in near-total silence. The session also takes in the Sphinx enclosure at first light, before the tour coaches arrive and the day's noise begins.",
+      "Few moments in travel match the silence of the Giza Plateau at dawn. We arrive before sunrise at a quiet viewpoint in the desert from which all nine pyramids of Giza can be seen together — the three great pyramids and the six smaller queens' pyramids beside them. The first part of the morning is yours: unroll a mat for sunrise yoga, hold a photo session while the light is soft and the desert is empty, or simply sit and watch. As the eastern sky shifts from deep violet to amber, the silhouettes of Khufu, Khafre and Menkaure gradually resolve from the darkness — the Great Pyramid among them, the only one of the Seven Wonders of the Ancient World still standing. Then the private early-access visit to the plateau begins, led by a licensed Egyptologist who tailors their commentary to your interests — from royal mythology and construction logistics to the astronomical alignments the ancient builders encoded into the plateau's geometry. With the site nearly empty, you can move at your own pace, photograph without crowds and appreciate the sheer scale of these 4,500-year-old monuments in near-total silence. The session also takes in the Sphinx enclosure at first light, before the tour coaches arrive and the day's noise begins.",
     category: "historical",
     durationLabel: "3–4 hours",
     durationMinutes: 210,
@@ -49,6 +49,8 @@ export const experiences: Experience[] = [
     priceNote:
       "Pricing confirmed on enquiry. Plateau entrance fees and licensed Egyptologist included.",
     highlights: [
+      "Before sunrise at a quiet viewpoint with all nine pyramids of Giza in one line",
+      "Time of your own at first light — for yoga, a photo session or simply the view",
       "Exclusive early-access to the plateau before it opens to the public",
       "Private licensed Egyptologist guide (Ministry of Tourism certified)",
       "Photography without crowds — all three pyramids and the Sphinx",
@@ -60,6 +62,8 @@ export const experiences: Experience[] = [
       { label: "Difficulty", value: "Easy" },
       { label: "Start time", value: "Before sunrise (time confirmed at booking)" },
       { label: "Location", value: "Giza Plateau" },
+      { label: "The view", value: "All nine pyramids of Giza" },
+      { label: "Free time", value: "For yoga, a photo session or the view" },
       { label: "Group type", value: "Private — your party only" },
       { label: "Languages", value: GUIDE_LANGUAGES },
       { label: "Suitable for", value: "All ages" },
@@ -81,7 +85,9 @@ export const experiences: Experience[] = [
       "Dress in layers — desert mornings are cold in winter, even when midday temperatures are high",
       "Bring a small torch for the pre-sunrise walk from the vehicle to the plateau",
       "Flat, closed-toe shoes are recommended — the terrain is uneven gravel and sand",
-      "A wide-angle lens captures all three pyramids in a single frame from the panorama point",
+      "A wide-angle lens captures all nine pyramids in a single frame from the viewpoint",
+      "Planning sunrise yoga? Bring your own mat — the ground is sand and gravel",
+      "For a photo session, be ready at sunrise: the softest light lasts only a short while",
     ],
     goodToKnow: [
       "The Egyptian authorities occasionally restrict early access for filming or official events — alternative times are arranged in this case",
@@ -101,6 +107,14 @@ export const experiences: Experience[] = [
         q: "Can we enter inside a pyramid?",
         a: "Interior access is available at an additional charge with a separate ticket. This must be requested in advance as daily entry numbers are strictly limited.",
       },
+      {
+        q: "What are the nine pyramids?",
+        a: "The three great pyramids — Khufu, Khafre and Menkaure — and six smaller queens' pyramids: three beside Khufu's and three beside Menkaure's. From the viewpoint we take you to before sunrise, all nine stand together across the desert.",
+      },
+      {
+        q: "Can we do yoga or a photo shoot there?",
+        a: "Yes — that is what the time at the viewpoint is for. Bring a mat for sunrise yoga, or your camera, or a photographer of your own, for a photo session. The spot is quiet at that hour, and your guide gives you the space and the time before the plateau visit begins.",
+      },
     ],
     hero: {
       alt: "A decorated camel resting before the Pyramids of Giza in warm early light",
@@ -109,10 +123,18 @@ export const experiences: Experience[] = [
       width: 736,
       height: 736,
     },
+    // Our own guests at the panorama viewpoint, by day — the line of pyramids
+    // the sunrise visit opens on. Not a sunrise picture, and the alt says so.
+    gallery: [
+      { alt: "Kemet guests at the Giza panorama viewpoint, the pyramids in a line behind them", label: "The viewpoint", src: "/images/clients/clients-26-giza-pose.webp", width: 680, height: 680 },
+      { alt: "Kemet guests on the desert road at the Giza panorama, the pyramids on the horizon", label: "The pyramids in a line", src: "/images/clients/clients-09-giza-panorama.webp", width: 680, height: 680 },
+      { alt: "Kemet guests leaping for a photograph above the Giza pyramid panorama", label: "A photo session", src: "/images/clients/clients-06-giza-jump.webp", width: 680, height: 680 },
+      { alt: "The Great Sphinx of Giza facing the dawn", label: "The Sphinx", src: "/images/giza/giza-great-sphinx-frontal.webp", width: 736, height: 920 },
+    ],
     seo: {
-      title: "Sunrise at the Giza Pyramids — Private Dawn Experience | Kemet",
+      title: "Giza Pyramids at Sunrise: Yoga & Photo Session | Kemet",
       description:
-        "Private early-access dawn visit to the Giza Plateau with a licensed Egyptologist — first light over the Great Pyramid, before the day-visitors.",
+        "Before sunrise at a quiet viewpoint over all nine pyramids of Giza — time for yoga or a photo session — then early access to the plateau with an Egyptologist.",
     },
     relationships: {
       destinations: [{ domain: "destination", id: "giza" }],
@@ -231,7 +253,7 @@ export const experiences: Experience[] = [
     shortSummary:
       "Walk the medieval lanes of Islamic Cairo and the Coptic quarter with a historian guide who reads nearly two thousand years of layered city — from Roman fortifications to Ottoman merchant palaces.",
     longDescription:
-      "Cairo is not one city but a dozen, each built on the ruins of its predecessor. This private walking experience moves through the oldest inhabited layers: the Roman fortress of Babylon, heart of Coptic Cairo; the Coptic quarter, with the Hanging Church built over the fortress's Roman gate; and the medieval fabric of Islamic Cairo — the world's largest surviving medieval city and a UNESCO World Heritage Site. Your historian guide is not a script-reader but someone who actually knows the city: who can stand in the courtyard of Ibn Tulun mosque and explain what made its ninth-century founder different from every other Abbasid governor, or point out the Mamluk water distribution systems still visible in the alley walls. The walk takes in the Khan el-Khalili bazaar quarter and the perfume-sellers' alley at its edge, giving you the knowledge to navigate and appreciate it independently later in your trip.",
+      "Cairo is not one city but a dozen, each built on the ruins of its predecessor. This private walking experience moves through the oldest inhabited layers: the Roman fortress of Babylon, heart of Coptic Cairo; the Coptic quarter, with the Hanging Church built over the fortress's Roman gate; and the medieval fabric of Islamic Cairo — the world's largest surviving medieval city and a UNESCO World Heritage Site. Your historian guide is not a script-reader but someone who actually knows the city: who can stand in the courtyard of Ibn Tulun mosque and explain what made its ninth-century founder different from every other Abbasid governor, or point out the Mamluk water distribution systems still visible in the alley walls. The Coptic quarter and Islamic Cairo lie a few kilometres apart, so a private car carries you between them and the walking is spent where it matters. The walk ends in the Khan el-Khalili bazaar quarter and the perfume-sellers' alley at its edge, giving you the knowledge to navigate and appreciate it independently later in your trip.",
     category: "walking-tour",
     durationLabel: "3 hours",
     durationMinutes: 180,
@@ -267,6 +289,7 @@ export const experiences: Experience[] = [
     ],
     whatsIncluded: [
       "Private historian guide",
+      "Private car between the Coptic quarter and Islamic Cairo",
       "All mosque and church entrance fees",
       "Bottled water",
     ],
@@ -279,7 +302,7 @@ export const experiences: Experience[] = [
     preparationTips: [
       "Wear comfortable, flat shoes — the alleyways are cobbled and sometimes uneven",
       "Shoulders and knees should be covered for entry into mosques and churches; scarves are available from the guide if needed",
-      "The walk involves moderate distances (approx. 3–4 km) with some steps and inclines",
+      "The walk involves moderate distances (approx. 3–4 km on foot, with a short private drive between the two quarters) and some steps and inclines",
       "Morning starts (before 10 am) avoid the peak heat and the earliest tourist groups",
     ],
     goodToKnow: [
@@ -290,7 +313,7 @@ export const experiences: Experience[] = [
     faqs: [
       {
         q: "How much walking is involved?",
-        a: "The route covers approximately 3–4 km over three hours, including pauses for explanation at each site. The terrain includes cobblestones and occasional steps but no sustained climbs.",
+        a: "The route covers approximately 3–4 km on foot over three hours, with a short private drive between the Coptic quarter and Islamic Cairo and pauses for explanation at each site. The terrain includes cobblestones and occasional steps but no sustained climbs.",
       },
       {
         q: "Can the walk be adapted for younger children?",
@@ -395,8 +418,11 @@ export const experiences: Experience[] = [
       },
     ],
     hero: {
-      alt: "Hands rolling grape leaves for Egyptian mahshi on a marble kitchen counter",
+      alt: "A platter of stuffed vine leaves with lemon and parsley",
       label: "Egyptian Cooking Experience",
+      src: "/images/stock/stuffed-vine-leaves.webp",
+      width: 1280,
+      height: 1541,
     },
     seo: {
       title: "Egyptian Cooking Class, Cairo — Private Session | Kemet",
@@ -1405,8 +1431,11 @@ export const experiences: Experience[] = [
       },
     ],
     hero: {
-      alt: "VIP airport meet and assist service",
+      alt: "An aircraft on its stand at Cairo International Airport, passenger stairs in place",
       label: "VIP Airport Meet & Assist",
+      src: "/images/stock/cairo-airport-aircraft-stand.webp",
+      width: 1280,
+      height: 768,
     },
     seo: {
       title: "VIP Airport Meet & Assist, Cairo — Fast-Track | Kemet",
