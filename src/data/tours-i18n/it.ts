@@ -27,7 +27,7 @@ export const it: TourText[] = [
     subtitle: "Dieci giorni senza fretta, dalle piramidi di Giza ai templi dell'Alto Egitto, tenuti insieme da tre notti di crociera sul Nilo.",
     durationLabel: "10 giorni / 9 notti",
     startPoint: "Il Cairo (aeroporto o hotel)",
-    summary: "Il nostro viaggio più completo: Il Cairo, Alessandria, un treno notturno verso sud e tre notti di crociera da Assuan a Luxor — ogni strato dell'Egitto in un solo arco.",
+    summary: "Il nostro viaggio signature: Il Cairo, Alessandria, un treno notturno verso sud e tre notti di crociera da Assuan a Luxor — ogni strato dell'Egitto in un solo arco.",
     overview: "Questo è l'Egitto in tutta la sua ampiezza, con un ritmo pensato per essere vissuto anziché spuntato da un elenco. Si comincia al Cairo con i tesori del Museo Egizio, si passa una giornata sul Mediterraneo ad Alessandria, poi si prende il treno notturno per Assuan. Da lì una crociera di tre notti vi porta a valle oltre Kom Ombo ed Edfu fino a Luxor, dove attendono i templi di Karnak e le tombe reali della riva occidentale. Si torna al Cairo per le piramidi di Giza e i vicoli del Cairo islamico. Il viaggio è privato dall'inizio alla fine, guidato dal vostro egittologo.",
     itinerary: [
       { title: "Il Cairo & il Museo Egizio", items: [
@@ -73,8 +73,8 @@ export const it: TourText[] = [
       ]},
       { title: "Giza & Saqqara", items: [
         "Le piramidi di Cheope, Chefren e Micerino e la Grande Sfinge",
-        "Piramide a gradoni di Djoser a Saqqara, il più antico monumento in pietra al mondo",
         "Punto panoramico sulla piana di Giza",
+        "Piramide a gradoni di Djoser a Saqqara, il più antico monumento in pietra al mondo",
       ]},
       { title: "Il Cairo islamico & partenza", items: [
         "Cittadella di Saladino e moschea di alabastro di Mohammed Ali",
@@ -136,8 +136,8 @@ export const it: TourText[] = [
       ]},
       { title: "Giza & Saqqara", items: [
         "Piramidi di Giza e Grande Sfinge",
-        "Piramide a gradoni di Djoser a Saqqara",
         "Punto panoramico sulla piana",
+        "Piramide a gradoni di Djoser a Saqqara",
       ]},
       { title: "Il Cairo islamico & partenza", items: [
         "Cittadella di Saladino e moschea di Mohammed Ali",
@@ -168,8 +168,8 @@ export const it: TourText[] = [
     subtitle: "Quattordici giorni, tutti i registri del paese — Il Cairo, Alessandria, il Nilo in crociera, Abu Simbel e il Mar Rosso per finire.",
     durationLabel: "14 giorni / 13 notti",
     startPoint: "Il Cairo (aeroporto o hotel)",
-    summary: "Il nostro viaggio più completo: due capitali, una crociera sul Nilo, il tempio di montagna di Ramesse II ad Abu Simbel e quattro giorni sul Mar Rosso per lasciar sedimentare tutto.",
-    overview: "È l'itinerario di chi conta di venire una volta e vedere tutto. La prima settimana appartiene alla storia: i due grandi musei del Cairo e i suoi quartieri medievali, Alessandria sul Mediterraneo, poi un volo a sud per Abu Simbel — il tempio di montagna di Ramesse II sopra il lago Nasser — prima che una crociera di tre notti vi porti da Assuan a Luxor. La seconda settimana cambia registro del tutto: dopo le tombe e i templi di Luxor si vola a Sharm el-Sheikh, dove il deserto incontra una delle acque più limpide del pianeta. Quattro giorni sul Mar Rosso chiudono il viaggio, con lo snorkeling sulle barriere di Ras Mohammed e nulla in programma che non possa essere annullato in favore della piscina. Tutti i voli interni sono inclusi; ogni giornata guidata è privata.",
+    summary: "Il nostro viaggio più completo: Il Cairo e Alessandria, una crociera sul Nilo, il tempio di montagna di Ramesse II ad Abu Simbel e tre notti sul Mar Rosso per lasciar sedimentare tutto.",
+    overview: "È l'itinerario di chi conta di venire una volta e vedere tutto. I primi dieci giorni appartengono alla storia: le piramidi e il Grand Egyptian Museum, il Cairo medievale e quello copto, Alessandria sul Mediterraneo, poi un volo a sud per Abu Simbel — il tempio di montagna di Ramesse II sopra il lago Nasser — prima che una crociera di tre notti vi porti da Assuan a Luxor. Gli ultimi quattro giorni cambiano registro del tutto: dopo le tombe e i templi di Luxor si vola a Sharm el-Sheikh, dove il deserto incontra una delle acque più limpide del pianeta. Tre notti sul Mar Rosso chiudono il viaggio, con lo snorkeling sulle barriere di Ras Mohammed e nulla in programma che non possa essere annullato in favore della piscina. Tutti i voli interni sono inclusi; ogni giornata guidata è privata.",
     itinerary: [
       { title: "Arrivo al Cairo", items: [
         "Accoglienza privata in aeroporto e trasferimento in hotel",
@@ -236,7 +236,7 @@ export const it: TourText[] = [
       early: "Una partenza prima dell'alba per Abu Simbel",
     },
     faqs: [
-      { q: "Quattordici giorni sono troppi per un primo viaggio?", a: "È la durata che la maggior parte di chi torna avrebbe voluto prenotare la prima volta. Sono proprio le giornate sul Mar Rosso a rendere sostenibile la settimana di storia: il viaggio respira invece di accumulare stanchezza." },
+      { q: "Quattordici giorni sono troppi per un primo viaggio?", a: "È la durata che serve all'Egitto per essere visto per intero, non solo assaggiato. Sono proprio le giornate sul Mar Rosso a rendere sostenibile la settimana di storia: il viaggio respira invece di accumulare stanchezza." },
       { q: "Quanto si vola in questo viaggio?", a: "Tre voli interni di circa un'ora ciascuno, che sostituiscono quelle che sarebbero dodici ore di strada o di treno. L'unico lungo tragitto che manteniamo — Assuan–Abu Simbel — fa parte dell'esperienza: deserto aperto all'alba." },
       { q: "Si può scambiare o prolungare la parte sul Mar Rosso?", a: "Liberamente. Alcuni la scambiano con notti in più a Luxor o con Siwa, altri allungano Sharm a una settimana intera. I primi dieci giorni sono la spina dorsale; il finale è vostro." },
     ],
@@ -251,7 +251,7 @@ export const it: TourText[] = [
     keywords: "il cairo 3 giorni, scalo il cairo, grand egyptian museum visita, cairo privato guida, viaggio breve cairo",
     crumb: "Il Cairo VIP, 3 giorni",
     title: "Il Cairo VIP, viaggio breve",
-    subtitle: "Tre giorni, zero attriti — corsia prioritaria all'arrivo, le piramidi e i due grandi musei, e il Cairo medievale quando i gitanti se ne sono andati.",
+    subtitle: "Tre giorni, zero attriti — corsia prioritaria all'arrivo, le piramidi e il Grand Egyptian Museum, e il Cairo medievale quando i gitanti se ne sono andati.",
     durationLabel: "3 giorni / 2 notti",
     startPoint: "Il Cairo (aeroporto, accoglienza VIP)",
     summary: "Il Cairo essenziale, gestito come una concierge: corsia prioritaria all'immigrazione, mattinata privata sulla piana, il Grand Egyptian Museum e il Cairo islamico illuminato a lanterne.",
@@ -294,7 +294,7 @@ export const it: TourText[] = [
     durationLabel: "3 giorni / 2 notti",
     startPoint: "Luxor (aeroporto, stazione o hotel)",
     summary: "Luxor senza corsa: Karnak all'apertura, la Valle dei Re prima del caldo, le terrazze di Hatshepsut e il viale delle sfingi dopo il tramonto.",
-    overview: "A Luxor si concede di solito una sola giornata frenetica; la città conserva più monumenti di tutto il resto del paese messo insieme. Questo viaggio breve restituisce il tempo mancante. La giornata sulla riva orientale prende Karnak all'apertura — un'ora prima dei pullman — e torna dopo il tramonto per il tempio di Luxor illuminato, raggiunto lungo il viale delle sfingi restaurato, che ne fa semplicemente un altro monumento. La giornata sulla riva occidentale scende in tre tombe reali scelte per il colore e per l'afflusso del giorno, poi raggiunge le terrazze scavate di Hatshepsut e i colossi di Memnone. L'ultima mattina è vostra: una mongolfiera all'alba sopra la necropoli, l'ottimo museo di Luxor, o niente del tutto. Si innesta con pulizia prima o dopo qualsiasi itinerario cairota, in aereo o in treno notturno.",
+    overview: "A Luxor si concede di solito una sola giornata frenetica; eppure custodisce una delle concentrazioni di monumenti antichi più dense al mondo. Questo viaggio breve restituisce il tempo mancante. La giornata sulla riva orientale prende Karnak all'apertura — un'ora prima dei pullman — e torna dopo il tramonto per il tempio di Luxor illuminato, raggiunto lungo il viale delle sfingi restaurato, che ne fa semplicemente un altro monumento. La giornata sulla riva occidentale scende in tre tombe reali scelte per il colore e per l'afflusso del giorno, poi raggiunge le terrazze scavate di Hatshepsut e i colossi di Memnone. L'ultima mattina è vostra: una mongolfiera all'alba sopra la necropoli, l'ottimo museo di Luxor, o niente del tutto. Si innesta con pulizia prima o dopo qualsiasi itinerario cairota, in aereo o in treno notturno.",
     itinerary: [
       { title: "La riva orientale & il tempio di notte", items: [
         "Accoglienza all'aeroporto o alla stazione di Luxor",
@@ -500,7 +500,7 @@ export const it: TourText[] = [
     durationLabel: "9 giorni / 8 notti",
     startPoint: "Il Cairo (aeroporto o hotel)",
     summary: "L'Egitto come dovrebbe essere un viaggio di nozze — alba privata alle piramidi, feluca nell'ora d'oro, tre notti sul Nilo e suite scelte per la vista.",
-    overview: "Un viaggio di nozze non è un itinerario qualsiasi con i petali di rosa. Il ritmo è diverso: partenze più tarde, serate più lunghe, un momento forte al giorno anziché quattro. Questo viaggio si apre al Cairo con il Museo Egizio e un'alba privata a Giza prima che la piana apra. Si vola ad Assuan — la città più dolce e romantica del fiume — per una feluca privata nell'ora d'oro e una cena sopra la cateratta. Una crociera di tre notti vi porta a Luxor passando per Kom Ombo ed Edfu, con una mongolfiera all'alba sulle colline tebane come immagine finale. Hotel e cabine sono scelti per la vista sul Nilo, e ogni guida sa che questo è un viaggio di nozze e non una marcia forzata.",
+    overview: "Un viaggio di nozze non è un itinerario qualsiasi con i petali di rosa. Il ritmo è diverso: partenze più tarde, serate più lunghe, un momento forte al giorno anziché quattro. Questo viaggio si apre al Cairo con un'alba privata a Giza prima che la piana apra, e poi il Grand Egyptian Museum con calma. Si vola ad Assuan — la città più dolce e romantica del fiume — per una feluca privata nell'ora d'oro e una cena sopra la cateratta. Una crociera di tre notti vi porta a Luxor passando per Kom Ombo ed Edfu, con una mongolfiera all'alba sulle colline tebane come immagine finale. Hotel e cabine sono scelti per la vista sul Nilo, e ogni guida sa che questo è un viaggio di nozze e non una marcia forzata.",
     itinerary: [
       { title: "Arrivo al Cairo", items: [
         "Accoglienza privata in aeroporto e trasferimento in una suite con vista sul Nilo",
@@ -531,7 +531,7 @@ export const it: TourText[] = [
         "Arrivo a Luxor in serata; il tempio di Luxor illuminato, se vi va",
       ]},
       { title: "Mongolfiera & riva occidentale", items: [
-        "Mongolfiera all'alba sopra la Valle dei Re (tempo permettendo)",
+        "Mongolfiera all'alba sopra la riva occidentale di Luxor, se la aggiungete (tempo permettendo)",
         "Valle dei Re e tempio di Hatshepsut con il vostro egittologo",
         "Sbarco verso un hotel di Luxor per le ultime notti",
       ]},
@@ -643,7 +643,7 @@ export const it: TourText[] = [
         "Volo serale per Luxor",
       ]},
       { title: "Mongolfiera & riva occidentale", items: [
-        "Mongolfiera all'alba sopra la necropoli tebana (tempo permettendo)",
+        "Mongolfiera all'alba sopra la necropoli tebana, se la aggiungete (tempo permettendo)",
         "Interni della Valle dei Re — tecnica a mano libera dove i cavalletti sono vietati",
         "Le terrazze di Hatshepsut nella luce radente del pomeriggio",
       ]},
@@ -686,7 +686,7 @@ export const it: TourText[] = [
     durationLabel: "5 giorni / 4 notti",
     startPoint: "Il Cairo (aeroporto o hotel)",
     summary: "Una lettura lenta e profonda della città più stratificata del mondo — i suoi due musei, tre fedi, le strade medievali e la necropoli dove è nata la piramide.",
-    overview: "Quasi tutti concedono al Cairo due notti e un elenco di cose da spuntare. Questo viaggio gli dedica cinque giorni e una tesi: che Il Cairo non è uno scalo, ma il sito culturale più denso del Mediterraneo. Allo strato faraonico vanno due giornate — Giza più l'arco Saqqara–Menfi–Dahshur, dove la forma della piramide è stata inventata — ma il cuore dell'itinerario è la città viva: il quartiere copto costruito dentro una fortezza romana, il tessuto millenario del Cairo islamico percorso moschea per moschea con una guida storica, le vie commerciali di Khan el-Khalili ancora leggibili nei suoi vicoli, e i due grandi musei letti come un'unica collezione divisa da un secolo. Le serate sono curate con la stessa attenzione delle mattinate — una tanoura sufi, una cena in una casa ottomana restaurata, il tè dove lo bevono davvero i cairoti.",
+    overview: "Quasi tutti concedono al Cairo due notti e un elenco di cose da spuntare. Questo viaggio gli dedica cinque giorni e una tesi: che Il Cairo non è uno scalo, ma il sito culturale più denso del Mediterraneo. Allo strato faraonico vanno due giornate — Giza più l'arco Saqqara–Menfi–Dahshur, dove la forma della piramide è stata inventata — ma il cuore dell'itinerario è la città viva: il quartiere copto costruito dentro una fortezza romana, il tessuto millenario del Cairo islamico percorso moschea per moschea con una guida storica, le vie commerciali di Khan el-Khalili ancora leggibili nei suoi vicoli, e i due grandi musei letti come un'unica collezione divisa da un secolo. Le serate sono curate con la stessa attenzione delle mattinate — una passeggiata serale tra le strade Belle Époque del centro, una tanoura sufi, il tè dove lo bevono davvero i cairoti.",
     itinerary: [
       { title: "Arrivo & il Museo Egizio", items: [
         "Accoglienza privata in aeroporto e trasferimento",
@@ -771,14 +771,14 @@ export const it: TourText[] = [
     localeSlug: "immersioni-mar-rosso-4-giorni",
     metaTitle: "Immersioni nel Mar Rosso: 4 giorni dal Sinai | Kemet",
     metaDescription:
-      "Sei immersioni guidate tra Ras Mohammed e lo stretto di Tiran con un diving PADI selezionato, più un'immersione di prova dalla riva.",
+      "Quattro immersioni guidate in barca tra Ras Mohammed e lo stretto di Tiran con un diving PADI selezionato, dopo un'immersione di prova sul reef dell'hotel.",
     keywords: "immersioni mar rosso, diving sharm el sheikh, ras mohammed immersioni, stretto di tiran, viaggio sub egitto",
     crumb: "Immersioni, 4 giorni",
     title: "Immersioni nel Mar Rosso",
     subtitle: "Quattro giorni costruiti sul tempo di fondo — le pareti di Ras Mohammed, le derive dello stretto di Tiran e barche a piccoli gruppi che partono presto.",
     durationLabel: "4 giorni / 3 notti",
     startPoint: "Sharm el-Sheikh (aeroporto o hotel)",
-    summary: "Sei immersioni guidate sui due migliori gruppi di siti del Sinai — Ras Mohammed e Tiran — con un diving PADI che abbiamo verificato, più un riscaldamento dalla riva.",
+    summary: "Quattro immersioni guidate in barca sui due migliori gruppi di siti del Sinai — Ras Mohammed e Tiran — con un diving PADI che abbiamo verificato, dopo un'immersione di prova sul reef dell'hotel.",
     overview: "Il Mar Rosso settentrionale è una delle regioni di riferimento per le immersioni nel mondo: visibilità oltre i 20 metri come norma, acqua mai davvero fredda e pareti di corallo che precipitano dalla quota dello snorkeling all'acqua blu. Questo programma lo concentra in quattro giorni senza rinunciare né alla sicurezza né agli intervalli di superficie. Dopo un'immersione di prova sulla barriera del resort, due giornate complete in barca coprono i due gruppi di siti essenziali — il parco nazionale di Ras Mohammed, dove Shark e Yolanda formano il doppio sito più celebre del Sinai, e le quattro barriere dello stretto di Tiran, percorse da correnti di deriva leggere e frequentate dai pelagici. Le immersioni sono gestite da un diving PADI autorizzato con cui lavoriamo in modo continuativo; i gruppi restano piccoli e chi non si immerge è il benvenuto a bordo con l'attrezzatura da snorkeling.",
     itinerary: [
       { title: "Arrivo & immersione di prova", items: [
@@ -984,7 +984,7 @@ export const it: TourText[] = [
       { title: "La Sala delle Mummie Reali", text: "Si scende nella Sala delle Mummie Reali, in penombra, dove i corpi conservati di faraoni come Ramesse II e Hatshepsut riposano in un allestimento rispettoso." },
     ],
     faqs: [
-      { q: "La Sala delle Mummie Reali è inclusa?", a: "Sì — l'ingresso alla Sala delle Mummie Reali all'interno del NMEC è incluso. È uno spazio silenzioso e rispettoso, e all'interno non è consentito fotografare." },
+      { q: "La Sala delle Mummie Reali è inclusa?", a: "Sì — la Sala delle Mummie Reali fa parte della visita. È compresa nel biglietto del NMEC, che come tutti i biglietti delle nostre escursioni giornaliere si paga alla tariffa ufficiale della biglietteria, senza ricarichi. È uno spazio silenzioso e rispettoso, e all'interno non è consentito fotografare." },
       { q: "In cosa differiscono i due musei?", a: "Il Museo Egizio è denso, storico e pieno di tesori; il NMEC è moderno e narrativo, con le mummie come fulcro. Insieme danno un quadro completo." },
       { q: "Non è troppo per una sola giornata?", a: "Non con una guida che seleziona i capolavori. Ci concentriamo sugli oggetti essenziali di ciascun museo, con una pausa tra i due." },
     ],

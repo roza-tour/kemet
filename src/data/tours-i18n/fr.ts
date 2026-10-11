@@ -30,7 +30,7 @@ export const fr: TourText[] = [
     durationLabel: "10 jours / 9 nuits",
     startPoint: "Le Caire (aéroport ou hôtel)",
     summary:
-      "Notre voyage le plus complet : Le Caire, Alexandrie, un train de nuit vers le sud et trois nuits de croisière d'Assouan à Louxor — toutes les couches de l'Égypte en un seul arc.",
+      "Notre voyage signature : Le Caire, Alexandrie, un train de nuit vers le sud et trois nuits de croisière d'Assouan à Louxor — toutes les couches de l'Égypte en un seul arc.",
     overview:
       "Voici l'Égypte dans toute son étendue, à un rythme fait pour être vécu plutôt que coché. Vous commencez au Caire avec les trésors du Musée égyptien, passez une journée en Méditerranée à Alexandrie, puis prenez le train de nuit vers Assouan. De là, une croisière de trois nuits vous porte vers l'aval, par Kom Ombo et Edfou, jusqu'à Louxor, où attendent les temples de Karnak et les tombes royales de la rive ouest. Retour au Caire pour les pyramides de Gizeh et les ruelles du Caire islamique. Le voyage est privé d'un bout à l'autre, mené par votre propre égyptologue.",
     itinerary: [
@@ -77,8 +77,8 @@ export const fr: TourText[] = [
       ]},
       { title: "Gizeh & Saqqarah", items: [
         "Les pyramides de Khéops, Khéphren et Mykérinos et le grand Sphinx",
-        "Pyramide à degrés de Djéser à Saqqarah, le plus ancien monument de pierre au monde",
         "Point de vue panoramique sur le plateau de Gizeh",
+        "Pyramide à degrés de Djéser à Saqqarah, le plus ancien monument de pierre au monde",
       ]},
       { title: "Le Caire islamique & départ", items: [
         "Citadelle de Saladin et mosquée d'albâtre de Méhémet Ali",
@@ -144,8 +144,8 @@ export const fr: TourText[] = [
       ]},
       { title: "Gizeh & Saqqarah", items: [
         "Pyramides de Gizeh et grand Sphinx",
-        "Pyramide à degrés de Djéser à Saqqarah",
         "Point de vue panoramique sur le plateau",
+        "Pyramide à degrés de Djéser à Saqqarah",
       ]},
       { title: "Le Caire islamique & départ", items: [
         "Citadelle de Saladin et mosquée de Méhémet Ali",
@@ -179,9 +179,9 @@ export const fr: TourText[] = [
     durationLabel: "14 jours / 13 nuits",
     startPoint: "Le Caire (aéroport ou hôtel)",
     summary:
-      "Notre voyage le plus complet : deux capitales, une croisière sur le Nil, le temple de montagne de Ramsès II à Abou Simbel, et quatre jours en mer Rouge pour tout laisser décanter.",
+      "Notre voyage le plus complet : Le Caire et Alexandrie, une croisière sur le Nil, le temple de montagne de Ramsès II à Abou Simbel, et trois nuits en mer Rouge pour tout laisser décanter.",
     overview:
-      "C'est l'itinéraire de ceux qui comptent venir une fois et tout voir. La première semaine appartient à l'histoire : les deux grands musées du Caire et ses quartiers médiévaux, Alexandrie sur la Méditerranée, puis un vol vers le sud pour Abou Simbel — le temple de montagne de Ramsès II au-dessus du lac Nasser — avant qu'une croisière de trois nuits ne vous porte d'Assouan à Louxor. La seconde semaine change entièrement de ton : après les tombes et les temples de Louxor, vous volez vers Charm el-Cheikh, là où le désert rencontre l'une des eaux les plus claires de la planète. Quatre jours en mer Rouge referment le voyage, avec le snorkeling sur les récifs de Ras Mohammed et rien au programme qui ne puisse être annulé au profit de la piscine. Tous les vols intérieurs sont compris ; chaque journée guidée est privée.",
+      "C'est l'itinéraire de ceux qui comptent venir une fois et tout voir. Les dix premiers jours appartiennent à l'histoire : les pyramides et le Grand Musée égyptien, le Caire médiéval et le Caire copte, Alexandrie sur la Méditerranée, puis un vol vers le sud pour Abou Simbel — le temple de montagne de Ramsès II au-dessus du lac Nasser — avant qu'une croisière de trois nuits ne vous porte d'Assouan à Louxor. Les quatre derniers jours changent entièrement de ton : après les tombes et les temples de Louxor, vous volez vers Charm el-Cheikh, là où le désert rencontre l'une des eaux les plus claires de la planète. Trois nuits en mer Rouge referment le voyage, avec le snorkeling sur les récifs de Ras Mohammed et rien au programme qui ne puisse être annulé au profit de la piscine. Tous les vols intérieurs sont compris ; chaque journée guidée est privée.",
     itinerary: [
       { title: "Arrivée au Caire", items: [
         "Accueil privé à l'aéroport et transfert à l'hôtel",
@@ -248,7 +248,7 @@ export const fr: TourText[] = [
       early: "Un départ avant l'aube pour Abou Simbel",
     },
     faqs: [
-      { q: "Quatorze jours, est-ce trop pour un premier voyage ?", a: "C'est la durée que la plupart des voyageurs qui reviennent auraient aimé réserver la première fois. Ce sont précisément les journées en mer Rouge qui rendent la semaine d'histoire tenable : le voyage respire au lieu d'accumuler la fatigue." },
+      { q: "Quatorze jours, est-ce trop pour un premier voyage ?", a: "C'est la durée qu'il faut à l'Égypte pour être vue en entier plutôt qu'effleurée. Ce sont précisément les journées en mer Rouge qui rendent la semaine d'histoire tenable : le voyage respire au lieu d'accumuler la fatigue." },
       { q: "Quelle part du voyage se fait en avion ?", a: "Trois vols intérieurs d'environ une heure chacun, qui remplacent ce qui serait sinon douze heures de route ou de rail. La seule longue route que nous gardons — Assouan–Abou Simbel — fait elle-même partie de l'expérience : le désert ouvert à l'aube." },
       { q: "Peut-on échanger ou prolonger la mer Rouge ?", a: "Sans difficulté. Certains la troquent contre des nuits supplémentaires à Louxor ou contre Siwa, d'autres prolongent Charm d'une semaine entière. Les dix premiers jours forment la colonne vertébrale ; la fin vous appartient." },
     ],
@@ -265,7 +265,7 @@ export const fr: TourText[] = [
     crumb: "Le Caire VIP, 3 jours",
     title: "Le Caire VIP, court séjour",
     subtitle:
-      "Trois jours, zéro friction — passage prioritaire à l'arrivée, les pyramides et les deux grands musées, et le Caire médiéval une fois les excursionnistes partis.",
+      "Trois jours, zéro friction — passage prioritaire à l'arrivée, les pyramides et le Grand Musée égyptien, et le Caire médiéval une fois les excursionnistes partis.",
     durationLabel: "3 jours / 2 nuits",
     startPoint: "Le Caire (aéroport, accueil VIP)",
     summary:
@@ -314,7 +314,7 @@ export const fr: TourText[] = [
     summary:
       "Louxor sans course : Karnak à l'ouverture, la Vallée des Rois avant la chaleur, les terrasses d'Hatchepsout et l'allée des Sphinx à la nuit tombée.",
     overview:
-      "On accorde d'ordinaire à Louxor une seule journée frénétique ; la ville conserve plus de monuments que tout le reste du pays réuni. Ce court séjour rend le temps manquant. La journée sur la rive est prend Karnak à l'ouverture — une heure avant les autocars — et revient après la tombée du jour pour le temple de Louxor illuminé, abordé par l'allée des Sphinx restaurée, qui en fait tout simplement un autre monument. La journée sur la rive ouest descend dans trois tombes royales choisies pour leurs couleurs et la fréquentation du jour, puis gagne les terrasses taillées d'Hatchepsout et les colosses de Memnon. La dernière matinée est à vous : une montgolfière à l'aube au-dessus de la nécropole, l'excellent musée de Louxor, ou rien du tout. Le séjour se greffe proprement avant ou après n'importe quel itinéraire cairote, par avion ou par train de nuit.",
+      "On accorde d'ordinaire à Louxor une seule journée frénétique ; elle concentre pourtant l'un des ensembles de monuments antiques les plus denses au monde. Ce court séjour rend le temps manquant. La journée sur la rive est prend Karnak à l'ouverture — une heure avant les autocars — et revient après la tombée du jour pour le temple de Louxor illuminé, abordé par l'allée des Sphinx restaurée, qui en fait tout simplement un autre monument. La journée sur la rive ouest descend dans trois tombes royales choisies pour leurs couleurs et la fréquentation du jour, puis gagne les terrasses taillées d'Hatchepsout et les colosses de Memnon. La dernière matinée est à vous : une montgolfière à l'aube au-dessus de la nécropole, l'excellent musée de Louxor, ou rien du tout. Le séjour se greffe proprement avant ou après n'importe quel itinéraire cairote, par avion ou par train de nuit.",
     itinerary: [
       { title: "La rive est & le temple de nuit", items: [
         "Accueil à l'aéroport ou à la gare de Louxor",
@@ -525,7 +525,7 @@ export const fr: TourText[] = [
     durationLabel: "9 jours / 8 nuits",
     startPoint: "Le Caire (aéroport ou hôtel)",
     summary: "L'Égypte comme un voyage de noces devrait l'être — lever de soleil privé aux pyramides, felouque à l'heure dorée, trois nuits sur le Nil et des suites choisies pour leur vue.",
-    overview: "Un voyage de noces n'est pas un itinéraire ordinaire avec des pétales de rose. Le rythme diffère : départs plus tardifs, soirées plus longues, un moment fort par jour plutôt que quatre. Ce voyage s'ouvre au Caire avec le Musée égyptien et un lever de soleil privé à Gizeh avant l'ouverture du plateau. Vous volez vers Assouan — la ville la plus douce et la plus romantique du fleuve — pour une felouque privée à l'heure dorée et un dîner au-dessus de la cataracte. Une croisière de trois nuits vous porte vers Louxor par Kom Ombo et Edfou, avec une montgolfière à l'aube sur les collines thébaines comme image finale. Hôtels et cabines sont choisis pour leur vue sur le Nil, et chaque guide sait qu'il s'agit d'un voyage de noces et non d'une marche forcée.",
+    overview: "Un voyage de noces n'est pas un itinéraire ordinaire avec des pétales de rose. Le rythme diffère : départs plus tardifs, soirées plus longues, un moment fort par jour plutôt que quatre. Ce voyage s'ouvre au Caire avec un lever de soleil privé à Gizeh avant l'ouverture du plateau, puis le Grand Musée égyptien à votre rythme. Vous volez vers Assouan — la ville la plus douce et la plus romantique du fleuve — pour une felouque privée à l'heure dorée et un dîner au-dessus de la cataracte. Une croisière de trois nuits vous porte vers Louxor par Kom Ombo et Edfou, avec une montgolfière à l'aube sur les collines thébaines comme image finale. Hôtels et cabines sont choisis pour leur vue sur le Nil, et chaque guide sait qu'il s'agit d'un voyage de noces et non d'une marche forcée.",
     itinerary: [
       { title: "Arrivée au Caire", items: [
         "Accueil privé à l'aéroport et transfert vers une suite avec vue sur le Nil",
@@ -556,7 +556,7 @@ export const fr: TourText[] = [
         "Arrivée à Louxor en soirée ; le temple de Louxor illuminé, si vous le souhaitez",
       ]},
       { title: "Montgolfière & rive ouest", items: [
-        "Montgolfière à l'aube au-dessus de la Vallée des Rois (selon la météo)",
+        "Montgolfière à l'aube au-dessus de la rive ouest de Louxor, si vous l'ajoutez (selon la météo)",
         "Vallée des Rois et temple d'Hatchepsout avec votre égyptologue",
         "Débarquement vers un hôtel de Louxor pour les dernières nuits",
       ]},
@@ -670,7 +670,7 @@ export const fr: TourText[] = [
         "Vol vers Louxor en soirée",
       ]},
       { title: "Montgolfière & rive ouest", items: [
-        "Montgolfière à l'aube au-dessus de la nécropole thébaine (selon la météo)",
+        "Montgolfière à l'aube au-dessus de la nécropole thébaine, si vous l'ajoutez (selon la météo)",
         "Intérieurs de la Vallée des Rois — à main levée là où le trépied est interdit",
         "Les terrasses d'Hatchepsout en lumière rasante de fin de journée",
       ]},
@@ -714,7 +714,7 @@ export const fr: TourText[] = [
     durationLabel: "5 jours / 4 nuits",
     startPoint: "Le Caire (aéroport ou hôtel)",
     summary: "Une lecture lente et profonde de la ville la plus stratifiée du monde — ses deux musées, trois confessions, rues médiévales et la nécropole où la pyramide fut inventée.",
-    overview: "La plupart des visiteurs accordent au Caire deux nuits et une liste. Ce voyage lui accorde cinq jours et une thèse : que Le Caire n'est pas une escale mais le site culturel le plus dense du monde méditerranéen. La strate pharaonique reçoit deux journées — Gizeh, plus l'arc Saqqarah–Memphis–Dahchour où la forme pyramidale fut inventée — mais le cœur de l'itinéraire est la ville vivante : le quartier copte bâti dans une forteresse romaine, le tissu millénaire du Caire islamique parcouru mosquée par mosquée avec un historien, le Khan el-Khalili dont les ruelles gardent la trace des routes commerciales, et les deux grands musées lus comme une seule collection séparée par un siècle. Les soirées sont construites avec autant de soin que les matinées — un spectacle soufi de tanoura, un dîner dans une maison ottomane restaurée, le thé là où les Cairotes le boivent vraiment.",
+    overview: "La plupart des visiteurs accordent au Caire deux nuits et une liste. Ce voyage lui accorde cinq jours et une thèse : que Le Caire n'est pas une escale mais le site culturel le plus dense du monde méditerranéen. La strate pharaonique reçoit deux journées — Gizeh, plus l'arc Saqqarah–Memphis–Dahchour où la forme pyramidale fut inventée — mais le cœur de l'itinéraire est la ville vivante : le quartier copte bâti dans une forteresse romaine, le tissu millénaire du Caire islamique parcouru mosquée par mosquée avec un historien, le Khan el-Khalili dont les ruelles gardent la trace des routes commerciales, et les deux grands musées lus comme une seule collection séparée par un siècle. Les soirées sont construites avec autant de soin que les matinées — une promenade du soir dans les rues Belle Époque du centre-ville, un spectacle soufi de tanoura, le thé là où les Cairotes le boivent vraiment.",
     itinerary: [
       { title: "Arrivée & le Musée égyptien", items: [
         "Accueil privé à l'aéroport et transfert",
@@ -797,14 +797,14 @@ export const fr: TourText[] = [
     localeSlug: "plongee-mer-rouge-4-jours",
     metaTitle: "Plongée en mer Rouge, 4 jours depuis Charm | Kemet",
     metaDescription:
-      "Six plongées guidées sur les deux meilleurs sites du Sinaï — Ras Mohammed et le détroit de Tiran — avec un centre PADI que nous avons vérifié.",
+      "Quatre plongées guidées en bateau sur les deux meilleurs sites du Sinaï — Ras Mohammed et le détroit de Tiran — avec un centre PADI que nous avons vérifié.",
     keywords: "plongee mer rouge, plongee charm el cheikh, ras mohammed plongee, detroit de tiran, sejour plongee egypte padi",
     crumb: "Plongée, 4 jours",
     title: "Plonger en mer Rouge",
     subtitle: "Quatre jours construits autour du temps de fond — les murs de Ras Mohammed, les récifs en dérive du détroit de Tiran et des bateaux en petit comité qui partent tôt.",
     durationLabel: "4 jours / 3 nuits",
     startPoint: "Charm el-Cheikh (aéroport ou hôtel)",
-    summary: "Six plongées guidées en bateau sur les deux meilleurs ensembles de sites du Sinaï — Ras Mohammed et Tiran — avec un centre PADI vérifié, plus une plongée de contrôle depuis le bord.",
+    summary: "Quatre plongées guidées en bateau sur les deux meilleurs ensembles de sites du Sinaï — Ras Mohammed et Tiran — avec un centre PADI vérifié, après une plongée de contrôle sur le récif de l'hôtel.",
     overview: "Le nord de la mer Rouge est l'une des régions de plongée de référence au monde : plus de 20 mètres de visibilité comme norme, une eau jamais vraiment froide, et des murs récifaux qui descendent de la surface jusqu'au bleu. Ce programme concentre tout cela en quatre jours sans rogner sur la sécurité ni sur les intervalles de surface. Après une plongée de contrôle au récif maison de votre resort, deux journées bateau couvrent les deux ensembles incontournables — le parc national de Ras Mohammed, où Shark Reef et Yolanda Reef forment le site double le plus célèbre du Sinaï, et les quatre récifs nommés du détroit de Tiran, balayés par de douces dérives et fréquentés par les pélagiques. La plongée se fait avec un centre PADI agréé avec lequel nous travaillons en continu ; les groupes restent réduits, et les accompagnants non plongeurs sont les bienvenus à bord avec un masque et un tuba.",
     itinerary: [
       { title: "Arrivée & plongée de contrôle", items: [
@@ -1015,7 +1015,7 @@ export const fr: TourText[] = [
       { title: "La salle des momies royales", text: "Descente dans la salle des momies royales, à la lumière tamisée, où reposent dignement les corps préservés de pharaons dont Ramsès II et Hatchepsout." },
     ],
     faqs: [
-      { q: "La salle des momies royales est-elle comprise ?", a: "Oui — l'entrée à la salle des momies royales au sein du NMEC est comprise. C'est un espace calme et respectueux, où la photographie n'est pas autorisée." },
+      { q: "La salle des momies royales est-elle comprise ?", a: "Oui — la salle des momies royales fait partie de la visite. Elle est couverte par le billet du NMEC, payé comme tous les billets de nos excursions à la journée au tarif officiel du guichet, sans majoration. C'est un espace calme et respectueux, où la photographie n'est pas autorisée." },
       { q: "En quoi les deux musées diffèrent-ils ?", a: "Le Musée égyptien est dense, historique et chargé de trésors ; le NMEC est moderne et narratif, avec les momies pour point d'orgue. Ensemble, ils donnent une image complète." },
       { q: "N'est-ce pas trop pour une journée ?", a: "Pas avec un guide qui sélectionne les pièces maîtresses. Nous nous concentrons sur l'essentiel dans chacun, avec une pause entre les deux." },
     ],

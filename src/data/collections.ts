@@ -445,8 +445,8 @@ export const collections: Collection[] = [
       },
     ],
     hero: {
-      alt: "The Great Sphinx and a pyramid of Giza, a highlight for families",
-      src: "/images/giza/giza-sphinx-and-pyramid.webp",
+      alt: "The Great Sphinx of Giza, a highlight for families",
+      src: "/images/giza/giza-great-sphinx-frontal.webp",
       width: 736,
       height: 920,
     },

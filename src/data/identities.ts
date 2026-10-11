@@ -34,10 +34,10 @@ export const identities: Identity[] = [
     intro:
       "The bright south of Egypt — riverside villages of painted houses, drum rhythms and a living language older than Arabic.",
     image: {
-      src: "/images/aswan/aswan-nubian-village-nile.webp",
-      alt: "A blue-painted Nubian village above the Nile at Aswan",
-      width: 512,
-      height: 640,
+      src: "/images/aswan/aswan-nubian-terrace-sunset.webp",
+      alt: "A painted Nubian terrace above the Nile at sunset in Aswan",
+      width: 736,
+      height: 1275,
     },
     experiences: [
       "A felucca to a Nubian village above Aswan",
@@ -94,10 +94,10 @@ export const identities: Identity[] = [
     intro:
       "The desert peoples of Sinai and the Eastern Desert — campfire hospitality, star-deep skies and trails only locals know.",
     image: {
-      src: "/images/redsea/sinai-wadi-rock-pool.webp",
-      alt: "A still rock pool hidden in a granite wadi of the Sinai interior",
-      width: 719,
-      height: 800,
+      src: "/images/fayoum/fayoum-desert-camp.webp",
+      alt: "Travellers around a campfire in the Egyptian desert at dusk",
+      width: 736,
+      height: 981,
     },
     experiences: [
       "Tea with a Bedouin host in a desert camp",
@@ -148,10 +148,10 @@ export const identities: Identity[] = [
     intro:
       "Egypt's coral coast — warm clear water, reef walls and desert mountains meeting the sea at Hurghada and Marsa Alam.",
     image: {
-      src: "/images/redsea/red-sea-blue-hole.webp",
-      alt: "Snorkellers over the deep blue circle of a Red Sea reef hole",
-      width: 736,
-      height: 736,
+      src: "/images/redsea/ras-mohammed-lagoon.webp",
+      alt: "A turquoise lagoon meeting bare desert headlands at Ras Mohammed, Red Sea",
+      width: 764,
+      height: 458,
     },
     experiences: [
       "Snorkelling or diving a Red Sea reef",

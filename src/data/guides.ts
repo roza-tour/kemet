@@ -129,7 +129,7 @@ export const guides: Guide[] = [
       },
     ],
     hero: {
-      alt: "The Great Pyramid of Khufu on the Giza plateau under a clear desert sky",
+      alt: "The Red Pyramid of Dahshur under a clear desert sky",
       label: "Egypt",
       src: "/images/giza/giza-great-pyramid-clear-sky.webp",
       width: 1600,

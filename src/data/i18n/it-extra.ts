@@ -191,8 +191,8 @@ export const itMongolfiera: LocalizedPage = {
   photos: [
     { alt: "Mongolfiere all'alba sopra i villaggi e i campi verdi della riva occidentale di Luxor, viste dal cesto", label: "Dal cesto", src: "/images/activities/balloons-luxor-sunrise-west-bank.webp", width: 814, height: 458 },
     { alt: "Mongolfiere controluce mentre il sole sale sull'orizzonte di Luxor", label: "L'alba", src: "/images/activities/balloons-luxor-silhouettes-dawn.webp", width: 743, height: 418 },
-    { alt: "Una flotta di mongolfiere che si alza sulla valle del Nilo e sui templi di Luxor all'alba", label: "La flotta", src: "/images/activities/balloons-over-luxor.webp", width: 1500, height: 1000 },
-    { alt: "Mongolfiere sopra la riva occidentale e la piana verde del Nilo", label: "Sopra Tebe", src: "/images/activities/act-balloon-luxor.webp", width: 1300, height: 867 },
+    { alt: "Una flotta di mongolfiere che si alza sulla valle del Nilo e sui templi di Luxor all'alba", label: "La flotta", src: "/images/activities/balloons-over-luxor.webp", width: 766, height: 400 },
+    { alt: "Mongolfiere sopra la riva occidentale e la piana verde del Nilo", label: "Sopra Tebe", src: "/images/activities/act-balloon-luxor.webp", width: 500, height: 400 },
     { alt: "Mongolfiere che salgono nella prima luce sulla valle del Nilo a Luxor", label: "Prima luce", src: "/images/activities/balloons-luxor-first-light.webp", width: 885, height: 498 },
   ],
   films: itBalloonFilms,
@@ -253,7 +253,7 @@ export const itAlbaPiramidi: LocalizedPage = {
   standfirst:
     "La prima luce sulla Grande Piramide, con l'altopiano ancora chiuso al pubblico — e una guida egittologica con licenza solo per voi, anche in italiano.",
   lede:
-    "Pochi momenti di viaggio valgono il silenzio dell'altopiano di Giza all'alba. Mentre il cielo a est passa dal viola profondo all'ambra, le sagome di Cheope, Chefren e Micerino emergono dal buio: le ultime sopravvissute delle Sette Meraviglie del mondo antico.",
+    "Pochi momenti di viaggio valgono il silenzio dell'altopiano di Giza all'alba. Mentre il cielo a est passa dal viola profondo all'ambra, le sagome di Cheope, Chefren e Micerino emergono dal buio — tra loro la Grande Piramide, l'unica delle Sette Meraviglie del mondo antico ancora in piedi.",
   facts: [
     { label: "Durata", value: "3–4 ore" },
     { label: "Partenza", value: "prima dell'alba" },
@@ -283,9 +283,9 @@ export const itAlbaPiramidi: LocalizedPage = {
     },
   ],
   photos: [
-    { alt: "La Grande Piramide di Cheope sull'altopiano di Giza sotto un cielo limpido", label: "La Grande Piramide", src: "/images/giza/giza-great-pyramid-clear-sky.webp", width: 1600, height: 1062 },
+    { alt: "La Grande Piramide di Cheope sull'altopiano di Giza", label: "La Grande Piramide", src: "/images/giza/giza-great-pyramid-khufu.webp", width: 736, height: 981 },
     { alt: "Un cammello addobbato a riposo davanti alle Piramidi di Giza nella luce calda del mattino", label: "Il mattino", src: "/images/giza/giza-camel-pyramids-sunrise.webp", width: 736, height: 736 },
-    { alt: "La Sfinge davanti a una piramide di Giza", label: "La Sfinge", src: "/images/giza/giza-sphinx-and-pyramid.webp", width: 736, height: 920 },
+    { alt: "La Grande Sfinge di Giza rivolta verso l'alba", label: "La Sfinge", src: "/images/giza/giza-great-sphinx-frontal.webp", width: 736, height: 920 },
     { alt: "La Grande Piramide di Cheope sull'altopiano di Giza", label: "Cheope", src: "/images/giza/giza-great-pyramid-khufu.webp", width: 736, height: 981 },
   ],
   highlights: {

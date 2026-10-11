@@ -91,7 +91,7 @@ export const venues: Venue[] = [
     suits: ["A wedding photograph", "A family gathering", "A brand or editorial shoot", "Breakfast on the sand"],
     image: {
       src: "/images/giza/giza-camel-pyramids-sunrise.webp",
-      alt: "The pyramids of Giza at sunrise with the desert empty in front of them",
+      alt: "A decorated camel resting before the Pyramids of Giza in early light",
       width: 736, height: 736,
     },
     confirmed: true,
@@ -229,7 +229,7 @@ export const venues: Venue[] = [
     image: {
       src: "/images/cruise/nile-dahabiya-deck.webp",
       alt: "The teak deck of a dahabiya under sail on the Nile",
-      width: 1300, height: 867,
+      width: 1200, height: 900,
     },
     confirmed: true,
     source: "Confirmed by the business. Whole-boat charter — the boat is chartered rather than permitted, so the constraint is availability, not paperwork.",
@@ -255,7 +255,7 @@ export const venues: Venue[] = [
     image: {
       src: "/images/luxor/luxor-hatshepsut-temple-deir-el-bahri.webp",
       alt: "The terraced temple of Hatshepsut at Deir el-Bahari beneath the Theban cliff",
-      width: 1600, height: 1066,
+      width: 1000, height: 600,
     },
     confirmed: true,
     source: "Confirmed by the business. Permitting runs through the site authority, as for the other monuments.",

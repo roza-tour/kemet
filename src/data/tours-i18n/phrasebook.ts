@@ -164,8 +164,8 @@ const de: TourPhrasebook = {
       "Gräber mit gesondertem Ticket (Tutanchamun, Sethos I. — auf Wunsch arrangiert)",
 
     // --- the rest of the catalogue ---
-    "3 nights' accommodation in 4- or 5-star hotels":
-      "3 Übernachtungen in 4- oder 5-Sterne-Hotels",
+    "3 nights' accommodation in a 4- or 5-star hotel":
+      "3 Übernachtungen in einem 4- oder 5-Sterne-Hotel",
     "2 nights' accommodation in 4- or 5-star hotels":
       "2 Übernachtungen in 4- oder 5-Sterne-Hotels",
     "4 nights' accommodation in 4- or 5-star hotels (Luxor & Aswan)":
@@ -353,7 +353,7 @@ const fr: TourPhrasebook = {
     "2 nights' accommodation in a 4- or 5-star hotel": "2 nuits dans un hôtel 4 ou 5 étoiles",
     "VIP airport meet & assist with fast-track, both directions":
       "Accueil VIP à l'aéroport avec passage prioritaire, à l'arrivée et au départ",
-    "3 nights' accommodation in 4- or 5-star hotels": "3 nuits en hôtels 4 ou 5 étoiles",
+    "3 nights' accommodation in a 4- or 5-star hotel": "3 nuits dans un hôtel 4 ou 5 étoiles",
     "2 nights' accommodation in 4- or 5-star hotels": "2 nuits en hôtels 4 ou 5 étoiles",
     "4 nights' accommodation in 4- or 5-star hotels (Luxor & Aswan)":
       "4 nuits en hôtels 4 ou 5 étoiles (Louxor et Assouan)",
@@ -530,7 +530,7 @@ const it: TourPhrasebook = {
     "2 nights' accommodation in a 4- or 5-star hotel": "2 notti in un hotel 4 o 5 stelle",
     "VIP airport meet & assist with fast-track, both directions":
       "Accoglienza VIP in aeroporto con corsia preferenziale, all'arrivo e alla partenza",
-    "3 nights' accommodation in 4- or 5-star hotels": "3 notti in hotel 4 o 5 stelle",
+    "3 nights' accommodation in a 4- or 5-star hotel": "3 notti in un hotel 4 o 5 stelle",
     "2 nights' accommodation in 4- or 5-star hotels": "2 notti in hotel 4 o 5 stelle",
     "4 nights' accommodation in 4- or 5-star hotels (Luxor & Aswan)":
       "4 notti in hotel 4 o 5 stelle (Luxor e Assuan)",

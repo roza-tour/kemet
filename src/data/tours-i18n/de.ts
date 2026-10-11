@@ -41,7 +41,7 @@ export const de: TourText[] = [
     durationLabel: "10 Tage / 9 Nächte",
     startPoint: "Kairo (Flughafen oder Hotel)",
     summary:
-      "Unsere vollständigste Reise: Kairo, Alexandria, mit dem Nachtzug nach Süden und drei Nächte auf dem Nil von Assuan nach Luxor — jede Schicht Ägyptens in einem Bogen.",
+      "Unsere Signature-Reise: Kairo, Alexandria, mit dem Nachtzug nach Süden und drei Nächte auf dem Nil von Assuan nach Luxor — jede Schicht Ägyptens in einem Bogen.",
     overview:
       "Das ist Ägypten in ganzer Breite, und im Tempo so angelegt, dass man es erlebt statt abhakt. Sie beginnen in Kairo mit den Schätzen des Ägyptischen Museums, verbringen einen Tag am Mittelmeer in Alexandria und fahren dann mit dem Nachtzug nach Assuan. Von dort trägt Sie eine dreitägige Nilkreuzfahrt flussabwärts vorbei an Kom Ombo und Edfu nach Luxor, wo die Tempel von Karnak und die Königsgräber des Westufers warten. Zurück in Kairo stehen die Pyramiden von Gizeh und die alten Gassen des islamischen Kairo. Gereist wird durchgehend privat, geführt von Ihrem eigenen Ägyptologen.",
     itinerary: [
@@ -114,8 +114,8 @@ export const de: TourText[] = [
         title: "Gizeh & Sakkara",
         items: [
           "Die Pyramiden des Cheops, Chephren und Mykerinos und die Große Sphinx",
-          "Stufenpyramide des Djoser in Sakkara, das älteste Steinbauwerk der Welt",
           "Panoramablick über das Plateau von Gizeh",
+          "Stufenpyramide des Djoser in Sakkara, das älteste Steinbauwerk der Welt",
         ],
       },
       {
@@ -223,8 +223,8 @@ export const de: TourText[] = [
         title: "Gizeh & Sakkara",
         items: [
           "Pyramiden von Gizeh und die Große Sphinx",
-          "Stufenpyramide des Djoser in Sakkara",
           "Panoramablick über das Plateau",
+          "Stufenpyramide des Djoser in Sakkara",
         ],
       },
       {
@@ -273,9 +273,9 @@ export const de: TourText[] = [
     durationLabel: "14 Tage / 13 Nächte",
     startPoint: "Kairo (Flughafen oder Hotel)",
     summary:
-      "Unsere vollständigste Reise: zwei Hauptstädte, eine Nilkreuzfahrt, der Bergtempel Ramses' II. in Abu Simbel und vier Tage am Roten Meer, um alles sacken zu lassen.",
+      "Unsere vollständigste Reise: Kairo und Alexandria, eine Nilkreuzfahrt, der Bergtempel Ramses' II. in Abu Simbel und drei Nächte am Roten Meer, um alles sacken zu lassen.",
     overview:
-      "Das ist die Reise für alle, die einmal kommen und es ganz sehen wollen. Die erste Woche gehört der Geschichte: Kairos zwei große Museen und seine mittelalterlichen Viertel, Alexandria am Mittelmeer, dann ein Flug nach Süden zu Abu Simbel — dem Bergtempel Ramses' II. über dem Nassersee —, bevor eine dreitägige Kreuzfahrt Sie von Assuan nach Luxor trägt. Die zweite Woche wechselt vollständig die Tonart: nach Luxors Gräbern und Tempeln fliegen Sie nach Scharm el-Scheich, wo die Wüste auf eines der klarsten Gewässer der Erde trifft. Vier Tage am Roten Meer beschließen die Reise, mit Schnorcheln über den Riffen von Ras Mohammed und nichts im Programm, das sich nicht zugunsten des Pools streichen ließe. Alle Inlandsflüge sind inbegriffen; jeder geführte Tag ist privat.",
+      "Das ist die Reise für alle, die einmal kommen und es ganz sehen wollen. Die ersten zehn Tage gehören der Geschichte: die Pyramiden und das Grand Egyptian Museum, das mittelalterliche und das koptische Kairo, Alexandria am Mittelmeer, dann ein Flug nach Süden zu Abu Simbel — dem Bergtempel Ramses' II. über dem Nassersee —, bevor eine dreitägige Kreuzfahrt Sie von Assuan nach Luxor trägt. Die letzten vier Tage wechseln vollständig die Tonart: nach Luxors Gräbern und Tempeln fliegen Sie nach Scharm el-Scheich, wo die Wüste auf eines der klarsten Gewässer der Erde trifft. Drei Nächte am Roten Meer beschließen die Reise, mit Schnorcheln über den Riffen von Ras Mohammed und nichts im Programm, das sich nicht zugunsten des Pools streichen ließe. Alle Inlandsflüge sind inbegriffen; jeder geführte Tag ist privat.",
     itinerary: [
       {
         title: "Ankunft in Kairo",
@@ -387,7 +387,7 @@ export const de: TourText[] = [
     faqs: [
       {
         q: "Sind vierzehn Tage für einen ersten Besuch zu lang?",
-        a: "Es ist die Länge, die sich die meisten Wiederkehrer beim ersten Mal gewünscht hätten. Gerade die Tage am Roten Meer machen die Geschichtswoche tragfähig — die Reise atmet, statt Erschöpfung anzusammeln.",
+        a: "Es ist die Länge, die Ägypten braucht, um es ganz zu sehen statt nur zu kosten. Gerade die Tage am Roten Meer machen die Geschichtswoche tragfähig — die Reise atmet, statt Erschöpfung anzusammeln.",
       },
       {
         q: "Wie viel von dieser Reise wird geflogen?",
@@ -412,7 +412,7 @@ export const de: TourText[] = [
     crumb: "Kairo VIP, 3 Tage",
     title: "Kairo VIP-Kurzreise",
     subtitle:
-      "Drei Tage, null Reibung — Fast-Track bei der Ankunft, die Pyramiden und beide großen Museen, und das mittelalterliche Kairo, wenn die Tagesgäste weg sind.",
+      "Drei Tage, null Reibung — Fast-Track bei der Ankunft, die Pyramiden und das Grand Egyptian Museum, und das mittelalterliche Kairo, wenn die Tagesgäste weg sind.",
     durationLabel: "3 Tage / 2 Nächte",
     startPoint: "Kairo (Flughafen, VIP-Empfang)",
     summary:
@@ -482,7 +482,7 @@ export const de: TourText[] = [
     summary:
       "Luxor ohne Sprint: Karnak zur Öffnung, das Tal der Könige vor der Hitze, die Terrassen der Hatschepsut und die Sphinxallee nach Einbruch der Dunkelheit.",
     overview:
-      "Luxor bekommt üblicherweise einen einzigen gehetzten Tag; es trägt mehr erhaltene Monumente als der ganze Rest des Landes zusammen. Diese Kurzreise gibt die fehlende Zeit zurück. Der Tag am Ostufer nimmt Karnak zur Öffnung — eine Stunde vor den Reisebussen — und kehrt nach Einbruch der Dunkelheit zum angestrahlten Luxor-Tempel zurück, erreicht über die wiederhergestellte Sphinxallee, was schlicht ein anderes Bauwerk ergibt. Der Tag am Westufer führt in drei Königsgräber hinab, ausgewählt nach Farbe und Besucherströmen, dann zu den in den Fels geschnittenen Terrassen der Hatschepsut und zu den Memnonkolossen. Der letzte Vormittag gehört Ihnen: eine Ballonfahrt über der Nekropole im Morgengrauen, das ausgezeichnete Luxor-Museum, oder gar nichts. Die Reise lässt sich sauber vor oder hinter jede Kairo-Route setzen, per Flug oder Nachtzug.",
+      "Luxor bekommt üblicherweise einen einzigen gehetzten Tag; dabei besitzt es eine der dichtesten Ansammlungen antiker Monumente der Welt. Diese Kurzreise gibt die fehlende Zeit zurück. Der Tag am Ostufer nimmt Karnak zur Öffnung — eine Stunde vor den Reisebussen — und kehrt nach Einbruch der Dunkelheit zum angestrahlten Luxor-Tempel zurück, erreicht über die wiederhergestellte Sphinxallee, was schlicht ein anderes Bauwerk ergibt. Der Tag am Westufer führt in drei Königsgräber hinab, ausgewählt nach Farbe und Besucherströmen, dann zu den in den Fels geschnittenen Terrassen der Hatschepsut und zu den Memnonkolossen. Der letzte Vormittag gehört Ihnen: eine Ballonfahrt über der Nekropole im Morgengrauen, das ausgezeichnete Luxor-Museum, oder gar nichts. Die Reise lässt sich sauber vor oder hinter jede Kairo-Route setzen, per Flug oder Nachtzug.",
     itinerary: [
       {
         title: "Das Ostufer & der Tempel bei Nacht",
@@ -823,7 +823,7 @@ export const de: TourText[] = [
     summary:
       "Ägypten, wie eine Hochzeitsreise sein sollte — privater Sonnenaufgang an den Pyramiden, eine Feluke zur goldenen Stunde, drei Nächte auf dem Nil und Suiten, die nach ihrer Aussicht ausgesucht sind.",
     overview:
-      "Eine Hochzeitsreise ist keine normale Reise mit Rosenblättern. Der Takt ist ein anderer: spätere Starts, längere Abende, ein Höhepunkt am Tag statt vier. Diese Reise beginnt in Kairo mit dem Ägyptischen Museum und einem privaten Sonnenaufgang in Gizeh, bevor das Plateau öffnet. Sie fliegen nach Assuan — der sanftesten, romantischsten Stadt am Fluss — zu einer privaten Felukenfahrt zur goldenen Stunde und einem Abendessen über dem Katarakt. Eine dreitägige Kreuzfahrt trägt Sie an Kom Ombo und Edfu vorbei nach Luxor, und als Schlussbild steht eine Ballonfahrt im Morgengrauen über den thebanischen Hügeln. Hotels und Kabinen sind durchgehend nach dem Nilblick ausgewählt, und jeder Guide weiß, dass dies eine Hochzeitsreise ist und kein Gewaltmarsch.",
+      "Eine Hochzeitsreise ist keine normale Reise mit Rosenblättern. Der Takt ist ein anderer: spätere Starts, längere Abende, ein Höhepunkt am Tag statt vier. Diese Reise beginnt in Kairo mit einem privaten Sonnenaufgang in Gizeh, bevor das Plateau öffnet, und danach dem Grand Egyptian Museum in Ihrem eigenen Tempo. Sie fliegen nach Assuan — der sanftesten, romantischsten Stadt am Fluss — zu einer privaten Felukenfahrt zur goldenen Stunde und einem Abendessen über dem Katarakt. Eine dreitägige Kreuzfahrt trägt Sie an Kom Ombo und Edfu vorbei nach Luxor, und als Schlussbild steht eine Ballonfahrt im Morgengrauen über den thebanischen Hügeln. Hotels und Kabinen sind durchgehend nach dem Nilblick ausgewählt, und jeder Guide weiß, dass dies eine Hochzeitsreise ist und kein Gewaltmarsch.",
     itinerary: [
       {
         title: "Ankunft in Kairo",
@@ -874,7 +874,7 @@ export const de: TourText[] = [
       {
         title: "Ballons & das Westufer",
         items: [
-          "Ballonfahrt im Morgengrauen über dem Tal der Könige (wetterabhängig)",
+          "Ballonfahrt im Morgengrauen über Luxors Westufer, wenn Sie sie dazubuchen (wetterabhängig)",
           "Tal der Könige und Tempel der Hatschepsut mit Ihrem Ägyptologen",
           "Ausschiffung in ein Hotel in Luxor für die letzten Nächte",
         ],
@@ -1060,7 +1060,7 @@ export const de: TourText[] = [
       {
         title: "Ballons & das Westufer",
         items: [
-          "Ballonfahrt im Morgengrauen über der thebanischen Nekropole (wetterabhängig)",
+          "Ballonfahrt im Morgengrauen über der thebanischen Nekropole, wenn Sie sie dazubuchen (wetterabhängig)",
           "Die Grabkammern im Tal der Könige — Technik aus der Hand, wo Stative verboten sind",
           "Die Terrassen der Hatschepsut im späten Streiflicht",
         ],
@@ -1129,7 +1129,7 @@ export const de: TourText[] = [
     summary:
       "Eine tiefe, langsame Lektüre der am stärksten geschichteten Stadt der Welt — ihre zwei Museen, drei Glaubensrichtungen, mittelalterlichen Straßen und die Nekropole, in der die Pyramide erfunden wurde.",
     overview:
-      "Die meisten Besucher geben Kairo zwei Nächte und eine Liste. Diese Reise gibt ihm fünf Tage und eine These: dass Kairo keine Zwischenstation ist, sondern die dichteste Kulturstätte des Mittelmeerraums. Die pharaonische Schicht bekommt zwei Tage — Gizeh sowie der Bogen Sakkara–Memphis–Dahschur, in dem die Pyramidenform erfunden wurde —, aber das Herz der Reise ist die lebende Stadt: das koptische Viertel, das in eine römische Festung hineingebaut ist; das tausend Jahre alte Gewebe des islamischen Kairo, Moschee für Moschee mit einem Historiker abgegangen; der Khan el-Khalili, in dessen Gassen die alten Handelswege noch schwach lesbar sind; und die beiden großen Museen, gelesen als eine Sammlung, die über ein Jahrhundert hinweg geteilt wurde. Die Abende sind so sorgfältig gebaut wie die Vormittage — eine Sufi-Tanoura-Vorführung, Abendessen in einem restaurierten osmanischen Haus, Tee dort, wo die Kairoer ihn tatsächlich trinken.",
+      "Die meisten Besucher geben Kairo zwei Nächte und eine Liste. Diese Reise gibt ihm fünf Tage und eine These: dass Kairo keine Zwischenstation ist, sondern die dichteste Kulturstätte des Mittelmeerraums. Die pharaonische Schicht bekommt zwei Tage — Gizeh sowie der Bogen Sakkara–Memphis–Dahschur, in dem die Pyramidenform erfunden wurde —, aber das Herz der Reise ist die lebende Stadt: das koptische Viertel, das in eine römische Festung hineingebaut ist; das tausend Jahre alte Gewebe des islamischen Kairo, Moschee für Moschee mit einem Historiker abgegangen; der Khan el-Khalili, in dessen Gassen die alten Handelswege noch schwach lesbar sind; und die beiden großen Museen, gelesen als eine Sammlung, die über ein Jahrhundert hinweg geteilt wurde. Die Abende sind so sorgfältig gebaut wie die Vormittage — ein Abendspaziergang durch die Belle-Époque-Straßen der Innenstadt, eine Sufi-Tanoura-Vorführung, Tee dort, wo die Kairoer ihn tatsächlich trinken.",
     itinerary: [
       {
         title: "Ankunft & das Ägyptische Museum",
@@ -1270,7 +1270,7 @@ export const de: TourText[] = [
     localeSlug: "tauchen-rotes-meer-4-tage",
     metaTitle: "Tauchen im Roten Meer, 4 Tage ab Scharm | Kemet",
     metaDescription:
-      "Sechs geführte Bootstauchgänge an den beiden besten Revieren des Sinai — Ras Mohammed und die Straße von Tiran — mit einem geprüften PADI-Center.",
+      "Vier geführte Bootstauchgänge an den beiden besten Revieren des Sinai — Ras Mohammed und die Straße von Tiran — mit einem geprüften PADI-Center.",
     keywords:
       "tauchen rotes meer, tauchsafari scharm el scheich, ras mohammed tauchen, straße von tiran, padi tauchreise ägypten",
     crumb: "Tauchen, 4 Tage",
@@ -1280,7 +1280,7 @@ export const de: TourText[] = [
     durationLabel: "4 Tage / 3 Nächte",
     startPoint: "Scharm el-Scheich (Flughafen oder Hotel)",
     summary:
-      "Sechs geführte Bootstauchgänge an den zwei besten Revieren des Sinai — Ras Mohammed und Tiran — mit einem von uns geprüften PADI-Center, plus ein Check-Dive vom Ufer.",
+      "Vier geführte Bootstauchgänge an den zwei besten Revieren des Sinai — Ras Mohammed und Tiran — mit einem von uns geprüften PADI-Center, nach einem Check-Dive am Hausriff.",
     overview:
       "Das nördliche Rote Meer ist eines der Maßstabsreviere der Welt: über 20 Meter Sicht als Normalfall, nie wirklich kaltes Wasser und Riffwände, die von Schnorcheltiefe ins Blaue abfallen. Dieses Programm verdichtet das auf vier Tage, ohne bei Sicherheit oder Oberflächenpausen zu kürzen. Nach einem Check-Dive am Hausriff Ihres Resorts decken zwei volle Bootstage die beiden Pflichtreviere ab — den Ras-Mohammed-Nationalpark, wo Shark Reef und Yolanda Reef den berühmtesten Doppelplatz des Sinai bilden, und die vier benannten Riffe der Straße von Tiran, über die sanfte Driftströmungen und Großfische ziehen. Getaucht wird mit einem lizenzierten PADI-Center, mit dem wir dauerhaft zusammenarbeiten; die Gruppen bleiben klein, und nicht tauchende Begleitung ist mit Schnorchelausrüstung an Bord willkommen.",
     itinerary: [
@@ -1690,7 +1690,7 @@ export const de: TourText[] = [
     faqs: [
       {
         q: "Ist die Halle der Königsmumien enthalten?",
-        a: "Ja — der Eintritt zur Mumienhalle innerhalb des NMEC ist enthalten. Es ist ein stiller, respektvoller Raum, und Fotografieren ist dort nicht erlaubt.",
+        a: "Ja — die Mumienhalle gehört zum Besuch. Sie ist im NMEC-Ticket enthalten, das wie jedes Ticket unserer Tagestouren zum offiziellen Kassenpreis bezahlt wird, ohne Aufschlag. Es ist ein stiller, respektvoller Raum, und Fotografieren ist dort nicht erlaubt.",
       },
       {
         q: "Worin unterscheiden sich die beiden Museen?",

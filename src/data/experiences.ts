@@ -28,7 +28,7 @@ export const experiences: Experience[] = [
     shortSummary:
       "Watch the first light of dawn break over the Great Pyramid in an exclusive early-access session before the plateau opens to day visitors — led by a licensed Egyptologist.",
     longDescription:
-      "Few moments in travel match the silence of the Giza Plateau at dawn. As the eastern sky shifts from deep violet to amber, the silhouettes of Khufu, Khafre and Menkaure gradually resolve from the darkness into the oldest surviving members of the Seven Wonders of the Ancient World. This private early-access experience is led by a licensed Egyptologist who tailors their commentary to your interests — from royal mythology and construction logistics to the astronomical alignments the ancient builders encoded into the plateau's geometry. With the site nearly empty, you can move at your own pace, photograph without crowds and appreciate the sheer scale of these 4,500-year-old monuments in near-total silence. The session also takes in the Sphinx enclosure at first light, before the tour coaches arrive and the day's noise begins.",
+      "Few moments in travel match the silence of the Giza Plateau at dawn. As the eastern sky shifts from deep violet to amber, the silhouettes of Khufu, Khafre and Menkaure gradually resolve from the darkness — the Great Pyramid among them, the only one of the Seven Wonders of the Ancient World still standing. This private early-access experience is led by a licensed Egyptologist who tailors their commentary to your interests — from royal mythology and construction logistics to the astronomical alignments the ancient builders encoded into the plateau's geometry. With the site nearly empty, you can move at your own pace, photograph without crowds and appreciate the sheer scale of these 4,500-year-old monuments in near-total silence. The session also takes in the Sphinx enclosure at first light, before the tour coaches arrive and the day's noise begins.",
     category: "historical",
     durationLabel: "3–4 hours",
     durationMinutes: 210,
@@ -206,8 +206,8 @@ export const experiences: Experience[] = [
       height: 981,
     },
     gallery: [
-      { alt: "A felucca silhouetted on the Nile as the sun sets over the water", label: "Golden hour", src: "/images/activities/felucca-golden-hour.webp", width: 1500, height: 1000 },
-      { alt: "A lateen-sailed felucca drifting past palms on the Nile at sunset", label: "Under sail", src: "/images/activities/act-felucca-sunset.webp", width: 1300, height: 867 },
+      { alt: "A felucca silhouetted on the Nile as the sun sets over the water", label: "Golden hour", src: "/images/activities/felucca-golden-hour.webp", width: 670, height: 446 },
+      { alt: "A lateen-sailed felucca drifting past palms on the Nile at sunset", label: "Under sail", src: "/images/activities/act-felucca-sunset.webp", width: 720, height: 480 },
     ],
     seo: {
       title: "Private Felucca Sailing, Aswan — Exclusive Charter | Kemet",
@@ -229,9 +229,9 @@ export const experiences: Experience[] = [
     domain: "experience",
     title: "Old Cairo Walking Experience",
     shortSummary:
-      "Walk the medieval lanes of Islamic Cairo and the Coptic quarter with a historian guide who reads the city's 1,400-year layered fabric — from Roman fortifications to Ottoman merchant palaces.",
+      "Walk the medieval lanes of Islamic Cairo and the Coptic quarter with a historian guide who reads nearly two thousand years of layered city — from Roman fortifications to Ottoman merchant palaces.",
     longDescription:
-      "Cairo is not one city but a dozen, each built on the ruins of its predecessor. This private walking experience moves through the oldest inhabited layers: the Roman fortress of Babylon, where Christianity arrived in Africa; the Coptic quarter with its hanging churches built into the Roman towers; and the medieval fabric of Islamic Cairo — the world's largest surviving medieval city and a UNESCO World Heritage Site. Your historian guide is not a script-reader but someone who actually knows the city: who can stand in the courtyard of Ibn Tulun mosque and explain what made its ninth-century founder different from every other Abbasid governor, or point out the Mamluk water distribution systems still visible in the alley walls. The walk takes in the Khan el-Khalili bazaar quarter and the perfume-sellers' alley at its edge, giving you the knowledge to navigate and appreciate it independently later in your trip.",
+      "Cairo is not one city but a dozen, each built on the ruins of its predecessor. This private walking experience moves through the oldest inhabited layers: the Roman fortress of Babylon, heart of Coptic Cairo; the Coptic quarter, with the Hanging Church built over the fortress's Roman gate; and the medieval fabric of Islamic Cairo — the world's largest surviving medieval city and a UNESCO World Heritage Site. Your historian guide is not a script-reader but someone who actually knows the city: who can stand in the courtyard of Ibn Tulun mosque and explain what made its ninth-century founder different from every other Abbasid governor, or point out the Mamluk water distribution systems still visible in the alley walls. The walk takes in the Khan el-Khalili bazaar quarter and the perfume-sellers' alley at its edge, giving you the knowledge to navigate and appreciate it independently later in your trip.",
     category: "walking-tour",
     durationLabel: "3 hours",
     durationMinutes: 180,
@@ -387,7 +387,7 @@ export const experiences: Experience[] = [
     faqs: [
       {
         q: "What dishes do we cook?",
-        a: "The menu varies seasonally and is curated by the instructor. A typical session includes ful medames (ancient broad-bean stew), mahshi (Ottoman-style stuffed vegetables), a pharaonic-influenced grain salad and konafa (Levantine pastry). The exact dishes are confirmed before the session.",
+        a: "The menu varies seasonally and is curated by the instructor. A typical session includes ful medames (ancient broad-bean stew), mahshi (Ottoman-style stuffed vegetables), a pharaonic-influenced grain salad and kunafa (the shredded-pastry sweet Cairo has made since Fatimid times). The exact dishes are confirmed before the session.",
       },
       {
         q: "Do we need any cooking experience?",
@@ -437,7 +437,7 @@ export const experiences: Experience[] = [
     languages: [...GUIDE_LANGUAGE_CODES],
     groupSizeNote: "Private — your party only.",
     availabilityNote:
-      "Available most evenings. The temple opens to visitors after dark from approximately 6 pm.",
+      "Available most evenings. The temple stays open into the evening and is floodlit from sunset.",
     priceNote:
       "Pricing confirmed on enquiry. All entrance fees and the Egyptologist guide included.",
     highlights: [
@@ -473,7 +473,7 @@ export const experiences: Experience[] = [
     ],
     goodToKnow: [
       "The Abu Haggag mosque, built inside the pylon of Ramesses II, is an active place of worship — respectful dress and behaviour are expected",
-      "The temple is at its least crowded in the two hours after opening; earlier evening visits can still have moderate footfall",
+      "The temple is quietest late in the evening; the first hour after sunset can still be fairly busy",
       "Photography is freely permitted throughout the site",
     ],
     faqs: [
@@ -483,7 +483,7 @@ export const experiences: Experience[] = [
       },
       {
         q: "Can we combine this with a Karnak visit?",
-        a: "Karnak is a separate complex approximately 2.5 km north. It is open to visitors in the evening as well. We can arrange a full evening itinerary combining both sites.",
+        a: "Karnak is a separate complex at the far end of the Avenue of Sphinxes, about 2.7 km north. After dark it opens only for its Sound and Light show, so the best combination is Karnak by day and this walk in the evening — or the show followed by this walk, which we can arrange.",
       },
     ],
     hero: {
@@ -623,7 +623,7 @@ export const experiences: Experience[] = [
     groupSizeNote:
       "Baskets are shared (sectioned compartments); private-basket charters available on request.",
     availabilityNote:
-      "Flies most mornings October–May, strictly weather permitting. Cancelled flights are rebooked or refunded.",
+      "Flies most mornings year-round, strictly weather permitting; October–May is the most reliable season. Cancelled flights are rebooked or refunded.",
     priceNote: "Pricing confirmed on enquiry; private-basket charter quoted separately.",
     highlights: [
       "The Valley of the Kings and Hatshepsut's temple from the air",
@@ -635,7 +635,7 @@ export const experiences: Experience[] = [
     keyFacts: [
       { label: "Flight time", value: "45–60 minutes" },
       { label: "Start", value: "Pre-dawn pickup (time confirmed the evening before)" },
-      { label: "Season", value: "October – May" },
+      { label: "Season", value: "Year-round; most reliable October – May" },
       { label: "Minimum age", value: "6 years (basket wall height)" },
       { label: "Group type", value: "Shared basket; private charter on request" },
     ],
@@ -683,13 +683,13 @@ export const experiences: Experience[] = [
     gallery: [
       { alt: "Hot-air balloons at sunrise over the villages and green fields of Luxor's West Bank, seen from a basket", label: "From the basket", src: "/images/activities/balloons-luxor-sunrise-west-bank.webp", width: 814, height: 458 },
       { alt: "Balloons in silhouette as the sun clears the horizon over Luxor", label: "Sunrise", src: "/images/activities/balloons-luxor-silhouettes-dawn.webp", width: 743, height: 418 },
-      { alt: "A fleet of hot-air balloons rising over the Nile valley and temples of Luxor at dawn", label: "Dawn fleet", src: "/images/activities/balloons-over-luxor.webp", width: 1500, height: 1000 },
-      { alt: "Balloons drifting above the West Bank and the green Nile floodplain", label: "Above Thebes", src: "/images/activities/act-balloon-luxor.webp", width: 1300, height: 867 },
+      { alt: "A fleet of hot-air balloons rising over the Nile valley and temples of Luxor at dawn", label: "Dawn fleet", src: "/images/activities/balloons-over-luxor.webp", width: 766, height: 400 },
+      { alt: "Balloons drifting above the West Bank and the green Nile floodplain", label: "Above Thebes", src: "/images/activities/act-balloon-luxor.webp", width: 500, height: 400 },
       { alt: "Balloons rising into the first light over the Nile valley at Luxor", label: "First light", src: "/images/activities/balloons-luxor-first-light.webp", width: 885, height: 498 },
     ],
     films: balloonFilms,
     seo: {
-      title: "Hot-Air Balloon over Luxor — Private Dawn Flight | Kemet",
+      title: "Hot-Air Balloon over Luxor — Sunrise Flight | Kemet",
       description:
         "Sunrise balloon flight over Luxor's West Bank — the Valley of the Kings, Hatshepsut's temple and the Nile at dawn, with licensed pilots.",
     },
@@ -878,9 +878,8 @@ export const experiences: Experience[] = [
       height: 458,
     },
     gallery: [
-      { alt: "A wooden jetty reaching over the turquoise Red Sea to a desert island", label: "Island anchorage", src: "/images/redsea/hurghada-island-jetty.webp", width: 1500, height: 844 },
-      { alt: "Guests parasailing high above the Red Sea under a bright canopy", label: "Parasailing", src: "/images/activities/parasailing-pair.webp", width: 1200, height: 800 },
-      { alt: "A quiet turquoise Red Sea bay fringed by palms", label: "Turquoise bay", src: "/images/redsea/hurghada-turquoise-swing.webp", width: 564, height: 845 },
+      { alt: "Sharm El Sheikh's curved bays seen from above", label: "Sharm El Sheikh", src: "/images/redsea/sharm-naama-bay-aerial.webp", width: 627, height: 627 },
+      { alt: "A thatched beach camp above the coral shallows at Sharm El Sheikh", label: "Coral shallows", src: "/images/redsea/sharm-reef-beach-camp.webp", width: 736, height: 981 },
     ],
     seo: {
       title: "Private Yacht Charter, Sharm El Sheikh — Ras Mohammed | Kemet",
@@ -1045,7 +1044,7 @@ export const experiences: Experience[] = [
     faqs: [
       {
         q: "Is this a staged 'Bedouin show'?",
-        a: "No — and that is the point. There is no belly-dancing stage or quad-bike convoy. It is a hosted dinner at a family camp, with the sky as the main event. Guests consistently call it the quietest, most memorable evening of the coast.",
+        a: "No — and that is the point. There is no belly-dancing stage or quad-bike convoy. It is a hosted dinner at a family camp, with the sky as the main event.",
       },
       {
         q: "What will we actually see in the sky?",
@@ -1059,15 +1058,6 @@ export const experiences: Experience[] = [
       width: 736,
       height: 1308,
     },
-    gallery: [
-      {
-        alt: "A still rock pool hidden in a granite wadi of the Sinai interior",
-        label: "Sinai wadi",
-        src: "/images/redsea/sinai-wadi-rock-pool.webp",
-        width: 719,
-        height: 800,
-      },
-    ],
     seo: {
       title: "Sinai Stargazing & Bedouin Dinner, Sharm El Sheikh | Kemet",
       description:
@@ -1102,7 +1092,7 @@ export const experiences: Experience[] = [
     location: "Giza plateau, Sphinx theatre area",
     meetingPointNote: "Hotel pickup from Cairo or Giza included; showtimes vary by season and language.",
     isPrivate: true,
-    languages: ["en", "fr", "ar"],
+    languages: ["en", "fr", "es", "de", "ar"],
     groupSizeNote: "Private transfers and reserved seating for your party.",
     availabilityNote: "Runs nightly with rotating language schedules; English shows most evenings.",
     priceNote: "Pricing confirmed on enquiry. Reserved seating and transfers included.",
@@ -1237,11 +1227,11 @@ export const experiences: Experience[] = [
       },
     ],
     hero: {
-      alt: "A blue-painted Nubian village above the Nile at Aswan",
+      alt: "A painted Nubian terrace above the Nile at sunset in Aswan",
       label: "Nubian Village Experience",
-      src: "/images/aswan/aswan-nubian-village-nile.webp",
-      width: 512,
-      height: 640,
+      src: "/images/aswan/aswan-nubian-terrace-sunset.webp",
+      width: 736,
+      height: 1275,
     },
     seo: {
       title: "Nubian Village Experience, Aswan — Private Family Visit | Kemet",
@@ -1353,7 +1343,7 @@ export const experiences: Experience[] = [
     shortSummary:
       "Met at the aircraft door, walked through fast-track immigration, luggage handled to the car — Cairo airport reduced to a corridor and a handshake.",
     longDescription:
-      "Cairo International is a perfectly functional airport experienced badly at exactly the wrong moments: after a long-haul overnight, before a dawn departure, with children, or with forty minutes between connections. This service removes it from the equation. On arrival you are met at the aircraft door or jet bridge by name, escorted through the fast-track immigration lane with your visa handled, and your luggage is collected and brought to a driver who is already waiting. Departures run the mirror image: kerb to lounge with check-in, security and immigration compressed into minutes. It is the least photogenic experience we offer and one of the most consistently praised — because the first and last hour of a journey sets the tone for everything between.",
+      "Cairo International is a perfectly functional airport experienced badly at exactly the wrong moments: after a long-haul overnight, before a dawn departure, with children, or with forty minutes between connections. This service removes it from the equation. On arrival you are met at the aircraft door or jet bridge by name, escorted through the fast-track immigration lane with your visa handled, and your luggage is collected and brought to a driver who is already waiting. Departures run the mirror image: kerb to lounge with check-in, security and immigration compressed into minutes. It is the least photogenic experience we offer and one of the most useful — because the first and last hour of a journey sets the tone for everything between.",
     category: "luxury-experience",
     durationLabel: "≈1 hour per direction",
     durationMinutes: 60,

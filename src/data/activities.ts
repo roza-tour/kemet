@@ -10,7 +10,7 @@ export const activities: Activity[] = [
     place: "Luxor",
     blurb:
       "Lift off at dawn over the West Bank as the temples and tombs of Thebes emerge from the mist and the Nile turns gold below.",
-    image: { src: "/images/activities/act-balloon-luxor.webp", alt: "Hot-air balloons drifting over the Nile valley and temples of Luxor at dawn", width: 1300, height: 867 },
+    image: { src: "/images/activities/act-balloon-luxor.webp", alt: "Hot-air balloons drifting over the Nile valley and temples of Luxor at dawn", width: 500, height: 400 },
     slug: "hot-air-balloon-luxor",
     // This activity and experiences/hot-air-balloon-luxor.html describe the same
     // flight. Two indexable pages competing for "hot air balloon Luxor" split
@@ -57,7 +57,7 @@ export const activities: Activity[] = [
     place: "Cairo",
     blurb:
       "An evening of whirling dervishes and live music in a restored Ottoman palace — colour, percussion and devotion in motion.",
-    image: { src: "/images/activities/act-tanoura.webp", alt: "A Sufi tanoura performer spinning in a brightly coloured skirt", width: 1200, height: 800 },
+    image: { src: "/images/activities/act-tanoura.webp", alt: "A Sufi tanoura performer spinning in a brightly coloured skirt", width: 800, height: 615 },
     slug: "sufi-tanoura-cairo",
     shortSummary:
       "An evening of Egyptian Sufi music and tanoura spinning in medieval Cairo — devotional performance, not a tourist floor show.",
@@ -96,7 +96,7 @@ export const activities: Activity[] = [
     place: "Sharm El Sheikh",
     blurb:
       "A fast, laughter-filled spin across the turquoise shallows of the Red Sea — the easiest way onto the water for all ages.",
-    image: { src: "/images/activities/act-banana-boat.webp", alt: "Guests riding a banana boat across the turquoise Red Sea", width: 1200, height: 800 },
+    image: { src: "/images/activities/act-banana-boat.webp", alt: "Guests riding a banana boat across the turquoise Red Sea", width: 800, height: 600 },
     slug: "banana-boat-sharm",
     shortSummary:
       "A fast inflatable ride across the sheltered turquoise shallows of the Red Sea — the simplest way onto the water for mixed-age groups.",
@@ -135,7 +135,7 @@ export const activities: Activity[] = [
     place: "Sharm El Sheikh",
     blurb:
       "Rise on the wind above the reef line for a gull's-eye view of the coast, the corals and the desert mountains behind.",
-    image: { src: "/images/activities/act-parasailing.webp", alt: "A pair parasailing above the Red Sea under a colourful canopy", width: 1200, height: 800 },
+    image: { src: "/images/activities/act-parasailing.webp", alt: "A pair parasailing above the Red Sea under a colourful canopy", width: 900, height: 500 },
     slug: "parasailing-sharm",
     shortSummary:
       "A towed canopy flight above the Red Sea reef line at Sharm El Sheikh — a few minutes of quiet, and the coast laid out beneath you.",
@@ -174,7 +174,7 @@ export const activities: Activity[] = [
     place: "Aswan",
     blurb:
       "Drift under a lateen sail past Elephantine Island and the Nubian shore as the sun sinks behind the dunes — Egypt at its most serene.",
-    image: { src: "/images/activities/act-felucca-sunset.webp", alt: "A felucca under sail on the Nile at golden sunset", width: 1300, height: 867 },
+    image: { src: "/images/activities/act-felucca-sunset.webp", alt: "A felucca under sail on the Nile at golden sunset", width: 720, height: 480 },
     slug: "felucca-sunset-aswan",
     shortSummary:
       "An hour under lateen sail at Aswan as the light goes — past Elephantine Island and the Nubian shore, with no engine.",
@@ -213,7 +213,7 @@ export const activities: Activity[] = [
     place: "Giza",
     blurb:
       "Cross the desert edge by camel for the timeless approach to the pyramids and the panoramic viewpoint beyond the plateau.",
-    image: { src: "/images/activities/act-camel-pyramids.webp", alt: "Guests on a camel caravan before the Pyramids of Giza", width: 1300, height: 867 },
+    image: { src: "/images/activities/act-camel-pyramids.webp", alt: "Guests on a camel caravan before the Pyramids of Giza", width: 1300, height: 934 },
     slug: "camel-ride-pyramids",
     shortSummary:
       "A short camel ride along the desert edge at Giza to the panoramic viewpoint — the classic approach, arranged so nobody haggles.",
@@ -252,7 +252,7 @@ export const activities: Activity[] = [
     place: "Marsa Alam",
     blurb:
       "Descend reef walls alive with coral and fish in some of the clearest, warmest water on earth, from beginner dives to deep sites.",
-    image: { src: "/images/activities/act-diving.webp", alt: "A scuba diver beside a vivid Red Sea coral reef teeming with fish", width: 1200, height: 800 },
+    image: { src: "/images/activities/act-diving.webp", alt: "A scuba diver beside a vivid Red Sea coral reef teeming with fish", width: 447, height: 447 },
     slug: "diving-marsa-alam",
     shortSummary:
       "Reef-wall diving in the southern Red Sea at Marsa Alam — 20–30 metres of visibility, warm water year-round, and reefs in better condition than the north.",
@@ -293,7 +293,7 @@ export const activities: Activity[] = [
     place: "Western Desert",
     blurb:
       "Throttle across open dunes into the silence of the desert, stopping for sweet tea and a sunset that runs the full spectrum of gold.",
-    image: { src: "/images/activities/act-quad-biking.webp", alt: "Guests quad biking across desert dunes near the Giza pyramids", width: 1300, height: 867 },
+    image: { src: "/images/activities/act-quad-biking.webp", alt: "Guests quad biking across desert dunes near the Giza pyramids", width: 1280, height: 720 },
     slug: "quad-biking-desert",
     shortSummary:
       "A guided quad run into the open desert with a Bedouin tea stop and sunset — dunes, silence and a sky that goes from gold to violet.",

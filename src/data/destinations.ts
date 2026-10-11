@@ -164,16 +164,16 @@ export const destinations: Destination[] = [
     ],
     symbol: "ankh",
     hero: {
-      alt: "The Great Pyramid of Khufu on the Giza plateau under a clear desert sky",
+      alt: "A decorated camel resting before the Pyramids of Giza in early light",
       label: "Giza",
-      src: "/images/giza/giza-great-pyramid-clear-sky.webp",
-      width: 1600,
-      height: 1062,
+      src: "/images/giza/giza-camel-pyramids-sunrise.webp",
+      width: 736,
+      height: 736,
     },
     gallery: [
       { alt: "The Great Sphinx of Giza facing the dawn", label: "Great Sphinx", src: "/images/giza/giza-great-sphinx-frontal.webp", width: 736, height: 920 },
       { alt: "The Great Pyramid of Khufu on the Giza plateau", label: "Great Pyramid", src: "/images/giza/giza-great-pyramid-khufu.webp", width: 736, height: 981 },
-      { alt: "The Sphinx set before a pyramid at Giza", label: "Sphinx & Pyramid", src: "/images/giza/giza-sphinx-and-pyramid.webp", width: 736, height: 920 },
+      { alt: "Kemet guests at the Giza panorama viewpoint with the pyramids behind them", label: "Panorama point", src: "/images/clients/clients-09-giza-panorama.webp", width: 680, height: 680 },
       { alt: "The Grand Egyptian Museum beside the Giza plateau", label: "Grand Egyptian Museum", src: "/images/giza/giza-grand-egyptian-museum.webp", width: 474, height: 592 },
     ],
     faqs: [
@@ -359,7 +359,7 @@ export const destinations: Destination[] = [
       height: 810,
     },
     gallery: [
-      { alt: "A blue-and-white Nubian village on the Nile at Aswan", label: "Nubian village", src: "/images/aswan/aswan-nubian-village-nile.webp", width: 512, height: 640 },
+      { alt: "Brightly decorated Nubian boats moored on the Nile at Aswan", label: "Nubian boats", src: "/images/aswan/aswan-nubian-decorated-boats.webp", width: 736, height: 1077 },
       { alt: "A felucca under sail on the Nile at Aswan", label: "Felucca", src: "/images/aswan/aswan-felucca-sailing-nile.webp", width: 736, height: 981 },
       { alt: "The Aswan High Dam holding back Lake Nasser", label: "High Dam", src: "/images/aswan/aswan-high-dam.webp", width: 1080, height: 607 },
       { alt: "The colossi of the Great Temple of Ramesses II at Abu Simbel", label: "Abu Simbel", src: "/images/aswan/abu-simbel-great-temple-colossi.webp", width: 736, height: 1308 },
@@ -591,8 +591,8 @@ export const destinations: Destination[] = [
       width: 627, height: 627,
     },
     gallery: [
-      { alt: "Vivid coral and fish on a Red Sea reef near Sharm El Sheikh", label: "The reefs", src: "/images/redsea/red-sea-aquarium.webp", width: 764, height: 458 },
-      { alt: "A rock pool in a Sinai desert wadi", label: "Sinai wadis", src: "/images/redsea/sinai-wadi-rock-pool.webp", width: 719, height: 800 },
+      { alt: "A turquoise lagoon meeting bare desert headlands at Ras Mohammed", label: "Ras Mohammed", src: "/images/redsea/ras-mohammed-lagoon.webp", width: 764, height: 458 },
+      { alt: "A thatched beach camp above the coral shallows at Sharm El Sheikh", label: "Coral shallows", src: "/images/redsea/sharm-reef-beach-camp.webp", width: 736, height: 981 },
       { alt: "A beach café at sunset on the Sharm El Sheikh coast", label: "Farsha at dusk", src: "/images/redsea/sharm-farsha-cafe-sunset.webp", width: 736, height: 981 },
     ],
     faqs: [

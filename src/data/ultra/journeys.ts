@@ -101,7 +101,7 @@ export const ultraJourneys: UltraJourney[] = [
       { hotel: "Old Cataract", place: "aswan", nights: 2, room: "palaceWing" },
       { hotel: "The Oberoi Beach Resort, Sahl Hasheesh", place: "redsea", nights: 2, room: "poolSuite" },
     ],
-    image: { src: "/images/redsea/red-sea-coral-reef-fish.webp", width: 764, height: 458 },
+    image: { src: "/images/redsea/red-sea-coral-reef-fish.webp", width: 736, height: 915 },
     accent: "lapis",
   },
   {

@@ -75,6 +75,14 @@ export const tours: Tour[] = [
       width: 652,
       height: 980,
     },
+    gallery: [
+      { alt: "The Great Pyramid of Khufu on the Giza plateau", label: "Giza", src: "/images/giza/giza-great-pyramid-khufu.webp", width: 736, height: 981 },
+      { alt: "The Citadel of Qaitbay on the Alexandria seafront", label: "Alexandria", src: "/images/alexandria/alexandria-qaitbay-citadel.webp", width: 736, height: 981 },
+      { alt: "The island Temple of Philae rising from the Nile near Aswan", label: "Philae", src: "/images/aswan/aswan-philae-temple-island.webp", width: 1080, height: 810 },
+      { alt: "A Nile cruise ship between Aswan and Luxor at sunset", label: "The Nile cruise", src: "/images/cruise/nile-cruise-sunset.webp", width: 1024, height: 683 },
+      { alt: "The terraced Temple of Hatshepsut at Deir el-Bahri on Luxor's West Bank", label: "Hatshepsut", src: "/images/luxor/luxor-hatshepsut-temple-deir-el-bahri.webp", width: 1000, height: 600 },
+      { alt: "The Mosque of Muhammad Ali on the Saladin Citadel at dusk", label: "Islamic Cairo", src: "/images/cairo/cairo-citadel-mosque-dusk.webp", width: 1600, height: 1066 },
+    ],
     title: "Egypt Icons & Nile Cruise",
     subtitle:
       "Ten unhurried days from the Pyramids of Giza to the temples of Upper Egypt, threaded together by a three-night Nile cruise.",
@@ -89,7 +97,7 @@ export const tours: Tour[] = [
     price: 1915,
     was: 2489,
     summary:
-      "Our most complete journey: Cairo, Alexandria, a sleeper train south, and a three-night Nile cruise from Aswan to Luxor — every layer of Egypt in one arc.",
+      "Our signature journey: Cairo, Alexandria, a sleeper train south, and a three-night Nile cruise from Aswan to Luxor — every layer of Egypt in one arc.",
     overview:
       "This is the full sweep of Egypt, paced to be lived rather than ticked off. You begin in Cairo with the treasures of the Egyptian Museum, take a day on the Mediterranean at Alexandria, then ride the sleeper train south to Aswan. From there a three-night Nile cruise carries you downstream past Kom Ombo and Edfu to Luxor, where the temples of Karnak and the royal tombs of the West Bank wait. You return to Cairo for the Pyramids of Giza and the timeworn lanes of Islamic Cairo. Travel is private throughout, led by your own Egyptologist.",
     itinerary: [
@@ -180,8 +188,8 @@ export const tours: Tour[] = [
         title: "Giza & Saqqara",
         items: [
           "The Pyramids of Khufu, Khafre and Menkaure and the Great Sphinx",
-          "Step Pyramid of Djoser at Saqqara, the world's oldest stone monument",
           "Panoramic viewpoint across the Giza plateau",
+          "Step Pyramid of Djoser at Saqqara, the world's oldest stone monument",
         ],
       },
       {
@@ -218,7 +226,7 @@ export const tours: Tour[] = [
       },
       {
         q: "How do the overnight trains work?",
-        a: "You travel in a private sleeper cabin with dinner and breakfast served aboard. It saves a daytime transfer and arrives refreshed for the morning's sightseeing.",
+        a: "You travel in a private sleeper cabin with dinner and breakfast served aboard. It saves a daytime transfer, and you arrive rested for the morning's sightseeing.",
       },
       {
         q: "Can Abu Simbel be added?",
@@ -239,6 +247,14 @@ export const tours: Tour[] = [
       width: 736,
       height: 920,
     },
+    gallery: [
+      { alt: "The grand hall of the Egyptian Museum in Cairo", label: "Egyptian Museum", src: "/images/cairo/cairo-egyptian-museum-hall.webp", width: 1067, height: 1600 },
+      { alt: "The disc of the Bibliotheca Alexandrina on the waterfront", label: "Alexandria", src: "/images/alexandria/alexandria-bibliotheca.webp", width: 764, height: 458 },
+      { alt: "Karnak Temple and its sacred lake at Luxor", label: "Karnak", src: "/images/luxor/luxor-karnak-sacred-lake.webp", width: 1000, height: 600 },
+      { alt: "A painted royal tomb in the Valley of the Kings", label: "Valley of the Kings", src: "/images/luxor/luxor-valley-of-the-kings-tomb.webp", width: 1000, height: 600 },
+      { alt: "The Step Pyramid of Djoser at Saqqara", label: "Saqqara", src: "/images/giza/saqqara-step-pyramid-djoser.webp", width: 1600, height: 1200 },
+      { alt: "The Mosque of Muhammad Ali crowning the Saladin Citadel", label: "Islamic Cairo", src: "/images/cairo/cairo-mosque-muhammad-ali-citadel.webp", width: 736, height: 1104 },
+    ],
     title: "Egypt Highlights Deluxe",
     subtitle:
       "A week that gathers the essentials — Cairo, Alexandria and Luxor — with sleeper-train nights between them.",
@@ -313,8 +329,8 @@ export const tours: Tour[] = [
         title: "Giza & Saqqara",
         items: [
           "Pyramids of Giza and the Great Sphinx",
-          "Step Pyramid of Djoser at Saqqara",
           "Panoramic plateau viewpoint",
+          "Step Pyramid of Djoser at Saqqara",
         ],
       },
       {
@@ -367,6 +383,12 @@ export const tours: Tour[] = [
       width: 736,
       height: 920,
     },
+    gallery: [
+      { alt: "The underground Catacombs of Kom el-Shoqafa in Alexandria", label: "Alexandria", src: "/images/alexandria/alexandria-catacombs-kom-el-shoqafa.webp", width: 1000, height: 725 },
+      { alt: "The Great Pyramid of Khufu on the Giza plateau", label: "Giza", src: "/images/giza/giza-great-pyramid-khufu.webp", width: 736, height: 981 },
+      { alt: "The Step Pyramid of Djoser at Saqqara", label: "Saqqara", src: "/images/giza/saqqara-step-pyramid-djoser.webp", width: 1600, height: 1200 },
+      { alt: "The Mosque of Muhammad Ali on the Saladin Citadel at dusk", label: "Islamic Cairo", src: "/images/cairo/cairo-citadel-mosque-dusk.webp", width: 1600, height: 1066 },
+    ],
     title: "From Pyramids to the Sea",
     subtitle:
       "Four days pairing the monuments of Cairo and Giza with a day on the Mediterranean at Alexandria.",
@@ -433,7 +455,7 @@ export const tours: Tour[] = [
     },
     included: [
       ...baseIncluded.slice(0, 1),
-      "3 nights' accommodation in 4- or 5-star hotels",
+      "3 nights' accommodation in a 4- or 5-star hotel",
       ...baseIncluded.slice(1),
     ],
     excluded: baseExcluded,
@@ -461,6 +483,12 @@ export const tours: Tour[] = [
       width: 1000,
       height: 600,
     },
+    gallery: [
+      { alt: "The great hypostyle hall of Karnak Temple, Luxor", label: "Karnak", src: "/images/luxor/luxor-karnak-hypostyle-hall.webp", width: 652, height: 980 },
+      { alt: "The colonnade of Luxor Temple with its royal statues", label: "Luxor Temple", src: "/images/luxor/luxor-temple-colonnade.webp", width: 736, height: 920 },
+      { alt: "The terraced Temple of Hatshepsut at Deir el-Bahri on Luxor's West Bank", label: "Hatshepsut", src: "/images/luxor/luxor-hatshepsut-temple-deir-el-bahri.webp", width: 1000, height: 600 },
+      { alt: "The island Temple of Philae rising from the Nile near Aswan", label: "Philae", src: "/images/aswan/aswan-philae-temple-island.webp", width: 1080, height: 810 },
+    ],
     title: "Cairo to Luxor & Aswan",
     subtitle:
       "Three days of Upper Egypt's temples and tombs, with domestic flights folded into the price.",
@@ -546,14 +574,14 @@ export const tours: Tour[] = [
     hero: {
       alt: "The Magic Lake and desert dunes of the Fayoum oasis under a wide sky",
       src: "/images/fayoum/fayoum-magic-lake.webp",
-      width: 1600,
-      height: 1067,
+      width: 764,
+      height: 458,
     },
     gallery: [
-      { alt: "The pyramid of Hawara rising from the Fayoum farmland", label: "Hawara Pyramid", src: "/images/fayoum/fayoum-hawara-pyramid.webp", width: 1200, height: 800 },
-      { alt: "The desert waterfalls of Wadi El Rayan in Fayoum", label: "Wadi El Rayan", src: "/images/fayoum/fayoum-waterfalls.webp", width: 1200, height: 800 },
-      { alt: "The historic wooden waterwheels of Fayoum", label: "Waterwheels", src: "/images/fayoum/fayoum-waterwheels.webp", width: 1200, height: 800 },
-      { alt: "Hand-painted pottery in the artists' village of Tunis, Fayoum", label: "Tunis pottery", src: "/images/fayoum/fayoum-tunis-pottery.webp", width: 1200, height: 800 },
+      { alt: "The pyramid of Hawara rising from the Fayoum farmland", label: "Hawara Pyramid", src: "/images/fayoum/fayoum-hawara-pyramid.webp", width: 764, height: 458 },
+      { alt: "The desert waterfalls of Wadi El Rayan in Fayoum", label: "Wadi El Rayan", src: "/images/fayoum/fayoum-waterfalls.webp", width: 736, height: 981 },
+      { alt: "The historic wooden waterwheels of Fayoum", label: "Waterwheels", src: "/images/fayoum/fayoum-waterwheels.webp", width: 764, height: 458 },
+      { alt: "Hand-painted pottery in the artists' village of Tunis, Fayoum", label: "Tunis pottery", src: "/images/fayoum/fayoum-tunis-pottery.webp", width: 736, height: 981 },
     ],
     title: "Fayoum Oasis",
     subtitle:
@@ -636,6 +664,12 @@ export const tours: Tour[] = [
       width: 736,
       height: 981,
     },
+    gallery: [
+      { alt: "Kemet guests posing playfully before the Pyramids of Giza", label: "Giza plateau", src: "/images/clients/clients-26-giza-pose.webp", width: 680, height: 680 },
+      { alt: "A decorated camel resting before the Pyramids of Giza in early light", label: "The pyramids", src: "/images/giza/giza-camel-pyramids-sunrise.webp", width: 736, height: 736 },
+      { alt: "The Great Sphinx of Giza facing the dawn", label: "Great Sphinx", src: "/images/giza/giza-great-sphinx-frontal.webp", width: 736, height: 920 },
+      { alt: "The Grand Egyptian Museum beside the Giza plateau", label: "Grand Egyptian Museum", src: "/images/giza/giza-grand-egyptian-museum.webp", width: 474, height: 592 },
+    ],
     title: "Giza & the Grand Museum",
     subtitle:
       "The Pyramids and Sphinx in the morning, the Grand Egyptian Museum in the afternoon — the old wonder and the new, in one day.",
@@ -710,6 +744,12 @@ export const tours: Tour[] = [
       width: 1600,
       height: 1200,
     },
+    gallery: [
+      { alt: "A family of Kemet guests celebrating at the Step Pyramid of Saqqara", label: "Saqqara", src: "/images/clients/clients-07-saqqara-family.webp", width: 680, height: 680 },
+      { alt: "Kemet guests at the Bent Pyramid of Dahshur", label: "Bent Pyramid", src: "/images/clients/clients-15-dahshur-bent-pyramid.webp", width: 680, height: 680 },
+      { alt: "The Red Pyramid of Dahshur, the first true pyramid, under a clear desert sky", label: "Red Pyramid", src: "/images/giza/giza-great-pyramid-clear-sky.webp", width: 1600, height: 1062 },
+      { alt: "A family of Kemet guests at the base of the Red Pyramid of Dahshur", label: "Red Pyramid", src: "/images/clients/clients-19-red-pyramid.webp", width: 680, height: 680 },
+    ],
     title: "Saqqara, Memphis & Dahshur",
     subtitle:
       "The birthplace of the pyramid — from Djoser's first step pyramid to the great geometric tombs of Dahshur.",
@@ -780,6 +820,10 @@ export const tours: Tour[] = [
       width: 736,
       height: 1104,
     },
+    gallery: [
+      { alt: "The Mosque of Muhammad Ali on the Saladin Citadel at dusk", label: "Saladin Citadel", src: "/images/cairo/cairo-citadel-mosque-dusk.webp", width: 1600, height: 1066 },
+      { alt: "A group of Kemet guests on the steps of the Saladin Citadel in Cairo", label: "Saladin Citadel", src: "/images/clients/clients-04-citadel-steps.webp", width: 680, height: 680 },
+    ],
     title: "Religious Cairo & the Citadel",
     subtitle:
       "The faiths of Cairo in one day — Coptic churches, an ancient synagogue, and the great mosque-crowned Citadel.",
@@ -893,7 +937,7 @@ export const tours: Tour[] = [
     faqs: [
       {
         q: "Is the Royal Mummies Hall included?",
-        a: "Yes — entry to the Royal Mummies Hall within the NMEC is included. It is a quiet, respectful space, and photography is not permitted inside.",
+        a: "Yes — the Royal Mummies Hall is part of the visit. It is covered by the NMEC ticket, which, like every ticket on our day tours, is paid at the published gate rate with nothing added. It is a quiet, respectful space, and photography is not permitted inside.",
       },
       {
         q: "How do the two museums differ?",
@@ -914,6 +958,12 @@ export const tours: Tour[] = [
       width: 1000,
       height: 600,
     },
+    gallery: [
+      { alt: "The underground Catacombs of Kom el-Shoqafa", label: "Catacombs", src: "/images/alexandria/alexandria-catacombs-kom-el-shoqafa.webp", width: 1000, height: 725 },
+      { alt: "Pompey's Pillar rising from the ruins of the Serapeum", label: "Pompey's Pillar", src: "/images/alexandria/alexandria-pompeys-pillar.webp", width: 764, height: 458 },
+      { alt: "The Citadel of Qaitbay on the Alexandria seafront", label: "Qaitbay", src: "/images/alexandria/alexandria-qaitbay-citadel.webp", width: 736, height: 981 },
+      { alt: "The disc of the Bibliotheca Alexandrina on the waterfront", label: "Bibliotheca", src: "/images/alexandria/alexandria-bibliotheca.webp", width: 764, height: 458 },
+    ],
     title: "Alexandria Sightseeing",
     subtitle:
       "A full day on the Mediterranean — catacombs, a Roman pillar, a sea-girt citadel and the great modern library.",
@@ -988,6 +1038,12 @@ export const tours: Tour[] = [
       width: 736,
       height: 1104,
     },
+    gallery: [
+      { alt: "The Great Pyramid of Khufu on the Giza plateau", label: "Great Pyramid", src: "/images/giza/giza-great-pyramid-khufu.webp", width: 736, height: 981 },
+      { alt: "Kemet guests at the Giza panorama viewpoint with the pyramids behind them", label: "Panoramic viewpoint", src: "/images/clients/clients-09-giza-panorama.webp", width: 680, height: 680 },
+      { alt: "The Great Sphinx of Giza facing the dawn", label: "Great Sphinx", src: "/images/giza/giza-great-sphinx-frontal.webp", width: 736, height: 920 },
+      { alt: "Kemet guests laughing together beside the Great Sphinx", label: "Great Sphinx", src: "/images/clients/clients-11-sphinx-laughs.webp", width: 680, height: 680 },
+    ],
     title: "Giza Pyramids & Sphinx",
     subtitle:
       "A focused half day among the three great pyramids and the Sphinx, with the classic panoramic viewpoint.",
@@ -1145,14 +1201,14 @@ export const tours: Tour[] = [
     hero: {
       alt: "A Nile cruise ship gliding the river between Aswan and Luxor at sunset",
       src: "/images/cruise/nile-cruise-sunset.webp",
-      width: 1600,
-      height: 1067,
+      width: 1024,
+      height: 683,
     },
     gallery: [
-      { alt: "The teak sun-deck of a Nile cruise vessel set for the day", label: "Sun deck", src: "/images/cruise/nile-dahabiya-deck.webp", width: 1300, height: 867 },
-      { alt: "A Nile cruise ship reflected in the river at golden hour", label: "Golden hour", src: "/images/cruise/nile-cruise-golden.webp", width: 1400, height: 933 },
-      { alt: "A Nile cruise ship illuminated on the river after dark", label: "By night", src: "/images/cruise/nile-cruise-night.webp", width: 1300, height: 867 },
-      { alt: "An ancient temple standing at the edge of the Nile in Upper Egypt", label: "Riverside temple", src: "/images/luxor/luxor-temple-on-the-nile.webp", width: 736, height: 736 },
+      { alt: "The teak sun-deck of a Nile cruise vessel set for the day", label: "Sun deck", src: "/images/cruise/nile-dahabiya-deck.webp", width: 1200, height: 900 },
+      { alt: "A Nile cruise ship reflected in the river at golden hour", label: "Golden hour", src: "/images/cruise/nile-cruise-golden.webp", width: 720, height: 397 },
+      { alt: "A Nile cruise ship illuminated on the river after dark", label: "By night", src: "/images/cruise/nile-cruise-night.webp", width: 700, height: 500 },
+      { alt: "The island Temple of Philae at Aswan, visited before you board", label: "Philae", src: "/images/aswan/aswan-philae-temple-island.webp", width: 1080, height: 810 },
     ],
     title: "Nile in Style: Aswan to Luxor",
     subtitle:
@@ -1170,7 +1226,7 @@ export const tours: Tour[] = [
     summary:
       "The essential Nile cruise, done properly — Philae and the High Dam, three nights afloat past Kom Ombo and Edfu, and Luxor's East and West Banks with your own Egyptologist.",
     overview:
-      "Two hundred kilometres of river separate Aswan from Luxor, and for three thousand years this was Egypt's highway of kings. This journey covers it the only way it should be covered: slowly, by water. You board in Aswan after visiting the island Temple of Philae and the High Dam, then sail north with stops at Kom Ombo — the twin temple shared by the crocodile god Sobek and Horus the Elder — and Edfu, the best-preserved temple in Egypt. The cruise ends in Luxor with a full private programme across both banks: Karnak and Luxor Temple on the east, the Valley of the Kings and Hatshepsut's terraces on the west. Your Egyptologist sails with you, so every stop is guided privately even though the vessel itself is shared.",
+      "Two hundred kilometres of river separate Aswan from Luxor, and for three thousand years this was Egypt's highway of kings. This journey covers it the only way it should be covered: slowly, by water. You board in Aswan after visiting the island Temple of Philae and the High Dam, then sail north with stops at Kom Ombo — the twin temple shared by the crocodile god Sobek and Horus the Elder — and Edfu, the best-preserved temple in Egypt. The cruise ends in Luxor with a private programme across both banks: Karnak on the east, the Valley of the Kings and Hatshepsut's terraces on the west — and, on your last evening aboard, Luxor Temple under floodlights if you wish. Your Egyptologist sails with you, so every stop is guided privately even though the vessel itself is shared.",
     itinerary: [
       {
         label: "Day",
@@ -1249,6 +1305,12 @@ export const tours: Tour[] = [
       width: 736,
       height: 1104,
     },
+    gallery: [
+      { alt: "The great hypostyle hall of Karnak Temple, Luxor", label: "Karnak", src: "/images/luxor/luxor-karnak-hypostyle-hall.webp", width: 652, height: 980 },
+      { alt: "The terraced Temple of Hatshepsut at Deir el-Bahri on Luxor's West Bank", label: "West Bank", src: "/images/luxor/luxor-hatshepsut-temple-deir-el-bahri.webp", width: 1000, height: 600 },
+      { alt: "The island Temple of Philae rising from the Nile near Aswan", label: "Philae", src: "/images/aswan/aswan-philae-temple-island.webp", width: 1080, height: 810 },
+      { alt: "A felucca under sail on the Nile at Aswan", label: "Aswan", src: "/images/aswan/aswan-felucca-sailing-nile.webp", width: 736, height: 981 },
+    ],
     title: "Temples of the South",
     subtitle:
       "Five unhurried days through Upper Egypt — Luxor's two banks, the road south past Edfu and Kom Ombo, and Aswan's islands.",
@@ -1358,6 +1420,14 @@ export const tours: Tour[] = [
       width: 736,
       height: 1308,
     },
+    gallery: [
+      { alt: "A decorated camel resting before the Pyramids of Giza in early light", label: "Sunrise at Giza", src: "/images/giza/giza-camel-pyramids-sunrise.webp", width: 736, height: 736 },
+      { alt: "The island Temple of Philae rising from the Nile near Aswan", label: "Philae", src: "/images/aswan/aswan-philae-temple-island.webp", width: 1080, height: 810 },
+      { alt: "A Nubian terrace above the Nile at sunset in Aswan", label: "Aswan", src: "/images/aswan/aswan-nubian-terrace-sunset.webp", width: 736, height: 1275 },
+      { alt: "A Nile cruise ship reflected in the river at golden hour", label: "The Nile cruise", src: "/images/cruise/nile-cruise-golden.webp", width: 720, height: 397 },
+      { alt: "Hot-air balloons drifting over the West Bank of Luxor at dawn", label: "Balloons", src: "/images/luxor/luxor-hot-air-balloons-dawn.webp", width: 736, height: 981 },
+      { alt: "Karnak Temple and its sacred lake at Luxor", label: "Karnak", src: "/images/luxor/luxor-karnak-sacred-lake.webp", width: 1000, height: 600 },
+    ],
     title: "Honeymoon on the Nile",
     subtitle:
       "Nine days built for two — Cairo's icons, a three-night cruise, Aswan's islands and long golden evenings with nowhere to hurry to.",
@@ -1374,7 +1444,7 @@ export const tours: Tour[] = [
     summary:
       "Egypt as a honeymoon should be — private sunrise at the pyramids, a felucca at golden hour, three nights on the Nile and suites chosen for the view.",
     overview:
-      "A honeymoon itinerary is not a standard itinerary with rose petals. The pacing is different: later starts, longer evenings, one signature moment a day rather than four. This journey opens in Cairo with the Egyptian Museum and a private early-access sunrise at Giza before the plateau opens. You fly south to Aswan — the softest, most romantic city on the river — for a private felucca at golden hour and dinner overlooking the cataract. A three-night cruise carries you to Luxor past Kom Ombo and Edfu, with a dawn hot-air balloon over the Theban hills as the closing image. Hotels and cabins are selected for Nile views throughout, and every guide knows this is a honeymoon, not a forced march.",
+      "A honeymoon itinerary is not a standard itinerary with rose petals. The pacing is different: later starts, longer evenings, one signature moment a day rather than four. This journey opens in Cairo with a private early-access sunrise at Giza before the plateau opens, then the Grand Egyptian Museum at your own pace. You fly south to Aswan — the softest, most romantic city on the river — for a private felucca at golden hour and dinner overlooking the cataract. A three-night cruise carries you to Luxor past Kom Ombo and Edfu, with a dawn hot-air balloon over the Theban hills as the closing image. Hotels and cabins are selected for Nile views throughout, and every guide knows this is a honeymoon, not a forced march.",
     itinerary: [
       {
         label: "Day",
@@ -1439,7 +1509,7 @@ export const tours: Tour[] = [
         num: "07",
         title: "Balloons & the West Bank",
         items: [
-          "Dawn hot-air balloon over the Valley of the Kings (weather permitting)",
+          "Dawn hot-air balloon over Luxor's West Bank, if you add it (weather permitting)",
           "Valley of the Kings and Hatshepsut's temple with your Egyptologist",
           "Disembark to a Luxor hotel for the final nights",
         ],
@@ -1500,11 +1570,19 @@ export const tours: Tour[] = [
   {
     slug: "tour-family-8day",
     hero: {
-      alt: "The Great Sphinx with a pyramid rising behind it at Giza",
-      src: "/images/giza/giza-sphinx-and-pyramid.webp",
+      alt: "The Great Sphinx of Giza facing the dawn",
+      src: "/images/giza/giza-great-sphinx-frontal.webp",
       width: 736,
       height: 920,
     },
+    gallery: [
+      { alt: "Kemet guests jumping for joy above the Giza pyramid panorama", label: "Giza", src: "/images/clients/clients-06-giza-jump.webp", width: 680, height: 680 },
+      { alt: "The Grand Egyptian Museum beside the Giza plateau", label: "Grand Egyptian Museum", src: "/images/giza/giza-grand-egyptian-museum.webp", width: 474, height: 592 },
+      { alt: "The great hypostyle hall of Karnak Temple, Luxor", label: "Karnak", src: "/images/luxor/luxor-karnak-hypostyle-hall.webp", width: 652, height: 980 },
+      { alt: "A painted royal tomb in the Valley of the Kings", label: "Valley of the Kings", src: "/images/luxor/luxor-valley-of-the-kings-tomb.webp", width: 1000, height: 600 },
+      { alt: "A felucca under sail on the Nile at Aswan", label: "Felucca", src: "/images/aswan/aswan-felucca-sailing-nile.webp", width: 736, height: 981 },
+      { alt: "A painted Nubian terrace above the Nile at sunset in Aswan", label: "Nubian colour", src: "/images/aswan/aswan-nubian-terrace-sunset.webp", width: 736, height: 1275 },
+    ],
     title: "Family Egypt: Pyramids to the Nile",
     subtitle:
       "Eight days engineered for curious kids and unhurried parents — mummies, feluccas, tomb-painting colours and afternoons by the pool.",
@@ -1642,6 +1720,14 @@ export const tours: Tour[] = [
       width: 736,
       height: 981,
     },
+    gallery: [
+      { alt: "A decorated camel resting before the Pyramids of Giza in early light", label: "Giza at first light", src: "/images/giza/giza-camel-pyramids-sunrise.webp", width: 736, height: 736 },
+      { alt: "A stone-paved lane of Islamic Cairo glowing with lanterns at night", label: "Islamic Cairo", src: "/images/cairo/cairo-islamic-old-street-night.webp", width: 850, height: 477 },
+      { alt: "Hot-air balloons at sunrise over the villages and fields of Luxor's West Bank, seen from a basket", label: "Balloons", src: "/images/activities/balloons-luxor-sunrise-west-bank.webp", width: 814, height: 458 },
+      { alt: "The colonnade of Luxor Temple with its royal statues", label: "Luxor Temple", src: "/images/luxor/luxor-temple-colonnade.webp", width: 736, height: 920 },
+      { alt: "A felucca under sail on the Nile at Aswan", label: "Aswan", src: "/images/aswan/aswan-felucca-sailing-nile.webp", width: 736, height: 981 },
+      { alt: "Brightly decorated Nubian boats moored on the Nile at Aswan", label: "Nubian colour", src: "/images/aswan/aswan-nubian-decorated-boats.webp", width: 736, height: 1077 },
+    ],
     title: "Egypt Through the Lens",
     subtitle:
       "Seven days scheduled around light, not opening hours — dawn plateaus, blue-hour temples and the Nile at golden hour.",
@@ -1693,7 +1779,7 @@ export const tours: Tour[] = [
         num: "04",
         title: "Balloons & the West Bank",
         items: [
-          "Dawn hot-air balloon over the Theban necropolis (weather permitting)",
+          "Dawn hot-air balloon over the Theban necropolis, if you add it (weather permitting)",
           "Valley of the Kings interiors — hand-held technique where tripods are barred",
           "Hatshepsut's terraces in late side-light",
         ],
@@ -1768,11 +1854,19 @@ export const tours: Tour[] = [
   {
     slug: "tour-grand-14day",
     hero: {
-      alt: "The pyramids of Giza rising from the desert with the Sphinx before them",
-      src: "/images/home/egypt-giza-pyramids-desert-panorama.webp",
+      alt: "A decorated camel resting before the Pyramids of Giza in early light",
+      src: "/images/giza/giza-camel-pyramids-sunrise.webp",
       width: 736,
-      height: 920,
+      height: 736,
     },
+    gallery: [
+      { alt: "The Mosque of Muhammad Ali on the Saladin Citadel at dusk", label: "Islamic Cairo", src: "/images/cairo/cairo-citadel-mosque-dusk.webp", width: 1600, height: 1066 },
+      { alt: "The Citadel of Qaitbay on the Alexandria seafront", label: "Alexandria", src: "/images/alexandria/alexandria-qaitbay-citadel.webp", width: 736, height: 981 },
+      { alt: "The colossi of the Great Temple of Ramesses II at Abu Simbel", label: "Abu Simbel", src: "/images/aswan/abu-simbel-great-temple-colossi.webp", width: 736, height: 1308 },
+      { alt: "A Nile cruise ship between Aswan and Luxor at sunset", label: "The Nile cruise", src: "/images/cruise/nile-cruise-sunset.webp", width: 1024, height: 683 },
+      { alt: "The ramp and colonnades of Hatshepsut's temple beneath the cliffs of Deir el-Bahri", label: "Hatshepsut", src: "/images/luxor/luxor-hatshepsut-colonnade.webp", width: 1000, height: 600 },
+      { alt: "A turquoise lagoon meeting bare desert headlands at Ras Mohammed, Red Sea", label: "Ras Mohammed", src: "/images/redsea/ras-mohammed-lagoon.webp", width: 764, height: 458 },
+    ],
     title: "The Grand Tour of Egypt",
     subtitle:
       "Fourteen days, every register of the country — Cairo, Alexandria, the Nile by cruise, Abu Simbel and the Red Sea to finish.",
@@ -1788,9 +1882,9 @@ export const tours: Tour[] = [
     was: 3278,
     flightsIncluded: true,
     summary:
-      "Our most complete journey: two capitals, a Nile cruise, Ramesses II's mountain temple at Abu Simbel, and four Red Sea days to absorb it all.",
+      "Our most complete journey: Cairo and Alexandria, a Nile cruise, Ramesses II's mountain temple at Abu Simbel, and three Red Sea nights to absorb it all.",
     overview:
-      "This is the itinerary for travellers who intend to come once and see it whole. The first week belongs to history: Cairo's two great museums and medieval quarters, Alexandria on the Mediterranean, then a flight south for Abu Simbel — the mountain temple of Ramesses II above Lake Nasser — before a three-night cruise carries you down the Nile from Aswan to Luxor. The second week changes key entirely: after Luxor's tombs and temples you fly to Sharm El Sheikh, where the desert meets some of the clearest water on earth. Four Red Sea days close the journey with snorkelling over the reefs of Ras Mohammed and nothing on the schedule that cannot be cancelled in favour of the pool. All domestic flights are included; every guided day is private.",
+      "This is the itinerary for travellers who intend to come once and see it whole. The first ten days belong to history: the Pyramids and the Grand Egyptian Museum, Cairo's medieval and Coptic quarters, Alexandria on the Mediterranean, then a flight south for Abu Simbel — the mountain temple of Ramesses II above Lake Nasser — before a three-night cruise carries you down the Nile from Aswan to Luxor. The last four days change key entirely: after Luxor's tombs and temples you fly to Sharm El Sheikh, where the desert meets some of the clearest water on earth. Three nights on the Red Sea close the journey with snorkelling over the reefs of Ras Mohammed and nothing on the schedule that cannot be cancelled in favour of the pool. All domestic flights are included; every guided day is private.",
     itinerary: [
       {
         label: "Day",
@@ -1895,7 +1989,7 @@ export const tours: Tour[] = [
     faqs: [
       {
         q: "Is fourteen days too long for a first visit?",
-        a: "It is the length most returning guests wish they had booked the first time. The Red Sea days at the end are what make the history week sustainable — the trip breathes instead of accumulating fatigue.",
+        a: "It is the length Egypt needs to be seen whole rather than sampled. The Red Sea days at the end are what make the history week sustainable — the trip breathes instead of accumulating fatigue.",
       },
       {
         q: "How much of this journey is flying?",
@@ -1917,6 +2011,12 @@ export const tours: Tour[] = [
       width: 1200,
       height: 630,
     },
+    gallery: [
+      { alt: "The Grand Egyptian Museum beside the Giza plateau", label: "Grand Egyptian Museum", src: "/images/giza/giza-grand-egyptian-museum.webp", width: 474, height: 592 },
+      { alt: "The Step Pyramid of Djoser at Saqqara", label: "Saqqara", src: "/images/giza/saqqara-step-pyramid-djoser.webp", width: 1600, height: 1200 },
+      { alt: "Lantern-lit Al-Muizz Street in medieval Islamic Cairo", label: "Al-Muizz Street", src: "/images/cairo/cairo-al-muizz-street.webp", width: 736, height: 1104 },
+      { alt: "A Sufi tanoura performer spinning in a brightly coloured skirt", label: "Tanoura", src: "/images/activities/act-tanoura.webp", width: 800, height: 615 },
+    ],
     title: "Cairo of the Eight Worlds",
     subtitle:
       "Five days inside a single city's layers — pharaonic, Coptic, Islamic and modern Cairo, read street by street with a historian.",
@@ -1932,7 +2032,7 @@ export const tours: Tour[] = [
     summary:
       "A deep, slow reading of the world's greatest layered city — its two museums, three faiths, medieval streets and the necropolis where the pyramid was invented.",
     overview:
-      "Most visitors give Cairo two nights and a checklist. This journey gives it five days and a thesis: that Cairo is not a stopover but the densest cultural site in the Mediterranean world. The pharaonic layer gets two days — Giza plus the Saqqara–Memphis–Dahshur arc where the pyramid form was invented — but the heart of the itinerary is the living city: the Coptic quarter built into a Roman fortress, the thousand-year fabric of Islamic Cairo walked mosque by mosque with a historian guide, the Khan el-Khalili's trade routes still faintly legible in its alleys, and the two great museums read as a single collection split across a century. Evenings are engineered as carefully as mornings — a Sufi tanoura performance, dinner in a restored Ottoman house, tea where Cairenes actually drink it.",
+      "Most visitors give Cairo two nights and a checklist. This journey gives it five days and a thesis: that Cairo is not a stopover but the densest cultural site in the Mediterranean world. The pharaonic layer gets two days — Giza plus the Saqqara–Memphis–Dahshur arc where the pyramid form was invented — but the heart of the itinerary is the living city: the Coptic quarter built into a Roman fortress, the thousand-year fabric of Islamic Cairo walked mosque by mosque with a historian guide, the Khan el-Khalili's trade routes still faintly legible in its alleys, and the two great museums read as a single collection split across a century. Evenings are planned as carefully as mornings — a walk through downtown's belle-époque streets, a Sufi tanoura performance, tea where Cairenes actually drink it.",
     itinerary: [
       {
         label: "Day",
@@ -2023,10 +2123,10 @@ export const tours: Tour[] = [
       height: 981,
     },
     gallery: [
-      { alt: "A wooden jetty reaching over the turquoise Red Sea to a desert island", label: "Island jetty", src: "/images/redsea/hurghada-island-jetty.webp", width: 1500, height: 844 },
-      { alt: "Thatched parasols along a calm Red Sea resort beach", label: "Resort beach", src: "/images/redsea/hurghada-beach-umbrellas.webp", width: 1400, height: 933 },
-      { alt: "A quiet turquoise bay on the Red Sea coast", label: "Turquoise bay", src: "/images/redsea/hurghada-turquoise-swing.webp", width: 564, height: 845 },
-      { alt: "The El Mina Mosque above the marina on the Red Sea coast", label: "Coastal mosque", src: "/images/redsea/hurghada-el-mina-mosque.webp", width: 736, height: 1308 },
+      { alt: "Sharm El Sheikh's curved bays seen from above", label: "Sharm El Sheikh", src: "/images/redsea/sharm-naama-bay-aerial.webp", width: 627, height: 627 },
+      { alt: "A turquoise lagoon meeting bare desert headlands at Ras Mohammed", label: "Ras Mohammed", src: "/images/redsea/ras-mohammed-lagoon.webp", width: 764, height: 458 },
+      { alt: "A beach caf\u00e9 at sunset on the Sharm El Sheikh coast", label: "Sharm at dusk", src: "/images/redsea/sharm-farsha-cafe-sunset.webp", width: 736, height: 981 },
+      { alt: "A palm-lined Red Sea resort beach", label: "Resort beach", src: "/images/redsea/red-sea-beach-resort-palms.webp", width: 764, height: 458 },
     ],
     title: "Red Sea Retreat: Sharm El Sheikh",
     subtitle:
@@ -2128,16 +2228,16 @@ export const tours: Tour[] = [
   {
     slug: "tour-red-sea-diving-4day",
     hero: {
-      alt: "Snorkellers over the deep blue circle of a Red Sea reef hole",
-      src: "/images/redsea/red-sea-blue-hole.webp",
-      width: 736,
-      height: 736,
+      alt: "A scuba diver beside a vivid Red Sea coral reef teeming with fish",
+      src: "/images/activities/red-sea-diver-reef.webp",
+      width: 1280,
+      height: 720,
     },
     gallery: [
-      { alt: "A scuba diver beside a vivid Red Sea coral reef teeming with fish", label: "Reef wall", src: "/images/activities/red-sea-diver-reef.webp", width: 1500, height: 1000 },
-      { alt: "A diver among a cloud of anthias on a Red Sea coral garden", label: "Coral garden", src: "/images/activities/act-diving.webp", width: 1200, height: 800 },
-      { alt: "Visitors before the whale-shark tank of the Red Sea aquarium", label: "Grand Aquarium", src: "/images/redsea/red-sea-aquarium.webp", width: 764, height: 458 },
-      { alt: "A wooden jetty reaching over the turquoise Red Sea to a desert island", label: "Island jetty", src: "/images/redsea/hurghada-island-jetty.webp", width: 1500, height: 844 },
+      { alt: "A diver among reef fish and a lionfish on a Red Sea coral garden", label: "Coral garden", src: "/images/activities/act-diving.webp", width: 447, height: 447 },
+      { alt: "A turquoise lagoon meeting bare desert headlands at Ras Mohammed", label: "Ras Mohammed", src: "/images/redsea/ras-mohammed-lagoon.webp", width: 764, height: 458 },
+      { alt: "Sharm El Sheikh's curved bays seen from above", label: "Sharm El Sheikh", src: "/images/redsea/sharm-naama-bay-aerial.webp", width: 627, height: 627 },
+      { alt: "A thatched beach camp above the coral shallows at Sharm El Sheikh", label: "House reef", src: "/images/redsea/sharm-reef-beach-camp.webp", width: 736, height: 981 },
     ],
     title: "Dive the Red Sea",
     subtitle:
@@ -2152,7 +2252,7 @@ export const tours: Tour[] = [
     isPrivate: privateNote,
     price: 792,
     summary:
-      "Six guided boat dives across the two best site groups in Sinai — Ras Mohammed and Tiran — with a PADI centre we have vetted, plus a shore warm-up.",
+      "Four guided boat dives across the two best site groups in Sinai — Ras Mohammed and Tiran — with a PADI centre we have vetted, after a house-reef check dive.",
     overview:
       "The northern Red Sea is one of the world's benchmark dive regions: 20-metre-plus visibility as the norm, water never truly cold, and reef walls that fall away from snorkel depth to blue water. This programme concentrates it into four days without cutting corners on safety or surface intervals. After a check dive on your resort's house reef, two full boat days cover the two essential site groups — Ras Mohammed National Park, where Shark and Yolanda reefs form the most famous double site in Sinai, and the Strait of Tiran's four named reefs swept by gentle drift currents and pelagics. Diving runs through a licensed PADI centre we work with continuously; groups are capped small, and non-diving partners are welcome aboard with snorkelling gear.",
     itinerary: [
@@ -2237,6 +2337,12 @@ export const tours: Tour[] = [
       width: 736,
       height: 1308,
     },
+    gallery: [
+      { alt: "The great hypostyle hall of Karnak Temple, Luxor", label: "Karnak", src: "/images/luxor/luxor-karnak-hypostyle-hall.webp", width: 652, height: 980 },
+      { alt: "The colonnade of Luxor Temple with its royal statues", label: "Luxor Temple", src: "/images/luxor/luxor-temple-colonnade.webp", width: 736, height: 920 },
+      { alt: "A painted royal tomb in the Valley of the Kings", label: "Valley of the Kings", src: "/images/luxor/luxor-valley-of-the-kings-tomb.webp", width: 1000, height: 600 },
+      { alt: "The ramp and colonnades of Hatshepsut's temple beneath the cliffs of Deir el-Bahri", label: "Hatshepsut", src: "/images/luxor/luxor-hatshepsut-colonnade.webp", width: 1000, height: 600 },
+    ],
     title: "Luxor Immersion",
     subtitle:
       "Three days in the world's greatest open-air museum — both banks properly done, with the illuminated temple at night as the hinge.",
@@ -2252,7 +2358,7 @@ export const tours: Tour[] = [
     summary:
       "Luxor without the sprint: Karnak at opening, the Valley of the Kings before the heat, Hatshepsut's terraces and the Avenue of Sphinxes after dark.",
     overview:
-      "Luxor is routinely given a single frantic day; it holds more surviving monument than the rest of the country combined. This short break restores the missing time. The East Bank day takes Karnak at opening — an hour ahead of the coaches — and returns after dark for Luxor Temple floodlit along the restored Avenue of Sphinxes, which is simply a different monument at night. The West Bank day descends into three royal tombs chosen for colour and crowd patterns, then Hatshepsut's cliff-cut terraces and the Colossi of Memnon. The final morning is yours: a dawn balloon over the necropolis, the superb Luxor Museum, or nothing at all. It slots cleanly onto the front or back of any Cairo itinerary by flight or sleeper train.",
+      "Luxor is routinely given a single frantic day, yet it holds one of the densest concentrations of ancient monuments anywhere on earth. This short break restores the missing time. The East Bank day takes Karnak at opening — an hour ahead of the coaches — and returns after dark for Luxor Temple floodlit along the restored Avenue of Sphinxes, which is simply a different monument at night. The West Bank day descends into three royal tombs chosen for colour and crowd patterns, then Hatshepsut's cliff-cut terraces and the Colossi of Memnon. The final morning is yours: a dawn balloon over the necropolis, the superb Luxor Museum, or nothing at all. It slots cleanly onto the front or back of any Cairo itinerary by flight or sleeper train.",
     itinerary: [
       {
         label: "Day",
@@ -2325,9 +2431,15 @@ export const tours: Tour[] = [
       width: 850,
       height: 477,
     },
+    gallery: [
+      { alt: "The Mosque of Muhammad Ali on the Saladin Citadel at dusk", label: "Saladin Citadel", src: "/images/cairo/cairo-citadel-mosque-dusk.webp", width: 1600, height: 1066 },
+      { alt: "The Great Pyramid of Khufu on the Giza plateau", label: "Giza", src: "/images/giza/giza-great-pyramid-khufu.webp", width: 736, height: 981 },
+      { alt: "The Grand Egyptian Museum beside the Giza plateau", label: "Grand Egyptian Museum", src: "/images/giza/giza-grand-egyptian-museum.webp", width: 474, height: 592 },
+      { alt: "The arcaded courtyard of Al-Azhar Mosque in Cairo", label: "Al-Azhar", src: "/images/cairo/cairo-al-azhar-mosque-courtyard.webp", width: 736, height: 920 },
+    ],
     title: "Cairo VIP Short Stay",
     subtitle:
-      "Three days, zero friction — fast-track arrival, the pyramids and both great museums, and medieval Cairo after the day-trippers leave.",
+      "Three days, zero friction — fast-track arrival, the pyramids and the Grand Egyptian Museum, and medieval Cairo after the day-trippers leave.",
     kind: "multiday",
     category: "Short Break",
     tag: "3 Days",
@@ -2409,6 +2521,12 @@ export const tours: Tour[] = [
       width: 960,
       height: 600,
     },
+    gallery: [
+      { alt: "The underground Catacombs of Kom el-Shoqafa", label: "Catacombs", src: "/images/alexandria/alexandria-catacombs-kom-el-shoqafa.webp", width: 1000, height: 725 },
+      { alt: "The Citadel of Qaitbay on the Alexandria seafront", label: "Qaitbay", src: "/images/alexandria/alexandria-qaitbay-citadel.webp", width: 736, height: 981 },
+      { alt: "The disc of the Bibliotheca Alexandrina on the waterfront", label: "Bibliotheca", src: "/images/alexandria/alexandria-bibliotheca.webp", width: 764, height: 458 },
+      { alt: "The Roman Amphitheatre at Kom el-Dikka, Alexandria", label: "Roman Amphitheatre", src: "/images/alexandria/alexandria-roman-amphitheatre.webp", width: 1000, height: 600 },
+    ],
     title: "Alexandria Overnight",
     subtitle:
       "Two Mediterranean days — the catacombs, the Citadel on the Pharos site, the reborn Library, and an evening the day-trippers never see.",
