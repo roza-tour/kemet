@@ -60,8 +60,5 @@ const credit = creditFor(src);
       <div class="wm"><BrandMark class="" /></div>
       <span class="lab">{label}</span>
     </>
-  )}
-  {credit && (
-    <a class="pcredit" href={credit.source} target="_blank" rel="noopener nofollow">{credit.creator} · {credit.license}</a>
-  )}
+  )}{credit && <a class="pcredit" href={credit.source} target="_blank" rel="noopener nofollow">{credit.creator} · {credit.license}</a>}
 </div>

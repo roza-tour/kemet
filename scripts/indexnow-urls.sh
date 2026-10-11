@@ -25,9 +25,12 @@
 #  differ" is true of almost every page almost every time. Before comparing,
 #  both versions are stripped of what a reader never sees: <style> blocks,
 #  scripts (except JSON-LD structured data, which search engines do read),
-#  /_astro/ asset names and Astro's data-astro-cid-* scoping attributes. What
-#  is left is the content. Needs perl (always present on cPanel); without it
-#  the comparison falls back to raw bytes, which over-reports but never misses.
+#  /_astro/ asset names and Astro's data-astro-cid-* scoping attributes, and
+#  every run of whitespace is read as one space — a template edit that only
+#  moves a line break changed 250 pages' bytes on 11 Oct 2026 and none of
+#  their words. What is left is the content. Needs perl (always present on
+#  cPanel); without it the comparison falls back to raw bytes, which
+#  over-reports but never misses.
 # =============================================================================
 set -uo pipefail
 
@@ -53,7 +56,8 @@ norm() {
     perl -0pe 's{<style\b[^>]*>.*?</style>}{}gs;
                s{<script\b(?![^>]*ld\+json)[^>]*>.*?</script>}{}gs;
                s{/_astro/[\w.\-]+}{}g;
-               s{\sdata-astro-cid-[a-z0-9]+(?:="[^"]*")?}{}g'
+               s{\sdata-astro-cid-[a-z0-9]+(?:="[^"]*")?}{}g;
+               s{\s+}{ }g'
   else
     cat
   fi
