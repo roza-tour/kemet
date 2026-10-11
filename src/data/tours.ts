@@ -76,7 +76,7 @@ export const tours: Tour[] = [
       height: 980,
     },
     gallery: [
-      { alt: "The Great Pyramid of Khufu on the Giza plateau", label: "Giza", src: "/images/giza/giza-great-pyramid-khufu.webp", width: 736, height: 981 },
+      { alt: "A decorated camel resting before the Pyramids of Giza in early light", label: "Giza", src: "/images/giza/giza-camel-pyramids-sunrise.webp", width: 736, height: 736 },
       { alt: "The Citadel of Qaitbay on the Alexandria seafront", label: "Alexandria", src: "/images/alexandria/alexandria-qaitbay-citadel.webp", width: 736, height: 981 },
       { alt: "The island Temple of Philae rising from the Nile near Aswan", label: "Philae", src: "/images/aswan/aswan-philae-temple-island.webp", width: 1080, height: 810 },
       { alt: "A Nile cruise ship between Aswan and Luxor at sunset", label: "The Nile cruise", src: "/images/cruise/nile-cruise-sunset.webp", width: 1024, height: 683 },
@@ -385,7 +385,7 @@ export const tours: Tour[] = [
     },
     gallery: [
       { alt: "The underground Catacombs of Kom el-Shoqafa in Alexandria", label: "Alexandria", src: "/images/alexandria/alexandria-catacombs-kom-el-shoqafa.webp", width: 1000, height: 725 },
-      { alt: "The Great Pyramid of Khufu on the Giza plateau", label: "Giza", src: "/images/giza/giza-great-pyramid-khufu.webp", width: 736, height: 981 },
+      { alt: "A decorated camel resting before the Pyramids of Giza in early light", label: "Giza", src: "/images/giza/giza-camel-pyramids-sunrise.webp", width: 736, height: 736 },
       { alt: "The Step Pyramid of Djoser at Saqqara", label: "Saqqara", src: "/images/giza/saqqara-step-pyramid-djoser.webp", width: 1600, height: 1200 },
       { alt: "The Mosque of Muhammad Ali on the Saladin Citadel at dusk", label: "Islamic Cairo", src: "/images/cairo/cairo-citadel-mosque-dusk.webp", width: 1600, height: 1066 },
     ],
@@ -2433,7 +2433,7 @@ export const tours: Tour[] = [
     },
     gallery: [
       { alt: "The Mosque of Muhammad Ali on the Saladin Citadel at dusk", label: "Saladin Citadel", src: "/images/cairo/cairo-citadel-mosque-dusk.webp", width: 1600, height: 1066 },
-      { alt: "The Great Pyramid of Khufu on the Giza plateau", label: "Giza", src: "/images/giza/giza-great-pyramid-khufu.webp", width: 736, height: 981 },
+      { alt: "A decorated camel resting before the Pyramids of Giza in early light", label: "Giza", src: "/images/giza/giza-camel-pyramids-sunrise.webp", width: 736, height: 736 },
       { alt: "The Grand Egyptian Museum beside the Giza plateau", label: "Grand Egyptian Museum", src: "/images/giza/giza-grand-egyptian-museum.webp", width: 474, height: 592 },
       { alt: "The arcaded courtyard of Al-Azhar Mosque in Cairo", label: "Al-Azhar", src: "/images/cairo/cairo-al-azhar-mosque-courtyard.webp", width: 736, height: 920 },
     ],
