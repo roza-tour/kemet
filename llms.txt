@@ -2,7 +2,7 @@
 
 > Kemet designs private, luxury journeys through every layer of Egypt — tailored tours, Nile cruises and experiences built around each traveller's interests, pace and timeline. Kemet designs entirely private, tailor-made journeys in Egypt — led by licensed Egyptologist guides, priced per person in EUR, with no group departures.
 
-Last updated: 2026-10-10
+Last updated: 2026-10-11
 
 ## About
 
@@ -53,7 +53,7 @@ Last updated: 2026-10-10
 - [Luxor Immersion](https://kemet-travel.com/tour-luxor-3day.html): 3 Days / 2 Nights. Luxor without the sprint: Karnak at opening, the Valley of the Kings before the heat, Hatshepsut's terraces and the Avenue of Sphinxes after dark. From €544 per person. Walking: moderate. Nights: One hotel in Luxor for both nights. Early starts: Only if you choose the optional dawn balloon on the last morning.
 - [Cairo VIP Short Stay](https://kemet-travel.com/tour-cairo-vip-3day.html): 3 Days / 2 Nights. The essential Cairo, concierge-run: fast-track immigration, private plateau morning, the Grand Egyptian Museum, and lantern-lit Islamic Cairo by night. From €600 per person. Walking: moderate. Nights: One hotel in Cairo for both nights.
 - [From Pyramids to the Sea](https://kemet-travel.com/tour-4-day.html): 4 Days / 3 Nights. A compact northern journey — the Egyptian Museum, Alexandria's Greco-Roman layers, the Pyramids of Giza and medieval Cairo. From €618 per person. Walking: moderate. Nights: One hotel in Cairo for all three nights. By road: A day trip from Cairo to Alexandria and back by road.
-- [Dive the Red Sea](https://kemet-travel.com/tour-red-sea-diving-4day.html): 4 Days / 3 Nights. Six guided boat dives across the two best site groups in Sinai — Ras Mohammed and Tiran — with a PADI centre we have vetted, plus a shore warm-up. From €792 per person. Walking: light. Nights: One Red Sea resort for all three nights.
+- [Dive the Red Sea](https://kemet-travel.com/tour-red-sea-diving-4day.html): 4 Days / 3 Nights. Four guided boat dives across the two best site groups in Sinai — Ras Mohammed and Tiran — with a PADI centre we have vetted, after a house-reef check dive. From €792 per person. Walking: light. Nights: One Red Sea resort for all three nights.
 - [Nile in Style: Aswan to Luxor](https://kemet-travel.com/tour-nile-cruise.html): 4 Days / 3 Nights. The essential Nile cruise, done properly — Philae and the High Dam, three nights afloat past Kom Ombo and Edfu, and Luxor's East and West Banks with your own Egyptologist. From €820 per person. Walking: moderate. Nights: On the Nile cruise for all three nights.
 - [Cairo of the Eight Worlds](https://kemet-travel.com/tour-cairo-culture-5day.html): 5 Days / 4 Nights. A deep, slow reading of the world's greatest layered city — its two museums, three faiths, medieval streets and the necropolis where the pyramid was invented. From €875 per person. Walking: moderate. Nights: One hotel in Cairo for all four nights.
 - [Red Sea Retreat: Sharm El Sheikh](https://kemet-travel.com/tour-sharm-5day.html): 5 Days / 4 Nights. The Red Sea done with intent — a private reef-boat day in Ras Mohammed, a Sinai desert evening under the stars, and space left deliberately empty. From €979 per person. Walking: light. Nights: One Red Sea resort for all four nights.
@@ -62,8 +62,8 @@ Last updated: 2026-10-10
 - [Egypt Through the Lens](https://kemet-travel.com/tour-photography-7day.html): 7 Days / 6 Nights. An itinerary built backwards from the light: early-access Giza at sunrise, Karnak before the crowds, balloons over Thebes and feluccas at golden hour. From €1,419 per person. Walking: moderate. Nights: Hotels in Cairo, Luxor and Aswan. By road: Luxor to Aswan by road. Early starts: Sunrise at Giza, a dawn balloon over the West Bank, and early light in a Nubian village.
 - [Family Egypt: Pyramids to the Nile](https://kemet-travel.com/tour-family-8day.html): 8 Days / 7 Nights. Egypt with children done right: short guided mornings, family-specialist Egyptologists, pool afternoons, and the moments no classroom can match. From €1,524 per person. Walking: moderate. Nights: Hotels in Cairo, Luxor and Aswan. By road: Luxor to Aswan by road, with a stop at Edfu. Early starts: An early start for the Valley of the Kings.
 - [Honeymoon on the Nile](https://kemet-travel.com/tour-honeymoon-9day.html): 9 Days / 8 Nights. Egypt as a honeymoon should be — private sunrise at the pyramids, a felucca at golden hour, three nights on the Nile and suites chosen for the view. From €1,859 per person. Walking: moderate. Nights: A Nile-view suite in Cairo, a hotel in Aswan, three nights on the Nile cruise, then a hotel in Luxor. Early starts: Sunrise at Giza, a dawn balloon over Luxor's West Bank, and Karnak in the early morning.
-- [Egypt Icons & Nile Cruise](https://kemet-travel.com/tour-10-day.html): 10 Days / 9 Nights. Our most complete journey: Cairo, Alexandria, a sleeper train south, and a three-night Nile cruise from Aswan to Luxor — every layer of Egypt in one arc. From €1,915 per person. Also available with flights in place of the two sleeper-train nights, from €2,045. Walking: moderate. Nights: Hotels in Cairo and Luxor, three nights on the Nile cruise, and two nights on the sleeper train — hotels instead on the flight version. By road: A day trip from Cairo to Alexandria and back by road.
-- [The Grand Tour of Egypt](https://kemet-travel.com/tour-grand-14day.html): 14 Days / 13 Nights. Our most complete journey: two capitals, a Nile cruise, Ramesses II's mountain temple at Abu Simbel, and four Red Sea days to absorb it all. From €2,728 per person. Walking: moderate. Nights: Hotels in Cairo and Aswan, three nights on the Nile cruise, a hotel in Luxor, then a Red Sea resort. By road: A day trip to Alexandria, and Aswan to Abu Simbel and back by road. Early starts: A pre-dawn road journey to Abu Simbel.
+- [Egypt Icons & Nile Cruise](https://kemet-travel.com/tour-10-day.html): 10 Days / 9 Nights. Our signature journey: Cairo, Alexandria, a sleeper train south, and a three-night Nile cruise from Aswan to Luxor — every layer of Egypt in one arc. From €1,915 per person. Also available with flights in place of the two sleeper-train nights, from €2,045. Walking: moderate. Nights: Hotels in Cairo and Luxor, three nights on the Nile cruise, and two nights on the sleeper train — hotels instead on the flight version. By road: A day trip from Cairo to Alexandria and back by road.
+- [The Grand Tour of Egypt](https://kemet-travel.com/tour-grand-14day.html): 14 Days / 13 Nights. Our most complete journey: Cairo and Alexandria, a Nile cruise, Ramesses II's mountain temple at Abu Simbel, and three Red Sea nights to absorb it all. From €2,728 per person. Walking: moderate. Nights: Hotels in Cairo and Aswan, three nights on the Nile cruise, a hotel in Luxor, then a Red Sea resort. By road: A day trip to Alexandria, and Aswan to Abu Simbel and back by road. Early starts: A pre-dawn road journey to Abu Simbel.
 
 ## Collections (seasonal & thematic)
 
@@ -127,9 +127,9 @@ Last updated: 2026-10-10
 
 ## Experiences
 
-- [Sunrise at the Giza Pyramids](https://kemet-travel.com/experiences/sunrise-giza-pyramids.html): Watch the first light of dawn break over the Great Pyramid in an exclusive early-access session before the plateau opens to day visitors — led by a licensed Egyptologist.
+- [Sunrise at the Giza Pyramids](https://kemet-travel.com/experiences/sunrise-giza-pyramids.html): Be in place before sunrise at a quiet viewpoint where all nine pyramids of Giza stand in one line, with time of your own for sunrise yoga, a photo session or simply the view — then the plateau with a licensed Egyptologist before it opens to day visitors.
 - [Private Felucca Sailing on the Nile](https://kemet-travel.com/experiences/private-felucca-nile.html): Charter an entire traditional felucca and drift down the Nile past ancient temples, granite boulders and palm-lined riverbanks — at the same unhurried pace Egyptians have sailed for millennia.
-- [Old Cairo Walking Experience](https://kemet-travel.com/experiences/old-cairo-walking.html): Walk the medieval lanes of Islamic Cairo and the Coptic quarter with a historian guide who reads the city's 1,400-year layered fabric — from Roman fortifications to Ottoman merchant palaces.
+- [Old Cairo Walking Experience](https://kemet-travel.com/experiences/old-cairo-walking.html): Walk the medieval lanes of Islamic Cairo and the Coptic quarter with a historian guide who reads nearly two thousand years of layered city — from Roman fortifications to Ottoman merchant palaces.
 - [Egyptian Cooking Experience](https://kemet-travel.com/experiences/egyptian-cooking.html): Learn to cook four dishes that trace Egypt's 7,000-year food history — from ancient grain preparations to Ottoman-era stuffed vegetables — in a private kitchen session led by a Cairo food specialist.
 - [Luxor Temple by Night](https://kemet-travel.com/experiences/luxor-temple-night.html): Walk the illuminated Avenue of Sphinxes into Luxor Temple after dark — one of the most dramatic experiences in Egyptian heritage tourism, now fully accessible following the 2021 restoration.
 - [Private Nile Dinner Cruise](https://kemet-travel.com/experiences/private-nile-dinner-cruise.html): Dinner afloat on the Cairo Nile aboard a privately reserved vessel — the capital's skyline sliding past over a slow, well-cooked evening.
@@ -181,6 +181,7 @@ The whole journey catalogue is also published in Deutsch, Italiano and Français
 - https://kemet-travel.com/de/ist-aegypten-sicher.html
 - https://kemet-travel.com/de/ultra-luxusreisen-aegypten.html
 - https://kemet-travel.com/de/weihnachten-in-aegypten.html — Weihnachten und Silvester in Ägypten: 24–26°C in Luxor, während es zu Hause dunkel ist — und die am stärksten umkämpften zwei Wochen des ägyptischen Jahres.
+- https://kemet-travel.com/de/sonnenaufgang-pyramiden-gizeh.html — Sonnenaufgang an den neun Pyramiden von Gizeh: Vor Sonnenaufgang an einem stillen Aussichtspunkt, von dem aus alle neun Pyramiden zu sehen sind — die erste Stunde gehört Ihnen: für Yoga, ein Fotoshooting oder einfach den Blick.
 
 Journeys in Deutsch (24), from-prices per person, the same as in English:
 
@@ -198,7 +199,7 @@ Journeys in Deutsch (24), from-prices per person, the same as in English:
 - [Luxor in Ruhe](https://kemet-travel.com/de/luxor-3-tage.html): 3 Tage / 2 Nächte. Luxor ohne Sprint: Karnak zur Öffnung, das Tal der Könige vor der Hitze, die Terrassen der Hatschepsut und die Sphinxallee nach Einbruch der Dunkelheit. From €544. English original: https://kemet-travel.com/tour-luxor-3day.html
 - [Kairo VIP-Kurzreise](https://kemet-travel.com/de/kairo-kurzreise-vip-3-tage.html): 3 Tage / 2 Nächte. Kairo auf das Wesentliche gebracht und concierge-geführt: Fast-Track bei der Einreise, ein privater Morgen am Plateau, das Grand Egyptian Museum und das laternenbeleuchtete islamische Kairo. From €600. English original: https://kemet-travel.com/tour-cairo-vip-3day.html
 - [Von den Pyramiden ans Meer](https://kemet-travel.com/de/kairo-alexandria-4-tage.html): 4 Tage / 3 Nächte. Eine kompakte Reise durch den Norden — das Ägyptische Museum, Alexandrias griechisch-römische Schichten, die Pyramiden von Gizeh und das mittelalterliche Kairo. From €618. English original: https://kemet-travel.com/tour-4-day.html
-- [Tauchen im Roten Meer](https://kemet-travel.com/de/tauchen-rotes-meer-4-tage.html): 4 Tage / 3 Nächte. Sechs geführte Bootstauchgänge an den zwei besten Revieren des Sinai — Ras Mohammed und Tiran — mit einem von uns geprüften PADI-Center, plus ein Check-Dive vom Ufer. From €792. English original: https://kemet-travel.com/tour-red-sea-diving-4day.html
+- [Tauchen im Roten Meer](https://kemet-travel.com/de/tauchen-rotes-meer-4-tage.html): 4 Tage / 3 Nächte. Vier geführte Bootstauchgänge an den zwei besten Revieren des Sinai — Ras Mohammed und Tiran — mit einem von uns geprüften PADI-Center, nach einem Check-Dive am Hausriff. From €792. English original: https://kemet-travel.com/tour-red-sea-diving-4day.html
 - [Kairo der acht Welten](https://kemet-travel.com/de/kairo-kulturreise-5-tage.html): 5 Tage / 4 Nächte. Eine tiefe, langsame Lektüre der am stärksten geschichteten Stadt der Welt — ihre zwei Museen, drei Glaubensrichtungen, mittelalterlichen Straßen und die Nekropole, in der die Pyramide erfunden wurde. From €875. English original: https://kemet-travel.com/tour-cairo-culture-5day.html
 - [Rückzug ans Rote Meer: Scharm el-Scheich](https://kemet-travel.com/de/rotes-meer-scharm-5-tage.html): 5 Tage / 4 Nächte. Das Rote Meer mit Absicht — ein privater Bootstag im Ras-Mohammed-Nationalpark, ein Abend in der Sinai-Wüste unter Sternen, und bewusst leer gelassene Zeit. From €979. English original: https://kemet-travel.com/tour-sharm-5day.html
 - [Die Tempel des Südens](https://kemet-travel.com/de/oberaegypten-5-tage.html): 5 Tage / 4 Nächte. Das geschichtliche Herz Ägyptens als private Straßenreise — Karnak, Tal der Könige, Edfu, Kom Ombo und Philae, mit der Zeit, sie wirklich aufzunehmen. From €1,018. English original: https://kemet-travel.com/tour-upper-egypt-5day.html
@@ -206,8 +207,8 @@ Journeys in Deutsch (24), from-prices per person, the same as in English:
 - [Ägypten durch die Linse](https://kemet-travel.com/de/fotoreise-aegypten-7-tage.html): 7 Tage / 6 Nächte. Eine Reise, rückwärts aus dem Licht geplant: privater Zugang zu Gizeh zum Sonnenaufgang, Karnak vor den Gruppen, Ballons über Theben und Feluken zur goldenen Stunde. From €1,419. English original: https://kemet-travel.com/tour-photography-7day.html
 - [Ägypten für Familien: von den Pyramiden an den Nil](https://kemet-travel.com/de/familienreise-aegypten-8-tage.html): 8 Tage / 7 Nächte. Ägypten mit Kindern richtig gemacht: kurze geführte Vormittage, auf Familien spezialisierte Ägyptologen, Nachmittage am Pool und Momente, die kein Klassenzimmer bietet. From €1,524. English original: https://kemet-travel.com/tour-family-8day.html
 - [Hochzeitsreise am Nil](https://kemet-travel.com/de/hochzeitsreise-aegypten-9-tage.html): 9 Tage / 8 Nächte. Ägypten, wie eine Hochzeitsreise sein sollte — privater Sonnenaufgang an den Pyramiden, eine Feluke zur goldenen Stunde, drei Nächte auf dem Nil und Suiten, die nach ihrer Aussicht ausgesucht sind. From €1,859. English original: https://kemet-travel.com/tour-honeymoon-9day.html
-- [Ägyptens Höhepunkte & Nilkreuzfahrt](https://kemet-travel.com/de/aegypten-hoehepunkte-nilkreuzfahrt.html): 10 Tage / 9 Nächte. Unsere vollständigste Reise: Kairo, Alexandria, mit dem Nachtzug nach Süden und drei Nächte auf dem Nil von Assuan nach Luxor — jede Schicht Ägyptens in einem Bogen. From €1,915. English original: https://kemet-travel.com/tour-10-day.html
-- [Die große Ägypten-Rundreise](https://kemet-travel.com/de/grosse-aegypten-rundreise-14-tage.html): 14 Tage / 13 Nächte. Unsere vollständigste Reise: zwei Hauptstädte, eine Nilkreuzfahrt, der Bergtempel Ramses' II. in Abu Simbel und vier Tage am Roten Meer, um alles sacken zu lassen. From €2,728. English original: https://kemet-travel.com/tour-grand-14day.html
+- [Ägyptens Höhepunkte & Nilkreuzfahrt](https://kemet-travel.com/de/aegypten-hoehepunkte-nilkreuzfahrt.html): 10 Tage / 9 Nächte. Unsere Signature-Reise: Kairo, Alexandria, mit dem Nachtzug nach Süden und drei Nächte auf dem Nil von Assuan nach Luxor — jede Schicht Ägyptens in einem Bogen. From €1,915. English original: https://kemet-travel.com/tour-10-day.html
+- [Die große Ägypten-Rundreise](https://kemet-travel.com/de/grosse-aegypten-rundreise-14-tage.html): 14 Tage / 13 Nächte. Unsere vollständigste Reise: Kairo und Alexandria, eine Nilkreuzfahrt, der Bergtempel Ramses' II. in Abu Simbel und drei Nächte am Roten Meer, um alles sacken zu lassen. From €2,728. English original: https://kemet-travel.com/tour-grand-14day.html
 
 ### Italiano (it)
 
@@ -223,7 +224,7 @@ Journeys in Deutsch (24), from-prices per person, the same as in English:
 - https://kemet-travel.com/it/natale-e-capodanno-in-egitto.html — Natale, Capodanno ed Epifania in Egitto: 24–26°C a Luxor mentre a casa fa buio alle cinque — e le scuole italiane che riaprono solo dopo l'Epifania, il 6 gennaio.
 - https://kemet-travel.com/it/dove-dormire-in-egitto.html — Dove dormire in Egitto: i migliori hotel, città per città: Gli alberghi su cui vale la pena costruire un viaggio — e quali dei più famosi si possono davvero prenotare per la stagione 2026–27.
 - https://kemet-travel.com/it/mongolfiera-luxor-alba.html — Mongolfiera a Luxor, all'alba: La necropoli tebana dall'alto mentre il sole sorge sul Nilo — la Valle dei Re, il tempio di Hatshepsut e il verde della valle, come solo una mongolfiera li mostra.
-- https://kemet-travel.com/it/alba-alle-piramidi-di-giza.html — L'alba alle Piramidi di Giza: La prima luce sulla Grande Piramide, con l'altopiano ancora chiuso al pubblico — e una guida egittologica con licenza solo per voi, anche in italiano.
+- https://kemet-travel.com/it/alba-alle-piramidi-di-giza.html — L'alba sulle nove piramidi di Giza: Prima dell'alba, in un punto panoramico tranquillo da cui si vedono tutte e nove le piramidi — la prima ora è vostra: yoga, un servizio fotografico o semplicemente la vista.
 
 Journeys in Italiano (24), from-prices per person, the same as in English:
 
@@ -241,7 +242,7 @@ Journeys in Italiano (24), from-prices per person, the same as in English:
 - [Luxor, con calma](https://kemet-travel.com/it/luxor-3-giorni.html): 3 giorni / 2 notti. Luxor senza corsa: Karnak all'apertura, la Valle dei Re prima del caldo, le terrazze di Hatshepsut e il viale delle sfingi dopo il tramonto. From €544. English original: https://kemet-travel.com/tour-luxor-3day.html
 - [Il Cairo VIP, viaggio breve](https://kemet-travel.com/it/il-cairo-vip-3-giorni.html): 3 giorni / 2 notti. Il Cairo essenziale, gestito come una concierge: corsia prioritaria all'immigrazione, mattinata privata sulla piana, il Grand Egyptian Museum e il Cairo islamico illuminato a lanterne. From €600. English original: https://kemet-travel.com/tour-cairo-vip-3day.html
 - [Dalle piramidi al mare](https://kemet-travel.com/it/cairo-alessandria-4-giorni.html): 4 giorni / 3 notti. Un viaggio compatto nel nord — il Museo Egizio, gli strati greco-romani di Alessandria, le piramidi di Giza e il Cairo medievale. From €618. English original: https://kemet-travel.com/tour-4-day.html
-- [Immersioni nel Mar Rosso](https://kemet-travel.com/it/immersioni-mar-rosso-4-giorni.html): 4 giorni / 3 notti. Sei immersioni guidate sui due migliori gruppi di siti del Sinai — Ras Mohammed e Tiran — con un diving PADI che abbiamo verificato, più un riscaldamento dalla riva. From €792. English original: https://kemet-travel.com/tour-red-sea-diving-4day.html
+- [Immersioni nel Mar Rosso](https://kemet-travel.com/it/immersioni-mar-rosso-4-giorni.html): 4 giorni / 3 notti. Quattro immersioni guidate in barca sui due migliori gruppi di siti del Sinai — Ras Mohammed e Tiran — con un diving PADI che abbiamo verificato, dopo un'immersione di prova sul reef dell'hotel. From €792. English original: https://kemet-travel.com/tour-red-sea-diving-4day.html
 - [Il Cairo degli otto mondi](https://kemet-travel.com/it/cairo-culturale-5-giorni.html): 5 giorni / 4 notti. Una lettura lenta e profonda della città più stratificata del mondo — i suoi due musei, tre fedi, le strade medievali e la necropoli dove è nata la piramide. From €875. English original: https://kemet-travel.com/tour-cairo-culture-5day.html
 - [Ritiro sul Mar Rosso: Sharm el-Sheikh](https://kemet-travel.com/it/mar-rosso-sharm-5-giorni.html): 5 giorni / 4 notti. Il Mar Rosso con un'idea precisa — una giornata in barca privata a Ras Mohammed, una serata nel deserto del Sinai sotto le stelle e spazi lasciati vuoti di proposito. From €979. English original: https://kemet-travel.com/tour-sharm-5day.html
 - [I templi del Sud](https://kemet-travel.com/it/alto-egitto-5-giorni.html): 5 giorni / 4 notti. Il cuore storico dell'Egitto in viaggio privato su strada — Karnak, la Valle dei Re, Edfu, Kom Ombo e File, con il tempo di assorbirli davvero. From €1,018. English original: https://kemet-travel.com/tour-upper-egypt-5day.html
@@ -249,8 +250,8 @@ Journeys in Italiano (24), from-prices per person, the same as in English:
 - [L'Egitto attraverso l'obiettivo](https://kemet-travel.com/it/viaggio-fotografico-egitto-7-giorni.html): 7 giorni / 6 notti. Un itinerario costruito a partire dalla luce: accesso anticipato a Giza all'alba, Karnak prima dei gruppi, mongolfiere sopra Tebe e feluche nell'ora d'oro. From €1,419. English original: https://kemet-travel.com/tour-photography-7day.html
 - [Egitto in famiglia: dalle piramidi al Nilo](https://kemet-travel.com/it/egitto-in-famiglia-8-giorni.html): 8 giorni / 7 notti. L'Egitto con i bambini fatto come si deve: mattinate guidate brevi, egittologi specializzati in famiglie, pomeriggi in piscina e momenti che nessuna aula può offrire. From €1,524. English original: https://kemet-travel.com/tour-family-8day.html
 - [Viaggio di nozze sul Nilo](https://kemet-travel.com/it/viaggio-di-nozze-nilo-9-giorni.html): 9 giorni / 8 notti. L'Egitto come dovrebbe essere un viaggio di nozze — alba privata alle piramidi, feluca nell'ora d'oro, tre notti sul Nilo e suite scelte per la vista. From €1,859. English original: https://kemet-travel.com/tour-honeymoon-9day.html
-- [L'Egitto essenziale & crociera sul Nilo](https://kemet-travel.com/it/egitto-essenziale-crociera-nilo.html): 10 giorni / 9 notti. Il nostro viaggio più completo: Il Cairo, Alessandria, un treno notturno verso sud e tre notti di crociera da Assuan a Luxor — ogni strato dell'Egitto in un solo arco. From €1,915. English original: https://kemet-travel.com/tour-10-day.html
-- [Il gran tour dell'Egitto](https://kemet-travel.com/it/gran-tour-egitto-14-giorni.html): 14 giorni / 13 notti. Il nostro viaggio più completo: due capitali, una crociera sul Nilo, il tempio di montagna di Ramesse II ad Abu Simbel e quattro giorni sul Mar Rosso per lasciar sedimentare tutto. From €2,728. English original: https://kemet-travel.com/tour-grand-14day.html
+- [L'Egitto essenziale & crociera sul Nilo](https://kemet-travel.com/it/egitto-essenziale-crociera-nilo.html): 10 giorni / 9 notti. Il nostro viaggio signature: Il Cairo, Alessandria, un treno notturno verso sud e tre notti di crociera da Assuan a Luxor — ogni strato dell'Egitto in un solo arco. From €1,915. English original: https://kemet-travel.com/tour-10-day.html
+- [Il gran tour dell'Egitto](https://kemet-travel.com/it/gran-tour-egitto-14-giorni.html): 14 giorni / 13 notti. Il nostro viaggio più completo: Il Cairo e Alessandria, una crociera sul Nilo, il tempio di montagna di Ramesse II ad Abu Simbel e tre notti sul Mar Rosso per lasciar sedimentare tutto. From €2,728. English original: https://kemet-travel.com/tour-grand-14day.html
 
 ### Español (es)
 
@@ -263,6 +264,7 @@ Journeys in Italiano (24), from-prices per person, the same as in English:
 - https://kemet-travel.com/es/es-seguro-viajar-a-egipto.html
 - https://kemet-travel.com/es/viajes-ultra-lujo-egipto.html
 - https://kemet-travel.com/es/semana-santa-en-egipto.html — Semana Santa en Egipto: Del 21 de marzo al 28 de marzo de 2027 — primavera en el Nilo, y la última ventana buena antes del calor.
+- https://kemet-travel.com/es/amanecer-en-las-piramides-de-giza.html — El amanecer sobre las nueve pirámides de Giza: Antes de que salga el sol, en un mirador tranquilo desde el que se ven las nueve pirámides — la primera hora es suya: yoga, una sesión de fotos o simplemente la vista.
 
 ### Français (fr)
 
@@ -275,6 +277,7 @@ Journeys in Italiano (24), from-prices per person, the same as in English:
 - https://kemet-travel.com/fr/securite-en-egypte.html
 - https://kemet-travel.com/fr/voyages-ultra-luxe-egypte.html
 - https://kemet-travel.com/fr/toussaint-en-egypte.html — La Toussaint tombe pile sur le changement de saison: Du 18 octobre au 3 novembre 2026 — deux semaines pendant lesquelles la Haute-Égypte passe de l'été à la saison.
+- https://kemet-travel.com/fr/lever-du-soleil-pyramides-gizeh.html — Le lever du soleil sur les neuf pyramides de Gizeh: Avant l'aube, un point de vue tranquille d'où l'on voit les neuf pyramides — la première heure vous appartient : yoga, séance photo ou simplement le regard.
 
 Journeys in Français (24), from-prices per person, the same as in English:
 
@@ -292,7 +295,7 @@ Journeys in Français (24), from-prices per person, the same as in English:
 - [Louxor, sans hâte](https://kemet-travel.com/fr/louxor-3-jours.html): 3 jours / 2 nuits. Louxor sans course : Karnak à l'ouverture, la Vallée des Rois avant la chaleur, les terrasses d'Hatchepsout et l'allée des Sphinx à la nuit tombée. From €544. English original: https://kemet-travel.com/tour-luxor-3day.html
 - [Le Caire VIP, court séjour](https://kemet-travel.com/fr/le-caire-vip-3-jours.html): 3 jours / 2 nuits. Le Caire essentiel, mené comme une conciergerie : passage prioritaire à l'immigration, matinée privée sur le plateau, le Grand Musée égyptien et le Caire islamique éclairé aux lanternes. From €600. English original: https://kemet-travel.com/tour-cairo-vip-3day.html
 - [Des pyramides à la mer](https://kemet-travel.com/fr/le-caire-alexandrie-4-jours.html): 4 jours / 3 nuits. Un voyage compact dans le nord — le Musée égyptien, les strates gréco-romaines d'Alexandrie, les pyramides de Gizeh et le Caire médiéval. From €618. English original: https://kemet-travel.com/tour-4-day.html
-- [Plonger en mer Rouge](https://kemet-travel.com/fr/plongee-mer-rouge-4-jours.html): 4 jours / 3 nuits. Six plongées guidées en bateau sur les deux meilleurs ensembles de sites du Sinaï — Ras Mohammed et Tiran — avec un centre PADI vérifié, plus une plongée de contrôle depuis le bord. From €792. English original: https://kemet-travel.com/tour-red-sea-diving-4day.html
+- [Plonger en mer Rouge](https://kemet-travel.com/fr/plongee-mer-rouge-4-jours.html): 4 jours / 3 nuits. Quatre plongées guidées en bateau sur les deux meilleurs ensembles de sites du Sinaï — Ras Mohammed et Tiran — avec un centre PADI vérifié, après une plongée de contrôle sur le récif de l'hôtel. From €792. English original: https://kemet-travel.com/tour-red-sea-diving-4day.html
 - [Le Caire aux huit mondes](https://kemet-travel.com/fr/le-caire-culturel-5-jours.html): 5 jours / 4 nuits. Une lecture lente et profonde de la ville la plus stratifiée du monde — ses deux musées, trois confessions, rues médiévales et la nécropole où la pyramide fut inventée. From €875. English original: https://kemet-travel.com/tour-cairo-culture-5day.html
 - [Retraite en mer Rouge : Charm el-Cheikh](https://kemet-travel.com/fr/mer-rouge-charm-5-jours.html): 5 jours / 4 nuits. La mer Rouge avec intention — une journée bateau privée à Ras Mohammed, une soirée sous les étoiles dans le désert du Sinaï, et du temps laissé volontairement vide. From €979. English original: https://kemet-travel.com/tour-sharm-5day.html
 - [Les temples du Sud](https://kemet-travel.com/fr/haute-egypte-5-jours.html): 5 jours / 4 nuits. Le cœur historique de l'Égypte en voyage privé par la route — Karnak, la Vallée des Rois, Edfou, Kom Ombo et Philae, avec le temps de les absorber. From €1,018. English original: https://kemet-travel.com/tour-upper-egypt-5day.html
@@ -300,8 +303,8 @@ Journeys in Français (24), from-prices per person, the same as in English:
 - [L'Égypte à travers l'objectif](https://kemet-travel.com/fr/voyage-photo-egypte-7-jours.html): 7 jours / 6 nuits. Un itinéraire construit à rebours depuis la lumière : accès anticipé à Gizeh au lever du soleil, Karnak avant la foule, montgolfières sur Thèbes et felouques à l'heure dorée. From €1,419. English original: https://kemet-travel.com/tour-photography-7day.html
 - [L'Égypte en famille : des pyramides au Nil](https://kemet-travel.com/fr/egypte-en-famille-8-jours.html): 8 jours / 7 nuits. L'Égypte avec des enfants, bien faite : matinées guidées courtes, égyptologues spécialistes des familles, après-midi libres, et des moments qu'aucune salle de classe n'égale. From €1,524. English original: https://kemet-travel.com/tour-family-8day.html
 - [Voyage de noces sur le Nil](https://kemet-travel.com/fr/voyage-de-noces-nil-9-jours.html): 9 jours / 8 nuits. L'Égypte comme un voyage de noces devrait l'être — lever de soleil privé aux pyramides, felouque à l'heure dorée, trois nuits sur le Nil et des suites choisies pour leur vue. From €1,859. English original: https://kemet-travel.com/tour-honeymoon-9day.html
-- [L'Égypte essentielle & croisière sur le Nil](https://kemet-travel.com/fr/egypte-essentielle-croisiere-nil.html): 10 jours / 9 nuits. Notre voyage le plus complet : Le Caire, Alexandrie, un train de nuit vers le sud et trois nuits de croisière d'Assouan à Louxor — toutes les couches de l'Égypte en un seul arc. From €1,915. English original: https://kemet-travel.com/tour-10-day.html
-- [Le grand tour d'Égypte](https://kemet-travel.com/fr/grand-tour-egypte-14-jours.html): 14 jours / 13 nuits. Notre voyage le plus complet : deux capitales, une croisière sur le Nil, le temple de montagne de Ramsès II à Abou Simbel, et quatre jours en mer Rouge pour tout laisser décanter. From €2,728. English original: https://kemet-travel.com/tour-grand-14day.html
+- [L'Égypte essentielle & croisière sur le Nil](https://kemet-travel.com/fr/egypte-essentielle-croisiere-nil.html): 10 jours / 9 nuits. Notre voyage signature : Le Caire, Alexandrie, un train de nuit vers le sud et trois nuits de croisière d'Assouan à Louxor — toutes les couches de l'Égypte en un seul arc. From €1,915. English original: https://kemet-travel.com/tour-10-day.html
+- [Le grand tour d'Égypte](https://kemet-travel.com/fr/grand-tour-egypte-14-jours.html): 14 jours / 13 nuits. Notre voyage le plus complet : Le Caire et Alexandrie, une croisière sur le Nil, le temple de montagne de Ramsès II à Abou Simbel, et trois nuits en mer Rouge pour tout laisser décanter. From €2,728. English original: https://kemet-travel.com/tour-grand-14day.html
 
 ### Русский (ru)
 
@@ -314,6 +317,7 @@ Journeys in Français (24), from-prices per person, the same as in English:
 - https://kemet-travel.com/ru/bezopasnost-v-egipte.html
 - https://kemet-travel.com/ru/ultra-lyuks-tury-v-egipet.html
 - https://kemet-travel.com/ru/novyy-god-v-egipte.html — Новогодние каникулы в Египте: С 31 декабря по 8 января — десять дней подряд, и это единственный длинный отпуск в году, который совпадает с лучшим сезоном в долине Нила.
+- https://kemet-travel.com/ru/rassvet-u-piramid-gizy.html — Рассвет над девятью пирамидами Гизы: До восхода солнца — тихая смотровая точка, откуда видны все девять пирамид. Первый час принадлежит вам: йога, фотосессия или просто вид.
 
 ### Bahasa Indonesia (id)
 
@@ -329,6 +333,7 @@ Journeys in Français (24), from-prices per person, the same as in English:
 - https://kemet-travel.com/id/ziarah-kairo-islam.html — Kairo Islam, dalam satu hari penuh: Bukan satu jam yang diselipkan di antara piramida — ini hari tersendiri, dan memang menuntutnya.
 - https://kemet-travel.com/id/gunung-sinai.html — Gunung Sinai, dan biara di kakinya: Naik dalam gelap, tiba saat fajar, turun sebelum panas. Tiga jam mendaki, dan tidak perlu menjadi pendaki.
 - https://kemet-travel.com/id/halal-dan-waktu-salat.html — Makanan dan salat, tanpa perlu dicari: Mesir negara mayoritas Muslim. Pertanyaannya bukan apakah ada yang halal, melainkan hal-hal kecil yang tetap perlu diperhatikan.
+- https://kemet-travel.com/id/matahari-terbit-di-piramida-giza.html — Matahari terbit di sembilan piramida Giza: Sebelum matahari terbit, di titik pandang yang tenang tempat kesembilan piramida terlihat sekaligus — satu jam pertama milik Anda: yoga, sesi foto, atau sekadar menikmati pemandangan.
 
 ### Bahasa Melayu (ms)
 
@@ -344,6 +349,7 @@ Journeys in Français (24), from-prices per person, the same as in English:
 - https://kemet-travel.com/ms/ziarah-kaherah-islam.html — Kaherah Islam, dalam satu hari penuh: Bukan sejam yang diselitkan antara piramid — ini hari tersendiri, dan ia memang menuntutnya.
 - https://kemet-travel.com/ms/bukit-tursina.html — Bukit Tursina, dan biara di kakinya: Naik dalam gelap, tiba ketika fajar, turun sebelum panas. Tiga jam mendaki, dan anda tidak perlu menjadi pendaki.
 - https://kemet-travel.com/ms/halal-dan-waktu-solat.html — Makanan dan solat, tanpa perlu dicari: Mesir negara majoriti Muslim. Persoalannya bukan sama ada ada yang halal, tetapi perkara kecil yang tetap perlu diperiksa.
+- https://kemet-travel.com/ms/matahari-terbit-di-piramid-giza.html — Matahari terbit di sembilan piramid Giza: Sebelum matahari terbit, di titik pandang yang tenang tempat kesemua sembilan piramid kelihatan serentak — sejam pertama milik anda: yoga, sesi foto atau sekadar menikmati pemandangan.
 
 ### Português (pt)
 
@@ -356,6 +362,7 @@ Journeys in Français (24), from-prices per person, the same as in English:
 - https://kemet-travel.com/pt/e-seguro-viajar-para-o-egito.html
 - https://kemet-travel.com/pt/viagens-ultra-luxo-egito.html
 - https://kemet-travel.com/pt/carnaval-no-egito.html — Carnaval no Egito, 2027: Em 2027 o Carnaval cai de 6 a 10 de fevereiro — em fevereiro, o melhor mês do ano para os monumentos.
+- https://kemet-travel.com/pt/nascer-do-sol-nas-piramides-de-gize.html — O nascer do sol sobre as nove pirâmides de Gizé: Antes do sol nascer, num mirante tranquilo de onde se veem as nove pirâmides — a primeira hora é sua: ioga, um ensaio fotográfico ou simplesmente a vista.
 
 ### العربية (ar)
 
@@ -367,6 +374,7 @@ Journeys in Français (24), from-prices per person, the same as in English:
 - https://kemet-travel.com/ar/afdal-waqt-lizyarat-masr.html
 - https://kemet-travel.com/ar/hal-masr-amina.html
 - https://kemet-travel.com/ar/rehlat-fakhira-jiddan-fi-masr.html
+- https://kemet-travel.com/ar/shorouq-al-shams-ind-al-ahramat.html — الشروق فوق أهرامات الجيزة التسعة: قبل شروق الشمس، في نقطة مطلّة هادئة تُرى منها الأهرامات التسعة معاً — والساعة الأولى لكم: يوغا، أو جلسة تصوير، أو مجرد التأمل في المنظر.
 
 ## Index pages
 

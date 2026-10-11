@@ -7,12 +7,72 @@
       <image:loc>https://kemet-travel.com/images/luxor/luxor-karnak-hypostyle-hall.webp</image:loc>
       <image:caption>The great hypostyle hall of Karnak Temple in Luxor</image:caption>
     </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/giza/giza-camel-pyramids-sunrise.webp</image:loc>
+      <image:caption>A decorated camel resting before the Pyramids of Giza in early light</image:caption>
+      <image:title>Giza</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/alexandria/alexandria-qaitbay-citadel.webp</image:loc>
+      <image:caption>The Citadel of Qaitbay on the Alexandria seafront</image:caption>
+      <image:title>Alexandria</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/aswan/aswan-philae-temple-island.webp</image:loc>
+      <image:caption>The island Temple of Philae rising from the Nile near Aswan</image:caption>
+      <image:title>Philae</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/cruise/nile-cruise-sunset.webp</image:loc>
+      <image:caption>A Nile cruise ship between Aswan and Luxor at sunset</image:caption>
+      <image:title>The Nile cruise</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/luxor/luxor-hatshepsut-temple-deir-el-bahri.webp</image:loc>
+      <image:caption>The terraced Temple of Hatshepsut at Deir el-Bahri on Luxor&apos;s West Bank</image:caption>
+      <image:title>Hatshepsut</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/cairo/cairo-citadel-mosque-dusk.webp</image:loc>
+      <image:caption>The Mosque of Muhammad Ali on the Saladin Citadel at dusk</image:caption>
+      <image:title>Islamic Cairo</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://kemet-travel.com/tour-7-day.html</loc>
     <image:image>
       <image:loc>https://kemet-travel.com/images/giza/giza-great-sphinx-frontal.webp</image:loc>
       <image:caption>The Great Sphinx of Giza facing the dawn</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/cairo/cairo-egyptian-museum-hall.webp</image:loc>
+      <image:caption>The grand hall of the Egyptian Museum in Cairo</image:caption>
+      <image:title>Egyptian Museum</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/alexandria/alexandria-bibliotheca.webp</image:loc>
+      <image:caption>The disc of the Bibliotheca Alexandrina on the waterfront</image:caption>
+      <image:title>Alexandria</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/luxor/luxor-karnak-sacred-lake.webp</image:loc>
+      <image:caption>Karnak Temple and its sacred lake at Luxor</image:caption>
+      <image:title>Karnak</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/luxor/luxor-valley-of-the-kings-tomb.webp</image:loc>
+      <image:caption>A painted royal tomb in the Valley of the Kings</image:caption>
+      <image:title>Valley of the Kings</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/giza/saqqara-step-pyramid-djoser.webp</image:loc>
+      <image:caption>The Step Pyramid of Djoser at Saqqara</image:caption>
+      <image:title>Saqqara</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/cairo/cairo-mosque-muhammad-ali-citadel.webp</image:loc>
+      <image:caption>The Mosque of Muhammad Ali crowning the Saladin Citadel</image:caption>
+      <image:title>Islamic Cairo</image:title>
     </image:image>
   </url>
   <url>
@@ -21,12 +81,52 @@
       <image:loc>https://kemet-travel.com/images/alexandria/alexandria-lighthouse.webp</image:loc>
       <image:caption>The lighthouse on the Alexandria seafront on the Mediterranean</image:caption>
     </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/alexandria/alexandria-catacombs-kom-el-shoqafa.webp</image:loc>
+      <image:caption>The underground Catacombs of Kom el-Shoqafa in Alexandria</image:caption>
+      <image:title>Alexandria</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/giza/giza-camel-pyramids-sunrise.webp</image:loc>
+      <image:caption>A decorated camel resting before the Pyramids of Giza in early light</image:caption>
+      <image:title>Giza</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/giza/saqqara-step-pyramid-djoser.webp</image:loc>
+      <image:caption>The Step Pyramid of Djoser at Saqqara</image:caption>
+      <image:title>Saqqara</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/cairo/cairo-citadel-mosque-dusk.webp</image:loc>
+      <image:caption>The Mosque of Muhammad Ali on the Saladin Citadel at dusk</image:caption>
+      <image:title>Islamic Cairo</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://kemet-travel.com/tour-3-day.html</loc>
     <image:image>
       <image:loc>https://kemet-travel.com/images/luxor/luxor-valley-of-the-kings-tomb.webp</image:loc>
       <image:caption>A painted royal tomb in the Valley of the Kings, Luxor</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/luxor/luxor-karnak-hypostyle-hall.webp</image:loc>
+      <image:caption>The great hypostyle hall of Karnak Temple, Luxor</image:caption>
+      <image:title>Karnak</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/luxor/luxor-temple-colonnade.webp</image:loc>
+      <image:caption>The colonnade of Luxor Temple with its royal statues</image:caption>
+      <image:title>Luxor Temple</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/luxor/luxor-hatshepsut-temple-deir-el-bahri.webp</image:loc>
+      <image:caption>The terraced Temple of Hatshepsut at Deir el-Bahri on Luxor&apos;s West Bank</image:caption>
+      <image:title>Hatshepsut</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/aswan/aswan-philae-temple-island.webp</image:loc>
+      <image:caption>The island Temple of Philae rising from the Nile near Aswan</image:caption>
+      <image:title>Philae</image:title>
     </image:image>
   </url>
   <url>
@@ -62,12 +162,52 @@
       <image:loc>https://kemet-travel.com/images/giza/giza-great-pyramid-khufu.webp</image:loc>
       <image:caption>The Great Pyramid of Khufu on the Giza plateau</image:caption>
     </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/clients/clients-26-giza-pose.webp</image:loc>
+      <image:caption>Kemet guests posing playfully before the Pyramids of Giza</image:caption>
+      <image:title>Giza plateau</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/giza/giza-camel-pyramids-sunrise.webp</image:loc>
+      <image:caption>A decorated camel resting before the Pyramids of Giza in early light</image:caption>
+      <image:title>The pyramids</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/giza/giza-great-sphinx-frontal.webp</image:loc>
+      <image:caption>The Great Sphinx of Giza facing the dawn</image:caption>
+      <image:title>Great Sphinx</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/giza/giza-grand-egyptian-museum.webp</image:loc>
+      <image:caption>The Grand Egyptian Museum beside the Giza plateau</image:caption>
+      <image:title>Grand Egyptian Museum</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://kemet-travel.com/tour-saqqara.html</loc>
     <image:image>
       <image:loc>https://kemet-travel.com/images/giza/saqqara-step-pyramid-djoser.webp</image:loc>
       <image:caption>The Step Pyramid of Djoser at Saqqara, the world&apos;s oldest stone monument</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/clients/clients-07-saqqara-family.webp</image:loc>
+      <image:caption>A family of Kemet guests celebrating at the Step Pyramid of Saqqara</image:caption>
+      <image:title>Saqqara</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/clients/clients-15-dahshur-bent-pyramid.webp</image:loc>
+      <image:caption>Kemet guests at the Bent Pyramid of Dahshur</image:caption>
+      <image:title>Bent Pyramid</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/giza/giza-great-pyramid-clear-sky.webp</image:loc>
+      <image:caption>The Red Pyramid of Dahshur, the first true pyramid, under a clear desert sky</image:caption>
+      <image:title>Red Pyramid</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/clients/clients-19-red-pyramid.webp</image:loc>
+      <image:caption>A family of Kemet guests at the base of the Red Pyramid of Dahshur</image:caption>
+      <image:title>Red Pyramid</image:title>
     </image:image>
   </url>
   <url>
@@ -76,12 +216,32 @@
       <image:loc>https://kemet-travel.com/images/cairo/cairo-mosque-muhammad-ali-citadel.webp</image:loc>
       <image:caption>The Mosque of Muhammad Ali crowning the Saladin Citadel in Cairo</image:caption>
     </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/cairo/cairo-citadel-mosque-dusk.webp</image:loc>
+      <image:caption>The Mosque of Muhammad Ali on the Saladin Citadel at dusk</image:caption>
+      <image:title>Saladin Citadel</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/clients/clients-04-citadel-steps.webp</image:loc>
+      <image:caption>A group of Kemet guests on the steps of the Saladin Citadel in Cairo</image:caption>
+      <image:title>Saladin Citadel</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://kemet-travel.com/tour-cairo-museums.html</loc>
     <image:image>
       <image:loc>https://kemet-travel.com/images/cairo/cairo-egyptian-museum-hall.webp</image:loc>
       <image:caption>The grand hall of the Egyptian Museum in Cairo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/egyptian-museum-menkaure-triad.webp</image:loc>
+      <image:caption>A triad statue of King Menkaure with the goddess Hathor in the Egyptian Museum, Cairo</image:caption>
+      <image:title>Egyptian Museum</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/nmec-main-hall.webp</image:loc>
+      <image:caption>The main hall of the National Museum of Egyptian Civilization, Cairo</image:caption>
+      <image:title>NMEC</image:title>
     </image:image>
   </url>
   <url>
@@ -90,12 +250,84 @@
       <image:loc>https://kemet-travel.com/images/alexandria/alexandria-roman-amphitheatre.webp</image:loc>
       <image:caption>The Roman Amphitheatre at Kom el-Dikka in Alexandria</image:caption>
     </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/alexandria/alexandria-catacombs-kom-el-shoqafa.webp</image:loc>
+      <image:caption>The underground Catacombs of Kom el-Shoqafa</image:caption>
+      <image:title>Catacombs</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/alexandria/alexandria-pompeys-pillar.webp</image:loc>
+      <image:caption>Pompey&apos;s Pillar rising from the ruins of the Serapeum</image:caption>
+      <image:title>Pompey&apos;s Pillar</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/alexandria/alexandria-qaitbay-citadel.webp</image:loc>
+      <image:caption>The Citadel of Qaitbay on the Alexandria seafront</image:caption>
+      <image:title>Qaitbay</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/alexandria/alexandria-bibliotheca.webp</image:loc>
+      <image:caption>The disc of the Bibliotheca Alexandrina on the waterfront</image:caption>
+      <image:title>Bibliotheca</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://kemet-travel.com/tour-giza-sphinx.html</loc>
     <image:image>
       <image:loc>https://kemet-travel.com/images/giza/giza-great-sphinx-profile.webp</image:loc>
       <image:caption>The Great Sphinx of Giza in profile before the pyramids</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/giza/giza-great-pyramid-khufu.webp</image:loc>
+      <image:caption>The Great Pyramid of Khufu on the Giza plateau</image:caption>
+      <image:title>Great Pyramid</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/clients/clients-09-giza-panorama.webp</image:loc>
+      <image:caption>Kemet guests at the Giza panorama viewpoint with the pyramids behind them</image:caption>
+      <image:title>Panoramic viewpoint</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/giza/giza-great-sphinx-frontal.webp</image:loc>
+      <image:caption>The Great Sphinx of Giza facing the dawn</image:caption>
+      <image:title>Great Sphinx</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/clients/clients-11-sphinx-laughs.webp</image:loc>
+      <image:caption>Kemet guests laughing together beside the Great Sphinx</image:caption>
+      <image:title>Great Sphinx</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://kemet-travel.com/tour-cairo-food.html</loc>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/koshari.webp</image:loc>
+      <image:caption>A bowl of koshari topped with tomato sauce, fried onions and parsley</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/tameya-frying.webp</image:loc>
+      <image:caption>Ta&apos;meya — Egyptian falafel — frying in a street-stall pan</image:caption>
+      <image:title>Ta&apos;meya</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/hawawshi.webp</image:loc>
+      <image:caption>Hawawshi: crisp bread baked around spiced minced meat, cut into wedges</image:caption>
+      <image:title>Hawawshi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/stuffed-pigeon.webp</image:loc>
+      <image:caption>Stuffed pigeons (hamam mahshi) in a pan</image:caption>
+      <image:title>Stuffed pigeon</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/kunafa.webp</image:loc>
+      <image:caption>A tray of kunafa, its shredded pastry baked golden</image:caption>
+      <image:title>Kunafa</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/basbousa.webp</image:loc>
+      <image:caption>Squares of basbousa, the syrup-soaked semolina cake, topped with almonds</image:caption>
+      <image:title>Basbousa</image:title>
     </image:image>
   </url>
   <url>
@@ -120,9 +352,9 @@
       <image:title>By night</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://kemet-travel.com/images/luxor/luxor-temple-on-the-nile.webp</image:loc>
-      <image:caption>An ancient temple standing at the edge of the Nile in Upper Egypt</image:caption>
-      <image:title>Riverside temple</image:title>
+      <image:loc>https://kemet-travel.com/images/aswan/aswan-philae-temple-island.webp</image:loc>
+      <image:caption>The island Temple of Philae at Aswan, visited before you board</image:caption>
+      <image:title>Philae</image:title>
     </image:image>
   </url>
   <url>
@@ -131,6 +363,26 @@
       <image:loc>https://kemet-travel.com/images/luxor/luxor-temple-ramesses-colossus.webp</image:loc>
       <image:caption>A colossus of Ramesses II at the entrance of Luxor Temple</image:caption>
     </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/luxor/luxor-karnak-hypostyle-hall.webp</image:loc>
+      <image:caption>The great hypostyle hall of Karnak Temple, Luxor</image:caption>
+      <image:title>Karnak</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/luxor/luxor-hatshepsut-temple-deir-el-bahri.webp</image:loc>
+      <image:caption>The terraced Temple of Hatshepsut at Deir el-Bahri on Luxor&apos;s West Bank</image:caption>
+      <image:title>West Bank</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/aswan/aswan-philae-temple-island.webp</image:loc>
+      <image:caption>The island Temple of Philae rising from the Nile near Aswan</image:caption>
+      <image:title>Philae</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/aswan/aswan-felucca-sailing-nile.webp</image:loc>
+      <image:caption>A felucca under sail on the Nile at Aswan</image:caption>
+      <image:title>Aswan</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://kemet-travel.com/tour-honeymoon-9day.html</loc>
@@ -138,12 +390,72 @@
       <image:loc>https://kemet-travel.com/images/aswan/nile-view-temple-window.webp</image:loc>
       <image:caption>The Nile and desert hills framed through an ancient temple doorway at Aswan</image:caption>
     </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/giza/giza-camel-pyramids-sunrise.webp</image:loc>
+      <image:caption>A decorated camel resting before the Pyramids of Giza in early light</image:caption>
+      <image:title>Sunrise at Giza</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/aswan/aswan-philae-temple-island.webp</image:loc>
+      <image:caption>The island Temple of Philae rising from the Nile near Aswan</image:caption>
+      <image:title>Philae</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/aswan/aswan-nubian-terrace-sunset.webp</image:loc>
+      <image:caption>A Nubian terrace above the Nile at sunset in Aswan</image:caption>
+      <image:title>Aswan</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/cruise/nile-cruise-golden.webp</image:loc>
+      <image:caption>A Nile cruise ship reflected in the river at golden hour</image:caption>
+      <image:title>The Nile cruise</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/luxor/luxor-hot-air-balloons-dawn.webp</image:loc>
+      <image:caption>Hot-air balloons drifting over the West Bank of Luxor at dawn</image:caption>
+      <image:title>Balloons</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/luxor/luxor-karnak-sacred-lake.webp</image:loc>
+      <image:caption>Karnak Temple and its sacred lake at Luxor</image:caption>
+      <image:title>Karnak</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://kemet-travel.com/tour-family-8day.html</loc>
     <image:image>
-      <image:loc>https://kemet-travel.com/images/giza/giza-sphinx-and-pyramid.webp</image:loc>
-      <image:caption>The Great Sphinx with a pyramid rising behind it at Giza</image:caption>
+      <image:loc>https://kemet-travel.com/images/giza/giza-great-sphinx-frontal.webp</image:loc>
+      <image:caption>The Great Sphinx of Giza facing the dawn</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/clients/clients-06-giza-jump.webp</image:loc>
+      <image:caption>Kemet guests jumping for joy above the Giza pyramid panorama</image:caption>
+      <image:title>Giza</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/giza/giza-grand-egyptian-museum.webp</image:loc>
+      <image:caption>The Grand Egyptian Museum beside the Giza plateau</image:caption>
+      <image:title>Grand Egyptian Museum</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/luxor/luxor-karnak-hypostyle-hall.webp</image:loc>
+      <image:caption>The great hypostyle hall of Karnak Temple, Luxor</image:caption>
+      <image:title>Karnak</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/luxor/luxor-valley-of-the-kings-tomb.webp</image:loc>
+      <image:caption>A painted royal tomb in the Valley of the Kings</image:caption>
+      <image:title>Valley of the Kings</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/aswan/aswan-felucca-sailing-nile.webp</image:loc>
+      <image:caption>A felucca under sail on the Nile at Aswan</image:caption>
+      <image:title>Felucca</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/aswan/aswan-nubian-terrace-sunset.webp</image:loc>
+      <image:caption>A painted Nubian terrace above the Nile at sunset in Aswan</image:caption>
+      <image:title>Nubian colour</image:title>
     </image:image>
   </url>
   <url>
@@ -152,12 +464,72 @@
       <image:loc>https://kemet-travel.com/images/luxor/luxor-hot-air-balloons-dawn.webp</image:loc>
       <image:caption>Hot-air balloons drifting over the West Bank of Luxor at dawn</image:caption>
     </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/giza/giza-camel-pyramids-sunrise.webp</image:loc>
+      <image:caption>A decorated camel resting before the Pyramids of Giza in early light</image:caption>
+      <image:title>Giza at first light</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/cairo/cairo-islamic-old-street-night.webp</image:loc>
+      <image:caption>A stone-paved lane of Islamic Cairo glowing with lanterns at night</image:caption>
+      <image:title>Islamic Cairo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/activities/balloons-luxor-sunrise-west-bank.webp</image:loc>
+      <image:caption>Hot-air balloons at sunrise over the villages and fields of Luxor&apos;s West Bank, seen from a basket</image:caption>
+      <image:title>Balloons</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/luxor/luxor-temple-colonnade.webp</image:loc>
+      <image:caption>The colonnade of Luxor Temple with its royal statues</image:caption>
+      <image:title>Luxor Temple</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/aswan/aswan-felucca-sailing-nile.webp</image:loc>
+      <image:caption>A felucca under sail on the Nile at Aswan</image:caption>
+      <image:title>Aswan</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/aswan/aswan-nubian-decorated-boats.webp</image:loc>
+      <image:caption>Brightly decorated Nubian boats moored on the Nile at Aswan</image:caption>
+      <image:title>Nubian colour</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://kemet-travel.com/tour-grand-14day.html</loc>
     <image:image>
-      <image:loc>https://kemet-travel.com/images/home/egypt-giza-pyramids-desert-panorama.webp</image:loc>
-      <image:caption>The pyramids of Giza rising from the desert with the Sphinx before them</image:caption>
+      <image:loc>https://kemet-travel.com/images/giza/giza-camel-pyramids-sunrise.webp</image:loc>
+      <image:caption>A decorated camel resting before the Pyramids of Giza in early light</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/cairo/cairo-citadel-mosque-dusk.webp</image:loc>
+      <image:caption>The Mosque of Muhammad Ali on the Saladin Citadel at dusk</image:caption>
+      <image:title>Islamic Cairo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/alexandria/alexandria-qaitbay-citadel.webp</image:loc>
+      <image:caption>The Citadel of Qaitbay on the Alexandria seafront</image:caption>
+      <image:title>Alexandria</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/aswan/abu-simbel-great-temple-colossi.webp</image:loc>
+      <image:caption>The colossi of the Great Temple of Ramesses II at Abu Simbel</image:caption>
+      <image:title>Abu Simbel</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/cruise/nile-cruise-sunset.webp</image:loc>
+      <image:caption>A Nile cruise ship between Aswan and Luxor at sunset</image:caption>
+      <image:title>The Nile cruise</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/luxor/luxor-hatshepsut-colonnade.webp</image:loc>
+      <image:caption>The ramp and colonnades of Hatshepsut&apos;s temple beneath the cliffs of Deir el-Bahri</image:caption>
+      <image:title>Hatshepsut</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/redsea/ras-mohammed-lagoon.webp</image:loc>
+      <image:caption>A turquoise lagoon meeting bare desert headlands at Ras Mohammed, Red Sea</image:caption>
+      <image:title>Ras Mohammed</image:title>
     </image:image>
   </url>
   <url>
@@ -165,6 +537,26 @@
     <image:image>
       <image:loc>https://kemet-travel.com/images/cairo/cairo-amr-ibn-al-as-mosque.webp</image:loc>
       <image:caption>The ancient Mosque of Amr ibn al-As in Old Cairo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/giza/giza-grand-egyptian-museum.webp</image:loc>
+      <image:caption>The Grand Egyptian Museum beside the Giza plateau</image:caption>
+      <image:title>Grand Egyptian Museum</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/giza/saqqara-step-pyramid-djoser.webp</image:loc>
+      <image:caption>The Step Pyramid of Djoser at Saqqara</image:caption>
+      <image:title>Saqqara</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/cairo/cairo-al-muizz-street.webp</image:loc>
+      <image:caption>Lantern-lit Al-Muizz Street in medieval Islamic Cairo</image:caption>
+      <image:title>Al-Muizz Street</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/activities/act-tanoura.webp</image:loc>
+      <image:caption>A Sufi tanoura performer spinning in a brightly coloured skirt</image:caption>
+      <image:title>Tanoura</image:title>
     </image:image>
   </url>
   <url>
@@ -174,51 +566,51 @@
       <image:caption>A thatched beach camp above the coral reef shallows of the Red Sea at Sharm El Sheikh</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://kemet-travel.com/images/redsea/hurghada-island-jetty.webp</image:loc>
-      <image:caption>A wooden jetty reaching over the turquoise Red Sea to a desert island</image:caption>
-      <image:title>Island jetty</image:title>
+      <image:loc>https://kemet-travel.com/images/redsea/sharm-naama-bay-aerial.webp</image:loc>
+      <image:caption>Sharm El Sheikh&apos;s curved bays seen from above</image:caption>
+      <image:title>Sharm El Sheikh</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://kemet-travel.com/images/redsea/hurghada-beach-umbrellas.webp</image:loc>
-      <image:caption>Thatched parasols along a calm Red Sea resort beach</image:caption>
+      <image:loc>https://kemet-travel.com/images/redsea/ras-mohammed-lagoon.webp</image:loc>
+      <image:caption>A turquoise lagoon meeting bare desert headlands at Ras Mohammed</image:caption>
+      <image:title>Ras Mohammed</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/redsea/sharm-farsha-cafe-sunset.webp</image:loc>
+      <image:caption>A beach café at sunset on the Sharm El Sheikh coast</image:caption>
+      <image:title>Sharm at dusk</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/redsea/red-sea-beach-resort-palms.webp</image:loc>
+      <image:caption>A palm-lined Red Sea resort beach</image:caption>
       <image:title>Resort beach</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://kemet-travel.com/images/redsea/hurghada-turquoise-swing.webp</image:loc>
-      <image:caption>A quiet turquoise bay on the Red Sea coast</image:caption>
-      <image:title>Turquoise bay</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://kemet-travel.com/images/redsea/hurghada-el-mina-mosque.webp</image:loc>
-      <image:caption>The El Mina Mosque above the marina on the Red Sea coast</image:caption>
-      <image:title>Coastal mosque</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://kemet-travel.com/tour-red-sea-diving-4day.html</loc>
     <image:image>
-      <image:loc>https://kemet-travel.com/images/redsea/red-sea-blue-hole.webp</image:loc>
-      <image:caption>Snorkellers over the deep blue circle of a Red Sea reef hole</image:caption>
-    </image:image>
-    <image:image>
       <image:loc>https://kemet-travel.com/images/activities/red-sea-diver-reef.webp</image:loc>
       <image:caption>A scuba diver beside a vivid Red Sea coral reef teeming with fish</image:caption>
-      <image:title>Reef wall</image:title>
     </image:image>
     <image:image>
       <image:loc>https://kemet-travel.com/images/activities/act-diving.webp</image:loc>
-      <image:caption>A diver among a cloud of anthias on a Red Sea coral garden</image:caption>
+      <image:caption>A diver among reef fish and a lionfish on a Red Sea coral garden</image:caption>
       <image:title>Coral garden</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://kemet-travel.com/images/redsea/red-sea-aquarium.webp</image:loc>
-      <image:caption>Visitors before the whale-shark tank of the Red Sea aquarium</image:caption>
-      <image:title>Grand Aquarium</image:title>
+      <image:loc>https://kemet-travel.com/images/redsea/ras-mohammed-lagoon.webp</image:loc>
+      <image:caption>A turquoise lagoon meeting bare desert headlands at Ras Mohammed</image:caption>
+      <image:title>Ras Mohammed</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://kemet-travel.com/images/redsea/hurghada-island-jetty.webp</image:loc>
-      <image:caption>A wooden jetty reaching over the turquoise Red Sea to a desert island</image:caption>
-      <image:title>Island jetty</image:title>
+      <image:loc>https://kemet-travel.com/images/redsea/sharm-naama-bay-aerial.webp</image:loc>
+      <image:caption>Sharm El Sheikh&apos;s curved bays seen from above</image:caption>
+      <image:title>Sharm El Sheikh</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/redsea/sharm-reef-beach-camp.webp</image:loc>
+      <image:caption>A thatched beach camp above the coral shallows at Sharm El Sheikh</image:caption>
+      <image:title>House reef</image:title>
     </image:image>
   </url>
   <url>
@@ -227,12 +619,52 @@
       <image:loc>https://kemet-travel.com/images/luxor/hatshepsut-osiride-statues.webp</image:loc>
       <image:caption>Osiride statues of Hatshepsut on the upper terrace of her temple at Deir el-Bahri</image:caption>
     </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/luxor/luxor-karnak-hypostyle-hall.webp</image:loc>
+      <image:caption>The great hypostyle hall of Karnak Temple, Luxor</image:caption>
+      <image:title>Karnak</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/luxor/luxor-temple-colonnade.webp</image:loc>
+      <image:caption>The colonnade of Luxor Temple with its royal statues</image:caption>
+      <image:title>Luxor Temple</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/luxor/luxor-valley-of-the-kings-tomb.webp</image:loc>
+      <image:caption>A painted royal tomb in the Valley of the Kings</image:caption>
+      <image:title>Valley of the Kings</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/luxor/luxor-hatshepsut-colonnade.webp</image:loc>
+      <image:caption>The ramp and colonnades of Hatshepsut&apos;s temple beneath the cliffs of Deir el-Bahri</image:caption>
+      <image:title>Hatshepsut</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://kemet-travel.com/tour-cairo-vip-3day.html</loc>
     <image:image>
       <image:loc>https://kemet-travel.com/images/cairo/cairo-islamic-old-street-night.webp</image:loc>
       <image:caption>A stone-paved lane of Islamic Cairo glowing with lanterns at night</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/cairo/cairo-citadel-mosque-dusk.webp</image:loc>
+      <image:caption>The Mosque of Muhammad Ali on the Saladin Citadel at dusk</image:caption>
+      <image:title>Saladin Citadel</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/giza/giza-camel-pyramids-sunrise.webp</image:loc>
+      <image:caption>A decorated camel resting before the Pyramids of Giza in early light</image:caption>
+      <image:title>Giza</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/giza/giza-grand-egyptian-museum.webp</image:loc>
+      <image:caption>The Grand Egyptian Museum beside the Giza plateau</image:caption>
+      <image:title>Grand Egyptian Museum</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/cairo/cairo-al-azhar-mosque-courtyard.webp</image:loc>
+      <image:caption>The arcaded courtyard of Al-Azhar Mosque in Cairo</image:caption>
+      <image:title>Al-Azhar</image:title>
     </image:image>
   </url>
   <url>
@@ -241,12 +673,52 @@
       <image:loc>https://kemet-travel.com/images/alexandria/alexandria-montaza-palace.webp</image:loc>
       <image:caption>The seafront Montaza Palace and its gardens in Alexandria</image:caption>
     </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/alexandria/alexandria-catacombs-kom-el-shoqafa.webp</image:loc>
+      <image:caption>The underground Catacombs of Kom el-Shoqafa</image:caption>
+      <image:title>Catacombs</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/alexandria/alexandria-qaitbay-citadel.webp</image:loc>
+      <image:caption>The Citadel of Qaitbay on the Alexandria seafront</image:caption>
+      <image:title>Qaitbay</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/alexandria/alexandria-bibliotheca.webp</image:loc>
+      <image:caption>The disc of the Bibliotheca Alexandrina on the waterfront</image:caption>
+      <image:title>Bibliotheca</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/alexandria/alexandria-roman-amphitheatre.webp</image:loc>
+      <image:caption>The Roman Amphitheatre at Kom el-Dikka, Alexandria</image:caption>
+      <image:title>Roman Amphitheatre</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://kemet-travel.com/tour-abu-simbel.html</loc>
     <image:image>
       <image:loc>https://kemet-travel.com/images/aswan/abu-simbel-great-temple-colossi.webp</image:loc>
       <image:caption>The four seated colossi of Ramesses II at the Great Temple of Abu Simbel</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/abu-simbel-both-temples.webp</image:loc>
+      <image:caption>The two rock-cut temples of Abu Simbel: the Great Temple beyond, the Temple of Nefertari in front</image:caption>
+      <image:title>Both temples</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/abu-simbel-nefertari-temple.webp</image:loc>
+      <image:caption>The facade of the Temple of Nefertari and Hathor at Abu Simbel</image:caption>
+      <image:title>Temple of Nefertari</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/abu-simbel-nefertari-facade.webp</image:loc>
+      <image:caption>Standing statues of Nefertari and Ramesses II on the facade of the smaller temple at Abu Simbel</image:caption>
+      <image:title>Nefertari</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/abu-simbel-hathor-hall.webp</image:loc>
+      <image:caption>Hathor-headed pillars in the hall of the Temple of Nefertari, Abu Simbel</image:caption>
+      <image:title>Hathor hall</image:title>
     </image:image>
   </url>
   <url>
@@ -280,8 +752,8 @@
   <url>
     <loc>https://kemet-travel.com/destinations/giza.html</loc>
     <image:image>
-      <image:loc>https://kemet-travel.com/images/giza/giza-great-pyramid-clear-sky.webp</image:loc>
-      <image:caption>The Great Pyramid of Khufu on the Giza plateau under a clear desert sky</image:caption>
+      <image:loc>https://kemet-travel.com/images/giza/giza-camel-pyramids-sunrise.webp</image:loc>
+      <image:caption>A decorated camel resting before the Pyramids of Giza in early light</image:caption>
       <image:title>Giza</image:title>
     </image:image>
     <image:image>
@@ -295,9 +767,9 @@
       <image:title>Great Pyramid</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://kemet-travel.com/images/giza/giza-sphinx-and-pyramid.webp</image:loc>
-      <image:caption>The Sphinx set before a pyramid at Giza</image:caption>
-      <image:title>Sphinx &amp; Pyramid</image:title>
+      <image:loc>https://kemet-travel.com/images/clients/clients-09-giza-panorama.webp</image:loc>
+      <image:caption>Kemet guests at the Giza panorama viewpoint with the pyramids behind them</image:caption>
+      <image:title>Panorama point</image:title>
     </image:image>
     <image:image>
       <image:loc>https://kemet-travel.com/images/giza/giza-grand-egyptian-museum.webp</image:loc>
@@ -341,9 +813,9 @@
       <image:title>Aswan</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://kemet-travel.com/images/aswan/aswan-nubian-village-nile.webp</image:loc>
-      <image:caption>A blue-and-white Nubian village on the Nile at Aswan</image:caption>
-      <image:title>Nubian village</image:title>
+      <image:loc>https://kemet-travel.com/images/aswan/aswan-nubian-decorated-boats.webp</image:loc>
+      <image:caption>Brightly decorated Nubian boats moored on the Nile at Aswan</image:caption>
+      <image:title>Nubian boats</image:title>
     </image:image>
     <image:image>
       <image:loc>https://kemet-travel.com/images/aswan/aswan-felucca-sailing-nile.webp</image:loc>
@@ -420,14 +892,14 @@
       <image:title>Sharm El Sheikh</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://kemet-travel.com/images/redsea/red-sea-aquarium.webp</image:loc>
-      <image:caption>Vivid coral and fish on a Red Sea reef near Sharm El Sheikh</image:caption>
-      <image:title>The reefs</image:title>
+      <image:loc>https://kemet-travel.com/images/redsea/ras-mohammed-lagoon.webp</image:loc>
+      <image:caption>A turquoise lagoon meeting bare desert headlands at Ras Mohammed</image:caption>
+      <image:title>Ras Mohammed</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://kemet-travel.com/images/redsea/sinai-wadi-rock-pool.webp</image:loc>
-      <image:caption>A rock pool in a Sinai desert wadi</image:caption>
-      <image:title>Sinai wadis</image:title>
+      <image:loc>https://kemet-travel.com/images/redsea/sharm-reef-beach-camp.webp</image:loc>
+      <image:caption>A thatched beach camp above the coral shallows at Sharm El Sheikh</image:caption>
+      <image:title>Coral shallows</image:title>
     </image:image>
     <image:image>
       <image:loc>https://kemet-travel.com/images/redsea/sharm-farsha-cafe-sunset.webp</image:loc>
@@ -465,6 +937,26 @@
       <image:caption>A decorated camel resting before the Pyramids of Giza in warm early light</image:caption>
       <image:title>Sunrise at the Giza Pyramids</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/clients/clients-26-giza-pose.webp</image:loc>
+      <image:caption>Kemet guests at the Giza panorama viewpoint, the pyramids in a line behind them</image:caption>
+      <image:title>The viewpoint</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/clients/clients-09-giza-panorama.webp</image:loc>
+      <image:caption>Kemet guests on the desert road at the Giza panorama, the pyramids on the horizon</image:caption>
+      <image:title>The pyramids in a line</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/clients/clients-06-giza-jump.webp</image:loc>
+      <image:caption>Kemet guests leaping for a photograph above the Giza pyramid panorama</image:caption>
+      <image:title>A photo session</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/giza/giza-great-sphinx-frontal.webp</image:loc>
+      <image:caption>The Great Sphinx of Giza facing the dawn</image:caption>
+      <image:title>The Sphinx</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://kemet-travel.com/experiences/private-felucca-nile.html</loc>
@@ -490,6 +982,14 @@
       <image:loc>https://kemet-travel.com/images/cairo/cairo-al-muizz-street.webp</image:loc>
       <image:caption>A lantern-lit medieval lane of Islamic Cairo along Al-Muizz Street, minarets above the rooftops</image:caption>
       <image:title>Old Cairo Walking Experience</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://kemet-travel.com/experiences/egyptian-cooking.html</loc>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/stuffed-vine-leaves.webp</image:loc>
+      <image:caption>A platter of stuffed vine leaves with lemon and parsley</image:caption>
+      <image:title>Egyptian Cooking Experience</image:title>
     </image:image>
   </url>
   <url>
@@ -562,19 +1062,14 @@
       <image:title>Red Sea Private Yacht Day</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://kemet-travel.com/images/redsea/hurghada-island-jetty.webp</image:loc>
-      <image:caption>A wooden jetty reaching over the turquoise Red Sea to a desert island</image:caption>
-      <image:title>Island anchorage</image:title>
+      <image:loc>https://kemet-travel.com/images/redsea/sharm-naama-bay-aerial.webp</image:loc>
+      <image:caption>Sharm El Sheikh&apos;s curved bays seen from above</image:caption>
+      <image:title>Sharm El Sheikh</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://kemet-travel.com/images/activities/parasailing-pair.webp</image:loc>
-      <image:caption>Guests parasailing high above the Red Sea under a bright canopy</image:caption>
-      <image:title>Parasailing</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://kemet-travel.com/images/redsea/hurghada-turquoise-swing.webp</image:loc>
-      <image:caption>A quiet turquoise Red Sea bay fringed by palms</image:caption>
-      <image:title>Turquoise bay</image:title>
+      <image:loc>https://kemet-travel.com/images/redsea/sharm-reef-beach-camp.webp</image:loc>
+      <image:caption>A thatched beach camp above the coral shallows at Sharm El Sheikh</image:caption>
+      <image:title>Coral shallows</image:title>
     </image:image>
   </url>
   <url>
@@ -592,11 +1087,6 @@
       <image:caption>A lantern-lit terrace in the Sinai night above the Red Sea</image:caption>
       <image:title>Sinai Desert Evening</image:title>
     </image:image>
-    <image:image>
-      <image:loc>https://kemet-travel.com/images/redsea/sinai-wadi-rock-pool.webp</image:loc>
-      <image:caption>A still rock pool hidden in a granite wadi of the Sinai interior</image:caption>
-      <image:title>Sinai wadi</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://kemet-travel.com/experiences/giza-sound-light-private.html</loc>
@@ -609,8 +1099,8 @@
   <url>
     <loc>https://kemet-travel.com/experiences/nubian-village-experience.html</loc>
     <image:image>
-      <image:loc>https://kemet-travel.com/images/aswan/aswan-nubian-village-nile.webp</image:loc>
-      <image:caption>A blue-painted Nubian village above the Nile at Aswan</image:caption>
+      <image:loc>https://kemet-travel.com/images/aswan/aswan-nubian-terrace-sunset.webp</image:loc>
+      <image:caption>A painted Nubian terrace above the Nile at sunset in Aswan</image:caption>
       <image:title>Nubian Village Experience</image:title>
     </image:image>
   </url>
@@ -623,10 +1113,18 @@
     </image:image>
   </url>
   <url>
+    <loc>https://kemet-travel.com/experiences/vip-airport-service.html</loc>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/cairo-airport-aircraft-stand.webp</image:loc>
+      <image:caption>An aircraft on its stand at Cairo International Airport, passenger stairs in place</image:caption>
+      <image:title>VIP Airport Meet &amp; Assist</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://kemet-travel.com/guides/egypt-travel-guide.html</loc>
     <image:image>
       <image:loc>https://kemet-travel.com/images/giza/giza-great-pyramid-clear-sky.webp</image:loc>
-      <image:caption>The Great Pyramid of Khufu on the Giza plateau under a clear desert sky</image:caption>
+      <image:caption>The Red Pyramid of Dahshur under a clear desert sky</image:caption>
       <image:title>Egypt</image:title>
     </image:image>
   </url>
@@ -644,6 +1142,30 @@
       <image:loc>https://kemet-travel.com/images/aswan/aswan-nubian-decorated-boats.webp</image:loc>
       <image:caption>Brightly decorated Nubian boats moored on the Nile at Aswan</image:caption>
       <image:title>Nile travel</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://kemet-travel.com/guides/egyptian-food-guide.html</loc>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/ful-medames.webp</image:loc>
+      <image:caption>A plate of ful medames with boiled eggs, olives, pickles and flatbread</image:caption>
+      <image:title>Egyptian cuisine</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://kemet-travel.com/guides/10-day-egypt-itinerary.html</loc>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/aswan/aswan-philae-temple-island.webp</image:loc>
+      <image:caption>The island Temple of Philae rising from the Nile near Aswan</image:caption>
+      <image:title>10 days in Egypt</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://kemet-travel.com/guides/egypt-packing-list.html</loc>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/activities/act-camel-pyramids.webp</image:loc>
+      <image:caption>Travellers on a camel caravan before the Pyramids of Giza</image:caption>
+      <image:title>Packing for Egypt</image:title>
     </image:image>
   </url>
   <url>
@@ -692,8 +1214,8 @@
   <url>
     <loc>https://kemet-travel.com/collections/family-egypt.html</loc>
     <image:image>
-      <image:loc>https://kemet-travel.com/images/giza/giza-sphinx-and-pyramid.webp</image:loc>
-      <image:caption>The Great Sphinx and a pyramid of Giza, a highlight for families</image:caption>
+      <image:loc>https://kemet-travel.com/images/giza/giza-great-sphinx-frontal.webp</image:loc>
+      <image:caption>The Great Sphinx of Giza, a highlight for families</image:caption>
     </image:image>
   </url>
   <url>
