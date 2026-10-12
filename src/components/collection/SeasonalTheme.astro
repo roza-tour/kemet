@@ -54,6 +54,30 @@ function lily(x: number, y: number): string {
   ].join(" ");
 }
 
+/**
+ * Points along a row of swags hung between `posts` evenly spaced posts across
+ * a 1200-wide band: each swag dips `dip` below `y`. Used for the Ramadan
+ * bunting and the Christmas lights.
+ */
+function swag(y: number, dip: number, step: number, swags = 2): Array<{ x: number; y: number }> {
+  const out: Array<{ x: number; y: number }> = [];
+  const w = 1200 / swags;
+  for (let x = step / 2; x < 1200; x += step) {
+    const t = (x % w) / w;
+    out.push({ x, y: y + 4 * dip * t * (1 - t) });
+  }
+  return out;
+}
+const swagPath = (y: number, dip: number, swags = 2) =>
+  Array.from({ length: swags }, (_, i) => {
+    const w = 1200 / swags;
+    return `M${i * w} ${y} Q${i * w + w / 2} ${y + 2 * dip} ${(i + 1) * w} ${y}`;
+  }).join(" ");
+
+/** Khayamiya colours — the appliqué tent cloth of Cairo's Tentmakers' Street. */
+const KHAYAMIYA = ["#B8452F", "#D9B45A", "#2F7E66", "#2E5E9E", "#E8DCC0"];
+const GLASS = ["#2F7E66", "#A33B3B", "#2E5E9E", "#C98A2E"];
+
 /** A cluster of dates hanging from a stalk at (x, y). */
 function dates(x: number, y: number): Array<{ cx: number; cy: number }> {
   const out: Array<{ cx: number; cy: number }> = [];
@@ -66,84 +90,109 @@ function dates(x: number, y: number): Array<{ cx: number; cy: number }> {
 
 {theme === "ramadan" && (
   <div class="sth sth-ramadan" aria-hidden="true">
-    {/* Hanging fanous lanterns */}
+    {/* Zeena: the khayamiya-coloured bunting strung across every Egyptian
+        street in Ramadan, with a string of small lights beneath it */}
+    <svg class="sth-zeena" viewBox="0 0 1200 120" width="1200" height="120" preserveAspectRatio="xMidYMin slice">
+      <path d={swagPath(10, 26, 3)} fill="none" stroke="#D9B45A" stroke-width="1.2" opacity=".55" />
+      {swag(10, 26, 34, 3).map((f, i) => (
+        <g>
+          <path d={`M${f.x - 13} ${f.y} L${f.x + 13} ${f.y} L${f.x} ${f.y + 24} Z`} fill={KHAYAMIYA[i % 5]} opacity=".88" />
+          <path d={`M${f.x - 6} ${f.y + 3} L${f.x + 6} ${f.y + 3} L${f.x} ${f.y + 14} Z`} fill={KHAYAMIYA[(i + 2) % 5]} opacity=".7" />
+        </g>
+      ))}
+      <path d={swagPath(48, 30, 2)} fill="none" stroke="#D9B45A" stroke-width=".8" opacity=".35" />
+      {swag(48, 30, 30, 2).map((l, i) => (
+        <circle class={`sth-bulb sth-k${i % 3}`} cx={l.x} cy={l.y + 2} r="2.6" fill="#FBEFC4" />
+      ))}
+    </svg>
+    {/* Hanging fanous lanterns, coloured glass, each with its own glow */}
     <div class="sth-lanterns">
-      {[0, 1, 2, 3, 4, 5, 6].map((i) => (
+      {[0, 1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
         <div class={`sth-lantern sth-l${i % 4}`}>
           <span class="sth-cord"></span>
-          <svg viewBox="0 0 40 62" width="34" height="53">
+          <span class="sth-halo"></span>
+          <svg viewBox="0 0 40 62" width="44" height="68">
             <defs>
               <linearGradient id={`lg${i}`} x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#F7E6AE" stop-opacity=".95" />
-                <stop offset="55%" stop-color="#D9B45A" stop-opacity=".8" />
-                <stop offset="100%" stop-color="#A87E32" stop-opacity=".7" />
+                <stop offset="0%" stop-color="#F7E6AE" stop-opacity=".98" />
+                <stop offset="55%" stop-color="#D9B45A" stop-opacity=".88" />
+                <stop offset="100%" stop-color="#A87E32" stop-opacity=".8" />
               </linearGradient>
             </defs>
-            {/* crown */}
-            <path d="M20 2 L26 8 H14 Z" fill="#D9B45A" opacity=".9" />
-            <rect x="12" y="8" width="16" height="3" rx="1" fill="#D9B45A" opacity=".85" />
-            {/* body */}
-            <path d="M11 11 H29 L33 24 L29 46 H11 L7 24 Z" fill={`url(#lg${i})`} stroke="#D9B45A" stroke-width=".8" />
-            {/* glass panes */}
-            <path d="M15 15 L20 20 L25 15 L25 38 L20 43 L15 38 Z" fill="#2F7E66" opacity=".45" />
-            <path d="M20 20 V43" stroke="#F7E6AE" stroke-width=".6" opacity=".5" />
-            {/* base + tassel */}
-            <rect x="13" y="46" width="14" height="3" rx="1" fill="#D9B45A" opacity=".9" />
-            <path d="M20 49 V56" stroke="#D9B45A" stroke-width="1" opacity=".8" />
-            <circle cx="20" cy="58" r="2.6" fill="#D9B45A" opacity=".85" />
+            <path d="M20 2 L26 8 H14 Z" fill="#D9B45A" />
+            <rect x="12" y="8" width="16" height="3" rx="1" fill="#D9B45A" />
+            <path d="M11 11 H29 L33 24 L29 46 H11 L7 24 Z" fill={`url(#lg${i})`} stroke="#F7E6AE" stroke-width=".8" />
+            <path d="M15 15 L20 20 L25 15 L25 38 L20 43 L15 38 Z" fill={GLASS[i % 4]} opacity=".75" />
+            <path d="M9.5 23 L13 16 L13 40 Z M30.5 23 L27 16 L27 40 Z" fill={GLASS[(i + 1) % 4]} opacity=".55" />
+            <circle cx="20" cy="29" r="3.2" fill="#FFF6DA" opacity=".9" />
+            <path d="M20 20 V43" stroke="#F7E6AE" stroke-width=".6" opacity=".6" />
+            <rect x="13" y="46" width="14" height="3" rx="1" fill="#D9B45A" />
+            <path d="M20 49 V56" stroke="#D9B45A" stroke-width="1" />
+            <circle cx="20" cy="58" r="2.6" fill="#D9B45A" />
           </svg>
         </div>
       ))}
     </div>
-    {/* Crescent + star */}
-    <svg class="sth-crescent" viewBox="0 0 120 120" width="120" height="120">
-      <path d="M78 18a44 44 0 1 0 26 74A36 36 0 1 1 78 18Z" fill="none" stroke="#D9B45A" stroke-width="2" opacity=".55" />
-      <path d="M96 30l3.2 7.4 8 .8-6 5.4 1.7 7.9-6.9-4.2-6.9 4.2 1.7-7.9-6-5.4 8-.8Z" fill="#F7E6AE" opacity=".6" />
+    {/* Crescent and star, with a few stars of their own */}
+    <svg class="sth-crescent" viewBox="0 0 120 120" width="150" height="150">
+      <path d="M78 18a44 44 0 1 0 26 74A36 36 0 1 1 78 18Z" fill="#D9B45A" fill-opacity=".14" stroke="#F7E6AE" stroke-width="2" opacity=".85" />
+      <path d="M96 30l3.2 7.4 8 .8-6 5.4 1.7 7.9-6.9-4.2-6.9 4.2 1.7-7.9-6-5.4 8-.8Z" fill="#FBEFC4" opacity=".9" />
     </svg>
   </div>
 )}
 
 {theme === "christmas" && (
   <div class="sth sth-christmas" aria-hidden="true">
-    {/* Starfield */}
     <div class="sth-stars">
-      {[...Array(22)].map((_, i) => (
-        <span class={`sth-star sth-s${i % 5}`} style={`left:${(i * 4.5 + (i % 3) * 2.2) % 98}%;top:${(i * 7 + (i % 4) * 9) % 88}%`}></span>
+      {[...Array(30)].map((_, i) => (
+        <span class={`sth-star sth-s${i % 5}`} style={`left:${(i * 3.3 + (i % 3) * 2.2) % 98}%;top:${(i * 7 + (i % 4) * 9) % 88}%`}></span>
       ))}
     </div>
+    {/* Falling sparkle */}
+    <div class="sth-snow">
+      {[...Array(18)].map((_, i) => (
+        <span class={`sth-flake sth-f${i % 4}`} style={`left:${(i * 5.6 + (i % 3) * 2.5) % 97}%`}></span>
+      ))}
+    </div>
+    {/* A string of coloured lights across the top */}
+    <svg class="sth-xlights" viewBox="0 0 1200 90" width="1200" height="90" preserveAspectRatio="xMidYMin slice">
+      <path d={swagPath(8, 26, 3)} fill="none" stroke="#2F5E46" stroke-width="1.6" opacity=".7" />
+      {swag(8, 26, 32, 3).map((l, i) => (
+        <g>
+          <path d={`M${l.x} ${l.y} v4`} stroke="#2F5E46" stroke-width="1.4" />
+          <ellipse class={`sth-bulb sth-k${i % 3}`} cx={l.x} cy={l.y + 9} rx="3.4" ry="5" fill={["#E3C579", "#C0392B", "#3E9E6E", "#FFF6DA"][i % 4]} />
+        </g>
+      ))}
+    </svg>
     {/* Ornament band: a garland swag hung with baubles, crowned by a star */}
-    <div class="sth-band">
-      <svg viewBox="0 0 460 92" width="460" height="92">
+    <div class="sth-band sth-xband">
+      <svg viewBox="0 0 460 104" width="460" height="104">
         <defs>
           <linearGradient id="xgar" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stop-color="#D9B45A" stop-opacity="0" />
-            <stop offset="22%" stop-color="#D9B45A" stop-opacity=".75" />
-            <stop offset="50%" stop-color="#FFF6DA" stop-opacity=".9" />
-            <stop offset="78%" stop-color="#D9B45A" stop-opacity=".75" />
-            <stop offset="100%" stop-color="#D9B45A" stop-opacity="0" />
+            <stop offset="0%" stop-color="#3E9E6E" stop-opacity="0" />
+            <stop offset="22%" stop-color="#3E9E6E" stop-opacity=".8" />
+            <stop offset="50%" stop-color="#E3C579" stop-opacity=".9" />
+            <stop offset="78%" stop-color="#3E9E6E" stop-opacity=".8" />
+            <stop offset="100%" stop-color="#3E9E6E" stop-opacity="0" />
           </linearGradient>
+          <radialGradient id="xstar" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#FFF6DA" stop-opacity=".9" />
+            <stop offset="100%" stop-color="#FFF6DA" stop-opacity="0" />
+          </radialGradient>
         </defs>
-        {/* garland swag */}
-        <path d="M10 30 Q230 76 450 30" fill="none" stroke="url(#xgar)" stroke-width="1.4" />
-        {/* hanging baubles */}
-        <g opacity=".9">
-          <path d="M118 46v9" stroke="#D9B45A" stroke-width="1" opacity=".65" />
-          <circle cx="118" cy="60" r="5.5" fill="none" stroke="#D9B45A" stroke-width="1.3" />
-          <circle cx="118" cy="58" r="1.6" fill="#FFF6DA" opacity=".7" />
-          <path d="M342 46v9" stroke="#D9B45A" stroke-width="1" opacity=".65" />
-          <circle cx="342" cy="60" r="5.5" fill="none" stroke="#D9B45A" stroke-width="1.3" />
-          <circle cx="342" cy="58" r="1.6" fill="#FFF6DA" opacity=".7" />
-          <path d="M230 58v10" stroke="#D9B45A" stroke-width="1" opacity=".55" />
-          <circle cx="230" cy="74" r="4" fill="none" stroke="#2F7E66" stroke-width="1.3" opacity=".9" />
-        </g>
-        {/* crowning eight-point star */}
-        <path d="M230 2 L236 22 L256 28 L236 34 L230 54 L224 34 L204 28 L224 22 Z"
-              fill="#FFF6DA" opacity=".9" />
-        <path d="M230 14 L232.6 25.4 L244 28 L232.6 30.6 L230 42 L227.4 30.6 L216 28 L227.4 25.4 Z"
-              fill="#fff" opacity=".65" />
-        {/* small flanking stars */}
-        <path d="M158 26l2 6 6 2-6 2-2 6-2-6-6-2 6-2Z" fill="#D9B45A" opacity=".7" />
-        <path d="M302 26l2 6 6 2-6 2-2 6-2-6-6-2 6-2Z" fill="#D9B45A" opacity=".7" />
+        <path d="M10 34 Q230 84 450 34" fill="none" stroke="url(#xgar)" stroke-width="2.4" />
+        {[
+          { x: 92, y: 52, c: "#C0392B" }, { x: 160, y: 64, c: "#E3C579" }, { x: 300, y: 64, c: "#3E9E6E" }, { x: 368, y: 52, c: "#C0392B" },
+        ].map((b) => (
+          <g>
+            <path d={`M${b.x} ${b.y - 8}v8`} stroke="#E3C579" stroke-width="1" opacity=".7" />
+            <circle cx={b.x} cy={b.y + 7} r="8" fill={b.c} opacity=".9" />
+            <circle cx={b.x - 2.6} cy={b.y + 4.4} r="2.2" fill="#FFF6DA" opacity=".8" />
+          </g>
+        ))}
+        <circle class="sth-xglow" cx="230" cy="30" r="34" fill="url(#xstar)" />
+        <path d="M230 2 L237 23 L258 30 L237 37 L230 58 L223 37 L202 30 L223 23 Z" fill="#FFF6DA" />
+        <path d="M230 14 L232.6 27.4 L246 30 L232.6 32.6 L230 46 L227.4 32.6 L214 30 L227.4 27.4 Z" fill="#fff" />
       </svg>
     </div>
   </div>
@@ -281,14 +330,20 @@ function dates(x: number, y: number): Array<{ cx: number; cy: number }> {
 {theme === "easter" && (
   <div class="sth sth-easter" aria-hidden="true">
     <div class="sth-easter-glow"></div>
+    <div class="sth-dawnrays"></div>
+    <div class="sth-petals sth-lilac">
+      {[...Array(22)].map((_, i) => (
+        <span class={`sth-petal sth-p${i % 5}`} style={`left:${(i * 4.6 + (i % 3) * 3) % 96}%`}></span>
+      ))}
+    </div>
     {/* Holy Week: two palm fronds for Palm Sunday, crossed beneath three lilies */}
     <div class="sth-band sth-easter-band">
       <svg viewBox="0 0 440 104" width="440" height="104">
-        <g stroke="#C9B0E2" stroke-width="1.1" fill="none" opacity=".8" stroke-linecap="round">
+        <g stroke="#C9B0E2" stroke-width="1.6" fill="none" opacity=".95" stroke-linecap="round">
           <path d={frond([214, 92], [150, 74], [70, 30])} />
           <path d={frond([226, 92], [290, 74], [370, 30])} />
         </g>
-        <g fill="none" stroke="#F3EAFB" stroke-width="1.3" stroke-linejoin="round" opacity=".92">
+        <g fill="#F3EAFB" fill-opacity=".14" stroke="#F3EAFB" stroke-width="1.7" stroke-linejoin="round">
           <path d={lily(196, 46)} />
           <path d={lily(244, 46)} />
           <path d={lily(220, 30)} />
@@ -306,14 +361,15 @@ function dates(x: number, y: number): Array<{ cx: number; cy: number }> {
   <div class="sth sth-autumn" aria-hidden="true">
     {/* Warm motes drifting in low autumn light */}
     <div class="sth-motes">
-      {[...Array(12)].map((_, i) => (
-        <span class={`sth-mote sth-m${i % 4}`} style={`left:${(i * 8.3 + (i % 3) * 3.5) % 95}%`}></span>
+      {[...Array(22)].map((_, i) => (
+        <span class={`sth-mote sth-m${i % 4}`} style={`left:${(i * 4.5 + (i % 3) * 3.5) % 96}%`}></span>
       ))}
     </div>
+    <div class="sth-haze"></div>
     {/* The date harvest — Egypt's autumn: a palm crown hung with ripe clusters */}
     <div class="sth-band sth-autumn-band">
       <svg viewBox="0 0 440 108" width="440" height="108">
-        <g stroke="#E0A46A" stroke-width="1.1" fill="none" opacity=".8" stroke-linecap="round">
+        <g stroke="#E0A46A" stroke-width="1.6" fill="none" opacity=".95" stroke-linecap="round">
           <path d={frond([220, 18], [160, 6], [96, 50], 12, 13)} />
           <path d={frond([220, 18], [280, 6], [344, 50], 12, 13)} />
           <path d={frond([220, 18], [176, 22], [140, 72], 10, 11)} />
@@ -321,7 +377,7 @@ function dates(x: number, y: number): Array<{ cx: number; cy: number }> {
         </g>
         <path d="M206 30 L214 52 M234 30 L226 52" stroke="#A5632E" stroke-width="1.2" opacity=".8" />
         {[...dates(213, 50), ...dates(227, 50)].map((d, i) => (
-          <ellipse cx={d.cx} cy={d.cy} rx="2.6" ry="3.6" fill={i % 3 === 0 ? "#C9773A" : "#A5632E"} opacity=".9" />
+          <ellipse cx={d.cx} cy={d.cy} rx="2.9" ry="4" fill={i % 3 === 0 ? "#D98A45" : "#B06A30"} />
         ))}
         <circle cx="220" cy="17" r="3" fill="#F8DFC4" opacity=".75" />
       </svg>
@@ -332,7 +388,7 @@ function dates(x: number, y: number): Array<{ cx: number; cy: number }> {
 {theme === "summer" && (
   <div class="sth sth-summer" aria-hidden="true">
     {/* A high summer sun with a slowly turning ring of rays */}
-    <svg class="sth-summer-sun" viewBox="0 0 200 200" width="200" height="200">
+    <svg class="sth-summer-sun" viewBox="0 0 200 200" width="240" height="240">
       <defs>
         <radialGradient id="smSun" cx="50%" cy="50%" r="50%">
           <stop offset="0%" stop-color="#FFF0C2" stop-opacity=".95" />
@@ -353,9 +409,16 @@ function dates(x: number, y: number): Array<{ cx: number; cy: number }> {
     </svg>
     {/* The Mediterranean swell, and a felucca crossing it */}
     <svg class="sth-swell sth-summer-swell" viewBox="0 0 1200 120" width="1200" height="120" preserveAspectRatio="none">
-      <path d="M0 76 Q150 50 300 76 T600 76 T900 76 T1200 76 V120 H0Z" fill="#4FA3D6" opacity=".14" />
-      <path d="M0 92 Q150 70 300 92 T600 92 T900 92 T1200 92 V120 H0Z" fill="#2E7FB3" opacity=".12" />
-      <path d="M0 76 Q150 50 300 76 T600 76 T900 76 T1200 76" fill="none" stroke="#BFE3F7" stroke-width="1" opacity=".35" />
+      <path d="M0 76 Q150 50 300 76 T600 76 T900 76 T1200 76 V120 H0Z" fill="#4FA3D6" opacity=".24" />
+      <path d="M0 92 Q150 70 300 92 T600 92 T900 92 T1200 92 V120 H0Z" fill="#2E7FB3" opacity=".2" />
+      <path d="M0 76 Q150 50 300 76 T600 76 T900 76 T1200 76" fill="none" stroke="#BFE3F7" stroke-width="1.2" opacity=".55" />
+    </svg>
+    <svg class="sth-gulls" viewBox="0 0 160 60" width="160" height="60">
+      <g fill="none" stroke="#E8F4FB" stroke-width="1.6" stroke-linecap="round" opacity=".7">
+        <path d="M10 30 q8 -9 16 0 q8 -9 16 0" />
+        <path d="M70 14 q6 -7 12 0 q6 -7 12 0" />
+        <path d="M118 38 q5 -6 10 0 q5 -6 10 0" />
+      </g>
     </svg>
     <svg class="sth-felucca" viewBox="0 0 80 70" width="80" height="70">
       <path d="M38 6 L40 54 L12 52 Z" fill="#FFF0C2" opacity=".55" />
@@ -369,29 +432,46 @@ function dates(x: number, y: number): Array<{ cx: number; cy: number }> {
   <div class="sth sth-carnival" aria-hidden="true">
     {/* Falling confetti */}
     <div class="sth-confetti">
-      {[...Array(26)].map((_, i) => (
-        <span class={`sth-conf sth-c${i % 6}`} style={`left:${(i * 3.9 + (i % 5) * 1.7) % 97}%`}></span>
+      {[...Array(42)].map((_, i) => (
+        <span class={`sth-conf sth-c${i % 6}`} style={`left:${(i * 2.4 + (i % 5) * 1.7) % 98}%;animation-duration:${8 + (i % 5)}s`}></span>
       ))}
     </div>
     {/* Serpentine streamers swagged across the top */}
     <svg class="sth-streamers" viewBox="0 0 1200 140" width="1200" height="140" preserveAspectRatio="none">
-      <path d="M0 20 C150 90 300 -10 450 60 S750 0 900 70 S1100 10 1200 40" fill="none" stroke="#2DBE6C" stroke-width="2.2" opacity=".55" />
-      <path d="M0 50 C160 0 320 100 480 40 S780 110 960 40 S1120 90 1200 30" fill="none" stroke="#F2C230" stroke-width="2.2" opacity=".55" />
-      <path d="M0 80 C140 40 300 120 460 70 S760 30 940 90 S1110 50 1200 80" fill="none" stroke="#E0457B" stroke-width="2" opacity=".5" />
-      <path d="M0 34 C170 70 330 10 500 50 S800 90 980 24 S1130 60 1200 56" fill="none" stroke="#3E8EDE" stroke-width="1.6" opacity=".45" />
+      <path d="M0 20 C150 90 300 -10 450 60 S750 0 900 70 S1100 10 1200 40" fill="none" stroke="#2DBE6C" stroke-width="3" opacity=".75" />
+      <path d="M0 50 C160 0 320 100 480 40 S780 110 960 40 S1120 90 1200 30" fill="none" stroke="#F2C230" stroke-width="3" opacity=".75" />
+      <path d="M0 80 C140 40 300 120 460 70 S760 30 940 90 S1110 50 1200 80" fill="none" stroke="#E0457B" stroke-width="2.8" opacity=".7" />
+      <path d="M0 34 C170 70 330 10 500 50 S800 90 980 24 S1130 60 1200 56" fill="none" stroke="#3E8EDE" stroke-width="2.4" opacity=".65" />
     </svg>
+    {/* A feathered carnival mask */}
+    <svg class="sth-mask" viewBox="0 0 160 120" width="170" height="128">
+      <g opacity=".85">
+        <path d="M80 44 C70 20 62 8 52 2 C60 16 64 30 70 44 Z" fill="#2DBE6C" />
+        <path d="M80 44 C80 18 82 6 88 0 C86 16 86 30 86 44 Z" fill="#F2C230" />
+        <path d="M80 44 C92 22 102 10 114 4 C104 18 98 32 92 46 Z" fill="#E0457B" />
+        <path d="M20 58 C40 44 64 46 80 56 C96 46 120 44 140 58 C136 82 116 94 98 88 C90 86 84 80 80 74 C76 80 70 86 62 88 C44 94 24 82 20 58 Z" fill="#F2C230" fill-opacity=".22" stroke="#F2C230" stroke-width="2" />
+        <path d="M44 66 C50 58 62 58 68 66 C62 74 50 74 44 66 Z M92 66 C98 58 110 58 116 66 C110 74 98 74 92 66 Z" fill="#07080F" stroke="#FFF1B8" stroke-width="1" />
+        <circle cx="80" cy="60" r="3" fill="#E0457B" />
+      </g>
+    </svg>
+    <div class="sth-sparks">
+      {[...Array(8)].map((_, i) => (
+        <span class={`sth-spark sth-k${i % 3}`} style={`left:${(i * 12.5 + 4) % 96}%;top:${(i * 23) % 70 + 8}%`}></span>
+      ))}
+    </div>
   </div>
 )}
 
 {theme === "eclipse" && (
   <div class="sth sth-eclipse" aria-hidden="true">
     <div class="sth-stars">
-      {[...Array(26)].map((_, i) => (
-        <span class={`sth-star sth-s${i % 5}`} style={`left:${(i * 3.9 + (i % 4) * 2.4) % 98}%;top:${(i * 6.7 + (i % 5) * 8) % 86}%`}></span>
+      {[...Array(44)].map((_, i) => (
+        <span class={`sth-star sth-s${i % 5}`} style={`left:${(i * 2.3 + (i % 4) * 2.4) % 98}%;top:${(i * 6.7 + (i % 5) * 8) % 90}%`}></span>
       ))}
     </div>
+    <span class="sth-shoot"></span>
     {/* Totality: the Moon's black disc, the corona around it, and the diamond ring */}
-    <svg class="sth-corona" viewBox="0 0 260 260" width="190" height="190">
+    <svg class="sth-corona" viewBox="0 0 260 260" width="210" height="210">
       <defs>
         <radialGradient id="ecCor" cx="50%" cy="50%" r="50%">
           <stop offset="28%" stop-color="#FFFFFF" stop-opacity=".9" />
@@ -401,7 +481,7 @@ function dates(x: number, y: number): Array<{ cx: number; cy: number }> {
         </radialGradient>
       </defs>
       <circle class="sth-corona-glow" cx="130" cy="130" r="128" fill="url(#ecCor)" />
-      <g stroke="#F4F6FF" stroke-linecap="round" opacity=".32">
+      <g class="sth-streams" stroke="#F4F6FF" stroke-linecap="round" opacity=".4">
         {[...Array(28)].map((_, i) => {
           const a = (Math.PI * 2 * i) / 28 + (i % 3) * 0.05;
           const r2 = 52 + ((i * 37) % 5) * 13;
@@ -476,29 +556,42 @@ function dates(x: number, y: number): Array<{ cx: number; cy: number }> {
   .themed-christmas .phero > .wrap,
   .themed-sun-festival .phero > .wrap { position: relative; z-index: 2; }
   /* Give the ornament room to breathe above the heading. */
-  .themed-ramadan .phero { padding-top: 214px; }
+  .themed-ramadan .phero { padding-top: 266px; }
   .themed-sun-festival .phero { padding-top: 206px; }
-  .themed-christmas .phero { padding-top: 200px; }
+  .themed-christmas .phero { padding-top: 240px; }
 
   /* ---------------------------------------------------------------------
      Ramadan — hanging fanous lanterns + crescent
      --------------------------------------------------------------------- */
   /* Hang below the fixed nav (86px) so lanterns never cross the menu. */
-  .sth-lanterns { position: absolute; top: 94px; left: 0; right: 0; display: flex;
-    justify-content: space-around; padding: 0 4%; }
+  .sth-zeena { position: absolute; top: 86px; left: 0; width: 100%; height: 120px;
+    filter: drop-shadow(0 6px 10px rgba(0,0,0,.35)); }
+  .sth-bulb { animation: sth-blink 2.4s ease-in-out infinite; }
+  .sth-k0 { animation-delay: 0s; } .sth-k1 { animation-delay: -.8s; } .sth-k2 { animation-delay: -1.6s; }
+  @keyframes sth-blink { 0%,100% { opacity: .35; } 50% { opacity: 1; } }
+  .sth-lanterns { position: absolute; top: 112px; left: 0; right: 0; display: flex;
+    justify-content: space-around; padding: 0 3%; }
   .sth-lantern { position: relative; display: flex; flex-direction: column; align-items: center;
-    transform-origin: top center; animation: sth-sway 7s ease-in-out infinite; opacity: .85;
-    filter: drop-shadow(0 6px 18px rgba(217,180,90,.28)); }
+    transform-origin: top center; animation: sth-sway 7s ease-in-out infinite; opacity: .97;
+    filter: drop-shadow(0 8px 22px rgba(217,180,90,.45)); }
+  .sth-halo { position: absolute; left: 50%; bottom: -14px; width: 96px; height: 96px; border-radius: 50%;
+    transform: translateX(-50%); pointer-events: none;
+    background: radial-gradient(closest-side, rgba(251,239,196,.34), rgba(217,180,90,.10) 55%, transparent 72%);
+    animation: sth-flicker 3.4s ease-in-out infinite; }
+  @keyframes sth-flicker { 0%,100% { opacity: .75; } 40% { opacity: 1; } 60% { opacity: .85; } }
   .sth-cord { display: block; width: 1px; background: linear-gradient(180deg, rgba(217,180,90,.55), rgba(217,180,90,.15)); }
   .sth-l0 { animation-delay: 0s; }      .sth-l0 .sth-cord { height: 46px; }
   .sth-l1 { animation-delay: -1.6s; }   .sth-l1 .sth-cord { height: 82px; }
   .sth-l2 { animation-delay: -3.1s; }   .sth-l2 .sth-cord { height: 30px; }
   .sth-l3 { animation-delay: -4.7s; }   .sth-l3 .sth-cord { height: 64px; }
   @keyframes sth-sway { 0%,100% { transform: rotate(-2.2deg); } 50% { transform: rotate(2.2deg); } }
-  .sth-crescent { position: absolute; right: 5%; top: 46%; opacity: .5;
-    filter: drop-shadow(0 0 22px rgba(217,180,90,.3)); }
-  @media(max-width:900px){ .sth-lantern:nth-child(n+5){ display:none; } .sth-crescent{ width:78px;height:78px;right:3%;top:52%; } }
-  @media(max-width:600px){ .sth-lantern:nth-child(n+4){ display:none; } .sth-crescent{ display:none; } }
+  .sth-crescent { position: absolute; right: 4%; top: 52%; opacity: .92;
+    filter: drop-shadow(0 0 26px rgba(247,230,174,.45)); }
+  @media(max-width:900px){ .sth-lantern:nth-child(n+7){ display:none; } .sth-crescent{ width:96px;height:96px;right:2%;top:58%; } }
+  @media(max-width:600px){ .sth-lantern:nth-child(n+5){ display:none; } .sth-lantern svg{ width:36px;height:56px; }
+    .sth-crescent{ display:none; } .themed-ramadan .phero { padding-top: 236px; }
+    .sth-l0 .sth-cord { height: 26px; } .sth-l1 .sth-cord { height: 46px; }
+    .sth-l2 .sth-cord { height: 14px; } .sth-l3 .sth-cord { height: 36px; } }
 
   /* ---------------------------------------------------------------------
      Christmas & New Year — starfield + ornament band
@@ -513,6 +606,19 @@ function dates(x: number, y: number): Array<{ cx: number; cy: number }> {
   @keyframes sth-twinkle { 0%,100% { opacity: .18; transform: scale(.85); } 50% { opacity: .85; transform: scale(1.15); } }
   .sth-band { position: absolute; left: 50%; top: 104px; transform: translateX(-50%); opacity: .8; }
   @media(max-width:600px){ .sth-band{ transform:translateX(-50%) scale(.78); top:88px; } }
+  .sth-xlights { position: absolute; top: 86px; left: 0; width: 100%; height: 90px; }
+  .sth-xband { top: 122px; opacity: .95; }
+  @media(max-width:600px){ .sth-xband{ top:118px; } .themed-christmas .phero { padding-top: 226px; } }
+  .sth-xglow { animation: sth-blink 4s ease-in-out infinite; }
+  .sth-snow { position: absolute; inset: 0; }
+  .sth-flake { position: absolute; top: 70px; width: 4px; height: 4px; border-radius: 50%; background: #FFF6DA;
+    box-shadow: 0 0 7px rgba(255,246,218,.9); opacity: 0; animation: sth-snowfall 14s linear infinite; }
+  .sth-f0 { animation-delay: 0s; } .sth-f1 { animation-delay: -3.5s; width:3px;height:3px; }
+  .sth-f2 { animation-delay: -7s; } .sth-f3 { animation-delay: -10.5s; width:5px;height:5px; }
+  @keyframes sth-snowfall {
+    0% { transform: translate(0, 0); opacity: 0; } 12% { opacity: .8; }
+    100% { transform: translate(-24px, 340px); opacity: 0; }
+  }
 
   /* ---------------------------------------------------------------------
      Abu Simbel Sun Festival — solar burst
@@ -620,7 +726,8 @@ function dates(x: number, y: number): Array<{ cx: number; cy: number }> {
   .sth-easter-glow { position: absolute; top: 70px; left: 50%; transform: translateX(-50%);
     width: min(720px, 90%); height: 240px; border-radius: 50%;
     background: radial-gradient(closest-side, rgba(243,234,251,.12), transparent 72%); filter: blur(6px); }
-  .sth-easter-band { top: 96px; transform: translateX(-50%) scale(1.22); transform-origin: top center; }
+  .sth-easter-band { top: 94px; opacity: 1; transform: translateX(-50%) scale(1.5); transform-origin: top center;
+    filter: drop-shadow(0 0 14px rgba(212,188,232,.4)); }
   @media(max-width:600px){ .sth-easter-band{ transform:translateX(-50%) scale(.82); top:88px; } }
 
   /* ---------------------------------------------------------------------
@@ -716,18 +823,63 @@ function dates(x: number, y: number): Array<{ cx: number; cy: number }> {
   @keyframes sth-corona { 0%,100% { opacity: .85; transform: scale(1); } 50% { opacity: 1; transform: scale(1.04); } }
   @media(max-width:600px){ .sth-corona{ width:160px;height:160px;top:86px; } }
 
+  /* Holy Week: dawn rays and drifting lilac petals */
+  .sth-dawnrays { position: absolute; top: 70px; left: 50%; width: 1000px; height: 460px; transform: translateX(-50%);
+    background: repeating-conic-gradient(from 90deg at 50% 0%, rgba(243,234,251,.13) 0deg 3deg, transparent 3deg 10deg);
+    -webkit-mask-image: radial-gradient(closest-side at 50% 0%, #000 20%, transparent 100%);
+    mask-image: radial-gradient(closest-side at 50% 0%, #000 20%, transparent 100%); }
+  .sth-lilac .sth-petal { background: linear-gradient(135deg, #F3EAFB, #C9B0E2); }
+  /* Autumn: a warmer haze and a larger crown */
+  .sth-haze { position: absolute; top: 50px; left: 50%; transform: translateX(-50%); width: min(920px, 96%); height: 320px;
+    border-radius: 50%; background: radial-gradient(closest-side, rgba(224,164,106,.28), transparent 70%); filter: blur(10px); }
+  .sth-autumn-band { opacity: 1; transform: translateX(-50%) scale(1.55); transform-origin: top center;
+    filter: drop-shadow(0 0 14px rgba(224,164,106,.4)); }
+  @media(max-width:600px){ .sth-autumn-band{ transform:translateX(-50%) scale(.86); top:88px; } }
+  /* Summer: gulls on the wind */
+  .sth-gulls { position: absolute; top: 134px; left: 20%; opacity: .85; animation: sth-glide 18s ease-in-out infinite; }
+  @keyframes sth-glide { 0%,100% { transform: translate(0, 0); } 50% { transform: translate(70px, -12px); } }
+  @media(max-width:600px){ .sth-gulls{ display:none; } }
+  /* Carnival: the mask and the sparkles */
+  .sth-mask { position: absolute; right: 5%; top: 46%; transform: rotate(-8deg);
+    filter: drop-shadow(0 0 20px rgba(242,194,48,.4)); }
+  @media(max-width:900px){ .sth-mask{ display:none; } }
+  .sth-sparks { position: absolute; inset: 0; }
+  .sth-spark { position: absolute; width: 14px; height: 14px; background: #FFF1B8;
+    clip-path: polygon(50% 0, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0 50%, 40% 40%);
+    animation: sth-blink 2.4s ease-in-out infinite; }
+  /* Eclipse: slowly turning streamers and a shooting star */
+  .sth-streams { transform-origin: 130px 130px; animation: sth-spin 240s linear infinite; }
+  .sth-shoot { position: absolute; top: 132px; left: 14%; width: 130px; height: 1.5px; opacity: 0;
+    background: linear-gradient(90deg, rgba(255,255,255,0), #fff); transform: rotate(16deg);
+    animation: sth-shoot 11s ease-in infinite 3s; }
+  @keyframes sth-shoot { 0% { opacity: 0; translate: 0 0; } 3% { opacity: 1; } 9% { opacity: 0; translate: 300px 86px; } 100% { opacity: 0; translate: 300px 86px; } }
+
+  /* A faint motif across the whole of a themed page, so the occasion does not
+     end where the hero does. Low enough never to trouble the text. */
+  .themed-ramadan { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84' height='84'%3E%3Cg fill='none' stroke='%23D9B45A' stroke-opacity='.08'%3E%3Crect x='24' y='24' width='36' height='36'/%3E%3Crect x='24' y='24' width='36' height='36' transform='rotate(45 42 42)'/%3E%3Ccircle cx='42' cy='42' r='6'/%3E%3C/g%3E%3C/svg%3E"); }
+  .themed-christmas { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='110' height='110'%3E%3Cg fill='%23FFF6DA' fill-opacity='.10'%3E%3Cpath d='M20 14l1.5 4.5 4.5 1.5-4.5 1.5-1.5 4.5-1.5-4.5-4.5-1.5 4.5-1.5Z'/%3E%3Ccircle cx='76' cy='60' r='1.4'/%3E%3Cpath d='M64 88l1 3 3 1-3 1-1 3-1-3-3-1 3-1Z'/%3E%3C/g%3E%3C/svg%3E"); }
+  .themed-easter { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3Cg fill='%23D4BCE8' fill-opacity='.10'%3E%3Ccircle cx='20' cy='20' r='1.6'/%3E%3Ccircle cx='65' cy='55' r='1.2'/%3E%3Cpath d='M45 74c-3-4-3-8 0-12 3 4 3 8 0 12Z'/%3E%3C/g%3E%3C/svg%3E"); }
+  .themed-autumn { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3Cg fill='%23E0A46A' fill-opacity='.09'%3E%3Cpath d='M22 16l4 6-4 6-4-6Z'/%3E%3Cpath d='M66 58l3 4.5-3 4.5-3-4.5Z'/%3E%3C/g%3E%3C/svg%3E"); }
+  .themed-summer { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='60'%3E%3Cpath d='M0 30 q15 -8 30 0 t30 0 t30 0 t30 0' fill='none' stroke='%234FA3D6' stroke-opacity='.09'/%3E%3C/svg%3E"); }
+  .themed-carnival { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Ccircle cx='14' cy='18' r='2' fill='%232DBE6C' fill-opacity='.16'/%3E%3Crect x='60' y='30' width='4' height='7' fill='%23F2C230' fill-opacity='.16' transform='rotate(30 62 33)'/%3E%3Ccircle cx='40' cy='76' r='1.8' fill='%23E0457B' fill-opacity='.16'/%3E%3Crect x='82' y='70' width='3' height='6' fill='%233E8EDE' fill-opacity='.16'/%3E%3C/svg%3E"); }
+  .themed-eclipse { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cg fill='%23E4E8FF' fill-opacity='.16'%3E%3Ccircle cx='18' cy='22' r='1'/%3E%3Ccircle cx='80' cy='14' r='.8'/%3E%3Ccircle cx='54' cy='70' r='1.2'/%3E%3Ccircle cx='100' cy='96' r='.9'/%3E%3C/g%3E%3C/svg%3E"); }
+
   /* The newer themes share the hero scaffolding. */
   .themed-easter .phero, .themed-autumn .phero, .themed-summer .phero,
   .themed-carnival .phero, .themed-eclipse .phero { position: relative; padding-top: 206px; }
-  .themed-easter .phero { padding-top: 228px; }
-  .themed-eclipse .phero { padding-top: 292px; }
+  .themed-easter .phero { padding-top: 268px; }
+  @media(max-width:600px){ .themed-easter .phero { padding-top: 214px; } }
+  .themed-eclipse .phero { padding-top: 312px; }
+  .themed-autumn .phero { padding-top: 278px; }
+  @media(max-width:600px){ .themed-autumn .phero { padding-top: 220px; } }
   .themed-easter .phero > .wrap, .themed-autumn .phero > .wrap, .themed-summer .phero > .wrap,
   .themed-carnival .phero > .wrap, .themed-eclipse .phero > .wrap { position: relative; z-index: 2; }
   @media(max-width:600px){ .themed-eclipse .phero { padding-top: 256px; } }
 
   @media (prefers-reduced-motion: reduce) {
     .sth-lantern, .sth-star, .sth-petal, .sth-bubble, .sth-mote, .sth-conf,
-    .sth-summer-rays, .sth-felucca, .sth-corona-glow { animation: none !important; }
-    .sth-petal, .sth-bubble, .sth-mote, .sth-conf { display: none; }
+    .sth-summer-rays, .sth-felucca, .sth-corona-glow, .sth-bulb, .sth-halo, .sth-flake,
+    .sth-xglow, .sth-spark, .sth-gulls, .sth-streams, .sth-shoot { animation: none !important; }
+    .sth-petal, .sth-bubble, .sth-mote, .sth-conf, .sth-flake, .sth-shoot { display: none; }
   }
 </style>
