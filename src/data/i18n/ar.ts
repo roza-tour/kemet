@@ -31,6 +31,7 @@
 // deposit, 8–10 days for the full route, €8–12 a day in tips.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { beforeDate, ECLIPSE_2027 } from "@/data/timeboxed";
 
 export const ar: LocalizedPage[] = [
   // ===== الرئيسية ==========================================================
@@ -226,6 +227,7 @@ export const ar: LocalizedPage[] = [
       whatsapp: "السلام عليكم كيميت — أرغب في رحلة نيلية خاصة.",
       emailSubject: "طلب — رحلة نيلية",
     },
+    links: beforeDate(ECLIPSE_2027, [{ label: "كسوف الشمس ٢٠٢٧ في الأقصر", route: "ar/kusuf-al-shams-2027-al-uqsur.html" }]),
     moreLabel: "البرامج بالتفصيل",
     moreText:
       "تفاصيل الرحلات النيلية يوماً بيوم، وأنواع المراكب والأسعار، منشورة بالإنجليزية على الموقع الرئيسي. راسلونا بالعربية.",
@@ -364,6 +366,7 @@ export const ar: LocalizedPage[] = [
       whatsapp: "السلام عليكم كيميت — متى الأفضل لزيارة مصر؟",
       emailSubject: "سؤال — أفضل وقت لزيارة مصر",
     },
+    links: beforeDate(ECLIPSE_2027, [{ label: "كسوف الشمس ٢٠٢٧ في الأقصر", route: "ar/kusuf-al-shams-2027-al-uqsur.html" }]),
     moreLabel: "الدليل شهراً بشهر",
     moreText:
       "دليل مفصّل لكل شهر من الشهور الاثني عشر — الحرارة والزحام والأسعار والمواسم — منشور بالإنجليزية على الموقع الرئيسي.",

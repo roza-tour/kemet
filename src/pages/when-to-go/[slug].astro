@@ -104,6 +104,11 @@ const jsonld: Record<string, unknown>[] = [
       <div class="wm-occ">
         <h2>Occasions this month</h2>
         <p>{m.occasions}</p>
+        {m.occasionLinks?.map((l) => (
+          <a class="wm-more" href={`${base}${l.href}`}>
+            {l.label} <i aria-hidden="true"></i>
+          </a>
+        ))}
         <a class="wm-more" href={`${base}collections.html`}>
           Seasonal collections <i aria-hidden="true"></i>
         </a>

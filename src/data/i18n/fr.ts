@@ -11,6 +11,7 @@
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
 import { tours } from "@/data/tours";
+import { beforeDate, ECLIPSE_2027 } from "@/data/timeboxed";
 
 // Read from the journeys, so the figure follows the catalogue when prices move.
 const FLY_EXTRA = tours.find((t) => t.flyOption)?.flyOption?.extra ?? 0;
@@ -211,6 +212,7 @@ export const fr: LocalizedPage[] = [
       whatsapp: "Bonjour Kemet — je m'intéresse à une croisière privée sur le Nil.",
       emailSubject: "Demande — croisière sur le Nil",
     },
+    links: beforeDate(ECLIPSE_2027, [{ label: "Éclipse solaire 2027 à Louxor", route: "fr/eclipse-solaire-2027-louxor.html" }]),
     moreLabel: "Les itinéraires détaillés",
     moreText:
       "Le détail jour par jour des croisières, les bateaux et les prix figurent en anglais sur le site principal. Écrivez-nous en français.",
@@ -346,6 +348,7 @@ export const fr: LocalizedPage[] = [
       whatsapp: "Bonjour Kemet — quand serait-il préférable de partir en Égypte ?",
       emailSubject: "Question — quand partir en Égypte",
     },
+    links: beforeDate(ECLIPSE_2027, [{ label: "Éclipse solaire 2027 à Louxor", route: "fr/eclipse-solaire-2027-louxor.html" }]),
     moreLabel: "Le guide mois par mois",
     moreText:
       "Un guide détaillé pour chacun des douze mois — températures, affluence, prix et fêtes — est publié en anglais sur le site principal.",

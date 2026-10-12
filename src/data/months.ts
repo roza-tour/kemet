@@ -43,6 +43,8 @@ export interface MonthGuide {
   watchFor: string[];
   /** Occasions and festivals that can fall in this month. */
   occasions: string;
+  /** Pages about those occasions, linked under the paragraph. Routes from the site root. */
+  occasionLinks?: Array<{ label: string; href: string }>;
   /** The honest recommendation. */
   verdict: string;
   faqs: Array<{ q: string; a: string }>;
@@ -76,6 +78,7 @@ export const months: MonthGuide[] = [
     goodFor: ["A first, complete Egypt itinerary — Cairo, Luxor, a Nile cruise and Aswan all work perfectly", "The Abu Simbel Sun Festival on 22 February, when sunrise reaches the inner sanctuary", "Ballooning over Luxor: settled winter air means fewer weather cancellations"],
     watchFor: ["The khamaseen wind season can begin late in the month — occasional dusty days, rarely more than a nuisance", "Half-term breaks in Europe push prices up for a fortnight around mid-month", "Nights are still cool, particularly on the water"],
     occasions: "The Abu Simbel Sun Festival on 22 February. In several years Ramadan falls partly or wholly within February — check the calendar for your year.",
+    occasionLinks: [{ label: "Ramadan in Egypt", href: "collections/ramadan-in-egypt.html" }, { label: "The Abu Simbel Sun Festival", href: "collections/abu-simbel-sun-festival.html" }],
     verdict: "The month we would pick if someone gave us a free choice. Book earlier than you think for the week around the sun festival.",
     faqs: [
       { q: "Is February a good month for Egypt?", a: "It is arguably the best. Daytime temperatures of 24–26°C in Luxor are ideal for walking sites, the air is dry and clear, and the January peak has passed. The Abu Simbel Sun Festival on 22 February is a genuine spectacle worth planning around." },
@@ -93,6 +96,7 @@ export const months: MonthGuide[] = [
     goodFor: ["Value — the same journey costs noticeably less than in January for weather that is barely different", "Nile cruising: warm days on deck without the summer glare", "The Red Sea starting to warm up while the inland sites are still easy"],
     watchFor: ["The khamaseen — a hot, dusty spring wind — is at its most likely from mid-March, and can close the desert for a day", "By the last week Aswan is regularly touching the low thirties, and midday at open sites gets hard", "Easter and Sham El-Nessim can fall in late March or April, which fills Egypt with domestic travellers"],
     occasions: "Ramadan falls partly in March in several years, and Sham El-Nessim can land in late March. Check the year's calendar before fixing dates.",
+    occasionLinks: [{ label: "Ramadan in Egypt", href: "collections/ramadan-in-egypt.html" }],
     verdict: "The first three weeks are the best value in the Egyptian year. If you want one recommendation for a first visit that balances weather, crowds and cost, this is it.",
     faqs: [
       { q: "Is March a good time to visit Egypt?", a: "Very. The first three weeks give near-winter comfort with post-peak prices and thinner crowds — the best combination of the year. By the final week Upper Egypt is regularly in the low thirties, which is still manageable with early starts but no longer effortless." },
@@ -178,6 +182,7 @@ export const months: MonthGuide[] = [
     goodFor: ["Diving in the warmest water Egypt offers, at 29–30°C", "Alexandria and the Mediterranean coast, which are several degrees cooler than Cairo and full of life", "Monuments without crowds, if you are willing to be at the gate when it opens"],
     watchFor: ["Peak domestic and Gulf travel means the North Coast and Red Sea are fully booked and priced accordingly", "Humidity in Cairo and the Delta makes the heat feel heavier than the same temperature in Aswan", "Very long, very hot afternoons — plan for genuine rest, not a light break"],
     occasions: "Depending on the lunar year, Islamic New Year may fall in August. Egypt's domestic summer holiday peaks this month. In 2027, Monday 2 August brings a total solar eclipse over Luxor — about six minutes and 22 seconds of totality, the longest on easily accessible land this century.",
+    occasionLinks: [{ label: "The 2027 total solar eclipse in Luxor", href: "guides/total-solar-eclipse-2027-luxor.html" }],
     verdict: "Go north or go diving. If the classical circuit is the goal and your dates are flexible, October will give you far more of it.",
     faqs: [
       { q: "Can you visit Luxor in August?", a: "Yes, with the day built around the heat — at the site by 6am, finished by 10.30, and the afternoon spent indoors or by water. The reward is genuinely empty tombs. But it is honest to say that a first-time visitor with a fixed idea of what a holiday feels like will enjoy the same itinerary far more in October." },
@@ -213,6 +218,7 @@ export const months: MonthGuide[] = [
     goodFor: ["A combined classical and Red Sea itinerary — the only months where both are genuinely at their best", "The Abu Simbel Sun Festival on 22 October", "Warm evenings: the first month where dinner outdoors is comfortable everywhere"],
     watchFor: ["Upper Egypt still reaches the high thirties in the first half — mornings are still the right time for the big sites", "The sun festival week fills Aswan and Abu Simbel; book several months ahead", "Prices begin climbing from the last week as the winter season starts"],
     occasions: "The Abu Simbel Sun Festival on 22 October, when sunrise reaches the inner sanctuary of the Great Temple.",
+    occasionLinks: [{ label: "The Abu Simbel Sun Festival", href: "collections/abu-simbel-sun-festival.html" }],
     verdict: "Our most-recommended month for a first visit. If you can travel in the second half of October, do.",
     faqs: [
       { q: "Is October a good time to visit Egypt?", a: "It is the best all-round month. The heat has broken enough for comfortable sightseeing, the Red Sea is still 27–28°C, the crowds are moderate and prices sit below the winter peak. For an itinerary that combines the monuments with a few days on the coast, nothing else matches it." },

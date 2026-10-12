@@ -16,6 +16,7 @@ import { tours } from "@/data/tours";
 // Read from the journeys, so the figure follows the catalogue when prices move.
 const FLY_EXTRA = tours.find((t) => t.flyOption)?.flyOption?.extra ?? 0;
 import { BUILD_YEAR } from "@/utils/format";
+import { beforeDate, ECLIPSE_2027 } from "@/data/timeboxed";
 
 export const ru: LocalizedPage[] = [
   // ===== Главная ===========================================================
@@ -213,6 +214,7 @@ export const ru: LocalizedPage[] = [
       whatsapp: "Здравствуйте, Kemet — интересует индивидуальный круиз по Нилу.",
       emailSubject: "Запрос — круиз по Нилу",
     },
+    links: beforeDate(ECLIPSE_2027, [{ label: "Солнечное затмение 2027 в Луксоре", route: "ru/solnechnoe-zatmenie-2027-luksor.html" }]),
     moreLabel: "Подробные маршруты",
     moreText:
       "Разбивка круизов по дням, описания судов и цены опубликованы на английском на основном сайте. Пишите нам по-русски.",
@@ -348,6 +350,7 @@ export const ru: LocalizedPage[] = [
       whatsapp: "Здравствуйте, Kemet — когда лучше ехать в Египет?",
       emailSubject: "Вопрос — когда ехать в Египет",
     },
+    links: beforeDate(ECLIPSE_2027, [{ label: "Солнечное затмение 2027 в Луксоре", route: "ru/solnechnoe-zatmenie-2027-luksor.html" }]),
     moreLabel: "Гид по месяцам",
     moreText:
       "Подробный разбор каждого из двенадцати месяцев — температуры, загруженность, цены и праздники — опубликован на английском на основном сайте.",

@@ -9,6 +9,7 @@
 // src/data/registry. Only nearby destinations are authored (symmetric edge).
 // ---------------------------------------------------------------------------
 import type { Destination } from "@/types";
+import { beforeDate, ECLIPSE_2027 } from "@/data/timeboxed";
 
 const near = (...ids: string[]) =>
   ids.map((id) => ({ domain: "destination" as const, id }));
@@ -287,7 +288,11 @@ export const destinations: Destination[] = [
         a: "Yes. Balloon flights over Luxor's West Bank at dawn are among Egypt's most celebrated experiences, available most mornings between October and May. Flights last approximately 45 to 60 minutes and launch from the West Bank to drift over the Theban hills, the Valley of the Kings and the mortuary temples. Your tour operator arranges booking; flights go ahead subject to wind conditions.",
       },
     ],
-    relationships: { nearbyDestinations: near("aswan") },
+    relationships: {
+      nearbyDestinations: near("aswan"),
+      // The 2027 eclipse is centred on Luxor; first in its guides until the day.
+      guides: beforeDate(ECLIPSE_2027, [{ domain: "guide" as const, id: "total-solar-eclipse-2027-luxor" }]),
+    },
     seo: {
       title: "Luxor, Egypt — Karnak & the Valley of the Kings | Kemet",
       description:

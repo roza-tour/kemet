@@ -17,6 +17,7 @@ import { frToussaint, esSemanaSanta, itFerragosto, itCapodanno, deWeihnachten, r
 import { itDoveDormire, itMongolfiera, itAlbaPiramidi } from "./it-extra";
 import { deSunrise, frSunrise, esSunrise, ruSunrise, ptSunrise, idSunrise, msSunrise, arSunrise } from "./sunrise";
 import { deEclipse, frEclipse, esEclipse, itEclipse, ruEclipse, ptEclipse, idEclipse, msEclipse, arEclipse } from "./eclipse";
+import { deRamadan, frRamadan, esRamadan, itRamadan, ruRamadan, ptRamadan, idRamadan, msRamadan, arRamadan } from "./ramadan";
 
 export interface StandalonePage {
   locale: TranslatedLocale;
@@ -89,6 +90,20 @@ export const STANDALONE_PAGES: StandalonePage[] = [
   { locale: "id", slug: "gerhana-matahari-2027-luxor", page: idEclipse },
   { locale: "ms", slug: "gerhana-matahari-2027-luxor", page: msEclipse },
   { locale: "ar", slug: "kusuf-al-shams-2027-al-uqsur", page: arEclipse },
+
+  // Ramadan in Egypt, in the nine other languages: practical for the European
+  // markets, written for those who fast in Arabic, Indonesian and Malay. The
+  // English original is collections/ramadan-in-egypt.html; see ramadan.ts.
+  // The seasonal ribbon leads each language here during Ramadan and Eid.
+  { locale: "de", slug: "ramadan-in-aegypten", page: deRamadan },
+  { locale: "fr", slug: "ramadan-en-egypte", page: frRamadan },
+  { locale: "es", slug: "ramadan-en-egipto", page: esRamadan },
+  { locale: "it", slug: "ramadan-in-egitto", page: itRamadan },
+  { locale: "ru", slug: "ramadan-v-egipte", page: ruRamadan },
+  { locale: "pt", slug: "ramada-no-egito", page: ptRamadan },
+  { locale: "id", slug: "ramadan-di-mesir", page: idRamadan },
+  { locale: "ms", slug: "ramadan-di-mesir", page: msRamadan },
+  { locale: "ar", slug: "ramadan-fi-masr", page: arRamadan },
 ];
 
 export const standaloneRoute = (p: StandalonePage) => `${p.locale}/${p.slug}.html`;

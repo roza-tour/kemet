@@ -84,6 +84,17 @@ export function relatedGuidesForDestination(destinationId: string): Guide[] {
   return guidesByDestination.get(destinationId) ?? [];
 }
 
+/**
+ * The guides a destination page lists: its editorial picks
+ * (destinations.ts → relationships.guides) first, then the guides that name
+ * the destination, in catalogue order.
+ */
+export function guidesForDestinationPage(dest: Destination, limit = 3): Guide[] {
+  const picks = registry.resolve<Guide>(dest.relationships?.guides ?? []);
+  const rest = relatedGuidesForDestination(dest.id).filter((g) => !picks.includes(g));
+  return [...picks, ...rest].slice(0, limit);
+}
+
 /** Inverse of the canonical Guide→Tour edge: Map<tourId, Guide[]>. */
 export const guidesByTour = deriveInverse(
   guides,
@@ -175,6 +186,9 @@ export function findSimilarTours(tour: Tour, limit = 3): Tour[] {
  */
 export function findPreparationGuides(tour: Tour, limit = 3): Guide[] {
   const meta = getTourMeta(tour.slug);
+  // Editorial picks (tours.taxonomy.ts → relationships.guides) come first;
+  // the ranked guides fill the remaining places.
+  const picks = registry.resolve<Guide>(meta?.relationships?.guides ?? []);
   const source: EntitySignals = {
     ...tourSignals(tour),
     categoryIds: [
@@ -182,8 +196,10 @@ export function findPreparationGuides(tour: Tour, limit = 3): Guide[] {
       "planning-resources",
     ],
   };
-  const candidates = guides.map((g) => ({ entity: g, signals: guideSignals(g) }));
-  return rankByRelevance(source, candidates, { limit });
+  const candidates = guides
+    .filter((g) => !picks.includes(g))
+    .map((g) => ({ entity: g, signals: guideSignals(g) }));
+  return [...picks, ...rankByRelevance(source, candidates, { limit })].slice(0, limit);
 }
 
 /**

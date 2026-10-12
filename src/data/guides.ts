@@ -10,6 +10,7 @@
 // ---------------------------------------------------------------------------
 import type { Guide } from "@/types";
 import { PEAK } from "@/data/ultra/journeys";
+import { beforeDate, ECLIPSE_2027 } from "@/data/timeboxed";
 
 const dest = (...ids: string[]) =>
   ids.map((id) => ({ domain: "destination" as const, id }));
@@ -270,7 +271,7 @@ export const guides: Guide[] = [
     },
     relationships: {
       destinations: dest("cairo", "giza", "luxor", "aswan", "alexandria"),
-      relatedGuides: guide("egypt-travel-guide"),
+      relatedGuides: [...guide("egypt-travel-guide"), ...beforeDate(ECLIPSE_2027, guide("total-solar-eclipse-2027-luxor"))],
     },
   },
 
@@ -961,7 +962,7 @@ export const guides: Guide[] = [
     relationships: {
       tours: tour("tour-10-day", "tour-nile-cruise"),
       destinations: dest("giza", "cairo", "luxor", "aswan"),
-      relatedGuides: guide("egypt-travel-guide", "best-time-to-visit-egypt", "10-day-egypt-itinerary"),
+      relatedGuides: [...guide("egypt-travel-guide", "best-time-to-visit-egypt", "10-day-egypt-itinerary"), ...beforeDate(ECLIPSE_2027, guide("total-solar-eclipse-2027-luxor"))],
     },
   },
 

@@ -13,6 +13,7 @@ import { tours } from "@/data/tours";
 // Read from the journeys, so the figure follows the catalogue when prices move.
 const FLY_EXTRA = tours.find((t) => t.flyOption)?.flyOption?.extra ?? 0;
 import { BUILD_YEAR } from "@/utils/format";
+import { beforeDate, ECLIPSE_2027 } from "@/data/timeboxed";
 
 export const de: LocalizedPage[] = [
   // ===== Startseite ========================================================
@@ -208,6 +209,7 @@ export const de: LocalizedPage[] = [
       whatsapp: "Guten Tag Kemet — ich interessiere mich für eine private Nilkreuzfahrt.",
       emailSubject: "Anfrage — Nilkreuzfahrt",
     },
+    links: beforeDate(ECLIPSE_2027, [{ label: "Sonnenfinsternis 2027 in Luxor", route: "de/sonnenfinsternis-2027-luxor.html" }]),
     moreLabel: "Mehr zur Nilstrecke",
     moreText:
       "Ausführliche Reiseverläufe, Schiffsbeschreibungen und der vollständige Reisekatalog stehen auf Englisch zur Verfügung.",
@@ -334,6 +336,7 @@ export const de: LocalizedPage[] = [
       whatsapp: "Guten Tag Kemet — ich brauche Rat, wann ich am besten nach Ägypten reise.",
       emailSubject: "Frage — beste Reisezeit Ägypten",
     },
+    links: beforeDate(ECLIPSE_2027, [{ label: "Sonnenfinsternis 2027 in Luxor", route: "de/sonnenfinsternis-2027-luxor.html" }]),
     moreLabel: "Alle zwölf Monate im Detail",
     moreText:
       "Eine ausführliche Aufschlüsselung jedes einzelnen Monats — mit Temperaturen, Andrang, Preisniveau und Urteil — steht auf Englisch zur Verfügung.",

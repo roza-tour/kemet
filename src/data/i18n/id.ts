@@ -15,6 +15,7 @@ import { tours } from "@/data/tours";
 // Read from the journeys, so the figure follows the catalogue when prices move.
 const FLY_EXTRA = tours.find((t) => t.flyOption)?.flyOption?.extra ?? 0;
 import { BUILD_YEAR } from "@/utils/format";
+import { beforeDate, ECLIPSE_2027 } from "@/data/timeboxed";
 
 export const id: LocalizedPage[] = [
   // ===== Beranda ===========================================================
@@ -222,6 +223,7 @@ export const id: LocalizedPage[] = [
       whatsapp: "Halo Kemet — saya tertarik pesiar privat di Sungai Nil.",
       emailSubject: "Permintaan — pesiar Sungai Nil",
     },
+    links: beforeDate(ECLIPSE_2027, [{ label: "Gerhana matahari 2027 di Luxor", route: "id/gerhana-matahari-2027-luxor.html" }]),
     moreLabel: "Rincian rute",
     moreText:
       "Rincian harian pesiar, jenis kapal dan harga tersedia dalam Bahasa Inggris di situs utama. Silakan hubungi kami dalam Bahasa Indonesia.",
@@ -357,6 +359,7 @@ export const id: LocalizedPage[] = [
       whatsapp: "Halo Kemet — kapan waktu terbaik ke Mesir?",
       emailSubject: "Pertanyaan — waktu terbaik ke Mesir",
     },
+    links: beforeDate(ECLIPSE_2027, [{ label: "Gerhana matahari 2027 di Luxor", route: "id/gerhana-matahari-2027-luxor.html" }]),
     moreLabel: "Panduan bulan per bulan",
     moreText:
       "Panduan rinci untuk kedua belas bulan — suhu, keramaian, harga dan hari besar — diterbitkan dalam Bahasa Inggris di situs utama.",

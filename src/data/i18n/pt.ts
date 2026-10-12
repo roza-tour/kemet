@@ -15,6 +15,7 @@
 import type { LocalizedPage } from "./types";
 import { tours } from "@/data/tours";
 import { BUILD_YEAR } from "@/utils/format";
+import { beforeDate, ECLIPSE_2027 } from "@/data/timeboxed";
 
 // Read from the journeys, so the figures follow the catalogue when prices move.
 const FLY_EXTRA = tours.find((t) => t.flyOption)?.flyOption?.extra ?? 0;
@@ -218,6 +219,7 @@ export const pt: LocalizedPage[] = [
       whatsapp: "Olá Kemet — tenho interesse num cruzeiro privado pelo Nilo.",
       emailSubject: "Consulta — cruzeiro pelo Nilo",
     },
+    links: beforeDate(ECLIPSE_2027, [{ label: "Eclipse solar de 2027 em Luxor", route: "pt/eclipse-solar-2027-luxor.html" }]),
     moreLabel: "Mais sobre o trecho do Nilo",
     moreText:
       "Programas detalhados, descrições das embarcações e o catálogo completo estão disponíveis em inglês.",
@@ -347,7 +349,7 @@ export const pt: LocalizedPage[] = [
     moreLabel: "Os doze meses em detalhe",
     moreText:
       "Um detalhamento de cada mês — temperaturas, movimento, preços e veredito — está disponível em inglês.",
-    links: [{ label: "Carnaval no Egito", route: "pt/carnaval-no-egito.html" }],
+    links: [{ label: "Carnaval no Egito", route: "pt/carnaval-no-egito.html" }, ...beforeDate(ECLIPSE_2027, [{ label: "Eclipse solar de 2027 em Luxor", route: "pt/eclipse-solar-2027-luxor.html" }])],
   },
 
   // ===== É seguro? =========================================================

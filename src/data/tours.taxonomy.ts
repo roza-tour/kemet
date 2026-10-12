@@ -10,6 +10,7 @@
 // category's members) are DERIVED via utils/relationships — never duplicated.
 // ---------------------------------------------------------------------------
 import type { Ref, TourRelationships, TourTaxonomy } from "@/types";
+import { beforeDate, ECLIPSE_2027 } from "@/data/timeboxed";
 
 const dest = (...ids: string[]): Ref<"destination">[] =>
   ids.map((id) => ({ domain: "destination", id }));
@@ -17,6 +18,11 @@ const cat = (...ids: string[]): Ref<"category">[] =>
   ids.map((id) => ({ domain: "category", id }));
 const related = (...ids: string[]): Ref<"tour">[] =>
   ids.map((id) => ({ domain: "tour", id }));
+/** Editorial "Preparation reading" picks, shown before the automatic ones. */
+const guides = (...ids: string[]): Ref<"guide">[] =>
+  ids.map((id) => ({ domain: "guide", id }));
+/** The 2027 eclipse guide, on the journeys that reach Luxor, until the day (data/timeboxed.ts). */
+const eclipse = () => beforeDate(ECLIPSE_2027, guides("total-solar-eclipse-2027-luxor"));
 
 export interface TourMeta {
   taxonomy: TourTaxonomy;
@@ -349,6 +355,7 @@ export const tourMetadata: Record<string, TourMeta> = {
       destinations: dest("aswan", "luxor"),
       categories: cat("multi-day", "nile-cruises"),
       relatedTours: related("tour-10-day", "tour-upper-egypt-5day"),
+      guides: eclipse(),
     },
   },
 
@@ -376,6 +383,7 @@ export const tourMetadata: Record<string, TourMeta> = {
       destinations: dest("luxor", "aswan"),
       categories: cat("multi-day"),
       relatedTours: related("tour-nile-cruise", "tour-luxor-3day"),
+      guides: eclipse(),
     },
   },
 
@@ -590,6 +598,7 @@ export const tourMetadata: Record<string, TourMeta> = {
       destinations: dest("luxor"),
       categories: cat("multi-day"),
       relatedTours: related("tour-upper-egypt-5day", "tour-3-day"),
+      guides: eclipse(),
     },
   },
 

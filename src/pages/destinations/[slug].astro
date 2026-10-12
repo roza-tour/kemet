@@ -20,8 +20,9 @@ import DestinationCard from "@/components/destination/DestinationCard.astro";
 import FactList from "@/components/destination/FactList.astro";
 import HighlightList from "@/components/destination/HighlightList.astro";
 import ExperienceCard from "@/components/experience/ExperienceCard.astro";
+import GuideCard from "@/components/guide/GuideCard.astro";
 import { destinations } from "@/data/destinations";
-import { relatedTours, relatedExperiences, nearbyDestinations } from "@/data/registry";
+import { relatedTours, relatedExperiences, nearbyDestinations, guidesForDestinationPage } from "@/data/registry";
 import { entityStaticPaths, relativePrefix, routeFor } from "@/config/routes";
 import { regions, seasons, travelStyles, labelOf } from "@/config/taxonomy";
 import { entitySchema } from "@/schemas/jsonld";
@@ -72,6 +73,10 @@ const essentialsFacts = [
 const tours = relatedTours(dest.id).slice(0, 6);
 const experiences = relatedExperiences(dest.id);
 const nearby = nearbyDestinations(dest);
+// Until now no destination page linked a single guide, though eight guides
+// name Luxor and seven name Cairo — the reading was a click away in the hub
+// and nowhere on the page a traveller was already reading.
+const destGuides = guidesForDestinationPage(dest);
 
 const title = dest.seo?.title ?? `${dest.title} — ${regionLabel}, Egypt | Kemet`;
 const description = dest.seo?.description ?? dest.shortSummary;
@@ -197,6 +202,17 @@ const jsonld = entitySchema("destination", dest);
             {experiences.map((exp) => (
               <ExperienceCard experience={exp} base={base} />
             ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    {destGuides.length > 0 && (
+      <section>
+        <div class="wrap">
+          <SectionHeader sym="guides" eyebrow="Planning" title={`Guides for ${dest.title}`} text={`Reading for a visit to ${dest.title}.`} />
+          <div class="grid-3">
+            {destGuides.map((g) => <GuideCard guide={g} base={base} />)}
           </div>
         </div>
       </section>

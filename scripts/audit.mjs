@@ -129,9 +129,13 @@ for (const f of html) {
   // home page grew 105 → 128KB raw and 23 → 24KB on the wire, because a list
   // of near-identical URLs compresses to almost nothing. Raw size flagged it;
   // transfer size says the page gained one kilobyte to save up to 935KB of
-  // images. 30KB sits ~20% above today's heaviest page (25KB).
+  // images. 30KB sat ~20% above the heaviest page (25KB) when it was set.
+  // Raised to 32KB on 12 Oct 2026: the heaviest page, the Russian Ultra page,
+  // reached 30.0KB because every page's nav and footer now list that
+  // language's own planning pages (sunrise, the 2027 eclipse, Ramadan) — each
+  // one ~0.1KB on every page of its language. Nothing on the page itself grew.
   const kb = gzipSync(readFileSync(f), { level: 6 }).length / 1024;
-  if (kb > 30) add('page-heavy', `${kb.toFixed(1)}KB gzip  ${f}`);
+  if (kb > 32) add('page-heavy', `${kb.toFixed(1)}KB gzip  ${f}`);
 }
 
 for (const [t, fs] of Object.entries(titles)) if (fs.length > 1) add('dup-title', `${fs.length}×  "${t}"  ${fs.join(', ')}`);
