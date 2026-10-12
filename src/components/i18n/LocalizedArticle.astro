@@ -77,6 +77,10 @@ const localeJourneys: Tour[] = page.groupId !== "journeys" ? [] :
 /** The landing layer's fact strip wins where there is one — see the markup. */
 const facts = page.landing?.facts ?? page.facts;
 
+/** The themed wrapper exists only on a page with a theme. */
+const Themed = page.theme ? "div" : Fragment;
+const themedProps = page.theme ? { class: `themed-${page.theme}` } : {};
+
 const wa = whatsappLink(page.cta.whatsapp);
 const mail = mailtoLink(page.cta.emailSubject, `${page.cta.whatsapp}\n\n`);
 
@@ -129,6 +133,9 @@ const jsonld: Record<string, unknown>[] = [
   keywords={page.keywords}
   showCta={false}
 >
+  {/* An occasion page wears its occasion: the palette here, the ornament in
+      the hero (data/i18n/types.ts → theme). Unthemed pages get no wrapper. */}
+  <Themed {...themedProps}>
   {/* On a page carrying a landing layer the hero speaks for the campaign: the
       dates as an overline, the layer's shorter standfirst, and two buttons.
       The H1 is still the page's own — it is what the page ranks for, and a
@@ -142,6 +149,7 @@ const jsonld: Record<string, unknown>[] = [
     overline={page.landing?.eyebrow}
     title={page.h1}
     text={page.landing?.standfirst ?? page.standfirst}
+    theme={page.theme}
   >
     {page.landing && (
       <div class="hero-actions" style="justify-content:center;margin-top:var(--s-5)">
@@ -260,4 +268,5 @@ const jsonld: Record<string, unknown>[] = [
       </div>
     </div>
   </section>
+  </Themed>
 </Base>

@@ -35,6 +35,7 @@ function photos(alt: [string, string, string, string], label: [string, string, s
 export const deSunrise: LocalizedPage = {
   groupId: "standalone-de-sunrise",
   symbol: "sun",
+  theme: "sun-festival",
   title: "Sonnenaufgang Pyramiden Gizeh: Yoga & Fotoshooting | Kemet",
   description:
     "Vor Sonnenaufgang an einem ruhigen Aussichtspunkt mit allen neun Pyramiden von Gizeh — Zeit für Yoga oder ein Fotoshooting, danach das Plateau vor der Öffnung.",
@@ -135,6 +136,7 @@ export const deSunrise: LocalizedPage = {
 export const frSunrise: LocalizedPage = {
   groupId: "standalone-fr-sunrise",
   symbol: "sun",
+  theme: "sun-festival",
   title: "Lever du soleil aux pyramides : yoga et photos | Kemet",
   description:
     "Avant l'aube, un point de vue tranquille sur les neuf pyramides de Gizeh — yoga ou séance photo — puis le plateau avant l'ouverture, avec votre égyptologue.",
@@ -235,6 +237,7 @@ export const frSunrise: LocalizedPage = {
 export const esSunrise: LocalizedPage = {
   groupId: "standalone-es-sunrise",
   symbol: "sun",
+  theme: "sun-festival",
   title: "Amanecer en las pirámides de Giza: yoga y fotos | Kemet",
   description:
     "Antes del amanecer, un mirador tranquilo frente a las nueve pirámides de Giza — tiempo para yoga o una sesión de fotos — y luego la meseta antes de que abra.",
@@ -335,6 +338,7 @@ export const esSunrise: LocalizedPage = {
 export const ruSunrise: LocalizedPage = {
   groupId: "standalone-ru-sunrise",
   symbol: "sun",
+  theme: "sun-festival",
   title: "Рассвет у пирамид Гизы: йога и фотосессия | Kemet",
   description:
     "До восхода — тихая смотровая точка, откуда видны все девять пирамид Гизы: время для йоги или фотосессии, а затем плато до открытия, с вашим египтологом.",
@@ -435,6 +439,7 @@ export const ruSunrise: LocalizedPage = {
 export const ptSunrise: LocalizedPage = {
   groupId: "standalone-pt-sunrise",
   symbol: "sun",
+  theme: "sun-festival",
   title: "Nascer do sol nas pirâmides de Gizé: ioga e fotos | Kemet",
   description:
     "Antes do sol nascer, um mirante tranquilo diante das nove pirâmides de Gizé — tempo para ioga ou um ensaio fotográfico — e depois o planalto antes de abrir.",
@@ -535,6 +540,7 @@ export const ptSunrise: LocalizedPage = {
 export const idSunrise: LocalizedPage = {
   groupId: "standalone-id-sunrise",
   symbol: "sun",
+  theme: "sun-festival",
   title: "Matahari Terbit di Piramida Giza: Yoga & Sesi Foto | Kemet",
   description:
     "Sebelum matahari terbit di titik pandang yang tenang menghadap sembilan piramida Giza — waktu untuk yoga atau sesi foto — lalu kompleks piramida sebelum dibuka.",
@@ -635,6 +641,7 @@ export const idSunrise: LocalizedPage = {
 export const msSunrise: LocalizedPage = {
   groupId: "standalone-ms-sunrise",
   symbol: "sun",
+  theme: "sun-festival",
   title: "Matahari Terbit di Piramid Giza: Yoga & Sesi Foto | Kemet",
   description:
     "Sebelum matahari terbit di titik pandang yang tenang menghadap sembilan piramid Giza — yoga atau sesi foto — kemudian kompleks piramid sebelum dibuka.",
@@ -735,6 +742,7 @@ export const msSunrise: LocalizedPage = {
 export const arSunrise: LocalizedPage = {
   groupId: "standalone-ar-sunrise",
   symbol: "sun",
+  theme: "sun-festival",
   title: "شروق الشمس عند أهرامات الجيزة: يوغا وجلسة تصوير | كيميت",
   description:
     "قبل الشروق في نقطة مطلّة هادئة تُرى منها أهرامات الجيزة التسعة — وقت لليوغا أو جلسة تصوير — ثم هضبة الأهرامات قبل فتحها للزوار، مع خبير آثار مرخَّص.",

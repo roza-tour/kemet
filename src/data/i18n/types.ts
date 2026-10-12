@@ -9,7 +9,7 @@
 // file; the words are not.
 // ---------------------------------------------------------------------------
 import type { TranslatedLocale } from "@/config/i18n";
-import type { LandingPage } from "@/types";
+import type { LandingPage, SeasonalTheme } from "@/types";
 import type { MediaPlaceholder, Film } from "@/types/primitives";
 
 export interface LocalizedSection {
@@ -76,6 +76,12 @@ export interface LocalizedPage {
   photos?: MediaPlaceholder[];
   /** Our own films (data/films.ts), in a row of their own after the photographs. */
   films?: Film[];
+  /**
+   * The occasion's own ornament and palette — lanterns for Ramadan, the
+   * garland for Christmas, palms and lilies for Holy Week — as the English
+   * collection pages wear them (components/collection/SeasonalTheme.astro).
+   */
+  theme?: SeasonalTheme;
 }
 
 export type LocalePageSet = Record<TranslatedLocale, LocalizedPage[]>;

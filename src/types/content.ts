@@ -131,9 +131,12 @@ export type SeasonalTheme =
   | "eid"
   | "christmas"
   | "sun-festival"
+  | "easter"
+  | "carnival"
   // Collection-page identities that are not on the calendar.
   | "red-sea"
-  | "honeymoon";
+  | "honeymoon"
+  | "eclipse";
 
 export type CollectionAudience =
   | "everyone"
@@ -658,6 +661,8 @@ export interface Guide extends ContentEntity {
   // Future media (placeholders until photography is sourced)
   hero?: MediaPlaceholder;
   gallery?: MediaPlaceholder[];
+  /** Ornament and palette for an occasion guide (SeasonalTheme.astro). */
+  theme?: SeasonalTheme;
 
   // Future attribution (null until author system is built)
   authorId?: string;

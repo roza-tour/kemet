@@ -45,6 +45,7 @@ function photos(alt: [string, string, string, string], label: [string, string, s
 export const deEclipse: LocalizedPage = {
   groupId: "standalone-de-eclipse",
   symbol: "sun",
+  theme: "eclipse",
   title: "Sonnenfinsternis 2027 in Luxor: Zeiten & Planung | Kemet",
   description:
     "Totale Sonnenfinsternis am 2. August 2027 über Luxor: rund 6 Min. 22 Sek. Totalität, die längste auf gut erreichbarem Land in diesem Jahrhundert.",
@@ -158,6 +159,7 @@ export const deEclipse: LocalizedPage = {
 export const frEclipse: LocalizedPage = {
   groupId: "standalone-fr-eclipse",
   symbol: "sun",
+  theme: "eclipse",
   title: "Éclipse solaire 2027 à Louxor : horaires, conseils | Kemet",
   description:
     "Éclipse totale du 2 août 2027 à Louxor : environ 6 min 22 s de totalité, la plus longue de ce siècle sur une terre facile d'accès. Horaires, où la voir.",
@@ -271,6 +273,7 @@ export const frEclipse: LocalizedPage = {
 export const esEclipse: LocalizedPage = {
   groupId: "standalone-es-eclipse",
   symbol: "sun",
+  theme: "eclipse",
   title: "Eclipse solar 2027 en Luxor: horarios y consejos | Kemet",
   description:
     "Eclipse total del 2 de agosto de 2027 en Luxor: unos 6 min 22 s de totalidad, el más largo del siglo en tierra de fácil acceso. Horarios y dónde verlo.",
@@ -384,6 +387,7 @@ export const esEclipse: LocalizedPage = {
 export const itEclipse: LocalizedPage = {
   groupId: "standalone-it-eclipse",
   symbol: "sun",
+  theme: "eclipse",
   title: "Eclissi solare 2027 a Luxor: orari e consigli | Kemet",
   description:
     "Eclissi totale del 2 agosto 2027 a Luxor: circa 6 min 22 s di totalità, la più lunga del secolo su una terra facilmente raggiungibile. Orari e dove vederla.",
@@ -498,6 +502,7 @@ export const itEclipse: LocalizedPage = {
 export const ruEclipse: LocalizedPage = {
   groupId: "standalone-ru-eclipse",
   symbol: "sun",
+  theme: "eclipse",
   title: "Солнечное затмение 2027 в Луксоре: время и советы | Kemet",
   description:
     "Полное солнечное затмение 2 августа 2027 года в Луксоре: около 6 мин 22 с полной фазы — самое долгое в этом веке на легкодоступной суше. Время, где смотреть.",
@@ -611,6 +616,7 @@ export const ruEclipse: LocalizedPage = {
 export const ptEclipse: LocalizedPage = {
   groupId: "standalone-pt-eclipse",
   symbol: "sun",
+  theme: "eclipse",
   title: "Eclipse solar de 2027 em Luxor: horários e dicas | Kemet",
   description:
     "Eclipse total de 2 de agosto de 2027 em Luxor: cerca de 6 min 22 s de totalidade, o mais longo do século em terra de fácil acesso. Horários e onde ver.",
@@ -724,6 +730,7 @@ export const ptEclipse: LocalizedPage = {
 export const idEclipse: LocalizedPage = {
   groupId: "standalone-id-eclipse",
   symbol: "sun",
+  theme: "eclipse",
   title: "Gerhana Matahari Total 2027 di Luxor, Mesir | Kemet",
   description:
     "Gerhana matahari total 2 Agustus 2027 di Luxor: sekitar 6 menit 22 detik, terlama abad ini di daratan yang mudah dijangkau. Jam, lokasi, dan salat gerhana.",
@@ -842,6 +849,7 @@ export const idEclipse: LocalizedPage = {
 export const msEclipse: LocalizedPage = {
   groupId: "standalone-ms-eclipse",
   symbol: "sun",
+  theme: "eclipse",
   title: "Gerhana Matahari Penuh 2027 di Luxor, Mesir | Kemet",
   description:
     "Gerhana matahari penuh 2 Ogos 2027 di Luxor: kira-kira 6 minit 22 saat, terpanjang abad ini di daratan yang mudah dikunjungi. Waktu, lokasi dan solat gerhana.",
@@ -960,6 +968,7 @@ export const msEclipse: LocalizedPage = {
 export const arEclipse: LocalizedPage = {
   groupId: "standalone-ar-eclipse",
   symbol: "sun",
+  theme: "eclipse",
   title: "كسوف الشمس الكلي ٢٠٢٧ في الأقصر: المواعيد والنصائح | كيميت",
   description:
     "كسوف كلي للشمس فوق الأقصر يوم ٢ أغسطس ٢٠٢٧: نحو ٦ دقائق و٢٢ ثانية، الأطول في هذا القرن على أرض يسهل بلوغها. المواعيد، وأين تشاهدونه، وصلاة الكسوف.",

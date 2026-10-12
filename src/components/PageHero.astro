@@ -4,6 +4,8 @@
 // full-width beneath the header when `heroSrc` is supplied.
 import Medallion from "@/components/marks/Medallion.astro";
 import Placeholder from "@/components/Placeholder.astro";
+import SeasonalTheme from "@/components/collection/SeasonalTheme.astro";
+import type { SeasonalTheme as Theme } from "@/types";
 
 interface Props {
   title: string;
@@ -32,14 +34,18 @@ interface Props {
   heroAlt?: string;
   heroWidth?: number;
   heroHeight?: number;
+  /** An occasion's ornament (SeasonalTheme.astro). Its palette comes from a
+   *  `themed-<name>` class on an ancestor — see LocalizedArticle. */
+  theme?: Theme;
 }
 const {
   title, text = "", symbol = "", crumb = "", overline = "", framed = false,
   rootLabel = "Home", rootHref = "/",
-  heroSrc, heroAlt, heroWidth, heroHeight,
+  heroSrc, heroAlt, heroWidth, heroHeight, theme,
 } = Astro.props;
 ---
 <header class:list={["phero", framed && "phero--framed"]}>
+  {theme && <SeasonalTheme theme={theme} />}
   {framed && <span class="phero-cart" aria-hidden="true"></span>}
   <div class="wrap">
     {crumb && (

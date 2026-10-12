@@ -52,7 +52,7 @@ const description = guide.seo?.description ?? guide.shortSummary;
 const jsonld = entitySchema("guide", guide);
 ---
 <Base title={title} description={description} active={route} jsonld={jsonld}>
-  <article>
+  <article class={guide.theme ? `themed-${guide.theme}` : undefined}>
     <GuideHero guide={guide} base={base} />
 
     <section style="padding-top:var(--s-3)">

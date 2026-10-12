@@ -84,6 +84,7 @@ const TS_END = new Date(Date.UTC(TOUSSAINT_Y, 10, 3));
 export const frToussaint: LocalizedPage = {
   groupId: "standalone-fr-toussaint",
   symbol: "sun",
+  theme: "autumn",
   title: `Vacances de la Toussaint en Égypte ${TOUSSAINT_Y} | Kemet`,
   description:
     `Partir en Égypte à la Toussaint ${TOUSSAINT_Y} : la saison qui s'ouvre, la mer Rouge à ${oct.seaTemp}, le 22 octobre à Abou Simbel, et des circuits privés avec leurs prix.`,
@@ -176,6 +177,7 @@ const SS_WALK = SS_IS_MARCH
 export const esSemanaSanta: LocalizedPage = {
   groupId: "standalone-es-semanasanta",
   symbol: "lotus",
+  theme: "easter",
   title: `Semana Santa en Egipto ${SS_Y} — viajes privados | Kemet`,
   description:
     `Semana Santa ${SS_Y} en Egipto: del ${esDate(PALM)} al ${esDate(EASTER)}, con ${ssMonth.temps.luxor} en Luxor. Itinerarios privados con precio y qué reservar con antelación.`,
@@ -249,6 +251,7 @@ const FERRAGOSTO = new Date(Date.UTC(FERRA_Y, 7, 15));
 export const itFerragosto: LocalizedPage = {
   groupId: "standalone-it-ferragosto",
   symbol: "boat",
+  theme: "summer",
   title: `Ferragosto in Egitto ${FERRA_Y} — dove funziona davvero | Kemet`,
   description:
     `Ferragosto ${FERRA_Y} in Egitto: il Mar Rosso a ${aug.seaTemp} è la risposta giusta, la valle del Nilo quasi no. Cosa funziona ad agosto, cosa no, e i prezzi.`,
@@ -337,6 +340,7 @@ const IT_SEASON = `${IT_XMAS_Y}–${String(IT_XMAS_Y + 1).slice(2)}`;
 export const itCapodanno: LocalizedPage = {
   groupId: "standalone-it-capodanno",
   symbol: "sun",
+  theme: "christmas",
   title: `Natale e Capodanno in Egitto ${IT_SEASON} | Kemet`,
   description:
     `Natale e Capodanno in Egitto: ${dec.temps.luxor} a Luxor, il Capodanno sul Nilo, viaggi privati con i prezzi — e perché i giorni dell'Epifania costano meno.`,
@@ -420,6 +424,7 @@ const NYE = new Date(Date.UTC(XMAS_Y, 11, 31));
 export const deWeihnachten: LocalizedPage = {
   groupId: "standalone-de-weihnachten",
   symbol: "ankh",
+  theme: "christmas",
   title: `Weihnachten & Silvester in Ägypten ${XMAS_Y} | Kemet`,
   description:
     `Weihnachten und Silvester ${XMAS_Y} in Ägypten: ${dec.temps.luxor} in Luxor, Silvester auf dem Nil, private Rundreisen mit Preis — und warum jetzt gebucht wird.`,
@@ -505,6 +510,7 @@ const ruDate = fmt("ru-RU", { day: "numeric", month: "long" });
 export const ruNovyGod: LocalizedPage = {
   groupId: "standalone-ru-novy-god",
   symbol: "sun",
+  theme: "christmas",
   title: `Новый год в Египте ${RU_NY_Y} — частные туры | Kemet`,
   description:
     `Новогодние каникулы ${RU_NY_Y} в Египте: ${jan.temps.luxor} в Луксоре, море ${jan.seaTemp}, частные маршруты с ценами и что бронировать заранее.`,

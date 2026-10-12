@@ -75,6 +75,7 @@ const ramadanSection = RAMADAN_START
 export const carnaval: LocalizedPage = {
   groupId: "carnaval",
   symbol: "sun",
+  theme: "carnival",
   title: `Carnaval no Egito ${YEAR} — viagem privada no feriado | Kemet`,
   description:
     `Carnaval ${YEAR} no Egito: dez dias usando o feriado, fevereiro no melhor clima do ano, roteiros privados com preço, o voo desde o Brasil e o que saber antes.`,

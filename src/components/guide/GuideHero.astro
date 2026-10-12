@@ -3,6 +3,7 @@
 // Reuses the site's .phero layout and follows the same pattern as DestinationHero.
 // Fully data-driven: no per-guide logic, no guide-specific markup.
 import Placeholder from "@/components/Placeholder.astro";
+import SeasonalTheme from "@/components/collection/SeasonalTheme.astro";
 import { guideCategories, labelOf } from "@/config/taxonomy";
 import { hubFor } from "@/config/routes";
 import type { Guide } from "@/types";
@@ -17,6 +18,7 @@ const categoryLabel = labelOf(guideCategories, guide.category) ?? guide.category
 const hub = hubFor("guide");
 ---
 <header class="phero" style="padding-bottom:var(--s-5)">
+  {guide.theme && <SeasonalTheme theme={guide.theme} />}
   <div class="wrap">
     <nav class="crumb" aria-label="Breadcrumb">
       <a href="/">Home</a> ·

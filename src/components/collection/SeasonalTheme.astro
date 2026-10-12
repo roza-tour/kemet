@@ -7,12 +7,61 @@
 // Themes: ramadan (crescents + fanous lanterns, emerald & gold)
 //         christmas (stars + evergreen, silver-gold on deep pine)
 //         sun-festival (solar burst + falcon disc, amber)
+//         easter (Holy Week: crossed palm fronds + lilies, violet & gold)
+//         autumn (the date harvest: a palm crown hung with dates, copper)
+//         summer (a slow sun over a Mediterranean swell and a felucca, azure)
+//         carnival (confetti and streamers, Brazil's green, gold and rose)
+//         eclipse (the corona around a black sun, pearl on deep indigo)
 import type { SeasonalTheme } from "@/types";
 
 interface Props {
   theme: SeasonalTheme;
 }
 const { theme } = Astro.props;
+
+/**
+ * A palm frond as hairlines: a quadratic stem (p0 → c → p1) with leaflets on
+ * both sides, shortening towards the tip. Used by the Holy Week palms and the
+ * date-harvest crown.
+ */
+function frond(p0: [number, number], c: [number, number], p1: [number, number], n = 13, len = 15): string {
+  const segs: string[] = [`M${p0[0]} ${p0[1]} Q${c[0]} ${c[1]} ${p1[0]} ${p1[1]}`];
+  for (let i = 1; i <= n; i++) {
+    const t = i / (n + 1);
+    const x = (1 - t) ** 2 * p0[0] + 2 * (1 - t) * t * c[0] + t ** 2 * p1[0];
+    const y = (1 - t) ** 2 * p0[1] + 2 * (1 - t) * t * c[1] + t ** 2 * p1[1];
+    let tx = 2 * (1 - t) * (c[0] - p0[0]) + 2 * t * (p1[0] - c[0]);
+    let ty = 2 * (1 - t) * (c[1] - p0[1]) + 2 * t * (p1[1] - c[1]);
+    const m = Math.hypot(tx, ty) || 1;
+    tx /= m; ty /= m;
+    const l = len * (1 - t * 0.7);
+    for (const side of [1, -1]) {
+      const ex = x + (-ty * side * 0.85 + tx * 0.55) * l;
+      const ey = y + (tx * side * 0.85 + ty * 0.55) * l;
+      segs.push(`M${x.toFixed(1)} ${y.toFixed(1)} L${ex.toFixed(1)} ${ey.toFixed(1)}`);
+    }
+  }
+  return segs.join(" ");
+}
+
+/** A lily seen from the side: three petals over a short stem. */
+function lily(x: number, y: number): string {
+  return [
+    `M${x} ${y + 26} V${y + 8}`,
+    `M${x} ${y + 8} C${x - 10} ${y + 4} ${x - 15} ${y - 6} ${x - 13} ${y - 12} C${x - 7} ${y - 6} ${x - 2} ${y - 2} ${x} ${y + 8} Z`,
+    `M${x} ${y + 8} C${x + 10} ${y + 4} ${x + 15} ${y - 6} ${x + 13} ${y - 12} C${x + 7} ${y - 6} ${x + 2} ${y - 2} ${x} ${y + 8} Z`,
+    `M${x} ${y + 8} C${x - 4} ${y - 2} ${x - 3} ${y - 12} ${x} ${y - 17} C${x + 3} ${y - 12} ${x + 4} ${y - 2} ${x} ${y + 8} Z`,
+  ].join(" ");
+}
+
+/** A cluster of dates hanging from a stalk at (x, y). */
+function dates(x: number, y: number): Array<{ cx: number; cy: number }> {
+  const out: Array<{ cx: number; cy: number }> = [];
+  [[0], [-4, 4], [-8, 0, 8], [-6, 2, 9], [-3, 5]].forEach((row, r) =>
+    row.forEach((dx) => out.push({ cx: x + dx, cy: y + 8 + r * 6 })),
+  );
+  return out;
+}
 ---
 
 {theme === "ramadan" && (
@@ -229,6 +278,145 @@ const { theme } = Astro.props;
   </div>
 )}
 
+{theme === "easter" && (
+  <div class="sth sth-easter" aria-hidden="true">
+    <div class="sth-easter-glow"></div>
+    {/* Holy Week: two palm fronds for Palm Sunday, crossed beneath three lilies */}
+    <div class="sth-band sth-easter-band">
+      <svg viewBox="0 0 440 104" width="440" height="104">
+        <g stroke="#C9B0E2" stroke-width="1.1" fill="none" opacity=".8" stroke-linecap="round">
+          <path d={frond([214, 92], [150, 74], [70, 30])} />
+          <path d={frond([226, 92], [290, 74], [370, 30])} />
+        </g>
+        <g fill="none" stroke="#F3EAFB" stroke-width="1.3" stroke-linejoin="round" opacity=".92">
+          <path d={lily(196, 46)} />
+          <path d={lily(244, 46)} />
+          <path d={lily(220, 30)} />
+        </g>
+        <g fill="#E3C579" opacity=".85">
+          <circle cx="196" cy="44" r="1.6" /><circle cx="244" cy="44" r="1.6" /><circle cx="220" cy="28" r="1.6" />
+        </g>
+        <path d="M220 2l1.8 5 5 1.8-5 1.8-1.8 5-1.8-5-5-1.8 5-1.8Z" fill="#FFF6DA" opacity=".75" />
+      </svg>
+    </div>
+  </div>
+)}
+
+{theme === "autumn" && (
+  <div class="sth sth-autumn" aria-hidden="true">
+    {/* Warm motes drifting in low autumn light */}
+    <div class="sth-motes">
+      {[...Array(12)].map((_, i) => (
+        <span class={`sth-mote sth-m${i % 4}`} style={`left:${(i * 8.3 + (i % 3) * 3.5) % 95}%`}></span>
+      ))}
+    </div>
+    {/* The date harvest — Egypt's autumn: a palm crown hung with ripe clusters */}
+    <div class="sth-band sth-autumn-band">
+      <svg viewBox="0 0 440 108" width="440" height="108">
+        <g stroke="#E0A46A" stroke-width="1.1" fill="none" opacity=".8" stroke-linecap="round">
+          <path d={frond([220, 18], [160, 6], [96, 50], 12, 13)} />
+          <path d={frond([220, 18], [280, 6], [344, 50], 12, 13)} />
+          <path d={frond([220, 18], [176, 22], [140, 72], 10, 11)} />
+          <path d={frond([220, 18], [264, 22], [300, 72], 10, 11)} />
+        </g>
+        <path d="M206 30 L214 52 M234 30 L226 52" stroke="#A5632E" stroke-width="1.2" opacity=".8" />
+        {[...dates(213, 50), ...dates(227, 50)].map((d, i) => (
+          <ellipse cx={d.cx} cy={d.cy} rx="2.6" ry="3.6" fill={i % 3 === 0 ? "#C9773A" : "#A5632E"} opacity=".9" />
+        ))}
+        <circle cx="220" cy="17" r="3" fill="#F8DFC4" opacity=".75" />
+      </svg>
+    </div>
+  </div>
+)}
+
+{theme === "summer" && (
+  <div class="sth sth-summer" aria-hidden="true">
+    {/* A high summer sun with a slowly turning ring of rays */}
+    <svg class="sth-summer-sun" viewBox="0 0 200 200" width="200" height="200">
+      <defs>
+        <radialGradient id="smSun" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#FFF0C2" stop-opacity=".95" />
+          <stop offset="45%" stop-color="#F0C24B" stop-opacity=".75" />
+          <stop offset="100%" stop-color="#F0C24B" stop-opacity="0" />
+        </radialGradient>
+      </defs>
+      <circle cx="100" cy="100" r="96" fill="url(#smSun)" opacity=".35" />
+      <g class="sth-summer-rays" stroke="#F0C24B" stroke-width="1.4" stroke-linecap="round" opacity=".55">
+        {[...Array(16)].map((_, i) => {
+          const a = (Math.PI * 2 * i) / 16;
+          const r1 = 40, r2 = i % 2 ? 58 : 70;
+          return <line x1={100 + Math.cos(a) * r1} y1={100 + Math.sin(a) * r1} x2={100 + Math.cos(a) * r2} y2={100 + Math.sin(a) * r2} />;
+        })}
+      </g>
+      <circle cx="100" cy="100" r="30" fill="#F0C24B" opacity=".8" />
+      <circle cx="100" cy="100" r="22" fill="#FFF0C2" opacity=".5" />
+    </svg>
+    {/* The Mediterranean swell, and a felucca crossing it */}
+    <svg class="sth-swell sth-summer-swell" viewBox="0 0 1200 120" width="1200" height="120" preserveAspectRatio="none">
+      <path d="M0 76 Q150 50 300 76 T600 76 T900 76 T1200 76 V120 H0Z" fill="#4FA3D6" opacity=".14" />
+      <path d="M0 92 Q150 70 300 92 T600 92 T900 92 T1200 92 V120 H0Z" fill="#2E7FB3" opacity=".12" />
+      <path d="M0 76 Q150 50 300 76 T600 76 T900 76 T1200 76" fill="none" stroke="#BFE3F7" stroke-width="1" opacity=".35" />
+    </svg>
+    <svg class="sth-felucca" viewBox="0 0 80 70" width="80" height="70">
+      <path d="M38 6 L40 54 L12 52 Z" fill="#FFF0C2" opacity=".55" />
+      <path d="M41 14 L64 52 L42 53 Z" fill="#FFF0C2" opacity=".35" />
+      <path d="M8 56 Q40 64 72 56 L66 62 Q40 68 14 62 Z" fill="#F0C24B" opacity=".55" />
+    </svg>
+  </div>
+)}
+
+{theme === "carnival" && (
+  <div class="sth sth-carnival" aria-hidden="true">
+    {/* Falling confetti */}
+    <div class="sth-confetti">
+      {[...Array(26)].map((_, i) => (
+        <span class={`sth-conf sth-c${i % 6}`} style={`left:${(i * 3.9 + (i % 5) * 1.7) % 97}%`}></span>
+      ))}
+    </div>
+    {/* Serpentine streamers swagged across the top */}
+    <svg class="sth-streamers" viewBox="0 0 1200 140" width="1200" height="140" preserveAspectRatio="none">
+      <path d="M0 20 C150 90 300 -10 450 60 S750 0 900 70 S1100 10 1200 40" fill="none" stroke="#2DBE6C" stroke-width="2.2" opacity=".55" />
+      <path d="M0 50 C160 0 320 100 480 40 S780 110 960 40 S1120 90 1200 30" fill="none" stroke="#F2C230" stroke-width="2.2" opacity=".55" />
+      <path d="M0 80 C140 40 300 120 460 70 S760 30 940 90 S1110 50 1200 80" fill="none" stroke="#E0457B" stroke-width="2" opacity=".5" />
+      <path d="M0 34 C170 70 330 10 500 50 S800 90 980 24 S1130 60 1200 56" fill="none" stroke="#3E8EDE" stroke-width="1.6" opacity=".45" />
+    </svg>
+  </div>
+)}
+
+{theme === "eclipse" && (
+  <div class="sth sth-eclipse" aria-hidden="true">
+    <div class="sth-stars">
+      {[...Array(26)].map((_, i) => (
+        <span class={`sth-star sth-s${i % 5}`} style={`left:${(i * 3.9 + (i % 4) * 2.4) % 98}%;top:${(i * 6.7 + (i % 5) * 8) % 86}%`}></span>
+      ))}
+    </div>
+    {/* Totality: the Moon's black disc, the corona around it, and the diamond ring */}
+    <svg class="sth-corona" viewBox="0 0 260 260" width="190" height="190">
+      <defs>
+        <radialGradient id="ecCor" cx="50%" cy="50%" r="50%">
+          <stop offset="28%" stop-color="#FFFFFF" stop-opacity=".9" />
+          <stop offset="36%" stop-color="#E4E8FF" stop-opacity=".45" />
+          <stop offset="60%" stop-color="#9AA6E0" stop-opacity=".12" />
+          <stop offset="100%" stop-color="#9AA6E0" stop-opacity="0" />
+        </radialGradient>
+      </defs>
+      <circle class="sth-corona-glow" cx="130" cy="130" r="128" fill="url(#ecCor)" />
+      <g stroke="#F4F6FF" stroke-linecap="round" opacity=".32">
+        {[...Array(28)].map((_, i) => {
+          const a = (Math.PI * 2 * i) / 28 + (i % 3) * 0.05;
+          const r2 = 52 + ((i * 37) % 5) * 13;
+          return <line x1={130 + Math.cos(a) * 40} y1={130 + Math.sin(a) * 40} x2={130 + Math.cos(a) * r2} y2={130 + Math.sin(a) * r2} stroke-width={i % 4 === 0 ? 1.4 : 0.7} />;
+        })}
+      </g>
+      <circle cx="130" cy="130" r="37" fill="#07080F" />
+      <circle cx="130" cy="130" r="37" fill="none" stroke="#FFFFFF" stroke-width=".8" opacity=".55" />
+      {/* the diamond ring: the first bead of sunlight at the Moon's edge */}
+      <circle cx="157" cy="105" r="3.2" fill="#FFFFFF" />
+      <path d="M157 91 L158.6 103.4 L171 105 L158.6 106.6 L157 119 L155.4 106.6 L143 105 L155.4 103.4 Z" fill="#FFFFFF" opacity=".85" />
+    </svg>
+  </div>
+)}
+
 <style is:global>
   /* ---------------------------------------------------------------------
      Shared theme scaffolding
@@ -417,8 +605,129 @@ const { theme } = Astro.props;
     filter: drop-shadow(0 6px 20px rgba(232,180,160,.28)); }
   @media(max-width:600px){ .sth-lotus{ transform:translateX(-50%) scale(.78); top:88px; } }
 
+  /* ---------------------------------------------------------------------
+     Holy Week / Easter — crossed palms and lilies, violet
+     --------------------------------------------------------------------- */
+  .themed-easter {
+    --gold: #D4BCE8; --gold-bright: #F3EAFB; --gold-deep: #8E6BB0;
+    --line: rgba(170,140,210,.26); --line-2: rgba(212,188,232,.44);
+  }
+  .themed-easter .phero {
+    background:
+      radial-gradient(760px 400px at 50% 0%, rgba(142,107,176,.24), transparent 62%),
+      radial-gradient(520px 280px at 50% 4%, rgba(227,197,121,.12), transparent 60%);
+  }
+  .sth-easter-glow { position: absolute; top: 70px; left: 50%; transform: translateX(-50%);
+    width: min(720px, 90%); height: 240px; border-radius: 50%;
+    background: radial-gradient(closest-side, rgba(243,234,251,.12), transparent 72%); filter: blur(6px); }
+  .sth-easter-band { top: 96px; transform: translateX(-50%) scale(1.22); transform-origin: top center; }
+  @media(max-width:600px){ .sth-easter-band{ transform:translateX(-50%) scale(.82); top:88px; } }
+
+  /* ---------------------------------------------------------------------
+     Autumn — the date harvest, copper and amber
+     --------------------------------------------------------------------- */
+  .themed-autumn {
+    --gold: #E0A46A; --gold-bright: #F8DFC4; --gold-deep: #A5632E;
+    --line: rgba(224,164,106,.24); --line-2: rgba(224,164,106,.46);
+  }
+  .themed-autumn .phero {
+    background:
+      radial-gradient(780px 420px at 50% 0%, rgba(165,99,46,.24), transparent 62%),
+      radial-gradient(520px 280px at 50% 6%, rgba(248,223,196,.10), transparent 60%);
+  }
+  .sth-autumn-band { top: 94px; }
+  .sth-motes { position: absolute; inset: 0; }
+  .sth-mote { position: absolute; top: 40px; width: 4px; height: 4px; border-radius: 50%;
+    background: #F8DFC4; box-shadow: 0 0 8px rgba(224,164,106,.8); opacity: 0;
+    animation: sth-drift 12s linear infinite; }
+  .sth-m0 { animation-delay: 0s; }   .sth-m1 { animation-delay: -3s; width:3px;height:3px; }
+  .sth-m2 { animation-delay: -6s; }  .sth-m3 { animation-delay: -9s; width:5px;height:5px; }
+  @keyframes sth-drift {
+    0%   { transform: translate(0, 0); opacity: 0; }
+    15%  { opacity: .6; }
+    100% { transform: translate(60px, 260px); opacity: 0; }
+  }
+
+  /* ---------------------------------------------------------------------
+     Summer — sun, swell and a felucca, azure and gold
+     --------------------------------------------------------------------- */
+  .themed-summer {
+    --gold: #F0C24B; --gold-bright: #FFF0C2; --gold-deep: #B0821E;
+    --line: rgba(79,163,214,.26); --line-2: rgba(240,194,75,.46);
+  }
+  .themed-summer .phero {
+    background:
+      linear-gradient(180deg, rgba(79,163,214,.16), transparent 64%),
+      radial-gradient(640px 360px at 80% 0%, rgba(240,194,75,.18), transparent 62%);
+  }
+  .sth-summer-sun { position: absolute; top: 86px; right: 7%; opacity: .9;
+    filter: drop-shadow(0 0 30px rgba(240,194,75,.35)); }
+  .sth-summer-rays { transform-origin: 100px 100px; animation: sth-spin 80s linear infinite; }
+  @keyframes sth-spin { to { transform: rotate(360deg); } }
+  .sth-felucca { position: absolute; left: 12%; bottom: 26px; opacity: .85;
+    animation: sth-bob 6s ease-in-out infinite; }
+  @keyframes sth-bob { 0%,100% { transform: translateY(0) rotate(-1deg); } 50% { transform: translateY(-4px) rotate(1deg); } }
+  @media(max-width:600px){ .sth-summer-sun{ width:120px;height:120px;right:2%;top:84px; } .sth-felucca{ display:none; } }
+
+  /* ---------------------------------------------------------------------
+     Carnival — confetti and streamers, green, gold and rose
+     --------------------------------------------------------------------- */
+  .themed-carnival {
+    --gold: #F2C230; --gold-bright: #FFF1B8; --gold-deep: #B88A0E;
+    --line: rgba(45,190,108,.24); --line-2: rgba(242,194,48,.46);
+  }
+  .themed-carnival .phero {
+    background:
+      radial-gradient(620px 360px at 20% 0%, rgba(45,190,108,.18), transparent 62%),
+      radial-gradient(620px 360px at 80% 0%, rgba(224,69,123,.16), transparent 62%),
+      radial-gradient(520px 280px at 50% 4%, rgba(242,194,48,.12), transparent 60%);
+  }
+  .sth-streamers { position: absolute; top: 88px; left: 0; width: 100%; height: 140px; }
+  .sth-confetti { position: absolute; inset: 0; }
+  .sth-conf { position: absolute; top: 80px; width: 6px; height: 10px; border-radius: 1px; opacity: 0;
+    animation: sth-confall 9s linear infinite; }
+  .sth-c0 { background: #2DBE6C; animation-delay: 0s; }
+  .sth-c1 { background: #F2C230; animation-delay: -1.5s; width:5px;height:8px; }
+  .sth-c2 { background: #E0457B; animation-delay: -3s; }
+  .sth-c3 { background: #3E8EDE; animation-delay: -4.5s; width:7px;height:7px;border-radius:50%; }
+  .sth-c4 { background: #FFF1B8; animation-delay: -6s; width:4px;height:9px; }
+  .sth-c5 { background: #2DBE6C; animation-delay: -7.5s; width:8px;height:5px; }
+  @keyframes sth-confall {
+    0%   { transform: translateY(0) rotate(0deg); opacity: 0; }
+    10%  { opacity: .8; }
+    100% { transform: translateY(300px) translateX(-30px) rotate(540deg); opacity: 0; }
+  }
+
+  /* ---------------------------------------------------------------------
+     Eclipse — corona on deep indigo, pearl accents
+     --------------------------------------------------------------------- */
+  .themed-eclipse {
+    --gold: #D9DCE8; --gold-bright: #FFFFFF; --gold-deep: #8C93AE;
+    --line: rgba(180,190,230,.18); --line-2: rgba(217,220,232,.42);
+  }
+  .themed-eclipse .phero {
+    background:
+      radial-gradient(820px 460px at 50% 0%, rgba(40,52,120,.38), transparent 64%),
+      radial-gradient(420px 240px at 50% 10%, rgba(228,232,255,.10), transparent 60%);
+  }
+  .sth-corona { position: absolute; top: 88px; left: 50%; transform: translateX(-50%);
+    filter: drop-shadow(0 0 26px rgba(228,232,255,.35)); }
+  .sth-corona-glow { transform-origin: 130px 130px; animation: sth-corona 7s ease-in-out infinite; }
+  @keyframes sth-corona { 0%,100% { opacity: .85; transform: scale(1); } 50% { opacity: 1; transform: scale(1.04); } }
+  @media(max-width:600px){ .sth-corona{ width:160px;height:160px;top:86px; } }
+
+  /* The newer themes share the hero scaffolding. */
+  .themed-easter .phero, .themed-autumn .phero, .themed-summer .phero,
+  .themed-carnival .phero, .themed-eclipse .phero { position: relative; padding-top: 206px; }
+  .themed-easter .phero { padding-top: 228px; }
+  .themed-eclipse .phero { padding-top: 292px; }
+  .themed-easter .phero > .wrap, .themed-autumn .phero > .wrap, .themed-summer .phero > .wrap,
+  .themed-carnival .phero > .wrap, .themed-eclipse .phero > .wrap { position: relative; z-index: 2; }
+  @media(max-width:600px){ .themed-eclipse .phero { padding-top: 256px; } }
+
   @media (prefers-reduced-motion: reduce) {
-    .sth-lantern, .sth-star, .sth-petal, .sth-bubble { animation: none !important; }
-    .sth-petal, .sth-bubble { display: none; }
+    .sth-lantern, .sth-star, .sth-petal, .sth-bubble, .sth-mote, .sth-conf,
+    .sth-summer-rays, .sth-felucca, .sth-corona-glow { animation: none !important; }
+    .sth-petal, .sth-bubble, .sth-mote, .sth-conf { display: none; }
   }
 </style>

@@ -54,6 +54,7 @@ const FASTING = [STREET, AZHAR, AMR, QATAYEF];
 export const deRamadan: LocalizedPage = {
   groupId: "standalone-de-ramadan",
   symbol: "crescent",
+  theme: "ramadan",
   title: "Ramadan in Ägypten 2027: Reisen, Tipps & Termine | Kemet",
   description:
     "Ägypten im Ramadan 2027 (voraussichtlich 8. Februar – 8. März): was geöffnet ist, was sich ändert, das islamische Kairo bei Nacht, Iftar und Eid al-Fitr.",
@@ -160,6 +161,7 @@ export const deRamadan: LocalizedPage = {
 export const frRamadan: LocalizedPage = {
   groupId: "standalone-fr-ramadan",
   symbol: "crescent",
+  theme: "ramadan",
   title: "Ramadan en Égypte 2027 : voyager, conseils, dates | Kemet",
   description:
     "L'Égypte pendant le Ramadan 2027 (prévu du 8 février au 8 mars) : ce qui est ouvert, ce qui change, Le Caire islamique la nuit, l'iftar et l'Aïd el-Fitr.",
@@ -266,6 +268,7 @@ export const frRamadan: LocalizedPage = {
 export const esRamadan: LocalizedPage = {
   groupId: "standalone-es-ramadan",
   symbol: "crescent",
+  theme: "ramadan",
   title: "Ramadán en Egipto 2027: viajar, consejos y fechas | Kemet",
   description:
     "Egipto durante el Ramadán de 2027 (previsto del 8 de febrero al 8 de marzo): qué abre, qué cambia, El Cairo islámico de noche, el iftar y el Eid al-Fitr.",
@@ -372,6 +375,7 @@ export const esRamadan: LocalizedPage = {
 export const itRamadan: LocalizedPage = {
   groupId: "standalone-it-ramadan",
   symbol: "crescent",
+  theme: "ramadan",
   title: "Ramadan in Egitto 2027: viaggiare, consigli, date | Kemet",
   description:
     "L'Egitto durante il Ramadan 2027 (previsto dall'8 febbraio all'8 marzo): cosa è aperto, cosa cambia, il Cairo islamico di notte, l'iftar e l'Eid al-Fitr.",
@@ -478,6 +482,7 @@ export const itRamadan: LocalizedPage = {
 export const ruRamadan: LocalizedPage = {
   groupId: "standalone-ru-ramadan",
   symbol: "crescent",
+  theme: "ramadan",
   title: "Рамадан в Египте 2027: поездка, советы, даты | Kemet",
   description:
     "Египет в Рамадан 2027 года (ожидается с 8 февраля по 8 марта): что открыто, что меняется, исламский Каир ночью, ифтар и Ураза-байрам (Ид аль-Фитр).",
@@ -584,6 +589,7 @@ export const ruRamadan: LocalizedPage = {
 export const ptRamadan: LocalizedPage = {
   groupId: "standalone-pt-ramadan",
   symbol: "crescent",
+  theme: "ramadan",
   title: "Ramadã no Egito 2027: viagem, dicas e datas | Kemet",
   description:
     "O Egito durante o Ramadã de 2027 (previsto de 8 de fevereiro a 8 de março): o que abre, o que muda, o Cairo islâmico à noite, o iftar e o Eid al-Fitr.",
@@ -690,6 +696,7 @@ export const ptRamadan: LocalizedPage = {
 export const idRamadan: LocalizedPage = {
   groupId: "standalone-id-ramadan",
   symbol: "crescent",
+  theme: "ramadan",
   title: "Ramadan di Mesir 2027: Tarawih, Iftar & Lebaran | Kemet",
   description:
     "Ramadan 1448 H di Kairo (perkiraan 8 Februari – 8 Maret 2027): tarawih di masjid bersejarah, buka puasa, sahur, umrah plus Mesir, dan Idulfitri di Mesir.",
@@ -796,6 +803,7 @@ export const idRamadan: LocalizedPage = {
 export const msRamadan: LocalizedPage = {
   groupId: "standalone-ms-ramadan",
   symbol: "crescent",
+  theme: "ramadan",
   title: "Ramadan di Mesir 2027: Tarawih, Iftar & Hari Raya | Kemet",
   description:
     "Ramadan 1448 H di Kaherah (jangkaan 8 Februari – 8 Mac 2027): tarawih di masjid bersejarah, berbuka, sahur, umrah plus Mesir dan Hari Raya di Mesir.",
@@ -902,6 +910,7 @@ export const msRamadan: LocalizedPage = {
 export const arRamadan: LocalizedPage = {
   groupId: "standalone-ar-ramadan",
   symbol: "crescent",
+  theme: "ramadan",
   title: "رمضان في مصر ٢٠٢٧: التراويح والإفطار والعيد | كيميت",
   description:
     "رمضان ١٤٤٨هـ في القاهرة (متوقَّع من ٨ فبراير إلى ٨ مارس ٢٠٢٧): التراويح في المساجد التاريخية، والإفطار والسحور، وعيد الفطر في مصر، وكيف نرتّب الرحلة.",

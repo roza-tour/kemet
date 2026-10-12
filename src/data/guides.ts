@@ -1102,6 +1102,7 @@ export const guides: Guide[] = [
         a: "Now, if Luxor is the plan. The city has a modest number of good rooms and the nights around 2 August 2027 are its most sought-after of the year. Fix the hotel first; the rest of the journey can be shaped later.",
       },
     ],
+    theme: "eclipse",
     hero: {
       alt: "Karnak Temple and its sacred lake at Luxor",
       label: "The 2027 eclipse in Luxor",

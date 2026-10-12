@@ -236,6 +236,7 @@ export const collections: Collection[] = [
         a: "Everything. Egypt's monuments, museums, restaurants and transport all operate normally year-round. The Grand Egyptian Museum, the Egyptian Museum, the Coptic Museum, the Islamic Art Museum and Alexandria's Bibliotheca Alexandrina are all open and air-conditioned. Outdoor sites like Karnak and the Valley of the Kings are also open — they are simply best visited very early in the morning.",
       },
     ],
+    theme: "summer",
     hero: {
       alt: "The Montaza Palace and its gardens on the Alexandria coast in summer",
       src: "/images/alexandria/alexandria-montaza-palace.webp",

@@ -243,6 +243,7 @@ export const itMongolfiera: LocalizedPage = {
 export const itAlbaPiramidi: LocalizedPage = {
   groupId: "standalone-it-alba-piramidi",
   symbol: "eye",
+  theme: "sun-festival",
   title: "Alba alle Piramidi di Giza: yoga e servizio fotografico | Kemet",
   description:
     "Prima dell'alba, un punto panoramico tranquillo sulle nove piramidi di Giza — tempo per lo yoga o un servizio fotografico — poi l'altopiano prima dell'apertura.",
