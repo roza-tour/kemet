@@ -358,12 +358,18 @@ export const christmasLanding: LandingPage = {
     },
   ],
 
-  // The same subject in two more European languages. These are not
-  // translations of this page and carry no hreflang — they are separate
-  // arguments written for Germany and Russia (see i18n/eu-holidays.ts), and
-  // this is the page best placed to send a reader to the right one.
+  // The same subject in the other languages. These are not translations of
+  // this page and carry no hreflang — they are separate arguments written for
+  // each market (i18n/eu-holidays.ts and i18n/year-end.ts), and this is the
+  // page best placed to send a reader to the right one.
   otherLanguages: [
     { route: "de/weihnachten-in-aegypten.html", label: "Weihnachten in Ägypten", lang: "de" },
     { route: "ru/novyy-god-v-egipte.html", label: "Новый год в Египте", lang: "ru" },
+    { route: "it/natale-e-capodanno-in-egitto.html", label: "Natale e Capodanno in Egitto", lang: "it" },
+    { route: "fr/noel-et-nouvel-an-en-egypte.html", label: "Noël et Nouvel An en Égypte", lang: "fr" },
+    { route: "es/navidad-y-fin-de-ano-en-egipto.html", label: "Navidad y Fin de Año en Egipto", lang: "es" },
+    { route: "pt/natal-e-reveillon-no-egito.html", label: "Natal e Réveillon no Egito", lang: "pt" },
+    { route: "id/libur-akhir-tahun-ke-mesir.html", label: "Libur akhir tahun di Mesir", lang: "id" },
+    { route: "ms/cuti-hujung-tahun-ke-mesir.html", label: "Cuti hujung tahun di Mesir", lang: "ms" },
   ],
 };

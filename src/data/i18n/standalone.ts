@@ -18,6 +18,7 @@ import { itDoveDormire, itMongolfiera, itAlbaPiramidi } from "./it-extra";
 import { deSunrise, frSunrise, esSunrise, ruSunrise, ptSunrise, idSunrise, msSunrise, arSunrise } from "./sunrise";
 import { deEclipse, frEclipse, esEclipse, itEclipse, ruEclipse, ptEclipse, idEclipse, msEclipse, arEclipse } from "./eclipse";
 import { deRamadan, frRamadan, esRamadan, itRamadan, ruRamadan, ptRamadan, idRamadan, msRamadan, arRamadan } from "./ramadan";
+import { frNoel, esNavidad, ptNatal, idAkhirTahun, msHujungTahun } from "./year-end";
 
 export interface StandalonePage {
   locale: TranslatedLocale;
@@ -104,6 +105,14 @@ export const STANDALONE_PAGES: StandalonePage[] = [
   { locale: "id", slug: "ramadan-di-mesir", page: idRamadan },
   { locale: "ms", slug: "ramadan-di-mesir", page: msRamadan },
   { locale: "ar", slug: "ramadan-fi-masr", page: arRamadan },
+
+  // Christmas, New Year and the year-end holidays for five more markets —
+  // the window the seasonal ribbon runs from October (see year-end.ts).
+  { locale: "fr", slug: "noel-et-nouvel-an-en-egypte", page: frNoel },
+  { locale: "es", slug: "navidad-y-fin-de-ano-en-egipto", page: esNavidad },
+  { locale: "pt", slug: "natal-e-reveillon-no-egito", page: ptNatal },
+  { locale: "id", slug: "libur-akhir-tahun-ke-mesir", page: idAkhirTahun },
+  { locale: "ms", slug: "cuti-hujung-tahun-ke-mesir", page: msHujungTahun },
 ];
 
 export const standaloneRoute = (p: StandalonePage) => `${p.locale}/${p.slug}.html`;

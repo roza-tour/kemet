@@ -82,6 +82,8 @@ function localDates(from?: string, to?: string, fallback = ""): string {
 // page, with the Italian one sitting unlinked beside it.
 // Ramadan and Eid al-Fitr lead to each language's Ramadan page (i18n/ramadan.ts).
 const ramadanIn = (route: string) => ({ ramadan: route, "eid-fitr": route });
+// Christmas, and the October–December run that sells it, lead to the same page.
+const christmasIn = (route: string) => ({ christmas: route, "christmas-booking": route });
 const LOCAL_SEASON_ROUTES: Partial<Record<SiteLocale, Partial<Record<SeasonKey, string>>>> = {
   it: {
     christmas: "it/natale-e-capodanno-in-egitto.html",
@@ -91,11 +93,14 @@ const LOCAL_SEASON_ROUTES: Partial<Record<SiteLocale, Partial<Record<SeasonKey, 
   },
   de: { christmas: "de/weihnachten-in-aegypten.html", "christmas-booking": "de/weihnachten-in-aegypten.html", ...ramadanIn("de/ramadan-in-aegypten.html") },
   ru: { christmas: "ru/novyy-god-v-egipte.html", "christmas-booking": "ru/novyy-god-v-egipte.html", ...ramadanIn("ru/ramadan-v-egipte.html") },
-  es: { easter: "es/semana-santa-en-egipto.html", "easter-both": "es/semana-santa-en-egipto.html", ...ramadanIn("es/ramadan-en-egipto.html") },
-  fr: ramadanIn("fr/ramadan-en-egypte.html"),
-  pt: ramadanIn("pt/ramada-no-egito.html"),
-  id: ramadanIn("id/ramadan-di-mesir.html"),
-  ms: ramadanIn("ms/ramadan-di-mesir.html"),
+  es: {
+    easter: "es/semana-santa-en-egipto.html", "easter-both": "es/semana-santa-en-egipto.html",
+    ...christmasIn("es/navidad-y-fin-de-ano-en-egipto.html"), ...ramadanIn("es/ramadan-en-egipto.html"),
+  },
+  fr: { ...christmasIn("fr/noel-et-nouvel-an-en-egypte.html"), ...ramadanIn("fr/ramadan-en-egypte.html") },
+  pt: { ...christmasIn("pt/natal-e-reveillon-no-egito.html"), ...ramadanIn("pt/ramada-no-egito.html") },
+  id: { ...christmasIn("id/libur-akhir-tahun-ke-mesir.html"), ...ramadanIn("id/ramadan-di-mesir.html") },
+  ms: { ...christmasIn("ms/cuti-hujung-tahun-ke-mesir.html"), ...ramadanIn("ms/ramadan-di-mesir.html") },
   ar: ramadanIn("ar/ramadan-fi-masr.html"),
 };
 const keys = [...new Set(seasonalCalendar.map((w) => w.key))];
