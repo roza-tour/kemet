@@ -2,7 +2,7 @@
 
 > Kemet designs private, luxury journeys through every layer of Egypt — tailored tours, Nile cruises and experiences built around each traveller's interests, pace and timeline. Kemet designs entirely private, tailor-made journeys in Egypt — led by licensed Egyptologist guides, priced per person in EUR, with no group departures.
 
-Last updated: 2026-10-11
+Last updated: 2026-10-12
 
 ## About
 
@@ -18,7 +18,7 @@ Last updated: 2026-10-11
 - Google: https://www.google.com/search?kgmid=/g/11zy30n66w
 - Contact: info@kemet-travel.com · WhatsApp +20 11 5836 7162
 - Model: 100% private, tailor-made itineraries (no shared coaches, no fixed departures)
-- Catalogue: 25 journeys, 15 experiences, 8 activities, 8 destinations, 7 travel guides
+- Catalogue: 25 journeys, 15 experiences, 8 activities, 8 destinations, 8 travel guides
 - Content reviewed by: Mervat Farouk, Egyptologist guide — Egyptian tour guide and specialist in Egyptology (https://kemet-travel.com/about.html#mervat-farouk)
 
 - Full content as a single Markdown document: https://kemet-travel.com/llms-full.txt — the substance of these pages in one file, for when fetching each page individually is not practical.
@@ -163,6 +163,7 @@ Last updated: 2026-10-11
 - [The Ideal 10-Day Egypt Itinerary](https://kemet-travel.com/guides/10-day-egypt-itinerary.html): A field-tested 10-day Egypt route — Cairo and Giza, a flight south, Luxor's two banks, a three-night Nile cruise to Aswan and Abu Simbel — with the pacing mistakes to avoid.
 - [What to Pack for Egypt](https://kemet-travel.com/guides/egypt-packing-list.html): The Egypt packing list that actually matches the trip: what the desert, the monuments, the mosques and the Nile each demand — by season, with the five things everyone forgets.
 - [Where to Stay in Egypt: The Best Hotels, City by City](https://kemet-travel.com/guides/where-to-stay-in-egypt.html): The hotels worth building an Egypt journey around — Giza, Cairo, Luxor, Aswan, the Nile and the Red Sea — and which of the famous ones can actually be booked for the 2026–27 season.
+- [The 2027 Total Solar Eclipse in Luxor](https://kemet-travel.com/guides/total-solar-eclipse-2027-luxor.html): On Monday 2 August 2027 the Moon covers the Sun over Luxor for about six minutes and 22 seconds — the longest total eclipse on easily accessible land this century. When it happens, where to watch, the August heat and how to plan the journey.
 
 ## Other languages
 
@@ -182,6 +183,7 @@ The whole journey catalogue is also published in Deutsch, Italiano and Français
 - https://kemet-travel.com/de/ultra-luxusreisen-aegypten.html
 - https://kemet-travel.com/de/weihnachten-in-aegypten.html — Weihnachten und Silvester in Ägypten: 24–26°C in Luxor, während es zu Hause dunkel ist — und die am stärksten umkämpften zwei Wochen des ägyptischen Jahres.
 - https://kemet-travel.com/de/sonnenaufgang-pyramiden-gizeh.html — Sonnenaufgang an den neun Pyramiden von Gizeh: Vor Sonnenaufgang an einem stillen Aussichtspunkt, von dem aus alle neun Pyramiden zu sehen sind — die erste Stunde gehört Ihnen: für Yoga, ein Fotoshooting oder einfach den Blick.
+- https://kemet-travel.com/de/sonnenfinsternis-2027-luxor.html — Die totale Sonnenfinsternis 2027 in Luxor: Am Montag, dem 2. August 2027, verdeckt der Mond über Luxor rund sechs Minuten und 22 Sekunden lang die Sonne — die längste totale Finsternis auf gut erreichbarem Land in diesem Jahrhundert.
 
 Journeys in Deutsch (24), from-prices per person, the same as in English:
 
@@ -225,6 +227,7 @@ Journeys in Deutsch (24), from-prices per person, the same as in English:
 - https://kemet-travel.com/it/dove-dormire-in-egitto.html — Dove dormire in Egitto: i migliori hotel, città per città: Gli alberghi su cui vale la pena costruire un viaggio — e quali dei più famosi si possono davvero prenotare per la stagione 2026–27.
 - https://kemet-travel.com/it/mongolfiera-luxor-alba.html — Mongolfiera a Luxor, all'alba: La necropoli tebana dall'alto mentre il sole sorge sul Nilo — la Valle dei Re, il tempio di Hatshepsut e il verde della valle, come solo una mongolfiera li mostra.
 - https://kemet-travel.com/it/alba-alle-piramidi-di-giza.html — L'alba sulle nove piramidi di Giza: Prima dell'alba, in un punto panoramico tranquillo da cui si vedono tutte e nove le piramidi — la prima ora è vostra: yoga, un servizio fotografico o semplicemente la vista.
+- https://kemet-travel.com/it/eclissi-solare-2027-luxor.html — L'eclissi totale di Sole del 2027 a Luxor: Lunedì 2 agosto 2027 la Luna copre il Sole sopra Luxor per circa sei minuti e 22 secondi: l'eclissi totale più lunga del secolo su una terra facilmente raggiungibile.
 
 Journeys in Italiano (24), from-prices per person, the same as in English:
 
@@ -265,6 +268,7 @@ Journeys in Italiano (24), from-prices per person, the same as in English:
 - https://kemet-travel.com/es/viajes-ultra-lujo-egipto.html
 - https://kemet-travel.com/es/semana-santa-en-egipto.html — Semana Santa en Egipto: Del 21 de marzo al 28 de marzo de 2027 — primavera en el Nilo, y la última ventana buena antes del calor.
 - https://kemet-travel.com/es/amanecer-en-las-piramides-de-giza.html — El amanecer sobre las nueve pirámides de Giza: Antes de que salga el sol, en un mirador tranquilo desde el que se ven las nueve pirámides — la primera hora es suya: yoga, una sesión de fotos o simplemente la vista.
+- https://kemet-travel.com/es/eclipse-solar-2027-luxor.html — El eclipse total de Sol de 2027 en Luxor: El lunes 2 de agosto de 2027, la Luna tapará el Sol sobre Luxor durante unos seis minutos y 22 segundos: el eclipse total más largo del siglo en tierra de fácil acceso.
 
 ### Français (fr)
 
@@ -278,6 +282,7 @@ Journeys in Italiano (24), from-prices per person, the same as in English:
 - https://kemet-travel.com/fr/voyages-ultra-luxe-egypte.html
 - https://kemet-travel.com/fr/toussaint-en-egypte.html — La Toussaint tombe pile sur le changement de saison: Du 18 octobre au 3 novembre 2026 — deux semaines pendant lesquelles la Haute-Égypte passe de l'été à la saison.
 - https://kemet-travel.com/fr/lever-du-soleil-pyramides-gizeh.html — Le lever du soleil sur les neuf pyramides de Gizeh: Avant l'aube, un point de vue tranquille d'où l'on voit les neuf pyramides — la première heure vous appartient : yoga, séance photo ou simplement le regard.
+- https://kemet-travel.com/fr/eclipse-solaire-2027-louxor.html — L'éclipse totale de Soleil de 2027 à Louxor: Le lundi 2 août 2027, la Lune masque le Soleil au-dessus de Louxor pendant environ six minutes et 22 secondes — la plus longue éclipse totale de ce siècle sur une terre facile d'accès.
 
 Journeys in Français (24), from-prices per person, the same as in English:
 
@@ -318,6 +323,7 @@ Journeys in Français (24), from-prices per person, the same as in English:
 - https://kemet-travel.com/ru/ultra-lyuks-tury-v-egipet.html
 - https://kemet-travel.com/ru/novyy-god-v-egipte.html — Новогодние каникулы в Египте: С 31 декабря по 8 января — десять дней подряд, и это единственный длинный отпуск в году, который совпадает с лучшим сезоном в долине Нила.
 - https://kemet-travel.com/ru/rassvet-u-piramid-gizy.html — Рассвет над девятью пирамидами Гизы: До восхода солнца — тихая смотровая точка, откуда видны все девять пирамид. Первый час принадлежит вам: йога, фотосессия или просто вид.
+- https://kemet-travel.com/ru/solnechnoe-zatmenie-2027-luksor.html — Полное солнечное затмение 2027 года в Луксоре: В понедельник, 2 августа 2027 года, Луна закроет Солнце над Луксором примерно на шесть минут 22 секунды — это самое продолжительное полное затмение века на легкодоступной суше.
 
 ### Bahasa Indonesia (id)
 
@@ -334,6 +340,7 @@ Journeys in Français (24), from-prices per person, the same as in English:
 - https://kemet-travel.com/id/gunung-sinai.html — Gunung Sinai, dan biara di kakinya: Naik dalam gelap, tiba saat fajar, turun sebelum panas. Tiga jam mendaki, dan tidak perlu menjadi pendaki.
 - https://kemet-travel.com/id/halal-dan-waktu-salat.html — Makanan dan salat, tanpa perlu dicari: Mesir negara mayoritas Muslim. Pertanyaannya bukan apakah ada yang halal, melainkan hal-hal kecil yang tetap perlu diperhatikan.
 - https://kemet-travel.com/id/matahari-terbit-di-piramida-giza.html — Matahari terbit di sembilan piramida Giza: Sebelum matahari terbit, di titik pandang yang tenang tempat kesembilan piramida terlihat sekaligus — satu jam pertama milik Anda: yoga, sesi foto, atau sekadar menikmati pemandangan.
+- https://kemet-travel.com/id/gerhana-matahari-2027-luxor.html — Gerhana Matahari Total 2027 di Luxor: Pada Senin, 2 Agustus 2027, Bulan menutupi Matahari di atas Luxor selama sekitar enam menit 22 detik — gerhana total terlama abad ini di daratan yang mudah dijangkau.
 
 ### Bahasa Melayu (ms)
 
@@ -350,6 +357,7 @@ Journeys in Français (24), from-prices per person, the same as in English:
 - https://kemet-travel.com/ms/bukit-tursina.html — Bukit Tursina, dan biara di kakinya: Naik dalam gelap, tiba ketika fajar, turun sebelum panas. Tiga jam mendaki, dan anda tidak perlu menjadi pendaki.
 - https://kemet-travel.com/ms/halal-dan-waktu-solat.html — Makanan dan solat, tanpa perlu dicari: Mesir negara majoriti Muslim. Persoalannya bukan sama ada ada yang halal, tetapi perkara kecil yang tetap perlu diperiksa.
 - https://kemet-travel.com/ms/matahari-terbit-di-piramid-giza.html — Matahari terbit di sembilan piramid Giza: Sebelum matahari terbit, di titik pandang yang tenang tempat kesemua sembilan piramid kelihatan serentak — sejam pertama milik anda: yoga, sesi foto atau sekadar menikmati pemandangan.
+- https://kemet-travel.com/ms/gerhana-matahari-2027-luxor.html — Gerhana Matahari Penuh 2027 di Luxor: Pada hari Isnin, 2 Ogos 2027, Bulan menutup Matahari di atas Luxor selama kira-kira enam minit 22 saat — gerhana penuh terpanjang abad ini di daratan yang mudah dikunjungi.
 
 ### Português (pt)
 
@@ -363,6 +371,7 @@ Journeys in Français (24), from-prices per person, the same as in English:
 - https://kemet-travel.com/pt/viagens-ultra-luxo-egito.html
 - https://kemet-travel.com/pt/carnaval-no-egito.html — Carnaval no Egito, 2027: Em 2027 o Carnaval cai de 6 a 10 de fevereiro — em fevereiro, o melhor mês do ano para os monumentos.
 - https://kemet-travel.com/pt/nascer-do-sol-nas-piramides-de-gize.html — O nascer do sol sobre as nove pirâmides de Gizé: Antes do sol nascer, num mirante tranquilo de onde se veem as nove pirâmides — a primeira hora é sua: ioga, um ensaio fotográfico ou simplesmente a vista.
+- https://kemet-travel.com/pt/eclipse-solar-2027-luxor.html — O eclipse solar total de 2027 em Luxor: Na segunda-feira, 2 de agosto de 2027, a Lua cobre o Sol sobre Luxor por cerca de seis minutos e 22 segundos — o eclipse total mais longo do século em terra de fácil acesso.
 
 ### العربية (ar)
 
@@ -375,6 +384,7 @@ Journeys in Français (24), from-prices per person, the same as in English:
 - https://kemet-travel.com/ar/hal-masr-amina.html
 - https://kemet-travel.com/ar/rehlat-fakhira-jiddan-fi-masr.html
 - https://kemet-travel.com/ar/shorouq-al-shams-ind-al-ahramat.html — الشروق فوق أهرامات الجيزة التسعة: قبل شروق الشمس، في نقطة مطلّة هادئة تُرى منها الأهرامات التسعة معاً — والساعة الأولى لكم: يوغا، أو جلسة تصوير، أو مجرد التأمل في المنظر.
+- https://kemet-travel.com/ar/kusuf-al-shams-2027-al-uqsur.html — كسوف الشمس الكلي ٢٠٢٧ في الأقصر: يوم الاثنين ٢ أغسطس ٢٠٢٧ يحجب القمر الشمس فوق الأقصر نحو ست دقائق و٢٢ ثانية — أطول كسوف كلي في هذا القرن على أرض يسهل الوصول إليها.
 
 ## Index pages
 

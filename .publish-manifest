@@ -8,7 +8,7 @@ _astro/_slug_.Bxz8ATbR.css
 _astro/_slug_.DFEz9ubS.css
 _astro/_slug_.DZMFfmgO.css
 _astro/about.BQ3rkLlz.css
-_astro/hoisted.C4SuNX8W.js
+_astro/hoisted.C93flgcA.js
 _astro/index.COGUg4Qt.css
 _astro/page.DCTgdEH6.js
 _astro/rehlat-fakhira-jiddan-fi-masr.aH_AhgbZ.css
@@ -27,6 +27,7 @@ ar/afdal-waqt-lizyarat-masr.html
 ar/hajz-mawaqea-athariya-khas.html
 ar/hal-masr-amina.html
 ar/index.html
+ar/kusuf-al-shams-2027-al-uqsur.html
 ar/rehla-niliya-khassa.html
 ar/rehlat-fakhira-jiddan-fi-masr.html
 ar/rehlat-masr-khassa.html
@@ -90,6 +91,7 @@ de/religioeses-kairo-und-zitadelle.html
 de/rotes-meer-scharm-5-tage.html
 de/sakkara-memphis-dahschur.html
 de/sonnenaufgang-pyramiden-gizeh.html
+de/sonnenfinsternis-2027-luxor.html
 de/tauchen-rotes-meer-4-tage.html
 de/ultra-luxusreisen-aegypten.html
 de/weihnachten-in-aegypten.html
@@ -108,6 +110,7 @@ egypt-tour-cost.html
 es/amanecer-en-las-piramides-de-giza.html
 es/crucero-por-el-nilo.html
 es/cuanto-cuesta-viajar-a-egipto.html
+es/eclipse-solar-2027-luxor.html
 es/es-seguro-viajar-a-egipto.html
 es/index.html
 es/mejor-epoca-para-viajar-a-egipto.html
@@ -149,6 +152,7 @@ fr/abou-simbel-depuis-assouan.html
 fr/alexandrie-excursion-journee.html
 fr/alexandrie-une-nuit.html
 fr/croisiere-sur-le-nil.html
+fr/eclipse-solaire-2027-louxor.html
 fr/egypte-7-jours.html
 fr/egypte-en-famille-8-jours.html
 fr/egypte-essentielle-croisiere-nil.html
@@ -185,10 +189,12 @@ guides/best-time-to-visit-egypt.html
 guides/egypt-packing-list.html
 guides/egypt-travel-guide.html
 guides/egyptian-food-guide.html
+guides/total-solar-eclipse-2027-luxor.html
 guides/transportation-in-egypt.html
 guides/where-to-stay-in-egypt.html
 id/apakah-mesir-aman.html
 id/biaya-liburan-ke-mesir.html
+id/gerhana-matahari-2027-luxor.html
 id/gunung-sinai.html
 id/halal-dan-waktu-salat.html
 id/index.html
@@ -826,6 +832,7 @@ it/cairo-religioso-e-cittadella.html
 it/crociera-sul-nilo.html
 it/dove-dormire-in-egitto.html
 it/e-sicuro-viaggiare-in-egitto.html
+it/eclissi-solare-2027-luxor.html
 it/egitto-7-giorni.html
 it/egitto-essenziale-crociera-nilo.html
 it/egitto-in-famiglia-8-giorni.html
@@ -863,6 +870,7 @@ media/balloons-luxor-sunrise-poster.webp
 media/balloons-luxor-sunrise.mp4
 ms/adakah-mesir-selamat.html
 ms/bukit-tursina.html
+ms/gerhana-matahari-2027-luxor.html
 ms/halal-dan-waktu-solat.html
 ms/index.html
 ms/kos-percutian-ke-mesir.html
@@ -887,6 +895,7 @@ private-hire.html
 pt/carnaval-no-egito.html
 pt/cruzeiro-pelo-nilo.html
 pt/e-seguro-viajar-para-o-egito.html
+pt/eclipse-solar-2027-luxor.html
 pt/index.html
 pt/melhor-epoca-para-ir-ao-egito.html
 pt/monumentos-exclusivos-egito.html
@@ -902,6 +911,7 @@ ru/kogda-luchshe-ehat-v-egipet.html
 ru/kruiz-po-nilu.html
 ru/novyy-god-v-egipte.html
 ru/rassvet-u-piramid-gizy.html
+ru/solnechnoe-zatmenie-2027-luksor.html
 ru/stoimost-tura-v-egipet.html
 ru/tury-v-egipet.html
 ru/ultra-lyuks-tury-v-egipet.html
