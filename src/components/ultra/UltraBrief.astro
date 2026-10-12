@@ -46,10 +46,11 @@ const PARTY_VALUES = ["couple", "family", "generations", "group", "solo"] as con
       styles are the base the Ultra palette below is laid over. */}
   {/* toolname and the tool* attributes: WebMCP — see ContactForm.astro. An
       AI agent acting for a visitor sees this as the "send_ultra_brief" tool;
-      the visitor still presses Send. */}
+      the visitor still presses Send. Kept short: the heaviest Ultra page is
+      at the 30KB budget, and the visible labels already name each field. */}
   <form class="cform vbrief-form" method="post" action="/contact-handler.php"
     toolname="send_ultra_brief"
-    tooldescription="Send a brief for Kemet Ultra, Kemet's top tier: four fully private Egypt journeys of 7 to 15 days, with the Great Pyramid opened for the party, dinner inside Karnak after closing, a chartered dahabiya or yacht and suites at the Mena House, the Old Cataract and the Oberoi; from EUR 17,400 per person for two. A name, an email and one journey choice are enough; a Kemet travel designer replies personally.">
+    tooldescription="Send a brief for Kemet Ultra, Kemet's most private Egypt journeys. A travel designer replies.">
     <label class="cform-hp" aria-hidden="true">
       {B.honeypot}
       <input type="text" name="website" tabindex="-1" autocomplete="off" toolparamdescription="Anti-spam field. Always leave it empty." />
@@ -70,29 +71,29 @@ const PARTY_VALUES = ["couple", "family", "generations", "group", "solo"] as con
       </label>
       <label>
         <span>{B.journey}</span>
-        <select name="journey" toolparamdescription="Which Kemet Ultra journey interests the travellers, or undecided.">
+        <select name="journey">
           <option value="undecided">{B.undecided}</option>
           {ultraJourneys.map((j) => <option value={j.id}>{T.journeys[j.id].title}</option>)}
         </select>
       </label>
       <label>
         <span>{B.when} <i>{B.optional}</i></span>
-        <input type="text" name="dates" maxlength="120" placeholder={B.whenPlaceholder} toolparamdescription="Travel dates or month. Optional." />
+        <input type="text" name="dates" maxlength="120" placeholder={B.whenPlaceholder} />
       </label>
       <label>
         <span>{B.party} <i>{B.optional}</i></span>
-        <select name="party" toolparamdescription="Who is travelling. Optional.">
+        <select name="party">
           <option value="">{B.choose}</option>
           {PARTY_VALUES.map((v, i) => <option value={v}>{B.partyOptions[i]}</option>)}
         </select>
       </label>
       <label>
         <span>{B.phone} <i>{B.optional}</i></span>
-        <input type="tel" name="phone" maxlength="40" autocomplete="tel" toolparamdescription="Phone or WhatsApp number with country code. Optional." />
+        <input type="tel" name="phone" maxlength="40" autocomplete="tel" />
       </label>
       <label class="vbrief-full">
         <span>{B.note} <i>{B.optional}</i></span>
-        <textarea name="message" rows="3" maxlength="5000" placeholder={B.notePlaceholder} toolparamdescription="Anything the travellers would like us to know. Optional."></textarea>
+        <textarea name="message" rows="3" maxlength="5000" placeholder={B.notePlaceholder}></textarea>
       </label>
     </div>
 

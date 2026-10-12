@@ -16,6 +16,7 @@ import { msUmrah, msZiarah, msSinai, msHalal } from "./ms-extra";
 import { frToussaint, esSemanaSanta, itFerragosto, itCapodanno, deWeihnachten, ruNovyGod } from "./eu-holidays";
 import { itDoveDormire, itMongolfiera, itAlbaPiramidi } from "./it-extra";
 import { deSunrise, frSunrise, esSunrise, ruSunrise, ptSunrise, idSunrise, msSunrise, arSunrise } from "./sunrise";
+import { deEclipse, frEclipse, esEclipse, itEclipse, ruEclipse, ptEclipse, idEclipse, msEclipse, arEclipse } from "./eclipse";
 
 export interface StandalonePage {
   locale: TranslatedLocale;
@@ -75,6 +76,19 @@ export const STANDALONE_PAGES: StandalonePage[] = [
   { locale: "id", slug: "matahari-terbit-di-piramida-giza", page: idSunrise },
   { locale: "ms", slug: "matahari-terbit-di-piramid-giza", page: msSunrise },
   { locale: "ar", slug: "shorouq-al-shams-ind-al-ahramat", page: arSunrise },
+
+  // The total solar eclipse of 2 August 2027 over Luxor, in the nine other
+  // languages. The English original is guides/total-solar-eclipse-2027-luxor
+  // .html; see eclipse.ts for the facts and where they come from.
+  { locale: "de", slug: "sonnenfinsternis-2027-luxor", page: deEclipse },
+  { locale: "fr", slug: "eclipse-solaire-2027-louxor", page: frEclipse },
+  { locale: "es", slug: "eclipse-solar-2027-luxor", page: esEclipse },
+  { locale: "it", slug: "eclissi-solare-2027-luxor", page: itEclipse },
+  { locale: "ru", slug: "solnechnoe-zatmenie-2027-luksor", page: ruEclipse },
+  { locale: "pt", slug: "eclipse-solar-2027-luxor", page: ptEclipse },
+  { locale: "id", slug: "gerhana-matahari-2027-luxor", page: idEclipse },
+  { locale: "ms", slug: "gerhana-matahari-2027-luxor", page: msEclipse },
+  { locale: "ar", slug: "kusuf-al-shams-2027-al-uqsur", page: arEclipse },
 ];
 
 export const standaloneRoute = (p: StandalonePage) => `${p.locale}/${p.slug}.html`;
