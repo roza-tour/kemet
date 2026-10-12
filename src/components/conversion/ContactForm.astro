@@ -106,11 +106,19 @@ const PRIORITY_VALUES = ["comfort", "balance", "cost"] as const;
   <div class="cform-note cform-note--ok" role="status" aria-live="polite" hidden>{t.okNote}</div>
   <div class="cform-note cform-note--err" role="alert" hidden>{t.errNote}</div>
 
-  <form class="cform" method="post" action="/contact-handler.php">
+  {/* toolname / tooldescription / toolparamdescription: WebMCP, the W3C
+      draft Chrome is trialling (developer.chrome.com/docs/ai/webmcp). An AI
+      agent acting for a visitor — Gemini in Chrome and the like — sees this
+      form as a "send_enquiry" tool and fills it in; without toolautosubmit
+      the visitor still presses Send themselves. Browsers without WebMCP
+      ignore the attributes, so nothing changes for anyone else. */}
+  <form class="cform" method="post" action="/contact-handler.php"
+    toolname="send_enquiry"
+    tooldescription="Send an enquiry to Kemet, a private tour operator in Egypt, to plan a private, tailor-made journey: Cairo and the pyramids, Luxor, Aswan, Nile cruises, the Red Sea. A Kemet travel designer replies by email.">
     {/* Honeypot — hidden from humans, bots fill it and get silently dropped. */}
     <label class="cform-hp" aria-hidden="true">
       {t.honeypotLabel}
-      <input type="text" name="website" tabindex="-1" autocomplete="off" />
+      <input type="text" name="website" tabindex="-1" autocomplete="off" toolparamdescription="Anti-spam field. Always leave it empty." />
     </label>
     {/* Filled in by the page's own script at the moment of sending: seconds
         the visitor spent on the page. A bot posting straight to the handler
@@ -135,11 +143,11 @@ const PRIORITY_VALUES = ["comfort", "balance", "cost"] as const;
       </label>
       <label>
         <span>{t.phoneLabel}</span>
-        <input type="tel" name="phone" maxlength="40" autocomplete="tel" />
+        <input type="tel" name="phone" maxlength="40" autocomplete="tel" toolparamdescription="Phone or WhatsApp number with country code. Optional." />
       </label>
       <label>
         <span>{t.datesLabel}</span>
-        <input type="text" name="dates" maxlength="120" placeholder={datesPlaceholder} />
+        <input type="text" name="dates" maxlength="120" placeholder={datesPlaceholder} toolparamdescription="Travel dates or month, and number of days if known. Optional." />
       </label>
       {/* Three optional questions that decide the shape of a reply: who the
           journey has to suit, how fast it can go, and whether comfort or cost
@@ -170,7 +178,7 @@ const PRIORITY_VALUES = ["comfort", "balance", "cost"] as const;
       </label>
       <label class="cform-full">
         <span>{t.messageLabel}</span>
-        <textarea name="message" required rows="6" maxlength="5000" placeholder={messagePlaceholder}></textarea>
+        <textarea name="message" required rows="6" maxlength="5000" placeholder={messagePlaceholder} toolparamdescription="What the travellers would like: places, interests, pace, hotel style, budget and any questions."></textarea>
       </label>
     </div>
 

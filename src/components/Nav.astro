@@ -112,8 +112,15 @@ const isCurrent = (item: (typeof primaryNav)[number]) =>
 
     {/* Search lives in the bar. It is an <input>, so none of the .navlinks a
         rules reach it — only the results panel had to move out. Without JS the
-        form submits to the site index, which lists every page. */}
-    <form class="nsearch" role="search" action={`${base}sitemap.html`} id="nsform">
+        form submits to the site index, which lists every page.
+        toolname and the tool* attributes: WebMCP (see ContactForm.astro). An
+        AI agent can search the site as the "search_kemet" tool and gets the
+        matching pages back as data (scripts/search.client.js). Searching
+        changes nothing, so it may run without the visitor pressing Enter. */}
+    <form class="nsearch" role="search" action={`${base}sitemap.html`} id="nsform"
+      toolname="search_kemet"
+      tooldescription="Search kemet-travel.com, the site of Kemet, a private tour operator in Egypt: private tours and Nile cruises with their length and price per person, day tours, destinations, travel guides (visas, weather, safety, what to wear) and planning pages. Returns titles, URLs and short summaries."
+      toolautosubmit>
       <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false">
         <circle cx="8.5" cy="8.5" r="5.6" fill="none" stroke="currentColor" stroke-width="1.5" />
         <line x1="12.7" y1="12.7" x2="17.4" y2="17.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
@@ -122,6 +129,7 @@ const isCurrent = (item: (typeof primaryNav)[number]) =>
         id="sin"
         type="search"
         name="q"
+        toolparamdescription="Search words in English, e.g. 'nile cruise', 'luxor', 'abu simbel', 'egypt visa', 'honeymoon'."
         autocomplete="off"
         autocorrect="off"
         spellcheck="false"

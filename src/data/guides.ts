@@ -964,6 +964,161 @@ export const guides: Guide[] = [
       relatedGuides: guide("egypt-travel-guide", "best-time-to-visit-egypt", "10-day-egypt-itinerary"),
     },
   },
+
+  // =========================================================================
+  // The total solar eclipse of 2 August 2027, centred on Luxor. Written
+  // 12 Oct 2026, ten months out, when travellers start asking assistants
+  // where to watch it and the rooms start to go.
+  //
+  // FACTS, AND WHERE THEY COME FROM
+  // Duration, local times, the towns in totality and the 2114 comparison are
+  // from the eclipse's NASA-derived tables as published on Wikipedia
+  // ("Solar eclipse of August 2, 2027", read 12 Oct 2026): totality in Luxor
+  // 13:02:14–13:08:36 local time, 6 min 22 s; the longest point on the path,
+  // 6 min 23.2 s, about 60 km south-east of Luxor; Cairo partial, about 95%.
+  // Hotel demand is described, never quantified: the sources that put numbers
+  // on it sell rooms. Nothing here promises a viewing site, glasses or an
+  // allocation we have not confirmed — we quote from live availability.
+  // =========================================================================
+  {
+    id: "total-solar-eclipse-2027-luxor",
+    slug: "total-solar-eclipse-2027-luxor",
+    domain: "guide",
+    title: "The 2027 Total Solar Eclipse in Luxor",
+    locales: ["en"],
+    guideType: "planning",
+    category: "weather-seasons",
+    parentGuideId: "best-time-to-visit-egypt",
+    shortSummary:
+      "On Monday 2 August 2027 the Moon covers the Sun over Luxor for about six minutes and 22 seconds — the longest total eclipse on easily accessible land this century. When it happens, where to watch, the August heat and how to plan the journey.",
+    difficulty: "moderate",
+    readingTimeMinutes: 6,
+    lastUpdated: "2026-10",
+    keyTakeaways: [
+      "Monday 2 August 2027: totality over Luxor lasts about 6 minutes 22 seconds, from about 13:02 to 13:08 local time",
+      "It is the longest total solar eclipse on easily accessible land in the 21st century — a longer one will not come until 3 June 2114",
+      "Luxor sits close to the centre of the path; Qena and Edfu are in totality too, while Cairo sees a deep partial eclipse of about 95%, not totality",
+      "Totality falls at the hottest hour of an August day — around 41–43 °C — so shade, water and an easy morning matter as much as the view",
+      "Luxor has a modest number of good rooms, and the nights around 2 August 2027 are its most sought-after of the year: plan the stay first",
+    ],
+    keyFacts: [
+      { label: "Date", value: "Monday 2 August 2027" },
+      { label: "Totality in Luxor", value: "About 6 min 22 s" },
+      { label: "Local time", value: "About 13:02–13:08" },
+      { label: "Longest on the path", value: "6 min 23 s, about 60 km south-east of Luxor" },
+      { label: "Also in totality", value: "Qena, Edfu, Nag Hammadi, Sohag, Asyut, Minya, Siwa" },
+      { label: "Cairo", value: "Partial only, about 95%" },
+      { label: "A longer one on accessible land", value: "3 June 2114" },
+    ],
+    sections: [
+      {
+        heading: "Why Luxor, and why this one",
+        paragraphs: [
+          "A total solar eclipse is the few minutes when the Moon covers the Sun completely: the sky goes dark in the middle of the day, the temperature drops, the Sun's corona appears as a white halo, and the horizon glows all the way round like sunset. Most totalities last two or three minutes. On 2 August 2027 the path of totality crosses North Africa and the Middle East, and over Upper Egypt it is at its longest — about six minutes and 22 seconds in Luxor, six minutes and 23 seconds at its peak a little to the south-east.",
+          "That makes it the longest total eclipse on easily accessible land this century; nothing longer comes until 3 June 2114. And it happens over Thebes — the temples of Karnak and Luxor, the Valley of the Kings — in a city whose ancient builders aligned their monuments to the Sun.",
+        ],
+      },
+      {
+        heading: "When it happens",
+        paragraphs: [
+          "The Moon begins to move across the Sun shortly before midday. Totality in Luxor begins at about 13:02 local time and ends at about 13:08 — a little over six minutes of darkness — and the partial phase then fades over the following hour or so. Exact local times are published for each town in the path, and the difference across Luxor is a matter of seconds.",
+        ],
+        note: "Times here are from the published eclipse tables for Luxor. We confirm them for your exact viewing spot when the itinerary is written.",
+        noteType: "info",
+      },
+      {
+        heading: "Where to watch from",
+        paragraphs: [
+          "Anywhere in Luxor is inside the path, so the choice is about comfort rather than geometry: shade, somewhere to sit, water, and room to look up without a crowd in front of you. A Nile-side terrace, a quiet spot on the West Bank beneath the Theban hills, or the deck of a boat all work. Edfu and Qena are in totality too, so a Nile cruise or dahabiya between Luxor and Edfu can be on the water for it.",
+          "Cairo is not in the path: it gets a deep partial eclipse, about 95% of the Sun covered, which is striking but is not totality — the sky does not go dark and the corona is not seen. For totality you need to be in the band, and Luxor is the obvious place to be.",
+        ],
+      },
+      {
+        heading: "August in Luxor, honestly",
+        paragraphs: [
+          "August is Luxor's hottest month, with afternoons around 41–43 °C, and totality falls at about one o'clock — the hottest hour of the day. That is manageable with planning and miserable without it. The good news is the sky: Upper Egypt in August is about as reliably clear as anywhere on earth, which is exactly what an eclipse needs.",
+          "So the day is built around the heat. Temples at opening, back in the shade by late morning, the eclipse watched from somewhere cool with water to hand, and the afternoon spent resting rather than touring.",
+        ],
+        items: [
+          "Light, loose, long-sleeved clothing and a wide hat — sun protection is about cover, not just cream",
+          "Water in quantity, and a shaded place to watch from, booked in advance",
+          "Sightseeing at the gate at opening, before the heat, on the days either side",
+        ],
+      },
+      {
+        heading: "Seeing it safely",
+        paragraphs: [
+          "During the partial phases — before and after totality — never look at the Sun without certified eclipse glasses (ISO 12312-2) or a proper solar filter on a camera or binoculars. Only during the minutes of totality itself, when the Sun is completely covered, is it safe to look with the naked eye; the glasses go back on the moment the first bright edge reappears.",
+        ],
+        note: "Ordinary sunglasses are not eclipse glasses. Bring certified ones, or a solar filter for a camera lens.",
+        noteType: "warning",
+      },
+      {
+        heading: "Rooms first: how to plan the journey",
+        paragraphs: [
+          "Luxor is a small city with a modest number of good hotel rooms, and the nights around 2 August 2027 are the most sought-after it has. Rates for that week are far above normal summer rates. The practical order is to fix where you sleep first and build the days around it. The Winter Palace is due to reopen in July 2027 as the Mandarin Oriental Winter Palace — if it does, it will be just in time, but restoration dates can move. On the West Bank, Al Moudira is where we stay guests; and a Nile cruise or dahabiya can serve as the hotel itself.",
+          "Three shapes work well: Luxor alone, three or four nights around the eclipse; Cairo and the pyramids first, then Luxor for the day itself; or a Nile journey between Aswan and Luxor timed so that 2 August is spent in Luxor or Edfu.",
+        ],
+        noteLink: { label: "Where to stay in Egypt", href: "/guides/where-to-stay-in-egypt.html" },
+        note: "We hold nothing in advance and quote from live availability, with the eclipse-week rates itemised rather than folded in.",
+        noteType: "tip",
+      },
+    ],
+    planningTips: [
+      "Decide where you will sleep on 1–2 August 2027 before anything else",
+      "Plan the eclipse day lightly: an early temple, a long shaded lunch, the eclipse, rest",
+      "Bring certified eclipse glasses (ISO 12312-2) for the partial phases",
+      "Combine it with Cairo, a Nile cruise or a few cooler days by the sea, so the journey is more than one afternoon",
+    ],
+    importantNotes: [
+      "Local times are approximate (about 13:02–13:08 in Luxor) and are confirmed for the exact viewing spot",
+      "August afternoons in Luxor reach 41–43 °C; totality falls at the hottest hour",
+      "Eclipse-week hotel rates in Luxor are far above normal summer rates",
+    ],
+    faqs: [
+      {
+        q: "When is the total solar eclipse in Egypt?",
+        a: "On Monday 2 August 2027. Over Luxor, totality begins at about 13:02 local time and lasts about six minutes and 22 seconds; the partial phase begins shortly before midday and ends in the early afternoon.",
+      },
+      {
+        q: "How long is totality in Luxor?",
+        a: "About six minutes and 22 seconds. The longest point on the path, six minutes and 23 seconds, is about 60 km south-east of Luxor. It is the longest total solar eclipse on easily accessible land in the 21st century; a longer one will not occur until 3 June 2114.",
+      },
+      {
+        q: "Can I see the 2027 eclipse from Cairo?",
+        a: "Only as a partial eclipse. Cairo is outside the path of totality and sees about 95% of the Sun covered — dramatic, but the sky does not go dark and the corona is not visible. For totality, be in Luxor, Qena, Edfu or elsewhere inside the path.",
+      },
+      {
+        q: "Can I watch the eclipse from a Nile cruise?",
+        a: "Yes, if the boat is inside the path on 2 August. Luxor, Qena and Edfu are all in totality, so a cruise or dahabiya between Luxor and Edfu can be on the water at the right moment. We would plan the sailing around the eclipse rather than the other way round.",
+      },
+      {
+        q: "Isn't August too hot for Luxor?",
+        a: "It is very hot — afternoons around 41–43 °C — and totality falls at about one o'clock. It works when the day is planned for it: sightseeing at opening, a shaded and cool place to watch from, plenty of water and a quiet afternoon. In exchange, August skies over Upper Egypt are about as reliably clear as anywhere, which is what an eclipse needs.",
+      },
+      {
+        q: "When should I book for the 2027 eclipse?",
+        a: "Now, if Luxor is the plan. The city has a modest number of good rooms and the nights around 2 August 2027 are its most sought-after of the year. Fix the hotel first; the rest of the journey can be shaped later.",
+      },
+    ],
+    hero: {
+      alt: "Karnak Temple and its sacred lake at Luxor",
+      label: "The 2027 eclipse in Luxor",
+      src: "/images/luxor/luxor-karnak-sacred-lake.webp",
+      width: 1000,
+      height: 600,
+    },
+    seo: {
+      title: "2027 Solar Eclipse in Luxor: Times & Where to Watch | Kemet",
+      description:
+        "The total solar eclipse of 2 August 2027 over Luxor: about 6 min 22 s of totality, the longest on accessible land this century. Times, where to watch, planning.",
+    },
+    relationships: {
+      tours: tour("tour-luxor-3day", "tour-upper-egypt-5day", "tour-nile-cruise"),
+      destinations: dest("luxor"),
+      relatedGuides: guide("best-time-to-visit-egypt", "where-to-stay-in-egypt"),
+    },
+  },
 ];
 
 export function getGuide(slug: string): Guide | undefined {

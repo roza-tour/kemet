@@ -12,14 +12,16 @@
     var list = document.getElementById("sres");
     if (!form || !input || !panel || !list) return;
 
-    var docs = null, loading = false, cursor = -1, lastReported = "";
+    var docs = null, loading = null, cursor = -1, lastReported = "";
     var depth = (location.pathname.match(/\//g) || []).length - 1;
     var prefix = depth > 0 ? "../".repeat(depth) : "";
 
+    /* Returns the pending fetch, so an agent's search (below) can wait for the
+       index; typing just calls it and lets run() pick the results up. */
     function load() {
-      if (docs || loading) return;
-      loading = true;
-      fetch(prefix + "search-index.json", { credentials: "omit" })
+      if (docs) return Promise.resolve(docs);
+      if (loading) return loading;
+      loading = fetch(prefix + "search-index.json", { credentials: "omit" })
         .then(function (r) { return r.json(); })
         .then(function (d) {
           // Fold once per document, here, rather than on every keystroke of
@@ -30,9 +32,11 @@
             d[i]._k = fold(d[i].k);
             d[i]._d = fold(d[i].d);
           }
-          docs = d; loading = false; run();
+          docs = d; loading = null; run();
+          return d;
         })
-        .catch(function () { loading = false; });
+        .catch(function () { loading = null; return null; });
+      return loading;
     }
 
     /* The panel is a sibling of the nav, so it has to be told where the field
@@ -112,6 +116,18 @@
       cursor = -1;
     }
 
+    /* The best eight documents for a folded query, best first. */
+    function rank(q, lastIsPrefix) {
+      var words = q.split(/\s+/).filter(Boolean);
+      var scored = [];
+      for (var i = 0; i < docs.length; i++) {
+        var sc = score(docs[i], words, lastIsPrefix);
+        if (sc > 0) scored.push([sc, docs[i]]);
+      }
+      scored.sort(function (a, b) { return b[0] - a[0]; });
+      return scored.slice(0, 8).map(function (x) { return x[1]; });
+    }
+
     function run() {
       var raw = input.value.trim();
       var q = fold(raw);
@@ -121,15 +137,7 @@
 
       // The last word counts as a prefix unless the visitor typed a trailing
       // space — that space is the signal that they consider the word finished.
-      var lastIsPrefix = !/\s$/.test(input.value);
-      var words = q.split(/\s+/).filter(Boolean);
-      var scored = [];
-      for (var i = 0; i < docs.length; i++) {
-        var sc = score(docs[i], words, lastIsPrefix);
-        if (sc > 0) scored.push([sc, docs[i]]);
-      }
-      scored.sort(function (a, b) { return b[0] - a[0]; });
-      var top = scored.slice(0, 8).map(function (x) { return x[1]; });
+      var top = rank(q, !/\s$/.test(input.value));
 
       if (!top.length) {
         list.innerHTML =
@@ -180,6 +188,33 @@
     input.addEventListener("focus", load);
     input.addEventListener("input", run);
     form.addEventListener("submit", function (e) {
+      // An AI agent searching through WebMCP (the toolname on this form, in
+      // Nav.astro) gets the results back as data instead of a page change:
+      // titles, full URLs, length and price, so it can answer its user and
+      // link to the right page. Words are whole here — the agent is not
+      // halfway through typing.
+      if (e.agentInvoked && e.respondWith) {
+        e.preventDefault();
+        var aq = fold(input.value.trim());
+        e.respondWith(load().then(function () {
+          var found = docs && aq.length > 1 ? rank(aq, false) : [];
+          if (!found.length) {
+            return { results: [], note: "Nothing on the site matched. Kemet plans every journey individually, so the enquiry form on /contact.html (the send_enquiry tool) can still ask for it." };
+          }
+          return {
+            results: found.map(function (r) {
+              return {
+                title: r.t,
+                url: new URL(prefix + r.u, location.href).href,
+                section: r.s,
+                summary: r.d,
+                lengthAndPrice: r.m || undefined
+              };
+            })
+          };
+        }));
+        return;
+      }
       // With JS the first result is the answer; without it the form falls
       // through to the site index, which is why it has a real action.
       var first = list.querySelector("li[role=option] a");
