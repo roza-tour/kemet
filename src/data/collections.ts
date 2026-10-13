@@ -377,6 +377,20 @@ export const collections: Collection[] = [
         a: "Yes. Kemet arranges special-access permits for pre-opening entry and, in some cases, after-hours private visits to monuments including the Valley of the Kings and Karnak Temple. These require advance planning — typically four to eight weeks — and availability depends on the site and season. Contact us to discuss what is possible for your dates.",
       },
     ],
+    // Confirmed by the owner, 13 Oct 2026.
+    touches: {
+      eyebrow: "On request",
+      heading: "The private touches",
+      intro: "The things that make a journey yours alone — arranged quietly, and itemised in your quote.",
+      items: [
+        { symbol: "ankh", title: "A private chef", text: "A chef who cooks for your party alone — on a dahabiya, at a villa, or at a private camp in the desert." },
+        { symbol: "palm", title: "Spa and massage", text: "A massage or a spa session at your hotel or aboard, placed on the days the itinerary leaves free." },
+        { symbol: "scales", title: "A companion for the bazaars", text: "Someone who knows Khan el-Khalili and the city's best workshops, translates, and makes sure the price is the right one." },
+        { symbol: "scarab", title: "Celebrations, arranged", text: "A cake, flowers and a decorated room or cabin for a birthday or an anniversary — a surprise if you want it to be." },
+        { symbol: "eye", title: "A private photographer", text: "For a portrait session at sunrise over the nine pyramids, or a day photographed without anyone having to hold the camera." },
+        { symbol: "boat", title: "A table set apart", text: "Dinner on a felucca under sail, on a rooftop above Islamic Cairo, or in the desert under the stars." },
+      ],
+    },
     hero: {
       alt: "A private Nubian terrace above the Nile at sunset in Aswan",
       src: "/images/aswan/aswan-nubian-terrace-sunset.webp",
@@ -445,6 +459,35 @@ export const collections: Collection[] = [
         a: "Yes. Egypt is a child-friendly culture — Egyptians are warmly attentive to children, and the major tourist areas are safe for family travel. The practical considerations are heat management (especially for children under ten), pacing monument visits carefully, and hydration. A private guide means you never need to worry about logistics, crowds or navigation — you simply focus on the experience.",
       },
     ],
+    // Confirmed by the owner, 13 Oct 2026: a babysitter or nanny, children's
+    // activities, child seats in our vehicles, guides used to children, a
+    // private chef, birthday surprises and spa time.
+    story: {
+      eyebrow: "Families",
+      heading: "A journey your children will tell their own children about",
+      paragraphs: [
+        "Egypt is the rare place where children and parents are amazed by the same things. The Great Pyramid is exactly as big as a child hopes it will be; a mummy is exactly as mysterious; a camel is exactly as funny. We build each day so those moments arrive at their best hour — the monuments in the cool of the morning, the pool in the afternoon, and something to do with their own hands every day.",
+        "And we build in time for the two of you. A trusted, experienced babysitter can stay with the children while you take a felucca at sunset, linger over dinner or spend an hour at the spa. The child seats are already in the car when you land, and your Egyptologist is one who knows that an eight-year-old's questions are the best part of the visit.",
+      ],
+      quote: "The best family journeys are the ones where everybody comes home with a different favourite moment.",
+      photos: [
+        { src: "/images/clients/clients-19-red-pyramid.webp", alt: "A family of Kemet guests, children among them, cheering at the foot of the Red Pyramid of Dahshur", label: "Our guests at Dahshur", width: 680, height: 680 },
+      ],
+    },
+    touches: {
+      eyebrow: "Made for families",
+      heading: "What we arrange for families",
+      intro: "Arranged on request and itemised in your quote, so the journey fits the family you are travelling with.",
+      items: [
+        { symbol: "horus", title: "A babysitter for an evening", text: "A trusted, experienced babysitter or nanny for the children, so the two of you can have a dinner, a spa hour or a quiet evening on the Nile." },
+        { symbol: "camel", title: "Activities children remember", text: "A camel ride by the pyramids, making papyrus by hand, a children's cooking class, the Grand Egyptian Museum's own children's museum, a felucca on the Nile." },
+        { symbol: "ankh", title: "Child seats in every car", text: "Child and booster seats fitted in our vehicles and waiting when you land — not something to ask about at the kerb." },
+        { symbol: "eye", title: "Guides children follow", text: "Egyptologists used to young travellers, who tell the story of the pharaohs so that a child asks to hear more of it." },
+        { symbol: "scarab", title: "A birthday on the journey", text: "A cake and a decorated room or cabin for a child's birthday — or a parent's — on the day it falls." },
+        { symbol: "palm", title: "Spa time for the parents", text: "A massage at the hotel while the children are happily looked after." },
+      ],
+    },
+    theme: "family",
     hero: {
       alt: "The Great Sphinx of Giza, a highlight for families",
       src: "/images/giza/giza-great-sphinx-frontal.webp",
@@ -971,6 +1014,10 @@ export const collections: Collection[] = [
         a: "Nine to twelve nights is the natural length: three in Cairo and Giza, four or five on the Nile between Luxor and Aswan, and three or four on the Red Sea. Shorter is possible — a week covers Cairo and the Nile well — but the coastal ending is what turns a tour into a honeymoon, and it needs its own days.",
       },
       {
+        q: "Can we do a wedding-dress photo shoot or a proposal at the pyramids?",
+        a: "Yes. At sunrise we take you to a quiet viewpoint from which all nine pyramids of Giza are seen together, and the time there is yours. We arrange a professional photographer for a bridal portrait session in your wedding clothes, or for a proposal photographed from a distance without being seen, with flowers set at the place before you arrive. Tell us in your first message, and if it is a proposal, we keep it a secret from your partner.",
+      },
+      {
         q: "What is a dahabiya, and is it worth it?",
         a: "A dahabiya is a small twin-sailed Nile vessel — the type that carried travellers before the modern cruise fleet — typically with fewer than a dozen cabins. It sails rather than motors, moors at islands and villages the large boats pass, and the pace is entirely different. For a honeymoon it is usually the single best upgrade on the itinerary, and because there are so few cabins it is the first thing to book.",
       },
@@ -979,6 +1026,37 @@ export const collections: Collection[] = [
         a: "Egypt is socially conservative in public, so overt affection is best kept low-key in streets, markets and religious sites, and modest dress is expected at mosques and churches. Inside hotels, on private vessels and at Red Sea resorts, normal resort behaviour is entirely usual. In practice this is a small courtesy rather than a constraint, and a private itinerary means most of your time is your own anyway.",
       },
     ],
+    // The owner, 13 Oct 2026: "romantic — a bridal photo session, or the
+    // proposal itself, at sunrise over the nine pyramids, as if wishing them a
+    // happy life beginning like the first sunrise of their life together."
+    // Confirmed on request: a photographer, flowers and decoration, a private
+    // dinner. Hair and make-up is NOT offered and is not mentioned.
+    story: {
+      eyebrow: "Sunrise at the nine pyramids",
+      heading: "The first sunrise of your life together",
+      paragraphs: [
+        "Before the gates open, while Giza is still blue and silent, we take the two of you to a quiet viewpoint in the desert from which all nine pyramids stand in a single line. Then the sky begins — violet, then rose, then gold — and the first light of the day touches the oldest monuments on earth. It is hard to think of a better picture of what you have just begun: a new day, rising over something built to last for ever.",
+        "The hour is yours. Some couples simply sit close and watch. Some bring the wedding dress and the suit, and a professional photographer we arrange takes the portraits most people only imagine — the two of you, the dress lifting in the dawn wind, nine pyramids on the horizon. And some arrive as two and leave engaged: flowers are set at the place before you arrive, the photographer waits out of sight, and your Egyptologist steps away at exactly the right moment.",
+        "Afterwards comes the plateau before the crowds, breakfast, and a day at your own pace. In the evening, if you like, a table for two — on a felucca under sail, on a rooftop above Islamic Cairo, or in the desert beneath more stars than you have ever seen.",
+      ],
+      quote: "Every marriage has a first sunrise. May yours rise over the pyramids — and may every morning after it be as golden.",
+      photos: [
+        { src: "/images/clients/clients-03-giza-wedding.webp", alt: "A bride and groom, Kemet guests, in their wedding clothes before the Pyramids of Giza", label: "Our guests, just married", width: 680, height: 680 },
+      ],
+    },
+    touches: {
+      eyebrow: "Arranged for two",
+      heading: "The touches we arrange",
+      intro: "Each is arranged on request, privately, and itemised in your quote — nothing is added that you did not ask for.",
+      items: [
+        { symbol: "eye", title: "A photographer at sunrise", text: "For a bridal portrait session in your wedding clothes at the nine-pyramid viewpoint, or to catch a proposal from a distance without ever being seen." },
+        { symbol: "lotus", title: "Flowers for the moment", text: "Flowers and a place set and waiting — at the viewpoint, on the dahabiya deck or at your table — arranged before you arrive." },
+        { symbol: "boat", title: "A table for two", text: "Dinner on a felucca under sail, on a rooftop above Islamic Cairo, or at a desert camp under the stars, with no one else there." },
+        { symbol: "scarab", title: "A surprise in the room", text: "A cake, flowers and a decorated room or cabin — for the night you arrive, a birthday, or the anniversary you came to mark." },
+        { symbol: "palm", title: "Time at the spa", text: "A massage or a spa session at your hotel or aboard, on the days built for doing nothing at all." },
+        { symbol: "ankh", title: "A private chef", text: "A chef who cooks for the two of you alone — on a dahabiya, at a villa, or at a private camp in the desert." },
+      ],
+    },
     hero: {
       alt: "The open deck of a dahabiya sailing vessel on the Nile",
       label: "Honeymoons in Egypt",

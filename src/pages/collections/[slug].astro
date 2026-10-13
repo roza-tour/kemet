@@ -19,6 +19,8 @@ import GuideCard from "@/components/guide/GuideCard.astro";
 import CollectionHero from "@/components/collection/CollectionHero.astro";
 import CollectionCard from "@/components/collection/CollectionCard.astro";
 import CollectionLanding from "@/components/collection/CollectionLanding.astro";
+import CollectionStory from "@/components/collection/CollectionStory.astro";
+import SignatureTouches from "@/components/collection/SignatureTouches.astro";
 import LeadCapture from "@/components/conversion/LeadCapture.astro";
 import { collections } from "@/data/collections";
 import { registry, resolveRelatedCollections, findRelatedCollections } from "@/data/registry";
@@ -68,6 +70,8 @@ const jsonld = entitySchema("seasonal", col);
         down, because the landing run has already shown the same journeys with
         their prices. See types/content.ts → LandingPage. */}
     {col.landing && <CollectionLanding landing={col.landing} route={route} base={base} />}
+
+    {col.story && <CollectionStory story={col.story} />}
 
     <section style="padding-top:var(--s-3)">
       <div class="wrap">
@@ -142,6 +146,8 @@ const jsonld = entitySchema("seasonal", col);
         </div>
       </div>
     </section>
+
+    {col.touches && <SignatureTouches touches={col.touches} />}
 
     <Frieze />
 

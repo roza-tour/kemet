@@ -1,0 +1,68 @@
+---
+// CollectionStory — the page's own voice, set apart under the hero: a short
+// story about the one moment this collection is for (the first sunrise of a
+// marriage, a family's first sight of the pyramids), with a photograph of our
+// own guests beside it and a single line to close. Reads the page palette
+// (--gold, --line) so a themed page keeps its colours here.
+import Placeholder from "@/components/Placeholder.astro";
+import type { CollectionStory as Story } from "@/types";
+
+interface Props {
+  story: Story;
+}
+const { story } = Astro.props;
+const photo = story.photos?.[0];
+---
+<section class="cstory">
+  <div class="wrap">
+    <div class:list={["cstory-grid", !photo && "cstory-grid--solo"]}>
+      {photo && (
+        <div class="cstory-photo reveal" style={`--ar:${photo.width ?? 1} / ${photo.height ?? 1}`}>
+          <Placeholder src={photo.src} alt={photo.alt} label={photo.label} width={photo.width} height={photo.height} sizes="card" />
+        </div>
+      )}
+      <div class="cstory-text reveal">
+        <div class="eyebrow">{story.eyebrow}</div>
+        <h2>{story.heading}</h2>
+        {story.paragraphs.map((p) => <p>{p}</p>)}
+      </div>
+    </div>
+    {story.quote && (
+      <blockquote class="cstory-quote reveal">
+        <span aria-hidden="true" class="cstory-rule"></span>
+        <p>{story.quote}</p>
+        <span aria-hidden="true" class="cstory-rule"></span>
+      </blockquote>
+    )}
+  </div>
+</section>
+
+<style>
+  .cstory { position: relative; padding: var(--s-6) 0 var(--s-5); }
+  .cstory::before {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(760px 420px at 30% 40%, color-mix(in srgb, var(--gold) 10%, transparent), transparent 70%);
+  }
+  .cstory-grid { position: relative; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: var(--s-6); align-items: center; }
+  .cstory-grid--solo { grid-template-columns: minmax(0, 1fr); max-width: 760px; margin: 0 auto; text-align: center; }
+  .cstory-photo { position: relative; }
+  .cstory-photo::after {
+    content: ""; position: absolute; inset: -10px; border: 1px solid var(--line-2); pointer-events: none;
+  }
+  /* A .frame takes its shape from its context; here, the photograph's own. */
+  .cstory-photo :global(.frame) { position: relative; aspect-ratio: var(--ar, 1 / 1); overflow: hidden;
+    box-shadow: 0 30px 80px -30px color-mix(in srgb, var(--gold) 45%, transparent); }
+  .cstory-text h2 { font-size: clamp(2rem, 4vw, 3rem); color: var(--bone); margin: var(--s-2) 0 var(--s-4); }
+  .cstory-text p { color: var(--muted); font-size: 1.06rem; line-height: 1.85; margin: 0 0 var(--s-3); }
+  .cstory-quote { position: relative; margin: var(--s-6) auto 0; max-width: 820px; text-align: center;
+    display: flex; flex-direction: column; align-items: center; gap: var(--s-3); }
+  .cstory-quote p { margin: 0; font-family: var(--ff-display); font-style: italic; font-weight: 300;
+    font-size: clamp(1.35rem, 2.6vw, 1.9rem); line-height: 1.45; color: var(--gold-bright); }
+  .cstory-rule { display: block; width: 90px; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+  @media (max-width: 860px) {
+    .cstory-grid { grid-template-columns: minmax(0, 1fr); gap: var(--s-5); }
+    .cstory-photo { max-width: 460px; margin: 0 auto; width: 100%; }
+  }
+</style>

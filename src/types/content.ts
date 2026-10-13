@@ -136,7 +136,28 @@ export type SeasonalTheme =
   // Collection-page identities that are not on the calendar.
   | "red-sea"
   | "honeymoon"
-  | "eclipse";
+  | "eclipse"
+  | "family";
+
+/** A short story set apart under a collection's hero (CollectionStory.astro). */
+export interface CollectionStory {
+  eyebrow: string;
+  heading: string;
+  paragraphs: string[];
+  /** One closing line, set as a quotation. */
+  quote?: string;
+  /** Our own guests where we have them; the first is shown. */
+  photos?: MediaPlaceholder[];
+}
+
+/** Confirmed private services, as cards (SignatureTouches.astro). */
+export interface CollectionTouches {
+  eyebrow: string;
+  heading: string;
+  intro?: string;
+  /** `symbol` is a SymbolIcon glyph name. */
+  items: Array<{ title: string; text: string; symbol: string }>;
+}
 
 export type CollectionAudience =
   | "everyone"
@@ -337,6 +358,10 @@ export interface Collection extends ContentEntity {
    * Omit for the default Kemet gold treatment.
    */
   theme?: SeasonalTheme;
+  /** The page's own story, under the hero. */
+  story?: CollectionStory;
+  /** Private services travellers can ask for — confirmed by the owner. */
+  touches?: CollectionTouches;
   /**
    * Present only on a collection that is also a campaign destination. See
    * LandingPage: the page keeps its URL and all of its editorial content, and

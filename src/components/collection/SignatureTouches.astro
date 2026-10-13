@@ -1,0 +1,48 @@
+---
+// SignatureTouches — the private services a page's travellers can ask for
+// (a photographer at sunrise, a babysitter for an evening, a private chef),
+// each under one of the site's own symbols. Only services the owner has
+// confirmed belong here: each card is a promise. Reads the page palette.
+import Medallion from "@/components/marks/Medallion.astro";
+import type { CollectionTouches } from "@/types";
+
+interface Props {
+  touches: CollectionTouches;
+}
+const { touches } = Astro.props;
+---
+<section class="ctouch">
+  <div class="wrap">
+    <div class="ctouch-head reveal">
+      <div class="eyebrow">{touches.eyebrow}</div>
+      <h2>{touches.heading}</h2>
+      {touches.intro && <p>{touches.intro}</p>}
+    </div>
+    <ul class="ctouch-grid">
+      {touches.items.map((t) => (
+        <li class="ctouch-card reveal">
+          <Medallion name={t.symbol} size="sm" />
+          <h3>{t.title}</h3>
+          <p>{t.text}</p>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .ctouch { padding: var(--s-6) 0; }
+  .ctouch-head { max-width: 720px; margin: 0 auto var(--s-5); text-align: center; }
+  .ctouch-head h2 { font-size: clamp(1.8rem, 3.4vw, 2.5rem); color: var(--bone); margin: var(--s-2) 0 var(--s-3); }
+  .ctouch-head p { color: var(--muted); margin: 0; }
+  .ctouch-grid { list-style: none; margin: 0; padding: 0; display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-4); }
+  .ctouch-card { position: relative; padding: var(--s-5) var(--s-4) var(--s-4);
+    border: 1px solid var(--line); background: linear-gradient(180deg, color-mix(in srgb, var(--gold) 6%, transparent), transparent 70%);
+    transition: border-color .5s, transform .5s cubic-bezier(.22,.61,.36,1); }
+  .ctouch-card:hover { border-color: var(--line-2); transform: translateY(-3px); }
+  .ctouch-card h3 { font-size: 1.3rem; color: var(--bone); margin: var(--s-3) 0 var(--s-2); }
+  .ctouch-card p { color: var(--muted); font-size: .98rem; line-height: 1.7; margin: 0; }
+  @media (max-width: 980px) { .ctouch-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 600px) { .ctouch-grid { grid-template-columns: minmax(0, 1fr); } }
+</style>
