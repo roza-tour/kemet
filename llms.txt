@@ -2,7 +2,7 @@
 
 > Kemet designs private, luxury journeys through every layer of Egypt — tailored tours, Nile cruises and experiences built around each traveller's interests, pace and timeline. Kemet designs entirely private, tailor-made journeys in Egypt — led by licensed Egyptologist guides, priced per person in EUR, with no group departures.
 
-Last updated: 2026-10-13
+Last updated: 2026-10-14
 
 ## About
 
@@ -185,6 +185,8 @@ The whole journey catalogue is also published in Deutsch, Italiano and Français
 - https://kemet-travel.com/de/sonnenaufgang-pyramiden-gizeh.html — Sonnenaufgang an den neun Pyramiden von Gizeh: Vor Sonnenaufgang an einem stillen Aussichtspunkt, von dem aus alle neun Pyramiden zu sehen sind — die erste Stunde gehört Ihnen: für Yoga, ein Fotoshooting oder einfach den Blick.
 - https://kemet-travel.com/de/sonnenfinsternis-2027-luxor.html — Die totale Sonnenfinsternis 2027 in Luxor: Am Montag, dem 2. August 2027, verdeckt der Mond über Luxor rund sechs Minuten und 22 Sekunden lang die Sonne — die längste totale Finsternis auf gut erreichbarem Land in diesem Jahrhundert.
 - https://kemet-travel.com/de/ramadan-in-aegypten.html — Ägypten im Ramadan: Der Ramadan 2027 fällt voraussichtlich auf den 8. Februar bis 8. März — mitten in die beste Reisezeit. Was sich ändert, was gleich bleibt, und warum die Abende in Kairo dann die schönsten des Jahres sind.
+- https://kemet-travel.com/de/flitterwochen-in-aegypten.html — Flitterwochen in Ägypten: Zwei Menschen, fünftausend Jahre — und niemandes Zeitplan außer Ihrem eigenen.
+- https://kemet-travel.com/de/aegypten-mit-kindern.html — Ägypten mit Kindern: Eine Reise, von der Ihre Kinder noch ihren eigenen Kindern erzählen werden.
 
 Journeys in Deutsch (24), from-prices per person, the same as in English:
 
@@ -230,6 +232,8 @@ Journeys in Deutsch (24), from-prices per person, the same as in English:
 - https://kemet-travel.com/it/alba-alle-piramidi-di-giza.html — L'alba sulle nove piramidi di Giza: Prima dell'alba, in un punto panoramico tranquillo da cui si vedono tutte e nove le piramidi — la prima ora è vostra: yoga, un servizio fotografico o semplicemente la vista.
 - https://kemet-travel.com/it/eclissi-solare-2027-luxor.html — L'eclissi totale di Sole del 2027 a Luxor: Lunedì 2 agosto 2027 la Luna copre il Sole sopra Luxor per circa sei minuti e 22 secondi: l'eclissi totale più lunga del secolo su una terra facilmente raggiungibile.
 - https://kemet-travel.com/it/ramadan-in-egitto.html — L'Egitto durante il Ramadan: Il Ramadan 2027 dovrebbe andare dall'8 febbraio all'8 marzo, in piena stagione migliore. Cosa cambia, cosa resta uguale e perché le sere del Cairo sono allora le più belle dell'anno.
+- https://kemet-travel.com/it/viaggio-di-nozze-in-egitto.html — Viaggio di nozze in Egitto: Due persone, cinquemila anni di storia — e nessun programma che non sia il vostro.
+- https://kemet-travel.com/it/egitto-con-bambini.html — Egitto con i bambini: Un viaggio che i vostri figli racconteranno un giorno ai loro figli.
 
 Journeys in Italiano (24), from-prices per person, the same as in English:
 
@@ -273,6 +277,8 @@ Journeys in Italiano (24), from-prices per person, the same as in English:
 - https://kemet-travel.com/es/eclipse-solar-2027-luxor.html — El eclipse total de Sol de 2027 en Luxor: El lunes 2 de agosto de 2027, la Luna tapará el Sol sobre Luxor durante unos seis minutos y 22 segundos: el eclipse total más largo del siglo en tierra de fácil acceso.
 - https://kemet-travel.com/es/ramadan-en-egipto.html — Egipto durante el Ramadán: El Ramadán de 2027 irá, previsiblemente, del 8 de febrero al 8 de marzo, en plena mejor temporada. Qué cambia, qué sigue igual y por qué las noches de El Cairo son entonces las mejores del año.
 - https://kemet-travel.com/es/navidad-y-fin-de-ano-en-egipto.html — Navidad, Nochevieja y Reyes en Egipto: 24–26°C en Luxor mientras en casa anochece antes de las seis — y unas vacaciones escolares que en España duran hasta después de Reyes, el 6 de enero.
+- https://kemet-travel.com/es/luna-de-miel-en-egipto.html — Luna de miel en Egipto: Dos personas, cinco mil años de historia y ningún horario que no sea el suyo.
+- https://kemet-travel.com/es/egipto-con-ninos.html — Egipto con niños: Un viaje que sus hijos contarán algún día a sus propios hijos.
 
 ### Français (fr)
 
@@ -289,6 +295,8 @@ Journeys in Italiano (24), from-prices per person, the same as in English:
 - https://kemet-travel.com/fr/eclipse-solaire-2027-louxor.html — L'éclipse totale de Soleil de 2027 à Louxor: Le lundi 2 août 2027, la Lune masque le Soleil au-dessus de Louxor pendant environ six minutes et 22 secondes — la plus longue éclipse totale de ce siècle sur une terre facile d'accès.
 - https://kemet-travel.com/fr/ramadan-en-egypte.html — L'Égypte pendant le Ramadan: Le Ramadan 2027 devrait aller du 8 février au 8 mars — en pleine meilleure saison. Ce qui change, ce qui ne change pas, et pourquoi les soirées du Caire sont alors les plus belles de l'année.
 - https://kemet-travel.com/fr/noel-et-nouvel-an-en-egypte.html — Noël et Nouvel An en Égypte: 24–26°C à Louxor quand la nuit tombe à cinq heures en France — et deux semaines de vacances scolaires qui tombent exactement sur le pic égyptien.
+- https://kemet-travel.com/fr/voyage-de-noces-en-egypte.html — Voyage de noces en Égypte: Deux personnes, cinq mille ans d'histoire — et aucun autre emploi du temps que le vôtre.
+- https://kemet-travel.com/fr/egypte-en-famille.html — L'Égypte en famille: Un voyage que vos enfants raconteront un jour à leurs propres enfants.
 
 Journeys in Français (24), from-prices per person, the same as in English:
 
@@ -331,6 +339,8 @@ Journeys in Français (24), from-prices per person, the same as in English:
 - https://kemet-travel.com/ru/rassvet-u-piramid-gizy.html — Рассвет над девятью пирамидами Гизы: До восхода солнца — тихая смотровая точка, откуда видны все девять пирамид. Первый час принадлежит вам: йога, фотосессия или просто вид.
 - https://kemet-travel.com/ru/solnechnoe-zatmenie-2027-luksor.html — Полное солнечное затмение 2027 года в Луксоре: В понедельник, 2 августа 2027 года, Луна закроет Солнце над Луксором примерно на шесть минут 22 секунды — это самое продолжительное полное затмение века на легкодоступной суше.
 - https://kemet-travel.com/ru/ramadan-v-egipte.html — Египет в Рамадан: Рамадан 2027 года ожидается с 8 февраля по 8 марта — в самый лучший сезон. Что меняется, что остаётся прежним и почему вечера в Каире в это время — лучшие в году.
+- https://kemet-travel.com/ru/medovyy-mesyats-v-egipte.html — Медовый месяц в Египте: Двое, пять тысяч лет истории — и никакого расписания, кроме вашего собственного.
+- https://kemet-travel.com/ru/egipet-s-detmi.html — Египет с детьми: Путешествие, о котором ваши дети однажды расскажут своим детям.
 
 ### Bahasa Indonesia (id)
 
@@ -350,6 +360,8 @@ Journeys in Français (24), from-prices per person, the same as in English:
 - https://kemet-travel.com/id/gerhana-matahari-2027-luxor.html — Gerhana Matahari Total 2027 di Luxor: Pada Senin, 2 Agustus 2027, Bulan menutupi Matahari di atas Luxor selama sekitar enam menit 22 detik — gerhana total terlama abad ini di daratan yang mudah dijangkau.
 - https://kemet-travel.com/id/ramadan-di-mesir.html — Ramadan di Kairo: Ramadan 1448 H diperkirakan jatuh pada 8 Februari sampai 8 Maret 2027, di musim sejuk. Tarawih di masjid-masjid tertua Kairo, buka puasa di atas atap kota tua, dan Lebaran di tepi Sungai Nil.
 - https://kemet-travel.com/id/libur-akhir-tahun-ke-mesir.html — Libur Akhir Tahun di Mesir: Saat libur sekolah dan cuti Natal–Tahun Baru, Mesir sedang di musim terbaiknya: Luxor 24–26°C, udara kering, langit cerah.
+- https://kemet-travel.com/id/bulan-madu-ke-mesir.html — Bulan Madu di Mesir: Berdua, lima ribu tahun sejarah — dan tak ada jadwal selain jadwal kalian sendiri.
+- https://kemet-travel.com/id/liburan-keluarga-ke-mesir.html — Liburan Keluarga di Mesir: Perjalanan yang suatu hari akan diceritakan anak-anak Anda kepada anak-anak mereka.
 
 ### Bahasa Melayu (ms)
 
@@ -369,6 +381,8 @@ Journeys in Français (24), from-prices per person, the same as in English:
 - https://kemet-travel.com/ms/gerhana-matahari-2027-luxor.html — Gerhana Matahari Penuh 2027 di Luxor: Pada hari Isnin, 2 Ogos 2027, Bulan menutup Matahari di atas Luxor selama kira-kira enam minit 22 saat — gerhana penuh terpanjang abad ini di daratan yang mudah dikunjungi.
 - https://kemet-travel.com/ms/ramadan-di-mesir.html — Ramadan di Kaherah: Ramadan 1448 H dijangka jatuh pada 8 Februari hingga 8 Mac 2027, pada musim sejuk. Tarawih di masjid-masjid tertua Kaherah, berbuka di atas bumbung kota lama, dan Hari Raya di tebing Sungai Nil.
 - https://kemet-travel.com/ms/cuti-hujung-tahun-ke-mesir.html — Cuti Hujung Tahun di Mesir: Ketika cuti sekolah dan cuti Krismas–Tahun Baru tiba, Mesir berada pada musim terbaiknya: Luxor 24–26°C, udara kering, langit cerah.
+- https://kemet-travel.com/ms/bulan-madu-ke-mesir.html — Bulan Madu di Mesir: Berdua, lima ribu tahun sejarah — dan tiada jadual selain jadual anda sendiri.
+- https://kemet-travel.com/ms/percutian-keluarga-ke-mesir.html — Percutian Keluarga di Mesir: Perjalanan yang suatu hari akan diceritakan anak-anak anda kepada anak-anak mereka.
 
 ### Português (pt)
 
@@ -385,6 +399,8 @@ Journeys in Français (24), from-prices per person, the same as in English:
 - https://kemet-travel.com/pt/eclipse-solar-2027-luxor.html — O eclipse solar total de 2027 em Luxor: Na segunda-feira, 2 de agosto de 2027, a Lua cobre o Sol sobre Luxor por cerca de seis minutos e 22 segundos — o eclipse total mais longo do século em terra de fácil acesso.
 - https://kemet-travel.com/pt/ramada-no-egito.html — O Egito durante o Ramadã: O Ramadã de 2027 deve ir de 8 de fevereiro a 8 de março, em plena melhor temporada. O que muda, o que continua igual e por que as noites do Cairo são, então, as melhores do ano.
 - https://kemet-travel.com/pt/natal-e-reveillon-no-egito.html — Natal e Réveillon no Egito: Enquanto o Brasil ferve no verão, Luxor fica em 24–26°C, com ar seco e céu limpo — e as férias de dezembro e janeiro dão tempo para o Egito inteiro, não só para o Cairo.
+- https://kemet-travel.com/pt/lua-de-mel-no-egito.html — Lua de mel no Egito: Duas pessoas, cinco mil anos de história — e nenhuma agenda além da de vocês.
+- https://kemet-travel.com/pt/egito-com-criancas.html — Egito com crianças: Uma viagem que seus filhos vão contar um dia para os filhos deles.
 
 ### العربية (ar)
 
@@ -399,6 +415,8 @@ Journeys in Français (24), from-prices per person, the same as in English:
 - https://kemet-travel.com/ar/shorouq-al-shams-ind-al-ahramat.html — الشروق فوق أهرامات الجيزة التسعة: قبل شروق الشمس، في نقطة مطلّة هادئة تُرى منها الأهرامات التسعة معاً — والساعة الأولى لكم: يوغا، أو جلسة تصوير، أو مجرد التأمل في المنظر.
 - https://kemet-travel.com/ar/kusuf-al-shams-2027-al-uqsur.html — كسوف الشمس الكلي ٢٠٢٧ في الأقصر: يوم الاثنين ٢ أغسطس ٢٠٢٧ يحجب القمر الشمس فوق الأقصر نحو ست دقائق و٢٢ ثانية — أطول كسوف كلي في هذا القرن على أرض يسهل الوصول إليها.
 - https://kemet-travel.com/ar/ramadan-fi-masr.html — رمضان في القاهرة: يُتوقَّع أن يكون رمضان ١٤٤٨هـ من ٨ فبراير إلى ٨ مارس ٢٠٢٧، في جوّ معتدل. تراويح في أعرق مساجد القاهرة، وإفطار فوق أسطح المدينة القديمة، وعيد على ضفاف النيل.
+- https://kemet-travel.com/ar/shahr-al-asal-fi-masr.html — شهر العسل في مصر: اثنان، وخمسة آلاف عام من التاريخ — ولا جدول سوى جدولكما.
+- https://kemet-travel.com/ar/rehla-aeiliya-ila-masr.html — رحلة عائلية إلى مصر: رحلة سيحكيها أطفالكم يوماً لأطفالهم.
 
 ## Index pages
 
