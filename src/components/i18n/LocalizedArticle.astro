@@ -19,6 +19,8 @@ import Frieze from "@/components/Frieze.astro";
 import Faq from "@/components/Faq.astro";
 import LangSwitch from "@/components/LangSwitch.astro";
 import CollectionLanding from "@/components/collection/CollectionLanding.astro";
+import CollectionStory from "@/components/collection/CollectionStory.astro";
+import SignatureTouches from "@/components/collection/SignatureTouches.astro";
 import TourCard from "@/components/TourCard.astro";
 import SectionHeader from "@/components/SectionHeader.astro";
 import { TRANSLATED_TOURS } from "@/config/tour-i18n";
@@ -188,6 +190,8 @@ const jsonld: Record<string, unknown>[] = [
       See data/i18n/types.ts → landing. */}
   {page.landing && <CollectionLanding landing={page.landing} route={route} base={base} locale={locale} />}
 
+  {page.story && <CollectionStory story={page.story} />}
+
   <section style="padding-top:0">
     <div class="wrap lz-wrap">
 
@@ -216,6 +220,8 @@ const jsonld: Record<string, unknown>[] = [
       {page.films && page.films.length > 0 && (
         <div class="lz-films"><FilmRow films={page.films} /></div>
       )}
+
+      {page.touches && <SignatureTouches touches={page.touches} inline />}
 
       {localeJourneys.length > 0 && (
         <div class="lz-journeys">

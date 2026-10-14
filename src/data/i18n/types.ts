@@ -9,7 +9,7 @@
 // file; the words are not.
 // ---------------------------------------------------------------------------
 import type { TranslatedLocale } from "@/config/i18n";
-import type { LandingPage, SeasonalTheme } from "@/types";
+import type { LandingPage, SeasonalTheme, CollectionStory, CollectionTouches } from "@/types";
 import type { MediaPlaceholder, Film } from "@/types/primitives";
 
 export interface LocalizedSection {
@@ -82,6 +82,10 @@ export interface LocalizedPage {
    * collection pages wear them (components/collection/SeasonalTheme.astro).
    */
   theme?: SeasonalTheme;
+  /** A short story under the hero, with our own guests beside it (CollectionStory.astro). */
+  story?: CollectionStory;
+  /** Private services the owner has confirmed, as cards (SignatureTouches.astro). */
+  touches?: CollectionTouches;
 }
 
 export type LocalePageSet = Record<TranslatedLocale, LocalizedPage[]>;

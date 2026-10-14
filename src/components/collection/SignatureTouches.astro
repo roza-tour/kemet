@@ -8,11 +8,14 @@ import type { CollectionTouches } from "@/types";
 
 interface Props {
   touches: CollectionTouches;
+  /** Inside a page column that already has its own .wrap (LocalizedArticle). */
+  inline?: boolean;
 }
-const { touches } = Astro.props;
+const { touches, inline = false } = Astro.props;
+const Outer = inline ? "div" : "section";
 ---
-<section class="ctouch">
-  <div class="wrap">
+<Outer class:list={["ctouch", inline && "ctouch--inline"]}>
+  <div class:list={[!inline && "wrap"]}>
     <div class="ctouch-head reveal">
       <div class="eyebrow">{touches.eyebrow}</div>
       <h2>{touches.heading}</h2>
@@ -28,10 +31,11 @@ const { touches } = Astro.props;
       ))}
     </ul>
   </div>
-</section>
+</Outer>
 
 <style>
   .ctouch { padding: var(--s-6) 0; }
+  .ctouch--inline { padding: var(--s-5) 0 var(--s-6); }
   .ctouch-head { max-width: 720px; margin: 0 auto var(--s-5); text-align: center; }
   .ctouch-head h2 { font-size: clamp(1.8rem, 3.4vw, 2.5rem); color: var(--bone); margin: var(--s-2) 0 var(--s-3); }
   .ctouch-head p { color: var(--muted); margin: 0; }

@@ -19,6 +19,8 @@ import { deSunrise, frSunrise, esSunrise, ruSunrise, ptSunrise, idSunrise, msSun
 import { deEclipse, frEclipse, esEclipse, itEclipse, ruEclipse, ptEclipse, idEclipse, msEclipse, arEclipse } from "./eclipse";
 import { deRamadan, frRamadan, esRamadan, itRamadan, ruRamadan, ptRamadan, idRamadan, msRamadan, arRamadan } from "./ramadan";
 import { frNoel, esNavidad, ptNatal, idAkhirTahun, msHujungTahun } from "./year-end";
+import { deHoneymoon, frHoneymoon, esHoneymoon, itHoneymoon, ruHoneymoon, ptHoneymoon, idHoneymoon, msHoneymoon, arHoneymoon } from "./honeymoon";
+import { deFamily, frFamily, esFamily, itFamily, ruFamily, ptFamily, idFamily, msFamily, arFamily } from "./family";
 
 export interface StandalonePage {
   locale: TranslatedLocale;
@@ -113,6 +115,29 @@ export const STANDALONE_PAGES: StandalonePage[] = [
   { locale: "pt", slug: "natal-e-reveillon-no-egito", page: ptNatal },
   { locale: "id", slug: "libur-akhir-tahun-ke-mesir", page: idAkhirTahun },
   { locale: "ms", slug: "cuti-hujung-tahun-ke-mesir", page: msHujungTahun },
+
+  // Honeymoons and families, in the nine other languages — the English
+  // originals are collections/honeymoon-egypt.html and family-egypt.html;
+  // see honeymoon.ts and family.ts.
+  { locale: "de", slug: "flitterwochen-in-aegypten", page: deHoneymoon },
+  { locale: "fr", slug: "voyage-de-noces-en-egypte", page: frHoneymoon },
+  { locale: "es", slug: "luna-de-miel-en-egipto", page: esHoneymoon },
+  { locale: "it", slug: "viaggio-di-nozze-in-egitto", page: itHoneymoon },
+  { locale: "ru", slug: "medovyy-mesyats-v-egipte", page: ruHoneymoon },
+  { locale: "pt", slug: "lua-de-mel-no-egito", page: ptHoneymoon },
+  { locale: "id", slug: "bulan-madu-ke-mesir", page: idHoneymoon },
+  { locale: "ms", slug: "bulan-madu-ke-mesir", page: msHoneymoon },
+  { locale: "ar", slug: "shahr-al-asal-fi-masr", page: arHoneymoon },
+
+  { locale: "de", slug: "aegypten-mit-kindern", page: deFamily },
+  { locale: "fr", slug: "egypte-en-famille", page: frFamily },
+  { locale: "es", slug: "egipto-con-ninos", page: esFamily },
+  { locale: "it", slug: "egitto-con-bambini", page: itFamily },
+  { locale: "ru", slug: "egipet-s-detmi", page: ruFamily },
+  { locale: "pt", slug: "egito-com-criancas", page: ptFamily },
+  { locale: "id", slug: "liburan-keluarga-ke-mesir", page: idFamily },
+  { locale: "ms", slug: "percutian-keluarga-ke-mesir", page: msFamily },
+  { locale: "ar", slug: "rehla-aeiliya-ila-masr", page: arFamily },
 ];
 
 export const standaloneRoute = (p: StandalonePage) => `${p.locale}/${p.slug}.html`;
