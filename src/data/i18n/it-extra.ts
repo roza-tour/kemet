@@ -293,6 +293,7 @@ export const itAlbaPiramidi: LocalizedPage = {
         "Vestitevi a strati: d'inverno le mattine nel deserto sono fredde, anche quando a mezzogiorno fa caldo. Portate una piccola torcia per il tratto a piedi prima dell'alba, e scarpe chiuse e basse, perché il terreno è ghiaia e sabbia. Per lo yoga portate il vostro tappetino; per le foto, un grandangolo prende tutte e nove le piramidi in un solo scatto.",
     },
   ],
+  sharePhoto: "/images/giza/giza-camel-pyramids-sunrise.webp",
   photos: [
     { alt: "Ospiti Kemet al punto panoramico di Giza, con le piramidi in fila alle loro spalle", label: "Il punto panoramico", src: "/images/clients/clients-26-giza-pose.webp", width: 680, height: 680 },
     { alt: "Un cammello addobbato a riposo davanti alle Piramidi di Giza nella luce calda del mattino", label: "Il mattino", src: "/images/giza/giza-camel-pyramids-sunrise.webp", width: 736, height: 736 },

@@ -126,11 +126,15 @@ const jsonld: Record<string, unknown>[] = [
     })),
   },
 ];
+/** The photograph this page is shared with, when it names one. */
+const share = page.sharePhoto ? page.photos?.find((g) => g.src === page.sharePhoto) : undefined;
 ---
 <Base
   title={page.title}
   description={page.description}
   active={route}
+  ogImage={share?.src}
+  ogImageAlt={share?.alt}
   jsonld={jsonld}
   keywords={page.keywords}
   showCta={false}

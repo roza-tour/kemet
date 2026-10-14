@@ -77,6 +77,7 @@ export const deSunrise: LocalizedPage = {
         "Ziehen Sie sich in Schichten an: Im Winter sind die Wüstenmorgen kalt, auch wenn es mittags warm wird. Eine kleine Taschenlampe hilft auf dem Weg vor Sonnenaufgang, feste, flache Schuhe auf Sand und Kies. Für Yoga bringen Sie bitte Ihre eigene Matte mit; für Fotos bringt ein Weitwinkelobjektiv alle neun Pyramiden in ein einziges Bild.",
     },
   ],
+  sharePhoto: "/images/giza/giza-camel-pyramids-sunrise.webp",
   photos: photos(
     [
       "Kemet-Gäste am Panoramapunkt von Gizeh, die Pyramiden in einer Linie hinter ihnen",
@@ -178,6 +179,7 @@ export const frSunrise: LocalizedPage = {
         "Habillez-vous en couches : en hiver, les matins du désert sont froids, même s'il fait chaud à midi. Une petite lampe aide pour la marche avant l'aube, et des chaussures fermées et plates conviennent au sable et au gravier. Pour le yoga, apportez votre propre tapis ; pour les photos, un grand-angle fait tenir les neuf pyramides dans une seule image.",
     },
   ],
+  sharePhoto: "/images/giza/giza-camel-pyramids-sunrise.webp",
   photos: photos(
     [
       "Des voyageurs Kemet au point de vue panoramique de Gizeh, les pyramides alignées derrière eux",
@@ -279,6 +281,7 @@ export const esSunrise: LocalizedPage = {
         "Vístanse por capas: en invierno las mañanas del desierto son frías, aunque al mediodía haga calor. Una linterna pequeña ayuda en el camino antes del amanecer, y conviene calzado cerrado y plano para la arena y la grava. Para el yoga, traigan su propia esterilla; para las fotos, un gran angular mete las nueve pirámides en una sola imagen.",
     },
   ],
+  sharePhoto: "/images/giza/giza-camel-pyramids-sunrise.webp",
   photos: photos(
     [
       "Viajeros de Kemet en el mirador panorámico de Giza, con las pirámides en línea detrás",
@@ -380,6 +383,7 @@ export const ruSunrise: LocalizedPage = {
         "Одевайтесь слоями: зимой утро в пустыне холодное, даже если в полдень тепло. Небольшой фонарик пригодится по дороге до рассвета, а закрытая обувь на плоской подошве — на песке и гравии. Для йоги возьмите свой коврик; для фотографий широкоугольный объектив вместит все девять пирамид в один кадр.",
     },
   ],
+  sharePhoto: "/images/giza/giza-camel-pyramids-sunrise.webp",
   photos: photos(
     [
       "Гости Kemet на панорамной точке Гизы, пирамиды выстроились в линию за ними",
@@ -481,6 +485,7 @@ export const ptSunrise: LocalizedPage = {
         "Vista-se em camadas: no inverno as manhãs no deserto são frias, mesmo que faça calor ao meio-dia. Uma lanterna pequena ajuda no caminho antes do nascer do sol, e sapatos fechados e baixos são o certo para areia e cascalho. Para a ioga, traga o seu próprio tapete; para as fotos, uma grande-angular põe as nove pirâmides numa única imagem.",
     },
   ],
+  sharePhoto: "/images/giza/giza-camel-pyramids-sunrise.webp",
   photos: photos(
     [
       "Viajantes da Kemet no mirante panorâmico de Gizé, com as pirâmides em linha atrás deles",
@@ -582,6 +587,7 @@ export const idSunrise: LocalizedPage = {
         "Kenakan pakaian berlapis: di musim dingin pagi di gurun terasa dingin, meskipun siangnya hangat. Senter kecil membantu di perjalanan sebelum matahari terbit, dan sepatu tertutup bersol datar cocok untuk pasir dan kerikil. Untuk yoga, bawalah matras sendiri; untuk foto, lensa sudut lebar memuat kesembilan piramida dalam satu bingkai.",
     },
   ],
+  sharePhoto: "/images/giza/giza-camel-pyramids-sunrise.webp",
   photos: photos(
     [
       "Tamu Kemet di titik panorama Giza, piramida berjajar di belakang mereka",
@@ -683,6 +689,7 @@ export const msSunrise: LocalizedPage = {
         "Pakai pakaian berlapis: pada musim sejuk pagi di padang pasir terasa dingin, walaupun tengah harinya panas. Lampu suluh kecil membantu dalam perjalanan sebelum matahari terbit, dan kasut tertutup bertapak rata sesuai untuk pasir dan batu kerikil. Untuk yoga, bawa tikar sendiri; untuk foto, lensa sudut lebar memuatkan kesemua sembilan piramid dalam satu bingkai.",
     },
   ],
+  sharePhoto: "/images/giza/giza-camel-pyramids-sunrise.webp",
   photos: photos(
     [
       "Tetamu Kemet di titik panorama Giza, piramid berbaris di belakang mereka",
@@ -784,6 +791,7 @@ export const arSunrise: LocalizedPage = {
         "البسوا طبقات: صباح الصحراء بارد في الشتاء حتى لو كان الظهر دافئاً. يفيد مصباح صغير في الطريق قبل الشروق، وحذاء مغلق مسطّح على الرمل والحصى. لليوغا أحضروا سجادتكم الخاصة، وللتصوير تُدخل عدسة واسعة الزاوية الأهرامات التسعة كلها في صورة واحدة.",
     },
   ],
+  sharePhoto: "/images/giza/giza-camel-pyramids-sunrise.webp",
   photos: photos(
     [
       "ضيوف كيميت عند نقطة بانوراما الجيزة، والأهرامات مصطفّة خلفهم",

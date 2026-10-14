@@ -8,6 +8,8 @@ import {
 } from "@/config/site";
 import { relativePrefix } from "@/config/routes";
 import { buildPageSeo } from "@/utils/seo";
+import { sharePhotoFor } from "@/utils/share";
+import { chosenSharePhoto } from "@/data/sharePhotos";
 import { ui } from "@/config/ui";
 import { siteSchema } from "@/schemas/jsonld";
 import type { JsonLd } from "@/types";
@@ -43,12 +45,25 @@ interface Props {
    * points at the fuller one so they do not split the ranking signal.
    */
   canonicalTo?: string;
-  /** Share-image overrides. */
+  /**
+   * The photograph to share this page with (a /images/… WebP; it is turned
+   * into a 1200×630 JPEG after the build). Without it, the page's own lead
+   * photograph is used — see utils/share.
+   */
   ogImage?: string;
   ogImageAlt?: string;
 }
 
 const { active = "index.html", jsonld, showCta = true } = Astro.props;
+
+// The share image: the one the page names, else the one chosen for it by hand
+// (data/sharePhotos), else its own lead photograph — which is why the body is
+// rendered first (utils/share). `null` from the hand list means the generic card.
+const body = await Astro.slots.render("default");
+const chosen = chosenSharePhoto(Astro.props.canonicalTo ?? active);
+const share = Astro.props.ogImage
+  ? sharePhotoFor({ src: Astro.props.ogImage, alt: Astro.props.ogImageAlt }, body)
+  : chosen === null ? undefined : sharePhotoFor(chosen ?? {}, body);
 
 // Resolve SEO once, so every page inherits the same defaults (utils/seo).
 const { title, description, canonicalUrl, ogImage, ogImageAlt, keywords } = buildPageSeo({
@@ -56,8 +71,8 @@ const { title, description, canonicalUrl, ogImage, ogImageAlt, keywords } = buil
   description: Astro.props.description,
   route: Astro.props.canonicalTo ?? active,
   keywords: Astro.props.keywords,
-  ogImage: Astro.props.ogImage,
-  ogImageAlt: Astro.props.ogImageAlt,
+  ogImage: share?.src,
+  ogImageAlt: share?.alt,
 });
 // Link prefix so shared nav/footer resolve from any directory depth.
 // Root pages → "" (output unchanged); /destinations/* → "../".
@@ -235,7 +250,7 @@ const ogLocaleAlternates = alternates
   <SvgDefs />
   <Nav active={active} base={base} locale={pageLocale} />
   <SeasonalSkin locale={pageLocale} />
-  <main id="main"><slot /></main>
+  <main id="main"><Fragment set:html={body} /></main>
   {showCta && <CTA base={base} />}
   <Footer base={base} route={active} locale={pageLocale} />
   <SearchPanel label={t.searchResults} />

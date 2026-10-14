@@ -86,6 +86,11 @@ export interface LocalizedPage {
   story?: CollectionStory;
   /** Private services the owner has confirmed, as cards (SignatureTouches.astro). */
   touches?: CollectionTouches;
+  /**
+   * Which of `photos` to share the page with (its src). Without it the page
+   * shares its first photograph — see utils/share.
+   */
+  sharePhoto?: string;
 }
 
 export type LocalePageSet = Record<TranslatedLocale, LocalizedPage[]>;

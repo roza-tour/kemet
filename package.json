@@ -8,6 +8,7 @@
     "images": "node scripts/responsive-images.mjs",
     "prebuild": "node scripts/responsive-images.mjs",
     "build": "astro build",
+    "postbuild": "node scripts/og-images.mjs",
     "preview": "astro preview",
     "check": "astro check",
     "audit": "node scripts/audit.mjs",
