@@ -34,6 +34,7 @@ export interface PhotoCredit {
 const C = "https://commons.wikimedia.org/wiki/File:";
 
 export const photoCredits: Record<string, PhotoCredit> = {
+  "/images/stock/giza-pyramids-sunrise-sky.webp": { subject: "Sunrise over the pyramids of Giza", creator: "Ben Sutherland", license: "CC BY 2.0", source: "https://www.flickr.com/photos/bensutherland/27684377097" },
   "/images/stock/koshari.webp": { subject: "Koshari", creator: "Youmna9115", license: "CC0", source: "https://commons.wikimedia.org/w/index.php?curid=188395232" },
   "/images/stock/ful-medames.webp": { subject: "Ful medames breakfast plate", creator: "Miansari66", license: "CC0", source: `${C}Ful_Medames.JPG` },
   "/images/stock/tameya-frying.webp": { subject: "Ta'meya frying at a street stall", creator: "Roland Unger", license: "CC BY-SA 3.0", source: `${C}EgFoodFryingFalafel.jpg` },
