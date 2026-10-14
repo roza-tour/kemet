@@ -2,6 +2,7 @@
 // ExperienceHero — breadcrumb, category eyebrow, H1, summary and hero media
 // placeholder. Fully data-driven: no per-experience logic or markup.
 // Follows the same pattern as DestinationHero and GuideHero.
+import SeasonalTheme from "@/components/collection/SeasonalTheme.astro";
 import Placeholder from "@/components/Placeholder.astro";
 import { experienceCategories, labelOf } from "@/config/taxonomy";
 import { hubFor } from "@/config/routes";
@@ -17,6 +18,7 @@ const categoryLabel = labelOf(experienceCategories, experience.category) ?? expe
 const hub = hubFor("experience");
 ---
 <header class="phero" style="padding-bottom:var(--s-5)">
+  {experience.theme && <SeasonalTheme theme={experience.theme} />}
   <div class="wrap">
     <nav class="crumb" aria-label="Breadcrumb">
       <a href="/">Home</a> ·

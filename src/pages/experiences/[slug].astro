@@ -63,7 +63,7 @@ const description = experience.seo?.description ?? experience.shortSummary;
 const jsonld = [entitySchema("experience", experience), ...(experience.films ?? []).map(videoObject)].flat();
 ---
 <Base title={title} description={description} active={route} jsonld={jsonld}>
-  <article>
+  <article class={experience.theme ? `themed-${experience.theme}` : undefined}>
     <ExperienceHero experience={experience} base={base} />
 
     <section style="padding-top:var(--s-3)">

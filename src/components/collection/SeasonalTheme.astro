@@ -13,6 +13,7 @@
 //         carnival (confetti and streamers, Brazil's green, gold and rose)
 //         eclipse (the corona around a black sun, pearl on deep indigo)
 //         family (hot-air balloons and a camel caravan, turquoise and sun)
+//         sunrise (dawn behind the nine pyramids of Giza: violet, rose, gold)
 import type { SeasonalTheme } from "@/types";
 
 interface Props {
@@ -80,6 +81,22 @@ const KHAYAMIYA = ["#B8452F", "#D9B45A", "#2F7E66", "#2E5E9E", "#E8DCC0"];
 const GLASS = ["#2F7E66", "#A33B3B", "#2E5E9E", "#C98A2E"];
 /** Playground colours for the family pages: coral, sun, mint, sky, lilac. */
 const FUN = ["#FF6B6B", "#FFD166", "#06D6A0", "#4CC9F0", "#B388EB"];
+
+/**
+ * The nine pyramids of Giza as the panorama viewpoint sees them at dawn, drawn
+ * back to front on a horizon at y=430: Khufu's queens, Khufu, Khafre (which
+ * stands taller from here, on higher ground, with casing left at its tip),
+ * Menkaure and Menkaure's three queens. x is the apex, w the half-base.
+ */
+const GIZA: Array<{ x: number; w: number; h: number; cap?: boolean }> = [
+  { x: 930, w: 20, h: 26 }, { x: 975, w: 20, h: 26 }, { x: 1015, w: 19, h: 24 },
+  { x: 790, w: 110, h: 128 },
+  { x: 600, w: 105, h: 134, cap: true },
+  { x: 430, w: 55, h: 70 },
+  { x: 250, w: 22, h: 30 }, { x: 300, w: 22, h: 30 }, { x: 345, w: 22, h: 30 },
+];
+/** Where the sun comes up: in the notch between Khafre and Khufu. */
+const SUN = { x: 695, y: 372, r: 46 };
 
 /** A cluster of dates hanging from a stalk at (x, y). */
 function dates(x: number, y: number): Array<{ cx: number; cy: number }> {
@@ -584,6 +601,96 @@ function dates(x: number, y: number): Array<{ cx: number; cy: number }> {
   </div>
 )}
 
+{theme === "sunrise" && (
+  <div class="sth sth-sunrise" aria-hidden="true">
+    {/* The sky warming from the horizon up: violet, rose, peach, gold */}
+    <div class="sth-sky"></div>
+    {/* The last stars of the night, fading softly */}
+    {[...Array(14)].map((_, i) => (
+      <span class="sth-laststar" style={`left:${(i * 7.3 + (i % 3) * 3.1) % 97}%;top:${4 + ((i * 11) % 30)}%;animation-delay:${-(i * 0.9)}s`}></span>
+    ))}
+    {/* The scene: the sun rising between the pyramids, morning mist, the dunes */}
+    <svg class="sth-sunscene" viewBox="0 0 1200 460" width="1200" height="460" preserveAspectRatio="xMidYMax slice">
+      <defs>
+        <radialGradient id="srSun" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#FFF8E7" />
+          <stop offset="55%" stop-color="#FFE2A8" />
+          <stop offset="85%" stop-color="#F7B267" />
+          <stop offset="100%" stop-color="#F29A5B" />
+        </radialGradient>
+        <radialGradient id="srHalo" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#FFD9A0" stop-opacity=".6" />
+          <stop offset="32%" stop-color="#F7B267" stop-opacity=".26" />
+          <stop offset="100%" stop-color="#F29A5B" stop-opacity="0" />
+        </radialGradient>
+        <radialGradient id="srRay" gradientUnits="userSpaceOnUse" cx={SUN.x} cy={SUN.y} r="440">
+          <stop offset="0%" stop-color="#FFE9C7" stop-opacity=".22" />
+          <stop offset="35%" stop-color="#F7C873" stop-opacity=".07" />
+          <stop offset="75%" stop-color="#F7C873" stop-opacity="0" />
+        </radialGradient>
+        <radialGradient id="srGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#FFB877" stop-opacity=".5" />
+          <stop offset="45%" stop-color="#D9707E" stop-opacity=".2" />
+          <stop offset="100%" stop-color="#D9707E" stop-opacity="0" />
+        </radialGradient>
+        <filter id="srSoft" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="5" /></filter>
+        <radialGradient id="srMist" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#FFE3CF" stop-opacity=".34" />
+          <stop offset="100%" stop-color="#FFE3CF" stop-opacity="0" />
+        </radialGradient>
+      </defs>
+      {/* The horizon warming all along its length, brightest where the sun is */}
+      <ellipse class="sth-horizon" cx={SUN.x} cy="430" rx="780" ry="160" fill="url(#srGlow)" />
+      <g class="sth-sun-rise">
+        <g class="sth-sun-rays" fill="url(#srRay)" filter="url(#srSoft)">
+          {[...Array(18)].map((_, i) => {
+            const a = (Math.PI * 2 * i) / 18;
+            const d = 0.05;
+            const l = i % 2 ? 330 : 440;
+            return <path d={`M${SUN.x} ${SUN.y} L${(SUN.x + Math.cos(a - d) * l).toFixed(1)} ${(SUN.y + Math.sin(a - d) * l).toFixed(1)} L${(SUN.x + Math.cos(a + d) * l).toFixed(1)} ${(SUN.y + Math.sin(a + d) * l).toFixed(1)} Z`} />;
+          })}
+        </g>
+        <circle class="sth-sun-halo" cx={SUN.x} cy={SUN.y} r="160" fill="url(#srHalo)" />
+        <circle cx={SUN.x} cy={SUN.y} r={SUN.r} fill="url(#srSun)" />
+      </g>
+      {/* Three birds crossing the morning, unhurried */}
+      <g class="sth-flock" fill="none" stroke="#2A1A30" stroke-width="1.8" stroke-linecap="round">
+        <path d="M0 262 q6 -6 12 0 q6 -6 12 0" />
+        <path d="M30 250 q5 -5 10 0 q5 -5 10 0" />
+        <path d="M18 276 q4 -4 8 0 q4 -4 8 0" />
+      </g>
+      {GIZA.map((p) => {
+        const top = 430 - p.h;
+        const edge = p.x + p.w * 0.2;
+        return (
+          <g>
+            <path d={`M${p.x - p.w} 430 L${p.x} ${top} L${edge} 430 Z`} fill="#2A1C36" />
+            <path d={`M${edge} 430 L${p.x} ${top} L${p.x + p.w} 430 Z`} fill="#1D1428" />
+            <path d={`M${p.x - p.w} 430 L${p.x} ${top} L${p.x + p.w} 430`} fill="none" stroke="#F2A271" stroke-width="1.2" stroke-opacity=".55" stroke-linejoin="round" />
+            {p.cap && <path d={`M${p.x} ${top} L${p.x - p.w * 0.12} ${top + p.h * 0.12} L${p.x + p.w * 0.12} ${top + p.h * 0.12} Z`} fill="#F2B98F" fill-opacity=".4" />}
+          </g>
+        );
+      })}
+      <ellipse class="sth-mist" cx="430" cy="424" rx="300" ry="20" fill="url(#srMist)" />
+      <ellipse class="sth-mist sth-mist2" cx="880" cy="428" rx="320" ry="18" fill="url(#srMist)" />
+      <path d="M0 432 C150 424 260 436 420 433 S760 427 900 433 S1100 428 1200 431 V460 H0 Z" fill="#150E1C" />
+      <path d="M0 432 C150 424 260 436 420 433 S760 427 900 433 S1100 428 1200 431" fill="none" stroke="#F2A271" stroke-width="1" stroke-opacity=".35" />
+      <path d="M0 446 C110 436 230 438 330 450 S560 452 700 447 S1000 440 1200 449 V460 H0 Z" fill="#100A16" />
+    </svg>
+    {/* Golden dust lifting slowly in the first light */}
+    {[...Array(16)].map((_, i) => (
+      <span class="sth-gdust" style={`left:${(i * 6.1 + (i % 4) * 2.7) % 96}%;animation-duration:${16 + (i % 5) * 2}s;animation-delay:${-(i * 1.3)}s`}></span>
+    ))}
+    {/* Someone sitting still on the sand, breathing with the morning */}
+    <svg class="sth-zen" viewBox="0 0 60 56" width="60" height="56">
+      <rect x="1" y="50.5" width="58" height="3.2" rx="1.6" fill="#F7B267" fill-opacity=".5" />
+      <circle cx="30" cy="8.5" r="6" fill="#120B18" stroke="#F7B267" stroke-width=".8" stroke-opacity=".75" />
+      <path fill-rule="evenodd" fill="#120B18" stroke="#F7B267" stroke-width=".8" stroke-opacity=".75"
+            d="M30 15 C26 15 21 16 19.5 19 L15 31 C14 34 12 38 9 42 C5 44 4 48 8 50 L52 50 C56 48 55 44 51 42 C48 38 46 34 45 31 L40.5 19 C39 16 34 15 30 15 Z M22.5 23 L18.6 36 L24 37.5 Z M37.5 23 L41.4 36 L36 37.5 Z" />
+    </svg>
+  </div>
+)}
+
 <style is:global>
   /* ---------------------------------------------------------------------
      Shared theme scaffolding
@@ -1007,7 +1114,7 @@ function dates(x: number, y: number): Array<{ cx: number; cy: number }> {
      --------------------------------------------------------------------- */
   .themed-ramadan, .themed-christmas, .themed-easter, .themed-autumn, .themed-summer,
   .themed-carnival, .themed-eclipse, .themed-honeymoon, .themed-family, .themed-sun-festival,
-  .themed-spring, .themed-red-sea, .themed-eid {
+  .themed-spring, .themed-red-sea, .themed-eid, .themed-sunrise {
     background-color: var(--atmos-base, transparent);
     background-image: var(--motif, linear-gradient(transparent, transparent)), var(--atmos, linear-gradient(transparent, transparent));
   }
@@ -1097,12 +1204,63 @@ function dates(x: number, y: number): Array<{ cx: number; cy: number }> {
     clip-path: polygon(50% 0, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); }
   @media(max-width:600px){ .sth-kite{ display:none; } .themed-family .phero { padding-top: 230px; } }
 
+  /* ---------------------------------------------------------------------
+     Sunrise — dawn behind the nine pyramids: violet, rose, peach and gold,
+     everything moving at the pace of a slow breath
+     --------------------------------------------------------------------- */
+  .themed-sunrise {
+    --gold: #F7C873; --gold-bright: #FFE9C7; --gold-deep: #C9824A;
+    --line: rgba(247,200,115,.22); --line-2: rgba(242,162,113,.45);
+    --motif: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='110' height='110'%3E%3Cg fill='%23F7C873' fill-opacity='.09'%3E%3Ccircle cx='22' cy='24' r='3'/%3E%3Ccircle cx='80' cy='70' r='1.4'/%3E%3Cpath d='M66 18l1.3 3.4 3.4 1.3-3.4 1.3-1.3 3.4-1.3-3.4-3.4-1.3 3.4-1.3Z'/%3E%3C/g%3E%3C/svg%3E");
+    --atmos-base: #130D1D;
+    --atmos: radial-gradient(1000px 600px at 50% 0%, rgba(124,84,176,.30), transparent 62%), radial-gradient(900px 620px at 100% 42%, rgba(242,140,110,.15), transparent 66%), radial-gradient(820px 620px at 0% 78%, rgba(247,200,115,.10), transparent 66%), linear-gradient(180deg, #1C1430 0%, #160F22 45%, #110B18 100%);
+  }
+  /* The scene sits under the text; the inline padding-bottom on the guide and
+     experience heroes is overridden so the pyramids never meet the summary. */
+  .themed-sunrise .phero { position: relative; padding-bottom: max(224px, calc(13.4vw + 52px)) !important;
+    background: radial-gradient(900px 460px at 50% 0%, rgba(124,84,176,.24), transparent 64%); }
+  .themed-sunrise .phero > .wrap { position: relative; z-index: 2; }
+  .themed-sunrise .phero h1 { text-shadow: 0 0 46px rgba(247,178,103,.28); }
+  .sth-horizon { animation: sth-dawn 9s ease-out both; }
+  .sth-sky { position: absolute; inset: 0;
+    background: linear-gradient(0deg, rgba(255,196,120,.50) 0, rgba(242,146,104,.36) 110px, rgba(196,96,128,.24) 240px, rgba(110,70,150,.14) 400px, transparent 620px);
+    animation: sth-dawn 9s ease-out both; }
+  @keyframes sth-dawn { from { opacity: .35; } }
+  .sth-laststar { position: absolute; width: 2px; height: 2px; border-radius: 50%; background: #FFF4E0;
+    box-shadow: 0 0 6px rgba(255,244,224,.8); animation: sth-twinkle 6s ease-in-out infinite; }
+  @keyframes sth-twinkle { 0%,100% { opacity: .15; } 50% { opacity: .8; } }
+  .sth-sunscene { position: absolute; left: 0; bottom: -1px; width: 100%; height: 460px; }
+  .sth-sun-rise { animation: sth-sunup 9s cubic-bezier(.22,.61,.36,1) both; }
+  @keyframes sth-sunup { from { transform: translateY(64px); } }
+  .sth-sun-rays { transform-origin: 695px 372px; animation: sth-spin 200s linear infinite; }
+  .sth-sun-halo { transform-origin: 695px 372px; animation: sth-breathe 8s ease-in-out infinite; }
+  @keyframes sth-breathe { 0%,100% { transform: scale(1); opacity: .85; } 50% { transform: scale(1.1); opacity: 1; } }
+  .sth-mist { animation: sth-mist 36s ease-in-out infinite alternate; }
+  .sth-mist2 { animation-duration: 48s; animation-direction: alternate-reverse; }
+  @keyframes sth-mist { from { transform: translateX(-40px); } to { transform: translateX(40px); } }
+  .sth-flock { animation: sth-flock 90s linear infinite; }
+  @keyframes sth-flock { from { transform: translate(-80px, 0); } 50% { transform: translate(600px, -16px); } to { transform: translate(1280px, 0); } }
+  .sth-gdust { position: absolute; bottom: 12%; width: 5px; height: 5px; border-radius: 50%; opacity: 0;
+    background: radial-gradient(circle, #FFE9C7, rgba(247,200,115,0) 70%); animation: sth-goldrise 18s ease-in-out infinite; }
+  @keyframes sth-goldrise { 0% { transform: translate(0, 0); opacity: 0; } 20% { opacity: .9; } 100% { transform: translate(24px, -320px); opacity: 0; } }
+  .sth-zen { position: absolute; left: 10%; bottom: 18px; transform-origin: 50% 100%;
+    filter: drop-shadow(0 0 12px rgba(247,178,103,.4)); animation: sth-breath 8s ease-in-out infinite; }
+  @keyframes sth-breath { 0%,100% { transform: scale(1); } 50% { transform: scale(1.025); } }
+  @media(max-width:600px){
+    .themed-sunrise .phero { padding-bottom: 160px !important; }
+    .sth-sunscene { height: 330px; }
+    .sth-zen { left: 4%; bottom: 6px; width: 42px; height: 39px; }
+    .sth-gdust:nth-of-type(n+10) { display: none; }
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .sth-lantern, .sth-star, .sth-petal, .sth-bubble, .sth-mote, .sth-conf,
     .sth-summer-rays, .sth-felucca, .sth-corona-glow, .sth-bulb, .sth-halo, .sth-flake,
     .sth-xglow, .sth-spark, .sth-gulls, .sth-streams, .sth-shoot, .sth-orb, .sth-balloon,
-    .sth-caravan, .sth-heart, .sth-pballoon, .sth-kite { animation: none !important; }
+    .sth-caravan, .sth-heart, .sth-pballoon, .sth-kite, .sth-sky, .sth-horizon, .sth-laststar,
+    .sth-sun-rise, .sth-sun-rays, .sth-sun-halo, .sth-mist, .sth-flock, .sth-gdust,
+    .sth-zen { animation: none !important; }
     .sth-petal, .sth-bubble, .sth-mote, .sth-conf, .sth-flake, .sth-shoot, .sth-orb,
-    .sth-heart, .sth-pballoon { display: none; }
+    .sth-heart, .sth-pballoon, .sth-gdust { display: none; }
   }
 </style>

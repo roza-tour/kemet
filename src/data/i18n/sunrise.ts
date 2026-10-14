@@ -9,7 +9,9 @@
 // written first, is itAlbaPiramidi in it-extra.ts.
 //
 // What these pages do NOT promise, because it was not confirmed: a yoga
-// teacher, a mat, or a photographer. Guests bring their own; the pages say so.
+// teacher or a mat; guests bring their own. A professional photographer IS
+// arranged on request — confirmed by the owner on 13 Oct 2026, with flowers
+// and decoration for a proposal or a wedding-dress shoot (see honeymoon.ts).
 //
 // Standalone pages rather than a translation group: a group needs every
 // locale and an English page built from the same template, and the English
@@ -35,7 +37,7 @@ function photos(alt: [string, string, string, string], label: [string, string, s
 export const deSunrise: LocalizedPage = {
   groupId: "standalone-de-sunrise",
   symbol: "sun",
-  theme: "sun-festival",
+  theme: "sunrise",
   title: "Sonnenaufgang Pyramiden Gizeh: Yoga & Fotoshooting | Kemet",
   description:
     "Vor Sonnenaufgang an einem ruhigen Aussichtspunkt mit allen neun Pyramiden von Gizeh — Zeit für Yoga oder ein Fotoshooting, danach das Plateau vor der Öffnung.",
@@ -62,7 +64,7 @@ export const deSunrise: LocalizedPage = {
     {
       title: "Die erste Stunde gehört Ihnen",
       body:
-        "Was Sie mit ihr machen, entscheiden Sie: eine Yogamatte ausrollen und den Sonnengruß wörtlich nehmen, ein Fotoshooting im weichen Morgenlicht — mit Ihrer Kamera oder Ihrem eigenen Fotografen — oder einfach sitzen und schauen. Ihr Ägyptologe hält sich zurück und lässt Ihnen Raum und Zeit.",
+        "Was Sie mit ihr machen, entscheiden Sie: eine Yogamatte ausrollen und den Sonnengruß wörtlich nehmen, ein Fotoshooting im weichen Morgenlicht — mit einem Fotografen, den wir auf Wunsch organisieren, oder mit Ihrer eigenen Kamera — oder einfach sitzen und schauen. Ihr Ägyptologe hält sich zurück und lässt Ihnen Raum und Zeit.",
     },
     {
       title: "Danach das Plateau, vor der Öffnung",
@@ -105,7 +107,7 @@ export const deSunrise: LocalizedPage = {
     },
     {
       q: "Können wir dort Yoga machen oder ein Fotoshooting?",
-      a: "Ja — genau dafür ist die Zeit am Aussichtspunkt da. Bringen Sie eine Matte für Yoga mit, oder Ihre Kamera beziehungsweise Ihren eigenen Fotografen für ein Shooting. Um diese Stunde ist es dort ruhig, und Ihr Ägyptologe lässt Ihnen Raum und Zeit, bevor der Besuch auf dem Plateau beginnt.",
+      a: "Ja — genau dafür ist die Zeit am Aussichtspunkt da. Bringen Sie eine Matte für Yoga mit; für ein Shooting organisieren wir auf Wunsch einen professionellen Fotografen — auch für ein Shooting im Brautkleid oder einen Heiratsantrag, mit Blumen, die bereitstehen, bevor Sie ankommen. Um diese Stunde ist es dort ruhig, und Ihr Ägyptologe lässt Ihnen Raum und Zeit, bevor der Besuch auf dem Plateau beginnt.",
     },
     {
       q: "Ist das für Kinder geeignet?",
@@ -136,7 +138,7 @@ export const deSunrise: LocalizedPage = {
 export const frSunrise: LocalizedPage = {
   groupId: "standalone-fr-sunrise",
   symbol: "sun",
-  theme: "sun-festival",
+  theme: "sunrise",
   title: "Lever du soleil aux pyramides : yoga et photos | Kemet",
   description:
     "Avant l'aube, un point de vue tranquille sur les neuf pyramides de Gizeh — yoga ou séance photo — puis le plateau avant l'ouverture, avec votre égyptologue.",
@@ -163,7 +165,7 @@ export const frSunrise: LocalizedPage = {
     {
       title: "La première heure est à vous",
       body:
-        "C'est vous qui décidez : dérouler un tapis et faire votre yoga face au soleil levant, organiser une séance photo dans la lumière douce du matin — avec votre appareil ou votre propre photographe —, ou simplement vous asseoir et regarder. Votre égyptologue se met en retrait et vous laisse l'espace et le temps.",
+        "C'est vous qui décidez : dérouler un tapis et faire votre yoga face au soleil levant, organiser une séance photo dans la lumière douce du matin — avec un photographe professionnel que nous organisons sur demande, ou votre propre appareil —, ou simplement vous asseoir et regarder. Votre égyptologue se met en retrait et vous laisse l'espace et le temps.",
     },
     {
       title: "Puis le plateau, avant l'ouverture",
@@ -206,7 +208,7 @@ export const frSunrise: LocalizedPage = {
     },
     {
       q: "Peut-on y faire du yoga ou une séance photo ?",
-      a: "Oui — c'est précisément à cela que sert le temps passé au point de vue. Apportez un tapis pour le yoga, ou votre appareil, voire votre propre photographe, pour une séance photo. L'endroit est calme à cette heure, et votre égyptologue vous laisse l'espace et le temps avant la visite du plateau.",
+      a: "Oui — c'est précisément à cela que sert le temps passé au point de vue. Apportez un tapis pour le yoga ; pour une séance photo, nous organisons sur demande un photographe professionnel — y compris pour une séance en robe de mariée ou une demande en mariage, avec des fleurs installées avant votre arrivée. L'endroit est calme à cette heure, et votre égyptologue vous laisse l'espace et le temps avant la visite du plateau.",
     },
     {
       q: "Est-ce adapté aux enfants ?",
@@ -237,7 +239,7 @@ export const frSunrise: LocalizedPage = {
 export const esSunrise: LocalizedPage = {
   groupId: "standalone-es-sunrise",
   symbol: "sun",
-  theme: "sun-festival",
+  theme: "sunrise",
   title: "Amanecer en las pirámides de Giza: yoga y fotos | Kemet",
   description:
     "Antes del amanecer, un mirador tranquilo frente a las nueve pirámides de Giza — tiempo para yoga o una sesión de fotos — y luego la meseta antes de que abra.",
@@ -264,7 +266,7 @@ export const esSunrise: LocalizedPage = {
     {
       title: "La primera hora es suya",
       body:
-        "Lo que hagan con ella lo deciden ustedes: extender una esterilla y hacer yoga frente al sol que sale, una sesión de fotos con la luz suave de la mañana — con su cámara o con su propio fotógrafo — o simplemente sentarse a mirar. Su egiptólogo se queda en segundo plano y les deja el espacio y el tiempo.",
+        "Lo que hagan con ella lo deciden ustedes: extender una esterilla y hacer yoga frente al sol que sale, una sesión de fotos con la luz suave de la mañana — con un fotógrafo profesional que organizamos a petición, o con su propia cámara — o simplemente sentarse a mirar. Su egiptólogo se queda en segundo plano y les deja el espacio y el tiempo.",
     },
     {
       title: "Después, la meseta antes de que abra",
@@ -307,7 +309,7 @@ export const esSunrise: LocalizedPage = {
     },
     {
       q: "¿Se puede hacer yoga o una sesión de fotos allí?",
-      a: "Sí — para eso es el tiempo en el mirador. Traigan una esterilla para el yoga, o su cámara, o su propio fotógrafo, para una sesión de fotos. A esa hora el lugar está tranquilo, y su egiptólogo les deja el espacio y el tiempo antes de la visita a la meseta.",
+      a: "Sí — para eso es el tiempo en el mirador. Traigan una esterilla para el yoga; para una sesión de fotos organizamos a petición un fotógrafo profesional, también para una sesión con el vestido de novia o una pedida de mano, con flores colocadas antes de que lleguen. A esa hora el lugar está tranquilo, y su egiptólogo les deja el espacio y el tiempo antes de la visita a la meseta.",
     },
     {
       q: "¿Es adecuado para niños?",
@@ -338,7 +340,7 @@ export const esSunrise: LocalizedPage = {
 export const ruSunrise: LocalizedPage = {
   groupId: "standalone-ru-sunrise",
   symbol: "sun",
-  theme: "sun-festival",
+  theme: "sunrise",
   title: "Рассвет у пирамид Гизы: йога и фотосессия | Kemet",
   description:
     "До восхода — тихая смотровая точка, откуда видны все девять пирамид Гизы: время для йоги или фотосессии, а затем плато до открытия, с вашим египтологом.",
@@ -365,7 +367,7 @@ export const ruSunrise: LocalizedPage = {
     {
       title: "Первый час — ваш",
       body:
-        "Как его провести, решаете вы: расстелить коврик и заняться йогой навстречу восходящему солнцу, устроить фотосессию в мягком утреннем свете — со своей камерой или своим фотографом — или просто сидеть и смотреть. Ваш египтолог держится в стороне и даёт вам и пространство, и время.",
+        "Как его провести, решаете вы: расстелить коврик и заняться йогой навстречу восходящему солнцу, устроить фотосессию в мягком утреннем свете — с профессиональным фотографом, которого мы организуем по запросу, или со своей камерой — или просто сидеть и смотреть. Ваш египтолог держится в стороне и даёт вам и пространство, и время.",
     },
     {
       title: "Затем плато — до открытия",
@@ -408,7 +410,7 @@ export const ruSunrise: LocalizedPage = {
     },
     {
       q: "Можно ли там заняться йогой или устроить фотосессию?",
-      a: "Да — именно для этого и нужно время на смотровой точке. Возьмите коврик для йоги или камеру, а то и своего фотографа, для фотосессии. В этот час там тихо, и ваш египтолог даёт вам пространство и время до начала осмотра плато.",
+      a: "Да — именно для этого и нужно время на смотровой точке. Возьмите коврик для йоги; для фотосессии мы по запросу организуем профессионального фотографа — в том числе для съёмки в свадебном платье или предложения руки и сердца, с цветами, подготовленными заранее. В этот час там тихо, и ваш египтолог даёт вам пространство и время до начала осмотра плато.",
     },
     {
       q: "Подходит ли это детям?",
@@ -439,7 +441,7 @@ export const ruSunrise: LocalizedPage = {
 export const ptSunrise: LocalizedPage = {
   groupId: "standalone-pt-sunrise",
   symbol: "sun",
-  theme: "sun-festival",
+  theme: "sunrise",
   title: "Nascer do sol nas pirâmides de Gizé: ioga e fotos | Kemet",
   description:
     "Antes do sol nascer, um mirante tranquilo diante das nove pirâmides de Gizé — tempo para ioga ou um ensaio fotográfico — e depois o planalto antes de abrir.",
@@ -466,7 +468,7 @@ export const ptSunrise: LocalizedPage = {
     {
       title: "A primeira hora é sua",
       body:
-        "O que fazer com ela, você decide: estender um tapete e fazer ioga de frente para o sol nascendo, um ensaio fotográfico na luz suave da manhã — com a sua câmera ou o seu próprio fotógrafo — ou simplesmente sentar e olhar. O seu egiptólogo fica em segundo plano e deixa a você o espaço e o tempo.",
+        "O que fazer com ela, você decide: estender um tapete e fazer ioga de frente para o sol nascendo, um ensaio fotográfico na luz suave da manhã — com um fotógrafo profissional que providenciamos sob pedido, ou com a sua própria câmera — ou simplesmente sentar e olhar. O seu egiptólogo fica em segundo plano e deixa a você o espaço e o tempo.",
     },
     {
       title: "Depois, o planalto antes de abrir",
@@ -509,7 +511,7 @@ export const ptSunrise: LocalizedPage = {
     },
     {
       q: "Dá para fazer ioga ou um ensaio fotográfico lá?",
-      a: "Sim — é para isso que serve o tempo no mirante. Traga um tapete para a ioga, ou a sua câmera, ou o seu próprio fotógrafo, para um ensaio. A essa hora o lugar está tranquilo, e o seu egiptólogo deixa a você o espaço e o tempo antes da visita ao planalto.",
+      a: "Sim — é para isso que serve o tempo no mirante. Traga um tapete para a ioga; para um ensaio, providenciamos sob pedido um fotógrafo profissional — também para um ensaio com vestido de noiva ou um pedido de casamento, com flores arrumadas antes da sua chegada. A essa hora o lugar está tranquilo, e o seu egiptólogo deixa a você o espaço e o tempo antes da visita ao planalto.",
     },
     {
       q: "É adequado para crianças?",
@@ -540,7 +542,7 @@ export const ptSunrise: LocalizedPage = {
 export const idSunrise: LocalizedPage = {
   groupId: "standalone-id-sunrise",
   symbol: "sun",
-  theme: "sun-festival",
+  theme: "sunrise",
   title: "Matahari Terbit di Piramida Giza: Yoga & Sesi Foto | Kemet",
   description:
     "Sebelum matahari terbit di titik pandang yang tenang menghadap sembilan piramida Giza — waktu untuk yoga atau sesi foto — lalu kompleks piramida sebelum dibuka.",
@@ -567,7 +569,7 @@ export const idSunrise: LocalizedPage = {
     {
       title: "Satu jam pertama milik Anda",
       body:
-        "Anda yang menentukan: menggelar matras dan beryoga menghadap matahari terbit, mengadakan sesi foto dalam cahaya pagi yang lembut — dengan kamera Anda sendiri atau fotografer Anda — atau sekadar duduk dan menikmati. Egyptologist Anda menepi dan memberi Anda ruang serta waktu.",
+        "Anda yang menentukan: menggelar matras dan beryoga menghadap matahari terbit, mengadakan sesi foto dalam cahaya pagi yang lembut — dengan fotografer profesional yang kami siapkan atas permintaan, atau dengan kamera Anda sendiri — atau sekadar duduk dan menikmati. Egyptologist Anda menepi dan memberi Anda ruang serta waktu.",
     },
     {
       title: "Lalu kompleks piramida, sebelum dibuka",
@@ -610,7 +612,7 @@ export const idSunrise: LocalizedPage = {
     },
     {
       q: "Bisakah kami beryoga atau mengadakan sesi foto di sana?",
-      a: "Bisa — memang untuk itulah waktu di titik pandang. Bawalah matras untuk yoga, atau kamera Anda, bahkan fotografer Anda sendiri, untuk sesi foto. Pada jam itu tempatnya tenang, dan Egyptologist Anda memberi ruang serta waktu sebelum kunjungan ke kompleks piramida dimulai.",
+      a: "Bisa — memang untuk itulah waktu di titik pandang. Bawalah matras untuk yoga; untuk sesi foto, kami menyiapkan fotografer profesional atas permintaan — termasuk untuk foto pengantin atau lamaran, dengan bunga yang ditata sebelum Anda tiba. Pada jam itu tempatnya tenang, dan Egyptologist Anda memberi ruang serta waktu sebelum kunjungan ke kompleks piramida dimulai.",
     },
     {
       q: "Apakah cocok untuk anak-anak?",
@@ -641,7 +643,7 @@ export const idSunrise: LocalizedPage = {
 export const msSunrise: LocalizedPage = {
   groupId: "standalone-ms-sunrise",
   symbol: "sun",
-  theme: "sun-festival",
+  theme: "sunrise",
   title: "Matahari Terbit di Piramid Giza: Yoga & Sesi Foto | Kemet",
   description:
     "Sebelum matahari terbit di titik pandang yang tenang menghadap sembilan piramid Giza — yoga atau sesi foto — kemudian kompleks piramid sebelum dibuka.",
@@ -668,7 +670,7 @@ export const msSunrise: LocalizedPage = {
     {
       title: "Sejam pertama milik anda",
       body:
-        "Anda yang menentukan: membentang tikar dan beryoga menghadap matahari terbit, mengadakan sesi foto dalam cahaya pagi yang lembut — dengan kamera anda atau jurugambar anda sendiri — atau sekadar duduk dan menikmati. Egyptologist anda berundur ke tepi dan memberi anda ruang serta masa.",
+        "Anda yang menentukan: membentang tikar dan beryoga menghadap matahari terbit, mengadakan sesi foto dalam cahaya pagi yang lembut — dengan jurugambar profesional yang kami aturkan atas permintaan, atau dengan kamera anda sendiri — atau sekadar duduk dan menikmati. Egyptologist anda berundur ke tepi dan memberi anda ruang serta masa.",
     },
     {
       title: "Kemudian kompleks piramid, sebelum dibuka",
@@ -711,7 +713,7 @@ export const msSunrise: LocalizedPage = {
     },
     {
       q: "Bolehkah kami beryoga atau mengadakan sesi foto di sana?",
-      a: "Boleh — memang untuk itulah masa di titik pandang. Bawa tikar untuk yoga, atau kamera anda, malah jurugambar anda sendiri, untuk sesi foto. Pada waktu itu tempatnya tenang, dan Egyptologist anda memberi ruang serta masa sebelum lawatan ke kompleks piramid bermula.",
+      a: "Boleh — memang untuk itulah masa di titik pandang. Bawa tikar untuk yoga; untuk sesi foto, kami mengaturkan jurugambar profesional atas permintaan — termasuk untuk fotografi pengantin atau lamaran, dengan bunga yang disediakan sebelum anda tiba. Pada waktu itu tempatnya tenang, dan Egyptologist anda memberi ruang serta masa sebelum lawatan ke kompleks piramid bermula.",
     },
     {
       q: "Adakah ia sesuai untuk kanak-kanak?",
@@ -742,7 +744,7 @@ export const msSunrise: LocalizedPage = {
 export const arSunrise: LocalizedPage = {
   groupId: "standalone-ar-sunrise",
   symbol: "sun",
-  theme: "sun-festival",
+  theme: "sunrise",
   title: "شروق الشمس عند أهرامات الجيزة: يوغا وجلسة تصوير | كيميت",
   description:
     "قبل الشروق في نقطة مطلّة هادئة تُرى منها أهرامات الجيزة التسعة — وقت لليوغا أو جلسة تصوير — ثم هضبة الأهرامات قبل فتحها للزوار، مع خبير آثار مرخَّص.",
@@ -769,7 +771,7 @@ export const arSunrise: LocalizedPage = {
     {
       title: "الساعة الأولى لكم",
       body:
-        "أنتم من يقرّر كيف تقضونها: فرش سجادة اليوغا ومواجهة الشمس وهي تشرق، أو جلسة تصوير في ضوء الصباح الناعم — بكاميرتكم أو بمصوّركم الخاص — أو الجلوس والتأمل فحسب. يبتعد خبير الآثار قليلاً ويترك لكم المكان والوقت.",
+        "أنتم من يقرّر كيف تقضونها: فرش سجادة اليوغا ومواجهة الشمس وهي تشرق، أو جلسة تصوير في ضوء الصباح الناعم — مع مصوّر محترف نرتّبه عند الطلب، أو بكاميرتكم — أو الجلوس والتأمل فحسب. يبتعد خبير الآثار قليلاً ويترك لكم المكان والوقت.",
     },
     {
       title: "ثم الهضبة، قبل أن تُفتح",
@@ -812,7 +814,7 @@ export const arSunrise: LocalizedPage = {
     },
     {
       q: "هل يمكن ممارسة اليوغا أو إقامة جلسة تصوير هناك؟",
-      a: "نعم — فهذا بالضبط ما خُصّص له الوقت عند النقطة المطلّة. أحضروا سجادة لليوغا، أو كاميرتكم، أو مصوّركم الخاص لجلسة التصوير. المكان هادئ في تلك الساعة، ويترك لكم خبير الآثار المكان والوقت قبل أن تبدأ زيارة الهضبة.",
+      a: "نعم — فهذا بالضبط ما خُصّص له الوقت عند النقطة المطلّة. أحضروا سجادة لليوغا؛ ولجلسة التصوير نرتّب عند الطلب مصوّراً محترفاً — ومنها جلسة بفستان الزفاف أو طلب زواج، مع ورد مهيّأ قبل وصولكم. المكان هادئ في تلك الساعة، ويترك لكم خبير الآثار المكان والوقت قبل أن تبدأ زيارة الهضبة.",
     },
     {
       q: "هل تناسب الأطفال؟",

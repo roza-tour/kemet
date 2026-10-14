@@ -243,7 +243,7 @@ export const itMongolfiera: LocalizedPage = {
 export const itAlbaPiramidi: LocalizedPage = {
   groupId: "standalone-it-alba-piramidi",
   symbol: "eye",
-  theme: "sun-festival",
+  theme: "sunrise",
   title: "Alba alle Piramidi di Giza: yoga e servizio fotografico | Kemet",
   description:
     "Prima dell'alba, un punto panoramico tranquillo sulle nove piramidi di Giza — tempo per lo yoga o un servizio fotografico — poi l'altopiano prima dell'apertura.",
@@ -270,7 +270,7 @@ export const itAlbaPiramidi: LocalizedPage = {
     {
       title: "La prima ora è vostra",
       body:
-        "Siete voi a decidere: stendere un tappetino e fare yoga davanti al sole che sorge, un servizio fotografico nella luce morbida del mattino — con la vostra macchina o con un vostro fotografo — oppure sedersi e guardare. La vostra guida si fa da parte e vi lascia spazio e tempo.",
+        "Siete voi a decidere: stendere un tappetino e fare yoga davanti al sole che sorge, un servizio fotografico nella luce morbida del mattino — con un fotografo professionista che organizziamo su richiesta, o con la vostra macchina — oppure sedersi e guardare. La vostra guida si fa da parte e vi lascia spazio e tempo.",
     },
     {
       title: "Poi l'altopiano, prima dell'apertura",
@@ -330,7 +330,7 @@ export const itAlbaPiramidi: LocalizedPage = {
     },
     {
       q: "Si può fare yoga o un servizio fotografico?",
-      a: "Sì — il tempo al punto panoramico serve proprio a questo. Portate un tappetino per lo yoga, oppure la vostra macchina fotografica o un vostro fotografo per un servizio. A quell'ora il luogo è tranquillo, e la guida vi lascia spazio e tempo prima della visita all'altopiano.",
+      a: "Sì — il tempo al punto panoramico serve proprio a questo. Portate un tappetino per lo yoga; per un servizio fotografico organizziamo su richiesta un fotografo professionista — anche per un servizio in abito da sposa o una proposta di matrimonio, con fiori pronti prima del vostro arrivo. A quell'ora il luogo è tranquillo, e la guida vi lascia spazio e tempo prima della visita all'altopiano.",
     },
     {
       q: "La guida parla italiano?",

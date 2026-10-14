@@ -137,7 +137,8 @@ export type SeasonalTheme =
   | "red-sea"
   | "honeymoon"
   | "eclipse"
-  | "family";
+  | "family"
+  | "sunrise";
 
 /** A short story set apart under a collection's hero (CollectionStory.astro). */
 export interface CollectionStory {
@@ -542,6 +543,9 @@ export interface Destination extends ContentEntity {
  */
 export interface Experience extends ContentEntity {
   domain: "experience";
+
+  /** Ornament and palette for the page (SeasonalTheme.astro) — the sunrise experience. */
+  theme?: SeasonalTheme;
 
   // Copy
   /** 1–2 sentence factual summary — meta description source and AI snippet. */

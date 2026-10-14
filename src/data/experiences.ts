@@ -88,6 +88,7 @@ export const experiences: Experience[] = [
       "A wide-angle lens captures all nine pyramids in a single frame from the viewpoint",
       "Planning sunrise yoga? Bring your own mat — the ground is sand and gravel",
       "For a photo session, be ready at sunrise: the softest light lasts only a short while",
+      "A professional photographer can be arranged on request — tell us when you book",
     ],
     goodToKnow: [
       "The Egyptian authorities occasionally restrict early access for filming or official events — alternative times are arranged in this case",
@@ -113,9 +114,14 @@ export const experiences: Experience[] = [
       },
       {
         q: "Can we do yoga or a photo shoot there?",
-        a: "Yes — that is what the time at the viewpoint is for. Bring a mat for sunrise yoga, or your camera, or a photographer of your own, for a photo session. The spot is quiet at that hour, and your guide gives you the space and the time before the plateau visit begins.",
+        a: "Yes — that is what the time at the viewpoint is for. Bring a mat for sunrise yoga; for a photo session we arrange a professional photographer on request, or bring your own camera. The spot is quiet at that hour, and your guide gives you the space and the time before the plateau visit begins.",
+      },
+      {
+        q: "Can we propose, or do a wedding-dress photo shoot, at the viewpoint?",
+        a: "Yes. At sunrise the viewpoint is quiet, and all nine pyramids stand behind you. We arrange a professional photographer — for a portrait session in your wedding clothes, or to photograph a proposal from a distance without being seen — and flowers set at the place before you arrive. If it is a proposal, we keep it secret from your partner.",
       },
     ],
+    theme: "sunrise",
     hero: {
       alt: "A decorated camel resting before the Pyramids of Giza in warm early light",
       label: "Sunrise at the Giza Pyramids",
