@@ -215,7 +215,7 @@ const keywords = [
           <aside class="side side-lead">
             <div class="pcard reveal">
               <div class="from">From</div>
-              <div class="big">
+              <div class="big" data-eur={tour.price}>
                 {formatPrice(tour.price)}
                 {tour.was && <span class="was">{formatPrice(tour.was)}</span>}
               </div>

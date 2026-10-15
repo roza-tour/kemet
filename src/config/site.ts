@@ -17,6 +17,14 @@ export const SITE_URL = (env.PUBLIC_SITE_URL ?? "https://kemet-travel.com").repl
 /** Pricing/format constants. */
 export const CURRENCY = "EUR";
 export const CURRENCY_SYMBOL = "€";
+/**
+ * Reference rates for the approximate dollar figure shown beside a price to
+ * visitors in the Americas only (Base.astro). Prices are set in euros and stay
+ * the headline everywhere; these only translate them for a reader who thinks in
+ * dollars. European Central Bank reference rates — refresh from
+ * https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml now and then.
+ */
+export const FX = { date: "2026-10-14", USD: 1.1195, CAD: 1.5918 } as const;
 /** Locale used for number formatting (en-IE renders EUR as "€1,741"). */
 export const NUMBER_LOCALE = "en-IE";
 

@@ -2,7 +2,7 @@
 import "@/styles/fonts.css";
 import "@/styles/global.css";
 import {
-  site, OG_LOCALE,
+  site, OG_LOCALE, FX,
   OG_IMAGE_WIDTH, OG_IMAGE_HEIGHT,
   GEO_REGION, GEO_PLACENAME, GEO_POSITION,
 } from "@/config/site";
@@ -260,5 +260,30 @@ const ogLocaleAlternates = alternates
       so it costs no layout, and it asks nothing until the page is up. */}
   <ConsentBanner locale={pageLocale} />
   <script>import "../scripts/enhance.client.js";</script>
+  {/* For visitors in the Americas only — decided by the device's time zone,
+      not its language, because many Europeans browse in American English —
+      each price gains an approximate dollar figure beneath it (Canadian
+      dollars in Canada). Prices stay set and shown in euros; in Europe and
+      everywhere else nothing on the page changes. */}
+  <script is:inline define:vars={{ fx: FX }}>
+    (function () {
+      try {
+        var tz = (Intl.DateTimeFormat().resolvedOptions().timeZone || "");
+        if (tz.indexOf("America/") !== 0) return;
+        var langs = (navigator.languages || [navigator.language || ""]).join(" ");
+        var canada = /^America\/(Toronto|Montreal|Vancouver|Edmonton|Winnipeg|Halifax|St_Johns|Regina|Moncton|Whitehorse|Yellowknife|Iqaluit|Glace_Bay|Goose_Bay|Swift_Current|Dawson_Creek|Fort_Nelson|Creston|Atikokan|Rankin_Inlet|Resolute|Cambridge_Bay|Inuvik|Dawson|Nipigon|Thunder_Bay|Rainy_River|Pangnirtung)$/.test(tz) || /-CA\b/i.test(langs);
+        var rate = canada ? fx.CAD : fx.USD, sym = canada ? "CA$" : "US$";
+        var els = document.querySelectorAll("[data-eur]");
+        for (var i = 0; i < els.length; i++) {
+          var v = Math.round(Number(els[i].getAttribute("data-eur")) * rate);
+          if (!v) continue;
+          var s = document.createElement("small");
+          s.className = "fx";
+          s.textContent = "\u2248 " + sym + v.toLocaleString("en-US");
+          els[i].appendChild(s);
+        }
+      } catch (e) {}
+    })();
+  </script>
 </body>
 </html>

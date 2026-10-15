@@ -187,7 +187,7 @@ const jsonld: Record<string, unknown>[] = [
       {/* The price, and what it is — said in the same breath, because the
           number alone invites the question the note answers. */}
       <div class="lt-price reveal">
-        <div>
+        <div data-eur={tour.price}>
           <span class="lt-from">{p.f.from}</span>
           <span class="lt-amount">{formatPrice(tour.price)}</span>
           <span class="lt-pp">{t.perPerson}</span>

@@ -50,7 +50,7 @@ const route = tour.cities.map((c) => placeName(c, t)).join(" · ");
     <div class="route">{route}</div>
     <p>{cardSummary}</p>
     <div class="meta">
-      <div class="price">
+      <div class="price" data-eur={tour.price}>
         {formatPrice(tour.price)}
         {tour.was && <span class="was">{formatPrice(tour.was)}</span>}
         <small>{t.perPerson}</small>

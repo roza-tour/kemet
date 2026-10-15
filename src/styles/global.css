@@ -1185,3 +1185,7 @@ footer{background:var(--ink-2);border-top:1px solid var(--line);padding:var(--s-
 .lhint--away{opacity:0;pointer-events:none;transform:translateY(-8px)}
 @media(max-width:680px){.lhint,.lhint[dir="rtl"]{top:80px;left:16px;right:16px;max-width:none}}
 @media(prefers-reduced-motion:reduce){.lhint{transition:none}}
+
+/* The approximate dollar figure added under a price for visitors in the
+   Americas only (Base.astro). Quiet: the euro price stays the headline. */
+small.fx{display:block;margin-top:2px;font-family:var(--ff-body);font-size:var(--t-micro);font-weight:400;letter-spacing:.04em;line-height:1.4;color:var(--muted-2);text-transform:none}
