@@ -105,7 +105,7 @@ const sunriseCredit = creditFor(SUNRISE_PHOTO);
  * print one. `hot` ones steam.
  */
 const FEAST_PLATES = [
-  { src: "/images/stock/koshari.webp", w: 736, h: 736, hot: true },
+  { src: "/images/food/koshari-sauce-pour.webp", w: 720, h: 900, hot: true, pos: "50% 62%" },
   { src: "/images/food/ful-medames-bowl.webp", w: 702, h: 437, hot: true },
   { src: "/images/food/kunafa-pistachio.webp", w: 736, h: 920, hot: false },
   { src: "/images/food/hamam-mahshi.webp", w: 735, h: 478, hot: true },
@@ -644,7 +644,7 @@ function dates(x: number, y: number): Array<{ cx: number; cy: number }> {
     {FEAST_PLATES.map((pl, i) => (
       <div class={`sth-plate sth-plate${i}`}>
         <img src={pl.src} srcset={srcsetFor(pl.src)} sizes="(max-width: 760px) 90px, 230px"
-             width={pl.w} height={pl.h} alt="" decoding="async" />
+             width={pl.w} height={pl.h} alt="" decoding="async" style={pl.pos && `object-position:${pl.pos}`} />
         {pl.hot && <span class="sth-steam"><i></i><i></i><i></i></span>}
       </div>
     ))}

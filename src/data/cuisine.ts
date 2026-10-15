@@ -7,7 +7,7 @@ import type { Dish } from "@/types";
 export const savoury: Dish[] = [
   {
     name: "Koshari",
-    image: { alt: "A bowl of koshari topped with tomato sauce, fried onions and parsley", src: "/images/stock/koshari.webp", width: 736, height: 736 },
+    image: { alt: "Koshari, with tomato sauce poured over pasta, lentils, chickpeas and crisp fried onions", src: "/images/food/koshari-sauce-pour.webp", width: 720, height: 900 },
     note: "Egypt's beloved national dish — rice, lentils, macaroni and chickpeas under crisp fried onions and a tangy tomato-garlic sauce.",
   },
   {

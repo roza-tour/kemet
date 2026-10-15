@@ -25,7 +25,7 @@ export const ms: TourText[] = [
       {
         title: "Koshari",
         text: "Bermula dengan hidangan kebangsaan Mesir — koshari, lapisan nasi, kacang dal, pasta dan kacang kuda yang mengenyangkan, di bawah bawang goreng rangup dan sos tomato yang masam segar.",
-        photos: [{ alt: "Semangkuk koshari dengan sos tomato, bawang goreng dan pasli", label: "Koshari" }],
+        photos: [{ alt: "Koshari: sos tomato dituang ke atas pasta, kacang dal, kacang kuda dan bawang goreng", label: "Koshari" }],
       },
       {
         title: "Ful dan ta'meya",

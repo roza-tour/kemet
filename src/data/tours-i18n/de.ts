@@ -1778,7 +1778,7 @@ export const de: TourText[] = [
     itinerary: [
       {
         title: "Koshari",
-        text: "Der Anfang mit Ägyptens Nationalgericht — Koshari, eine wohltuende Schichtung aus Reis, Linsen, Nudeln und Kichererbsen unter knusprigen Röstzwiebeln und einer säuerlichen Tomatensauce.", photos: [{ alt: "Eine Schale Koshari mit Tomatensauce, Röstzwiebeln und Petersilie", label: "Koshari" }],
+        text: "Der Anfang mit Ägyptens Nationalgericht — Koshari, eine wohltuende Schichtung aus Reis, Linsen, Nudeln und Kichererbsen unter knusprigen Röstzwiebeln und einer säuerlichen Tomatensauce.", photos: [{ alt: "Koshari: Tomatensauce wird über Nudeln, Linsen, Kichererbsen und Röstzwiebeln gegossen", label: "Koshari" }],
       },
       {
         title: "Ful & Ta'meya",

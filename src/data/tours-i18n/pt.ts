@@ -26,7 +26,7 @@ export const pt: TourText[] = [
       {
         title: "Koshari",
         text: "Começa-se pelo prato nacional do Egito — o koshari, uma camada reconfortante de arroz, lentilha, macarrão e grão-de-bico sob cebola frita crocante e um molho de tomate azedinho.",
-        photos: [{ alt: "Uma tigela de koshari com molho de tomate, cebola frita e salsinha", label: "Koshari" }],
+        photos: [{ alt: "Koshari: o molho de tomate despejado sobre o macarrão, as lentilhas, o grão-de-bico e a cebola frita", label: "Koshari" }],
       },
       {
         title: "Ful e ta'meya",

@@ -1121,10 +1121,10 @@ export const tours: Tour[] = [
   {
     slug: "tour-cairo-food",
     hero: {
-      alt: "A bowl of koshari topped with tomato sauce, fried onions and parsley",
-      src: "/images/stock/koshari.webp",
-      width: 736,
-      height: 736,
+      alt: "Koshari, with tomato sauce poured over pasta, lentils, chickpeas and crisp fried onions",
+      src: "/images/food/koshari-sauce-pour.webp",
+      width: 720,
+      height: 900,
     },
     title: "Cairo Authentic Food",
     subtitle:
@@ -1155,7 +1155,7 @@ export const tours: Tour[] = [
         text: "Start with Egypt's national dish — koshari, a comforting layer of rice, lentils, pasta and chickpeas under crisp fried onions and a tangy tomato sauce.",
         native: "كشري",
         photos: [
-          { alt: "A bowl of koshari topped with tomato sauce, fried onions and parsley", label: "Koshari", src: "/images/stock/koshari.webp", width: 736, height: 736 },
+          { alt: "Koshari, with tomato sauce poured over pasta, lentils, chickpeas and crisp fried onions", label: "Koshari", src: "/images/food/koshari-sauce-pour.webp", width: 720, height: 900 },
         ],
       },
       {

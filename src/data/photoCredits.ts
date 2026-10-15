@@ -35,7 +35,6 @@ const C = "https://commons.wikimedia.org/wiki/File:";
 
 export const photoCredits: Record<string, PhotoCredit> = {
   "/images/stock/giza-pyramids-sunrise-sky.webp": { subject: "Sunrise over the pyramids of Giza", creator: "Ben Sutherland", license: "CC BY 2.0", source: "https://www.flickr.com/photos/bensutherland/27684377097" },
-  "/images/stock/koshari.webp": { subject: "Koshari", creator: "Youmna9115", license: "CC0", source: "https://commons.wikimedia.org/w/index.php?curid=188395232" },
   "/images/stock/molokhia.webp": { subject: "Molokhia", creator: "Yosi I", license: "CC BY 2.5", source: `${C}Molokheya_hi_res.JPG` },
   "/images/stock/feteer.webp": { subject: "Feteer meshaltet", creator: "Mohamed Ouda", license: "CC BY-SA 4.0", source: `${C}Egyptian-food-16.jpg` },
   "/images/stock/sayadeya.webp": { subject: "Sayadeya (fish over spiced rice)", creator: "Wikimedia Commons contributor", license: "CC0", source: `${C}Sayadiyah_Fish.jpg` },

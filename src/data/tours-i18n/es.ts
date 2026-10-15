@@ -27,7 +27,7 @@ export const es: TourText[] = [
       {
         title: "Koshari",
         text: "Se empieza con el plato nacional de Egipto: el koshari, una reconfortante combinación de arroz, lentejas, pasta y garbanzos bajo cebolla frita crujiente y una salsa de tomate ácida.",
-        photos: [{ alt: "Un plato de koshari con salsa de tomate, cebolla frita y perejil", label: "Koshari" }],
+        photos: [{ alt: "Koshari: la salsa de tomate vertida sobre la pasta, las lentejas, los garbanzos y la cebolla frita", label: "Koshari" }],
       },
       {
         title: "Ful y ta'meya",
