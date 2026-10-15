@@ -169,7 +169,7 @@ Last updated: 2026-10-15
 
 8 key pages — the home page, private access to monuments, the journeys, the Nile cruise, what it costs, when to go, whether Egypt is safe and Kemet Ultra, the top tier — are published in 9 languages besides English: Deutsch, Italiano, Español, Français, Русский, Bahasa Indonesia, Bahasa Melayu, Português, العربية. Each set is written for its market rather than translated word for word, so the flight times, school holidays, entry rules and reference points differ between them. The translated pages carry the same facts and the same prices.
 
-The whole journey catalogue is also published in Deutsch, Italiano and Français: each journey page is listed under its language below, in that language, with a link to its English original. Experiences, activities, guides and the month-by-month pages are in English only.
+Part of the journey catalogue is also published in Deutsch, Italiano, Español, Français, Русский, Bahasa Indonesia, Bahasa Melayu, Português and العربية: each journey page is listed under its language below, in that language, with a link to its English original. Experiences, activities, guides and the month-by-month pages are in English only.
 
 ### Deutsch (de)
 
@@ -280,6 +280,10 @@ Journeys in Italiano (24), from-prices per person, the same as in English:
 - https://kemet-travel.com/es/luna-de-miel-en-egipto.html — Luna de miel en Egipto: Dos personas, cinco mil años de historia y ningún horario que no sea el suyo.
 - https://kemet-travel.com/es/egipto-con-ninos.html — Egipto con niños: Un viaje que sus hijos contarán algún día a sus propios hijos.
 
+Journeys in Español (1), from-prices per person, the same as in English:
+
+- [El Cairo, con todos sus sabores](https://kemet-travel.com/es/noche-gastronomica-en-el-cairo.html): Noche (unas 4 horas). Una degustación guiada por la noche de los platos más queridos de El Cairo: koshari, ful y ta'meya, hawawshi y pichón a la parrilla, kunafa y basbousa, para terminar en un ahwa tradicional. From €59. English original: https://kemet-travel.com/tour-cairo-food.html
+
 ### Français (fr)
 
 - https://kemet-travel.com/fr/
@@ -342,6 +346,10 @@ Journeys in Français (24), from-prices per person, the same as in English:
 - https://kemet-travel.com/ru/medovyy-mesyats-v-egipte.html — Медовый месяц в Египте: Двое, пять тысяч лет истории — и никакого расписания, кроме вашего собственного.
 - https://kemet-travel.com/ru/egipet-s-detmi.html — Египет с детьми: Путешествие, о котором ваши дети однажды расскажут своим детям.
 
+Journeys in Русский (1), from-prices per person, the same as in English:
+
+- [Каир на вкус](https://kemet-travel.com/ru/gastronomicheskiy-vecher-v-kaire.html): Вечер (около 4 часов). Вечерняя дегустация с гидом самых любимых блюд Каира — кошари, фуль и таамия, хавауши и голубь на гриле, кунафа и басбуса, а в завершение — традиционная ахва. From €59. English original: https://kemet-travel.com/tour-cairo-food.html
+
 ### Bahasa Indonesia (id)
 
 - https://kemet-travel.com/id/
@@ -362,6 +370,10 @@ Journeys in Français (24), from-prices per person, the same as in English:
 - https://kemet-travel.com/id/libur-akhir-tahun-ke-mesir.html — Libur Akhir Tahun di Mesir: Saat libur sekolah dan cuti Natal–Tahun Baru, Mesir sedang di musim terbaiknya: Luxor 24–26°C, udara kering, langit cerah.
 - https://kemet-travel.com/id/bulan-madu-ke-mesir.html — Bulan Madu di Mesir: Berdua, lima ribu tahun sejarah — dan tak ada jadwal selain jadwal kalian sendiri.
 - https://kemet-travel.com/id/liburan-keluarga-ke-mesir.html — Liburan Keluarga di Mesir: Perjalanan yang suatu hari akan diceritakan anak-anak Anda kepada anak-anak mereka.
+
+Journeys in Bahasa Indonesia (1), from-prices per person, the same as in English:
+
+- [Kairo, dari Rasanya](https://kemet-travel.com/id/wisata-kuliner-malam-di-kairo.html): Malam (sekitar 4 jam). Mencicipi hidangan paling dicintai di Kairo bersama pemandu, pada malam hari — koshari, ful dan ta'meya, hawawshi dan merpati panggang, kunafa dan basbousa, ditutup di ahwa tradisional. From €59. English original: https://kemet-travel.com/tour-cairo-food.html
 
 ### Bahasa Melayu (ms)
 
@@ -384,6 +396,10 @@ Journeys in Français (24), from-prices per person, the same as in English:
 - https://kemet-travel.com/ms/bulan-madu-ke-mesir.html — Bulan Madu di Mesir: Berdua, lima ribu tahun sejarah — dan tiada jadual selain jadual anda sendiri.
 - https://kemet-travel.com/ms/percutian-keluarga-ke-mesir.html — Percutian Keluarga di Mesir: Perjalanan yang suatu hari akan diceritakan anak-anak anda kepada anak-anak mereka.
 
+Journeys in Bahasa Melayu (1), from-prices per person, the same as in English:
+
+- [Kaherah, Melalui Rasanya](https://kemet-travel.com/ms/jelajah-makanan-malam-di-kaherah.html): Malam (lebih kurang 4 jam). Merasa hidangan paling digemari di Kaherah bersama pemandu, pada waktu malam — koshari, ful dan ta'meya, hawawshi dan burung merpati panggang, kunafa dan basbousa, diakhiri di ahwa tradisional. From €59. English original: https://kemet-travel.com/tour-cairo-food.html
+
 ### Português (pt)
 
 - https://kemet-travel.com/pt/
@@ -402,6 +418,10 @@ Journeys in Français (24), from-prices per person, the same as in English:
 - https://kemet-travel.com/pt/lua-de-mel-no-egito.html — Lua de mel no Egito: Duas pessoas, cinco mil anos de história — e nenhuma agenda além da de vocês.
 - https://kemet-travel.com/pt/egito-com-criancas.html — Egito com crianças: Uma viagem que seus filhos vão contar um dia para os filhos deles.
 
+Journeys in Português (1), from-prices per person, the same as in English:
+
+- [O Cairo, com todos os sabores](https://kemet-travel.com/pt/noite-gastronomica-no-cairo.html): Noite (cerca de 4 horas). Uma degustação guiada, à noite, dos pratos mais queridos do Cairo — koshari, ful e ta'meya, hawawshi e pombo grelhado, kunafa e basbousa, terminando em um ahwa tradicional. From €59. English original: https://kemet-travel.com/tour-cairo-food.html
+
 ### العربية (ar)
 
 - https://kemet-travel.com/ar/
@@ -417,6 +437,10 @@ Journeys in Français (24), from-prices per person, the same as in English:
 - https://kemet-travel.com/ar/ramadan-fi-masr.html — رمضان في القاهرة: يُتوقَّع أن يكون رمضان ١٤٤٨هـ من ٨ فبراير إلى ٨ مارس ٢٠٢٧، في جوّ معتدل. تراويح في أعرق مساجد القاهرة، وإفطار فوق أسطح المدينة القديمة، وعيد على ضفاف النيل.
 - https://kemet-travel.com/ar/shahr-al-asal-fi-masr.html — شهر العسل في مصر: اثنان، وخمسة آلاف عام من التاريخ — ولا جدول سوى جدولكما.
 - https://kemet-travel.com/ar/rehla-aeiliya-ila-masr.html — رحلة عائلية إلى مصر: رحلة سيحكيها أطفالكم يوماً لأطفالهم.
+
+Journeys in العربية (1), from-prices per person, the same as in English:
+
+- [القاهرة بطعمها الأصلي](https://kemet-travel.com/ar/jawlat-al-akl-fi-al-qahira.html): مساءً (نحو 4 ساعات). سهرة تذوق مع مرشد لأحب أطباق القاهرة: الكشري، والفول والطعمية، والحواوشي والحمام المحشي، والكنافة والبسبوسة، وفي الختام قهوة بلدي تقليدية. From €59. English original: https://kemet-travel.com/tour-cairo-food.html
 
 ## Index pages
 

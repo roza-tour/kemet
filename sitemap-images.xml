@@ -305,39 +305,39 @@
       <image:caption>A bowl of koshari topped with tomato sauce, fried onions and parsley</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://kemet-travel.com/images/stock/ful-medames.webp</image:loc>
-      <image:caption>A plate of ful medames with boiled eggs, olives, pickles and flatbread</image:caption>
+      <image:loc>https://kemet-travel.com/images/food/ful-medames-bowl.webp</image:loc>
+      <image:caption>A bowl of ful medames topped with tomato and herbs, with lemon and a glass of tea</image:caption>
       <image:title>Ful medames</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://kemet-travel.com/images/stock/tameya-frying.webp</image:loc>
-      <image:caption>Ta&apos;meya — Egyptian falafel — frying in a street-stall pan</image:caption>
+      <image:loc>https://kemet-travel.com/images/food/tameya-sesame.webp</image:loc>
+      <image:caption>Sesame-crusted ta&apos;meya on a plate, with bags of the green fava-and-herb mix behind</image:caption>
       <image:title>Ta&apos;meya</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://kemet-travel.com/images/stock/hawawshi.webp</image:loc>
-      <image:caption>Hawawshi: crisp bread baked around spiced minced meat, cut into wedges</image:caption>
+      <image:loc>https://kemet-travel.com/images/food/hawawshi-cut.webp</image:loc>
+      <image:caption>Hawawshi cut open to show its spiced minced meat, with pickles on the side</image:caption>
       <image:title>Hawawshi</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://kemet-travel.com/images/stock/stuffed-pigeon.webp</image:loc>
-      <image:caption>Stuffed pigeons (hamam mahshi) in a pan</image:caption>
+      <image:loc>https://kemet-travel.com/images/food/hamam-mahshi.webp</image:loc>
+      <image:caption>Two roasted pigeons stuffed with rice (hamam mahshi) on a bed of greens</image:caption>
       <image:title>Stuffed pigeon</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://kemet-travel.com/images/stock/kunafa.webp</image:loc>
-      <image:caption>A tray of kunafa, its shredded pastry baked golden</image:caption>
+      <image:loc>https://kemet-travel.com/images/food/kunafa-pistachio.webp</image:loc>
+      <image:caption>Kunafa topped with pistachio, a slice lifted to show the melted cheese inside</image:caption>
       <image:title>Kunafa</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://kemet-travel.com/images/stock/basbousa.webp</image:loc>
-      <image:caption>Squares of basbousa, the syrup-soaked semolina cake, topped with almonds</image:caption>
+      <image:loc>https://kemet-travel.com/images/food/basbousa-almond.webp</image:loc>
+      <image:caption>Squares of basbousa, each topped with an almond</image:caption>
       <image:title>Basbousa</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://kemet-travel.com/images/stock/mint-tea-glasses.webp</image:loc>
-      <image:caption>Glasses of tea beside ornate teapots on brass trays</image:caption>
-      <image:title>Tea</image:title>
+      <image:loc>https://kemet-travel.com/images/food/ahwa-tea-glasses.webp</image:loc>
+      <image:caption>Two glasses of tea on a table in a traditional café, its walls covered in framed old photographs</image:caption>
+      <image:title>The ahwa</image:title>
     </image:image>
   </url>
   <url>
@@ -1157,8 +1157,8 @@
   <url>
     <loc>https://kemet-travel.com/guides/egyptian-food-guide.html</loc>
     <image:image>
-      <image:loc>https://kemet-travel.com/images/stock/ful-medames.webp</image:loc>
-      <image:caption>A plate of ful medames with boiled eggs, olives, pickles and flatbread</image:caption>
+      <image:loc>https://kemet-travel.com/images/food/ful-medames-bowl.webp</image:loc>
+      <image:caption>A bowl of ful medames topped with tomato and herbs, with lemon and a glass of tea</image:caption>
       <image:title>Egyptian cuisine</image:title>
     </image:image>
   </url>
