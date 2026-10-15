@@ -3,13 +3,14 @@
 22ec2ad73324afe14c2b7badc0edb43f.txt
 404.html
 BingSiteAuth.xml
+_astro/_slug_.4vpjWtNv.css
 _astro/_slug_.Bxz8ATbR.css
 _astro/_slug_.C37nzwvn.css
-_astro/_slug_.DGztKyzX.css
 _astro/_slug_.DZMFfmgO.css
 _astro/_slug_.P_RMW1OR.css
 _astro/about.BQ3rkLlz.css
-_astro/hoisted.C93flgcA.js
+_astro/cuisine.DthhfxYL.css
+_astro/hoisted.WTLKoxdx.js
 _astro/index.COGUg4Qt.css
 _astro/page.DCTgdEH6.js
 _astro/rehlat-fakhira-jiddan-fi-masr.aH_AhgbZ.css
@@ -616,6 +617,10 @@ images/food/hawawshi-cut-320w.webp
 images/food/hawawshi-cut-480w.webp
 images/food/hawawshi-cut-640w.webp
 images/food/hawawshi-cut.webp
+images/food/koshari-sauce-pour-320w.webp
+images/food/koshari-sauce-pour-480w.webp
+images/food/koshari-sauce-pour-640w.webp
+images/food/koshari-sauce-pour.webp
 images/food/kunafa-pistachio-320w.webp
 images/food/kunafa-pistachio-480w.webp
 images/food/kunafa-pistachio-640w.webp
@@ -808,10 +813,6 @@ images/stock/giza-pyramids-sunrise-sky-480w.webp
 images/stock/giza-pyramids-sunrise-sky-640w.webp
 images/stock/giza-pyramids-sunrise-sky-960w.webp
 images/stock/giza-pyramids-sunrise-sky.webp
-images/stock/koshari-320w.webp
-images/stock/koshari-480w.webp
-images/stock/koshari-640w.webp
-images/stock/koshari.webp
 images/stock/molokhia-320w.webp
 images/stock/molokhia-480w.webp
 images/stock/molokhia-640w.webp
@@ -898,6 +899,7 @@ lib-auth.php
 lib-source.php
 llms-full.txt
 llms.txt
+markets.json
 media/balloon-flight-west-bank-poster.webp
 media/balloon-flight-west-bank.mp4
 media/balloons-luxor-sunrise-poster.webp
@@ -984,6 +986,7 @@ og/fayoum/fayoum-magic-lake.jpg
 og/fayoum/fayoum-wadi-rayan.jpg
 og/fayoum/fayoum-waterwheels.jpg
 og/food/ful-medames-bowl.jpg
+og/food/koshari-sauce-pour.jpg
 og/giza/giza-camel-pyramids-sunrise.jpg
 og/giza/giza-grand-egyptian-museum.jpg
 og/giza/giza-great-pyramid-clear-sky.jpg
@@ -1019,7 +1022,6 @@ og/stock/abu-simbel-both-temples.jpg
 og/stock/abu-simbel-nefertari-temple.jpg
 og/stock/cairo-airport-aircraft-stand.jpg
 og/stock/egyptian-museum-menkaure-triad.jpg
-og/stock/koshari.jpg
 og/stock/stuffed-vine-leaves.jpg
 og/tours/tour-nile-cairo-feluccas-aerial.jpg
 plan.html
