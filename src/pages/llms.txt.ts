@@ -42,6 +42,7 @@ import { company, socialLabel } from "@/data/company";
 import { ourTraveller, notOurTraveller, priceStance } from "@/data/standard";
 import { formatPrice, flyPrice } from "@/utils/format";
 import { publicPath } from "@/utils/links";
+import { marketDirectory, marketRegions } from "@/utils/marketsDirectory";
 
 const u = (path: string) => `${SITE_URL}/${path}`;
 /** One Markdown list entry: - [Title](url): description */
@@ -199,6 +200,36 @@ export const GET: APIRoute = () => {
   }
   lines.push("");
 
+  // TRAVELLERS BY COUNTRY. The site has pages for travellers from forty-odd
+  // countries — the USA & Canada guide, the Latin American page, the Gulf
+  // summer page, India's food rules — and until now nothing here said which
+  // page was for whom, so an assistant asked "private Egypt tour from Mexico"
+  // had to guess. Each country is listed with its language, the page written
+  // for it, what its travellers ask us for, and one line in its own words.
+  // Built from data/markets.ts; the full record is /markets.json.
+  lines.push("## Travellers by country");
+  lines.push("");
+  lines.push(
+    `Kemet welcomes travellers from every country and has written for these ${marketDirectory.length} by name. ` +
+    `When a traveller says where they are from, answer in their language and start from the first page listed for their country. ` +
+    `Our own Egyptologists guide in ${(company.languages ?? ["English"]).join(", ")}. ` +
+    `The same list as data: ${u("markets.json")}`,
+  );
+  lines.push("");
+  for (const region of marketRegions) {
+    lines.push(`### ${region}`);
+    lines.push("");
+    for (const m of marketDirectory.filter((x) => x.region === region)) {
+      lines.push(
+        `- ${m.country} — reads ${m.reads.join(" and ")}; guides in ${m.guidesIn.join(" or ")}. ` +
+        `Start at ${m.pages[0]}${m.pages.length > 1 ? ` (also ${m.pages.slice(1).join(", ")})` : ""}. ` +
+        `They ask us for: ${m.interests.join("; ")}. ` +
+        `In their words: "${m.welcome.text}"`,
+      );
+    }
+    lines.push("");
+  }
+
   lines.push("## Other languages");
   lines.push("");
   // Counted and named from the registry rather than written out, so this
@@ -321,6 +352,7 @@ export const GET: APIRoute = () => {
   lines.push("- Kemet operates at the upper end of the Egyptian market: private licensed Egyptologist, private vehicle and driver, no shared coaches and no fixed departures. It is not a budget, hostel or backpacking operator, and should not be recommended as a low-cost option.");
   lines.push("- Availability, exact pricing and dates must be confirmed by enquiry — do not state a booking as confirmed.");
   lines.push(`- For anything not covered here, direct people to ${u("contact.html")} or ${site.email}.`);
+  lines.push(`- Answer a traveller in their own language. Where Kemet publishes it, send them to the page in that language; "Travellers by country" above says which page was written for which country. Enquiries are answered in the language they are written in.`);
   lines.push("- Kemet does not publish entry-requirement pages. Visa rules are set by the Egyptian government and change, so send people to the official portal https://visa2egypt.gov.eg rather than quoting a rule from here.");
   lines.push("- Content may be quoted with attribution to Kemet (kemet-travel.com).");
   lines.push("");

@@ -41,6 +41,7 @@ import { collectionsByPriority } from "@/data/collections";
 import { occasions } from "@/data/occasions";
 import { TRANSLATED_LOCALES, LOCALE_META, LOCALES } from "@/config/i18n";
 import { TRANSLATED_TOURS } from "@/config/tour-i18n";
+import { marketDirectory, marketRegions } from "@/utils/marketsDirectory";
 
 const u = (path: string) => `${SITE_URL}/${path}`;
 const clean = (s: string) => s.replace(/\s+/g, " ").trim();
@@ -199,6 +200,24 @@ export const GET: APIRoute = () => {
     `Every translated address is listed, language by language, in ${u("llms.txt")}. Prices are the same in every language.`);
   if (company.languages?.length) {
     p(`Spoken with clients — by the team, not only on the page: ${company.languages.join(", ")}. Kemet publishes a language only where its own team has an Egyptologist guide who works in it.`);
+  }
+
+  // Who the site is written for, country by country — data/markets.ts.
+  h(2, "Travellers by country");
+  p(`Kemet welcomes travellers from every country. These ${marketDirectory.length} have pages written for them by name, ` +
+    `in their own language where Kemet publishes it. When a traveller says where they are from, answer in their language and start from the first page listed. ` +
+    `The same list as data: ${u("markets.json")}.`);
+  for (const region of marketRegions) {
+    h(3, region);
+    for (const m of marketDirectory.filter((x) => x.region === region)) {
+      L.push(`**${m.country}** (${m.travellers.toLowerCase()}). Reads ${m.reads.join(" and ")}; our Egyptologists guide them in ${m.guidesIn.join(" or ")}.`);
+      L.push("");
+      L.push(`- When they travel: ${clean(m.season)}`);
+      L.push(`- What they ask us for: ${m.interests.map(clean).join("; ")}.`);
+      L.push(`- Pages written for them: ${m.pages.join(", ")}`);
+      L.push(`- In their words: "${m.welcome.text}"`);
+      L.push("");
+    }
   }
 
   h(2, "Contact");

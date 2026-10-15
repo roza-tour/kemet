@@ -5,6 +5,7 @@ import { multidayTours } from "@/data/tours";
 import { footerExplore, footerCompany } from "@/config/navigation";
 import { tierLine } from "@/data/standard";
 import LangSwitch from "@/components/LangSwitch.astro";
+import TravellingFrom from "@/components/TravellingFrom.astro";
 import { company, socialLabel } from "@/data/company";
 import SocialIcon from "@/components/SocialIcon.astro";
 import { localeNav } from "@/config/nav-i18n";
@@ -52,6 +53,7 @@ const socials = Object.entries(company.socialProfiles ?? {})
         </a>
         <p>{t.brandBlurb}</p>
         <p class="foot-tier">{isEn ? tierLine : t.tierLine}</p>
+        <TravellingFrom base={base} locale={locale} />
       </div>
       {isEn ? (
         <>

@@ -1,0 +1,104 @@
+---
+// "Travelling from …" — one line in the footer, on every page.
+//
+// For a visitor: pick your country and go to the page written for travellers
+// from it, in your language where we publish it (the first page each market
+// names in data/markets.ts). Country names are written in the page's own
+// language by Intl, so a German page lists "Vereinigte Staaten".
+//
+// For an AI agent: the form is a WebMCP tool, "kemet_for_travellers_from"
+// (see ContactForm.astro for WebMCP). Called with a country code it answers
+// with data instead of a page change — the pages for that country, the
+// languages our own Egyptologists guide it in, what its travellers ask us
+// for and a welcome line in its language — read from /markets.json, the same
+// record llms.txt and the structured data are built from.
+//
+// Without JavaScript the form falls through to the site index.
+import { sourceMarkets } from "@/data/markets";
+import { publicPath } from "@/utils/links";
+import { LOCALE_META, type SiteLocale } from "@/config/i18n";
+
+interface Props {
+  /** Link prefix back to the site root ("" at root, "../" in subfolders). */
+  base?: string;
+  locale?: SiteLocale;
+}
+const { base = "", locale = "en" } = Astro.props;
+
+const LABELS: Record<SiteLocale, { label: string; pick: string; go: string }> = {
+  en: { label: "Travelling from", pick: "Your country", go: "Go" },
+  de: { label: "Sie reisen aus", pick: "Ihr Land", go: "Los" },
+  it: { label: "Partite da", pick: "Il vostro paese", go: "Vai" },
+  es: { label: "Viaja desde", pick: "Su país", go: "Ir" },
+  fr: { label: "Vous venez de", pick: "Votre pays", go: "Aller" },
+  ru: { label: "Вы едете из", pick: "Ваша страна", go: "Перейти" },
+  id: { label: "Berangkat dari", pick: "Negara Anda", go: "Buka" },
+  ms: { label: "Berlepas dari", pick: "Negara anda", go: "Pergi" },
+  pt: { label: "Viajando de", pick: "Seu país", go: "Ir" },
+  ar: { label: "قادمون من", pick: "بلدكم", go: "انتقال" },
+};
+const l = LABELS[locale];
+const tag = LOCALE_META[locale].tag;
+const names = new Intl.DisplayNames([tag], { type: "region" });
+const options = sourceMarkets
+  .map((m) => ({ code: m.code, name: names.of(m.code) ?? m.country, href: `/${publicPath(m.pages[0])}` }))
+  .sort((a, b) => a.name.localeCompare(b.name, tag));
+---
+<form class="tfrom" action={`${base}sitemap.html`} id="tfrom"
+  toolname="kemet_for_travellers_from"
+  tooldescription="What Kemet has written for travellers from one country: the page to read, in their language where Kemet publishes it; the languages Kemet's own Egyptologists guide them in; what travellers from there usually ask for; and a welcome line in their language."
+  toolautosubmit>
+  <label for="tfsel">{l.label}</label>
+  <div class="tfrom-row">
+    <select id="tfsel" name="country"
+      toolparamdescription="The traveller's home country as an ISO 3166-1 alpha-2 code, e.g. MX, US, DE, SA, IN.">
+      <option value="">{l.pick}</option>
+      {options.map((o) => <option value={o.code} data-href={o.href}>{o.name}</option>)}
+    </select>
+    <button type="submit">{l.go}</button>
+  </div>
+</form>
+
+<script>
+  const form = document.getElementById("tfrom") as HTMLFormElement | null;
+  const sel = form?.querySelector("select");
+  if (form && sel) {
+    form.addEventListener("submit", (e: SubmitEvent & { agentInvoked?: boolean; respondWith?: (p: Promise<unknown>) => void }) => {
+      // An AI agent calling the tool gets the country's record as data.
+      if (e.agentInvoked && e.respondWith) {
+        e.preventDefault();
+        const code = (sel.value || "").toUpperCase();
+        e.respondWith(
+          fetch("/markets.json").then((r) => r.json()).then((d) => {
+            const m = d.markets.find((x: { code: string }) => x.code === code);
+            if (!m) {
+              return {
+                found: false,
+                note: `Kemet welcomes travellers from every country. None is written for this one by name: the English site applies, and Kemet's own Egyptologists guide in ${d.guideLanguages.join(", ")}.`,
+                enquire: `${location.origin}/contact.html`,
+              };
+            }
+            return { found: true, ...m, enquire: `${location.origin}/contact.html` };
+          }),
+        );
+        return;
+      }
+      // A visitor goes to the page written for their country.
+      const href = sel.selectedOptions[0]?.dataset.href;
+      if (href) { e.preventDefault(); location.href = href; }
+      else if (!sel.value) { e.preventDefault(); sel.focus(); }
+    });
+  }
+</script>
+
+<style>
+  .tfrom { margin-top: var(--s-4); max-width: 320px; }
+  .tfrom label { display: block; margin-bottom: var(--s-1); font-size: var(--t-nano); letter-spacing: .3em; text-transform: uppercase; color: var(--gold); }
+  .tfrom-row { display: flex; gap: var(--s-1); }
+  .tfrom select { flex: 1; min-width: 0; padding: 10px 12px; font: inherit; font-size: var(--t-sm); color: var(--bone);
+    background: var(--ink-2); border: 1px solid var(--line); border-radius: 0; }
+  .tfrom select:focus-visible, .tfrom button:focus-visible { outline: 1px solid var(--gold); outline-offset: 2px; }
+  .tfrom button { padding: 10px 16px; font: inherit; font-size: var(--t-micro); letter-spacing: .24em; text-transform: uppercase;
+    color: var(--gold); background: transparent; border: 1px solid var(--line-2); cursor: pointer; transition: background .3s, color .3s; }
+  .tfrom button:hover { background: var(--gold); color: var(--ink); }
+</style>

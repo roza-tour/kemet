@@ -12,6 +12,7 @@ import { sharePhotoFor } from "@/utils/share";
 import { chosenSharePhoto } from "@/data/sharePhotos";
 import { ui } from "@/config/ui";
 import { siteSchema } from "@/schemas/jsonld";
+import { audienceForRoute } from "@/data/markets";
 import type { JsonLd } from "@/types";
 import { localeOfRoute, LOCALE_META } from "@/config/i18n";
 import { allAlternatesFor } from "@/config/alternates";
@@ -77,7 +78,7 @@ const { title, description, canonicalUrl, ogImage, ogImageAlt, keywords } = buil
 // Link prefix so shared nav/footer resolve from any directory depth.
 // Root pages → "" (output unchanged); /destinations/* → "../".
 const base = relativePrefix(active);
-const pageLd = jsonld ? (Array.isArray(jsonld) ? jsonld : [jsonld]) : [];
+const rawLd = jsonld ? (Array.isArray(jsonld) ? jsonld : [jsonld]) : [];
 
 // --- Localisation -----------------------------------------------------------
 // The locale is derived from the route, and the hreflang set comes from the
@@ -89,6 +90,35 @@ const htmlLang = LOCALE_META[pageLocale].tag;
 // Only emitted for a right-to-left language — not written as dir="ltr" on 181
 // pages to say nothing.
 const htmlDir = LOCALE_META[pageLocale].dir;
+
+// --- Who this page is for ------------------------------------------------------
+// data/markets.ts names the travellers each page was written for — the USA &
+// Canada guide for the US and Canada, every German page for Germany, Austria
+// and Switzerland, the Latin American page for Mexico, Colombia, Argentina,
+// Chile and Peru. That goes on the page's own WebPage/Article node as
+// schema.org `audience` (or on a small WebPage node of its own when the page
+// has none), so search engines and answer engines read, page by page, which
+// nationalities it serves. English pages that no market names stay addressed
+// to everyone, as the organisation's audience already says. Only canonical
+// pages carry it: a duplicate pointing elsewhere is not for anyone.
+const audience = (Astro.props.canonicalTo === undefined || Astro.props.canonicalTo === active)
+  ? audienceForRoute(active, pageLocale)
+  : undefined;
+const PAGE_NODES = new Set(["WebPage", "Article", "CollectionPage"]);
+let audiencePlaced = false;
+const pageLd: JsonLd[] = audience
+  ? rawLd.map((n) => {
+      const node = n as Record<string, unknown>;
+      const fits = typeof node["@type"] === "string" && PAGE_NODES.has(node["@type"] as string)
+        && !node.audience && (!node.url || node.url === canonicalUrl);
+      if (!fits) return n;
+      audiencePlaced = true;
+      return { ...node, audience } as JsonLd;
+    })
+  : rawLd;
+if (audience && !audiencePlaced) {
+  pageLd.push({ "@context": "https://schema.org", "@type": "WebPage", url: canonicalUrl, inLanguage: htmlLang, audience } as JsonLd);
+}
 // The chrome, in this page's language.
 const t = ui(pageLocale);
 
