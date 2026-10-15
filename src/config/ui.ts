@@ -61,6 +61,8 @@ export interface UiStrings {
   priceBasisPax: string;
   /** Said beside it when gate tickets sit outside the published price. */
   priceBasisTickets: string;
+  /** Card qualifier when the food itself is not in the price (the food evening). */
+  priceBasisFood: string;
   /** The duration chip on a journey card, which is built from data. */
   tag: { days: string; fullDay: string; halfDay: string; evening: string };
   /**
@@ -129,6 +131,7 @@ export const UI: Record<SiteLocale, UiStrings> = {
     perPerson: "/ person",
     priceBasisPax: "from %n travellers",
     priceBasisTickets: "tickets not included",
+    priceBasisFood: "food not included",
     englishNote: "The journey pages themselves are in English.",
     consentTitle: "Before we count anything",
     consentBody:
@@ -177,6 +180,7 @@ export const UI: Record<SiteLocale, UiStrings> = {
     perPerson: "/ Person",
     priceBasisPax: "ab %n Reisenden",
     priceBasisTickets: "Eintritte nicht enthalten",
+    priceBasisFood: "Essen nicht enthalten",
     englishNote: "Die Reiseverläufe im Detail sind auf Englisch.",
     consentTitle: "Bevor wir etwas zählen",
     consentBody:
@@ -228,6 +232,7 @@ export const UI: Record<SiteLocale, UiStrings> = {
     perPerson: "/ persona",
     priceBasisPax: "da %n viaggiatori",
     priceBasisTickets: "biglietti non inclusi",
+    priceBasisFood: "cibo non incluso",
     englishNote: "Le pagine dei singoli viaggi sono in inglese.",
     consentTitle: "Prima di contare qualcosa",
     consentBody:
@@ -279,6 +284,7 @@ export const UI: Record<SiteLocale, UiStrings> = {
     perPerson: "/ persona",
     priceBasisPax: "desde %n viajeros",
     priceBasisTickets: "entradas no incluidas",
+    priceBasisFood: "comida no incluida",
     englishNote: "Las páginas de cada viaje están en inglés.",
     consentTitle: "Antes de contar nada",
     consentBody:
@@ -330,6 +336,7 @@ export const UI: Record<SiteLocale, UiStrings> = {
     perPerson: "/ personne",
     priceBasisPax: "à partir de %n voyageurs",
     priceBasisTickets: "billets non inclus",
+    priceBasisFood: "repas non inclus",
     englishNote: "Les pages de chaque voyage sont en anglais.",
     consentTitle: "Avant de compter quoi que ce soit",
     consentBody:
@@ -382,6 +389,7 @@ export const UI: Record<SiteLocale, UiStrings> = {
     perPerson: "/ чел.",
     priceBasisPax: "от %n человек",
     priceBasisTickets: "билеты не включены",
+    priceBasisFood: "еда не включена",
     englishNote: "Страницы отдельных маршрутов — на английском.",
     consentTitle: "Прежде чем что-то считать",
     consentBody:
@@ -437,6 +445,7 @@ export const UI: Record<SiteLocale, UiStrings> = {
     perPerson: "/ pessoa",
     priceBasisPax: "a partir de %n viajantes",
     priceBasisTickets: "ingressos não incluídos",
+    priceBasisFood: "comida não incluída",
     englishNote: "As páginas de cada viagem estão em inglês.",
     consentTitle: "Antes de contarmos seja o que for",
     consentBody:
@@ -487,6 +496,7 @@ export const UI: Record<SiteLocale, UiStrings> = {
     perPerson: "/ orang",
     priceBasisPax: "mulai %n orang",
     priceBasisTickets: "tiket masuk tidak termasuk",
+    priceBasisFood: "makanan tidak termasuk",
     englishNote: "Halaman rincian tiap perjalanan berbahasa Inggris.",
     consentTitle: "Sebelum kami menghitung apa pun",
     consentBody:
@@ -535,6 +545,7 @@ export const UI: Record<SiteLocale, UiStrings> = {
     perPerson: "/ seorang",
     priceBasisPax: "dari %n orang",
     priceBasisTickets: "tiket masuk tidak termasuk",
+    priceBasisFood: "makanan tidak termasuk",
     englishNote: "Halaman butiran setiap percutian dalam bahasa Inggeris.",
     consentTitle: "Sebelum kami mengira apa-apa",
     consentBody:
@@ -583,6 +594,7 @@ export const UI: Record<SiteLocale, UiStrings> = {
     perPerson: "/ للفرد",
     priceBasisPax: "من %n أفراد",
     priceBasisTickets: "التذاكر غير مشمولة",
+    priceBasisFood: "الأكل غير مشمول",
     englishNote: "صفحات تفاصيل كل رحلة بالإنجليزية.",
     consentTitle: "قبل أن نحصي أي شيء",
     consentBody:
@@ -638,12 +650,13 @@ export function tourTag(tag: string, t: UiStrings): string {
  * English tour pages in their longer, sentence form.
  */
 export function priceBasisShort(
-  tour: { priceBasisPax?: number; ticketsExcluded?: boolean },
+  tour: { priceBasisPax?: number; ticketsExcluded?: boolean; foodExcluded?: boolean },
   t: UiStrings,
 ): string | undefined {
   const parts: string[] = [];
   if (tour.priceBasisPax) parts.push(t.priceBasisPax.replace("%n", String(tour.priceBasisPax)));
   if (tour.ticketsExcluded) parts.push(t.priceBasisTickets);
+  if (tour.foodExcluded) parts.push(t.priceBasisFood);
   return parts.length ? parts.join(" · ") : undefined;
 }
 

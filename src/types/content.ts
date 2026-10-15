@@ -414,6 +414,12 @@ export interface Tour {
    * data all state the same thing.
    */
   ticketsExcluded?: boolean;
+  /**
+   * True when the food and drinks themselves are not in the price — the food
+   * evening, where guests pay each stop directly. Stated on the card, in the
+   * price block, in the answer box and in the structured data, like tickets.
+   */
+  foodExcluded?: boolean;
   flightsIncluded?: boolean;
   /** Card description. */
   summary: string;

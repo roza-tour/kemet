@@ -15,7 +15,7 @@ export function formatPrice(amount: number): string {
  * element. `short` is the card variant — the same facts, fewer words.
  */
 export function priceBasis(
-  tour: { priceBasisPax?: number; ticketsExcluded?: boolean },
+  tour: { priceBasisPax?: number; ticketsExcluded?: boolean; foodExcluded?: boolean },
   short = false,
 ): string | undefined {
   const parts: string[] = [];
@@ -24,6 +24,9 @@ export function priceBasis(
   }
   if (tour.ticketsExcluded) {
     parts.push(short ? "tickets not included" : "entrance tickets not included");
+  }
+  if (tour.foodExcluded) {
+    parts.push(short ? "food not included" : "food and drinks not included");
   }
   if (parts.length === 0) return undefined;
   const line = parts.join(" · ");
@@ -98,7 +101,7 @@ export function flyFaq(tour: FlyTour) {
  */
 export function tourAnswer(tour: {
   title: string; kind?: string; durationLabel: string; visiting: string; cities?: string[]; price: number;
-  included: string[]; excluded: string[]; priceBasisPax?: number; ticketsExcluded?: boolean;
+  included: string[]; excluded: string[]; priceBasisPax?: number; ticketsExcluded?: boolean; foodExcluded?: boolean;
   flyOption?: { extra: number; replaces: string };
 }): string {
   const list = (xs: string[]) => xs.length < 2 ? xs.join("") : `${xs.slice(0, -1).join(", ")} and ${xs.at(-1)}`;
@@ -125,7 +128,8 @@ export function tourAnswer(tour: {
   const lead = m
     ? `${tour.title} is a private ${m[1]}-day, ${m[2]}-night journey through ${places}, from ${formatPrice(tour.price)} per person.`
     : `${tour.title} is a private ${lower(when)} tour of ${places}, from ${formatPrice(tour.price)} per person${tour.priceBasisPax ? ` for a party of ${tour.priceBasisPax} or more` : ""}.`;
-  const tickets = tour.ticketsExcluded ? " Entrance tickets are paid at the gate." : "";
+  const tickets = (tour.ticketsExcluded ? " Entrance tickets are paid at the gate." : "") +
+    (tour.foodExcluded ? " Food and drinks are paid directly at each stop." : "");
   // Worth saying on a journey someone flies in for; noise on an afternoon in Giza.
   const flights = m && tour.excluded.some((x) => /international flights/i.test(x)) ? " International flights are not included." : "";
   const fly = tour.flyOption

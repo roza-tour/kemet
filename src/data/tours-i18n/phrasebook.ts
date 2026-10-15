@@ -56,6 +56,8 @@ export interface TourPhrasebook {
   cta: { heading: string; text: string; button: string; whatsapp: string };
   /** What the price is, said once under it. */
   priceNote: string;
+  /** Added to the price note when the food itself is not in the price. */
+  foodNote: string;
   /** Back to this language's journeys page. */
   allJourneys: string;
   /** Keyed by the English line in data/tours.ts. */
@@ -110,6 +112,7 @@ const de: TourPhrasebook = {
     whatsapp: "Guten Tag Kemet — wir interessieren uns für diese Reise.",
   },
   priceNote: "Pro Person, Normalsaison. Zuschläge für Feiertage weisen wir im Angebot getrennt aus.",
+  foodNote: "Speisen und Getränke sind nicht enthalten — Sie bezahlen sie direkt an jeder Station.",
   allJourneys: "Alle Reisen ansehen",
   lines: {
     // --- included ---
@@ -192,10 +195,10 @@ const de: TourPhrasebook = {
     "Seafront seafood lunch": "Fischessen direkt am Meer",
     "Private local food guide for the evening":
       "Privater lokaler Food-Guide für den Abend",
-    "All food tastings listed in the itinerary":
-      "Alle im Programm genannten Verkostungen",
-    "Bottled water and tea/coffee at the ahwa":
-      "Wasser in Flaschen sowie Tee oder Kaffee im Ahwa",
+    "Your guide's choice of places, and help ordering at every stop":
+      "Die Auswahl der Lokale durch Ihren Guide und Hilfe beim Bestellen an jeder Station",
+    "Bottled water through the evening":
+      "Wasser in Flaschen den ganzen Abend",
     "Private felucca sail in Aswan": "Private Felukenfahrt in Assuan",
     "Sunset felucca charter in Aswan":
       "Private Felukenfahrt zum Sonnenuntergang in Assuan",
@@ -248,9 +251,8 @@ const de: TourPhrasebook = {
       "Kamel- oder Pferderitte (optionale Zusatzleistung)",
     "Other optional extras — dinner cruise, drinks":
       "Weitere optionale Zusatzleistungen — Dinner-Cruise, Getränke",
-    "Alcoholic drinks": "Alkoholische Getränke",
-    "Additional dishes beyond the tasting menu":
-      "Zusätzliche Gerichte über das Verkostungsmenü hinaus",
+    "Food and drinks at each stop, paid directly to the venue":
+      "Speisen und Getränke an den Stationen — direkt vor Ort bezahlt",
     "Abu Simbel excursion (optional extra)":
       "Ausflug nach Abu Simbel (optionale Zusatzleistung)",
     "Hot-air balloon flight (booked on request, ~EUR 120 per person)":
@@ -320,6 +322,7 @@ const fr: TourPhrasebook = {
     whatsapp: "Bonjour Kemet — ce voyage nous intéresse.",
   },
   priceNote: "Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.",
+  foodNote: "Les plats et les boissons ne sont pas compris : ils se règlent directement à chaque étape.",
   allJourneys: "Voir tous les voyages",
   lines: {
     "Private Egyptologist guide throughout": "Un égyptologue privé tout au long du voyage",
@@ -376,8 +379,8 @@ const fr: TourPhrasebook = {
     "Lakeside fish lunch": "Déjeuner de poisson au bord du lac",
     "Seafront seafood lunch": "Déjeuner de fruits de mer face à la Méditerranée",
     "Private local food guide for the evening": "Un guide culinaire local privé pour la soirée",
-    "All food tastings listed in the itinerary": "Toutes les dégustations indiquées au programme",
-    "Bottled water and tea/coffee at the ahwa": "Eau en bouteille et thé ou café à l'ahwa",
+    "Your guide's choice of places, and help ordering at every stop": "Le choix des adresses par votre guide, et son aide pour commander à chaque étape",
+    "Bottled water through the evening": "Eau en bouteille toute la soirée",
     "Private felucca sail in Aswan": "Navigation privée en felouque à Assouan",
     "Sunset felucca charter in Aswan": "Felouque privée au coucher du soleil à Assouan",
     "Golden-hour felucca charter in Aswan": "Felouque privée à l'heure dorée à Assouan",
@@ -421,8 +424,7 @@ const fr: TourPhrasebook = {
     "Camel or horse rides (optional extra)": "Les promenades à dos de chameau ou à cheval (en option)",
     "Other optional extras — dinner cruise, drinks":
       "Les autres options — dîner-croisière, boissons",
-    "Alcoholic drinks": "Les boissons alcoolisées",
-    "Additional dishes beyond the tasting menu": "Les plats supplémentaires hors menu de dégustation",
+    "Food and drinks at each stop, paid directly to the venue": "Les plats et les boissons à chaque étape, réglés directement sur place",
     "Abu Simbel excursion (optional extra)": "L'excursion à Abou Simbel (en option)",
     "Hot-air balloon flight (booked on request, ~EUR 120 per person)":
       "Le vol en montgolfière (sur demande, environ 120 € par personne)",
@@ -497,6 +499,7 @@ const it: TourPhrasebook = {
     whatsapp: "Buongiorno Kemet — questo viaggio ci interessa.",
   },
   priceNote: "A persona, in stagione normale. I supplementi delle festività sono indicati separatamente nel preventivo.",
+  foodNote: "Cibo e bevande non sono inclusi: si pagano direttamente a ogni tappa.",
   allJourneys: "Vedi tutti i viaggi",
   lines: {
     "Private Egyptologist guide throughout": "Un egittologo privato per tutto il viaggio",
@@ -553,8 +556,8 @@ const it: TourPhrasebook = {
     "Lakeside fish lunch": "Pranzo di pesce in riva al lago",
     "Seafront seafood lunch": "Pranzo di pesce sul lungomare",
     "Private local food guide for the evening": "Una guida gastronomica locale privata per la serata",
-    "All food tastings listed in the itinerary": "Tutte le degustazioni indicate nel programma",
-    "Bottled water and tea/coffee at the ahwa": "Acqua in bottiglia e tè o caffè all'ahwa",
+    "Your guide's choice of places, and help ordering at every stop": "La scelta dei locali da parte della guida e il suo aiuto per ordinare a ogni tappa",
+    "Bottled water through the evening": "Acqua in bottiglia per tutta la serata",
     "Private felucca sail in Aswan": "Navigazione privata in feluca ad Assuan",
     "Sunset felucca charter in Aswan": "Feluca privata al tramonto ad Assuan",
     "Golden-hour felucca charter in Aswan": "Feluca privata nell'ora d'oro ad Assuan",
@@ -597,8 +600,7 @@ const it: TourPhrasebook = {
     "Camel or horse rides (optional extra)": "I giri in cammello o a cavallo (supplemento facoltativo)",
     "Other optional extras — dinner cruise, drinks":
       "Gli altri supplementi facoltativi — cena-crociera, bevande",
-    "Alcoholic drinks": "Le bevande alcoliche",
-    "Additional dishes beyond the tasting menu": "I piatti aggiuntivi oltre al menu di degustazione",
+    "Food and drinks at each stop, paid directly to the venue": "Cibo e bevande a ogni tappa, pagati direttamente sul posto",
     "Abu Simbel excursion (optional extra)": "L'escursione ad Abu Simbel (supplemento facoltativo)",
     "Hot-air balloon flight (booked on request, ~EUR 120 per person)":
       "Il volo in mongolfiera (su richiesta, circa 120 € a persona)",

@@ -184,7 +184,7 @@ const jsonld: Record<string, unknown>[] = [
           <span class="lt-amount">{formatPrice(tour.price)}</span>
           <span class="lt-pp">{t.perPerson}</span>
         </div>
-        <p>{p.priceNote}</p>
+        <p>{p.priceNote}{tour.foodExcluded && ` ${p.foodNote}`}</p>
       </div>
 
       <div class="lz-facts lz-facts--4">

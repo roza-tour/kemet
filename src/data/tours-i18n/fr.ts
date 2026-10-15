@@ -1070,9 +1070,10 @@ export const fr: TourText[] = [
       { title: "Un ahwa traditionnel", text: "On finit dans un ahwa d'une rue adjacente, autour d'un thé à la menthe, d'un café turc et du murmure de la ville — la bonne façon de terminer une soirée cairote." },
     ],
     faqs: [
+      { q: "Les plats sont-ils compris dans le prix ?", a: "Non. Le prix comprend votre guide culinaire privé, l'itinéraire et les transferts. Les plats et les boissons se règlent directement sur place à chaque étape — votre guide passe la commande et peut vous indiquer le prix de chaque plat." },
       { q: "La nourriture est-elle sans risque ?", a: "Oui — nous choisissons des établissements fréquentés et éprouvés, à forte rotation, et votre guide se charge de commander. L'eau en bouteille est fournie tout du long." },
       { q: "Les régimes particuliers sont-ils pris en compte ?", a: "Les végétariens sont bien servis — koshari, ful, ta'meya et les desserts sont tous sans viande. Signalez-nous les allergies à l'avance et nous adapterons le parcours." },
-      { q: "Vais-je être trop repu ?", a: "Les portions sont des formats dégustation réparties sur la marche : vous goûtez largement sans excès à aucune étape. Venez avec de l'appétit, sans inquiétude." },
+      { q: "Vais-je être trop repu ?", a: "Vous décidez vous-même de ce que vous commandez à chaque étape, et en partageant les assiettes vous goûtez beaucoup sans excès nulle part. Venez avec de l'appétit, sans inquiétude." },
     ],
   },
 ];

@@ -1037,9 +1037,10 @@ export const it: TourText[] = [
       { title: "Un ahwa tradizionale", text: "Si chiude in un ahwa di quartiere davanti a un tè alla menta, un caffè alla turca e il brusio della città — il modo in cui dovrebbe finire ogni serata al Cairo." },
     ],
     faqs: [
+      { q: "Il cibo è incluso nel prezzo?", a: "No. Il prezzo comprende la guida gastronomica privata, il percorso e i trasferimenti. Cibo e bevande si pagano direttamente sul posto a ogni tappa — la guida si occupa delle ordinazioni e può dirvi il prezzo di ogni piatto." },
       { q: "Il cibo è sicuro per chi viene da fuori?", a: "Sì — scegliamo locali frequentati e affidabili, con grande ricambio di prodotto, e la vostra guida si occupa degli ordini. L'acqua in bottiglia è fornita durante tutta la serata." },
       { q: "Si possono gestire esigenze alimentari particolari?", a: "I vegetariani sono serviti bene — koshari, ful, ta'meya e i dolci sono tutti senza carne. Segnalateci in anticipo eventuali allergie e adattiamo il percorso." },
-      { q: "Rischio di essere troppo pieno?", a: "Le porzioni sono da degustazione e distribuite lungo la camminata, così assaggiate molto senza esagerare in nessuna tappa. Venite affamati, ma senza ansia." },
+      { q: "Rischio di essere troppo pieno?", a: "Decidete voi quanto ordinare a ogni tappa, e dividendo i piatti assaggiate molto senza esagerare in nessuna. Venite affamati, ma senza ansia." },
     ],
   },
 ];

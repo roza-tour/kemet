@@ -27,6 +27,8 @@
 //   · `ticketsExcluded: true` — monument and museum tickets are paid at the
 //     published gate rate with nothing added. Egypt raises them mid-season and
 //     we would rather charge them at cost than pad the price to absorb the risk.
+//   · `foodExcluded: true` — on the food evening the dishes and drinks are
+//     paid directly at each stop; the price is the guide, route and transfers.
 //
 // Types live in src/types; formatting/lookups in src/utils — this module is
 // pure content plus the derived lists used by listings.
@@ -1144,6 +1146,7 @@ export const tours: Tour[] = [
     isPrivate: privateNote,
     price: 59,
     priceBasisPax: DAY_PRICE_PAX,
+    foodExcluded: true,
     summary:
       "A guided evening tasting of Cairo's best-loved dishes — koshari, ful and ta'meya, hawawshi and grilled pigeon, kunafa and basbousa, finished at a traditional ahwa.",
     overview:
@@ -1182,20 +1185,23 @@ export const tours: Tour[] = [
     ],
     included: [
       "Private local food guide for the evening",
-      "All food tastings listed in the itinerary",
-      "Bottled water and tea/coffee at the ahwa",
+      "Your guide's choice of places, and help ordering at every stop",
+      "Bottled water through the evening",
       "Private air-conditioned transfers",
       "Hotel pickup & drop-off",
     ],
     excluded: [
-      "Alcoholic drinks",
-      "Additional dishes beyond the tasting menu",
+      "Food and drinks at each stop, paid directly to the venue",
       ...baseExcluded.filter(
         (x) => !x.startsWith("Optional extras") && !x.startsWith("Tipping"),
       ),
       "Tipping (gratuities)",
     ],
     faqs: [
+      {
+        q: "Is the food included in the price?",
+        a: "No. The price covers your private food guide, the route and the transfers. Food and drinks at each stop are paid directly to the venue as you go — your guide does the ordering and can tell you the price of each dish.",
+      },
       {
         q: "Is the food safe for visitors?",
         a: "Yes — we choose busy, trusted establishments with high turnover, and your guide handles ordering. Bottled water is provided throughout.",
@@ -1206,7 +1212,7 @@ export const tours: Tour[] = [
       },
       {
         q: "Will I be too full?",
-        a: "Portions are tasting-sized and spread across the walk, so you sample widely without overdoing any one stop. Come hungry but not anxious.",
+        a: "You decide how much to order at each stop, and sharing plates lets you taste widely without overdoing any one of them. Come hungry but not anxious.",
       },
     ],
     order: 12,

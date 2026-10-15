@@ -1799,6 +1799,10 @@ export const de: TourText[] = [
     ],
     faqs: [
       {
+        q: "Ist das Essen im Preis inbegriffen?",
+        a: "Nein. Der Preis umfasst Ihren privaten Food-Guide, die Route und die Transfers. Speisen und Getränke bezahlen Sie an jeder Station direkt vor Ort — Ihr Guide übernimmt das Bestellen und sagt Ihnen gern, was jedes Gericht kostet.",
+      },
+      {
         q: "Ist das Essen für Besucher unbedenklich?",
         a: "Ja — wir wählen gut besuchte, bewährte Lokale mit hohem Durchsatz, und Ihr Guide übernimmt das Bestellen. Wasser in Flaschen gibt es durchgehend.",
       },
@@ -1808,7 +1812,7 @@ export const de: TourText[] = [
       },
       {
         q: "Werde ich zu satt?",
-        a: "Die Portionen sind Verkostungsgrößen und über den ganzen Weg verteilt, sodass Sie breit probieren, ohne es an einer Station zu übertreiben. Kommen Sie hungrig, aber ohne Sorge.",
+        a: "Sie entscheiden an jeder Station selbst, wie viel Sie bestellen — und wer Teller teilt, probiert vieles, ohne es irgendwo zu übertreiben. Kommen Sie hungrig, aber ohne Sorge.",
       },
     ],
   },
