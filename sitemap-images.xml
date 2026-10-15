@@ -305,6 +305,11 @@
       <image:caption>A bowl of koshari topped with tomato sauce, fried onions and parsley</image:caption>
     </image:image>
     <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/ful-medames.webp</image:loc>
+      <image:caption>A plate of ful medames with boiled eggs, olives, pickles and flatbread</image:caption>
+      <image:title>Ful medames</image:title>
+    </image:image>
+    <image:image>
       <image:loc>https://kemet-travel.com/images/stock/tameya-frying.webp</image:loc>
       <image:caption>Ta&apos;meya — Egyptian falafel — frying in a street-stall pan</image:caption>
       <image:title>Ta&apos;meya</image:title>
@@ -328,6 +333,11 @@
       <image:loc>https://kemet-travel.com/images/stock/basbousa.webp</image:loc>
       <image:caption>Squares of basbousa, the syrup-soaked semolina cake, topped with almonds</image:caption>
       <image:title>Basbousa</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/mint-tea-glasses.webp</image:loc>
+      <image:caption>Glasses of tea beside ornate teapots on brass trays</image:caption>
+      <image:title>Tea</image:title>
     </image:image>
   </url>
   <url>
