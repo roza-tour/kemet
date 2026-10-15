@@ -1121,6 +1121,139 @@ export const guides: Guide[] = [
       relatedGuides: guide("best-time-to-visit-egypt", "where-to-stay-in-egypt"),
     },
   },
+  // -------------------------------------------------------------------------
+  // Egypt from the USA & Canada — added October 2026 to reach North America
+  // without changing anything the European pages say. Facts that move (visa
+  // fees, new routes) are stated as what to check, not as numbers that age.
+  // -------------------------------------------------------------------------
+  {
+    id: "egypt-from-usa-canada",
+    slug: "egypt-from-usa-canada",
+    domain: "guide",
+    title: "Egypt from the USA & Canada",
+    locales: ["en"],
+    guideType: "practical",
+    category: "planning-your-trip",
+    parentGuideId: "egypt-travel-guide",
+    shortSummary:
+      "Planning Egypt from North America: the flights to Cairo, the visa, the time difference, the best months, money and tipping, and how a private journey works.",
+    difficulty: "easy",
+    readingTimeMinutes: 6,
+    lastUpdated: "2026-10",
+    keyFacts: [
+      { label: "Nonstop to Cairo", value: "New York, Newark, Washington, Toronto" },
+      { label: "Flight time nonstop", value: "About 10–12 hours" },
+      { label: "Visa", value: "Online e-visa, or on arrival" },
+      { label: "Time difference", value: "Cairo is 7 hours ahead of New York" },
+      { label: "Best months", value: "October to April" },
+      { label: "Prices", value: "Set in euros, shown here in dollars too" },
+    ],
+    keyTakeaways: [
+      "EgyptAir flies nonstop to Cairo from the US East Coast and Toronto; from anywhere else it is one stop",
+      "US and Canadian passports can get Egypt's tourist visa online before flying or on arrival in Cairo",
+      "Cairo is seven hours ahead of New York and Toronto, ten ahead of Los Angeles — so the first day is kept light",
+      "Thanksgiving, Christmas and spring break are Egypt's best weather — and its busiest weeks, so book early",
+      "Everything is private: your own Egyptologist, your own vehicle, and one person who answers your messages",
+    ],
+    sections: [
+      {
+        heading: "Getting there",
+        paragraphs: [
+          "EgyptAir flies nonstop to Cairo from New York (JFK), Newark and Washington Dulles, and from Toronto in Canada — roughly ten to twelve hours in the air. It has also announced routes from Los Angeles and Chicago, so check the current schedule when you book. From any other North American city, one stop through Europe, Istanbul or the Gulf gets you to Cairo the next day.",
+          "Our journeys can start at Cairo airport: we meet you on arrival and take you to your hotel. If you would rather not queue at all, our VIP arrival service meets you inside the terminal and walks you through the formalities.",
+        ],
+        noteLink: { label: "The VIP arrival service at Cairo airport", href: "experiences/vip-airport-service.html" },
+      },
+      {
+        heading: "The visa",
+        paragraphs: [
+          "US and Canadian passport holders can apply for Egypt's tourist e-visa online before they fly, on the official portal, visa2egypt.gov.eg — or buy a visa on arrival at the bank counters in the Cairo arrivals hall, before passport control. Your passport should be valid for at least six months after the day you arrive.",
+          "The fees changed during 2026, so check the current amount on the official portal, and pay only there: look-alike sites charge a service fee for the same form. Canadian travellers should also read Global Affairs Canada's Egypt page before booking — the rules for Canadians changed recently. With your itinerary we send the up-to-date steps for your passport.",
+        ],
+        note: "Pay for an e-visa only on visa2egypt.gov.eg. Other sites that look official add their own fee.",
+        noteType: "warning",
+      },
+      {
+        heading: "Time difference and the first day",
+        paragraphs: [
+          "Cairo is seven hours ahead of New York and Toronto for most of the year, eight ahead of Chicago and ten ahead of Los Angeles. Egypt keeps summer time on its own dates, so the gap moves by an hour for a few weeks in spring and autumn.",
+          "That is why we keep the first day light: a late breakfast, perhaps a walk by the Nile, and the pyramids the next morning, when you will actually enjoy them.",
+        ],
+      },
+      {
+        heading: "When to come",
+        paragraphs: [
+          "October to April is the season: warm, dry days and cool evenings, the right weather for temples and for the deck of a Nile boat. Thanksgiving week, Christmas and New Year sit in the middle of it — the best weather of the year and the busiest weeks, when the best Nile cabins and hotel rooms go three to four months ahead. Spring break in March is one of the very best times to come.",
+          "From June to August Upper Egypt is hot, often past 40°C (104°F) in Luxor and Aswan by midday. It can still be done — early mornings, a rest at noon — and the Red Sea and Alexandria are at their best then.",
+        ],
+        noteLink: { label: "The best time to visit Egypt, month by month", href: "guides/best-time-to-visit-egypt.html" },
+      },
+      {
+        heading: "Money, cards and tipping",
+        paragraphs: [
+          "Egypt's currency is the Egyptian pound. Cards work in hotels and most restaurants; keep some pounds for small purchases. Our own prices are set in euros — on this site you will see an approximate dollar figure beside each one.",
+          "Tipping is part of daily life in Egypt, as it is at home, but the amounts are smaller and more frequent. We send you a short tipping guide with your itinerary, so you never have to guess.",
+        ],
+      },
+      {
+        heading: "Safety",
+        paragraphs: [
+          "Before any trip abroad, read your government's advice — the US State Department and Global Affairs Canada both publish a page on Egypt. The places our journeys go — Cairo and Giza, Luxor, Aswan, the Nile, the Red Sea resorts — are where visitors travel every day, and you are never on your own: your guide and your driver are with you throughout.",
+        ],
+        noteLink: { label: "Is Egypt safe? Our honest answer", href: "egypt-safety.html" },
+      },
+      {
+        heading: "How a private journey works",
+        paragraphs: [
+          "Everything is private: your own licensed Egyptologist, your own vehicle and driver, and hotels chosen for the room rather than the star rating. Tell us your dates and how many of you are travelling; we reply within one working day with a real itinerary and a clear price, with no obligation.",
+        ],
+      },
+    ],
+    planningTips: [
+      "For Thanksgiving, Christmas and New Year, book three to four months ahead — the best cabins and rooms go first.",
+      "Check the e-visa fee on visa2egypt.gov.eg when you book; it changed during 2026.",
+      "Keep the first day after a transatlantic flight free of early starts.",
+    ],
+    importantNotes: [
+      "Your passport should be valid for at least six months after the day you arrive in Egypt.",
+      "Canadian travellers: read Global Affairs Canada's Egypt page before booking — the visa rules for Canadians changed recently.",
+    ],
+    faqs: [
+      {
+        q: "Do Americans and Canadians need a visa for Egypt?",
+        a: "Yes, but it is simple: apply for the tourist e-visa online before you fly, on the official portal visa2egypt.gov.eg, or buy a visa on arrival at the bank counters in the Cairo arrivals hall. Check the current fee on the official portal — it changed during 2026.",
+      },
+      {
+        q: "Are there direct flights from the US and Canada to Egypt?",
+        a: "Yes. EgyptAir flies nonstop to Cairo from New York (JFK), Newark and Washington Dulles, and from Toronto, in about ten to twelve hours. Routes from Los Angeles and Chicago have been announced; from other cities it is one stop through Europe, Istanbul or the Gulf.",
+      },
+      {
+        q: "What is the time difference between Egypt and the US?",
+        a: "Cairo is seven hours ahead of New York and Toronto for most of the year, eight ahead of Chicago and ten ahead of Los Angeles. Egypt keeps summer time on its own dates, so for a few weeks in spring and autumn the gap is an hour different.",
+      },
+      {
+        q: "Can I see prices in dollars?",
+        a: "Yes. Our prices are set in euros, and visitors in North America see an approximate dollar figure beside each one on this site. Your quote states the exact amount.",
+      },
+    ],
+    hero: {
+      alt: "The three great pyramids of Giza rising from the desert",
+      label: "Egypt from North America",
+      src: "/images/home/egypt-giza-pyramids-desert-panorama.webp",
+      width: 736,
+      height: 920,
+    },
+    seo: {
+      title: "Egypt from the USA & Canada: Flights, Visa, Timing | Kemet",
+      description:
+        "Planning Egypt from North America: nonstop flights to Cairo, the e-visa, the time difference, the best months, tipping — and how a private journey works.",
+    },
+    relationships: {
+      destinations: dest("cairo", "giza", "luxor", "aswan"),
+      relatedGuides: guide("egypt-travel-guide", "best-time-to-visit-egypt", "transportation-in-egypt"),
+    },
+  },
+
 ];
 
 export function getGuide(slug: string): Guide | undefined {

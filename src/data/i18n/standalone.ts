@@ -21,6 +21,7 @@ import { deRamadan, frRamadan, esRamadan, itRamadan, ruRamadan, ptRamadan, idRam
 import { frNoel, esNavidad, ptNatal, idAkhirTahun, msHujungTahun } from "./year-end";
 import { deHoneymoon, frHoneymoon, esHoneymoon, itHoneymoon, ruHoneymoon, ptHoneymoon, idHoneymoon, msHoneymoon, arHoneymoon } from "./honeymoon";
 import { deFamily, frFamily, esFamily, itFamily, ruFamily, ptFamily, idFamily, msFamily, arFamily } from "./family";
+import { esLatam, ptBrasil } from "./americas";
 
 export interface StandalonePage {
   locale: TranslatedLocale;
@@ -31,6 +32,12 @@ export interface StandalonePage {
 
 export const STANDALONE_PAGES: StandalonePage[] = [
   { locale: "pt", slug: "carnaval-no-egito", page: carnaval },
+
+  // The Americas (October 2026): Latin America in Spanish and Brazil in
+  // Portuguese — how to get there, the visa, the hours and the season, for
+  // markets the site set out to reach without changing a word for Europe.
+  { locale: "es", slug: "viajar-a-egipto-desde-latinoamerica", page: esLatam },
+  { locale: "pt", slug: "viajar-ao-egito-saindo-do-brasil", page: ptBrasil },
 
   // Indonesia and Malaysia. Four each, and none of them a translation of an
   // English page — these answer what those two markets search and the English
