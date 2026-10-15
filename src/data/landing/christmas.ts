@@ -320,7 +320,7 @@ export const christmasLanding: LandingPage = {
   assurances: [
     bookingTerms.steps[0].body,
     `${bookingTerms.deposit.label} confirms the booking, and ${lower(bookingTerms.deposit.note.replace(/^Payable to confirm your booking\. /, ""))} Balance ${bookingTerms.balance.label.toLowerCase()}.`,
-    `${bookingTerms.paymentMethods.map((m, i) => (i === 0 ? m : lower(m))).join(" or ")}. Priced per person in euros, itemised, with what is and is not included stated.`,
+    `${(() => { const ms = bookingTerms.paymentMethods.map((m, i) => (i === 0 || /^[A-Z][a-z]+[A-Z]/.test(m) ? m : lower(m))); return ms.length > 2 ? `${ms.slice(0, -1).join(", ")} or ${ms.at(-1)}` : ms.join(" or "); })()}. Priced per person in euros, itemised, with what is and is not included stated.`,
     "Your party only, with a private Egyptologist and a private vehicle throughout — no seat-in-coach, no joining a group at the gate.",
   ],
 

@@ -72,7 +72,9 @@ export const bookingTerms: BookingTerms = {
   },
 
   // Accepted payment methods.
-  paymentMethods: ["Bank transfer", "Major credit & debit cards"],
+  // PayPal confirmed by the owner, 15 Oct 2026 — and the way most travellers
+  // from North and Latin America prefer to pay from home.
+  paymentMethods: ["Bank transfer", "Major credit & debit cards", "PayPal"],
 
   // Traveller-initiated cancellation schedule.
   cancellationTiers: [

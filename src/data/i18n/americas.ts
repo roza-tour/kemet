@@ -55,7 +55,7 @@ export const esLatam: LocalizedPage = {
     {
       title: "Precios, dinero y propinas",
       body:
-        "Nuestros precios están fijados en euros; si nos visita desde América, verá junto a cada uno una cifra aproximada en dólares. En Egipto la moneda es la libra egipcia, y las tarjetas funcionan en los hoteles y en la mayoría de los restaurantes. La propina forma parte de la vida diaria, en cantidades pequeñas y frecuentes: con el itinerario le enviamos una guía breve para que nunca tenga que adivinar.",
+        "Nuestros precios están fijados en euros; si nos visita desde América, verá junto a cada uno una cifra aproximada en dólares, y puede pagar con PayPal desde su país, con tarjeta o por transferencia. En Egipto la moneda es la libra egipcia, y las tarjetas funcionan en los hoteles y en la mayoría de los restaurantes. La propina forma parte de la vida diaria, en cantidades pequeñas y frecuentes: con el itinerario le enviamos una guía breve para que nunca tenga que adivinar.",
     },
     {
       title: "Guías en español",
@@ -72,7 +72,7 @@ export const esLatam: LocalizedPage = {
     { q: "¿Los mexicanos necesitan visa para Egipto?", a: "Sí, pero se tramita en línea: el pasaporte mexicano puede solicitar la visa electrónica de turista en el portal oficial visa2egypt.gov.eg antes de viajar. Compruebe allí la tarifa vigente y pague solo en ese portal." },
     { q: "¿Hay vuelos directos desde Latinoamérica a Egipto?", a: "No. Lo habitual es una escala en Madrid, París, Fráncfort, Estambul, Doha o Dubái; desde las principales capitales de la región se llega a El Cairo en un día." },
     { q: "¿Cuál es la mejor época para viajar desde Argentina o Chile?", a: "Sus vacaciones de verano, de diciembre a febrero: son los mejores meses del año en Egipto, con días templados y noches frescas. Conviene reservar con tres o cuatro meses de antelación, porque coinciden con la temporada alta." },
-    { q: "¿Puedo ver los precios en dólares?", a: "Sí. Nuestros precios están fijados en euros y, si nos visita desde América, verá junto a cada uno una cifra aproximada en dólares. El presupuesto indica el importe exacto." },
+    { q: "¿Puedo ver los precios en dólares y pagar desde mi país?", a: "Sí. Nuestros precios están fijados en euros y, si nos visita desde América, verá junto a cada uno una cifra aproximada en dólares; el presupuesto indica el importe exacto. Puede pagar con PayPal desde su país, con tarjeta o por transferencia." },
   ],
   cta: {
     heading: "Cuéntenos desde dónde viaja",
@@ -133,7 +133,7 @@ export const ptBrasil: LocalizedPage = {
     {
       title: "Preços, dinheiro e gorjetas",
       body:
-        "Nossos preços são definidos em euros; quem nos visita das Américas vê ao lado de cada um um valor aproximado em dólares. No Egito a moeda é a libra egípcia, e cartões funcionam nos hotéis e na maioria dos restaurantes. A gorjeta faz parte do dia a dia, em valores pequenos e frequentes: junto com o roteiro mandamos um guia rápido para vocês nunca precisarem adivinhar.",
+        "Nossos preços são definidos em euros; quem nos visita das Américas vê ao lado de cada um um valor aproximado em dólares, e dá para pagar com PayPal direto do Brasil, com cartão ou por transferência. No Egito a moeda é a libra egípcia, e cartões funcionam nos hotéis e na maioria dos restaurantes. A gorjeta faz parte do dia a dia, em valores pequenos e frequentes: junto com o roteiro mandamos um guia rápido para vocês nunca precisarem adivinhar.",
     },
     {
       title: "Como funciona uma viagem privativa",
@@ -145,7 +145,7 @@ export const ptBrasil: LocalizedPage = {
     { q: "Brasileiro precisa de visto para o Egito?", a: "Sim, mas é simples: o passaporte brasileiro pode pedir o visto eletrônico de turista no portal oficial visa2egypt.gov.eg antes de viajar. Confira lá a taxa em vigor e pague só nesse portal." },
     { q: "Tem voo direto do Brasil para o Egito?", a: "Não. O mais comum é uma escala em Istambul, Dubai, Doha ou na Europa; de São Paulo ou do Rio se chega ao Cairo em cerca de um dia." },
     { q: "Qual a melhor época para ir ao Egito saindo do Brasil?", a: "As férias de verão, de dezembro a fevereiro: são os melhores meses do ano no Egito, com dias amenos e noites frescas. Vale reservar com três a quatro meses de antecedência, porque é alta temporada." },
-    { q: "Dá para ver os preços em dólar?", a: "Sim. Nossos preços são definidos em euros e, para quem nos visita das Américas, aparece ao lado de cada um um valor aproximado em dólares. O orçamento traz o valor exato." },
+    { q: "Dá para ver os preços em dólar e pagar do Brasil?", a: "Sim. Nossos preços são definidos em euros e, para quem nos visita das Américas, aparece ao lado de cada um um valor aproximado em dólares; o orçamento traz o valor exato. Dá para pagar com PayPal direto do Brasil, com cartão ou por transferência." },
   ],
   cta: {
     heading: "Conte-nos suas datas",

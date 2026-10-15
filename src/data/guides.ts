@@ -1147,6 +1147,7 @@ export const guides: Guide[] = [
       { label: "Time difference", value: "Cairo is 7 hours ahead of New York" },
       { label: "Best months", value: "October to April" },
       { label: "Prices", value: "Set in euros, shown here in dollars too" },
+      { label: "Pay by", value: "PayPal, card or bank transfer" },
     ],
     keyTakeaways: [
       "EgyptAir flies nonstop to Cairo from the US East Coast and Toronto; from anywhere else it is one stop",
@@ -1191,7 +1192,7 @@ export const guides: Guide[] = [
       {
         heading: "Money, cards and tipping",
         paragraphs: [
-          "Egypt's currency is the Egyptian pound. Cards work in hotels and most restaurants; keep some pounds for small purchases. Our own prices are set in euros — on this site you will see an approximate dollar figure beside each one.",
+          "Egypt's currency is the Egyptian pound. Cards work in hotels and most restaurants; keep some pounds for small purchases. Our own prices are set in euros — on this site you will see an approximate dollar figure beside each one — and you can pay us by PayPal from a US or Canadian account, by card or by bank transfer.",
           "Tipping is part of daily life in Egypt, as it is at home, but the amounts are smaller and more frequent. We send you a short tipping guide with your itinerary, so you never have to guess.",
         ],
       },
@@ -1232,8 +1233,8 @@ export const guides: Guide[] = [
         a: "Cairo is seven hours ahead of New York and Toronto for most of the year, eight ahead of Chicago and ten ahead of Los Angeles. Egypt keeps summer time on its own dates, so for a few weeks in spring and autumn the gap is an hour different.",
       },
       {
-        q: "Can I see prices in dollars?",
-        a: "Yes. Our prices are set in euros, and visitors in North America see an approximate dollar figure beside each one on this site. Your quote states the exact amount.",
+        q: "Can I see prices in dollars, and pay from the US or Canada?",
+        a: "Yes. Our prices are set in euros, and visitors in North America see an approximate dollar figure beside each one on this site; your quote states the exact amount. You can pay by PayPal from a US or Canadian account, by card or by bank transfer.",
       },
     ],
     hero: {
