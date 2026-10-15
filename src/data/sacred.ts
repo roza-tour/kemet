@@ -180,6 +180,10 @@ export interface SacredPhotos {
   hero?: MediaPlaceholder;
   resin?: MediaPlaceholder;
   jewel?: MediaPlaceholder;
+  /** A wide photograph for the stones' velvet tray. */
+  tray?: MediaPlaceholder;
+  /** By stone name, as in `stones`. */
+  stone?: Record<string, MediaPlaceholder>;
   linen?: MediaPlaceholder;
   cotton?: MediaPlaceholder;
   flax?: MediaPlaceholder;
@@ -189,4 +193,25 @@ export interface SacredPhotos {
   incense?: Record<string, MediaPlaceholder>;
 }
 
-export const sacredPhotos: SacredPhotos = {};
+export const sacredPhotos: SacredPhotos = {
+  hero: {
+    src: "/images/stock/incense-burner-smoke.webp", width: 2000, height: 1415,
+    alt: "Smoke curling from the spout of an engraved brass incense burner",
+  },
+  resin: {
+    src: "/images/stock/frankincense-myrrh-burning.webp", width: 1400, height: 1752,
+    alt: "Tears of frankincense and dark myrrh smouldering on charcoal in a brass burner",
+  },
+  jewel: {
+    src: "/images/sacred/sithathoryunet-pectoral.webp", width: 1563, height: 1600,
+    alt: "The pectoral of Princess Sithathoryunet, gold inlaid with turquoise, lapis lazuli and carnelian, about 1887–1878 BC",
+  },
+  tray: {
+    src: "/images/sacred/amenemhat-girdle-bracelets.webp", width: 1600, height: 1269,
+    alt: "A gold cowrie-shell girdle and bracelets strung with carnelian, turquoise and lapis lazuli, from the reign of Amenemhat III",
+  },
+  linen: {
+    src: "/images/sacred/ancient-linen-sheet-fringe.webp", width: 1600, height: 1200,
+    alt: "The fringe and sheer weave of an ancient Egyptian linen sheet, about 1473–1458 BC",
+  },
+};

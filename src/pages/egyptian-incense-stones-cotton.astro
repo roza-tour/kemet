@@ -9,17 +9,21 @@
 // are offered — on a journey, with a guide or shopping companion, or ordered
 // on WhatsApp and shipped home.
 //
-// THE DESIGN. Calm, warm and led by photographs. It opens on smoke in the
-// dark, then settles into sand and linen tones with room to breathe:
-// photographs in arched frames, the shape of a temple doorway; the incenses
-// set out like an apothecary's list rather than product cards; the stones
-// shown on dark velvet, as a jeweller would; cotton and linen on a woven
-// ground. It closes in the evening, with the smoke again. Animation is slow
-// and stops under prefers-reduced-motion.
+// THE DESIGN — the owner's brief: calm, spiritual, and real.
+//   · It opens at night in the temple: smoke, candlelight, and the circle of
+//     the Dendera zodiac turning slowly in fine gold — the heavens the
+//     priests timed their incense by.
+//   · Then it lightens into soft auras — lavender, peach, sage — the colours
+//     of calm, with the grain of paper over them.
+//   · Every picture is a PHOTOGRAPH: resin, smoke, the stones and the cloth
+//     themselves, and the jewellery of Middle Kingdom princesses (the
+//     Metropolitan Museum's open-access photographs). Nothing is drawn to
+//     stand in for a thing: where a photograph is still missing, the thing's
+//     own name is set in Arabic calligraphy instead.
+// Animation is slow and stops under prefers-reduced-motion.
 import Base from "@/layouts/Base.astro";
 import Faq from "@/components/Faq.astro";
 import Placeholder from "@/components/Placeholder.astro";
-import IncenseArt from "@/components/sacred/IncenseArt.astro";
 import { breadcrumb } from "@/schemas/jsonld";
 import { canonical, whatsappLink, mailtoLink } from "@/utils/links";
 import { incenses, templeDay, stones, sacredFaqs, sacredPhotos as PH } from "@/data/sacred";
@@ -56,30 +60,24 @@ const orderStones = whatsappLink("Hello Kemet — I'm looking for a stone: ");
 const orderCloth = whatsappLink("Hello Kemet — I'd like Egyptian cotton / linen: ");
 const journey = mailtoLink("Incense, stones & cotton on my journey", "Hello Kemet,\n\nI'd like to add incense, stones or cotton and linen to my journey in Egypt.\n\nDates:\nTravellers:\n\nThank you.");
 
-/** Smoke wisps: x position, path, width, duration, delay, drift. */
-const WISPS = [
-  { x: 14, d: "M0 600 C 30 520, -30 440, 10 360 S 60 200, -10 0", w: 26, t: 22, delay: 0, dx: -40 },
-  { x: 34, d: "M0 600 C -30 500, 40 420, -6 330 S -50 160, 14 0", w: 34, t: 26, delay: -9, dx: 50 },
-  { x: 58, d: "M0 600 C 20 520, -16 450, 22 380 S 40 180, -18 0", w: 20, t: 19, delay: -14, dx: -24 },
-  { x: 78, d: "M0 600 C -14 510, 30 400, -16 300 S -26 120, 20 0", w: 30, t: 24, delay: -4, dx: 36 },
-];
+// The ring of the Dendera zodiac, in fine gold line: 36 decans, 12 signs.
+const SIGNS = ["♈", "♉", "♊", "♋", "♌", "♍", "♎", "♏", "♐", "♑", "♒", "♓"];
+const ring = (n: number, r1: number, r2: number, off = 0) =>
+  [...Array(n)].map((_, i) => {
+    const a = (i / n) * Math.PI * 2 + off;
+    return `M${(Math.cos(a) * r1).toFixed(1)} ${(Math.sin(a) * r1).toFixed(1)} L${(Math.cos(a) * r2).toFixed(1)} ${(Math.sin(a) * r2).toFixed(1)}`;
+  }).join(" ");
+const DECANS = ring(36, 262, 276);
+const SPOKES = ring(12, 120, 205, Math.PI / 12);
+const signAt = (i: number) => {
+  const a = (i / 12) * Math.PI * 2 - Math.PI / 2;
+  return { x: (Math.cos(a) * 240).toFixed(1), y: (Math.sin(a) * 240 + 7).toFixed(1) };
+};
 
-/** A faceted gem seen from above: an octagon, its table, and the facets between. */
-function facets(cx: number, cy: number, r: number) {
-  const pt = (k: number, rr: number) => {
-    const a = (Math.PI / 4) * k + Math.PI / 8;
-    return [cx + Math.cos(a) * rr, cy + Math.sin(a) * rr * 0.86];
-  };
-  const outer = [...Array(8)].map((_, k) => pt(k, r));
-  const inner = [...Array(8)].map((_, k) => pt(k, r * 0.52));
-  const f = (p: number[]) => `${p[0].toFixed(1)} ${p[1].toFixed(1)}`;
-  return {
-    outer: `M${outer.map(f).join(" L")} Z`,
-    table: `M${inner.map(f).join(" L")} Z`,
-    tris: [...Array(8)].map((_, k) => `M${f(outer[k])} L${f(outer[(k + 1) % 8])} L${f(inner[(k + 1) % 8])} L${f(inner[k])} Z`),
-  };
-}
-const GEM = facets(60, 60, 50);
+/** The aura colour behind each stone. */
+const STONE_GLOW: Record<string, string> = {
+  Turquoise: "#3FD0C0", "Lapis lazuli": "#4C6FE0", Carnelian: "#E8673F", Peridot: "#A9CF45", Amethyst: "#A57AD8",
+};
 ---
 <Base
   title="Egyptian Incense, Sacred Stones & Egyptian Cotton | Kemet"
@@ -90,56 +88,50 @@ const GEM = facets(60, 60, 50);
 >
 <div class="ss">
 
-  <!-- ================= Smoke in the dark ================= -->
-  <header class="ss-hero">
-    <div class="ss-hero-photo">
-      {PH.hero ? (
+  <!-- ================= Night in the temple ================= -->
+  <header class:list={["ss-hero", PH.hero && "ss-hero--photo"]}>
+    {PH.hero && (
+      <div class="ss-hero-photo">
         <Placeholder src={PH.hero.src} alt={PH.hero.alt} width={PH.hero.width} height={PH.hero.height} loading="eager" label="Incense" />
-      ) : <div class="ss-hero-ground"></div>}
-    </div>
+      </div>
+    )}
     <div class="ss-hero-veil" aria-hidden="true"></div>
-    <svg class="ss-hero-smoke" viewBox="0 0 100 600" preserveAspectRatio="none" aria-hidden="true">
-      <defs><filter id="ssblur" x="-100%" y="-10%" width="300%" height="120%"><feGaussianBlur stdDeviation="9" /></filter></defs>
-      {WISPS.map((w) => (
-        <path d={w.d} transform={`translate(${w.x} 0)`} fill="none" stroke="#F4EEFF" stroke-width={w.w / 10} stroke-linecap="round"
-          filter="url(#ssblur)" style={`--t:${w.t}s;--delay:${w.delay}s;--dx:${w.dx / 10}px`} />
-      ))}
+    <svg class="ss-zodiac" viewBox="-320 -320 640 640" aria-hidden="true">
+      <g fill="none" stroke="currentColor" stroke-width="1">
+        <circle r="300" /><circle r="282" /><circle r="262" /><circle r="212" stroke-dasharray="2 6" /><circle r="120" />
+        <path d={DECANS} /><path d={SPOKES} />
+      </g>
+      {SIGNS.map((g, i) => <text x={signAt(i).x} y={signAt(i).y} text-anchor="middle">{g}&#xFE0E;</text>)}
     </svg>
     <div class="wrap ss-hero-in">
       <nav class="crumb" aria-label="Breadcrumb"><a href="/">Home</a> · <span>Incense, stones &amp; cotton</span></nav>
-      <div class="ss-over">Smoke <span>·</span> Stone <span>·</span> Cloth</div>
-      <h1>The Sacred<br /> Senses of Egypt</h1>
-      <p class="ss-lede">Incense burned since the pharaohs, the stones they held sacred, and the cotton and linen Egypt still grows — for a home that feels calmer, and clothes that feel like nothing at all.</p>
+      <div class="ss-over">Incense <span>·</span> Stones <span>·</span> Cotton &amp; linen</div>
+      <h1>The Sacred <em>Senses</em><br /> of Egypt</h1>
+      <p class="ss-lede">Incense burned since the pharaohs, the stones they held sacred, and the cotton and linen Egypt still grows — for a home that feels lighter, and a calmer you.</p>
       <div class="ss-actions">
         <a class="btn btn-solid" href={order} target="_blank" rel="noopener">Order on WhatsApp</a>
         <a class="btn btn-ghost" href="#incense">Begin with the incense</a>
       </div>
     </div>
-    <ul class="ss-chapters" aria-label="On this page">
-      <li><a href="#incense"><i>I</i>Incense</a></li>
-      <li><a href="#stones"><i>II</i>Stones</a></li>
-      <li><a href="#cloth"><i>III</i>Cotton &amp; linen</a></li>
-    </ul>
   </header>
 
   <!-- ================= The word ================= -->
-  <section class="ss-word">
+  <section class="ss-aura ss-word">
+    <i class="ss-blob b1"></i><i class="ss-blob b2"></i><i class="ss-blob b3"></i>
     <div class="wrap">
-      <svg class="ss-lotus" viewBox="0 0 80 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M40 36 C 34 26, 34 14, 40 4 C 46 14, 46 26, 40 36 Z" /><path d="M40 36 C 30 30, 22 22, 20 12 C 30 14, 37 22, 40 36 Z" /><path d="M40 36 C 50 30, 58 22, 60 12 C 50 14, 43 22, 40 36 Z" /><path d="M6 36 H74" />
-      </svg>
       <p class="ss-word-q reveal"><em>senetjer</em></p>
       <p class="ss-word-t reveal">The ancient Egyptian word for incense is usually translated <b>“that which makes divine.”</b> Scent, stone and cloth were never only things here: they were how a person, a home and a temple were made ready.</p>
     </div>
   </section>
 
   <!-- ================= I. Incense ================= -->
-  <section class="ss-ch ss-incense" id="incense">
+  <section class="ss-aura ss-ch" id="incense">
+    <i class="ss-blob b2"></i><i class="ss-blob b4"></i>
     <div class="wrap ss-open">
       <figure class="ss-arch reveal">
         {PH.resin ? (
-          <Placeholder src={PH.resin.src} alt={PH.resin.alt} width={PH.resin.width} height={PH.resin.height} sizes="half" label="Frankincense" />
-        ) : <div class="ss-arch-ground ss-arch-amber"><IncenseArt tone="gold" id="iahero" /></div>}
+          <Placeholder src={PH.resin.src} alt={PH.resin.alt} width={PH.resin.width} height={PH.resin.height} sizes="half" label="Frankincense and myrrh" />
+        ) : <div class="ss-calli"><span lang="ar" dir="rtl">بخور</span></div>}
       </figure>
       <div class="ss-open-t reveal">
         <div class="ss-num">I</div>
@@ -147,15 +139,8 @@ const GEM = facets(60, 60, 50);
         <h2>The incense of the temples</h2>
         <p>Every morning the temples of Egypt woke to smoke. The priests burned incense as the sun crossed the sky — a ritual timed by the heavens, and one that never quite left Egyptian homes.</p>
         <ol class="ss-sun">
-          {templeDay.map((d, i) => (
-            <li>
-              <svg viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
-                {i === 0 && <><path d="M6 28 H34" /><path d="M11 28 A9 9 0 0 1 29 28" /><path d="M20 12 V9 M10 17 l-2 -2 M30 17 l2 -2" /></>}
-                {i === 1 && <><circle cx="20" cy="20" r="7" /><path d="M20 5 V9 M20 31 V35 M5 20 H9 M31 20 H35 M9.5 9.5 l2.8 2.8 M27.7 27.7 l2.8 2.8 M30.5 9.5 l-2.8 2.8 M12.3 27.7 l-2.8 2.8" /></>}
-                {i === 2 && <><path d="M6 24 H34" /><path d="M12 24 A8 8 0 0 1 28 24" /><path d="M10 30 H30 M14 35 H26" opacity=".6" /></>}
-              </svg>
-              <small>{d.when}</small><b>{d.what}</b><span>{d.note}</span>
-            </li>
+          {templeDay.map((d) => (
+            <li><small>{d.when}</small><b>{d.what}</b><span>{d.note}</span></li>
           ))}
         </ol>
         <p class="ss-src">The priests' day, as Plutarch records it in <i>On Isis and Osiris</i>. The recipe for kyphi is still carved on the walls of the laboratory at Edfu temple.</p>
@@ -168,12 +153,12 @@ const GEM = facets(60, 60, 50);
         <p>Each as Cairo's incense sellers know it — where it comes from, and how it is used at home.</p>
       </div>
       <ul class="ss-apoth">
-        {incenses.map((x, i) => {
+        {incenses.map((x) => {
           const ph = PH.incense?.[x.name];
           return (
             <li class="reveal">
               <div class="ss-dish">
-                {ph ? <Placeholder src={ph.src} alt={ph.alt} width={ph.width} height={ph.height} sizes="card" label={x.name} /> : <IncenseArt tone={x.tone} id={`ia${i}`} />}
+                {ph ? <Placeholder src={ph.src} alt={ph.alt} width={ph.width} height={ph.height} sizes="card" label={x.name} /> : <span lang="ar" dir="rtl">{x.ar}</span>}
               </div>
               <div>
                 <h4>{x.name}<span lang="ar" dir="rtl">{x.ar}</span></h4>
@@ -185,21 +170,14 @@ const GEM = facets(60, 60, 50);
         })}
       </ul>
     </div>
+  </section>
 
-    <div class="ss-belief reveal">
-      <div class="wrap">
-        <svg viewBox="0 0 120 64" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M8 30 C 30 8, 90 8, 112 30 C 90 46, 30 46, 8 30 Z" />
-          <circle cx="60" cy="29" r="11" /><circle cx="60" cy="29" r="4.5" fill="currentColor" />
-          <path d="M44 42 L 40 60 M 40 60 C 46 60, 50 56, 50 52 M 64 41 C 70 50, 82 50, 88 44" />
-        </svg>
-        <blockquote>In Egyptian homes to this day, incense is burned after a guest has gone, before a new beginning, and against <i>hasad</i> — the evil eye.</blockquote>
-        <p>These beliefs are older than any of us, and we share them as Egyptians live them. Whatever you believe, the ritual does what rituals do: it slows the hour down, and leaves a room feeling cared for.</p>
-      </div>
-    </div>
-
-    <div class="wrap">
-      <div class="ss-ritual reveal">
+  <section class="ss-aura ss-belief">
+    <i class="ss-blob b1"></i><i class="ss-blob b3"></i>
+    <div class="wrap reveal">
+      <blockquote>In Egyptian homes to this day, incense is burned after a guest has gone, before a new beginning, and against <i>hasad</i> — the evil eye.</blockquote>
+      <p>These beliefs are older than any of us, and we share them as Egyptians live them. Whatever you believe, the ritual does what rituals do: it slows the hour down, and leaves a room feeling cared for.</p>
+      <div class="ss-ritual">
         <h3>How to burn it</h3>
         <ol>
           <li><span>1</span>Light a charcoal disc in a heatproof dish, and wait until it turns grey.</li>
@@ -211,7 +189,7 @@ const GEM = facets(60, 60, 50);
     </div>
   </section>
 
-  <!-- ================= II. Stones, on velvet ================= -->
+  <!-- ================= II. Stones, at night ================= -->
   <section class="ss-ch ss-velvet" id="stones">
     <div class="wrap ss-open ss-open--rev">
       <div class="ss-open-t reveal">
@@ -219,49 +197,39 @@ const GEM = facets(60, 60, 50);
         <div class="eyebrow">Stones</div>
         <h2>Stones the pharaohs held sacred</h2>
         <p>To the ancient Egyptians a stone's colour was its power. Green and turquoise were new life, red was blood and vitality, deep blue was the night sky. They set them into amulets and collars, buried them with their kings — and Egyptians still wear them for the same reasons.</p>
+        {PH.jewel && <p class="ss-cap">Right: the pectoral of Princess Sithathoryunet — gold, turquoise, lapis lazuli and carnelian, made about 3,900 years ago. The Metropolitan Museum of Art.</p>}
       </div>
       <figure class="ss-arch ss-arch--gold reveal">
         {PH.jewel ? (
           <Placeholder src={PH.jewel.src} alt={PH.jewel.alt} width={PH.jewel.width} height={PH.jewel.height} sizes="half" label="Ancient Egyptian jewellery" />
-        ) : <div class="ss-arch-ground ss-arch-night"></div>}
+        ) : <div class="ss-calli ss-calli--night"><span lang="ar" dir="rtl">أحجار</span></div>}
       </figure>
     </div>
 
     <div class="wrap">
-      <div class="ss-tray">
-        {stones.map((s, i) => (
-          <article class="ss-gem reveal">
-            <svg class="ss-gem-art" viewBox="0 0 120 120" aria-hidden="true">
-              <defs>
-                <radialGradient id={`ssg${i}`} cx="36%" cy="30%" r="75%">
-                  <stop offset="0" stop-color={s.colors[0]} /><stop offset=".55" stop-color={s.colors[1]} /><stop offset="1" stop-color={s.colors[2]} />
-                </radialGradient>
-              </defs>
-              <ellipse cx="60" cy="108" rx="40" ry="6" fill="#000" fill-opacity=".45" />
-              {s.cut === "cabochon" ? (
-                <g>
-                  <ellipse cx="60" cy="58" rx="50" ry="42" fill="none" stroke="#D9B45A" stroke-width="3.5" />
-                  <ellipse cx="60" cy="58" rx="45" ry="37" fill={`url(#ssg${i})`} />
-                  {s.name === "Turquoise" && <path d="M24 66 C 38 58, 46 70, 60 62 S 84 54, 96 62 M40 44 C 50 48, 56 40, 68 44" stroke="#0B3B37" stroke-opacity=".45" stroke-width="1.2" fill="none" />}
-                  {s.name === "Lapis lazuli" && [[40, 66], [52, 52], [70, 70], [80, 50], [62, 80], [46, 78], [88, 66]].map(([x, y]) => <circle cx={x} cy={y} r="1.3" fill="#F5D77A" />)}
-                  <ellipse cx="46" cy="40" rx="16" ry="8" fill="#fff" fill-opacity=".38" transform="rotate(-20 46 40)" />
-                </g>
-              ) : (
-                <g transform="translate(0 -2)">
-                  <path d={GEM.outer} fill={`url(#ssg${i})`} stroke="#fff" stroke-opacity=".35" stroke-width="1" />
-                  {GEM.tris.map((t, k) => <path d={t} fill="#fff" fill-opacity={[0.22, 0.05, 0.14, 0, 0.1, 0.03, 0.18, 0.08][k]} stroke="#fff" stroke-opacity=".22" stroke-width=".8" />)}
-                  <path d={GEM.table} fill="#fff" fill-opacity=".16" stroke="#fff" stroke-opacity=".4" stroke-width=".9" />
-                </g>
-              )}
-              <path class="ss-twinkle" d="M88 24 l2.4 6 6 2.4 -6 2.4 -2.4 6 -2.4 -6 -6 -2.4 6 -2.4 Z" fill="#fff" />
-            </svg>
-            <h3>{s.name}</h3>
-            <div class="ss-called"><i>{s.called}</i> · {s.calledIn}</div>
-            <p>{s.origin}</p>
-            <p class="ss-meaning">{s.meaning}</p>
-          </article>
-        ))}
-      </div>
+      <ul class="ss-stones">
+        {stones.map((s) => {
+          const ph = PH.stone?.[s.name];
+          return (
+            <li class="reveal" style={`--glow:${STONE_GLOW[s.name]}`}>
+              <div class="ss-stone-img">
+                {ph ? <Placeholder src={ph.src} alt={ph.alt} width={ph.width} height={ph.height} sizes="card" label={s.name} /> : <em>{s.called}</em>}
+              </div>
+              <h3>{s.name}</h3>
+              <div class="ss-called"><i>{s.called}</i> · {s.calledIn}</div>
+              <p>{s.origin}</p>
+              <p class="ss-meaning">{s.meaning}</p>
+            </li>
+          );
+        })}
+      </ul>
+
+      {PH.tray && (
+        <figure class="ss-tray reveal">
+          <Placeholder src={PH.tray.src} alt={PH.tray.alt} width={PH.tray.width} height={PH.tray.height} sizes="full" label="Middle Kingdom jewellery" />
+          <figcaption>A princess's girdle and bracelets — gold, carnelian, turquoise and lapis lazuli — from the reign of Amenemhat III. The Metropolitan Museum of Art.</figcaption>
+        </figure>
+      )}
 
       <p class="ss-today reveal">The blue bead against the evil eye, the carnelian ring, the scarab worn for luck — Egypt never stopped.</p>
       <div class="ss-pieces reveal">
@@ -272,35 +240,33 @@ const GEM = facets(60, 60, 50);
   </section>
 
   <!-- ================= III. Cotton & linen ================= -->
-  <section class="ss-ch ss-linen" id="cloth">
+  <section class="ss-aura ss-aura--sage ss-ch" id="cloth">
+    <i class="ss-blob b3"></i><i class="ss-blob b4"></i>
     <div class="wrap ss-open">
       <figure class="ss-arch reveal">
         {PH.linen ? (
           <Placeholder src={PH.linen.src} alt={PH.linen.alt} width={PH.linen.width} height={PH.linen.height} sizes="half" label="Linen" />
-        ) : <div class="ss-arch-ground ss-arch-weave"></div>}
+        ) : <div class="ss-calli"><span lang="ar" dir="rtl">كتان</span></div>}
       </figure>
       <div class="ss-open-t reveal">
         <div class="ss-num">III</div>
         <div class="eyebrow">Cotton &amp; linen</div>
         <h2>Cloth grown by the Nile</h2>
         <p>Egypt has dressed in linen for five thousand years. Its priests, Herodotus noticed, wore nothing else, and Tutankhamun was buried with chests of linen shirts and tunics. Today the same river grows some of the finest cotton in the world.</p>
+        {PH.linen && <p class="ss-cap">Left: an Egyptian linen sheet woven about 3,500 years ago, its fringe still soft. The Metropolitan Museum of Art.</p>}
       </div>
     </div>
 
     <div class="wrap">
       <div class="ss-fibres">
         <article class="ss-fibre reveal">
-          <div class="ss-fibre-img">
-            {PH.cotton ? <Placeholder src={PH.cotton.src} alt={PH.cotton.alt} width={PH.cotton.width} height={PH.cotton.height} sizes="card" label="Cotton" /> : <div class="ss-arch-ground ss-arch-weave"></div>}
-          </div>
-          <h3>Egyptian cotton</h3>
+          {PH.cotton && <div class="ss-fibre-img"><Placeholder src={PH.cotton.src} alt={PH.cotton.alt} width={PH.cotton.width} height={PH.cotton.height} sizes="card" label="Cotton" /></div>}
+          <h3>Egyptian cotton <span lang="ar" dir="rtl">قطن</span></h3>
           <p>Egyptian cotton is <b>extra-long staple</b>: each fibre is longer than ordinary cotton's, so it spins into a finer, stronger, softer yarn — one that grows softer with every wash. It has been grown in the Nile Delta since the 1820s, when Muhammad Ali planted it for the world.</p>
         </article>
         <article class="ss-fibre reveal">
-          <div class="ss-fibre-img">
-            {PH.flax ? <Placeholder src={PH.flax.src} alt={PH.flax.alt} width={PH.flax.width} height={PH.flax.height} sizes="card" label="Linen" /> : <div class="ss-arch-ground ss-arch-weave"></div>}
-          </div>
-          <h3>Egyptian linen</h3>
+          {PH.flax && <div class="ss-fibre-img"><Placeholder src={PH.flax.src} alt={PH.flax.alt} width={PH.flax.width} height={PH.flax.height} sizes="card" label="Linen" /></div>}
+          <h3>Egyptian linen <span lang="ar" dir="rtl">كتان</span></h3>
           <p>Spun from flax grown by the Nile, linen is cool, strong and better with age. It breathes in the heat, softens as it is worn, and lasts for years — the cloth Egypt chose for its priests and its kings.</p>
         </article>
       </div>
@@ -313,8 +279,9 @@ const GEM = facets(60, 60, 50);
     </div>
   </section>
 
-  <!-- ================= Two ways ================= -->
-  <section class="ss-ways">
+  <!-- ================= Two ways, and questions ================= -->
+  <section class="ss-aura ss-ways">
+    <i class="ss-blob b1"></i><i class="ss-blob b2"></i>
     <div class="wrap">
       <div class="ss-center reveal">
         <div class="eyebrow">Two ways to have them</div>
@@ -322,17 +289,13 @@ const GEM = facets(60, 60, 50);
       </div>
       <div class="ss-way-grid">
         <article class="ss-way reveal">
-          <div class="ss-way-img">
-            {PH.souk ? <Placeholder src={PH.souk.src} alt={PH.souk.alt} width={PH.souk.width} height={PH.souk.height} sizes="half" label="Khan el-Khalili" /> : <div class="ss-arch-ground ss-arch-amber"></div>}
-          </div>
+          {PH.souk && <div class="ss-way-img"><Placeholder src={PH.souk.src} alt={PH.souk.alt} width={PH.souk.width} height={PH.souk.height} sizes="half" label="Khan el-Khalili" /></div>}
           <h3>On your journey</h3>
           <p>Add an afternoon to your journey: Cairo's incense and perfume sellers in Khan el-Khalili with your guide, and a shopping companion for stones, cotton and linen. On a Nile journey, stand in the laboratory at Edfu temple, where the recipes for incense are carved into the walls.</p>
           <a class="btn btn-ghost" href={journey}>Add it to my journey</a>
         </article>
         <article class="ss-way reveal">
-          <div class="ss-way-img">
-            {PH.parcel ? <Placeholder src={PH.parcel.src} alt={PH.parcel.alt} width={PH.parcel.width} height={PH.parcel.height} sizes="half" label="Sent home" /> : <div class="ss-arch-ground ss-arch-weave"></div>}
-          </div>
+          {PH.parcel && <div class="ss-way-img"><Placeholder src={PH.parcel.src} alt={PH.parcel.alt} width={PH.parcel.width} height={PH.parcel.height} sizes="half" label="Sent home" /></div>}
           <h3>Sent to your home</h3>
           <p>Write to us on WhatsApp with what you are looking for — an incense, a stone, a size or a colour. We send photographs of the actual pieces and a price with shipping to your country. Pay by bank transfer, card or PayPal.</p>
           <a class="btn btn-solid" href={order} target="_blank" rel="noopener">Order on WhatsApp</a>
@@ -347,12 +310,6 @@ const GEM = facets(60, 60, 50);
 
   <!-- ================= Evening ================= -->
   <section class="ss-evening">
-    <svg class="ss-hero-smoke" viewBox="0 0 100 600" preserveAspectRatio="none" aria-hidden="true">
-      {WISPS.slice(0, 3).map((w) => (
-        <path d={w.d} transform={`translate(${w.x + 10} 0)`} fill="none" stroke="#F4EEFF" stroke-width={w.w / 12} stroke-linecap="round"
-          filter="url(#ssblur)" style={`--t:${w.t}s;--delay:${w.delay}s;--dx:${w.dx / 10}px`} />
-      ))}
-    </svg>
     <div class="wrap ss-center reveal">
       <p class="ss-close">Light it slowly.</p>
       <a class="btn btn-solid" href={order} target="_blank" rel="noopener">Order on WhatsApp</a>
@@ -362,188 +319,203 @@ const GEM = facets(60, 60, 50);
 </Base>
 
 <style>
-  .ss { --sand: #F4EDE2; --sand-2: #EBE1D2; --umber: #2B231C; --umber-m: #62564A; --gold-d: #8A6A2E; --amber: #B9772E;
-    background: var(--sand); color: var(--umber); overflow: clip; }
+  .ss { --ink-p: #2E2238; --ink-pm: #5E4E6A; --gold-d: #8A6A2E; --lav: #CDB6F4; --peach: #F9C4A2; --sage: #BCDDC5; --honey: #F6DE9C;
+    --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+    background: #F6F0EA; color: var(--ink-p); overflow: clip; }
   .ss section { position: relative; }
   .ss .eyebrow { color: var(--gold-d); }
-  .ss-center { max-width: 680px; margin: 0 auto var(--s-6); text-align: center; }
-  .ss-center h2 { margin-top: var(--s-2); font-size: var(--t-2xl); color: var(--umber); }
-  .ss-num { font-family: var(--ff-display); font-size: 3rem; line-height: 1; color: transparent; -webkit-text-stroke: 1px rgba(138,106,46,.6); margin-bottom: var(--s-2); }
   .ss :global(.frame::before) { display: none; }
+  .ss-center { max-width: 680px; margin: 0 auto var(--s-6); text-align: center; position: relative; z-index: 1; }
+  .ss-center h2 { margin-top: var(--s-2); font-size: var(--t-2xl); color: var(--ink-p); }
+  .ss-num { font-family: var(--ff-display); font-size: 3rem; line-height: 1; color: transparent; -webkit-text-stroke: 1px rgba(138,106,46,.6); margin-bottom: var(--s-2); }
 
-  /* ---- Hero: smoke in the dark ---- */
-  .ss-hero { position: relative; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 150px 0 140px; background: #0D0A10; color: var(--bone); overflow: hidden; }
+  /* ---- Auras: soft colour, slowly breathing, with paper grain over it ---- */
+  .ss-aura { background: #F6F0EA; overflow: hidden; }
+  .ss-aura::after { content: ""; position: absolute; inset: 0; background-image: var(--grain); opacity: .2; mix-blend-mode: multiply; pointer-events: none; }
+  .ss-aura > .wrap { position: relative; z-index: 1; }
+  .ss-blob { position: absolute; border-radius: 50%; filter: blur(90px); opacity: .55; pointer-events: none; animation: ss-breathe 22s ease-in-out infinite alternate; }
+  .ss-blob.b1 { width: 620px; height: 620px; background: var(--lav); left: -180px; top: -120px; }
+  .ss-blob.b2 { width: 560px; height: 560px; background: var(--peach); right: -160px; top: 20%; animation-delay: -7s; }
+  .ss-blob.b3 { width: 560px; height: 560px; background: var(--sage); left: 25%; bottom: -260px; animation-delay: -12s; }
+  .ss-blob.b4 { width: 420px; height: 420px; background: var(--honey); right: 20%; top: -140px; opacity: .45; animation-delay: -4s; }
+  .ss-aura--sage .ss-blob.b3 { opacity: .7; }
+  @keyframes ss-breathe { to { transform: translate(40px, 30px) scale(1.1); } }
+
+  /* ---- Hero: night in the temple ---- */
+  .ss-hero { position: relative; min-height: 100vh; display: flex; align-items: center; padding: 150px 0 120px; overflow: hidden; color: #EDE6F5; text-align: center;
+    background: radial-gradient(900px 600px at 50% 112%, rgba(240,150,60,.38), transparent 62%), radial-gradient(1000px 700px at 50% 40%, #1C1738, #07060F 72%); }
   .ss-hero-photo { position: absolute; inset: 0; }
-  .ss-hero-photo :global(.frame) { position: absolute; inset: 0; background: #0D0A10; }
+  .ss-hero-photo :global(.frame) { position: absolute; inset: 0; background: #07060F; }
   .ss-hero-photo :global(img) { animation: ss-drift 40s ease-in-out infinite alternate; }
-  @keyframes ss-drift { from { transform: scale(1.02); } to { transform: scale(1.12) translate(-1.5%, -1%); } }
-  .ss-hero-ground { position: absolute; inset: 0; background: radial-gradient(700px 520px at 72% 60%, rgba(214,150,70,.26), transparent 64%), radial-gradient(800px 600px at 30% 20%, rgba(120,86,150,.24), transparent 66%), #0D0A10; }
-  .ss-hero-veil { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(10,8,12,.86) 0%, rgba(10,8,12,.6) 42%, rgba(10,8,12,.15) 75%), linear-gradient(0deg, rgba(10,8,12,.7), transparent 40%); }
-  .ss-hero-smoke { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
-  .ss-hero-smoke path { opacity: 0; animation: ss-rise var(--t) ease-in-out infinite; animation-delay: var(--delay); }
-  @keyframes ss-rise {
-    0% { opacity: 0; transform: translateY(60px); }
-    25% { opacity: .22; }
-    70% { opacity: .12; }
-    100% { opacity: 0; transform: translate(var(--dx), -80px); }
-  }
-  .ss-hero-in { position: relative; z-index: 2; max-width: 1240px; }
-  .ss-hero-in > * { max-width: 620px; }
-  .ss-hero .crumb { color: rgba(251,246,236,.7); }
-  .ss-over { font-size: var(--t-micro); letter-spacing: .5em; text-transform: uppercase; color: var(--gold); margin-bottom: var(--s-3); }
-  .ss-over span { opacity: .5; margin: 0 .4em; }
-  .ss-hero h1 { font-size: clamp(2.8rem, 6.6vw, 5.6rem); line-height: 1.02; color: var(--bone); }
-  .ss-lede { margin-top: var(--s-4); color: rgba(251,246,236,.82); font-size: var(--t-md); line-height: 1.8; }
-  .ss-actions { display: flex; flex-wrap: wrap; gap: var(--s-3); margin-top: var(--s-6); }
-  .ss-chapters { position: absolute; z-index: 2; left: 0; right: 0; bottom: 34px; display: flex; justify-content: center; gap: var(--s-6); list-style: none; padding: 0; margin: 0; }
-  .ss-chapters a { display: flex; align-items: baseline; gap: 10px; color: rgba(251,246,236,.75); font-size: var(--t-micro); letter-spacing: .3em; text-transform: uppercase; transition: color .4s; }
-  .ss-chapters a:hover { color: var(--gold-bright); }
-  .ss-chapters i { font-family: var(--ff-display); font-style: normal; font-size: 1.2rem; letter-spacing: 0; color: var(--gold); }
+  @keyframes ss-drift { from { transform: scale(1.02); } to { transform: scale(1.12); } }
+  .ss-hero-veil { position: absolute; inset: 0; background: radial-gradient(800px 520px at 50% 48%, rgba(7,6,15,.55), rgba(7,6,15,.25) 70%), linear-gradient(0deg, rgba(7,6,15,.85), transparent 45%); }
+  .ss-zodiac { position: absolute; left: 50%; top: 50%; width: min(720px, 120vw); transform: translate(-50%, -50%); color: #C9A55A; opacity: .5; animation: ss-turn 300s linear infinite; }
+  .ss-zodiac text { fill: #E2C27A; font-size: 22px; font-family: serif; }
+  @keyframes ss-turn { to { transform: translate(-50%, -50%) rotate(360deg); } }
+  .ss-hero-in { position: relative; z-index: 2; }
+  /* With the photograph: the words on the left, the burner and its smoke on the right */
+  .ss-hero--photo { text-align: left; background: #07060F; }
+  .ss-hero--photo .ss-hero-photo :global(img) { object-position: 70% 50%; }
+  .ss-hero--photo .ss-hero-veil { background: linear-gradient(90deg, rgba(7,6,15,.92) 0%, rgba(7,6,15,.72) 38%, rgba(7,6,15,.1) 72%), linear-gradient(0deg, rgba(7,6,15,.8), transparent 40%); }
+  .ss-hero--photo .ss-hero-in > * { max-width: 600px; }
+  .ss-hero--photo .ss-lede { margin-left: 0; }
+  .ss-hero--photo .ss-actions { justify-content: flex-start; }
+  .ss-hero--photo .ss-zodiac { left: 24%; width: min(640px, 110vw); opacity: .28; }
+  .ss-hero .crumb { color: rgba(237,230,245,.7); }
+  .ss-over { font-size: var(--t-micro); letter-spacing: .5em; text-transform: uppercase; color: #E2C27A; margin-bottom: var(--s-3); }
+  .ss-over span { opacity: .5; margin: 0 .3em; }
+  .ss-hero h1 { font-size: clamp(2.8rem, 6.8vw, 5.6rem); line-height: 1.02; background: linear-gradient(180deg, #FFF3D6, #E2B969 62%, #B8862E); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .ss-hero h1 em { font-style: italic; }
+  .ss-lede { max-width: 620px; margin: var(--s-4) auto 0; color: rgba(237,230,245,.85); font-size: var(--t-md); line-height: 1.8; }
+  .ss-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--s-3); margin-top: var(--s-6); }
 
   /* ---- The word ---- */
-  .ss-word { padding: var(--s-8) 0 var(--s-7); text-align: center; }
-  .ss-lotus { width: 80px; color: var(--gold-d); margin: 0 auto var(--s-3); display: block; }
-  .ss-word-q { font-family: var(--ff-display); font-size: clamp(2.6rem, 5.4vw, 4rem); color: var(--amber); letter-spacing: .03em; }
-  .ss-word-t { max-width: 640px; margin: var(--s-3) auto 0; color: var(--umber-m); font-size: var(--t-md); line-height: 1.85; }
-  .ss-word-t b { color: var(--umber); font-weight: 500; }
+  .ss-word { padding: var(--s-8) 0; text-align: center; }
+  .ss-word-q { font-family: var(--ff-display); font-size: clamp(2.6rem, 5.4vw, 4rem); color: #7A5A9A; letter-spacing: .03em; }
+  .ss-word-t { max-width: 640px; margin: var(--s-3) auto 0; color: var(--ink-pm); font-size: var(--t-md); line-height: 1.85; }
+  .ss-word-t b { color: var(--ink-p); font-weight: 500; }
 
-  /* ---- Chapter openers: an arched photograph beside the words ---- */
+  /* ---- Chapter openers ---- */
   .ss-ch { padding: var(--s-8) 0; }
   .ss-open { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: var(--s-8); align-items: center; margin-bottom: var(--s-8); }
   .ss-open--rev { grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); }
-  .ss-open-t h2 { margin-top: var(--s-2); font-size: var(--t-2xl); color: var(--umber); }
-  .ss-open-t > p { margin-top: var(--s-4); color: var(--umber-m); font-size: var(--t-md); line-height: 1.85; }
+  .ss-open-t h2 { margin-top: var(--s-2); font-size: var(--t-2xl); color: var(--ink-p); }
+  .ss-open-t > p { margin-top: var(--s-4); color: var(--ink-pm); font-size: var(--t-md); line-height: 1.85; }
+  .ss-cap { font-size: var(--t-sm) !important; font-style: italic; opacity: .85; }
   .ss-arch { position: relative; margin: 0; aspect-ratio: 4 / 5; max-width: 480px; width: 100%; justify-self: center;
-    border-radius: 999px 999px 18px 18px; overflow: hidden; box-shadow: 0 50px 80px -50px rgba(43,35,28,.7); }
-  .ss-arch::after { content: ""; position: absolute; inset: 12px; border-radius: 999px 999px 10px 10px; border: 1px solid rgba(255,255,255,.55); pointer-events: none; z-index: 2; }
+    border-radius: 999px 999px 18px 18px; overflow: hidden; box-shadow: 0 50px 80px -46px rgba(46,34,56,.65); background: #EFE6DA; }
+  .ss-arch::after { content: ""; position: absolute; inset: 12px; border-radius: 999px 999px 10px 10px; border: 1px solid rgba(255,255,255,.6); pointer-events: none; z-index: 2; }
   .ss-arch :global(.frame) { position: absolute; inset: 0; }
-  .ss-arch :global(img) { transition: transform 2s cubic-bezier(.22,.61,.36,1); }
+  .ss-arch :global(img) { transition: transform 2.4s cubic-bezier(.22,.61,.36,1); }
   .ss-arch:hover :global(img) { transform: scale(1.04); }
-  .ss-arch-ground { position: absolute; inset: 0; display: grid; place-items: center; }
-  .ss-arch-ground :global(svg) { width: 80%; }
-  .ss-arch-amber { background: radial-gradient(circle at 50% 40%, #F1C886, #B9772E 55%, #4A2810); }
-  .ss-arch-night { background: radial-gradient(circle at 50% 35%, #2A5C66, #10262B 60%, #08141A); }
-  .ss-arch-weave { background: repeating-linear-gradient(0deg, rgba(120,100,70,.10) 0 2px, transparent 2px 5px), repeating-linear-gradient(90deg, rgba(120,100,70,.10) 0 2px, transparent 2px 5px), radial-gradient(circle at 30% 30%, #FBF6EC, #E2D5BC); }
+  /* Where a photograph is still missing: the thing's name, in calligraphy */
+  .ss-calli { position: absolute; inset: 0; display: grid; place-items: center;
+    background: radial-gradient(circle at 50% 38%, rgba(255,255,255,.7), transparent 60%), linear-gradient(160deg, #EADCF5, #F8DCC8 55%, #DCEBDD); }
+  .ss-calli span { font-family: 'Amiri', serif; font-size: clamp(4rem, 9vw, 7rem); color: rgba(46,34,56,.75); }
+  .ss-calli--night { background: radial-gradient(circle at 50% 38%, rgba(255,255,255,.08), transparent 60%), linear-gradient(160deg, #1A2B4A, #0D1A22); }
+  .ss-calli--night span { color: rgba(226,194,122,.85); }
 
   /* ---- Incense ---- */
-  .ss-sun { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-3); list-style: none; padding: var(--s-4) 0 0; margin: var(--s-5) 0 0; border-top: 1px solid rgba(138,106,46,.25); }
-  .ss-sun svg { width: 34px; height: 34px; color: var(--amber); display: block; margin-bottom: var(--s-1); }
+  .ss-sun { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-3); list-style: none; padding: var(--s-4) 0 0; margin: var(--s-5) 0 0; border-top: 1px solid rgba(138,106,46,.28); }
   .ss-sun small { display: block; font-size: var(--t-micro); letter-spacing: .3em; text-transform: uppercase; color: var(--gold-d); }
-  .ss-sun b { display: block; margin-top: 2px; font-family: var(--ff-display); font-weight: 400; font-size: var(--t-lg); color: var(--umber); }
-  .ss-sun span { display: block; margin-top: 2px; color: var(--umber-m); font-size: var(--t-sm); line-height: 1.6; }
-  .ss-src { margin-top: var(--s-4); color: var(--umber-m); font-size: var(--t-sm); font-style: italic; }
+  .ss-sun b { display: block; margin-top: 2px; font-family: var(--ff-display); font-weight: 400; font-size: var(--t-lg); color: var(--ink-p); }
+  .ss-sun span { display: block; margin-top: 2px; color: var(--ink-pm); font-size: var(--t-sm); line-height: 1.6; }
+  .ss-src { margin-top: var(--s-4); color: var(--ink-pm); font-size: var(--t-sm); font-style: italic; }
   .ss-shelf-head { text-align: center; max-width: 640px; margin: 0 auto var(--s-6); }
-  .ss-shelf-head h3 { font-size: var(--t-xl); color: var(--umber); }
-  .ss-shelf-head p { margin-top: var(--s-2); color: var(--umber-m); }
-  .ss-apoth { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 var(--s-7); list-style: none; padding: 0; margin: 0; }
-  .ss-apoth li { display: grid; grid-template-columns: 132px 1fr; gap: var(--s-4); align-items: start; padding: var(--s-5) 0; border-top: 1px solid rgba(138,106,46,.22); }
-  .ss-dish { position: relative; width: 132px; aspect-ratio: 1; border-radius: 50%; overflow: hidden;
-    background: radial-gradient(circle at 50% 38%, #3A2A1E, #15100C 72%); box-shadow: 0 20px 34px -18px rgba(43,35,28,.75), 0 0 0 6px var(--sand), 0 0 0 7px rgba(138,106,46,.35); }
+  .ss-shelf-head h3 { font-size: var(--t-xl); color: var(--ink-p); }
+  .ss-shelf-head p { margin-top: var(--s-2); color: var(--ink-pm); }
+  .ss-apoth { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-4); list-style: none; padding: 0; margin: 0; }
+  .ss-apoth li { display: grid; grid-template-columns: 120px 1fr; gap: var(--s-4); align-items: start; padding: var(--s-4); border-radius: 28px;
+    background: rgba(255,255,255,.42); border: 1px solid rgba(255,255,255,.75); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
+    box-shadow: 0 30px 60px -46px rgba(70,40,90,.55); }
+  .ss-dish { position: relative; width: 120px; aspect-ratio: 1; border-radius: 50%; overflow: hidden; display: grid; place-items: center;
+    background: radial-gradient(circle at 50% 38%, rgba(255,255,255,.8), transparent 64%), linear-gradient(160deg, #EADCF5, #F8DCC8); box-shadow: 0 0 0 5px rgba(255,255,255,.7), 0 18px 30px -18px rgba(70,40,90,.5); }
   .ss-dish :global(.frame) { position: absolute; inset: 0; }
-  .ss-dish :global(svg) { position: absolute; inset: 10%; width: 80%; height: 80%; }
-  .ss-apoth h4 { font-family: var(--ff-display); font-weight: 400; font-size: var(--t-lg); color: var(--umber); display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
-  .ss-apoth h4 span { font-family: 'Amiri', var(--ff-display); font-size: .85em; color: var(--amber); }
-  .ss-apoth p { margin-top: var(--s-2); color: var(--umber-m); font-size: var(--t-sm); line-height: 1.8; }
+  .ss-dish > span { font-family: 'Amiri', serif; font-size: 2.3rem; color: rgba(46,34,56,.7); }
+  .ss-apoth h4 { font-family: var(--ff-display); font-weight: 400; font-size: var(--t-lg); color: var(--ink-p); display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .ss-apoth h4 span { font-family: 'Amiri', var(--ff-display); font-size: .85em; color: var(--gold-d); }
+  .ss-apoth p { margin-top: var(--s-2); color: var(--ink-pm); font-size: var(--t-sm); line-height: 1.8; }
   .ss-home b { display: block; font-size: var(--t-nano); letter-spacing: .32em; text-transform: uppercase; color: var(--gold-d); font-weight: 500; margin-bottom: 2px; }
-  .ss-belief { margin: var(--s-8) 0; padding: var(--s-8) 0; text-align: center;
-    background: radial-gradient(900px 400px at 50% 0%, rgba(185,119,46,.12), transparent 70%), linear-gradient(180deg, var(--sand-2), #E4D8C6 50%, var(--sand-2)); }
-  .ss-belief svg { width: 110px; color: var(--gold-d); margin: 0 auto var(--s-4); display: block; }
-  .ss-belief blockquote { max-width: 820px; margin: 0 auto; font-family: var(--ff-display); font-weight: 300; font-size: clamp(1.6rem, 3.2vw, 2.4rem); line-height: 1.35; color: var(--umber); }
-  .ss-belief p { max-width: 640px; margin: var(--s-4) auto 0; color: var(--umber-m); line-height: 1.85; }
-  .ss-ritual { max-width: 980px; margin: 0 auto; text-align: center; }
-  .ss-ritual h3 { font-size: var(--t-xl); color: var(--umber); }
-  .ss-ritual ol { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-5); list-style: none; padding: 0; margin: var(--s-5) 0 var(--s-6); text-align: left; }
-  .ss-ritual li { color: var(--umber-m); font-size: var(--t-sm); line-height: 1.75; }
-  .ss-ritual li span { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; margin-bottom: var(--s-2); border: 1px solid var(--gold-d); color: var(--gold-d); font-family: var(--ff-display); }
 
-  /* ---- Stones, on velvet ---- */
-  .ss-velvet { color: var(--bone); background: radial-gradient(1000px 500px at 50% 30%, #1B3A40, transparent 70%), linear-gradient(180deg, #0F2328, #0A181C 60%, #0F2328); }
-  .ss-velvet .eyebrow { color: #E2C77E; }
-  .ss-velvet .ss-num { -webkit-text-stroke-color: rgba(226,199,126,.6); }
-  .ss-velvet .ss-open-t h2 { color: var(--bone); }
-  .ss-velvet .ss-open-t > p { color: rgba(251,246,236,.78); }
-  .ss-arch--gold { box-shadow: 0 0 0 1px rgba(226,199,126,.4), 0 50px 80px -40px rgba(0,0,0,.9); }
-  .ss-tray { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--s-4); padding: var(--s-6) var(--s-5); border-radius: 32px;
-    background: radial-gradient(circle at 50% 0%, rgba(255,255,255,.06), transparent 60%), linear-gradient(180deg, #13292E, #0C1C20);
-    box-shadow: inset 0 2px 0 rgba(255,255,255,.04), inset 0 -30px 60px rgba(0,0,0,.35), 0 40px 70px -40px rgba(0,0,0,.9); border: 1px solid rgba(226,199,126,.16); }
-  .ss-gem { text-align: center; }
-  .ss-gem-art { width: 100%; max-width: 132px; margin: 0 auto var(--s-3); display: block; transition: transform .8s cubic-bezier(.22,.61,.36,1); }
-  .ss-gem:hover .ss-gem-art { transform: translateY(-8px) rotate(4deg); }
-  .ss-twinkle { transform-origin: 88px 32px; animation: ss-twinkle 4.5s ease-in-out infinite; }
-  .ss-gem:nth-child(2) .ss-twinkle { animation-delay: -1s; } .ss-gem:nth-child(3) .ss-twinkle { animation-delay: -2.2s; }
-  .ss-gem:nth-child(4) .ss-twinkle { animation-delay: -3s; } .ss-gem:nth-child(5) .ss-twinkle { animation-delay: -1.6s; }
-  @keyframes ss-twinkle { 0%, 70%, 100% { opacity: 0; transform: scale(.4); } 82% { opacity: .95; transform: scale(1); } }
-  .ss-gem h3 { font-size: var(--t-md); color: var(--bone); }
-  .ss-called { margin-top: 4px; font-size: var(--t-micro); letter-spacing: .1em; color: #8FE3D6; }
-  .ss-gem p { margin-top: var(--s-2); color: rgba(251,246,236,.72); font-size: var(--t-micro); line-height: 1.7; }
+  .ss-belief { padding: var(--s-8) 0; text-align: center; }
+  .ss-belief blockquote { max-width: 860px; margin: 0 auto; font-family: var(--ff-display); font-weight: 300; font-size: clamp(1.7rem, 3.3vw, 2.5rem); line-height: 1.35; color: var(--ink-p); }
+  .ss-belief > .wrap > p { max-width: 640px; margin: var(--s-4) auto 0; color: var(--ink-pm); line-height: 1.85; }
+  .ss-ritual { max-width: 980px; margin: var(--s-8) auto 0; }
+  .ss-ritual h3 { font-size: var(--t-xl); color: var(--ink-p); }
+  .ss-ritual ol { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-5); list-style: none; padding: 0; margin: var(--s-5) 0 var(--s-6); text-align: left; }
+  .ss-ritual li { color: var(--ink-pm); font-size: var(--t-sm); line-height: 1.75; }
+  .ss-ritual li span { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; margin-bottom: var(--s-2); background: rgba(255,255,255,.6); color: var(--gold-d); font-family: var(--ff-display); }
+
+  /* ---- Stones, at night ---- */
+  .ss-velvet { color: #EDE6F5; background: radial-gradient(1000px 520px at 50% 20%, #1E2A4E, transparent 70%), linear-gradient(180deg, #0C0B1C, #090814 60%, #0C0B1C); }
+  .ss-velvet .eyebrow { color: #E2C27A; }
+  .ss-velvet .ss-num { -webkit-text-stroke-color: rgba(226,194,122,.6); }
+  .ss-velvet .ss-open-t h2 { color: #F6EEDC; }
+  .ss-velvet .ss-open-t > p { color: rgba(237,230,245,.8); }
+  .ss-arch--gold { background: #0C0B1C; box-shadow: 0 0 0 1px rgba(226,194,122,.45), 0 50px 90px -40px rgba(0,0,0,.95); }
+  .ss-arch--gold::after { border-color: rgba(226,194,122,.55); }
+  .ss-stones { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--s-4); list-style: none; padding: 0; margin: 0; }
+  .ss-stones li { text-align: center; }
+  .ss-stone-img { position: relative; width: 132px; aspect-ratio: 1; margin: 0 auto var(--s-3); border-radius: 50%; overflow: hidden; display: grid; place-items: center;
+    background: radial-gradient(circle at 50% 40%, color-mix(in srgb, var(--glow) 55%, transparent), transparent 70%), #12112A;
+    box-shadow: 0 0 0 1px rgba(226,194,122,.4), 0 0 60px -10px color-mix(in srgb, var(--glow) 60%, transparent); }
+  .ss-stone-img :global(.frame) { position: absolute; inset: 0; }
+  .ss-stone-img em { font-family: var(--ff-display); font-size: 1.4rem; color: #F6EEDC; }
+  .ss-stones h3 { font-size: var(--t-md); color: #F6EEDC; }
+  .ss-called { margin-top: 4px; font-size: var(--t-micro); letter-spacing: .1em; color: color-mix(in srgb, var(--glow) 70%, #fff); }
+  .ss-stones p { margin-top: var(--s-2); color: rgba(237,230,245,.72); font-size: var(--t-micro); line-height: 1.7; }
   .ss-meaning { color: #F1D891 !important; font-family: var(--ff-display); font-style: italic; font-size: var(--t-sm) !important; }
-  .ss-today { max-width: 760px; margin: var(--s-7) auto 0; text-align: center; font-family: var(--ff-display); font-size: clamp(1.4rem, 2.6vw, 1.9rem); line-height: 1.4; color: var(--bone); }
+  .ss-tray { position: relative; margin: var(--s-8) 0 0; }
+  .ss-tray :global(.frame) { position: relative; aspect-ratio: 16 / 9; border-radius: 26px; overflow: hidden; box-shadow: 0 0 0 1px rgba(226,194,122,.3); }
+  .ss-tray figcaption { margin-top: var(--s-2); text-align: center; font-size: var(--t-sm); font-style: italic; color: rgba(237,230,245,.65); }
+  .ss-today { max-width: 760px; margin: var(--s-7) auto 0; text-align: center; font-family: var(--ff-display); font-size: clamp(1.4rem, 2.6vw, 1.9rem); line-height: 1.4; color: #F6EEDC; }
   .ss-pieces { display: flex; align-items: center; justify-content: space-between; gap: var(--s-5); max-width: 860px; margin: var(--s-6) auto 0; padding: var(--s-4) var(--s-5);
-    border-radius: 999px; border: 1px solid rgba(226,199,126,.3); }
-  .ss-pieces p { color: rgba(251,246,236,.8); font-size: var(--t-sm); line-height: 1.7; }
-  .ss-pieces b { color: var(--bone); font-weight: 400; font-family: var(--ff-display); font-size: var(--t-md); }
-  .ss-pieces .btn { flex: none; }
+    border-radius: 999px; border: 1px solid rgba(226,194,122,.3); }
+  .ss-pieces p { color: rgba(237,230,245,.82); font-size: var(--t-sm); line-height: 1.7; }
+  .ss-pieces b { color: #F6EEDC; font-weight: 400; font-family: var(--ff-display); font-size: var(--t-md); }
+  .ss-pieces .btn { flex: none; color: #E2C27A; border-color: rgba(226,194,122,.5); }
 
   /* ---- Cotton & linen ---- */
-  .ss-linen { background:
-      repeating-linear-gradient(0deg, rgba(120,100,70,.045) 0 1px, transparent 1px 4px),
-      repeating-linear-gradient(90deg, rgba(120,100,70,.045) 0 1px, transparent 1px 4px),
-      linear-gradient(180deg, #F7F1E7, var(--sand)); }
-  .ss-fibres { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-7); }
-  .ss-fibre-img { position: relative; aspect-ratio: 16 / 10; border-radius: 22px; overflow: hidden; margin-bottom: var(--s-4); box-shadow: 0 30px 50px -36px rgba(43,35,28,.6); }
+  .ss-fibres { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-5); }
+  .ss-fibre { padding: var(--s-5); border-radius: 28px; background: rgba(255,255,255,.45); border: 1px solid rgba(255,255,255,.8);
+    -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); box-shadow: 0 30px 60px -46px rgba(40,60,40,.5); }
+  .ss-fibre-img { position: relative; aspect-ratio: 16 / 10; border-radius: 20px; overflow: hidden; margin-bottom: var(--s-4); }
   .ss-fibre-img :global(.frame) { position: absolute; inset: 0; }
-  .ss-fibre h3 { font-size: var(--t-lg); color: var(--umber); }
-  .ss-fibre p { margin-top: var(--s-2); color: var(--umber-m); line-height: 1.85; }
-  .ss-fibre b { color: var(--umber); font-weight: 500; }
-  .ss-natural { max-width: 760px; margin: var(--s-8) auto 0; text-align: center; padding: var(--s-6); border-radius: 30px; background: rgba(255,255,255,.55); border: 1px solid rgba(138,106,46,.2); }
-  .ss-natural h3 { font-size: var(--t-xl); color: var(--umber); }
-  .ss-natural p { margin: var(--s-3) auto var(--s-5); max-width: 560px; color: var(--umber-m); line-height: 1.85; }
+  .ss-fibre h3 { font-size: var(--t-lg); color: var(--ink-p); }
+  .ss-fibre h3 span { font-family: 'Amiri', serif; color: var(--gold-d); font-size: .85em; margin-left: 8px; }
+  .ss-fibre p { margin-top: var(--s-2); color: var(--ink-pm); line-height: 1.85; }
+  .ss-fibre b { color: var(--ink-p); font-weight: 500; }
+  .ss-natural { max-width: 760px; margin: var(--s-8) auto 0; text-align: center; }
+  .ss-natural h3 { font-size: var(--t-xl); color: var(--ink-p); }
+  .ss-natural p { margin: var(--s-3) auto var(--s-5); max-width: 560px; color: var(--ink-pm); line-height: 1.85; }
 
   /* ---- Two ways & questions ---- */
-  .ss-ways { padding: var(--s-8) 0; background: var(--sand-2); }
-  .ss-way-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-6); }
-  .ss-way { padding: var(--s-3) var(--s-3) var(--s-5); border-radius: 28px; background: #FBF7F0; box-shadow: 0 30px 50px -36px rgba(43,35,28,.55); }
-  .ss-way-img { position: relative; aspect-ratio: 16 / 9; border-radius: 20px; overflow: hidden; }
+  .ss-ways { padding: var(--s-8) 0; }
+  .ss-way-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-5); }
+  .ss-way { padding: var(--s-5); border-radius: 28px; background: rgba(255,255,255,.5); border: 1px solid rgba(255,255,255,.8);
+    -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); box-shadow: 0 30px 60px -46px rgba(70,40,90,.55); }
+  .ss-way-img { position: relative; aspect-ratio: 16 / 9; border-radius: 20px; overflow: hidden; margin-bottom: var(--s-4); }
   .ss-way-img :global(.frame) { position: absolute; inset: 0; }
-  .ss-way h3, .ss-way p, .ss-way .btn { margin-left: var(--s-3); margin-right: var(--s-3); }
-  .ss-way h3 { margin-top: var(--s-4); font-size: var(--t-lg); color: var(--umber); }
-  .ss-way p { margin-top: var(--s-2); margin-bottom: var(--s-4); color: var(--umber-m); line-height: 1.85; }
+  .ss-way h3 { font-size: var(--t-lg); color: var(--ink-p); }
+  .ss-way p { margin: var(--s-2) 0 var(--s-4); color: var(--ink-pm); line-height: 1.85; }
   .ss-way .btn-ghost { color: var(--gold-d); border-color: rgba(138,106,46,.55); }
-  .ss-velvet .ss-pieces .btn-ghost { color: #E2C77E; border-color: rgba(226,199,126,.5); }
-  .ss-faq { max-width: 860px; margin: var(--s-8) auto 0; }
-  .ss-faq :global(.tblock h2) { color: var(--umber); }
+  .ss-faq { position: relative; z-index: 1; max-width: 860px; margin: var(--s-8) auto 0; }
+  .ss-faq :global(.tblock h2) { color: var(--ink-p); }
   .ss-faq :global(.qa) { border-top-color: rgba(138,106,46,.22); }
-  .ss-faq :global(.qa h3) { color: var(--umber); }
-  .ss-faq :global(.qa p) { color: var(--umber-m); }
+  .ss-faq :global(.qa h3) { color: var(--ink-p); }
+  .ss-faq :global(.qa p) { color: var(--ink-pm); }
 
   /* ---- Evening ---- */
-  .ss-evening { padding: var(--s-8) 0; background: linear-gradient(180deg, var(--sand-2), #2A2230 30%, #0D0A10); overflow: hidden; }
-  .ss-evening .ss-center { position: relative; z-index: 1; margin-bottom: 0; padding-top: var(--s-7); }
-  .ss-close { font-family: var(--ff-display); font-style: italic; font-size: clamp(2rem, 4.4vw, 3.2rem); color: var(--bone); margin-bottom: var(--s-5); }
+  .ss-evening { padding: var(--s-8) 0; background: radial-gradient(800px 400px at 50% 100%, rgba(240,150,60,.3), transparent 65%), linear-gradient(180deg, #F6F0EA, #2A2244 30%, #07060F); }
+  .ss-evening .ss-center { margin-bottom: 0; padding-top: var(--s-7); }
+  .ss-close { font-family: var(--ff-display); font-style: italic; font-size: clamp(2rem, 4.4vw, 3.2rem); color: #F6EEDC; margin-bottom: var(--s-5); }
 
   @media (max-width: 980px) {
     .ss-open, .ss-open--rev { grid-template-columns: 1fr; gap: var(--s-6); }
     .ss-open--rev .ss-arch { order: -1; }
     .ss-apoth { grid-template-columns: 1fr; }
-    .ss-tray { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .ss-stones { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: var(--s-6); }
     .ss-arch { max-width: 420px; }
   }
   @media (max-width: 680px) {
-    .ss-hero { padding: 120px 0 120px; }
-    .ss-chapters { gap: var(--s-4); bottom: 24px; }
-    .ss-chapters a { font-size: var(--t-nano); letter-spacing: .2em; }
-    .ss-apoth li { grid-template-columns: 88px 1fr; gap: var(--s-3); }
-    .ss-dish { width: 88px; }
+    .ss-hero { padding: 120px 0 100px; }
+    .ss-hero--photo .ss-hero-photo :global(img) { object-position: 78% 50%; }
+    .ss-hero--photo .ss-hero-veil { background: linear-gradient(0deg, rgba(7,6,15,.94) 20%, rgba(7,6,15,.55) 60%, rgba(7,6,15,.35)); }
+    .ss-hero--photo .ss-zodiac { left: 50%; opacity: .2; }
+    .ss-apoth li { grid-template-columns: 84px 1fr; gap: var(--s-3); padding: var(--s-3); }
+    .ss-dish { width: 84px; }
+    .ss-dish > span { font-size: 1.6rem; }
     .ss-sun { gap: var(--s-2); }
     .ss-sun span { font-size: var(--t-micro); }
     .ss-ritual ol, .ss-fibres, .ss-way-grid { grid-template-columns: 1fr; }
-    .ss-tray { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: var(--s-5) var(--s-3); }
-    .ss-gem:last-child { grid-column: 1 / -1; max-width: 240px; justify-self: center; }
+    .ss-stones { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .ss-stones li:last-child { grid-column: 1 / -1; max-width: 260px; justify-self: center; }
+    .ss-stone-img { width: 108px; }
     .ss-pieces { flex-direction: column; border-radius: 26px; text-align: center; }
     .ss-arch { max-width: 320px; }
+    .ss-blob { filter: blur(70px); }
   }
   @media (prefers-reduced-motion: reduce) {
-    .ss-hero-photo :global(img), .ss-hero-smoke path, .ss-twinkle { animation: none !important; }
-    .ss-hero-smoke path { opacity: .14; }
+    .ss-hero-photo :global(img), .ss-zodiac, .ss-blob { animation: none !important; }
   }
 </style>
