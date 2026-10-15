@@ -41,7 +41,7 @@ export const it: LocalizedPage[] = [
       {
         title: "Un egittologo, non un accompagnatore",
         body:
-          "Ogni viaggio è guidato da una persona autorizzata dal Ministero del Turismo egiziano e laureata in egittologia. Sta con voi davanti ai monumenti, non aspetta al parcheggio — e per quella giornata appartiene solo a voi, rispondendo alle vostre domande invece di recitare davanti a quaranta persone. Su richiesta, in italiano.",
+          "Ogni viaggio è guidato da una persona autorizzata dal Ministero del Turismo egiziano e laureata in egittologia. Sta con voi davanti ai monumenti, non aspetta al parcheggio — e per quella giornata appartiene solo a voi, rispondendo alle vostre domande invece di recitare davanti a quaranta persone. In italiano, con egittologi del nostro team.",
       },
       {
         title: "Solo il vostro gruppo",
@@ -75,7 +75,7 @@ export const it: LocalizedPage[] = [
     },
     faqs: [
       { q: "Quanto costa un viaggio privato in Egitto?", a: "Per un viaggio interamente privato e su misura, con egittologo autorizzato, auto e autista privati e buoni alberghi, calcolate tra i 200 e i 450 euro a persona al giorno. La cifra per persona scende sensibilmente al crescere del gruppo, perché guida e mezzo vengono divisi fra più persone." },
-      { q: "Ci sono guide che parlano italiano?", a: "Sì. Lavoriamo con egittologi autorizzati che guidano in italiano. Segnalatelo in fase di progettazione: il numero di egittologi italofoni è limitato e in alta stagione sono impegnati con largo anticipo." },
+      { q: "Ci sono guide che parlano italiano?", a: "Sì. Egittologi autorizzati del nostro team guidano in italiano." },
       { q: "Quanti giorni servono per l'Egitto?", a: "Otto-dieci giorni sul posto coprono Il Cairo, Luxor, una crociera sul Nilo e Assuan senza correre. Sei-sette giorni bastano per Il Cairo e Luxor. Dodici-quattordici lasciano spazio ad Abu Simbel, Alessandria o una settimana sul Mar Rosso." },
       { q: "L'Egitto è sicuro?", a: "Le zone turistiche — Il Cairo, Giza, Luxor, Assuan, Alessandria e la costa del Mar Rosso — sono presidiate e visitate ogni anno da milioni di persone. I fastidi concreti sono i venditori insistenti ai siti principali e il traffico del Cairo, entrambi in gran parte eliminati da guida e autista privati. Consultate comunque gli avvisi aggiornati della Farnesina prima di prenotare." },
     ],

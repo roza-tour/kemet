@@ -1175,7 +1175,7 @@ export const guides: Guide[] = [
       "US and Canadian passports can get Egypt's tourist visa online before flying or on arrival in Cairo",
       "Cairo is seven hours ahead of New York and Toronto, ten ahead of Los Angeles — so the first day is kept light",
       "Thanksgiving, Christmas and spring break are Egypt's best weather — and its busiest weeks, so book early",
-      "Everything is private: your own Egyptologist, your own vehicle, and one person who answers your messages",
+      "Everything is private: your own licensed Egyptologist, and your own vehicle and driver",
     ],
     sections: [
       {

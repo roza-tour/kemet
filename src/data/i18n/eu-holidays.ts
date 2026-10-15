@@ -121,7 +121,7 @@ export const frToussaint: LocalizedPage = {
     {
       title: "Ce qu'il faut réserver tôt, et ce qui peut attendre",
       body:
-        "Tôt : les dahabiehs, les bons égyptologues francophones et les chambres avec vue sur le Nil — deux à trois mois. Cela peut attendre : les vols intérieurs, les entrées, les transferts. C'est pourquoi nous demandons d'abord vos dates et le nombre de voyageurs, puis nous discutons du reste : ce sont les deux seules informations qui bloquent les éléments contestés.",
+        "Tôt : les dahabiehs et les chambres avec vue sur le Nil — deux à trois mois. Cela peut attendre : les vols intérieurs, les entrées, les transferts. C'est pourquoi nous demandons d'abord vos dates et le nombre de voyageurs, puis nous discutons du reste : ce sont les deux seules informations qui bloquent les éléments contestés.",
     },
   ],
   highlights: {
@@ -224,7 +224,7 @@ export const esSemanaSanta: LocalizedPage = {
         ? `Todavía no. Luxor está a ${mar.temps.luxor} durante el día y El Cairo a ${mar.temps.cairo}. Es agradable para caminar, que es exactamente lo que se deja de poder hacer unas semanas después.`
         : `En el Alto Egipto sí: Luxor a ${apr.temps.luxor}. Se resuelve con el horario — mañanas tempranas y parada a mediodía — no con optimismo. El Cairo, a ${apr.temps.cairo}, se lleva bien todo el día.` },
     { q: "¿Se celebra la Semana Santa en Egipto?", a: "Sí, y de dos maneras. La Semana Santa copta suele caer en fechas distintas a la católica, y el lunes siguiente es Sham El-Nessim, la fiesta de primavera del país entero: todo Egipto sale al aire libre. Si sus fechas coinciden, es un día extraordinario para estar aquí." },
-    { q: "¿Hay guías que hablen español?", a: "Sí, trabajamos con egiptólogos titulados que guían en español. Dígalo al planificar: en Semana Santa son pocos y se comprometen con mucha antelación." },
+    { q: "¿Hay guías que hablen español?", a: "Sí. Egiptólogos titulados de nuestro propio equipo guían en español, también en Semana Santa." },
     { q: "¿Merece la pena con niños?", a: "Mucho, y la primavera es el mejor momento para ello: el calor aún no obliga a madrugar tanto. Acortamos las mañanas y dejamos tiempo de piscina, que es lo que hace que un niño recuerde el viaje y no el cansancio." },
   ],
   cta: {
@@ -394,7 +394,7 @@ export const itCapodanno: LocalizedPage = {
     { q: "Con quanto anticipo si prenota il Capodanno in Egitto?", a: "Quattro-sei mesi, e per una dahabiya intera o una suite sul Nilo anche prima. Non è una tecnica di vendita: le buone navi sono poche e d'estate sono già assegnate." },
     { q: "A Capodanno si fa il bagno in Egitto?", a: `Sul Mar Rosso sì: l'acqua è a ${dec.seaTemp}, piacevole per quasi tutti. Nel Nilo non si fa il bagno, e le piscine dell'Alto Egitto a dicembre, se non sono riscaldate, sono una questione di coraggio.` },
     { q: "Conviene partire dopo Capodanno?", a: `Per il prezzo sì: dal 4 gennaio le tariffe scendono, con lo stesso clima. Con le scuole chiuse fino all'Epifania, una famiglia italiana può far cadere una parte del viaggio dopo il picco e rientrare il ${itDate(IT_EPIPH)}.` },
-    { q: "Ci sono guide che parlano italiano?", a: "Sì: l'italiano è una delle lingue più diffuse tra gli egittologi con licenza in Egitto. A Capodanno sono richiesti quanto le navi — ditecelo nel primo messaggio, non alla conferma." },
+    { q: "Ci sono guide che parlano italiano?", a: "Sì. Egittologi autorizzati del nostro team guidano in italiano, anche a Capodanno." },
   ],
   cta: {
     heading: "Diteci le vostre date",
@@ -563,7 +563,7 @@ export const ruNovyGod: LocalizedPage = {
   faqs: [
     { q: "За сколько бронировать на Новый год?", a: "За четыре-шесть месяцев, а для полной дахабии или номера с видом на Нил — раньше. Это не приём продаж: хороших судов немного, и летом они уже расписаны." },
     { q: "Можно ли купаться в январе?", a: `На Красном море да: вода ${jan.seaTemp}, и для большинства это комфортно. В Ниле не купаются, а бассейны в Верхнем Египте в январе — вопрос характера, если они не с подогревом.` },
-    { q: "Есть ли русскоговорящие гиды?", a: "Да, мы работаем с лицензированными египтологами, которые ведут экскурсии по-русски. На новогодние даты их разбирают заранее — скажите об этом в первом же сообщении, а не при подтверждении." },
+    { q: "Есть ли русскоговорящие гиды?", a: "Да. Лицензированные египтологи из нашей собственной команды ведут экскурсии по-русски — и в новогодние даты тоже." },
     { q: "Стоит ли ехать после каникул?", a: "Если вы не связаны школьным расписанием — безусловно. Вторая половина января даёт ту же погоду при значительно меньших ценах и заметно меньшем количестве людей." },
   ],
   cta: {

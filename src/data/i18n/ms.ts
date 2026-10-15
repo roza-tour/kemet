@@ -78,7 +78,7 @@ export const ms: LocalizedPage[] = [
     },
     faqs: [
       { q: "Berapa kos pakej Mesir persendirian?", a: "Untuk percutian persendirian sepenuhnya dengan Egyptologist berlesen, kenderaan dan pemandu sendiri serta hotel yang baik, jangkakan 200–450 euro seorang sehari, tidak termasuk tiket penerbangan antarabangsa. Jumlah seorang turun dengan ketara apabila rombongan bertambah kerana pemandu dan kenderaan dikongsi." },
-      { q: "Adakah pemandu yang berbahasa Melayu?", a: "Bilangannya terhad, dan kami tidak akan menjanjikan sesuatu yang belum kami pastikan. Nyatakan keperluan ini pada awal perancangan: kami akan mengesahkan ketersediaannya untuk tarikh anda sebelum sebarang bayaran, dan jika tiada kami katakan terus serta menawarkan pemandu berbahasa Inggeris atau Arab." },
+      { q: "Adakah pemandu yang berbahasa Melayu?", a: "Ya. Egyptologist berlesen daripada pasukan kami sendiri memandu dalam bahasa Melayu." },
       { q: "Adakah makanan di Mesir halal?", a: "Mesir sebuah negara majoriti Muslim, jadi daging di restoran dan hotel umumnya halal tanpa perlu dicari khas. Yang perlu diberi perhatian hanyalah restoran hotel antarabangsa yang turut menghidangkan alkohol, dan kami menyediakan senarai tempat makan sejak awal." },
       { q: "Berapa hari diperlukan untuk Mesir?", a: "Lapan hingga sepuluh hari di sana memadai untuk Kaherah, Luxor, pelayaran Sungai Nil dan Aswan tanpa tergesa-gesa. Enam hingga tujuh hari cukup untuk Kaherah dan Luxor. Dua belas hingga empat belas hari memberi ruang untuk Abu Simbel, Alexandria atau Laut Merah." },
       { q: "Boleh digabungkan dengan umrah?", a: "Sangat kerap. Ramai tetamu kami tiba di Mesir sebelum atau selepas ibadah di Arab Saudi, dan penerbangan Jeddah–Kaherah hanya sekitar dua jam. Urusan ibadah dikendalikan oleh penganjur anda; kami menyusun bahagian Mesir dan menyelaraskan tarikh supaya kedua-duanya bersambung kemas." },
@@ -144,7 +144,7 @@ export const ms: LocalizedPage[] = [
     ],
     faqs: [
       { q: "Bolehkah laluan yang ditawarkan diubah?", a: "Itulah tujuannya. Laluan yang dipaparkan ialah titik permulaan. Anda boleh memanjangkan satu bahagian, membuangnya, menukar kelas hotel, atau bermula daripada helaian kosong — sebut harga dikira semula pada setiap versi dan tiada bayaran sebelum susunannya anda persetujui." },
-      { q: "Berapa awal perlu membuat tempahan?", a: "Untuk tempoh Oktober hingga April, sediakan dua hingga tiga bulan: itulah bulan-bulan apabila Egyptologist yang baik, kapal dahabiya dan bilik berpemandangan habis dahulu. Di luar musim itu, beberapa minggu selalunya memadai." },
+      { q: "Berapa awal perlu membuat tempahan?", a: "Untuk tempoh Oktober hingga April, sediakan dua hingga tiga bulan: itulah bulan-bulan apabila kapal dahabiya dan bilik berpemandangan habis dahulu. Di luar musim itu, beberapa minggu selalunya memadai." },
       { q: "Betulkah kami berjalan sendirian sahaja?", a: "Betul. Kenderaan, pemandu dan Egyptologist ditempah untuk rombongan anda sahaja, berapa pun bilangannya. Anda tidak akan digabungkan dengan tetamu lain semata-mata untuk memenuhi kenderaan." },
       { q: "Bagaimana jika penerbangan domestik tertangguh?", a: "Laluannya disusun semula di sana pada hari yang sama tanpa caj tambahan — itulah kelebihan perjalanan persendirian: tiada kumpulan yang menunggu dan tiada slot bersama yang perlu dikejar. Penyelaras anda di Mesir boleh dihubungi sepanjang perjalanan." },
     ],

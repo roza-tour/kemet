@@ -77,7 +77,7 @@ export const id: LocalizedPage[] = [
     },
     faqs: [
       { q: "Berapa biaya tour privat ke Mesir?", a: "Untuk perjalanan yang sepenuhnya privat dengan Egyptologist berlisensi, mobil dan sopir pribadi, serta hotel yang baik, perkirakan 200–450 euro per orang per hari, di luar tiket pesawat internasional. Angka per orang turun cukup jauh saat rombongan bertambah, karena pemandu dan kendaraan dibagi." },
-      { q: "Apakah ada pemandu berbahasa Indonesia?", a: "Jumlahnya terbatas, dan kami tidak akan menjanjikan apa yang belum kami pastikan. Beritahukan kebutuhan ini di awal perencanaan: kami akan mengonfirmasi ketersediaannya untuk tanggal Anda sebelum ada pembayaran, dan jika tidak tersedia kami katakan terus terang serta menawarkan pemandu berbahasa Inggris atau Arab." },
+      { q: "Apakah ada pemandu berbahasa Indonesia?", a: "Ya. Egyptologist berlisensi dari tim kami sendiri memandu dalam bahasa Indonesia." },
       { q: "Apakah makanan di Mesir halal?", a: "Mesir berpenduduk mayoritas Muslim, sehingga daging di restoran dan hotel umumnya halal tanpa perlu dicari khusus. Yang perlu diperhatikan hanya restoran hotel internasional yang juga menyajikan alkohol, dan kami menyiapkan pilihan tempat makan sejak awal, bukan dadakan." },
       { q: "Berapa hari yang dibutuhkan untuk Mesir?", a: "Delapan sampai sepuluh hari di lokasi cukup untuk Kairo, Luxor, pelayaran Nil dan Aswan tanpa terburu-buru. Enam sampai tujuh hari cukup untuk Kairo dan Luxor. Dua belas sampai empat belas hari memberi ruang untuk Abu Simbel, Alexandria, atau Laut Merah." },
       { q: "Bisakah digabung dengan umrah?", a: "Sangat sering. Banyak tamu kami tiba di Mesir sebelum atau sesudah ibadah di Arab Saudi, dan penerbangan Jeddah–Kairo hanya sekitar dua jam. Ibadahnya sendiri diatur oleh penyelenggara Anda; kami menyusun bagian Mesirnya dan menyesuaikan tanggal agar keduanya tersambung rapi." },
@@ -143,7 +143,7 @@ export const id: LocalizedPage[] = [
     ],
     faqs: [
       { q: "Bisakah rute yang ditawarkan diubah?", a: "Justru itu intinya. Rute yang ditampilkan adalah titik awal. Anda boleh memperpanjang satu bagian, menghapusnya, mengganti kelas hotel, atau memulai dari halaman kosong — penawaran dihitung ulang pada setiap versi dan tidak ada pembayaran sebelum naskahnya Anda setujui." },
-      { q: "Berapa lama sebelumnya harus memesan?", a: "Untuk periode Oktober sampai April, siapkan dua sampai tiga bulan: itulah bulan-bulan ketika Egyptologist yang baik, kapal dahabiya, dan kamar dengan pemandangan habis lebih dulu. Di luar musim itu, beberapa pekan sering sudah cukup." },
+      { q: "Berapa lama sebelumnya harus memesan?", a: "Untuk periode Oktober sampai April, siapkan dua sampai tiga bulan: itulah bulan-bulan ketika kapal dahabiya dan kamar dengan pemandangan habis lebih dulu. Di luar musim itu, beberapa pekan sering sudah cukup." },
       { q: "Apakah benar kami berjalan sendiri saja?", a: "Benar. Kendaraan, sopir dan Egyptologist dipesan hanya untuk rombongan Anda, berapa pun jumlahnya. Anda tidak akan pernah digabungkan dengan tamu lain demi memenuhi kursi." },
       { q: "Bagaimana jika penerbangan domestik tertunda?", a: "Rutenya disusun ulang di tempat pada hari itu juga tanpa biaya tambahan — itulah keuntungan perjalanan privat: tidak ada grup yang menunggu dan tidak ada jadwal bersama yang harus dikejar. Koordinator Anda di Mesir dapat dihubungi sepanjang perjalanan." },
     ],

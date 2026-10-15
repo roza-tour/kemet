@@ -41,7 +41,7 @@ export const de: LocalizedPage[] = [
       {
         title: "Ein Ägyptologe, kein Reiseleiter",
         body:
-          "Jede Reise wird von einem vom ägyptischen Tourismusministerium lizenzierten Führer mit einem Abschluss in Ägyptologie begleitet. Er steht mit Ihnen vor den Monumenten, nicht auf dem Parkplatz — und er gehört für den Tag Ihnen allein und beantwortet Ihre Fragen, statt vierzig Menschen etwas vorzutragen. Auf Wunsch auf Deutsch.",
+          "Jede Reise wird von einem vom ägyptischen Tourismusministerium lizenzierten Führer mit einem Abschluss in Ägyptologie begleitet. Er steht mit Ihnen vor den Monumenten, nicht auf dem Parkplatz — und er gehört für den Tag Ihnen allein und beantwortet Ihre Fragen, statt vierzig Menschen etwas vorzutragen. Auf Deutsch, mit Ägyptologen aus unserem eigenen Team.",
       },
       {
         title: "Nur Ihre Reisegruppe",
@@ -75,7 +75,7 @@ export const de: LocalizedPage[] = [
     },
     faqs: [
       { q: "Was kostet eine private Ägypten-Reise?", a: "Für eine vollständig private, maßgeschneiderte Reise mit lizenziertem Ägyptologen, eigenem Fahrzeug und Fahrer sowie guten Hotels rechnen Sie mit etwa 200 bis 450 Euro pro Person und Tag. Der Betrag pro Person sinkt deutlich, je größer die Reisegruppe ist, weil Führer und Fahrzeug auf mehr Personen verteilt werden." },
-      { q: "Gibt es deutschsprachige Reiseleiter?", a: "Ja. Wir arbeiten mit lizenzierten Ägyptologen, die auf Deutsch führen. Bitte geben Sie den Wunsch bei der Planung an — die Zahl der deutschsprachigen Ägyptologen ist begrenzt und sie sind in der Hauptsaison früh ausgebucht." },
+      { q: "Gibt es deutschsprachige Reiseleiter?", a: "Ja. Lizenzierte Ägyptologen aus unserem eigenen Team führen auf Deutsch." },
       { q: "Wie lange sollte eine Ägypten-Reise dauern?", a: "Acht bis zehn Tage vor Ort decken Kairo, Luxor, eine Nilkreuzfahrt und Assuan ohne Hetze ab. Sechs bis sieben Tage reichen für Kairo und Luxor. Zwölf bis vierzehn Tage lassen Raum für Abu Simbel, Alexandria oder eine Woche am Roten Meer." },
       { q: "Ist Ägypten sicher?", a: "Die touristischen Regionen — Kairo, Gizeh, Luxor, Assuan, Alexandria und die Küste des Roten Meeres — werden jährlich von Millionen Menschen besucht und sind gut gesichert. Die praktischen Ärgernisse sind aufdringliche Händler an den großen Stätten und der Kairoer Verkehr; beides entfällt mit privatem Führer und Fahrer weitgehend. Prüfen Sie vor der Buchung die aktuellen Hinweise des Auswärtigen Amts." },
     ],

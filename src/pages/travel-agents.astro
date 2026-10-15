@@ -13,28 +13,33 @@ import Faq from "@/components/Faq.astro";
 import LeadCapture from "@/components/conversion/LeadCapture.astro";
 import { breadcrumb, faqPageSchema } from "@/schemas/jsonld";
 import { mailtoLink, whatsappLink } from "@/utils/links";
+import { company } from "@/data/company";
+
+// The languages our own Egyptologists guide in — company.languages, the one list.
+const langs = company.languages ?? ["English"];
+const langList = langs.length > 1 ? `${langs.slice(0, -1).join(", ")} and ${langs[langs.length - 1]}` : langs[0];
 
 const handled = [
-  { title: "Licensed Egyptologists", body: "Private, licensed Egyptologist guides for every visit — in English as standard, and in Spanish and other languages on request, subject to availability." },
+  { title: "Licensed Egyptologists", body: `Private, licensed Egyptologist guides from our own team for every visit, in ${langList}.` },
   { title: "Vehicles and drivers", body: "A private air-conditioned vehicle and driver for each party, for transfers, touring days and the long roads to Abu Simbel or the oases." },
   { title: "Hotels and the Nile", body: "Hotels chosen for the room, Nile cruises and private dahabiyas, domestic flights and the sleeper train — booked, confirmed and checked." },
   { title: "Arrival and departure", body: "Meet and assist at Cairo airport, fast-track on request, and transfers at every arrival and departure." },
-  { title: "Experiences", body: "Hot-air balloons over Luxor, private feluccas, the food evening in Cairo, sunrise at the pyramids — and private access to monuments by permit." },
-  { title: "One contact on the ground", body: "One person follows each journey from arrival to departure and is reachable on WhatsApp throughout." },
+  { title: "Experiences", body: "Hot-air balloons over Luxor, private feluccas, the food evening in Cairo, sunrise at the pyramids, a photographer or a private chef along the way." },
+  { title: "Food rules and occasions", body: "Vegetarian, no egg, no onion and garlic, allergies: we brief every hotel and boat before your clients arrive. Birthdays and anniversaries are marked with flowers, a private dinner or a surprise." },
 ];
 
 const steps = [
   { title: "Send the request", body: "Dates, number of travellers, interests and the level of comfort your clients expect." },
   { title: "Itinerary and trade rates", body: "Within one working day: a real itinerary, day by day, at trade rates." },
   { title: "Confirmation", body: "Once you confirm, we book everything and send the documents — vouchers, the day-by-day programme, contacts." },
-  { title: "On the ground", body: "We run the journey and keep you informed. Your clients have one number to call, and so do you." },
+  { title: "On the ground", body: "We run the journey and keep you informed." },
 ];
 
 const faqs = [
   { q: "Do you offer trade rates?", a: "Yes. Trade rates and payment terms are agreed with each partner. Write to us with a first request, or simply ask for our terms, and we send them." },
-  { q: "Which languages do your guides speak?", a: "English as standard. Spanish and other languages are available on request, subject to availability on your dates — tell us when you enquire." },
+  { q: "Which languages do your guides speak?", a: `Our own Egyptologists guide in ${langList}.` },
   { q: "Can you handle private groups?", a: "Yes. Everything we run is private — couples, families, friends travelling together and larger private groups, each with its own guide and vehicle." },
-  { q: "How quickly do you reply?", a: "Within one working day, with a real itinerary and a clear price. During a journey, the contact on the ground answers at any hour." },
+  { q: "How quickly do you reply?", a: "Within one working day, with a real itinerary and a clear price." },
   { q: "How can partners pay?", a: "By bank transfer, by card or by PayPal." },
 ];
 

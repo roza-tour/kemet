@@ -60,7 +60,7 @@ export const esLatam: LocalizedPage = {
     {
       title: "Guías en español",
       body:
-        "Trabajamos con egiptólogos titulados que guían en español. Dígalo al planificar: en las semanas de más demanda son pocos y se comprometen con antelación.",
+        "Trabajamos con egiptólogos titulados de nuestro propio equipo que guían en español, de la primera visita a la última.",
     },
     {
       title: "Cómo funciona un viaje privado",
@@ -138,7 +138,7 @@ export const ptBrasil: LocalizedPage = {
     {
       title: "Como funciona uma viagem privativa",
       body:
-        "Tudo é privativo: seu próprio egiptólogo, seu próprio veículo com motorista e hotéis escolhidos pelo quarto, não pelas estrelas. Diga-nos as datas, quantas pessoas viajam e em que língua preferem ser guiados; respondemos em um dia útil com um roteiro real e um preço detalhado — sem compromisso.",
+        "Tudo é privativo: seu próprio egiptólogo, seu próprio veículo com motorista e hotéis escolhidos pelo quarto, não pelas estrelas. Nossos próprios egiptólogos guiam em português. Diga-nos as datas e quantas pessoas viajam; respondemos em um dia útil com um roteiro real e um preço detalhado — sem compromisso.",
     },
   ],
   faqs: [

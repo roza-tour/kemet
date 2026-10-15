@@ -42,7 +42,7 @@ export const fr: LocalizedPage[] = [
       {
         title: "Un égyptologue, pas un accompagnateur",
         body:
-          "Chaque voyage est mené par une personne agréée par le ministère égyptien du Tourisme et diplômée en égyptologie. Elle reste avec vous devant les monuments au lieu d'attendre au parking, et ce jour-là elle n'appartient qu'à vous : elle répond à vos questions plutôt que de réciter un texte devant quarante personnes. En français, si vous le demandez à la conception.",
+          "Chaque voyage est mené par une personne agréée par le ministère égyptien du Tourisme et diplômée en égyptologie. Elle reste avec vous devant les monuments au lieu d'attendre au parking, et ce jour-là elle n'appartient qu'à vous : elle répond à vos questions plutôt que de réciter un texte devant quarante personnes. En français, avec des égyptologues de notre propre équipe.",
       },
       {
         title: "Votre groupe, et personne d'autre",
@@ -76,7 +76,7 @@ export const fr: LocalizedPage[] = [
     },
     faqs: [
       { q: "Combien coûte un voyage privé en Égypte ?", a: "Pour un voyage entièrement privé et sur mesure, avec égyptologue agréé, voiture et chauffeur privés et de bons hôtels, comptez entre 200 et 450 euros par personne et par jour. Le montant par personne baisse nettement à mesure que le groupe grandit, puisque le guide et le véhicule se partagent." },
-      { q: "Proposez-vous des guides francophones ?", a: "Oui. Nous travaillons avec des égyptologues agréés qui guident en français. Signalez-le dès la conception du voyage : les égyptologues francophones ne sont pas nombreux et, en haute saison, ils sont retenus longtemps à l'avance." },
+      { q: "Proposez-vous des guides francophones ?", a: "Oui. Des égyptologues agréés de notre propre équipe guident en français." },
       { q: "Combien de jours faut-il pour l'Égypte ?", a: "Huit à dix jours sur place couvrent Le Caire, Louxor, une croisière sur le Nil et Assouan sans courir. Six à sept jours suffisent pour Le Caire et Louxor. Douze à quatorze laissent la place à Abou Simbel, à Alexandrie ou à une semaine en mer Rouge." },
       { q: "L'Égypte est-elle sûre ?", a: "Les zones touristiques — Le Caire, Gizeh, Louxor, Assouan, Alexandrie et la côte de la mer Rouge — sont surveillées et reçoivent des millions de visiteurs chaque année. Les vraies nuisances sont les vendeurs insistants sur les grands sites et la circulation du Caire, deux problèmes que le guide et le chauffeur privés effacent en grande partie. Consultez malgré tout les conseils aux voyageurs de votre ministère des Affaires étrangères avant de réserver." },
     ],
@@ -137,7 +137,7 @@ export const fr: LocalizedPage[] = [
     ],
     faqs: [
       { q: "Peut-on modifier un itinéraire proposé ?", a: "C'est le principe même. Les itinéraires publiés sont des points de départ. Vous pouvez rallonger une étape, en retirer une, changer la catégorie d'hôtel ou repartir d'une page blanche — le devis est recalculé à chaque version et rien n'est payé avant que le texte ne vous convienne." },
-      { q: "Combien de temps à l'avance faut-il réserver ?", a: "Pour un voyage entre octobre et avril, comptez deux à trois mois : ce sont les mois où les bons égyptologues francophones, les dahabiehs et les chambres avec vue partent en premier. Hors saison, quelques semaines suffisent souvent." },
+      { q: "Combien de temps à l'avance faut-il réserver ?", a: "Pour un voyage entre octobre et avril, comptez deux à trois mois : ce sont les mois où les dahabiehs et les chambres avec vue partent en premier. Hors saison, quelques semaines suffisent souvent." },
       { q: "Voyage-t-on vraiment seuls ?", a: "Oui. Le véhicule, le chauffeur et l'égyptologue sont réservés pour votre groupe seul, quel que soit le nombre de participants. Vous ne serez jamais regroupés avec d'autres clients pour compléter une voiture." },
       { q: "Que se passe-t-il si un vol intérieur est retardé ?", a: "L'itinéraire est reconstruit sur place le jour même, sans supplément : c'est l'avantage d'un voyage privé — il n'y a pas de groupe qui attend et pas de créneau collectif à respecter. Votre interlocuteur en Égypte est joignable pendant tout le séjour." },
     ],

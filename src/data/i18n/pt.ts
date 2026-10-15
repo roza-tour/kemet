@@ -51,7 +51,7 @@ export const pt: LocalizedPage[] = [
       {
         title: "Um egiptólogo, não um acompanhante",
         body:
-          "Cada viagem é guiada por um profissional credenciado pelo Ministério do Turismo do Egito e formado em egiptologia. Ele fica com vocês diante dos monumentos, não esperando no estacionamento — e o dia é só de vocês: ele responde às suas perguntas em vez de recitar um texto para quarenta pessoas. Em português, se vocês pedirem.",
+          "Cada viagem é guiada por um profissional credenciado pelo Ministério do Turismo do Egito e formado em egiptologia. Ele fica com vocês diante dos monumentos, não esperando no estacionamento — e o dia é só de vocês: ele responde às suas perguntas em vez de recitar um texto para quarenta pessoas. Em português, com egiptólogos da nossa própria equipe.",
       },
       {
         title: "Só o seu grupo",
@@ -85,7 +85,7 @@ export const pt: LocalizedPage[] = [
     },
     faqs: [
       { q: "Quanto custa uma viagem privada ao Egito?", a: `Uma viagem totalmente privada e sob medida, com egiptólogo credenciado, carro com motorista e bons hotéis, fica no mercado entre 200 e 450 euros por pessoa por dia. As viagens da Kemet saem entre ${PER_DAY_LOW} e ${PER_DAY_HIGH} euros por pessoa por dia, com hotéis de 4 ou 5 estrelas. O valor por pessoa cai bastante quando o grupo cresce, porque o guia e o carro são divididos entre mais gente.` },
-      { q: "Existem guias que falam português?", a: "Sim. Trabalhamos com egiptólogos credenciados que guiam em português, e temos guias em todos os principais idiomas. Avisem ao planejar a viagem: os egiptólogos que falam português são poucos e, na alta temporada, ficam reservados com muita antecedência." },
+      { q: "Existem guias que falam português?", a: "Sim. Egiptólogos credenciados da nossa própria equipe guiam em português." },
       { q: "Quantos dias são necessários para o Egito?", a: "Vindo do Brasil, a viagem só compensa a partir de oito a dez dias no destino: isso cobre o Cairo, Luxor, um cruzeiro pelo Nilo e Assuã sem pressa. Doze a catorze dias deixam espaço para Abu Simbel, Alexandria ou alguns dias no Mar Vermelho." },
       { q: "O Egito é seguro?", a: "As regiões turísticas — Cairo, Gizé, Luxor, Assuã, Alexandria e o litoral do Mar Vermelho — são policiadas e recebem milhões de visitantes por ano. Os incômodos reais são os vendedores insistentes nos grandes sítios e o trânsito do Cairo, e os dois praticamente desaparecem com guia e motorista particulares. Consulte sempre as orientações atuais do Itamaraty antes de reservar." },
     ],

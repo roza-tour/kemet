@@ -41,7 +41,7 @@ export const es: LocalizedPage[] = [
       {
         title: "Un egiptólogo, no un acompañante",
         body:
-          "Cada viaje lo guía una persona titulada por el Ministerio de Turismo egipcio y licenciada en egiptología. Está con ustedes ante los monumentos, no esperando en el aparcamiento — y ese día les pertenece únicamente a ustedes, respondiendo a sus preguntas en lugar de recitar ante cuarenta personas. En español, si lo piden.",
+          "Cada viaje lo guía una persona titulada por el Ministerio de Turismo egipcio y licenciada en egiptología. Está con ustedes ante los monumentos, no esperando en el aparcamiento — y ese día les pertenece únicamente a ustedes, respondiendo a sus preguntas en lugar de recitar ante cuarenta personas. En español, con egiptólogos de nuestro propio equipo.",
       },
       {
         title: "Solo su grupo",
@@ -75,7 +75,7 @@ export const es: LocalizedPage[] = [
     },
     faqs: [
       { q: "¿Cuánto cuesta un viaje privado a Egipto?", a: "Para un viaje enteramente privado y a medida, con egiptólogo titulado, coche y conductor privados y buenos hoteles, calculen entre 200 y 450 euros por persona y día. La cifra por persona baja notablemente al crecer el grupo, porque el guía y el vehículo se reparten entre más personas." },
-      { q: "¿Hay guías que hablen español?", a: "Sí. Trabajamos con egiptólogos titulados que guían en español. Indíquenlo al planificar el viaje: el número de egiptólogos hispanohablantes es limitado y en temporada alta están comprometidos con mucha antelación." },
+      { q: "¿Hay guías que hablen español?", a: "Sí. Egiptólogos titulados de nuestro propio equipo guían en español." },
       { q: "¿Cuántos días hacen falta para Egipto?", a: "Ocho a diez días sobre el terreno cubren El Cairo, Luxor, un crucero por el Nilo y Asuán sin prisas. Seis o siete bastan para El Cairo y Luxor. Doce a catorce dejan margen para Abu Simbel, Alejandría o una semana en el mar Rojo." },
       { q: "¿Es seguro Egipto?", a: "Las zonas turísticas — El Cairo, Guiza, Luxor, Asuán, Alejandría y la costa del mar Rojo — están vigiladas y las visitan millones de personas al año. Las molestias reales son los vendedores insistentes en los grandes yacimientos y el tráfico de El Cairo, y ambas desaparecen en gran medida con guía y conductor privados. Consulten en todo caso las recomendaciones de viaje vigentes antes de reservar." },
     ],

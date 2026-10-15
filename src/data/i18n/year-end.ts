@@ -101,7 +101,7 @@ export const frNoel: LocalizedPage = {
     { q: "Combien de temps à l'avance réserver le Nouvel An en Égypte ?", a: "Quatre à six mois, et davantage pour une dahabiya entière ou une suite sur le Nil. Ce n'est pas un argument de vente : les bons bateaux sont peu nombreux, et ils sont attribués dès l'été." },
     { q: "Peut-on se baigner à Noël en Égypte ?", a: `En mer Rouge, oui : l'eau est à ${dec.seaTemp}, agréable pour la plupart. On ne se baigne pas dans le Nil, et les piscines de Haute-Égypte en décembre, si elles ne sont pas chauffées, sont une affaire de courage.` },
     { q: "Tout est-il ouvert le 25 décembre ?", a: "Oui. En Égypte, le 25 décembre n'est pas férié : sites, musées et restaurants sont ouverts normalement. Le jour férié est le 7 janvier, Noël copte." },
-    { q: "Y a-t-il des guides francophones ?", a: "Oui : nous travaillons avec des égyptologues agréés qui guident en français. Pour les fêtes, ils sont aussi demandés que les bateaux — dites-le dès le premier message, pas à la confirmation." },
+    { q: "Y a-t-il des guides francophones ?", a: "Oui. Des égyptologues agréés de notre propre équipe guident en français, fêtes comprises." },
   ],
   cta: {
     heading: "Donnez-nous vos dates",
@@ -180,7 +180,7 @@ export const esNavidad: LocalizedPage = {
     { q: "¿Con cuánta antelación se reserva el Fin de Año en Egipto?", a: "Cuatro a seis meses, y para una dahabiya entera o una suite sobre el Nilo, antes. No es una técnica de venta: los buenos barcos son pocos y en verano ya están asignados." },
     { q: "¿Uno se puede bañar en Navidad en Egipto?", a: `En el mar Rojo, sí: el agua está a ${dec.seaTemp}, agradable para casi todos. En el Nilo no se baña nadie, y las piscinas del Alto Egipto en diciembre, si no están climatizadas, son cuestión de valor.` },
     { q: "¿Conviene viajar después de Año Nuevo?", a: `Por precio, sí: desde el 4–5 de enero las tarifas bajan, con el mismo clima. Con los colegios cerrados hasta Reyes, una familia española puede dejar parte del viaje fuera del pico y volver el ${esDate(EPIPH)}.` },
-    { q: "¿Hay guías que hablen español?", a: "Sí: trabajamos con egiptólogos titulados que guían en español. En Fin de Año se piden tanto como los barcos — díganoslo en el primer mensaje, no al confirmar." },
+    { q: "¿Hay guías que hablen español?", a: "Sí. Egiptólogos titulados de nuestro propio equipo guían en español, también en Fin de Año." },
   ],
   cta: {
     heading: "Díganos sus fechas",
@@ -257,7 +257,7 @@ export const ptNatal: LocalizedPage = {
     { q: "Com quanta antecedência reservar o Réveillon no Egito?", a: "Quatro a seis meses, e para uma dahabiya inteira ou uma suíte sobre o Nilo, antes. Não é técnica de venda: os bons barcos são poucos e no meio do ano já estão reservados." },
     { q: "Dá para tomar banho de mar no Natal?", a: `No mar Vermelho, sim: a água fica em ${dec.seaTemp}, agradável para quase todos. No Nilo ninguém nada, e as piscinas do Alto Egito em dezembro, se não forem aquecidas, são para os corajosos.` },
     { q: "Está tudo aberto em 25 de dezembro?", a: "Sim. No Egito, 25 de dezembro não é feriado: sítios, museus e restaurantes abrem normalmente. O feriado é 7 de janeiro, o Natal copto." },
-    { q: "Há guias que falam português?", a: "Sim: trabalhamos com egiptólogos credenciados que guiam em português. No fim de ano eles são tão disputados quanto os barcos — avise na primeira mensagem, não na confirmação." },
+    { q: "Há guias que falam português?", a: "Sim. Egiptólogos credenciados da nossa própria equipe guiam em português, também no Réveillon." },
   ],
   cta: {
     heading: "Diga as suas datas",
