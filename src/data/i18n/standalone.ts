@@ -22,6 +22,7 @@ import { frNoel, esNavidad, ptNatal, idAkhirTahun, msHujungTahun } from "./year-
 import { deHoneymoon, frHoneymoon, esHoneymoon, itHoneymoon, ruHoneymoon, ptHoneymoon, idHoneymoon, msHoneymoon, arHoneymoon } from "./honeymoon";
 import { deFamily, frFamily, esFamily, itFamily, ruFamily, ptFamily, idFamily, msFamily, arFamily } from "./family";
 import { esLatam, ptBrasil } from "./americas";
+import { arGulfSummer } from "./markets";
 
 export interface StandalonePage {
   locale: TranslatedLocale;
@@ -38,6 +39,8 @@ export const STANDALONE_PAGES: StandalonePage[] = [
   // markets the site set out to reach without changing a word for Europe.
   { locale: "es", slug: "viajar-a-egipto-desde-latinoamerica", page: esLatam },
   { locale: "pt", slug: "viajar-ao-egito-saindo-do-brasil", page: ptBrasil },
+  // Gulf families (October 2026): Egypt's summer is their season.
+  { locale: "ar", slug: "sayf-masr-lil-aailat-al-khalijiya", page: arGulfSummer },
 
   // Indonesia and Malaysia. Four each, and none of them a translation of an
   // English page — these answer what those two markets search and the English

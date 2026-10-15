@@ -1,0 +1,138 @@
+---
+// For travel agents and tour operators — added October 2026.
+//
+// A second way in for travellers the European pages never reached: an agency
+// in Mexico City, São Paulo, Mumbai or Riyadh that sends a dozen clients a
+// year. The page says what is handled on the ground and how a request becomes
+// a journey; trade rates and terms are agreed with each partner and sent on
+// request, so no figure is published here.
+import Base from "@/layouts/Base.astro";
+import PageHero from "@/components/PageHero.astro";
+import Frieze from "@/components/Frieze.astro";
+import Faq from "@/components/Faq.astro";
+import LeadCapture from "@/components/conversion/LeadCapture.astro";
+import { breadcrumb, faqPageSchema } from "@/schemas/jsonld";
+import { mailtoLink, whatsappLink } from "@/utils/links";
+
+const handled = [
+  { title: "Licensed Egyptologists", body: "Private, licensed Egyptologist guides for every visit — in English as standard, and in Spanish and other languages on request, subject to availability." },
+  { title: "Vehicles and drivers", body: "A private air-conditioned vehicle and driver for each party, for transfers, touring days and the long roads to Abu Simbel or the oases." },
+  { title: "Hotels and the Nile", body: "Hotels chosen for the room, Nile cruises and private dahabiyas, domestic flights and the sleeper train — booked, confirmed and checked." },
+  { title: "Arrival and departure", body: "Meet and assist at Cairo airport, fast-track on request, and transfers at every arrival and departure." },
+  { title: "Experiences", body: "Hot-air balloons over Luxor, private feluccas, the food evening in Cairo, sunrise at the pyramids — and private access to monuments by permit." },
+  { title: "One contact on the ground", body: "One person follows each journey from arrival to departure and is reachable on WhatsApp throughout." },
+];
+
+const steps = [
+  { title: "Send the request", body: "Dates, number of travellers, interests and the level of comfort your clients expect." },
+  { title: "Itinerary and trade rates", body: "Within one working day: a real itinerary, day by day, at trade rates." },
+  { title: "Confirmation", body: "Once you confirm, we book everything and send the documents — vouchers, the day-by-day programme, contacts." },
+  { title: "On the ground", body: "We run the journey and keep you informed. Your clients have one number to call, and so do you." },
+];
+
+const faqs = [
+  { q: "Do you offer trade rates?", a: "Yes. Trade rates and payment terms are agreed with each partner. Write to us with a first request, or simply ask for our terms, and we send them." },
+  { q: "Which languages do your guides speak?", a: "English as standard. Spanish and other languages are available on request, subject to availability on your dates — tell us when you enquire." },
+  { q: "Can you handle private groups?", a: "Yes. Everything we run is private — couples, families, friends travelling together and larger private groups, each with its own guide and vehicle." },
+  { q: "How quickly do you reply?", a: "Within one working day, with a real itinerary and a clear price. During a journey, the contact on the ground answers at any hour." },
+  { q: "How can partners pay?", a: "By bank transfer, by card or by PayPal." },
+];
+
+const jsonld = [
+  breadcrumb([["Home", "index.html"], ["For travel agents", "travel-agents.html"]]),
+  ...faqPageSchema(faqs),
+];
+const mail = mailtoLink(
+  "Trade enquiry — Kemet",
+  "Hello Kemet,\n\nWe are a travel agency / tour operator and would like to work with you.\n\nAgency:\nCountry:\nFirst request (dates, travellers):\n\nThank you.",
+);
+const wa = whatsappLink("Hello Kemet — we are a travel agency and would like to discuss working together.");
+---
+<Base
+  title="For Travel Agents & Tour Operators | Kemet"
+  description="Private ground arrangements in Egypt for travel agents and tour operators abroad: Egyptologists, vehicles, hotels and Nile cruises, at trade rates."
+  active="travel-agents.html"
+  jsonld={jsonld}
+  keywords="egypt dmc, egypt ground handler, egypt tour operator for travel agents, private egypt tours trade rates, egypt incoming agency"
+>
+  <PageHero
+    crumb="For travel agents"
+    symbol="scales"
+    overline="For the trade"
+    title="Your clients, our Egypt"
+    text="Travel agents and tour operators send us their clients for private journeys in Egypt. We arrange and run everything on the ground, and keep you informed at every step."
+  />
+
+  <section style="padding-top:var(--s-4)">
+    <div class="wrap">
+      <div class="ta-head reveal">
+        <div class="eyebrow">What we handle</div>
+        <h2>Everything on the ground, privately</h2>
+        <div class="rule"></div>
+      </div>
+      <div class="ta-grid">
+        {handled.map((h) => (
+          <div class="ta-card reveal">
+            <h3>{h.title}</h3>
+            <p>{h.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Frieze />
+
+  <section>
+    <div class="wrap">
+      <div class="ta-head reveal">
+        <div class="eyebrow">How it works</div>
+        <h2>From a request to a journey</h2>
+        <div class="rule"></div>
+      </div>
+      <ol class="ta-steps">
+        {steps.map((s, i) => (
+          <li class="reveal">
+            <span class="ta-num">{String(i + 1).padStart(2, "0")}</span>
+            <div><h3>{s.title}</h3><p>{s.body}</p></div>
+          </li>
+        ))}
+      </ol>
+      <div class="ta-actions reveal">
+        <a class="btn btn-solid" href={mail}>Send a trade enquiry</a>
+        <a class="btn btn-ghost" href={wa} target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <Frieze />
+
+  <section>
+    <div class="wrap">
+      <Faq items={faqs} heading="Asked by agents" />
+    </div>
+  </section>
+
+  <LeadCapture
+    variant="expert"
+    whatsappMessage="Hello Kemet — we are a travel agency and would like to discuss working together."
+    emailSubject="Trade enquiry — Kemet"
+  />
+</Base>
+
+<style>
+  .ta-head { max-width: 720px; margin-bottom: var(--s-5); }
+  .ta-head h2 { margin-top: var(--s-2); }
+  .ta-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-4); }
+  .ta-card { border: 1px solid var(--line); padding: var(--s-4); background: var(--ink-2); }
+  .ta-card h3 { font-family: var(--ff-display); font-size: var(--t-md); color: var(--bone); margin-bottom: var(--s-2); }
+  .ta-card p { color: var(--muted); font-size: var(--t-sm); line-height: 1.7; }
+  .ta-steps { list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-4) var(--s-6); padding: 0; margin: 0; }
+  .ta-steps li { display: grid; grid-template-columns: 52px 1fr; gap: var(--s-3); align-items: start; }
+  .ta-num { font-family: var(--ff-display); font-size: var(--t-xl); color: var(--gold); line-height: 1; }
+  .ta-steps h3 { font-family: var(--ff-display); font-size: var(--t-md); color: var(--bone); margin-bottom: var(--s-1); }
+  .ta-steps p { color: var(--muted); font-size: var(--t-sm); line-height: 1.7; }
+  .ta-actions { display: flex; flex-wrap: wrap; gap: var(--s-3); margin-top: var(--s-6); }
+  @media (max-width: 900px) { .ta-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 640px) { .ta-grid, .ta-steps { grid-template-columns: 1fr; } }
+</style>

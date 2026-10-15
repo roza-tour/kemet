@@ -11,6 +11,27 @@
 import type { Guide } from "@/types";
 import { PEAK } from "@/data/ultra/journeys";
 import { beforeDate, ECLIPSE_2027 } from "@/data/timeboxed";
+import { findMonth } from "@/data/months";
+
+// --- for the market guides (October 2026) ------------------------------------
+/** A month's temperature for a place, from the same table as the month pages. */
+const temp = (month: string, place: "cairo" | "luxor" | "aswan" | "redSea") => findMonth(month)!.temps[place];
+/** "24–26°C" → "24–26°C (75–79°F)", for American readers. */
+const withF = (c: string) =>
+  c.replace(/(\d+)–(\d+)°C/, (_m, a: string, b: string) =>
+    `${a}–${b}°C (${Math.round((+a * 9) / 5 + 32)}–${Math.round((+b * 9) / 5 + 32)}°F)`);
+/** The next US Thanksgiving — the fourth Thursday of November. */
+const thanksgiving = (() => {
+  const now = new Date();
+  const forYear = (y: number) => {
+    const d = new Date(Date.UTC(y, 10, 1));
+    const firstThu = 1 + ((4 - d.getUTCDay() + 7) % 7);
+    return new Date(Date.UTC(y, 10, firstThu + 21));
+  };
+  const t = forYear(now.getUTCFullYear());
+  return now.getTime() > t.getTime() + 3 * 86_400_000 ? forYear(now.getUTCFullYear() + 1) : t;
+})();
+const thanksgivingLabel = thanksgiving.toLocaleDateString("en-US", { timeZone: "UTC", weekday: "long", month: "long", day: "numeric", year: "numeric" });
 
 const dest = (...ids: string[]) =>
   ids.map((id) => ({ domain: "destination" as const, id }));
@@ -1252,6 +1273,419 @@ export const guides: Guide[] = [
     relationships: {
       destinations: dest("cairo", "giza", "luxor", "aswan"),
       relatedGuides: guide("egypt-travel-guide", "best-time-to-visit-egypt", "transportation-in-egypt"),
+    },
+  },
+
+  // -------------------------------------------------------------------------
+  // Market guides, October 2026 — Australia & New Zealand, India, the British
+  // half-term, Thanksgiving & spring break. Additive: they reach travellers the
+  // European pages never addressed, and change nothing those pages say. Facts
+  // that move (visa fees, new routes, school dates) are stated as what to
+  // check, or dated.
+  // -------------------------------------------------------------------------
+  {
+    id: "egypt-from-australia-new-zealand",
+    slug: "egypt-from-australia-new-zealand",
+    domain: "guide",
+    title: "Egypt from Australia & New Zealand",
+    locales: ["en"],
+    guideType: "practical",
+    category: "planning-your-trip",
+    parentGuideId: "egypt-travel-guide",
+    shortSummary:
+      "Planning Egypt from Australia or New Zealand: the one-stop flights, the visa, the time difference, which school holidays work best, and how much to fit in.",
+    difficulty: "easy",
+    readingTimeMinutes: 6,
+    lastUpdated: "2026-10",
+    keyFacts: [
+      { label: "Flights", value: "One stop, via the Gulf or Asia" },
+      { label: "Visa", value: "Online e-visa, or on arrival" },
+      { label: "Time difference", value: "Sydney is 7–9 hours ahead of Cairo" },
+      { label: "Best months", value: "October to April" },
+      { label: "Best school holidays", value: "December–January" },
+      { label: "Pay by", value: "PayPal, card or bank transfer" },
+    ],
+    keyTakeaways: [
+      "There is no nonstop flight: one stop through Dubai, Doha, Abu Dhabi or Asia, about a day door to door",
+      "Australian and New Zealand passports can get Egypt's tourist visa online before flying, or on arrival in Cairo",
+      "Your summer holidays fall in Egypt's best weather — and its busiest weeks, so book four to six months ahead",
+      "After a flight that long, ten days or more lets Egypt unfold: Cairo, the Nile, Aswan, perhaps the Red Sea",
+    ],
+    sections: [
+      {
+        heading: "Getting there",
+        paragraphs: [
+          "No airline flies nonstop between Australia or New Zealand and Egypt, but one stop is all it takes: through Dubai, Doha or Abu Dhabi on the Gulf carriers, or through an Asian hub. From Sydney, Melbourne, Brisbane, Perth or Auckland, plan on about a day door to door.",
+          "Our journeys can start at Cairo airport: we meet you on arrival and take you to your hotel, and the first day is kept free of early starts.",
+        ],
+      },
+      {
+        heading: "The visa",
+        paragraphs: [
+          "Australian and New Zealand passport holders can apply for Egypt's tourist e-visa online before they fly, on the official portal, visa2egypt.gov.eg, or buy a visa on arrival at the airport. Cairo began moving the visa on arrival to a digital version in 2026, and the fees changed during the year — check the current amount on the official portal, and pay only there.",
+          "Your passport should be valid for at least six months beyond your stay. With your itinerary we send the up-to-date steps for your passport.",
+        ],
+        note: "Pay for an e-visa only on visa2egypt.gov.eg. Other sites that look official add their own fee.",
+        noteType: "warning",
+      },
+      {
+        heading: "Time difference and the first days",
+        paragraphs: [
+          "Sydney, Melbourne and Brisbane are seven to nine hours ahead of Cairo, Perth five to six, and Auckland nine to eleven — the gap shifts as each country moves its clocks. Jet lag from the east is real, so we keep the first two days gentle: a late start, the Nile at sunset, and the pyramids once your body has caught up.",
+        ],
+      },
+      {
+        heading: "Which school holidays work",
+        paragraphs: [
+          `December and January — your summer holidays — are Egypt's best weather: ${temp("january", "luxor")} by day in Luxor and ${temp("january", "cairo")} in Cairo. They are also the busiest weeks of the year, when the best Nile cabins and hotel rooms go first, so book four to six months ahead.`,
+          `The April holidays work well too — ${temp("april", "luxor")} in Luxor, with early mornings and a rest at noon — and the late September–October holidays catch the start of the season, warm but settling. The July holidays fall in Egypt's hottest month: the Red Sea and Alexandria are at their best then, the temples of Upper Egypt are a dawn affair.`,
+        ],
+        noteLink: { label: "The best time to visit Egypt, month by month", href: "guides/best-time-to-visit-egypt.html" },
+      },
+      {
+        heading: "Make the long flight count",
+        paragraphs: [
+          "After a day of flying, a short trip is a waste. Ten days or more lets Egypt unfold at its own pace: Cairo and Giza, a flight to Luxor, the Nile to Aswan, and, if you have the days, the Red Sea to finish. Our longest journey covers all of it in fourteen days.",
+        ],
+      },
+      {
+        heading: "Money, cards and tipping",
+        paragraphs: [
+          "Egypt's currency is the Egyptian pound. Cards work in hotels and most restaurants; keep some pounds for small purchases. Our prices are set in euros, and you can pay us by PayPal, by card or by bank transfer. Tipping is part of daily life in Egypt, in small and frequent amounts — we send a short tipping guide with your itinerary.",
+        ],
+      },
+      {
+        heading: "How a private journey works",
+        paragraphs: [
+          "Everything is private: your own licensed Egyptologist, your own vehicle and driver, and hotels chosen for the room rather than the star rating. Tell us your dates and how many of you are travelling; we reply within one working day with a real itinerary and a clear price, with no obligation.",
+        ],
+      },
+    ],
+    planningTips: [
+      "For December and January, book four to six months ahead — the best cabins and rooms go first.",
+      "Keep the first two days after arrival free of early starts.",
+      "Check the e-visa fee on visa2egypt.gov.eg when you book; it changed during 2026.",
+    ],
+    importantNotes: [
+      "Your passport should be valid for at least six months beyond your stay in Egypt.",
+    ],
+    faqs: [
+      { q: "Do Australians and New Zealanders need a visa for Egypt?", a: "Yes, but it is simple: apply for the tourist e-visa online before you fly, on the official portal visa2egypt.gov.eg, or buy a visa on arrival at the airport. Check the current fee on the official portal — it changed during 2026." },
+      { q: "Are there direct flights from Australia to Egypt?", a: "No. It is one stop, usually through Dubai, Doha or Abu Dhabi, or through an Asian hub — about a day door to door from the east coast of Australia or from Auckland." },
+      { q: "What is the best time to visit Egypt from Australia?", a: `Your summer holidays, December and January: ${temp("january", "luxor")} in Luxor and ${temp("january", "cairo")} in Cairo, cool evenings and clear skies. Book four to six months ahead, because they are Egypt's busiest weeks.` },
+      { q: "How many days do we need?", a: "After a flight that long, ten days or more. That covers Cairo and Giza, Luxor, the Nile to Aswan, and leaves room for the Red Sea if you have the time." },
+    ],
+    hero: {
+      alt: "The island Temple of Philae at Aswan",
+      label: "Egypt from Australia & New Zealand",
+      src: "/images/aswan/aswan-philae-temple-island.webp",
+      width: 1080,
+      height: 810,
+    },
+    seo: {
+      title: "Egypt from Australia & New Zealand: Flights, Visa | Kemet",
+      description:
+        "Planning Egypt from Australia or New Zealand: one-stop flights, the e-visa, the time difference, the school holidays that work best and how many days to take.",
+    },
+    relationships: {
+      tours: tour("tour-10-day", "tour-grand-14day"),
+      destinations: dest("cairo", "giza", "luxor", "aswan"),
+      relatedGuides: guide("best-time-to-visit-egypt", "10-day-egypt-itinerary"),
+    },
+  },
+  {
+    id: "egypt-from-india",
+    slug: "egypt-from-india",
+    domain: "guide",
+    title: "Egypt from India",
+    locales: ["en"],
+    guideType: "practical",
+    category: "planning-your-trip",
+    parentGuideId: "egypt-travel-guide",
+    shortSummary:
+      "Planning Egypt from India: the nonstop flights from Mumbai and Delhi, the e-visa, vegetarian food, the best months and festival holidays, and how a private journey works.",
+    difficulty: "easy",
+    readingTimeMinutes: 6,
+    lastUpdated: "2026-10",
+    keyFacts: [
+      { label: "Nonstop to Cairo", value: "From Mumbai and Delhi" },
+      { label: "Flight time", value: "About 6 hours" },
+      { label: "Visa", value: "E-visa, applied for before you fly" },
+      { label: "Time difference", value: "India is 2½–3½ hours ahead" },
+      { label: "Vegetarian", value: "Easy — Egypt's everyday food is largely meat-free" },
+      { label: "Best months", value: "October to April" },
+    ],
+    keyTakeaways: [
+      "EgyptAir flies nonstop to Cairo from Mumbai and Delhi several times a week, in about six hours",
+      "Indian passport holders should apply for the e-visa online, well before travel — do not count on a visa on arrival",
+      "Vegetarians eat very well: koshari, ful, ta'meya and most of the sweets are meat-free",
+      "Diwali and the winter holidays fall in Egypt's best weather",
+    ],
+    sections: [
+      {
+        heading: "Getting there",
+        paragraphs: [
+          "EgyptAir flies nonstop to Cairo from Mumbai and from Delhi several times a week, in about six hours — check the current schedule when you book. From other Indian cities, one stop through the Gulf is the easy route. Our journeys can start at Cairo airport: we meet you on arrival and take you to your hotel.",
+        ],
+      },
+      {
+        heading: "The visa",
+        paragraphs: [
+          "Indian passport holders should apply for Egypt's tourist e-visa online, on the official portal visa2egypt.gov.eg, at least two weeks before travel. A visa on arrival is generally not available to Indian passports except in specific cases, so do not count on one. Requirements change, so check the official portal, or the Egyptian embassy in New Delhi, before you apply — and pay only on the official portal.",
+          "We send the documents a visa application usually asks for — your itinerary and hotel confirmations — as soon as your journey is confirmed.",
+        ],
+        note: "Apply for the e-visa only on visa2egypt.gov.eg, and in good time: do not plan on a visa at the airport.",
+        noteType: "warning",
+      },
+      {
+        heading: "Vegetarian food",
+        paragraphs: [
+          "Egypt is an easy country for vegetarians. The everyday food of Cairo is largely meat-free: koshari, the national dish of rice, lentils, pasta and chickpeas; ful, slow-cooked fava beans; ta'meya, Egypt's green, herb-filled falafel; and most of the sweets, from basbousa to kunafa. Some dishes that look vegetarian, such as molokhia, are often cooked in a meat broth, so ask, or let your guide ask.",
+          "Tell us your rules — vegetarian, no egg, no onion and garlic — and we plan the meals around them and brief the hotels and boats before you arrive.",
+        ],
+        noteLink: { label: "Egyptian food, dish by dish", href: "guides/egyptian-food-guide.html" },
+      },
+      {
+        heading: "When to come",
+        paragraphs: [
+          `October to April is the season: warm, dry days and cool evenings. Diwali — ${new Date(Date.UTC(2026, 10, 8)).toLocaleDateString("en-IN", { timeZone: "UTC", day: "numeric", month: "long", year: "numeric" })} — falls right in it, with ${temp("november", "luxor")} by day in Luxor; the winter holidays in December and January are the coolest and the busiest weeks, so book three to four months ahead. May and June holidays are hot in Upper Egypt: the Red Sea and Alexandria suit them better.`,
+        ],
+        noteLink: { label: "The best time to visit Egypt, month by month", href: "guides/best-time-to-visit-egypt.html" },
+      },
+      {
+        heading: "Honeymoons",
+        paragraphs: [
+          "Egypt is a honeymoon that is also a story to tell: the pyramids at sunrise, a private felucca on the Nile at sunset, a cabin on a Nile boat and a few days by the Red Sea. A professional photographer can be arranged on request for a photo session at the pyramids.",
+        ],
+        noteLink: { label: "Honeymoons in Egypt", href: "collections/honeymoon-egypt.html" },
+      },
+      {
+        heading: "Money and payment",
+        paragraphs: [
+          "Egypt's currency is the Egyptian pound. Cards work in hotels and most restaurants; keep some pounds for small purchases. Our prices are set in euros, and you can pay us by PayPal, by card or by bank transfer.",
+        ],
+      },
+      {
+        heading: "How a private journey works",
+        paragraphs: [
+          "Everything is private: your own licensed Egyptologist, your own vehicle and driver, and hotels chosen for the room rather than the star rating. Tell us your dates and how many of you are travelling; we reply within one working day with a real itinerary and a clear price, with no obligation.",
+        ],
+      },
+    ],
+    planningTips: [
+      "Apply for the e-visa at least two weeks before travel, on the official portal only.",
+      "For Diwali and the December holidays, book three to four months ahead.",
+      "Tell us your food rules when you enquire, so the hotels and boats are briefed in advance.",
+    ],
+    importantNotes: [
+      "A visa on arrival is generally not available to Indian passports except in specific cases — apply for the e-visa in advance.",
+      "Your passport should be valid for at least six months after the day you arrive.",
+    ],
+    faqs: [
+      { q: "Do Indians need a visa for Egypt?", a: "Yes. Apply for the tourist e-visa online on the official portal visa2egypt.gov.eg, at least two weeks before travel. A visa on arrival is generally not available to Indian passports except in specific cases, so do not rely on one." },
+      { q: "Are there direct flights from India to Egypt?", a: "Yes. EgyptAir flies nonstop to Cairo from Mumbai and Delhi several times a week, in about six hours. From other cities it is one stop, usually through the Gulf." },
+      { q: "Is it easy to eat vegetarian in Egypt?", a: "Very. Koshari, ful, ta'meya and most of the sweets are meat-free, and we brief the hotels and boats on your rules before you arrive. Ask about dishes like molokhia, which are often cooked in a meat broth." },
+      { q: "When is the best time to visit Egypt from India?", a: "October to April. Diwali and the December–January holidays fall in Egypt's best weather; book three to four months ahead for those weeks." },
+    ],
+    hero: {
+      alt: "The colonnade of Luxor Temple with its royal statues",
+      label: "Egypt from India",
+      src: "/images/luxor/luxor-temple-colonnade.webp",
+      width: 736,
+      height: 920,
+    },
+    seo: {
+      title: "Egypt from India: Flights, E-Visa, Vegetarian Food | Kemet",
+      description:
+        "Planning Egypt from India: nonstop flights from Mumbai and Delhi, the e-visa, vegetarian food, the best months and festival holidays, and private journeys.",
+    },
+    relationships: {
+      tours: tour("tour-7-day", "tour-honeymoon-9day"),
+      destinations: dest("cairo", "giza", "luxor", "aswan"),
+      relatedGuides: guide("egyptian-food-guide", "best-time-to-visit-egypt"),
+    },
+  },
+  {
+    id: "egypt-half-term-uk",
+    slug: "egypt-half-term-uk",
+    domain: "guide",
+    title: "Egypt for Half-Term (and Easter)",
+    locales: ["en"],
+    guideType: "planning",
+    category: "weather-seasons",
+    parentGuideId: "best-time-to-visit-egypt",
+    shortSummary:
+      "Egypt in a British school holiday: why the October and February half-terms fall in Egypt's season, what fits in nine days, the flights, the visa and booking in time.",
+    difficulty: "easy",
+    readingTimeMinutes: 5,
+    lastUpdated: "2026-10",
+    keyFacts: [
+      { label: "October half-term", value: "26–30 October 2026 (most schools)" },
+      { label: "February half-term", value: "15–19 February 2027 (most schools)" },
+      { label: "Flight, London–Cairo", value: "About 5 hours, nonstop" },
+      { label: "Time difference", value: "Cairo is 2 hours ahead" },
+      { label: "Luxor in February", value: temp("february", "luxor") },
+      { label: "Book", value: "3–4 months ahead" },
+    ],
+    keyTakeaways: [
+      "Both the October and the February half-terms fall inside Egypt's season — warm days, cool evenings",
+      "Nine days, Saturday to Sunday, is enough for Cairo and Luxor, or Cairo and a short Nile cruise",
+      "British Airways and EgyptAir fly nonstop from Heathrow to Cairo in about five hours",
+      "Half-term weeks are among the busiest of the year: book three to four months ahead",
+    ],
+    sections: [
+      {
+        heading: "Why half-term works",
+        paragraphs: [
+          `The October half-term catches the start of Egypt's season: ${temp("october", "luxor")} in Luxor, ${temp("october", "cairo")} in Cairo and the Red Sea still warm enough to swim. By February it is the heart of winter — ${temp("february", "luxor")} by day in Luxor, ${temp("february", "cairo")} in Cairo, crisp evenings — the most comfortable weather of the year for temples. The Easter holidays work too, warmer, with early mornings in Upper Egypt.`,
+          "Most schools in England take 26–30 October 2026 and 15–19 February 2027, but councils and academies set their own dates, and some take the week before in February — check your school's calendar before you book.",
+        ],
+        noteLink: { label: "The best time to visit Egypt, month by month", href: "guides/best-time-to-visit-egypt.html" },
+      },
+      {
+        heading: "What fits in nine days",
+        paragraphs: [
+          "From the Saturday before to the Sunday after, nine days is enough for a real journey: Cairo, Giza and the Grand Egyptian Museum, then a short flight to Luxor for the Valley of the Kings and Karnak — or a three-night Nile cruise from Luxor to Aswan instead. With younger children we shorten the mornings and leave time for the pool.",
+        ],
+        noteLink: { label: "Egypt with children", href: "collections/family-egypt.html" },
+      },
+      {
+        heading: "Flights",
+        paragraphs: [
+          "British Airways and EgyptAir both fly nonstop from Heathrow to Cairo, in about five hours, and holiday flights reach the Red Sea resorts from several UK airports. Cairo is two hours ahead of London for most of the year, so there is no jet lag to speak of. Our journeys can start at Cairo airport: we meet you on arrival and take you to your hotel.",
+        ],
+      },
+      {
+        heading: "The visa",
+        paragraphs: [
+          "British passport holders can apply for Egypt's tourist e-visa online before they fly, on the official portal visa2egypt.gov.eg, or buy a visa on arrival at the airport. The fees changed during 2026, so check the current amount on the official portal and pay only there. Your passport should be valid for at least six months after you arrive.",
+        ],
+      },
+      {
+        heading: "Book in time",
+        paragraphs: [
+          "Half-term weeks are among the busiest of the year, for families from across Europe at once. The best Nile cabins, family rooms and connecting rooms go first: three to four months ahead is right; with less, what changes is which boat and which hotel. Tell us your school's dates and how many of you are travelling — we reply within one working day with a real itinerary and a clear price.",
+        ],
+      },
+    ],
+    planningTips: [
+      "Check your school's own half-term dates before booking — councils and academies differ.",
+      "Book three to four months ahead for half-term weeks.",
+      "With younger children, choose Cairo and Luxor rather than a long day-by-day tour.",
+    ],
+    faqs: [
+      { q: "When is half-term?", a: "Most schools in England take 26–30 October 2026 and 15–19 February 2027, but councils and academies set their own dates, and some take the week before in February. Check your school's calendar before booking." },
+      { q: "Is Egypt warm at October half-term?", a: `Yes — ${temp("october", "luxor")} by day in Luxor and ${temp("october", "cairo")} in Cairo, with the Red Sea still warm enough to swim. Evenings are pleasant.` },
+      { q: "How long is the flight from London to Egypt?", a: "About five hours nonstop from Heathrow to Cairo with British Airways or EgyptAir. Holiday flights also reach the Red Sea resorts from several UK airports." },
+      { q: "Can we do Egypt in a half-term week with children?", a: "Yes. Nine days, Saturday to Sunday, covers Cairo, Giza and Luxor at a family pace, with time for the pool. We shorten the mornings for younger children." },
+    ],
+    hero: {
+      alt: "The Great Sphinx of Giza seen from the front",
+      label: "Egypt for half-term",
+      src: "/images/giza/giza-great-sphinx-frontal.webp",
+      width: 736,
+      height: 920,
+    },
+    seo: {
+      title: "Egypt for Half-Term: October & February Holidays | Kemet",
+      description:
+        "Egypt in a British half-term: why October and February fall in Egypt's season, what fits in nine days, nonstop flights from Heathrow, the visa, booking in time.",
+    },
+    relationships: {
+      tours: tour("tour-family-8day", "tour-7-day"),
+      destinations: dest("cairo", "giza", "luxor"),
+      relatedGuides: guide("best-time-to-visit-egypt", "egypt-packing-list"),
+    },
+  },
+  {
+    id: "thanksgiving-spring-break-egypt",
+    slug: "thanksgiving-spring-break-egypt",
+    domain: "guide",
+    title: "Thanksgiving & Spring Break in Egypt",
+    locales: ["en"],
+    guideType: "planning",
+    category: "weather-seasons",
+    parentGuideId: "best-time-to-visit-egypt",
+    shortSummary:
+      "Egypt in an American holiday week: Thanksgiving and spring break both fall in Egypt's best weather. What fits in nine days, the flights, and why to book early.",
+    difficulty: "easy",
+    readingTimeMinutes: 5,
+    lastUpdated: "2026-10",
+    keyFacts: [
+      { label: "Thanksgiving", value: thanksgivingLabel },
+      { label: "Luxor in late November", value: withF(temp("november", "luxor")) },
+      { label: "Luxor in March", value: withF(temp("march", "luxor")) },
+      { label: "Fits in", value: "9 days, Saturday to Sunday" },
+      { label: "Nonstop to Cairo", value: "New York, Newark, Washington" },
+      { label: "Book", value: "3–4 months ahead" },
+    ],
+    keyTakeaways: [
+      "Thanksgiving week and spring break both fall in Egypt's best weather",
+      "Nine days, Saturday to Sunday, covers Cairo, Luxor and the Nile",
+      "EgyptAir flies nonstop to Cairo from New York, Newark and Washington Dulles",
+      "Both weeks are among the busiest of Egypt's year: book three to four months ahead",
+    ],
+    sections: [
+      {
+        heading: "Thanksgiving week",
+        paragraphs: [
+          `Thanksgiving falls on ${thanksgivingLabel}. Take the week around it and Egypt is at its most comfortable: ${withF(temp("november", "luxor"))} by day in Luxor and ${withF(temp("november", "cairo"))} in Cairo, dry air and cool evenings on the deck of a Nile boat. It is the start of Egypt's high season, and the week Americans, Canadians and Europeans all choose at once — the best cabins and rooms go three to four months ahead.`,
+        ],
+      },
+      {
+        heading: "Spring break",
+        paragraphs: [
+          `March is one of the very best months in Egypt: ${withF(temp("march", "luxor"))} in Luxor and ${withF(temp("march", "cairo"))} in Cairo, long days and the light that photographers come for. For families it is the last comfortable window before the heat, and the temples are at their most beautiful in the early-morning light.`,
+        ],
+      },
+      {
+        heading: "What fits in nine days",
+        paragraphs: [
+          "From the Saturday before to the Sunday after: three days in Cairo and Giza — the pyramids, the Grand Egyptian Museum, Islamic Cairo — then a short flight to Luxor for the Valley of the Kings and Karnak, and either a three-night Nile cruise to Aswan or two nights in Luxor before flying home. We keep the first day light after the transatlantic flight.",
+        ],
+        noteLink: { label: "Egypt from the USA & Canada: flights, visa, timing", href: "guides/egypt-from-usa-canada.html" },
+      },
+      {
+        heading: "Christmas and New Year",
+        paragraphs: [
+          "The winter holidays are the other American window — and the single busiest fortnight of Egypt's year. If those are your dates, book as early as you can.",
+        ],
+        noteLink: { label: "Christmas & New Year in Egypt", href: "collections/christmas-new-year-egypt.html" },
+      },
+      {
+        heading: "How a private journey works",
+        paragraphs: [
+          "Everything is private: your own licensed Egyptologist, your own vehicle and driver, and hotels chosen for the room rather than the star rating. Our prices are set in euros — visitors in North America see an approximate dollar figure beside each — and you can pay by PayPal, card or bank transfer. Tell us your dates; we reply within one working day with a real itinerary and a clear price.",
+        ],
+      },
+    ],
+    planningTips: [
+      "Book Thanksgiving and spring break weeks three to four months ahead.",
+      "Keep the first day after the transatlantic flight free of early starts.",
+      "Check the e-visa fee on visa2egypt.gov.eg when you book; it changed during 2026.",
+    ],
+    faqs: [
+      { q: "When is Thanksgiving this year?", a: `${thanksgivingLabel}. Most travellers take the week around it — nine days from the Saturday before to the Sunday after.` },
+      { q: "Is Egypt warm in late November?", a: `Pleasantly: ${withF(temp("november", "luxor"))} by day in Luxor and ${withF(temp("november", "cairo"))} in Cairo, with cool evenings. It is the start of Egypt's best season.` },
+      { q: "Can we see Egypt in a spring break week?", a: "Yes. Nine days covers Cairo and Giza, Luxor and either a short Nile cruise to Aswan or two nights in Luxor — at a comfortable pace, with the first day kept light." },
+      { q: "How early should we book?", a: "Three to four months ahead for Thanksgiving and spring break, earlier for Christmas and New Year — the best Nile cabins and hotel rooms go first." },
+    ],
+    hero: {
+      alt: "A fleet of hot-air balloons rising over the Nile valley and temples of Luxor at dawn",
+      label: "Thanksgiving & spring break",
+      src: "/images/activities/balloons-over-luxor.webp",
+      width: 766,
+      height: 400,
+    },
+    seo: {
+      title: "Thanksgiving & Spring Break in Egypt: 9-Day Trips | Kemet",
+      description:
+        "Egypt in an American holiday week: Thanksgiving and spring break fall in Egypt's best weather. What fits in nine days, nonstop flights, and when to book.",
+    },
+    relationships: {
+      tours: tour("tour-7-day", "tour-family-8day"),
+      destinations: dest("cairo", "giza", "luxor", "aswan"),
+      relatedGuides: guide("egypt-from-usa-canada", "best-time-to-visit-egypt"),
     },
   },
 

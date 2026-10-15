@@ -121,6 +121,7 @@ export const footerCompany: FooterColumn = {
     { label: "Contact", href: "contact.html" },
     { label: "What a journey costs", href: "egypt-tour-cost.html" },
     { label: "Booking & Cancellation", href: "booking.html" },
+    { label: "For travel agents", href: "travel-agents.html" },
     { label: "Privacy Policy", href: "privacy.html" },
     { label: "Terms of Use", href: "terms.html" },
     { label: "Site Index", href: "sitemap.html" },
