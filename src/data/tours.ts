@@ -1145,7 +1145,9 @@ export const tours: Tour[] = [
     visiting: "Downtown Cairo · street-food quarters",
     isPrivate: privateNote,
     price: 59,
-    priceBasisPax: DAY_PRICE_PAX,
+    // The owner, 15 Oct 2026: this price is for a private party of two or
+    // more, not the six the other day tours are quoted from.
+    priceBasisPax: 2,
     foodExcluded: true,
     summary:
       "A guided evening tasting of Cairo's best-loved dishes — koshari, ful and ta'meya, hawawshi and grilled pigeon, kunafa and basbousa, finished at a traditional ahwa.",
