@@ -5,7 +5,7 @@
 import Medallion from "@/components/marks/Medallion.astro";
 import Placeholder from "@/components/Placeholder.astro";
 import SeasonalTheme from "@/components/collection/SeasonalTheme.astro";
-import type { SeasonalTheme as Theme } from "@/types";
+import type { SeasonalTheme as Theme, FeastPlate } from "@/types";
 
 interface Props {
   title: string;
@@ -37,15 +37,17 @@ interface Props {
   /** An occasion's ornament (SeasonalTheme.astro). Its palette comes from a
    *  `themed-<name>` class on an ancestor — see LocalizedArticle. */
   theme?: Theme;
+  /** The feast theme's plates, for a page that sets its own table. */
+  plates?: FeastPlate[];
 }
 const {
   title, text = "", symbol = "", crumb = "", overline = "", framed = false,
   rootLabel = "Home", rootHref = "/",
-  heroSrc, heroAlt, heroWidth, heroHeight, theme,
+  heroSrc, heroAlt, heroWidth, heroHeight, theme, plates,
 } = Astro.props;
 ---
 <header class:list={["phero", framed && "phero--framed"]}>
-  {theme && <SeasonalTheme theme={theme} />}
+  {theme && <SeasonalTheme theme={theme} plates={plates} />}
   {framed && <span class="phero-cart" aria-hidden="true"></span>}
   <div class="wrap">
     {crumb && (

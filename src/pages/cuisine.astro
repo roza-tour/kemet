@@ -1,12 +1,30 @@
 ---
+// The cuisine hub — "The Table of Egypt".
+//
+// Redesigned October 2026 to look like what it is about: the feast palette
+// (saffron, tomato and mint on espresso) across the whole page, plates of the
+// dishes in the header, hairline drawings of the Egyptian table drifting in
+// the background, the dishes set out as a menu with their Arabic names, the
+// spice box, the shape of an Egyptian eating day, the sweets on plates, what
+// to drink — and the food evening, for anyone who wants to taste it.
+//
+// What did not change: the URL, the title, the description, the H1 and lede,
+// every dish and its note, the editorial and the FAQ (and its FAQPage data).
+// Every new line restates something already said on this page — in a dish's
+// note or in the editorial in data/hubs.ts — so the design adds no claim.
 import Base from "@/layouts/Base.astro";
 import HubEditorial from "@/components/HubEditorial.astro";
 import { hubs } from "@/data/hubs";
 import PageHero from "@/components/PageHero.astro";
 import SectionHeader from "@/components/SectionHeader.astro";
 import Placeholder from "@/components/Placeholder.astro";
+import TourCard from "@/components/TourCard.astro";
+import FoodGlyph from "@/components/cuisine/FoodGlyph.astro";
+import type { DoodleName } from "@/components/cuisine/doodles";
 import { savoury, sweets } from "@/data/cuisine";
+import { tours } from "@/data/tours";
 import { breadcrumb } from "@/schemas/jsonld";
+import type { FeastPlate } from "@/types";
 
 const jsonld = breadcrumb([["Home", "index.html"], ["Cuisine", "cuisine.html"]]);
 
@@ -22,6 +40,93 @@ const faqLd = {
   })),
 };
 
+// The header's table: savoury on the left, sweet on the right — the page's
+// own two halves. Our own photographs, so no plate needs a credit.
+const plates: FeastPlate[] = [
+  { src: "/images/food/koshari-sauce-pour.webp", w: 720, h: 900, hot: true, pos: "50% 62%" },
+  { src: "/images/food/tameya-sesame.webp", w: 432, h: 478, hot: true },
+  { src: "/images/food/kunafa-pistachio.webp", w: 736, h: 920, hot: false },
+  { src: "/images/food/basbousa-almond.webp", w: 720, h: 720, hot: false },
+];
+
+/** The feast's five colours, each with the ink that reads on it. */
+const ACC = [
+  { c: "#E8623A", ink: "#FFF6EA" }, // tomato
+  { c: "#F4B33F", ink: "#2A1608" }, // saffron
+  { c: "#3FB68B", ink: "#06231A" }, // mint
+  { c: "#D9774A", ink: "#FFF2E4" }, // cumin
+  { c: "#A8C256", ink: "#1C2408" }, // lime
+];
+const acc = (i: number) => `--acc:${ACC[i % ACC.length].c};--acc-ink:${ACC[i % ACC.length].ink}`;
+
+// The drawings behind the page: down both margins and into the gaps between
+// sections. top is a share of the page's height, x of its width.
+const SCATTER: { n: DoodleName; t: number; x: number; s: number; r: number; c: number }[] = [
+  { n: "tea", t: 9, x: 2, s: 120, r: -10, c: 1 },
+  { n: "chilli", t: 12, x: 90, s: 104, r: 18, c: 0 },
+  { n: "bread", t: 19, x: 91, s: 128, r: 8, c: 3 },
+  { n: "beans", t: 23, x: 1, s: 112, r: -14, c: 2 },
+  { n: "lemon", t: 29, x: 92, s: 96, r: 0, c: 4 },
+  { n: "qidra", t: 33, x: 2.5, s: 118, r: 6, c: 1 },
+  { n: "garlic", t: 38, x: 89, s: 100, r: -8, c: 5 },
+  { n: "mint", t: 41, x: 3, s: 110, r: 12, c: 2 },
+  { n: "tameya", t: 46, x: 90, s: 108, r: 0, c: 3 },
+  { n: "kunafa", t: 51, x: 1.5, s: 116, r: 0, c: 1 },
+  { n: "cezve", t: 55, x: 88, s: 120, r: -6, c: 0 },
+  { n: "lemon", t: 60, x: 3, s: 84, r: 20, c: 4 },
+  { n: "chilli", t: 64, x: 91, s: 96, r: -24, c: 0 },
+  { n: "tea", t: 69, x: 2, s: 104, r: 8, c: 5 },
+  { n: "bread", t: 74, x: 90, s: 120, r: -12, c: 3 },
+  { n: "beans", t: 79, x: 2.5, s: 100, r: 16, c: 2 },
+  { n: "mint", t: 84, x: 91, s: 104, r: -10, c: 2 },
+  { n: "qidra", t: 89, x: 1.5, s: 110, r: -4, c: 1 },
+  { n: "kunafa", t: 94, x: 90, s: 100, r: 0, c: 1 },
+];
+const INK = ["#E8623A", "#F4B33F", "#3FB68B", "#F3E3C3", "#A8C256", "#D9774A"];
+
+// The spice box: the four the FAQ names — cumin, coriander, garlic and dill —
+// and the chilli it says stays on the side. Each line restates the page: the
+// cumin of ful and sayadeya, molokhia's coriander and garlic, koshari's
+// tomato-garlic sauce, the green of ta'meya.
+const SPICES = [
+  { name: "Cumin", ar: "كمون", use: "In the ful, and in the rice of sayadeya", top: "#C98A4B", deep: "#8E5A2B" },
+  { name: "Coriander", ar: "كزبرة", use: "Simmered into molokhia", top: "#D8BC86", deep: "#A68852" },
+  { name: "Garlic", ar: "توم", use: "In molokhia, and in koshari's tomato sauce", top: "#F1E6CF", deep: "#C9B48E" },
+  { name: "Dill", ar: "شبت", use: "Part of the green inside ta'meya", top: "#93B85A", deep: "#5C7D33" },
+  { name: "Chilli", ar: "شطة", use: "Shatta: on the table, never in the dish", top: "#E5533A", deep: "#9E2B1C" },
+];
+/** Specks on a mound, the same on every build. */
+const specks = (seed: number) =>
+  [...Array(26)].map((_, k) => {
+    const u = ((seed * 37 + k * 53) % 97) / 97, v = ((seed * 11 + k * 29) % 89) / 89;
+    const y = 30 + v * 38, half = 6 + (y - 22) * 0.95;
+    return { x: (70 + (u - 0.5) * 2 * half).toFixed(1), y: y.toFixed(1), r: (0.9 + ((k * 7) % 5) * 0.25).toFixed(2) };
+  });
+
+// When Egypt eats — the editorial's "When Egyptians actually eat", drawn.
+const MEALS = [
+  { when: "Early", title: "Breakfast", text: "Early and substantial: ful, ta'meya and bread from a bakery that bakes twice a day.", icon: "sunrise" },
+  { when: "2–4 pm", title: "Lunch", text: "The main meal of the day, somewhere between two and four.", icon: "sun" },
+  { when: "From 9 pm", title: "Dinner", text: "Starts at nine and can run past midnight. A room full at seven is full of visitors; at ten, of Egyptians.", icon: "moon" },
+];
+
+// What to drink — the FAQ's answer, set out.
+const DRINKS: { name: string; ar: string; note: string; icon: DoodleName }[] = [
+  { name: "Tea with mint", ar: "شاي بالنعناع", note: "Black, sweet, and constantly.", icon: "tea" },
+  { name: "Turkish coffee", ar: "قهوة مظبوط", note: "Ask for it mazbout: medium sugar.", icon: "cezve" },
+  { name: "Sugarcane juice", ar: "عصير قصب", note: "Fresh, and worth seeking out.", icon: "cane" },
+  { name: "Karkadeh", ar: "كركديه", note: "Hibiscus: hot in winter, iced in summer.", icon: "karkadeh" },
+];
+
+// Syrup running off the top edge of the sweets: drips of set lengths, the
+// same on every build.
+const DRIPS = [40, 112, 170, 236, 318, 382, 452, 530, 604, 668, 744, 812, 884, 958, 1030, 1096, 1162];
+const drip = "M0 0 H1200 V14 " + [...DRIPS].reverse().map((x, i) => {
+  const len = 22 + ((i * 37) % 5) * 9, w = 9 + (i % 3) * 3;
+  return `L${x + w} 14 C${x + w} ${14 + len * 0.6} ${x + w * 0.7} ${14 + len} ${x} ${14 + len} C${x - w * 0.7} ${14 + len} ${x - w} ${14 + len * 0.6} ${x - w} 14`;
+}).join(" ") + " L0 14 Z";
+
+const food = tours.find((t) => t.slug === "tour-cairo-food");
 ---
 <Base
   title="Egyptian Cuisine — The Table of Kemet"
@@ -29,27 +134,39 @@ const faqLd = {
   active="cuisine.html"
   jsonld={[...(Array.isArray(jsonld) ? jsonld : [jsonld]), faqLd]}
 >
+<div class="themed-feast cz">
+  <div class="cz-doodles" aria-hidden="true">
+    {SCATTER.map((d, i) => (
+      <FoodGlyph name={d.n} class={`cz-dd cz-dd${i % 4}`} weight={2}
+        style={`top:${d.t}%;left:${d.x}%;width:${d.s}px;height:${d.s}px;--rot:${d.r}deg;color:${INK[d.c]};animation-delay:${-(i * 1.7) % 14}s`} />
+    ))}
+  </div>
+
   <PageHero
     crumb="Cuisine"
-    symbol="lotus"
     title="The Table of Egypt"
     text="A cuisine of beans and bread, herbs and slow-cooked greens, finished with syrup and nuts — generous, everyday and deeply Egyptian."
+    theme="feast"
+    plates={plates}
   />
 
-  <section class="light">
+  <!-- The savoury dishes, set out as a menu -->
+  <section class="cz-sec">
     <div class="wrap">
       <SectionHeader sym="cuisine"
         eyebrow="Savoury"
         title="The everyday feast"
         text="Six dishes that define the Egyptian table, from the national bowl of koshari to the coastal rice of sayadeya."
       />
-      <div class="grid-3">
-        {savoury.map((d) => (
-          <article class="eat reveal">
-            <Placeholder label={d.name} src={d.image?.src} alt={d.image?.alt} width={d.image?.width} height={d.image?.height} sizes="card" />
-            <div class="body">
-              <h3>{d.name}</h3>
+      <div class="cz-menu">
+        {savoury.map((d, i) => (
+          <article class="cz-dish reveal" style={acc(i)}>
+            <span class="cz-num" aria-hidden="true">{String(i + 1).padStart(2, "0")}</span>
+            <Placeholder class="cz-ph" label={d.name} src={d.image?.src} alt={d.image?.alt} width={d.image?.width} height={d.image?.height} sizes="card" />
+            <div class="cz-body">
+              <h3>{d.name}{d.native && <span class="cz-ar" lang="ar" dir="rtl">{d.native}</span>}</h3>
               <p>{d.note}</p>
+              {d.tags && <ul class="cz-tags">{d.tags.map((t) => <li>{t}</li>)}</ul>}
             </div>
           </article>
         ))}
@@ -57,25 +174,277 @@ const faqLd = {
     </div>
   </section>
 
-  <section>
+  <!-- The spice box -->
+  <section class="cz-spice">
+    <div class="wrap">
+      <div class="cz-head reveal">
+        <div class="eyebrow">The spice box</div>
+        <h2>Aromatic, not hot</h2>
+        <p>Cumin, coriander, garlic and dill do the work. Chilli comes to the table on the side, as shatta, for whoever wants it.</p>
+      </div>
+      <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <defs><linearGradient id="czbowl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C8873E" /><stop offset="1" stop-color="#6E3F1A" /></linearGradient></defs>
+      </svg>
+      <ul class="cz-mounds">
+        {SPICES.map((s, i) => (
+          <li class="reveal">
+            <svg viewBox="0 0 140 112" aria-hidden="true">
+              <defs>
+                <linearGradient id={`czm${i}`} x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color={s.top} /><stop offset="1" stop-color={s.deep} /></linearGradient>
+              </defs>
+              <path d="M18 72 C34 30 54 18 70 18 C86 18 106 30 122 72 Z" fill={`url(#czm${i})`} />
+              {specks(i + 1).map((p) => <circle cx={p.x} cy={p.y} r={p.r} fill="#000" fill-opacity=".16" />)}
+              <path d="M44 34 C52 26 60 23 68 22" stroke="#fff" stroke-opacity=".28" stroke-width="2.4" fill="none" stroke-linecap="round" />
+              <path d="M8 70 H132 C130 94 104 106 70 106 C36 106 10 94 8 70 Z" fill="url(#czbowl)" />
+              <path d="M8 70 H132" stroke="#F4B33F" stroke-opacity=".7" stroke-width="2" />
+              <path d="M22 84 Q70 94 118 84" stroke="#F4B33F" stroke-opacity=".35" stroke-width="1.4" fill="none" stroke-dasharray="3 5" />
+            </svg>
+            <b>{s.name}</b>
+            <span class="cz-ar" lang="ar" dir="rtl">{s.ar}</span>
+            <small>{s.use}</small>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- A day at the Egyptian table -->
+  <section class="cz-day">
+    <div class="wrap">
+      <div class="cz-head reveal">
+        <div class="eyebrow">When Egypt eats</div>
+        <h2>A day at the Egyptian table</h2>
+        <p>Later than you. Plan a day around it and you eat where Cairo eats.</p>
+      </div>
+      <ol class="cz-meals">
+        {MEALS.map((m, i) => (
+          <li class="reveal" style={acc(i)}>
+            <span class="cz-clock" aria-hidden="true">
+              {m.icon === "sunrise" && (
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M10 42 H54" /><path d="M18 42 A14 14 0 0 1 46 42" /><path d="M32 18 V12 M17 25 l-4 -4 M47 25 l4 -4 M10 34 H5 M59 34 H54" /><path d="M22 50 H42" opacity=".6" /></svg>
+              )}
+              {m.icon === "sun" && (
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="32" cy="32" r="11" /><path d="M32 8 V14 M32 50 V56 M8 32 H14 M50 32 H56 M15 15 l4 4 M45 45 l4 4 M49 15 l-4 4 M19 45 l-4 4" /></svg>
+              )}
+              {m.icon === "moon" && (
+                <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M40 12 A20 20 0 1 0 52 44 A16 16 0 1 1 40 12 Z" /><path d="M48 16 l1.6 3.4 l3.4 1.6 l-3.4 1.6 l-1.6 3.4 l-1.6 -3.4 l-3.4 -1.6 l3.4 -1.6 Z" /></svg>
+              )}
+            </span>
+            <small>{m.when}</small>
+            <h3>{m.title}</h3>
+            <p>{m.text}</p>
+          </li>
+        ))}
+      </ol>
+      <p class="cz-ramadan reveal">
+        <svg viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 5 A11 11 0 1 0 27 22 A9 9 0 1 1 20 5 Z" /></svg>
+        <span>In Ramadan the rhythm turns around: the city is quiet all afternoon, then erupts at sunset for iftar.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- The sweets, on plates -->
+  <section class="cz-sweets">
+    <svg class="cz-drip" viewBox="0 0 1200 70" preserveAspectRatio="none" aria-hidden="true">
+      <defs><linearGradient id="czhoney" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F7C25A" /><stop offset="1" stop-color="#C9772B" /></linearGradient></defs>
+      <path d={drip} fill="url(#czhoney)" />
+    </svg>
     <div class="wrap">
       <SectionHeader sym="cuisine"
         eyebrow="Sweets"
         title="Syrup, nuts & pastry"
         text="The honeyed finish to any Egyptian meal — and the heart of every celebration."
       />
-      <div class="grid-4">
-        {sweets.map((d) => (
-          <article class="sweet reveal">
-            <Placeholder label={d.name} src={d.image?.src} alt={d.image?.alt} width={d.image?.width} height={d.image?.height} sizes="card" />
-            <div class="body">
-              <h3>{d.name}</h3>
-              <span>{d.note}</span>
+      <div class="cz-plates">
+        {sweets.map((d, i) => (
+          <article class="cz-sweet reveal" style={acc(i + 1)}>
+            <div class="cz-plate">
+              <Placeholder label={d.name} src={d.image?.src} alt={d.image?.alt} width={d.image?.width} height={d.image?.height} sizes="card" />
             </div>
+            <h3>{d.name}{d.native && <span class="cz-ar" lang="ar" dir="rtl">{d.native}</span>}</h3>
+            <p>{d.note}</p>
+            {d.tags && <ul class="cz-tags">{d.tags.map((t) => <li>{t}</li>)}</ul>}
           </article>
         ))}
       </div>
     </div>
   </section>
+
+  <!-- And to drink -->
+  <section class="cz-drinks">
+    <div class="wrap">
+      <div class="cz-head reveal">
+        <div class="eyebrow">And to drink</div>
+        <h2>Tea, constantly</h2>
+      </div>
+      <ul class="cz-cups">
+        {DRINKS.map((d, i) => (
+          <li class="reveal" style={acc(i)}>
+            <span class="cz-cup"><FoodGlyph name={d.icon} weight={2.6} /></span>
+            <div>
+              <b>{d.name}</b>
+              <span class="cz-ar" lang="ar" dir="rtl">{d.ar}</span>
+              <small>{d.note}</small>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- Taste it -->
+  {food && (
+    <section class="cz-taste">
+      <div class="wrap cz-taste-in">
+        <div class="cz-taste-copy reveal">
+          <div class="eyebrow">Taste it with us</div>
+          <h2>One evening, the whole table</h2>
+          <p>Koshari, ful and ta'meya, hawawshi and grilled pigeon, kunafa and basbousa — on one private evening in Cairo, with a local food guide who knows which counter to stop at. It ends where Cairenes end theirs: at a traditional ahwa.</p>
+          <a class="btn btn-solid" href="tour-cairo-food.html">See the food evening</a>
+        </div>
+        <div class="cz-taste-card"><TourCard tour={food} /></div>
+      </div>
+    </section>
+  )}
+
   <HubEditorial hub={hub} faqHeading="Egyptian food questions" />
+</div>
 </Base>
+
+<style>
+  .cz { position: relative; overflow: clip; }
+  .cz > :global(*:not(.cz-doodles)) { position: relative; z-index: 1; }
+
+  /* ---- The drawings behind the page ---------------------------------- */
+  .cz-doodles { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+  .cz-doodles :global(.cz-dd) { position: absolute; opacity: .3; transform: rotate(var(--rot));
+    animation: cz-drift 14s ease-in-out infinite alternate; }
+  @keyframes cz-drift { from { transform: rotate(var(--rot)) translateY(0); } to { transform: rotate(calc(var(--rot) + 5deg)) translateY(-14px); } }
+
+  /* ---- Shared ---------------------------------------------------------- */
+  .cz-head { max-width: 680px; margin: 0 auto var(--s-6); text-align: center; }
+  .cz-head h2 { margin-top: var(--s-2); font-size: var(--t-2xl); color: var(--bone); }
+  .cz-head p { margin-top: var(--s-3); color: var(--muted); }
+  .cz-ar { display: inline-block; margin-left: 10px; padding: 0 11px; border-radius: 999px; vertical-align: middle;
+    font-family: 'Amiri', var(--ff-display); font-size: .82em; line-height: 1.55; color: var(--acc, var(--gold-bright));
+    border: 1px solid color-mix(in srgb, var(--acc, #F4B33F) 55%, transparent); background: color-mix(in srgb, var(--acc, #F4B33F) 12%, transparent); }
+  .cz-tags { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; padding: 0; margin: var(--s-3) 0 0; }
+  .cz-tags li { font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase; padding: 5px 11px; border-radius: 999px;
+    color: var(--acc-ink); background: var(--acc); font-weight: 500; }
+
+  /* ---- The menu -------------------------------------------------------- */
+  .cz-menu { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 46px 30px; margin-top: var(--s-5); }
+  .cz-dish { position: relative; padding: 12px 12px 24px; border-radius: 24px;
+    background: linear-gradient(180deg, rgba(255,236,206,.075), rgba(255,236,206,.025));
+    border: 1px solid rgba(244,179,63,.18); box-shadow: 0 24px 40px -26px rgba(0,0,0,.8);
+    transition: transform .45s cubic-bezier(.22,.61,.36,1), border-color .45s, box-shadow .45s; }
+  .cz-dish:nth-child(3n+2) { transform: translateY(18px); }
+  .cz-dish:hover { transform: translateY(-6px) rotate(-.6deg); border-color: var(--acc); box-shadow: 0 30px 50px -24px rgba(0,0,0,.85), 0 0 0 1px var(--acc); }
+  .cz-dish:nth-child(3n+2):hover { transform: translateY(10px) rotate(.6deg); }
+  .cz-dish :global(.frame) { aspect-ratio: 4 / 3; border-radius: 16px; overflow: hidden; }
+  .cz-dish :global(.frame::before), .cz-dish :global(.frame::after) { display: none; }
+  .cz-dish :global(.frame img) { transition: transform 1s cubic-bezier(.22,.61,.36,1); }
+  .cz-dish:hover :global(.frame img) { transform: scale(1.06); }
+  .cz-num { position: absolute; z-index: 3; top: -16px; left: 24px; width: 46px; height: 46px; border-radius: 50%;
+    display: grid; place-items: center; background: var(--acc); color: var(--acc-ink);
+    font-family: var(--ff-display); font-size: 1.1rem; box-shadow: 0 10px 20px -8px rgba(0,0,0,.7), 0 0 0 4px rgba(23,13,8,.9); }
+  .cz-body { padding: var(--s-4) 10px 0; }
+  .cz-body h3 { font-size: var(--t-lg); color: var(--bone); }
+  .cz-body p { margin-top: var(--s-2); color: var(--muted); font-size: var(--t-sm); line-height: 1.7; }
+
+  /* ---- The spice box --------------------------------------------------- */
+  .cz-spice { padding-top: var(--s-6); }
+  .cz-mounds { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--s-4); list-style: none; padding: 0; margin: 0; }
+  .cz-mounds li { text-align: center; }
+  .cz-mounds svg { display: block; width: 100%; max-width: 168px; margin: 0 auto var(--s-2); filter: drop-shadow(0 16px 18px rgba(0,0,0,.55));
+    transition: transform .5s cubic-bezier(.22,.61,.36,1); }
+  .cz-mounds li:hover svg { transform: translateY(-6px) scale(1.04); }
+  .cz-mounds b { display: block; font-family: var(--ff-display); font-weight: 400; font-size: var(--t-md); color: var(--bone); }
+  .cz-mounds .cz-ar { margin: 6px 0 0; --acc: #F4B33F; }
+  .cz-mounds small { display: block; margin-top: var(--s-2); color: var(--muted-2); font-size: var(--t-micro); line-height: 1.6; }
+
+  /* ---- The day --------------------------------------------------------- */
+  .cz-meals { position: relative; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-5); list-style: none; padding: 0; margin: 0; }
+  .cz-meals::before { content: ""; position: absolute; left: 16%; right: 16%; top: 52px; height: 2px;
+    background: repeating-linear-gradient(90deg, rgba(244,179,63,.55) 0 8px, transparent 8px 18px); }
+  .cz-meals li { position: relative; text-align: center; padding: 0 var(--s-2); }
+  .cz-clock { position: relative; display: grid; place-items: center; width: 104px; height: 104px; margin: 0 auto var(--s-3); border-radius: 50%;
+    color: var(--acc); background: radial-gradient(circle at 34% 28%, #2E1B0F, #1A0F08 70%);
+    box-shadow: 0 0 0 2px var(--acc), 0 0 0 9px rgba(23,13,8,.95), 0 0 0 10px rgba(244,179,63,.25), 0 22px 36px -14px rgba(0,0,0,.8); }
+  .cz-clock svg { width: 52px; height: 52px; }
+  .cz-meals small { font-size: var(--t-micro); letter-spacing: .3em; text-transform: uppercase; color: var(--acc); }
+  .cz-meals h3 { margin-top: var(--s-1); font-size: var(--t-lg); color: var(--bone); }
+  .cz-meals p { margin-top: var(--s-2); color: var(--muted); font-size: var(--t-sm); line-height: 1.7; max-width: 300px; margin-inline: auto; }
+  .cz-ramadan { display: flex; align-items: center; justify-content: center; gap: var(--s-2); max-width: 640px; margin: var(--s-6) auto 0;
+    padding: var(--s-3) var(--s-4); border-radius: 999px; border: 1px dashed rgba(63,182,139,.45); color: var(--muted); font-size: var(--t-sm); text-align: left; }
+  .cz-ramadan svg { flex: none; width: 26px; height: 26px; color: #3FB68B; }
+
+  /* ---- The sweets ------------------------------------------------------ */
+  .cz-sweets { margin-top: var(--s-6); padding-top: calc(var(--s-8) + 20px);
+    background: linear-gradient(180deg, rgba(201,119,43,.13), rgba(201,119,43,.03) 55%, transparent); }
+  .cz-drip { position: absolute; left: 0; top: 0; width: 100%; height: 70px; filter: drop-shadow(0 6px 8px rgba(0,0,0,.35)); }
+  .cz-plates { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s-5) var(--s-4); margin-top: var(--s-5); }
+  .cz-sweet { text-align: center; }
+  .cz-sweet:nth-child(even) { margin-top: 34px; }
+  .cz-plate { position: relative; width: 86%; margin: 0 auto var(--s-4); aspect-ratio: 1; border-radius: 50%; padding: 12px;
+    background: radial-gradient(circle at 34% 28%, #FFFBF2, #EFE2CA 62%, #CDB894);
+    box-shadow: 0 30px 44px -18px rgba(0,0,0,.8), 0 0 0 1px rgba(255,255,255,.2) inset;
+    transition: transform .7s cubic-bezier(.22,.61,.36,1); }
+  .cz-plate::after { content: ""; position: absolute; inset: 5px; border-radius: 50%; border: 1.5px dashed color-mix(in srgb, var(--acc) 70%, #C9772B); pointer-events: none; }
+  .cz-sweet:hover .cz-plate { transform: rotate(-8deg) translateY(-6px); }
+  .cz-plate :global(.frame) { position: relative; width: 100%; height: 100%; border-radius: 50%; overflow: hidden; aspect-ratio: 1; }
+  .cz-plate :global(.frame::before), .cz-plate :global(.frame::after) { display: none; }
+  .cz-sweet h3 { font-size: var(--t-md); color: var(--bone); }
+  .cz-sweet p { margin-top: var(--s-2); color: var(--muted); font-size: var(--t-sm); line-height: 1.7; }
+  .cz-sweet .cz-tags { justify-content: center; }
+
+  /* ---- Drinks ---------------------------------------------------------- */
+  .cz-cups { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s-4); list-style: none; padding: 0; margin: 0; }
+  .cz-cups li { display: flex; gap: var(--s-3); align-items: center; padding: var(--s-3); border-radius: 20px;
+    background: rgba(255,236,206,.04); border: 1px solid rgba(244,179,63,.14); }
+  .cz-cup { flex: none; display: grid; place-items: center; width: 74px; height: 74px; border-radius: 50%; color: var(--acc-ink); background: var(--acc);
+    box-shadow: 0 14px 24px -12px rgba(0,0,0,.8); }
+  .cz-cup :global(svg) { width: 46px; height: 46px; }
+  .cz-cups b { display: block; font-family: var(--ff-display); font-weight: 400; font-size: var(--t-md); color: var(--bone); line-height: 1.2; }
+  .cz-cups .cz-ar { margin: 6px 0 0; }
+  .cz-cups small { display: block; margin-top: 6px; color: var(--muted-2); font-size: var(--t-micro); line-height: 1.55; }
+
+  /* ---- Taste it -------------------------------------------------------- */
+  .cz-taste-in { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: var(--s-7); align-items: center;
+    padding: var(--s-6); border-radius: 30px; border: 1px solid rgba(232,98,58,.35);
+    background: radial-gradient(600px 300px at 0% 0%, rgba(232,98,58,.16), transparent 70%), radial-gradient(500px 300px at 100% 100%, rgba(244,179,63,.12), transparent 70%), rgba(18,10,6,.6); }
+  .cz-taste-copy h2 { margin-top: var(--s-2); font-size: var(--t-2xl); color: var(--bone); }
+  .cz-taste-copy p { margin: var(--s-3) 0 var(--s-5); color: var(--muted); }
+  .cz-taste-card { max-width: 380px; width: 100%; justify-self: center; }
+
+  /* ---- Smaller screens ------------------------------------------------- */
+  @media (max-width: 980px) {
+    .cz-menu { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .cz-dish:nth-child(3n+2) { transform: none; }
+    .cz-dish:nth-child(even) { transform: translateY(18px); }
+    .cz-mounds { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: var(--s-5); }
+    .cz-plates, .cz-cups { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .cz-taste-in { grid-template-columns: 1fr; gap: var(--s-5); }
+  }
+  @media (max-width: 640px) {
+    .cz-menu { grid-template-columns: 1fr; gap: 40px; }
+    .cz-dish:nth-child(even), .cz-dish:nth-child(3n+2) { transform: none; }
+    .cz-mounds { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-4) var(--s-3); }
+    .cz-mounds li:last-child { grid-column: 1 / -1; }
+    .cz-mounds li:last-child svg { max-width: 140px; }
+    .cz-meals { grid-template-columns: 1fr; gap: var(--s-5); }
+    .cz-meals::before { display: none; }
+    .cz-ramadan { border-radius: 22px; }
+    .cz-plates { gap: var(--s-5) var(--s-3); }
+    .cz-sweet:nth-child(even) { margin-top: 26px; }
+    .cz-sweet p { font-size: var(--t-micro); }
+    .cz-cups { grid-template-columns: 1fr; }
+    .cz-taste-in { padding: var(--s-4); border-radius: 22px; }
+    .cz-doodles :global(.cz-dd) { width: 64px !important; height: 64px !important; opacity: .22; }
+    .cz-doodles :global(.cz-dd:nth-child(odd)) { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .cz-doodles :global(.cz-dd) { animation: none; }
+    .cz-dish, .cz-plate, .cz-mounds svg { transition: none; }
+  }
+</style>

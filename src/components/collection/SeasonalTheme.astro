@@ -16,14 +16,16 @@
 //         sunrise (a photograph of the plateau in low sun, light breathing over it)
 //         feast (the food evening: plates of the dishes themselves, steam, spice
 //                dust; saffron, tomato and mint on espresso)
-import type { SeasonalTheme } from "@/types";
+import type { SeasonalTheme, FeastPlate } from "@/types";
 import { creditFor } from "@/data/photoCredits";
 import { srcsetFor } from "@/utils/images";
 
 interface Props {
   theme: SeasonalTheme;
+  /** The feast's plates, when a page sets its own table (the cuisine page). */
+  plates?: FeastPlate[];
 }
-const { theme } = Astro.props;
+const { theme, plates: ownPlates } = Astro.props;
 
 /**
  * A palm frond as hairlines: a quadratic stem (p0 → c → p1) with leaflets on
@@ -104,7 +106,7 @@ const sunriseCredit = creditFor(SUNRISE_PHOTO);
  * photographs or ones that need no credit (CC0), since a plate has nowhere to
  * print one. `hot` ones steam.
  */
-const FEAST_PLATES = [
+const FEAST_PLATES: FeastPlate[] = [
   { src: "/images/food/koshari-sauce-pour.webp", w: 720, h: 900, hot: true, pos: "50% 62%" },
   { src: "/images/food/ful-medames-bowl.webp", w: 702, h: 437, hot: true },
   { src: "/images/food/kunafa-pistachio.webp", w: 736, h: 920, hot: false },
@@ -641,7 +643,7 @@ function dates(x: number, y: number): Array<{ cx: number; cy: number }> {
       ))}
     </div>
     {/* The plates, set out around the words; the hot ones steam */}
-    {FEAST_PLATES.map((pl, i) => (
+    {(ownPlates ?? FEAST_PLATES).map((pl, i) => (
       <div class={`sth-plate sth-plate${i}`}>
         <img src={pl.src} srcset={srcsetFor(pl.src)} sizes="(max-width: 760px) 90px, 230px"
              width={pl.w} height={pl.h} alt="" decoding="async" style={pl.pos && `object-position:${pl.pos}`} />

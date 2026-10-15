@@ -788,6 +788,23 @@ export interface Dish {
   note: string;
   /** The dish in a photograph — data/photoCredits.ts while it is not ours. */
   image?: MediaPlaceholder;
+  /** Its name in Arabic, as it is written on the menu board in Cairo. */
+  native?: string;
+  /** One or two short facts about when or how it is eaten — each one stated
+   *  in `note` or the cuisine editorial, never added for colour. */
+  tags?: string[];
+}
+
+/** A plate on the feast's table (SeasonalTheme "feast"): our own photograph
+ *  or a CC0 one, since a plate has nowhere to print a credit. */
+export interface FeastPlate {
+  src: string;
+  w: number;
+  h: number;
+  /** Steams. */
+  hot: boolean;
+  /** object-position, when the dish is not in the middle of the frame. */
+  pos?: string;
 }
 
 export interface CultureSymbol {

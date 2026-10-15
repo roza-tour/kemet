@@ -1,0 +1,19 @@
+---
+// One food doodle (doodles.ts) as inline SVG. Strokes take `currentColor`, so
+// the caller colours it with `color`.
+import { DOODLES, type DoodleName } from "./doodles";
+
+interface Props {
+  name: DoodleName;
+  class?: string;
+  style?: string;
+  /** Stroke width on the 100×100 grid. */
+  weight?: number;
+}
+const { name, class: cls = "", style, weight = 2.2 } = Astro.props;
+const paths = DOODLES[name];
+---
+<svg class={cls} style={style} viewBox="0 0 100 100" aria-hidden="true" focusable="false"
+     fill="none" stroke="currentColor" stroke-width={weight} stroke-linecap="round" stroke-linejoin="round">
+  {paths.map((p) => p.fill ? <path d={p.d} fill="currentColor" stroke="none" /> : <path d={p.d} />)}
+</svg>
