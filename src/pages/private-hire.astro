@@ -22,8 +22,8 @@ import LeadCapture from "@/components/conversion/LeadCapture.astro";
 import StandardOfTravel from "@/components/trust/StandardOfTravel.astro";
 import Placeholder from "@/components/Placeholder.astro";
 import { publishedVenues, venueFaqs, VENUE_QUESTION, VENUE_ANSWER } from "@/data/venues";
-import { breadcrumb, answerPageSchema, venueCatalogSchema, faqPageSchema } from "@/schemas/jsonld";
-import { whatsappLink } from "@/utils/links";
+import { breadcrumb, answerPageSchema, venueCatalogSchema } from "@/schemas/jsonld";
+import { canonical, whatsappLink } from "@/utils/links";
 
 const jsonld = [
   breadcrumb([["Home", "index.html"], ["Private access", "private-hire.html"]]),
@@ -35,7 +35,16 @@ const jsonld = [
     answer: VENUE_ANSWER,
   }),
   venueCatalogSchema("private-hire.html", publishedVenues),
-  ...faqPageSchema(venueFaqs),
+  // This page's own FAQPage. faqPageSchema() belongs to the site FAQ: it gave
+  // these questions faq.html's address and added a second breadcrumb, Home ›
+  // Travel FAQ, to a page that is not the FAQ.
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    url: canonical("private-hire.html"),
+    inLanguage: "en",
+    mainEntity: venueFaqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+  },
 ];
 
 const wa = whatsappLink(

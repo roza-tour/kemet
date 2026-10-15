@@ -11,8 +11,8 @@ import PageHero from "@/components/PageHero.astro";
 import Frieze from "@/components/Frieze.astro";
 import Faq from "@/components/Faq.astro";
 import LeadCapture from "@/components/conversion/LeadCapture.astro";
-import { breadcrumb, faqPageSchema } from "@/schemas/jsonld";
-import { mailtoLink, whatsappLink } from "@/utils/links";
+import { breadcrumb } from "@/schemas/jsonld";
+import { canonical, mailtoLink, whatsappLink } from "@/utils/links";
 import { company } from "@/data/company";
 
 // The languages our own Egyptologists guide in — company.languages, the one list.
@@ -24,7 +24,7 @@ const handled = [
   { title: "Vehicles and drivers", body: "A private air-conditioned vehicle and driver for each party, for transfers, touring days and the long roads to Abu Simbel or the oases." },
   { title: "Hotels and the Nile", body: "Hotels chosen for the room, Nile cruises and private dahabiyas, domestic flights and the sleeper train — booked, confirmed and checked." },
   { title: "Arrival and departure", body: "Meet and assist at Cairo airport, fast-track on request, and transfers at every arrival and departure." },
-  { title: "Experiences", body: "Hot-air balloons over Luxor, private feluccas, the food evening in Cairo, sunrise at the pyramids, a photographer or a private chef along the way." },
+  { title: "Experiences", body: "Hot-air balloons over Luxor, private feluccas, the food evening in Cairo, sunrise at the pyramids — and private access to monuments by permit." },
   { title: "Food rules and occasions", body: "Vegetarian, no egg, no onion and garlic, allergies: we brief every hotel and boat before your clients arrive. Birthdays and anniversaries are marked with flowers, a private dinner or a surprise." },
 ];
 
@@ -45,7 +45,15 @@ const faqs = [
 
 const jsonld = [
   breadcrumb([["Home", "index.html"], ["For travel agents", "travel-agents.html"]]),
-  ...faqPageSchema(faqs),
+  // This page's own FAQPage — faqPageSchema() is the site FAQ's, and would
+  // have given these questions faq.html's address.
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    url: canonical("travel-agents.html"),
+    inLanguage: "en",
+    mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+  },
 ];
 const mail = mailtoLink(
   "Trade enquiry — Kemet",

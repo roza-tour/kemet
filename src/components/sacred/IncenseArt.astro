@@ -1,0 +1,76 @@
+---
+// A still life of one incense, in a shallow brass dish — drawn, for the cards
+// that have no photograph yet. Resin as translucent tears, sandalwood and
+// oud as chips of wood, mint as leaves, camphor as crystals.
+interface Props {
+  tone: "amber" | "gold" | "wood" | "dark" | "green" | "frost";
+  id: string;
+}
+const { tone, id } = Astro.props;
+
+const RESIN: Record<string, [string, string, string]> = {
+  amber: ["#FFD99A", "#D9822E", "#6E3210"],
+  gold: ["#FFF6CF", "#E8C25A", "#8A6416"],
+};
+/** Resin tears: cx, cy, rx, ry, rotation. */
+const TEARS: [number, number, number, number, number][] = [
+  [44, 60, 9, 6.5, -20], [58, 56, 11, 8, 15], [73, 61, 8.5, 6, 40], [51, 67, 8, 5.5, 70],
+  [66, 68, 9.5, 6.5, -35], [80, 67, 6.5, 5, 10], [38, 68, 6, 4.5, 30], [62, 49, 6, 4.5, -10],
+];
+/** Wood chips: x, y, w, h, rotation. */
+const CHIPS: [number, number, number, number, number][] = [
+  [34, 56, 30, 7, -14], [52, 50, 34, 7, 10], [40, 64, 36, 8, 4], [62, 60, 26, 7, -24], [48, 70, 28, 6, 18],
+];
+const WOOD = tone === "dark" ? ["#9A6B48", "#4A2C1A", "#1E120A"] : ["#F0D2A8", "#C08C5C", "#7A5230"];
+/** Camphor crystals: x, y, size. */
+const CRYSTALS: [number, number, number][] = [[44, 56, 12], [60, 52, 14], [74, 58, 11], [52, 64, 10], [68, 66, 12]];
+---
+<svg viewBox="0 0 120 90" aria-hidden="true">
+  <defs>
+    <linearGradient id={`${id}b`} x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E9C26E" /><stop offset=".5" stop-color="#A9772E" /><stop offset="1" stop-color="#4A2E10" /></linearGradient>
+    {RESIN[tone] && (
+      <radialGradient id={`${id}r`} cx="35%" cy="30%" r="80%"><stop offset="0" stop-color={RESIN[tone][0]} /><stop offset=".55" stop-color={RESIN[tone][1]} /><stop offset="1" stop-color={RESIN[tone][2]} /></radialGradient>
+    )}
+    <linearGradient id={`${id}w`} x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color={WOOD[0]} /><stop offset=".6" stop-color={WOOD[1]} /><stop offset="1" stop-color={WOOD[2]} /></linearGradient>
+    <linearGradient id={`${id}g`} x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#B9E89A" /><stop offset="1" stop-color="#3E7E3A" /></linearGradient>
+    <linearGradient id={`${id}c`} x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF" /><stop offset="1" stop-color="#B8C9D8" /></linearGradient>
+  </defs>
+  <!-- the dish -->
+  <ellipse cx="60" cy="76" rx="50" ry="7" fill="#000" fill-opacity=".4" />
+  <path d="M12 62 C 14 76, 32 82, 60 82 C 88 82, 106 76, 108 62 Z" fill={`url(#${id}b)`} />
+  <ellipse cx="60" cy="62" rx="48" ry="11" fill="#2A1A0C" stroke="#E9C26E" stroke-opacity=".7" stroke-width="1.2" />
+  <ellipse cx="60" cy="63" rx="40" ry="7.5" fill="#1A0F06" />
+
+  {RESIN[tone] && TEARS.map(([x, y, rx, ry, r]) => (
+    <g transform={`rotate(${r} ${x} ${y})`}>
+      <ellipse cx={x} cy={y} rx={rx} ry={ry} fill={`url(#${id}r)`} />
+      <ellipse cx={x - rx * 0.3} cy={y - ry * 0.35} rx={rx * 0.32} ry={ry * 0.22} fill="#fff" fill-opacity=".55" />
+    </g>
+  ))}
+
+  {(tone === "wood" || tone === "dark") && CHIPS.map(([x, y, w, h, r]) => (
+    <g transform={`rotate(${r} ${x + w / 2} ${y + h / 2})`}>
+      <rect x={x} y={y} width={w} height={h} rx="2" fill={`url(#${id}w)`} />
+      <path d={`M${x + 3} ${y + h * 0.4} H${x + w - 4} M${x + 6} ${y + h * 0.7} H${x + w - 8}`} stroke="#000" stroke-opacity=".22" stroke-width=".7" />
+      <path d={`M${x + 2} ${y + 1.4} H${x + w * 0.6}`} stroke="#fff" stroke-opacity=".3" stroke-width=".8" />
+    </g>
+  ))}
+
+  {tone === "green" && (
+    <g stroke="#2E5E2C" stroke-width=".8" stroke-linecap="round">
+      <path d="M30 62 C 36 46, 54 42, 62 54 C 54 64, 40 66, 30 62 Z" fill={`url(#${id}g)`} />
+      <path d="M32 61 C 42 56, 50 54, 60 54" fill="none" />
+      <path d="M58 60 C 64 44, 84 40, 92 52 C 84 62, 68 66, 58 60 Z" fill={`url(#${id}g)`} />
+      <path d="M60 59 C 70 54, 80 52, 90 52" fill="none" />
+      <path d="M46 68 C 52 56, 68 54, 74 64 C 66 72, 54 72, 46 68 Z" fill={`url(#${id}g)`} />
+      <path d="M48 67 C 56 63, 64 62, 72 64" fill="none" />
+    </g>
+  )}
+
+  {tone === "frost" && CRYSTALS.map(([x, y, s]) => (
+    <g>
+      <path d={`M${x} ${y - s / 2} L${x + s / 2} ${y - s / 4} L${x + s / 2} ${y + s / 4} L${x} ${y + s / 2} L${x - s / 2} ${y + s / 4} L${x - s / 2} ${y - s / 4} Z`} fill={`url(#${id}c)`} stroke="#fff" stroke-opacity=".8" stroke-width=".6" />
+      <path d={`M${x} ${y - s / 2} L${x} ${y + s / 2} M${x - s / 2} ${y - s / 4} L${x} ${y} L${x + s / 2} ${y - s / 4}`} stroke="#9FB4C6" stroke-opacity=".7" stroke-width=".5" fill="none" />
+    </g>
+  ))}
+</svg>

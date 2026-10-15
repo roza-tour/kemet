@@ -89,6 +89,7 @@ export const GET: APIRoute = () => {
     ["activities.html", "Activities", "Activities", "Ballooning, diving, sailing, quad biking, desert nights."],
     ["culture.html", "Culture", "Culture", "The gods, hieroglyphs and living crafts behind the monuments."],
     ["cuisine.html", "Cuisine", "Cuisine", "Koshari, molokhia, kunafa — what to eat in Egypt and where."],
+    ["egyptian-incense-stones-cotton.html", "Incense, stones & cotton", "Egypt", "Myrrh, luban dakar, oud; turquoise, lapis, carnelian; Egyptian cotton and linen — on your journey or sent home."],
     ["identities.html", "The 8 Identities", "Culture", "Pharaonic, Nubian, Coptic, Islamic, Greco-Roman, Bedouin, Siwan, Red Sea."],
     ["when-to-go.html", "When to visit Egypt", "Planning", "Month by month — heat, crowds, prices and festivals."],
     ["egypt-tour-cost.html", "What a private Egypt journey costs", "Planning", "Price bands per person per day and the five things that move them."],

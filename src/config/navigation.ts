@@ -61,6 +61,7 @@ export const primaryNav: NavItem[] = [
       { label: "The 8 Identities", href: "identities.html" },
       { label: "Culture", href: "culture.html" },
       { label: "Cuisine", href: "cuisine.html" },
+      { label: "Incense, stones & cotton", href: "egyptian-incense-stones-cotton.html" },
     ],
   },
   {
@@ -105,6 +106,7 @@ export const footerExplore: FooterColumn = {
     { label: "The 8 Identities", href: "identities.html" },
     { label: "Activities", href: "activities.html" },
     { label: "Cuisine", href: "cuisine.html" },
+    { label: "Incense, stones & cotton", href: "egyptian-incense-stones-cotton.html" },
     { label: "When to go", href: "when-to-go.html" },
     { label: "Compare", href: "compare.html" },
     { label: "Travel FAQ", href: "faq.html" },
