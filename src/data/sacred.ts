@@ -210,6 +210,17 @@ export const sacredPhotos: SacredPhotos = {
     src: "/images/sacred/amenemhat-girdle-bracelets.webp", width: 1600, height: 1269,
     alt: "A gold cowrie-shell girdle and bracelets strung with carnelian, turquoise and lapis lazuli, from the reign of Amenemhat III",
   },
+  incense: {
+    Myrrh: { src: "/images/stock/myrrh-on-charcoal.webp", width: 900, height: 900, alt: "Pieces of myrrh smouldering on a charcoal ring" },
+    "Luban dakar": { src: "/images/stock/frankincense-tears.webp", width: 900, height: 900, alt: "Pale tears of Omani frankincense" },
+  },
+  stone: {
+    Peridot: { src: "/images/stock/peridot-crystal.webp", width: 700, height: 700, alt: "A clear green peridot crystal, lit from behind" },
+  },
+  cotton: {
+    src: "/images/stock/cotton-open-boll.webp", width: 1400, height: 933,
+    alt: "An open cotton boll on the branch",
+  },
   linen: {
     src: "/images/sacred/ancient-linen-sheet-fringe.webp", width: 1600, height: 1200,
     alt: "The fringe and sheer weave of an ancient Egyptian linen sheet, about 1473–1458 BC",
