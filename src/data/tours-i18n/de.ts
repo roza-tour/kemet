@@ -1778,23 +1778,23 @@ export const de: TourText[] = [
     itinerary: [
       {
         title: "Koshari",
-        text: "Der Anfang mit Ägyptens Nationalgericht — Koshari, eine wohltuende Schichtung aus Reis, Linsen, Nudeln und Kichererbsen unter knusprigen Röstzwiebeln und einer säuerlichen Tomatensauce.",
+        text: "Der Anfang mit Ägyptens Nationalgericht — Koshari, eine wohltuende Schichtung aus Reis, Linsen, Nudeln und Kichererbsen unter knusprigen Röstzwiebeln und einer säuerlichen Tomatensauce.", photos: [{ alt: "Eine Schale Koshari mit Tomatensauce, Röstzwiebeln und Petersilie", label: "Koshari" }],
       },
       {
         title: "Ful & Ta'meya",
-        text: "Probieren Sie Ful Medames, die langsam gegarten Saubohnen, die man von morgens bis abends isst, dazu Ta'meya, Ägyptens Falafel-Variante aus Saubohnen, frisch frittiert.",
+        text: "Probieren Sie Ful Medames, die langsam gegarten Saubohnen, die man von morgens bis abends isst, dazu Ta'meya, Ägyptens Falafel-Variante aus Saubohnen, frisch frittiert.", photos: [{ alt: "Ein Teller Ful Medames mit gekochten Eiern, Oliven, eingelegtem Gemüse und Fladenbrot", label: "Ful Medames" }, { alt: "Ta'meya — ägyptische Falafel — in der Pfanne eines Straßenstands frittiert", label: "Ta'meya" }],
       },
       {
         title: "Hawawshi & gegrillte Taube",
-        text: "Weiter ins herzhafte Zentrum des Abends — Hawawshi, gewürztes Hackfleisch in knusprigem Brot gebacken, und Hamam Mahschi, mit gewürztem Reis gefüllte gegrillte Taube.",
+        text: "Weiter ins herzhafte Zentrum des Abends — Hawawshi, gewürztes Hackfleisch in knusprigem Brot gebacken, und Hamam Mahschi, mit gewürztem Reis gefüllte gegrillte Taube.", photos: [{ alt: "Hawawshi: knuspriges Brot, um gewürztes Hackfleisch gebacken, in Stücke geschnitten", label: "Hawawshi" }, { alt: "Gefüllte Tauben (Hamam Mahschi) in einer Pfanne", label: "Gefüllte Taube" }],
       },
       {
         title: "Kunafa & Basbousa",
-        text: "Zum Nachtisch warme Kunafa mit ihrem Teigfaden-Mantel über süßem Käse und Stücke der in Sirup getränkten Grießkuchen Basbousa.",
+        text: "Zum Nachtisch warme Kunafa mit ihrem Teigfaden-Mantel über süßem Käse und Stücke der in Sirup getränkten Grießkuchen Basbousa.", photos: [{ alt: "Ein Blech Kunafa, der Teigfaden goldbraun gebacken", label: "Kunafa" }, { alt: "Stücke Basbousa, des in Sirup getränkten Grießkuchens, mit Mandeln", label: "Basbousa" }],
       },
       {
         title: "Ein traditionelles Ahwa",
-        text: "Abschluss in einem Ahwa in einer Seitenstraße, bei Minztee, türkischem Kaffee und dem Gemurmel der Stadt — so sollte jeder Abend in Kairo enden.",
+        text: "Abschluss in einem Ahwa in einer Seitenstraße, bei Minztee, türkischem Kaffee und dem Gemurmel der Stadt — so sollte jeder Abend in Kairo enden.", photos: [{ alt: "Teegläser neben verzierten Teekannen auf Messingtabletts", label: "Tee" }],
       },
     ],
     faqs: [

@@ -14,6 +14,8 @@
 //         eclipse (the corona around a black sun, pearl on deep indigo)
 //         family (hot-air balloons and a camel caravan, turquoise and sun)
 //         sunrise (a photograph of the plateau in low sun, light breathing over it)
+//         feast (the food evening: plates of the dishes themselves, steam, spice
+//                dust; saffron, tomato and mint on espresso)
 import type { SeasonalTheme } from "@/types";
 import { creditFor } from "@/data/photoCredits";
 import { srcsetFor } from "@/utils/images";
@@ -96,6 +98,20 @@ const SUNRISE_PHOTO = "/images/stock/giza-pyramids-sunrise-sky.webp";
 const SUNRISE_SIZE = { w: 2400, h: 1440 };
 const SUN = { x: 0.755, y: 0.606 };
 const sunriseCredit = creditFor(SUNRISE_PHOTO);
+
+/**
+ * The plates on the feast's table — the evening's own dishes, and only
+ * photographs that need no credit (CC0 or public domain), since a plate has
+ * nowhere to print one. `hot` ones steam.
+ */
+const FEAST_PLATES = [
+  { src: "/images/stock/koshari.webp", w: 736, h: 736, hot: true },
+  { src: "/images/stock/ful-medames.webp", w: 1280, h: 1305, hot: true },
+  { src: "/images/stock/kunafa.webp", w: 1280, h: 911, hot: false },
+  { src: "/images/stock/mint-tea-glasses.webp", w: 1280, h: 847, hot: true },
+];
+/** Spice on the table: sesame, chilli, cumin, parsley. */
+const SPICE = ["#F3E3C3", "#E8623A", "#B5793F", "#7DBE5A"];
 
 /** A cluster of dates hanging from a stalk at (x, y). */
 function dates(x: number, y: number): Array<{ cx: number; cy: number }> {
@@ -614,6 +630,27 @@ function dates(x: number, y: number): Array<{ cx: number; cy: number }> {
     <div class="sth-grain"></div>
   </div>
 )}
+{theme === "feast" && (
+  <div class="sth sth-feast" aria-hidden="true">
+    <div class="sth-feast-glow"></div>
+    {/* Spice dust across the table */}
+    <div class="sth-spices">
+      {[...Array(44)].map((_, i) => (
+        <span class={`sth-sp sth-sp${i % 4}`}
+              style={`left:${(i * 9.7 + (i % 5) * 3.3) % 98}%;top:${(i * 13.1 + (i % 3) * 7) % 94}%;transform:rotate(${(i * 47) % 180}deg);background:${SPICE[i % 4]}`}></span>
+      ))}
+    </div>
+    {/* The plates, set out around the words; the hot ones steam */}
+    {FEAST_PLATES.map((pl, i) => (
+      <div class={`sth-plate sth-plate${i}`}>
+        <img src={pl.src} srcset={srcsetFor(pl.src)} sizes="(max-width: 760px) 90px, 230px"
+             width={pl.w} height={pl.h} alt="" decoding="async" />
+        {pl.hot && <span class="sth-steam"><i></i><i></i><i></i></span>}
+      </div>
+    ))}
+  </div>
+)}
+
 {theme === "sunrise" && sunriseCredit && (
   <a class="sth-credit" href={sunriseCredit.source} target="_blank" rel="noopener nofollow">{sunriseCredit.creator} · {sunriseCredit.license}</a>
 )}
@@ -1041,7 +1078,7 @@ function dates(x: number, y: number): Array<{ cx: number; cy: number }> {
      --------------------------------------------------------------------- */
   .themed-ramadan, .themed-christmas, .themed-easter, .themed-autumn, .themed-summer,
   .themed-carnival, .themed-eclipse, .themed-honeymoon, .themed-family, .themed-sun-festival,
-  .themed-spring, .themed-red-sea, .themed-eid, .themed-sunrise {
+  .themed-spring, .themed-red-sea, .themed-eid, .themed-sunrise, .themed-feast {
     background-color: var(--atmos-base, transparent);
     background-image: var(--motif, linear-gradient(transparent, transparent)), var(--atmos, linear-gradient(transparent, transparent));
   }
@@ -1189,13 +1226,101 @@ function dates(x: number, y: number): Array<{ cx: number; cy: number }> {
       -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 26%); mask-image: linear-gradient(180deg, transparent 0, #000 26%); }
   }
 
+  /* ---------------------------------------------------------------------
+     Feast — the food evening: plates of the dishes themselves, steam, spice
+     on the table; saffron, tomato and mint on an espresso ground, the way
+     food is photographed to look its best
+     --------------------------------------------------------------------- */
+  .themed-feast {
+    --gold: #F4B33F; --gold-bright: #FFE2A0; --gold-deep: #C9772B;
+    --line: rgba(244,179,63,.22); --line-2: rgba(232,98,58,.5);
+    --motif: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cellipse cx='18' cy='22' rx='3' ry='1.6' fill='%23F3E3C3' fill-opacity='.10' transform='rotate(30 18 22)'/%3E%3Ccircle cx='86' cy='34' r='1.4' fill='%23E8623A' fill-opacity='.14'/%3E%3Cellipse cx='54' cy='88' rx='2.6' ry='1' fill='%23B5793F' fill-opacity='.14' transform='rotate(-40 54 88)'/%3E%3Ccircle cx='104' cy='96' r='1.2' fill='%237DBE5A' fill-opacity='.14'/%3E%3C/svg%3E");
+    --atmos-base: #170D08;
+    --atmos: radial-gradient(900px 560px at 12% 0%, rgba(232,98,58,.22), transparent 62%), radial-gradient(900px 560px at 88% 0%, rgba(244,179,63,.20), transparent 62%), radial-gradient(800px 640px at 50% 72%, rgba(63,182,139,.07), transparent 66%), linear-gradient(180deg, #23140B 0%, #170D08 50%, #120A06 100%);
+  }
+  .themed-feast .phero { position: relative; padding-top: 196px;
+    background: radial-gradient(760px 420px at 50% 10%, rgba(244,179,63,.16), transparent 64%); }
+  .themed-feast .phero > .wrap { position: relative; z-index: 2; }
+  /* A hand-drawn squiggle under the title, in tomato */
+  .themed-feast .phero h1::after { content: ""; display: block; width: 168px; height: 16px; margin: 14px auto 0;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 168 16'%3E%3Cpath d='M3 9 Q 17 1 31 9 T 59 9 T 87 9 T 115 9 T 143 9 T 165 8' fill='none' stroke='%23E8623A' stroke-width='3.4' stroke-linecap='round'/%3E%3C/svg%3E") center/contain no-repeat; }
+  .sth-feast-glow { position: absolute; left: 50%; top: 40%; width: min(780px, 90%); height: 360px; transform: translate(-50%, -50%);
+    border-radius: 50%; background: radial-gradient(closest-side, rgba(232,98,58,.16), transparent 72%); filter: blur(8px); }
+  .sth-spices { position: absolute; inset: 0; }
+  .sth-sp { position: absolute; width: 5px; height: 2.4px; border-radius: 50%; opacity: .55; }
+  .sth-sp1 { width: 3px; height: 3px; border-radius: 1px; } .sth-sp3 { width: 3.4px; height: 3.4px; }
+  .sth-plate { position: absolute; width: 220px; aspect-ratio: 1; border-radius: 50%; padding: 11px;
+    background: radial-gradient(circle at 34% 28%, #FFFBF2, #EFE2CA 62%, #CDB894);
+    box-shadow: 0 26px 44px -14px rgba(0,0,0,.7), 0 0 0 1px rgba(255,255,255,.18) inset;
+    animation: sth-plate 10s ease-in-out infinite; }
+  /* The rim's painted ring */
+  .sth-plate::before { content: ""; position: absolute; inset: 5px; border-radius: 50%; border: 1.5px dashed rgba(201,119,43,.55); }
+  .sth-plate img { display: block; width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+  .sth-plate0 { left: 3%; top: 112px; --r: -7deg; }
+  .sth-plate1 { left: 12%; top: 304px; width: 158px; --r: 5deg; animation-delay: -3s; }
+  .sth-plate2 { right: 3%; top: 124px; width: 208px; --r: 8deg; animation-delay: -6s; }
+  .sth-plate3 { right: 12.5%; top: 310px; width: 150px; --r: -5deg; animation-delay: -1.5s; }
+  @keyframes sth-plate { 0%,100% { transform: rotate(var(--r)) translateY(0); } 50% { transform: rotate(calc(var(--r) + 3deg)) translateY(-9px); } }
+  /* Steam: three soft wisps rising off the hot plates */
+  .sth-steam { position: absolute; left: 50%; top: 4px; width: 64px; height: 90px; transform: translate(-50%, -100%); }
+  .sth-steam i { position: absolute; bottom: 0; width: 12px; height: 50px; border-radius: 50%; opacity: 0;
+    background: linear-gradient(to top, rgba(255,255,255,0), rgba(255,255,255,.42), rgba(255,255,255,0));
+    filter: blur(4px); animation: sth-steam 3.9s ease-out infinite; }
+  .sth-steam i:nth-child(1) { left: 12px; } .sth-steam i:nth-child(2) { left: 27px; animation-delay: 1.3s; }
+  .sth-steam i:nth-child(3) { left: 42px; animation-delay: 2.6s; }
+  @keyframes sth-steam { 0% { transform: translateY(12px) scaleX(1); opacity: 0; } 25% { opacity: .85; } 100% { transform: translate(7px, -52px) scaleX(1.9); opacity: 0; } }
+  @media(max-width:1180px){
+    .sth-plate0 { left: -34px; width: 170px; } .sth-plate1 { left: 2%; width: 118px; top: 316px; }
+    .sth-plate2 { right: -30px; width: 160px; } .sth-plate3 { right: 2%; width: 112px; top: 322px; }
+  }
+  /* On a phone the plates make a row across the top, like the evening's menu */
+  @media(max-width:760px){
+    .themed-feast .phero { padding-top: 214px; }
+    .sth-plate { top: 98px !important; width: 78px !important; padding: 5px; right: auto !important; box-shadow: 0 12px 20px -8px rgba(0,0,0,.7); }
+    .sth-plate::before { inset: 2px; border-width: 1px; }
+    .sth-plate0 { left: calc(50% - 170px) !important; } .sth-plate1 { left: calc(50% - 82px) !important; }
+    .sth-plate2 { left: calc(50% + 6px) !important; } .sth-plate3 { left: calc(50% + 94px) !important; }
+    .sth-steam { width: 34px; height: 46px; } .sth-steam i { width: 7px; height: 26px; }
+    .sth-steam i:nth-child(1) { left: 5px; } .sth-steam i:nth-child(2) { left: 14px; } .sth-steam i:nth-child(3) { left: 23px; }
+    .sth-sp:nth-child(n+22) { display: none; }
+  }
+
+  /* The courses: a coloured number for each, the dish's Arabic name beside
+     its title, and the photographs as prints laid on the table */
+  .themed-feast .day::before { background: repeating-linear-gradient(to bottom, var(--gold) 0 6px, transparent 6px 13px); opacity: .45; }
+  .themed-feast .day .dn { border-color: transparent; }
+  /* On the translated pages the number is a coloured disc, not the column */
+  .themed-feast .lz-sec .lz-n { align-self: start; width: 52px; height: 52px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; font-size: 1.3rem; line-height: 1; }
+  @media(max-width:700px){ .themed-feast .lz-sec .lz-n { width: 42px; height: 42px; font-size: 1.05rem; } }
+  .themed-feast .day:nth-child(5n+1) .dn, .themed-feast .lz-sec:nth-child(5n+1) .lz-n { background: #E8623A; color: #FFF6EA; }
+  .themed-feast .day:nth-child(5n+2) .dn, .themed-feast .lz-sec:nth-child(5n+2) .lz-n { background: #F4B33F; color: #2A1608; }
+  .themed-feast .day:nth-child(5n+3) .dn, .themed-feast .lz-sec:nth-child(5n+3) .lz-n { background: #3FB68B; color: #06231A; }
+  .themed-feast .day:nth-child(5n+4) .dn, .themed-feast .lz-sec:nth-child(5n+4) .lz-n { background: #C2633A; color: #FFF2E4; }
+  .themed-feast .day:nth-child(5n+5) .dn, .themed-feast .lz-sec:nth-child(5n+5) .lz-n { background: #A8C256; color: #1C2408; }
+  .themed-feast .dn small, .themed-feast .dn b { color: inherit; } .themed-feast .dn small { opacity: .8; }
+  .themed-feast .dn::after { background: currentColor; opacity: .5; }
+  .native { display: inline-block; margin-inline-start: 12px; padding: 0 12px; border-radius: 999px; vertical-align: middle;
+    font-family: 'Amiri', var(--ff-display); font-size: .95em; line-height: 1.6; color: var(--gold-bright);
+    border: 1px solid var(--line-2); background: rgba(232,98,58,.10); }
+  .dishes { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 268px)); gap: var(--s-4); margin-top: var(--s-4); }
+  .dish { margin: 0; padding: 8px 8px 10px; background: #FFF8EC; border-radius: 6px;
+    box-shadow: 0 20px 32px -16px rgba(0,0,0,.75); transform: rotate(-1.6deg); transition: transform .45s cubic-bezier(.22,.61,.36,1); }
+  .dish:nth-child(2n) { transform: rotate(1.8deg); }
+  .dish:hover { transform: rotate(0) scale(1.03); }
+  .dish .frame { position: relative; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 3px; border: 0; }
+  .dish .frame::before, .dish .frame::after { display: none; }
+  .dish img { transition: transform .6s ease; } .dish:hover img { transform: scale(1.06); }
+  .dish figcaption { margin-top: 7px; text-align: center; font-family: var(--ff-display); font-style: italic;
+    font-size: var(--t-sm); color: #3A2214; }
+
   @media (prefers-reduced-motion: reduce) {
     .sth-lantern, .sth-star, .sth-petal, .sth-bubble, .sth-mote, .sth-conf,
     .sth-summer-rays, .sth-felucca, .sth-corona-glow, .sth-bulb, .sth-halo, .sth-flake,
     .sth-xglow, .sth-spark, .sth-gulls, .sth-streams, .sth-shoot, .sth-orb, .sth-balloon,
     .sth-caravan, .sth-heart, .sth-pballoon, .sth-kite, .sth-frame, .sth-photo,
-    .sth-bloom { animation: none !important; }
+    .sth-bloom, .sth-plate, .sth-steam i { animation: none !important; }
     .sth-petal, .sth-bubble, .sth-mote, .sth-conf, .sth-flake, .sth-shoot, .sth-orb,
-    .sth-heart, .sth-pballoon { display: none; }
+    .sth-heart, .sth-pballoon, .sth-steam { display: none; }
   }
 </style>

@@ -96,6 +96,15 @@ for (const locale of TRANSLATED_LOCALES) {
           `stop and needs \`text\`, not \`items\`.`,
         );
       }
+      // Photographs carry words — an alt and a caption — and those must be in
+      // the page's language, one per English photograph.
+      if ((en.photos?.length ?? 0) !== (got.photos?.length ?? 0)) {
+        throw new Error(
+          `tours-i18n/${locale}.ts: "${text.slug}" row ${i + 1} needs ` +
+          `${en.photos?.length ?? 0} photo captions to match the English stop; ` +
+          `it has ${got.photos?.length ?? 0}.`,
+        );
+      }
     });
     assertPhrasebook(locale, text.slug, [...(tour.included ?? []), ...(tour.excluded ?? [])]);
     TRANSLATED_TOURS.push({ locale, slug: text.slug, route: `${locale}/${text.localeSlug}.html`, text });

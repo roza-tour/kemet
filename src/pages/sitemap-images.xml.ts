@@ -61,7 +61,7 @@ export const GET: APIRoute = () => {
   };
 
   for (const t of tours) {
-    add(`${t.slug}.html`, imagesOf(t.hero, ...(t.gallery ?? [])));
+    add(`${t.slug}.html`, imagesOf(t.hero, ...(t.gallery ?? []), ...t.itinerary.flatMap((s) => s.photos ?? [])));
   }
   for (const d of destinations) {
     add(`destinations/${d.slug}.html`, imagesOf(d.hero, ...(d.gallery ?? [])));

@@ -1,6 +1,7 @@
 ---
 import Base from "@/layouts/Base.astro";
 import Placeholder from "@/components/Placeholder.astro";
+import SeasonalTheme from "@/components/collection/SeasonalTheme.astro";
 import Faq from "@/components/Faq.astro";
 import AnswerBox from "@/components/aeo/AnswerBox.astro";
 import Frieze from "@/components/Frieze.astro";
@@ -102,8 +103,9 @@ const keywords = [
   ogImage={tour.hero?.src}
   ogImageAlt={tour.hero?.alt}
 >
-  <article>
+  <article class={tour.theme ? `themed-${tour.theme}` : undefined}>
     <header class="phero" style="padding-bottom:var(--s-6)">
+      {tour.theme && <SeasonalTheme theme={tour.theme} />}
       <div class="wrap">
         <nav class="crumb" aria-label="Breadcrumb">
           <a href="/">Home</a> · <a href="tours.html">Tours</a> · <span>{tour.title}</span>
@@ -116,16 +118,20 @@ const keywords = [
 
     <section style="padding-top:var(--s-3)">
       <div class="wrap">
-        <Placeholder
-          sizes="wide"
-          class="tgallery reveal cur"
-          label={tour.title}
-          src={tour.hero?.src}
-          alt={tour.hero?.alt}
-          width={tour.hero?.width}
-          height={tour.hero?.height}
-          loading="eager"
-        />
+        {/* The feast lays its dishes out in the header and on every stop, so
+            one more large photograph of the first of them would only repeat. */}
+        {tour.theme !== "feast" && (
+          <Placeholder
+            sizes="wide"
+            class="tgallery reveal cur"
+            label={tour.title}
+            src={tour.hero?.src}
+            alt={tour.hero?.alt}
+            width={tour.hero?.width}
+            height={tour.hero?.height}
+            loading="eager"
+          />
+        )}
 
         <div class="tdetail">
           <div>
@@ -146,11 +152,21 @@ const keywords = [
                   <div class="day">
                     <div class="dn"><small>{step.label}</small><b>{step.num}</b></div>
                     <div class="dc">
-                      <h3>{step.title}</h3>
+                      <h3>{step.title}{step.native && <span class="native" lang="ar" dir="rtl">{step.native}</span>}</h3>
                       {step.items && (
                         <ul>{step.items.map((it) => <li>{it}</li>)}</ul>
                       )}
                       {step.text && <p>{step.text}</p>}
+                      {step.photos && (
+                        <div class="dishes">
+                          {step.photos.map((ph) => (
+                            <figure class="dish">
+                              <Placeholder sizes="card" src={ph.src} alt={ph.alt} width={ph.width} height={ph.height} label={ph.label ?? step.title} />
+                              {ph.label && <figcaption>{ph.label}</figcaption>}
+                            </figure>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   </div>
                 ))}

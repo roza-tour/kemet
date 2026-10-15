@@ -39,6 +39,12 @@ export interface TourDayText {
   items?: string[];
   /** Day tours: the stop in a sentence or two. */
   text?: string;
+  /**
+   * When the English stop has photographs: their alt text and caption in this
+   * language, same order. Required then — config/tour-i18n.ts refuses to build
+   * a page with English captions under a German heading.
+   */
+  photos?: Array<{ alt: string; label: string }>;
 }
 
 export interface TourText {

@@ -1126,13 +1126,6 @@ export const tours: Tour[] = [
       width: 736,
       height: 736,
     },
-    gallery: [
-      { alt: "Ta'meya \u2014 Egyptian falafel \u2014 frying in a street-stall pan", label: "Ta'meya", src: "/images/stock/tameya-frying.webp", width: 800, height: 600 },
-      { alt: "Hawawshi: crisp bread baked around spiced minced meat, cut into wedges", label: "Hawawshi", src: "/images/stock/hawawshi.webp", width: 1280, height: 960 },
-      { alt: "Stuffed pigeons (hamam mahshi) in a pan", label: "Stuffed pigeon", src: "/images/stock/stuffed-pigeon.webp", width: 1280, height: 960 },
-      { alt: "A tray of kunafa, its shredded pastry baked golden", label: "Kunafa", src: "/images/stock/kunafa.webp", width: 1280, height: 911 },
-      { alt: "Squares of basbousa, the syrup-soaked semolina cake, topped with almonds", label: "Basbousa", src: "/images/stock/basbousa.webp", width: 1280, height: 853 },
-    ],
     title: "Cairo Authentic Food",
     subtitle:
       "An evening walking the flavours of Cairo — koshari, street classics, grilled pigeon and honey-soaked sweets.",
@@ -1149,6 +1142,7 @@ export const tours: Tour[] = [
     // more, not the six the other day tours are quoted from.
     priceBasisPax: 2,
     foodExcluded: true,
+    theme: "feast",
     summary:
       "A guided evening tasting of Cairo's best-loved dishes — koshari, ful and ta'meya, hawawshi and grilled pigeon, kunafa and basbousa, finished at a traditional ahwa.",
     overview:
@@ -1159,30 +1153,53 @@ export const tours: Tour[] = [
         num: "01",
         title: "Koshari",
         text: "Start with Egypt's national dish — koshari, a comforting layer of rice, lentils, pasta and chickpeas under crisp fried onions and a tangy tomato sauce.",
+        native: "كشري",
+        photos: [
+          { alt: "A bowl of koshari topped with tomato sauce, fried onions and parsley", label: "Koshari", src: "/images/stock/koshari.webp", width: 736, height: 736 },
+        ],
       },
       {
         label: "Stop",
         num: "02",
         title: "Ful & ta'meya",
         text: "Taste ful medames, the slow-cooked fava beans eaten morning to night, alongside ta'meya, Egypt's fava-bean take on falafel, fried fresh to order.",
+        native: "فول وطعمية",
+        photos: [
+          { alt: "A plate of ful medames with boiled eggs, olives, pickles and flatbread", label: "Ful medames", src: "/images/stock/ful-medames.webp", width: 1280, height: 1305 },
+          { alt: "Ta'meya \u2014 Egyptian falafel \u2014 frying in a street-stall pan", label: "Ta'meya", src: "/images/stock/tameya-frying.webp", width: 800, height: 600 },
+        ],
       },
       {
         label: "Stop",
         num: "03",
         title: "Hawawshi & grilled pigeon",
         text: "Move to the savoury heart of the evening — hawawshi, spiced minced meat baked in crisp bread, and hamam mahshi, grilled pigeon stuffed with seasoned rice.",
+        native: "حواوشي وحمام محشي",
+        photos: [
+          { alt: "Hawawshi: crisp bread baked around spiced minced meat, cut into wedges", label: "Hawawshi", src: "/images/stock/hawawshi.webp", width: 1280, height: 960 },
+          { alt: "Stuffed pigeons (hamam mahshi) in a pan", label: "Stuffed pigeon", src: "/images/stock/stuffed-pigeon.webp", width: 1280, height: 960 },
+        ],
       },
       {
         label: "Stop",
         num: "04",
         title: "Kunafa & basbousa",
         text: "Turn to dessert with warm kunafa, its shredded pastry over sweet cheese, and squares of syrup-soaked basbousa semolina cake.",
+        native: "كنافة وبسبوسة",
+        photos: [
+          { alt: "A tray of kunafa, its shredded pastry baked golden", label: "Kunafa", src: "/images/stock/kunafa.webp", width: 1280, height: 911 },
+          { alt: "Squares of basbousa, the syrup-soaked semolina cake, topped with almonds", label: "Basbousa", src: "/images/stock/basbousa.webp", width: 1280, height: 853 },
+        ],
       },
       {
         label: "Stop",
         num: "05",
         title: "A traditional ahwa",
         text: "Finish at a backstreet ahwa over mint tea, Turkish coffee and the murmur of the city — the way every Cairo evening should end.",
+        native: "قهوة بلدي",
+        photos: [
+          { alt: "Glasses of tea beside ornate teapots on brass trays", label: "Tea", src: "/images/stock/mint-tea-glasses.webp", width: 1280, height: 847 },
+        ],
       },
     ],
     included: [

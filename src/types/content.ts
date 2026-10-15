@@ -38,6 +38,10 @@ export interface ItineraryStep {
   items?: string[];
   /** Single paragraph — used for stop-by-stop day tours. */
   text?: string;
+  /** The dish or place in its own script, set beside the title (e.g. "كشري"). */
+  native?: string;
+  /** Photographs of what this stop is about — one per dish on the food evening. */
+  photos?: MediaPlaceholder[];
 }
 
 export interface Faq {
@@ -138,7 +142,9 @@ export type SeasonalTheme =
   | "honeymoon"
   | "eclipse"
   | "family"
-  | "sunrise";
+  | "sunrise"
+  // Journey-page identities.
+  | "feast";
 
 /** A short story set apart under a collection's hero (CollectionStory.astro). */
 export interface CollectionStory {
@@ -413,6 +419,11 @@ export interface Tour {
    * than implied by the exclusion list so cards, price blocks and structured
    * data all state the same thing.
    */
+  /**
+   * A journey's own look — the palette and header ornament of SeasonalTheme,
+   * as the occasion pages wear them. The food evening is the "feast".
+   */
+  theme?: SeasonalTheme;
   ticketsExcluded?: boolean;
   /**
    * True when the food and drinks themselves are not in the price — the food

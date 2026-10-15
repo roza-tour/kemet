@@ -75,7 +75,13 @@ const days = tour.itinerary.map((en, i) => ({
   title: text.itinerary[i].title,
   items: text.itinerary[i].items,
   text: text.itinerary[i].text,
+  native: en.native,
+  // The photographs are the English stop's; their words are this language's
+  // (config/tour-i18n.ts has checked there is one caption per photograph).
+  photos: en.photos?.map((ph, j) => ({ ...ph, ...text.itinerary[i].photos![j] })),
 }));
+const Themed = tour.theme ? "div" : Fragment;
+const themedProps = tour.theme ? { class: `themed-${tour.theme}` } : {};
 
 const included = (tour.included ?? []).map((l) => p.lines[l]);
 const excluded = (tour.excluded ?? []).map((l) => p.lines[l]);
@@ -139,6 +145,7 @@ const jsonld: Record<string, unknown>[] = [
   keywords={text.keywords}
   showCta={false}
 >
+  <Themed {...themedProps}>
   <PageHero
     rootLabel={LOCALE_META[locale].home}
     rootHref={`/${locale}/`}
@@ -147,6 +154,7 @@ const jsonld: Record<string, unknown>[] = [
     overline={category}
     title={text.title}
     text={text.subtitle}
+    theme={tour.theme}
   >
     <div class="hero-actions" style="justify-content:center;margin-top:var(--s-5)">
       <a href="#enquire" class="btn btn-solid">{p.h.enquire}</a>
@@ -156,7 +164,7 @@ const jsonld: Record<string, unknown>[] = [
     </div>
   </PageHero>
 
-  {tour.hero && (
+  {tour.hero && tour.theme !== "feast" && (
     <section style="padding-top:var(--s-3);padding-bottom:0">
       <div class="wrap">
         <Placeholder
@@ -211,10 +219,20 @@ const jsonld: Record<string, unknown>[] = [
           <div class="lz-sec reveal">
             <span class="lz-n">{d.num}</span>
             <div>
-              <h3 class="lt-day">{d.label} {Number(d.num)} — {d.title}</h3>
+              <h3 class="lt-day">{d.label} {Number(d.num)} — {d.title}{d.native && <span class="native" lang="ar" dir="rtl">{d.native}</span>}</h3>
               {d.items
                 ? <ul class="lt-items">{d.items.map((i) => <li>{i}</li>)}</ul>
                 : <p class="lt-text">{d.text}</p>}
+              {d.photos && (
+                <div class="dishes">
+                  {d.photos.map((ph) => (
+                    <figure class="dish">
+                      <Placeholder sizes="card" src={ph.src} alt={ph.alt} width={ph.width} height={ph.height} label={ph.label} />
+                      <figcaption>{ph.label}</figcaption>
+                    </figure>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         ))}
@@ -262,6 +280,7 @@ const jsonld: Record<string, unknown>[] = [
       </div>
     </div>
   </section>
+  </Themed>
 </Base>
 
 <style>
