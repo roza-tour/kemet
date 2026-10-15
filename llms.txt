@@ -18,7 +18,7 @@ Last updated: 2026-10-15
 - Google: https://www.google.com/search?kgmid=/g/11zy30n66w
 - Contact: info@kemet-travel.com · WhatsApp +20 11 5836 7162
 - Model: 100% private, tailor-made itineraries (no shared coaches, no fixed departures)
-- Catalogue: 25 journeys, 15 experiences, 8 activities, 8 destinations, 8 travel guides
+- Catalogue: 25 journeys, 15 experiences, 8 activities, 8 destinations, 9 travel guides
 - Content reviewed by: Mervat Farouk, Egyptologist guide — Egyptian tour guide and specialist in Egyptology (https://kemet-travel.com/about.html#mervat-farouk)
 
 - Full content as a single Markdown document: https://kemet-travel.com/llms-full.txt — the substance of these pages in one file, for when fetching each page individually is not practical.
@@ -164,6 +164,7 @@ Last updated: 2026-10-15
 - [What to Pack for Egypt](https://kemet-travel.com/guides/egypt-packing-list.html): The Egypt packing list that actually matches the trip: what the desert, the monuments, the mosques and the Nile each demand — by season, with the five things everyone forgets.
 - [Where to Stay in Egypt: The Best Hotels, City by City](https://kemet-travel.com/guides/where-to-stay-in-egypt.html): The hotels worth building an Egypt journey around — Giza, Cairo, Luxor, Aswan, the Nile and the Red Sea — and which of the famous ones can actually be booked for the 2026–27 season.
 - [The 2027 Total Solar Eclipse in Luxor](https://kemet-travel.com/guides/total-solar-eclipse-2027-luxor.html): On Monday 2 August 2027 the Moon covers the Sun over Luxor for about six minutes and 22 seconds — the longest total eclipse on easily accessible land this century. When it happens, where to watch, the August heat and how to plan the journey.
+- [Egypt from the USA & Canada](https://kemet-travel.com/guides/egypt-from-usa-canada.html): Planning Egypt from North America: the flights to Cairo, the visa, the time difference, the best months, money and tipping, and how a private journey works.
 
 ## Other languages
 
@@ -272,6 +273,7 @@ Journeys in Italiano (24), from-prices per person, the same as in English:
 - https://kemet-travel.com/es/mejor-epoca-para-viajar-a-egipto.html
 - https://kemet-travel.com/es/es-seguro-viajar-a-egipto.html
 - https://kemet-travel.com/es/viajes-ultra-lujo-egipto.html
+- https://kemet-travel.com/es/viajar-a-egipto-desde-latinoamerica.html — Viajar a Egipto desde Latinoamérica: Desde México, Colombia, Argentina, Chile o Perú: una escala, una visa en línea y la mejor temporada de Egipto.
 - https://kemet-travel.com/es/semana-santa-en-egipto.html — Semana Santa en Egipto: Del 21 de marzo al 28 de marzo de 2027 — primavera en el Nilo, y la última ventana buena antes del calor.
 - https://kemet-travel.com/es/amanecer-en-las-piramides-de-giza.html — El amanecer sobre las nueve pirámides de Giza: Antes de que salga el sol, en un mirador tranquilo desde el que se ven las nueve pirámides — la primera hora es suya: yoga, una sesión de fotos o simplemente la vista.
 - https://kemet-travel.com/es/eclipse-solar-2027-luxor.html — El eclipse total de Sol de 2027 en Luxor: El lunes 2 de agosto de 2027, la Luna tapará el Sol sobre Luxor durante unos seis minutos y 22 segundos: el eclipse total más largo del siglo en tierra de fácil acceso.
@@ -411,6 +413,7 @@ Journeys in Bahasa Melayu (1), from-prices per person, the same as in English:
 - https://kemet-travel.com/pt/e-seguro-viajar-para-o-egito.html
 - https://kemet-travel.com/pt/viagens-ultra-luxo-egito.html
 - https://kemet-travel.com/pt/carnaval-no-egito.html — Carnaval no Egito, 2027: Em 2027 o Carnaval cai de 6 a 10 de fevereiro — em fevereiro, o melhor mês do ano para os monumentos.
+- https://kemet-travel.com/pt/viajar-ao-egito-saindo-do-brasil.html — Viajar ao Egito saindo do Brasil: Uma escala, um visto pela internet e o melhor inverno do Egito bem nas suas férias de verão.
 - https://kemet-travel.com/pt/nascer-do-sol-nas-piramides-de-gize.html — O nascer do sol sobre as nove pirâmides de Gizé: Antes do sol nascer, num mirante tranquilo de onde se veem as nove pirâmides — a primeira hora é sua: ioga, um ensaio fotográfico ou simplesmente a vista.
 - https://kemet-travel.com/pt/eclipse-solar-2027-luxor.html — O eclipse solar total de 2027 em Luxor: Na segunda-feira, 2 de agosto de 2027, a Lua cobre o Sol sobre Luxor por cerca de seis minutos e 22 segundos — o eclipse total mais longo do século em terra de fácil acesso.
 - https://kemet-travel.com/pt/ramada-no-egito.html — O Egito durante o Ramadã: O Ramadã de 2027 deve ir de 8 de fevereiro a 8 de março, em plena melhor temporada. O que muda, o que continua igual e por que as noites do Cairo são, então, as melhores do ano.

@@ -110,6 +110,7 @@ function pageLabel(string $p): string {
 }
 
 $daysMap = $pages = $refs = $events = $devices = $langs = $camps = [];
+$regions = $regionSeen = [];          // browser region per visit: "en-US" → US
 $landing = $picks = $broken = [];
 $searches = $searchNone = [];
 $visitors = $seenVisit = $hitsPerVisit = [];
@@ -136,6 +137,14 @@ foreach ($rows as $c) {
     $hitsPerVisit[$visit] = ($hitsPerVisit[$visit] ?? 0) + 1;
     if ($extra !== "") $refs[$extra] = ($refs[$extra] ?? 0) + 1;
     if ($lang  !== "") $langs[substr($lang, 0, 2)] = ($langs[substr($lang, 0, 2)] ?? 0) + 1;
+    // The region half of the language tag is the nearest thing to a
+    // nationality the site records: "en-US" is not "en-GB", "es-MX" is not
+    // "es-ES", "pt-BR" is not "pt-PT". Counted once per visit.
+    if (!isset($regionSeen[$visit]) && preg_match('~^[a-z]{2,3}-([a-z]{2})$~i', $lang, $rm)) {
+      $regionSeen[$visit] = 1;
+      $rc = strtoupper($rm[1]);
+      $regions[$rc] = ($regions[$rc] ?? 0) + 1;
+    }
     if ($query !== "") $camps[$query] = ($camps[$query] ?? 0) + 1;
     // Where the visit came from: its first arrival from outside the site.
     if (!isset($visitSrc[$visit]) && ($extra !== "" || $query !== "")) {
@@ -207,7 +216,7 @@ foreach ($contactEv as [$v, $type]) {
 uasort($tapsBySrc, fn($a, $b) => [$b["whatsapp"], array_sum($b)] <=> [$a["whatsapp"], array_sum($a)]);
 $waLatest = array_slice(array_reverse(array_values(array_filter($contactEv, fn($e) => $e[1] === "whatsapp"))), 0, 20);
 
-arsort($pages); arsort($refs); arsort($events); arsort($langs);
+arsort($pages); arsort($refs); arsort($events); arsort($langs); arsort($regions);
 arsort($camps); arsort($landing); arsort($picks); arsort($broken);
 arsort($searches); arsort($searchNone);
 ksort($daysMap);
@@ -241,6 +250,28 @@ const LANG_NAMES = [
   "ko" => "한국어 · Korean", "hi" => "हिन्दी · Hindi", "id" => "Bahasa Indonesia",
   "th" => "ไทย · Thai", "vi" => "Tiếng Việt · Vietnamese",
 ];
+
+// Region code → country, for the countries a visit's browser most often names.
+// The Americas are flagged: they are the markets the site set out to reach in
+// October 2026 without changing anything for its European guests.
+const REGION_NAMES = [
+  "US" => "United States", "CA" => "Canada", "MX" => "Mexico", "BR" => "Brazil",
+  "AR" => "Argentina", "CO" => "Colombia", "CL" => "Chile", "PE" => "Peru",
+  "UY" => "Uruguay", "EC" => "Ecuador", "VE" => "Venezuela", "CR" => "Costa Rica",
+  "PA" => "Panama", "DO" => "Dominican Republic", "GT" => "Guatemala", "PR" => "Puerto Rico",
+  "GB" => "United Kingdom", "IE" => "Ireland", "DE" => "Germany", "AT" => "Austria",
+  "CH" => "Switzerland", "FR" => "France", "BE" => "Belgium", "NL" => "Netherlands",
+  "IT" => "Italy", "ES" => "Spain", "PT" => "Portugal", "SE" => "Sweden", "NO" => "Norway",
+  "DK" => "Denmark", "FI" => "Finland", "PL" => "Poland", "RU" => "Russia", "UA" => "Ukraine",
+  "AU" => "Australia", "NZ" => "New Zealand", "IN" => "India", "ID" => "Indonesia",
+  "MY" => "Malaysia", "SG" => "Singapore", "AE" => "United Arab Emirates", "SA" => "Saudi Arabia",
+  "EG" => "Egypt", "ZA" => "South Africa", "JP" => "Japan", "CN" => "China", "KR" => "South Korea",
+];
+const AMERICAS = ["US","CA","MX","BR","AR","CO","CL","PE","UY","EC","VE","CR","PA","DO","GT","PR",
+  "BO","PY","HN","SV","NI","CU","JM","TT","BS","BB"];
+$regionTotal = array_sum($regions);
+$americasN = 0;
+foreach ($regions as $rc => $n) if (in_array($rc, AMERICAS, true)) $americasN += $n;
 
 // --- Enquiries -------------------------------------------------------------
 // contact-handler.php writes a row for every enquiry it receives, whatever
@@ -542,6 +573,9 @@ td.n2{text-align:right;color:var(--mut);font-variant-numeric:tabular-nums;width:
   <h2>Visitor languages</h2>
   <div class="note">Browser language per visit. A market that is large here and not yet translated is the next language worth publishing.</div>
   <?php $table($langs, 14, fn($k) => (LANG_NAMES[$k] ?? $k) . "  ($k)", "No language data yet"); ?>
+  <h2>Visitor countries</h2>
+  <div class="note">From the region in the browser language, once per visit — "en-US" is an American, "es-MX" a Mexican, "pt-BR" a Brazilian. The Americas: <b><?= $fmt($americasN) ?></b> of <?= $fmt($regionTotal) ?> visits that name a region<?= $regionTotal ? " (" . round($americasN / $regionTotal * 100) . "%)" : "" ?>.</div>
+  <?php $table($regions, 16, fn($k) => (REGION_NAMES[$k] ?? $k) . "  ($k)" . (in_array($k, AMERICAS, true) ? "  · Americas" : ""), "No region data yet"); ?>
 </div>
 <div>
   <h2>Referrers</h2>
