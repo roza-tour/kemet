@@ -1782,19 +1782,19 @@ export const de: TourText[] = [
       },
       {
         title: "Ful & Ta'meya",
-        text: "Probieren Sie Ful Medames, die langsam gegarten Saubohnen, die man von morgens bis abends isst, dazu Ta'meya, Ägyptens Falafel-Variante aus Saubohnen, frisch frittiert.", photos: [{ alt: "Ein Teller Ful Medames mit gekochten Eiern, Oliven, eingelegtem Gemüse und Fladenbrot", label: "Ful Medames" }, { alt: "Ta'meya — ägyptische Falafel — in der Pfanne eines Straßenstands frittiert", label: "Ta'meya" }],
+        text: "Probieren Sie Ful Medames, die langsam gegarten Saubohnen, die man von morgens bis abends isst, dazu Ta'meya, Ägyptens Falafel-Variante aus Saubohnen, frisch frittiert.", photos: [{ alt: "Eine Schale Ful Medames mit Tomate und Kräutern, dazu Zitrone und ein Glas Tee", label: "Ful Medames" }, { alt: "Ta'meya mit Sesamkruste auf einem Teller, dahinter Beutel mit der grünen Masse aus Saubohnen und Kräutern", label: "Ta'meya" }],
       },
       {
         title: "Hawawshi & gegrillte Taube",
-        text: "Weiter ins herzhafte Zentrum des Abends — Hawawshi, gewürztes Hackfleisch in knusprigem Brot gebacken, und Hamam Mahschi, mit gewürztem Reis gefüllte gegrillte Taube.", photos: [{ alt: "Hawawshi: knuspriges Brot, um gewürztes Hackfleisch gebacken, in Stücke geschnitten", label: "Hawawshi" }, { alt: "Gefüllte Tauben (Hamam Mahschi) in einer Pfanne", label: "Gefüllte Taube" }],
+        text: "Weiter ins herzhafte Zentrum des Abends — Hawawshi, gewürztes Hackfleisch in knusprigem Brot gebacken, und Hamam Mahschi, mit gewürztem Reis gefüllte gegrillte Taube.", photos: [{ alt: "Aufgeschnittenes Hawawshi mit gewürztem Hackfleisch, daneben eingelegtes Gemüse", label: "Hawawshi" }, { alt: "Zwei mit Reis gefüllte, gebratene Tauben (Hamam Mahschi) auf Kräutern", label: "Gefüllte Taube" }],
       },
       {
         title: "Kunafa & Basbousa",
-        text: "Zum Nachtisch warme Kunafa mit ihrem Teigfaden-Mantel über süßem Käse und Stücke der in Sirup getränkten Grießkuchen Basbousa.", photos: [{ alt: "Ein Blech Kunafa, der Teigfaden goldbraun gebacken", label: "Kunafa" }, { alt: "Stücke Basbousa, des in Sirup getränkten Grießkuchens, mit Mandeln", label: "Basbousa" }],
+        text: "Zum Nachtisch warme Kunafa mit ihrem Teigfaden-Mantel über süßem Käse und Stücke der in Sirup getränkten Grießkuchen Basbousa.", photos: [{ alt: "Kunafa mit Pistazien, ein Stück angehoben über geschmolzenem Käse", label: "Kunafa" }, { alt: "Stücke Basbousa, jedes mit einer Mandel", label: "Basbousa" }],
       },
       {
         title: "Ein traditionelles Ahwa",
-        text: "Abschluss in einem Ahwa in einer Seitenstraße, bei Minztee, türkischem Kaffee und dem Gemurmel der Stadt — so sollte jeder Abend in Kairo enden.", photos: [{ alt: "Teegläser neben verzierten Teekannen auf Messingtabletts", label: "Tee" }],
+        text: "Abschluss in einem Ahwa in einer Seitenstraße, bei Minztee, türkischem Kaffee und dem Gemurmel der Stadt — so sollte jeder Abend in Kairo enden.", photos: [{ alt: "Zwei Teegläser auf einem Tisch in einem traditionellen Café, die Wände voller gerahmter alter Fotografien", label: "Im Ahwa" }],
       },
     ],
     faqs: [

@@ -1165,8 +1165,8 @@ export const tours: Tour[] = [
         text: "Taste ful medames, the slow-cooked fava beans eaten morning to night, alongside ta'meya, Egypt's fava-bean take on falafel, fried fresh to order.",
         native: "فول وطعمية",
         photos: [
-          { alt: "A plate of ful medames with boiled eggs, olives, pickles and flatbread", label: "Ful medames", src: "/images/stock/ful-medames.webp", width: 1280, height: 1305 },
-          { alt: "Ta'meya \u2014 Egyptian falafel \u2014 frying in a street-stall pan", label: "Ta'meya", src: "/images/stock/tameya-frying.webp", width: 800, height: 600 },
+          { alt: "A bowl of ful medames topped with tomato and herbs, with lemon and a glass of tea", label: "Ful medames", src: "/images/food/ful-medames-bowl.webp", width: 702, height: 437 },
+          { alt: "Sesame-crusted ta'meya on a plate, with bags of the green fava-and-herb mix behind", label: "Ta'meya", src: "/images/food/tameya-sesame.webp", width: 432, height: 478 },
         ],
       },
       {
@@ -1176,8 +1176,8 @@ export const tours: Tour[] = [
         text: "Move to the savoury heart of the evening — hawawshi, spiced minced meat baked in crisp bread, and hamam mahshi, grilled pigeon stuffed with seasoned rice.",
         native: "حواوشي وحمام محشي",
         photos: [
-          { alt: "Hawawshi: crisp bread baked around spiced minced meat, cut into wedges", label: "Hawawshi", src: "/images/stock/hawawshi.webp", width: 1280, height: 960 },
-          { alt: "Stuffed pigeons (hamam mahshi) in a pan", label: "Stuffed pigeon", src: "/images/stock/stuffed-pigeon.webp", width: 1280, height: 960 },
+          { alt: "Hawawshi cut open to show its spiced minced meat, with pickles on the side", label: "Hawawshi", src: "/images/food/hawawshi-cut.webp", width: 735, height: 974 },
+          { alt: "Two roasted pigeons stuffed with rice (hamam mahshi) on a bed of greens", label: "Stuffed pigeon", src: "/images/food/hamam-mahshi.webp", width: 735, height: 478 },
         ],
       },
       {
@@ -1187,8 +1187,8 @@ export const tours: Tour[] = [
         text: "Turn to dessert with warm kunafa, its shredded pastry over sweet cheese, and squares of syrup-soaked basbousa semolina cake.",
         native: "كنافة وبسبوسة",
         photos: [
-          { alt: "A tray of kunafa, its shredded pastry baked golden", label: "Kunafa", src: "/images/stock/kunafa.webp", width: 1280, height: 911 },
-          { alt: "Squares of basbousa, the syrup-soaked semolina cake, topped with almonds", label: "Basbousa", src: "/images/stock/basbousa.webp", width: 1280, height: 853 },
+          { alt: "Kunafa topped with pistachio, a slice lifted to show the melted cheese inside", label: "Kunafa", src: "/images/food/kunafa-pistachio.webp", width: 736, height: 920 },
+          { alt: "Squares of basbousa, each topped with an almond", label: "Basbousa", src: "/images/food/basbousa-almond.webp", width: 720, height: 720 },
         ],
       },
       {
@@ -1198,7 +1198,7 @@ export const tours: Tour[] = [
         text: "Finish at a backstreet ahwa over mint tea, Turkish coffee and the murmur of the city — the way every Cairo evening should end.",
         native: "قهوة بلدي",
         photos: [
-          { alt: "Glasses of tea beside ornate teapots on brass trays", label: "Tea", src: "/images/stock/mint-tea-glasses.webp", width: 1280, height: 847 },
+          { alt: "Two glasses of tea on a table in a traditional café, its walls covered in framed old photographs", label: "The ahwa", src: "/images/food/ahwa-tea-glasses.webp", width: 720, height: 620 },
         ],
       },
     ],

@@ -12,7 +12,7 @@ export const savoury: Dish[] = [
   },
   {
     name: "Ful & Falafel",
-    image: { alt: "A plate of ful medames with boiled eggs, olives, pickles and flatbread", src: "/images/stock/ful-medames.webp", width: 1280, height: 1305 },
+    image: { alt: "A bowl of ful medames topped with tomato and herbs, with lemon and a glass of tea", src: "/images/food/ful-medames-bowl.webp", width: 702, height: 437 },
     note: "Slow-stewed fava beans (ful medames) with ta'meya, the green, herb-flecked Egyptian falafel made from fava rather than chickpea.",
   },
   {
@@ -22,7 +22,7 @@ export const savoury: Dish[] = [
   },
   {
     name: "Stuffed Pigeon",
-    image: { alt: "Stuffed pigeons (hamam mahshi) in a pan", src: "/images/stock/stuffed-pigeon.webp", width: 1280, height: 960 },
+    image: { alt: "Two roasted pigeons stuffed with rice (hamam mahshi) on a bed of greens", src: "/images/food/hamam-mahshi.webp", width: 735, height: 478 },
     note: "Hamam mahshi — pigeon roasted and stuffed with seasoned freekeh or rice, a celebratory dish prized across Egypt.",
   },
   {
@@ -40,12 +40,12 @@ export const savoury: Dish[] = [
 export const sweets: Dish[] = [
   {
     name: "Kunafa",
-    image: { alt: "A tray of kunafa, its shredded pastry baked golden", src: "/images/stock/kunafa.webp", width: 1280, height: 911 },
+    image: { alt: "Kunafa topped with pistachio, a slice lifted to show the melted cheese inside", src: "/images/food/kunafa-pistachio.webp", width: 736, height: 920 },
     note: "Fine shredded pastry over sweet cheese or cream, baked crisp and drenched in syrup — a centrepiece of Ramadan tables and celebrations.",
   },
   {
     name: "Basbousa",
-    image: { alt: "Squares of basbousa, the syrup-soaked semolina cake, topped with almonds", src: "/images/stock/basbousa.webp", width: 1280, height: 853 },
+    image: { alt: "Squares of basbousa, each topped with an almond", src: "/images/food/basbousa-almond.webp", width: 720, height: 720 },
     note: "Syrup-soaked semolina cake, tender and grainy, crowned with an almond and often scented with coconut or orange-blossom water.",
   },
   {

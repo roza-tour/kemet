@@ -531,11 +531,11 @@ export const guides: Guide[] = [
       },
     ],
     hero: {
-      alt: "A plate of ful medames with boiled eggs, olives, pickles and flatbread",
+      alt: "A bowl of ful medames topped with tomato and herbs, with lemon and a glass of tea",
       label: "Egyptian cuisine",
-      src: "/images/stock/ful-medames.webp",
-      width: 1280,
-      height: 1305,
+      src: "/images/food/ful-medames-bowl.webp",
+      width: 702,
+      height: 437,
     },
     seo: {
       title: "Egyptian Food Guide — What to Eat, Where & Cuisine Tips | Kemet",
