@@ -24,10 +24,16 @@ import { assertPhrasebook } from "@/data/tours-i18n/phrasebook";
 import { de } from "@/data/tours-i18n/de";
 import { fr } from "@/data/tours-i18n/fr";
 import { it } from "@/data/tours-i18n/it";
+import { es } from "@/data/tours-i18n/es";
+import { pt } from "@/data/tours-i18n/pt";
+import { ru } from "@/data/tours-i18n/ru";
+import { id } from "@/data/tours-i18n/id";
+import { ms } from "@/data/tours-i18n/ms";
+import { ar } from "@/data/tours-i18n/ar";
 import { tours } from "@/data/tours";
 
 /** Every language a journey has been translated into. Add a file, add it here. */
-const SETS: Partial<Record<TranslatedLocale, TourText[]>> = { de, fr, it };
+const SETS: Partial<Record<TranslatedLocale, TourText[]>> = { de, fr, it, es, pt, ru, id, ms, ar };
 
 export interface TranslatedTour {
   locale: TranslatedLocale;

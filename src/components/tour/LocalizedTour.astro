@@ -219,7 +219,7 @@ const jsonld: Record<string, unknown>[] = [
           <div class="lz-sec reveal">
             <span class="lz-n">{d.num}</span>
             <div>
-              <h3 class="lt-day">{d.label} {Number(d.num)} — {d.title}{d.native && <span class="native" lang="ar" dir="rtl">{d.native}</span>}</h3>
+              <h3 class="lt-day">{d.label} {Number(d.num)} — {d.title}{d.native && locale !== "ar" && <span class="native" lang="ar" dir="rtl">{d.native}</span>}</h3>
               {d.items
                 ? <ul class="lt-items">{d.items.map((i) => <li>{i}</li>)}</ul>
                 : <p class="lt-text">{d.text}</p>}
