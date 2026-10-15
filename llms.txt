@@ -18,7 +18,7 @@ Last updated: 2026-10-15
 - Google: https://www.google.com/search?kgmid=/g/11zy30n66w
 - Contact: info@kemet-travel.com · WhatsApp +20 11 5836 7162
 - Model: 100% private, tailor-made itineraries (no shared coaches, no fixed departures)
-- Catalogue: 25 journeys, 15 experiences, 8 activities, 8 destinations, 9 travel guides
+- Catalogue: 25 journeys, 15 experiences, 8 activities, 8 destinations, 13 travel guides
 - Content reviewed by: Mervat Farouk, Egyptologist guide — Egyptian tour guide and specialist in Egyptology (https://kemet-travel.com/about.html#mervat-farouk)
 
 - Full content as a single Markdown document: https://kemet-travel.com/llms-full.txt — the substance of these pages in one file, for when fetching each page individually is not practical.
@@ -165,6 +165,10 @@ Last updated: 2026-10-15
 - [Where to Stay in Egypt: The Best Hotels, City by City](https://kemet-travel.com/guides/where-to-stay-in-egypt.html): The hotels worth building an Egypt journey around — Giza, Cairo, Luxor, Aswan, the Nile and the Red Sea — and which of the famous ones can actually be booked for the 2026–27 season.
 - [The 2027 Total Solar Eclipse in Luxor](https://kemet-travel.com/guides/total-solar-eclipse-2027-luxor.html): On Monday 2 August 2027 the Moon covers the Sun over Luxor for about six minutes and 22 seconds — the longest total eclipse on easily accessible land this century. When it happens, where to watch, the August heat and how to plan the journey.
 - [Egypt from the USA & Canada](https://kemet-travel.com/guides/egypt-from-usa-canada.html): Planning Egypt from North America: the flights to Cairo, the visa, the time difference, the best months, money and tipping, and how a private journey works.
+- [Egypt from Australia & New Zealand](https://kemet-travel.com/guides/egypt-from-australia-new-zealand.html): Planning Egypt from Australia or New Zealand: the one-stop flights, the visa, the time difference, which school holidays work best, and how much to fit in.
+- [Egypt from India](https://kemet-travel.com/guides/egypt-from-india.html): Planning Egypt from India: the nonstop flights from Mumbai and Delhi, the e-visa, vegetarian food, the best months and festival holidays, and how a private journey works.
+- [Egypt for Half-Term (and Easter)](https://kemet-travel.com/guides/egypt-half-term-uk.html): Egypt in a British school holiday: why the October and February half-terms fall in Egypt's season, what fits in nine days, the flights, the visa and booking in time.
+- [Thanksgiving & Spring Break in Egypt](https://kemet-travel.com/guides/thanksgiving-spring-break-egypt.html): Egypt in an American holiday week: Thanksgiving and spring break both fall in Egypt's best weather. What fits in nine days, the flights, and why to book early.
 
 ## Other languages
 
@@ -435,6 +439,7 @@ Journeys in Português (1), from-prices per person, the same as in English:
 - https://kemet-travel.com/ar/afdal-waqt-lizyarat-masr.html
 - https://kemet-travel.com/ar/hal-masr-amina.html
 - https://kemet-travel.com/ar/rehlat-fakhira-jiddan-fi-masr.html
+- https://kemet-travel.com/ar/sayf-masr-lil-aailat-al-khalijiya.html — صيف مصر للعائلات الخليجية: نسيم الإسكندرية، ومياه البحر الأحمر، وليالي القاهرة على النيل — برحلة خاصة لعائلتكم وحدها.
 - https://kemet-travel.com/ar/shorouq-al-shams-ind-al-ahramat.html — الشروق فوق أهرامات الجيزة التسعة: قبل شروق الشمس، في نقطة مطلّة هادئة تُرى منها الأهرامات التسعة معاً — والساعة الأولى لكم: يوغا، أو جلسة تصوير، أو مجرد التأمل في المنظر.
 - https://kemet-travel.com/ar/kusuf-al-shams-2027-al-uqsur.html — كسوف الشمس الكلي ٢٠٢٧ في الأقصر: يوم الاثنين ٢ أغسطس ٢٠٢٧ يحجب القمر الشمس فوق الأقصر نحو ست دقائق و٢٢ ثانية — أطول كسوف كلي في هذا القرن على أرض يسهل الوصول إليها.
 - https://kemet-travel.com/ar/ramadan-fi-masr.html — رمضان في القاهرة: يُتوقَّع أن يكون رمضان ١٤٤٨هـ من ٨ فبراير إلى ٨ مارس ٢٠٢٧، في جوّ معتدل. تراويح في أعرق مساجد القاهرة، وإفطار فوق أسطح المدينة القديمة، وعيد على ضفاف النيل.
