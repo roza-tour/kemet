@@ -26,7 +26,9 @@ import Faq from "@/components/Faq.astro";
 import Placeholder from "@/components/Placeholder.astro";
 import { breadcrumb } from "@/schemas/jsonld";
 import { canonical, whatsappLink, mailtoLink } from "@/utils/links";
-import { incenses, templeDay, stones, oils, sacredFaqs, sacredPhotos as PH } from "@/data/sacred";
+import { incenses, templeDay, stones, oils, sacredFaqs, sacredPhotos as PH, sacredBrief, sacredEntities, wikipedia } from "@/data/sacred";
+import { ORG_ID } from "@/schemas/jsonld";
+import { company } from "@/data/company";
 import { creditFor, type PhotoCredit } from "@/data/photoCredits";
 
 const route = "egyptian-incense-stones-cotton.html";
@@ -37,30 +39,84 @@ const faqLd = {
   inLanguage: "en",
   mainEntity: sacredFaqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
 };
-const jsonld = [
-  breadcrumb([["Home", "index.html"], ["Incense, stones & cotton", route]]),
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    name: "The Sacred Senses of Egypt — incense, stones, cotton and linen",
-    url: canonical(route),
-    inLanguage: "en",
-    about: [
-      { "@type": "Thing", name: "Egyptian incense" },
-      { "@type": "Thing", name: "Gemstones of ancient Egypt" },
-      { "@type": "Thing", name: "Egyptian cotton" },
-      { "@type": "Thing", name: "Egyptian linen" },
-    ],
-  },
-  faqLd,
-];
-
 const order = whatsappLink("Hello Kemet — I'd like to order from the Sacred Senses page: ");
 const orderIncense = whatsappLink("Hello Kemet — I'd like to order incense: ");
 const orderStones = whatsappLink("Hello Kemet — I'm looking for a stone: ");
 const orderCloth = whatsappLink("Hello Kemet — I'd like Egyptian cotton / linen: ");
 const orderOils = whatsappLink("Hello Kemet — I'm looking for a natural oil: ");
-const journey = mailtoLink("Incense, stones & cotton on my journey", "Hello Kemet,\n\nI'd like to add incense, stones or cotton and linen to my journey in Egypt.\n\nDates:\nTravellers:\n\nThank you.");
+const journey = mailtoLink("Incense, oils, stones & cotton on my journey", "Hello Kemet,\n\nI'd like to add incense, oils, stones or cotton and linen to my journey in Egypt.\n\nDates:\nTravellers:\n\nThank you.");
+
+// What the page offers and who it is for, told to Google and answer engines
+// from the same brief llms.txt and llms-full.txt read (data/sacred.ts).
+const url = canonical(route);
+const worldwide = { "@type": "AdministrativeArea", name: "Worldwide" };
+const audience = { "@type": "Audience", audienceType: sacredBrief.audienceShort, geographicArea: worldwide };
+const thing = (name: string, alternateName?: string) => ({
+  "@type": "Thing", name, ...(alternateName ? { alternateName } : {}), sameAs: wikipedia(sacredEntities[name]),
+});
+const names = (xs: { name: string }[]) => xs.map((x) => x.name.toLowerCase()).join(", ");
+const offer = (position: number, name: string, description: string) => ({
+  "@type": "Offer", position,
+  // No price on the page: each piece is photographed and priced on request.
+  itemOffered: { "@type": "Service", name, description, provider: { "@id": ORG_ID } },
+});
+const jsonld = [
+  breadcrumb([["Home", "index.html"], ["Incense, oils, stones & cotton", route]]),
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${url}#page`,
+    name: sacredBrief.title,
+    url,
+    inLanguage: "en",
+    description: sacredBrief.summary,
+    audience,
+    about: [
+      { "@type": "Thing", name: "Egyptian incense", sameAs: wikipedia("Incense") },
+      { "@type": "Thing", name: "Natural oils of Egypt — essential, carrier and massage oils", sameAs: wikipedia("Essential_oil") },
+      { "@type": "Thing", name: "Gemstones of ancient Egypt", sameAs: wikipedia("Gemstone") },
+      { "@type": "Thing", name: "Egyptian cotton", sameAs: wikipedia("Egyptian_cotton") },
+      { "@type": "Thing", name: "Egyptian linen", sameAs: wikipedia("Linen") },
+    ],
+    mentions: [
+      ...incenses.map((x) => thing(x.name, x.ar)),
+      ...oils.map((x) => thing(x.name, x.ar)),
+      ...stones.map((x) => thing(x.name, x.called)),
+    ],
+    mainEntity: { "@id": `${url}#offer` },
+    publisher: { "@id": ORG_ID },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${url}#offer`,
+    name: "Egyptian incense, oils, stones, cotton and linen — chosen in Cairo",
+    serviceType: "Choosing and sending Egyptian incense, natural oils, gemstones, cotton and linen; incense and perfume shopping with a guide on a private journey",
+    description: sacredBrief.ways.map((w) => `${w.name}: ${w.text}`).join(" "),
+    provider: { "@id": ORG_ID },
+    areaServed: worldwide,
+    audience,
+    url,
+    availableChannel: {
+      "@type": "ServiceChannel",
+      name: "WhatsApp",
+      serviceUrl: order,
+      availableLanguage: (company.languages ?? ["English"]).map((name) => ({ "@type": "Language", name })),
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "What Kemet chooses and sends",
+      itemListElement: [
+        offer(1, "Egyptian incense", `Incense as Cairo's incense sellers know it: ${names(incenses)}.`),
+        offer(2, "Natural oils of Egypt", `Essential, carrier and massage oils: ${names(oils)}.`),
+        offer(3, "Gemstones", `Natural stones, chosen one by one: ${names(stones)}.`),
+        offer(4, "Egyptian cotton and linen", sacredBrief.cloth),
+        offer(5, "An incense, perfume and oil afternoon in Khan el-Khalili", sacredBrief.ways[0].text),
+      ],
+    },
+  },
+  faqLd,
+];
 
 // The ring of the Dendera zodiac, in fine gold line: 36 decans, 12 signs.
 const SIGNS = ["♈", "♉", "♊", "♋", "♌", "♍", "♎", "♏", "♐", "♑", "♒", "♓"];
@@ -131,7 +187,7 @@ const STONE_GLOW: Record<string, string> = {
       {SIGNS.map((g, i) => <text x={signAt(i).x} y={signAt(i).y} text-anchor="middle">{g}&#xFE0E;</text>)}
     </svg>
     <div class="wrap ss-hero-in">
-      <nav class="crumb" aria-label="Breadcrumb"><a href="/">Home</a> · <span>Incense, stones &amp; cotton</span></nav>
+      <nav class="crumb" aria-label="Breadcrumb"><a href="/">Home</a> · <span>Incense, oils, stones &amp; cotton</span></nav>
       <div class="ss-over">Incense <span>·</span> Oils <span>·</span> Stones <span>·</span> Cotton &amp; linen</div>
       <h1>The Sacred <em>Senses</em><br /> of Egypt</h1>
       <p class="ss-lede">Incense burned since the pharaohs, the oils of the temples and the Delta, the stones they held sacred, and the cotton and linen Egypt still grows — for a home that feels lighter, and a calmer you.</p>
@@ -139,6 +195,7 @@ const STONE_GLOW: Record<string, string> = {
         <a class="btn btn-solid" href={order} target="_blank" rel="noopener">Order on WhatsApp</a>
         <a class="btn btn-ghost" href="#incense">Begin with the incense</a>
       </div>
+      <p class="ss-for">For travellers on a journey in Egypt — and for anyone, anywhere, who wants them sent home.</p>
     </div>
   </header>
 
@@ -498,6 +555,7 @@ const STONE_GLOW: Record<string, string> = {
   .ss-hero h1 em { font-style: italic; }
   .ss-lede { max-width: 620px; margin: var(--s-4) auto 0; color: rgba(237,230,245,.85); font-size: var(--t-md); line-height: 1.8; }
   .ss-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--s-3); margin-top: var(--s-6); }
+  .ss-for { max-width: 620px; margin-top: var(--s-4); font-size: var(--t-sm); color: rgba(237,230,245,.8); line-height: 1.7; text-wrap: balance; }
 
   /* ---- The word ---- */
   .ss-word { padding: var(--s-8) 0; text-align: center; }

@@ -43,6 +43,7 @@ import { ourTraveller, notOurTraveller, priceStance } from "@/data/standard";
 import { formatPrice, flyPrice } from "@/utils/format";
 import { publicPath } from "@/utils/links";
 import { marketDirectory, marketRegions } from "@/utils/marketsDirectory";
+import { sacredBrief } from "@/data/sacred";
 
 const u = (path: string) => `${SITE_URL}/${path}`;
 /** One Markdown list entry: - [Title](url): description */
@@ -324,7 +325,7 @@ export const GET: APIRoute = () => {
     ["The 8 identities of Egypt", "identities.html", "Egypt's eight cultural layers — Pharaonic, Coptic, Islamic, Nubian and more — and where to meet each."],
     ["Egyptian culture", "culture.html", "Symbols, gods and crafts of Egypt."],
     ["Egyptian cuisine", "cuisine.html", "The Egyptian table, dish by dish."],
-    ["The Sacred Senses of Egypt", "egyptian-incense-stones-cotton.html", "Incense (myrrh, luban dakar, sandalwood, oud, mint, camphor) as the temples burned it, the stones the pharaohs held sacred, and Egyptian cotton and linen — bought on a journey with a guide or shopping companion, or ordered on WhatsApp and shipped."],
+    ["The Sacred Senses of Egypt", "egyptian-incense-stones-cotton.html", sacredBrief.oneLine],
     ["Site index", "sitemap.html", "Every page on the site, in one list."],
   ];
   // build.format is "file", so a folder index (collections/index.astro) is

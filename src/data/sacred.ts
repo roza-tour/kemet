@@ -1,5 +1,5 @@
 // ---------------------------------------------------------------------------
-// The Sacred Senses of Egypt — incense, stones, cotton and linen.
+// The Sacred Senses of Egypt — incense, oils, stones, cotton and linen.
 // The words for egyptian-incense-stones-cotton.html, kept as data so the page
 // can be translated set by set, the way the other languages are.
 //
@@ -361,3 +361,76 @@ export const sacredPhotos: SacredPhotos = {
     alt: "The fringe and sheer weave of an ancient Egyptian linen sheet, about 1473–1458 BC",
   },
 };
+
+// ---------------------------------------------------------------------------
+// WHAT THE PAGE OFFERS, AND WHO IT IS FOR
+// Written once, and read by the page's structured data, /llms.txt and
+// /llms-full.txt — so Google, answer engines and the page never say
+// different things. Every line here is something the page itself states.
+// ---------------------------------------------------------------------------
+export const sacredBrief = {
+  title: "The Sacred Senses of Egypt — incense, oils, stones, cotton and linen",
+  /** One line, for indexes. */
+  oneLine:
+    "Egyptian incense, natural and massage oils, the gemstones ancient Egypt held sacred, and Egyptian cotton and linen — " +
+    "bought with a guide on a journey in Egypt, or ordered on WhatsApp and sent to your home.",
+  /** The page in a paragraph. */
+  summary:
+    "A page on four things Egypt has treasured since the pharaohs, and how to have them. Incense: myrrh, luban dakar " +
+    "(the finest frankincense), sandalwood, oud, mint and camphor, with the temples' daily ritual and how to burn resin at home. " +
+    "Oils: Egyptian jasmine, geranium and chamomile, black seed, sesame, moringa and blue lotus, the seven sacred oils of the " +
+    "temples, and how to blend a massage oil. Stones: turquoise, lapis lazuli, carnelian, peridot, amethyst and garnet — where " +
+    "each came from and what it meant. Cloth: Egyptian cotton and linen, cut in modern, comfortable lines.",
+  /** Short enough for schema.org `audienceType`. */
+  audienceShort:
+    "Travellers on a private journey in Egypt, and people anywhere in the world who want Egyptian incense, natural oils, " +
+    "gemstones, or cotton and linen sent to their home",
+  /** Who it is for, in full. */
+  audience: [
+    "Travellers on a private journey in Egypt who want to bring home incense, oils, stones, or cotton and linen — chosen with a guide or a shopping companion in Khan el-Khalili.",
+    "People anywhere in the world who want genuine Egyptian incense, natural oils, gemstones, or cotton and linen sent to their home, without travelling.",
+    "Readers drawn to Egypt's living traditions of scent and stone: incense to clear a home and against the evil eye, oils for massage and quiet, stones for what they have meant since the pharaohs.",
+    "Anyone who prefers natural fibres: pure Egyptian cotton and linen against the skin, with nothing synthetic in between.",
+  ],
+  cloth:
+    "Egyptian cotton is extra-long staple: each fibre is longer than ordinary cotton's, so it spins into a finer, stronger, " +
+    "softer yarn that grows softer with every wash; it has been grown in the Nile Delta since the 1820s. Egyptian linen is spun " +
+    "from flax grown by the Nile — cool, strong, better with age — the cloth Egypt chose for its priests and kings. " +
+    "Kemet offers both cut in modern, comfortable lines.",
+  /** The two ways to have them. */
+  ways: [
+    {
+      name: "On a journey in Egypt",
+      text: "An afternoon added to a private journey: Cairo's incense, perfume and oil sellers in Khan el-Khalili with your guide, " +
+        "and a shopping companion for stones, cotton and linen. On a Nile journey, the laboratory at Edfu temple, where the " +
+        "recipes for incense are carved into the walls.",
+    },
+    {
+      name: "Sent to your home",
+      text: "Write to Kemet on WhatsApp with what you are looking for — an incense, an oil, a stone, a size or a colour. Kemet " +
+        "sends photographs of the actual pieces and a price with shipping to your country. Payment by bank transfer, card or PayPal.",
+    },
+  ],
+  /** What the page does not claim. */
+  limits: [
+    "Beliefs — incense against the evil eye, the meanings of stones — are shared as Egyptian tradition, not as science.",
+    "No medical claim is made for any oil or incense. Essential oils are diluted in a carrier oil before they touch the skin, and anyone pregnant is asked to check with a doctor first.",
+    "Burning incense makes smoke: the page says to open a window.",
+  ],
+};
+
+/**
+ * The Wikipedia article for each thing the page names, so a machine knows
+ * exactly which myrrh, which geranium and which garnet is meant. A new
+ * incense, oil or stone without one stops the build (below).
+ */
+export const sacredEntities: Record<string, string> = {
+  Myrrh: "Myrrh", "Luban dakar": "Frankincense", Sandalwood: "Sandalwood", Oud: "Agarwood", Mint: "Mentha", Camphor: "Camphor",
+  Jasmine: "Jasmine", Geranium: "Pelargonium_graveolens", Chamomile: "Chamomile", "Black seed": "Nigella_sativa",
+  Sesame: "Sesame_oil", Moringa: "Moringa_oleifera", "Blue lotus": "Nymphaea_caerulea",
+  Turquoise: "Turquoise", "Lapis lazuli": "Lapis_lazuli", Carnelian: "Carnelian", Peridot: "Peridot", Amethyst: "Amethyst", Garnet: "Garnet",
+};
+for (const { name } of [...incenses, ...oils, ...stones]) {
+  if (!sacredEntities[name]) throw new Error(`sacred.ts: "${name}" has no entry in sacredEntities`);
+}
+export const wikipedia = (article: string) => `https://en.wikipedia.org/wiki/${article}`;

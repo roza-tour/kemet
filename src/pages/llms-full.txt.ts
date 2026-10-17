@@ -42,6 +42,7 @@ import { occasions } from "@/data/occasions";
 import { TRANSLATED_LOCALES, LOCALE_META, LOCALES } from "@/config/i18n";
 import { TRANSLATED_TOURS } from "@/config/tour-i18n";
 import { marketDirectory, marketRegions } from "@/utils/marketsDirectory";
+import { incenses, oils, stones, sacredFaqs, sacredBrief } from "@/data/sacred";
 
 const u = (path: string) => `${SITE_URL}/${path}`;
 const clean = (s: string) => s.replace(/\s+/g, " ").trim();
@@ -165,6 +166,36 @@ export const GET: APIRoute = () => {
     p(`${o.shortSummary} ${u(`occasions/${o.slug}.html`)}`);
     for (const i of o.ideas) L.push(`- **${clean(i.title)}.** ${clean(i.body)}`);
     L.push("");
+  }
+
+  // The Sacred Senses page: what it offers and who it is for (data/sacred.ts).
+  h(2, sacredBrief.title);
+  p(`${sacredBrief.summary} ${u("egyptian-incense-stones-cotton.html")}`);
+  h(3, "Who it is for");
+  for (const a of sacredBrief.audience) L.push(`- ${clean(a)}`);
+  L.push("");
+  h(3, "How to have them");
+  for (const w of sacredBrief.ways) L.push(`- **${w.name}.** ${clean(w.text)}`);
+  L.push("");
+  h(3, "Incense");
+  for (const x of incenses) L.push(`- **${x.name}** (Arabic: ${x.ar}). ${clean(x.story)} At home: ${clean(x.home)}`);
+  L.push("");
+  h(3, "Natural oils");
+  for (const x of oils) L.push(`- **${x.name}** (Arabic: ${x.ar}). ${clean(x.story)} Use: ${clean(x.home)}`);
+  L.push("");
+  h(3, "Stones");
+  for (const x of stones) L.push(`- **${x.name}** (${x.calledIn}: ${x.called}). ${clean(x.origin)} What it has meant: ${clean(x.meaning)}`);
+  L.push("");
+  h(3, "Cotton and linen");
+  p(sacredBrief.cloth);
+  h(3, "What the page does not claim");
+  for (const l of sacredBrief.limits) L.push(`- ${clean(l)}`);
+  L.push("");
+  h(3, "Questions about incense, oils, stones and cotton");
+  for (const f of sacredFaqs) {
+    L.push(`**${clean(f.q)}**`);
+    L.push("");
+    p(f.a);
   }
 
   h(2, "Destinations");
