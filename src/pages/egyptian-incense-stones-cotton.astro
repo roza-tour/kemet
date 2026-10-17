@@ -26,7 +26,7 @@ import Faq from "@/components/Faq.astro";
 import Placeholder from "@/components/Placeholder.astro";
 import { breadcrumb } from "@/schemas/jsonld";
 import { canonical, whatsappLink, mailtoLink } from "@/utils/links";
-import { incenses, templeDay, stones, sacredFaqs, sacredPhotos as PH } from "@/data/sacred";
+import { incenses, templeDay, stones, oils, sacredFaqs, sacredPhotos as PH } from "@/data/sacred";
 import { creditFor, type PhotoCredit } from "@/data/photoCredits";
 
 const route = "egyptian-incense-stones-cotton.html";
@@ -59,6 +59,7 @@ const order = whatsappLink("Hello Kemet — I'd like to order from the Sacred Se
 const orderIncense = whatsappLink("Hello Kemet — I'd like to order incense: ");
 const orderStones = whatsappLink("Hello Kemet — I'm looking for a stone: ");
 const orderCloth = whatsappLink("Hello Kemet — I'd like Egyptian cotton / linen: ");
+const orderOils = whatsappLink("Hello Kemet — I'm looking for a natural oil: ");
 const journey = mailtoLink("Incense, stones & cotton on my journey", "Hello Kemet,\n\nI'd like to add incense, stones or cotton and linen to my journey in Egypt.\n\nDates:\nTravellers:\n\nThank you.");
 
 // The ring of the Dendera zodiac, in fine gold line: 36 decans, 12 signs.
@@ -79,7 +80,8 @@ const signAt = (i: number) => {
 // image, so every borrowed photograph on the page is credited here, at the
 // foot, linked to its source — the condition of its licence.
 const usedSrcs = [PH.hero, PH.resin, PH.jewel, PH.tray, PH.linen, PH.cotton, PH.flax, PH.souk, PH.parcel,
-  ...Object.values(PH.incense ?? {}), ...Object.values(PH.stone ?? {})]
+  PH.oilsArch, PH.oilsSlab, PH.massage, PH.ownOils,
+  ...Object.values(PH.incense ?? {}), ...Object.values(PH.stone ?? {}), ...Object.values(PH.oil ?? {}), ...(PH.ownStones ?? [])]
   .map((p) => p?.src).filter((x): x is string => !!x);
 const creditList: PhotoCredit[] = [...new Set(usedSrcs)]
   .map((src) => creditFor(src))
@@ -90,19 +92,22 @@ const credits = [...creditList.reduce((m, c) => {
   m.set(k, { creator: c.creator, license: c.license, sources: [...(m.get(k)?.sources ?? []), c.source] });
   return m;
 }, new Map<string, { creator: string; license: string; sources: string[] }>()).values()];
-const usesMet = usedSrcs.some((s) => s.startsWith("/images/sacred/"));
+const usesMet = [PH.jewel, PH.tray, PH.linen, PH.oilsArch, PH.oilsSlab].some((p) => p?.src);
+
+/** Long Arabic names are set smaller so they stay on one line in their circle. */
+const calliSize = (ar: string) => (ar.length > 8 ? "font-size:1.45em" : ar.length > 5 ? "font-size:1.8em" : undefined);
 
 /** The aura colour behind each stone. */
 const STONE_GLOW: Record<string, string> = {
-  Turquoise: "#3FD0C0", "Lapis lazuli": "#4C6FE0", Carnelian: "#E8673F", Peridot: "#A9CF45", Amethyst: "#A57AD8",
+  Turquoise: "#3FD0C0", "Lapis lazuli": "#4C6FE0", Carnelian: "#E8673F", Peridot: "#A9CF45", Amethyst: "#A57AD8", Garnet: "#C8304A",
 };
 ---
 <Base
-  title="Egyptian Incense, Sacred Stones & Egyptian Cotton | Kemet"
-  description="Myrrh, luban dakar, oud and sandalwood; the stones the pharaohs held sacred; Egyptian cotton and linen. Buy them on your journey or have them sent home."
+  title="Egyptian Incense, Oils, Sacred Stones & Cotton | Kemet"
+  description="Myrrh, luban dakar and oud; Egyptian jasmine and sacred oils; the stones the pharaohs held sacred; cotton and linen — on your journey or sent home."
   active={route}
   jsonld={jsonld}
-  keywords="egyptian incense, luban dakar, egyptian frankincense, myrrh incense egypt, oud bakhoor egypt, ancient egyptian gemstones, sinai turquoise, egyptian cotton clothing, egyptian linen, khan el khalili incense"
+  keywords="egyptian incense, luban dakar, egyptian frankincense, myrrh incense egypt, oud bakhoor egypt, ancient egyptian gemstones, sinai turquoise, egyptian cotton clothing, egyptian linen, khan el khalili incense, egyptian essential oils, egyptian jasmine oil, black seed oil, natural massage oil"
 >
 <div class="ss">
 
@@ -123,9 +128,9 @@ const STONE_GLOW: Record<string, string> = {
     </svg>
     <div class="wrap ss-hero-in">
       <nav class="crumb" aria-label="Breadcrumb"><a href="/">Home</a> · <span>Incense, stones &amp; cotton</span></nav>
-      <div class="ss-over">Incense <span>·</span> Stones <span>·</span> Cotton &amp; linen</div>
+      <div class="ss-over">Incense <span>·</span> Oils <span>·</span> Stones <span>·</span> Cotton &amp; linen</div>
       <h1>The Sacred <em>Senses</em><br /> of Egypt</h1>
-      <p class="ss-lede">Incense burned since the pharaohs, the stones they held sacred, and the cotton and linen Egypt still grows — for a home that feels lighter, and a calmer you.</p>
+      <p class="ss-lede">Incense burned since the pharaohs, the oils of the temples and the Delta, the stones they held sacred, and the cotton and linen Egypt still grows — for a home that feels lighter, and a calmer you.</p>
       <div class="ss-actions">
         <a class="btn btn-solid" href={order} target="_blank" rel="noopener">Order on WhatsApp</a>
         <a class="btn btn-ghost" href="#incense">Begin with the incense</a>
@@ -176,7 +181,7 @@ const STONE_GLOW: Record<string, string> = {
           return (
             <li class="reveal">
               <div class="ss-dish">
-                {ph ? <Placeholder src={ph.src} alt={ph.alt} width={ph.width} height={ph.height} sizes="card" label={x.name} /> : <span lang="ar" dir="rtl">{x.ar}</span>}
+                {ph ? <Placeholder src={ph.src} alt={ph.alt} width={ph.width} height={ph.height} sizes="card" label={x.name} /> : <span lang="ar" dir="rtl" style={calliSize(x.ar)}>{x.ar}</span>}
               </div>
               <div>
                 <h4>{x.name}<span lang="ar" dir="rtl">{x.ar}</span></h4>
@@ -207,11 +212,88 @@ const STONE_GLOW: Record<string, string> = {
     </div>
   </section>
 
-  <!-- ================= II. Stones, at night ================= -->
+  <!-- ================= II. Oils ================= -->
+  <section class="ss-aura ss-aura--honey ss-ch" id="oils">
+    <i class="ss-blob b4"></i><i class="ss-blob b2"></i>
+    <div class="wrap ss-open">
+      <figure class="ss-arch reveal">
+        {PH.oilsArch ? (
+          <Placeholder src={PH.oilsArch.src} alt={PH.oilsArch.alt} width={PH.oilsArch.width} height={PH.oilsArch.height} sizes="half" label="An ancient perfume bottle" />
+        ) : <div class="ss-calli"><span lang="ar" dir="rtl">زيوت</span></div>}
+      </figure>
+      <div class="ss-open-t reveal">
+        <div class="ss-num">II</div>
+        <div class="eyebrow">Oils</div>
+        <h2>Oils of the temples and the Delta</h2>
+        <p>Egypt's perfumers were famous across the ancient world. They steeped flowers, resins and spices in oil to make perfumes and ointments, and the temples kept seven sacred oils for their rituals — at Edfu, the recipes for ointments are carved beside those for incense.</p>
+        <p>The craft never left. The Nile Delta still grows jasmine picked by hand before dawn, and small presses still press sesame and black seed cold, the way they always have.</p>
+        {PH.oilsArch && <p class="ss-cap">Left: a perfume bottle of blue glass, made in Egypt about 3,300 years ago. The Metropolitan Museum of Art.</p>}
+      </div>
+    </div>
+
+    <div class="wrap">
+      {PH.oilsSlab && (
+        <figure class="ss-slab reveal">
+          <Placeholder src={PH.oilsSlab.src} alt={PH.oilsSlab.alt} width={PH.oilsSlab.width} height={PH.oilsSlab.height} sizes="half" label="The seven sacred oils" />
+          <figcaption><b>The seven sacred oils.</b> An offering slab carved for Ankhwadjes in the Old Kingdom: each hollow held one of the oils named above it. The Metropolitan Museum of Art.</figcaption>
+        </figure>
+      )}
+
+      <div class="ss-shelf-head reveal">
+        <h3>Seven oils of Egypt</h3>
+        <p>For scent, for the skin and for massage — each pressed or distilled the way Egypt has always done it.</p>
+      </div>
+      <ul class="ss-apoth">
+        {oils.map((x) => {
+          const ph = PH.oil?.[x.name];
+          return (
+            <li class="reveal">
+              <div class="ss-dish ss-dish--oil">
+                {ph ? <Placeholder src={ph.src} alt={ph.alt} width={ph.width} height={ph.height} sizes="card" label={x.name} /> : <span lang="ar" dir="rtl" style={calliSize(x.ar)}>{x.ar}</span>}
+              </div>
+              <div>
+                <h4>{x.name}<span lang="ar" dir="rtl">{x.ar}</span></h4>
+                <p>{x.story}</p>
+                <p class="ss-home"><b>Use</b>{x.home}</p>
+              </div>
+            </li>
+          );
+        })}
+      </ul>
+
+      <div class="ss-massage reveal">
+        {PH.massage && (
+          <div class="ss-massage-img">
+            <Placeholder src={PH.massage.src} alt={PH.massage.alt} width={PH.massage.width} height={PH.massage.height} sizes="half" label="Massage oils" />
+          </div>
+        )}
+        <div class="ss-massage-t">
+          <h3>A massage, the Egyptian way</h3>
+          <p>A massage oil is simple: a carrier — sesame, sweet almond or moringa — and a few drops of an essential oil such as jasmine, geranium or chamomile. Warm it between your palms, breathe it in, and work slowly.</p>
+          <p class="ss-safe">Essential oils are strong. Always dilute them in a carrier oil, test on a small patch of skin first, keep them away from the eyes, and ask your doctor before using them if you are pregnant.</p>
+        </div>
+      </div>
+
+      <div class="ss-ours reveal">
+        {PH.ownOils && (
+          <div class="ss-ours-img">
+            <Placeholder src={PH.ownOils.src} alt={PH.ownOils.alt} width={PH.ownOils.width} height={PH.ownOils.height} sizes="card" label="Natural oils" />
+          </div>
+        )}
+        <div>
+          <h3>Our oils</h3>
+          <p>Natural oils, pressed and distilled the Egyptian way. Tell us what you are looking for — an oil for the skin, for massage or for scent — and we send photographs and a price.</p>
+          <a class="btn btn-solid" href={orderOils} target="_blank" rel="noopener">Ask about oils</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= III. Stones, at night ================= -->
   <section class="ss-ch ss-velvet" id="stones">
     <div class="wrap ss-open ss-open--rev">
       <div class="ss-open-t reveal">
-        <div class="ss-num">II</div>
+        <div class="ss-num">III</div>
         <div class="eyebrow">Stones</div>
         <h2>Stones the pharaohs held sacred</h2>
         <p>To the ancient Egyptians a stone's colour was its power. Green and turquoise were new life, red was blood and vitality, deep blue was the night sky. They set them into amulets and collars, buried them with their kings — and Egyptians still wear them for the same reasons.</p>
@@ -250,6 +332,16 @@ const STONE_GLOW: Record<string, string> = {
       )}
 
       <p class="ss-today reveal">The blue bead against the evil eye, the carnelian ring, the scarab worn for luck — Egypt never stopped.</p>
+      {PH.ownStones && PH.ownStones.length > 0 && (
+        <ul class="ss-gallery reveal" aria-label="Our stones">
+          {PH.ownStones.map((g) => (
+            <li>
+              <Placeholder src={g.src} alt={g.alt} width={g.width} height={g.height} sizes="card" label={g.name} />
+              <span>{g.name}</span>
+            </li>
+          ))}
+        </ul>
+      )}
       <div class="ss-pieces reveal">
         <p><b>Our stones.</b> Natural stones, chosen one by one. Tell us which stone you are looking for and how you will wear it, and we send photographs of the actual pieces, with a price.</p>
         <a class="btn btn-ghost" href={orderStones} target="_blank" rel="noopener">Ask about a stone</a>
@@ -257,7 +349,7 @@ const STONE_GLOW: Record<string, string> = {
     </div>
   </section>
 
-  <!-- ================= III. Cotton & linen ================= -->
+  <!-- ================= IV. Cotton & linen ================= -->
   <section class="ss-aura ss-aura--sage ss-ch" id="cloth">
     <i class="ss-blob b3"></i><i class="ss-blob b4"></i>
     <div class="wrap ss-open">
@@ -267,7 +359,7 @@ const STONE_GLOW: Record<string, string> = {
         ) : <div class="ss-calli"><span lang="ar" dir="rtl">كتان</span></div>}
       </figure>
       <div class="ss-open-t reveal">
-        <div class="ss-num">III</div>
+        <div class="ss-num">IV</div>
         <div class="eyebrow">Cotton &amp; linen</div>
         <h2>Cloth grown by the Nile</h2>
         <p>Egypt has dressed in linen for five thousand years. Its priests, Herodotus noticed, wore nothing else, and Tutankhamun was buried with chests of linen shirts and tunics. Today the same river grows some of the finest cotton in the world.</p>
@@ -309,19 +401,19 @@ const STONE_GLOW: Record<string, string> = {
         <article class="ss-way reveal">
           {PH.souk && <div class="ss-way-img"><Placeholder src={PH.souk.src} alt={PH.souk.alt} width={PH.souk.width} height={PH.souk.height} sizes="half" label="Khan el-Khalili" /></div>}
           <h3>On your journey</h3>
-          <p>Add an afternoon to your journey: Cairo's incense and perfume sellers in Khan el-Khalili with your guide, and a shopping companion for stones, cotton and linen. On a Nile journey, stand in the laboratory at Edfu temple, where the recipes for incense are carved into the walls.</p>
+          <p>Add an afternoon to your journey: Cairo's incense, perfume and oil sellers in Khan el-Khalili with your guide, and a shopping companion for stones, cotton and linen. On a Nile journey, stand in the laboratory at Edfu temple, where the recipes for incense are carved into the walls.</p>
           <a class="btn btn-ghost" href={journey}>Add it to my journey</a>
         </article>
         <article class="ss-way reveal">
           {PH.parcel && <div class="ss-way-img"><Placeholder src={PH.parcel.src} alt={PH.parcel.alt} width={PH.parcel.width} height={PH.parcel.height} sizes="half" label="Sent home" /></div>}
           <h3>Sent to your home</h3>
-          <p>Write to us on WhatsApp with what you are looking for — an incense, a stone, a size or a colour. We send photographs of the actual pieces and a price with shipping to your country. Pay by bank transfer, card or PayPal.</p>
+          <p>Write to us on WhatsApp with what you are looking for — an incense, an oil, a stone, a size or a colour. We send photographs of the actual pieces and a price with shipping to your country. Pay by bank transfer, card or PayPal.</p>
           <a class="btn btn-solid" href={order} target="_blank" rel="noopener">Order on WhatsApp</a>
         </article>
       </div>
 
       <div class="ss-faq">
-        <Faq items={sacredFaqs} heading="Asked about incense, stones and cotton" />
+        <Faq items={sacredFaqs} heading="Asked about incense, oils, stones and cotton" />
       </div>
     </div>
   </section>
@@ -365,6 +457,8 @@ const STONE_GLOW: Record<string, string> = {
   .ss-blob.b3 { width: 560px; height: 560px; background: var(--sage); left: 25%; bottom: -260px; animation-delay: -12s; }
   .ss-blob.b4 { width: 420px; height: 420px; background: var(--honey); right: 20%; top: -140px; opacity: .45; animation-delay: -4s; }
   .ss-aura--sage .ss-blob.b3 { opacity: .7; }
+  .ss-aura--honey { background: #F8F1E6; }
+  .ss-aura--honey .ss-blob.b4 { opacity: .6; left: -120px; right: auto; top: 10%; }
   @keyframes ss-breathe { to { transform: translate(40px, 30px) scale(1.1); } }
 
   /* ---- Hero: night in the temple ---- */
@@ -437,7 +531,7 @@ const STONE_GLOW: Record<string, string> = {
   .ss-dish { position: relative; width: 120px; aspect-ratio: 1; border-radius: 50%; overflow: hidden; display: grid; place-items: center;
     background: radial-gradient(circle at 50% 38%, rgba(255,255,255,.8), transparent 64%), linear-gradient(160deg, #EADCF5, #F8DCC8); box-shadow: 0 0 0 5px rgba(255,255,255,.7), 0 18px 30px -18px rgba(70,40,90,.5); }
   .ss-dish :global(.frame) { position: absolute; inset: 0; }
-  .ss-dish > span { font-family: 'Amiri', serif; font-size: 2.3rem; color: rgba(46,34,56,.7); }
+  .ss-dish > span { font-family: 'Amiri', serif; font-size: 2.3rem; line-height: 1.2; white-space: nowrap; color: rgba(46,34,56,.7); }
   .ss-apoth h4 { font-family: var(--ff-display); font-weight: 400; font-size: var(--t-lg); color: var(--ink-p); display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
   .ss-apoth h4 span { font-family: 'Amiri', var(--ff-display); font-size: .85em; color: var(--gold-d); }
   .ss-apoth p { margin-top: var(--s-2); color: var(--ink-pm); font-size: var(--t-sm); line-height: 1.8; }
@@ -452,6 +546,22 @@ const STONE_GLOW: Record<string, string> = {
   .ss-ritual li { color: var(--ink-pm); font-size: var(--t-sm); line-height: 1.75; }
   .ss-ritual li span { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; margin-bottom: var(--s-2); background: rgba(255,255,255,.6); color: var(--gold-d); font-family: var(--ff-display); }
 
+  /* ---- Oils ---- */
+  .ss-open-t > p + p { margin-top: var(--s-3); }
+  .ss-slab { max-width: 760px; margin: 0 auto var(--s-8); text-align: center; }
+  .ss-slab :global(.frame) { position: relative; aspect-ratio: 721 / 299; border-radius: 18px; overflow: hidden; box-shadow: 0 30px 50px -36px rgba(46,34,56,.6); }
+  .ss-slab figcaption { margin-top: var(--s-3); color: var(--ink-pm); font-size: var(--t-sm); line-height: 1.7; }
+  .ss-slab b { color: var(--ink-p); font-weight: 500; }
+  .ss-dish--oil { background: radial-gradient(circle at 50% 38%, rgba(255,255,255,.85), transparent 64%), linear-gradient(160deg, #F8E3B8, #EBD3F0); }
+  .ss-massage, .ss-ours { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--s-6); align-items: center; margin-top: var(--s-8); }
+  .ss-massage-img, .ss-ours-img { position: relative; aspect-ratio: 4 / 3; border-radius: 26px; overflow: hidden; box-shadow: 0 40px 60px -40px rgba(46,34,56,.6); }
+  .ss-massage-img :global(.frame), .ss-ours-img :global(.frame) { position: absolute; inset: 0; }
+  .ss-massage-t h3, .ss-ours h3 { font-size: var(--t-xl); color: var(--ink-p); }
+  .ss-massage-t p, .ss-ours p { margin-top: var(--s-3); color: var(--ink-pm); line-height: 1.85; }
+  .ss-safe { padding: var(--s-3) var(--s-4); border-radius: 18px; background: rgba(255,255,255,.55); border: 1px solid rgba(138,106,46,.2); font-size: var(--t-sm); }
+  .ss-ours { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); padding: var(--s-4); border-radius: 30px; background: rgba(255,255,255,.45); border: 1px solid rgba(255,255,255,.8); }
+  .ss-ours .btn { margin-top: var(--s-4); }
+
   /* ---- Stones, at night ---- */
   .ss-velvet { color: #EDE6F5; background: radial-gradient(1000px 520px at 50% 20%, #1E2A4E, transparent 70%), linear-gradient(180deg, #0C0B1C, #090814 60%, #0C0B1C); }
   .ss-velvet .eyebrow { color: #E2C27A; }
@@ -460,7 +570,7 @@ const STONE_GLOW: Record<string, string> = {
   .ss-velvet .ss-open-t > p { color: rgba(237,230,245,.8); }
   .ss-arch--gold { background: #0C0B1C; box-shadow: 0 0 0 1px rgba(226,194,122,.45), 0 50px 90px -40px rgba(0,0,0,.95); }
   .ss-arch--gold::after { border-color: rgba(226,194,122,.55); }
-  .ss-stones { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--s-4); list-style: none; padding: 0; margin: 0; }
+  .ss-stones { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: var(--s-4); list-style: none; padding: 0; margin: 0; }
   .ss-stones li { text-align: center; }
   .ss-stone-img { position: relative; width: 132px; aspect-ratio: 1; margin: 0 auto var(--s-3); border-radius: 50%; overflow: hidden; display: grid; place-items: center;
     background: radial-gradient(circle at 50% 40%, color-mix(in srgb, var(--glow) 55%, transparent), transparent 70%), #12112A;
@@ -474,6 +584,10 @@ const STONE_GLOW: Record<string, string> = {
   .ss-tray { position: relative; margin: var(--s-8) 0 0; }
   .ss-tray :global(.frame) { position: relative; aspect-ratio: 16 / 9; border-radius: 26px; overflow: hidden; box-shadow: 0 0 0 1px rgba(226,194,122,.3); }
   .ss-tray figcaption { margin-top: var(--s-2); text-align: center; font-size: var(--t-sm); font-style: italic; color: rgba(237,230,245,.65); }
+  .ss-gallery { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--s-3); list-style: none; padding: 0; margin: var(--s-7) 0 0; }
+  .ss-gallery li { position: relative; aspect-ratio: 1; border-radius: 20px; overflow: hidden; box-shadow: 0 0 0 1px rgba(226,194,122,.3); }
+  .ss-gallery :global(.frame) { position: absolute; inset: 0; }
+  .ss-gallery span { position: absolute; left: 10px; bottom: 10px; z-index: 2; padding: 4px 12px; border-radius: 999px; font-size: var(--t-micro); letter-spacing: .14em; text-transform: uppercase; color: #F6EEDC; background: rgba(9,8,20,.6); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
   .ss-today { max-width: 760px; margin: var(--s-7) auto 0; text-align: center; font-family: var(--ff-display); font-size: clamp(1.4rem, 2.6vw, 1.9rem); line-height: 1.4; color: #F6EEDC; }
   .ss-pieces { display: flex; align-items: center; justify-content: space-between; gap: var(--s-5); max-width: 860px; margin: var(--s-6) auto 0; padding: var(--s-4) var(--s-5);
     border-radius: 999px; border: 1px solid rgba(226,194,122,.3); }
@@ -524,6 +638,8 @@ const STONE_GLOW: Record<string, string> = {
     .ss-open--rev .ss-arch { order: -1; }
     .ss-apoth { grid-template-columns: 1fr; }
     .ss-stones { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: var(--s-6); }
+    .ss-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .ss-massage, .ss-ours { grid-template-columns: 1fr; gap: var(--s-4); }
     .ss-arch { max-width: 420px; }
   }
   @media (max-width: 680px) {
@@ -538,7 +654,8 @@ const STONE_GLOW: Record<string, string> = {
     .ss-sun span { font-size: var(--t-micro); }
     .ss-ritual ol, .ss-fibres, .ss-way-grid { grid-template-columns: 1fr; }
     .ss-stones { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .ss-stones li:last-child { grid-column: 1 / -1; max-width: 260px; justify-self: center; }
+    .ss-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .ss-gallery li:last-child { grid-column: 1 / -1; aspect-ratio: 2 / 1; }
     .ss-stone-img { width: 108px; }
     .ss-pieces { flex-direction: column; border-radius: 26px; text-align: center; }
     .ss-arch { max-width: 320px; }

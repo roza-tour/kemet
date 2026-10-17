@@ -84,7 +84,7 @@ export interface SacredStone {
   name: string;
   /** What Egypt called it, and in which language. */
   called: string;
-  calledIn: "ancient Egyptian" | "Arabic";
+  calledIn: "ancient Egyptian" | "Arabic" | "Latin";
   /** Where it came from — fact. */
   origin: string;
   /** What it meant — the belief. */
@@ -135,6 +135,73 @@ export const stones: SacredStone[] = [
     cut: "faceted",
     colors: ["#D3A8F0", "#8E5BB5", "#3E1F5C"],
   },
+  {
+    name: "Garnet",
+    called: "granatum", calledIn: "Latin",
+    origin: "Strung into Egyptian necklaces since before the pharaohs — garnet beads lie in Predynastic graves — and set in the jewellery of the Middle Kingdom. Its name comes from the pomegranate.",
+    meaning: "The red of life, like carnelian.",
+    cut: "faceted",
+    colors: ["#F07A8A", "#B8203A", "#4E0716"],
+  },
+];
+
+export interface SacredOil {
+  name: string;
+  ar: string;
+  /** Where it comes from, and its history — facts. */
+  story: string;
+  /** How it is used — tradition and use, never a medical claim. */
+  home: string;
+}
+
+/**
+ * The oils of Egypt. Facts are history and agriculture (the seven sacred oils,
+ * Delta jasmine, Fayoum chamomile, black seed in Tutankhamun's tomb); uses are
+ * scent, skin, hair and massage. Nothing here claims to treat anything.
+ */
+export const oils: SacredOil[] = [
+  {
+    name: "Jasmine",
+    ar: "ياسمين",
+    story: "Egypt is one of the world's great growers of jasmine. In the Nile Delta the flowers are picked by hand before sunrise, while their scent is strongest, and extracted the same day.",
+    home: "Warm, heady and joyful — a drop in a carrier oil for the evening.",
+  },
+  {
+    name: "Geranium",
+    ar: "عطرة",
+    story: "Grown in Middle Egypt and distilled for perfumers across the world, Egyptian geranium is prized for its rose-like scent.",
+    home: "Bright and rosy — a balancing note in a massage blend.",
+  },
+  {
+    name: "Chamomile",
+    ar: "بابونج",
+    story: "Egypt is one of the world's largest growers of chamomile, in the fields of Fayoum and Beni Suef.",
+    home: "Soft and apple-sweet — for winding down at night.",
+  },
+  {
+    name: "Black seed",
+    ar: "حبة البركة",
+    story: "Pressed cold from the seeds of Nigella. Black seed was found in the tomb of Tutankhamun.",
+    home: "Rich and peppery — used on skin and hair in Egyptian homes for generations.",
+  },
+  {
+    name: "Sesame",
+    ar: "سيرج",
+    story: "The everyday oil of Egypt, pressed from sesame seed in small traditional presses.",
+    home: "Light and warming — a classic base for massage.",
+  },
+  {
+    name: "Moringa",
+    ar: "زيت البان",
+    story: "Ben oil, from the moringa tree. Ancient perfumers prized it because it keeps for years without turning and carries a scent well.",
+    home: "Silky and almost scentless — the base that carries another oil.",
+  },
+  {
+    name: "Blue lotus",
+    ar: "لوتس أزرق",
+    story: "The sacred flower of the sun, painted on temple walls and carried in the hands of queens. Its scent is rare and precious.",
+    home: "Delicate and floral — for meditation and quiet.",
+  },
 ];
 
 export const sacredFaqs = [
@@ -155,6 +222,18 @@ export const sacredFaqs = [
     a: "Yes — it is one of the oldest traditions in Egyptian homes: incense is burned after a visit, before a new beginning and against hasad, the evil eye. It is a belief rather than a science, and we share it as Egyptians live it.",
   },
   {
+    q: "What oils did the ancient Egyptians use?",
+    a: "Plant oils — moringa (ben oil), sesame and castor among them — steeped with flowers, resins and spices to make perfumes and ointments. Temples kept seven sacred oils for their rituals, and offering slabs with seven hollows, one for each oil, survive from the Old Kingdom.",
+  },
+  {
+    q: "How do I make a massage oil?",
+    a: "Mix a few drops of an essential oil — jasmine, geranium or chamomile — into a carrier oil such as sesame, sweet almond or moringa. Essential oils are too strong to use on the skin undiluted: test the blend on a small patch of skin first, keep it away from the eyes, and ask your doctor before using essential oils if you are pregnant.",
+  },
+  {
+    q: "Is Egyptian jasmine special?",
+    a: "Egypt is one of the world's largest producers of jasmine. In the Nile Delta the flowers are picked by hand before sunrise, when their scent is strongest, and extracted the same day.",
+  },
+  {
     q: "Which gemstones come from Egypt itself?",
     a: "Turquoise from Sinai, peridot from Zabargad island in the Red Sea, amethyst from Wadi el-Hudi near Aswan, and carnelian from the deserts. Lapis lazuli, the deep blue of Tutankhamun's mask, was always imported, from the mountains of Afghanistan.",
   },
@@ -164,7 +243,7 @@ export const sacredFaqs = [
   },
   {
     q: "Can I buy these during my journey, or have them sent home?",
-    a: "Both. On a journey, your guide or a shopping companion takes you to Cairo's incense sellers and to stones, cotton and linen. From anywhere, write to us on WhatsApp: we send photographs of the actual pieces and a price, with shipping to your country. Payment by bank transfer, card or PayPal.",
+    a: "Both. On a journey, your guide or a shopping companion takes you to Cairo's incense and oil sellers, and to stones, cotton and linen. From anywhere, write to us on WhatsApp: we send photographs of the actual pieces and a price, with shipping to your country. Payment by bank transfer, card or PayPal.",
   },
 ];
 
@@ -191,6 +270,15 @@ export interface SacredPhotos {
   parcel?: MediaPlaceholder;
   /** By incense name, as in `incenses`. */
   incense?: Record<string, MediaPlaceholder>;
+  /** The owner's own stones, shown together under "Our stones". */
+  ownStones?: (MediaPlaceholder & { name: string })[];
+  /** The oils chapter: its arch, the seven-oils slab, the massage and our oils. */
+  oilsArch?: MediaPlaceholder;
+  oilsSlab?: MediaPlaceholder;
+  massage?: MediaPlaceholder;
+  ownOils?: MediaPlaceholder;
+  /** By oil name, as in `oils`. */
+  oil?: Record<string, MediaPlaceholder>;
 }
 
 export const sacredPhotos: SacredPhotos = {
@@ -214,11 +302,42 @@ export const sacredPhotos: SacredPhotos = {
     Myrrh: { src: "/images/stock/myrrh-on-charcoal.webp", width: 900, height: 900, alt: "Pieces of myrrh smouldering on a charcoal ring" },
     "Luban dakar": { src: "/images/stock/frankincense-tears.webp", width: 900, height: 900, alt: "Pale tears of Omani frankincense" },
   },
+  // The owner's own photographs of the stones Kemet offers.
   stone: {
-    Turquoise: { src: "/images/stock/turquoise-raw.webp", width: 700, height: 700, alt: "Raw sky-blue turquoise" },
-    "Lapis lazuli": { src: "/images/stock/lapis-lazuli-raw.webp", width: 700, height: 700, alt: "Raw lapis lazuli, deep blue veined with white" },
-    Peridot: { src: "/images/stock/peridot-crystal.webp", width: 700, height: 700, alt: "A clear green peridot crystal, lit from behind" },
-    Amethyst: { src: "/images/stock/amethyst-druse.webp", width: 700, height: 700, alt: "A bed of violet amethyst crystals" },
+    Turquoise: { src: "/images/sacred/stones/turquoise-tumbled-circle.webp", width: 400, height: 400, alt: "Polished turquoise stones" },
+    "Lapis lazuli": { src: "/images/sacred/stones/lapis-lazuli-tumbled-circle.webp", width: 400, height: 400, alt: "Polished lapis lazuli stones, deep blue flecked with gold" },
+    Peridot: { src: "/images/sacred/stones/peridot-pear-cut-circle.webp", width: 400, height: 400, alt: "Pear-cut peridots" },
+    Amethyst: { src: "/images/sacred/stones/amethyst-cabochons-circle.webp", width: 400, height: 400, alt: "Polished amethyst cabochons" },
+    Garnet: { src: "/images/sacred/stones/garnet-hearts-circle.webp", width: 400, height: 400, alt: "Heart-cut garnets" },
+  },
+  ownStones: [
+    { name: "Turquoise", src: "/images/sacred/stones/turquoise-tumbled.webp", width: 640, height: 479, alt: "Polished turquoise stones" },
+    { name: "Lapis lazuli", src: "/images/sacred/stones/lapis-lazuli-tumbled.webp", width: 800, height: 800, alt: "Polished lapis lazuli stones on a white plate" },
+    { name: "Peridot", src: "/images/sacred/stones/peridot-pear-cut.webp", width: 710, height: 532, alt: "Five pear-cut peridots" },
+    { name: "Amethyst", src: "/images/sacred/stones/amethyst-cabochons.webp", width: 300, height: 300, alt: "Polished amethyst cabochons" },
+    { name: "Garnet", src: "/images/sacred/stones/garnet-hearts.webp", width: 1600, height: 1600, alt: "Heart-cut garnets" },
+  ],
+  oilsArch: {
+    src: "/images/sacred/oils/perfume-amphora-glass.webp", width: 1161, height: 1500,
+    alt: "An ancient Egyptian perfume bottle of blue glass shaped like an amphora, about 1386–1330 BC",
+  },
+  oilsSlab: {
+    src: "/images/sacred/oils/seven-sacred-oils-slab.webp", width: 721, height: 299,
+    alt: "An Old Kingdom offering slab with a row of hollows for the seven sacred oils",
+  },
+  massage: {
+    src: "/images/sacred/oils/massage-oils.webp", width: 1024, height: 768,
+    alt: "Massage oils in glass bottles with white flowers and rolled towels",
+  },
+  ownOils: {
+    src: "/images/sacred/oils/oil-bottles-herbs.webp", width: 1024, height: 683,
+    alt: "Small corked bottles of natural oil with herbs and flowers on linen",
+  },
+  oil: {
+    Jasmine: { src: "/images/sacred/oils/jasmine-blossom.webp", width: 600, height: 600, alt: "White jasmine in flower" },
+    Geranium: { src: "/images/sacred/oils/geranium-flower.webp", width: 600, height: 600, alt: "A pink rose-geranium flower among its leaves" },
+    Chamomile: { src: "/images/sacred/oils/chamomile-flowers.webp", width: 600, height: 600, alt: "Chamomile flowers" },
+    Sesame: { src: "/images/sacred/oils/sesame-seeds.webp", width: 600, height: 600, alt: "Sesame seeds" },
   },
   flax: {
     src: "/images/stock/flax-field-flowering.webp", width: 1400, height: 933,
