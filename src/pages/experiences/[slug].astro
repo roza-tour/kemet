@@ -62,7 +62,9 @@ const title = experience.seo?.title ?? `${experience.title} — ${experience.dur
 const description = experience.seo?.description ?? experience.shortSummary;
 const jsonld = [entitySchema("experience", experience), ...(experience.films ?? []).map(videoObject)].flat();
 ---
-<Base title={title} description={description} active={route} jsonld={jsonld}>
+{/* The page ends with its own enquiry block (LeadCapture), so the
+    site-wide call to action would repeat it straight after. */}
+<Base title={title} description={description} active={route} jsonld={jsonld} showCta={false}>
   <article class={experience.theme ? `themed-${experience.theme}` : undefined}>
     <ExperienceHero experience={experience} base={base} />
 

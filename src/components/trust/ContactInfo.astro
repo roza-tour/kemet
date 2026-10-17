@@ -10,8 +10,10 @@ import type { CTAType } from "@/types";
 interface Props {
   /** Whether to show business hours below the contact channels. */
   showHours?: boolean;
+  /** The "during your trip" line — off where the page gives it its own block. */
+  showEmergency?: boolean;
 }
-const { showHours = true } = Astro.props;
+const { showHours = true, showEmergency = true } = Astro.props;
 
 const channels = company.contactChannels ?? [];
 const hours = company.businessHours ?? [];
@@ -64,7 +66,7 @@ function isExternal(type: CTAType): boolean {
         {h.days} · {h.opens}–{h.closes} {h.timezone}
       </p>
     ))}
-    {company.emergencyContactNote && (
+    {showEmergency && company.emergencyContactNote && (
       <p style="margin-top:var(--s-2);font-size:0.85em;opacity:0.7">{company.emergencyContactNote}</p>
     )}
   </div>

@@ -9,6 +9,18 @@ export function formatPrice(amount: number): string {
 }
 
 /**
+ * The same amount written the way the page's language writes money:
+ * "1.915 €" in German, "1 915 €" in French, "١٬٩١٥ €" in Arabic. English (or no
+ * locale) keeps "€1,915". A German reader takes "€1,915" for about two euros.
+ */
+export function formatPriceIn(amount: number, formatLocale?: string): string {
+  if (!formatLocale || formatLocale.startsWith("en")) return formatPrice(amount);
+  return new Intl.NumberFormat(formatLocale, {
+    style: "currency", currency: "EUR", maximumFractionDigits: 0, useGrouping: "always",
+  }).format(amount);
+}
+
+/**
  * The qualifying line under a published price: the party size it assumes and
  * whether entrance tickets sit outside it. Returns `undefined` when a tour
  * carries neither qualifier, so callers render nothing rather than an empty

@@ -52,8 +52,8 @@ const { hub, faqHeading = "Questions, answered" } = Astro.props;
               {hub.table.rows.map((r) => (
                 <tr>
                   <th scope="row">{r.label}</th>
-                  <td>{r.value}</td>
-                  <td class="he-note">{r.note}</td>
+                  <td data-label={hub.table?.columns[1]}>{r.value}</td>
+                  <td class="he-note" data-label={hub.table?.columns[2]}>{r.note}</td>
                 </tr>
               ))}
             </tbody>
@@ -97,6 +97,16 @@ const { hub, faqHeading = "Questions, answered" } = Astro.props;
     font-family: var(--ff-display); font-size:var(--t-base); white-space: nowrap; }
   .he-table td { color: var(--muted); font-size:var(--t-sm); line-height: 1.7; }
   .he-table .he-note { color: var(--muted-2); font-size:var(--t-sm); }
+  /* On a phone each row becomes a short stack — label, then each column named —
+     instead of a 560px table cut off at the screen's edge. */
+  @media (max-width: 680px) {
+    .he-table { min-width: 0; }
+    .he-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+    .he-table tr { display: block; padding: var(--s-3) 0; border-bottom: 1px solid var(--line); }
+    .he-table tbody th, .he-table td { display: block; border: 0; padding: 0 0 var(--s-1); }
+    .he-table td::before { content: attr(data-label); display: block; margin-top: var(--s-1);
+      font-size: var(--t-micro); letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
+  }
 
   @media(max-width:680px){
     .he-lede { font-size:var(--t-md); }

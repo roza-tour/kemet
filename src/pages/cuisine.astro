@@ -317,6 +317,10 @@ const food = tours.find((t) => t.slug === "tour-cairo-food");
 
   /* ---- The drawings behind the page ---------------------------------- */
   .cz-doodles { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+  /* The lower courses are not painted until they come near the screen: the
+     page drew everything at once on load and held a phone's main thread for
+     over half a second. The intrinsic size keeps the scrollbar honest. */
+  .cz-spice, .cz-day, .cz-sweets, .cz-drinks, .cz-taste { content-visibility: auto; contain-intrinsic-size: auto 1100px; }
   .cz-doodles :global(.cz-dd) { position: absolute; opacity: .3; transform: rotate(var(--rot));
     animation: cz-drift 14s ease-in-out infinite alternate; }
   @keyframes cz-drift { from { transform: rotate(var(--rot)) translateY(0); } to { transform: rotate(calc(var(--rot) + 5deg)) translateY(-14px); } }

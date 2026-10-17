@@ -545,7 +545,14 @@ const STONE_GLOW: Record<string, string> = {
   .ss-hero--photo .ss-hero-photo :global(img) { object-position: 70% 50%; }
   .ss-hero--photo .ss-hero-veil { background: linear-gradient(90deg, rgba(7,6,15,.92) 0%, rgba(7,6,15,.72) 38%, rgba(7,6,15,.1) 72%), linear-gradient(0deg, rgba(7,6,15,.8), transparent 40%); }
   .ss-hero--photo .ss-hero-in > * { max-width: 600px; }
-  .ss-hero--photo .ss-lede { margin-left: 0; }
+  /* On a phone the title always breaks the same way — "The Sacred / Senses /
+     of Egypt" — so the moment the webfont replaces the fallback font it
+     cannot add a line and push the page down (that reflow measured 0.17 CLS). */
+  @media (max-width: 680px) {
+    .ss-hero h1 em { display: block; }
+    .ss-hero h1 br { display: none; }
+  }
+  .ss-hero--photo .ss-lede { margin-left: 0; text-shadow: 0 1px 2px rgba(10,6,14,.85), 0 2px 18px rgba(10,6,14,.8); }
   .ss-hero--photo .ss-actions { justify-content: flex-start; }
   .ss-hero--photo .ss-zodiac { left: 24%; width: min(640px, 110vw); opacity: .28; }
   .ss-hero .crumb { color: rgba(237,230,245,.7); }
@@ -593,6 +600,8 @@ const STONE_GLOW: Record<string, string> = {
   .ss-shelf-head h3 { font-size: var(--t-xl); color: var(--ink-p); }
   .ss-shelf-head p { margin-top: var(--s-2); color: var(--ink-pm); }
   .ss-apoth { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-4); list-style: none; padding: 0; margin: 0; }
+  /* An odd last card (the seventh oil) sits centred, not alone on the left. */
+  .ss-apoth > li:last-child:nth-child(odd) { grid-column: 1 / -1; justify-self: center; width: calc(50% - var(--s-4) / 2); }
   .ss-apoth li { display: grid; grid-template-columns: 120px 1fr; gap: var(--s-4); align-items: start; padding: var(--s-4); border-radius: 28px;
     background: rgba(255,255,255,.42); border: 1px solid rgba(255,255,255,.75); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
     box-shadow: 0 30px 60px -46px rgba(70,40,90,.55); }
@@ -710,6 +719,7 @@ const STONE_GLOW: Record<string, string> = {
     .ss-open, .ss-open--rev { grid-template-columns: 1fr; gap: var(--s-6); }
     .ss-open--rev .ss-arch { order: -1; }
     .ss-apoth { grid-template-columns: 1fr; }
+    .ss-apoth > li:last-child:nth-child(odd) { width: auto; justify-self: stretch; }
     .ss-stones { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: var(--s-6); }
     .ss-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     .ss-massage, .ss-ours { grid-template-columns: 1fr; gap: var(--s-4); }

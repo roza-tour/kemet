@@ -51,7 +51,9 @@ const title = guide.seo?.title ?? `${guide.title} | Kemet Egypt Travel Guides`;
 const description = guide.seo?.description ?? guide.shortSummary;
 const jsonld = entitySchema("guide", guide);
 ---
-<Base title={title} description={description} active={route} jsonld={jsonld}>
+{/* The page ends with its own enquiry block (LeadCapture), so the
+    site-wide call to action would repeat it straight after. */}
+<Base title={title} description={description} active={route} jsonld={jsonld} showCta={false}>
   <article class={guide.theme ? `themed-${guide.theme}` : undefined}>
     <GuideHero guide={guide} base={base} />
 

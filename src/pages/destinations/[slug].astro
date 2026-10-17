@@ -82,7 +82,9 @@ const title = dest.seo?.title ?? `${dest.title} — ${regionLabel}, Egypt | Keme
 const description = dest.seo?.description ?? dest.shortSummary;
 const jsonld = entitySchema("destination", dest);
 ---
-<Base title={title} description={description} active={route} jsonld={jsonld}>
+{/* The page ends with its own enquiry block (LeadCapture), so the
+    site-wide call to action would repeat it straight after. */}
+<Base title={title} description={description} active={route} jsonld={jsonld} showCta={false}>
   <article>
     <DestinationHero destination={dest} base={base} />
 

@@ -89,8 +89,8 @@ const title = `${c.title} | Kemet`;
             {c.rows.map((r) => (
               <tr>
                 <th scope="row">{r.aspect}</th>
-                <td>{r.a}</td>
-                <td>{r.b}</td>
+                <td data-label={c.optionA}>{r.a}</td>
+                <td data-label={c.optionB}>{r.b}</td>
               </tr>
             ))}
           </tbody>
@@ -189,6 +189,20 @@ const title = `${c.title} | Kemet`;
   .cp-table tbody th { font-weight: 400; color: var(--muted-2); font-size:var(--t-tiny);
     letter-spacing: .1em; text-transform: uppercase; width: 26%; }
   .cp-table td { color: var(--muted); font-size:var(--t-sm); line-height: 1.7; }
+  /* On a phone the table was 620px wide inside a 342px column: the second
+     option sat off-screen with nothing to say it was there. Each row becomes
+     a small card instead — the aspect on top, the two options side by side,
+     each named. The header row stays for screen readers only. */
+  @media (max-width: 680px) {
+    .cp-table { min-width: 0; }
+    .cp-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+    .cp-table tr { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-1) var(--s-3);
+      padding: var(--s-3) 0; border-bottom: 1px solid var(--line); }
+    .cp-table tbody th { grid-column: 1 / -1; width: auto; border: 0; padding: 0 0 var(--s-1); }
+    .cp-table td { border: 0; padding: 0; }
+    .cp-table td::before { content: attr(data-label); display: block; margin-bottom: 4px;
+      font-size: var(--t-micro); letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
+  }
 
   .cp-cols { display: grid; grid-template-columns: 1fr 1fr; gap:var(--s-4); }
   .cp-col { border: 1px solid var(--line); border-radius: 2px; padding:var(--s-4) var(--s-4);
@@ -216,6 +230,10 @@ const title = `${c.title} | Kemet`;
   .cp-others { margin-top:var(--s-6); }
   .cp-others h2 { font-size:var(--t-lg); color: var(--bone); margin-bottom:var(--s-3); }
   .cp-others-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap:var(--s-3); }
+  @media (min-width: 681px) {
+    /* Five decisions in two columns: the fifth sits centred under the others. */
+    .cp-others-grid > :last-child:nth-child(odd) { grid-column: 1 / -1; justify-self: center; width: calc(50% - var(--s-3) / 2); }
+  }
   .cp-other { display: block; border: 1px solid var(--line); border-radius: 2px;
     padding:var(--s-4) var(--s-3); transition: border-color .4s, transform .4s cubic-bezier(.22,.61,.36,1); }
   .cp-other:hover { border-color: var(--gold); transform: translateY(-4px); }

@@ -20,7 +20,7 @@ import type {
 /** Egypt's regions — the geographic spine destinations and tours hang off. */
 export const regions: TaxonomyTerm[] = [
   { id: "cairo", label: "Cairo & Giza" },
-  { id: "nile-valley", label: "Nile Valley (Luxor & Aswan)" },
+  { id: "nile-valley", label: "Nile Valley" },
   { id: "mediterranean", label: "Mediterranean Coast" },
   { id: "red-sea", label: "Red Sea & Sinai" },
   { id: "western-desert", label: "Western Desert & Oases" },

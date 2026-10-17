@@ -16,7 +16,6 @@ import PageHero from "@/components/PageHero.astro";
 import Frieze from "@/components/Frieze.astro";
 import Faq from "@/components/Faq.astro";
 import AnswerBox from "@/components/aeo/AnswerBox.astro";
-import Byline from "@/components/trust/Byline.astro";
 import LeadCapture from "@/components/conversion/LeadCapture.astro";
 import SectionHeader from "@/components/SectionHeader.astro";
 import { breadcrumb, answerPageSchema } from "@/schemas/jsonld";
@@ -134,9 +133,9 @@ const jsonld: Record<string, unknown>[] = [
   <section style="padding-top:var(--s-4)">
     <div class="wrap sf-wrap">
 
+      {/* The answer box already says who checked it; a byline straight
+          beneath named the same reviewer twice in a row. */}
       <AnswerBox question={ANSWER_Q} answer={ANSWER_A} />
-
-      <Byline />
 
       <div class="sf-facts">
         {facts.map((f) => (

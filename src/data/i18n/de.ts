@@ -231,7 +231,7 @@ export const de: LocalizedPage[] = [
     lede:
       "Die meisten Seiten zu dieser Frage sind für andere Reisende geschrieben — Tagesbudgets, Mehrbettzimmer und wie man um eine Feluke feilscht. Das ist eine legitime Art, Ägypten zu sehen, und nicht die, die wir planen. Hier ist dieselbe Frage für eine private, geführte Reise beantwortet, mit den Zahlen, die wir tatsächlich anbieten.",
     facts: [
-      { label: "Privat, maßgeschneidert", value: "200–450 € p. P./Tag" },
+      { label: "Privat, maßgeschneidert", value: "200–450\u00A0€ p.\u202FP./Tag" },
       { label: "Eine Woche zu zweit", value: "2.800–6.000 € gesamt" },
       { label: "Anzahlung", value: "25 %" },
       { label: "Restzahlung", value: "30 Tage vorher" },
@@ -448,7 +448,7 @@ export const de: LocalizedPage[] = [
     standfirst:
       "Keine ruhige Stunde, kein Seiteneingang — das Monument, leer, und drinnen steht nur Ihre Gesellschaft.",
     lede:
-      "Es gibt Orte in Ägypten, die für die Öffentlichkeit geschlossen und für eine einzige Gesellschaft geöffnet werden können. Die Cheops-Pyramide wird nach Besuchsschluss wieder aufgeschlossen; das Giza-Plateau wird vor Toröffnung betreten; im Karnak-Bezirk wird eingedeckt. Das ist keine Frage des Preises, sondern der GENEHMIGUNG — und die beantragen wir in Ihrem Namen.",
+      "Es gibt Orte in Ägypten, die für die Öffentlichkeit geschlossen und für eine einzige Gesellschaft geöffnet werden können. Die Cheops-Pyramide wird nach Besuchsschluss wieder aufgeschlossen; das Giza-Plateau wird vor Toröffnung betreten; im Karnak-Bezirk wird eingedeckt. Das ist keine Frage des Preises, sondern der Genehmigung — und die beantragen wir in Ihrem Namen.",
     facts: [
       { label: "Grundlage", value: "Genehmigung, nicht Zahlung" },
       { label: "Beantragt", value: "Auf Ihren Namen" },

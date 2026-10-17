@@ -24,7 +24,7 @@ import type { TranslatedLocale } from "@/config/i18n";
 import { LOCALE_META } from "@/config/i18n";
 import { TOUR_PHRASEBOOK } from "@/data/tours-i18n/phrasebook";
 import { ui, placeName } from "@/config/ui";
-import { formatPrice } from "@/utils/format";
+import { formatPriceIn } from "@/utils/format";
 import { canonical, whatsappLink, mailtoLink, publicPath } from "@/utils/links";
 import { TRANSLATION_GROUPS } from "@/config/i18n";
 import { site, SITE_URL } from "@/config/site";
@@ -189,7 +189,7 @@ const jsonld: Record<string, unknown>[] = [
       <div class="lt-price reveal">
         <div data-eur={tour.price}>
           <span class="lt-from">{p.f.from}</span>
-          <span class="lt-amount">{formatPrice(tour.price)}</span>
+          <span class="lt-amount">{formatPriceIn(tour.price, LOCALE_META[locale].formatLocale)}</span>
           <span class="lt-pp">{t.perPerson}</span>
         </div>
         <p>{p.priceNote}{tour.foodExcluded && ` ${p.foodNote}`}</p>

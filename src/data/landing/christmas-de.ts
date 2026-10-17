@@ -68,9 +68,10 @@ const deY = (x: Date) => x.toLocaleDateString("de-DE", { timeZone: "UTC", day: "
 const dec = findMonth("december")!;
 const jan = findMonth("january")!;
 
+// Only journeys published in German: an English card on a German page reads
+// as a mistake. (tour-nile-cruise has no German page yet.)
 const JOURNEY_SLUGS = [
   "tour-10-day",
-  "tour-nile-cruise",
   "tour-7-day",
   "tour-grand-14day",
   "tour-cairo-vip-3day",

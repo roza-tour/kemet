@@ -69,7 +69,9 @@ export const ultraJourneys: UltraJourney[] = [
       { hotel: "Marriott Mena House", place: "giza", nights: 3, room: "pyramidSuite" },
       { hotel: "Al Moudira", place: "luxor", nights: 3, room: "suite" },
     ],
-    image: { src: "/images/giza/giza-great-pyramid-clear-sky.webp", width: 1600, height: 1062 },
+    // The Great Pyramid itself (giza-great-pyramid-clear-sky is the Red Pyramid
+    // at Dahshur, which this journey does not visit).
+    image: { src: "/images/giza/giza-great-pyramid-khufu.webp", width: 736, height: 981 },
     accent: "lapis",
   },
   {

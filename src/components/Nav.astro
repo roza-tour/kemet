@@ -64,7 +64,7 @@ const isCurrent = (item: (typeof primaryNav)[number]) =>
       seasonal system being switched off. This chip cannot be dismissed and
       reads no storage: if a season is active, it is on screen. Filled in by
       components/SeasonalSkin. */}
-  <a class="schip" id="season-chip" href="#" hidden>
+  <a class="schip" id="season-chip" href="#" hidden aria-labelledby="schip-label">
     <span class="smark schip-mark" aria-hidden="true"></span>
     <span class="schip-label" id="schip-label"></span>
   </a>

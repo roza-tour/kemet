@@ -625,7 +625,7 @@ export const destinations: Destination[] = [
       "A green depression an hour from Cairo — waterfalls in the desert, a lake full of birdlife, whale fossils, and a village of potters.",
     longDescription:
       "The Fayoum is Egypt's oldest oasis and its most surprising day of travel: a fertile basin an hour and a half southwest of Cairo where the rules of the desert are suspended. Wadi El Rayan's twin lakes spill into each other over Egypt's only waterfalls, dunes run straight to the water's edge, and the wind farms of birdlife on Lake Qarun have drawn travellers since pharaonic times — the region's waterwheels, still turning, are its emblem. Beyond the green rim lies Wadi Al-Hitan, the Valley of the Whales, a UNESCO World Heritage site scattered with forty-million-year-old skeletons of early whales that still had legs. Tie it together with lunch among the potters of Tunis village and you have the richest single day trip Cairo offers — or an unhurried overnight under desert stars.",
-    region: "fayoum",
+    region: "western-desert",
     coordinates: { lat: 29.3084, lng: 30.8428 },
     unesco: { listed: true, siteName: "Wadi Al-Hitan (Whale Valley)" },
     bestSeasons: ["autumn", "winter", "spring"],

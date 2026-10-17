@@ -1,10 +1,11 @@
 ---
 import type { Tour } from "@/types";
-import { formatPrice } from "@/utils/format";
+import { formatPriceIn } from "@/utils/format";
 import Placeholder from "@/components/Placeholder.astro";
 import { ui, UI_DEFAULT, tourTag, placeName, priceBasisShort } from "@/config/ui";
 import { tourRouteFor, tourTextFor } from "@/config/tour-i18n";
 import type { SiteLocale, TranslatedLocale } from "@/config/i18n";
+import { LOCALE_META } from "@/config/i18n";
 
 interface Props {
   tour: Tour;
@@ -51,8 +52,8 @@ const route = tour.cities.map((c) => placeName(c, t)).join(" · ");
     <p>{cardSummary}</p>
     <div class="meta">
       <div class="price" data-eur={tour.price}>
-        {formatPrice(tour.price)}
-        {tour.was && <span class="was">{formatPrice(tour.was)}</span>}
+        {formatPriceIn(tour.price, LOCALE_META[locale]?.formatLocale)}
+        {tour.was && <span class="was">{formatPriceIn(tour.was, LOCALE_META[locale]?.formatLocale)}</span>}
         <small>{t.perPerson}</small>
         {basis && <span class="basis">{basis}</span>}
       </div>
