@@ -339,10 +339,12 @@ export const sacredPhotos: SacredPhotos = {
     Chamomile: { src: "/images/sacred/oils/chamomile-flowers.webp", width: 600, height: 600, alt: "Chamomile flowers" },
     Sesame: { src: "/images/sacred/oils/sesame-seeds.webp", width: 600, height: 600, alt: "Sesame seeds" },
     "Black seed": { src: "/images/sacred/oils/black-seed-jar.webp", width: 400, height: 400, alt: "Black seed in a glass jar" },
+    Moringa: { src: "/images/sacred/oils/moringa-seeds.webp", width: 600, height: 600, alt: "Dried moringa seeds, the source of ben oil" },
+    "Blue lotus": { src: "/images/sacred/oils/blue-lotus-flower.webp", width: 600, height: 600, alt: "A blue lotus in flower, pale violet petals around a golden heart" },
   },
   flax: {
-    src: "/images/stock/flax-field-flowering.webp", width: 1400, height: 933,
-    alt: "A field of flax in blue flower, the plant linen is spun from",
+    src: "/images/sacred/flax-flower-blue.webp", width: 1200, height: 750,
+    alt: "A pale blue flax flower, the plant linen is spun from",
   },
   souk: {
     src: "/images/stock/khan-el-khalili-attar-shop.webp", width: 1400, height: 928,

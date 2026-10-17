@@ -39,7 +39,6 @@ export const photoCredits: Record<string, PhotoCredit> = {
   "/images/stock/frankincense-myrrh-burning.webp": { subject: "Frankincense and myrrh burning on charcoal in a brass burner", creator: "Mark Bonica", license: "CC BY 2.0", source: "https://www.flickr.com/photos/23119666@N03/4636042546" },
   "/images/stock/myrrh-on-charcoal.webp": { subject: "Myrrh burning on charcoal", creator: "maja kuzmanovic", license: "CC BY-SA 2.0", source: "https://www.flickr.com/photos/deziluzija/50796268726" },
   "/images/stock/cotton-open-boll.webp": { subject: "An open cotton boll", creator: "Alabama Extension", license: "CC0", source: "https://www.flickr.com/photos/alabama_extension/53489490144" },
-  "/images/stock/flax-field-flowering.webp": { subject: "A flax field in flower", creator: "Johan Neven", license: "CC BY 2.0", source: "https://www.flickr.com/photos/enneafive/34264144884" },
   "/images/stock/khan-el-khalili-attar-shop.webp": { subject: "A spice and attar shop in Khan el-Khalili", creator: "Dan (twiga_swala)", license: "CC BY-SA 2.0", source: "https://www.flickr.com/photos/twiga_swala/2274965337" },
   "/images/stock/molokhia.webp": { subject: "Molokhia", creator: "Yosi I", license: "CC BY 2.5", source: `${C}Molokheya_hi_res.JPG` },
   "/images/stock/feteer.webp": { subject: "Feteer meshaltet", creator: "Mohamed Ouda", license: "CC BY-SA 4.0", source: `${C}Egyptian-food-16.jpg` },

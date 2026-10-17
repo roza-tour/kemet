@@ -95,6 +95,8 @@ const credits = [...creditList.reduce((m, c) => {
 const usesMet = [PH.jewel, PH.tray, PH.linen, PH.oilsArch, PH.oilsSlab].some((p) => p?.src);
 
 /** Long Arabic names are set smaller so they stay on one line in their circle. */
+/** Until there is a photograph of a parcel: four of our own pieces — an incense, an oil, a stone. */
+const sentHome = [PH.incense?.["Luban dakar"], PH.incense?.Oud, PH.ownStones?.find((g) => g.name === "Carnelian"), PH.oil?.["Black seed"]].filter((p): p is NonNullable<typeof p> => !!p?.src);
 const calliSize = (ar: string) => (ar.length > 8 ? "font-size:1.45em" : ar.length > 5 ? "font-size:1.8em" : undefined);
 
 /** The aura colour behind each stone. */
@@ -407,7 +409,13 @@ const STONE_GLOW: Record<string, string> = {
           <a class="btn btn-ghost" href={journey}>Add it to my journey</a>
         </article>
         <article class="ss-way reveal">
-          {PH.parcel && <div class="ss-way-img"><Placeholder src={PH.parcel.src} alt={PH.parcel.alt} width={PH.parcel.width} height={PH.parcel.height} sizes="half" label="Sent home" /></div>}
+          {PH.parcel ? (
+            <div class="ss-way-img"><Placeholder src={PH.parcel.src} alt={PH.parcel.alt} width={PH.parcel.width} height={PH.parcel.height} sizes="half" label="Sent home" /></div>
+          ) : sentHome.length === 4 && (
+            <div class="ss-way-img ss-way-mosaic">
+              {sentHome.map((p) => <div><Placeholder src={p.src} alt={p.alt} width={p.width} height={p.height} sizes="card" label="Sent home" /></div>)}
+            </div>
+          )}
           <h3>Sent to your home</h3>
           <p>Write to us on WhatsApp with what you are looking for — an incense, an oil, a stone, a size or a colour. We send photographs of the actual pieces and a price with shipping to your country. Pay by bank transfer, card or PayPal.</p>
           <a class="btn btn-solid" href={order} target="_blank" rel="noopener">Order on WhatsApp</a>
@@ -620,6 +628,9 @@ const STONE_GLOW: Record<string, string> = {
     -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); box-shadow: 0 30px 60px -46px rgba(70,40,90,.55); }
   .ss-way-img { position: relative; aspect-ratio: 16 / 9; border-radius: 20px; overflow: hidden; margin-bottom: var(--s-4); }
   .ss-way-img :global(.frame) { position: absolute; inset: 0; }
+  .ss-way-mosaic { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 6px; }
+  .ss-way-mosaic > div { position: relative; overflow: hidden; border-radius: 8px; }
+  .ss-way-mosaic :global(.pcredit) { display: none; }
   .ss-way h3 { font-size: var(--t-lg); color: var(--ink-p); }
   .ss-way p { margin: var(--s-2) 0 var(--s-4); color: var(--ink-pm); line-height: 1.85; }
   .ss-way .btn-ghost { color: var(--gold-d); border-color: rgba(138,106,46,.55); }
