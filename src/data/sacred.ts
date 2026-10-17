@@ -329,10 +329,6 @@ export const sacredPhotos: SacredPhotos = {
     src: "/images/sacred/oils/massage-oils.webp", width: 1024, height: 768,
     alt: "Massage oils in glass bottles with white flowers and rolled towels",
   },
-  ownOils: {
-    src: "/images/sacred/oils/oil-bottles-herbs.webp", width: 1024, height: 683,
-    alt: "Small corked bottles of natural oil with herbs and flowers on linen",
-  },
   oil: {
     Jasmine: { src: "/images/sacred/oils/jasmine-blossom.webp", width: 600, height: 600, alt: "White jasmine in flower" },
     Geranium: { src: "/images/sacred/oils/geranium-flower.webp", width: 600, height: 600, alt: "A pink rose-geranium flower among its leaves" },
