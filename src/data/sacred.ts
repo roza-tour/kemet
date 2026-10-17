@@ -215,7 +215,18 @@ export const sacredPhotos: SacredPhotos = {
     "Luban dakar": { src: "/images/stock/frankincense-tears.webp", width: 900, height: 900, alt: "Pale tears of Omani frankincense" },
   },
   stone: {
+    Turquoise: { src: "/images/stock/turquoise-raw.webp", width: 700, height: 700, alt: "Raw sky-blue turquoise" },
+    "Lapis lazuli": { src: "/images/stock/lapis-lazuli-raw.webp", width: 700, height: 700, alt: "Raw lapis lazuli, deep blue veined with white" },
     Peridot: { src: "/images/stock/peridot-crystal.webp", width: 700, height: 700, alt: "A clear green peridot crystal, lit from behind" },
+    Amethyst: { src: "/images/stock/amethyst-druse.webp", width: 700, height: 700, alt: "A bed of violet amethyst crystals" },
+  },
+  flax: {
+    src: "/images/stock/flax-field-flowering.webp", width: 1400, height: 933,
+    alt: "A field of flax in blue flower, the plant linen is spun from",
+  },
+  souk: {
+    src: "/images/stock/khan-el-khalili-attar-shop.webp", width: 1400, height: 928,
+    alt: "A spice and attar shop in Khan el-Khalili, sacks of herbs and spices before shelves of jars",
   },
   cotton: {
     src: "/images/stock/cotton-open-boll.webp", width: 1400, height: 933,
