@@ -81,9 +81,15 @@ const signAt = (i: number) => {
 const usedSrcs = [PH.hero, PH.resin, PH.jewel, PH.tray, PH.linen, PH.cotton, PH.flax, PH.souk, PH.parcel,
   ...Object.values(PH.incense ?? {}), ...Object.values(PH.stone ?? {})]
   .map((p) => p?.src).filter((x): x is string => !!x);
-const credits: PhotoCredit[] = [...new Set(usedSrcs)]
+const creditList: PhotoCredit[] = [...new Set(usedSrcs)]
   .map((src) => creditFor(src))
   .filter((c): c is PhotoCredit => !!c && !/^(CC0|Public)/i.test(c.license));
+// One entry per photographer and licence, each photograph still linked.
+const credits = [...creditList.reduce((m, c) => {
+  const k = `${c.creator}|${c.license}`;
+  m.set(k, { creator: c.creator, license: c.license, sources: [...(m.get(k)?.sources ?? []), c.source] });
+  return m;
+}, new Map<string, { creator: string; license: string; sources: string[] }>()).values()];
 const usesMet = usedSrcs.some((s) => s.startsWith("/images/sacred/"));
 
 /** The aura colour behind each stone. */
@@ -328,7 +334,9 @@ const STONE_GLOW: Record<string, string> = {
       {(credits.length > 0 || usesMet) && (
         <p class="ss-credits">Photographs:
           {usesMet && <> ancient jewellery and linen, <a href="https://www.metmuseum.org/about-the-met/policies-and-documents/open-access" target="_blank" rel="noopener nofollow">The Metropolitan Museum of Art</a> (public domain){credits.length ? " ·" : ""}</>}
-          {credits.map((c, i) => <> <a href={c.source} target="_blank" rel="noopener nofollow">{c.creator}</a> ({c.license}){i < credits.length - 1 ? " ·" : ""}</>)}
+          {credits.map((c, i) => (
+            <> <a href={c.sources[0]} target="_blank" rel="noopener nofollow">{c.creator}</a>{c.sources.slice(1).map((src, k) => <>, <a href={src} target="_blank" rel="noopener nofollow">{k + 2}</a></>)} ({c.license}){i < credits.length - 1 ? " ·" : ""}</>
+          ))}
         </p>
       )}
     </div>
