@@ -107,6 +107,8 @@ const STONE_GLOW: Record<string, string> = {
   description="Myrrh, luban dakar and oud; Egyptian jasmine and sacred oils; the stones the pharaohs held sacred; cotton and linen — on your journey or sent home."
   active={route}
   jsonld={jsonld}
+  ogImage={PH.oilsArch?.src}
+  ogImageAlt={PH.oilsArch?.alt}
   keywords="egyptian incense, luban dakar, egyptian frankincense, myrrh incense egypt, oud bakhoor egypt, ancient egyptian gemstones, sinai turquoise, egyptian cotton clothing, egyptian linen, khan el khalili incense, egyptian essential oils, egyptian jasmine oil, black seed oil, natural massage oil"
 >
 <div class="ss">
@@ -586,7 +588,7 @@ const STONE_GLOW: Record<string, string> = {
   .ss-tray { position: relative; margin: var(--s-8) 0 0; }
   .ss-tray :global(.frame) { position: relative; aspect-ratio: 16 / 9; border-radius: 26px; overflow: hidden; box-shadow: 0 0 0 1px rgba(226,194,122,.3); }
   .ss-tray figcaption { margin-top: var(--s-2); text-align: center; font-size: var(--t-sm); font-style: italic; color: rgba(237,230,245,.65); }
-  .ss-gallery { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--s-3); list-style: none; padding: 0; margin: var(--s-7) 0 0; }
+  .ss-gallery { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: var(--s-3); list-style: none; padding: 0; margin: var(--s-7) 0 0; }
   .ss-gallery li { position: relative; aspect-ratio: 1; border-radius: 20px; overflow: hidden; box-shadow: 0 0 0 1px rgba(226,194,122,.3); }
   .ss-gallery :global(.frame) { position: absolute; inset: 0; }
   .ss-gallery span { position: absolute; left: 10px; bottom: 10px; z-index: 2; padding: 4px 12px; border-radius: 999px; font-size: var(--t-micro); letter-spacing: .14em; text-transform: uppercase; color: #F6EEDC; background: rgba(9,8,20,.6); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
@@ -657,7 +659,6 @@ const STONE_GLOW: Record<string, string> = {
     .ss-ritual ol, .ss-fibres, .ss-way-grid { grid-template-columns: 1fr; }
     .ss-stones { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .ss-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .ss-gallery li:last-child { grid-column: 1 / -1; aspect-ratio: 2 / 1; }
     .ss-stone-img { width: 108px; }
     .ss-pieces { flex-direction: column; border-radius: 26px; text-align: center; }
     .ss-arch { max-width: 320px; }

@@ -37,7 +37,6 @@ export const photoCredits: Record<string, PhotoCredit> = {
   "/images/stock/giza-pyramids-sunrise-sky.webp": { subject: "Sunrise over the pyramids of Giza", creator: "Ben Sutherland", license: "CC BY 2.0", source: "https://www.flickr.com/photos/bensutherland/27684377097" },
   "/images/stock/incense-burner-smoke.webp": { subject: "Smoke rising from an engraved brass incense burner", creator: "Mark Bonica", license: "CC BY 2.0", source: "https://www.flickr.com/photos/23119666@N03/4635439613" },
   "/images/stock/frankincense-myrrh-burning.webp": { subject: "Frankincense and myrrh burning on charcoal in a brass burner", creator: "Mark Bonica", license: "CC BY 2.0", source: "https://www.flickr.com/photos/23119666@N03/4636042546" },
-  "/images/stock/frankincense-tears.webp": { subject: "Omani frankincense tears", creator: "WIPO", license: "CC BY 2.0", source: "https://www.flickr.com/photos/wipo/53035562267" },
   "/images/stock/myrrh-on-charcoal.webp": { subject: "Myrrh burning on charcoal", creator: "maja kuzmanovic", license: "CC BY-SA 2.0", source: "https://www.flickr.com/photos/deziluzija/50796268726" },
   "/images/stock/cotton-open-boll.webp": { subject: "An open cotton boll", creator: "Alabama Extension", license: "CC0", source: "https://www.flickr.com/photos/alabama_extension/53489490144" },
   "/images/stock/flax-field-flowering.webp": { subject: "A flax field in flower", creator: "Johan Neven", license: "CC BY 2.0", source: "https://www.flickr.com/photos/enneafive/34264144884" },

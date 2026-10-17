@@ -300,11 +300,14 @@ export const sacredPhotos: SacredPhotos = {
   },
   incense: {
     Myrrh: { src: "/images/stock/myrrh-on-charcoal.webp", width: 900, height: 900, alt: "Pieces of myrrh smouldering on a charcoal ring" },
-    "Luban dakar": { src: "/images/stock/frankincense-tears.webp", width: 900, height: 900, alt: "Pale tears of Omani frankincense" },
+    "Luban dakar": { src: "/images/sacred/incense/frankincense-tears-oil.webp", width: 320, height: 320, alt: "Tears of frankincense in a wooden bowl, beside bottles of frankincense oil" },
+    Oud: { src: "/images/sacred/incense/oud-chips-burning.webp", width: 500, height: 500, alt: "Chips of oud smouldering in a burner, more agarwood beside it" },
+    Mint: { src: "/images/sacred/incense/mint-leaves-powder.webp", width: 393, height: 393, alt: "Dried mint, ground, with fresh mint leaves" },
   },
   // The owner's own photographs of the stones Kemet offers.
   stone: {
     Turquoise: { src: "/images/sacred/stones/turquoise-tumbled-circle.webp", width: 400, height: 400, alt: "Polished turquoise stones" },
+    Carnelian: { src: "/images/sacred/stones/carnelian-beads-circle.webp", width: 400, height: 400, alt: "Strands of polished carnelian beads" },
     "Lapis lazuli": { src: "/images/sacred/stones/lapis-lazuli-tumbled-circle.webp", width: 400, height: 400, alt: "Polished lapis lazuli stones, deep blue flecked with gold" },
     Peridot: { src: "/images/sacred/stones/peridot-pear-cut-circle.webp", width: 400, height: 400, alt: "Pear-cut peridots" },
     Amethyst: { src: "/images/sacred/stones/amethyst-cabochons-circle.webp", width: 400, height: 400, alt: "Polished amethyst cabochons" },
@@ -313,6 +316,7 @@ export const sacredPhotos: SacredPhotos = {
   ownStones: [
     { name: "Turquoise", src: "/images/sacred/stones/turquoise-tumbled.webp", width: 640, height: 479, alt: "Polished turquoise stones" },
     { name: "Lapis lazuli", src: "/images/sacred/stones/lapis-lazuli-tumbled.webp", width: 800, height: 800, alt: "Polished lapis lazuli stones on a white plate" },
+    { name: "Carnelian", src: "/images/sacred/stones/carnelian-beads.webp", width: 894, height: 894, alt: "Strands of polished carnelian beads" },
     { name: "Peridot", src: "/images/sacred/stones/peridot-pear-cut.webp", width: 710, height: 532, alt: "Five pear-cut peridots" },
     { name: "Amethyst", src: "/images/sacred/stones/amethyst-cabochons.webp", width: 300, height: 300, alt: "Polished amethyst cabochons" },
     { name: "Garnet", src: "/images/sacred/stones/garnet-hearts.webp", width: 1600, height: 1600, alt: "Heart-cut garnets" },
@@ -334,6 +338,7 @@ export const sacredPhotos: SacredPhotos = {
     Geranium: { src: "/images/sacred/oils/geranium-flower.webp", width: 600, height: 600, alt: "A pink rose-geranium flower among its leaves" },
     Chamomile: { src: "/images/sacred/oils/chamomile-flowers.webp", width: 600, height: 600, alt: "Chamomile flowers" },
     Sesame: { src: "/images/sacred/oils/sesame-seeds.webp", width: 600, height: 600, alt: "Sesame seeds" },
+    "Black seed": { src: "/images/sacred/oils/black-seed-jar.webp", width: 400, height: 400, alt: "Black seed in a glass jar" },
   },
   flax: {
     src: "/images/stock/flax-field-flowering.webp", width: 1400, height: 933,
