@@ -303,6 +303,8 @@ export const sacredPhotos: SacredPhotos = {
     "Luban dakar": { src: "/images/sacred/incense/frankincense-tears-oil.webp", width: 320, height: 320, alt: "Tears of frankincense in a wooden bowl, beside bottles of frankincense oil" },
     Oud: { src: "/images/sacred/incense/oud-chips-burning.webp", width: 500, height: 500, alt: "Chips of oud smouldering in a burner, more agarwood beside it" },
     Mint: { src: "/images/sacred/incense/mint-leaves-powder.webp", width: 393, height: 393, alt: "Dried mint, ground, with fresh mint leaves" },
+    Sandalwood: { src: "/images/sacred/incense/sandalwood-chips-jar.webp", width: 600, height: 600, alt: "Chips of sandalwood in an open glass jar" },
+    Camphor: { src: "/images/sacred/incense/camphor-crystals-jars.webp", width: 500, height: 500, alt: "White camphor crystals in two clear jars, a few on a green leaf" },
   },
   // The owner's own photographs of the stones Kemet offers.
   stone: {
