@@ -119,6 +119,7 @@ export const GET: APIRoute = () => {
   lines.push(item("About Kemet", "about.html", "Who we are, how we design journeys, and our editorial standards."));
   lines.push(item("Our travellers", "travellers.html", "Our own footage and photographs of Kemet journeys — a sunrise balloon flight over Luxor's West Bank, filmed from the basket, and our guests across Egypt. Links to independent reviews on TripAdvisor and Google."));
   lines.push(item("Contact", "contact.html", "Enquiry form, WhatsApp, email and business hours."));
+  lines.push(item("For travel agents & tour operators", "travel-agents.html", "Private ground arrangements in Egypt for travel agents and tour operators abroad: Egyptologists, vehicles, hotels and Nile cruises, at trade rates."));
   lines.push("");
 
   lines.push("## Journeys (private, per person, from-prices in EUR)");

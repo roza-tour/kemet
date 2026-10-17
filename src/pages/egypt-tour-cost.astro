@@ -22,8 +22,6 @@ import StandardOfTravel from "@/components/trust/StandardOfTravel.astro";
 import LeadCapture from "@/components/conversion/LeadCapture.astro";
 import { tours } from "@/data/tours";
 import { bookingTerms } from "@/data/booking";
-import { canonical } from "@/utils/links";
-import { site, SITE_URL } from "@/config/site";
 import { breadcrumb, answerPageSchema } from "@/schemas/jsonld";
 import { formatPrice, BUILD_YEAR } from "@/utils/format";
 
@@ -180,19 +178,8 @@ const answerLd = answerPageSchema({
 });
 
 const jsonld: Record<string, unknown>[] = [
-  answerLd,
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    name: "How Much a Private Egypt Tour Costs",
-    description:
-      "What a private, tailor-made journey in Egypt costs per person per day, what moves the number, and where Kemet sits in the market.",
-    url: canonical(ROUTE),
-    inLanguage: "en",
-    about: { "@type": "Country", name: "Egypt" },
-    isPartOf: { "@type": "WebSite", name: `${site.name} — The Black Land`, url: SITE_URL },
-    publisher: { "@type": "TravelAgency", name: site.name, url: SITE_URL },
-  },
+  // One WebPage node: the answer page (reviewer, speakable), about Egypt.
+  { ...answerLd, about: { "@type": "Country", name: "Egypt" } },
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",

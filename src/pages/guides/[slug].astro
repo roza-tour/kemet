@@ -102,7 +102,7 @@ const jsonld = entitySchema("guide", guide);
           </div>
 
           {/* ---- Right sidebar ---- */}
-          <aside class="side">
+          <div class="side">
             {guide.keyFacts && guide.keyFacts.length > 0 && (
               <div class="pcard reveal">
                 <div class="eyebrow" style="margin-bottom:4px">Quick facts</div>
@@ -123,7 +123,7 @@ const jsonld = entitySchema("guide", guide);
                 <HighlightList items={guide.importantNotes} variant="dot" />
               </div>
             )}
-          </aside>
+          </div>
 
         </div>
       </div>

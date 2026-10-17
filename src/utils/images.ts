@@ -47,11 +47,17 @@ export const SIZES = {
   wide: "(max-width: 1180px) calc(100vw - 48px), 1120px",
   // two-up photographs: 1 col (vw-48) · 2 col (50vw-42) · cap 548
   half: "(max-width: 700px) calc(100vw - 48px), (max-width: 1180px) calc(50vw - 40px), 550px",
-  // home destination strip: 268 · 318 from 700
-  strip: "(max-width: 680px) 270px, 320px",
+  // home destination strip: square tiles, 268 · 318 from 700. The photographs
+  // are landscape (about 3:2 to 5:3) cropped to fill the square, so the file
+  // has to be ~1.67× the tile's width to cover its height without blurring.
+  strip: "(max-width: 680px) 450px, 530px",
   // photo beside text (private-hire, identities, vip, home overview):
   // 1 col up to ~1010 (vw-48 / vw-60) · 2 col (50vw-30) · cap 560
   beside: "(max-width: 1020px) calc(100vw - 48px), (max-width: 1180px) calc(50vw - 28px), 560px",
+  // the same photo-beside-text column, but a tall 4:5 frame holding a
+  // landscape photograph (private-hire venues): ~1.8× the column's width
+  // covers the frame's height.
+  besideTall: "(max-width: 1020px) calc((100vw - 48px) * 1.8), (max-width: 1180px) calc((50vw - 28px) * 1.8), 900px",
   // home experience mosaic, wide tile: vw-50 · vw-62 · 66.7vw-50 · cap 737
   mosaic: "(max-width: 1020px) calc(100vw - 48px), (max-width: 1180px) calc(66.7vw - 48px), 740px",
   // small inset in the home overview: 64vw-29 · 44vw-26 · 19vw-8 · cap 213

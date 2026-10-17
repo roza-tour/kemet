@@ -13,6 +13,16 @@
     if (!form || !input || !panel || !list) return;
 
     var docs = null, loading = null, cursor = -1, lastReported = "";
+    /* Results in the visitor's own language come first. The index holds every
+       language, so a German reader searching "luxor" should see "Luxor 3 Tage"
+       before the English and Italian pages — and an English reader should not
+       be shown the German one first. English stays neutral on every page:
+       where a page has no translation, the English one is still the answer. */
+    var pageLang = (document.documentElement.lang || "en").slice(0, 2);
+    function langOf(u) {
+      var m = /^(de|it|es|fr|ru|id|ms|pt|ar)\//.exec(u);
+      return m ? m[1] : "en";
+    }
     var depth = (location.pathname.match(/\//g) || []).length - 1;
     var prefix = depth > 0 ? "../".repeat(depth) : "";
 
@@ -31,6 +41,7 @@
             d[i]._t = fold(d[i].t);
             d[i]._k = fold(d[i].k);
             d[i]._d = fold(d[i].d);
+            d[i]._l = langOf(d[i].u);
           }
           docs = d; loading = null; run();
           return d;
@@ -122,7 +133,11 @@
       var scored = [];
       for (var i = 0; i < docs.length; i++) {
         var sc = score(docs[i], words, lastIsPrefix);
-        if (sc > 0) scored.push([sc, docs[i]]);
+        if (sc > 0) {
+          if (docs[i]._l === pageLang) sc *= 1.5;
+          else if (docs[i]._l !== "en") sc *= 0.5;
+          scored.push([sc, docs[i]]);
+        }
       }
       scored.sort(function (a, b) { return b[0] - a[0]; });
       return scored.slice(0, 8).map(function (x) { return x[1]; });

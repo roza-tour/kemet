@@ -51,6 +51,17 @@ import { ru } from "@/data/i18n/ru";
 import { id as idPages } from "@/data/i18n/id";
 import { ms } from "@/data/i18n/ms";
 import { pt } from "@/data/i18n/pt";
+import { ar } from "@/data/i18n/ar";
+import { TRANSLATED_TOURS } from "@/config/tour-i18n";
+import { de as ultraDe } from "@/data/ultra/de";
+import { it as ultraIt } from "@/data/ultra/it";
+import { es as ultraEs } from "@/data/ultra/es";
+import { fr as ultraFr } from "@/data/ultra/fr";
+import { ru as ultraRu } from "@/data/ultra/ru";
+import { id as ultraId } from "@/data/ultra/id";
+import { ms as ultraMs } from "@/data/ultra/ms";
+import { pt as ultraPt } from "@/data/ultra/pt";
+import { ar as ultraAr } from "@/data/ultra/ar";
 import { STANDALONE_PAGES, standaloneRoute } from "@/data/i18n/standalone";
 import type { LocalizedPage } from "@/data/i18n/types";
 import { TRANSLATION_GROUPS, TRANSLATED_LOCALES, LOCALE_META } from "@/config/i18n";
@@ -90,6 +101,9 @@ export const GET: APIRoute = () => {
     ["culture.html", "Culture", "Culture", "The gods, hieroglyphs and living crafts behind the monuments."],
     ["cuisine.html", "Cuisine", "Cuisine", "Koshari, molokhia, kunafa — what to eat in Egypt and where."],
     ["egyptian-incense-stones-cotton.html", "Incense, oils, stones & cotton", "Egypt", "Myrrh, luban dakar, oud; jasmine, black seed and massage oils; turquoise, lapis, carnelian; Egyptian cotton and linen — on your journey or sent home."],
+    ["plan.html", "Plan your journey", "Planning", "Five questions that narrow the catalogue to the right journey for you."],
+    ["travellers.html", "Our travellers", "Kemet", "Our own footage and photographs of Kemet journeys — a sunrise balloon over Luxor, filmed from the basket, and our guests across Egypt."],
+    ["travel-agents.html", "For travel agents & tour operators", "Practical", "Private ground arrangements in Egypt for travel agents and tour operators abroad — Egyptologists, vehicles, hotels and Nile cruises, at trade rates."],
     ["identities.html", "The 8 Identities", "Culture", "Pharaonic, Nubian, Coptic, Islamic, Greco-Roman, Bedouin, Siwan, Red Sea."],
     ["when-to-go.html", "When to visit Egypt", "Planning", "Month by month — heat, crowds, prices and festivals."],
     ["egypt-tour-cost.html", "What a private Egypt journey costs", "Planning", "Price bands per person per day and the five things that move them."],
@@ -182,7 +196,7 @@ export const GET: APIRoute = () => {
   // from the same locale data the pages are rendered from, so every translated
   // page is searchable in its own language, in its own words.
   const LOCALE_PAGES: Record<string, LocalizedPage[]> = {
-    de, it: itPages, es: esPages, fr, ru, id: idPages, ms, pt,
+    de, it: itPages, es: esPages, fr, ru, id: idPages, ms, pt, ar,
   };
   for (const locale of TRANSLATED_LOCALES) {
     for (const page of LOCALE_PAGES[locale] ?? []) {
@@ -199,6 +213,31 @@ export const GET: APIRoute = () => {
         k: terms(page.title, page.keywords, page.crumb, page.h1,
                  page.sections.map((x) => x.title), page.faqs.map((x) => x.q),
                  LOCALE_META[locale].endonym),
+      });
+    }
+  }
+
+  // The journeys translated in full, each at its own address in its language.
+  for (const x of TRANSLATED_TOURS) {
+    const tour = tours.find((t) => t.slug === x.slug);
+    docs.push({
+      u: x.route, t: x.text.title, s: LOCALE_META[x.locale].endonym, d: clean(x.text.summary),
+      m: tour ? `${x.text.durationLabel} · ${formatPrice(tour.price)}` : x.text.durationLabel,
+      k: terms(x.text.title, x.text.keywords, x.text.crumb, x.text.startPoint,
+               x.text.itinerary.map((d) => d.title), LOCALE_META[x.locale].endonym),
+    });
+  }
+
+  // Kemet Ultra in each language (data/ultra/<locale>.ts).
+  const ULTRA = TRANSLATION_GROUPS.find((g) => g.key === "ultra");
+  const ULTRA_TEXT = { de: ultraDe, it: ultraIt, es: ultraEs, fr: ultraFr, ru: ultraRu, id: ultraId, ms: ultraMs, pt: ultraPt, ar: ultraAr } as const;
+  if (ULTRA) {
+    for (const [locale, T] of Object.entries(ULTRA_TEXT)) {
+      const u = ULTRA[locale as keyof typeof ULTRA_TEXT];
+      if (!u) continue;
+      docs.push({
+        u: String(u), t: T.crumb, s: LOCALE_META[locale as keyof typeof ULTRA_TEXT].endonym, d: clean(T.metaDescription),
+        k: terms(T.metaTitle, T.keywords, T.crumb, "ultra vip"),
       });
     }
   }

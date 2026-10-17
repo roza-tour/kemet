@@ -51,7 +51,7 @@ export const pt: LocalizedPage[] = [
       {
         title: "Um egiptólogo, não um acompanhante",
         body:
-          "Cada viagem é guiada por um profissional credenciado pelo Ministério do Turismo do Egito e formado em egiptologia. Ele fica com vocês diante dos monumentos, não esperando no estacionamento — e o dia é só de vocês: ele responde às suas perguntas em vez de recitar um texto para quarenta pessoas. Em português, com egiptólogos da nossa própria equipe.",
+          "Cada viagem é guiada por uma pessoa credenciada pelo Ministério do Turismo do Egito e formada em egiptologia. A visita acontece diante dos monumentos, não no estacionamento — e o dia é só de vocês, com respostas às suas perguntas em vez de um texto recitado para quarenta pessoas. Em português, com egiptólogos da nossa própria equipe.",
       },
       {
         title: "Só o seu grupo",

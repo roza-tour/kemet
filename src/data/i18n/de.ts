@@ -41,7 +41,7 @@ export const de: LocalizedPage[] = [
       {
         title: "Ein Ägyptologe, kein Reiseleiter",
         body:
-          "Jede Reise wird von einem vom ägyptischen Tourismusministerium lizenzierten Führer mit einem Abschluss in Ägyptologie begleitet. Er steht mit Ihnen vor den Monumenten, nicht auf dem Parkplatz — und er gehört für den Tag Ihnen allein und beantwortet Ihre Fragen, statt vierzig Menschen etwas vorzutragen. Auf Deutsch, mit Ägyptologen aus unserem eigenen Team.",
+          "Jede Reise wird von einer vom ägyptischen Tourismusministerium lizenzierten Person mit einem Abschluss in Ägyptologie begleitet. Die Führung findet vor den Monumenten statt, nicht auf dem Parkplatz — einen ganzen Tag nur für Sie, mit Antworten auf Ihre Fragen statt eines Vortrags für vierzig Menschen. Auf Deutsch, mit Ägyptologen aus unserem eigenen Team.",
       },
       {
         title: "Nur Ihre Reisegruppe",

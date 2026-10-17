@@ -129,12 +129,14 @@ const isCurrent = (item: (typeof primaryNav)[number]) =>
         id="sin"
         type="search"
         name="q"
-        toolparamdescription="English search words, e.g. nile cruise."
+        toolparamdescription="Search words in English or in the page's language, e.g. nile cruise."
         autocomplete="off"
         autocorrect="off"
         spellcheck="false"
         placeholder={t.searchPlaceholder}
         aria-label={t.searchAria}
+        role="combobox"
+        aria-autocomplete="list"
         aria-controls="sres"
         aria-expanded="false"
       />

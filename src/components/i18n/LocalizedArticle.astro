@@ -24,6 +24,7 @@ import SignatureTouches from "@/components/collection/SignatureTouches.astro";
 import TourCard from "@/components/TourCard.astro";
 import SectionHeader from "@/components/SectionHeader.astro";
 import { TRANSLATED_TOURS } from "@/config/tour-i18n";
+import { TOUR_PHRASEBOOK } from "@/data/tours-i18n/phrasebook";
 import { tours as allTours } from "@/data/tours";
 import { ui } from "@/config/ui";
 import type { Tour } from "@/types";
@@ -250,7 +251,10 @@ const share = page.sharePhoto ? page.photos?.find((g) => g.src === page.sharePho
 
       <Frieze />
 
-      <Faq items={page.faqs} heading={page.crumb} />
+      {/* "Häufige Fragen", "Questions fréquentes"… — the questions block is
+          headed as questions, not with the page's breadcrumb label (which read
+          "Startseite" on the German home page). */}
+      <Faq items={page.faqs} heading={TOUR_PHRASEBOOK[locale]?.h.faq ?? page.crumb} />
 
       <div class="lz-cta reveal" id="enquire">
         <h2>{page.cta.heading}</h2>

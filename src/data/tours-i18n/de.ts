@@ -1032,7 +1032,7 @@ export const de: TourText[] = [
     summary:
       "Eine Reise, rückwärts aus dem Licht geplant: privater Zugang zu Gizeh zum Sonnenaufgang, Karnak vor den Gruppen, Ballons über Theben und Feluken zur goldenen Stunde.",
     overview:
-      "Die meisten Ägypten-Reisen stellen Sie in der flachen, überfüllten Tagesmitte vor die großen Stätten — den schlechtesten Stunden, die eine Kamera je sieht. Diese Reise dreht die Logik um. Jeder Tag ist um das erste und letzte Licht herum geplant: privater Frühzugang in Gizeh, bevor das Plateau öffnet; Karnaks Säulenhalle in der tiefen Morgensonne, die die Reliefs herausarbeitet; die beleuchtete Sphinxallee zur blauen Stunde; und Assuans Lateinersegel im Gegenlicht zur goldenen Stunde. Ihr Guide versteht Fotografen — das heißt: er weiß, wann er redet, wann er eine Stativgenehmigung mitbringt und wann er Sie einfach mit der Szene allein lässt. Nicht fotografierende Begleitung reist hier übrigens ebenso gut mit; das Licht, das einem Sensor schmeichelt, schmeichelt einer Erinnerung genauso.",
+      "Die meisten Ägypten-Reisen stellen Sie in der flachen, überfüllten Tagesmitte vor die großen Stätten — den schlechtesten Stunden, die eine Kamera je sieht. Diese Reise dreht die Logik um. Jeder Tag ist um das erste und letzte Licht herum geplant: privater Frühzugang in Gizeh, bevor das Plateau öffnet; Karnaks Säulenhalle in der tiefen Morgensonne, die die Reliefs herausarbeitet; die beleuchtete Sphinxallee zur blauen Stunde; und Assuans Lateinersegel im Gegenlicht zur goldenen Stunde. Ihr Guide versteht Fotografen — und weiß, wann zu erzählen ist, wann eine Stativgenehmigung bereitliegen muss und wann Sie einfach mit der Szene allein bleiben. Nicht fotografierende Begleitung reist hier übrigens ebenso gut mit; das Licht, das einem Sensor schmeichelt, schmeichelt einer Erinnerung genauso.",
     itinerary: [
       {
         title: "Ankunft in Kairo & Besprechung",
@@ -1350,7 +1350,7 @@ export const de: TourText[] = [
     summary:
       "Die Cheops-Pyramide, die Pyramiden des Chephren und Mykerinos, der Panoramapunkt und der Taltempel mit der Großen Sphinx — Gizeh an einem Vormittag.",
     overview:
-      "Für Reisende mit wenig Zeit oder einem freien Fenster am Ankunftstag liefert dieser halbe Tag das Plateau von Gizeh ohne Füllmaterial. Sie sehen die Cheops-Pyramide, die benachbarten Pyramiden des Chephren und Mykerinos, den Panoramapunkt, an dem sich alle drei aufreihen, und den Taltempel, der zur Großen Sphinx führt. Ein privater Guide macht den kurzen Besuch wertvoll, und er lässt sich gut mit einem freien Nachmittag oder dem Grand Egyptian Museum verbinden.",
+      "Für Reisende mit wenig Zeit oder einem freien Fenster am Ankunftstag liefert dieser halbe Tag das Plateau von Gizeh ohne Füllmaterial. Sie sehen die Cheops-Pyramide, die benachbarten Pyramiden des Chephren und Mykerinos, den Panoramapunkt, an dem sich alle drei aufreihen, und den Taltempel, der zur Großen Sphinx führt. Ein privater Guide macht den kurzen Besuch wertvoll; der halbe Tag lässt sich gut mit einem freien Nachmittag oder dem Grand Egyptian Museum verbinden.",
     itinerary: [
       {
         title: "Die Cheops-Pyramide",

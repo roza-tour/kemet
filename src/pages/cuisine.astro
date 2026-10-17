@@ -51,10 +51,10 @@ const plates: FeastPlate[] = [
 
 /** The feast's five colours, each with the ink that reads on it. */
 const ACC = [
-  { c: "#E8623A", ink: "#FFF6EA" }, // tomato
+  { c: "#E8623A", ink: "#1A0F08" }, // tomato — dark ink: light ink read at 3.1:1
   { c: "#F4B33F", ink: "#2A1608" }, // saffron
   { c: "#3FB68B", ink: "#06231A" }, // mint
-  { c: "#D9774A", ink: "#FFF2E4" }, // cumin
+  { c: "#D9774A", ink: "#1A0F08" }, // cumin — dark ink: light ink read at 2.9:1
   { c: "#A8C256", ink: "#1C2408" }, // lime
 ];
 const acc = (i: number) => `--acc:${ACC[i % ACC.length].c};--acc-ink:${ACC[i % ACC.length].ink}`;

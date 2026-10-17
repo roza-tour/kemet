@@ -130,7 +130,7 @@ const jsonld = [entitySchema("experience", experience), ...(experience.films ?? 
           </div>
 
           {/* ---- Right sidebar ---- */}
-          <aside class="side">
+          <div class="side">
             {experience.keyFacts && experience.keyFacts.length > 0 && (
               <div class="pcard reveal">
                 <div class="eyebrow" style="margin-bottom:4px">Quick facts</div>
@@ -159,7 +159,7 @@ const jsonld = [entitySchema("experience", experience), ...(experience.films ?? 
                 <p style="font-size:var(--t-sm);color:var(--muted)">{experience.meetingPointNote}</p>
               </div>
             )}
-          </aside>
+          </div>
 
         </div>
       </div>

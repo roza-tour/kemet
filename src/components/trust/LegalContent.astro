@@ -9,7 +9,7 @@ const { doc } = Astro.props;
 const pad2 = (n: number) => String(n).padStart(2, "0");
 ---
 <div class="legal-layout">
-  <aside class="legal-toc" aria-label="Contents">
+  <nav class="legal-toc" aria-label="Contents">
     <div class="legal-toc-inner">
       <div class="eyebrow">Contents</div>
       <ol>
@@ -19,7 +19,7 @@ const pad2 = (n: number) => String(n).padStart(2, "0");
       </ol>
       <div class="legal-updated">Last updated<br /><b>{doc.lastUpdated}</b></div>
     </div>
-  </aside>
+  </nav>
 
   <article class="legal-body reveal">
     <p class="legal-intro">{doc.intro}</p>

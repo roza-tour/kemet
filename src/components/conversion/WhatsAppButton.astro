@@ -21,7 +21,10 @@ const {
 const waHref = whatsappLink(message);
 ---
 
-{/* Floating WhatsApp button — see global.css .wafab-* rules. */}
+{/* Floating WhatsApp button — see global.css .wafab-* rules. Wrapped in a
+    named landmark so screen readers do not find it loose outside the page's
+    regions; the wrapper itself has no box (display: contents). */}
+<aside class="wafab-land" aria-label={label} style="display:contents">
 <a
   href={waHref}
   class="wafab"
@@ -38,3 +41,4 @@ const waHref = whatsappLink(message);
     ></path>
   </svg>
 </a>
+</aside>

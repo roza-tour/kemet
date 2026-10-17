@@ -347,15 +347,27 @@ const DUST_DENSITY = 15000; // px² of viewport per particle
   try{
     var reduceMo=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
     var railed=false;
+    /* The arrows and the strip are named in the page's language, for screen
+       readers; the strip takes keyboard focus while it scrolls, so arrow keys
+       can move it without a mouse. */
+    var RL={en:['Previous','Next','Gallery'],de:['Zurück','Weiter','Galerie'],fr:['Précédent','Suivant','Galerie'],
+      it:['Precedente','Successivo','Galleria'],es:['Anterior','Siguiente','Galería'],pt:['Anterior','Próximo','Galeria'],
+      ru:['Назад','Вперёд','Галерея'],id:['Sebelumnya','Berikutnya','Galeri'],ms:['Sebelumnya','Seterusnya','Galeri'],
+      ar:['السابق','التالي','معرض']}[(document.documentElement.lang||'en').slice(0,2)]||['Previous','Next','Gallery'];
     [].forEach.call(document.querySelectorAll('.grid-2,.grid-3,.grid-4'),function(g){
-      if(g.children.length<4||!g.querySelector(':scope > .tgallery, :scope > .jcard, :scope > .tease, :scope > .eat'))return;
+      if(g.children.length<4||!g.querySelector(':scope > .tgallery, :scope > .jcard, :scope > .tease, :scope > .eat')){
+        /* Not a rail, but it may still scroll sideways on a narrow screen:
+           make sure a keyboard can reach it. */
+        if(getComputedStyle(g).overflowX==='auto'&&g.scrollWidth>g.clientWidth+4&&!g.querySelector('a,button,[tabindex]')){
+          g.tabIndex=0;g.setAttribute('role','region');g.setAttribute('aria-label',RL[2]);}
+        return;}
       var photo=!!g.querySelector(':scope > .tgallery');
       var box=document.createElement('div');box.className='rail-box'+(photo?' rail-box--photo':'');
       g.parentNode.insertBefore(box,g);box.appendChild(g);
       var nav=document.createElement('div');nav.className='rail-nav';
-      nav.innerHTML='<button type="button" class="rail-btn rail-prev" aria-label="Previous"><span>‹</span></button>'+
+      nav.innerHTML='<button type="button" class="rail-btn rail-prev" aria-label="'+RL[0]+'"><span>‹</span></button>'+
         '<span class="rail-count" aria-hidden="true"></span>'+
-        '<button type="button" class="rail-btn rail-next" aria-label="Next"><span>›</span></button>';
+        '<button type="button" class="rail-btn rail-next" aria-label="'+RL[1]+'"><span>›</span></button>';
       box.appendChild(nav);
       var prev=nav.querySelector('.rail-prev'),next=nav.querySelector('.rail-next'),count=nav.querySelector('.rail-count');
       var rtl=getComputedStyle(g).direction==='rtl';
@@ -364,7 +376,10 @@ const DUST_DENSITY = 15000; // px² of viewport per particle
         return b?Math.abs(b.getBoundingClientRect().left-a.getBoundingClientRect().left):g.clientWidth;}
       function pos(){return Math.abs(g.scrollLeft);}
       function atEnd(){return pos()>g.scrollWidth-g.clientWidth-4;}
-      function sync(){var r=on();box.classList.toggle('is-rail',r);if(!r)return;
+      function sync(){var r=on();box.classList.toggle('is-rail',r);
+        if(r){if(!g.hasAttribute('tabindex')){g.tabIndex=0;g.setAttribute('role','region');g.setAttribute('aria-label',RL[2]);}}
+        else if(g.getAttribute('role')==='region'){g.removeAttribute('tabindex');g.removeAttribute('role');g.removeAttribute('aria-label');}
+        if(!r)return;
         prev.disabled=pos()<4;next.disabled=atEnd();
         var n=g.children.length,st=step(),vis=Math.max(1,Math.round(g.clientWidth/st));
         count.textContent=(atEnd()?n:Math.min(n,Math.round(pos()/st)+vis))+' / '+n;}

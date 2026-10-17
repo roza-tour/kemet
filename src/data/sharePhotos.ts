@@ -238,6 +238,27 @@ const CHOICES: Choice[] = [
   { src: img("activities/balloons-luxor-silhouettes-dawn"), alt: { en: "Balloons in silhouette as the sun clears the horizon over Luxor" }, routes: ["collections.html"] },
   { src: img("alexandria/alexandria-bibliotheca"), alt: { en: "The disc of the Bibliotheca Alexandrina on the waterfront" }, routes: ["guides.html"] },
   { src: img("giza/giza-sphinx-and-pyramid"), alt: { en: "A pyramid of Giza beyond weathered limestone blocks" }, routes: ["faq.html"] },
+  // ---- Pages added since, with no photograph of their own at the top
+  {
+    src: img("cruise/nile-dahabiya-deck"),
+    alt: { en: "The teak sun-deck of a Nile cruise vessel set for the day" },
+    routes: ["travel-agents.html"],
+  },
+  {
+    src: img("giza/giza-great-pyramid-khufu"),
+    alt: { es: "La Gran Pirámide de Keops en la meseta de Guiza" },
+    routes: ["es/viajar-a-egipto-desde-latinoamerica.html"],
+  },
+  {
+    src: img("luxor/luxor-karnak-hypostyle-hall"),
+    alt: { pt: "A grande sala hipostila do Templo de Karnak, em Luxor" },
+    routes: ["pt/viajar-ao-egito-saindo-do-brasil.html"],
+  },
+  {
+    src: img("alexandria/alexandria-montaza-palace"),
+    alt: { ar: "قصر المنتزه وحدائقه على شاطئ الإسكندرية في الصيف" },
+    routes: ["ar/sayf-masr-lil-aailat-al-khalijiya.html"],
+  },
 ];
 
 /** Pages that keep the generic card on purpose. */
