@@ -51,6 +51,8 @@ export interface UiStrings {
   /** The same link in the nav bar, where the full sentence is too wide and
    *  crowds out the items that actually lead somewhere in this language. */
   englishShort: string;
+  /** A localised page's link to its own English version. */
+  thisPageEnglish: string;
   brandBlurb: string;
   tierLine: string;
   motto: string;
@@ -125,6 +127,7 @@ export const UI: Record<SiteLocale, UiStrings> = {
     allJourneys: "All journeys",
     fullSiteEnglish: "The full site, in English",
     englishShort: "The full site",
+    thisPageEnglish: "This page in English",
     brandBlurb: "Private luxury travel through every layer of Egypt — the Black Land, in full colour.",
     tierLine: "Private · Tailor-made · Never a group",
     motto: "The Land · The Legacy · The Journey",
@@ -174,6 +177,7 @@ export const UI: Record<SiteLocale, UiStrings> = {
     allJourneys: "Alle Reisen",
     fullSiteEnglish: "Die ganze Website auf Englisch",
     englishShort: "Alles auf Englisch",
+    thisPageEnglish: "Diese Seite auf Englisch",
     brandBlurb: "Private Luxusreisen durch alle Schichten Ägyptens — das Schwarze Land, in voller Farbe.",
     tierLine: "Privat · Maßgeschneidert · Nie in der Gruppe",
     motto: "Das Land · Das Erbe · Die Reise",
@@ -226,6 +230,7 @@ export const UI: Record<SiteLocale, UiStrings> = {
     allJourneys: "Tutti i viaggi",
     fullSiteEnglish: "Il sito completo, in inglese",
     englishShort: "Tutto in inglese",
+    thisPageEnglish: "Questa pagina in inglese",
     brandBlurb: "Viaggi privati di lusso attraverso ogni strato dell'Egitto — la Terra Nera, a colori.",
     tierLine: "Privato · Su misura · Mai in gruppo",
     motto: "La Terra · L'Eredità · Il Viaggio",
@@ -278,6 +283,7 @@ export const UI: Record<SiteLocale, UiStrings> = {
     allJourneys: "Todos los viajes",
     fullSiteEnglish: "El sitio completo, en inglés",
     englishShort: "Todo en inglés",
+    thisPageEnglish: "Esta página en inglés",
     brandBlurb: "Viajes privados de lujo por todas las capas de Egipto — la Tierra Negra, a todo color.",
     tierLine: "Privado · A medida · Nunca en grupo",
     motto: "La Tierra · El Legado · El Viaje",
@@ -330,6 +336,7 @@ export const UI: Record<SiteLocale, UiStrings> = {
     allJourneys: "Tous les voyages",
     fullSiteEnglish: "Le site complet, en anglais",
     englishShort: "Tout en anglais",
+    thisPageEnglish: "Cette page en anglais",
     brandBlurb: "Voyages privés de luxe à travers toutes les couches de l'Égypte — la Terre Noire, en couleurs.",
     tierLine: "Privé · Sur mesure · Jamais en groupe",
     motto: "La Terre · L'Héritage · Le Voyage",
@@ -383,6 +390,7 @@ export const UI: Record<SiteLocale, UiStrings> = {
     allJourneys: "Все маршруты",
     fullSiteEnglish: "Весь сайт на английском",
     englishShort: "Всё на английском",
+    thisPageEnglish: "Эта страница на английском",
     brandBlurb: "Частные люкс-путешествия сквозь все слои Египта — Чёрная земля, в цвете.",
     tierLine: "Частно · По вашей мерке · Никогда не в группе",
     motto: "Земля · Наследие · Путешествие",
@@ -439,6 +447,7 @@ export const UI: Record<SiteLocale, UiStrings> = {
     allJourneys: "Todas as viagens",
     fullSiteEnglish: "O site completo, em inglês",
     englishShort: "Tudo em inglês",
+    thisPageEnglish: "Esta página em inglês",
     brandBlurb: "Viagens privadas de luxo por todas as camadas do Egito — a Terra Negra, em cores.",
     tierLine: "Privado · Sob medida · Nunca em grupo",
     motto: "A Terra · O Legado · A Viagem",
@@ -490,6 +499,7 @@ export const UI: Record<SiteLocale, UiStrings> = {
     allJourneys: "Semua perjalanan",
     fullSiteEnglish: "Situs lengkap, dalam bahasa Inggris",
     englishShort: "Semua, bahasa Inggris",
+    thisPageEnglish: "Halaman ini dalam bahasa Inggris",
     brandBlurb: "Perjalanan mewah privat menelusuri setiap lapisan Mesir — Tanah Hitam, dalam warna penuh.",
     tierLine: "Privat · Dirancang khusus · Tidak pernah rombongan",
     motto: "Negeri · Warisan · Perjalanan",
@@ -539,6 +549,7 @@ export const UI: Record<SiteLocale, UiStrings> = {
     allJourneys: "Semua percutian",
     fullSiteEnglish: "Laman penuh, dalam bahasa Inggeris",
     englishShort: "Semua, bahasa Inggeris",
+    thisPageEnglish: "Halaman ini dalam bahasa Inggeris",
     brandBlurb: "Percutian mewah privat menyusuri setiap lapisan Mesir — Tanah Hitam, dalam warna penuh.",
     tierLine: "Privat · Direka khas · Tidak pernah berkumpulan",
     motto: "Negeri · Warisan · Perjalanan",
@@ -588,6 +599,7 @@ export const UI: Record<SiteLocale, UiStrings> = {
     allJourneys: "كل الرحلات",
     fullSiteEnglish: "الموقع كاملاً بالإنجليزية",
     englishShort: "الموقع بالإنجليزية",
+    thisPageEnglish: "هذه الصفحة بالإنجليزية",
     brandBlurb: "رحلات خاصة فاخرة عبر طبقات مصر كلها — الأرض السوداء، بالألوان.",
     tierLine: "خاص · مُصمَّم لكم · بلا مجموعات",
     motto: "الأرض · الإرث · الرحلة",

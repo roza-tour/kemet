@@ -1188,7 +1188,10 @@ function dates(x: number, y: number): Array<{ cx: number; cy: number }> {
     background: linear-gradient(180deg, #0F1220 0%, #2A3550 100%); }
   .themed-sunrise .phero > .wrap { position: relative; z-index: 2; }
   .themed-sunrise .phero h1 { text-shadow: 0 2px 30px rgba(12,10,24,.6); }
-  .themed-sunrise .phero p { color: #FBF3E6; text-shadow: 0 1px 16px rgba(12,10,24,.85), 0 0 2px rgba(12,10,24,.5); }
+  .themed-sunrise .phero p { color: #FBF3E6; text-shadow: 0 1px 2px rgba(12,10,24,.9), 0 1px 16px rgba(12,10,24,.9), 0 0 32px rgba(12,10,24,.6);
+    /* A soft pool of shade behind the lines that fall on the sun's glow — on a
+       phone the brightest part of the sky sits right behind them. */
+    background: radial-gradient(ellipse 70% 80% at 50% 50%, rgba(12,10,24,.38), rgba(12,10,24,0) 72%); padding: 6px 4px; }
   .themed-sunrise .phero .crumb, .themed-sunrise .phero .eyebrow { text-shadow: 0 1px 12px rgba(12,10,24,.8); }
   .sth-sunrise { container-type: size; }
   /* object-fit: cover, done by hand so the bloom can ride on the sun: the

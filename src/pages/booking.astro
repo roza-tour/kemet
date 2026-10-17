@@ -163,6 +163,9 @@ const jsonld = [
 
   .bk-table-wrap{overflow-x:auto;margin-top:var(--s-1)}
   .bk-table{width:100%;border-collapse:collapse;min-width:420px}
+  /* On a phone the two columns wrap instead of scrolling: the charge column
+     was cut off at "50% of the tot…". */
+  @media(max-width:520px){ .bk-table{min-width:0} .bk-table th,.bk-table td{padding:var(--s-3) var(--s-2)} }
   .bk-table th,.bk-table td{text-align:start;padding:var(--s-3) var(--s-3);border-bottom:1px solid var(--line)}
   .bk-table th{font-size:var(--t-micro);letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:500}
   .bk-table td{color:var(--bone)}

@@ -154,7 +154,7 @@ const jsonld = entitySchema("seasonal", col);
     {relTours.length > 0 && !col.landing && (
       <section>
         <div class="wrap">
-          <SectionHeader sym="journeys" eyebrow="Journeys" title="Featured tours" text={`Private tours included in the ${col.title} collection.`} />
+          <SectionHeader sym="journeys" eyebrow="Journeys" title="Featured tours" text={`Private tours included in the ${col.title.replace(/^The /, "")} collection.`} />
           <div class="grid-3">
             {relTours.map((tour) => <TourCard tour={tour} base={base} />)}
           </div>

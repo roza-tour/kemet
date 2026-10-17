@@ -354,20 +354,24 @@ const DUST_DENSITY = 15000; // px² of viewport per particle
       it:['Precedente','Successivo','Galleria'],es:['Anterior','Siguiente','Galería'],pt:['Anterior','Próximo','Galeria'],
       ru:['Назад','Вперёд','Галерея'],id:['Sebelumnya','Berikutnya','Galeri'],ms:['Sebelumnya','Seterusnya','Galeri'],
       ar:['السابق','التالي','معرض']}[(document.documentElement.lang||'en').slice(0,2)]||['Previous','Next','Gallery'];
+    /* Two strips on one page need two names: "Gallery", "Gallery 2"… */
+    var railN=0;function railName(){railN++;return RL[2]+(railN>1?' '+railN:'');}
     [].forEach.call(document.querySelectorAll('.grid-2,.grid-3,.grid-4'),function(g){
       if(g.children.length<4||!g.querySelector(':scope > .tgallery, :scope > .jcard, :scope > .tease, :scope > .eat')){
         /* Not a rail, but it may still scroll sideways on a narrow screen:
            make sure a keyboard can reach it. */
         if(getComputedStyle(g).overflowX==='auto'&&g.scrollWidth>g.clientWidth+4&&!g.querySelector('a,button,[tabindex]')){
-          g.tabIndex=0;g.setAttribute('role','region');g.setAttribute('aria-label',RL[2]);}
+          g.tabIndex=0;g.setAttribute('role','region');g.setAttribute('aria-label',railName());}
         return;}
       var photo=!!g.querySelector(':scope > .tgallery');
       var box=document.createElement('div');box.className='rail-box'+(photo?' rail-box--photo':'');
       g.parentNode.insertBefore(box,g);box.appendChild(g);
       var nav=document.createElement('div');nav.className='rail-nav';
-      nav.innerHTML='<button type="button" class="rail-btn rail-prev" aria-label="'+RL[0]+'"><span>‹</span></button>'+
+      // Right-to-left pages read the other way: "previous" points right.
+      var rtlG=getComputedStyle(g).direction==='rtl',back=rtlG?'›':'‹',fwd=rtlG?'‹':'›';
+      nav.innerHTML='<button type="button" class="rail-btn rail-prev" aria-label="'+RL[0]+'"><span>'+back+'</span></button>'+
         '<span class="rail-count" aria-hidden="true"></span>'+
-        '<button type="button" class="rail-btn rail-next" aria-label="'+RL[1]+'"><span>›</span></button>';
+        '<button type="button" class="rail-btn rail-next" aria-label="'+RL[1]+'"><span>'+fwd+'</span></button>';
       box.appendChild(nav);
       var prev=nav.querySelector('.rail-prev'),next=nav.querySelector('.rail-next'),count=nav.querySelector('.rail-count');
       var rtl=getComputedStyle(g).direction==='rtl';
@@ -377,7 +381,7 @@ const DUST_DENSITY = 15000; // px² of viewport per particle
       function pos(){return Math.abs(g.scrollLeft);}
       function atEnd(){return pos()>g.scrollWidth-g.clientWidth-4;}
       function sync(){var r=on();box.classList.toggle('is-rail',r);
-        if(r){if(!g.hasAttribute('tabindex')){g.tabIndex=0;g.setAttribute('role','region');g.setAttribute('aria-label',RL[2]);}}
+        if(r){if(!g.hasAttribute('tabindex')){g.tabIndex=0;g.setAttribute('role','region');g.setAttribute('aria-label',railName());}}
         else if(g.getAttribute('role')==='region'){g.removeAttribute('tabindex');g.removeAttribute('role');g.removeAttribute('aria-label');}
         if(!r)return;
         prev.disabled=pos()<4;next.disabled=atEnd();

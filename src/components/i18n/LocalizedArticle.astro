@@ -276,7 +276,7 @@ const share = page.sharePhoto ? page.photos?.find((g) => g.src === page.sharePho
           </ul>
         )}
         <a class="lz-morelink" href={`${base}${publicPath(moreRoute)}` || "/"}>
-          {moreRoute === "index.html" ? "kemet-travel.com" : `kemet-travel.com/${publicPath(moreRoute)}`}
+          {moreRoute === "index.html" ? t.fullSiteEnglish : t.thisPageEnglish}
           <i aria-hidden="true"></i>
         </a>
       </div>

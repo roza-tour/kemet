@@ -17,11 +17,10 @@ const href = `${base}experiences/${experience.slug}.html`;
   <div class="eyebrow" style="margin-bottom:var(--s-1)">{categoryLabel}</div>
   <h3>{experience.title}</h3>
   <p>{experience.shortSummary}</p>
-  <div style="margin-top:var(--s-2);display:flex;gap:var(--s-3);align-items:center">
-    <span class="eyebrow" style="font-size:.85em;opacity:.6">{experience.durationLabel}</span>
-    {experience.isPrivate && (
-      <span class="eyebrow" style="font-size:.85em;opacity:.6">Private</span>
-    )}
+  {/* One line of text, so a long duration wraps as a sentence rather than
+      squeezing into a column beside a stranded "Private". */}
+  <div class="eyebrow" style="margin-top:var(--s-2);font-size:.85em;opacity:.6;line-height:1.7">
+    {experience.durationLabel}{experience.isPrivate && " · Private"}
   </div>
   <span class="more" style="margin-top:var(--s-2);display:block">Explore <b>→</b></span>
 </a>

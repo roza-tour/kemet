@@ -252,27 +252,27 @@ export const id: LocalizedPage[] = [
     ],
     sections: [
       {
-        title: "1. Jumlah peserta",
+        title: "Jumlah peserta",
         body:
           "Ini faktor terkuat, jauh melampaui yang lain. Egyptologist, kendaraan dan sopir berharga sama untuk dua orang maupun enam orang: biayanya dibagi. Keluarga berenam kerap membayar jauh lebih murah per kepala untuk perjalanan yang sepenuhnya privat dibanding sepasang suami istri pada rute yang sama.",
       },
       {
-        title: "2. Kelas hotel",
+        title: "Kelas hotel",
         body:
           "Ini tuas kedua. Selisih antara hotel bintang empat yang baik dan hotel mewah di tepi Nil bisa melampaui seluruh biaya harian lainnya jika digabung. Sebaliknya, mengganti hotel tidak mengubah situs, pemandu, maupun tiket masuk — inilah pos yang paling mudah disesuaikan tanpa merusak perjalanan.",
       },
       {
-        title: "3. Musim",
+        title: "Musim",
         body:
           "Oktober sampai April semuanya lebih mahal — itulah musimnya Mesir Hulu. Mei sampai September, hotel dan kapal yang sama turun jauh, kadang setengahnya, karena Aswan mencapai 40 °C. Musim tidak mengubah mutu perjalanan, hanya jam berangkatnya.",
       },
       {
-        title: "4. Kapal di Sungai Nil",
+        title: "Kapal di Sungai Nil",
         body:
           "Satu kabin di kapal bintang lima dan sewa penuh sebuah dahabiya berada pada orde biaya yang berbeda. Pos inilah yang paling sering menjelaskan seluruh selisih antara dua penawaran yang sepintas tampak menawarkan hal yang sama.",
       },
       {
-        title: "5. Penerbangan domestik",
+        title: "Penerbangan domestik",
         body:
           "Kairo–Luxor dan Aswan–Kairo ditempuh dengan pesawat: sekitar satu jam, dibanding sepuluh jam perjalanan darat. Pos ini tidak besar tetapi nyata, dan pada penawaran kami ia berdiri sebagai baris tersendiri, bukan dilebur ke dalam paket.",
       },

@@ -254,6 +254,12 @@ section{position:relative;padding:var(--s-8) 0}
 
 .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--s-4)}
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s-4)}
+/* A card left alone on the last row of a three-column grid sits in the middle
+   column, not stranded on the left with two empty places beside it. Grids of
+   seven or more become sideways rails (below) and are left alone. */
+@media(min-width:681px){
+  .grid-3:not(:has(> :nth-child(7))) > :is(.tease,.jcard,.eat):last-child:nth-child(3n+1){grid-column:2}
+}
 .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s-3)}
 
 .frame{position:relative;overflow:hidden;background:linear-gradient(150deg,#1A1510,#0C0F13)}
@@ -481,6 +487,16 @@ footer{background:var(--ink-2);border-top:1px solid var(--line);padding:var(--s-
 .foot-col--2{grid-column:span 2;display:grid;grid-template-columns:1fr 1fr;gap:0 var(--s-5);align-content:start}
 .foot-col--2 h3{grid-column:1/-1}
 .foot-col--2 .foot-en{grid-column:1/-1;margin-top:var(--s-3)}
+/* The English footer has five blocks for four columns, so Contact wrapped to a
+   second row and sat below the long Explore list, leaving a hole under the
+   logo. On wide screens it now sits directly under the brand block, and the
+   three link columns run the full height beside them. */
+@media(min-width:1001px){
+  .foot-grid:not(:has(.foot-col--2)){grid-template-rows:auto 1fr}
+  .foot-grid:not(:has(.foot-col--2))>.foot-brand{grid-column:1;grid-row:1}
+  .foot-grid:not(:has(.foot-col--2))>.foot-col:not(:last-child){grid-row:1/span 2}
+  .foot-grid:not(:has(.foot-col--2))>.foot-col:last-child{grid-column:1;grid-row:2;align-self:start}
+}
 .foot-brand .brand{margin-bottom:var(--s-3)}
 .foot-brand p{color:var(--muted);font-size:var(--t-sm);font-weight:300;line-height:1.85;max-width:300px}
 .foot-brand .foot-tier{color:var(--gold);opacity:.72;font-size:var(--t-nano);letter-spacing:.2em;text-transform:uppercase;line-height:1.9;margin-top:var(--s-3);max-width:none;text-wrap:balance}
@@ -771,7 +787,10 @@ footer{background:var(--ink-2);border-top:1px solid var(--line);padding:var(--s-
   .crumb a{display:inline-block;padding:var(--s-1) 2px}
   /* Contact details are the highest-intent taps on the site — the phone and
      email links sit inside .facts rows and were only 23px tall. */
-  .facts a,.enq-actions a,.foot-col a,.sm-machine a{display:inline-block;padding:var(--s-2) 0;min-height:44px}
+  .facts a,.enq-actions a,.sm-machine a{display:inline-block;padding:var(--s-2) 0;min-height:44px}
+  /* Footer links stay one per line (block, as on desktop) — inline-block here
+     ran each column together into a single line of text on phones. */
+  .foot-col a{display:block;padding:var(--s-2) 0;min-height:44px}
   .facts.facts-stacked a{padding:var(--s-1) 0;min-height:0}
   .pcard-terms{padding:var(--s-2) 0;min-height:44px}
   /* Site index + footer link lists */
@@ -893,8 +912,11 @@ footer{background:var(--ink-2);border-top:1px solid var(--line);padding:var(--s-
   .dn{width:auto;height:auto;border-radius:0;border:0;background:none;
     flex-direction:row;align-items:baseline;justify-content:flex-start;gap:var(--s-1);
     display:inline-flex;padding-bottom:var(--s-1)}
-  .dn small{margin-bottom:0;order:0}
+  .dn small{margin-bottom:0;order:0;font-size:var(--t-micro);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
   .dn b{font-size:var(--t-base);color:var(--gold-bright)}
+  /* The little bar under the badge belongs to the round badge; inline, it
+     floated under "Step" like a stray underline. */
+  .dn::after{content:none}
   .dc h3,.dc h4{margin-top:0}
   /* Price / process cards join the single card inset. */
   .pcard{padding-left:var(--s-3);padding-right:var(--s-3);padding-top:var(--s-4);padding-bottom:var(--s-4)}

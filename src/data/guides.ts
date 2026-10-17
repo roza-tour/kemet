@@ -1580,11 +1580,11 @@ export const guides: Guide[] = [
       { q: "Can we do Egypt in a half-term week with children?", a: "Yes. Nine days, Saturday to Sunday, covers Cairo, Giza and Luxor at a family pace, with time for the pool. We shorten the mornings for younger children." },
     ],
     hero: {
-      alt: "The Great Sphinx of Giza seen from the front",
+      alt: "Guests on a camel caravan before the Pyramids of Giza",
       label: "Egypt for half-term",
-      src: "/images/giza/giza-great-sphinx-frontal.webp",
-      width: 736,
-      height: 920,
+      src: "/images/activities/act-camel-pyramids.webp",
+      width: 1300,
+      height: 934,
     },
     seo: {
       title: "Egypt for Half-Term: October & February Holidays | Kemet",

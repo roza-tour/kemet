@@ -241,27 +241,27 @@ export const fr: LocalizedPage[] = [
     ],
     sections: [
       {
-        title: "1. Le nombre de voyageurs",
+        title: "Le nombre de voyageurs",
         body:
           "C'est le facteur le plus puissant, et de loin. L'égyptologue, le véhicule et le chauffeur coûtent la même chose pour deux personnes que pour six : leur coût se divise. Une famille de six paie souvent nettement moins par tête, pour un voyage entièrement privé, qu'un couple sur le même itinéraire.",
       },
       {
-        title: "2. La catégorie d'hôtel",
+        title: "La catégorie d'hôtel",
         body:
           "C'est le deuxième levier. Entre un bon quatre-étoiles et un palace au bord du Nil, l'écart par nuit peut dépasser le reste de la journée additionné. À l'inverse, changer d'hôtel ne change ni les sites, ni le guide, ni les entrées : c'est le poste le plus facile à ajuster sans abîmer le voyage.",
       },
       {
-        title: "3. La saison",
+        title: "La saison",
         body:
           "D'octobre à avril, tout est plus cher — c'est la saison de la Haute-Égypte. De mai à septembre, les mêmes hôtels et les mêmes bateaux baissent nettement, parfois de moitié, parce qu'il fait 40 °C à Assouan. La saison ne change pas la qualité du voyage, seulement l'heure à laquelle on visite.",
       },
       {
-        title: "4. Le bateau",
+        title: "Le bateau",
         body:
           "Une cabine sur un navire cinq étoiles et l'affrètement complet d'un dahabieh ne jouent pas dans le même ordre de grandeur. C'est souvent le poste qui explique à lui seul la différence entre deux devis qui semblent proposer le même voyage.",
       },
       {
-        title: "5. Les vols intérieurs",
+        title: "Les vols intérieurs",
         body:
           "Le Caire–Louxor et Assouan–Le Caire se prennent en avion : environ une heure contre dix heures de route. C'est un poste modeste mais réel, et il figure séparément sur nos devis plutôt que dilué dans un forfait.",
       },

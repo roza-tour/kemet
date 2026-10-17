@@ -238,10 +238,10 @@ export const collections: Collection[] = [
     ],
     theme: "summer",
     hero: {
-      alt: "The Montaza Palace and its gardens on the Alexandria coast in summer",
-      src: "/images/alexandria/alexandria-montaza-palace.webp",
-      width: 960,
-      height: 600,
+      alt: "Alexandria's corniche curving around the Mediterranean bay, the Bibliotheca Alexandrina in front",
+      src: "/images/alexandria/alexandria-corniche-bay.webp",
+      width: 736,
+      height: 1104,
     },
     lastReviewed: "2026-01",
     relationships: {
@@ -310,8 +310,8 @@ export const collections: Collection[] = [
       },
     ],
     hero: {
-      alt: "The Great Sphinx of Giza facing the dawn beneath a pyramid",
-      src: "/images/giza/giza-great-sphinx-frontal.webp",
+      alt: "A pyramid of Giza beyond the weathered limestone blocks of the Great Pyramid",
+      src: "/images/giza/giza-sphinx-and-pyramid.webp",
       width: 736,
       height: 920,
     },
@@ -489,10 +489,10 @@ export const collections: Collection[] = [
     },
     theme: "family",
     hero: {
-      alt: "The Great Sphinx of Giza, a highlight for families",
-      src: "/images/giza/giza-great-sphinx-frontal.webp",
-      width: 736,
-      height: 920,
+      alt: "Guests on a camel caravan before the Pyramids of Giza",
+      src: "/images/activities/act-camel-pyramids.webp",
+      width: 1300,
+      height: 934,
     },
     lastReviewed: "2026-01",
     relationships: {

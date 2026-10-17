@@ -1612,13 +1612,13 @@ export const tours: Tour[] = [
   {
     slug: "tour-family-8day",
     hero: {
-      alt: "The Great Sphinx of Giza facing the dawn",
-      src: "/images/giza/giza-great-sphinx-frontal.webp",
-      width: 736,
-      height: 920,
+      alt: "Kemet guests jumping for joy above the Giza pyramid panorama",
+      src: "/images/clients/clients-06-giza-jump.webp",
+      width: 680,
+      height: 680,
     },
     gallery: [
-      { alt: "Kemet guests jumping for joy above the Giza pyramid panorama", label: "Giza", src: "/images/clients/clients-06-giza-jump.webp", width: 680, height: 680 },
+      { alt: "The Great Sphinx of Giza facing the dawn", label: "Great Sphinx", src: "/images/giza/giza-great-sphinx-frontal.webp", width: 736, height: 920 },
       { alt: "The Grand Egyptian Museum beside the Giza plateau", label: "Grand Egyptian Museum", src: "/images/giza/giza-grand-egyptian-museum.webp", width: 474, height: 592 },
       { alt: "The great hypostyle hall of Karnak Temple, Luxor", label: "Karnak", src: "/images/luxor/luxor-karnak-hypostyle-hall.webp", width: 652, height: 980 },
       { alt: "A painted royal tomb in the Valley of the Kings", label: "Valley of the Kings", src: "/images/luxor/luxor-valley-of-the-kings-tomb.webp", width: 1000, height: 600 },

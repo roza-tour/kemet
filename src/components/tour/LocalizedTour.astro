@@ -325,6 +325,8 @@ const jsonld: Record<string, unknown>[] = [
   .lz-high--out li::before { background: var(--muted-2); }
 
   .lt-comfort { margin-top: var(--s-5); }
+  /* The questions block came straight after the boxes above it with no space. */
+  .lt-two + :global(.tblock), .lt-comfort + :global(.tblock) { margin-top: var(--s-7); }
   .lt-comfort h2 {
     font-size: var(--t-micro); letter-spacing: .28em; text-transform: uppercase;
     font-family: var(--ff-body); font-weight: 400; color: var(--gold); margin: 0 0 var(--s-3);

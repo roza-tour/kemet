@@ -253,27 +253,27 @@ export const ms: LocalizedPage[] = [
     ],
     sections: [
       {
-        title: "1. Bilangan peserta",
+        title: "Bilangan peserta",
         body:
           "Inilah faktor paling kuat, jauh mengatasi yang lain. Egyptologist, kenderaan dan pemandu berharga sama sama ada untuk dua orang atau enam orang: kosnya dibahagi. Keluarga seramai enam orang kerap membayar jauh lebih murah seorang untuk percutian persendirian sepenuhnya berbanding pasangan suami isteri pada laluan yang sama.",
       },
       {
-        title: "2. Kelas hotel",
+        title: "Kelas hotel",
         body:
           "Ini tuas kedua. Beza antara hotel empat bintang yang baik dan hotel mewah di tebing Sungai Nil boleh melebihi keseluruhan kos harian yang lain jika dijumlahkan. Sebaliknya, menukar hotel tidak mengubah tapak lawatan, pemandu mahupun tiket masuk — inilah item paling mudah dilaraskan tanpa menjejaskan perjalanan.",
       },
       {
-        title: "3. Musim",
+        title: "Musim",
         body:
           "Oktober hingga April semuanya lebih mahal — itulah musim Mesir Hulu. Mei hingga September, hotel dan kapal yang sama turun banyak, kadangkala separuh, kerana Aswan mencecah 40 °C. Musim tidak mengubah mutu perjalanan, hanya waktu keluar melawat.",
       },
       {
-        title: "4. Kapal di Sungai Nil",
+        title: "Kapal di Sungai Nil",
         body:
           "Satu kabin di kapal lima bintang dan sewaan penuh sebuah dahabiya berada pada tahap kos yang berbeza sama sekali. Item inilah yang paling kerap menjelaskan keseluruhan beza antara dua sebut harga yang pada pandangan pertama menawarkan perkara yang sama.",
       },
       {
-        title: "5. Penerbangan domestik",
+        title: "Penerbangan domestik",
         body:
           "Kaherah–Luxor dan Aswan–Kaherah ditempuh dengan pesawat: kira-kira sejam, berbanding sepuluh jam perjalanan darat. Item ini kecil tetapi nyata, dan dalam sebut harga kami ia berdiri sebagai baris tersendiri, bukan dileburkan ke dalam pakej.",
       },
