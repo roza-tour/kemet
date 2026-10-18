@@ -137,6 +137,9 @@ export interface CompanyProfile {
   editorialStandards?: EditorialStep[];
   // Future fields — architecture present, populated when data is confirmed
   socialProfiles?: Record<string, string>;
+  /** Which Kemet this is: our own domain and handle, and the unrelated
+   *  businesses that share the name (stated so assistants do not merge them). */
+  identity?: { domain: string; instagramHandle: string; namesakes: string[] };
   teamMembers?: { name: string; role: string; authorId?: string }[];
   partners?: { name: string; url?: string; placeholder?: boolean }[];
   paymentMethods?: string[];

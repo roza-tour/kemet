@@ -302,7 +302,7 @@ export function destinationSchema(dest: Destination): JsonLd[] {
     name: dest.title,
     description: dest.shortSummary,
     url,
-    isPartOf: { "@type": "WebSite", name: `${site.name} — The Black Land`, url: SITE_URL },
+    isPartOf: { "@type": "WebSite", "@id": `${SITE_URL}#website`, name: site.name, url: SITE_URL },
     about: { "@type": "TouristDestination", name: dest.title },
     publisher: org,
   };
@@ -365,7 +365,7 @@ export function guideSchema(guide: Guide): JsonLd[] {
     name: guide.title,
     description: guide.shortSummary,
     url,
-    isPartOf: { "@type": "WebSite", name: `${site.name} — The Black Land`, url: SITE_URL },
+    isPartOf: { "@type": "WebSite", "@id": `${SITE_URL}#website`, name: site.name, url: SITE_URL },
     publisher: org,
     ...(guide.noReviewer ? {} : { reviewedBy: personRef() }),
   };
@@ -449,7 +449,7 @@ export function experienceSchema(experience: Experience): JsonLd[] {
     name: experience.title,
     description: experience.shortSummary,
     url,
-    isPartOf: { "@type": "WebSite", name: `${site.name} — The Black Land`, url: SITE_URL },
+    isPartOf: { "@type": "WebSite", "@id": `${SITE_URL}#website`, name: site.name, url: SITE_URL },
     about: { "@type": "TouristAttraction", name: experience.title },
     publisher: org,
   };
@@ -508,7 +508,7 @@ export function collectionSchema(
     name,
     description,
     url,
-    isPartOf: { "@type": "WebSite", name: `${site.name} — The Black Land`, url: SITE_URL },
+    isPartOf: { "@type": "WebSite", "@id": `${SITE_URL}#website`, name: site.name, url: SITE_URL },
     publisher: orgRef(),
   };
 
@@ -530,7 +530,7 @@ export function collectionDetailSchema(col: Collection): JsonLd[] {
     name: col.title,
     description: col.shortSummary,
     url,
-    isPartOf: { "@type": "WebSite", name: `${site.name} — The Black Land`, url: SITE_URL },
+    isPartOf: { "@type": "WebSite", "@id": `${SITE_URL}#website`, name: site.name, url: SITE_URL },
     publisher: org,
     about: { "@type": "Country", name: "Egypt" },
     keywords: [
@@ -546,7 +546,7 @@ export function collectionDetailSchema(col: Collection): JsonLd[] {
     name: col.title,
     description: col.shortSummary,
     url,
-    isPartOf: { "@type": "WebSite", name: `${site.name} — The Black Land`, url: SITE_URL },
+    isPartOf: { "@type": "WebSite", "@id": `${SITE_URL}#website`, name: site.name, url: SITE_URL },
     publisher: org,
     ...(col.lastReviewed ? { dateModified: col.lastReviewed } : {}),
   };
@@ -630,7 +630,10 @@ export function siteSchema(): JsonLd[] {
     "@type": ["TravelAgency", "LocalBusiness"],
     "@id": ORG_ID,
     name: site.name,
-    alternateName: "Kemet — Luxury Egypt Travel",
+    alternateName: ["Kemet — Luxury Egypt Travel", "Kemet Luxury Egypt Travel", "kemet-travel.com"],
+    // Several unrelated businesses use the name Kemet (company.identity).
+    ...(company.identity ? { disambiguatingDescription:
+      `Private, tailor-made Egypt travel company at ${company.identity.domain} (Instagram ${company.identity.instagramHandle}), based in Cairo. Not connected with other businesses that use the name Kemet.` } : {}),
     url: SITE_URL,
     logo: `${SITE_URL}/images/brand/kemet-logo-gold.webp`,
     image: `${SITE_URL}${OG_IMAGE_PATH}`,
@@ -723,7 +726,12 @@ export function siteSchema(): JsonLd[] {
   const webSite: JsonLd = {
     "@context": SCHEMA_CONTEXT,
     "@type": "WebSite",
-    name: `${site.name} — The Black Land`,
+    "@id": `${SITE_URL}#website`,
+    // The site name Google shows above a result comes from here: the brand on
+    // its own, with the longer forms as alternates. It used to read "Kemet —
+    // The Black Land", a tagline no traveller searches for.
+    name: site.name,
+    alternateName: ["Kemet — Luxury Egypt Travel", "Kemet Luxury Egypt Travel", "kemet-travel.com"],
     url: SITE_URL,
     // Every language the site is actually published in, not just English. This
     // is the machine-readable half of the hreflang set: hreflang tells a
@@ -875,7 +883,7 @@ export function answerPageSchema(opts: {
     description: opts.description,
     url,
     inLanguage: "en",
-    isPartOf: { "@type": "WebSite", name: `${site.name} — The Black Land`, url: SITE_URL },
+    isPartOf: { "@type": "WebSite", "@id": `${SITE_URL}#website`, name: site.name, url: SITE_URL },
     publisher: orgRef(),
     reviewedBy: personRef(),
     speakable: SPEAKABLE,
@@ -901,7 +909,7 @@ export function aboutPageSchema(): JsonLd {
     description:
       "Learn about Kemet — our mission, values, and why we design private, tailor-made Egypt journeys for discerning international travellers.",
     url,
-    isPartOf: { "@type": "WebSite", name: `${site.name} — The Black Land`, url: SITE_URL },
+    isPartOf: { "@type": "WebSite", "@id": `${SITE_URL}#website`, name: site.name, url: SITE_URL },
     about: orgRef(),
     // The About page is where the Person node lives in full — every byline
     // and every reviewedBy elsewhere on the site is a reference back to here.
@@ -945,7 +953,7 @@ export function contactPageSchema(): JsonLd {
     name: `Contact ${site.name} — Plan Your Egypt Journey`,
     description: `Get in touch with ${site.name} to start planning your private Egypt journey.`,
     url,
-    isPartOf: { "@type": "WebSite", name: `${site.name} — The Black Land`, url: SITE_URL },
+    isPartOf: { "@type": "WebSite", "@id": `${SITE_URL}#website`, name: site.name, url: SITE_URL },
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "customer service",

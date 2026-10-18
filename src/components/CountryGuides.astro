@@ -1,0 +1,47 @@
+---
+// The pages written for travellers from one country or in one situation, as
+// plain links grouped by region (data/travellingFrom.ts). Crawlable on
+// purpose: the footer's country picker is a <select>, which no crawler follows.
+import { FROM_GROUPS } from "@/data/travellingFrom";
+import SectionHeader from "@/components/SectionHeader.astro";
+
+interface Props { base?: string }
+const { base = "" } = Astro.props;
+---
+<section id="from" class="cg-from" style="padding-top:var(--s-5)">
+  <div class="wrap">
+    <SectionHeader sym="travellers"
+      eyebrow="Planning from your country"
+      title="Written for where you are travelling from"
+      text="Flights, the visa for your passport, the time difference and the holidays that fit — one page for each, in plain words."
+    />
+    <div class="cgf-grid">
+      {FROM_GROUPS.map((grp) => (
+        <div class="cgf-group">
+          <h3>{grp.heading}</h3>
+          <ul>
+            {grp.links.map((l) => (
+              <li>
+                <a href={`${base}${l.href}`} lang={l.lang} dir={l.lang === "ar" ? "rtl" : undefined}>{l.label}</a>
+                {l.note && <span lang={l.lang} dir={l.lang === "ar" ? "rtl" : undefined}>{l.note}</span>}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .cgf-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: var(--s-4); }
+  .cgf-group { border: 1px solid var(--line); border-radius: 2px; padding: var(--s-4); background: rgba(217,180,90,.03); }
+  .cgf-group h3 { font-family: var(--ff-body); font-weight: 400; font-size: var(--t-micro); letter-spacing: .28em;
+    text-transform: uppercase; color: var(--gold); margin: 0 0 var(--s-3); }
+  .cgf-group ul { list-style: none; margin: 0; padding: 0; }
+  .cgf-group li { padding: var(--s-1) 0; border-bottom: 1px solid var(--line); display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px var(--s-2); }
+  .cgf-group li:last-child { border-bottom: 0; }
+  .cgf-group a { color: var(--bone); font-size: var(--t-sm); min-height: 32px; display: inline-flex; align-items: center; transition: color .3s; }
+  .cgf-group a:hover { color: var(--gold-bright); }
+  .cgf-group span { font-size: var(--t-tiny); color: var(--muted-2); }
+</style>

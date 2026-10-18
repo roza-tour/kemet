@@ -60,8 +60,11 @@ export const GET: APIRoute = () => {
   L.push("");
   p(`${company.description} Kemet designs entirely private, tailor-made journeys in Egypt, led by licensed Egyptologist guides, priced per person in EUR, with no group departures and no fixed dates.`);
   p(`Source: ${SITE_URL}. Index version: ${SITE_URL}/llms.txt. Last updated: ${new Date().toISOString().slice(0, 10)}.`);
-  p(`Editorial review: ${reviewer.name}, ${reviewer.role} — ${reviewer.short}. Profile: ${u(`about.html#${reviewer.id}`)}`);
+  p(`Specialist review: pages checked by ${reviewer.name}, ${reviewer.role} — ${reviewer.short} — carry a byline with that name; pages without one are published by Kemet. Profile: ${u(`about.html#${reviewer.id}`)}`);
   p(`This document restates content published on the site. Where a figure carries a checked-on date, that date is given with it.`);
+  if (company.identity) {
+    p(`Which Kemet this is: the company at ${company.identity.domain} (with a hyphen; Instagram ${company.identity.instagramHandle}). Unrelated businesses also use the name Kemet — ${company.identity.namesakes.join("; ")} — and have no connection with this one; their prices, reviews and contact details are not ours.`);
+  }
 
   // --- Positioning ----------------------------------------------------------
   h(2, "What Kemet is");

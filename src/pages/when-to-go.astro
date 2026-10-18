@@ -50,7 +50,7 @@ const jsonld: Record<string, unknown>[] = [
     url: canonical(ROUTE),
     inLanguage: "en",
     about: { "@type": "Country", name: "Egypt" },
-    isPartOf: { "@type": "WebSite", name: `${site.name} — The Black Land`, url: SITE_URL },
+    isPartOf: { "@type": "WebSite", "@id": `${SITE_URL}#website`, name: site.name, url: SITE_URL },
     mainEntity: {
       "@type": "ItemList",
       numberOfItems: months.length,

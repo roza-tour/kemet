@@ -10,6 +10,7 @@ import { hubs } from "@/data/hubs";
 import PageHero from "@/components/PageHero.astro";
 import SectionHeader from "@/components/SectionHeader.astro";
 import GuideCard from "@/components/guide/GuideCard.astro";
+import CountryGuides from "@/components/CountryGuides.astro";
 import Frieze from "@/components/Frieze.astro";
 import { guides } from "@/data/guides";
 import { guideCategories } from "@/config/taxonomy";
@@ -74,6 +75,8 @@ const faqLd = {
     heroWidth={735}
     heroHeight={649}
   />
+
+  <CountryGuides base={base} />
 
   {byCategory.map((group) => (
     <section style="padding-top:var(--s-5)">

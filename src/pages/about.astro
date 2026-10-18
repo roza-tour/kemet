@@ -79,7 +79,16 @@ const jsonld = [aboutPageSchema(), breadcrumb([["Home", "index.html"], ["About",
                 {company.headquarters && (
                   <div><span>Based in</span><b>{company.headquarters.city}, {company.headquarters.country}</b></div>
                 )}
+                {company.identity && (
+                  <div><span>Our only website</span><b>{company.identity.domain}</b></div>
+                )}
+                {company.identity && (
+                  <div><span>Instagram</span><b>{company.identity.instagramHandle}</b></div>
+                )}
               </div>
+              {company.identity && (
+                <p class="about-namesake">Other businesses also trade as "Kemet" in Egypt. We are not connected with any of them.</p>
+              )}
             </div>
           </div>
         </div>
@@ -160,3 +169,7 @@ const jsonld = [aboutPageSchema(), breadcrumb([["Home", "index.html"], ["About",
     </div>
   </section>
 </Base>
+
+<style>
+  .about-namesake { margin: var(--s-3) 0 0; font-size: var(--t-tiny); line-height: 1.7; color: var(--muted-2); }
+</style>

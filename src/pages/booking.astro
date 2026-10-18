@@ -20,7 +20,7 @@ const jsonld = [
     "@type": "WebPage",
     name: `Booking, Payment & Cancellation — ${company.name}`,
     url: canonical(ROUTE),
-    isPartOf: { "@type": "WebSite", name: `${company.name} — The Black Land`, url: SITE_URL },
+    isPartOf: { "@type": "WebSite", "@id": `${SITE_URL}#website`, name: company.name, url: SITE_URL },
   },
   breadcrumb([["Home", "index.html"], ["Booking & Cancellation", ROUTE]]),
 ];

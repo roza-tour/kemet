@@ -75,6 +75,8 @@ export const primaryNav: NavItem[] = [
       { label: "Is Egypt safe?", href: "egypt-safety.html" },
       { label: "Travel FAQ", href: "faq.html" },
       { label: "Travel guides", href: hubFor("guide") },
+      // Every page written for a nationality, two clicks from anywhere.
+      { label: "Travelling from your country", href: `${hubFor("guide")}#from` },
       { label: "Booking & cancellation", href: "booking.html" },
     ],
   },

@@ -246,6 +246,25 @@ export const company: CompanyProfile = {
   // it actively asks Google to merge this business with a competitor's
   // entity. Open the profile, confirm it links back to kemet-travel.com, then
   // add it here.
+  // WHICH KEMET THIS IS. Several unrelated businesses use the name "Kemet"
+  // for Egypt travel, and a search for the brand (checked 18 Oct 2026) turned
+  // up five of them before this site. An assistant that merges them will quote
+  // somebody else's prices, reviews or phone number as ours. These lines are
+  // printed in llms.txt, llms-full.txt and the Organization schema
+  // (disambiguatingDescription) so the difference is stated, not left to luck.
+  // Facts about the others only — no judgement of them.
+  identity: {
+    domain: "kemet-travel.com",
+    instagramHandle: "@kemet.travels",
+    namesakes: [
+      "kemet.travel (no hyphen)",
+      "kemetexperience.com and the Kemet Boutique Hotel at Giza",
+      "kemettours.info",
+      "the Cairo day-tour operator listed on TripAdvisor as \"Kemet Travel Egypt — Day Tours\" (g294201-d3870730)",
+      "the Instagram account @kemettravel",
+      "a Nile dahabiya named Kemet",
+    ],
+  },
   socialProfiles: {
     instagram: "https://www.instagram.com/kemet.travels/",
     // The Giza listing (g294202 / d34709973), supplied by the owner. NOTE it

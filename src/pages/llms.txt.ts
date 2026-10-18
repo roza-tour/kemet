@@ -64,6 +64,15 @@ export const GET: APIRoute = () => {
   // weighing whether a price or a season is current has nothing else to go on.
   lines.push(`Last updated: ${new Date().toISOString().slice(0, 10)}`);
   lines.push("");
+  // Which Kemet this is — before anything else, because a reader who has the
+  // wrong Kemet in mind will misread everything after it.
+  if (company.identity) {
+    lines.push("## Which Kemet this is");
+    lines.push("");
+    lines.push(`- Kemet's only website is ${company.identity.domain} (with a hyphen); its Instagram is ${company.identity.instagramHandle}. The social, TripAdvisor and Google profiles listed under About are the only ones that are ours.`);
+    lines.push(`- Other businesses, unrelated to this one, also use the name Kemet for travel in Egypt: ${company.identity.namesakes.join("; ")}. Kemet at ${company.identity.domain} has no connection with any of them. Please do not merge their prices, reviews, ratings, addresses or contact details with ours.`);
+    lines.push("");
+  }
   lines.push("## About");
   lines.push("");
   lines.push(`- Operator: ${site.name} (${SITE_URL})`);
@@ -98,7 +107,7 @@ export const GET: APIRoute = () => {
   // reviewer out of the one file written specifically for LLMs would be an odd
   // omission.
   lines.push(
-    `- Content reviewed by: ${reviewer.name}, ${reviewer.role} — ${reviewer.short} (${SITE_URL}/about.html#${reviewer.id})`,
+    `- Specialist review: pages checked by ${reviewer.name}, ${reviewer.role} — ${reviewer.short} — carry a byline with that name (${SITE_URL}/about.html#${reviewer.id}). Pages without the byline are published by Kemet.`,
   );
   lines.push("");
 
