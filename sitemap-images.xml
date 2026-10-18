@@ -1235,6 +1235,70 @@
     </image:image>
   </url>
   <url>
+    <loc>https://kemet-travel.com/guides/egypt-from-uk-ireland.html</loc>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/luxor/luxor-hatshepsut-temple-deir-el-bahri.webp</image:loc>
+      <image:caption>The terraced Temple of Hatshepsut at Deir el-Bahri, below the cliffs of Luxor&apos;s West Bank</image:caption>
+      <image:title>Egypt from the UK &amp; Ireland</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://kemet-travel.com/guides/egypt-from-scandinavia.html</loc>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/cruise/nile-cruise-golden.webp</image:loc>
+      <image:caption>A two-masted dahabiya sailing on the Nile in low golden sunlight</image:caption>
+      <image:title>Egypt from Scandinavia &amp; the Nordics</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://kemet-travel.com/guides/egypt-from-netherlands-belgium.html</loc>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/giza/saqqara-step-pyramid-djoser.webp</image:loc>
+      <image:caption>The Step Pyramid of Djoser at Saqqara under a pale blue sky</image:caption>
+      <image:title>Egypt from the Netherlands &amp; Belgium</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://kemet-travel.com/guides/egypt-from-singapore-hong-kong-china.html</loc>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/giza-sphinx-with-pyramid.webp</image:loc>
+      <image:caption>The Great Sphinx of Giza in profile, with a pyramid behind it under a clear blue sky</image:caption>
+      <image:title>Egypt from Singapore, Hong Kong &amp; China</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://kemet-travel.com/guides/egypt-from-africa.html</loc>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/abu-simbel-both-temples.webp</image:loc>
+      <image:caption>The two rock-cut temples of Abu Simbel: the Great Temple of Ramesses II in the distance and the Temple of Nefertari in front, with visitors on the forecourt</image:caption>
+      <image:title>Egypt from South Africa, Nigeria, Kenya &amp; Ghana</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://kemet-travel.com/guides/egypt-for-gulf-residents.html</loc>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/giza-camel-rider-pyramids.webp</image:loc>
+      <image:caption>A camel rider crossing the sand in front of a pyramid and its smaller satellite pyramids at Giza</image:caption>
+      <image:title>Egypt for Gulf residents</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://kemet-travel.com/guides/umrah-and-egypt.html</loc>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/cairo/cairo-al-azhar-mosque-courtyard.webp</image:loc>
+      <image:caption>The white marble courtyard of Al-Azhar Mosque in Cairo, with its minarets and dome under a blue sky</image:caption>
+      <image:title>Umrah and Egypt</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://kemet-travel.com/guides/egypt-cruise-shore-excursions.html</loc>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/alexandria/alexandria-qaitbay-citadel.webp</image:loc>
+      <image:caption>The Citadel of Qaitbay in Alexandria, at the end of a paved approach lined with old cannons and palms</image:caption>
+      <image:title>Shore excursions in Egypt</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://kemet-travel.com/collections/egypt-at-an-easy-pace.html</loc>
     <image:image>
       <image:loc>https://kemet-travel.com/images/cruise/nile-dahabiya-deck.webp</image:loc>

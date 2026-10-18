@@ -13,7 +13,8 @@
     "Indonesian",
     "Malay",
     "Portuguese",
-    "Arabic"
+    "Arabic",
+    "Mandarin Chinese"
   ],
   "markets": [
     {
@@ -31,7 +32,8 @@
       ],
       "pages": [
         "https://kemet-travel.com/ar/sayf-masr-lil-aailat-al-khalijiya.html",
-        "https://kemet-travel.com/ar/"
+        "https://kemet-travel.com/ar/",
+        "https://kemet-travel.com/guides/egypt-for-gulf-residents.html"
       ],
       "season": "Summer and school holidays — the months European demand drops, which makes them easy to serve well.",
       "interests": [
@@ -60,7 +62,8 @@
       ],
       "pages": [
         "https://kemet-travel.com/ar/sayf-masr-lil-aailat-al-khalijiya.html",
-        "https://kemet-travel.com/ar/"
+        "https://kemet-travel.com/ar/",
+        "https://kemet-travel.com/guides/egypt-for-gulf-residents.html"
       ],
       "season": "Year-round, with a strong summer peak and long-weekend breaks around national holidays.",
       "interests": [
@@ -89,7 +92,8 @@
       ],
       "pages": [
         "https://kemet-travel.com/ar/sayf-masr-lil-aailat-al-khalijiya.html",
-        "https://kemet-travel.com/ar/"
+        "https://kemet-travel.com/ar/",
+        "https://kemet-travel.com/guides/egypt-for-gulf-residents.html"
       ],
       "season": "Summer, and Eid holidays in both directions of the year.",
       "interests": [
@@ -118,7 +122,8 @@
       ],
       "pages": [
         "https://kemet-travel.com/ar/sayf-masr-lil-aailat-al-khalijiya.html",
-        "https://kemet-travel.com/ar/"
+        "https://kemet-travel.com/ar/",
+        "https://kemet-travel.com/guides/egypt-for-gulf-residents.html"
       ],
       "season": "Summer and Eid, plus short winter breaks.",
       "interests": [
@@ -147,7 +152,8 @@
       ],
       "pages": [
         "https://kemet-travel.com/ar/sayf-masr-lil-aailat-al-khalijiya.html",
-        "https://kemet-travel.com/ar/"
+        "https://kemet-travel.com/ar/",
+        "https://kemet-travel.com/guides/egypt-for-gulf-residents.html"
       ],
       "season": "Summer and Eid.",
       "interests": [
@@ -176,7 +182,8 @@
       ],
       "pages": [
         "https://kemet-travel.com/ar/sayf-masr-lil-aailat-al-khalijiya.html",
-        "https://kemet-travel.com/ar/"
+        "https://kemet-travel.com/ar/",
+        "https://kemet-travel.com/guides/egypt-for-gulf-residents.html"
       ],
       "season": "Summer and Eid.",
       "interests": [
@@ -202,11 +209,12 @@
         "English"
       ],
       "pages": [
-        "https://kemet-travel.com/guides/egypt-half-term-uk.html",
-        "https://kemet-travel.com/"
+        "https://kemet-travel.com/guides/egypt-from-uk-ireland.html",
+        "https://kemet-travel.com/guides/egypt-half-term-uk.html"
       ],
       "season": "October to April, concentrated on half-term, Christmas and Easter.",
       "interests": [
+        "Nonstop flights to Cairo from Heathrow (British Airways and EgyptAir) and Manchester, with Birmingham from late October 2026",
         "Half-term, Christmas and Easter dates",
         "The Nile Valley in the October-to-April season",
         "Private guiding rather than group departures"
@@ -415,7 +423,7 @@
         "English"
       ],
       "pages": [
-        "https://kemet-travel.com/"
+        "https://kemet-travel.com/guides/egypt-from-netherlands-belgium.html"
       ],
       "season": "October to April, plus the May and autumn school breaks.",
       "interests": [
@@ -439,7 +447,8 @@
         "French"
       ],
       "pages": [
-        "https://kemet-travel.com/fr/"
+        "https://kemet-travel.com/fr/",
+        "https://kemet-travel.com/guides/egypt-from-netherlands-belgium.html"
       ],
       "season": "October to April.",
       "interests": [
@@ -463,7 +472,7 @@
         "English"
       ],
       "pages": [
-        "https://kemet-travel.com/"
+        "https://kemet-travel.com/guides/egypt-from-uk-ireland.html"
       ],
       "season": "October to April.",
       "interests": [
@@ -487,7 +496,7 @@
         "English"
       ],
       "pages": [
-        "https://kemet-travel.com/"
+        "https://kemet-travel.com/guides/egypt-from-scandinavia.html"
       ],
       "season": "November to March — the darkest months at home are the best months on the Nile.",
       "interests": [
@@ -511,7 +520,7 @@
         "English"
       ],
       "pages": [
-        "https://kemet-travel.com/"
+        "https://kemet-travel.com/guides/egypt-from-scandinavia.html"
       ],
       "season": "November to March, plus the February winter holiday week.",
       "interests": [
@@ -535,7 +544,7 @@
         "English"
       ],
       "pages": [
-        "https://kemet-travel.com/"
+        "https://kemet-travel.com/guides/egypt-from-scandinavia.html"
       ],
       "season": "November to March.",
       "interests": [
@@ -913,7 +922,7 @@
       ],
       "welcome": {
         "language": "en",
-        "text": "We plan private journeys in Egypt for travellers from Japan — with your own licensed Egyptologist, guiding in English or another of our ten languages."
+        "text": "We plan private journeys in Egypt for travellers from Japan — with your own licensed Egyptologist, guiding in English or another of the languages our team guides in."
       }
     },
     {
@@ -937,7 +946,7 @@
       ],
       "welcome": {
         "language": "en",
-        "text": "We plan private journeys in Egypt for travellers from South Korea — with your own licensed Egyptologist, guiding in English or another of our ten languages."
+        "text": "We plan private journeys in Egypt for travellers from South Korea — with your own licensed Egyptologist, guiding in English or another of the languages our team guides in."
       }
     },
     {
@@ -1047,6 +1056,291 @@
       "welcome": {
         "language": "en",
         "text": "We plan private journeys in Egypt for travellers from New Zealand — journeys long enough to be worth the flight, with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day."
+      }
+    },
+    {
+      "code": "FI",
+      "country": "Finland",
+      "travellers": "Finnish travellers",
+      "region": "Northern Europe",
+      "reads": [
+        "English"
+      ],
+      "guidesIn": [
+        "English"
+      ],
+      "pages": [
+        "https://kemet-travel.com/guides/egypt-from-scandinavia.html"
+      ],
+      "season": "November to March, and the February winter holiday.",
+      "interests": [
+        "One stop to Cairo, via Istanbul, Frankfurt, Athens or a Gulf hub",
+        "The darkest months at home are the best months on the Nile",
+        "The e-visa or a visa on arrival"
+      ],
+      "welcome": {
+        "language": "en",
+        "text": "We plan private journeys in Egypt for travellers from Finland — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day."
+      }
+    },
+    {
+      "code": "IS",
+      "country": "Iceland",
+      "travellers": "Icelandic travellers",
+      "region": "Northern Europe",
+      "reads": [
+        "English"
+      ],
+      "guidesIn": [
+        "English"
+      ],
+      "pages": [
+        "https://kemet-travel.com/guides/egypt-from-scandinavia.html"
+      ],
+      "season": "November to March.",
+      "interests": [
+        "One stop to Cairo through a European hub",
+        "Winter on the Nile"
+      ],
+      "welcome": {
+        "language": "en",
+        "text": "We plan private journeys in Egypt for travellers from Iceland — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day."
+      }
+    },
+    {
+      "code": "LU",
+      "country": "Luxembourg",
+      "travellers": "Luxembourg travellers",
+      "region": "Western Europe",
+      "reads": [
+        "French",
+        "German",
+        "English"
+      ],
+      "guidesIn": [
+        "French",
+        "German",
+        "English"
+      ],
+      "pages": [
+        "https://kemet-travel.com/guides/egypt-from-netherlands-belgium.html",
+        "https://kemet-travel.com/fr/",
+        "https://kemet-travel.com/de/"
+      ],
+      "season": "October to April.",
+      "interests": [
+        "Egyptologists from our own team who guide in French, German or English",
+        "The nonstop from Brussels, or one stop"
+      ],
+      "welcome": {
+        "language": "fr",
+        "text": "Nous organisons des voyages privés en Égypte pour les voyageurs venus du Luxembourg — en français, en allemand ou en anglais, avec des égyptologues de notre propre équipe."
+      }
+    },
+    {
+      "code": "SG",
+      "country": "Singapore",
+      "travellers": "Singaporean travellers",
+      "region": "Asia-Pacific",
+      "reads": [
+        "English",
+        "Mandarin Chinese",
+        "Malay"
+      ],
+      "guidesIn": [
+        "English",
+        "Mandarin Chinese",
+        "Malay"
+      ],
+      "pages": [
+        "https://kemet-travel.com/guides/egypt-from-singapore-hong-kong-china.html"
+      ],
+      "season": "The June and December school holidays, and Chinese New Year.",
+      "interests": [
+        "One stop to Cairo through Dubai, Doha, Abu Dhabi or Istanbul",
+        "Egyptologists from our own team who guide in English or Mandarin",
+        "The e-visa or a visa on arrival"
+      ],
+      "welcome": {
+        "language": "en",
+        "text": "We plan private journeys in Egypt for travellers from Singapore — with your own licensed Egyptologist, in English or Mandarin, and a real itinerary within one working day."
+      }
+    },
+    {
+      "code": "HK",
+      "country": "Hong Kong",
+      "travellers": "Hong Kong travellers",
+      "region": "Asia-Pacific",
+      "reads": [
+        "English",
+        "Mandarin Chinese"
+      ],
+      "guidesIn": [
+        "English",
+        "Mandarin Chinese"
+      ],
+      "pages": [
+        "https://kemet-travel.com/guides/egypt-from-singapore-hong-kong-china.html"
+      ],
+      "season": "October to April, Chinese New Year and Easter.",
+      "interests": [
+        "One stop to Cairo through a Gulf hub or mainland China",
+        "Egyptologists from our own team who guide in English or Mandarin"
+      ],
+      "welcome": {
+        "language": "en",
+        "text": "We plan private journeys in Egypt for travellers from Hong Kong — with your own licensed Egyptologist, in English or Mandarin, and a real itinerary within one working day."
+      }
+    },
+    {
+      "code": "TW",
+      "country": "Taiwan",
+      "travellers": "Taiwanese travellers",
+      "region": "Asia-Pacific",
+      "reads": [
+        "Mandarin Chinese",
+        "English"
+      ],
+      "guidesIn": [
+        "Mandarin Chinese",
+        "English"
+      ],
+      "pages": [
+        "https://kemet-travel.com/guides/egypt-from-singapore-hong-kong-china.html"
+      ],
+      "season": "October to April, and Lunar New Year.",
+      "interests": [
+        "Egyptologists from our own team who guide in Mandarin",
+        "The tourist e-visa, online before you fly"
+      ],
+      "welcome": {
+        "language": "en",
+        "text": "We plan private journeys in Egypt for travellers from Taiwan — with your own licensed Egyptologist, guiding in Mandarin or English."
+      }
+    },
+    {
+      "code": "CN",
+      "country": "China",
+      "travellers": "Chinese travellers",
+      "region": "Asia-Pacific",
+      "reads": [
+        "Mandarin Chinese",
+        "English"
+      ],
+      "guidesIn": [
+        "Mandarin Chinese",
+        "English"
+      ],
+      "pages": [
+        "https://kemet-travel.com/guides/egypt-from-singapore-hong-kong-china.html"
+      ],
+      "season": "Chinese New Year and the October Golden Week, both in Egypt's good season.",
+      "interests": [
+        "Nonstop flights to Cairo from Beijing, Shanghai, Guangzhou, Hangzhou and Chengdu",
+        "Egyptologists from our own team who guide in Mandarin",
+        "The e-visa or a visa on arrival"
+      ],
+      "welcome": {
+        "language": "en",
+        "text": "We plan private journeys in Egypt for travellers from China — with your own licensed Egyptologist, guiding in Mandarin or English."
+      }
+    },
+    {
+      "code": "ZA",
+      "country": "South Africa",
+      "travellers": "South African travellers",
+      "region": "Africa",
+      "reads": [
+        "English"
+      ],
+      "guidesIn": [
+        "English"
+      ],
+      "pages": [
+        "https://kemet-travel.com/guides/egypt-from-africa.html"
+      ],
+      "season": "The December–January holidays and the April and September breaks.",
+      "interests": [
+        "The EgyptAir nonstop from Johannesburg",
+        "The tourist e-visa, online before you fly",
+        "Family and multi-generation journeys"
+      ],
+      "welcome": {
+        "language": "en",
+        "text": "We plan private journeys in Egypt for travellers from South Africa — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day."
+      }
+    },
+    {
+      "code": "NG",
+      "country": "Nigeria",
+      "travellers": "Nigerian travellers",
+      "region": "Africa",
+      "reads": [
+        "English"
+      ],
+      "guidesIn": [
+        "English"
+      ],
+      "pages": [
+        "https://kemet-travel.com/guides/egypt-from-africa.html"
+      ],
+      "season": "December and the Easter holidays, plus milestone and celebration travel year-round.",
+      "interests": [
+        "EgyptAir nonstops from Lagos and Abuja",
+        "An Egyptian visa from the embassy, applied for well before travel",
+        "Family and celebration journeys"
+      ],
+      "welcome": {
+        "language": "en",
+        "text": "We plan private journeys in Egypt for travellers from Nigeria — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day."
+      }
+    },
+    {
+      "code": "KE",
+      "country": "Kenya",
+      "travellers": "Kenyan travellers",
+      "region": "Africa",
+      "reads": [
+        "English"
+      ],
+      "guidesIn": [
+        "English"
+      ],
+      "pages": [
+        "https://kemet-travel.com/guides/egypt-from-africa.html"
+      ],
+      "season": "December, Easter and the August holidays.",
+      "interests": [
+        "The EgyptAir nonstop from Nairobi",
+        "An Egyptian visa from the embassy, applied for well before travel"
+      ],
+      "welcome": {
+        "language": "en",
+        "text": "We plan private journeys in Egypt for travellers from Kenya — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day."
+      }
+    },
+    {
+      "code": "GH",
+      "country": "Ghana",
+      "travellers": "Ghanaian travellers",
+      "region": "Africa",
+      "reads": [
+        "English"
+      ],
+      "guidesIn": [
+        "English"
+      ],
+      "pages": [
+        "https://kemet-travel.com/guides/egypt-from-africa.html"
+      ],
+      "season": "December and the Easter holidays.",
+      "interests": [
+        "The EgyptAir nonstop from Accra",
+        "An Egyptian visa from the embassy, applied for well before travel"
+      ],
+      "welcome": {
+        "language": "en",
+        "text": "We plan private journeys in Egypt for travellers from Ghana — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day."
       }
     }
   ]
