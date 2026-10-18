@@ -37,6 +37,7 @@ export const segmentGuidesEurope: Guide[] = [
     difficulty: "easy",
     readingTimeMinutes: 6,
     lastUpdated: "2026-10",
+    noReviewer: true,
     keyFacts: [
       { label: "Nonstop to Cairo", value: "Heathrow, Manchester, Birmingham, Dublin" },
       { label: "Flight time", value: "About 5 hours from London" },
@@ -174,6 +175,7 @@ export const segmentGuidesEurope: Guide[] = [
     difficulty: "easy",
     readingTimeMinutes: 6,
     lastUpdated: "2026-10",
+    noReviewer: true,
     keyFacts: [
       { label: "Nonstop to Cairo", value: "Copenhagen; Stockholm from 18 December 2026" },
       { label: "Oslo", value: "Nonstop planned from 21 December 2026" },
@@ -322,6 +324,7 @@ export const segmentGuidesEurope: Guide[] = [
     difficulty: "easy",
     readingTimeMinutes: 6,
     lastUpdated: "2026-10",
+    noReviewer: true,
     keyFacts: [
       { label: "Nonstop to Cairo", value: "Amsterdam (EgyptAir, Transavia), Brussels (EgyptAir)" },
       { label: "Flight time", value: "About 5 hours" },

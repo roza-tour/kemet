@@ -712,6 +712,11 @@ export interface Guide extends ContentEntity {
 
   // Future attribution (null until author system is built)
   authorId?: string;
+  /** True for a guide no named specialist has reviewed: no "Reviewed by"
+   *  byline and no reviewedBy/author Person in its structured data — the
+   *  organisation is the author. The owner asked (18 Oct 2026) that the
+   *  October 2026 English market guides carry no reviewer's name. */
+  noReviewer?: boolean;
   reviewDate?: string;
 
   relationships?: GuideRelationships;

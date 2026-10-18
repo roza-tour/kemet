@@ -349,8 +349,7 @@ export function guideSchema(guide: Guide): JsonLd[] {
     // Attribution. An unsigned travel article is the weakest thing a search
     // system or an answer engine can be handed; naming the specialist who
     // checked it is what makes a claim on this page quotable.
-    author: personRef(),
-    reviewedBy: personRef(),
+    ...(guide.noReviewer ? { author: org } : { author: personRef(), reviewedBy: personRef() }),
     // Google's Rich Results Test flags an Article with no image. The hero is
     // already published on the page, so this is a field we simply were not
     // passing through rather than one we lack. datePublished stays out: we have
@@ -368,7 +367,7 @@ export function guideSchema(guide: Guide): JsonLd[] {
     url,
     isPartOf: { "@type": "WebSite", name: `${site.name} — The Black Land`, url: SITE_URL },
     publisher: org,
-    reviewedBy: personRef(),
+    ...(guide.noReviewer ? {} : { reviewedBy: personRef() }),
   };
 
   const leaf: BreadcrumbItem = [guide.title, route];

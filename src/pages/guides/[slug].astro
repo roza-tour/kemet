@@ -62,7 +62,7 @@ const jsonld = entitySchema("guide", guide);
         {/* Visible attribution. Google's guidance is explicit that authorship
             should be apparent to a reader, not only to a parser — and a
             generative engine quoting this page reads the text, not the JSON. */}
-        <Byline base={base} updated={guide.lastUpdated} />
+        {!guide.noReviewer && <Byline base={base} updated={guide.lastUpdated} />}
 
         <div class="tdetail">
 

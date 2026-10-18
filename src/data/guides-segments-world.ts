@@ -31,6 +31,7 @@ export const segmentGuidesWorld: Guide[] = [
     difficulty: "easy",
     readingTimeMinutes: 6,
     lastUpdated: "2026-10",
+    noReviewer: true,
     keyFacts: [
       { label: "Nonstop to Cairo", value: "From Beijing, Shanghai, Guangzhou, Hangzhou and Chengdu" },
       { label: "From Singapore & Hong Kong", value: "One stop" },
@@ -167,6 +168,7 @@ export const segmentGuidesWorld: Guide[] = [
     difficulty: "easy",
     readingTimeMinutes: 6,
     lastUpdated: "2026-10",
+    noReviewer: true,
     keyFacts: [
       { label: "Nonstop to Cairo", value: "EgyptAir from Johannesburg, Lagos, Abuja, Nairobi and Accra" },
       { label: "Flight time", value: "About 4½–5½ hours; about 8½ from Johannesburg" },
@@ -299,6 +301,7 @@ export const segmentGuidesWorld: Guide[] = [
     difficulty: "easy",
     readingTimeMinutes: 6,
     lastUpdated: "2026-10",
+    noReviewer: true,
     keyFacts: [
       { label: "Flight to Cairo", value: "About 2–4 hours" },
       { label: "Pyramids weekend", value: "flydubai lands at Sphinx airport, near Giza" },

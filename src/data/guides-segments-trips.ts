@@ -35,6 +35,7 @@ export const segmentGuidesTrips: Guide[] = [
     difficulty: "easy",
     readingTimeMinutes: 6,
     lastUpdated: "2026-10",
+    noReviewer: true,
     keyFacts: [
       { label: "Jeddah or Madinah → Cairo", value: "About 2 hours, nonstop" },
       { label: "Egypt visa", value: "Follows your passport, not your Umrah visa" },
@@ -179,12 +180,14 @@ export const segmentGuidesTrips: Guide[] = [
     difficulty: "easy",
     readingTimeMinutes: 6,
     lastUpdated: "2026-10",
+    noReviewer: true,
     keyFacts: [
       { label: "Alexandria → Giza", value: "About 3 hours each way" },
       { label: "Port Said → Cairo & Giza", value: "About 3 hours each way" },
       { label: "Safaga → Luxor", value: "About 3½–4 hours each way" },
       { label: "Sokhna → Cairo", value: "About 2 hours each way" },
       { label: "Meeting point", value: "At the port" },
+      { label: "Lunch", value: "Included" },
       { label: "Planned around", value: "Your all-aboard time, with a traffic margin" },
       { label: "Shore pass", value: "As your cruise line instructs" },
     ],
@@ -229,7 +232,7 @@ export const segmentGuidesTrips: Guide[] = [
         paragraphs: [
           "Every shore day is planned backwards from your ship's all-aboard time. We subtract a margin for traffic and the port, and fix the latest time to leave the last site before the day begins. Your guide keeps to it.",
           "We cannot control the traffic or the port, and we do not pretend to. What we control is the plan: if the morning starts late, through a delayed berthing or a slow disembarkation, the visits are shortened, not the margin.",
-          "Your guide and vehicle meet you at the port, at the terminal or the port gate depending on the port and your cruise line's arrangements. Lunch is booked in advance on the way or near the sites, so it does not eat into the visits.",
+          "Your guide and vehicle meet you at the port, at the terminal or the port gate depending on the port and your cruise line's arrangements. Lunch is included in the price, booked in advance on the way or near the sites so it does not eat into the visits.",
         ],
         note: "Check whether your all-aboard time is in ship's time or Egyptian local time; ships do not always keep local time. Egypt's summer time runs from the last Friday of April to the last Thursday of October.",
         noteType: "warning",
@@ -287,144 +290,12 @@ export const segmentGuidesTrips: Guide[] = [
       tours: tour("tour-giza-sphinx", "tour-giza-museum", "tour-alexandria"),
       destinations: dest("alexandria", "giza", "cairo", "luxor"),
       experiences: exp("grand-egyptian-museum-private", "alexandria-heritage-walk"),
-      relatedGuides: guide("cairo-layover-tour", "transportation-in-egypt"),
+      relatedGuides: guide("transportation-in-egypt", "best-time-to-visit-egypt"),
     },
   },
 
   // ===== Cairo layover ======================================================
-  {
-    id: "cairo-layover-tour",
-    slug: "cairo-layover-tour",
-    domain: "guide",
-    title: "A Cairo layover: the pyramids between flights",
-    locales: ["en"],
-    guideType: "practical",
-    category: "travel-styles",
-    parentGuideId: "egypt-travel-guide",
-    shortSummary:
-      "Seeing the pyramids on a Cairo layover: who can leave the airport, how many hours you need, what fits between flights, luggage, and which of Cairo's two airports you use.",
-    difficulty: "easy",
-    readingTimeMinutes: 6,
-    lastUpdated: "2026-10",
-    keyFacts: [
-      { label: "Layover needed", value: "At least 8–9 hours between flights" },
-      { label: "Cairo airport → Giza", value: "About 1 hour in normal traffic" },
-      { label: "To leave the airport", value: "The visa your passport requires" },
-      { label: "What fits", value: "Pyramids & Sphinx, or the Grand Egyptian Museum" },
-      { label: "Airports", value: "Cairo International (CAI) or Sphinx International (SPX)" },
-      { label: "Book with", value: "Both flight numbers" },
-    ],
-    keyTakeaways: [
-      "Leaving the airport means entering Egypt: you need the visa your passport requires, and enough time",
-      "Allow at least eight to nine hours between flights for the pyramids and the Sphinx, or for the Grand Egyptian Museum",
-      "Giza is about an hour from Cairo International in normal traffic, longer at rush hour",
-      "Check your ticket: flydubai and some other airlines use Sphinx International near Giza, not Cairo International",
-      "Book with your flight numbers: the plan is built around your onward departure",
-    ],
-    sections: [
-      {
-        heading: "Can you leave the airport?",
-        paragraphs: [
-          "Leaving the airport means entering Egypt, so you need the visa your passport requires, exactly as if you were staying a week. Many passports can use Egypt's tourist e-visa, applied for on the official portal visa2egypt.gov.eg, or buy a visa on arrival. For a layover, get the e-visa before you travel if your passport allows it: it is one less queue.",
-          "The paper visa on arrival is paid in cash. At Cairo International, a digital visa on arrival, paid by card and issued as a QR code, has run as a pilot since 1 August 2026; other airports still issue the paper sticker. The fee changed during 2026 and a further rise has been announced for January 2027, so check the current amount on the official portal.",
-          "Some passports, Nigerian, Kenyan and Ghanaian among them, need a visa from an Egyptian embassy before travel. Your passport should be valid for at least six months beyond your stay.",
-        ],
-        note: "Pay for an e-visa only on visa2egypt.gov.eg. Other sites that look official add their own fee.",
-        noteType: "warning",
-      },
-      {
-        heading: "How long a layover you need",
-        paragraphs: [
-          "We suggest at least eight to nine hours between flights. Giza is about an hour's drive from Cairo International in normal traffic, but the hours go elsewhere. Roughly:",
-        ],
-        items: [
-          "Arrival: immigration, the visa if you are buying one, and meeting your guide",
-          "About an hour's drive to Giza, longer at rush hour",
-          "Two to three hours at the pyramids and the Sphinx",
-          "About an hour back to the airport",
-          "Check-in and security, in the time your airline asks for",
-        ],
-      },
-      {
-        heading: "What fits between flights",
-        paragraphs: [
-          "With eight to nine hours: the pyramids of Khufu, Khafre and Menkaure, the panoramic viewpoint where all three line up, and the Valley Temple leading to the Great Sphinx. It is our half-day Giza tour, timed to your flights.",
-          `Or the Grand Egyptian Museum instead: about four hours with your Egyptologist for the complete Tutankhamun collection, the grand staircase of royal statues and Khufu's solar boat. It is air-conditioned, which matters from June to August, when Cairo reaches ${temp("july", "cairo")} by day.`,
-          "Both need a longer layover. Our Giza & the Grand Museum day runs about eight hours on its own, before the airport at each end.",
-        ],
-        noteLink: { label: "Giza Pyramids & Sphinx, the half-day tour", href: "tour-giza-sphinx.html" },
-      },
-      {
-        heading: "Which airport: Cairo International or Sphinx International",
-        paragraphs: [
-          "Most flights use Cairo International (CAI). Some airlines, flydubai among them, use Sphinx International (SPX), west of Cairo near Giza. Check the ticket for both flights: the airport changes the drive and the meeting point. Landing at one and leaving from the other means crossing Greater Cairo, so allow more time.",
-          "At Cairo International, our VIP meet-and-assist service runs in every terminal, around the clock, with advance booking. You are met at the aircraft door or jet bridge by name, taken through the fast-track immigration lane with your visa handled, and walked to your driver; on departure it runs in reverse. The visa fee itself is separate. If your flight uses Sphinx International, tell us, because the meeting arrangements are different.",
-        ],
-        noteLink: { label: "VIP airport meet & assist", href: "experiences/vip-airport-service.html" },
-      },
-      {
-        heading: "Your luggage",
-        paragraphs: [
-          "If both flights are on one ticket, ask your airline whether your checked bags go through to your final destination. If they do, you leave the airport with hand luggage only, and it can stay in your private vehicle while you visit. If they do not, or your flights are on separate tickets, you collect your bags and check them in again, which takes time we build into the plan. Keep your passport and boarding passes with you.",
-        ],
-      },
-      {
-        heading: "Night layovers",
-        paragraphs: [
-          "Landing in the evening? The Sound & Light show at Giza is an hour-long show after dark, with the pyramids and the Sphinx lit against the desert. Showtimes vary by season and the languages rotate, with English most nights; it takes about three hours door to door from a Cairo or Giza hotel.",
-          "If your onward flight leaves late morning or later, sunrise at Giza is the other choice: a quiet desert viewpoint before dawn, then the plateau with your Egyptologist before the day visitors arrive, in three to four hours. A hotel room for a few hours' sleep makes either far easier.",
-        ],
-        noteLink: { label: "The Pyramids Sound & Light show, privately", href: "experiences/giza-sound-light-private.html" },
-      },
-      {
-        heading: "Book with your flight numbers",
-        paragraphs: [
-          "Send us both flight numbers when you book. We follow the inbound flight, so a delay moves the meeting rather than cancelling it — but a long delay shortens the visit, because the onward flight always comes first. The time you must leave Giza is fixed before the day begins, worked back from your departure.",
-        ],
-      },
-      {
-        heading: "How a private journey works",
-        paragraphs: [
-          "Everything is private: your own licensed Egyptologist, in any of our guiding languages, and your own vehicle and driver. Tell us your flights, the date and how many of you are travelling; we reply within one working day with a real plan and a clear price, with no obligation. Our prices are set in euros, and you can pay by PayPal, card or bank transfer.",
-        ],
-      },
-    ],
-    planningTips: [
-      "Get the e-visa before you travel if your passport allows it — one less queue on the day.",
-      "Check which airport each flight uses: Cairo International or Sphinx International.",
-      "Ask your airline whether your checked bags go through to your final destination.",
-      "Send both flight numbers when you book.",
-    ],
-    importantNotes: [
-      "Leaving the airport means entering Egypt: without the visa your passport requires, you cannot leave.",
-      "Allow at least eight to nine hours between flights; your onward flight always comes first.",
-      "Your passport should be valid for at least six months beyond your stay.",
-    ],
-    faqs: [
-      { q: "Can I see the pyramids on a Cairo layover?", a: "Yes, with enough time and the right visa. Allow at least eight to nine hours between flights: Giza is about an hour from Cairo International in normal traffic, and you need time for immigration on arrival and check-in before your onward flight." },
-      { q: "Do I need a visa to leave Cairo airport on a layover?", a: "Yes. Leaving the airport means entering Egypt, so you need the visa your passport requires: the e-visa from visa2egypt.gov.eg or a visa on arrival, where your passport allows. Nigerian, Kenyan and Ghanaian passport holders, among others, need a visa from an Egyptian embassy in advance." },
-      { q: "What can I do with a nine-hour layover in Cairo?", a: "The Giza pyramids and the Sphinx, or the Grand Egyptian Museum: one or the other. Both need a longer layover, because our Giza & the Grand Museum day runs about eight hours on its own." },
-      { q: "What do I do with my luggage?", a: "If your checked bags go through to your final destination, you leave the airport with hand luggage only, and it can stay in your private vehicle while you visit. If they do not, you collect and re-check them, which takes time we build into the plan." },
-      { q: "Which Cairo airport does flydubai use?", a: "Sphinx International (SPX), west of Cairo near Giza, not Cairo International. Some other airlines use it too, so check the ticket for both flights." },
-      { q: "Is there anything to do on a night layover?", a: "Yes. The Sound & Light show at Giza runs in the evening, about three hours door to door from a Cairo or Giza hotel. If your onward flight leaves late morning or later, sunrise at the pyramids is the other choice." },
-    ],
-    hero: {
-      alt: "The pyramids of Giza in silhouette against the sun low on the horizon",
-      label: "A Cairo layover",
-      src: "/images/stock/giza-pyramids-sunrise-sky.webp",
-      width: 2400,
-      height: 1440,
-    },
-    seo: {
-      title: "Cairo Layover Tour: Pyramids Between Flights | Kemet",
-      description:
-        "See the pyramids on a Cairo layover: the visa to leave the airport, how many hours you need, what fits between flights, luggage, and Cairo's two airports.",
-    },
-    relationships: {
-      tours: tour("tour-giza-sphinx", "tour-giza-museum", "tour-cairo-vip-3day"),
-      destinations: dest("giza", "cairo"),
-      experiences: exp("vip-airport-service", "grand-egyptian-museum-private", "giza-sound-light-private", "sunrise-giza-pyramids"),
-      relatedGuides: guide("transportation-in-egypt", "egypt-cruise-shore-excursions"),
-    },
-  },
+  // The Cairo layover guide was drafted on 18 Oct 2026 and held back: the
+  // owner has not confirmed the layover service or the minimum time between
+  // flights. Restore it from git history (commit 40bc418) once confirmed.
 ];
