@@ -80,6 +80,24 @@ ErrorDocument 404 /404.html
   # Content-encoding varies by client — keep proxy caches honest.
   Header append Vary Accept-Encoding
 
+  # --- Security headers ---
+  # Safe for a static site, and none of them touches indexing or redirects:
+  #   HSTS            the browser goes straight to https:// (the 301 above
+  #                   already sends it there). No includeSubDomains or preload,
+  #                   so a subdomain without a certificate is never locked out.
+  #   nosniff         a file is only ever read as the type the server says.
+  #   Referrer        other sites see that a visitor came from kemet-travel.com,
+  #                   not the full address of the page they were on.
+  #   X-Frame-Options the site cannot be framed by another site (clickjacking).
+  #   Permissions     the pages never use the camera, microphone or location.
+  # No Content-Security-Policy: Google Tag Manager and the inline JSON-LD would
+  # need a careful allow-list, and a wrong one breaks the page silently.
+  Header always set Strict-Transport-Security "max-age=31536000"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+
   # The PHP endpoints are machinery, not pages: the analytics collector, the
   # contact-form handler and the private dashboard. None of them belongs in a
   # search result, and the dashboard lists customer names, emails and phone
