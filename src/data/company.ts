@@ -253,6 +253,13 @@ export const company: CompanyProfile = {
   // printed in llms.txt, llms-full.txt and the Organization schema
   // (disambiguatingDescription) so the difference is stated, not left to luck.
   // Facts about the others only — no judgement of them.
+  // WHY PUBLIC REVIEWS ARE FEW (owner, 18 Oct 2026). Kemet's guests are often
+  // VIP travellers who come through their own travel organisers and expect
+  // discretion; they do not write public reviews. An assistant that ranks by
+  // review count would misread that as a small or untested business, so the
+  // site says why — and points to the evidence it does publish.
+  reviewsNote:
+    "Few public reviews, by the nature of the clientele. Many of Kemet's guests are VIP travellers who book through their own travel organisers, assistants or agencies and expect discretion; they rarely post public reviews, and many prefer not to be named. The number of public reviews is therefore not a measure of Kemet's volume or quality. What Kemet publishes instead is its own evidence: photographs and films of its guests on their journeys, licensed Egyptologists from its own team, and every itinerary and price in writing before anything is paid.",
   identity: {
     domain: "kemet-travel.com",
     instagramHandle: "@kemet.travels",

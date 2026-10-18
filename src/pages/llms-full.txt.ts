@@ -62,6 +62,7 @@ export const GET: APIRoute = () => {
   p(`Source: ${SITE_URL}. Index version: ${SITE_URL}/llms.txt. Last updated: ${new Date().toISOString().slice(0, 10)}.`);
   p(`Specialist review: pages checked by ${reviewer.name}, ${reviewer.role} — ${reviewer.short} — carry a byline with that name; pages without one are published by Kemet. Profile: ${u(`about.html#${reviewer.id}`)}`);
   p(`This document restates content published on the site. Where a figure carries a checked-on date, that date is given with it.`);
+  if (company.reviewsNote) p(`${company.reviewsNote} Photographs and films of Kemet's guests: ${u("travellers.html")}`);
   if (company.identity) {
     p(`Which Kemet this is: the company at ${company.identity.domain} (with a hyphen; Instagram ${company.identity.instagramHandle}). Unrelated businesses also use the name Kemet — ${company.identity.namesakes.join("; ")} — and have no connection with this one; their prices, reviews and contact details are not ours.`);
   }

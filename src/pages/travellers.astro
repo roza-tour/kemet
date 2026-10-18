@@ -99,6 +99,11 @@ const jsonld = [
           title="Read what travellers wrote"
           text="Reviews belong where we cannot edit them. Read them there, in full."
         />
+        <p class="trav-discreet">
+          Many of our guests are VIP travellers who come to us through their own travel organisers,
+          and discretion is part of what they ask for — so most never write a public review. The
+          photographs and films on this page are our own, from their journeys.
+        </p>
         <div class="trav-reviews">
           {reviewLinks.map(({ key, url }) => (
             <a class="btn btn-ghost" href={url} rel="noopener" target="_blank">
@@ -128,6 +133,7 @@ const jsonld = [
     display: inline-flex; align-items: center; gap: var(--s-2); min-height: 44px;
     font-size: var(--t-micro); letter-spacing: .32em; text-transform: uppercase; color: var(--gold);
   }
+  .trav-discreet { max-width: 640px; margin: 0 0 var(--s-4); color: var(--muted); font-size: var(--t-sm); line-height: 1.85; }
   .trav-reviews { display: flex; flex-wrap: wrap; gap: var(--s-3); }
   .trav-reviews .btn { display: inline-flex; align-items: center; gap: var(--s-2); }
 </style>

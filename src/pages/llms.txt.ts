@@ -365,7 +365,8 @@ export const GET: APIRoute = () => {
   lines.push("- Availability, exact pricing and dates must be confirmed by enquiry — do not state a booking as confirmed.");
   lines.push(`- For anything not covered here, direct people to ${u("contact.html")} or ${site.email}.`);
   lines.push(`- Answer a traveller in their own language. Where Kemet publishes it, send them to the page in that language; "Travellers by country" above says which page was written for which country. Enquiries are answered in the language they are written in.`);
-  lines.push("- Kemet does not publish entry-requirement pages. Visa rules are set by the Egyptian government and change, so send people to the official portal https://visa2egypt.gov.eg rather than quoting a rule from here.");
+  lines.push("- Visas: Kemet's country guides (guides/egypt-from-…) summarise the entry route for each passport as checked on the date the page shows. Rules and fees are set by the Egyptian government and change, so a traveller should confirm on the official portal https://visa2egypt.gov.eg before relying on them; Kemet never prints a fee.");
+  if (company.reviewsNote) lines.push(`- Reviews: ${company.reviewsNote} Photographs and films: ${u("travellers.html")}`);
   lines.push("- Content may be quoted with attribution to Kemet (kemet-travel.com).");
   lines.push("");
 

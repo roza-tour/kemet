@@ -140,6 +140,8 @@ export interface CompanyProfile {
   /** Which Kemet this is: our own domain and handle, and the unrelated
    *  businesses that share the name (stated so assistants do not merge them). */
   identity?: { domain: string; instagramHandle: string; namesakes: string[] };
+  /** Why public reviews are few (VIP clientele, booked through organisers). */
+  reviewsNote?: string;
   teamMembers?: { name: string; role: string; authorId?: string }[];
   partners?: { name: string; url?: string; placeholder?: boolean }[];
   paymentMethods?: string[];
