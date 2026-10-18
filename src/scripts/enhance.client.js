@@ -542,4 +542,35 @@ const DUST_DENSITY = 15000; // px² of viewport per particle
       }
     }
   }catch(e){}
+
+  /* ── The Pharaonic layer ─────────────────────────────────────────────────
+     Torchlight: the carved wall in the page header (global.css, .hero::after /
+     .phero::before) is brightest where the pointer is. Carving: a glyph's gold
+     contour is traced in when it scrolls into view. Both are decoration; both
+     stay off under prefers-reduced-motion. */
+  if(!reduce){
+    document.querySelectorAll('.hero,.phero').forEach(function(h){
+      var raf=0,x=0,y=0;
+      function paint(){raf=0;h.style.setProperty('--mx',x+'px');h.style.setProperty('--my',y+'px');}
+      function move(e){var r=h.getBoundingClientRect();x=e.clientX-r.left;y=e.clientY-r.top;
+        h.classList.add('lit');if(!raf)raf=requestAnimationFrame(paint);}
+      h.addEventListener('pointermove',move,{passive:true});
+      h.addEventListener('pointerdown',move,{passive:true});
+      h.addEventListener('pointerleave',function(){h.classList.remove('lit');});
+    });
+    if('IntersectionObserver' in window){
+      /* Only what arrives on screen later is carved. A glyph already visible
+         when the page opens is left alone — it was seen whole, and tracing it
+         again would read as a flicker. */
+      var seen=new WeakSet();
+      var io=new IntersectionObserver(function(es){
+        es.forEach(function(e){
+          var el=e.target;
+          if(!seen.has(el)){seen.add(el);if(e.isIntersecting){io.unobserve(el);return;}}
+          if(e.isIntersecting){el.classList.add('carve');io.unobserve(el);}
+        });
+      },{rootMargin:'0px 0px -12% 0px',threshold:.2});
+      document.querySelectorAll('.medallion,.frieze,.sym,.sot-sym,.expert-sym,.dec-sym,.cg-sym').forEach(function(el){io.observe(el);});
+    }
+  }
 })();

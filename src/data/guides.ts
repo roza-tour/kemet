@@ -12,6 +12,14 @@ import type { Guide } from "@/types";
 import { PEAK } from "@/data/ultra/journeys";
 import { beforeDate, ECLIPSE_2027 } from "@/data/timeboxed";
 import { findMonth } from "@/data/months";
+// Nine English guides for travellers who search in English from markets the
+// site had not addressed by name (October 2026): the UK & Ireland, the Nordics,
+// the Low Countries, Singapore/Hong Kong/China, Africa, Gulf residents — and
+// three situations that cut across nationality: Umrah + Egypt, cruise shore
+// excursions, a Cairo layover. Written to the same rules as the guides below.
+import { segmentGuidesEurope } from "@/data/guides-segments-europe";
+import { segmentGuidesWorld } from "@/data/guides-segments-world";
+import { segmentGuidesTrips } from "@/data/guides-segments-trips";
 
 // --- for the market guides (October 2026) ------------------------------------
 /** A month's temperature for a place, from the same table as the month pages. */
@@ -1689,6 +1697,9 @@ export const guides: Guide[] = [
     },
   },
 
+  ...segmentGuidesEurope,
+  ...segmentGuidesWorld,
+  ...segmentGuidesTrips,
 ];
 
 export function getGuide(slug: string): Guide | undefined {

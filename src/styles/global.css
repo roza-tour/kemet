@@ -769,6 +769,87 @@ footer{background:var(--ink-2);border-top:1px solid var(--line);padding:var(--s-
 @media(max-width:820px){.cgal-item{width:200px;height:200px}.cgal-track{gap:var(--s-2)}}
 @media(max-width:560px){.cgal-item{width:158px;height:158px}}
 
+/* ── The Pharaonic layer (October 2026) ───────────────────────────────────
+   The owner asked for more of Egypt in the design itself: carving, pattern,
+   motion. Everything here is decoration on top of a page that is complete
+   without it — it paints no text, hides nothing at first paint, and switches
+   off entirely under prefers-reduced-motion (the rule above kills animation;
+   the torchlight script checks the same preference).
+
+   The four patterns are drawn from the real repertoire:
+     · blocks — the band of rectangles framing tomb paintings
+     · lotus  — the lotus-and-bud border
+     · stars  — the five-armed seba stars of tomb ceilings
+     · wall   — columns of hieroglyphs, revealed under a moving torchlight */
+:root{
+  --pat-blocks:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='10' viewBox='0 0 28 10'%3E%3Cg fill='none' stroke='%23D9B45A' stroke-opacity='.6'%3E%3Crect x='1.5' y='1.5' width='11' height='7'/%3E%3Crect x='15.5' y='1.5' width='11' height='7' fill='%23D9B45A' fill-opacity='.22'/%3E%3C/g%3E%3C/svg%3E");
+  --pat-lotus:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='32' viewBox='0 0 64 32'%3E%3Cg fill='none' stroke='%23D9B45A' stroke-width='1.1' stroke-linecap='round' stroke-linejoin='round' stroke-opacity='.75'%3E%3Cpath d='M0 29Q16 21 32 29Q48 21 64 29'/%3E%3Cpath d='M16 25V20M48 26V22'/%3E%3Cpath d='M16 20C11 17 8 12 7 6C12 9 15 14 16 20C17 14 20 9 25 6C24 12 21 17 16 20Z'/%3E%3Cpath d='M16 20C15 14 15 9 16 3C17 9 17 14 16 20Z'/%3E%3Cpath d='M48 22C44 18 44 12 48 7C52 12 52 18 48 22Z'/%3E%3C/g%3E%3C/svg%3E");
+  --pat-stars:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cg fill='%23D9B45A'%3E%3Cpath d='M22.0 23.0 L22.9 26.7 L26.8 26.5 L23.5 28.5 L24.9 32.0 L22.0 29.6 L19.1 32.0 L20.5 28.5 L17.2 26.5 L21.1 26.7Z'/%3E%3Cpath d='M92.0 12.0 L92.8 15.0 L95.8 14.8 L93.2 16.4 L94.4 19.2 L92.0 17.3 L89.6 19.2 L90.8 16.4 L88.2 14.8 L91.2 15.0Z'/%3E%3Cpath d='M64.0 64.5 L65.0 68.6 L69.2 68.3 L65.7 70.5 L67.2 74.4 L64.0 71.8 L60.8 74.4 L62.3 70.5 L58.8 68.3 L63.0 68.6Z'/%3E%3Cpath d='M16.0 100.0 L16.8 103.0 L19.8 102.8 L17.2 104.4 L18.4 107.2 L16.0 105.3 L13.6 107.2 L14.8 104.4 L12.2 102.8 L15.2 103.0Z'/%3E%3Cpath d='M118.0 91.0 L118.9 94.7 L122.8 94.5 L119.5 96.5 L120.9 100.0 L118.0 97.6 L115.1 100.0 L116.5 96.5 L113.2 94.5 L117.1 94.7Z'/%3E%3Cpath d='M98.0 124.5 L98.7 127.1 L101.3 126.9 L99.1 128.3 L100.1 130.8 L98.0 129.1 L95.9 130.8 L96.9 128.3 L94.7 126.9 L97.3 127.1Z'/%3E%3Cpath d='M46.0 121.0 L46.6 123.2 L48.9 123.1 L46.9 124.3 L47.8 126.4 L46.0 125.0 L44.2 126.4 L45.1 124.3 L43.1 123.1 L45.4 123.2Z'/%3E%3C/g%3E%3C/svg%3E");
+  --pat-wall:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cg fill='none' stroke='%23D9B45A' stroke-width='1.1' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 8C24 14 24 22 20 28C18 22 18 14 20 8Z'/%3E%3Cpath d='M10 42l2.5 -3 l2.5 3l2.5 -3 l2.5 3l2.5 -3 l2.5 3l2.5 -3 l2.5 3'/%3E%3Cellipse cx='20' cy='56' rx='7' ry='3'/%3E%3Cellipse cx='20' cy='73' rx='3.5' ry='5'/%3E%3Cpath d='M14 79H26M20 79V92'/%3E%3Cpath d='M13 108A7 6 0 0 1 27 108Z'/%3E%3Ccircle cx='20' cy='124' r='6'/%3E%3Ccircle cx='20' cy='124' r='1.4' fill='%23D9B45A'/%3E%3Cpath d='M12 146A8 5 0 0 0 28 146Z'/%3E%3Cpath d='M51 14C56 9 64 9 69 14C64 18 56 18 51 14Z'/%3E%3Ccircle cx='60' cy='14' r='2' fill='%23D9B45A'/%3E%3Cpath d='M57 17l-2 7M63 17c2 4 2 7-1 8'/%3E%3Cpath d='M57.5 28V52H62.5V28Z'/%3E%3Cpath d='M54 30H66M54 33H66M54 36H66M54 39H66'/%3E%3Cpath d='M52 64A8 5 0 0 0 68 64Z'/%3E%3Cpath d='M60 96C57 86 57 78 62 74C64 80 63 88 60 96Z'/%3E%3Cpath d='M50 108l2.5 -3 l2.5 3l2.5 -3 l2.5 3l2.5 -3 l2.5 3l2.5 -3 l2.5 3'/%3E%3Crect x='54' y='120' width='12' height='20' rx='6'/%3E%3Cpath d='M53 142H67'/%3E%3Cpath d='M90 16q3-5 6 0t6 0t6-5M106 11l2-3M108 12l3-2'/%3E%3Cpath d='M100 42C94 38 92 32 92 26C97 29 99 35 100 42C101 35 103 29 108 26C108 32 106 38 100 42ZM100 42V48'/%3E%3Cpath d='M100 80V58l5-3M100 80l-3 3M100 80l3 3'/%3E%3Cpath d='M100 90C104 96 104 104 100 110C98 104 98 96 100 90Z'/%3E%3Cellipse cx='100' cy='120' rx='7' ry='3'/%3E%3Cpath d='M93 140A7 6 0 0 1 107 140Z'/%3E%3Ccircle cx='140' cy='12' r='6'/%3E%3Ccircle cx='140' cy='12' r='1.4' fill='%23D9B45A'/%3E%3Cpath d='M136 26C140 32 140 40 136 46C134 40 134 32 136 26Z'/%3E%3Cpath d='M144 26C148 32 148 40 144 46C142 40 142 32 144 26Z'/%3E%3Cpath d='M133 60A7 6 0 0 1 147 60Z'/%3E%3Cpath d='M130 74l2.5 -3 l2.5 3l2.5 -3 l2.5 3l2.5 -3 l2.5 3l2.5 -3 l2.5 3'/%3E%3Cellipse cx='140' cy='91' rx='3.5' ry='5'/%3E%3Cpath d='M134 97H146M140 97V110'/%3E%3Cpath d='M132 124A8 5 0 0 0 148 124Z'/%3E%3Cpath d='M131 144C136 139 144 139 149 144C144 148 136 148 131 144Z'/%3E%3Ccircle cx='140' cy='144' r='2' fill='%23D9B45A'/%3E%3Cpath d='M137 147l-2 7M143 147c2 4 2 7-1 8'/%3E%3Cpath d='M40 0V160M80 0V160M120 0V160M160 0V160' stroke-opacity='.45'/%3E%3C/g%3E%3C/svg%3E");
+}
+@property --mx{syntax:'<length-percentage>';inherits:true;initial-value:72%}
+@property --my{syntax:'<length-percentage>';inherits:true;initial-value:36%}
+
+/* The carved wall in the page header: faint everywhere, brighter where the
+   pointer is — a torch moving over a tomb wall. */
+.hero::after,.phero::before{content:"";position:absolute;inset:0;pointer-events:none;background:var(--pat-wall);
+  -webkit-mask:radial-gradient(circle 300px at var(--mx) var(--my),#000 0%,rgba(0,0,0,.4) 45%,transparent 75%);
+  mask:radial-gradient(circle 300px at var(--mx) var(--my),#000 0%,rgba(0,0,0,.4) 45%,transparent 75%);
+  opacity:.2;transition:opacity .8s ease}
+.hero::after{z-index:2}
+.phero{isolation:isolate;--mx:50%;--my:22%}
+.phero::before{z-index:-1}
+.hero.lit::after{opacity:.46}
+.phero.lit::before{opacity:.3}
+.phero::before{opacity:.13}
+
+/* The frieze becomes a carved band: a block border above and below. */
+.frieze{position:relative;padding:calc(var(--s-4) + 8px) 0}
+.frieze::before,.frieze::after{content:"";position:absolute;left:0;right:0;height:10px;background:var(--pat-blocks) repeat-x center;opacity:.5;pointer-events:none}
+.frieze::before{top:6px}.frieze::after{bottom:6px}
+.frieze svg{opacity:.62}
+
+/* Tomb-ceiling stars over the numbers band and the closing call to action;
+   the lotus-and-bud border along the top of the footer. */
+.stats-band::after{content:"";position:absolute;inset:0;background:var(--pat-stars);opacity:.22;pointer-events:none}
+.cta{isolation:isolate}
+.cta::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--pat-stars);opacity:.16;pointer-events:none;
+  -webkit-mask:radial-gradient(90% 100% at 50% 0%,#000,transparent 80%);mask:radial-gradient(90% 100% at 50% 0%,#000,transparent 80%)}
+footer{position:relative}
+footer::before{content:"";position:absolute;top:0;left:0;right:0;height:32px;background:var(--pat-lotus) repeat-x 0 0;opacity:.32;pointer-events:none}
+
+/* Medallions: a sun-disc rim of fine ticks that turns when you reach for it. */
+.medallion::after{content:"";position:absolute;inset:-5px;border-radius:50%;pointer-events:none;
+  background:repeating-conic-gradient(rgba(217,180,90,.6) 0 1.4deg,transparent 1.4deg 9deg);
+  -webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 3px),#000 calc(100% - 3px));
+  mask:radial-gradient(farthest-side,transparent calc(100% - 3px),#000 calc(100% - 3px));
+  opacity:.4;transition:transform 1.8s cubic-bezier(.2,.7,.2,1),opacity .5s}
+.medallion:hover::after,a:hover .medallion::after,.sec-head:hover .medallion::after{transform:rotate(60deg);opacity:.85}
+
+/* Carving: a glyph's gold contour is cut in, line by line, when it scrolls
+   into view (never for one already on screen at load) and again on hover. */
+@keyframes carve{from{stroke-dasharray:1;stroke-dashoffset:1}to{stroke-dasharray:1;stroke-dashoffset:0}}
+.carve svg,.medallion:hover svg{animation:carve 1.7s cubic-bezier(.5,0,.2,1) backwards}
+.frieze.carve svg{animation-delay:calc(var(--i,0) * 70ms)}
+
+/* The italic line of the home headline catches the light now and then, like
+   gold leaf turning under a lamp. */
+.hero h1 em{background:linear-gradient(100deg,var(--gold-bright) 30%,#FFF6DA 46%,var(--gold-bright) 62%);background-size:260% 100%;background-position:100% 0;
+  -webkit-background-clip:text;background-clip:text;color:transparent;animation:glint 9s ease-in-out 1.5s infinite}
+@keyframes glint{0%,60%{background-position:100% 0}85%,100%{background-position:0 0}}
+
+/* A thread of gold along the top edge shows how far down the page you are. */
+.scroll-gild{position:fixed;top:0;left:0;width:100%;height:2px;z-index:200;pointer-events:none;transform:scaleX(0);transform-origin:0 50%;
+  background:linear-gradient(90deg,var(--gold-deep),var(--gold-bright))}
+@keyframes gild{to{transform:scaleX(1)}}
+@supports (animation-timeline: scroll()){
+  .scroll-gild{animation:gild linear both;animation-timeline:scroll(root)}
+  /* The home photograph drifts as the page scrolls past it. */
+  .hero .bg img{animation:hero-drift linear both;animation-timeline:view();animation-range:exit 0% exit 100%}
+  @keyframes hero-drift{to{transform:translateY(14%) scale(1.06)}}
+}
+@media print{.scroll-gild,.hero::after,.phero::before,footer::before{display:none}}
+
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1!important;transform:none!important}.cur{clip-path:none}#dust{display:none}}
 
 /* Skip-to-content link — visible only on keyboard focus */

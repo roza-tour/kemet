@@ -78,7 +78,7 @@ export const GET: APIRoute = () => {
   // who speaks X?" is a question assistants are asked — and people read this
   // file too. The list is company.languages, the one list.
   if (company.languages?.length) {
-    lines.push(`- Guides: Kemet publishes a language only where its own team has an Egyptologist guide who works in it. Guiding languages: ${company.languages.join(", ")}. Enquiries are answered in the language they are written in.`);
+    lines.push(`- Guides: Kemet publishes a language only where its own team has an Egyptologist guide who works in it. Guiding languages: ${company.languages.join(", ")}. Mandarin Chinese is a guiding language only — the site is not published in Chinese. Enquiries are answered in the language they are written in.`);
   }
   // Italian is the second language among the site's visitors.
   lines.push(`- Italian: the site in Italian at ${u("it/")} — every journey, Kemet Ultra (${u("it/viaggi-ultra-lusso-egitto.html")}), where to stay (${u("it/dove-dormire-in-egitto.html")}) and Christmas to the Epiphany (${u("it/natale-e-capodanno-in-egitto.html")}), with Italian-speaking guides on the team.`);

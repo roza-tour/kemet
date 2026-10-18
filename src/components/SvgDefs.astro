@@ -12,6 +12,12 @@
 // for itself on any page drawing more than a dozen icons, which is all but
 // six of them.
 import { GLYPHS } from "@/data/glyphs";
+// Every drawn element gets pathLength="1", so one CSS animation (the "carve"
+// in global.css) can trace any glyph's contour from 0 to 1 regardless of how
+// long its paths really are. Without it, a path the rule reaches would turn
+// into dots for the length of the animation.
+const carvable = (body: string) =>
+  body.replace(/<(path|circle|ellipse|rect|line|polyline|polygon)\b(?![^>]*pathLength)/g, '<$1 pathLength="1"');
 ---
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
@@ -38,6 +44,6 @@ import { GLYPHS } from "@/data/glyphs";
     </linearGradient>
   </defs>
   {Object.entries(GLYPHS).map(([name, body]) => (
-    <symbol id={`sym-${name}`} viewBox="0 0 100 100" set:html={body} />
+    <symbol id={`sym-${name}`} viewBox="0 0 100 100" set:html={carvable(body)} />
   ))}
 </svg>

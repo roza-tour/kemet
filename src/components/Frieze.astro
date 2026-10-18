@@ -19,6 +19,6 @@ const glyphs = Array.from({ length: 24 }, (_, i) => PERIOD[i % PERIOD.length]);
 ---
 <div class="frieze" aria-hidden="true">
   <div class="frieze-band">
-    {glyphs.map((g) => <SymbolIcon name={g} />)}
+    {glyphs.map((g, i) => <SymbolIcon name={g} style={`--i:${i}`} />)}
   </div>
 </div>

@@ -17,8 +17,10 @@ interface Props {
   /** Accessible label; when omitted the icon is decorative. */
   title?: string;
   class?: string;
+  /** Inline style — the frieze uses it to stagger the carving (--i). */
+  style?: string;
 }
-const { name, title = "", class: className = "" } = Astro.props;
+const { name, title = "", class: className = "", style } = Astro.props;
 // Fail the build on a name that does not exist. The Greco-Roman identity
 // asked for "column" while the glyph is keyed "greco", so it rendered an empty
 // <svg> on nine pages — invisible, valid HTML, and silent for as long as it
@@ -31,6 +33,7 @@ if (!Object.hasOwn(GLYPHS, name)) {
 <svg
     viewBox="0 0 100 100"
     class={className}
+    style={style}
     role={title ? "img" : "presentation"}
     aria-hidden={title ? undefined : "true"}
     aria-label={title || undefined}

@@ -43,11 +43,13 @@ export const company: CompanyProfile = {
   serviceArea: ["Egypt"],
 
   // Languages the team genuinely corresponds and guides in — a claim about
-  // people, not pages. Since 10 Oct 2026 these are all ten of the site's
+  // people, not pages. Since 10 Oct 2026 these include all ten of the site's
   // languages: the owner confirmed that Kemet publishes a language only where
-  // it has an Egyptologist guide who works in it, on its own team.
-  languages: ["English", "German", "Italian", "Spanish", "French", "Russian", "Indonesian", "Malay", "Portuguese", "Arabic"],
-  languageCodes: ["en", "de", "it", "es", "fr", "ru", "id", "ms", "pt", "ar"],
+  // it has an Egyptologist guide who works in it, on its own team. On 18 Oct
+  // 2026 the owner confirmed Mandarin-speaking guides too — a guiding language
+  // only; the site is not published in Chinese.
+  languages: ["English", "German", "Italian", "Spanish", "French", "Russian", "Indonesian", "Malay", "Portuguese", "Arabic", "Mandarin Chinese"],
+  languageCodes: ["en", "de", "it", "es", "fr", "ru", "id", "ms", "pt", "ar", "zh"],
 
   businessHours: [
     {

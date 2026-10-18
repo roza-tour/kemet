@@ -22,7 +22,7 @@ import { publicPath } from "@/utils/links";
 /** Language codes as company.languages names them. */
 const LANGUAGE_NAME: Record<string, string> = {
   en: "English", de: "German", it: "Italian", es: "Spanish", fr: "French", ru: "Russian",
-  id: "Indonesian", ms: "Malay", pt: "Portuguese", ar: "Arabic", ja: "Japanese", ko: "Korean", nl: "Dutch",
+  id: "Indonesian", ms: "Malay", pt: "Portuguese", ar: "Arabic", ja: "Japanese", ko: "Korean", nl: "Dutch", zh: "Mandarin Chinese",
 };
 
 const KNOWN_ROUTES = new Set<string>([

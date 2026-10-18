@@ -41,7 +41,8 @@ export type MarketRegion =
   | "Gulf"
   | "North America"
   | "Latin America"
-  | "Asia-Pacific";
+  | "Asia-Pacific"
+  | "Africa";
 
 export interface SourceMarket {
   /** ISO 3166-1 alpha-2. Used as the schema.org Country identifier. */
@@ -107,7 +108,7 @@ export const sourceMarkets: SourceMarket[] = [
     season: "Summer and school holidays — the months European demand drops, which makes them easy to serve well.",
     why: "Two to three hours from Cairo, travels in large family groups, and buys private guiding and private transport as standard rather than as an upgrade.",
     alsoReads: ["en"],
-    pages: ["ar/sayf-masr-lil-aailat-al-khalijiya.html", "ar/index.html"],
+    pages: ["ar/sayf-masr-lil-aailat-al-khalijiya.html", "ar/index.html", "guides/egypt-for-gulf-residents.html"],
     interests: [
       "Summer and the Eid holidays",
       "Alexandria's sea breeze, the Red Sea and Cairo evenings on the Nile",
@@ -122,7 +123,7 @@ export const sourceMarkets: SourceMarket[] = [
     season: "Year-round, with a strong summer peak and long-weekend breaks around national holidays.",
     why: "A dense expatriate and resident market with excellent daily connectivity to Cairo and an established habit of buying the top of the range.",
     alsoReads: ["en"],
-    pages: ["ar/sayf-masr-lil-aailat-al-khalijiya.html", "ar/index.html"],
+    pages: ["ar/sayf-masr-lil-aailat-al-khalijiya.html", "ar/index.html", "guides/egypt-for-gulf-residents.html"],
     interests: [
       "Summer and the Eid holidays",
       "Alexandria's sea breeze, the Red Sea and Cairo evenings on the Nile",
@@ -137,7 +138,7 @@ export const sourceMarkets: SourceMarket[] = [
     season: "Summer, and Eid holidays in both directions of the year.",
     why: "Long summer holidays, large parties, and a strong preference for privately arranged travel over packaged departures.",
     alsoReads: ["en"],
-    pages: ["ar/sayf-masr-lil-aailat-al-khalijiya.html", "ar/index.html"],
+    pages: ["ar/sayf-masr-lil-aailat-al-khalijiya.html", "ar/index.html", "guides/egypt-for-gulf-residents.html"],
     interests: [
       "Summer and the Eid holidays",
       "Alexandria's sea breeze, the Red Sea and Cairo evenings on the Nile",
@@ -152,7 +153,7 @@ export const sourceMarkets: SourceMarket[] = [
     season: "Summer and Eid, plus short winter breaks.",
     why: "Small market, high spend per party, and direct connectivity — the profile the VIP tier is written for.",
     alsoReads: ["en"],
-    pages: ["ar/sayf-masr-lil-aailat-al-khalijiya.html", "ar/index.html"],
+    pages: ["ar/sayf-masr-lil-aailat-al-khalijiya.html", "ar/index.html", "guides/egypt-for-gulf-residents.html"],
     interests: [
       "Summer and the Eid holidays",
       "Alexandria's sea breeze, the Red Sea and Cairo evenings on the Nile",
@@ -167,7 +168,7 @@ export const sourceMarkets: SourceMarket[] = [
     season: "Summer and Eid.",
     why: "Small but consistent, and reached by the same Arabic-language and Gulf-season material as its neighbours.",
     alsoReads: ["en"],
-    pages: ["ar/sayf-masr-lil-aailat-al-khalijiya.html", "ar/index.html"],
+    pages: ["ar/sayf-masr-lil-aailat-al-khalijiya.html", "ar/index.html", "guides/egypt-for-gulf-residents.html"],
     interests: [
       "Summer and the Eid holidays",
       "Alexandria's sea breeze, the Red Sea and Cairo evenings on the Nile",
@@ -182,7 +183,7 @@ export const sourceMarkets: SourceMarket[] = [
     season: "Summer and Eid.",
     why: "Completes Gulf coverage; the same entry rules and the same season as the rest of the GCC.",
     alsoReads: ["en"],
-    pages: ["ar/sayf-masr-lil-aailat-al-khalijiya.html", "ar/index.html"],
+    pages: ["ar/sayf-masr-lil-aailat-al-khalijiya.html", "ar/index.html", "guides/egypt-for-gulf-residents.html"],
     interests: [
       "Summer and the Eid holidays",
       "Alexandria's sea breeze, the Red Sea and Cairo evenings on the Nile",
@@ -198,8 +199,9 @@ export const sourceMarkets: SourceMarket[] = [
     searchLanguage: "en",
     season: "October to April, concentrated on half-term, Christmas and Easter.",
     why: "Searches in English, so it lands on the complete site rather than a seven-page summary — and it is a long-established market for guided Nile travel at the top of the range.",
-    pages: ["guides/egypt-half-term-uk.html", "index.html"],
+    pages: ["guides/egypt-from-uk-ireland.html", "guides/egypt-half-term-uk.html"],
     interests: [
+      "Nonstop flights to Cairo from Heathrow (British Airways and EgyptAir) and Manchester, with Birmingham from late October 2026",
       "Half-term, Christmas and Easter dates",
       "The Nile Valley in the October-to-April season",
       "Private guiding rather than group departures",
@@ -301,7 +303,7 @@ export const sourceMarkets: SourceMarket[] = [
     searchLanguage: "en",
     season: "October to April, plus the May and autumn school breaks.",
     why: "Researches long-haul travel in English, so the full English site serves it directly — no translation needed to compete here.",
-    pages: ["index.html"],
+    pages: ["guides/egypt-from-netherlands-belgium.html"],
     interests: [
       "The complete site, in English",
       "The Nile Valley from October to April, and the May and autumn school breaks",
@@ -313,7 +315,7 @@ export const sourceMarkets: SourceMarket[] = [
     searchLanguage: "fr",
     season: "October to April.",
     why: "Served by the French and Dutch-facing material already in place; a compact market that buys guided travel.",
-    pages: ["fr/index.html"],
+    pages: ["fr/index.html", "guides/egypt-from-netherlands-belgium.html"],
     interests: [
       "Egyptologists from our own team who guide in French",
       "The Nile Valley from October to April",
@@ -325,7 +327,7 @@ export const sourceMarkets: SourceMarket[] = [
     searchLanguage: "en",
     season: "October to April.",
     why: "English-searching, and reaches Egypt on one stop — the full site serves it with no additional work.",
-    pages: ["index.html"],
+    pages: ["guides/egypt-from-uk-ireland.html"],
     interests: [
       "One stop to Cairo",
       "The Nile Valley from October to April",
@@ -339,7 +341,7 @@ export const sourceMarkets: SourceMarket[] = [
     searchLanguage: "en",
     season: "November to March — the darkest months at home are the best months on the Nile.",
     why: "Long winter holidays, high disposable spend, and English-language research habits that put the full site in front of them.",
-    pages: ["index.html"],
+    pages: ["guides/egypt-from-scandinavia.html"],
     interests: [
       "The darkest months at home are the best months on the Nile",
       "Private guiding, researched and booked in English",
@@ -351,7 +353,7 @@ export const sourceMarkets: SourceMarket[] = [
     searchLanguage: "en",
     season: "November to March, plus the February winter holiday week.",
     why: "The highest-spending of the Nordic markets and entirely comfortable researching and booking in English.",
-    pages: ["index.html"],
+    pages: ["guides/egypt-from-scandinavia.html"],
     interests: [
       "November to March, and the February winter holiday",
       "Private guiding, researched and booked in English",
@@ -363,7 +365,7 @@ export const sourceMarkets: SourceMarket[] = [
     searchLanguage: "en",
     season: "November to March.",
     why: "Completes Nordic coverage on the same English-language footing.",
-    pages: ["index.html"],
+    pages: ["guides/egypt-from-scandinavia.html"],
     interests: [
       "November to March on the Nile",
       "Private guiding, researched and booked in English",
@@ -566,7 +568,7 @@ export const sourceMarkets: SourceMarket[] = [
       "Egyptology in depth, with a private licensed specialist",
       "Fully arranged, carefully planned private travel",
     ],
-    welcome: "We plan private journeys in Egypt for travellers from Japan — with your own licensed Egyptologist, guiding in English or another of our ten languages.",
+    welcome: "We plan private journeys in Egypt for travellers from Japan — with your own licensed Egyptologist, guiding in English or another of the languages our team guides in.",
   },
   {
     code: "KR", country: "South Korea", demonym: "South Korean travellers", region: "Asia-Pacific",
@@ -578,7 +580,7 @@ export const sourceMarkets: SourceMarket[] = [
       "Fully arranged private travel",
       "A private licensed Egyptologist",
     ],
-    welcome: "We plan private journeys in Egypt for travellers from South Korea — with your own licensed Egyptologist, guiding in English or another of our ten languages.",
+    welcome: "We plan private journeys in Egypt for travellers from South Korea — with your own licensed Egyptologist, guiding in English or another of the languages our team guides in.",
   },
   {
     code: "IN", country: "India", demonym: "Indian travellers", region: "Asia-Pacific",
@@ -635,6 +637,149 @@ export const sourceMarkets: SourceMarket[] = [
       "The southern-summer holidays fall in Egypt's best weather",
     ],
     welcome: "We plan private journeys in Egypt for travellers from New Zealand — journeys long enough to be worth the flight, with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day.",
+  },
+  // ===== Added October 2026 — English-searching markets with their own page ==
+  {
+    code: "FI", country: "Finland", demonym: "Finnish travellers", region: "Northern Europe",
+    searchLanguage: "en",
+    season: "November to March, and the February winter holiday.",
+    why: "Researches long-haul trips in English, on the same Nordic winter-sun footing as Sweden and Norway; one stop to Cairo.",
+    pages: ["guides/egypt-from-scandinavia.html"],
+    interests: [
+      "One stop to Cairo, via Istanbul, Frankfurt, Athens or a Gulf hub",
+      "The darkest months at home are the best months on the Nile",
+      "The e-visa or a visa on arrival",
+    ],
+    welcome: "We plan private journeys in Egypt for travellers from Finland — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day.",
+  },
+  {
+    code: "IS", country: "Iceland", demonym: "Icelandic travellers", region: "Northern Europe",
+    searchLanguage: "en",
+    season: "November to March.",
+    why: "A small, high-spending market that researches in English; served by the Nordic page.",
+    pages: ["guides/egypt-from-scandinavia.html"],
+    interests: [
+      "One stop to Cairo through a European hub",
+      "Winter on the Nile",
+    ],
+    welcome: "We plan private journeys in Egypt for travellers from Iceland — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day.",
+  },
+  {
+    code: "LU", country: "Luxembourg", demonym: "Luxembourg travellers", region: "Western Europe",
+    searchLanguage: "fr",
+    season: "October to April.",
+    why: "Compact and high-spending; reads French, German and English, all of which the site serves.",
+    alsoReads: ["de", "en"],
+    pages: ["guides/egypt-from-netherlands-belgium.html", "fr/index.html", "de/index.html"],
+    interests: [
+      "Egyptologists from our own team who guide in French, German or English",
+      "The nonstop from Brussels, or one stop",
+    ],
+    welcome: "Nous organisons des voyages privés en Égypte pour les voyageurs venus du Luxembourg — en français, en allemand ou en anglais, avec des égyptologues de notre propre équipe.",
+  },
+  {
+    code: "SG", country: "Singapore", demonym: "Singaporean travellers", region: "Asia-Pacific",
+    searchLanguage: "en",
+    season: "The June and December school holidays, and Chinese New Year.",
+    why: "Researches and books in English, buys fully arranged private travel, and reaches Cairo on one stop through the Gulf.",
+    alsoReads: ["zh", "ms"],
+    pages: ["guides/egypt-from-singapore-hong-kong-china.html"],
+    interests: [
+      "One stop to Cairo through Dubai, Doha, Abu Dhabi or Istanbul",
+      "Egyptologists from our own team who guide in English or Mandarin",
+      "The e-visa or a visa on arrival",
+    ],
+    welcome: "We plan private journeys in Egypt for travellers from Singapore — with your own licensed Egyptologist, in English or Mandarin, and a real itinerary within one working day.",
+  },
+  {
+    code: "HK", country: "Hong Kong", demonym: "Hong Kong travellers", region: "Asia-Pacific",
+    searchLanguage: "en",
+    season: "October to April, Chinese New Year and Easter.",
+    why: "English-researching, long-haul, and drawn to private, carefully arranged travel; one stop to Cairo.",
+    alsoReads: ["zh"],
+    pages: ["guides/egypt-from-singapore-hong-kong-china.html"],
+    interests: [
+      "One stop to Cairo through a Gulf hub or mainland China",
+      "Egyptologists from our own team who guide in English or Mandarin",
+    ],
+    welcome: "We plan private journeys in Egypt for travellers from Hong Kong — with your own licensed Egyptologist, in English or Mandarin, and a real itinerary within one working day.",
+  },
+  {
+    code: "TW", country: "Taiwan", demonym: "Taiwanese travellers", region: "Asia-Pacific",
+    searchLanguage: "zh",
+    season: "October to April, and Lunar New Year.",
+    why: "Buys guided, fully arranged long-haul travel; Mandarin-speaking Egyptologists on our own team make it a natural fit.",
+    alsoReads: ["en"],
+    pages: ["guides/egypt-from-singapore-hong-kong-china.html"],
+    interests: [
+      "Egyptologists from our own team who guide in Mandarin",
+      "The tourist e-visa, online before you fly",
+    ],
+    welcome: "We plan private journeys in Egypt for travellers from Taiwan — with your own licensed Egyptologist, guiding in Mandarin or English.",
+  },
+  {
+    code: "CN", country: "China", demonym: "Chinese travellers", region: "Asia-Pacific",
+    searchLanguage: "zh",
+    season: "Chinese New Year and the October Golden Week, both in Egypt's good season.",
+    why: "Nonstop flights from Beijing, Shanghai, Guangzhou, Hangzhou and Chengdu, a visa on arrival, and Mandarin-speaking Egyptologists on our own team. The site is not published in Chinese, so this market is served in English and in Mandarin on the ground.",
+    alsoReads: ["en"],
+    pages: ["guides/egypt-from-singapore-hong-kong-china.html"],
+    interests: [
+      "Nonstop flights to Cairo from Beijing, Shanghai, Guangzhou, Hangzhou and Chengdu",
+      "Egyptologists from our own team who guide in Mandarin",
+      "The e-visa or a visa on arrival",
+    ],
+    welcome: "We plan private journeys in Egypt for travellers from China — with your own licensed Egyptologist, guiding in Mandarin or English.",
+  },
+  {
+    code: "ZA", country: "South Africa", demonym: "South African travellers", region: "Africa",
+    searchLanguage: "en",
+    season: "The December–January holidays and the April and September breaks.",
+    why: "English-searching, with an EgyptAir nonstop from Johannesburg — the same time zone as Cairo in winter.",
+    pages: ["guides/egypt-from-africa.html"],
+    interests: [
+      "The EgyptAir nonstop from Johannesburg",
+      "The tourist e-visa, online before you fly",
+      "Family and multi-generation journeys",
+    ],
+    welcome: "We plan private journeys in Egypt for travellers from South Africa — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day.",
+  },
+  {
+    code: "NG", country: "Nigeria", demonym: "Nigerian travellers", region: "Africa",
+    searchLanguage: "en",
+    season: "December and the Easter holidays, plus milestone and celebration travel year-round.",
+    why: "English-searching, with EgyptAir nonstops from Lagos and Abuja, and a strong habit of family and celebration travel.",
+    pages: ["guides/egypt-from-africa.html"],
+    interests: [
+      "EgyptAir nonstops from Lagos and Abuja",
+      "An Egyptian visa from the embassy, applied for well before travel",
+      "Family and celebration journeys",
+    ],
+    welcome: "We plan private journeys in Egypt for travellers from Nigeria — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day.",
+  },
+  {
+    code: "KE", country: "Kenya", demonym: "Kenyan travellers", region: "Africa",
+    searchLanguage: "en",
+    season: "December, Easter and the August holidays.",
+    why: "English-searching, a short nonstop from Nairobi.",
+    pages: ["guides/egypt-from-africa.html"],
+    interests: [
+      "The EgyptAir nonstop from Nairobi",
+      "An Egyptian visa from the embassy, applied for well before travel",
+    ],
+    welcome: "We plan private journeys in Egypt for travellers from Kenya — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day.",
+  },
+  {
+    code: "GH", country: "Ghana", demonym: "Ghanaian travellers", region: "Africa",
+    searchLanguage: "en",
+    season: "December and the Easter holidays.",
+    why: "English-searching, with an EgyptAir nonstop from Accra.",
+    pages: ["guides/egypt-from-africa.html"],
+    interests: [
+      "The EgyptAir nonstop from Accra",
+      "An Egyptian visa from the embassy, applied for well before travel",
+    ],
+    welcome: "We plan private journeys in Egypt for travellers from Ghana — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day.",
   },
 ];
 
