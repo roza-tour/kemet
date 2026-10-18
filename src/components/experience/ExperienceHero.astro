@@ -25,7 +25,7 @@ const hub = hubFor("experience");
       <a href={`${base}${hub}`}>Experiences</a> ·
       <span>{experience.title}</span>
     </nav>
-    <div class="eyebrow">{categoryLabel} · {experience.durationLabel}</div>
+    <div class="eyebrow" style="text-wrap:balance">{categoryLabel} · {experience.durationLabel.replace(/-/g, "\u2011")}</div>
     <h1>{experience.title}</h1>
     <p>{experience.shortSummary}</p>
   </div>

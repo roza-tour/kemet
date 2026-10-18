@@ -56,13 +56,16 @@ const heading = LOCALE_META[(current ?? "en") as SiteLocale].language;
       {entries.map((a) => {
         const loc = a.hreflang as SiteLocale;
         const isCurrent = isTranslated ? loc === current : loc === current && current !== "en";
+        // The page's own language is always shown as the one you are reading,
+        // even where its chip links to a home page (aria-current stays honest).
+        const isOwnLanguage = loc === (current ?? "en");
         return (
           <li>
             <a
               href={`${base}${publicPath(a.route)}` || "/"}
               hreflang={isTranslated ? a.hreflang : undefined}
               lang={a.hreflang}
-              class={isCurrent ? "is-current" : undefined}
+              class={isCurrent || isOwnLanguage ? "is-current" : undefined}
               aria-current={isCurrent ? "true" : undefined}
             >
               <b>{LOCALE_META[loc].short}</b>

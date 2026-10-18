@@ -60,6 +60,7 @@ const jsonld: Record<string, unknown>[] = [
 const title = `${o.title} | Kemet`;
 ---
 <Base
+  showCta={false}
   title={title.length <= 65 ? title : `${o.label} in Egypt | Kemet`}
   description={o.metaDescription}
   active={route}

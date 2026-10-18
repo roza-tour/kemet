@@ -86,6 +86,19 @@ const rawLd = jsonld ? (Array.isArray(jsonld) ? jsonld : [jsonld]) : [];
 // page does not declare back. Pages with no translations emit only the
 // site-wide English/x-default pair.
 const pageLocale = localeOfRoute(active);
+
+// Typography the browser cannot know: keep a regnal number with its name
+// ("Ramsès II" never splits before "II"), and in French keep « » ? ! : ; with
+// the word before them, as French sets them with a space that must not break.
+// Text only — tags, scripts and styles are passed through untouched.
+const typeset = (html: string) =>
+  html.split(/(<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>|<[^>]+>)/g).map((seg, i) => {
+    if (i % 2) return seg;
+    let t = seg.replace(/([A-ZÀ-Ý][a-zà-ÿ]+) (II|III|IV|VI|VII|VIII)\b/g, "$1\u00A0$2");
+    if (pageLocale === "fr") t = t.replace(/ ([?!:;»])/g, "\u202F$1").replace(/« /g, "«\u202F");
+    return t;
+  }).join("");
+const typesetBody = typeset(body);
 const htmlLang = LOCALE_META[pageLocale].tag;
 // Only emitted for a right-to-left language — not written as dir="ltr" on 181
 // pages to say nothing.
@@ -280,7 +293,7 @@ const ogLocaleAlternates = alternates
   <SvgDefs />
   <Nav active={active} base={base} locale={pageLocale} />
   <SeasonalSkin locale={pageLocale} />
-  <main id="main"><Fragment set:html={body} /></main>
+  <main id="main"><Fragment set:html={typesetBody} /></main>
   {showCta && <CTA base={base} />}
   <Footer base={base} route={active} locale={pageLocale} />
   <SearchPanel label={t.searchResults} />

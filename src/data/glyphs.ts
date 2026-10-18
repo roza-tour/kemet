@@ -37,10 +37,9 @@ export const GLYPHS: Record<string, string> = {
     <path d="M76 38 l4.5 9.2 10.2 1.5-7.4 7.2 1.7 10.1-9-4.8-9 4.8 1.7-10.1-7.4-7.2 10.2-1.5Z"/>
   </g>`,
   // Bedouin · Sinai — camel silhouette
-  camel: `<g fill="url(#gs)">
-    <path d="M11 40c2-1 4 0 5 3 1 4 3 6 6 6 2 4 4 6 7 7l2 22c0 2 2 3 4 3s3-1 3-3l-1-21h12l1 6c-2 1-3 3-3 6l1 12c0 2 2 3 4 3s3-1 3-3l-1-15c4-3 7-8 9-15 3-12 9-18 16-19 3 0 5-1 6-3 2-3 5-4 8-3 2 0 3-1 3-3s-2-4-5-4c-5-1-9 1-12 5-1 1-3 2-5 2-9 1-16 5-21 12-3-5-7-8-13-9-3-7-6-11-10-12-4-2-8-1-11 2-3-2-6-2-9 0-3 1-5 3-6 6-2 1-4 2-5 4-1 2-1 4 0 5Z"/>
-    <path d="M30 60l-3 12 4 1 3-12Z"/>
-  </g>`,
+  camel: `<path fill="url(#gs)" d="M12 52 C12 47 16 44 21 44 C24 34 32 28 41 28 C50 28 56 34 58 42 C62 43 66 41 69 37 L74 26 C76 21 80 18 85 18 C88 18 90 19 92 21 L95 25 L90 27 C88 28 87 30 86 33 L82 46 C80 52 76 56 72 58 L74 84 L69 84 L66 62 L62 62 L62 84 L57 84 L55 62 C48 63 40 63 34 61 L33 84 L28 84 L27 60 L24 59 L22 84 L17 84 L17 57 C14 56 12 54 12 52 Z"/>
+    <path fill="none" stroke="url(#gs)" stroke-width="2.2" stroke-linecap="round" d="M13 50 C9 52 8 58 9 63"/>
+    <circle cx="86" cy="23" r="1.4" fill="#0A0806"/>`,
   // Greco-Roman — classical column
   greco: `<g fill="url(#gs)">
     <path d="M22 18h56v8H22z"/>
@@ -85,12 +84,14 @@ export const GLYPHS: Record<string, string> = {
     <path d="M70 44 86 36M70 56 88 56M68 70 82 78"/>
   </g>`,
   // Anubis — jackal head
-  anubis: `<path fill="url(#gs)" d="M30 14c2 8 1 16-2 24-4 10-6 20-4 30 1 8 6 14 13 16 2 4 6 6 11 6 3 0 5-2 5-4 0-3-2-4-5-5-4-1-7-3-8-7 7-2 12-7 14-15 3-12 1-24-5-35-3-6-4-12-3-18 0-3-2-5-5-6-4-1-8 1-9 4-2-3-5-4-8-3-2 1-3 3-2 5 4 2 6 5 5 9Z"/>
-    <circle cx="40" cy="46" r="3.5" fill="#0A0806"/>`,
+  anubis: `<path fill="url(#gs)" d="M30 8 L40 30 L44 30 L47 9 L53 33 C58 35 62 38 66 41 L88 49 C90 50 90 53 88 54 L67 57 C62 59 59 63 59 68 L62 94 L30 94 C31 84 32 72 32 60 C32 48 29 36 30 8 Z"/>
+    <path fill="#0A0806" d="M47 43 C50 40 55 40 58 42 C55 45 50 46 47 43 Z"/>
+    <path fill="none" stroke="#0A0806" stroke-width="1.6" stroke-linecap="round" d="M33 16 L39 29"/>`,
   // Horus — falcon head
-  horus: `<path fill="url(#gs)" d="M34 20c10-2 20 2 26 11 4 6 6 13 6 21 0 3 2 5 5 6 4 1 8 3 10 7-5 1-9 0-13-2-1 9-7 16-16 19-12 4-25-2-30-14-4-10-3-21 3-30 4-6 5-12 3-18-1-3 2-6 6-6Z"/>
-    <circle cx="46" cy="40" r="4.5" fill="#0A0806"/>
-    <path fill="#0A0806" d="M44 48c8 1 14 4 18 9-7-2-13-3-18-2Z"/>`,
+  horus: `<path fill="url(#gs)" d="M24 42 C25 27 37 16 52 14 C62 13 70 15 76 21 L80 23 C86 26 89 31 89 37 C89 42 86 45 83 47 C83 43 81 41 78 41 C76 47 71 52 65 55 L67 71 C68 81 65 89 62 94 L26 94 C24 82 22 67 23 55 C23 50 23 46 24 42 Z"/>
+    <circle cx="62" cy="28" r="4" fill="#0A0806"/>
+    <path fill="#0A0806" d="M59.5 33 C58.5 41 56 48 52 54 C57.5 50 61.5 43 62.5 34 Z"/>
+    <path fill="none" stroke="#0A0806" stroke-width="1.8" stroke-linecap="round" d="M67 33 C71 34.5 74.5 37 78 40.5"/>`,
   // Nile — a felucca under its lateen sail
   boat: `<g fill="url(#gs)">
     <path d="M50 12 48 66 76 60Z"/>

@@ -310,10 +310,10 @@ export const collections: Collection[] = [
       },
     ],
     hero: {
-      alt: "A pyramid of Giza beyond the weathered limestone blocks of the Great Pyramid",
-      src: "/images/giza/giza-sphinx-and-pyramid.webp",
-      width: 736,
-      height: 920,
+      alt: "A camel rider crossing the sand towards the Pyramid of Menkaure and the queens' pyramids at Giza",
+      src: "/images/stock/giza-camel-rider-pyramids.webp",
+      width: 1024,
+      height: 680,
     },
     lastReviewed: "2026-01",
     relationships: {
@@ -489,10 +489,10 @@ export const collections: Collection[] = [
     },
     theme: "family",
     hero: {
-      alt: "Guests on a camel caravan before the Pyramids of Giza",
-      src: "/images/activities/act-camel-pyramids.webp",
-      width: 1300,
-      height: 934,
+      alt: "A family of Kemet guests celebrating at the Step Pyramid of Saqqara",
+      src: "/images/clients/clients-07-saqqara-family.webp",
+      width: 680,
+      height: 680,
     },
     lastReviewed: "2026-01",
     relationships: {

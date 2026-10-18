@@ -44,7 +44,7 @@ export const pt: LocalizedPage[] = [
     facts: [
       { label: "Formato", value: "Exclusivamente privado" },
       { label: "Guia", value: "Com credencial, em português" },
-      { label: "Voo desde São Paulo", value: "uma conexão, cerca de 17–20 h" },
+      { label: "Voo desde São Paulo", value: "uma conexão, cerca de 17–20\u00A0h" },
       { label: "Melhor época", value: "outubro a abril" },
     ],
     sections: [
@@ -176,7 +176,7 @@ export const pt: LocalizedPage[] = [
     lede:
       "Quase tudo o que vale uma parada entre Luxor e Assuã está a poucas centenas de metros do Nilo. Por isso o rio é a estrada, e por isso para esse trecho recomendamos quase sempre o barco. A vantagem real não é a embarcação: é a chegada. Vocês descem e já estão lá, em vez de entrar atravessando um estacionamento de ônibus.",
     facts: [
-      { label: "Trecho", value: "Luxor ↔ Assuã" },
+      { label: "Trecho", value: "Luxor – Assuã" },
       { label: "Duração", value: "3–4 noites" },
       { label: "Templos no caminho", value: "Kom Ombo, Edfu, Esna" },
       { label: "Melhor época", value: "outubro–abril" },

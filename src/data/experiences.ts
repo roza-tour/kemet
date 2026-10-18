@@ -519,11 +519,11 @@ export const experiences: Experience[] = [
       },
     ],
     hero: {
-      alt: "The colonnade of Luxor Temple with its seated royal statues, floodlit in the evening",
+      alt: "Carved temple columns at Luxor lit at night, the moon between them",
       label: "Luxor Temple by Night",
-      src: "/images/luxor/luxor-temple-colonnade.webp",
-      width: 736,
-      height: 920,
+      src: "/images/luxor/luxor-temple-columns-night.webp",
+      width: 1024,
+      height: 683,
     },
     seo: {
       title: "Luxor Temple by Night — Avenue of Sphinxes | Kemet",
@@ -608,11 +608,11 @@ export const experiences: Experience[] = [
       },
     ],
     hero: {
-      alt: "Feluccas and river craft on the Cairo Nile seen from above at dusk",
+      alt: "A felucca on the Nile in Cairo, the Cairo Tower behind it",
       label: "Private Nile Dinner Cruise",
-      src: "/images/tours/tour-nile-cairo-feluccas-aerial.webp",
+      src: "/images/cairo/cairo-tower-nile-skyline.webp",
       width: 736,
-      height: 1308,
+      height: 981,
     },
     seo: {
       title: "Private Nile Dinner Cruise, Cairo — Evening Sailing | Kemet",
@@ -1084,11 +1084,11 @@ export const experiences: Experience[] = [
       },
     ],
     hero: {
-      alt: "A lantern-lit terrace in the Sinai night above the Red Sea",
+      alt: "Travellers around a campfire in the open desert at dusk",
       label: "Sinai Desert Evening",
-      src: "/images/redsea/sinai-cliff-lounge-night.webp",
+      src: "/images/fayoum/fayoum-desert-camp.webp",
       width: 736,
-      height: 1308,
+      height: 981,
     },
     seo: {
       title: "Sinai Stargazing & Bedouin Dinner, Sharm El Sheikh | Kemet",
@@ -1439,9 +1439,9 @@ export const experiences: Experience[] = [
     hero: {
       alt: "An aircraft on its stand at Cairo International Airport, passenger stairs in place",
       label: "VIP Airport Meet & Assist",
-      src: "/images/stock/cairo-airport-aircraft-stand.webp",
-      width: 1280,
-      height: 768,
+      src: "/images/stock/cairo-airport-apron.webp",
+      width: 980,
+      height: 618,
     },
     seo: {
       title: "VIP Airport Meet & Assist, Cairo — Fast-Track | Kemet",

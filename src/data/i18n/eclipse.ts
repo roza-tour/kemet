@@ -82,7 +82,7 @@ export const deEclipse: LocalizedPage = {
     {
       title: "August in Luxor, ehrlich gesagt",
       body:
-        "Der August ist Luxors heißester Monat, mit Nachmittagen um 41–43 °C, und die Totalität fällt in die heißeste Stunde des Tages. Mit Planung ist das gut zu machen, ohne Planung nicht. Dafür ist der Himmel über Oberägypten im August so zuverlässig klar wie kaum anderswo — genau das, was eine Finsternis braucht. Der Tag richtet sich also nach der Hitze: Tempel zur Öffnung, gegen späten Vormittag zurück in den Schatten, die Finsternis von einem kühlen Ort mit Wasser in Reichweite, der Nachmittag zum Ausruhen.",
+        "Der August ist einer der beiden heißesten Monate in Luxor, mit Nachmittagen um 41–43 °C, und die Totalität fällt in die heißeste Stunde des Tages. Mit Planung ist das gut zu machen, ohne Planung nicht. Dafür ist der Himmel über Oberägypten im August so zuverlässig klar wie kaum anderswo — genau das, was eine Finsternis braucht. Der Tag richtet sich also nach der Hitze: Tempel zur Öffnung, gegen späten Vormittag zurück in den Schatten, die Finsternis von einem kühlen Ort mit Wasser in Reichweite, der Nachmittag zum Ausruhen.",
     },
     {
       title: "Sicher hinschauen",
@@ -196,7 +196,7 @@ export const frEclipse: LocalizedPage = {
     {
       title: "Août à Louxor, franchement",
       body:
-        "Août est le mois le plus chaud à Louxor, avec des après-midi autour de 41–43 °C, et la totalité tombe à l'heure la plus chaude de la journée. Avec de l'organisation, c'est tout à fait faisable ; sans, c'est pénible. En échange, le ciel de Haute-Égypte en août est l'un des plus sûrement dégagés du monde — exactement ce qu'il faut pour une éclipse. La journée se construit donc autour de la chaleur : les temples à l'ouverture, retour à l'ombre en fin de matinée, l'éclipse depuis un endroit frais avec de l'eau à portée de main, et l'après-midi au repos.",
+        "Août est l'un des deux mois les plus chauds à Louxor, avec des après-midi autour de 41–43 °C, et la totalité tombe à l'heure la plus chaude de la journée. Avec de l'organisation, c'est tout à fait faisable ; sans, c'est pénible. En échange, le ciel de Haute-Égypte en août est l'un des plus sûrement dégagés du monde — exactement ce qu'il faut pour une éclipse. La journée se construit donc autour de la chaleur : les temples à l'ouverture, retour à l'ombre en fin de matinée, l'éclipse depuis un endroit frais avec de l'eau à portée de main, et l'après-midi au repos.",
     },
     {
       title: "Regarder sans danger",
@@ -310,7 +310,7 @@ export const esEclipse: LocalizedPage = {
     {
       title: "Agosto en Luxor, con franqueza",
       body:
-        "Agosto es el mes más caluroso de Luxor, con tardes de 41–43 °C, y la totalidad cae en la hora más calurosa del día. Con planificación es perfectamente llevadero; sin ella, no. A cambio, el cielo del Alto Egipto en agosto es de los más fiablemente despejados del mundo, justo lo que pide un eclipse. Así que el día se organiza en torno al calor: templos a la hora de apertura, de vuelta a la sombra a media mañana, el eclipse desde un lugar fresco con agua a mano y la tarde para descansar.",
+        "Agosto es uno de los dos meses más calurosos de Luxor, con tardes de 41–43 °C, y la totalidad cae en la hora más calurosa del día. Con planificación es perfectamente llevadero; sin ella, no. A cambio, el cielo del Alto Egipto en agosto es de los más fiablemente despejados del mundo, justo lo que pide un eclipse. Así que el día se organiza en torno al calor: templos a la hora de apertura, de vuelta a la sombra a media mañana, el eclipse desde un lugar fresco con agua a mano y la tarde para descansar.",
     },
     {
       title: "Mirar sin riesgo",
@@ -424,7 +424,7 @@ export const itEclipse: LocalizedPage = {
     {
       title: "Agosto a Luxor, onestamente",
       body:
-        "Agosto è il mese più caldo di Luxor, con pomeriggi intorno ai 41–43 °C, e la totalità cade nell'ora più calda della giornata. Con un'organizzazione attenta si fa benissimo; senza, è faticoso. In cambio, il cielo dell'Alto Egitto in agosto è tra i più sicuramente sereni al mondo: esattamente ciò che serve a un'eclissi. La giornata si costruisce quindi intorno al caldo: templi all'apertura, di nuovo all'ombra a fine mattinata, l'eclissi da un luogo fresco con acqua a portata di mano e il pomeriggio a riposo.",
+        "Agosto è uno dei due mesi più caldi di Luxor, con pomeriggi intorno ai 41–43 °C, e la totalità cade nell'ora più calda della giornata. Con un'organizzazione attenta si fa benissimo; senza, è faticoso. In cambio, il cielo dell'Alto Egitto in agosto è tra i più sicuramente sereni al mondo: esattamente ciò che serve a un'eclissi. La giornata si costruisce quindi intorno al caldo: templi all'apertura, di nuovo all'ombra a fine mattinata, l'eclissi da un luogo fresco con acqua a portata di mano e il pomeriggio a riposo.",
     },
     {
       title: "Guardare in sicurezza",
@@ -539,7 +539,7 @@ export const ruEclipse: LocalizedPage = {
     {
       title: "Август в Луксоре — честно",
       body:
-        "Август — самый жаркий месяц в Луксоре, днём около 41–43 °C, и полная фаза приходится на самый жаркий час. С хорошей организацией это вполне выносимо, без неё — тяжело. Зато небо над Верхним Египтом в августе — одно из самых надёжно ясных на свете, а именно это и нужно для затмения. Поэтому день строится вокруг жары: храмы к открытию, к концу утра — обратно в тень, затмение — из прохладного места с водой под рукой, а после — отдых.",
+        "Август — один из двух самых жарких месяцев в Луксоре, днём около 41–43 °C, и полная фаза приходится на самый жаркий час. С хорошей организацией это вполне выносимо, без неё — тяжело. Зато небо над Верхним Египтом в августе — одно из самых надёжно ясных на свете, а именно это и нужно для затмения. Поэтому день строится вокруг жары: храмы к открытию, к концу утра — обратно в тень, затмение — из прохладного места с водой под рукой, а после — отдых.",
     },
     {
       title: "Как смотреть безопасно",
@@ -653,7 +653,7 @@ export const ptEclipse: LocalizedPage = {
     {
       title: "Agosto em Luxor, com franqueza",
       body:
-        "Agosto é o mês mais quente de Luxor, com tardes de 41–43 °C, e a totalidade cai na hora mais quente do dia. Com planejamento, é perfeitamente viável; sem ele, é sofrido. Em troca, o céu do Alto Egito em agosto é um dos mais confiavelmente limpos do mundo — exatamente o que um eclipse pede. Por isso o dia é montado em torno do calor: templos na abertura, de volta à sombra no fim da manhã, o eclipse de um lugar fresco com água à mão e a tarde para descansar.",
+        "Agosto é um dos dois meses mais quentes de Luxor, com tardes de 41–43 °C, e a totalidade cai na hora mais quente do dia. Com planejamento, é perfeitamente viável; sem ele, é sofrido. Em troca, o céu do Alto Egito em agosto é um dos mais confiavelmente limpos do mundo — exatamente o que um eclipse pede. Por isso o dia é montado em torno do calor: templos na abertura, de volta à sombra no fim da manhã, o eclipse de um lugar fresco com água à mão e a tarde para descansar.",
     },
     {
       title: "Olhar com segurança",
@@ -772,7 +772,7 @@ export const idEclipse: LocalizedPage = {
     {
       title: "Agustus di Luxor, terus terang",
       body:
-        "Agustus adalah bulan terpanas di Luxor, dengan siang hingga sore sekitar 41–43 °C, dan totalitas jatuh pada jam terpanas hari itu. Dengan perencanaan, ini sangat bisa dijalani; tanpa perencanaan, berat. Sebagai gantinya, langit Mesir Hulu pada bulan Agustus termasuk yang paling dapat diandalkan cerahnya di dunia — persis yang dibutuhkan gerhana. Jadi hari itu disusun mengikuti panas: kuil saat baru dibuka, kembali ke tempat teduh menjelang siang, gerhana dari tempat yang sejuk dengan air di dekat Anda, dan sore untuk beristirahat.",
+        "Agustus adalah salah satu dari dua bulan terpanas di Luxor, dengan siang hingga sore sekitar 41–43 °C, dan totalitas jatuh pada jam terpanas hari itu. Dengan perencanaan, ini sangat bisa dijalani; tanpa perencanaan, berat. Sebagai gantinya, langit Mesir Hulu pada bulan Agustus termasuk yang paling dapat diandalkan cerahnya di dunia — persis yang dibutuhkan gerhana. Jadi hari itu disusun mengikuti panas: kuil saat baru dibuka, kembali ke tempat teduh menjelang siang, gerhana dari tempat yang sejuk dengan air di dekat Anda, dan sore untuk beristirahat.",
     },
     {
       title: "Melihat dengan aman",
@@ -891,7 +891,7 @@ export const msEclipse: LocalizedPage = {
     {
       title: "Ogos di Luxor, secara jujur",
       body:
-        "Ogos ialah bulan paling panas di Luxor, dengan suhu tengah hari hingga petang sekitar 41–43 °C, dan fasa penuh jatuh pada jam paling panas hari itu. Dengan perancangan, ia sangat boleh diharungi; tanpa perancangan, ia memenatkan. Sebagai gantinya, langit Mesir Hulu pada bulan Ogos antara yang paling boleh diharap cerahnya di dunia — tepat seperti yang diperlukan gerhana. Jadi hari itu disusun mengikut panas: kuil sebaik dibuka, kembali ke tempat teduh menjelang tengah hari, gerhana dari tempat yang sejuk dengan air di sisi, dan petang untuk berehat.",
+        "Ogos ialah salah satu daripada dua bulan paling panas di Luxor, dengan suhu tengah hari hingga petang sekitar 41–43 °C, dan fasa penuh jatuh pada jam paling panas hari itu. Dengan perancangan, ia sangat boleh diharungi; tanpa perancangan, ia memenatkan. Sebagai gantinya, langit Mesir Hulu pada bulan Ogos antara yang paling boleh diharap cerahnya di dunia — tepat seperti yang diperlukan gerhana. Jadi hari itu disusun mengikut panas: kuil sebaik dibuka, kembali ke tempat teduh menjelang tengah hari, gerhana dari tempat yang sejuk dengan air di sisi, dan petang untuk berehat.",
     },
     {
       title: "Menonton dengan selamat",
@@ -1010,7 +1010,7 @@ export const arEclipse: LocalizedPage = {
     {
       title: "أغسطس في الأقصر، بصراحة",
       body:
-        "أغسطس أشدّ شهور الأقصر حرّاً، وبعد الظهر فيه نحو ٤١–٤٣ درجة، والكسوف الكلي يقع في أحرّ ساعات النهار. مع التخطيط يمرّ الأمر بسهولة، ومن دونه يصبح متعباً — وأهل الخليج يعرفون هذا الحرّ جيداً. والمقابل أن سماء الصعيد في أغسطس من أصفى سماوات العالم وأكثرها ثباتاً، وهذا تحديداً ما يحتاجه الكسوف. لذلك يُبنى اليوم حول الحرّ: المعابد عند فتحها، والعودة إلى الظلّ قبل الظهر، ومشاهدة الكسوف من مكان بارد والماء في المتناول، ثم راحة بعد الظهر.",
+        "أغسطس من أشدّ شهرين حرّاً في الأقصر، وبعد الظهر فيه نحو ٤١–٤٣ درجة، والكسوف الكلي يقع في أحرّ ساعات النهار. مع التخطيط يمرّ الأمر بسهولة، ومن دونه يصبح متعباً — وأهل الخليج يعرفون هذا الحرّ جيداً. والمقابل أن سماء الصعيد في أغسطس من أصفى سماوات العالم وأكثرها ثباتاً، وهذا تحديداً ما يحتاجه الكسوف. لذلك يُبنى اليوم حول الحرّ: المعابد عند فتحها، والعودة إلى الظلّ قبل الظهر، ومشاهدة الكسوف من مكان بارد والماء في المتناول، ثم راحة بعد الظهر.",
     },
     {
       title: "المشاهدة الآمنة",

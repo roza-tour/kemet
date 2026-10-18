@@ -15,6 +15,24 @@ import { occasions } from "@/data/occasions";
 import { months } from "@/data/months";
 import { comparisons } from "@/data/comparisons";
 import { TRANSLATION_GROUPS, TRANSLATED_LOCALES, LOCALE_META } from "@/config/i18n";
+import { de as deP } from "@/data/i18n/de";
+import { it as itP } from "@/data/i18n/it";
+import { es as esP } from "@/data/i18n/es";
+import { fr as frP } from "@/data/i18n/fr";
+import { ru as ruP } from "@/data/i18n/ru";
+import { id as idP } from "@/data/i18n/id";
+import { ms as msP } from "@/data/i18n/ms";
+import { pt as ptP } from "@/data/i18n/pt";
+import { ar as arP } from "@/data/i18n/ar";
+import { de as ultraDe } from "@/data/ultra/de";
+import { it as ultraIt } from "@/data/ultra/it";
+import { es as ultraEs } from "@/data/ultra/es";
+import { fr as ultraFr } from "@/data/ultra/fr";
+import { ru as ultraRu } from "@/data/ultra/ru";
+import { id as ultraId } from "@/data/ultra/id";
+import { ms as ultraMs } from "@/data/ultra/ms";
+import { pt as ultraPt } from "@/data/ultra/pt";
+import { ar as ultraAr } from "@/data/ultra/ar";
 import { canonical, publicPath } from "@/utils/links";
 import { site, SITE_URL } from "@/config/site";
 import { breadcrumb } from "@/schemas/jsonld";
@@ -65,6 +83,25 @@ const pageCount =
   main.length + support.length + tours.length + collections.length +
   destinations.length + experiences.length + guides.length +
   activities.filter((a) => a.slug).length + occasions.length + months.length + comparisons.length + TRANSLATION_GROUPS.length * TRANSLATED_LOCALES.length;
+
+// Each translated page listed by its own name in its own language (its
+// breadcrumb label), not by its file name — "Nilkreuzfahrt", not
+// "nilkreuzfahrt". Falls back to the file name for anything not found.
+const LOCALE_PAGES = { de: deP, it: itP, es: esP, fr: frP, ru: ruP, id: idP, ms: msP, pt: ptP, ar: arP } as const;
+const ULTRA_TEXT = { de: ultraDe, it: ultraIt, es: ultraEs, fr: ultraFr, ru: ultraRu, id: ultraId, ms: ultraMs, pt: ultraPt, ar: ultraAr } as const;
+const localLabel = new Map<string, string>();
+for (const loc of TRANSLATED_LOCALES) {
+  for (const page of LOCALE_PAGES[loc as keyof typeof LOCALE_PAGES] ?? []) {
+    const g = TRANSLATION_GROUPS.find((x) => x.key === page.groupId);
+    if (g && page.crumb) localLabel.set(g[loc], page.crumb);
+  }
+  const ultraRoute = TRANSLATION_GROUPS.find((x) => x.key === "ultra")?.[loc];
+  const ultraText = ULTRA_TEXT[loc as keyof typeof ULTRA_TEXT];
+  if (ultraRoute && ultraText?.crumb) localLabel.set(ultraRoute, ultraText.crumb);
+}
+const labelFor = (route: string) =>
+  localLabel.get(route) ?? route.split("/")[1].replace(".html", "").replace(/-/g, " ");
+
 ---
 <Base
   title={`Site Index — Every Page on Kemet | Kemet`}
@@ -201,7 +238,7 @@ const pageCount =
           <ul class="sm-list sm-cols">
             {TRANSLATION_GROUPS.map((g) => (
               <li>
-                <a href={publicPath(g[loc])} hreflang={loc} lang={loc}>{g[loc].split("/")[1].replace(".html", "").replace(/-/g, " ")}</a>
+                <a href={publicPath(g[loc])} hreflang={loc} lang={loc}>{labelFor(g[loc])}</a>
                 <span>{LOCALE_META[loc].endonym}</span>
               </li>
             ))}

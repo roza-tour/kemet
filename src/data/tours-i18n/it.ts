@@ -237,7 +237,7 @@ export const it: TourText[] = [
     },
     faqs: [
       { q: "Quattordici giorni sono troppi per un primo viaggio?", a: "È la durata che serve all'Egitto per essere visto per intero, non solo assaggiato. Sono proprio le giornate sul Mar Rosso a rendere sostenibile la settimana di storia: il viaggio respira invece di accumulare stanchezza." },
-      { q: "Quanto si vola in questo viaggio?", a: "Tre voli interni di circa un'ora ciascuno, che sostituiscono quelle che sarebbero dodici ore di strada o di treno. L'unico lungo tragitto che manteniamo — Assuan–Abu Simbel — fa parte dell'esperienza: deserto aperto all'alba." },
+      { q: "Quanto si vola in questo viaggio?", a: "Tre voli interni di circa un'ora ciascuno, che sostituiscono quelle che sarebbero dodici ore di strada o di treno. Due lunghi tragitti restano su strada: l'escursione ad Alessandria e Assuan–Abu Simbel andata e ritorno — il secondo fa parte dell'esperienza: deserto aperto all'alba." },
       { q: "Si può scambiare o prolungare la parte sul Mar Rosso?", a: "Liberamente. Alcuni la scambiano con notti in più a Luxor o con Siwa, altri allungano Sharm a una settimana intera. I primi dieci giorni sono la spina dorsale; il finale è vostro." },
     ],
   },

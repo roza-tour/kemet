@@ -203,7 +203,10 @@ const jsonld: Record<string, unknown>[] = [
     padding:var(--s-2) 0; min-height: 44px; display: inline-flex; align-items: center; }
   .wm-nav a:hover { color: var(--gold-bright); }
 
-  @media(max-width:900px){ .wm-stats { grid-template-columns: repeat(4, 1fr); } }
+  /* Seven tiles: on four or two columns the last one would sit alone beside
+     an empty cell, so it takes two columns and the row closes. */
+  @media(max-width:900px){ .wm-stats { grid-template-columns: repeat(4, 1fr); }
+    .wm-stats > div:last-child { grid-column: span 2; } }
   @media(max-width:680px){
     .wm-stats { grid-template-columns: repeat(2, 1fr); }
     .wm-stats > div { padding:var(--s-2) var(--s-1); }

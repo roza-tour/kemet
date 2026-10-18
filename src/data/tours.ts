@@ -50,10 +50,18 @@ const baseExcluded = [
   "Egypt entry visa",
   "Tipping (gratuities)",
   "Personal expenses",
-  "Optional extras — Abu Simbel, camel rides, dinner cruise, drinks",
+  // Generic on purpose: this list is shared by every journey, including the
+  // ones that already include Abu Simbel and the Red Sea trips nowhere near it.
+  "Optional extras you choose to add — activities, drinks",
 ];
 
 const privateNote = "Yes — your party only";
+/** Journeys that include a scheduled Nile cruise. Guide, vehicle and every
+ *  visit are private, but the ship is shared with other guests (each of these
+ *  journeys says so in its FAQ), so a blanket "your party only" would
+ *  contradict the page. LocalizedTour compares against this to pick the
+ *  translated wording. */
+export const sharedShipNote = "Guide, vehicle and visits — yes; the cruise ship is shared";
 
 // Day-tour inclusion bases (see the DAY TOURS pricing note above). Tickets move
 // out of the price and to the top of the exclusions, where a reader looking for
@@ -95,7 +103,7 @@ export const tours: Tour[] = [
     startPoint: "Cairo (airport or hotel)",
     cities: ["Cairo", "Giza", "Alexandria", "Aswan", "Luxor"],
     visiting: "Cairo · Giza · Alexandria · Aswan · Luxor",
-    isPrivate: privateNote,
+    isPrivate: sharedShipNote,
     price: 1915,
     was: 2489,
     summary:
@@ -217,7 +225,7 @@ export const tours: Tour[] = [
       ...baseIncluded.slice(0, 1),
       "9 nights' accommodation — 4- or 5-star hotels and a deluxe Nile cruise",
       "3-night full-board Nile cruise, Aswan to Luxor",
-      "Sleeper-train berths Cairo↔Upper Egypt (both directions)",
+      "Sleeper-train berths Cairo–Upper Egypt (both directions)",
       ...baseIncluded.slice(1),
     ],
     excluded: baseExcluded,
@@ -357,7 +365,7 @@ export const tours: Tour[] = [
     included: [
       ...baseIncluded.slice(0, 1),
       "6 nights' accommodation in 4- or 5-star hotels",
-      "Sleeper-train berths Cairo↔Luxor (both directions)",
+      "Sleeper-train berths Cairo–Luxor (both directions)",
       ...baseIncluded.slice(1),
     ],
     excluded: baseExcluded,
@@ -1038,11 +1046,13 @@ export const tours: Tour[] = [
   },
   {
     slug: "tour-giza-sphinx",
+    // The photo here before was a generated image, not the Sphinx: its nose
+    // was intact. This one is real (CC0, see photoCredits).
     hero: {
-      alt: "The Great Sphinx of Giza in profile before the pyramids",
-      src: "/images/giza/giza-great-sphinx-profile.webp",
-      width: 736,
-      height: 1104,
+      alt: "The Great Sphinx of Giza with a pyramid rising behind it",
+      src: "/images/stock/giza-sphinx-with-pyramid.webp",
+      width: 1024,
+      height: 683,
     },
     gallery: [
       { alt: "The Great Pyramid of Khufu on the Giza plateau", label: "Great Pyramid", src: "/images/giza/giza-great-pyramid-khufu.webp", width: 736, height: 981 },
@@ -1262,7 +1272,7 @@ export const tours: Tour[] = [
     startPoint: "Aswan (hotel, station or airport)",
     cities: ["Aswan", "Kom Ombo", "Edfu", "Luxor"],
     visiting: "Aswan · Kom Ombo · Edfu · Luxor",
-    isPrivate: privateNote,
+    isPrivate: sharedShipNote,
     price: 820,
     was: 1065,
     summary:
@@ -1480,7 +1490,7 @@ export const tours: Tour[] = [
     startPoint: "Cairo (airport or hotel)",
     cities: ["Cairo", "Giza", "Aswan", "Luxor"],
     visiting: "Cairo · Giza · Aswan · Luxor",
-    isPrivate: privateNote,
+    isPrivate: sharedShipNote,
     price: 1859,
     was: 2354,
     summary:
@@ -1589,7 +1599,7 @@ export const tours: Tour[] = [
       ...baseIncluded.slice(1),
     ],
     excluded: [
-      "Hot-air balloon flight (booked on request, ~EUR 120 per person)",
+      "Hot-air balloon flight (booked on request, about €120 per person)",
       ...baseExcluded,
     ],
     faqs: [
@@ -1919,7 +1929,7 @@ export const tours: Tour[] = [
     startPoint: "Cairo (airport or hotel)",
     cities: ["Cairo", "Giza", "Alexandria", "Aswan", "Abu Simbel", "Luxor", "Sharm El Sheikh"],
     visiting: "Cairo · Alexandria · Aswan · Abu Simbel · Luxor · Red Sea",
-    isPrivate: privateNote,
+    isPrivate: sharedShipNote,
     price: 2728,
     was: 3278,
     flightsIncluded: true,
@@ -2035,7 +2045,7 @@ export const tours: Tour[] = [
       },
       {
         q: "How much of this journey is flying?",
-        a: "Three internal flights, each about an hour, replacing what would otherwise be twelve-hour road or rail legs. The one long drive we keep — Aswan to Abu Simbel — is itself part of the experience, crossing open desert at dawn.",
+        a: "Three internal flights, each about an hour, replacing what would otherwise be twelve-hour road or rail legs. Two long drives stay on the road: the day trip to Alexandria, and Aswan to Abu Simbel and back — the second is itself part of the experience, crossing open desert at dawn.",
       },
       {
         q: "Can the Red Sea leg be swapped or extended?",

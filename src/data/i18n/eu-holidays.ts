@@ -63,7 +63,9 @@ const fmt = (loc: string, opts: Intl.DateTimeFormatOptions) => (d: Date) =>
   d.toLocaleDateString(loc, { timeZone: "UTC", ...opts });
 
 const tour = (slug: string) => tours.find((t) => t.slug === slug)!;
-const price = (slug: string) => `${tour(slug).price.toLocaleString("de-DE")} €`;
+/** "1.915 €" in German, "1 915 €" in French — each page writes money its own way. */
+const price = (slug: string, loc = "de-DE") =>
+  new Intl.NumberFormat(loc, { style: "currency", currency: "EUR", maximumFractionDigits: 0, useGrouping: "always" }).format(tour(slug).price);
 
 const oct = findMonth("october")!;
 const nov = findMonth("november")!;
@@ -111,7 +113,7 @@ export const frToussaint: LocalizedPage = {
     {
       title: "Ce que deux semaines permettent réellement",
       body:
-        `Dix jours sur place couvrent Le Caire, Louxor, la croisière sur le Nil et Assouan sans courir — c'est la forme de notre circuit de ${/^(\d+)/.exec(tour("tour-10-day").durationLabel)?.[1]} jours, à partir de ${price("tour-10-day")} par personne. Avec quatorze jours on ajoute Abou Simbel sans réveil à quatre heures, ou quelques jours en mer Rouge à la fin. Une semaine seule suffit pour Le Caire et Louxor, et c'est déjà un vrai voyage.`,
+        `Dix jours sur place couvrent Le Caire, Louxor, la croisière sur le Nil et Assouan sans courir — c'est la forme de notre circuit de ${/^(\d+)/.exec(tour("tour-10-day").durationLabel)?.[1]} jours, à partir de ${price("tour-10-day", "fr-FR")} par personne. Avec quatorze jours on ajoute Abou Simbel sans réveil à quatre heures, ou quelques jours en mer Rouge à la fin. Une semaine seule suffit pour Le Caire et Louxor, et c'est déjà un vrai voyage.`,
     },
     {
       title: "Le 22 octobre, à Abou Simbel",
@@ -216,7 +218,7 @@ export const esSemanaSanta: LocalizedPage = {
     {
       title: "Cuántos días caben",
       body:
-        `Si encadena Semana Santa con unos días de vacaciones, diez días cubren El Cairo, Luxor, el crucero por el Nilo y Asuán sin prisas — es la forma de nuestro itinerario de ${/^(\d+)/.exec(tour("tour-10-day").durationLabel)?.[1]} días, desde ${price("tour-10-day")} por persona. Con solo la semana santa propiamente dicha, El Cairo y Luxor entran bien y el viaje sigue mereciendo la pena.`,
+        `Si encadena Semana Santa con unos días de vacaciones, diez días cubren El Cairo, Luxor, el crucero por el Nilo y Asuán sin prisas — es la forma de nuestro itinerario de ${/^(\d+)/.exec(tour("tour-10-day").durationLabel)?.[1]} días, desde ${price("tour-10-day", "es-ES")} por persona. Con solo la semana santa propiamente dicha, El Cairo y Luxor entran bien y el viaje sigue mereciendo la pena.`,
     },
   ],
   faqs: [
@@ -377,7 +379,7 @@ export const itCapodanno: LocalizedPage = {
     {
       title: "Quanto costa, e perché",
       body:
-        `Il nostro viaggio di ${/^(\d+)/.exec(tour("tour-10-day").durationLabel)?.[1]} giorni parte da ${price("tour-10-day")} a persona. Tra Natale e Capodanno si aggiungono i supplementi che alberghi e navi applicano a noi: li riportiamo a parte nel preventivo, senza nasconderli nel totale. Chi è flessibile trova i primi di dicembre e la seconda metà di gennaio sensibilmente più economici, con lo stesso clima.`,
+        `Il nostro viaggio di ${/^(\d+)/.exec(tour("tour-10-day").durationLabel)?.[1]} giorni parte da ${price("tour-10-day", "it-IT")} a persona. Tra Natale e Capodanno si aggiungono i supplementi che alberghi e navi applicano a noi: li riportiamo a parte nel preventivo, senza nasconderli nel totale. Chi è flessibile trova i primi di dicembre e la seconda metà di gennaio sensibilmente più economici, con lo stesso clima.`,
     },
   ],
   highlights: {
@@ -537,7 +539,7 @@ export const ruNovyGod: LocalizedPage = {
     {
       title: "Как выглядят десять дней",
       body:
-        `Каир на три дня — пирамиды на открытии и Большой Египетский музей, на который нужно полдня, а не час. Перелёт в Луксор, Долина царей и Карнак. Затем Нил до Асуана на теплоходе или дахабии, три-четыре ночи. И, если хочется, два-три дня на Красном море в конце. Это форма нашего маршрута на ${/^(\d+)/.exec(tour("tour-10-day").durationLabel)?.[1]} дней, от ${price("tour-10-day")} на человека.`,
+        `Каир на три дня — пирамиды на открытии и Большой Египетский музей, на который нужно полдня, а не час. Перелёт в Луксор, Долина царей и Карнак. Затем Нил до Асуана на теплоходе или дахабии, три-четыре ночи. И, если хочется, два-три дня на Красном море в конце. Это форма нашего маршрута на ${/^(\d+)/.exec(tour("tour-10-day").durationLabel)?.[1]} дней, от ${price("tour-10-day", "ru-RU")} на человека.`,
     },
     {
       title: "Что уходит первым",

@@ -95,8 +95,8 @@ export const GET: APIRoute = () => {
       "The Stanley Bridge arching over the Mediterranean at Alexandria"],
     ["identities.html", "/images/alexandria/coptic-cathedral-alexandria.webp",
       "The twin bell towers of a Coptic Orthodox cathedral in Alexandria"],
-    ["about.html", "/images/cairo/cairo-sultan-hassan-mosque-aerial.webp",
-      "The historic mosques of Cairo from above, with the Giza pyramids on the horizon"],
+    ["about.html", "/images/clients/clients-10-giza-hats-group.webp",
+      "A group of Kemet guests in sun hats before the Great Pyramid of Giza"],
   ];
   for (const [page, src, alt] of pageImages) {
     add(page, imagesOf({ src, alt }));

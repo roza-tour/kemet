@@ -166,7 +166,7 @@ export const de: LocalizedPage[] = [
     lede:
       "Fast alles, wofür es sich auf der Strecke zwischen Luxor und Assuan zu halten lohnt, liegt wenige hundert Meter vom Nil entfernt. Deshalb ist der Fluss die Straße — und deshalb empfehlen wir für diesen Abschnitt praktisch immer das Schiff. Der eigentliche Vorteil ist nicht das Boot, sondern die Ankunft: Sie steigen aus und sind da, statt über einen Busparkplatz hineinzugehen.",
     facts: [
-      { label: "Strecke", value: "Luxor ↔ Assuan" },
+      { label: "Strecke", value: "Luxor – Assuan" },
       { label: "Dauer", value: "3–4 Nächte" },
       { label: "Tempel unterwegs", value: "Kom Ombo, Edfu, Esna" },
       { label: "Beste Zeit", value: "Oktober bis April" },

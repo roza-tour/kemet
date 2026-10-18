@@ -249,7 +249,7 @@ export const fr: TourText[] = [
     },
     faqs: [
       { q: "Quatorze jours, est-ce trop pour un premier voyage ?", a: "C'est la durée qu'il faut à l'Égypte pour être vue en entier plutôt qu'effleurée. Ce sont précisément les journées en mer Rouge qui rendent la semaine d'histoire tenable : le voyage respire au lieu d'accumuler la fatigue." },
-      { q: "Quelle part du voyage se fait en avion ?", a: "Trois vols intérieurs d'environ une heure chacun, qui remplacent ce qui serait sinon douze heures de route ou de rail. La seule longue route que nous gardons — Assouan–Abou Simbel — fait elle-même partie de l'expérience : le désert ouvert à l'aube." },
+      { q: "Quelle part du voyage se fait en avion ?", a: "Trois vols intérieurs d'environ une heure chacun, qui remplacent ce qui serait sinon douze heures de route ou de rail. Deux longs trajets restent sur la route : l'excursion à Alexandrie, et l'aller-retour Assouan–Abou Simbel — le second fait lui-même partie de l'expérience : le désert ouvert à l'aube." },
       { q: "Peut-on échanger ou prolonger la mer Rouge ?", a: "Sans difficulté. Certains la troquent contre des nuits supplémentaires à Louxor ou contre Siwa, d'autres prolongent Charm d'une semaine entière. Les dix premiers jours forment la colonne vertébrale ; la fin vous appartient." },
     ],
   },

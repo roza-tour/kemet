@@ -25,7 +25,7 @@ import TourCard from "@/components/TourCard.astro";
 import SectionHeader from "@/components/SectionHeader.astro";
 import { TRANSLATED_TOURS } from "@/config/tour-i18n";
 import { TOUR_PHRASEBOOK } from "@/data/tours-i18n/phrasebook";
-import { tours as allTours } from "@/data/tours";
+import { tours as allTours, multidayTours } from "@/data/tours";
 import { ui } from "@/config/ui";
 import type { Tour } from "@/types";
 import type { LocalizedPage } from "@/data/i18n/types";
@@ -76,6 +76,12 @@ const localeJourneys: Tour[] = page.groupId !== "journeys" ? [] :
     .filter((x) => x.locale === locale)
     .map((x) => allTours.find((a) => a.slug === x.slug)!)
     .sort((a, b) => (a.order ?? 999) - (b.order ?? 999));
+/** Where only one or two journeys exist in this language, "All journeys" with
+ *  a single card looked broken: the main journeys follow, in English, under a
+ *  line that says so in the reader's language. */
+const englishJourneys: Tour[] = page.groupId === "journeys" && localeJourneys.length < 3
+  ? multidayTours.filter((x) => !localeJourneys.includes(x)).slice(0, 6)
+  : [];
 
 /** The landing layer's fact strip wins where there is one — see the markup. */
 const facts = page.landing?.facts ?? page.facts;
@@ -239,6 +245,14 @@ const share = page.sharePhoto ? page.photos?.find((g) => g.src === page.sharePho
           <div class="grid-3 grid-all">
             {localeJourneys.map((tour) => <TourCard tour={tour} base={base} locale={locale} />)}
           </div>
+          {englishJourneys.length > 0 && (
+            <>
+              <p class="lz-en-note">{t.journeysInEnglish}</p>
+              <div class="grid-3 grid-all">
+                {englishJourneys.map((tour) => <TourCard tour={tour} base={base} locale={locale} />)}
+              </div>
+            </>
+          )}
         </div>
       )}
 

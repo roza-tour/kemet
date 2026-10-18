@@ -23,6 +23,7 @@ import type { TourText } from "@/data/tours-i18n/types";
 import type { TranslatedLocale } from "@/config/i18n";
 import { LOCALE_META } from "@/config/i18n";
 import { TOUR_PHRASEBOOK } from "@/data/tours-i18n/phrasebook";
+import { sharedShipNote } from "@/data/tours";
 import { ui, placeName } from "@/config/ui";
 import { formatPriceIn } from "@/utils/format";
 import { canonical, whatsappLink, mailtoLink, publicPath } from "@/utils/links";
@@ -57,7 +58,7 @@ const facts: Array<[string, string]> = [
   [p.f.duration, text.durationLabel],
   [p.f.startPoint, text.startPoint],
   [p.f.visiting, visiting],
-  [p.f.isPrivate, p.privateYes],
+  [p.f.isPrivate, tour.isPrivate === sharedShipNote ? p.privateShared : p.privateYes],
 ];
 
 const comfortRows: Array<[string, string]> = [];

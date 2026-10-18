@@ -40,6 +40,7 @@ const keywords = [
 ].join(", ");
 ---
 <Base
+  showCta={false}
   title="Egypt Travel FAQ — Safety, Visas, Best Time, Costs & Tips | Kemet"
   description="Answers to the most common Egypt travel questions — safety, the best time to visit, how many days you need, costs, getting around, food and more."
   active={ROUTE}
@@ -72,7 +73,8 @@ const keywords = [
                 {group.intro && <p>{group.intro}</p>}
               </div>
             </div>
-            <Faq items={group.items} heading="" />
+            {/* The answer box above already answers "how many days": not again straight under it. */}
+            <Faq items={group.items.filter((f) => f.q !== "How many days do I need in Egypt?")} heading="" />
           </div>
         </Fragment>
       ))}

@@ -48,6 +48,9 @@ export interface TourPhrasebook {
   stopLabel: string;
   /** "Yes — your party only", as this language says it. */
   privateYes: string;
+  /** For journeys with a scheduled Nile cruise: "Guide, vehicle and visits —
+   *  yes; the cruise ship is shared". */
+  privateShared: string;
   /** The journey's editorial category. */
   categories: Record<string, string>;
   /** comfort.walking, which is one of two fixed English values. */
@@ -89,6 +92,7 @@ const de: TourPhrasebook = {
   dayLabel: "Tag",
   stopLabel: "Station",
   privateYes: "Ja — nur Ihre Gruppe",
+  privateShared: "Guide, Fahrzeug und Besichtigungen — ja; das Schiff teilen Sie mit anderen Gästen",
   categories: {
     "Signature Journey": "Signature-Reise",
     "Short Break": "Kurzreise",
@@ -128,12 +132,12 @@ const de: TourPhrasebook = {
       "9 Übernachtungen — 4- oder 5-Sterne-Hotels und eine Deluxe-Nilkreuzfahrt",
     "3-night full-board Nile cruise, Aswan to Luxor":
       "Dreitägige Nilkreuzfahrt mit Vollpension, Assuan bis Luxor",
-    "Sleeper-train berths Cairo↔Upper Egypt (both directions)":
-      "Schlafwagenplätze Kairo↔Oberägypten (in beiden Richtungen)",
+    "Sleeper-train berths Cairo–Upper Egypt (both directions)":
+      "Schlafwagenplätze Kairo–Oberägypten (in beiden Richtungen)",
     "6 nights' accommodation in 4- or 5-star hotels":
       "6 Übernachtungen in 4- oder 5-Sterne-Hotels",
-    "Sleeper-train berths Cairo↔Luxor (both directions)":
-      "Schlafwagenplätze Kairo↔Luxor (in beiden Richtungen)",
+    "Sleeper-train berths Cairo–Luxor (both directions)":
+      "Schlafwagenplätze Kairo–Luxor (in beiden Richtungen)",
     "All shore excursions as private visits with your own guide":
       "Alle Landgänge als private Besichtigungen mit Ihrem eigenen Guide",
     "13 nights — 4- or 5-star hotels, a 3-night full-board Nile cruise and a Red Sea resort":
@@ -159,8 +163,8 @@ const de: TourPhrasebook = {
     "Egypt entry visa": "Einreisevisum für Ägypten",
     "Tipping (gratuities)": "Trinkgelder",
     "Personal expenses": "Persönliche Ausgaben",
-    "Optional extras — Abu Simbel, camel rides, dinner cruise, drinks":
-      "Optionale Zusatzleistungen — Abu Simbel, Kamelritte, Dinner-Cruise, Getränke",
+    "Optional extras you choose to add — activities, drinks":
+      "Optionale Zusatzleistungen nach Wahl — Aktivitäten, Getränke",
     "Hot-air balloon flight (optional extra)":
       "Ballonfahrt (optionale Zusatzleistung)",
     "Special tombs requiring separate tickets (Tutankhamun, Seti I — arranged on request)":
@@ -255,7 +259,7 @@ const de: TourPhrasebook = {
       "Speisen und Getränke an den Stationen — direkt vor Ort bezahlt",
     "Abu Simbel excursion (optional extra)":
       "Ausflug nach Abu Simbel (optionale Zusatzleistung)",
-    "Hot-air balloon flight (booked on request, ~EUR 120 per person)":
+    "Hot-air balloon flight (booked on request, about €120 per person)":
       "Ballonfahrt (auf Anfrage buchbar, ca. 120 € pro Person)",
     "Hot-air balloon flight (booked on request)":
       "Ballonfahrt (auf Anfrage buchbar)",
@@ -302,6 +306,7 @@ const fr: TourPhrasebook = {
   dayLabel: "Jour",
   stopLabel: "Étape",
   privateYes: "Oui — votre groupe seul",
+  privateShared: "Guide, véhicule et visites — oui ; le bateau est partagé avec d’autres passagers",
   categories: {
     "Signature Journey": "Voyage signature",
     "Short Break": "Court séjour",
@@ -335,11 +340,11 @@ const fr: TourPhrasebook = {
       "9 nuits — hôtels 4 ou 5 étoiles et une croisière de luxe sur le Nil",
     "3-night full-board Nile cruise, Aswan to Luxor":
       "Croisière de 3 nuits en pension complète, d'Assouan à Louxor",
-    "Sleeper-train berths Cairo↔Upper Egypt (both directions)":
-      "Couchettes de train de nuit Le Caire↔Haute-Égypte (aller et retour)",
+    "Sleeper-train berths Cairo–Upper Egypt (both directions)":
+      "Couchettes de train de nuit Le Caire–Haute-Égypte (aller et retour)",
     "6 nights' accommodation in 4- or 5-star hotels": "6 nuits en hôtels 4 ou 5 étoiles",
-    "Sleeper-train berths Cairo↔Luxor (both directions)":
-      "Couchettes de train de nuit Le Caire↔Louxor (aller et retour)",
+    "Sleeper-train berths Cairo–Luxor (both directions)":
+      "Couchettes de train de nuit Le Caire–Louxor (aller et retour)",
     "All shore excursions as private visits with your own guide":
       "Toutes les escales en visites privées avec votre propre guide",
     "13 nights — 4- or 5-star hotels, a 3-night full-board Nile cruise and a Red Sea resort":
@@ -426,7 +431,7 @@ const fr: TourPhrasebook = {
       "Les autres options — dîner-croisière, boissons",
     "Food and drinks at each stop, paid directly to the venue": "Les plats et les boissons à chaque étape, réglés directement sur place",
     "Abu Simbel excursion (optional extra)": "L'excursion à Abou Simbel (en option)",
-    "Hot-air balloon flight (booked on request, ~EUR 120 per person)":
+    "Hot-air balloon flight (booked on request, about €120 per person)":
       "Le vol en montgolfière (sur demande, environ 120 € par personne)",
     "Hot-air balloon flight (booked on request)": "Le vol en montgolfière (sur demande)",
     "Hot-air balloon flight (optional extra)": "Le vol en montgolfière (en option)",
@@ -449,8 +454,8 @@ const fr: TourPhrasebook = {
     "Egypt entry visa": "Le visa d'entrée en Égypte",
     "Tipping (gratuities)": "Les pourboires",
     "Personal expenses": "Les dépenses personnelles",
-    "Optional extras — Abu Simbel, camel rides, dinner cruise, drinks":
-      "Les options — Abou Simbel, promenades à dos de chameau, dîner-croisière, boissons",
+    "Optional extras you choose to add — activities, drinks":
+      "Les options que vous ajoutez — activités, boissons",
   },
 };
 
@@ -479,6 +484,7 @@ const it: TourPhrasebook = {
   dayLabel: "Giorno",
   stopLabel: "Tappa",
   privateYes: "Sì — solo il vostro gruppo",
+  privateShared: "Guida, veicolo e visite — sì; la nave è condivisa con altri ospiti",
   categories: {
     "Signature Journey": "Viaggio signature",
     "Short Break": "Viaggio breve",
@@ -512,11 +518,11 @@ const it: TourPhrasebook = {
       "9 notti — hotel 4 o 5 stelle e una crociera deluxe sul Nilo",
     "3-night full-board Nile cruise, Aswan to Luxor":
       "Crociera di 3 notti in pensione completa, da Assuan a Luxor",
-    "Sleeper-train berths Cairo↔Upper Egypt (both directions)":
-      "Cuccette sul treno notturno Il Cairo↔Alto Egitto (andata e ritorno)",
+    "Sleeper-train berths Cairo–Upper Egypt (both directions)":
+      "Cuccette sul treno notturno Il Cairo–Alto Egitto (andata e ritorno)",
     "6 nights' accommodation in 4- or 5-star hotels": "6 notti in hotel 4 o 5 stelle",
-    "Sleeper-train berths Cairo↔Luxor (both directions)":
-      "Cuccette sul treno notturno Il Cairo↔Luxor (andata e ritorno)",
+    "Sleeper-train berths Cairo–Luxor (both directions)":
+      "Cuccette sul treno notturno Il Cairo–Luxor (andata e ritorno)",
     "All shore excursions as private visits with your own guide":
       "Tutte le escursioni a terra come visite private con la vostra guida",
     "13 nights — 4- or 5-star hotels, a 3-night full-board Nile cruise and a Red Sea resort":
@@ -602,7 +608,7 @@ const it: TourPhrasebook = {
       "Gli altri supplementi facoltativi — cena-crociera, bevande",
     "Food and drinks at each stop, paid directly to the venue": "Cibo e bevande a ogni tappa, pagati direttamente sul posto",
     "Abu Simbel excursion (optional extra)": "L'escursione ad Abu Simbel (supplemento facoltativo)",
-    "Hot-air balloon flight (booked on request, ~EUR 120 per person)":
+    "Hot-air balloon flight (booked on request, about €120 per person)":
       "Il volo in mongolfiera (su richiesta, circa 120 € a persona)",
     "Hot-air balloon flight (booked on request)": "Il volo in mongolfiera (su richiesta)",
     "Hot-air balloon flight (optional extra)": "Il volo in mongolfiera (supplemento facoltativo)",
@@ -625,8 +631,8 @@ const it: TourPhrasebook = {
     "Egypt entry visa": "Il visto d'ingresso in Egitto",
     "Tipping (gratuities)": "Le mance",
     "Personal expenses": "Le spese personali",
-    "Optional extras — Abu Simbel, camel rides, dinner cruise, drinks":
-      "I supplementi facoltativi — Abu Simbel, giri in cammello, cena-crociera, bevande",
+    "Optional extras you choose to add — activities, drinks":
+      "I supplementi facoltativi a scelta — attività, bevande",
   },
 };
 
@@ -637,6 +643,7 @@ const es: TourPhrasebook = {
   dayLabel: "Día",
   stopLabel: "Parada",
   privateYes: "Sí — solo su grupo",
+  privateShared: "Guía, vehículo y visitas — sí; el barco se comparte con otros pasajeros",
   categories: {
     "Signature Journey": "Viaje insignia",
     "Short Break": "Escapada",
@@ -680,6 +687,7 @@ const pt: TourPhrasebook = {
   dayLabel: "Dia",
   stopLabel: "Parada",
   privateYes: "Sim — só o seu grupo",
+  privateShared: "Guia, veículo e visitas — sim; o navio é compartilhado com outros hóspedes",
   categories: {
     "Signature Journey": "Viagem assinatura",
     "Short Break": "Escapada",
@@ -723,6 +731,7 @@ const ru: TourPhrasebook = {
   dayLabel: "День",
   stopLabel: "Остановка",
   privateYes: "Да — только ваша группа",
+  privateShared: "Сопровождение, транспорт и экскурсии — да; теплоход общий с другими гостями",
   categories: {
     "Signature Journey": "Фирменное путешествие",
     "Short Break": "Короткая поездка",
@@ -766,6 +775,7 @@ const id: TourPhrasebook = {
   dayLabel: "Hari",
   stopLabel: "Persinggahan",
   privateYes: "Ya — hanya rombongan Anda",
+  privateShared: "Pemandu, kendaraan, dan kunjungan — ya; kapal pesiar dipakai bersama tamu lain",
   categories: {
     "Signature Journey": "Perjalanan unggulan",
     "Short Break": "Liburan singkat",
@@ -809,6 +819,7 @@ const ms: TourPhrasebook = {
   dayLabel: "Hari",
   stopLabel: "Hentian",
   privateYes: "Ya — kumpulan anda sahaja",
+  privateShared: "Pemandu, kenderaan dan lawatan — ya; kapal persiaran dikongsi dengan tetamu lain",
   categories: {
     "Signature Journey": "Perjalanan istimewa",
     "Short Break": "Percutian singkat",
@@ -852,6 +863,7 @@ const ar: TourPhrasebook = {
   dayLabel: "اليوم",
   stopLabel: "المحطة",
   privateYes: "نعم — لمجموعتكم وحدها",
+  privateShared: "الإرشاد والسيارة والزيارات — نعم؛ أما الباخرة فمشتركة مع ضيوف آخرين",
   categories: {
     "Signature Journey": "رحلة مميزة",
     "Short Break": "عطلة قصيرة",

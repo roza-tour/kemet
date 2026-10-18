@@ -166,7 +166,7 @@ export const es: LocalizedPage[] = [
     lede:
       "Casi todo aquello por lo que merece la pena detenerse entre Luxor y Asuán está a unos cientos de metros del Nilo. Por eso el río es la carretera, y por eso para ese tramo recomendamos casi siempre el barco. La ventaja real no es la embarcación: es la llegada. Bajan y ya están allí, en lugar de entrar cruzando un aparcamiento de autocares.",
     facts: [
-      { label: "Tramo", value: "Luxor ↔ Asuán" },
+      { label: "Tramo", value: "Luxor – Asuán" },
       { label: "Duración", value: "3–4 noches" },
       { label: "Templos del recorrido", value: "Kom Ombo, Edfu, Esna" },
       { label: "Mejor época", value: "octubre–abril" },

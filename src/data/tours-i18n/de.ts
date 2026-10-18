@@ -391,7 +391,7 @@ export const de: TourText[] = [
       },
       {
         q: "Wie viel von dieser Reise wird geflogen?",
-        a: "Drei Inlandsflüge von je etwa einer Stunde, die sonst zwölfstündige Straßen- oder Bahnetappen wären. Die eine lange Fahrt, die wir behalten — Assuan nach Abu Simbel —, ist selbst Teil des Erlebnisses: offene Wüste im Morgengrauen.",
+        a: "Drei Inlandsflüge von je etwa einer Stunde, die sonst zwölfstündige Straßen- oder Bahnetappen wären. Zwei lange Fahrten bleiben auf der Straße: der Tagesausflug nach Alexandria und Assuan–Abu Simbel und zurück — die zweite ist selbst Teil des Erlebnisses: offene Wüste im Morgengrauen.",
       },
       {
         q: "Lässt sich der Teil am Roten Meer tauschen oder verlängern?",

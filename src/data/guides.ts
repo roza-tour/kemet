@@ -147,7 +147,7 @@ export const guides: Guide[] = [
       },
       {
         q: "How long do I need for Egypt?",
-        a: "A week is the minimum for a meaningful visit: Cairo and Giza in two to three days, Luxor in two days, Aswan in one to two days. Ten to fourteen days allows a Nile cruise, Abu Simbel and Alexandria without rushing.",
+        a: "A week is the most common length for a first visit: Cairo and Giza in two to three days, Luxor in two days, Aswan in one to two days. Five days covers the essentials if time is short; ten to fourteen days allows a Nile cruise, Abu Simbel and Alexandria without rushing.",
       },
     ],
     hero: {
@@ -817,11 +817,11 @@ export const guides: Guide[] = [
       },
     ],
     hero: {
-      alt: "Travellers on a camel caravan before the Pyramids of Giza",
+      alt: "The teak sun-deck of a Nile cruise vessel set for the day",
       label: "Packing for Egypt",
-      src: "/images/activities/act-camel-pyramids.webp",
-      width: 1300,
-      height: 934,
+      src: "/images/cruise/nile-dahabiya-deck.webp",
+      width: 1200,
+      height: 900,
     },
     seo: {
       title: "What to Pack for Egypt — Season-by-Season Packing List | Kemet",
@@ -1058,7 +1058,7 @@ export const guides: Guide[] = [
       {
         heading: "August in Luxor, honestly",
         paragraphs: [
-          "August is Luxor's hottest month, with afternoons around 41–43 °C, and totality falls at about one o'clock — the hottest hour of the day. That is manageable with planning and miserable without it. The good news is the sky: Upper Egypt in August is about as reliably clear as anywhere on earth, which is exactly what an eclipse needs.",
+          "August is one of Luxor's two hottest months, with afternoons around 41–43 °C, and totality falls at about one o'clock — the hottest hour of the day. That is manageable with planning and miserable without it. The good news is the sky: Upper Egypt in August is about as reliably clear as anywhere on earth, which is exactly what an eclipse needs.",
           "So the day is built around the heat. Temples at opening, back in the shade by late morning, the eclipse watched from somewhere cool with water to hand, and the afternoon spent resting rather than touring.",
         ],
         items: [
@@ -1259,11 +1259,11 @@ export const guides: Guide[] = [
       },
     ],
     hero: {
-      alt: "The three great pyramids of Giza rising from the desert",
+      alt: "The Pyramid of Khafre at Giza under a clear blue sky, the Pyramid of Menkaure beyond",
       label: "Egypt from North America",
-      src: "/images/home/egypt-giza-pyramids-desert-panorama.webp",
-      width: 736,
-      height: 920,
+      src: "/images/stock/giza-khafre-pyramid.webp",
+      width: 1024,
+      height: 685,
     },
     seo: {
       title: "Egypt from the USA & Canada: Flights, Visa, Timing | Kemet",
@@ -1580,11 +1580,11 @@ export const guides: Guide[] = [
       { q: "Can we do Egypt in a half-term week with children?", a: "Yes. Nine days, Saturday to Sunday, covers Cairo, Giza and Luxor at a family pace, with time for the pool. We shorten the mornings for younger children." },
     ],
     hero: {
-      alt: "Guests on a camel caravan before the Pyramids of Giza",
+      alt: "A family of Kemet guests at the base of the Red Pyramid of Dahshur",
       label: "Egypt for half-term",
-      src: "/images/activities/act-camel-pyramids.webp",
-      width: 1300,
-      height: 934,
+      src: "/images/clients/clients-19-red-pyramid.webp",
+      width: 680,
+      height: 680,
     },
     seo: {
       title: "Egypt for Half-Term: October & February Holidays | Kemet",

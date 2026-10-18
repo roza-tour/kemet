@@ -213,7 +213,7 @@ export const activities: Activity[] = [
     place: "Giza",
     blurb:
       "Cross the desert edge by camel for the timeless approach to the pyramids and the panoramic viewpoint beyond the plateau.",
-    image: { src: "/images/activities/act-camel-pyramids.webp", alt: "Guests on a camel caravan before the Pyramids of Giza", width: 1300, height: 934 },
+    image: { src: "/images/giza/giza-camel-pyramids-sunrise.webp", alt: "A decorated camel resting before the Pyramids of Giza in early light", width: 736, height: 736 },
     slug: "camel-ride-pyramids",
     shortSummary:
       "A short camel ride along the desert edge at Giza to the panoramic viewpoint — the classic approach, arranged so nobody haggles.",

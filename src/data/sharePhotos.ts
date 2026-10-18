@@ -12,7 +12,11 @@
 //
 // Photos whose file names say one thing and show another are not used here:
 // luxor-temple-on-the-nile is a rock-cut temple at Abu Simbel, and
-// aswan-nubian-village-nile is not in Egypt.
+// aswan-nubian-village-nile is not in Egypt. Nor are photos carrying another
+// company's watermark or logo (giza-sphinx-and-pyramid,
+// egypt-giza-pyramids-desert-panorama, sinai-wadi-rock-pool), or generated
+// images passed off as a real place (cairo-sultan-hassan-mosque-aerial,
+// tour-nile-cairo-feluccas-aerial, red-sea-blue-hole, giza-great-sphinx-profile).
 // ---------------------------------------------------------------------------
 import type { SiteLocale } from "@/config/i18n";
 import { localeOfRoute } from "@/config/i18n";
@@ -42,18 +46,18 @@ const CHOICES: Choice[] = [
       "it/index.html", "ms/index.html", "pt/index.html", "ru/index.html"],
   },
   {
-    src: img("tours/tour-nile-cairo-feluccas-aerial"),
+    src: img("cruise/nile-cruise-sunset"),
     alt: {
-      en: "Cairo from above: minarets, the Nile and white-sailed feluccas",
-      de: "Kairo von oben: Minarette, der Nil und Feluken mit weißen Segeln",
-      fr: "Le Caire vu d'en haut : minarets, le Nil et des felouques aux voiles blanches",
-      es: "El Cairo desde el aire: minaretes, el Nilo y faluchos de velas blancas",
-      it: "Il Cairo dall'alto: minareti, il Nilo e feluche dalle vele bianche",
-      ru: "Каир сверху: минареты, Нил и фелуки под белыми парусами",
-      pt: "O Cairo visto de cima: minaretes, o Nilo e falucas de velas brancas",
-      id: "Kairo dari atas: menara masjid, Sungai Nil, dan perahu felucca berlayar putih",
-      ms: "Kaherah dari atas: menara masjid, Sungai Nil dan perahu felucca berlayar putih",
-      ar: "القاهرة من أعلى: المآذن والنيل والفلوكات بأشرعتها البيضاء",
+      en: "A Nile cruise ship between Aswan and Luxor at sunset",
+      de: "Ein Nilkreuzfahrtschiff zwischen Assuan und Luxor bei Sonnenuntergang",
+      fr: "Un bateau de croisière sur le Nil entre Assouan et Louxor au coucher du soleil",
+      es: "Un barco de crucero en el Nilo entre Asuán y Luxor al atardecer",
+      it: "Una nave da crociera sul Nilo tra Assuan e Luxor al tramonto",
+      pt: "Um navio de cruzeiro no Nilo entre Assuã e Luxor ao pôr do sol",
+      ru: "Круизный теплоход на Ниле между Асуаном и Луксором на закате",
+      id: "Kapal pesiar Sungai Nil antara Aswan dan Luxor saat matahari terbenam",
+      ms: "Kapal persiaran Sungai Nil antara Aswan dan Luxor ketika matahari terbenam",
+      ar: "مركب نيلي بين أسوان والأقصر عند الغروب",
     },
     routes: ["egypt-safety.html", "ar/hal-masr-amina.html", "de/ist-aegypten-sicher.html",
       "es/es-seguro-viajar-a-egipto.html", "fr/securite-en-egypte.html", "id/apakah-mesir-aman.html",
@@ -116,18 +120,18 @@ const CHOICES: Choice[] = [
       "ms/pelayaran-sungai-nil.html", "pt/cruzeiro-pelo-nilo.html", "ru/kruiz-po-nilu.html"],
   },
   {
-    src: img("home/egypt-giza-pyramids-desert-panorama"),
+    src: img("stock/giza-khafre-pyramid"),
     alt: {
-      en: "The three great pyramids of Giza rising from the desert",
-      de: "Die drei großen Pyramiden von Gizeh in der Wüste",
-      fr: "Les trois grandes pyramides de Gizeh dans le désert",
-      es: "Las tres grandes pirámides de Guiza en el desierto",
-      it: "Le tre grandi piramidi di Giza nel deserto",
-      ru: "Три великие пирамиды Гизы среди пустыни",
-      pt: "As três grandes pirâmides de Gizé no deserto",
-      id: "Tiga piramida besar Giza menjulang dari gurun",
-      ms: "Tiga piramid besar Giza menjulang dari gurun",
-      ar: "أهرامات الجيزة الثلاثة الكبرى في قلب الصحراء",
+      en: "The Pyramid of Khafre at Giza under a clear blue sky",
+      de: "Die Chephren-Pyramide in Gizeh unter klarem blauem Himmel",
+      fr: "La pyramide de Khéphren à Gizeh sous un ciel bleu limpide",
+      es: "La pirámide de Kefrén en Guiza bajo un cielo azul despejado",
+      it: "La piramide di Chefren a Giza sotto un cielo azzurro limpido",
+      ru: "Пирамида Хефрена в Гизе под ясным синим небом",
+      pt: "A pirâmide de Quéfren em Gizé sob um céu azul limpo",
+      id: "Piramida Khafre di Giza di bawah langit biru cerah",
+      ms: "Piramid Khafre di Giza di bawah langit biru cerah",
+      ar: "هرم خفرع في الجيزة تحت سماء زرقاء صافية",
     },
     routes: ["tours.html", "ar/rehlat-masr-khassa.html", "de/aegypten-reisen.html", "es/viajes-a-egipto.html",
       "fr/voyage-egypte.html", "id/paket-tour-mesir.html", "it/viaggi-in-egitto.html",
@@ -170,8 +174,8 @@ const CHOICES: Choice[] = [
       "id/libur-akhir-tahun-ke-mesir.html", "ms/cuti-hujung-tahun-ke-mesir.html"],
   },
   {
-    src: img("redsea/sinai-wadi-rock-pool"),
-    alt: { id: "Kolam batu di sebuah wadi di Sinai", ms: "Kolam batu di sebuah wadi di Sinai" },
+    src: img("redsea/ras-mohammed-lagoon"),
+    alt: { id: "Laguna biru di Ras Mohammed, Sinai Selatan", ms: "Lagun biru di Ras Mohammed, Sinai Selatan" },
     routes: ["id/gunung-sinai.html", "ms/bukit-tursina.html"],
   },
   {
@@ -180,10 +184,10 @@ const CHOICES: Choice[] = [
     routes: ["id/halal-dan-waktu-salat.html", "ms/halal-dan-waktu-solat.html"],
   },
   {
-    src: img("cairo/cairo-sultan-hassan-mosque-aerial"),
+    src: img("cairo/cairo-mosque-muhammad-ali-citadel"),
     alt: {
-      id: "Masjid Sultan Hassan dan Ar-Rifa'i di Kairo, dengan piramida di kejauhan",
-      ms: "Masjid Sultan Hassan dan Ar-Rifa'i di Kaherah, dengan piramid di kejauhan",
+      id: "Masjid Muhammad Ali di Benteng Salahuddin, Kairo",
+      ms: "Masjid Muhammad Ali di Kota Salahuddin, Kaherah",
     },
     routes: ["id/umrah-plus-mesir.html", "ms/umrah-plus-mesir.html"],
   },
@@ -213,7 +217,7 @@ const CHOICES: Choice[] = [
   { src: img("redsea/red-sea-beach-resort-palms"), alt: { en: "Palm-lined Red Sea resort beach" }, routes: ["when-to-go/may.html"] },
   { src: img("redsea/hurghada-island-jetty"), alt: { en: "A jetty reaching over turquoise water to an island near Hurghada" }, routes: ["when-to-go/june.html"] },
   { src: img("alexandria/alexandria-corniche-bay"), alt: { en: "Alexandria's corniche curving around the bay, seen from above" }, routes: ["when-to-go/july.html"] },
-  { src: img("redsea/red-sea-blue-hole"), alt: { en: "The Blue Hole at Dahab seen from above, its reef dropping into deep blue" }, routes: ["when-to-go/august.html"] },
+  { src: img("activities/red-sea-diver-reef"), alt: { en: "Divers above a Red Sea coral reef" }, routes: ["when-to-go/august.html"] },
   { src: img("redsea/hurghada-beach-boats"), alt: { en: "Boats on turquoise water off a Hurghada beach" }, routes: ["when-to-go/september.html"] },
   { src: img("stock/abu-simbel-nefertari-temple"), alt: { en: "The facade of the Temple of Nefertari and Hathor at Abu Simbel" }, routes: ["when-to-go/october.html"] },
   { src: img("activities/act-felucca-sunset"), alt: { en: "A lateen-sailed felucca drifting past palms on the Nile at sunset" }, routes: ["when-to-go/november.html"] },
@@ -222,7 +226,7 @@ const CHOICES: Choice[] = [
   { src: img("aswan/aswan-high-dam"), alt: { en: "The Aswan High Dam holding back Lake Nasser" }, routes: ["compare.html"] },
   { src: img("cruise/nile-cruise-ship"), alt: { en: "A Nile cruise ship moored on the river" }, routes: ["compare/dahabiya-vs-cruise-ship.html"] },
   { src: img("stock/egyptian-museum-menkaure-triad"), alt: { en: "A triad statue of King Menkaure with the goddess Hathor in the Egyptian Museum, Cairo" }, routes: ["compare/egyptian-museum-vs-grand-egyptian-museum.html"] },
-  { src: img("stock/cairo-airport-aircraft-stand"), alt: { en: "A jet at its stand at Cairo airport, the steps already in place" }, routes: ["compare/fly-or-sleeper-train.html"] },
+  { src: img("stock/cairo-airport-apron"), alt: { en: "A jet at its stand at Cairo airport, the steps already in place" }, routes: ["compare/fly-or-sleeper-train.html"] },
   { src: img("aswan/aswan-nubian-decorated-boats"), alt: { en: "Brightly decorated Nubian boats moored on the Nile at Aswan" }, routes: ["compare/luxor-vs-aswan.html"] },
   { src: img("cruise/nile-cruise-golden"), alt: { en: "A Nile cruise ship reflected in the river at golden hour" }, routes: ["compare/nile-cruise-vs-land-tour.html"] },
   { src: img("redsea/hurghada-beach-umbrellas"), alt: { en: "Palms and beach umbrellas on the Red Sea at Hurghada" }, routes: ["compare/sharm-el-sheikh-vs-hurghada.html"] },
@@ -237,7 +241,7 @@ const CHOICES: Choice[] = [
   { src: img("activities/act-quad-biking"), alt: { en: "Guests quad biking across desert dunes near the Giza pyramids" }, routes: ["activities.html"] },
   { src: img("activities/balloons-luxor-silhouettes-dawn"), alt: { en: "Balloons in silhouette as the sun clears the horizon over Luxor" }, routes: ["collections.html"] },
   { src: img("alexandria/alexandria-bibliotheca"), alt: { en: "The disc of the Bibliotheca Alexandrina on the waterfront" }, routes: ["guides.html"] },
-  { src: img("giza/giza-sphinx-and-pyramid"), alt: { en: "A pyramid of Giza beyond weathered limestone blocks" }, routes: ["faq.html"] },
+  { src: img("giza/giza-great-sphinx-frontal"), alt: { en: "The Great Sphinx of Giza facing the dawn" }, routes: ["faq.html"] },
   // ---- Pages added since, with no photograph of their own at the top
   {
     src: img("cruise/nile-dahabiya-deck"),

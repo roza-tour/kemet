@@ -52,7 +52,7 @@ const socials = Object.entries(company.socialProfiles ?? {})
           </span>
         </a>
         <p>{t.brandBlurb}</p>
-        <p class="foot-tier">{isEn ? tierLine : t.tierLine}</p>
+        <p class="foot-tier">{(isEn ? tierLine : t.tierLine).replace(/ · /g, "\u00A0· ")}</p>
         <TravellingFrom base={base} locale={locale} />
       </div>
       {isEn ? (

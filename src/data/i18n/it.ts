@@ -166,7 +166,7 @@ export const it: LocalizedPage[] = [
     lede:
       "Quasi tutto ciò per cui vale la pena fermarsi fra Luxor e Assuan si trova a poche centinaia di metri dal Nilo. Per questo il fiume è la strada, e per questo per quel tratto consigliamo quasi sempre la barca. Il vantaggio vero non è la nave: è l'arrivo. Scendete e siete già lì, invece di entrare passando da un parcheggio di pullman.",
     facts: [
-      { label: "Tratta", value: "Luxor ↔ Assuan" },
+      { label: "Tratta", value: "Luxor – Assuan" },
       { label: "Durata", value: "3–4 notti" },
       { label: "Templi lungo il percorso", value: "Kom Ombo, Edfu, Esna" },
       { label: "Periodo migliore", value: "ottobre–aprile" },
