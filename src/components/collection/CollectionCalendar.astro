@@ -1,0 +1,71 @@
+---
+// CollectionCalendar — dates that move every year, as a small table: Easter's
+// two Sundays and Sham El-Nessim, five years ahead. The rows come from the
+// data file (computed, never typed); this only lays them out. On a phone each
+// row becomes a card with its column names beside the values.
+//
+// Reads the page palette (--gold, --line, --bone) so a themed page keeps its
+// colours, and marks the coming year.
+import type { CollectionCalendar as Calendar } from "@/types";
+
+interface Props {
+  calendar: Calendar;
+}
+const { calendar } = Astro.props;
+const current = calendar.current ?? 0;
+---
+<section class="ccal">
+  <div class="wrap">
+    <div class="ccal-head reveal">
+      <div class="eyebrow">{calendar.eyebrow}</div>
+      <h2>{calendar.heading}</h2>
+      {calendar.intro && <p>{calendar.intro}</p>}
+    </div>
+    <div class="ccal-table reveal" role="table" aria-label={calendar.heading}>
+      <div class="ccal-row ccal-cols" role="row">
+        {calendar.columns.map((c) => <span role="columnheader">{c}</span>)}
+      </div>
+      {calendar.rows.map((row, i) => (
+        <div class:list={["ccal-row", i === current && "is-current"]} role="row">
+          {row.map((cell, j) => (
+            j === 0
+              ? <span class="ccal-year" role="rowheader">{cell}</span>
+              : <span role="cell" data-label={calendar.columns[j]}>{cell}</span>
+          ))}
+        </div>
+      ))}
+    </div>
+    {calendar.note && <p class="ccal-note reveal">{calendar.note}</p>}
+  </div>
+</section>
+
+<style>
+  .ccal { position: relative; padding: var(--s-5) 0 var(--s-6); }
+  .ccal-head { text-align: center; max-width: 720px; margin: 0 auto var(--s-5); }
+  .ccal-head h2 { font-size: clamp(1.9rem, 3.6vw, 2.7rem); color: var(--bone); margin: var(--s-2) 0 var(--s-3); }
+  .ccal-head p { color: var(--muted); line-height: 1.8; margin: 0; }
+  .ccal-table { max-width: 980px; margin: 0 auto; border: 1px solid var(--line-2); position: relative;
+    background: linear-gradient(180deg, color-mix(in srgb, var(--gold) 6%, transparent), transparent 60%); }
+  .ccal-table::before, .ccal-table::after { content: ""; position: absolute; width: 18px; height: 18px;
+    border: 1px solid var(--gold); opacity: .7; pointer-events: none; }
+  .ccal-table::before { top: -6px; inset-inline-start: -6px; border-inline-end: 0; border-bottom: 0; }
+  .ccal-table::after { bottom: -6px; inset-inline-end: -6px; border-inline-start: 0; border-top: 0; }
+  .ccal-row { display: grid; grid-template-columns: minmax(70px, .6fr) repeat(3, minmax(0, 1fr));
+    align-items: center; gap: var(--s-3); padding: var(--s-3) var(--s-4); border-top: 1px solid var(--line); }
+  .ccal-cols { border-top: 0; font-size: var(--t-micro); letter-spacing: .18em; text-transform: uppercase; color: var(--muted-2); }
+  .ccal-row span { color: var(--bone); font-size: 1.02rem; }
+  .ccal-cols span { color: var(--muted-2); font-size: var(--t-micro); }
+  .ccal-year { font-family: var(--ff-display); font-size: 1.5rem !important; color: var(--gold-bright) !important; }
+  .ccal-row.is-current { background: color-mix(in srgb, var(--gold) 12%, transparent);
+    box-shadow: inset 3px 0 0 var(--gold); }
+  :global([dir="rtl"]) .ccal-row.is-current { box-shadow: inset -3px 0 0 var(--gold); }
+  .ccal-note { max-width: 980px; margin: var(--s-3) auto 0; color: var(--muted-2); font-size: var(--t-tiny); line-height: 1.7; text-align: center; }
+
+  @media (max-width: 720px) {
+    .ccal-cols { display: none; }
+    .ccal-row { grid-template-columns: 1fr; gap: 6px; padding: var(--s-3); }
+    .ccal-row span[data-label] { display: flex; justify-content: space-between; gap: var(--s-3); font-size: .98rem; }
+    .ccal-row span[data-label]::before { content: attr(data-label); color: var(--muted-2); font-size: var(--t-tiny);
+      letter-spacing: .06em; text-align: start; }
+  }
+</style>

@@ -96,7 +96,7 @@ export const months: MonthGuide[] = [
     goodFor: ["Value — the same journey costs noticeably less than in January, and the weather is still comfortable, if warmer in the south", "Nile cruising: warm days on deck without the summer glare", "The Red Sea starting to warm up while the inland sites are still easy"],
     watchFor: ["The khamaseen — a hot, dusty spring wind — is at its most likely from mid-March, and can close the desert for a day", "By the last week Aswan is regularly touching the low thirties, and midday at open sites gets hard", "Easter and Sham El-Nessim can fall in late March or April, which fills Egypt with domestic travellers"],
     occasions: "In 2027 Ramadan runs until about 9 March, with Eid al-Fitr straight after it. Easter week (28 March in 2027) is priced as peak. Check the year's calendar before fixing dates.",
-    occasionLinks: [{ label: "Ramadan in Egypt", href: "collections/ramadan-in-egypt.html" }],
+    occasionLinks: [{ label: "Ramadan in Egypt", href: "collections/ramadan-in-egypt.html" }, { label: "Easter in Egypt", href: "collections/easter-in-egypt.html" }],
     verdict: "The first three weeks are the best value in the Egyptian year — near-winter weather, thinner crowds and post-peak prices. Only October beats it for a first visit.",
     faqs: [
       { q: "Is March a good time to visit Egypt?", a: "Very. The first three weeks give near-winter comfort with post-peak prices and thinner crowds — the best combination of the year. By the final week Upper Egypt is regularly in the low thirties, which is still manageable with early starts but no longer effortless." },
@@ -114,6 +114,7 @@ export const months: MonthGuide[] = [
     goodFor: ["Sham El-Nessim, Egypt's spring festival, when parks and riverbanks fill with families across every community", "Cairo, Alexandria and the Delta — the coast is at its best before the summer haze", "The Red Sea warming into genuine swimming temperature"],
     watchFor: ["Upper Egypt heat: Aswan can reach 38°C, and the Valley of the Kings must be done at opening or not at all", "Easter and Sham El-Nessim fill domestic hotels and the Red Sea for a long weekend", "Khamaseen winds remain possible into May"],
     occasions: "Sham El-Nessim — the Monday after Coptic Easter — falls in April in most years, and Eid al-Adha can fall in late April or May depending on the year.",
+    occasionLinks: [{ label: "Easter in Egypt", href: "collections/easter-in-egypt.html" }, { label: "Sham El-Nessim", href: "collections/sham-el-nessim-egypt.html" }],
     verdict: "Excellent for Cairo, Alexandria and the coast. For Upper Egypt, plan dawn starts and long afternoons off, or shift to March.",
     faqs: [
       { q: "What is Sham El-Nessim?", a: "Egypt's spring festival, celebrated on the Monday after Coptic Easter and — remarkably — dating back to pharaonic times, which makes it one of the oldest continuously observed festivals anywhere. It is celebrated by all Egyptians regardless of faith, entirely outdoors, with salted fish, spring onions and coloured eggs. Parks, riverbanks and gardens fill from early morning." },
@@ -131,6 +132,7 @@ export const months: MonthGuide[] = [
     goodFor: ["The Red Sea — one of the best months for diving and snorkelling, before the summer holidays", "Low-season pricing: the same private journey costs substantially less than in February", "Empty monuments — the Valley of the Kings at 6am in May is a different place entirely"],
     watchFor: ["Aswan and Luxor at 40°C+ demand a genuinely restructured day: sunrise starts, nothing between eleven and four", "Some Nile boats reduce sailings in the deep summer — check availability early", "Eid al-Adha can fall in May, which is one of Egypt's two busiest domestic travel weeks"],
     occasions: "Eid al-Adha falls in May in several years. Sham El-Nessim occasionally lands in early May when Coptic Easter is late.",
+    occasionLinks: [{ label: "Easter in Egypt", href: "collections/easter-in-egypt.html" }, { label: "Sham El-Nessim", href: "collections/sham-el-nessim-egypt.html" }],
     verdict: "Go to the Red Sea. If you must do Upper Egypt in May, we will build the itinerary around dawn and dusk — and it works, but only if the plan respects the heat.",
     faqs: [
       { q: "Is May too hot to visit Egypt?", a: "For Luxor and Aswan it is hot — 38–42°C — but far from impossible with the right plan: start at sunrise, finish sightseeing by eleven, and treat the afternoon as rest. For Cairo it is warm but manageable, and for the Red Sea it is one of the best months of the year." },

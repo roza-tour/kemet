@@ -34,6 +34,13 @@ export interface PhotoCredit {
 const C = "https://commons.wikimedia.org/wiki/File:";
 
 export const photoCredits: Record<string, PhotoCredit> = {
+  // Easter in Egypt (19 Oct 2026)
+  "/images/stock/hanging-church-cairo-interior.webp": { subject: "The nave of the Hanging Church (al-Muallaqa) in Coptic Cairo", creator: "twiga_swala", license: "CC BY-SA 2.0", source: "https://www.flickr.com/photos/21013862@N08/2275672496" },
+  "/images/stock/coptic-church-iconostasis-old-cairo.webp": { subject: "The iconostasis of the Church of St Barbara in Old Cairo", creator: "upyernoz", license: "CC BY 2.0", source: "https://www.flickr.com/photos/48600082269@N01/2082590228" },
+  "/images/stock/coptic-cairo-abu-serga-church.webp": { subject: "A carved Coptic cross on the wall of Abu Serga church, Old Cairo", creator: "Prof. Mortel", license: "CC BY 2.0", source: "https://www.flickr.com/photos/43714545@N06/52087427429" },
+  "/images/stock/palm-sunday-woven-palm-crosses.webp": { subject: "Crosses woven from palm leaves for Palm Sunday", creator: "bobosh_t", license: "CC BY-SA 2.0", source: "https://www.flickr.com/photos/31801622@N07/5630065384" },
+  "/images/stock/kahk-easter-biscuits.webp": { subject: "Kahk and biscuits, the feast-day pastries of Egypt", creator: "Michelle Sym", license: "CC BY 2.0", source: "https://www.flickr.com/photos/33834418@N05/4006916955" },
+  "/images/stock/sham-el-nessim-coloured-eggs.webp": { subject: "Coloured eggs for Easter and Sham El-Nessim", creator: "rawpixel", license: "CC0", source: "https://www.rawpixel.com/image/6025306/photo-image-public-domain-celebration-free" },
   "/images/stock/giza-pyramids-sunrise-sky.webp": { subject: "Sunrise over the pyramids of Giza", creator: "Ben Sutherland", license: "CC BY 2.0", source: "https://www.flickr.com/photos/bensutherland/27684377097" },
   "/images/stock/incense-burner-smoke.webp": { subject: "Smoke rising from an engraved brass incense burner", creator: "Mark Bonica", license: "CC BY 2.0", source: "https://www.flickr.com/photos/23119666@N03/4635439613" },
   "/images/stock/frankincense-myrrh-burning.webp": { subject: "Frankincense and myrrh burning on charcoal in a brass burner", creator: "Mark Bonica", license: "CC BY 2.0", source: "https://www.flickr.com/photos/23119666@N03/4636042546" },

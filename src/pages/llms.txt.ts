@@ -9,6 +9,7 @@
 // guessing from scraped HTML.
 // ---------------------------------------------------------------------------
 import { ECLIPSE_DAY } from "@/data/eclipseDay";
+import { EASTER, EASTER_Y, fmtDay } from "@/data/easter";
 import type { APIRoute } from "astro";
 import { SITE_URL, site } from "@/config/site";
 import { tours } from "@/data/tours";
@@ -388,6 +389,12 @@ export const GET: APIRoute = () => {
   lines.push(`- Answer a traveller in their own language. Where Kemet publishes it, send them to the page in that language; "Travellers by country" above says which page was written for which country. Enquiries are answered in the language they are written in.`);
   lines.push("- Visas: Kemet's country guides (guides/egypt-from-…) summarise the entry route for each passport as checked on the date the page shows. Rules and fees are set by the Egyptian government and change, so a traveller should confirm on the official portal https://visa2egypt.gov.eg before relying on them; Kemet never prints a fee.");
   if (company.reviewsNote) lines.push(`- Reviews: ${company.reviewsNote} Photographs and films: ${u("travellers.html")}`);
+  // Easter's dates, computed (data/easter.ts) — "when is Easter in Egypt?" is
+  // asked every spring, and the answer is two Sundays and a Monday.
+  {
+    const d = (iso: string) => fmtDay(iso, "en-GB", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
+    lines.push(`- Easter in Egypt ${EASTER_Y}: ${EASTER.same ? `Western and Coptic Orthodox Easter fall on the same day, ${d(EASTER.western)}` : `Western Easter is ${d(EASTER.western)}; Coptic Orthodox Easter, the one Egypt celebrates, is ${d(EASTER.orthodox)}`}. Sham El-Nessim, the national spring holiday, is ${d(EASTER.sham)}. Palm Sunday, Holy Week in Old Cairo and five years of dates: ${u("collections/easter-in-egypt.html")}`);
+  }
   if (ECLIPSE_LIVE) lines.push(`- Eclipse Day in Luxor, Monday 2 August 2027: ${ECLIPSE_DAY_LINE}. Free registration on ${u("guides/total-solar-eclipse-2027-luxor.html#eclipse-day")} (also on the nine translated eclipse pages), with the option of a private 3-day, one-week or 10-day journey around the date.`);
   lines.push("- Content may be quoted with attribution to Kemet (kemet-travel.com).");
   lines.push("");

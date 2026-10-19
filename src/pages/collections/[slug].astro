@@ -21,6 +21,8 @@ import CollectionCard from "@/components/collection/CollectionCard.astro";
 import CollectionLanding from "@/components/collection/CollectionLanding.astro";
 import CollectionStory from "@/components/collection/CollectionStory.astro";
 import SignatureTouches from "@/components/collection/SignatureTouches.astro";
+import CollectionCalendar from "@/components/collection/CollectionCalendar.astro";
+import Placeholder from "@/components/Placeholder.astro";
 import LeadCapture from "@/components/conversion/LeadCapture.astro";
 import { collections } from "@/data/collections";
 import { registry, resolveRelatedCollections, findRelatedCollections } from "@/data/registry";
@@ -72,6 +74,8 @@ const jsonld = entitySchema("seasonal", col);
     {col.landing && <CollectionLanding landing={col.landing} route={route} base={base} />}
 
     {col.story && <CollectionStory story={col.story} />}
+
+    {col.calendar && <CollectionCalendar calendar={col.calendar} />}
 
     <section style="padding-top:var(--s-3)">
       <div class="wrap">
@@ -146,6 +150,21 @@ const jsonld = entitySchema("seasonal", col);
         </div>
       </div>
     </section>
+
+    {/* Photographs, three across; they open full-size on a tap like every
+        other gallery on the site, and a borrowed one carries its credit. */}
+    {col.gallery && col.gallery.length > 0 && (
+      <section style="padding-top:var(--s-4)">
+        <div class="wrap">
+          <SectionHeader sym="experiences" eyebrow="In pictures" title={col.galleryTitle ?? col.title} />
+          <div class="grid-3">
+            {col.gallery.map((g) => (
+              <Placeholder sizes="card" class="tgallery reveal cur" src={g.src} alt={g.alt} width={g.width} height={g.height} label={g.label ?? col.title} />
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
 
     {col.touches && <SignatureTouches touches={col.touches} />}
 

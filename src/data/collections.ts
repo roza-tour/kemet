@@ -9,6 +9,8 @@
 import type { Collection } from "@/types";
 import { tours as allTours } from "@/data/tours";
 import { christmasLanding } from "@/data/landing/christmas";
+import { EASTER, EASTER_Y, EASTER_YEARS, fmtDay, fmtDayMonth } from "@/data/easter";
+import { findMonth } from "@/data/months";
 
 // Read from the journeys, not typed here: the flight-version difference, and
 // the journeys that keep you in one bed — both change when the catalogue does.
@@ -36,6 +38,21 @@ const guide = (...ids: string[]) =>
 
 const col = (...ids: string[]) =>
   ids.map((id) => ({ domain: "seasonal" as const, id }));
+
+
+// --- Easter: every date below is computed (data/easter.ts) -------------------
+const enDay = (iso: string) => fmtDay(iso, "en-GB", { weekday: "long", day: "numeric", month: "long" });
+const enDM = (iso: string) => fmtDayMonth(iso, "en-GB");
+const E_W = enDay(EASTER.western);
+const E_O = enDay(EASTER.orthodox);
+const E_S = enDay(EASTER.sham);
+const E_P = enDay(EASTER.palm);
+const marchT = findMonth("march")!.temps;
+const aprilT = findMonth("april")!.temps;
+/** "Western Easter is Sunday 28 March and Coptic Easter Sunday 2 May" — or one Sunday in the years they coincide. */
+const easterPair = EASTER.same
+  ? `Western and Coptic Easter fall on the same Sunday, ${E_O}`
+  : `Western Easter is ${E_W} and Coptic Easter ${E_O}, ${Math.round(EASTER.gap / 7)} weeks later`;
 
 export const collections: Collection[] = [
   // ---------------------------------------------------------------------------
@@ -868,12 +885,153 @@ export const collections: Collection[] = [
       destinations: dest("aswan", "cairo", "alexandria", "luxor"),
       experiences: exp("private-felucca-nile", "nubian-village-experience", "egyptian-cooking", "old-cairo-walking"),
       guides: guide("best-time-to-visit-egypt", "egyptian-food-guide", "egypt-travel-guide"),
-      relatedCollections: col("family-egypt", "first-time-egypt", "egypt-in-winter"),
+      relatedCollections: col("easter-in-egypt", "family-egypt", "first-time-egypt"),
     },
     seo: {
       title: "Sham El-Nessim & Spring in Egypt — 2027 Date & Guide | Kemet",
       description:
         "Sham El-Nessim, Egypt's 4,700-year-old spring festival, falls on 3 May 2027. What it is, how it is celebrated, and why March–May is a fine time to go.",
+    },
+  },
+
+  // ---------------------------------------------------------------------------
+  // 9b. Easter in Egypt (19 Oct 2026). Both Easters, Holy Week in Old Cairo
+  // and Sham El-Nessim; dates computed in data/easter.ts. Translated in
+  // data/i18n/easter.ts.
+  // ---------------------------------------------------------------------------
+  {
+    id: "easter-in-egypt",
+    slug: "easter-in-egypt",
+    domain: "seasonal",
+    title: "Easter in Egypt",
+    subtitle: "Two Easters, one spring — and on the Monday after, the whole country outdoors.",
+    shortSummary:
+      `Egypt keeps Easter twice in most years: the Western date most of Europe travels around, and the Coptic date the country itself celebrates — palm crosses at the church doors, a liturgy that ends after midnight, and then Sham El-Nessim, when everyone goes outside. In ${EASTER_Y}, ${easterPair}.`,
+    editorialIntro:
+      "Easter is a good time to be in Egypt for two reasons that have nothing to do with each other. The first is the weather: late March and April are the last weeks of easy days in the Nile Valley before the heat — warm enough for an afternoon on a felucca, cool enough to walk Karnak in the morning. The second is that Egypt has an Easter of its own. The Coptic Orthodox Church, founded by tradition by Saint Mark in Alexandria, is the largest Christian community in the Middle East, and its Easter follows the older Julian reckoning — usually a week or more after the Western date, in some years on the same day. The week before is Holy Week: palm fronds woven into crosses and crowns outside every church on Palm Sunday, services every day, and the Easter liturgy on Saturday night, which ends after midnight, when a fast of fifty-five days is broken at home. On the Monday, the whole country — Muslim and Christian alike — goes outdoors for Sham El-Nessim, a spring festival older than either faith. We plan Easter journeys around both calendars: the monuments early, the churches of Old Cairo when visitors are welcome, and the long weekends when Egyptians are travelling too.",
+    collectionType: "festival",
+    seasons: ["spring"],
+    travelStyles: ["cultural", "historical", "photography"],
+    audience: ["everyone", "families", "couples", "history-enthusiasts"],
+    priority: 7,
+    featured: false,
+    story: {
+      eyebrow: "Holy Week in Cairo",
+      heading: "Palm crosses at the church door",
+      paragraphs: [
+        "On the Sunday before Coptic Easter, the pavements outside Cairo's churches turn green. Sellers sit with armfuls of fresh palm fronds and weave them while you watch — crosses, crowns, rings, little woven donkeys for the children — and families carry them home and keep them until the next year. It is Palm Sunday, the first day of the busiest week in the Coptic calendar.",
+        "The week ends on Saturday night. The Easter liturgy runs for hours and ends after midnight, when the bells ring and the fast that began eight weeks earlier is over; families go home to the first meat, eggs and cheese since it began. In Old Cairo, the Hanging Church and Abu Serga — where tradition says the Holy Family sheltered — are full to the doors.",
+        "Our guests come to these churches as visitors, not spectators: we go when the doors are open, keep to the back during a service, and leave the photographs for the courtyard.",
+      ],
+      quote: "“Al-Masih qam!” — “Bil-haqiqa qam.” Christ is risen; he is risen indeed: the greeting on every Coptic doorstep on Easter morning.",
+      photos: [
+        { src: "/images/clients/clients-20-cave-church.webp", alt: "Guests visiting the rock-cut Cave Church of Cairo", label: "Our guests at the Cave Church", width: 680, height: 680 },
+      ],
+    },
+    calendar: {
+      eyebrow: "The dates",
+      heading: "When is Easter in Egypt?",
+      intro: "Two Sundays in most years, and a public holiday on the Monday after the second one. Computed from the two church calendars, five years ahead.",
+      columns: ["Year", "Western Easter", "Coptic & Orthodox Easter", "Sham El-Nessim"],
+      rows: EASTER_YEARS.map((y) => [
+        String(y.year),
+        y.same ? `${enDM(y.western)} · same day` : enDM(y.western),
+        enDM(y.orthodox),
+        enDM(y.sham),
+      ]),
+      current: 0,
+      note: "Western Easter is kept by the Catholic and Protestant churches. Coptic and Orthodox Easter is kept by the Coptic Orthodox Church — Egypt's own Easter — and by the Greek, Russian and other Orthodox churches. Sham El-Nessim, always the Monday after it, is a national public holiday.",
+    },
+    highlights: [
+      "Palm Sunday in Cairo — palm fronds woven into crosses and crowns outside every church, a week before Coptic Easter",
+      "The Easter liturgy on Saturday night in Old Cairo, ending after midnight with the bells",
+      "Sham El-Nessim on the Monday after: picnics on every riverbank, coloured eggs, and a festival kept since the age of the pyramids",
+      `The last weeks of easy weather in the Nile Valley — Cairo ${marchT.cairo} in March and ${aprilT.cairo} in April, Luxor walkable at opening`,
+      "Kahk and biscuits — the feast-day pastries baked for Easter, as for Eid",
+    ],
+    planningNotes: [
+      `In ${EASTER_Y}: ${easterPair}. Coptic Palm Sunday is ${E_P}, and Sham El-Nessim ${E_S}.`,
+      "Western Easter week is peak season: most of Europe travels in it, and the best Nile cabins, Giza-view rooms and Abu Simbel flights go months ahead. Book three to six months out",
+      "Coptic Easter and Sham El-Nessim are Egypt's own holidays: Alexandria, the Red Sea and Sinai fill with Egyptian families for the long weekend and trains are full, while the monuments stay open",
+      "Western Easter Sunday and Monday are ordinary working days in Egypt",
+      `From April, Luxor reaches ${aprilT.luxor} and Aswan ${aprilT.aswan}: we plan the Valley of the Kings at opening and leave the afternoons free`,
+      "The khamaseen, a hot, dusty spring wind, can blow for a day or two between March and May; we keep a free half-day in the plan for it",
+    ],
+    travelTips: [
+      "In church, cover shoulders and knees; a light scarf is useful. Stand at the back during a service — Coptic liturgies are long, and slipping out quietly is fine",
+      "Ask before photographing a service; the courtyards, the woodwork and the icons are easier",
+      "The big churches are full to the doors on Easter night. If you want to attend, tell us when you write and we will advise which church and when to arrive",
+      "On Sham El-Nessim the parks and the corniches are packed; we plan the day around the river — a felucca, a garden island — rather than the crowds",
+      "Fesikh, the salted fish of Sham El-Nessim, is an acquired taste; the coloured eggs, green onions and lupini beans are the easy part of the table",
+    ],
+    faqs: [
+      {
+        q: `When is Easter in Egypt in ${EASTER_Y}?`,
+        a: EASTER.same
+          ? `In ${EASTER_Y} both Easters fall on the same day, ${E_O}: the Catholic and Protestant churches and the Coptic Orthodox Church — Egypt's own — keep it together. Sham El-Nessim, the national spring holiday, follows on ${E_S}.`
+          : `There are two dates. Western Easter, kept by the Catholic and Protestant churches, is ${E_W}. Coptic Orthodox Easter — the one Egypt celebrates — is ${E_O}. Sham El-Nessim, the national spring holiday, follows on ${E_S}.`,
+      },
+      {
+        q: "What is Coptic Easter?",
+        a: "The Easter of the Coptic Orthodox Church, Egypt's ancient church and the largest Christian community in the Middle East. It follows the older Julian reckoning, like the Greek and Russian Orthodox churches, so it falls up to five weeks after the Western date and in some years on the same day. It closes a fast of fifty-five days and a Holy Week of daily services, with the Easter liturgy on Saturday night.",
+      },
+      {
+        q: "Is Easter a public holiday in Egypt?",
+        a: "Sham El-Nessim, the Monday after Coptic Easter, is a national public holiday for everyone. Coptic Easter Sunday is kept by Egypt's Christians, and Western Easter Sunday and Monday are ordinary working days. The monuments and museums stay open throughout.",
+      },
+      {
+        q: "Can visitors attend Easter services in Cairo?",
+        a: "Yes. Coptic churches welcome respectful visitors, and Catholic and Anglican churches in Cairo hold Western Easter services. Dress modestly, stand at the back during the liturgy and ask before taking photographs. The churches of Old Cairo — the Hanging Church and Abu Serga — are full on Easter night, so if you want to attend, tell us and we will advise where and when to arrive.",
+      },
+      {
+        q: "Is Easter a good time to visit Egypt?",
+        a: `One of the best. Late March and April are the last comfortable weeks in the Nile Valley: Cairo is around ${marchT.cairo} in March and ${aprilT.cairo} in April, and Luxor ${marchT.luxor} in March. The trade-offs are crowds and prices in Western Easter week, and the domestic holiday rush around Sham El-Nessim — book early, and plan the south around the mornings.`,
+      },
+      {
+        q: "What is Sham El-Nessim?",
+        a: "Egypt's spring festival, on the Monday after Coptic Easter. Its roots are ancient Egyptian, and because it is older than both Christianity and Islam it is kept by every Egyptian. Families spend the day outdoors — by the Nile, in parks and gardens, on the corniche in Alexandria — with coloured eggs, green onions, lupini beans and fesikh.",
+      },
+      {
+        q: "What do Egyptians eat at Easter?",
+        a: "Coptic families break the fast after the Easter liturgy with what they have gone without for eight weeks — meat, eggs, cheese — and bake kahk and biscuits, the same feast-day pastries as at Eid. On Sham El-Nessim everyone eats outdoors: coloured eggs, green onions, lettuce, lupini beans and fesikh, the salted grey mullet that divides the country.",
+      },
+    ],
+    hero: {
+      alt: "The twin bell towers of a Coptic Orthodox cathedral in Alexandria",
+      label: "Easter in Egypt",
+      src: "/images/alexandria/coptic-cathedral-alexandria.webp",
+      width: 1000,
+      height: 600,
+    },
+    galleryTitle: "Palm crosses, painted eggs and the feast",
+    gallery: [
+      { src: "/images/stock/hanging-church-cairo-interior.webp", alt: "The nave of the Hanging Church in Coptic Cairo, with its wooden ceiling and hanging lamps", label: "The Hanging Church", width: 900, height: 679 },
+      { src: "/images/stock/palm-sunday-woven-palm-crosses.webp", alt: "Crosses woven from palm leaves for Palm Sunday", label: "Palm Sunday", width: 1024, height: 865 },
+      { src: "/images/stock/coptic-church-iconostasis-old-cairo.webp", alt: "The carved and painted iconostasis of the Church of St Barbara in Old Cairo", label: "St Barbara, Old Cairo", width: 768, height: 920 },
+      { src: "/images/stock/coptic-cairo-abu-serga-church.webp", alt: "A Coptic cross carved into the brick wall of Abu Serga church in Old Cairo", label: "Abu Serga", width: 1024, height: 769 },
+      { src: "/images/stock/sham-el-nessim-coloured-eggs.webp", alt: "Coloured eggs for Easter and Sham El-Nessim", label: "Coloured eggs", width: 1024, height: 683 },
+      { src: "/images/stock/kahk-easter-biscuits.webp", alt: "Kahk and biscuits, the pastries baked for Easter and Eid", label: "Kahk", width: 1024, height: 640 },
+    ],
+    theme: "easter",
+    lastReviewed: "2026-10",
+    relationships: {
+      tours: tour(
+        "tour-religious-citadel",
+        "tour-cairo-culture-5day",
+        "tour-7-day",
+        "tour-10-day",
+        "tour-nile-cruise",
+        "tour-alexandria",
+      ),
+      destinations: dest("cairo", "alexandria", "luxor"),
+      experiences: exp("old-cairo-walking", "private-felucca-nile", "alexandria-heritage-walk"),
+      guides: guide("best-time-to-visit-egypt", "egypt-travel-guide", "egyptian-food-guide"),
+      relatedCollections: col("sham-el-nessim-egypt", "christmas-new-year-egypt", "family-egypt"),
+    },
+    seo: {
+      title: `Easter in Egypt ${EASTER_Y}: Coptic Easter & Holy Week | Kemet`,
+      description:
+        `Easter in Egypt ${EASTER_Y}: Western Easter ${enDM(EASTER.western)}, Coptic Easter ${enDM(EASTER.orthodox)}, Sham El-Nessim ${enDM(EASTER.sham)}. Palm Sunday, Holy Week in Old Cairo, weather and booking.`,
     },
   },
 

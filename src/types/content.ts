@@ -157,6 +157,18 @@ export interface CollectionStory {
   photos?: MediaPlaceholder[];
 }
 
+/** A dates table (CollectionCalendar.astro). The first cell of a row is its label. */
+export interface CollectionCalendar {
+  eyebrow: string;
+  heading: string;
+  intro?: string;
+  columns: string[];
+  rows: string[][];
+  /** Index of the row to mark as the coming one, usually 0. */
+  current?: number;
+  note?: string;
+}
+
 /** Confirmed private services, as cards (SignatureTouches.astro). */
 export interface CollectionTouches {
   eyebrow: string;
@@ -357,6 +369,8 @@ export interface Collection extends ContentEntity {
   faqs?: Faq[];
   hero?: MediaPlaceholder;
   gallery?: MediaPlaceholder[];
+  /** The heading over the gallery; the collection's title when omitted. */
+  galleryTitle?: string;
   /** When this editorial content was last reviewed. */
   lastReviewed?: string;
   /**
@@ -369,6 +383,12 @@ export interface Collection extends ContentEntity {
   story?: CollectionStory;
   /** Private services travellers can ask for — confirmed by the owner. */
   touches?: CollectionTouches;
+  /**
+   * Dates that move every year, as a small table under the story — Easter's
+   * two Sundays and Sham El-Nessim, five years ahead (CollectionCalendar.astro).
+   * The rows are computed by the data file, never typed.
+   */
+  calendar?: CollectionCalendar;
   /**
    * Present only on a collection that is also a campaign destination. See
    * LandingPage: the page keeps its URL and all of its editorial content, and

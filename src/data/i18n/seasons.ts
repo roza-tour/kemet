@@ -48,6 +48,7 @@ export const SEASON_TEXT: Record<SiteLocale, Record<SeasonKey, SeasonText>> = {
     valentines: { label: "Valentine's on the Nile", note: "{dates} — a felucca at sunset and dinner on the water, in the best month of the year for it." },
     christmas: { label: "Christmas & New Year in Egypt", note: "Winter sun, New Year's Eve on the Nile, Coptic Christmas on 7 January." },
     "christmas-booking": { label: "Christmas & New Year", note: "The first week of Egypt's year to sell out — the best Nile cabins and Giza-view rooms go first." },
+    "easter-booking": { label: "Easter in Egypt", note: "Easter on the Nile is booked early — the best cabins and rooms for Holy Week go months ahead." },
   },
 
   de: {
@@ -66,6 +67,7 @@ export const SEASON_TEXT: Record<SiteLocale, Record<SeasonKey, SeasonText>> = {
     valentines: { label: "Valentinstag am Nil", note: "{dates} — eine Feluke im Sonnenuntergang und Abendessen auf dem Wasser, im schönsten Monat dafür." },
     christmas: { label: "Weihnachten & Neujahr in Ägypten", note: "Wintersonne, Silvester auf dem Nil, koptisches Weihnachten am 7. Januar." },
     "christmas-booking": { label: "Weihnachten & Neujahr", note: "Die erste Woche des Jahres, die in Ägypten ausgebucht ist — die besten Nilkabinen und Zimmer mit Pyramidenblick sind zuerst weg." },
+    "easter-booking": { label: "Ostern in Ägypten", note: "Ostern am Nil wird früh gebucht — die besten Kabinen und Zimmer für die Karwoche sind Monate vorher vergeben." },
   },
 
   it: {
@@ -84,6 +86,7 @@ export const SEASON_TEXT: Record<SiteLocale, Record<SeasonKey, SeasonText>> = {
     valentines: { label: "San Valentino sul Nilo", note: "{dates} — una feluca al tramonto e cena sull'acqua, nel mese più bello per farlo." },
     christmas: { label: "Natale e Capodanno in Egitto", note: "Sole d'inverno, notte di Capodanno sul Nilo, Natale copto il 7 gennaio." },
     "christmas-booking": { label: "Natale e Capodanno", note: "La prima settimana dell'anno a esaurirsi in Egitto — le cabine migliori sul Nilo e le camere vista piramidi vanno via per prime." },
+    "easter-booking": { label: "Pasqua in Egitto", note: "La Pasqua sul Nilo si prenota presto — le cabine e le camere migliori per la Settimana Santa vanno via mesi prima." },
   },
 
   es: {
@@ -102,6 +105,7 @@ export const SEASON_TEXT: Record<SiteLocale, Record<SeasonKey, SeasonText>> = {
     valentines: { label: "San Valentín en el Nilo", note: "{dates} — una faluca al atardecer y cena sobre el agua, en el mejor mes del año para ello." },
     christmas: { label: "Navidad y Año Nuevo en Egipto", note: "Sol de invierno, Nochevieja en el Nilo, Navidad copta el 7 de enero." },
     "christmas-booking": { label: "Navidad y Año Nuevo", note: "La primera semana del año que se agota en Egipto — los mejores camarotes del Nilo y las habitaciones con vista a las pirámides se van primero." },
+    "easter-booking": { label: "Semana Santa en Egipto", note: "La Semana Santa en el Nilo se reserva pronto — los mejores camarotes y habitaciones se agotan con meses de antelación." },
   },
 
   fr: {
@@ -120,6 +124,7 @@ export const SEASON_TEXT: Record<SiteLocale, Record<SeasonKey, SeasonText>> = {
     valentines: { label: "La Saint-Valentin sur le Nil", note: "{dates} — une félouque au coucher du soleil et un dîner sur l'eau, au plus beau mois pour cela." },
     christmas: { label: "Noël et Nouvel An en Égypte", note: "Soleil d'hiver, réveillon sur le Nil, Noël copte le 7 janvier." },
     "christmas-booking": { label: "Noël et Nouvel An", note: "La première semaine de l'année à afficher complet en Égypte — les meilleures cabines sur le Nil et les chambres face aux pyramides partent d'abord." },
+    "easter-booking": { label: "Pâques en Égypte", note: "Pâques sur le Nil se réserve tôt — les meilleures cabines et chambres de la Semaine sainte partent des mois à l'avance." },
   },
 
   ru: {
@@ -138,6 +143,7 @@ export const SEASON_TEXT: Record<SiteLocale, Record<SeasonKey, SeasonText>> = {
     valentines: { label: "День святого Валентина на Ниле", note: "{dates} — фелука на закате и ужин на воде, в лучший месяц года для этого." },
     christmas: { label: "Рождество и Новый год в Египте", note: "Зимнее солнце, Новый год на Ниле, коптское Рождество 7 января." },
     "christmas-booking": { label: "Рождество и Новый год", note: "Первая неделя года, которая распродаётся в Египте, — лучшие каюты на Ниле и номера с видом на пирамиды уходят первыми." },
+    "easter-booking": { label: "Пасха в Египте", note: "Пасху на Ниле бронируют заранее — лучшие каюты и номера на Страстную неделю уходят за несколько месяцев." },
   },
 
   id: {
@@ -156,6 +162,7 @@ export const SEASON_TEXT: Record<SiteLocale, Record<SeasonKey, SeasonText>> = {
     valentines: { label: "Valentine di Sungai Nil", note: "{dates} — felucca saat matahari terbenam dan makan malam di atas air, di bulan terbaik sepanjang tahun untuk itu." },
     christmas: { label: "Natal & Tahun Baru di Mesir", note: "Matahari musim dingin, malam Tahun Baru di Sungai Nil, Natal Koptik pada 7 Januari." },
     "christmas-booking": { label: "Natal & Tahun Baru", note: "Pekan pertama dalam setahun yang habis dipesan di Mesir — kabin terbaik di Sungai Nil dan kamar menghadap piramida paling cepat habis." },
+    "easter-booking": { label: "Paskah di Mesir", note: "Paskah di Sungai Nil dipesan jauh hari — kabin dan kamar terbaik untuk Pekan Suci habis berbulan-bulan sebelumnya." },
   },
 
   ms: {
@@ -174,6 +181,7 @@ export const SEASON_TEXT: Record<SiteLocale, Record<SeasonKey, SeasonText>> = {
     valentines: { label: "Valentine di Sungai Nil", note: "{dates} — felucca ketika matahari terbenam dan makan malam di atas air, pada bulan terbaik sepanjang tahun untuknya." },
     christmas: { label: "Krismas & Tahun Baharu di Mesir", note: "Matahari musim sejuk, malam Tahun Baharu di Sungai Nil, Krismas Koptik pada 7 Januari." },
     "christmas-booking": { label: "Krismas & Tahun Baharu", note: "Minggu pertama dalam setahun yang habis ditempah di Mesir — kabin terbaik di Sungai Nil dan bilik menghadap piramid paling cepat habis." },
+    "easter-booking": { label: "Easter di Mesir", note: "Easter di Sungai Nil ditempah awal — kabin dan bilik terbaik untuk Minggu Suci habis berbulan-bulan lebih awal." },
   },
   pt: {
     winter:  { label: "Inverno no Egito", note: "O auge da temporada — céu limpo, 22 °C na margem oeste de Tebas e o Nilo no seu melhor." },
@@ -191,6 +199,7 @@ export const SEASON_TEXT: Record<SiteLocale, Record<SeasonKey, SeasonText>> = {
     valentines: { label: "São Valentim no Nilo", note: "{dates} — faluca ao pôr do sol e jantar sobre a água, no melhor mês do ano para isso." },
     christmas: { label: "Natal e Réveillon no Egito", note: "Sol de inverno, Réveillon no Nilo, Natal copta em 7 de janeiro." },
     "christmas-booking": { label: "Natal e Réveillon", note: "A primeira semana do ano a esgotar no Egito — as melhores cabines no Nilo e os quartos com vista para as pirâmides saem primeiro." },
+    "easter-booking": { label: "Páscoa no Egito", note: "A Páscoa no Nilo é reservada cedo — as melhores cabines e quartos da Semana Santa esgotam com meses de antecedência." },
   },
   // Written for a Gulf reader, not translated from the English. Two lines
   // differ in substance rather than wording: SUMMER is not framed as a
@@ -213,6 +222,7 @@ export const SEASON_TEXT: Record<SiteLocale, Record<SeasonKey, SeasonText>> = {
     valentines: { label: "عيد الحب على النيل", note: "{dates} — فلوكة عند الغروب وعشاء على الماء، في أنسب شهور السنة لذلك." },
     christmas: { label: "أعياد الميلاد ورأس السنة", note: "شمس الشتاء، ليلة رأس السنة على النيل، وعيد الميلاد القبطي في ٧ يناير." },
     "christmas-booking": { label: "أعياد الميلاد ورأس السنة", note: "أول أسبوع يمتلئ في مصر — أفضل الغرف على النيل والمطلّة على الأهرامات تُحجز أولاً." },
+    "easter-booking": { label: "عطلة الفصح في مصر", note: "رحلات الفصح على النيل تُحجز مبكراً — أفضل الكبائن والغرف في أسبوع الآلام تنفد قبلها بشهور." },
   },
 };
 

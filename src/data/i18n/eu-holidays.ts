@@ -243,6 +243,15 @@ export const esSemanaSanta: LocalizedPage = {
     { label: "Mejor época para viajar a Egipto", route: "es/mejor-epoca-para-viajar-a-egipto.html" },
     { label: "Cuánto cuesta viajar a Egipto", route: "es/cuanto-cuesta-viajar-a-egipto.html" },
   ],
+  // The Holy Week photographs of the English Easter page (Oct 2026).
+  photos: [
+    { src: "/images/stock/hanging-church-cairo-interior.webp", width: 900, height: 679, alt: "La nave de la Iglesia Colgante, en el Cairo copto, con su techo de madera y sus lámparas", label: "La Iglesia Colgante" },
+    { src: "/images/stock/palm-sunday-woven-palm-crosses.webp", width: 1024, height: 865, alt: "Cruces trenzadas con hojas de palma para el Domingo de Ramos", label: "Domingo de Ramos" },
+    { src: "/images/stock/coptic-church-iconostasis-old-cairo.webp", width: 768, height: 920, alt: "El iconostasio tallado y pintado de la iglesia de Santa Bárbara, en el Cairo Viejo", label: "Santa Bárbara" },
+    { src: "/images/stock/coptic-cairo-abu-serga-church.webp", width: 1024, height: 769, alt: "Una cruz copta tallada en el muro de ladrillo de la iglesia de Abu Serga, en el Cairo Viejo", label: "Abu Serga" },
+    { src: "/images/stock/sham-el-nessim-coloured-eggs.webp", width: 1024, height: 683, alt: "Huevos de colores para Pascua y Sham El-Nessim", label: "Huevos de colores" },
+    { src: "/images/stock/kahk-easter-biscuits.webp", width: 1024, height: 640, alt: "Kahk y galletas, los dulces de fiesta de Pascua y del Eid", label: "Kahk" },
+  ],
 };
 
 // ===== ITALIANO — Ferragosto ===============================================

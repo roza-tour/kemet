@@ -84,24 +84,27 @@ function localDates(from?: string, to?: string, fallback = ""): string {
 const ramadanIn = (route: string) => ({ ramadan: route, "eid-fitr": route });
 // Christmas, and the October–December run that sells it, lead to the same page.
 const christmasIn = (route: string) => ({ christmas: route, "christmas-booking": route });
+/** Both Easters, and the weeks they are booked in, lead to one page per language (data/i18n/easter-*.ts). */
+const easterIn = (route: string) => ({ easter: route, "easter-both": route, "orthodox-easter": route, "easter-booking": route });
 const LOCAL_SEASON_ROUTES: Partial<Record<SiteLocale, Partial<Record<SeasonKey, string>>>> = {
   it: {
     christmas: "it/natale-e-capodanno-in-egitto.html",
     "christmas-booking": "it/natale-e-capodanno-in-egitto.html",
     summer: "it/ferragosto-in-egitto.html",
     ...ramadanIn("it/ramadan-in-egitto.html"),
+    ...easterIn("it/pasqua-in-egitto.html"),
   },
-  de: { christmas: "de/weihnachten-in-aegypten.html", "christmas-booking": "de/weihnachten-in-aegypten.html", ...ramadanIn("de/ramadan-in-aegypten.html") },
-  ru: { christmas: "ru/novyy-god-v-egipte.html", "christmas-booking": "ru/novyy-god-v-egipte.html", ...ramadanIn("ru/ramadan-v-egipte.html") },
+  de: { christmas: "de/weihnachten-in-aegypten.html", "christmas-booking": "de/weihnachten-in-aegypten.html", ...ramadanIn("de/ramadan-in-aegypten.html"), ...easterIn("de/ostern-in-aegypten.html") },
+  ru: { christmas: "ru/novyy-god-v-egipte.html", "christmas-booking": "ru/novyy-god-v-egipte.html", ...ramadanIn("ru/ramadan-v-egipte.html"), ...easterIn("ru/pasha-v-egipte.html") },
   es: {
-    easter: "es/semana-santa-en-egipto.html", "easter-both": "es/semana-santa-en-egipto.html",
+    ...easterIn("es/semana-santa-en-egipto.html"),
     ...christmasIn("es/navidad-y-fin-de-ano-en-egipto.html"), ...ramadanIn("es/ramadan-en-egipto.html"),
   },
-  fr: { ...christmasIn("fr/noel-et-nouvel-an-en-egypte.html"), ...ramadanIn("fr/ramadan-en-egypte.html") },
-  pt: { ...christmasIn("pt/natal-e-reveillon-no-egito.html"), ...ramadanIn("pt/ramada-no-egito.html") },
-  id: { ...christmasIn("id/libur-akhir-tahun-ke-mesir.html"), ...ramadanIn("id/ramadan-di-mesir.html") },
-  ms: { ...christmasIn("ms/cuti-hujung-tahun-ke-mesir.html"), ...ramadanIn("ms/ramadan-di-mesir.html") },
-  ar: ramadanIn("ar/ramadan-fi-masr.html"),
+  fr: { ...christmasIn("fr/noel-et-nouvel-an-en-egypte.html"), ...ramadanIn("fr/ramadan-en-egypte.html"), ...easterIn("fr/paques-en-egypte.html") },
+  pt: { ...christmasIn("pt/natal-e-reveillon-no-egito.html"), ...ramadanIn("pt/ramada-no-egito.html"), ...easterIn("pt/pascoa-no-egito.html") },
+  id: { ...christmasIn("id/libur-akhir-tahun-ke-mesir.html"), ...ramadanIn("id/ramadan-di-mesir.html"), ...easterIn("id/paskah-di-mesir.html") },
+  ms: { ...christmasIn("ms/cuti-hujung-tahun-ke-mesir.html"), ...ramadanIn("ms/ramadan-di-mesir.html"), ...easterIn("ms/easter-di-mesir.html") },
+  ar: { ...ramadanIn("ar/ramadan-fi-masr.html"), ...easterIn("ar/al-fish-wa-sham-al-nasim-fi-masr.html") },
 };
 const keys = [...new Set(seasonalCalendar.map((w) => w.key))];
 const seasonDefs = keys.map((k) => {

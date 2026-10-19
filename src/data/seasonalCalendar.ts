@@ -35,7 +35,8 @@ export type SeasonKey =
   | "winter" | "spring" | "summer" | "autumn"
   | "ramadan" | "eid-fitr" | "eid-adha"
   | "easter" | "easter-both" | "orthodox-easter"
-  | "sun-festival" | "thanksgiving" | "valentines" | "christmas" | "christmas-booking";
+  | "sun-festival" | "thanksgiving" | "valentines" | "christmas" | "christmas-booking"
+  | "easter-booking";
 
 export interface SeasonalWindow {
   /**
@@ -184,6 +185,33 @@ function christmasBooking(y: number): SeasonalWindow[] {
 }
 
 /**
+ * Easter, in the weeks it is being booked — the same idea as Christmas above.
+ * The Easter windows themselves open three days before Good Friday, which is
+ * when people travel, not when they decide; this runs from New Year (or eleven
+ * weeks out, whichever is later) to the Monday of Holy Week, and points at the
+ * Easter page (collections/easter-in-egypt). The theme is the season
+ * underneath, so it changes the ribbon and not the look of the site.
+ * Added 19 Oct 2026, with the Easter page.
+ */
+const EASTER_BOOKING = {
+  key: "easter-booking" as const,
+  slug: "easter-in-egypt",
+  label: "Easter in Egypt",
+  note: "Easter on the Nile is booked early — the best cabins and rooms for Holy Week go months ahead.",
+};
+function easterBooking(y: number): SeasonalWindow[] {
+  const sunday = westernEasterDay(y);
+  const elevenWeeks = shift(sunday, -77);
+  const start = elevenWeeks > `${y}-01-01` ? elevenWeeks : `${y}-01-01`;
+  const end = shift(sunday, -6);
+  const out: SeasonalWindow[] = [];
+  // Split at 1 March so the theme stays the base season's.
+  if (start < `${y}-03-01`) out.push({ ...EASTER_BOOKING, theme: "winter", start, end: end < `${y}-03-01` ? end : shift(`${y}-03-01`, -1), priority: 20 });
+  if (end >= `${y}-03-01`) out.push({ ...EASTER_BOOKING, theme: "spring", start: start > `${y}-03-01` ? start : `${y}-03-01`, end, priority: 20 });
+  return out;
+}
+
+/**
  * The year's seasons. Winter appears twice because it straddles New Year: the
  * tail of the one that began last December, and the one that begins in this.
  */
@@ -263,7 +291,7 @@ const readable = (day: string): string => {
 };
 
 /** Western Easter Sunday — the anonymous Gregorian computus. */
-const westernEasterDay = (y: number): string => {
+export const westernEasterDay = (y: number): string => {
   const a = y % 19, b = Math.floor(y / 100), c = y % 100;
   const d = Math.floor(b / 4), e = b % 4;
   const f = Math.floor((b + 8) / 25), g = Math.floor((b - f + 1) / 3);
@@ -281,7 +309,7 @@ const westernEasterDay = (y: number): string => {
  * Gregorian. The +13 day offset holds until 2100; the calendar's horizon is
  * thirteen years, so it will be someone else's problem long before it drifts.
  */
-const orthodoxEasterDay = (y: number): string => {
+export const orthodoxEasterDay = (y: number): string => {
   const a = y % 4, b = y % 7, c = y % 19;
   const d = (19 * c + 15) % 30;
   const e = (2 * a + 4 * b - d + 34) % 7;
@@ -368,7 +396,7 @@ const easterWindow = (friday: string, monday: string, sunday: string, alsoOrthod
   // sentence with a variable in it: in the years the calendars coincide the
   // note says so, and that is the whole point of the distinction.
   key: alsoOrthodox ? "easter-both" : "easter",
-  theme: "spring", slug: "sham-el-nessim-egypt", label: "Easter in Egypt",
+  theme: "spring", slug: "easter-in-egypt", label: "Easter in Egypt",
   note: alsoOrthodox
     ? "Easter Sunday is {dates}, Western and Orthodox together this year — the Nile valley at its best, and booked early."
     : "Easter Sunday is {dates} — spring on the Nile, warm days and cool evenings, and the long weekend most of Europe travels in.",
@@ -389,7 +417,7 @@ const orthodoxEaster = (y: number): Occasion => {
 };
 const orthodoxWindow = (friday: string, monday: string, sunday: string): Occasion => ({
   key: "orthodox-easter",
-  theme: "spring", slug: "sham-el-nessim-egypt", label: "Orthodox Easter",
+  theme: "spring", slug: "easter-in-egypt", label: "Orthodox Easter",
   note: "Orthodox and Coptic Easter falls on {dates} — Egypt's own Easter, and the spring weekend the country spends outdoors.",
   from: friday, to: monday, dates: sunday, priority: 62,
 });
@@ -512,6 +540,7 @@ const TODAY = iso(new Date());
 export const seasonalCalendar: SeasonalWindow[] = [
   ...BASE_YEARS.flatMap(baseSeasons),
   ...BASE_YEARS.flatMap(christmasBooking),
+  ...BASE_YEARS.flatMap(easterBooking),
   ...occasions.map(toWindow),
   ...BASE_YEARS.flatMap(computedOccasions).map(toWindow),
 ]
