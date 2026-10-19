@@ -14,8 +14,8 @@
 // whose Sham El-Nessim has not yet passed on the day the site is built.
 //
 // Used by the English page (collections.ts → easter-in-egypt) and by its
-// translations (data/i18n/easter.ts), each of which formats the dates in its
-// own language with fmtDay().
+// translations (data/i18n/easter-eu.ts, easter-ru-ar.ts, easter-asia.ts),
+// each of which formats the dates in its own language with fmtDay().
 // ---------------------------------------------------------------------------
 import { westernEasterDay, orthodoxEasterDay } from "@/data/seasonalCalendar";
 

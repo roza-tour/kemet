@@ -18,6 +18,9 @@ import { itDoveDormire, itMongolfiera, itAlbaPiramidi } from "./it-extra";
 import { deSunrise, frSunrise, esSunrise, ruSunrise, ptSunrise, idSunrise, msSunrise, arSunrise } from "./sunrise";
 import { deEclipse, frEclipse, esEclipse, itEclipse, ruEclipse, ptEclipse, idEclipse, msEclipse, arEclipse } from "./eclipse";
 import { deRamadan, frRamadan, esRamadan, itRamadan, ruRamadan, ptRamadan, idRamadan, msRamadan, arRamadan } from "./ramadan";
+import { deEaster, frEaster, itEaster, ptEaster } from "./easter-eu";
+import { ruEaster, arEaster } from "./easter-ru-ar";
+import { idEaster, msEaster } from "./easter-asia";
 import { frNoel, esNavidad, ptNatal, idAkhirTahun, msHujungTahun } from "./year-end";
 import { deHoneymoon, frHoneymoon, esHoneymoon, itHoneymoon, ruHoneymoon, ptHoneymoon, idHoneymoon, msHoneymoon, arHoneymoon } from "./honeymoon";
 import { deFamily, frFamily, esFamily, itFamily, ruFamily, ptFamily, idFamily, msFamily, arFamily } from "./family";
@@ -117,6 +120,22 @@ export const STANDALONE_PAGES: StandalonePage[] = [
   { locale: "id", slug: "ramadan-di-mesir", page: idRamadan },
   { locale: "ms", slug: "ramadan-di-mesir", page: msRamadan },
   { locale: "ar", slug: "ramadan-fi-masr", page: arRamadan },
+
+  // Easter in Egypt (Oct 2026): both Easters, Holy Week in Old Cairo and Sham
+  // El-Nessim, each written for its own market — the Osterferien, Pasquetta and
+  // the spring "ponti", Russia's Orthodox Easter on the Coptic date, the Good
+  // Friday long weekend in Indonesia. The English original is
+  // collections/easter-in-egypt.html; Spanish keeps its Semana Santa page
+  // (eu-holidays.ts). Dates from data/easter.ts. The seasonal ribbon leads
+  // each language here from January to Easter Monday.
+  { locale: "de", slug: "ostern-in-aegypten", page: deEaster },
+  { locale: "fr", slug: "paques-en-egypte", page: frEaster },
+  { locale: "it", slug: "pasqua-in-egitto", page: itEaster },
+  { locale: "pt", slug: "pascoa-no-egito", page: ptEaster },
+  { locale: "ru", slug: "pasha-v-egipte", page: ruEaster },
+  { locale: "id", slug: "paskah-di-mesir", page: idEaster },
+  { locale: "ms", slug: "easter-di-mesir", page: msEaster },
+  { locale: "ar", slug: "al-fish-wa-sham-al-nasim-fi-masr", page: arEaster },
 
   // Christmas, New Year and the year-end holidays for five more markets —
   // the window the seasonal ribbon runs from October (see year-end.ts).

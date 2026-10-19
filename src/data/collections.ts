@@ -953,7 +953,9 @@ export const collections: Collection[] = [
       `In ${EASTER_Y}: ${easterPair}. Coptic Palm Sunday is ${E_P}, and Sham El-Nessim ${E_S}.`,
       "Western Easter week is peak season: most of Europe travels in it, and the best Nile cabins, Giza-view rooms and Abu Simbel flights go months ahead. Book three to six months out",
       "Coptic Easter and Sham El-Nessim are Egypt's own holidays: Alexandria, the Red Sea and Sinai fill with Egyptian families for the long weekend and trains are full, while the monuments stay open",
-      "Western Easter Sunday and Monday are ordinary working days in Egypt",
+      EASTER.same
+        ? "In years like this one, when both Easters fall together, Easter Monday is Sham El-Nessim — a public holiday in Egypt too"
+        : "Western Easter Sunday and Monday are ordinary working days in Egypt",
       `From April, Luxor reaches ${aprilT.luxor} and Aswan ${aprilT.aswan}: we plan the Valley of the Kings at opening and leave the afternoons free`,
       "The khamaseen, a hot, dusty spring wind, can blow for a day or two between March and May; we keep a free half-day in the plan for it",
     ],
@@ -977,7 +979,9 @@ export const collections: Collection[] = [
       },
       {
         q: "Is Easter a public holiday in Egypt?",
-        a: "Sham El-Nessim, the Monday after Coptic Easter, is a national public holiday for everyone. Coptic Easter Sunday is kept by Egypt's Christians, and Western Easter Sunday and Monday are ordinary working days. The monuments and museums stay open throughout.",
+        a: EASTER.same
+          ? `Sham El-Nessim, the Monday after Coptic Easter, is a national public holiday for everyone — and in ${EASTER_Y}, with both Easters on the same Sunday, it is Easter Monday too. Coptic Easter Sunday is kept by Egypt's Christians. The monuments and museums stay open throughout.`
+          : "Sham El-Nessim, the Monday after Coptic Easter, is a national public holiday for everyone. Coptic Easter Sunday is kept by Egypt's Christians, and Western Easter Sunday and Monday are ordinary working days. The monuments and museums stay open throughout.",
       },
       {
         q: "Can visitors attend Easter services in Cairo?",
