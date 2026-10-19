@@ -1373,6 +1373,44 @@
     </image:image>
   </url>
   <url>
+    <loc>https://kemet-travel.com/collections/easter-in-egypt.html</loc>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/sham-el-nessim-coloured-eggs.webp</image:loc>
+      <image:caption>Eggs dyed red, blue, green, orange and yellow for Easter and Sham El-Nessim</image:caption>
+      <image:title>Easter in Egypt</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/hanging-church-cairo-interior.webp</image:loc>
+      <image:caption>The nave of the Hanging Church in Coptic Cairo, with its wooden ceiling and hanging lamps</image:caption>
+      <image:title>The Hanging Church</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/palm-sunday-woven-palm-crosses.webp</image:loc>
+      <image:caption>Crosses woven from palm leaves for Palm Sunday</image:caption>
+      <image:title>Palm Sunday</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/coptic-church-iconostasis-old-cairo.webp</image:loc>
+      <image:caption>The carved and painted iconostasis of the Church of St Barbara in Old Cairo</image:caption>
+      <image:title>St Barbara, Old Cairo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/coptic-cairo-abu-serga-church.webp</image:loc>
+      <image:caption>A Coptic cross carved into the brick wall of Abu Serga church in Old Cairo</image:caption>
+      <image:title>Abu Serga</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/alexandria/coptic-cathedral-alexandria.webp</image:loc>
+      <image:caption>The twin bell towers of a Coptic Orthodox cathedral in Alexandria</image:caption>
+      <image:title>Alexandria</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/kahk-easter-biscuits.webp</image:loc>
+      <image:caption>Kahk and biscuits, the pastries baked for Easter and Eid</image:caption>
+      <image:title>Kahk</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://kemet-travel.com/collections/red-sea-egypt.html</loc>
     <image:image>
       <image:loc>https://kemet-travel.com/images/redsea/ras-mohammed-lagoon.webp</image:loc>

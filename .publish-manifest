@@ -3,7 +3,7 @@
 22ec2ad73324afe14c2b7badc0edb43f.txt
 404.html
 BingSiteAuth.xml
-_astro/_slug_.2gPGSPx_.css
+_astro/_slug_.B0xakMOy.css
 _astro/_slug_.Bwazh5bX.css
 _astro/_slug_.C37nzwvn.css
 _astro/_slug_.CctGzkDz.css
@@ -13,7 +13,7 @@ _astro/about.rWJrEa1c.css
 _astro/cuisine.EYXUyvBE.css
 _astro/egyptian-incense-stones-cotton.CyXhzFvt.css
 _astro/hoisted.Dln-5jz7.js
-_astro/index.COGUg4Qt.css
+_astro/index.is2Hpzi7.css
 _astro/page.DCTgdEH6.js
 _astro/rehlat-fakhira-jiddan-fi-masr.aH_AhgbZ.css
 about.html
@@ -28,6 +28,7 @@ activities/quad-biking-desert.html
 activities/sufi-tanoura-cairo.html
 apple-touch-icon.png
 ar/afdal-waqt-lizyarat-masr.html
+ar/al-fish-wa-sham-al-nasim-fi-masr.html
 ar/hajz-mawaqea-athariya-khas.html
 ar/hal-masr-amina.html
 ar/index.html
@@ -47,6 +48,7 @@ build.txt
 collections.html
 collections/abu-simbel-sun-festival.html
 collections/christmas-new-year-egypt.html
+collections/easter-in-egypt.html
 collections/egypt-at-an-easy-pace.html
 collections/egypt-in-summer.html
 collections/egypt-in-winter.html
@@ -97,6 +99,7 @@ de/luxor-3-tage.html
 de/luxor-assuan-3-tage-mit-fluegen.html
 de/nilkreuzfahrt.html
 de/oberaegypten-5-tage.html
+de/ostern-in-aegypten.html
 de/pyramiden-von-gizeh-halbtags.html
 de/ramadan-in-aegypten.html
 de/religioeses-kairo-und-zitadelle.html
@@ -192,6 +195,7 @@ fr/monuments-en-exclusivite-egypte.html
 fr/musees-du-caire.html
 fr/noel-et-nouvel-an-en-egypte.html
 fr/oasis-du-fayoum.html
+fr/paques-en-egypte.html
 fr/plongee-mer-rouge-4-jours.html
 fr/prix-voyage-egypte.html
 fr/pyramides-de-gizeh-demi-journee.html
@@ -239,6 +243,7 @@ id/libur-akhir-tahun-ke-mesir.html
 id/liburan-keluarga-ke-mesir.html
 id/matahari-terbit-di-piramida-giza.html
 id/paket-tour-mesir.html
+id/paskah-di-mesir.html
 id/pesiar-sungai-nil.html
 id/ramadan-di-mesir.html
 id/sewa-eksklusif-situs-mesir.html
@@ -881,6 +886,15 @@ images/stock/cairo-airport-apron-480w.webp
 images/stock/cairo-airport-apron-640w.webp
 images/stock/cairo-airport-apron-960w.webp
 images/stock/cairo-airport-apron.webp
+images/stock/coptic-cairo-abu-serga-church-320w.webp
+images/stock/coptic-cairo-abu-serga-church-480w.webp
+images/stock/coptic-cairo-abu-serga-church-640w.webp
+images/stock/coptic-cairo-abu-serga-church-960w.webp
+images/stock/coptic-cairo-abu-serga-church.webp
+images/stock/coptic-church-iconostasis-old-cairo-320w.webp
+images/stock/coptic-church-iconostasis-old-cairo-480w.webp
+images/stock/coptic-church-iconostasis-old-cairo-640w.webp
+images/stock/coptic-church-iconostasis-old-cairo.webp
 images/stock/cotton-open-boll-320w.webp
 images/stock/cotton-open-boll-480w.webp
 images/stock/cotton-open-boll-640w.webp
@@ -921,11 +935,20 @@ images/stock/giza-sphinx-with-pyramid-480w.webp
 images/stock/giza-sphinx-with-pyramid-640w.webp
 images/stock/giza-sphinx-with-pyramid-960w.webp
 images/stock/giza-sphinx-with-pyramid.webp
+images/stock/hanging-church-cairo-interior-320w.webp
+images/stock/hanging-church-cairo-interior-480w.webp
+images/stock/hanging-church-cairo-interior-640w.webp
+images/stock/hanging-church-cairo-interior.webp
 images/stock/incense-burner-smoke-320w.webp
 images/stock/incense-burner-smoke-480w.webp
 images/stock/incense-burner-smoke-640w.webp
 images/stock/incense-burner-smoke-960w.webp
 images/stock/incense-burner-smoke.webp
+images/stock/kahk-easter-biscuits-320w.webp
+images/stock/kahk-easter-biscuits-480w.webp
+images/stock/kahk-easter-biscuits-640w.webp
+images/stock/kahk-easter-biscuits-960w.webp
+images/stock/kahk-easter-biscuits.webp
 images/stock/khan-el-khalili-attar-shop-320w.webp
 images/stock/khan-el-khalili-attar-shop-480w.webp
 images/stock/khan-el-khalili-attar-shop-640w.webp
@@ -950,6 +973,11 @@ images/stock/om-ali-480w.webp
 images/stock/om-ali-640w.webp
 images/stock/om-ali-960w.webp
 images/stock/om-ali.webp
+images/stock/palm-sunday-woven-palm-crosses-320w.webp
+images/stock/palm-sunday-woven-palm-crosses-480w.webp
+images/stock/palm-sunday-woven-palm-crosses-640w.webp
+images/stock/palm-sunday-woven-palm-crosses-960w.webp
+images/stock/palm-sunday-woven-palm-crosses.webp
 images/stock/qatayef-320w.webp
 images/stock/qatayef-480w.webp
 images/stock/qatayef-640w.webp
@@ -960,6 +988,11 @@ images/stock/sayadeya-480w.webp
 images/stock/sayadeya-640w.webp
 images/stock/sayadeya-960w.webp
 images/stock/sayadeya.webp
+images/stock/sham-el-nessim-coloured-eggs-320w.webp
+images/stock/sham-el-nessim-coloured-eggs-480w.webp
+images/stock/sham-el-nessim-coloured-eggs-640w.webp
+images/stock/sham-el-nessim-coloured-eggs-960w.webp
+images/stock/sham-el-nessim-coloured-eggs.webp
 images/stock/siwa-shali-fortress-320w.webp
 images/stock/siwa-shali-fortress-480w.webp
 images/stock/siwa-shali-fortress-640w.webp
@@ -1001,6 +1034,7 @@ it/monumenti-in-esclusiva-egitto.html
 it/musei-del-cairo.html
 it/natale-e-capodanno-in-egitto.html
 it/oasi-del-fayyum.html
+it/pasqua-in-egitto.html
 it/piramidi-di-giza-mezza-giornata.html
 it/quando-andare-in-egitto.html
 it/quanto-costa-viaggio-egitto.html
@@ -1026,6 +1060,7 @@ ms/adakah-mesir-selamat.html
 ms/bukit-tursina.html
 ms/bulan-madu-ke-mesir.html
 ms/cuti-hujung-tahun-ke-mesir.html
+ms/easter-di-mesir.html
 ms/gerhana-matahari-2027-luxor.html
 ms/halal-dan-waktu-solat.html
 ms/index.html
@@ -1140,6 +1175,7 @@ og/stock/egyptian-museum-menkaure-triad.jpg
 og/stock/giza-camel-rider-pyramids.jpg
 og/stock/giza-khafre-pyramid.jpg
 og/stock/giza-sphinx-with-pyramid.jpg
+og/stock/sham-el-nessim-coloured-eggs.jpg
 og/stock/stuffed-vine-leaves.jpg
 plan.html
 privacy.html
@@ -1156,6 +1192,7 @@ pt/monumentos-exclusivos-egito.html
 pt/nascer-do-sol-nas-piramides-de-gize.html
 pt/natal-e-reveillon-no-egito.html
 pt/noite-gastronomica-no-cairo.html
+pt/pascoa-no-egito.html
 pt/quanto-custa-viajar-para-o-egito.html
 pt/ramada-no-egito.html
 pt/viagens-ao-egito.html
@@ -1171,6 +1208,7 @@ ru/kogda-luchshe-ehat-v-egipet.html
 ru/kruiz-po-nilu.html
 ru/medovyy-mesyats-v-egipte.html
 ru/novyy-god-v-egipte.html
+ru/pasha-v-egipte.html
 ru/ramadan-v-egipte.html
 ru/rassvet-u-piramid-gizy.html
 ru/solnechnoe-zatmenie-2027-luksor.html
