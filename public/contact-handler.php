@@ -100,7 +100,11 @@ function clean_line($v) {
 function log_enquiry($status, $name, $email, $phone, $dates, $message, $source = "", $first = "", $party = "", $pace = "", $priority = "") {
   $dir = __DIR__ . "/_stats";
   if (!is_dir($dir)) { @mkdir($dir, 0755, true); @file_put_contents("$dir/index.html", ""); }
-  $q = function ($v) { return str_replace('"', "'", (string)$v); };
+  // One enquiry = one line: stats.php reads the file line by line, so a
+  // message typed over several lines (or a registration, which is composed
+  // on several) would split into broken rows. Line breaks become " | " here
+  // only; the email keeps them.
+  $q = function ($v) { return str_replace('"', "'", preg_replace(['/\s*(\r\n|\r|\n)+\s*/', '/ {2,}/'], [" | ", " "], trim((string)$v))); };
   $row = sprintf("%s,%s,\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\"\n",
     gmdate("Y-m-d H:i"), $status,
     $q($name), $q($email), $q($phone), $q($dates), $q(mb_substr($message, 0, 5000)),
@@ -180,6 +184,32 @@ if ($journey !== "") {
   $message = mb_substr("Kemet Ultra brief: " . $journey . ($message !== "" ? "\n\n" . $message : ""), 0, 5000);
 }
 
+// Eclipse Day registration (components/EclipseDay.astro, data/eclipseDay.ts).
+// The form sends no free-text message, so the registration itself becomes
+// the message — in the email and in the CSV, whose columns are read
+// positionally and so get no new one; the number of travellers goes in the
+// "party" column. A WhatsApp number and a number of travellers are required
+// on top of name and email. Only the form's own values are accepted.
+$EVENTS = ["eclipse-2027" => "Eclipse Day in Luxor — 2 August 2027"];
+$event = $EVENTS[(string)($_POST["event"] ?? "")] ?? "";
+$eventOk = true;
+if ($event !== "") {
+  $PLANS = ["day" => "Eclipse Day only (2 August)", "3days" => "A 3-day journey around the eclipse",
+            "week" => "A week in Egypt around the eclipse", "10days" => "10 days in Egypt around the eclipse"];
+  $plan = $PLANS[(string)($_POST["plan"] ?? "")] ?? $PLANS["day"];
+  $travellers = (int)($_POST["travellers"] ?? 0);
+  if ($travellers < 1 || $travellers > 99) $travellers = 0;
+  $digits = preg_replace('/\D/', '', $phone);
+  $eventOk = $travellers > 0 && strlen($digits) >= 7 && strlen($digits) <= 15;
+  $message = mb_substr(
+    "REGISTRATION — " . $event . "\n" .
+    "Request:    " . $plan . "\n" .
+    "Travellers: " . ($travellers ?: "not given") . "\n" .
+    "WhatsApp:   " . $phone .
+    ($message !== "" ? "\n\n" . $message : ""), 0, 5000);
+  if ($travellers) $party = $travellers . " travellers";
+}
+
 // How this person found us — read from today's analytics log on the server,
 // through the anonymous daily visitor hash. Nothing was stored on their device
 // and nothing extra was sent by the form; see lib-source.php.
@@ -194,7 +224,7 @@ if ($spam) {
   respond(true, $wantsJson);
 }
 
-if ($name === "" || $message === "" || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+if ($name === "" || $message === "" || !filter_var($email, FILTER_VALIDATE_EMAIL) || !$eventOk) {
   // Still recorded: a mistyped email address is a real person who tried to
   // reach us, and the phone number they left may be perfectly good.
   log_enquiry("invalid", $name, $email, $phone, $dates, $message, $srcTxt, $trail["first"], $party, $pace, $priority);
@@ -227,7 +257,7 @@ if ($ip !== "") {
 }
 
 // UTF-8-safe subject (visitor names may be Arabic, French, ...).
-$subject = "=?UTF-8?B?" . base64_encode(($journey !== "" ? "Kemet Ultra enquiry — " : "Website enquiry — ") . $name) . "?=";
+$subject = "=?UTF-8?B?" . base64_encode(($event !== "" ? "Eclipse 2027 registration — " : ($journey !== "" ? "Kemet Ultra enquiry — " : "Website enquiry — ")) . $name) . "?=";
 
 $body =
   "New enquiry from kemet-travel.com\n" .

@@ -43,6 +43,7 @@ const KNOWN = new Map([
   [400,  "rounded prose in faq.ts: 'roughly €400 and €1,950'"],
   [1950, "rounded prose in faq.ts: 'roughly €400 and €1,950'"],
   [120,  "third-party cost — hot-air balloon add-on, booked on request"],
+  [195,  "Eclipse Day in Luxor, 2 Aug 2027 — small-group day tour, per person (data/eclipseDay.ts)"],
   [12,   "gratuities guidance, per day"],
   [8,    "gratuities guidance, per day"],
 ]);

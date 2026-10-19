@@ -33,6 +33,8 @@ import { TRANSLATION_GROUPS, LOCALE_META } from "@/config/i18n";
 import type { TranslatedLocale } from "@/config/i18n";
 import { canonical, publicPath, whatsappLink, mailtoLink } from "@/utils/links";
 import { personRef, videoObject } from "@/schemas/jsonld";
+import EclipseDay from "@/components/EclipseDay.astro";
+import { eclipseDayEvent } from "@/schemas/eclipseEvent";
 import Placeholder from "@/components/Placeholder.astro";
 import FilmRow from "@/components/FilmRow.astro";
 import { site, SITE_URL } from "@/config/site";
@@ -135,6 +137,10 @@ const jsonld: Record<string, unknown>[] = [
 ];
 /** The photograph this page is shared with, when it names one. */
 const share = page.sharePhoto ? page.photos?.find((g) => g.src === page.sharePhoto) : undefined;
+// The nine translations of the eclipse guide carry Eclipse Day in Luxor and
+// its registration form in their language (data/eclipseDay-i18n.ts).
+const isEclipse = /^standalone-[a-z]{2}-eclipse$/.test(page.groupId ?? "");
+if (isEclipse) jsonld.push(...eclipseDayEvent(locale, route, page.photos?.[0]?.src));
 ---
 <Base
   title={page.title}
@@ -188,6 +194,7 @@ const share = page.sharePhoto ? page.photos?.find((g) => g.src === page.sharePho
       )}
 
       <p class="lz-lede">{page.lede}</p>
+      {isEclipse && <EclipseDay locale={locale} route={route} variant="banner" />}
     </div>
   </section>
 
@@ -262,6 +269,8 @@ const share = page.sharePhoto ? page.photos?.find((g) => g.src === page.sharePho
           <ul>{page.highlights.items.map((i) => <li>{i}</li>)}</ul>
         </div>
       )}
+
+      {isEclipse && <EclipseDay locale={locale} route={route} variant="embedded" />}
 
       <Frieze />
 

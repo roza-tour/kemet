@@ -623,7 +623,9 @@ footer{background:var(--ink-2);border-top:1px solid var(--line);padding:var(--s-
 /* unanswered reads like an empty field's placeholder, not like an answer */
 .cform select:has(option[value=""]:checked){color:var(--muted-2)}
 .cform select option{color:var(--bone)}
-.cform-hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
+/* Clipped in place, not pushed off to the left: on an RTL page a box at left:-9999px
+   widens the page and gives mobile a sideways scroll ten thousand pixels long. */
+.cform-hp{position:absolute!important;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;opacity:0;pointer-events:none}
 .cform-note{border:1px solid var(--line-2);border-radius:2px;padding:var(--s-3) var(--s-4);margin-bottom:var(--s-4);font-size:var(--t-sm);color:var(--bone)}
 .cform-note--ok{border-color:rgba(140,190,120,.5);background:rgba(60,110,50,.16)}
 .cform-note--err{border-color:rgba(210,120,100,.5);background:rgba(130,50,40,.18)}

@@ -1,0 +1,205 @@
+---
+// Eclipse Day in Luxor — the programme and the registration form, in the
+// page's language (data/eclipseDay.ts, data/eclipseDay-i18n.ts).
+//
+//   variant="banner" — one line near the top of the page, jumping to the form
+//   variant="full"   — the day, what is included, and the form
+//
+// The form posts to the same handler as every enquiry and shares its
+// behaviour (time on page, sending in place, the outcome event) through the
+// `vbrief-form` / `vbrief-send` hooks in scripts/enhance.client.js. Shown only
+// until the eclipse itself.
+import { ECLIPSE_DAY, eclipseDayEn, type EclipseDayText } from "@/data/eclipseDay";
+import { eclipseDayI18n } from "@/data/eclipseDay-i18n";
+import { beforeDate } from "@/data/timeboxed";
+import { LOCALE_META, type SiteLocale } from "@/config/i18n";
+import { formatPriceIn } from "@/utils/format";
+
+interface Props {
+  locale?: SiteLocale;
+  /** This page's route, e.g. "guides/total-solar-eclipse-2027-luxor.html". */
+  route: string;
+  /** "embedded" — the same block as "full", as a card inside a page column
+   *  that already has its own .wrap (the localized article). */
+  variant?: "banner" | "full" | "embedded";
+}
+const { locale = "en", route, variant = "full" } = Astro.props;
+const T: EclipseDayText = locale === "en" ? eclipseDayEn : eclipseDayI18n[locale as keyof typeof eclipseDayI18n] ?? eclipseDayEn;
+const F = T.form;
+const live = beforeDate(ECLIPSE_DAY.date, [true]).length > 0;
+const price = formatPriceIn(ECLIPSE_DAY.price, LOCALE_META[locale].formatLocale);
+const Outer = variant === "embedded" ? "div" : "section";
+---
+{live && variant === "banner" && (
+  <a class="eday-banner" href="#eclipse-day">
+    <span class="eday-banner-dot" aria-hidden="true"></span>
+    <span>{T.banner} <b>{price}</b> {T.perPerson}</span>
+    <span class="eday-banner-cta">{T.bannerCta} <span aria-hidden="true">↓</span></span>
+  </a>
+)}
+
+{live && variant !== "banner" && (
+  <Outer id="eclipse-day" class:list={["eday", variant === "embedded" && "eday--card"]}>
+    <div class={variant === "full" ? "wrap" : "eday-inner"}>
+      <div class="eday-head">
+        <div class="eyebrow">{T.eyebrow}</div>
+        <h2>{T.title}</h2>
+        <p class="eday-lede">{T.lede}</p>
+        <p class="eday-price"><b>{price}</b> {T.perPerson} <span>·</span> {T.hotelNote} <span>·</span> {T.capacity}</p>
+      </div>
+
+      <div class="eday-grid">
+        <div class="eday-day">
+          <h3>{T.scheduleHeading}</h3>
+          <ol class="eday-steps">
+            {T.schedule.map(([time, text]) => (
+              <li class={time.includes("13:02") || time.includes("١٣:٠٢") ? "is-total" : undefined}>
+                <time>{time}</time><span>{text}</span>
+              </li>
+            ))}
+          </ol>
+          <p class="eday-small">{T.timesNote}</p>
+          <div class="eday-inc">
+            <div>
+              <h3>{T.includedHeading}</h3>
+              <ul>{T.included.map((x) => <li>{x}</li>)}</ul>
+            </div>
+            <div>
+              <h3>{T.excludedHeading}</h3>
+              <ul class="no">{T.excluded.map((x) => <li>{x}</li>)}</ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="eday-reg" id="message-us">
+          <h3 class="eday-reg-h">{F.heading}</h3>
+          <p class="eday-small">{F.intro}</p>
+          <div class="cform-note cform-note--ok" role="status" aria-live="polite" hidden>{F.ok}</div>
+          <div class="cform-note cform-note--err" role="alert" hidden>{F.err}</div>
+          <form class="cform vbrief-form eday-form" method="post" action="/contact-handler.php"
+            toolname="register_eclipse_day"
+            tooldescription="Register for Kemet's Eclipse Day in Luxor on 2 August 2027, or ask for a 3-day, one-week or 10-day journey around the eclipse. Free to register; Kemet replies on WhatsApp and by email.">
+            <label class="cform-hp" aria-hidden="true">
+              {F.honeypot}
+              <input type="text" name="website" tabindex="-1" autocomplete="off" toolparamdescription="Anti-spam field. Always leave it empty." />
+            </label>
+            <input type="hidden" name="kt" value="" />
+            <input type="hidden" name="gclid" value="" />
+            <input type="hidden" name="event" value="eclipse-2027" />
+            <input type="hidden" name="return" value={`/${route}`} />
+            <input type="hidden" name="context" value={`Eclipse Day 2027 registration (/${route})`} />
+
+            <label>
+              <span>{F.name}</span>
+              <input type="text" name="name" required maxlength="120" autocomplete="name" />
+            </label>
+            <label>
+              <span>{F.email}</span>
+              <input type="email" name="email" required maxlength="200" autocomplete="email" />
+            </label>
+            <label>
+              <span>{F.whatsapp}</span>
+              <input type="tel" name="phone" required maxlength="40" autocomplete="tel" inputmode="tel"
+                pattern="[+0-9 ()\-]{7,}" placeholder={F.whatsappHint} dir="ltr" />
+            </label>
+            <label>
+              <span>{F.travellers}</span>
+              <input type="number" name="travellers" required min="1" max="99" step="1" value="2" inputmode="numeric" />
+            </label>
+            <label class="eday-full">
+              <span>{F.plan}</span>
+              <select name="plan">
+                {ECLIPSE_DAY.plans.map((p) => <option value={p}>{F.planOptions[p]}</option>)}
+              </select>
+              <small>{F.planNote}</small>
+            </label>
+            <label class="eday-full">
+              <span>{F.note} <i>{F.optional}</i></span>
+              <textarea name="message" rows="2" maxlength="2000"></textarea>
+            </label>
+            <button type="submit" class="vbrief-send eday-send" data-sending={F.sending}><span>{F.submit}</span></button>
+            <p class="eday-small eday-privacy">{F.privacy}</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </Outer>
+)}
+
+<style>
+  .eday-banner { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-2) var(--s-3);
+    margin: 0 0 var(--s-5); padding: var(--s-3) var(--s-4); border: 1px solid var(--line-2);
+    background: linear-gradient(90deg, rgba(217,180,90,.12), rgba(217,180,90,.03));
+    color: var(--bone); font-size: var(--t-sm); line-height: 1.6; transition: border-color .3s; }
+  .eday-banner:hover { border-color: var(--gold); }
+  .eday-banner b { color: var(--gold-bright); font-weight: 500; }
+  .eday-banner-dot { width: 14px; height: 14px; border-radius: 50%; flex: none;
+    background: radial-gradient(circle, #0A0806 55%, transparent 56%), radial-gradient(circle, var(--gold-bright) 0 62%, transparent 72%);
+    box-shadow: 0 0 12px rgba(247,230,174,.6); }
+  .eday-banner-cta { margin-inline-start: auto; font-size: var(--t-micro); letter-spacing: .28em; text-transform: uppercase; color: var(--gold); }
+
+  .eday { position: relative; isolation: isolate; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    background: radial-gradient(60% 80% at 80% 0%, rgba(247,230,174,.08), transparent 70%), var(--ink-2); }
+  .eday::before { content: ""; position: absolute; inset: 0; z-index: -1; background: var(--pat-stars); opacity: .14; pointer-events: none; }
+  section.eday { padding: var(--s-8) 0; }
+  .eday--card { margin: var(--s-6) 0; padding: var(--s-6) var(--s-5); border: 1px solid var(--line-2); }
+  .eday--card .eday-grid { grid-template-columns: 1fr; }
+  .eday-head { max-width: 760px; margin-bottom: var(--s-6); }
+  .eday-head h2 { font-size: clamp(2.2rem, 4.4vw, 3.4rem); color: var(--bone); margin: var(--s-3) 0 var(--s-3); }
+  .eday-lede { color: var(--muted); line-height: 1.85; margin: 0 0 var(--s-3); }
+  .eday-price { color: var(--muted); font-size: var(--t-sm); margin: 0; }
+  .eday-price b { font-family: var(--ff-display); font-weight: 400; font-size: 1.9rem; color: var(--gold-bright); margin-inline-end: 4px; }
+  .eday-price span { color: var(--muted-2); margin: 0 6px; }
+
+  .eday-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: var(--s-6); align-items: start; }
+  .eday h3 { font-family: var(--ff-body); font-weight: 400; font-size: var(--t-micro); letter-spacing: .28em;
+    text-transform: uppercase; color: var(--gold); margin: 0 0 var(--s-3); }
+  .eday-steps { list-style: none; margin: 0 0 var(--s-3); padding: 0; border-inline-start: 1px solid var(--line-2); }
+  .eday-steps li { position: relative; display: grid; grid-template-columns: 7.2em 1fr; gap: var(--s-3);
+    padding: var(--s-2) 0 var(--s-2) var(--s-4); color: var(--muted); font-size: var(--t-sm); line-height: 1.7; }
+  .eday-steps li::before { content: ""; position: absolute; inset-inline-start: -4px; top: 1.05em; width: 7px; height: 7px;
+    transform: rotate(45deg); background: var(--gold); opacity: .7; }
+  .eday-steps time { color: var(--gold-bright); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .eday-steps li.is-total { color: var(--bone); }
+  .eday-steps li.is-total::before { width: 11px; height: 11px; inset-inline-start: -6px; border-radius: 50%; transform: none;
+    background: #0A0806; box-shadow: 0 0 0 2px var(--gold-bright), 0 0 14px 3px rgba(247,230,174,.55); opacity: 1; }
+  .eday-small { color: var(--muted-2); font-size: var(--t-tiny); line-height: 1.7; margin: 0 0 var(--s-4); }
+  .eday-inc { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-4); }
+  .eday-inc ul { list-style: none; margin: 0; padding: 0; }
+  .eday-inc li { position: relative; padding-inline-start: 18px; margin-bottom: var(--s-1); color: var(--muted); font-size: var(--t-sm); line-height: 1.65; }
+  .eday-inc li::before { content: "✓"; position: absolute; inset-inline-start: 0; color: var(--gold); font-size: .85em; }
+  .eday-inc ul.no li::before { content: "—"; color: var(--muted-2); }
+
+  .eday-reg { border: 1px solid var(--line-2); padding: var(--s-5); background: rgba(10,8,6,.55); }
+  .eday-reg-h { font-family: var(--ff-display) !important; font-size: 1.6rem !important; letter-spacing: 0 !important;
+    text-transform: none !important; color: var(--bone) !important; margin-bottom: var(--s-2) !important; }
+  .eday-form { border: 0; padding: 0; background: none; display: grid; grid-template-columns: 1fr 1fr; gap: 16px 14px; }
+  .eday-form label { display: block; margin: 0; }
+  .eday-full, .eday-send, .eday-privacy { grid-column: 1 / -1; }
+  .eday-form label > span { display: block; margin-bottom: 7px; font-size: var(--t-nano); letter-spacing: .22em;
+    text-transform: uppercase; color: var(--gold); }
+  .eday-form label > span i { font-style: normal; text-transform: none; letter-spacing: .04em; color: var(--muted-2); margin-inline-start: 4px; }
+  .eday-form input, .eday-form select, .eday-form textarea { width: 100%; background: rgba(3,3,2,.5); border: 1px solid var(--line-2);
+    color: var(--bone); padding: 11px 13px; font-size: var(--t-sm); }
+  .eday-form input:focus, .eday-form select:focus, .eday-form textarea:focus { border-color: var(--gold); outline: none;
+    box-shadow: 0 0 0 3px rgba(217,180,90,.15); }
+  .eday-form input::placeholder { color: var(--muted-2); opacity: 1; }
+  .eday-form small { display: block; margin-top: 6px; color: var(--muted-2); font-size: var(--t-tiny); line-height: 1.6; }
+  .eday-form input.cform-bad { border-color: #C0564A; }
+  .eday-send { display: block; width: 100%; border: 0; cursor: pointer; padding: 15px 22px; margin-top: 4px;
+    background: linear-gradient(120deg, var(--gold-bright), var(--gold) 55%, var(--gold-deep)); color: var(--ink);
+    font-size: var(--t-micro); letter-spacing: .3em; text-transform: uppercase; transition: transform .4s, box-shadow .4s; }
+  .eday-send:hover { transform: translateY(-2px); box-shadow: 0 16px 40px -14px rgba(217,180,90,.5); }
+  .eday-send[disabled] { opacity: .65; cursor: wait; }
+  .eday-privacy { margin: 4px 0 0; text-align: center; }
+  .eday-reg .cform-note { margin-bottom: var(--s-3); line-height: 1.7; }
+
+  @media (max-width: 900px) { .eday-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 560px) {
+    .eday-form, .eday-inc { grid-template-columns: 1fr; }
+    .eday-reg { padding: var(--s-4); }
+    .eday-steps li { grid-template-columns: 1fr; gap: 2px; }
+  }
+  :global([lang="ar"]) .eday-form label > span, :global([lang="ar"]) .eday h3, :global([lang="ar"]) .eday-send,
+  :global([lang="ar"]) .eday-banner-cta { letter-spacing: 0; }
+</style>

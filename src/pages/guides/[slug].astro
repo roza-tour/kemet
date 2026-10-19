@@ -25,6 +25,8 @@ import { guides } from "@/data/guides";
 import { registry, resolveRelatedGuides, findRelatedExperiencesForGuide } from "@/data/registry";
 import { entityStaticPaths, relativePrefix, routeFor } from "@/config/routes";
 import { entitySchema } from "@/schemas/jsonld";
+import EclipseDay from "@/components/EclipseDay.astro";
+import { eclipseDayEvent } from "@/schemas/eclipseEvent";
 import type { Destination, Guide, Tour } from "@/types";
 
 interface Props {
@@ -49,7 +51,13 @@ const relExperiences = findRelatedExperiencesForGuide(guide);
 
 const title = guide.seo?.title ?? `${guide.title} | Kemet Egypt Travel Guides`;
 const description = guide.seo?.description ?? guide.shortSummary;
-const jsonld = entitySchema("guide", guide);
+// Eclipse Day in Luxor: the small-group day and its registration form live on
+// the eclipse guide (data/eclipseDay.ts).
+const isEclipse = guide.slug === "total-solar-eclipse-2027-luxor";
+const jsonld = [
+  ...[entitySchema("guide", guide)].flat(),
+  ...(isEclipse ? eclipseDayEvent("en", route, guide.hero?.src) : []),
+];
 ---
 {/* The page ends with its own enquiry block (LeadCapture), so the
     site-wide call to action would repeat it straight after. */}
@@ -63,6 +71,7 @@ const jsonld = entitySchema("guide", guide);
             should be apparent to a reader, not only to a parser — and a
             generative engine quoting this page reads the text, not the JSON. */}
         {!guide.noReviewer && <Byline base={base} updated={guide.lastUpdated} />}
+        {isEclipse && <EclipseDay route={route} variant="banner" />}
 
         <div class="tdetail">
 
@@ -130,6 +139,8 @@ const jsonld = entitySchema("guide", guide);
         </div>
       </div>
     </section>
+
+    {isEclipse && <EclipseDay route={route} />}
 
     <Frieze />
 
