@@ -32,7 +32,7 @@ import type { LocalizedPage } from "@/data/i18n/types";
 import { TRANSLATION_GROUPS, LOCALE_META } from "@/config/i18n";
 import type { TranslatedLocale } from "@/config/i18n";
 import { canonical, publicPath, whatsappLink, mailtoLink } from "@/utils/links";
-import { personRef, videoObject } from "@/schemas/jsonld";
+import { personRef, videoObject, thingLd } from "@/schemas/jsonld";
 import EclipseDay from "@/components/EclipseDay.astro";
 import { eclipseDayEvent } from "@/schemas/eclipseEvent";
 import Placeholder from "@/components/Placeholder.astro";
@@ -103,7 +103,9 @@ const jsonld: Record<string, unknown>[] = [
     description: page.description,
     url: canonical(route),
     inLanguage: lang,
-    about: { "@type": "Country", name: "Egypt" },
+    about: page.schemaAbout?.length
+      ? [{ "@type": "Country", name: "Egypt" }, ...page.schemaAbout.map(thingLd)]
+      : { "@type": "Country", name: "Egypt" },
     isPartOf: { "@type": "WebSite", "@id": `${SITE_URL}#website`, name: site.name, url: SITE_URL },
     publisher: { "@type": "TravelAgency", name: site.name, url: SITE_URL },
     reviewedBy: personRef(),

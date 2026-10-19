@@ -9,7 +9,7 @@
 // file; the words are not.
 // ---------------------------------------------------------------------------
 import type { TranslatedLocale } from "@/config/i18n";
-import type { LandingPage, SeasonalTheme, CollectionStory, CollectionTouches } from "@/types";
+import type { LandingPage, SeasonalTheme, CollectionStory, CollectionTouches, SchemaThing } from "@/types";
 import type { MediaPlaceholder, Film } from "@/types/primitives";
 
 export interface LocalizedSection {
@@ -91,6 +91,8 @@ export interface LocalizedPage {
    * shares its first photograph — see utils/share.
    */
   sharePhoto?: string;
+  /** Extra subjects for the page's structured data (types/content.ts → SchemaThing). */
+  schemaAbout?: SchemaThing[];
 }
 
 export type LocalePageSet = Record<TranslatedLocale, LocalizedPage[]>;

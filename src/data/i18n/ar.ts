@@ -367,7 +367,7 @@ export const ar: LocalizedPage[] = [
       whatsapp: "السلام عليكم كيميت — متى الأفضل لزيارة مصر؟",
       emailSubject: "سؤال — أفضل وقت لزيارة مصر",
     },
-    links: beforeDate(ECLIPSE_2027, [{ label: "كسوف الشمس ٢٠٢٧ في الأقصر", route: "ar/kusuf-al-shams-2027-al-uqsur.html" }]),
+    links: [{ label: "عيد الفصح وشم النسيم في مصر", route: "ar/al-fish-wa-sham-al-nasim-fi-masr.html" }, ...beforeDate(ECLIPSE_2027, [{ label: "كسوف الشمس ٢٠٢٧ في الأقصر", route: "ar/kusuf-al-shams-2027-al-uqsur.html" }])],
     moreLabel: "الدليل شهراً بشهر",
     moreText:
       "دليل مفصّل لكل شهر من الشهور الاثني عشر — الحرارة والزحام والأسعار والمواسم — منشور بالإنجليزية على الموقع الرئيسي.",

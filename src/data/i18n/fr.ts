@@ -348,7 +348,7 @@ export const fr: LocalizedPage[] = [
       whatsapp: "Bonjour Kemet — quand serait-il préférable de partir en Égypte ?",
       emailSubject: "Question — quand partir en Égypte",
     },
-    links: beforeDate(ECLIPSE_2027, [{ label: "Éclipse solaire 2027 à Louxor", route: "fr/eclipse-solaire-2027-louxor.html" }]),
+    links: [{ label: "Pâques en Égypte", route: "fr/paques-en-egypte.html" }, ...beforeDate(ECLIPSE_2027, [{ label: "Éclipse solaire 2027 à Louxor", route: "fr/eclipse-solaire-2027-louxor.html" }])],
     moreLabel: "Le guide mois par mois",
     moreText:
       "Un guide détaillé pour chacun des douze mois — températures, affluence, prix et fêtes — est publié en anglais sur le site principal.",

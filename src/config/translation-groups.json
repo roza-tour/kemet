@@ -14,7 +14,13 @@
     "",
     "'locales' is ordered; 'en' must be first because it is the x-default.",
     "Every group must carry a route for every locale — i18n.ts is typed to fail",
-    "the build if one is missing."
+    "the build if one is missing.",
+    "",
+    "A group may also tie together pages that are built as standalone pages in",
+    "their own language (data/i18n/standalone.ts) when every locale has one: the",
+    "'easter' group (Oct 2026) is the English collection, eight Easter pages and",
+    "the Spanish Semana Santa page. It gives them one hreflang cluster and the",
+    "language switch; it generates no page of its own."
   ],
   "locales": [
     "en",
@@ -132,6 +138,19 @@
       "ms": "ms/percutian-ultra-mewah-mesir.html",
       "pt": "pt/viagens-ultra-luxo-egito.html",
       "ar": "ar/rehlat-fakhira-jiddan-fi-masr.html"
+    },
+    {
+      "key": "easter",
+      "en": "collections/easter-in-egypt.html",
+      "de": "de/ostern-in-aegypten.html",
+      "it": "it/pasqua-in-egitto.html",
+      "es": "es/semana-santa-en-egipto.html",
+      "fr": "fr/paques-en-egypte.html",
+      "ru": "ru/pasha-v-egipte.html",
+      "id": "id/paskah-di-mesir.html",
+      "ms": "ms/easter-di-mesir.html",
+      "pt": "pt/pascoa-no-egito.html",
+      "ar": "ar/al-fish-wa-sham-al-nasim-fi-masr.html"
     }
   ]
 }

@@ -39,8 +39,9 @@ import { ultraJourneys } from "@/data/ultra/journeys";
 import { en as ultraEn } from "@/data/ultra/en";
 import { experiences } from "@/data/experiences";
 import { collectionsByPriority } from "@/data/collections";
+import { EASTER_YEARS, fmtDay } from "@/data/easter";
 import { occasions } from "@/data/occasions";
-import { TRANSLATED_LOCALES, LOCALE_META, LOCALES } from "@/config/i18n";
+import { TRANSLATED_LOCALES, LOCALE_META, LOCALES, TRANSLATION_GROUPS } from "@/config/i18n";
 import { TRANSLATED_TOURS } from "@/config/tour-i18n";
 import { marketDirectory, marketRegions } from "@/utils/marketsDirectory";
 import { incenses, oils, stones, sacredFaqs, sacredBrief } from "@/data/sacred";
@@ -172,6 +173,25 @@ export const GET: APIRoute = () => {
     L.push(`- **${c.title}.** ${clean(c.shortSummary)} ${u(`collections/${c.slug}.html`)}`);
   }
   L.push("");
+
+  // Easter, answered in full: "when is Easter in Egypt?" and "what is Coptic
+  // Easter?" are asked every spring, in every language the site speaks. The
+  // dates are computed (data/easter.ts) and the answers are the page's own.
+  {
+    const easter = collectionsByPriority.find((c) => c.slug === "easter-in-egypt");
+    if (easter) {
+      h(2, "Easter in Egypt: the dates and the answers");
+      p(`${clean(easter.shortSummary)} ${u("collections/easter-in-egypt.html")}`);
+      const dm = (iso: string) => fmtDay(iso, "en-GB", { day: "numeric", month: "long" });
+      for (const y of EASTER_YEARS) {
+        L.push(`- **${y.year}:** ${y.same ? `Western and Coptic Orthodox Easter together on ${dm(y.western)}` : `Western Easter ${dm(y.western)}; Coptic Orthodox Easter ${dm(y.orthodox)}`}; Sham El-Nessim (national holiday) ${dm(y.sham)}.`);
+      }
+      L.push("");
+      for (const f of easter.faqs ?? []) p(`**${f.q}** ${f.a}`);
+      const g = TRANSLATION_GROUPS.find((x) => x.key === "easter");
+      if (g) p(`The page in every language: ${Object.entries(g).filter(([k]) => k !== "key").map(([k, v]) => `${k} ${u(String(v))}`).join(" · ")}.`);
+    }
+  }
 
   h(2, "Journeys planned around an occasion");
   for (const o of occasions) {

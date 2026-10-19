@@ -350,7 +350,7 @@ export const ru: LocalizedPage[] = [
       whatsapp: "Здравствуйте, Kemet — когда лучше ехать в Египет?",
       emailSubject: "Вопрос — когда ехать в Египет",
     },
-    links: beforeDate(ECLIPSE_2027, [{ label: "Солнечное затмение 2027 в Луксоре", route: "ru/solnechnoe-zatmenie-2027-luksor.html" }]),
+    links: [{ label: "Пасха в Египте", route: "ru/pasha-v-egipte.html" }, ...beforeDate(ECLIPSE_2027, [{ label: "Солнечное затмение 2027 в Луксоре", route: "ru/solnechnoe-zatmenie-2027-luksor.html" }])],
     moreLabel: "Гид по месяцам",
     moreText:
       "Подробный разбор каждого из двенадцати месяцев — температуры, загруженность, цены и праздники — опубликован на английском на основном сайте.",

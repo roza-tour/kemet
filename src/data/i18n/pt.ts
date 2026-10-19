@@ -349,7 +349,7 @@ export const pt: LocalizedPage[] = [
     moreLabel: "Os doze meses em detalhe",
     moreText:
       "Um detalhamento de cada mês — temperaturas, movimento, preços e veredito — está disponível em inglês.",
-    links: [{ label: "Carnaval no Egito", route: "pt/carnaval-no-egito.html" }, ...beforeDate(ECLIPSE_2027, [{ label: "Eclipse solar de 2027 em Luxor", route: "pt/eclipse-solar-2027-luxor.html" }])],
+    links: [{ label: "Carnaval no Egito", route: "pt/carnaval-no-egito.html" }, { label: "Páscoa no Egito", route: "pt/pascoa-no-egito.html" }, ...beforeDate(ECLIPSE_2027, [{ label: "Eclipse solar de 2027 em Luxor", route: "pt/eclipse-solar-2027-luxor.html" }])],
   },
 
   // ===== É seguro? =========================================================

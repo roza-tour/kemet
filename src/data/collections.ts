@@ -9,7 +9,7 @@
 import type { Collection } from "@/types";
 import { tours as allTours } from "@/data/tours";
 import { christmasLanding } from "@/data/landing/christmas";
-import { EASTER, EASTER_Y, EASTER_YEARS, fmtDay, fmtDayMonth } from "@/data/easter";
+import { EASTER, EASTER_Y, EASTER_YEARS, EASTER_ABOUT, fmtDay, fmtDayMonth } from "@/data/easter";
 import { findMonth } from "@/data/months";
 
 // Read from the journeys, not typed here: the flight-version difference, and
@@ -1017,6 +1017,7 @@ export const collections: Collection[] = [
       { src: "/images/stock/kahk-easter-biscuits.webp", alt: "Kahk and biscuits, the pastries baked for Easter and Eid", label: "Kahk", width: 1024, height: 640 },
     ],
     theme: "easter",
+    schemaAbout: EASTER_ABOUT,
     lastReviewed: "2026-10",
     relationships: {
       tours: tour(

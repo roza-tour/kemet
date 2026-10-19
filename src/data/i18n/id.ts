@@ -359,7 +359,7 @@ export const id: LocalizedPage[] = [
       whatsapp: "Halo Kemet — kapan waktu terbaik ke Mesir?",
       emailSubject: "Pertanyaan — waktu terbaik ke Mesir",
     },
-    links: beforeDate(ECLIPSE_2027, [{ label: "Gerhana matahari 2027 di Luxor", route: "id/gerhana-matahari-2027-luxor.html" }]),
+    links: [{ label: "Paskah di Mesir", route: "id/paskah-di-mesir.html" }, ...beforeDate(ECLIPSE_2027, [{ label: "Gerhana matahari 2027 di Luxor", route: "id/gerhana-matahari-2027-luxor.html" }])],
     moreLabel: "Panduan bulan per bulan",
     moreText:
       "Panduan rinci untuk kedua belas bulan — suhu, keramaian, harga dan hari besar — diterbitkan dalam Bahasa Inggris di situs utama.",

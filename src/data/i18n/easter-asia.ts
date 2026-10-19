@@ -35,7 +35,7 @@
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
 import type { MediaPlaceholder } from "@/types/primitives";
-import { EASTER, EASTER_Y, fmtDay, fmtDayMonth } from "@/data/easter";
+import { EASTER, EASTER_Y, fmtDay, fmtDayMonth, EASTER_ABOUT } from "@/data/easter";
 import { findMonth } from "@/data/months";
 
 /** The English original, linked from both editions' "more" line. */
@@ -89,6 +89,7 @@ export const idEaster: LocalizedPage = {
   groupId: "standalone-id-easter",
   symbol: "lotus",
   theme: "easter",
+  schemaAbout: EASTER_ABOUT,
   title: `Paskah di Mesir ${Y}: Paskah Koptik & Pekan Suci | Kemet`,
   description: EASTER.same
     ? `Paskah di Mesir ${Y}: Paskah Barat dan Koptik bersamaan pada ${idD(EASTER.orthodox)}, Sham El-Nessim ${idD(EASTER.sham)}. Pekan Suci di Kairo Lama, cuaca, dan kapan memesan.`
@@ -230,6 +231,7 @@ export const msEaster: LocalizedPage = {
   groupId: "standalone-ms-easter",
   symbol: "lotus",
   theme: "easter",
+  schemaAbout: EASTER_ABOUT,
   title: `Easter di Mesir ${Y}: Easter Koptik & Minggu Suci | Kemet`,
   description: EASTER.same
     ? `Easter di Mesir ${Y}: Easter Barat dan Koptik serentak pada ${msD(EASTER.orthodox)}, Sham El-Nessim ${msD(EASTER.sham)}. Minggu Suci di Kaherah Lama, cuaca dan bila perlu menempah.`

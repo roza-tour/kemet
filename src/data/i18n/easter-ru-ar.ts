@@ -36,7 +36,7 @@
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
 import type { MediaPlaceholder } from "@/types/primitives";
-import { EASTER, EASTER_Y, fmtDay, fmtDayMonth } from "@/data/easter";
+import { EASTER, EASTER_Y, fmtDay, fmtDayMonth, EASTER_ABOUT } from "@/data/easter";
 import { findMonth } from "@/data/months";
 
 /** The English original, linked from both editions' "more" line. */
@@ -108,6 +108,7 @@ export const ruEaster: LocalizedPage = {
   groupId: "standalone-ru-easter",
   symbol: "lotus",
   theme: "easter",
+  schemaAbout: EASTER_ABOUT,
   title: `Пасха в Египте ${Y}: коптская Пасха и Шам эль-Нессим | Kemet`,
   description: SAME
     ? `Пасха в Египте ${Y}: западная и православная в один день — ${ruDM(O)}, Шам эль-Нессим — ${ruDM(S)}. Страстная неделя в Каире, погода и бронирование.`
@@ -240,6 +241,7 @@ export const arEaster: LocalizedPage = {
   groupId: "standalone-ar-easter",
   symbol: "lotus",
   theme: "easter",
+  schemaAbout: EASTER_ABOUT,
   title: `عيد الفصح في مصر ${AR_Y}: عيد القيامة وشم النسيم | كيميت`,
   description: SAME
     ? `عيد الفصح في مصر ${AR_Y}: الفصح الغربي والشرقي معاً يوم ${arDM(O)}، وشم النسيم ${arDM(S)}. أسبوع الآلام في القاهرة، والطقس، والحجز.`

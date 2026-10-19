@@ -336,7 +336,7 @@ export const es: LocalizedPage[] = [
       whatsapp: "Buenos días Kemet — quisiera consejo sobre cuándo viajar a Egipto.",
       emailSubject: "Consulta — mejor época para viajar a Egipto",
     },
-    links: beforeDate(ECLIPSE_2027, [{ label: "Eclipse solar 2027 en Luxor", route: "es/eclipse-solar-2027-luxor.html" }]),
+    links: [{ label: "Semana Santa en Egipto", route: "es/semana-santa-en-egipto.html" }, ...beforeDate(ECLIPSE_2027, [{ label: "Eclipse solar 2027 en Luxor", route: "es/eclipse-solar-2027-luxor.html" }])],
     moreLabel: "Los doce meses en detalle",
     moreText:
       "Un desglose detallado de cada mes — temperaturas, afluencia, precios y veredicto — está disponible en inglés.",

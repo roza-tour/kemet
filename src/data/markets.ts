@@ -199,7 +199,7 @@ export const sourceMarkets: SourceMarket[] = [
     searchLanguage: "en",
     season: "October to April, concentrated on half-term, Christmas and Easter.",
     why: "Searches in English, so it lands on the complete site rather than a seven-page summary — and it is a long-established market for guided Nile travel at the top of the range.",
-    pages: ["guides/egypt-from-uk-ireland.html", "guides/egypt-half-term-uk.html"],
+    pages: ["guides/egypt-from-uk-ireland.html", "guides/egypt-half-term-uk.html", "collections/easter-in-egypt.html"],
     interests: [
       "Nonstop flights to Cairo from Heathrow (British Airways and EgyptAir) and Manchester, with Birmingham from late October 2026",
       "Half-term, Christmas and Easter dates",
@@ -213,7 +213,7 @@ export const sourceMarkets: SourceMarket[] = [
     searchLanguage: "de",
     season: "October to April for the Nile Valley; the Red Sea runs year-round.",
     why: "Buys guided cultural travel rather than independent itineraries, plans a long way ahead, and reads detail before booking — which is what this site is built to provide.",
-    pages: ["de/index.html", "de/weihnachten-in-aegypten.html"],
+    pages: ["de/index.html", "de/weihnachten-in-aegypten.html", "de/ostern-in-aegypten.html"],
     interests: [
       "Egyptologists from our own team who guide in German",
       "The Nile Valley from October to April, the Red Sea all year",
@@ -226,7 +226,7 @@ export const sourceMarkets: SourceMarket[] = [
     searchLanguage: "fr",
     season: "October to April, with the Toussaint and February school holidays falling inside the good season.",
     why: "A deep-rooted Egyptology audience — this is the market that produced Champollion and fills the Louvre's Egyptian galleries — and it expects a guide who is a specialist rather than an escort.",
-    pages: ["fr/index.html", "fr/toussaint-en-egypte.html", "fr/noel-et-nouvel-an-en-egypte.html"],
+    pages: ["fr/index.html", "fr/toussaint-en-egypte.html", "fr/noel-et-nouvel-an-en-egypte.html", "fr/paques-en-egypte.html"],
     interests: [
       "Egyptologists from our own team who guide in French",
       "The Toussaint and February school holidays, Christmas and New Year",
@@ -239,7 +239,7 @@ export const sourceMarkets: SourceMarket[] = [
     searchLanguage: "it",
     season: "October to April, plus Easter and short spring breaks.",
     why: "The shortest flight of any major Western European market, which makes shorter high-quality trips realistic rather than a compromise.",
-    pages: ["it/index.html", "it/natale-e-capodanno-in-egitto.html", "it/ferragosto-in-egitto.html"],
+    pages: ["it/index.html", "it/natale-e-capodanno-in-egitto.html", "it/ferragosto-in-egitto.html", "it/pasqua-in-egitto.html"],
     interests: [
       "Egyptologists from our own team who guide in Italian",
       "The shortest flight to Cairo from Western Europe",
@@ -265,7 +265,7 @@ export const sourceMarkets: SourceMarket[] = [
     searchLanguage: "pt",
     season: "October to April, with Easter and the Christmas break as the peaks.",
     why: "Reads the Portuguese pages written for Brazil — the same language, with European flight times a short hop away.",
-    pages: ["pt/index.html"],
+    pages: ["pt/index.html", "pt/pascoa-no-egito.html"],
     interests: [
       "Egyptologists from our own team who guide in Portuguese",
       "Easter and the Christmas break",
@@ -290,7 +290,7 @@ export const sourceMarkets: SourceMarket[] = [
     searchLanguage: "de",
     season: "October to April.",
     why: "Reached by the same German-language material as Germany and Switzerland, with the same preference for guided cultural travel.",
-    pages: ["de/index.html", "de/weihnachten-in-aegypten.html"],
+    pages: ["de/index.html", "de/weihnachten-in-aegypten.html", "de/ostern-in-aegypten.html"],
     interests: [
       "Egyptologists from our own team who guide in German",
       "The Nile Valley from October to April, the Red Sea all year",
@@ -327,7 +327,7 @@ export const sourceMarkets: SourceMarket[] = [
     searchLanguage: "en",
     season: "October to April.",
     why: "English-searching, and reaches Egypt on one stop — the full site serves it with no additional work.",
-    pages: ["guides/egypt-from-uk-ireland.html"],
+    pages: ["guides/egypt-from-uk-ireland.html", "collections/easter-in-egypt.html"],
     interests: [
       "One stop to Cairo",
       "The Nile Valley from October to April",
@@ -379,7 +379,7 @@ export const sourceMarkets: SourceMarket[] = [
     searchLanguage: "ru",
     season: "Year-round on the Red Sea; New Year is the peak fortnight.",
     why: "A very large market that arrives almost entirely on all-inclusive resort packages. The opportunity is not the volume — it is the minority within it that wants the Nile Valley done properly, and that minority searches in Russian and finds almost nothing written for it.",
-    pages: ["ru/index.html", "ru/novyy-god-v-egipte.html"],
+    pages: ["ru/index.html", "ru/novyy-god-v-egipte.html", "ru/pasha-v-egipte.html"],
     interests: [
       "Egyptologists from our own team who guide in Russian",
       "The Nile Valley done properly, beyond the Red Sea resorts",
@@ -430,7 +430,7 @@ export const sourceMarkets: SourceMarket[] = [
     searchLanguage: "en",
     season: "October to April, with a distinct spring-break and Thanksgiving pattern.",
     why: "The single most important market for the top of the range: it books private guiding as the default, plans a year ahead for the best boats, and expects the itinerary in writing before it commits — all of which this site is designed around.",
-    pages: ["guides/egypt-from-usa-canada.html", "guides/thanksgiving-spring-break-egypt.html"],
+    pages: ["guides/egypt-from-usa-canada.html", "guides/thanksgiving-spring-break-egypt.html", "collections/easter-in-egypt.html"],
     interests: [
       "Nonstop EgyptAir flights to Cairo from New York JFK, Newark and Washington Dulles",
       "Thanksgiving, Christmas and spring break — Egypt's best weather",
@@ -461,7 +461,7 @@ export const sourceMarkets: SourceMarket[] = [
     searchLanguage: "pt",
     season: "December to February and the July school holidays; Carnival and Easter are the peak windows.",
     why: "A large long-haul market that buys guided, fully arranged travel and reaches Cairo on one stop through the Gulf, Istanbul or Addis Ababa. Searches in Portuguese, and finds very little written for it at this level.",
-    pages: ["pt/viajar-ao-egito-saindo-do-brasil.html", "pt/carnaval-no-egito.html", "pt/index.html"],
+    pages: ["pt/viajar-ao-egito-saindo-do-brasil.html", "pt/carnaval-no-egito.html", "pt/index.html", "pt/pascoa-no-egito.html"],
     interests: [
       "Egyptologists from our own team who guide in Portuguese",
       "Carnival, Easter, December to February and the July school holidays",
@@ -602,7 +602,7 @@ export const sourceMarkets: SourceMarket[] = [
     season: "School holidays and the Raya period; often attached to an Umrah.",
     why: "Frequently combines Egypt with travel to Saudi Arabia, and looks for Islamic Cairo alongside the pharaonic sites — a different itinerary from the European one, and one worth being explicit about.",
     alsoReads: ["en"],
-    pages: ["ms/index.html", "ms/umrah-plus-mesir.html", "ms/ziarah-kaherah-islam.html"],
+    pages: ["ms/index.html", "ms/umrah-plus-mesir.html", "ms/ziarah-kaherah-islam.html", "ms/easter-di-mesir.html"],
     interests: [
       "Egyptologists from our own team who guide in Malay",
       "Egypt after or before an Umrah",
@@ -616,7 +616,7 @@ export const sourceMarkets: SourceMarket[] = [
     searchLanguage: "id",
     season: "June–July school holidays and the Lebaran period; often attached to an Umrah.",
     why: "Same itinerary shape as Malaysia and the same Umrah pattern.",
-    pages: ["id/index.html", "id/umrah-plus-mesir.html", "id/ziarah-kairo-islam.html"],
+    pages: ["id/index.html", "id/umrah-plus-mesir.html", "id/ziarah-kairo-islam.html", "id/paskah-di-mesir.html"],
     interests: [
       "Egyptologists from our own team who guide in Indonesian",
       "Egypt after or before an Umrah",

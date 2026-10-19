@@ -18,6 +18,7 @@
 // each of which formats the dates in its own language with fmtDay().
 // ---------------------------------------------------------------------------
 import { westernEasterDay, orthodoxEasterDay } from "@/data/seasonalCalendar";
+import type { SchemaThing } from "@/types";
 
 const DAY = 86_400_000;
 /** An ISO day moved by `n` days. */
@@ -76,3 +77,15 @@ export const fmtDay = (
 ) => new Date(`${iso}T12:00:00Z`).toLocaleDateString(locale, { timeZone: "UTC", ...opts });
 /** Day and month only: "2 May", "2. Mai". */
 export const fmtDayMonth = (iso: string, locale: string) => fmtDay(iso, locale, { day: "numeric", month: "long" });
+
+/**
+ * What every Easter page is about, for its structured data: the feast, the
+ * festival, the church and its best-known building in Cairo, each identified by
+ * its encyclopedia page so search and answer engines tie the page to them.
+ */
+export const EASTER_ABOUT: SchemaThing[] = [
+  { type: "Thing", name: "Easter", sameAs: "https://en.wikipedia.org/wiki/Easter" },
+  { type: "Thing", name: "Sham El-Nessim", sameAs: "https://en.wikipedia.org/wiki/Sham_Ennessim" },
+  { type: "Organization", name: "Coptic Orthodox Church", sameAs: "https://en.wikipedia.org/wiki/Coptic_Orthodox_Church" },
+  { type: "Church", name: "The Hanging Church, Cairo", sameAs: "https://en.wikipedia.org/wiki/Hanging_Church" },
+];

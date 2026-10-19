@@ -127,7 +127,9 @@ export const STANDALONE_PAGES: StandalonePage[] = [
   // Friday long weekend in Indonesia. The English original is
   // collections/easter-in-egypt.html; Spanish keeps its Semana Santa page
   // (eu-holidays.ts). Dates from data/easter.ts. The seasonal ribbon leads
-  // each language here from January to Easter Monday.
+  // each language here from January to Easter Monday. Unlike the other pages
+  // in this file, these ten DO form an hreflang cluster: every locale has one,
+  // so they are grouped as "easter" in config/translation-groups.json.
   { locale: "de", slug: "ostern-in-aegypten", page: deEaster },
   { locale: "fr", slug: "paques-en-egypte", page: frEaster },
   { locale: "it", slug: "pasqua-in-egitto", page: itEaster },

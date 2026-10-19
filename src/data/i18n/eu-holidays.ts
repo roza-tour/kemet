@@ -31,6 +31,7 @@
 // established; it is followed here rather than reinvented.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { EASTER_ABOUT } from "@/data/easter";
 import { tours } from "@/data/tours";
 import { findMonth } from "@/data/months";
 import { weihnachtenLanding, SEASON_Y } from "@/data/landing/christmas-de";
@@ -180,6 +181,7 @@ export const esSemanaSanta: LocalizedPage = {
   groupId: "standalone-es-semanasanta",
   symbol: "lotus",
   theme: "easter",
+  schemaAbout: EASTER_ABOUT,
   title: `Semana Santa en Egipto ${SS_Y} — viajes privados | Kemet`,
   description:
     `Semana Santa ${SS_Y} en Egipto: del ${esDate(PALM)} al ${esDate(EASTER)}, con ${ssMonth.temps.luxor} en Luxor. Itinerarios privados con precio y qué reservar con antelación.`,

@@ -336,7 +336,7 @@ export const de: LocalizedPage[] = [
       whatsapp: "Guten Tag Kemet — ich brauche Rat, wann ich am besten nach Ägypten reise.",
       emailSubject: "Frage — beste Reisezeit Ägypten",
     },
-    links: beforeDate(ECLIPSE_2027, [{ label: "Sonnenfinsternis 2027 in Luxor", route: "de/sonnenfinsternis-2027-luxor.html" }]),
+    links: [{ label: "Ostern in Ägypten", route: "de/ostern-in-aegypten.html" }, ...beforeDate(ECLIPSE_2027, [{ label: "Sonnenfinsternis 2027 in Luxor", route: "de/sonnenfinsternis-2027-luxor.html" }])],
     moreLabel: "Alle zwölf Monate im Detail",
     moreText:
       "Eine ausführliche Aufschlüsselung jedes einzelnen Monats — mit Temperaturen, Andrang, Preisniveau und Urteil — steht auf Englisch zur Verfügung.",

@@ -157,6 +157,17 @@ export interface CollectionStory {
   photos?: MediaPlaceholder[];
 }
 
+/**
+ * What a page is about, for its structured data beyond "Egypt": the feast, the
+ * church, the festival — each with the encyclopedia page that identifies it,
+ * so search engines and answer engines tie the page to the right thing.
+ */
+export interface SchemaThing {
+  type: string;
+  name: string;
+  sameAs?: string;
+}
+
 /** A dates table (CollectionCalendar.astro). The first cell of a row is its label. */
 export interface CollectionCalendar {
   eyebrow: string;
@@ -389,6 +400,8 @@ export interface Collection extends ContentEntity {
    * The rows are computed by the data file, never typed.
    */
   calendar?: CollectionCalendar;
+  /** Extra subjects for the page's structured data (see SchemaThing). */
+  schemaAbout?: SchemaThing[];
   /**
    * Present only on a collection that is also a campaign destination. See
    * LandingPage: the page keeps its URL and all of its editorial content, and

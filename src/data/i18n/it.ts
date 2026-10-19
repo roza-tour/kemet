@@ -336,7 +336,7 @@ export const it: LocalizedPage[] = [
       whatsapp: "Buongiorno Kemet — vorrei un consiglio su quando andare in Egitto.",
       emailSubject: "Domanda — quando andare in Egitto",
     },
-    links: beforeDate(ECLIPSE_2027, [{ label: "Eclissi solare 2027 a Luxor", route: "it/eclissi-solare-2027-luxor.html" }]),
+    links: [{ label: "Pasqua in Egitto", route: "it/pasqua-in-egitto.html" }, ...beforeDate(ECLIPSE_2027, [{ label: "Eclissi solare 2027 a Luxor", route: "it/eclissi-solare-2027-luxor.html" }])],
     moreLabel: "Tutti e dodici i mesi in dettaglio",
     moreText:
       "Un'analisi dettagliata di ogni singolo mese — temperature, affluenza, prezzi e giudizio — è disponibile in inglese.",

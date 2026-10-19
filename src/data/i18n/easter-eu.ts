@@ -37,7 +37,7 @@
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
 import type { MediaPlaceholder } from "@/types/primitives";
-import { EASTER, EASTER_Y, fmtDay } from "@/data/easter";
+import { EASTER, EASTER_Y, fmtDay, EASTER_ABOUT } from "@/data/easter";
 import { findMonth } from "@/data/months";
 
 /** The English original, linked from every edition's "more" line. */
@@ -116,6 +116,7 @@ export const deEaster: LocalizedPage = {
   groupId: "standalone-de-easter",
   symbol: "lotus",
   theme: "easter",
+  schemaAbout: EASTER_ABOUT,
   title: `Ostern in Ägypten ${EASTER_Y}: koptisches Ostern & Termine | Kemet`,
   description: EASTER.same
     ? `Ostern ${EASTER_Y} in Ägypten: Alle Kirchen feiern am ${DE.C}, Sham El-Nessim folgt am ${DE.S}. Karwoche in Alt-Kairo, Wetter, Osterferien und Buchung.`
@@ -249,6 +250,7 @@ export const frEaster: LocalizedPage = {
   groupId: "standalone-fr-easter",
   symbol: "lotus",
   theme: "easter",
+  schemaAbout: EASTER_ABOUT,
   title: `Pâques en Égypte ${EASTER_Y} : Pâque copte, dates et conseils | Kemet`,
   description: EASTER.same
     ? `Pâques ${EASTER_Y} en Égypte : toutes les Églises fêtent le ${FR.C}, Sham El-Nessim suit le ${FR.S}. Semaine sainte au Vieux-Caire, météo, vacances, réservation.`
@@ -410,6 +412,7 @@ export const itEaster: LocalizedPage = {
   groupId: "standalone-it-easter",
   symbol: "lotus",
   theme: "easter",
+  schemaAbout: EASTER_ABOUT,
   title: `Pasqua in Egitto ${EASTER_Y}: Pasqua copta, date e consigli | Kemet`,
   description: EASTER.same
     ? `Pasqua ${EASTER_Y} in Egitto: tutte le Chiese festeggiano ${itIl(IT.C)}, Sham El-Nessim segue ${itIl(IT.S)}. Settimana Santa al Cairo, clima, ponti e prenotazioni.`
@@ -543,6 +546,7 @@ export const ptEaster: LocalizedPage = {
   groupId: "standalone-pt-easter",
   symbol: "lotus",
   theme: "easter",
+  schemaAbout: EASTER_ABOUT,
   title: `Páscoa no Egito ${EASTER_Y}: Páscoa copta, datas e dicas | Kemet`,
   description: EASTER.same
     ? `Páscoa ${EASTER_Y} no Egito: todas as igrejas celebram em ${PT.C}, e o Sham El-Nessim vem em ${PT.S}. Semana Santa no Cairo, clima, feriado e reservas.`

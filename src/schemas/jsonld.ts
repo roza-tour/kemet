@@ -63,6 +63,10 @@ const absolute = (path: string) => (path.startsWith("http") ? path : `${SITE_URL
  * graph (and an answer engine deciding whether a claim is attributable) can
  * actually accumulate trust against.
  */
+/** A page subject (types/content.ts → SchemaThing) as JSON-LD. */
+export const thingLd = (t: { type: string; name: string; sameAs?: string }): JsonLd =>
+  ({ "@type": t.type, name: t.name, ...(t.sameAs ? { sameAs: t.sameAs } : {}) });
+
 export function personSchema(expert: Expert = reviewer, standalone = false): JsonLd {
   return {
     ...(standalone ? { "@context": SCHEMA_CONTEXT } : {}),
@@ -532,7 +536,9 @@ export function collectionDetailSchema(col: Collection): JsonLd[] {
     url,
     isPartOf: { "@type": "WebSite", "@id": `${SITE_URL}#website`, name: site.name, url: SITE_URL },
     publisher: org,
-    about: { "@type": "Country", name: "Egypt" },
+    about: col.schemaAbout?.length
+      ? [{ "@type": "Country", name: "Egypt" }, ...col.schemaAbout.map(thingLd)]
+      : { "@type": "Country", name: "Egypt" },
     keywords: [
       ...(col.travelStyles ?? []),
       ...(col.seasons ?? []),

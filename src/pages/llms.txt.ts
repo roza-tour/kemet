@@ -276,6 +276,7 @@ export const GET: APIRoute = () => {
     home: "the home page", "private-access": "private access to monuments",
     journeys: "the journeys", "nile-cruise": "the Nile cruise",
     cost: "what it costs", "when-to-go": "when to go", safety: "whether Egypt is safe", ultra: "Kemet Ultra, the top tier",
+    easter: "Easter in Egypt",
   };
   const missing = TRANSLATION_GROUPS.filter((g) => !GROUP_NAME[g.key]);
   if (missing.length) throw new Error(`llms.txt: no name for translation group(s) ${missing.map((g) => g.key).join(", ")}`);
@@ -316,7 +317,11 @@ export const GET: APIRoute = () => {
   for (const loc of TRANSLATED_LOCALES) {
     lines.push(`### ${LOCALE_META[loc].endonym} (${loc})`);
     lines.push("");
+    // A group member that is also a standalone page (the Easter pages) is
+    // listed once, below, with its title and summary.
+    const standaloneHere = new Set(STANDALONE_PAGES.filter((x) => x.locale === loc).map(standaloneRoute));
     for (const g of TRANSLATION_GROUPS) {
+      if (standaloneHere.has(g[loc])) continue;
       lines.push(`- ${u(publicPath(g[loc]))}`);
     }
     // Pages written for this market only, with no English original.
