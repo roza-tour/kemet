@@ -191,14 +191,26 @@ h3{font-weight:400}
 .burger{display:none;background:none;border:0;color:var(--gold);font-size:var(--t-lg);cursor:pointer}
 
 /* HOME HERO — cinematic editorial */
-.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;overflow:hidden}
+/* The nav is fixed over the hero (86px, 70px on phones). The hero's content
+   sits at the bottom, so on a short screen it used to climb under the nav and
+   the eyebrow ran into the Contact button. The top padding keeps it clear of
+   the nav whatever the screen height; 100svh is the screen a phone actually
+   shows, without its browser bars. */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;padding-top:112px}
 .hero .bg{position:absolute;inset:0}
 .hero .bg img{width:100%;height:100%;object-fit:cover;transform-origin:55% 40%}
 .hero .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,8,5,.55) 0%,rgba(10,8,5,.15) 38%,rgba(10,8,5,.84) 88%),radial-gradient(120% 90% at 50% 20%,transparent 40%,rgba(10,8,5,.55) 100%)}
 .hero .hframe{position:absolute;inset:24px;border:1px solid rgba(217,180,90,.3);pointer-events:none;z-index:3}
-.hero-inner{position:relative;z-index:4;width:100%;padding:0 0 12vh;text-align:left}
+/* At least 160px below the buttons: the "Scroll" mark and the two footer lines sit
+   in that band, and on a laptop-height screen 12vh alone let them touch the buttons.
+   padding-bottom only: a shorthand here wiped out .wrap's side padding, and on
+   tablets and small laptops the hero text touched the left edge of the screen. */
+.hero-inner{position:relative;z-index:4;width:100%;padding-bottom:max(12vh,160px);text-align:left}
 .kicker{display:flex;align-items:center;gap:var(--s-4);margin-bottom:var(--s-5)}
 .kicker .kline{width:72px;height:1px;background:var(--gold);flex:0 0 auto}
+/* On the narrowest phones the rule and the eyebrow's wide tracking pushed
+   "Luxury Travel · Egypt" onto two lines; a shorter rule keeps it on one. */
+@media(max-width:400px){.kicker{gap:var(--s-3)}.kicker .kline{width:32px}.kicker .eyebrow{letter-spacing:.3em}}
 .hero h1{font-size:clamp(3rem,7.6vw,6.8rem);line-height:1.03;color:var(--bone)}
 .hero h1 em{font-style:italic;font-family:'Cormorant Garamond',serif;color:var(--gold-bright);font-weight:300}
 .lede{max-width:560px;margin:var(--s-5) 0 0;color:var(--muted);font-size:var(--t-base);font-weight:300;line-height:1.85}
@@ -720,6 +732,7 @@ footer{background:var(--ink-2);border-top:1px solid var(--line);padding:var(--s-
   .custom-trip-inner{grid-template-columns:1fr}
   .custom-trip-cta{flex-direction:column}
   .custom-trip-cta .btn{width:100%}
+  .hero{padding-top:92px}
   .hero-inner{padding-bottom:16vh}
   .hero .hfoot{padding:0 var(--s-4) var(--s-5)}
   .dpost{flex:0 0 270px}
