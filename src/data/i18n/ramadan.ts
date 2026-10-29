@@ -70,7 +70,7 @@ export const deRamadan: LocalizedPage = {
     { label: "Ramadan 2027", value: "voraussichtlich 8. Februar – 8. März" },
     { label: "Eid al-Fitr", value: "um den 9.–11. März 2027" },
     { label: "Kairo tagsüber", value: "20–26 °C" },
-    { label: "Monumente", value: "geöffnet, teils kürzere Nachmittagszeiten" },
+    { label: "Monumente", value: "geöffnet, teils kürzere Nachmittags\u00ADzeiten" },
   ],
   sections: [
     {

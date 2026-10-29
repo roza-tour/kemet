@@ -367,7 +367,7 @@ export const es: LocalizedPage[] = [
       { label: "Emergencias", value: "Policía 122 · Ambulancia 123 · Policía turística 126" },
       { label: "Agua del grifo", value: "No potable — embotellada en todas partes" },
       { label: "Molestia principal", value: "Vendedores insistentes · tráfico de El Cairo" },
-      { label: "Antes de reservar", value: "Consultar las recomendaciones oficiales" },
+      { label: "Antes de reservar", value: "Consultar las recomen\u00ADdaciones oficiales" },
     ],
     sections: [
       {
