@@ -728,6 +728,8 @@ export const tours: Tour[] = [
     excluded: [
       ...dayExcluded.slice(0, 1),
       "Entry inside the pyramid chambers (optional extra)",
+      "Private golf cart around the plateau (optional extra)",
+      "Private opening of the Tutankhamun galleries, an hour and a half (optional extra)",
       ...dayExcluded.slice(1),
     ],
     faqs: [
@@ -742,6 +744,14 @@ export const tours: Tour[] = [
       {
         q: "How much walking does this day involve?",
         a: "A moderate amount across the plateau and through the museum galleries. We take it at your pace with rests in the shade.",
+      },
+      {
+        q: "Can we see the Tutankhamun galleries privately?",
+        a: "Yes, as an optional extra: the Tutankhamun galleries are opened for your party alone for an hour and a half, with no other visitors among the boy-king's treasure. Mention it when you enquire, so it can be arranged for your date.",
+      },
+      {
+        q: "Can we get around the plateau by golf cart?",
+        a: "Yes, as a private optional extra. A golf cart for your party alone carries you around the plateau instead of walking the long stretches between the monuments — welcome with young children, for older travellers, or in the midday heat.",
       },
     ],
     order: 6,
@@ -1109,6 +1119,7 @@ export const tours: Tour[] = [
       ...dayExcluded.slice(0, 1),
       "Lunch (half-day tour)",
       "Camel or horse rides (optional extra)",
+      "Private golf cart around the plateau (optional extra)",
       ...baseExcluded.filter((x) => !x.startsWith("Optional extras")),
       "Other optional extras — dinner cruise, drinks",
     ],
@@ -1124,6 +1135,10 @@ export const tours: Tour[] = [
       {
         q: "Can we go inside a pyramid?",
         a: "Interior entry is available as an optional extra for the Great Pyramid or one of the smaller pyramids, subject to the daily ticket allocation.",
+      },
+      {
+        q: "Can we get around the plateau by golf cart?",
+        a: "Yes, as a private optional extra. A golf cart for your party alone carries you around the plateau instead of walking the long stretches between the monuments — welcome with young children, for older travellers, or in the midday heat.",
       },
     ],
     order: 11,

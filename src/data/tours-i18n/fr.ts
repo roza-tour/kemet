@@ -856,6 +856,7 @@ export const fr: TourText[] = [
       { q: "Pourquoi la demi-journée plutôt que la journée ?", a: "Elle est idéale un jour d'arrivée ou de départ, ou quand vous voulez les pyramides sans musée. Pour y ajouter le Grand Musée égyptien, choisissez notre journée Gizeh & Grand Musée." },
       { q: "Peut-on monter à dos de chameau ?", a: "Oui — les promenades à dos de chameau ou à cheval sont proposées en option sur le plateau. Votre guide vous aidera à convenir d'un prix juste sur place." },
       { q: "Peut-on entrer dans une pyramide ?", a: "L'entrée à l'intérieur est proposée en option pour la grande pyramide ou pour l'une des plus petites, dans la limite du quota de billets du jour." },
+      { q: "Peut-on parcourir le plateau en voiturette de golf ?", a: "Oui, en option privée. Une voiturette de golf réservée à votre groupe vous conduit sur le plateau, au lieu de parcourir à pied les longues distances entre les monuments — appréciable avec de jeunes enfants, pour les voyageurs âgés ou sous la chaleur de midi." },
     ],
   },
 
@@ -883,6 +884,8 @@ export const fr: TourText[] = [
       { q: "Peut-on entrer dans la grande pyramide ?", a: "Oui, en option. Un nombre limité de billets est vendu chaque jour pour les chambres intérieures ; nous pouvons en obtenir un sur demande, selon disponibilité." },
       { q: "Le Grand Musée égyptien est-il entièrement ouvert ?", a: "Les galeries principales, le grand escalier et la collection de Toutânkhamon sont ouverts au public. Votre guide se concentre sur les pièces essentielles pour que l'après-midi ne soit jamais précipité." },
       { q: "Faut-il beaucoup marcher ?", a: "Modérément, sur le plateau puis dans les galeries du musée. Nous avançons à votre rythme, avec des pauses à l'ombre." },
+      { q: "Peut-on voir les salles de Toutânkhamon en privé ?", a: "Oui, en option : les salles de Toutânkhamon sont ouvertes pour votre seul groupe pendant une heure et demie, sans aucun autre visiteur parmi les trésors du roi enfant. Précisez-le dans votre demande, afin que nous l'organisions pour votre date." },
+      { q: "Peut-on parcourir le plateau en voiturette de golf ?", a: "Oui, en option privée. Une voiturette de golf réservée à votre groupe vous conduit sur le plateau, au lieu de parcourir à pied les longues distances entre les monuments — appréciable avec de jeunes enfants, pour les voyageurs âgés ou sous la chaleur de midi." },
     ],
   },
 

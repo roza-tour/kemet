@@ -134,7 +134,9 @@ export const venues: Venue[] = [
       "Galleries can be closed to the public and held for one party, which means " +
       "the Tutankhamun rooms — five thousand objects, the whole burial assemblage " +
       "together for the first time — walked at your own pace with a curator rather " +
-      "than a guide. The grand staircase alone takes a reception of some size.",
+      "than a guide. The grand staircase alone takes a reception of some size. " +
+      "For a few guests, the Tutankhamun galleries alone can be opened privately " +
+      "for an hour and a half.",
     facts: [
       { label: "When", value: "After public closing" },
       { label: "Party", value: "A private viewing, or a reception on the grand staircase" },
@@ -310,5 +312,6 @@ export const VENUE_ANSWER =
   "does not take a booking until the permit is granted. The Great Pyramid can be opened " +
   "after public closing for two uninterrupted hours; the Giza plateau can be entered before " +
   "the gates open; dinner can be laid inside the precinct at Karnak for up to around two " +
-  "hundred; and galleries at the Grand Egyptian Museum can be closed for a private viewing. " +
+  "hundred; and galleries at the Grand Egyptian Museum can be closed for a private viewing, " +
+  "among them the Tutankhamun galleries, opened for one party for an hour and a half. " +
   "Lead times run from several weeks to several months depending on the site.";

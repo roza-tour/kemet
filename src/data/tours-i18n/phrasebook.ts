@@ -253,6 +253,10 @@ const de: TourPhrasebook = {
       "Mittagessen (Rückkehr nach Assuan am frühen Nachmittag)",
     "Camel or horse rides (optional extra)":
       "Kamel- oder Pferderitte (optionale Zusatzleistung)",
+    "Private golf cart around the plateau (optional extra)":
+      "Privates Golfcart auf dem Plateau (optionale Zusatzleistung)",
+    "Private opening of the Tutankhamun galleries, an hour and a half (optional extra)":
+      "Private Öffnung der Tutanchamun-Säle, anderthalb Stunden (optionale Zusatzleistung)",
     "Other optional extras — dinner cruise, drinks":
       "Weitere optionale Zusatzleistungen — Dinner-Cruise, Getränke",
     "Food and drinks at each stop, paid directly to the venue":
@@ -427,6 +431,9 @@ const fr: TourPhrasebook = {
     "Lunch (returned to Aswan by early afternoon)":
       "Le déjeuner (retour à Assouan en début d'après-midi)",
     "Camel or horse rides (optional extra)": "Les promenades à dos de chameau ou à cheval (en option)",
+    "Private golf cart around the plateau (optional extra)": "Une voiturette de golf privée sur le plateau (en option)",
+    "Private opening of the Tutankhamun galleries, an hour and a half (optional extra)":
+      "L'ouverture privée des salles de Toutânkhamon, une heure et demie (en option)",
     "Other optional extras — dinner cruise, drinks":
       "Les autres options — dîner-croisière, boissons",
     "Food and drinks at each stop, paid directly to the venue": "Les plats et les boissons à chaque étape, réglés directement sur place",
@@ -604,6 +611,9 @@ const it: TourPhrasebook = {
     "Lunch (returned to Aswan by early afternoon)":
       "Il pranzo (rientro ad Assuan nel primo pomeriggio)",
     "Camel or horse rides (optional extra)": "I giri in cammello o a cavallo (supplemento facoltativo)",
+    "Private golf cart around the plateau (optional extra)": "Una golf car privata sulla piana (supplemento facoltativo)",
+    "Private opening of the Tutankhamun galleries, an hour and a half (optional extra)":
+      "L'apertura privata delle sale di Tutankhamon, un'ora e mezza (supplemento facoltativo)",
     "Other optional extras — dinner cruise, drinks":
       "Gli altri supplementi facoltativi — cena-crociera, bevande",
     "Food and drinks at each stop, paid directly to the venue": "Cibo e bevande a ogni tappa, pagati direttamente sul posto",

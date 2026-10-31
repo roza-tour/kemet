@@ -1382,6 +1382,10 @@ export const de: TourText[] = [
         q: "Kann man in eine Pyramide hineingehen?",
         a: "Der Zutritt ins Innere ist als Zusatzleistung für die Cheops-Pyramide oder eine der kleineren möglich, abhängig vom Tageskontingent an Tickets.",
       },
+      {
+        q: "Können wir das Plateau im Golfcart erkunden?",
+        a: "Ja, als private Zusatzleistung. Ein Golfcart nur für Ihre Gruppe bringt Sie über das Plateau, statt die langen Wege zwischen den Monumenten zu Fuß zu gehen — angenehm mit kleinen Kindern, für ältere Reisende oder in der Mittagshitze.",
+      },
     ],
   },
 
@@ -1434,6 +1438,14 @@ export const de: TourText[] = [
       {
         q: "Wie viel läuft man an diesem Tag?",
         a: "Ein mittleres Maß, über das Plateau und durch die Museumssäle. Wir gehen es in Ihrem Tempo an, mit Pausen im Schatten.",
+      },
+      {
+        q: "Kann man die Tutanchamun-Säle privat sehen?",
+        a: "Ja, als Zusatzleistung: Die Tutanchamun-Säle werden anderthalb Stunden lang nur für Ihre Gruppe geöffnet, ohne andere Besucher zwischen den Schätzen des Kindkönigs. Erwähnen Sie es bei Ihrer Anfrage, damit wir es für Ihr Reisedatum arrangieren.",
+      },
+      {
+        q: "Können wir das Plateau im Golfcart erkunden?",
+        a: "Ja, als private Zusatzleistung. Ein Golfcart nur für Ihre Gruppe bringt Sie über das Plateau, statt die langen Wege zwischen den Monumenten zu Fuß zu gehen — angenehm mit kleinen Kindern, für ältere Reisende oder in der Mittagshitze.",
       },
     ],
   },

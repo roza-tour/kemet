@@ -831,6 +831,7 @@ export const it: TourText[] = [
       { q: "Perché scegliere la mezza giornata invece dell'intera?", a: "È perfetta il giorno dell'arrivo o della partenza, o quando volete le piramidi senza un museo. Se volete anche il Grand Egyptian Museum, scegliete la nostra giornata intera Giza & Grand Museum." },
       { q: "Si può andare in cammello alle piramidi?", a: "Sì — giri in cammello e a cavallo sono disponibili sulla piana come extra facoltativo. La vostra guida vi aiuterà a concordare un prezzo giusto sul posto." },
       { q: "Si può entrare dentro una piramide?", a: "L'ingresso agli interni è disponibile come extra facoltativo per la Grande Piramide o per una delle piramidi minori, nei limiti dei biglietti disponibili ogni giorno." },
+      { q: "Si può girare la piana in golf car?", a: "Sì, come extra facoltativo privato. Una golf car riservata al vostro gruppo vi porta sulla piana, invece di percorrere a piedi i lunghi tratti tra i monumenti — comoda con bambini piccoli, per i viaggiatori più anziani o nel caldo di mezzogiorno." },
     ],
   },
   {
@@ -857,6 +858,8 @@ export const it: TourText[] = [
       { q: "Si può entrare nella Grande Piramide?", a: "Sì, come extra facoltativo. Ogni giorno viene venduto un numero limitato di biglietti per le camere interne; su richiesta ne riserviamo uno, in base alla disponibilità." },
       { q: "Il Grand Egyptian Museum è completamente aperto?", a: "Le gallerie principali, la grande scalinata e la collezione di Tutankhamon sono aperte al pubblico. La vostra guida si concentrerà sui capolavori, così il pomeriggio non risulta mai di corsa." },
       { q: "Quanto si cammina in questa giornata?", a: "In misura moderata, sulla piana e nelle gallerie del museo. Procediamo con i vostri tempi, con pause all'ombra." },
+      { q: "Si possono vedere le sale di Tutankhamon in privato?", a: "Sì, come extra facoltativo: le sale di Tutankhamon vengono aperte solo per il vostro gruppo per un'ora e mezza, senza altri visitatori tra i tesori del re bambino. Ditecelo al momento della richiesta, così lo organizziamo per la vostra data." },
+      { q: "Si può girare la piana in golf car?", a: "Sì, come extra facoltativo privato. Una golf car riservata al vostro gruppo vi porta sulla piana, invece di percorrere a piedi i lunghi tratti tra i monumenti — comoda con bambini piccoli, per i viaggiatori più anziani o nel caldo di mezzogiorno." },
     ],
   },
   {

@@ -78,6 +78,7 @@ export const experiences: Experience[] = [
     whatsExcluded: [
       "Interior pyramid entrance (optional, available on request at additional cost)",
       "Camel or horse rides",
+      "A private golf cart around the plateau (optional extra)",
       "Gratuities",
       "Hotel accommodation",
     ],
@@ -107,6 +108,10 @@ export const experiences: Experience[] = [
       {
         q: "Can we enter inside a pyramid?",
         a: "Interior access is available at an additional charge with a separate ticket. This must be requested in advance as daily entry numbers are strictly limited.",
+      },
+      {
+        q: "Can we get around the plateau by golf cart?",
+        a: "Yes, as a private optional extra. A golf cart for your party alone carries you around the plateau, so the long stretches between the monuments are ridden rather than walked — welcome with young children, for older travellers, or once the sun is high.",
       },
       {
         q: "What are the nine pyramids?",
@@ -743,7 +748,7 @@ export const experiences: Experience[] = [
     shortSummary:
       "The largest archaeological museum ever built, walked privately with an Egyptologist — Tutankhamun's complete treasure, the grand staircase and the solar boat.",
     longDescription:
-      "The Grand Egyptian Museum is too big to wander well. Its permanent galleries hold over 50,000 objects; the Tutankhamun collection alone — displayed complete for the first time since Carter opened the tomb in 1922 — runs to more than 5,000 pieces. Without structure, visitors drift; with a senior Egyptologist, the building becomes a narrative. This private tour moves through the museum in story order: the eleven-metre colossus of Ramesses II in the atrium, the grand staircase's procession of kings rising toward the pyramids framed in the window, the boy-king's gold in the sequence the tomb itself revealed, and Khufu's forty-four-metre solar boat — a real, 4,500-year-old ship built to carry a pharaoh through the afterlife. Timing is planned around the coach waves, and the pace is entirely yours.",
+      "The Grand Egyptian Museum is too big to wander well. Its permanent galleries hold over 50,000 objects; the Tutankhamun collection alone — displayed complete for the first time since Carter opened the tomb in 1922 — runs to more than 5,000 pieces. Without structure, visitors drift; with a senior Egyptologist, the building becomes a narrative. This private tour moves through the museum in story order: the eleven-metre colossus of Ramesses II in the atrium, the grand staircase's procession of kings rising toward the pyramids framed in the window, the boy-king's gold in the sequence the tomb itself revealed, and Khufu's forty-four-metre solar boat — a real, 4,500-year-old ship built to carry a pharaoh through the afterlife. Timing is planned around the coach waves, and the pace is entirely yours. For the closest look of all, the Tutankhamun galleries can be opened privately for your party: an hour and a half with the boy-king's treasure and no other visitors in the room.",
     category: "museum-visit",
     durationLabel: "4 hours",
     durationMinutes: 240,
@@ -766,6 +771,7 @@ export const experiences: Experience[] = [
       "Khufu's 4,500-year-old solar boat, forty-four metres of original cedar",
       "A senior Egyptologist who turns fifty thousand objects into one story",
       "Timed around the tour-coach waves; fully air-conditioned year-round",
+      "Optional: the Tutankhamun galleries opened privately for your party, for an hour and a half",
     ],
     keyFacts: [
       { label: "Duration", value: "4 hours" },
@@ -781,6 +787,7 @@ export const experiences: Experience[] = [
     ],
     whatsExcluded: [
       "Special exhibitions requiring separate tickets",
+      "Private opening of the Tutankhamun galleries (optional extra — an hour and a half, your party only)",
       "Lunch (the museum's restaurants are good; your guide will advise)",
       "Gratuities",
     ],
@@ -800,6 +807,10 @@ export const experiences: Experience[] = [
       {
         q: "Should we do the pyramids and the GEM on the same day?",
         a: "It is the natural pairing — plateau in the morning cool, museum in the climate-controlled afternoon. Our Giza & the Grand Museum day tour runs exactly that shape; this experience is the museum half on its own, for those pacing it differently.",
+      },
+      {
+        q: "Can we see Tutankhamun's treasure without the crowds?",
+        a: "Yes. As an optional extra, the Tutankhamun galleries are opened privately for your party for an hour and a half, with your Egyptologist and no other visitors among the boy-king's gold. Mention it when you enquire, so it can be arranged for your date.",
       },
     ],
     hero: {
