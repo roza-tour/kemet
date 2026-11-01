@@ -48,7 +48,7 @@ export const alwaysTrue: StandardPoint[] = [
     symbol: "sun",
     title: "One price, itemised",
     body:
-      "The quote lists what is included and what is not, line by line, before you commit. Your Egyptologist, private air-conditioned transfers and lunch on touring days are inside the price on every journey, and entrance fees are inside it on every multi-day one. Where something sits outside — monument tickets on a day tour, for instance — it is named on the page you are reading, at the rate the ticket office charges, not discovered at the end.",
+      "The quote lists what is included and what is not, line by line, before you commit. Your Egyptologist and private air-conditioned transfers are inside the price on every journey, and entrance fees are inside it on every multi-day one. Where something sits outside — monument tickets on a day tour, or meals, for instance — it is named on the page you are reading, at the rate the ticket office charges, not discovered at the end.",
   },
   {
     symbol: "scarab",

@@ -121,7 +121,7 @@ export const es: LocalizedPage[] = [
       {
         title: "Qué incluye el precio",
         body:
-          "Su egiptólogo titulado durante todo el viaje, todas las entradas, los traslados privados con aire acondicionado, la recogida y el regreso al hotel, el almuerzo en cada día de visita y agua a diario. No incluye: vuelos internacionales, visado de entrada, propinas, gastos personales y los extras expresamente indicados. Cada presupuesto detalla ambas listas antes de que se comprometan.",
+          "Su egiptólogo titulado durante todo el viaje, todas las entradas, los traslados privados con aire acondicionado, la recogida y el regreso al hotel y agua a diario. No incluye: vuelos internacionales, visado de entrada, propinas, comidas, gastos personales y los extras expresamente indicados. Cada presupuesto detalla ambas listas antes de que se comprometan.",
       },
       {
         title: "Por qué el precio por persona baja con el grupo",

@@ -138,7 +138,7 @@ export function tourAnswer(tour: {
   const places = list(tour.cities?.length ? tour.cities : tour.visiting.split(/\s*·\s*/));
   const when = tour.durationLabel.replace(/\s*\(.*\)$/, "").replace(/^(Full|Half) day$/i, (x) => x.replace(" ", "-"));
   const lead = m
-    ? `${tour.title} is a private ${m[1]}-day, ${m[2]}-night journey through ${places}, from ${formatPrice(tour.price)} per person.`
+    ? `${tour.title} is a private ${m[1]}-day, ${m[2]}-night journey through ${places}, from ${formatPrice(tour.price)} per person${tour.priceBasisPax ? ` for a party of ${tour.priceBasisPax} or more` : ""}.`
     : `${tour.title} is a private ${lower(when)} tour of ${places}, from ${formatPrice(tour.price)} per person${tour.priceBasisPax ? ` for a party of ${tour.priceBasisPax} or more` : ""}.`;
   const tickets = (tour.ticketsExcluded ? " Entrance tickets are paid at the gate." : "") +
     (tour.foodExcluded ? " Food and drinks are paid directly at each stop." : "");

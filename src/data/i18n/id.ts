@@ -133,7 +133,7 @@ export const id: LocalizedPage[] = [
       {
         title: "Yang sudah termasuk dalam harga",
         body:
-          "Egyptologist berlisensi selama seluruh perjalanan, seluruh tiket masuk, transfer privat ber-AC, penjemputan dan pengantaran hotel, makan siang pada hari kunjungan, dan air setiap hari. Tidak termasuk: tiket pesawat internasional, visa, tip, pengeluaran pribadi dan tambahan yang disebutkan tersendiri. Setiap penawaran mencantumkan kedua daftar itu sebelum Anda memutuskan.",
+          "Egyptologist berlisensi selama seluruh perjalanan, seluruh tiket masuk, transfer privat ber-AC, penjemputan dan pengantaran hotel, dan air setiap hari. Tidak termasuk: tiket pesawat internasional, visa, tip, makan, pengeluaran pribadi dan tambahan yang disebutkan tersendiri. Setiap penawaran mencantumkan kedua daftar itu sebelum Anda memutuskan.",
       },
       {
         title: "Berapa hari — apa adanya",

@@ -2,28 +2,22 @@
 // Kemet — tour catalogue. All 25 journeys live here; pages are rendered from
 // this data by src/pages/[slug].astro and listed on tours.html / index.html.
 //
-// PRICING NOTE: every `price` and `was` value is in EUR, per person.
+// PRICING NOTE: every `price` is in EUR, per person, for a private party of
+// six or more (PRICE_BASIS_PAX). Owner, 1 Nov 2026: no struck-through
+// reference prices, no meals in any programme, no hotel star rating.
 //
 // The base was the source-operator price marked up by +20%. On 23 September
 // 2026 every figure was raised a further 10%, so the markup over source now
 // compounds to +32%, not +30% — 1.20 × 1.10, not 1.20 + 0.10. Worth stating
 // because the two are easy to confuse and the difference is real money.
 //
-// The `was` values were raised by the same 10% rather than left alone. Leaving
-// them would have quietly widened every advertised discount, which is a claim
-// nobody made: the struck-through figure is a reference price, not a ceiling.
-// Every discount percentage is unchanged, and no `was` is now at or below its
-// own `price`.
 //
-// Where a `was` value exists it is shown struck-through.
-//
-// DAY TOURS are quoted on a different basis from the multi-day journeys, and
-// the difference is stated on the card, in the price block and in the
-// structured data rather than buried in an inclusion list:
+// Every journey states its basis on the card, in the price block and in the
+// structured data rather than burying it in an inclusion list:
 //   · `priceBasisPax: 6` — the per-person figure assumes a private party of
-//     six. A private Egyptologist and a private car cost the same for two as
-//     for six, so smaller parties are quoted individually, never averaged into
-//     a headline number we would have to walk back.
+//     six or more. A private Egyptologist and a private car cost the same for
+//     two as for six, so smaller parties are quoted individually, never
+//     averaged into a headline number we would have to walk back.
 //   · `ticketsExcluded: true` — monument and museum tickets are paid at the
 //     published gate rate with nothing added. Egypt raises them mid-season and
 //     we would rather charge them at cost than pad the price to absorb the risk.
@@ -39,7 +33,6 @@ import type { Tour } from "@/types";
 const baseIncluded = [
   "Private Egyptologist guide throughout",
   "All entrance fees to sites and monuments",
-  "Lunch on each touring day",
   "Private air-conditioned transfers",
   "Hotel pickup & drop-off",
   "Bottled water every day",
@@ -50,6 +43,7 @@ const baseExcluded = [
   "Egypt entry visa",
   "Tipping (gratuities)",
   "Personal expenses",
+  "Meals",
   // Generic on purpose: this list is shared by every journey, including the
   // ones that already include Abu Simbel and the Red Sea trips nowhere near it.
   "Optional extras you choose to add — activities, drinks",
@@ -72,8 +66,8 @@ const TICKETS_LINE =
 const dayIncluded = baseIncluded.filter((x) => !x.startsWith("All entrance fees"));
 const dayExcluded = [TICKETS_LINE, ...baseExcluded];
 
-/** Party size every published day-tour price is based on. */
-const DAY_PRICE_PAX = 6;
+/** Party size every published price is based on. */
+const PRICE_BASIS_PAX = 6;
 
 export const tours: Tour[] = [
   // ========================= MULTI-DAY =====================================
@@ -105,7 +99,7 @@ export const tours: Tour[] = [
     visiting: "Cairo · Giza · Alexandria · Aswan · Luxor",
     isPrivate: sharedShipNote,
     price: 1915,
-    was: 2489,
+    priceBasisPax: PRICE_BASIS_PAX,
     summary:
       "Our signature journey: Cairo, Alexandria, a sleeper train south, and a three-night Nile cruise from Aswan to Luxor — every layer of Egypt in one arc.",
     overview:
@@ -223,8 +217,8 @@ export const tours: Tour[] = [
     },
     included: [
       ...baseIncluded.slice(0, 1),
-      "9 nights' accommodation — 4- or 5-star hotels and a deluxe Nile cruise",
-      "3-night full-board Nile cruise, Aswan to Luxor",
+      "9 nights' accommodation — hotels and a Nile cruise",
+      "3-night Nile cruise, Aswan to Luxor",
       "Sleeper-train berths Cairo–Upper Egypt (both directions)",
       ...baseIncluded.slice(1),
     ],
@@ -277,7 +271,7 @@ export const tours: Tour[] = [
     visiting: "Cairo · Giza · Alexandria · Luxor",
     isPrivate: privateNote,
     price: 1179,
-    was: 1531,
+    priceBasisPax: PRICE_BASIS_PAX,
     summary:
       "The headline acts of Egypt in seven days — the Egyptian Museum, Alexandria, the temples and tombs of Luxor, and the Pyramids of Giza.",
     overview:
@@ -364,7 +358,7 @@ export const tours: Tour[] = [
     },
     included: [
       ...baseIncluded.slice(0, 1),
-      "6 nights' accommodation in 4- or 5-star hotels",
+      "6 nights' hotel accommodation",
       "Sleeper-train berths Cairo–Luxor (both directions)",
       ...baseIncluded.slice(1),
     ],
@@ -411,7 +405,7 @@ export const tours: Tour[] = [
     visiting: "Cairo · Giza · Alexandria",
     isPrivate: privateNote,
     price: 618,
-    was: 803,
+    priceBasisPax: PRICE_BASIS_PAX,
     summary:
       "A compact northern journey — the Egyptian Museum, Alexandria's Greco-Roman layers, the Pyramids of Giza and medieval Cairo.",
     overview:
@@ -465,7 +459,7 @@ export const tours: Tour[] = [
     },
     included: [
       ...baseIncluded.slice(0, 1),
-      "3 nights' accommodation in a 4- or 5-star hotel",
+      "3 nights' hotel accommodation",
       ...baseIncluded.slice(1),
     ],
     excluded: baseExcluded,
@@ -511,7 +505,7 @@ export const tours: Tour[] = [
     visiting: "Luxor · Aswan",
     isPrivate: privateNote,
     price: 527,
-    was: 594,
+    priceBasisPax: PRICE_BASIS_PAX,
     flightsIncluded: true,
     summary:
       "A fast, flight-included loop through Luxor and Aswan — Karnak, the Valley of the Kings, Philae and the High Dam — out and back from Cairo.",
@@ -557,7 +551,7 @@ export const tours: Tour[] = [
     included: [
       ...baseIncluded.slice(0, 1),
       "Domestic flights Cairo–Luxor and Aswan–Cairo",
-      "2 nights' accommodation in 4- or 5-star hotels",
+      "2 nights' hotel accommodation",
       ...baseIncluded.slice(1),
     ],
     excluded: baseExcluded,
@@ -605,7 +599,7 @@ export const tours: Tour[] = [
     visiting: "Lake Qarun · Wadi El Rayan · Wadi Al-Hitan · Tunis village",
     isPrivate: privateNote,
     price: 139,
-    priceBasisPax: DAY_PRICE_PAX,
+    priceBasisPax: PRICE_BASIS_PAX,
     ticketsExcluded: true,
     summary:
       "Lake Qarun, the waterfalls and dunes of Wadi El Rayan, the fossil whales of Wadi Al-Hitan and the potters of Tunis village — Egypt's wild, green other half.",
@@ -646,7 +640,6 @@ export const tours: Tour[] = [
     included: [
       ...dayIncluded.slice(0, 1),
       "4x4 desert transfer where required",
-      "Lakeside fish lunch",
       ...dayIncluded.slice(1),
     ],
     excluded: dayExcluded,
@@ -692,7 +685,7 @@ export const tours: Tour[] = [
     visiting: "Giza plateau · Great Sphinx · GEM",
     isPrivate: privateNote,
     price: 79,
-    priceBasisPax: DAY_PRICE_PAX,
+    priceBasisPax: PRICE_BASIS_PAX,
     ticketsExcluded: true,
     summary:
       "The Great Pyramid, the panorama of all three pyramids, the Valley Temple and Sphinx, then the vast new Grand Egyptian Museum beside them.",
@@ -782,7 +775,7 @@ export const tours: Tour[] = [
     visiting: "Saqqara · Memphis · Dahshur",
     isPrivate: privateNote,
     price: 68,
-    priceBasisPax: DAY_PRICE_PAX,
+    priceBasisPax: PRICE_BASIS_PAX,
     ticketsExcluded: true,
     summary:
       "Djoser's Step Pyramid, the open-air ruins of Memphis, and the Bent and Red Pyramids of Dahshur — the story of how the pyramid was invented.",
@@ -856,7 +849,7 @@ export const tours: Tour[] = [
     visiting: "Coptic Cairo · Saladin Citadel",
     isPrivate: privateNote,
     price: 80,
-    priceBasisPax: DAY_PRICE_PAX,
+    priceBasisPax: PRICE_BASIS_PAX,
     ticketsExcluded: true,
     summary:
       "The Hanging Church, Ben Ezra Synagogue and Abu Serga in Old Cairo, then Saladin's Citadel and the alabaster Mosque of Muhammad Ali.",
@@ -930,7 +923,7 @@ export const tours: Tour[] = [
     visiting: "Egyptian Museum · NMEC",
     isPrivate: privateNote,
     price: 64,
-    priceBasisPax: DAY_PRICE_PAX,
+    priceBasisPax: PRICE_BASIS_PAX,
     ticketsExcluded: true,
     summary:
       "The treasures of the Egyptian Museum in Tahrir, then the National Museum of Egyptian Civilization and its Royal Mummies Hall.",
@@ -1000,7 +993,7 @@ export const tours: Tour[] = [
     visiting: "Catacombs · Qaitbay · Bibliotheca Alexandrina",
     isPrivate: privateNote,
     price: 57,
-    priceBasisPax: DAY_PRICE_PAX,
+    priceBasisPax: PRICE_BASIS_PAX,
     ticketsExcluded: true,
     summary:
       "The Catacombs of Kom El Shoqafa, Pompey's Pillar, the Citadel of Qaitbay on the old Pharos site and the Bibliotheca Alexandrina, with a seafood lunch.",
@@ -1034,7 +1027,6 @@ export const tours: Tour[] = [
     ],
     included: [
       ...dayIncluded.slice(0, 1),
-      "Seafront seafood lunch",
       ...dayIncluded.slice(1),
     ],
     excluded: dayExcluded,
@@ -1082,7 +1074,7 @@ export const tours: Tour[] = [
     visiting: "Giza plateau · Great Sphinx",
     isPrivate: privateNote,
     price: 66,
-    priceBasisPax: DAY_PRICE_PAX,
+    priceBasisPax: PRICE_BASIS_PAX,
     ticketsExcluded: true,
     summary:
       "The Great Pyramid, the pyramids of Khafre and Menkaure, the panoramic viewpoint and the Valley Temple with the Great Sphinx — Giza in a morning.",
@@ -1117,7 +1109,6 @@ export const tours: Tour[] = [
     included: [...dayIncluded.filter((x) => !x.startsWith("Lunch"))],
     excluded: [
       ...dayExcluded.slice(0, 1),
-      "Lunch (half-day tour)",
       "Camel or horse rides (optional extra)",
       "Private golf cart around the plateau (optional extra)",
       ...baseExcluded.filter((x) => !x.startsWith("Optional extras")),
@@ -1163,9 +1154,9 @@ export const tours: Tour[] = [
     visiting: "Downtown Cairo · street-food quarters",
     isPrivate: privateNote,
     price: 59,
+    priceBasisPax: PRICE_BASIS_PAX,
     // The owner, 15 Oct 2026: this price is for a private party of two or
     // more, not the six the other day tours are quoted from.
-    priceBasisPax: 2,
     foodExcluded: true,
     theme: "feast",
     summary:
@@ -1237,7 +1228,7 @@ export const tours: Tour[] = [
     excluded: [
       "Food and drinks at each stop, paid directly to the venue",
       ...baseExcluded.filter(
-        (x) => !x.startsWith("Optional extras") && !x.startsWith("Tipping"),
+        (x) => !x.startsWith("Optional extras") && !x.startsWith("Tipping") && x !== "Meals",
       ),
       "Tipping (gratuities)",
     ],
@@ -1289,7 +1280,7 @@ export const tours: Tour[] = [
     visiting: "Aswan · Kom Ombo · Edfu · Luxor",
     isPrivate: sharedShipNote,
     price: 820,
-    was: 1065,
+    priceBasisPax: PRICE_BASIS_PAX,
     summary:
       "The essential Nile cruise, done properly — Philae and the High Dam, three nights afloat past Kom Ombo and Edfu, and Luxor's East and West Banks with your own Egyptologist.",
     overview:
@@ -1342,7 +1333,7 @@ export const tours: Tour[] = [
     },
     included: [
       ...baseIncluded.slice(0, 1),
-      "3-night full-board Nile cruise, Aswan to Luxor",
+      "3-night Nile cruise, Aswan to Luxor",
       "All shore excursions as private visits with your own guide",
       ...baseIncluded.slice(1),
     ],
@@ -1390,10 +1381,11 @@ export const tours: Tour[] = [
     visiting: "Luxor · Edfu · Kom Ombo · Aswan",
     isPrivate: privateNote,
     price: 1018,
+    priceBasisPax: PRICE_BASIS_PAX,
     summary:
       "The deep-history heart of Egypt by private road journey — Karnak, the Valley of the Kings, Edfu, Kom Ombo and Philae, with time to actually absorb them.",
     overview:
-      "Upper Egypt holds the country's densest concentration of monuments, and most itineraries sprint through it. This one doesn't. Two full days in Luxor split the East Bank's temples from the West Bank's necropolis, so neither is rushed. The drive south to Aswan then becomes part of the journey rather than a transfer: Edfu and Kom Ombo break the road exactly where the ancient river traffic once paused. Aswan closes the journey at a gentler register — Philae by motorboat, the granite quarries, and a felucca hour under sail before you fly or train back. Four- and five-star hotels throughout, private Egyptologist from first day to last.",
+      "Upper Egypt holds the country's densest concentration of monuments, and most itineraries sprint through it. This one doesn't. Two full days in Luxor split the East Bank's temples from the West Bank's necropolis, so neither is rushed. The drive south to Aswan then becomes part of the journey rather than a transfer: Edfu and Kom Ombo break the road exactly where the ancient river traffic once paused. Aswan closes the journey at a gentler register — Philae by motorboat, the granite quarries, and a felucca hour under sail before you fly or train back. Your own private Egyptologist from first day to last.",
     itinerary: [
       {
         label: "Day",
@@ -1453,7 +1445,7 @@ export const tours: Tour[] = [
     },
     included: [
       ...baseIncluded.slice(0, 1),
-      "4 nights' accommodation in 4- or 5-star hotels (Luxor & Aswan)",
+      "4 nights' hotel accommodation (Luxor & Aswan)",
       "Private felucca sail in Aswan",
       ...baseIncluded.slice(1),
     ],
@@ -1507,7 +1499,7 @@ export const tours: Tour[] = [
     visiting: "Cairo · Giza · Aswan · Luxor",
     isPrivate: sharedShipNote,
     price: 1859,
-    was: 2354,
+    priceBasisPax: PRICE_BASIS_PAX,
     summary:
       "Egypt as a honeymoon should be — private sunrise at the pyramids, a felucca at golden hour, three nights on the Nile and suites chosen for the view.",
     overview:
@@ -1607,7 +1599,7 @@ export const tours: Tour[] = [
     },
     included: [
       ...baseIncluded.slice(0, 1),
-      "8 nights — Nile-view suites, 4- or 5-star hotels and a 3-night full-board cruise",
+      "8 nights — Nile-view suites and a 3-night Nile cruise",
       "Domestic flights Cairo–Aswan and Luxor–Cairo",
       "Private early-access Giza sunrise session",
       "Sunset felucca charter in Aswan",
@@ -1662,7 +1654,7 @@ export const tours: Tour[] = [
     visiting: "Cairo · Giza · Luxor · Aswan",
     isPrivate: privateNote,
     price: 1524,
-    was: 1859,
+    priceBasisPax: PRICE_BASIS_PAX,
     summary:
       "Egypt with children done right: short guided mornings, family-specialist Egyptologists, pool afternoons, and the moments no classroom can match.",
     overview:
@@ -1753,7 +1745,7 @@ export const tours: Tour[] = [
     },
     included: [
       "Private family-specialist Egyptologist throughout",
-      "7 nights' accommodation — family suites or connecting rooms, 4- or 5-star",
+      "7 nights' accommodation — family suites or connecting rooms",
       "Domestic flights Cairo–Luxor and Aswan–Cairo",
       "Felucca sail and Nubian village visit in Aswan",
       ...baseIncluded.slice(1),
@@ -1807,8 +1799,9 @@ export const tours: Tour[] = [
     visiting: "Cairo · Giza · Luxor · Aswan",
     isPrivate: privateNote,
     price: 1419,
+    priceBasisPax: PRICE_BASIS_PAX,
     summary:
-      "An itinerary built backwards from the light: early-access Giza at sunrise, Karnak before the crowds, balloons over Thebes and feluccas at golden hour.",
+      "An itinerary built backwards from the light: early-access Giza at sunrise, Karnak before the crowds, an optional balloon over Thebes and feluccas at golden hour.",
     overview:
       "Most Egypt itineraries put you at the great sites in the flat, crowded middle of the day — the worst hours a camera will ever see. This journey inverts the logic. Every day is scheduled around first and last light: private early access at Giza before the plateau opens, Karnak's hypostyle hall in the low morning sun that rakes the reliefs into relief, the illuminated Avenue of Sphinxes at blue hour, and Aswan's lateen sails backlit at golden hour. Your guide understands photographers — which means knowing when to talk, when to carry a tripod permit, and when to simply leave you alone with the scene. Non-photographing partners travel well on this trip too; the light that flatters a sensor flatters a memory just as much.",
     itinerary: [
@@ -1889,7 +1882,7 @@ export const tours: Tour[] = [
     },
     included: [
       "Private photography-aware Egyptologist guide throughout",
-      "6 nights' accommodation in 4- or 5-star hotels",
+      "6 nights' hotel accommodation",
       "Domestic flights Cairo–Luxor and Aswan–Cairo",
       "Private early-access Giza sunrise session",
       "Golden-hour felucca charter in Aswan",
@@ -1946,7 +1939,7 @@ export const tours: Tour[] = [
     visiting: "Cairo · Alexandria · Aswan · Abu Simbel · Luxor · Red Sea",
     isPrivate: sharedShipNote,
     price: 2728,
-    was: 3278,
+    priceBasisPax: PRICE_BASIS_PAX,
     flightsIncluded: true,
     summary:
       "Our most complete journey: Cairo and Alexandria, a Nile cruise, Ramesses II's mountain temple at Abu Simbel, and three Red Sea nights to absorb it all.",
@@ -2046,7 +2039,7 @@ export const tours: Tour[] = [
     },
     included: [
       ...baseIncluded.slice(0, 1),
-      "13 nights — 4- or 5-star hotels, a 3-night full-board Nile cruise and a Red Sea resort",
+      "13 nights — hotels, a 3-night Nile cruise and a Red Sea resort",
       "All domestic flights (Cairo–Aswan, Luxor–Sharm El Sheikh, Sharm–Cairo)",
       "Abu Simbel excursion by private vehicle",
       "Ras Mohammed boat day with snorkelling equipment",
@@ -2096,6 +2089,7 @@ export const tours: Tour[] = [
     visiting: "Cairo · Giza · Saqqara · Memphis",
     isPrivate: privateNote,
     price: 875,
+    priceBasisPax: PRICE_BASIS_PAX,
     summary:
       "A deep, slow reading of the world's greatest layered city — its two museums, three faiths, medieval streets and the necropolis where the pyramid was invented.",
     overview:
@@ -2158,11 +2152,15 @@ export const tours: Tour[] = [
     },
     included: [
       "Private historian-Egyptologist guide throughout",
-      "4 nights' accommodation in a 4- or 5-star hotel",
+      "4 nights' hotel accommodation",
       "Sufi tanoura performance tickets",
       ...baseIncluded.slice(1),
     ],
-    excluded: baseExcluded,
+    excluded: [
+      "A Zar music evening in Cairo (optional extra)",
+      "Cooking with your own hands in a Cairo restaurant kitchen (optional extra)",
+      ...baseExcluded,
+    ],
     faqs: [
       {
         q: "Is five days genuinely enough material in one city?",
@@ -2207,6 +2205,7 @@ export const tours: Tour[] = [
     visiting: "Sharm El Sheikh · Ras Mohammed",
     isPrivate: privateNote,
     price: 979,
+    priceBasisPax: PRICE_BASIS_PAX,
     summary:
       "The Red Sea done with intent — a private reef-boat day in Ras Mohammed, a Sinai desert evening under the stars, and space left deliberately empty.",
     overview:
@@ -2263,9 +2262,9 @@ export const tours: Tour[] = [
       sleep: "One Red Sea resort for all four nights",
     },
     included: [
-      "4 nights' accommodation in a 4- or 5-star Red Sea resort (half board)",
+      "4 nights in a Red Sea resort",
       "Private full-day Ras Mohammed boat charter with snorkelling equipment",
-      "Sinai desert evening with Bedouin dinner",
+      "Sinai desert evening under the stars",
       "Private air-conditioned transfers",
       "Hotel pickup & drop-off",
       "Bottled water every day",
@@ -2318,6 +2317,7 @@ export const tours: Tour[] = [
     visiting: "Ras Mohammed · Strait of Tiran",
     isPrivate: privateNote,
     price: 792,
+    priceBasisPax: PRICE_BASIS_PAX,
     summary:
       "Four guided boat dives across the two best site groups in Sinai — Ras Mohammed and Tiran — with a PADI centre we have vetted, after a house-reef check dive.",
     overview:
@@ -2365,7 +2365,7 @@ export const tours: Tour[] = [
       sleep: "One Red Sea resort for all three nights",
     },
     included: [
-      "3 nights' accommodation in a 4- or 5-star Red Sea resort (half board)",
+      "3 nights in a Red Sea resort",
       "5 guided dives (1 check dive + 2 two-dive boat days) with a licensed PADI centre",
       "Full equipment rental, tanks and weights",
       "Marine park fees for Ras Mohammed",
@@ -2422,6 +2422,7 @@ export const tours: Tour[] = [
     visiting: "Karnak · Luxor Temple · West Bank",
     isPrivate: privateNote,
     price: 544,
+    priceBasisPax: PRICE_BASIS_PAX,
     summary:
       "Luxor without the sprint: Karnak at opening, the Valley of the Kings before the heat, Hatshepsut's terraces and the Avenue of Sphinxes after dark.",
     overview:
@@ -2464,7 +2465,7 @@ export const tours: Tour[] = [
     },
     included: [
       ...baseIncluded.slice(0, 1),
-      "2 nights' accommodation in a 4- or 5-star Luxor hotel",
+      "2 nights' hotel accommodation in Luxor",
       "Evening entry to Luxor Temple and the Avenue of Sphinxes",
       ...baseIncluded.slice(1),
     ],
@@ -2516,6 +2517,7 @@ export const tours: Tour[] = [
     visiting: "Giza · GEM · Islamic Cairo",
     isPrivate: privateNote,
     price: 600,
+    priceBasisPax: PRICE_BASIS_PAX,
     summary:
       "The essential Cairo, concierge-run: fast-track immigration, private plateau morning, the Grand Egyptian Museum, and lantern-lit Islamic Cairo by night.",
     overview:
@@ -2558,11 +2560,15 @@ export const tours: Tour[] = [
     },
     included: [
       ...baseIncluded.slice(0, 1),
-      "2 nights' accommodation in a 4- or 5-star hotel",
+      "2 nights' hotel accommodation",
       "VIP airport meet & assist with fast-track, both directions",
       ...baseIncluded.slice(1),
     ],
-    excluded: baseExcluded,
+    excluded: [
+      "A Zar music evening in Cairo (optional extra)",
+      "Cooking with your own hands in a Cairo restaurant kitchen (optional extra)",
+      ...baseExcluded,
+    ],
     faqs: [
       {
         q: "What does the VIP airport service actually include?",
@@ -2606,6 +2612,7 @@ export const tours: Tour[] = [
     visiting: "Catacombs · Qaitbay · Bibliotheca · Montaza",
     isPrivate: privateNote,
     price: 402,
+    priceBasisPax: PRICE_BASIS_PAX,
     summary:
       "Alexandria with its missing half restored: the Greco-Roman sites by day, then the corniche at dusk, seafood by the water and the morning light day-trips never catch.",
     overview:
@@ -2640,8 +2647,7 @@ export const tours: Tour[] = [
     },
     included: [
       ...baseIncluded.slice(0, 1),
-      "1 night's accommodation in a seafront 4/5-star hotel",
-      "Seafood dinner on the first evening",
+      "1 night in a seafront hotel",
       ...baseIncluded.slice(1),
     ],
     excluded: baseExcluded,
@@ -2688,7 +2694,7 @@ export const tours: Tour[] = [
     visiting: "Great Temple · Temple of Nefertari",
     isPrivate: privateNote,
     price: 160,
-    priceBasisPax: DAY_PRICE_PAX,
+    priceBasisPax: PRICE_BASIS_PAX,
     ticketsExcluded: true,
     summary:
       "Ramesses II's colossal rock-cut temples — carved into a Nubian mountainside, moved block by block above the rising lake, and still aligned to the sun.",
@@ -2723,15 +2729,15 @@ export const tours: Tour[] = [
     included: [
       ...baseIncluded.slice(0, 1),
       "Private air-conditioned vehicle for the desert road, both ways",
-      "Breakfast box and bottled water",
+      "Bottled water",
       "Hotel or cruise-ship pickup & drop-off in Aswan",
     ],
     excluded: [
       "Entrance tickets to both temples — paid at the published gate rate, with nothing added",
       "Flight option Aswan–Abu Simbel (available on request, limited schedule)",
-      "Lunch (returned to Aswan by early afternoon)",
       "Tipping (gratuities)",
       "Personal expenses",
+      "Meals",
     ],
     faqs: [
       {

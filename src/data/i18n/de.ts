@@ -121,7 +121,7 @@ export const de: LocalizedPage[] = [
       {
         title: "Was im Preis enthalten ist",
         body:
-          "Ihr privater lizenzierter Ägyptologe während der gesamten Reise, sämtliche Eintrittsgelder, private klimatisierte Transfers, Abholung und Rückbringung am Hotel, Mittagessen an jedem Besichtigungstag und täglich Trinkwasser. Nicht enthalten: internationale Flüge, das Einreisevisum, Trinkgelder, persönliche Ausgaben und ausdrücklich benannte Zusatzleistungen. Jedes Angebot listet beide Seiten auf, bevor Sie sich festlegen.",
+          "Ihr privater lizenzierter Ägyptologe während der gesamten Reise, sämtliche Eintrittsgelder, private klimatisierte Transfers, Abholung und Rückbringung am Hotel und täglich Trinkwasser. Nicht enthalten: internationale Flüge, das Einreisevisum, Trinkgelder, Mahlzeiten, persönliche Ausgaben und ausdrücklich benannte Zusatzleistungen. Jedes Angebot listet beide Seiten auf, bevor Sie sich festlegen.",
       },
       {
         title: "Warum der Preis pro Person mit der Gruppengröße sinkt",

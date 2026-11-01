@@ -13,7 +13,7 @@ const SITE_URL = (PUBLIC_SITE_URL || "https://kemet-travel.com").replace(/\/$/, 
 
 // Pages whose canonical points at a different page. They stay on the site and
 // in the navigation; they are simply not submitted for indexing.
-const CANONICALISED_AWAY = ["/activities/hot-air-balloon-luxor.html"];
+const CANONICALISED_AWAY = ["/activities/hot-air-balloon-luxor.html", "/activities/felucca-sunset-aswan.html"];
 
 // Translation clusters. Read from the SAME file src/config/i18n.ts reads, not
 // copied. This block used to be a hand-maintained duplicate "mirrored from

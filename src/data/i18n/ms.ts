@@ -134,7 +134,7 @@ export const ms: LocalizedPage[] = [
       {
         title: "Apa yang termasuk dalam harga",
         body:
-          "Egyptologist berlesen sepanjang perjalanan, semua tiket masuk, pemindahan persendirian berhawa dingin, ambilan dan hantaran hotel, makan tengah hari pada hari lawatan, dan air setiap hari. Tidak termasuk: tiket penerbangan antarabangsa, visa, tip, perbelanjaan peribadi dan tambahan yang dinyatakan berasingan. Setiap sebut harga menyenaraikan kedua-duanya sebelum anda membuat keputusan.",
+          "Egyptologist berlesen sepanjang perjalanan, semua tiket masuk, pemindahan persendirian berhawa dingin, ambilan dan hantaran hotel, dan air setiap hari. Tidak termasuk: tiket penerbangan antarabangsa, visa, tip, makanan, perbelanjaan peribadi dan tambahan yang dinyatakan berasingan. Setiap sebut harga menyenaraikan kedua-duanya sebelum anda membuat keputusan.",
       },
       {
         title: "Berapa hari — secara jujur",

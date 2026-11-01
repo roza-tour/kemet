@@ -84,7 +84,7 @@ export const pt: LocalizedPage[] = [
       ],
     },
     faqs: [
-      { q: "Quanto custa uma viagem privada ao Egito?", a: `Uma viagem totalmente privada e sob medida, com egiptólogo credenciado, carro com motorista e bons hotéis, fica no mercado entre 200 e 450 euros por pessoa por dia. As viagens da Kemet saem entre ${PER_DAY_LOW} e ${PER_DAY_HIGH} euros por pessoa por dia, com hotéis de 4 ou 5 estrelas. O valor por pessoa cai bastante quando o grupo cresce, porque o guia e o carro são divididos entre mais gente.` },
+      { q: "Quanto custa uma viagem privada ao Egito?", a: `Uma viagem totalmente privada e sob medida, com egiptólogo credenciado, carro com motorista e bons hotéis, fica no mercado entre 200 e 450 euros por pessoa por dia. As viagens da Kemet saem entre ${PER_DAY_LOW} e ${PER_DAY_HIGH} euros por pessoa por dia, para grupos a partir de 6 pessoas. O valor por pessoa cai bastante quando o grupo cresce, porque o guia e o carro são divididos entre mais gente.` },
       { q: "Existem guias que falam português?", a: "Sim. Egiptólogos credenciados da nossa própria equipe guiam em português." },
       { q: "Quantos dias são necessários para o Egito?", a: "Vindo do Brasil, a viagem só compensa a partir de oito a dez dias no destino: isso cobre o Cairo, Luxor, um cruzeiro pelo Nilo e Assuã sem pressa. Doze a catorze dias deixam espaço para Abu Simbel, Alexandria ou alguns dias no Mar Vermelho." },
       { q: "O Egito é seguro?", a: "As regiões turísticas — Cairo, Gizé, Luxor, Assuã, Alexandria e o litoral do Mar Vermelho — são policiadas e recebem milhões de visitantes por ano. Os incômodos reais são os vendedores insistentes nos grandes sítios e o trânsito do Cairo, e os dois praticamente desaparecem com guia e motorista particulares. Consulte sempre as orientações atuais do Itamaraty antes de reservar." },
@@ -131,7 +131,7 @@ export const pt: LocalizedPage[] = [
       {
         title: "O que o preço inclui",
         body:
-          "O seu egiptólogo credenciado durante toda a viagem, todas as entradas, os traslados privados com ar-condicionado, a busca e o retorno ao hotel, o almoço em cada dia de passeio e água todos os dias. Não inclui: voos internacionais, gorjetas, gastos pessoais e os extras indicados como tal. Cada orçamento detalha as duas listas antes de vocês se comprometerem.",
+          "O seu egiptólogo credenciado durante toda a viagem, todas as entradas, os traslados privados com ar-condicionado, a busca e o retorno ao hotel e água todos os dias. Não inclui: voos internacionais, gorjetas, refeições, gastos pessoais e os extras indicados como tal. Cada orçamento detalha as duas listas antes de vocês se comprometerem.",
       },
       {
         title: "Por que o preço por pessoa cai com o grupo",
@@ -255,7 +255,7 @@ export const pt: LocalizedPage[] = [
       {
         title: "Onde a Kemet está",
         body:
-          `Na faixa privada e sob medida, e na entrada dela: as viagens de vários dias da Kemet saem entre ${PER_DAY_LOW} e ${PER_DAY_HIGH} euros por pessoa por dia, com hotéis de 4 ou 5 estrelas, todas as entradas, o egiptólogo, os traslados e o almoço incluídos. O valor sobe com a categoria do hotel e com a dahabiya, e cai por pessoa quando o grupo cresce. Os preços são em euros.`,
+          `Na faixa privada e sob medida, e na entrada dela: as viagens de vários dias da Kemet saem entre ${PER_DAY_LOW} e ${PER_DAY_HIGH} euros por pessoa por dia para grupos a partir de 6 pessoas, com hotéis, todas as entradas, o egiptólogo e os traslados incluídos. O valor sobe com a categoria do hotel e com a dahabiya, e cai por pessoa quando o grupo cresce. Os preços são em euros.`,
       },
       {
         title: "Quantos vocês são — o fator de maior peso",

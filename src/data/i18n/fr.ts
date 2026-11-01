@@ -122,7 +122,7 @@ export const fr: LocalizedPage[] = [
       {
         title: "Ce que le prix comprend",
         body:
-          "Votre égyptologue agréé pour tout le voyage, tous les droits d'entrée, les transferts privés climatisés, la prise en charge et le retour à l'hôtel, le déjeuner chaque jour de visite et l'eau. Ne sont pas compris : les vols internationaux, le visa d'entrée, les pourboires, les dépenses personnelles et les suppléments expressément indiqués. Chaque devis énumère les deux listes avant que vous ne vous engagiez.",
+          "Votre égyptologue agréé pour tout le voyage, tous les droits d'entrée, les transferts privés climatisés, la prise en charge et le retour à l'hôtel et l'eau. Ne sont pas compris : les vols internationaux, le visa d'entrée, les pourboires, les repas, les dépenses personnelles et les suppléments expressément indiqués. Chaque devis énumère les deux listes avant que vous ne vous engagiez.",
       },
       {
         title: "Les durées, sans enjolivement",

@@ -370,7 +370,7 @@ export const collections: Collection[] = [
       "Private monument access: pre-opening entry and after-hours visits arranged on request",
       "Exclusive Nile cruising: boutique dahabiyas and private-charter cruises between Luxor and Aswan",
       "Senior Egyptologist guides — specialists rather than licensed generalists",
-      "Four- and five-star properties with genuine Nile, pyramid or temple views",
+      "Hotels with genuine Nile, pyramid or temple views",
       "Completely private itineraries: your party, your schedule, your pace",
     ],
     planningNotes: [

@@ -121,7 +121,7 @@ export const it: LocalizedPage[] = [
       {
         title: "Cosa è compreso nel prezzo",
         body:
-          "Il vostro egittologo autorizzato per tutto il viaggio, tutti i biglietti d'ingresso, i trasferimenti privati con aria condizionata, il prelievo e il rientro in hotel, il pranzo in ogni giornata di visita e l'acqua ogni giorno. Non compresi: voli internazionali, visto d'ingresso, mance, spese personali ed extra espressamente indicati. Ogni preventivo elenca entrambe le voci prima che vi impegniate.",
+          "Il vostro egittologo autorizzato per tutto il viaggio, tutti i biglietti d'ingresso, i trasferimenti privati con aria condizionata, il prelievo e il rientro in hotel e l'acqua ogni giorno. Non compresi: voli internazionali, visto d'ingresso, mance, pasti, spese personali ed extra espressamente indicati. Ogni preventivo elenca entrambe le voci prima che vi impegniate.",
       },
       {
         title: "Perché il prezzo per persona scende col gruppo",

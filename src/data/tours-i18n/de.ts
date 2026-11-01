@@ -742,7 +742,7 @@ export const de: TourText[] = [
     summary:
       "Das geschichtliche Herz Ägyptens als private Straßenreise — Karnak, Tal der Könige, Edfu, Kom Ombo und Philae, mit der Zeit, sie wirklich aufzunehmen.",
     overview:
-      "Oberägypten trägt die dichteste Konzentration an Monumenten des Landes, und die meisten Reisen sprinten hindurch. Diese nicht. Zwei volle Tage in Luxor trennen die Tempel des Ostufers von der Nekropole des Westens, damit keines von beiden gehetzt wird. Die Fahrt nach Süden wird dann Teil der Reise statt bloßer Transfer: Edfu und Kom Ombo unterbrechen die Straße genau dort, wo der antike Flussverkehr einst pausierte. Assuan schließt die Reise in ruhigerer Tonlage — Philae mit dem Boot, die Granitbrüche und eine Stunde unter Segeln, bevor Sie fliegen oder den Zug nehmen. Durchgehend Hotels der vier- und fünf-Sterne-Kategorie und vom ersten bis zum letzten Tag Ihr eigener Ägyptologe.",
+      "Oberägypten trägt die dichteste Konzentration an Monumenten des Landes, und die meisten Reisen sprinten hindurch. Diese nicht. Zwei volle Tage in Luxor trennen die Tempel des Ostufers von der Nekropole des Westens, damit keines von beiden gehetzt wird. Die Fahrt nach Süden wird dann Teil der Reise statt bloßer Transfer: Edfu und Kom Ombo unterbrechen die Straße genau dort, wo der antike Flussverkehr einst pausierte. Assuan schließt die Reise in ruhigerer Tonlage — Philae mit dem Boot, die Granitbrüche und eine Stunde unter Segeln, bevor Sie fliegen oder den Zug nehmen. Vom ersten bis zum letzten Tag Ihre eigene ägyptologische Reiseleitung.",
     itinerary: [
       {
         title: "Ankunft in Luxor & das Ostufer",
@@ -1020,7 +1020,7 @@ export const de: TourText[] = [
     localeSlug: "fotoreise-aegypten-7-tage",
     metaTitle: "Fotoreise Ägypten, 7 Tage nach dem Licht geplant | Kemet",
     metaDescription:
-      "Sieben Tage, geplant nach dem Licht statt nach Öffnungszeiten: Gizeh zum Sonnenaufgang, Karnak vor den Bussen, Ballons über Theben.",
+      "Sieben Tage, geplant nach dem Licht statt nach Öffnungszeiten: Gizeh zum Sonnenaufgang, Karnak vor den Bussen, optional ein Ballon über Theben.",
     keywords:
       "fotoreise ägypten, fotografie reise ägypten, gizeh sonnenaufgang foto, karnak fotografieren, ägypten fotoworkshop",
     crumb: "Fotoreise, 7 Tage",
@@ -1030,7 +1030,7 @@ export const de: TourText[] = [
     durationLabel: "7 Tage / 6 Nächte",
     startPoint: "Kairo (Flughafen oder Hotel)",
     summary:
-      "Eine Reise, rückwärts aus dem Licht geplant: privater Zugang zu Gizeh zum Sonnenaufgang, Karnak vor den Gruppen, Ballons über Theben und Feluken zur goldenen Stunde.",
+      "Eine Reise, rückwärts aus dem Licht geplant: privater Zugang zu Gizeh zum Sonnenaufgang, Karnak vor den Gruppen, optional ein Ballon über Theben und Feluken zur goldenen Stunde.",
     overview:
       "Die meisten Ägypten-Reisen stellen Sie in der flachen, überfüllten Tagesmitte vor die großen Stätten — den schlechtesten Stunden, die eine Kamera je sieht. Diese Reise dreht die Logik um. Jeder Tag ist um das erste und letzte Licht herum geplant: privater Frühzugang in Gizeh, bevor das Plateau öffnet; Karnaks Säulenhalle in der tiefen Morgensonne, die die Reliefs herausarbeitet; die beleuchtete Sphinxallee zur blauen Stunde; und Assuans Lateinersegel im Gegenlicht zur goldenen Stunde. Ihr Guide versteht Fotografen — und weiß, wann zu erzählen ist, wann eine Stativgenehmigung bereitliegen muss und wann Sie einfach mit der Szene allein bleiben. Nicht fotografierende Begleitung reist hier übrigens ebenso gut mit; das Licht, das einem Sensor schmeichelt, schmeichelt einer Erinnerung genauso.",
     itinerary: [

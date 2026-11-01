@@ -473,7 +473,7 @@ export const fr: TourText[] = [
     durationLabel: "5 jours / 4 nuits",
     startPoint: "Louxor (hôtel, gare ou aéroport)",
     summary: "Le cœur historique de l'Égypte en voyage privé par la route — Karnak, la Vallée des Rois, Edfou, Kom Ombo et Philae, avec le temps de les absorber.",
-    overview: "La Haute-Égypte concentre la plus forte densité de monuments du pays, et la plupart des itinéraires la traversent au pas de course. Pas celui-ci. Deux journées pleines à Louxor séparent les temples de la rive est de la nécropole de la rive ouest, pour que ni l'une ni l'autre ne soit expédiée. La route vers le sud devient alors une partie du voyage plutôt qu'un transfert : Edfou et Kom Ombo coupent le trajet exactement là où le trafic fluvial antique faisait halte. Assouan referme le voyage sur un registre plus doux — Philae en bateau, les carrières de granit, et une heure de felouque sous voile avant l'avion ou le train. Hôtels quatre et cinq étoiles tout du long, égyptologue privé du premier au dernier jour.",
+    overview: "La Haute-Égypte concentre la plus forte densité de monuments du pays, et la plupart des itinéraires la traversent au pas de course. Pas celui-ci. Deux journées pleines à Louxor séparent les temples de la rive est de la nécropole de la rive ouest, pour que ni l'une ni l'autre ne soit expédiée. La route vers le sud devient alors une partie du voyage plutôt qu'un transfert : Edfou et Kom Ombo coupent le trajet exactement là où le trafic fluvial antique faisait halte. Assouan referme le voyage sur un registre plus doux — Philae en bateau, les carrières de granit, et une heure de felouque sous voile avant l'avion ou le train. Votre propre égyptologue, du premier au dernier jour.",
     itinerary: [
       { title: "Arrivée à Louxor & la rive est", items: [
         "Accueil privé à l'aéroport ou à la gare de Louxor",
@@ -645,14 +645,14 @@ export const fr: TourText[] = [
     localeSlug: "voyage-photo-egypte-7-jours",
     metaTitle: "Voyage photo en Égypte, 7 jours réglés sur la lumière | Kemet",
     metaDescription:
-      "Sept jours organisés selon la lumière et non les horaires : Gizeh au lever du soleil, Karnak avant les cars, montgolfières sur Thèbes.",
+      "Sept jours organisés selon la lumière et non les horaires : Gizeh au lever du soleil, Karnak avant les cars, une montgolfière sur Thèbes en option.",
     keywords: "voyage photo egypte, photographie egypte, gizeh lever du soleil photo, karnak photographier, stage photo egypte",
     crumb: "Voyage photo, 7 jours",
     title: "L'Égypte à travers l'objectif",
     subtitle: "Sept jours réglés sur la lumière et non sur les horaires d'ouverture — plateaux à l'aube, temples à l'heure bleue et le Nil à l'heure dorée.",
     durationLabel: "7 jours / 6 nuits",
     startPoint: "Le Caire (aéroport ou hôtel)",
-    summary: "Un itinéraire construit à rebours depuis la lumière : accès anticipé à Gizeh au lever du soleil, Karnak avant la foule, montgolfières sur Thèbes et felouques à l'heure dorée.",
+    summary: "Un itinéraire construit à rebours depuis la lumière : accès anticipé à Gizeh au lever du soleil, Karnak avant la foule, une montgolfière sur Thèbes en option et des felouques à l'heure dorée.",
     overview: "La plupart des itinéraires égyptiens vous déposent devant les grands sites au milieu d'une journée plate et bondée — les pires heures qu'un appareil puisse connaître. Ce voyage inverse la logique. Chaque journée s'organise autour de la première et de la dernière lumière : accès privé anticipé à Gizeh avant l'ouverture du plateau, la salle hypostyle de Karnak dans le soleil rasant du matin qui sculpte les reliefs, l'allée des Sphinx illuminée à l'heure bleue, et les voiles latines d'Assouan à contre-jour à l'heure dorée. Votre guide comprend les photographes — et sait quand parler, quand apporter un permis de trépied, et quand vous laisser simplement seul avec la scène. Un conjoint non photographe voyage très bien ici aussi : la lumière qui flatte un capteur flatte autant un souvenir.",
     itinerary: [
       { title: "Arrivée au Caire & briefing", items: [

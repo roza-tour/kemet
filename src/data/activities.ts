@@ -176,6 +176,11 @@ export const activities: Activity[] = [
       "Drift under a lateen sail past Elephantine Island and the Nubian shore as the sun sinks behind the dunes — Egypt at its most serene.",
     image: { src: "/images/activities/act-felucca-sunset.webp", alt: "A felucca under sail on the Nile at golden sunset", width: 720, height: 480 },
     slug: "felucca-sunset-aswan",
+    // The same sail as experiences/private-felucca-nile.html (a whole felucca
+    // in Aswan, chartered for your party). Merged the way the balloon is: the
+    // experience page is the authority; this one stays in the activities grid
+    // and keeps its address, with its canonical pointing there (owner, 1 Nov 2026).
+    canonicalTo: "experiences/private-felucca-nile.html",
     shortSummary:
       "An hour under lateen sail at Aswan as the light goes — past Elephantine Island and the Nubian shore, with no engine.",
     longDescription:

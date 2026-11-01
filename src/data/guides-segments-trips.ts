@@ -232,7 +232,7 @@ export const segmentGuidesTrips: Guide[] = [
         paragraphs: [
           "Every shore day is planned backwards from your ship's all-aboard time. We subtract a margin for traffic and the port, and fix the latest time to leave the last site before the day begins. Your guide keeps to it.",
           "We cannot control the traffic or the port, and we do not pretend to. What we control is the plan: if the morning starts late, through a delayed berthing or a slow disembarkation, the visits are shortened, not the margin.",
-          "Your guide and vehicle meet you at the port, at the terminal or the port gate depending on the port and your cruise line's arrangements. Lunch is included in the price, booked in advance on the way or near the sites so it does not eat into the visits.",
+          "Your guide and vehicle meet you at the port, at the terminal or the port gate depending on the port and your cruise line's arrangements. Lunch is booked in advance on the way or near the sites, so it does not eat into the visits; meals are paid separately.",
         ],
         note: "Check whether your all-aboard time is in ship's time or Egyptian local time; ships do not always keep local time. Egypt's summer time runs from the last Friday of April to the last Thursday of October.",
         noteType: "warning",

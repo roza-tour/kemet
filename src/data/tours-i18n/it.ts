@@ -449,7 +449,7 @@ export const it: TourText[] = [
     durationLabel: "5 giorni / 4 notti",
     startPoint: "Luxor (hotel, stazione o aeroporto)",
     summary: "Il cuore storico dell'Egitto in viaggio privato su strada — Karnak, la Valle dei Re, Edfu, Kom Ombo e File, con il tempo di assorbirli davvero.",
-    overview: "L'Alto Egitto concentra la densità di monumenti più alta del paese, e la maggior parte degli itinerari lo attraversa di corsa. Questo no. Due giornate piene a Luxor separano i templi della riva orientale dalla necropoli della riva occidentale, così nessuna delle due viene liquidata. La strada verso sud diventa allora parte del viaggio anziché un trasferimento: Edfu e Kom Ombo spezzano il percorso esattamente dove il traffico fluviale antico faceva sosta. Assuan chiude il viaggio su un registro più dolce — File in barca, le cave di granito, e un'ora di feluca a vela prima dell'aereo o del treno. Hotel a quattro e cinque stelle per tutto il viaggio, egittologo privato dal primo all'ultimo giorno.",
+    overview: "L'Alto Egitto concentra la densità di monumenti più alta del paese, e la maggior parte degli itinerari lo attraversa di corsa. Questo no. Due giornate piene a Luxor separano i templi della riva orientale dalla necropoli della riva occidentale, così nessuna delle due viene liquidata. La strada verso sud diventa allora parte del viaggio anziché un trasferimento: Edfu e Kom Ombo spezzano il percorso esattamente dove il traffico fluviale antico faceva sosta. Assuan chiude il viaggio su un registro più dolce — File in barca, le cave di granito, e un'ora di feluca a vela prima dell'aereo o del treno. La stessa guida privata, dal primo all'ultimo giorno.",
     itinerary: [
       { title: "Arrivo a Luxor & la riva orientale", items: [
         "Accoglienza privata all'aeroporto o alla stazione di Luxor",
@@ -618,14 +618,14 @@ export const it: TourText[] = [
     localeSlug: "viaggio-fotografico-egitto-7-giorni",
     metaTitle: "Viaggio fotografico in Egitto, 7 giorni | Kemet",
     metaDescription:
-      "Sette giorni costruiti sulla luce: Giza all'alba con accesso anticipato, Karnak prima dei gruppi, mongolfiere su Tebe e feluche nell'ora d'oro.",
+      "Sette giorni costruiti sulla luce: Giza all'alba con accesso anticipato, Karnak prima dei gruppi, una mongolfiera facoltativa su Tebe e feluche nell'ora d'oro.",
     keywords: "viaggio fotografico egitto, egitto fotografia, tour fotografico piramidi, luxor fotografia, viaggio foto nilo",
     crumb: "Fotografia, 7 giorni",
     title: "L'Egitto attraverso l'obiettivo",
     subtitle: "Sette giorni organizzati sulla luce, non sugli orari di apertura — piane all'alba, templi nell'ora blu e il Nilo nell'ora d'oro.",
     durationLabel: "7 giorni / 6 notti",
     startPoint: "Il Cairo (aeroporto o hotel)",
-    summary: "Un itinerario costruito a partire dalla luce: accesso anticipato a Giza all'alba, Karnak prima dei gruppi, mongolfiere sopra Tebe e feluche nell'ora d'oro.",
+    summary: "Un itinerario costruito a partire dalla luce: accesso anticipato a Giza all'alba, Karnak prima dei gruppi, una mongolfiera facoltativa sopra Tebe e feluche nell'ora d'oro.",
     overview: "Quasi tutti gli itinerari egiziani vi portano ai grandi siti nelle ore centrali, piatte e affollate — le peggiori che una macchina fotografica incontrerà mai. Questo viaggio ribalta la logica. Ogni giornata è organizzata sulla prima e sull'ultima luce: accesso privato anticipato a Giza prima che la piana apra, la sala ipostila di Karnak nel sole basso del mattino che scolpisce i rilievi, il viale delle sfingi illuminato nell'ora blu, le vele latine di Assuan in controluce nell'ora d'oro. La vostra guida capisce i fotografi — e questo significa sapere quando parlare, quando portare un permesso per il cavalletto e quando semplicemente lasciarvi soli con la scena. Anche chi non fotografa viaggia bene in questo itinerario: la luce che lusinga un sensore lusinga allo stesso modo un ricordo.",
     itinerary: [
       { title: "Arrivo al Cairo & briefing", items: [

@@ -108,17 +108,17 @@ const family = tour("tour-family-8day");
 export const budgetLadder: Rung[] = [
   {
     who: "A modest budget, or only a day or an evening free",
-    what: `Private day tours and evenings from ${eur(cheapest.price)} per person: ${dayTours.slice(0, 4).map(named).join(", ")}. A guide and a vehicle that are the party's own, for a single day.`,
+    what: `Private day tours and evenings from ${eur(cheapest.price)} per person for a party of six or more: ${dayTours.slice(0, 4).map(named).join(", ")}. A guide and a vehicle that are the party's own, for a single day.`,
     path: "tours.html",
   },
   {
     who: "A short break of two to five days",
-    what: `Private short journeys from ${eur(shortTrips[0].price)} per person: ${shortTrips.slice(0, 3).map(named).join(", ")}.`,
+    what: `Private short journeys from ${eur(shortTrips[0].price)} per person for a party of six or more: ${shortTrips.slice(0, 3).map(named).join(", ")}.`,
     path: "tours.html",
   },
   {
     who: "A full week or more",
-    what: `Private journeys of seven to fourteen days from ${eur(longTrips[0].price)} per person, working out at about ${eur(Math.round(Math.min(...perDay)))}–${Math.round(Math.max(...perDay)).toLocaleString("en-GB")} per person per day with hotels, guide, vehicle, entrance fees and lunch on touring days included: ${longTrips.slice(0, 3).map(named).join(", ")}. The per-person price falls as the party grows.`,
+    what: `Private journeys of seven to fourteen days from ${eur(longTrips[0].price)} per person, working out at about ${eur(Math.round(Math.min(...perDay)))}–${Math.round(Math.max(...perDay)).toLocaleString("en-GB")} per person per day for a private party of six or more, with hotels, guide, vehicle and entrance fees included: ${longTrips.slice(0, 3).map(named).join(", ")}. The per-person price falls as the party grows.`,
     path: "egypt-tour-cost.html",
   },
   {

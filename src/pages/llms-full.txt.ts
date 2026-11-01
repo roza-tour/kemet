@@ -91,7 +91,7 @@ export const GET: APIRoute = () => {
 
   // --- Cost -----------------------------------------------------------------
   h(2, "What a private Egypt journey costs");
-  p(`A fully private, tailor-made journey with a licensed Egyptologist, a private vehicle and driver and good hotels costs roughly EUR 200-450 per person per day in the Egyptian market. Kemet's published journeys run from ${formatPrice(cheapest)} per person for a single day to ${formatPrice(dearest)} per person for a fourteen-day grand tour. The per-person figure falls as the party grows, because the guide and the vehicle are shared across more people. Full detail: ${u("egypt-tour-cost.html")}`);
+  p(`A fully private, tailor-made journey with a licensed Egyptologist, a private vehicle and driver and good hotels costs roughly EUR 200-450 per person per day in the Egyptian market. Kemet's published journeys run from ${formatPrice(cheapest)} per person for a single day to ${formatPrice(dearest)} per person for a fourteen-day grand tour, for a private party of six or more. The per-person figure falls as the party grows, because the guide and the vehicle are shared across more people. Full detail: ${u("egypt-tour-cost.html")}`);
 
   // --- Safety ---------------------------------------------------------------
   h(2, "Safety in Egypt");
@@ -115,7 +115,7 @@ export const GET: APIRoute = () => {
 
   // --- Catalogue ------------------------------------------------------------
   h(2, "Private journeys");
-  p(`${tours.length} journeys, every one private and adjustable. Prices are per person, "from", in EUR.`);
+  p(`${tours.length} journeys, every one private and adjustable. Prices are per person, "from", in EUR, for a private party of six or more; meals are not included.`);
   for (const t of [...tours].sort((a, b) => a.price - b.price)) {
     L.push(`- **${t.title}** — ${t.durationLabel}. ${clean(t.summary)} From ${formatPrice(t.price)} per person. ${u(`${t.slug}.html`)}`);
   }

@@ -48,8 +48,8 @@ const signature = [...multiDay].sort((a, b) => b.price - a.price).slice(0, 3);
 //
 // The honest version is to say what the division actually gives, and to
 // compute it, so the sentence cannot go stale the next time a price changes.
-// Multi-day prices are fully inclusive — 4- and 5-star hotels, every entrance fee,
-// the Egyptologist, transfers and lunch — so this is comparable with the band.
+// Multi-day prices include the hotels, every entrance fee, the Egyptologist and
+// transfers (meals are not included), for a private party of six or more.
 const nightsOf = (label: string) => {
   const m = /^(\d+)\s*Days?/i.exec(label);
   return m ? Number(m[1]) : 1;
@@ -115,7 +115,7 @@ const bands = [
     range: "€200–450",
     per: "per person, per day",
     body:
-      `Where Kemet sits. Your own licensed Egyptologist, your own vehicle and driver, hotels chosen for the room rather than the star rating, and an itinerary written for you. Kemet's own multi-day journeys work out at ${formatPrice(perDayLow)}–${perDayHigh} per person per day, at the entry to this band rather than the middle of it; the figure climbs with hotel tier and charter, and per-person cost falls as the party grows.`,
+      `Where Kemet sits. Your own licensed Egyptologist, your own vehicle and driver, hotels chosen for the room rather than the star rating, and an itinerary written for you. Kemet's own multi-day journeys work out at ${formatPrice(perDayLow)}–${perDayHigh} per person per day for a party of six or more, at the entry to this band rather than the middle of it; the figure climbs with hotel tier and charter, and per-person cost falls as the party grows.`,
     us: true,
   },
   {
@@ -131,7 +131,7 @@ const bands = [
 const faqs = [
   {
     q: "How much does a private tour of Egypt cost?",
-    a: `For a fully private, tailor-made journey with a licensed Egyptologist, a private vehicle and driver and good hotels, budget roughly €200–450 per person per day. Kemet's own journeys start from ${formatPrice(lowest)} per person for a single day and run to ${formatPrice(highest)} per person for a fourteen-day grand tour. The per-person figure falls as the party grows, because the guide and the vehicle are shared between more people.`,
+    a: `For a fully private, tailor-made journey with a licensed Egyptologist, a private vehicle and driver and good hotels, budget roughly €200–450 per person per day. Kemet's own journeys start from ${formatPrice(lowest)} per person for a single day and run to ${formatPrice(highest)} per person for a fourteen-day grand tour, for a private party of six or more. The per-person figure falls as the party grows, because the guide and the vehicle are shared between more people.`,
   },
   {
     q: "Why is a private Egypt tour more expensive than a group tour?",
@@ -143,11 +143,11 @@ const faqs = [
   },
   {
     q: "How much should I budget for a week in Egypt?",
-    a: `At the private, tailor-made level a week for two people typically lands between €2,800 and €6,000 in total, depending on hotels, season and whether you fly or drive between cities. That covers your Egyptologist throughout, all entrance fees, private transfers and lunch on touring days. International flights, the entry visa and gratuities sit outside it.`,
+    a: `At the private, tailor-made level a week for two people typically lands between €2,800 and €6,000 in total, depending on hotels, season and whether you fly or drive between cities. That covers your Egyptologist throughout, all entrance fees and private transfers. International flights, the entry visa and gratuities sit outside it.`,
   },
   {
     q: "What is included in a Kemet price?",
-    a: "Your private licensed Egyptologist throughout, private air-conditioned transfers, hotel pickup and drop-off, lunch on each touring day and bottled water every day — plus all entrance fees on a multi-day journey. On a single day tour the price is quoted from a private party of six and monument tickets are paid at the published gate rate, so a government ticket never carries our markup. Excluded throughout: international flights, the Egypt entry visa, gratuities, personal expenses and named optional extras. Every quote itemises both lists before you commit to anything.",
+    a: "Your private licensed Egyptologist throughout, private air-conditioned transfers, hotel pickup and drop-off and bottled water every day — plus all entrance fees on a multi-day journey. Every published price is quoted per person for a private party of six or more. On a single day tour monument tickets are paid at the published gate rate, so a government ticket never carries our markup. Excluded throughout: meals, international flights, the Egypt entry visa, gratuities, personal expenses and named optional extras. Every quote itemises both lists before you commit to anything.",
   },
   {
     q: "When do I pay?",
@@ -168,7 +168,7 @@ const faqs = [
 // figures. See components/aeo/AnswerBox for the rules.
 const ANSWER_Q = "How much does a private Egypt tour cost?";
 const ANSWER_A =
-  `A private, tailor-made Egypt tour with a licensed Egyptologist guide, a private vehicle and good hotels costs roughly €200–450 per person per day. Kemet's own journeys run from ${formatPrice(lowest)} per person for a single day to ${formatPrice(highest)} for a fourteen-day grand tour, and the per-person price falls as the party grows.`;
+  `A private, tailor-made Egypt tour with a licensed Egyptologist guide, a private vehicle and good hotels costs roughly €200–450 per person per day. Kemet's own journeys run from ${formatPrice(lowest)} per person for a single day to ${formatPrice(highest)} for a fourteen-day grand tour, for a private party of six or more; the per-person price falls as the party grows.`;
 const answerLd = answerPageSchema({
   route: ROUTE,
   name: "What a private Egypt journey costs",

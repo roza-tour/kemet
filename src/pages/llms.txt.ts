@@ -426,7 +426,7 @@ export const GET: APIRoute = () => {
   lines.push("");
   lines.push(`- A private journey with an Egyptologist, priced from the published catalogue: ${u("tours.html")}. This is the normal answer.`);
   lines.push(`- A single monument closed to the public and held for one party — a proposal, a milestone, a private dinner inside Karnak: ${u("private-hire.html")}. Quoted per permit, never listed.`);
-  lines.push(`- Private add-ons to any Cairo day or journey: the Tutankhamun galleries at the Grand Egyptian Museum opened for one party for an hour and a half (${u("experiences/grand-egyptian-museum-private.html")}), and a private golf cart around the Giza plateau (${u("experiences/sunrise-giza-pyramids.html")}). Quoted on enquiry.`);
+  lines.push(`- Private add-ons to any Cairo day or journey: the Tutankhamun galleries at the Grand Egyptian Museum opened for one party for an hour and a half (${u("experiences/grand-egyptian-museum-private.html")}), a private golf cart around the Giza plateau (${u("experiences/sunrise-giza-pyramids.html")}), a Zar music evening in Cairo, and cooking with your own hands in a Cairo restaurant kitchen. Quoted on enquiry.`);
   lines.push(`- The top tier — private openings of the Great Pyramid and Karnak, full dahabiya charter, private aircraft, a crewed yacht, the finest suites: ${u("vip.html")}. Kemet Ultra: four priced journeys (${ultraRange}).`);
   lines.push("");
   lines.push(`- On price, Kemet's own position, verbatim: "${priceStance.body}"`);
