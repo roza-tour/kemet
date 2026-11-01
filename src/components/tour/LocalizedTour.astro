@@ -193,6 +193,14 @@ const jsonld: Record<string, unknown>[] = [
           <span class="lt-amount">{formatPriceIn(tour.price, LOCALE_META[locale].formatLocale)}</span>
           <span class="lt-pp">{t.perPerson}</span>
         </div>
+        {/* The party size the price assumes, and whether tickets sit outside it —
+            the same two facts the English price block states. */}
+        {(tour.priceBasisPax || tour.ticketsExcluded) && (
+          <p class="lt-basis">{[
+            tour.priceBasisPax && t.priceBasisPax.replace("%n", String(tour.priceBasisPax)),
+            tour.ticketsExcluded && t.priceBasisTickets,
+          ].filter(Boolean).join(" · ")}</p>
+        )}
         <p>{p.priceNote}{tour.foodExcluded && ` ${p.foodNote}`}</p>
       </div>
 
@@ -297,6 +305,8 @@ const jsonld: Record<string, unknown>[] = [
   .lt-amount { font-family: var(--ff-display); font-size: var(--t-2xl); color: var(--gold-bright); margin-inline-start: var(--s-2); }
   .lt-pp { font-size: var(--t-tiny); color: var(--muted); margin-inline-start: 4px; }
   .lt-price p { margin: 0; font-size: var(--t-sm); color: var(--muted-2); max-width: 54ch; }
+  .lt-price .lt-basis { color: var(--bone); font-size: var(--t-tiny); letter-spacing: .04em;
+    padding-inline-start: var(--s-2); border-inline-start: 1px solid var(--gold); }
 
   .lt-h {
     font-size: var(--t-xl); margin: var(--s-6) 0 var(--s-3);
