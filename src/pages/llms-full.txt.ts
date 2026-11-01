@@ -115,7 +115,7 @@ export const GET: APIRoute = () => {
 
   // --- Catalogue ------------------------------------------------------------
   h(2, "Private journeys");
-  p(`${tours.length} journeys, every one private and adjustable. Prices are per person, "from", in EUR, for a private party of six or more; meals are not included.`);
+  p(`${tours.length} journeys, every one private and adjustable. Prices are per person, "from", in EUR, for a private party of six or more (the honeymoon: for two); meals are not included, except on board the Nile cruise.`);
   for (const t of [...tours].sort((a, b) => a.price - b.price)) {
     L.push(`- **${t.title}** — ${t.durationLabel}. ${clean(t.summary)} From ${formatPrice(t.price)} per person. ${u(`${t.slug}.html`)}`);
   }

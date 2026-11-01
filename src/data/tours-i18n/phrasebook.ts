@@ -180,6 +180,9 @@ const de: TourPhrasebook = {
     "Sinai desert evening under the stars": "Abend unter Sternen in der Sinai-Wüste",
     "Bottled water": "Wasser in Flaschen",
     "Meals": "Mahlzeiten",
+    "Meals, except on board the Nile cruise": "Mahlzeiten, außer an Bord der Nilkreuzfahrt",
+    "8 nights — Nile-view suites and a 3-night full-board Nile cruise": "8 Übernachtungen — Suiten mit Nilblick und eine dreitägige Nilkreuzfahrt mit Vollpension",
+    "13 nights — hotels, a 3-night full-board Nile cruise and a Red Sea resort": "13 Übernachtungen — Hotels, dreitägige Nilkreuzfahrt mit Vollpension und ein Resort am Roten Meer",
     "A Zar music evening in Cairo (optional extra)": "Ein Zar-Musikabend in Kairo (optionale Zusatzleistung)",
     "Cooking with your own hands in a Cairo restaurant kitchen (optional extra)": "Selbst kochen in einer Restaurantküche in Kairo (optionale Zusatzleistung)",
     "Optional extras you choose to add — activities, drinks":
@@ -497,6 +500,9 @@ const fr: TourPhrasebook = {
     "Sinai desert evening under the stars": "Soirée sous les étoiles dans le désert du Sinaï",
     "Bottled water": "Eau en bouteille",
     "Meals": "Les repas",
+    "Meals, except on board the Nile cruise": "Les repas, sauf à bord de la croisière sur le Nil",
+    "8 nights — Nile-view suites and a 3-night full-board Nile cruise": "8 nuits — suites avec vue sur le Nil et une croisière de 3 nuits en pension complète",
+    "13 nights — hotels, a 3-night full-board Nile cruise and a Red Sea resort": "13 nuits — hôtels, croisière de 3 nuits en pension complète et un resort en mer Rouge",
     "A Zar music evening in Cairo (optional extra)": "Une soirée de musique zar au Caire (en option)",
     "Cooking with your own hands in a Cairo restaurant kitchen (optional extra)": "Cuisiner de vos propres mains dans la cuisine d'un restaurant du Caire (en option)",
     "Optional extras you choose to add — activities, drinks":
@@ -696,6 +702,9 @@ const it: TourPhrasebook = {
     "Sinai desert evening under the stars": "Serata sotto le stelle nel deserto del Sinai",
     "Bottled water": "Acqua in bottiglia",
     "Meals": "I pasti",
+    "Meals, except on board the Nile cruise": "I pasti, tranne a bordo della crociera sul Nilo",
+    "8 nights — Nile-view suites and a 3-night full-board Nile cruise": "8 notti — suite con vista sul Nilo e una crociera di 3 notti in pensione completa",
+    "13 nights — hotels, a 3-night full-board Nile cruise and a Red Sea resort": "13 notti — hotel, crociera di 3 notti in pensione completa e un resort sul Mar Rosso",
     "A Zar music evening in Cairo (optional extra)": "Una serata di musica zar al Cairo (supplemento facoltativo)",
     "Cooking with your own hands in a Cairo restaurant kitchen (optional extra)": "Cucinare con le vostre mani nella cucina di un ristorante del Cairo (supplemento facoltativo)",
     "Optional extras you choose to add — activities, drinks":

@@ -21,7 +21,7 @@ import { beforeDate, ECLIPSE_2027 } from "@/data/timeboxed";
 const FLY_EXTRA = tours.find((t) => t.flyOption)?.flyOption?.extra ?? 0;
 const multiDay = tours.filter((t) => t.kind === "multiday");
 const nightsOf = (label: string) => Number(/^(\d+)\s*Days?/i.exec(label)?.[1] ?? 1);
-const perDay = multiDay.map((t) => t.price / nightsOf(t.durationLabel));
+const perDay = multiDay.filter((t) => t.priceBasisPax === 6).map((t) => t.price / nightsOf(t.durationLabel));
 const PER_DAY_LOW = Math.round(Math.min(...perDay));
 const PER_DAY_HIGH = Math.round(Math.max(...perDay));
 

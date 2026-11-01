@@ -31,7 +31,7 @@ import { join } from "node:path";
 // page computes it. This line used to say Kemet "sits" at EUR 200-450 a day —
 // the market band — while every journey actually works out below its floor.
 const multiDay = tours.filter((t) => /^\d+\s*Days?/i.test(t.durationLabel));
-const perDay = multiDay.map((t) => t.price / parseInt(t.durationLabel, 10));
+const perDay = multiDay.filter((t) => t.priceBasisPax === 6).map((t) => t.price / parseInt(t.durationLabel, 10));
 const perDayLow = Math.round(Math.min(...perDay));
 const perDayHigh = Math.round(Math.max(...perDay));
 

@@ -54,7 +54,8 @@ const nightsOf = (label: string) => {
   const m = /^(\d+)\s*Days?/i.exec(label);
   return m ? Number(m[1]) : 1;
 };
-const perDay = multiDay.map((t) => t.price / nightsOf(t.durationLabel));
+// Journeys priced for a party of six (the honeymoon is priced for two).
+const perDay = multiDay.filter((t) => t.priceBasisPax === 6).map((t) => t.price / nightsOf(t.durationLabel));
 const perDayLow = Math.round(Math.min(...perDay));
 const perDayHigh = Math.round(Math.max(...perDay));
 
@@ -147,7 +148,7 @@ const faqs = [
   },
   {
     q: "What is included in a Kemet price?",
-    a: "Your private licensed Egyptologist throughout, private air-conditioned transfers, hotel pickup and drop-off and bottled water every day — plus all entrance fees on a multi-day journey. Every published price is quoted per person for a private party of six or more. On a single day tour monument tickets are paid at the published gate rate, so a government ticket never carries our markup. Excluded throughout: meals, international flights, the Egypt entry visa, gratuities, personal expenses and named optional extras. Every quote itemises both lists before you commit to anything.",
+    a: "Your private licensed Egyptologist throughout, private air-conditioned transfers, hotel pickup and drop-off and bottled water every day — plus all entrance fees on a multi-day journey. Every published price is quoted per person for a private party of six or more; the honeymoon is priced for two. On a single day tour monument tickets are paid at the published gate rate, so a government ticket never carries our markup. Excluded throughout: meals, international flights, the Egypt entry visa, gratuities, personal expenses and named optional extras. Every quote itemises both lists before you commit to anything.",
   },
   {
     q: "When do I pay?",

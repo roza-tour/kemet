@@ -35,7 +35,7 @@ const planningAndBooking: Faq[] = [
   },
   {
     q: "What is included in a Kemet journey?",
-    a: "Inclusions vary by itinerary and are listed in full on every tour page. A multi-day Kemet journey typically covers your licensed Egyptologist guide, private air-conditioned transfers, accommodation, monument and site entrance fees, and internal logistics such as domestic flights or Nile-cruise segments where the route calls for them. Day tours cover the guide, the private car and transfers — monument tickets are paid separately at the published gate rate, with nothing added by us. Every published price is per person for a private party of six or more. Meals, international flights, visa fees, travel insurance and personal spending are excluded throughout; each tour states exactly which.",
+    a: "Inclusions vary by itinerary and are listed in full on every tour page. A multi-day Kemet journey typically covers your licensed Egyptologist guide, private air-conditioned transfers, accommodation, monument and site entrance fees, and internal logistics such as domestic flights or Nile-cruise segments where the route calls for them. Day tours cover the guide, the private car and transfers — monument tickets are paid separately at the published gate rate, with nothing added by us. Every published price is per person for a private party of six or more; the honeymoon is priced for two. Meals, international flights, visa fees, travel insurance and personal spending are excluded throughout; each tour states exactly which.",
   },
   {
     q: "How do I book a trip with Kemet?",

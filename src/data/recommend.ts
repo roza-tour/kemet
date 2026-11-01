@@ -37,7 +37,7 @@ const byPrice = (a: Tour, b: Tour) => a.price - b.price;
 const dayTours = tours.filter((t) => days(t) === 0).sort(byPrice);
 const shortTrips = tours.filter((t) => days(t) >= 2 && days(t) <= 5).sort(byPrice);
 const longTrips = tours.filter((t) => days(t) >= 7).sort(byPrice);
-const perDay = tours.filter((t) => days(t) > 0).map((t) => t.price / days(t));
+const perDay = tours.filter((t) => days(t) > 0 && t.priceBasisPax === 6).map((t) => t.price / days(t));
 const ultraLow = Math.min(...ultraJourneys.map((j) => j.price2));
 const ultraHigh = Math.max(...ultraJourneys.map((j) => j.price2));
 const ultraFour = Math.min(...ultraJourneys.map((j) => j.price4));
@@ -124,7 +124,7 @@ export const budgetLadder: Rung[] = [
   {
     who: "A honeymoon, a family across generations, a milestone",
     what: [
-      honeymoon && `a nine-day honeymoon from ${eur(honeymoon.price)} per person`,
+      honeymoon && `a nine-day honeymoon from ${eur(honeymoon.price)} per person for a couple`,
       family && `an eight-day family journey from ${eur(family.price)} per person`,
       "and, for a proposal or a private dinner, a single monument closed to the public and held for one party (quoted per permit)",
     ].filter(Boolean).join(", ").replace(/^./, (c) => c.toUpperCase()) + ".",

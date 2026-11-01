@@ -3,7 +3,7 @@
 // this data by src/pages/[slug].astro and listed on tours.html / index.html.
 //
 // PRICING NOTE: every `price` is in EUR, per person, for a private party of
-// six or more (PRICE_BASIS_PAX). Owner, 1 Nov 2026: no struck-through
+// six or more (PRICE_BASIS_PAX) — except the honeymoon, priced for the couple. Owner, 1 Nov 2026: no struck-through
 // reference prices, no meals in any programme, no hotel star rating.
 //
 // The base was the source-operator price marked up by +20%. On 23 September
@@ -48,6 +48,10 @@ const baseExcluded = [
   // ones that already include Abu Simbel and the Red Sea trips nowhere near it.
   "Optional extras you choose to add — activities, drinks",
 ];
+
+/** Journeys with a Nile cruise: the ship serves full board, so only the meals
+ *  ashore sit outside the price (owner, 1 Nov 2026). */
+const cruiseExcluded = baseExcluded.map((x) => (x === "Meals" ? "Meals, except on board the Nile cruise" : x));
 
 const privateNote = "Yes — your party only";
 /** Journeys that include a scheduled Nile cruise. Guide, vehicle and every
@@ -218,11 +222,11 @@ export const tours: Tour[] = [
     included: [
       ...baseIncluded.slice(0, 1),
       "9 nights' accommodation — hotels and a Nile cruise",
-      "3-night Nile cruise, Aswan to Luxor",
+      "3-night full-board Nile cruise, Aswan to Luxor",
       "Sleeper-train berths Cairo–Upper Egypt (both directions)",
       ...baseIncluded.slice(1),
     ],
-    excluded: baseExcluded,
+    excluded: cruiseExcluded,
     faqs: [
       {
         q: "Is the Nile cruise private?",
@@ -1333,11 +1337,11 @@ export const tours: Tour[] = [
     },
     included: [
       ...baseIncluded.slice(0, 1),
-      "3-night Nile cruise, Aswan to Luxor",
+      "3-night full-board Nile cruise, Aswan to Luxor",
       "All shore excursions as private visits with your own guide",
       ...baseIncluded.slice(1),
     ],
-    excluded: baseExcluded,
+    excluded: cruiseExcluded,
     faqs: [
       {
         q: "Is the cruise itself private?",
@@ -1498,8 +1502,9 @@ export const tours: Tour[] = [
     cities: ["Cairo", "Giza", "Aswan", "Luxor"],
     visiting: "Cairo · Giza · Aswan · Luxor",
     isPrivate: sharedShipNote,
-    price: 1859,
-    priceBasisPax: PRICE_BASIS_PAX,
+    // Owner, 1 Nov 2026: raised 10% (from 1,859) and priced for the couple.
+    price: 2045,
+    priceBasisPax: 2,
     summary:
       "Egypt as a honeymoon should be — private sunrise at the pyramids, a felucca at golden hour, three nights on the Nile and suites chosen for the view.",
     overview:
@@ -1599,7 +1604,7 @@ export const tours: Tour[] = [
     },
     included: [
       ...baseIncluded.slice(0, 1),
-      "8 nights — Nile-view suites and a 3-night Nile cruise",
+      "8 nights — Nile-view suites and a 3-night full-board Nile cruise",
       "Domestic flights Cairo–Aswan and Luxor–Cairo",
       "Private early-access Giza sunrise session",
       "Sunset felucca charter in Aswan",
@@ -1607,7 +1612,7 @@ export const tours: Tour[] = [
     ],
     excluded: [
       "Hot-air balloon flight (booked on request, about €120 per person)",
-      ...baseExcluded,
+      ...cruiseExcluded,
     ],
     faqs: [
       {
@@ -2039,13 +2044,13 @@ export const tours: Tour[] = [
     },
     included: [
       ...baseIncluded.slice(0, 1),
-      "13 nights — hotels, a 3-night Nile cruise and a Red Sea resort",
+      "13 nights — hotels, a 3-night full-board Nile cruise and a Red Sea resort",
       "All domestic flights (Cairo–Aswan, Luxor–Sharm El Sheikh, Sharm–Cairo)",
       "Abu Simbel excursion by private vehicle",
       "Ras Mohammed boat day with snorkelling equipment",
       ...baseIncluded.slice(1),
     ],
-    excluded: baseExcluded,
+    excluded: cruiseExcluded,
     faqs: [
       {
         q: "Is fourteen days too long for a first visit?",

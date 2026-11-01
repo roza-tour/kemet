@@ -69,7 +69,7 @@ for (const t of tours.filter((t) => t.flyOption)) {
   KNOWN.set(t.flyOption.extra, "flight-version difference, read from tours.ts");
 }
 const multi = tours.filter((t) => t.kind === "multiday");
-const perDay = multi.map((t) => t.price / days(t.durationLabel));
+const perDay = multi.filter((t) => t.priceBasisPax === 6).map((t) => t.price / days(t.durationLabel));
 // The computed per-day range the cost page prints, so it is not "unexplained".
 KNOWN.set(Math.round(Math.min(...perDay)), "computed per-day floor, printed on the cost page");
 KNOWN.set(Math.round(Math.max(...perDay)), "computed per-day ceiling, printed on the cost page");
