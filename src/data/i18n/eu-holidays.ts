@@ -114,7 +114,7 @@ export const frToussaint: LocalizedPage = {
     {
       title: "Ce que deux semaines permettent réellement",
       body:
-        `Dix jours sur place couvrent Le Caire, Louxor, la croisière sur le Nil et Assouan sans courir — c'est la forme de notre circuit de ${/^(\d+)/.exec(tour("tour-10-day").durationLabel)?.[1]} jours, à partir de ${price("tour-10-day", "fr-FR")} par personne. Avec quatorze jours on ajoute Abou Simbel sans réveil à quatre heures, ou quelques jours en mer Rouge à la fin. Une semaine seule suffit pour Le Caire et Louxor, et c'est déjà un vrai voyage.`,
+        `Dix jours sur place couvrent Le Caire, Louxor, la croisière sur le Nil et Assouan sans courir — c'est la forme de notre circuit de ${/^(\d+)/.exec(tour("tour-10-day").durationLabel)?.[1]} jours, à partir de ${price("tour-10-day", "fr-FR")} par personne, pour un groupe de ${tour("tour-10-day").priceBasisPax} voyageurs ou plus. Avec quatorze jours on ajoute Abou Simbel sans réveil à quatre heures, ou quelques jours en mer Rouge à la fin. Une semaine seule suffit pour Le Caire et Louxor, et c'est déjà un vrai voyage.`,
     },
     {
       title: "Le 22 octobre, à Abou Simbel",
@@ -220,7 +220,7 @@ export const esSemanaSanta: LocalizedPage = {
     {
       title: "Cuántos días caben",
       body:
-        `Si encadena Semana Santa con unos días de vacaciones, diez días cubren El Cairo, Luxor, el crucero por el Nilo y Asuán sin prisas — es la forma de nuestro itinerario de ${/^(\d+)/.exec(tour("tour-10-day").durationLabel)?.[1]} días, desde ${price("tour-10-day", "es-ES")} por persona. Con solo la semana santa propiamente dicha, El Cairo y Luxor entran bien y el viaje sigue mereciendo la pena.`,
+        `Si encadena Semana Santa con unos días de vacaciones, diez días cubren El Cairo, Luxor, el crucero por el Nilo y Asuán sin prisas — es la forma de nuestro itinerario de ${/^(\d+)/.exec(tour("tour-10-day").durationLabel)?.[1]} días, desde ${price("tour-10-day", "es-ES")} por persona, para grupos desde ${tour("tour-10-day").priceBasisPax} viajeros. Con solo la semana santa propiamente dicha, El Cairo y Luxor entran bien y el viaje sigue mereciendo la pena.`,
     },
   ],
   faqs: [
@@ -390,7 +390,7 @@ export const itCapodanno: LocalizedPage = {
     {
       title: "Quanto costa, e perché",
       body:
-        `Il nostro viaggio di ${/^(\d+)/.exec(tour("tour-10-day").durationLabel)?.[1]} giorni parte da ${price("tour-10-day", "it-IT")} a persona. Tra Natale e Capodanno si aggiungono i supplementi che alberghi e navi applicano a noi: li riportiamo a parte nel preventivo, senza nasconderli nel totale. Chi è flessibile trova i primi di dicembre e la seconda metà di gennaio sensibilmente più economici, con lo stesso clima.`,
+        `Il nostro viaggio di ${/^(\d+)/.exec(tour("tour-10-day").durationLabel)?.[1]} giorni parte da ${price("tour-10-day", "it-IT")} a persona, per gruppi da ${tour("tour-10-day").priceBasisPax} viaggiatori. Tra Natale e Capodanno si aggiungono i supplementi che alberghi e navi applicano a noi: li riportiamo a parte nel preventivo, senza nasconderli nel totale. Chi è flessibile trova i primi di dicembre e la seconda metà di gennaio sensibilmente più economici, con lo stesso clima.`,
     },
   ],
   highlights: {
@@ -479,7 +479,7 @@ export const deWeihnachten: LocalizedPage = {
     {
       title: "Was das kostet, und woran es liegt",
       body:
-        `Unsere ${/^(\d+)/.exec(tour("tour-10-day").durationLabel)?.[1]}-Tage-Rundreise beginnt bei ${price("tour-10-day")} pro Person; über Weihnachten und Silvester liegt der Aufschlag im Bereich der Hotel- und Schiffszuschläge, die uns selbst berechnet werden — wir geben sie weiter und weisen sie im Angebot getrennt aus, statt sie im Gesamtpreis verschwinden zu lassen. Wer flexibel ist: Anfang Dezember und die zweite Januarhälfte kosten deutlich weniger bei praktisch gleichem Wetter.`,
+        `Unsere ${/^(\d+)/.exec(tour("tour-10-day").durationLabel)?.[1]}-Tage-Rundreise beginnt bei ${price("tour-10-day")} pro Person ab ${tour("tour-10-day").priceBasisPax} Reisenden; über Weihnachten und Silvester liegt der Aufschlag im Bereich der Hotel- und Schiffszuschläge, die uns selbst berechnet werden — wir geben sie weiter und weisen sie im Angebot getrennt aus, statt sie im Gesamtpreis verschwinden zu lassen. Wer flexibel ist: Anfang Dezember und die zweite Januarhälfte kosten deutlich weniger bei praktisch gleichem Wetter.`,
     },
   ],
   highlights: {
@@ -550,7 +550,7 @@ export const ruNovyGod: LocalizedPage = {
     {
       title: "Как выглядят десять дней",
       body:
-        `Каир на три дня — пирамиды на открытии и Большой Египетский музей, на который нужно полдня, а не час. Перелёт в Луксор, Долина царей и Карнак. Затем Нил до Асуана на теплоходе или дахабии, три-четыре ночи. И, если хочется, два-три дня на Красном море в конце. Это форма нашего маршрута на ${/^(\d+)/.exec(tour("tour-10-day").durationLabel)?.[1]} дней, от ${price("tour-10-day", "ru-RU")} на человека.`,
+        `Каир на три дня — пирамиды на открытии и Большой Египетский музей, на который нужно полдня, а не час. Перелёт в Луксор, Долина царей и Карнак. Затем Нил до Асуана на теплоходе или дахабии, три-четыре ночи. И, если хочется, два-три дня на Красном море в конце. Это форма нашего маршрута на ${/^(\d+)/.exec(tour("tour-10-day").durationLabel)?.[1]} дней, от ${price("tour-10-day", "ru-RU")} на человека для группы от ${tour("tour-10-day").priceBasisPax} человек.`,
     },
     {
       title: "Что уходит первым",

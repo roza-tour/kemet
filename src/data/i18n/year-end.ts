@@ -84,7 +84,7 @@ export const frNoel: LocalizedPage = {
     {
       title: "Ce que ça coûte, et pourquoi",
       body:
-        `Notre voyage de ${daysOf("tour-10-day")} jours commence à ${eur("fr-FR", "tour-10-day")} par personne. Entre Noël et le Nouvel An s'ajoutent les suppléments que les hôtels et les bateaux nous appliquent : nous les indiquons à part dans le devis, sans les fondre dans le total. Pour qui est flexible, début décembre et la seconde moitié de janvier coûtent nettement moins, pour un climat identique.`,
+        `Notre voyage de ${daysOf("tour-10-day")} jours commence à ${eur("fr-FR", "tour-10-day")} par personne, pour un groupe de ${tour("tour-10-day").priceBasisPax} voyageurs ou plus. Entre Noël et le Nouvel An s'ajoutent les suppléments que les hôtels et les bateaux nous appliquent : nous les indiquons à part dans le devis, sans les fondre dans le total. Pour qui est flexible, début décembre et la seconde moitié de janvier coûtent nettement moins, pour un climat identique.`,
     },
   ],
   highlights: {
@@ -163,7 +163,7 @@ export const esNavidad: LocalizedPage = {
     {
       title: "Cuánto cuesta, y por qué",
       body:
-        `Nuestro viaje de ${daysOf("tour-10-day")} días empieza en ${eur("es-ES", "tour-10-day")} por persona. Entre Navidad y Año Nuevo se suman los suplementos que hoteles y barcos nos aplican a nosotros: los indicamos aparte en el presupuesto, sin esconderlos en el total. Quien sea flexible encontrará principios de diciembre y la segunda quincena de enero bastante más baratos, con el mismo clima.`,
+        `Nuestro viaje de ${daysOf("tour-10-day")} días empieza en ${eur("es-ES", "tour-10-day")} por persona, para grupos desde ${tour("tour-10-day").priceBasisPax} viajeros. Entre Navidad y Año Nuevo se suman los suplementos que hoteles y barcos nos aplican a nosotros: los indicamos aparte en el presupuesto, sin esconderlos en el total. Quien sea flexible encontrará principios de diciembre y la segunda quincena de enero bastante más baratos, con el mismo clima.`,
     },
   ],
   highlights: {
@@ -225,7 +225,7 @@ export const ptNatal: LocalizedPage = {
     {
       title: "Férias longas, viagem completa",
       body:
-        `A viagem desde o Brasil é longa — normalmente com conexão na Europa ou no Golfo — e por isso uma semana é pouco. Com as férias de verão, dá para fazer o Egito como ele pede: o Cairo e as pirâmides, Luxor, o Nilo até Assuã, Abu Simbel e, se quiser, alguns dias no mar Vermelho no fim. É o formato da nossa viagem de ${daysOf("tour-grand-14day")} dias, a partir de ${eur("pt-BR", "tour-grand-14day")} por pessoa.`,
+        `A viagem desde o Brasil é longa — normalmente com conexão na Europa ou no Golfo — e por isso uma semana é pouco. Com as férias de verão, dá para fazer o Egito como ele pede: o Cairo e as pirâmides, Luxor, o Nilo até Assuã, Abu Simbel e, se quiser, alguns dias no mar Vermelho no fim. É o formato da nossa viagem de ${daysOf("tour-grand-14day")} dias, a partir de ${eur("pt-BR", "tour-grand-14day")} por pessoa, para grupos a partir de ${tour("tour-grand-14day").priceBasisPax} viajantes.`,
     },
     {
       title: "A virada no Nilo",
@@ -240,7 +240,7 @@ export const ptNatal: LocalizedPage = {
     {
       title: "Quanto custa, e por quê",
       body:
-        `Nossa viagem de ${daysOf("tour-10-day")} dias começa em ${eur("pt-BR", "tour-10-day")} por pessoa. Entre o Natal e o Ano-Novo entram os suplementos que hotéis e barcos cobram de nós: eles aparecem à parte no orçamento, sem se esconder no total. E aqui o calendário brasileiro ajuda: depois do dia 5 de janeiro os preços caem bastante, o clima continua igual — e as férias ainda não acabaram.`,
+        `Nossa viagem de ${daysOf("tour-10-day")} dias começa em ${eur("pt-BR", "tour-10-day")} por pessoa, para grupos a partir de ${tour("tour-10-day").priceBasisPax} viajantes. Entre o Natal e o Ano-Novo entram os suplementos que hotéis e barcos cobram de nós: eles aparecem à parte no orçamento, sem se esconder no total. E aqui o calendário brasileiro ajuda: depois do dia 5 de janeiro os preços caem bastante, o clima continua igual — e as férias ainda não acabaram.`,
     },
   ],
   highlights: {
@@ -317,7 +317,7 @@ export const idAkhirTahun: LocalizedPage = {
     {
       title: "Berapa biayanya",
       body:
-        `Perjalanan ${daysOf("tour-10-day")} hari kami mulai dari ${eur("id-ID", "tour-10-day")} per orang. Antara Natal dan Tahun Baru ada biaya tambahan yang dikenakan hotel dan kapal kepada kami; kami mencantumkannya terpisah dalam penawaran, tidak disembunyikan di dalam total.`,
+        `Perjalanan ${daysOf("tour-10-day")} hari kami mulai dari ${eur("id-ID", "tour-10-day")} per orang, untuk rombongan mulai ${tour("tour-10-day").priceBasisPax} orang. Antara Natal dan Tahun Baru ada biaya tambahan yang dikenakan hotel dan kapal kepada kami; kami mencantumkannya terpisah dalam penawaran, tidak disembunyikan di dalam total.`,
     },
   ],
   highlights: {
@@ -393,7 +393,7 @@ export const msHujungTahun: LocalizedPage = {
     {
       title: "Berapa kosnya",
       body:
-        `Perjalanan ${daysOf("tour-10-day")} hari kami bermula dari ${eur("ms-MY", "tour-10-day")} seorang. Antara Krismas dan Tahun Baru ada caj tambahan yang dikenakan hotel dan kapal kepada kami; kami menyenaraikannya secara berasingan dalam sebut harga, bukan disembunyikan dalam jumlah.`,
+        `Perjalanan ${daysOf("tour-10-day")} hari kami bermula dari ${eur("ms-MY", "tour-10-day")} seorang, untuk kumpulan dari ${tour("tour-10-day").priceBasisPax} orang. Antara Krismas dan Tahun Baru ada caj tambahan yang dikenakan hotel dan kapal kepada kami; kami menyenaraikannya secara berasingan dalam sebut harga, bukan disembunyikan dalam jumlah.`,
     },
   ],
   highlights: {

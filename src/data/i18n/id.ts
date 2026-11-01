@@ -283,8 +283,8 @@ export const id: LocalizedPage[] = [
         "Egyptologist berlisensi untuk seluruh perjalanan",
         "Seluruh tiket masuk situs di sepanjang rute",
         "Transfer privat ber-AC dan penjemputan di hotel",
-        "Makan siang pada hari kunjungan, air setiap hari",
-        "Tidak termasuk: tiket internasional, visa, tip, pengeluaran pribadi",
+        "Air minum setiap hari",
+        "Tidak termasuk: tiket internasional, visa, tip, makan, pengeluaran pribadi",
       ],
     },
     faqs: [

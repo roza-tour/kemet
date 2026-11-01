@@ -50,7 +50,7 @@ export const deFamily: LocalizedPage = {
     { label: "Beste Zeit", value: "Herbst- und Osterferien" },
     { label: "Ideales Alter", value: "ab etwa 7 Jahren" },
     { label: "Für die Eltern", value: "Babysitter auf Wunsch" },
-    { label: `${FAM_DAYS}-Tage-Familienreise ab`, value: `${eur("de-DE")} p. P.` },
+    { label: `${FAM_DAYS}-Tage-Familienreise ab`, value: `${eur("de-DE")} p. P., ab ${FAM.priceBasisPax} Reisenden` },
   ],
   story: {
     eyebrow: "Familien",
@@ -134,7 +134,7 @@ export const frFamily: LocalizedPage = {
     { label: "Meilleure période", value: "Toussaint et Pâques" },
     { label: "Âge idéal", value: "à partir de 7 ans environ" },
     { label: "Pour les parents", value: "baby-sitter sur demande" },
-    { label: `Voyage famille de ${FAM_DAYS} jours dès`, value: `${eur("fr-FR")} / pers.` },
+    { label: `Voyage famille de ${FAM_DAYS} jours dès`, value: `${eur("fr-FR")} / pers., dès ${FAM.priceBasisPax} voyageurs` },
   ],
   story: {
     eyebrow: "En famille",
@@ -218,7 +218,7 @@ export const esFamily: LocalizedPage = {
     { label: "Mejor época", value: "otoño y Semana Santa" },
     { label: "Edad ideal", value: "desde unos 7 años" },
     { label: "Para los padres", value: "canguro a petición" },
-    { label: `Viaje en familia de ${FAM_DAYS} días desde`, value: `${eur("es-ES")} por persona` },
+    { label: `Viaje en familia de ${FAM_DAYS} días desde`, value: `${eur("es-ES")} por persona, desde ${FAM.priceBasisPax} viajeros` },
   ],
   story: {
     eyebrow: "En familia",
@@ -302,7 +302,7 @@ export const itFamily: LocalizedPage = {
     { label: "Periodo migliore", value: "Natale e Pasqua" },
     { label: "Età ideale", value: "dai 7 anni circa" },
     { label: "Per i genitori", value: "babysitter su richiesta" },
-    { label: `Viaggio in famiglia di ${FAM_DAYS} giorni da`, value: `${eur("it-IT")} a persona` },
+    { label: `Viaggio in famiglia di ${FAM_DAYS} giorni da`, value: `${eur("it-IT")} a persona, da ${FAM.priceBasisPax} viaggiatori` },
   ],
   story: {
     eyebrow: "In famiglia",
@@ -386,7 +386,7 @@ export const ruFamily: LocalizedPage = {
     { label: "Лучшее время", value: "с октября по апрель" },
     { label: "Возраст", value: "примерно с 7 лет" },
     { label: "Для родителей", value: "няня по запросу" },
-    { label: `Семейный тур на ${FAM_DAYS} дней от`, value: `${eur("ru-RU")} с человека` },
+    { label: `Семейный тур на ${FAM_DAYS} дней от`, value: `${eur("ru-RU")} с человека, от ${FAM.priceBasisPax} человек` },
   ],
   story: {
     eyebrow: "Для семьи",
@@ -470,7 +470,7 @@ export const ptFamily: LocalizedPage = {
     { label: "Melhor época", value: "férias de janeiro" },
     { label: "Idade ideal", value: "a partir de uns 7 anos" },
     { label: "Para os pais", value: "babá sob pedido" },
-    { label: `Viagem em família de ${FAM_DAYS} dias a partir de`, value: `${eur("pt-BR")} por pessoa` },
+    { label: `Viagem em família de ${FAM_DAYS} dias a partir de`, value: `${eur("pt-BR")} por pessoa, a partir de ${FAM.priceBasisPax} viajantes` },
   ],
   story: {
     eyebrow: "Em família",
@@ -554,7 +554,7 @@ export const idFamily: LocalizedPage = {
     { label: "Waktu terbaik", value: "Oktober sampai April" },
     { label: "Usia ideal", value: "mulai sekitar 7 tahun" },
     { label: "Untuk orang tua", value: "babysitter atas permintaan" },
-    { label: `Tur keluarga ${FAM_DAYS} hari mulai`, value: `${eur("id-ID")} per orang` },
+    { label: `Tur keluarga ${FAM_DAYS} hari mulai`, value: `${eur("id-ID")} per orang, mulai ${FAM.priceBasisPax} orang` },
   ],
   story: {
     eyebrow: "Keluarga",
@@ -638,7 +638,7 @@ export const msFamily: LocalizedPage = {
     { label: "Masa terbaik", value: "Oktober hingga April" },
     { label: "Umur ideal", value: "dari sekitar 7 tahun" },
     { label: "Untuk ibu bapa", value: "pengasuh atas permintaan" },
-    { label: `Lawatan keluarga ${FAM_DAYS} hari dari`, value: `${eur("ms-MY")} seorang` },
+    { label: `Lawatan keluarga ${FAM_DAYS} hari dari`, value: `${eur("ms-MY")} seorang, dari ${FAM.priceBasisPax} orang` },
   ],
   story: {
     eyebrow: "Keluarga",

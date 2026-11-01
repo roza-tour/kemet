@@ -284,8 +284,8 @@ export const ms: LocalizedPage[] = [
         "Egyptologist berlesen sepanjang perjalanan",
         "Semua tiket masuk tapak di sepanjang laluan",
         "Pemindahan persendirian berhawa dingin dan ambilan hotel",
-        "Makan tengah hari pada hari lawatan, air setiap hari",
-        "Tidak termasuk: tiket antarabangsa, visa, tip, perbelanjaan peribadi",
+        "Air minuman setiap hari",
+        "Tidak termasuk: tiket antarabangsa, visa, tip, makanan, perbelanjaan peribadi",
       ],
     },
     faqs: [

@@ -83,10 +83,10 @@ src/
 
 ## Pricing
 
-> **All prices are the source-operator price already marked up by +20%**,
-> shown in **EUR, per person.** Where an original figure is given it is shown
-> struck-through next to the current price. To change the markup, edit the
-> values in `src/data/tours.ts` (the `price` / `was` fields).
+> **Prices are in EUR, per person, "from", for a private party of six or more**
+> (`priceBasisPax`; the honeymoon is priced for two). No struck-through prices,
+> no meals except on board the Nile cruise, and no hotel star rating (owner,
+> 1 Nov 2026). Edit the values in `src/data/tours.ts`.
 
 ## SEO / GEO / AEO
 
