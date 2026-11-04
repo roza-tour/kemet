@@ -122,7 +122,7 @@ const socials = Object.entries(company.socialProfiles ?? {})
     <LangSwitch route={route} label="Language (footer)" />
 
     <div class="foot-bottom">
-      <span>{site.copyright}</span>
+      <span dir="ltr">{site.copyright} <span class="foot-by" data-nosnippet>· by Roza Tour</span></span>
       <span>{isEn ? "The Land · The Legacy · The Journey" : t.motto}</span>
     </div>
   </div>

@@ -537,6 +537,7 @@ footer{background:var(--ink-2);border-top:1px solid var(--line);padding:var(--s-
 .foot-social a:hover .soc-i{opacity:1}
 .foot-social .soc-i{opacity:.8;transition:opacity .4s}
 .foot-bottom{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;padding-top:var(--s-5);border-top:1px solid var(--line);color:var(--muted-2);font-size:var(--t-nano);letter-spacing:.22em;text-transform:uppercase;flex-wrap:wrap;gap:var(--s-2)}
+.foot-by{white-space:nowrap}
 .foot-ghost{position:absolute;left:50%;bottom:-4vw;transform:translateX(-50%);font-family:var(--ff-display);font-weight:400;font-size:20vw;line-height:1;letter-spacing:.08em;color:transparent;-webkit-text-stroke:1px rgba(217,180,90,.08);user-select:none;pointer-events:none;z-index:1}
 
 /* Scroll-reveal REMOVED. Every element paints at its final state the moment the
