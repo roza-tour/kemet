@@ -157,7 +157,7 @@ export const occasions: Occasion[] = [
       {
         title: "A day built around one thing",
         body:
-          "The Valley of the Kings at opening with the extra-ticket tombs — Seti I, Nefertari — included rather than debated at the gate. Then nothing. Lunch that lasts two hours, an afternoon by the water, and dinner somewhere that took a month to book. One thing done completely beats four done adequately.",
+          "The Valley of the Kings at opening with the extra-ticket tombs — Seti I, Ramesses VI — included rather than debated at the gate. Then nothing. Lunch that lasts two hours, an afternoon by the water, and dinner somewhere that took a month to book. One thing done completely beats four done adequately.",
       },
       {
         title: "Something nobody in the family has done",
