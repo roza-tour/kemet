@@ -53,10 +53,7 @@ const symData = JSON.stringify(Object.fromEntries(CURRENCIES.map((c) => [c.code,
 <div class="hprefs">
   {entries.length > 1 && (
     <details class="hp hp-lang">
-      <summary aria-label={LOCALE_META[current].language}>
-        <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="7.2" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M2.8 10h14.4M10 2.8c2.2 2.3 2.2 12.1 0 14.4M10 2.8c-2.2 2.3-2.2 12.1 0 14.4" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
-        <span>{LOCALE_META[current].short}</span>
-      </summary>
+      <summary aria-label={LOCALE_META[current].language}><span>{LOCALE_META[current].short}</span></summary>
       <div class="hp-panel">
         <ul>
           {entries.map((a) => {
@@ -70,7 +67,7 @@ const symData = JSON.stringify(Object.fromEntries(CURRENCIES.map((c) => [c.code,
                   lang={a.hreflang}
                   class={own ? "is-current" : undefined}
                   aria-current={own && isTranslated ? "true" : undefined}
-                ><b>{LOCALE_META[loc].short}</b><span>{LOCALE_META[loc].endonym}</span></a>
+                ><span>{LOCALE_META[loc].endonym}</span><b>{LOCALE_META[loc].short}</b></a>
               </li>
             );
           })}
@@ -78,12 +75,13 @@ const symData = JSON.stringify(Object.fromEntries(CURRENCIES.map((c) => [c.code,
       </div>
     </details>
   )}
+  {entries.length > 1 && <span class="hp-sep" aria-hidden="true"></span>}
   <details class="hp hp-cur" data-fx={fxData} data-sym={symData}>
     <summary aria-label={w.currency}><span data-cur-label>EUR</span></summary>
     <div class="hp-panel">
       <ul>
         {CURRENCIES.map((c) => (
-          <li><button type="button" data-cur={c.code} aria-pressed={c.code === "EUR" ? "true" : "false"}><b>{c.symbol}</b><span>{c.code}</span></button></li>
+          <li><button type="button" data-cur={c.code} aria-pressed={c.code === "EUR" ? "true" : "false"}><span>{c.code}</span><b>{c.symbol}</b></button></li>
         ))}
       </ul>
       <p class="hp-note">{w.note}</p>
@@ -92,53 +90,73 @@ const symData = JSON.stringify(Object.fromEntries(CURRENCIES.map((c) => [c.code,
 </div>
 
 <style is:global>
-  .nav-end { display: flex; align-items: center; gap: var(--s-2); }
-  .hprefs { display: flex; align-items: center; gap: 6px; }
+  /* The two controls share one cartouche: a gold hairline, a dark gap and a
+     second, fainter hairline inside it — the double ring of a royal name —
+     with a small gold lozenge between language and currency. */
+  .nav-end { display: flex; align-items: center; gap: var(--s-3); }
+  .hprefs { display: flex; align-items: center; height: 38px; padding: 0 6px; border-radius: 999px;
+    border: 1px solid rgba(217,180,90,.6);
+    background: linear-gradient(180deg, rgba(217,180,90,.12), rgba(217,180,90,.02) 70%);
+    box-shadow: inset 0 0 0 3px rgba(11,9,7,.88), inset 0 0 0 4px rgba(217,180,90,.24), 0 10px 26px -16px rgba(217,180,90,.55);
+    transition: border-color .4s, box-shadow .4s; }
+  .hprefs:hover, .hprefs:focus-within { border-color: var(--gold-bright);
+    box-shadow: inset 0 0 0 3px rgba(11,9,7,.88), inset 0 0 0 4px rgba(217,180,90,.4), 0 0 22px -6px rgba(217,180,90,.55); }
+  .hp-sep { width: 5px; height: 5px; flex: none; transform: rotate(45deg);
+    background: linear-gradient(135deg, #F7E6AE, #B8955A); box-shadow: 0 0 6px rgba(217,180,90,.6); }
   .hp { position: relative; }
-  .hp > summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 6px;
-    height: 34px; padding: 0 10px; border: 1px solid var(--line); color: var(--gold);
-    font-family: var(--ff-body); font-size: var(--t-micro); letter-spacing: .2em; text-transform: uppercase;
-    white-space: nowrap; transition: border-color .35s, background .35s; }
+  .hp > summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 7px;
+    height: 36px; padding: 0 12px; white-space: nowrap;
+    font-family: var(--ff-display); font-size: .9rem; font-weight: 400; letter-spacing: .16em; }
+  .hp > summary span { background: linear-gradient(180deg, #F7E6AE 10%, #D9B45A 60%, #A8862F);
+    -webkit-background-clip: text; background-clip: text; color: transparent; }
   .hp > summary::-webkit-details-marker { display: none; }
-  .hp > summary::after { content: ""; width: 5px; height: 5px; border-right: 1px solid currentColor;
-    border-bottom: 1px solid currentColor; transform: rotate(45deg) translate(-1px, -1px); opacity: .8; }
+  .hp > summary::after { content: ""; width: 4px; height: 4px; border-right: 1px solid var(--gold);
+    border-bottom: 1px solid var(--gold); transform: rotate(45deg) translate(-1px, -1px); opacity: .75;
+    transition: transform .3s; }
   .hp[open] > summary::after { transform: rotate(-135deg) translate(-1px, -1px); }
-  .hp > summary:hover, .hp[open] > summary { border-color: var(--gold); background: rgba(217,180,90,.06); }
-  .hp > summary:focus-visible { outline: 2px solid rgba(247,230,174,.6); outline-offset: 2px; }
-  .hp > summary svg { width: 14px; height: 14px; flex: none; }
-  .hp-panel { position: absolute; top: calc(100% + 8px); inset-inline-end: 0; z-index: 130; min-width: 210px;
-    background: rgba(14,11,8,.98); border: 1px solid var(--line-2);
-    box-shadow: 0 26px 60px -26px rgba(0,0,0,.9); padding: var(--s-2) 0; }
+  .hp > summary:focus-visible { outline: 2px solid rgba(247,230,174,.6); outline-offset: 2px; border-radius: 999px; }
+
+  .hp-panel { position: absolute; top: calc(100% + 14px); inset-inline-end: -10px; z-index: 130; min-width: 230px;
+    background: linear-gradient(180deg, rgba(20,16,11,.985), rgba(11,9,7,.985));
+    border: 1px solid rgba(217,180,90,.32); border-radius: 3px;
+    box-shadow: 0 30px 70px -28px rgba(0,0,0,.95), inset 0 0 0 1px rgba(11,9,7,.9), inset 0 0 0 2px rgba(217,180,90,.08);
+    padding: 18px 0 10px; }
+  /* A gold rule across the top with a lozenge at its centre. */
+  .hp-panel::before { content: ""; position: absolute; top: 8px; left: 18px; right: 18px; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(217,180,90,.7), transparent); }
+  .hp-panel::after { content: ""; position: absolute; top: 5px; left: calc(50% - 3.5px); width: 7px; height: 7px;
+    transform: rotate(45deg); background: #0B0907; border: 1px solid rgba(217,180,90,.8); }
   .hp-panel ul { list-style: none; margin: 0; padding: 0; }
-  .hp-panel a, .hp-panel button { display: flex; align-items: baseline; gap: 12px; width: 100%;
-    padding: 9px var(--s-3); background: none; border: 0; cursor: pointer; text-align: start;
-    color: var(--bone); font-family: var(--ff-body); font-size: var(--t-tiny); letter-spacing: .04em;
+  .hp-panel a, .hp-panel button { display: flex; align-items: baseline; justify-content: space-between; gap: 18px;
+    width: 100%; padding: 8px 20px; background: none; border: 0; cursor: pointer; text-align: start;
+    color: var(--bone); font-family: var(--ff-display); font-size: 1rem; font-weight: 300; letter-spacing: .01em;
     text-transform: none; white-space: nowrap; transition: background .25s, color .25s; }
   .hp-panel a::after { display: none; }
-  .hp-panel b { min-width: 30px; font-weight: 400; color: var(--gold); letter-spacing: .14em; font-size: var(--t-micro); }
-  .hp-panel a:hover, .hp-panel button:hover { background: rgba(217,180,90,.08); color: var(--gold-bright); }
-  .hp-panel .is-current, .hp-panel [aria-pressed="true"] { color: var(--gold-bright); background: rgba(217,180,90,.1); }
-  .hp-cur .hp-panel ul { display: grid; grid-template-columns: 1fr 1fr; }
-  .hp-cur .hp-panel button { padding: 8px var(--s-3); }
-  .hp-note { margin: var(--s-2) var(--s-3) 2px; padding-top: var(--s-2); border-top: 1px solid var(--line);
-    font-size: var(--t-nano); line-height: 1.5; color: var(--muted-2); white-space: normal; max-width: 240px; }
+  .hp-panel b { font-family: var(--ff-body); font-weight: 400; color: var(--gold); letter-spacing: .2em; font-size: var(--t-nano);
+    direction: ltr; unicode-bidi: isolate; } /* "US$" stays "US$" on Arabic pages */
+  .hp-panel a:hover, .hp-panel button:hover { background: linear-gradient(90deg, rgba(217,180,90,.12), transparent); color: var(--gold-bright); }
+  .hp-panel .is-current, .hp-panel [aria-pressed="true"] { color: var(--gold-bright); }
+  .hp-panel .is-current span::before, .hp-panel [aria-pressed="true"] span::before { content: ""; display: inline-block;
+    width: 5px; height: 5px; margin-inline-end: 9px; transform: rotate(45deg) translateY(-2px); background: var(--gold); }
+  .hp-cur .hp-panel ul { display: grid; grid-template-columns: 1fr 1fr; column-gap: 4px; }
+  .hp-cur .hp-panel button { font-family: var(--ff-body); font-size: var(--t-tiny); letter-spacing: .14em; padding: 8px 18px; }
+  .hp-cur .hp-panel button b { letter-spacing: .06em; font-size: var(--t-micro); }
+  .hp-note { margin: 10px 20px 2px; padding-top: 10px; border-top: 1px solid rgba(217,180,90,.18);
+    font-size: var(--t-nano); line-height: 1.55; color: var(--muted-2); white-space: normal; max-width: 250px; font-style: italic; }
 
-  /* Laptop widths: the bar carries four menus, the search and these two
-     controls, so everything tightens a notch before the burger takes over. */
+  /* Laptop widths: the bar carries four menus, the search and this control,
+     so everything tightens a notch before the burger takes over. */
   @media (max-width: 1320px) and (min-width: 1081px) {
-    .hp-lang > summary svg { display: none; }
-    .hp > summary { padding: 0 8px; letter-spacing: .14em; }
-    .nav-end { gap: 10px; }
-    .nsearch { flex-basis: 136px; min-width: 104px; }
+    .hp > summary { padding: 0 9px; letter-spacing: .12em; }
+    .nav-end { gap: 12px; }
   }
   @media (max-width: 1080px) {
-    .nav-end { margin-inline-start: auto; gap: 6px; }
+    .nav-end { margin-inline-start: auto; gap: 8px; }
     .nav-end .nav-cta { margin-left: 0; margin-right: var(--s-1); }
-    .hp > summary { height: 36px; padding: 0 8px; }
   }
   @media (max-width: 420px) {
-    .hp-lang > summary svg { display: none; }
-    .hp > summary { padding: 0 7px; letter-spacing: .12em; }
-    .hp-panel { position: fixed; top: 74px; inset-inline: 12px; min-width: 0; }
+    .hprefs { height: 36px; padding: 0 3px; }
+    .hp > summary { height: 34px; padding: 0 8px; gap: 5px; font-size: .82rem; letter-spacing: .1em; }
+    .hp-panel { position: fixed; top: 76px; inset-inline: 12px; min-width: 0; }
   }
 </style>
