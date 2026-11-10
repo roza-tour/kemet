@@ -14,6 +14,7 @@
 // nav's uppercase, letter-spacing and nowrap — which is exactly what wrecked
 // the first version of this.
 import { primaryNav } from "@/config/navigation";
+import HeaderPrefs from "@/components/HeaderPrefs.astro";
 import { localeNav } from "@/config/nav-i18n";
 import { ui, namedMenu, UI_DEFAULT } from "@/config/ui";
 import type { SiteLocale } from "@/config/i18n";
@@ -143,7 +144,10 @@ const isCurrent = (item: (typeof primaryNav)[number]) =>
     </form>
   </div>
 
-  <a href={contactHref} class="nav-cta">{t.contact}</a>
+  <div class="nav-end">
+    <HeaderPrefs route={active} locale={locale} />
+    <a href={contactHref} class="nav-cta">{t.contact}</a>
+  </div>
   <button class="burger" aria-label={t.openMenu} aria-expanded="false" aria-controls="navlinks">&#9776;</button>
 </nav>
 

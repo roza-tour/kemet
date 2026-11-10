@@ -204,7 +204,7 @@ const jsonld: Record<string, unknown>[] = [
                 <span class="vcardj-dur">{T.labels.duration(j.days, j.nights)}</span>
                 <b class="vcardj-title">{jt.title}</b>
                 <span class="vcardj-route">{jt.route}</span>
-                <span class="vcardj-price"><em>{T.labels.from}</em> {eur(j.price2)}</span>
+                <span class="vcardj-price" data-eur={j.price2}><em>{T.labels.from}</em> {eur(j.price2)}</span>
                 <span class="vcardj-pp">{T.labels.perPersonTwo}</span>
                 <span class="vcardj-go">{T.labels.view} <b aria-hidden="true">→</b></span>
               </a>
@@ -290,7 +290,7 @@ const jsonld: Record<string, unknown>[] = [
 
                 <div class="vprice">
                   <span class="vprice-from">{T.labels.from}</span>
-                  <b>{eur(j.price2)}</b>
+                  <b data-eur={j.price2}>{eur(j.price2)}</b>
                   <span class="vprice-pp">{T.labels.perPersonTwo}</span>
                   <span class="vprice-four">{T.labels.perPersonFour(eur(j.price4))}</span>
                 </div>

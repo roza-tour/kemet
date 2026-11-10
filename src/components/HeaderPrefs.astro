@@ -1,0 +1,144 @@
+---
+// HeaderPrefs — language and currency, in the header, on every page.
+//
+// LANGUAGE: the same links as LangSwitch (the footer one), now where a
+// visitor looks first. On a translated page each entry opens THIS page in that
+// language; on an untranslated page it opens that language's home page, with
+// no hreflang — those are navigation, not alternates (see LangSwitch).
+// Links only: nothing switches language on its own.
+//
+// CURRENCY: prices are set in euros and stay in euros. Choosing another
+// currency adds an approximate figure under each price marked data-eur; the
+// choice is remembered on this device only (Base.astro runs it). Rates live
+// in config/site.ts (FX).
+//
+// Both panels are <details>, so they open and close without any script.
+import { LOCALE_META, localeOfRoute, basePrefixFor } from "@/config/i18n";
+import { allAlternatesFor } from "@/config/alternates";
+import { publicPath } from "@/utils/links";
+import { CURRENCIES, FX } from "@/config/site";
+import type { SiteLocale } from "@/config/i18n";
+
+interface Props {
+  /** Route file of the current page. */
+  route: string;
+  locale?: SiteLocale;
+}
+const { route, locale } = Astro.props;
+
+const alternates = allAlternatesFor(route).filter((a) => a.hreflang !== "x-default");
+const homes = allAlternatesFor("index.html").filter((a) => a.hreflang !== "x-default");
+const isTranslated = alternates.length > 1;
+const entries = isTranslated ? alternates : homes;
+const current = (localeOfRoute(route) ?? locale ?? "en") as SiteLocale;
+const base = basePrefixFor(route);
+
+/** The word "Currency" and the one-line rate note, in the page's language. */
+const WORDS: Record<SiteLocale, { currency: string; note: string }> = {
+  en: { currency: "Currency", note: "Prices are in euros. Other currencies are approximate." },
+  de: { currency: "Währung", note: "Preise in Euro. Andere Währungen sind Richtwerte." },
+  it: { currency: "Valuta", note: "Prezzi in euro. Le altre valute sono indicative." },
+  es: { currency: "Moneda", note: "Precios en euros. Las demás monedas son orientativas." },
+  fr: { currency: "Devise", note: "Prix en euros. Les autres devises sont indicatives." },
+  ru: { currency: "Валюта", note: "Цены в евро. Другие валюты указаны ориентировочно." },
+  id: { currency: "Mata uang", note: "Harga dalam euro. Mata uang lain hanya perkiraan." },
+  ms: { currency: "Mata wang", note: "Harga dalam euro. Mata wang lain hanyalah anggaran." },
+  pt: { currency: "Moeda", note: "Preços em euros. As outras moedas são aproximadas." },
+  ar: { currency: "العملة", note: "الأسعار باليورو، والعملات الأخرى تقريبية." },
+};
+const w = WORDS[current] ?? WORDS.en;
+const fxData = JSON.stringify(Object.fromEntries(CURRENCIES.filter((c) => c.code !== "EUR").map((c) => [c.code, FX[c.code as keyof typeof FX]])));
+const symData = JSON.stringify(Object.fromEntries(CURRENCIES.map((c) => [c.code, c.symbol])));
+---
+<div class="hprefs">
+  {entries.length > 1 && (
+    <details class="hp hp-lang">
+      <summary aria-label={LOCALE_META[current].language}>
+        <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="7.2" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M2.8 10h14.4M10 2.8c2.2 2.3 2.2 12.1 0 14.4M10 2.8c-2.2 2.3-2.2 12.1 0 14.4" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+        <span>{LOCALE_META[current].short}</span>
+      </summary>
+      <div class="hp-panel">
+        <ul>
+          {entries.map((a) => {
+            const loc = a.hreflang as SiteLocale;
+            const own = loc === current;
+            return (
+              <li>
+                <a
+                  href={`${base}${publicPath(a.route)}` || "/"}
+                  hreflang={isTranslated ? a.hreflang : undefined}
+                  lang={a.hreflang}
+                  class={own ? "is-current" : undefined}
+                  aria-current={own && isTranslated ? "true" : undefined}
+                ><b>{LOCALE_META[loc].short}</b><span>{LOCALE_META[loc].endonym}</span></a>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    </details>
+  )}
+  <details class="hp hp-cur" data-fx={fxData} data-sym={symData}>
+    <summary aria-label={w.currency}><span data-cur-label>EUR</span></summary>
+    <div class="hp-panel">
+      <ul>
+        {CURRENCIES.map((c) => (
+          <li><button type="button" data-cur={c.code} aria-pressed={c.code === "EUR" ? "true" : "false"}><b>{c.symbol}</b><span>{c.code}</span></button></li>
+        ))}
+      </ul>
+      <p class="hp-note">{w.note}</p>
+    </div>
+  </details>
+</div>
+
+<style is:global>
+  .nav-end { display: flex; align-items: center; gap: var(--s-2); }
+  .hprefs { display: flex; align-items: center; gap: 6px; }
+  .hp { position: relative; }
+  .hp > summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 6px;
+    height: 34px; padding: 0 10px; border: 1px solid var(--line); color: var(--gold);
+    font-family: var(--ff-body); font-size: var(--t-micro); letter-spacing: .2em; text-transform: uppercase;
+    white-space: nowrap; transition: border-color .35s, background .35s; }
+  .hp > summary::-webkit-details-marker { display: none; }
+  .hp > summary::after { content: ""; width: 5px; height: 5px; border-right: 1px solid currentColor;
+    border-bottom: 1px solid currentColor; transform: rotate(45deg) translate(-1px, -1px); opacity: .8; }
+  .hp[open] > summary::after { transform: rotate(-135deg) translate(-1px, -1px); }
+  .hp > summary:hover, .hp[open] > summary { border-color: var(--gold); background: rgba(217,180,90,.06); }
+  .hp > summary:focus-visible { outline: 2px solid rgba(247,230,174,.6); outline-offset: 2px; }
+  .hp > summary svg { width: 14px; height: 14px; flex: none; }
+  .hp-panel { position: absolute; top: calc(100% + 8px); inset-inline-end: 0; z-index: 130; min-width: 210px;
+    background: rgba(14,11,8,.98); border: 1px solid var(--line-2);
+    box-shadow: 0 26px 60px -26px rgba(0,0,0,.9); padding: var(--s-2) 0; }
+  .hp-panel ul { list-style: none; margin: 0; padding: 0; }
+  .hp-panel a, .hp-panel button { display: flex; align-items: baseline; gap: 12px; width: 100%;
+    padding: 9px var(--s-3); background: none; border: 0; cursor: pointer; text-align: start;
+    color: var(--bone); font-family: var(--ff-body); font-size: var(--t-tiny); letter-spacing: .04em;
+    text-transform: none; white-space: nowrap; transition: background .25s, color .25s; }
+  .hp-panel a::after { display: none; }
+  .hp-panel b { min-width: 30px; font-weight: 400; color: var(--gold); letter-spacing: .14em; font-size: var(--t-micro); }
+  .hp-panel a:hover, .hp-panel button:hover { background: rgba(217,180,90,.08); color: var(--gold-bright); }
+  .hp-panel .is-current, .hp-panel [aria-pressed="true"] { color: var(--gold-bright); background: rgba(217,180,90,.1); }
+  .hp-cur .hp-panel ul { display: grid; grid-template-columns: 1fr 1fr; }
+  .hp-cur .hp-panel button { padding: 8px var(--s-3); }
+  .hp-note { margin: var(--s-2) var(--s-3) 2px; padding-top: var(--s-2); border-top: 1px solid var(--line);
+    font-size: var(--t-nano); line-height: 1.5; color: var(--muted-2); white-space: normal; max-width: 240px; }
+
+  /* Laptop widths: the bar carries four menus, the search and these two
+     controls, so everything tightens a notch before the burger takes over. */
+  @media (max-width: 1320px) and (min-width: 1081px) {
+    .hp-lang > summary svg { display: none; }
+    .hp > summary { padding: 0 8px; letter-spacing: .14em; }
+    .nav-end { gap: 10px; }
+    .nsearch { flex-basis: 136px; min-width: 104px; }
+  }
+  @media (max-width: 1080px) {
+    .nav-end { margin-inline-start: auto; gap: 6px; }
+    .nav-end .nav-cta { margin-left: 0; margin-right: var(--s-1); }
+    .hp > summary { height: 36px; padding: 0 8px; }
+  }
+  @media (max-width: 420px) {
+    .hp-lang > summary svg { display: none; }
+    .hp > summary { padding: 0 7px; letter-spacing: .12em; }
+    .hp-panel { position: fixed; top: 74px; inset-inline: 12px; min-width: 0; }
+  }
+</style>

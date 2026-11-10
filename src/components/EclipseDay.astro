@@ -45,7 +45,7 @@ const Outer = variant === "embedded" ? "div" : "section";
         <div class="eyebrow">{T.eyebrow}</div>
         <h2>{T.title}</h2>
         <p class="eday-lede">{T.lede}</p>
-        <p class="eday-price"><b>{price}</b> {T.perPerson} <span>·</span> {T.hotelNote} <span>·</span> {T.capacity}</p>
+        <p class="eday-price" data-eur={ECLIPSE_DAY.price}><b>{price}</b> {T.perPerson} <span>·</span> {T.hotelNote} <span>·</span> {T.capacity}</p>
       </div>
 
       <div class="eday-grid">

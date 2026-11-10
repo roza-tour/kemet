@@ -293,6 +293,13 @@ const seasonWindows = seasonalCalendar.map((w) => {
      room, and below 680px it drops to the mark alone — a small seasonal glyph
      beside the wordmark, with the words still in the ribbon. */
   @media (max-width: 1180px) { .schip { margin-left:var(--s-2); padding:var(--s-1) var(--s-2) var(--s-1) var(--s-2); } }
+  /* 1081–1180px: the bar also carries the language and currency controls, so
+     the chip shows its mark alone here too; the season is still named in the
+     ribbon and in the chip's accessible name. */
+  @media (max-width: 1180px) and (min-width: 1081px) {
+    .schip { padding:var(--s-1); gap: 0; }
+    .schip-label { display: none; }
+  }
   @media (max-width: 680px) {
     .schip { margin-left:var(--s-2); padding:var(--s-1); gap: 0; }
     .schip-label { display: none; }

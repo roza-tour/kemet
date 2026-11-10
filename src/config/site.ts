@@ -18,13 +18,31 @@ export const SITE_URL = (env.PUBLIC_SITE_URL ?? "https://kemet-travel.com").repl
 export const CURRENCY = "EUR";
 export const CURRENCY_SYMBOL = "€";
 /**
- * Reference rates for the approximate dollar figure shown beside a price to
- * visitors in the Americas only (Base.astro). Prices are set in euros and stay
- * the headline everywhere; these only translate them for a reader who thinks in
- * dollars. European Central Bank reference rates — refresh from
- * https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml now and then.
+ * Reference rates for the approximate figure shown under a price in another
+ * currency (Base.astro). Prices are set in euros and stay the headline
+ * everywhere; these only translate them for a reader who thinks in another
+ * currency — chosen in the header (HeaderPrefs), or dollars by default for
+ * visitors in the Americas. European Central Bank reference rates — refresh
+ * from https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml now and
+ * then. AED is not published by the ECB: it is the dollar rate × 3.6725, the
+ * dirham's fixed peg.
  */
-export const FX = { date: "2026-10-14", USD: 1.1195, CAD: 1.5918 } as const;
+export const FX = {
+  date: "2026-11-09",
+  USD: 1.1193, GBP: 0.8343, CHF: 0.9164, CAD: 1.5785, AUD: 1.6236, AED: 4.1106, INR: 105.1435,
+} as const;
+
+/** The header's currency choices, in menu order. EUR is the price itself. */
+export const CURRENCIES = [
+  { code: "EUR", symbol: "€" },
+  { code: "USD", symbol: "US$" },
+  { code: "GBP", symbol: "£" },
+  { code: "CHF", symbol: "CHF" },
+  { code: "CAD", symbol: "CA$" },
+  { code: "AUD", symbol: "A$" },
+  { code: "AED", symbol: "AED" },
+  { code: "INR", symbol: "₹" },
+] as const;
 /** Locale used for number formatting (en-IE renders EUR as "€1,741"). */
 export const NUMBER_LOCALE = "en-IE";
 
