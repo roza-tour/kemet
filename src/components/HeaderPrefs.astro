@@ -90,22 +90,47 @@ const symData = JSON.stringify(Object.fromEntries(CURRENCIES.map((c) => [c.code,
 </div>
 
 <style is:global>
-  /* The two controls share one cartouche: a gold hairline, a dark gap and a
-     second, fainter hairline inside it — the double ring of a royal name —
-     with a small gold lozenge between language and currency. */
-  .nav-end { display: flex; align-items: center; gap: var(--s-3); }
-  .hprefs { display: flex; align-items: center; height: 38px; padding: 0 6px; border-radius: 999px;
-    border: 1px solid rgba(217,180,90,.6);
-    background: linear-gradient(180deg, rgba(217,180,90,.12), rgba(217,180,90,.02) 70%);
-    box-shadow: inset 0 0 0 3px rgba(11,9,7,.88), inset 0 0 0 4px rgba(217,180,90,.24), 0 10px 26px -16px rgba(217,180,90,.55);
+  /* Language, currency and Contact are each drawn as a CARTOUCHE — the ring
+     that encloses a royal name: an oval with elongated ends (not a pill), a gold
+     hairline, a dark gap and a second fainter hairline inside, and the knotted
+     tie bar standing across one end. The bar sits at the inline end, so on
+     Arabic pages it moves to the left with the reading direction. */
+  .nav-end { display: flex; align-items: center; gap: 18px; }
+  .hprefs, .nav-end .nav-cta { --c-h: 38px; position: relative; isolation: isolate; height: var(--c-h);
+    margin-inline-end: 3px; border-radius: 30px / 50%; }
+  .hprefs { display: flex; align-items: center; padding: 0 10px; border: 1px solid rgba(217,180,90,.62);
+    background: radial-gradient(120% 140% at 50% 0%, rgba(217,180,90,.16), rgba(217,180,90,.02) 65%);
+    box-shadow: inset 0 0 0 2px rgba(11,9,7,.55), inset 0 0 0 3px rgba(217,180,90,.38), 0 10px 26px -16px rgba(217,180,90,.55);
     transition: border-color .4s, box-shadow .4s; }
   .hprefs:hover, .hprefs:focus-within { border-color: var(--gold-bright);
-    box-shadow: inset 0 0 0 3px rgba(11,9,7,.88), inset 0 0 0 4px rgba(217,180,90,.4), 0 0 22px -6px rgba(217,180,90,.55); }
+    box-shadow: inset 0 0 0 2px rgba(11,9,7,.55), inset 0 0 0 3px rgba(217,180,90,.55), 0 0 22px -6px rgba(217,180,90,.6); }
+  /* The tie bar. */
+  .hprefs::after, .nav-end .nav-cta::after { content: ""; position: absolute; inset-inline-end: -3px; top: -5px; bottom: -5px;
+    width: 4px; border-radius: 1px; pointer-events: none;
+    background: linear-gradient(180deg, #F7E6AE, #D9B45A 45%, #9C7A2E);
+    box-shadow: 0 0 0 1px rgba(11,9,7,.85), 0 0 10px rgba(217,180,90,.45); }
+
+  /* Contact: the same cartouche, the word itself in gold. */
+  .nav-end .nav-cta { display: inline-flex; align-items: center; padding: 0 22px; border: 0; background: none;
+    font-family: var(--ff-display); font-size: .82rem; font-weight: 400; letter-spacing: .26em; text-transform: uppercase;
+    color: #E9CF85; transition: color .4s; }
+  .nav-end .nav-cta::before { content: ""; position: absolute; inset: 0; z-index: -1; border-radius: inherit;
+    border: 1px solid rgba(217,180,90,.62);
+    background: radial-gradient(120% 140% at 50% 0%, rgba(217,180,90,.16), rgba(217,180,90,.02) 65%);
+    box-shadow: inset 0 0 0 2px rgba(11,9,7,.55), inset 0 0 0 3px rgba(217,180,90,.38), 0 10px 26px -16px rgba(217,180,90,.55);
+    transition: background .4s, box-shadow .4s, border-color .4s; }
+  /* Hover fills the ring with gold, as a name cut in gold leaf. */
+  .nav-end .nav-cta:hover, .nav-end .nav-cta:focus-visible { color: #1A140C; background: none; }
+  .nav-end .nav-cta:hover::before, .nav-end .nav-cta:focus-visible::before { border-color: #F7E6AE;
+    background: linear-gradient(180deg, #F7E6AE, #D9B45A 55%, #B8955A);
+    box-shadow: inset 0 0 0 3px rgba(247,230,174,.0), inset 0 0 0 4px rgba(26,20,12,.35), 0 0 24px -6px rgba(217,180,90,.7); }
+  .nav-end .nav-cta:focus-visible { outline: 2px solid rgba(247,230,174,.6); outline-offset: 4px; }
+
   .hp-sep { width: 5px; height: 5px; flex: none; transform: rotate(45deg);
     background: linear-gradient(135deg, #F7E6AE, #B8955A); box-shadow: 0 0 6px rgba(217,180,90,.6); }
   .hp { position: relative; }
   .hp > summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 7px;
-    height: 36px; padding: 0 12px; white-space: nowrap;
+    height: 36px; padding: 0 11px; white-space: nowrap;
     font-family: var(--ff-display); font-size: .9rem; font-weight: 400; letter-spacing: .16em; }
   .hp > summary span { background: linear-gradient(180deg, #F7E6AE 10%, #D9B45A 60%, #A8862F);
     -webkit-background-clip: text; background-clip: text; color: transparent; }
@@ -116,7 +141,7 @@ const symData = JSON.stringify(Object.fromEntries(CURRENCIES.map((c) => [c.code,
   .hp[open] > summary::after { transform: rotate(-135deg) translate(-1px, -1px); }
   .hp > summary:focus-visible { outline: 2px solid rgba(247,230,174,.6); outline-offset: 2px; border-radius: 999px; }
 
-  .hp-panel { position: absolute; top: calc(100% + 14px); inset-inline-end: -10px; z-index: 130; min-width: 230px;
+  .hp-panel { position: absolute; top: calc(100% + 14px); inset-inline-end: -14px; z-index: 130; min-width: 230px;
     background: linear-gradient(180deg, rgba(20,16,11,.985), rgba(11,9,7,.985));
     border: 1px solid rgba(217,180,90,.32); border-radius: 3px;
     box-shadow: 0 30px 70px -28px rgba(0,0,0,.95), inset 0 0 0 1px rgba(11,9,7,.9), inset 0 0 0 2px rgba(217,180,90,.08);
@@ -144,19 +169,25 @@ const symData = JSON.stringify(Object.fromEntries(CURRENCIES.map((c) => [c.code,
   .hp-note { margin: 10px 20px 2px; padding-top: 10px; border-top: 1px solid rgba(217,180,90,.18);
     font-size: var(--t-nano); line-height: 1.55; color: var(--muted-2); white-space: normal; max-width: 250px; font-style: italic; }
 
-  /* Laptop widths: the bar carries four menus, the search and this control,
+  /* Laptop widths: the bar carries four menus, the search and these controls,
      so everything tightens a notch before the burger takes over. */
   @media (max-width: 1320px) and (min-width: 1081px) {
-    .hp > summary { padding: 0 9px; letter-spacing: .12em; }
-    .nav-end { gap: 12px; }
+    .hp > summary { padding: 0 8px; letter-spacing: .12em; }
+    .hprefs { padding: 0 7px; }
+    .nav-end { gap: 14px; }
+    .nav-end .nav-cta { padding: 0 16px; letter-spacing: .2em; }
   }
   @media (max-width: 1080px) {
-    .nav-end { margin-inline-start: auto; gap: 8px; }
-    .nav-end .nav-cta { margin-left: 0; margin-right: var(--s-1); }
+    .nav-end { margin-inline-start: auto; gap: 14px; }
+    .nav-end .nav-cta { margin-left: 0; margin-inline-end: 10px; padding: 0 16px; letter-spacing: .2em; }
   }
   @media (max-width: 420px) {
-    .hprefs { height: 36px; padding: 0 3px; }
-    .hp > summary { height: 34px; padding: 0 8px; gap: 5px; font-size: .82rem; letter-spacing: .1em; }
+    .nav-end { gap: 11px; }
+    .hprefs, .nav-end .nav-cta { --c-h: 34px; border-radius: 22px / 50%; margin-inline-end: 4px; }
+    .hprefs { padding: 0 4px; }
+    .hprefs::after, .nav-end .nav-cta::after { inset-inline-end: -2px; top: -4px; bottom: -4px; width: 3px; }
+    .hp > summary { height: 32px; padding: 0 6px; gap: 4px; font-size: .8rem; letter-spacing: .08em; }
+    .nav-end .nav-cta { padding: 0 11px; font-size: .7rem; letter-spacing: .12em; margin-inline-end: 8px; }
     .hp-panel { position: fixed; top: 76px; inset-inline: 12px; min-width: 0; }
   }
 </style>
