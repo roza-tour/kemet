@@ -2,7 +2,7 @@
 
 Kemet designs private, luxury journeys through every layer of Egypt — tailored tours, Nile cruises and experiences built around each traveller's interests, pace and timeline. Kemet designs entirely private, tailor-made journeys in Egypt, led by licensed Egyptologist guides, priced per person in EUR, with no group departures and no fixed dates.
 
-Source: https://kemet-travel.com. Index version: https://kemet-travel.com/llms.txt. Last updated: 2026-11-04.
+Source: https://kemet-travel.com. Index version: https://kemet-travel.com/llms.txt. Last updated: 2026-11-13.
 
 Specialist review: pages checked by Mervat Farouk, Egyptologist guide — Egyptian tour guide and specialist in Egyptology — carry a byline with that name; pages without one are published by Kemet. Profile: https://kemet-travel.com/about.html#mervat-farouk
 
@@ -172,7 +172,7 @@ A week built around two doors that are normally shut. At Giza the Great Pyramid 
 
 - Great Pyramid private opening — two hours, your party only
 - Karnak opened after closing, with dinner in the precinct
-- The tombs of Seti I, Nefertari and Tutankhamun
+- The tombs of Seti I, Ramesses VI and Tutankhamun
 - A private balloon basket and a private felucca
 - One senior Egyptologist throughout, a chauffeured car on call
 - VIP handling at every arrival and departure
@@ -187,7 +187,7 @@ Four nights on a sailing dahabiya with no other guests aboard: the crew, the che
 - Great Pyramid private opening; dinner in Karnak after closing
 - Abu Simbel by private aircraft
 - The Old Cataract, historic Palace wing, facing the Nile
-- The tombs of Seti I and Nefertari; a private balloon
+- The tombs of Seti I and Ramesses VI; a private balloon
 - VIP handling at every arrival and departure
 
 ### Karnak to the Coral Sea — 12 days / 11 nights
@@ -326,7 +326,7 @@ For the birthdays that end in a zero and the years worth marking. https://kemet-
 
 - **A dahabiya instead of a cruise ship.** Ten cabins instead of a hundred and forty. A sailing boat that moors where the ships cannot, at villages with no dock, and that stops when you want to swim. It is the single largest upgrade available on the Nile and it is not a matter of thread count — it is a different river.
 - **The room, not the hotel.** In Cairo there are perhaps a dozen rooms with a real, unobstructed pyramid view, and several hundred rooms in hotels that advertise one. In Luxor the difference between a river-facing room and a garden-facing room at the same address is the difference between waking up in Egypt and waking up in a hotel. We book the room, not the property.
-- **A day built around one thing.** The Valley of the Kings at opening with the extra-ticket tombs — Seti I, Nefertari — included rather than debated at the gate. Then nothing. Lunch that lasts two hours, an afternoon by the water, and dinner somewhere that took a month to book. One thing done completely beats four done adequately.
+- **A day built around one thing.** The Valley of the Kings at opening with the extra-ticket tombs — Seti I, Ramesses VI — included rather than debated at the gate. Then nothing. Lunch that lasts two hours, an afternoon by the water, and dinner somewhere that took a month to book. One thing done completely beats four done adequately.
 - **Something nobody in the family has done.** A dawn balloon over the West Bank of Luxor, going up in the dark and watching the sun come off the Theban hills onto the colossi below. Or Abu Simbel at first light, four hours before the day-trippers land. Milestones want a photograph that is not the same photograph everybody has.
 - **The private table.** Dinner in a restored Ottoman house in Cairo, in a garden in Aswan, or on the deck with the boat moored and the crew ashore. Where a celebration meal can be arranged privately we will arrange it; where a venue will not do it properly we will tell you rather than book it anyway.
 
@@ -358,6 +358,28 @@ Grandparents, parents and children in one country, at one pace that works. https
 - **The sites that hold everyone.** Some work across all three ages without effort: the Grand Egyptian Museum, because scale does the work; Abu Simbel, for the same reason; a felucca, because nobody has to walk; the camel road at Giza; Philae, reached by boat. Others — the deeper tombs, the long climbs — are best planned as optional for whoever wants them.
 - **Split the day, not the family.** The most useful thing a private journey gives a large family is the ability to fork. A second vehicle for one morning means the grandparents get Karnak at eight and back by eleven, the teenagers get the balloon, the small ones get the pool — and everybody has lunch together and tells the others about it.
 - **Rooms, properly configured.** Interconnecting rooms for parents and small children, a ground floor or a lift for grandparents, and enough separation that the teenagers are not sharing with anybody. This is booked at the start, not requested at reception. It is boring and it decides how the week feels.
+
+## The Oberoi Zahra — luxury Nile cruise, on request
+
+The Oberoi Zahra is a luxury Nile cruiser operated by Oberoi Hotels & Resorts, sailing between Luxor and Aswan on three-, four- and seven-night itineraries. It has 28 cabins and suites, all facing the river, an 11-metre temperature-controlled pool, a spa and an à la carte restaurant. Kemet books it on request: you send dates, we confirm availability and the rate with the ship in writing, and build the rest of your journey around the sailing. https://kemet-travel.com/oberoi-zahra-nile-cruise.html
+
+- **Luxury Cabin** (26.4 m²; sleeps two). A king bed or twins beside a picture window on the river, and a naturally lit bathroom whose glass-walled rain shower looks out on the Nile as well.
+- **Luxury Suite with Two Bedrooms** (92 m²; sleeps four). One king bedroom and one twin, a separate living room and dining space behind floor-to-ceiling windows, and a terrace with loungers.
+- **Luxury Suite** (115 m² with its terrace · 50 m² inside; sleeps two). A bedroom, a living room and a private dining area; outside, a terrace with sun loungers and a heated whirlpool of your own. The bathroom has a standalone tub and a rain shower.
+
+- **Aswan to Luxor · 3 nights** — Saturdays. Board at noon in Aswan. The High Dam and the island Temple of Philae. Kom Ombo, then Edfu. Luxor's West Bank — the Valley of the Kings, Medinet Habu and the Colossi of Memnon — then Luxor and Karnak Temples. Disembark in Luxor at 8 am.
+- **Luxor to Aswan · 4 nights** — Tuesdays. Board at noon in Luxor. Luxor and Karnak Temples. The West Bank: the Valley of the Kings, Deir el-Medina, the Colossi of Memnon and the Temple of Hatshepsut. Edfu, then Kom Ombo. Aswan: the High Dam, Philae and the Botanical Garden; a Nubian evening on board. Disembark in Aswan at 8 am.
+- **Seven nights · either direction** — A handful of dates a year. Dendera, the Valley of the Nobles, Deir el-Medina, the Temple of Hatshepsut, Luxor Museum and Aswan's Botanical Garden. Sunset cocktails on a private island. Abu Simbel is an optional visit.
+
+- **How much does the Oberoi Zahra cost?** There is no single price to print. The rate depends on the sailing, the season and the cabin or suite, and it is the ship's to quote. We ask for your dates and send the figure in writing, with what it includes, before anything is paid.
+- **Is the ship private?** No. You share the ship with the guests of the other cabins — 28 cabins and suites in all. Your cabin is your own, and in the suites so is the terrace. For a vessel with nobody else aboard, we charter a dahabiya, a sailing boat of a few cabins, on the same stretch of river.
+- **Are the temple visits part of the cruise?** On the ship's published terms, yes: the visits in the itinerary, the guiding and the entrance fees are included, led by the ship's Egyptologists in English, or in other languages with notice. We confirm it in your quote. A private Egyptologist for your party alone can be arranged alongside.
+- **Zahra or Philae — which Oberoi ship?** They are sister ships. The Philae is the smaller: 22 cabins and suites, larger standard cabins at 36 m², and sailings of four or six nights. The Zahra has 28, sails three, four or seven nights, and has the largest suite of the two — 115 m² with its terrace and a private whirlpool. In practice your dates usually decide.
+- **Can children sail?** The ship does not accommodate children under seven, and its policy gives older children a cabin of their own. Tell us the ages when you enquire and we ask the ship what suits your family.
+- **When does it sail?** Through the year. On the ship's published calendars for 2026 and 2027 there are no departures in June. October to April is the comfortable season on the river; from June to August Upper Egypt reaches 40 °C and visits start early in the day.
+- **Can the whole ship be taken for one party?** The ship does not publish a charter. For an occasion we will ask about a specific date on your behalf. Where a party wants the boat entirely to itself, a chartered dahabiya is the certain way.
+
+The Oberoi Zahra is operated by Oberoi Hotels & Resorts. Kemet is an independent travel company: we book the ship for our guests and plan the journey around it. The ship's details are as the ship publishes them, checked in November 2026, and are confirmed again in every quote. The photographs on this page are of the river and the temples on the route.
 
 ## The Sacred Senses of Egypt — incense, oils, stones, cotton and linen
 
