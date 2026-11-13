@@ -180,7 +180,7 @@ export const de: LocalizedPage[] = [
       {
         title: "Dahabiya oder Kreuzfahrtschiff",
         body:
-          "Eine Dahabiya ist ein traditionelles Segelschiff mit meist acht bis zwölf Kabinen. Sie ankert an Sandbänken und Dörfern, die große Schiffe nicht anfahren können, trägt ein Zehntel der Passagiere und hat kein Unterhaltungsprogramm. Sie kostet deutlich mehr. Ein Kreuzfahrtschiff mit sechzig bis hundertvierzig Kabinen ist der Marktstandard, gut verfügbar und für eine erste Reise völlig angemessen. Wenn Ihre Reise einen Anlass hat, ist die Dahabiya das Upgrade, das wir vor jedem anderen empfehlen.",
+          "Eine Dahabiya ist ein traditionelles Segelschiff mit meist acht bis zwölf Kabinen. Sie ankert an Sandbänken und Dörfern, die große Schiffe nicht anfahren können, trägt ein Zehntel der Passagiere und hat kein Unterhaltungsprogramm. Sie kostet deutlich mehr. Ein Kreuzfahrtschiff mit sechzig bis hundertvierzig Kabinen ist der Marktstandard, gut verfügbar und für eine erste Reise völlig angemessen. Wir buchen dafür die Schiffe der Sonesta-Flotte; welches es wird, steht mit Ihren Reisedaten fest. Wenn Ihre Reise einen Anlass hat, ist die Dahabiya das Upgrade, das wir vor jedem anderen empfehlen.",
       },
       {
         title: "Fahrtrichtung — sie macht einen Unterschied",

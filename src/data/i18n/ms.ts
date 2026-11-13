@@ -189,7 +189,7 @@ export const ms: LocalizedPage[] = [
       {
         title: "Dahabiya atau kapal besar",
         body:
-          "Dahabiya ialah kapal layar dengan beberapa kabin sahaja. Ia berlayar, berlabuh di beting pasir yang tidak mampu didekati kapal besar, dan jika disewa penuh tiada penumpang lain selain rombongan anda. Kapal lima bintang memberi ruang lebih luas, kolam renang dan geladak atas, tetapi mengikut jadual bersama dan berlabuh di tempat yang sama dengan kapal lain. Kedua-duanya baik; kedua-duanya bercerita perkara berbeza.",
+          "Dahabiya ialah kapal layar dengan beberapa kabin sahaja. Ia berlayar, berlabuh di beting pasir yang tidak mampu didekati kapal besar, dan jika disewa penuh tiada penumpang lain selain rombongan anda. Kapal lima bintang memberi ruang lebih luas, kolam renang dan geladak atas, tetapi mengikut jadual bersama dan berlabuh di tempat yang sama dengan kapal lain. Untuk kapal besar, kami menempah armada Sonesta; kapal yang mana disahkan mengikut tarikh anda. Kedua-duanya baik; kedua-duanya bercerita perkara berbeza.",
       },
       {
         title: "Apa yang kelihatan dari sungai",

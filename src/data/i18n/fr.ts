@@ -177,7 +177,7 @@ export const fr: LocalizedPage[] = [
       {
         title: "Dahabieh ou navire : la vraie différence",
         body:
-          "Un dahabieh est un voilier de quelques cabines. Il navigue à la voile, il mouille contre un banc de sable où aucun grand bateau ne peut approcher, et il n'y a personne d'autre à bord que votre groupe si vous l'affrétez en entier. Un navire cinq étoiles offre plus d'espace, une piscine et un pont supérieur, mais il suit un horaire partagé et accoste là où accostent les autres. Les deux sont excellents ; ils ne racontent pas la même chose.",
+          "Un dahabieh est un voilier de quelques cabines. Il navigue à la voile, il mouille contre un banc de sable où aucun grand bateau ne peut approcher, et il n'y a personne d'autre à bord que votre groupe si vous l'affrétez en entier. Un navire cinq étoiles offre plus d'espace, une piscine et un pont supérieur, mais il suit un horaire partagé et accoste là où accostent les autres. Pour le navire, nous réservons la flotte Sonesta ; le bateau exact est confirmé avec vos dates. Les deux sont excellents ; ils ne racontent pas la même chose.",
       },
       {
         title: "Ce que l'on voit depuis le fleuve",

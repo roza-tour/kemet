@@ -180,7 +180,7 @@ export const es: LocalizedPage[] = [
       {
         title: "Dahabiya o barco de crucero",
         body:
-          "Una dahabiya es un velero tradicional, normalmente de ocho a doce camarotes. Fondea en bancos de arena y aldeas a las que los barcos grandes no llegan, lleva una décima parte del pasaje y no tiene programa de animación. Cuesta bastante más. Un barco de crucero de sesenta a ciento cuarenta camarotes es el estándar del mercado, tiene buena disponibilidad y es perfectamente adecuado para un primer viaje. Si el viaje celebra algo, la dahabiya es la mejora que recomendamos antes que cualquier otra.",
+          "Una dahabiya es un velero tradicional, normalmente de ocho a doce camarotes. Fondea en bancos de arena y aldeas a las que los barcos grandes no llegan, lleva una décima parte del pasaje y no tiene programa de animación. Cuesta bastante más. Un barco de crucero de sesenta a ciento cuarenta camarotes es el estándar del mercado, tiene buena disponibilidad y es perfectamente adecuado para un primer viaje. Para el barco reservamos los cruceros de la flota Sonesta; cuál será se confirma con sus fechas. Si el viaje celebra algo, la dahabiya es la mejora que recomendamos antes que cualquier otra.",
       },
       {
         title: "El sentido de navegación importa",

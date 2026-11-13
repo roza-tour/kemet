@@ -190,7 +190,7 @@ export const pt: LocalizedPage[] = [
       {
         title: "Dahabiya ou navio de cruzeiro",
         body:
-          "A dahabiya é um veleiro tradicional, normalmente com oito a doze cabines. Ela atraca em bancos de areia e vilarejos aonde os barcos grandes não chegam, leva uma fração dos passageiros e não tem programa de animação. Custa bem mais. Um navio de cruzeiro de sessenta a cento e quarenta cabines é o padrão do mercado, tem boa disponibilidade e é perfeitamente adequado para uma primeira viagem. Se a viagem comemora alguma coisa, a dahabiya é o upgrade que recomendamos antes de qualquer outro.",
+          "A dahabiya é um veleiro tradicional, normalmente com oito a doze cabines. Ela atraca em bancos de areia e vilarejos aonde os barcos grandes não chegam, leva uma fração dos passageiros e não tem programa de animação. Custa bem mais. Um navio de cruzeiro de sessenta a cento e quarenta cabines é o padrão do mercado, tem boa disponibilidade e é perfeitamente adequado para uma primeira viagem. Para o navio, reservamos os cruzeiros da frota Sonesta; qual deles será, confirmamos com as datas de vocês. Se a viagem comemora alguma coisa, a dahabiya é o upgrade que recomendamos antes de qualquer outro.",
       },
       {
         title: "O sentido da navegação importa",

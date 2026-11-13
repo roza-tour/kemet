@@ -180,7 +180,7 @@ export const it: LocalizedPage[] = [
       {
         title: "Dahabeya o motonave",
         body:
-          "Una dahabeya è una barca a vela tradizionale, di norma con otto-dodici cabine. Ormeggia su banchi di sabbia e presso villaggi che le navi grandi non possono raggiungere, porta un decimo dei passeggeri e non ha programma di intrattenimento. Costa sensibilmente di più. Una motonave da sessanta-centoquaranta cabine è lo standard di mercato, ben disponibile e del tutto adeguata per un primo viaggio. Se il viaggio celebra qualcosa, la dahabeya è l'unico upgrade che consigliamo prima di ogni altro.",
+          "Una dahabeya è una barca a vela tradizionale, di norma con otto-dodici cabine. Ormeggia su banchi di sabbia e presso villaggi che le navi grandi non possono raggiungere, porta un decimo dei passeggeri e non ha programma di intrattenimento. Costa sensibilmente di più. Una motonave da sessanta-centoquaranta cabine è lo standard di mercato, ben disponibile e del tutto adeguata per un primo viaggio. Per la motonave prenotiamo le navi della flotta Sonesta; quale sarà, lo confermiamo con le vostre date. Se il viaggio celebra qualcosa, la dahabeya è l'unico upgrade che consigliamo prima di ogni altro.",
       },
       {
         title: "La direzione di navigazione conta",
