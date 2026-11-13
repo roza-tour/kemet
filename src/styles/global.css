@@ -1333,3 +1333,68 @@ footer::before{content:"";position:absolute;top:0;left:0;right:0;height:32px;bac
 /* The approximate dollar figure added under a price for visitors in the
    Americas only (Base.astro). Quiet: the euro price stays the headline. */
 small.fx{display:block;margin-top:2px;font-family:var(--ff-body);font-size:var(--t-micro);font-weight:400;letter-spacing:.04em;line-height:1.4;color:var(--muted-2);text-transform:none}
+
+/* ---------------------------------------------------------------------------
+   Quick request — "plan your journey in 30 seconds"
+   (scripts/quick-request.client.js builds the dialog on the first tap).
+   Three questions answered with one tap each, on plaques cut like the header's
+   controls: a gold edge, chamfered corners, solid gold for the chosen answer
+   and for the button that sends.
+--------------------------------------------------------------------------- */
+.qr{padding:0;border:0;background:transparent;color:var(--bone);width:100%;height:100%;max-width:none;max-height:none;overflow:hidden}
+.qr[open]{display:grid;place-items:center}
+.qr::backdrop{background:rgba(6,5,3,.74);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.qr-card{position:relative;width:min(580px,calc(100vw - 24px));max-height:calc(100dvh - 24px);overflow:auto;padding:28px 30px 18px;
+  background:linear-gradient(180deg,#1C160E,#0E0B07);border:1px solid rgba(217,180,90,.5);
+  box-shadow:0 40px 120px -30px #000,inset 0 0 0 4px #0B0907,inset 0 0 0 5px rgba(217,180,90,.16)}
+.qr-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+.qr-title{margin:0;font-family:var(--ff-display);font-weight:300;font-size:clamp(1.35rem,3.6vw,1.7rem);line-height:1.2;color:var(--gold-bright)}
+.qr-x{flex:none;width:34px;height:34px;margin:-6px -8px 0 0;border:0;background:none;color:var(--gold);font-size:1.6rem;line-height:1;cursor:pointer;opacity:.8}
+[dir="rtl"] .qr-x{margin:-6px 0 0 -8px}
+.qr-x:hover{opacity:1}
+.qr-dots{display:flex;gap:10px;margin:16px 0 22px;align-items:center}
+.qr-dots i{width:8px;height:8px;transform:rotate(45deg);border:1px solid rgba(217,180,90,.7);transition:background .3s}
+.qr-dots i.on{background:linear-gradient(135deg,#F7E6AE,#B8955A)}
+.qr-dots::after{content:"";flex:1;height:1px;margin-inline-start:6px;background:linear-gradient(90deg,rgba(217,180,90,.5),transparent)}
+[dir="rtl"] .qr-dots::after{background:linear-gradient(270deg,rgba(217,180,90,.5),transparent)}
+.qr-q{margin:0 0 16px;font-family:var(--ff-display);font-weight:300;font-size:1.3rem;color:var(--bone)}
+.qr-chips{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.qr-chips--wide{grid-template-columns:1fr 1fr}
+.qr-chip,.qr-wa,.qr-mail{--cut:8px;position:relative;isolation:isolate;display:flex;align-items:center;justify-content:center;min-height:46px;padding:8px 10px;
+  border:0;background:none;cursor:pointer;text-align:center;text-decoration:none;font-family:var(--ff-body);font-size:var(--t-sm);line-height:1.25;color:var(--bone)}
+.qr-chip::before,.qr-chip::after,.qr-wa::before,.qr-wa::after,.qr-mail::before,.qr-mail::after{content:"";position:absolute;pointer-events:none;
+  clip-path:polygon(var(--cut) 0,calc(100% - var(--cut)) 0,100% var(--cut),100% calc(100% - var(--cut)),calc(100% - var(--cut)) 100%,var(--cut) 100%,0 calc(100% - var(--cut)),0 var(--cut))}
+.qr-chip::before,.qr-wa::before,.qr-mail::before{inset:0;z-index:-2;background:linear-gradient(180deg,rgba(247,230,174,.75),rgba(184,149,90,.6))}
+.qr-chip::after,.qr-mail::after{inset:1px;z-index:-1;background:linear-gradient(180deg,#241B11,#120E08);transition:background .25s}
+.qr-chip:hover::after,.qr-mail:hover::after{background:linear-gradient(180deg,#33271A,#1A140C)}
+.qr-chip[aria-pressed="true"],.qr-wa{color:#1A140C;font-weight:500}
+.qr-chip[aria-pressed="true"]::after,.qr-wa::after{inset:2px;z-index:-1;background:linear-gradient(115deg,#A8862F 0%,#E9CF85 30%,#F7E6AE 45%,#D9B45A 62%,#9C7A2E 100%)}
+.qr-wa:hover::after{filter:brightness(1.1)}
+.qr-chip:focus-visible,.qr-wa:focus-visible,.qr-mail:focus-visible,.qr-x:focus-visible,.qr-back:focus-visible{outline:2px solid rgba(247,230,174,.7);outline-offset:3px}
+.qr-kids{display:flex;align-items:center;gap:10px;margin:0 0 16px;color:var(--muted);font-size:var(--t-sm);cursor:pointer}
+.qr-kids input{width:18px;height:18px;accent-color:#D9B45A}
+.qr-sum{margin:0 0 20px;display:grid;gap:10px}
+.qr-sum>div{display:grid;grid-template-columns:150px 1fr;gap:12px;align-items:baseline;padding-bottom:10px;border-bottom:1px solid rgba(217,180,90,.16)}
+.qr-sum dt{font-size:var(--t-nano);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.qr-sum dd{margin:0;font-family:var(--ff-display);font-weight:300;font-size:1.15rem;color:var(--bone)}
+.qr-send{display:grid;grid-template-columns:1.3fr 1fr;gap:10px}
+.qr-wa,.qr-mail{min-height:52px;letter-spacing:.14em;text-transform:uppercase;font-size:var(--t-micro)}
+.qr-note{margin:14px 0 0;color:var(--muted-2);font-size:var(--t-tiny);line-height:1.6}
+.qr-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:22px;padding-top:14px;border-top:1px solid rgba(217,180,90,.16)}
+.qr-back{border:0;background:none;padding:6px 0;cursor:pointer;color:var(--gold);font-family:var(--ff-body);font-size:var(--t-tiny);letter-spacing:.14em;text-transform:uppercase}
+.qr-back[hidden]{display:block;visibility:hidden}
+.qr-more{color:var(--muted-2);font-size:var(--t-tiny);text-decoration:underline;text-underline-offset:3px}
+.qr-more:hover{color:var(--gold-bright)}
+[lang="ar"] .qr-wa,[lang="ar"] .qr-mail,[lang="ar"] .qr-back,[lang="ar"] .qr-sum dt{letter-spacing:0}
+@media(max-width:560px){
+  .qr[open]{place-items:end center}
+  .qr-card{width:100%;max-height:92dvh;padding:22px 18px calc(14px + env(safe-area-inset-bottom));border-inline:0;border-bottom:0}
+  .qr-chips{grid-template-columns:repeat(3,1fr);gap:8px}
+  .qr-chips--wide{grid-template-columns:1fr 1fr}
+  .qr-send{grid-template-columns:1fr}
+  .qr-sum>div{grid-template-columns:118px 1fr}
+}
+@media(prefers-reduced-motion:no-preference){
+  .qr[open] .qr-card{animation:qr-in .35s cubic-bezier(.22,.61,.36,1)}
+  @keyframes qr-in{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+}
