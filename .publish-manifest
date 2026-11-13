@@ -7,16 +7,19 @@ _astro/_slug_.B0xakMOy.css
 _astro/_slug_.Bwazh5bX.css
 _astro/_slug_.C37nzwvn.css
 _astro/_slug_.D63V5Zx3.css
-_astro/_slug_.md6DbufQ.css
 _astro/_slug_.tIrjNeqs.css
 _astro/about.rWJrEa1c.css
 _astro/cuisine.EYXUyvBE.css
 _astro/egyptian-incense-stones-cotton.CyXhzFvt.css
-_astro/hoisted.BphoE4gG.js
+_astro/hoisted.ByVNPikA.js
+_astro/hoisted.CiVt2VyW.js
+_astro/hoisted.DXkOsCMc.js
 _astro/index.is2Hpzi7.css
 _astro/oberoi-zahra-nile-cruise.0ngJ58d0.css
 _astro/page.DCTgdEH6.js
 _astro/rehlat-fakhira-jiddan-fi-masr.aH_AhgbZ.css
+_astro/sammem-rehlatak-fi-masr.D_wGTOjm.css
+_astro/sammem-rehlatak-fi-masr.DgjiSd0P.css
 about.html
 activities.html
 activities/banana-boat-sharm.html
@@ -60,6 +63,7 @@ ar/rehlat-fakhira-jiddan-fi-masr.html
 ar/rehlat-masr-khassa.html
 ar/rehlat-taswir-fi-masr-7-ayyam.html
 ar/rehlat-yawm-ila-al-iskandariya.html
+ar/sammem-rehlatak-fi-masr.html
 ar/saqqara-wa-manf-wa-dahshur.html
 ar/sayf-masr-lil-aailat-al-khalijiya.html
 ar/shahr-al-asal-ala-al-nil-9-ayyam.html
@@ -128,6 +132,7 @@ de/oberoi-zahra-nilkreuzfahrt.html
 de/ostern-in-aegypten.html
 de/pyramiden-von-gizeh-halbtags.html
 de/ramadan-in-aegypten.html
+de/reise-auf-der-karte-entwerfen.html
 de/religioeses-kairo-und-zitadelle.html
 de/rotes-meer-scharm-5-tage.html
 de/sakkara-memphis-dahschur.html
@@ -136,6 +141,7 @@ de/sonnenfinsternis-2027-luxor.html
 de/tauchen-rotes-meer-4-tage.html
 de/ultra-luxusreisen-aegypten.html
 de/weihnachten-in-aegypten.html
+design-your-journey.html
 desk.php
 destinations.html
 destinations/alexandria.html
@@ -159,6 +165,7 @@ es/amanecer-en-las-piramides-de-giza.html
 es/buceo-mar-rojo-4-dias.html
 es/crucero-por-el-nilo.html
 es/cuanto-cuesta-viajar-a-egipto.html
+es/disene-su-viaje-a-egipto.html
 es/eclipse-solar-2027-luxor.html
 es/egipto-10-dias-con-crucero-por-el-nilo.html
 es/egipto-con-ninos.html
@@ -227,6 +234,7 @@ fr/abou-simbel-depuis-assouan.html
 fr/alexandrie-excursion-journee.html
 fr/alexandrie-une-nuit.html
 fr/croisiere-sur-le-nil.html
+fr/dessinez-votre-voyage-en-egypte.html
 fr/eclipse-solaire-2027-louxor.html
 fr/egypte-7-jours.html
 fr/egypte-en-famille-8-jours.html
@@ -286,6 +294,9 @@ guides/total-solar-eclipse-2027-luxor.html
 guides/transportation-in-egypt.html
 guides/umrah-and-egypt.html
 guides/where-to-stay-in-egypt.html
+icon-192.png
+icon-512.png
+icon-maskable-512.png
 id/aleksandria-2-hari-1-malam.html
 id/apakah-mesir-aman.html
 id/biaya-liburan-ke-mesir.html
@@ -308,6 +319,7 @@ id/paket-tour-mesir.html
 id/paskah-di-mesir.html
 id/pesiar-sungai-nil.html
 id/ramadan-di-mesir.html
+id/rancang-perjalanan-mesir.html
 id/sewa-eksklusif-situs-mesir.html
 id/tour-fotografi-mesir-7-hari.html
 id/tour-kairo-alexandria-4-hari.html
@@ -1091,6 +1103,7 @@ it/cairo-alessandria-4-giorni.html
 it/cairo-culturale-5-giorni.html
 it/cairo-religioso-e-cittadella.html
 it/crociera-sul-nilo.html
+it/disegna-il-tuo-viaggio-in-egitto.html
 it/dove-dormire-in-egitto.html
 it/e-sicuro-viaggiare-in-egitto.html
 it/eclissi-solare-2027-luxor.html
@@ -1176,6 +1189,7 @@ ms/percutian-ultra-mewah-mesir.html
 ms/piramid-giza-dan-grand-egyptian-museum.html
 ms/piramid-giza-dan-sphinx-separuh-hari.html
 ms/ramadan-di-mesir.html
+ms/reka-perjalanan-mesir.html
 ms/tempahan-eksklusif-tapak-mesir.html
 ms/umrah-plus-mesir.html
 ms/ziarah-kaherah-islam.html
@@ -1293,6 +1307,7 @@ pt/cairo-religioso-e-cidadela.html
 pt/cairo-vip-3-dias.html
 pt/carnaval-no-egito.html
 pt/cruzeiro-pelo-nilo.html
+pt/desenhe-sua-viagem-ao-egito.html
 pt/e-seguro-viajar-para-o-egito.html
 pt/eclipse-solar-2027-luxor.html
 pt/egito-10-dias-com-cruzeiro-no-nilo.html
@@ -1363,6 +1378,7 @@ ru/sakkara-memfis-i-dahshur.html
 ru/semeynyy-tur-v-egipet-8-dney.html
 ru/sharm-el-sheykh-5-dney.html
 ru/solnechnoe-zatmenie-2027-luksor.html
+ru/sostavte-marshrut-po-egiptu.html
 ru/stoimost-tura-v-egipet.html
 ru/tur-v-egipet-na-7-dney.html
 ru/tury-v-egipet.html
