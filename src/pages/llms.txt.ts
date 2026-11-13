@@ -47,6 +47,7 @@ import { formatPrice, flyPrice } from "@/utils/format";
 import { publicPath } from "@/utils/links";
 import { marketDirectory, marketRegions } from "@/utils/marketsDirectory";
 import { sacredBrief } from "@/data/sacred";
+import { zahraOneLine } from "@/data/zahra";
 
 const u = (path: string) => `${SITE_URL}/${path}`;
 /** One Markdown list entry: - [Title](url): description */
@@ -363,6 +364,7 @@ export const GET: APIRoute = () => {
     ["Egyptian culture", "culture.html", "Symbols, gods and crafts of Egypt."],
     ["Egyptian cuisine", "cuisine.html", "The Egyptian table, dish by dish."],
     ["The Sacred Senses of Egypt", "egyptian-incense-stones-cotton.html", sacredBrief.oneLine],
+    ["The Oberoi Zahra, on request", "oberoi-zahra-nile-cruise.html", zahraOneLine],
     ["Site index", "sitemap.html", "Every page on the site, in one list."],
   ];
   // build.format is "file", so a folder index (collections/index.astro) is

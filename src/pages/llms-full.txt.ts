@@ -45,6 +45,7 @@ import { TRANSLATED_LOCALES, LOCALE_META, LOCALES, TRANSLATION_GROUPS } from "@/
 import { TRANSLATED_TOURS } from "@/config/tour-i18n";
 import { marketDirectory, marketRegions } from "@/utils/marketsDirectory";
 import { incenses, oils, stones, sacredFaqs, sacredBrief } from "@/data/sacred";
+import { ZAHRA_ANSWER, zahraRooms, zahraSailings, zahraFaqs, zahraDisclosure } from "@/data/zahra";
 
 const u = (path: string) => `${SITE_URL}/${path}`;
 const clean = (s: string) => s.replace(/\s+/g, " ").trim();
@@ -200,6 +201,17 @@ export const GET: APIRoute = () => {
     for (const i of o.ideas) L.push(`- **${clean(i.title)}.** ${clean(i.body)}`);
     L.push("");
   }
+
+  // The Oberoi Zahra: a ship booked on request (data/zahra.ts). No price.
+  h(2, "The Oberoi Zahra — luxury Nile cruise, on request");
+  p(`${ZAHRA_ANSWER} ${u("oberoi-zahra-nile-cruise.html")}`);
+  for (const r of zahraRooms) L.push(`- **${clean(r.name)}** (${clean(r.size)}; ${clean(r.sleeps).toLowerCase()}). ${clean(r.body)}`);
+  L.push("");
+  for (const sl of zahraSailings) L.push(`- **${clean(sl.title)}** — ${clean(sl.when)}. ${sl.days.map((d) => clean(d.text)).join(" ")}`);
+  L.push("");
+  for (const f of zahraFaqs) L.push(`- **${clean(f.q)}** ${clean(f.a)}`);
+  L.push("");
+  p(zahraDisclosure);
 
   // The Sacred Senses page: what it offers and who it is for (data/sacred.ts).
   h(2, sacredBrief.title);

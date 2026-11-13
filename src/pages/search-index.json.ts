@@ -101,6 +101,7 @@ export const GET: APIRoute = () => {
     ["culture.html", "Culture", "Culture", "The gods, hieroglyphs and living crafts behind the monuments."],
     ["cuisine.html", "Cuisine", "Cuisine", "Koshari, molokhia, kunafa — what to eat in Egypt and where."],
     ["egyptian-incense-stones-cotton.html", "Incense, oils, stones & cotton", "Egypt", "Myrrh, luban dakar, oud; jasmine, black seed and massage oils; turquoise, lapis, carnelian; Egyptian cotton and linen — on your journey or sent home."],
+    ["oberoi-zahra-nile-cruise.html", "The Oberoi Zahra", "Nile cruise", "A luxury Nile cruiser between Luxor and Aswan — 28 river-view cabins and suites, 3, 4 or 7 nights — booked on request."],
     ["plan.html", "Plan your journey", "Planning", "Five questions that narrow the catalogue to the right journey for you."],
     ["travellers.html", "Our travellers", "Kemet", "Our own footage and photographs of Kemet journeys — a sunrise balloon over Luxor, filmed from the basket, and our guests across Egypt."],
     ["travel-agents.html", "For travel agents & tour operators", "Practical", "Private ground arrangements in Egypt for travel agents and tour operators abroad — Egyptologists, vehicles, hotels and Nile cruises, at trade rates."],

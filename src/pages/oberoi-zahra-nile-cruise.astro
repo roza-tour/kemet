@@ -1,0 +1,309 @@
+---
+// The Oberoi Zahra — a luxury Nile cruiser we book on request.
+//
+// English first (November 2026); the words live in data/zahra.ts so the other
+// languages can follow. Read that file's header before changing a fact: every
+// figure is the ship's own, and what the ship does not publish is left out.
+//
+// The page answers the reader's two questions in order — what is this ship,
+// and how do I get on it — and prints no price, because the rate belongs to a
+// sailing and is the ship's to quote. It says plainly that the ship is
+// Oberoi's and not ours, and its photographs are of the route, not the vessel.
+import Base from "@/layouts/Base.astro";
+import PageHero from "@/components/PageHero.astro";
+import Frieze from "@/components/Frieze.astro";
+import Faq from "@/components/Faq.astro";
+import SymbolIcon from "@/components/SymbolIcon.astro";
+import AnswerBox from "@/components/aeo/AnswerBox.astro";
+import LeadCapture from "@/components/conversion/LeadCapture.astro";
+import Placeholder from "@/components/Placeholder.astro";
+import {
+  ZAHRA_ROUTE, ZAHRA_QUESTION, ZAHRA_ANSWER, zahraFacts, zahraRooms, zahraOnBoard, zahraSailings,
+  zahraIncluded, zahraCharged, zahraSteps, zahraFaqs, zahraRecognition, zahraDisclosure, zahraPhotos as PH,
+} from "@/data/zahra";
+import { breadcrumb, answerPageSchema } from "@/schemas/jsonld";
+import { canonical, whatsappLink } from "@/utils/links";
+
+const title = "The Oberoi Zahra — Luxury Nile Cruise, on Request | Kemet";
+const description =
+  "The Oberoi Zahra between Luxor and Aswan: 28 river-view cabins and suites, sailings of 3, 4 or 7 nights. Booked on request, with your journey built around it.";
+
+// The ship's details were read from the ship's own pages, not reviewed as a
+// passage by the site's named reviewer — so neither the schema nor the answer
+// box carries her name.
+const { reviewedBy: _reviewedBy, ...pageLd } = answerPageSchema({
+  route: ZAHRA_ROUTE,
+  name: "The Oberoi Zahra — Luxury Nile Cruise, on Request",
+  description,
+  question: ZAHRA_QUESTION,
+  answer: ZAHRA_ANSWER,
+}) as Record<string, unknown>;
+
+const jsonld = [
+  breadcrumb([["Home", "index.html"], ["Journeys", "tours.html"], ["The Oberoi Zahra", ZAHRA_ROUTE]]),
+  pageLd,
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    url: canonical(ZAHRA_ROUTE),
+    inLanguage: "en",
+    mainEntity: zahraFaqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+  },
+];
+
+const waMessage = "Hello Kemet — I'd like to ask about The Oberoi Zahra. My dates: ";
+const wa = whatsappLink(waMessage);
+---
+<Base
+  showCta={false}
+  title={title}
+  description={description}
+  active={ZAHRA_ROUTE}
+  jsonld={jsonld}
+  keywords="Oberoi Zahra, Oberoi Zahra Nile cruise, luxury Nile cruise, Luxor Aswan luxury cruise, Oberoi Nile cruiser, Nile cruise suite with terrace, luxury Egypt cruise on request"
+  ogImage={PH.hero.src}
+>
+  <PageHero
+    crumb="The Oberoi Zahra"
+    symbol="boat"
+    overline="Luxury Nile cruise · on request"
+    framed
+    title="The Oberoi Zahra"
+    text="Twenty-eight cabins and suites on the river between Luxor and Aswan, every one of them facing the water. We book it for you on request, and plan the rest of Egypt around the days you sail."
+    heroSrc={PH.hero.src}
+    heroAlt={PH.hero.alt}
+    heroWidth={PH.hero.width}
+    heroHeight={PH.hero.height}
+  />
+
+  <section style="padding-top:var(--s-4)">
+    <div class="wrap">
+      <AnswerBox question={ZAHRA_QUESTION} answer={ZAHRA_ANSWER} checked={false} />
+      <dl class="oz-facts reveal">
+        {zahraFacts.map((f) => (
+          <div><dt>{f.label}</dt><dd>{f.value}</dd></div>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <Frieze />
+
+  {/* Where you sleep. */}
+  <section>
+    <div class="wrap">
+      <div class="oz-row">
+        <div class="oz-shot reveal">
+          <Placeholder sizes="besideTall" class="oz-img" src={PH.rooms.src} alt={PH.rooms.alt} width={PH.rooms.width} height={PH.rooms.height} label="The Nile at Aswan" />
+        </div>
+        <div>
+          <div class="oz-head reveal">
+            <div class="eyebrow">Where you sleep</div>
+            <h2>Every window is on the river</h2>
+            <div class="rule"></div>
+          </div>
+          <div class="oz-rooms">
+            {zahraRooms.map((r) => (
+              <article class="oz-room reveal">
+                <h3>{r.name}</h3>
+                <p class="oz-meta"><span>{r.size}</span><span>{r.sleeps}</span></p>
+                <p>{r.body}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Frieze />
+
+  {/* The ship itself. */}
+  <section>
+    <div class="wrap">
+      <div class="oz-head reveal">
+        <div class="eyebrow">On board</div>
+        <h2>Between the temples</h2>
+        <div class="rule"></div>
+        <p>The hours on the water are the reason to take a ship of this kind. This is what fills them.</p>
+      </div>
+      <div class="oz-grid">
+        {zahraOnBoard.map((x) => (
+          <div class="oz-cell reveal">
+            <h3>{x.title}</h3>
+            <p>{x.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Frieze />
+
+  {/* The sailings. */}
+  <section>
+    <div class="wrap">
+      <div class="oz-row oz-row--flip">
+        <div class="oz-shot reveal">
+          <Placeholder sizes="besideTall" class="oz-img" src={PH.route.src} alt={PH.route.alt} width={PH.route.width} height={PH.route.height} label="Karnak" />
+        </div>
+        <div>
+          <div class="oz-head reveal">
+            <div class="eyebrow">The sailings</div>
+            <h2>Three, four or seven nights</h2>
+            <div class="rule"></div>
+            <p>The ship sails on fixed days, as its calendar publishes them. Boarding is at noon and disembarkation at 8 am.</p>
+          </div>
+          {zahraSailings.map((s) => (
+            <article class="oz-sail reveal">
+              <h3>{s.title}</h3>
+              <p class="oz-when">{s.when}</p>
+              <dl>
+                {s.days.map((d) => (
+                  <div><dt>{d.day}</dt><dd>{d.text}</dd></div>
+                ))}
+              </dl>
+              {s.note && <p class="oz-sailnote">{s.note}</p>}
+            </article>
+          ))}
+        </div>
+      </div>
+
+      <div class="oz-incl reveal">
+        <div>
+          <h3>On the ship's terms, included</h3>
+          <ul>{zahraIncluded.map((x) => <li>{x}</li>)}</ul>
+        </div>
+        <div>
+          <h3>Charged on board</h3>
+          <ul>{zahraCharged.map((x) => <li>{x}</li>)}</ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Frieze />
+
+  {/* How it is booked. */}
+  <section>
+    <div class="wrap">
+      <div class="oz-head reveal">
+        <div class="eyebrow">How it is booked</div>
+        <h2>On request, and in writing</h2>
+        <div class="rule"></div>
+        <p>With twenty-eight cabins and suites and fixed departure days, whether there is room is a question
+           about one sailing — and so is the rate. That is why this page carries no price.</p>
+      </div>
+      <div class="oz-steps">
+        {zahraSteps.map((p, i) => (
+          <div class="oz-step reveal">
+            <div class="oz-stepnum">{String(i + 1).padStart(2, "0")}</div>
+            <div class="oz-stepsym" aria-hidden="true"><SymbolIcon name={p.symbol} /></div>
+            <h3>{p.title}</h3>
+            <p>{p.body}</p>
+          </div>
+        ))}
+      </div>
+      <p class="oz-ask reveal"><a href={wa} class="btn btn-ghost" target="_blank" rel="noopener">Ask about your dates</a></p>
+
+      <div class="oz-note reveal">
+        <h3>Recognition</h3>
+        <p>{zahraRecognition}</p>
+      </div>
+    </div>
+  </section>
+
+  <Frieze />
+
+  <section>
+    <div class="wrap">
+      <Faq items={zahraFaqs} heading="Asked before booking" />
+      <p class="oz-disclosure">{zahraDisclosure}</p>
+    </div>
+  </section>
+
+  <LeadCapture
+    variant="consultation"
+    heading="Send us your dates"
+    subtext="Dates and the number of travellers are enough. We ask the ship, and reply with the cabins or suites that are free and the rate, in writing."
+    whatsappMessage={waMessage}
+    emailSubject="The Oberoi Zahra — enquiry"
+  />
+</Base>
+
+<style is:global>
+  .oz-facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-4) var(--s-5);
+    margin: var(--s-6) 0 0; padding: var(--s-5) 0 0; border-top: 1px solid var(--line); }
+  .oz-facts dt, .oz-sail dt { font-size: var(--t-nano); letter-spacing: .24em; text-transform: uppercase; color: var(--gold); }
+  .oz-facts dt { margin-bottom: var(--s-1); }
+  .oz-facts dd { margin: 0; color: var(--bone); font-family: var(--ff-display); font-weight: 300; font-size: 1.2rem; line-height: 1.4; }
+
+  .oz-head { margin-bottom: var(--s-5); }
+  .oz-head h2 { font-family: var(--ff-display); font-weight: 300; font-size: clamp(1.9rem, 3.4vw, 2.6rem);
+    color: var(--bone); margin-top: var(--s-3); line-height: 1.15; }
+  .oz-head p { color: var(--muted); max-width: 640px; margin: var(--s-4) 0 0; line-height: 1.85; }
+
+  .oz-row { display: grid; grid-template-columns: .8fr 1fr; gap: 56px; align-items: start; }
+  .oz-row--flip { direction: rtl; }
+  .oz-row--flip > * { direction: ltr; }
+  .oz-shot { position: relative; position: sticky; top: 110px; }
+  .oz-img { width: 100%; aspect-ratio: var(--ar-port); }
+  .oz-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .oz-shot::after { content: ""; position: absolute; inset: 12px; border: 1px solid rgba(217,180,90,.3); pointer-events: none; }
+
+  .oz-room { padding: var(--s-4) 0; border-top: 1px solid var(--line); }
+  .oz-room:first-child { border-top: 0; padding-top: 0; }
+  .oz-room h3, .oz-sail h3 { font-family: var(--ff-display); font-weight: 300; font-size: 1.5rem; color: var(--bone); margin: 0; }
+  .oz-meta { display: flex; flex-wrap: wrap; gap: var(--s-1) var(--s-3); margin: var(--s-2) 0 0;
+    font-size: var(--t-nano); letter-spacing: .2em; text-transform: uppercase; color: var(--gold); }
+  .oz-room p:last-child { color: var(--muted); font-size: var(--t-base); line-height: 1.85; margin: var(--s-3) 0 0; }
+
+  .oz-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-4); }
+  .oz-cell { border: 1px solid var(--line); border-radius: 2px; padding: var(--s-5);
+    background: linear-gradient(165deg, rgba(30,25,18,.85), rgba(14,17,21,.6)); }
+  .oz-cell h3, .oz-step h3 { font-size: var(--t-md); color: var(--bone); font-weight: 500; margin: 0 0 var(--s-2); }
+  .oz-cell p, .oz-step p { color: var(--muted); font-size: var(--t-sm); line-height: 1.8; margin: 0; }
+
+  .oz-sail { padding: var(--s-4) 0; border-top: 1px solid var(--line); }
+  .oz-when { margin: var(--s-1) 0 0; font-size: var(--t-nano); letter-spacing: .2em; text-transform: uppercase; color: var(--gold-bright); }
+  .oz-sail dl { margin: var(--s-3) 0 0; display: grid; gap: var(--s-2); }
+  .oz-sail dl > div { display: grid; grid-template-columns: 64px 1fr; gap: var(--s-3); align-items: baseline; }
+  .oz-sail dd { margin: 0; color: var(--muted); font-size: var(--t-sm); line-height: 1.75; }
+  .oz-sailnote { margin: var(--s-3) 0 0; color: var(--muted-2); font-size: var(--t-tiny); line-height: 1.7; font-style: italic; }
+
+  .oz-incl { display: grid; grid-template-columns: 1.4fr 1fr; gap: var(--s-5); margin-top: var(--s-6);
+    padding: var(--s-5); border: 1px solid var(--line); background: rgba(217,180,90,.04); }
+  .oz-incl h3, .oz-note h3 { font-family: var(--ff-display); font-weight: 300; font-size: 1.35rem; color: var(--gold-bright); margin: 0 0 var(--s-3); }
+  .oz-incl ul { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-2); }
+  .oz-incl li { position: relative; padding-inline-start: 18px; color: var(--muted); font-size: var(--t-sm); line-height: 1.7; }
+  .oz-incl li::before { content: ""; position: absolute; inset-inline-start: 0; top: .62em; width: 5px; height: 5px;
+    transform: rotate(45deg); background: var(--gold); }
+
+  .oz-steps { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-4); }
+  .oz-step { position: relative; border: 1px solid var(--line); border-radius: 2px; padding: var(--s-5);
+    background: linear-gradient(165deg, rgba(30,25,18,.85), rgba(14,17,21,.6)); }
+  .oz-stepnum { position: absolute; top: 22px; inset-inline-end: 26px; font-family: var(--ff-display); font-size: 2.2rem; color: var(--gold); opacity: .18; }
+  .oz-stepsym { width: 34px; height: 40px; margin-bottom: var(--s-3); }
+  .oz-stepsym svg { width: 100%; height: 100%; }
+  .oz-ask { margin: var(--s-5) 0 0; }
+
+  .oz-note { margin-top: var(--s-6); padding: var(--s-5); border-inline-start: 2px solid var(--gold); background: rgba(217,180,90,.05); }
+  .oz-note p { color: var(--muted); font-size: var(--t-sm); line-height: 1.88; margin: 0; max-width: 760px; }
+  .oz-disclosure { margin: var(--s-6) 0 0; padding-top: var(--s-4); border-top: 1px solid var(--line);
+    color: var(--muted-2); font-size: var(--t-tiny); line-height: 1.8; max-width: 820px; }
+
+  @media (max-width: 900px) {
+    .oz-row { grid-template-columns: 1fr; gap: var(--s-5); }
+    .oz-row--flip { direction: ltr; }
+    .oz-shot { position: relative; top: 0; }
+    .oz-img { aspect-ratio: 4 / 3; }
+    .oz-grid { grid-template-columns: 1fr 1fr; }
+    .oz-incl { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 560px) {
+    .oz-facts { grid-template-columns: 1fr 1fr; gap: var(--s-3); }
+    .oz-facts dd { font-size: 1.05rem; }
+    .oz-grid, .oz-steps { grid-template-columns: 1fr; }
+    .oz-cell, .oz-step, .oz-incl, .oz-note { padding: var(--s-4) var(--s-3); }
+  }
+</style>

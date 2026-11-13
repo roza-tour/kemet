@@ -44,6 +44,9 @@ export const primaryNav: NavItem[] = [
       // but they are different products — VIP is a journey with named sites
       // reserved along it, this is a site taken for an evening.
       { label: "Private access", href: "private-hire.html" },
+      // A ship booked on request, not a catalogue journey — so it sits with
+      // the two pages that are arranged rather than chosen.
+      { label: "The Oberoi Zahra", href: "oberoi-zahra-nile-cruise.html" },
       { label: "All journeys", href: "tours.html" },
       { label: "By occasion", href: "occasions.html" },
       { label: "Collections", href: hubFor("seasonal") },
