@@ -48,6 +48,7 @@ export const primaryNav: NavItem[] = [
       // the two pages that are arranged rather than chosen.
       { label: "The Oberoi Zahra", href: "oberoi-zahra-nile-cruise.html" },
       { label: "All journeys", href: "tours.html" },
+      { label: "Design your journey", href: "design-your-journey.html" },
       { label: "By occasion", href: "occasions.html" },
       { label: "Collections", href: hubFor("seasonal") },
       { label: "Compare the options", href: "compare.html" },

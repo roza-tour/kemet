@@ -75,6 +75,19 @@
       "ar": "ar/oberoi-zahra-rehla-niliya.html"
     },
     {
+      "key": "design-journey",
+      "en": "design-your-journey.html",
+      "de": "de/reise-auf-der-karte-entwerfen.html",
+      "it": "it/disegna-il-tuo-viaggio-in-egitto.html",
+      "es": "es/disene-su-viaje-a-egipto.html",
+      "fr": "fr/dessinez-votre-voyage-en-egypte.html",
+      "ru": "ru/sostavte-marshrut-po-egiptu.html",
+      "id": "id/rancang-perjalanan-mesir.html",
+      "ms": "ms/reka-perjalanan-mesir.html",
+      "pt": "pt/desenhe-sua-viagem-ao-egito.html",
+      "ar": "ar/sammem-rehlatak-fi-masr.html"
+    },
+    {
       "key": "journeys",
       "en": "tours.html",
       "de": "de/aegypten-reisen.html",

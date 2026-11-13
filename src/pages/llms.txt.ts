@@ -277,6 +277,7 @@ export const GET: APIRoute = () => {
     home: "the home page", "private-access": "private access to monuments",
     journeys: "the journeys", "nile-cruise": "the Nile cruise",
     "oberoi-zahra": "The Oberoi Zahra, a luxury Nile cruiser booked on request",
+    "design-journey": "the map for designing a journey of your own",
     cost: "what it costs", "when-to-go": "when to go", safety: "whether Egypt is safe", ultra: "Kemet Ultra, the top tier",
     easter: "Easter in Egypt",
   };
@@ -366,6 +367,7 @@ export const GET: APIRoute = () => {
     ["Egyptian cuisine", "cuisine.html", "The Egyptian table, dish by dish."],
     ["The Sacred Senses of Egypt", "egyptian-incense-stones-cotton.html", sacredBrief.oneLine],
     ["The Oberoi Zahra, on request", "oberoi-zahra-nile-cruise.html", zahraOneLine],
+    ["Design your journey on the map", "design-your-journey.html", "An interactive map of Egypt: choose the places, set the nights and send the route for a private itinerary and a written price."],
     ["Site index", "sitemap.html", "Every page on the site, in one list."],
   ];
   // build.format is "file", so a folder index (collections/index.astro) is

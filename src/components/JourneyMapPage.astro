@@ -1,0 +1,38 @@
+---
+// The map's own page, in any language — one job: let a visitor draw the trip
+// they have in mind and send it. The page is the tool and almost nothing else
+// (the owner's brief, November 2026: lighter to use, less to read). Each
+// language's route file is three lines; the words are in config/journey-map.ts.
+import Base from "@/layouts/Base.astro";
+import JourneyMap from "@/components/JourneyMap.astro";
+import { MAP_WORDS, MAP_ROUTE } from "@/config/journey-map";
+import { LOCALE_META } from "@/config/i18n";
+import type { SiteLocale } from "@/config/i18n";
+import { canonical } from "@/utils/links";
+
+interface Props {
+  locale: SiteLocale;
+}
+const { locale } = Astro.props;
+const w = MAP_WORDS[locale];
+const route = MAP_ROUTE[locale];
+const jsonld = [{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: w.heading,
+  description: w.metaDescription,
+  url: canonical(route),
+  inLanguage: LOCALE_META[locale].tag,
+}];
+---
+<Base showCta={false} title={w.metaTitle} description={w.metaDescription} active={route} jsonld={jsonld}>
+  <div class="dyj">
+    <JourneyMap locale={locale} base={locale === "en" ? "" : "../"} level="h1" />
+  </div>
+</Base>
+
+<style is:global>
+  /* The header is fixed; the map section is the whole page. */
+  .dyj { padding-top: 132px; }
+  .dyj .jmap { padding-top: var(--s-4); }
+</style>

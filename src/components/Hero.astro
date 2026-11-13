@@ -10,9 +10,19 @@
 // footer and the ribbon. Same elements, same lengths: only the text changed.
 import { site } from "@/config/site";
 import { srcsetFor, SIZES } from "@/utils/images";
+
+// The photographs that follow the first one in the reel (hero-reel.client.js).
+// Only pictures large enough to fill a desktop screen without softening.
+const reel = [
+  "/images/stock/giza-pyramids-sunrise-sky.webp",
+  "/images/cairo/cairo-citadel-mosque-dusk.webp",
+  "/images/giza/saqqara-step-pyramid-djoser.webp",
+].map((src) => ({ src, srcset: srcsetFor(src) }));
+// The sunrise photograph keeps its pyramids at the foot of the frame.
+reel[0] = { ...reel[0], pos: "50% 82%" } as (typeof reel)[number];
 ---
 <header class="hero">
-  <div class="bg">
+  <div class="bg" data-reel={JSON.stringify(reel)}>
     <img
       src="/images/giza/giza-great-pyramid-clear-sky.webp"
       srcset={srcsetFor("/images/giza/giza-great-pyramid-clear-sky.webp")}
@@ -45,3 +55,5 @@ import { srcsetFor, SIZES } from "@/utils/images";
     <span class="end">Tailor-made · Private · 4 &amp; 5-Star</span>
   </div>
 </header>
+
+<script>import "../scripts/hero-reel.client.js";</script>

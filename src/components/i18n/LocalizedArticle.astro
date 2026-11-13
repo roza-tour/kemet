@@ -32,6 +32,7 @@ import type { LocalizedPage } from "@/data/i18n/types";
 import { TRANSLATION_GROUPS, LOCALE_META } from "@/config/i18n";
 import type { TranslatedLocale } from "@/config/i18n";
 import { canonical, publicPath, whatsappLink, mailtoLink } from "@/utils/links";
+import { MAP_WORDS, MAP_ROUTE } from "@/config/journey-map";
 import { personRef, videoObject, thingLd } from "@/schemas/jsonld";
 import EclipseDay from "@/components/EclipseDay.astro";
 import { eclipseDayEvent } from "@/schemas/eclipseEvent";
@@ -242,6 +243,10 @@ if (isEclipse) jsonld.push(...eclipseDayEvent(locale, route, page.photos?.[0]?.s
       )}
 
       {page.touches && <SignatureTouches touches={page.touches} inline />}
+
+      {page.groupId === "journeys" && (
+        <p class="lz-maplink reveal"><a class="btn btn-ghost" href={`${base}${publicPath(MAP_ROUTE[locale])}`}>{MAP_WORDS[locale].heading}</a></p>
+      )}
 
       {localeJourneys.length > 0 && (
         <div class="lz-journeys">
