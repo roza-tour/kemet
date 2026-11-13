@@ -8,6 +8,7 @@
 // a Latin American reader is well used to reading peninsular Spanish.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { esZahra } from "./zahra";
 import { tours } from "@/data/tours";
 
 // Read from the journeys, so the figure follows the catalogue when prices move.
@@ -209,7 +210,10 @@ export const es: LocalizedPage[] = [
       whatsapp: "Buenos días Kemet — me interesa un crucero privado por el Nilo.",
       emailSubject: "Consulta — crucero por el Nilo",
     },
-    links: beforeDate(ECLIPSE_2027, [{ label: "Eclipse solar 2027 en Luxor", route: "es/eclipse-solar-2027-luxor.html" }]),
+    links: [
+      { label: "The Oberoi Zahra — crucero de lujo, bajo petición", route: "es/oberoi-zahra-crucero-por-el-nilo.html" },
+      ...beforeDate(ECLIPSE_2027, [{ label: "Eclipse solar 2027 en Luxor", route: "es/eclipse-solar-2027-luxor.html" }]),
+    ],
     moreLabel: "Más sobre el tramo del Nilo",
     moreText:
       "Programas detallados, descripciones de las embarcaciones y el catálogo completo están disponibles en inglés.",
@@ -515,4 +519,7 @@ export const es: LocalizedPage[] = [
     moreLabel: "Más en inglés",
     moreText: "Ocho lugares, cada uno con su vía de permiso, explicados por extenso en la página en inglés.",
   },
+
+  // ===== The Oberoi Zahra — the words are in ./zahra.ts ====================
+  esZahra,
 ];

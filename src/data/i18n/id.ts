@@ -10,6 +10,7 @@
 // through the Gulf, Lebaran and the June–July school holidays.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { idZahra } from "./zahra";
 import { tours } from "@/data/tours";
 
 // Read from the journeys, so the figure follows the catalogue when prices move.
@@ -223,7 +224,10 @@ export const id: LocalizedPage[] = [
       whatsapp: "Halo Kemet — saya tertarik pesiar privat di Sungai Nil.",
       emailSubject: "Permintaan — pesiar Sungai Nil",
     },
-    links: beforeDate(ECLIPSE_2027, [{ label: "Gerhana matahari 2027 di Luxor", route: "id/gerhana-matahari-2027-luxor.html" }]),
+    links: [
+      { label: "The Oberoi Zahra — kapal pesiar mewah, atas permintaan", route: "id/oberoi-zahra-pesiar-sungai-nil.html" },
+      ...beforeDate(ECLIPSE_2027, [{ label: "Gerhana matahari 2027 di Luxor", route: "id/gerhana-matahari-2027-luxor.html" }]),
+    ],
     moreLabel: "Rincian rute",
     moreText:
       "Rincian harian pesiar, jenis kapal dan harga tersedia dalam Bahasa Inggris di situs utama. Silakan hubungi kami dalam Bahasa Indonesia.",
@@ -528,4 +532,7 @@ export const id: LocalizedPage[] = [
     moreLabel: "Selengkapnya dalam bahasa Inggris",
     moreText: "Delapan situs, beserta jalur perizinan masing-masing, dijelaskan lengkap di halaman berbahasa Inggris.",
   },
+
+  // ===== The Oberoi Zahra — the words are in ./zahra.ts ====================
+  idZahra,
 ];

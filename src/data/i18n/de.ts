@@ -8,6 +8,7 @@
 // charter traffic that dominates the market.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { deZahra } from "./zahra";
 import { tours } from "@/data/tours";
 
 // Read from the journeys, so the figure follows the catalogue when prices move.
@@ -209,7 +210,10 @@ export const de: LocalizedPage[] = [
       whatsapp: "Guten Tag Kemet — ich interessiere mich für eine private Nilkreuzfahrt.",
       emailSubject: "Anfrage — Nilkreuzfahrt",
     },
-    links: beforeDate(ECLIPSE_2027, [{ label: "Sonnenfinsternis 2027 in Luxor", route: "de/sonnenfinsternis-2027-luxor.html" }]),
+    links: [
+      { label: "The Oberoi Zahra — Luxus-Nilschiff auf Anfrage", route: "de/oberoi-zahra-nilkreuzfahrt.html" },
+      ...beforeDate(ECLIPSE_2027, [{ label: "Sonnenfinsternis 2027 in Luxor", route: "de/sonnenfinsternis-2027-luxor.html" }]),
+    ],
     moreLabel: "Mehr zur Nilstrecke",
     moreText:
       "Ausführliche Reiseverläufe, Schiffsbeschreibungen und der vollständige Reisekatalog stehen auf Englisch zur Verfügung.",
@@ -517,4 +521,7 @@ export const de: LocalizedPage[] = [
     moreLabel: "Mehr auf Englisch",
     moreText: "Acht Orte, jeweils mit ihrem Genehmigungsweg, ausführlich auf der englischen Seite.",
   },
+
+  // ===== The Oberoi Zahra — the words are in ./zahra.ts ====================
+  deZahra,
 ];

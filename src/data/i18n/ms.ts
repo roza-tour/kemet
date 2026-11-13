@@ -11,6 +11,7 @@
 // to an Umrah in Saudi Arabia.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { msZahra } from "./zahra";
 import { tours } from "@/data/tours";
 
 // Read from the journeys, so the figure follows the catalogue when prices move.
@@ -224,7 +225,10 @@ export const ms: LocalizedPage[] = [
       whatsapp: "Salam Kemet — saya berminat dengan pelayaran persendirian di Sungai Nil.",
       emailSubject: "Pertanyaan — pelayaran Sungai Nil",
     },
-    links: beforeDate(ECLIPSE_2027, [{ label: "Gerhana matahari 2027 di Luxor", route: "ms/gerhana-matahari-2027-luxor.html" }]),
+    links: [
+      { label: "The Oberoi Zahra — kapal persiaran mewah, atas permintaan", route: "ms/oberoi-zahra-pelayaran-sungai-nil.html" },
+      ...beforeDate(ECLIPSE_2027, [{ label: "Gerhana matahari 2027 di Luxor", route: "ms/gerhana-matahari-2027-luxor.html" }]),
+    ],
     moreLabel: "Perincian laluan",
     moreText:
       "Perincian harian pelayaran, jenis kapal dan harga tersedia dalam Bahasa Inggeris di laman utama. Hubungi kami dalam Bahasa Melayu.",
@@ -528,4 +532,7 @@ export const ms: LocalizedPage[] = [
     moreLabel: "Selengkapnya dalam bahasa Inggeris",
     moreText: "Lapan tapak, berserta laluan kebenaran masing-masing, dijelaskan sepenuhnya di halaman bahasa Inggeris.",
   },
+
+  // ===== The Oberoi Zahra — the words are in ./zahra.ts ====================
+  msZahra,
 ];

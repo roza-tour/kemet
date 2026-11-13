@@ -11,6 +11,7 @@
 // Slugs are transliterated to Latin — see config/i18n for why.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { ruZahra } from "./zahra";
 import { tours } from "@/data/tours";
 
 // Read from the journeys, so the figure follows the catalogue when prices move.
@@ -214,7 +215,10 @@ export const ru: LocalizedPage[] = [
       whatsapp: "Здравствуйте, Kemet — интересует индивидуальный круиз по Нилу.",
       emailSubject: "Запрос — круиз по Нилу",
     },
-    links: beforeDate(ECLIPSE_2027, [{ label: "Солнечное затмение 2027 в Луксоре", route: "ru/solnechnoe-zatmenie-2027-luksor.html" }]),
+    links: [
+      { label: "The Oberoi Zahra — теплоход класса люкс, по запросу", route: "ru/oberoi-zahra-kruiz-po-nilu.html" },
+      ...beforeDate(ECLIPSE_2027, [{ label: "Солнечное затмение 2027 в Луксоре", route: "ru/solnechnoe-zatmenie-2027-luksor.html" }]),
+    ],
     moreLabel: "Подробные маршруты",
     moreText:
       "Разбивка круизов по дням, описания судов и цены опубликованы на английском на основном сайте. Пишите нам по-русски.",
@@ -508,4 +512,7 @@ export const ru: LocalizedPage[] = [
     moreLabel: "Подробнее по-английски",
     moreText: "Восемь мест, каждое со своим порядком получения разрешения, подробно изложены на английской странице.",
   },
+
+  // ===== The Oberoi Zahra — the words are in ./zahra.ts ====================
+  ruZahra,
 ];

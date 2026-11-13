@@ -276,6 +276,7 @@ export const GET: APIRoute = () => {
   const GROUP_NAME: Record<string, string> = {
     home: "the home page", "private-access": "private access to monuments",
     journeys: "the journeys", "nile-cruise": "the Nile cruise",
+    "oberoi-zahra": "The Oberoi Zahra, a luxury Nile cruiser booked on request",
     cost: "what it costs", "when-to-go": "when to go", safety: "whether Egypt is safe", ultra: "Kemet Ultra, the top tier",
     easter: "Easter in Egypt",
   };

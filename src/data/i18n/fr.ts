@@ -10,6 +10,7 @@
 // avoids France-only administrative detail where a neutral wording works.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { frZahra } from "./zahra";
 import { tours } from "@/data/tours";
 import { beforeDate, ECLIPSE_2027 } from "@/data/timeboxed";
 
@@ -212,7 +213,10 @@ export const fr: LocalizedPage[] = [
       whatsapp: "Bonjour Kemet — je m'intéresse à une croisière privée sur le Nil.",
       emailSubject: "Demande — croisière sur le Nil",
     },
-    links: beforeDate(ECLIPSE_2027, [{ label: "Éclipse solaire 2027 à Louxor", route: "fr/eclipse-solaire-2027-louxor.html" }]),
+    links: [
+      { label: "The Oberoi Zahra — navire de luxe, sur demande", route: "fr/oberoi-zahra-croisiere-sur-le-nil.html" },
+      ...beforeDate(ECLIPSE_2027, [{ label: "Éclipse solaire 2027 à Louxor", route: "fr/eclipse-solaire-2027-louxor.html" }]),
+    ],
     moreLabel: "Les itinéraires détaillés",
     moreText:
       "Le détail jour par jour des croisières, les bateaux et les prix figurent en anglais sur le site principal. Écrivez-nous en français.",
@@ -506,4 +510,7 @@ export const fr: LocalizedPage[] = [
     moreLabel: "Davantage en anglais",
     moreText: "Huit lieux, chacun avec sa voie d'autorisation, détaillés sur la page anglaise.",
   },
+
+  // ===== The Oberoi Zahra — the words are in ./zahra.ts ====================
+  frZahra,
 ];

@@ -8,6 +8,7 @@
 // than German school terms, Rome and Milan rather than Frankfurt.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { itZahra } from "./zahra";
 import { tours } from "@/data/tours";
 
 // Read from the journeys, so the figure follows the catalogue when prices move.
@@ -209,7 +210,10 @@ export const it: LocalizedPage[] = [
       whatsapp: "Buongiorno Kemet — sono interessato a una crociera privata sul Nilo.",
       emailSubject: "Richiesta — crociera sul Nilo",
     },
-    links: beforeDate(ECLIPSE_2027, [{ label: "Eclissi solare 2027 a Luxor", route: "it/eclissi-solare-2027-luxor.html" }]),
+    links: [
+      { label: "The Oberoi Zahra — motonave di lusso, su richiesta", route: "it/oberoi-zahra-crociera-sul-nilo.html" },
+      ...beforeDate(ECLIPSE_2027, [{ label: "Eclissi solare 2027 a Luxor", route: "it/eclissi-solare-2027-luxor.html" }]),
+    ],
     moreLabel: "Approfondire il tratto del Nilo",
     moreText:
       "Programmi dettagliati, descrizioni delle imbarcazioni e il catalogo completo sono disponibili in inglese.",
@@ -515,4 +519,7 @@ export const it: LocalizedPage[] = [
     moreLabel: "Di più in inglese",
     moreText: "Otto luoghi, ciascuno con il proprio iter di permesso, spiegati per esteso nella pagina inglese.",
   },
+
+  // ===== The Oberoi Zahra — the words are in ./zahra.ts ====================
+  itZahra,
 ];

@@ -32,6 +32,7 @@
 // deposit, 8–10 days for the full route, €8–12 a day in tips.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { arZahra } from "./zahra";
 import { beforeDate, ECLIPSE_2027 } from "@/data/timeboxed";
 
 export const ar: LocalizedPage[] = [
@@ -228,7 +229,10 @@ export const ar: LocalizedPage[] = [
       whatsapp: "السلام عليكم كيميت — أرغب في رحلة نيلية خاصة.",
       emailSubject: "طلب — رحلة نيلية",
     },
-    links: beforeDate(ECLIPSE_2027, [{ label: "كسوف الشمس ٢٠٢٧ في الأقصر", route: "ar/kusuf-al-shams-2027-al-uqsur.html" }]),
+    links: [
+      { label: "أوبروي زهرة — باخرة فاخرة عند الطلب", route: "ar/oberoi-zahra-rehla-niliya.html" },
+      ...beforeDate(ECLIPSE_2027, [{ label: "كسوف الشمس ٢٠٢٧ في الأقصر", route: "ar/kusuf-al-shams-2027-al-uqsur.html" }]),
+    ],
     moreLabel: "البرامج بالتفصيل",
     moreText:
       "تفاصيل الرحلات النيلية يوماً بيوم، وأنواع المراكب والأسعار، منشورة بالإنجليزية على الموقع الرئيسي. راسلونا بالعربية.",
@@ -495,4 +499,7 @@ export const ar: LocalizedPage[] = [
     moreText:
       "الصفحة الكاملة عن الحجز الحصري للمواقع، بما فيها ما تمّ تنفيذه سابقاً، منشورة بالإنجليزية على الموقع الرئيسي.",
   },
+
+  // ===== The Oberoi Zahra — the words are in ./zahra.ts ====================
+  arZahra,
 ];

@@ -13,6 +13,7 @@
 // Prices stay in euros, as on every other page of the site.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { ptZahra } from "./zahra";
 import { tours } from "@/data/tours";
 import { BUILD_YEAR } from "@/utils/format";
 import { beforeDate, ECLIPSE_2027 } from "@/data/timeboxed";
@@ -219,7 +220,10 @@ export const pt: LocalizedPage[] = [
       whatsapp: "Olá Kemet — tenho interesse num cruzeiro privado pelo Nilo.",
       emailSubject: "Consulta — cruzeiro pelo Nilo",
     },
-    links: beforeDate(ECLIPSE_2027, [{ label: "Eclipse solar de 2027 em Luxor", route: "pt/eclipse-solar-2027-luxor.html" }]),
+    links: [
+      { label: "The Oberoi Zahra — navio de luxo, sob consulta", route: "pt/oberoi-zahra-cruzeiro-pelo-nilo.html" },
+      ...beforeDate(ECLIPSE_2027, [{ label: "Eclipse solar de 2027 em Luxor", route: "pt/eclipse-solar-2027-luxor.html" }]),
+    ],
     moreLabel: "Mais sobre o trecho do Nilo",
     moreText:
       "Programas detalhados, descrições das embarcações e o catálogo completo estão disponíveis em inglês.",
@@ -523,4 +527,7 @@ export const pt: LocalizedPage[] = [
     moreLabel: "Mais em inglês",
     moreText: "Oito lugares, cada um explicado em detalhe na página em inglês.",
   },
+
+  // ===== The Oberoi Zahra — the words are in ./zahra.ts ====================
+  ptZahra,
 ];

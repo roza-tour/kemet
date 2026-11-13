@@ -62,6 +62,19 @@
       "ar": "ar/hajz-mawaqea-athariya-khas.html"
     },
     {
+      "key": "oberoi-zahra",
+      "en": "oberoi-zahra-nile-cruise.html",
+      "de": "de/oberoi-zahra-nilkreuzfahrt.html",
+      "it": "it/oberoi-zahra-crociera-sul-nilo.html",
+      "es": "es/oberoi-zahra-crucero-por-el-nilo.html",
+      "fr": "fr/oberoi-zahra-croisiere-sur-le-nil.html",
+      "ru": "ru/oberoi-zahra-kruiz-po-nilu.html",
+      "id": "id/oberoi-zahra-pesiar-sungai-nil.html",
+      "ms": "ms/oberoi-zahra-pelayaran-sungai-nil.html",
+      "pt": "pt/oberoi-zahra-cruzeiro-pelo-nilo.html",
+      "ar": "ar/oberoi-zahra-rehla-niliya.html"
+    },
+    {
       "key": "journeys",
       "en": "tours.html",
       "de": "de/aegypten-reisen.html",
