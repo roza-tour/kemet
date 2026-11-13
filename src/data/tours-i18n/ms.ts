@@ -572,7 +572,7 @@ export const ms: TourText[] = [
     durationLabel: "7 hari / 6 malam",
     startPoint: "Kaherah (lapangan terbang atau hotel)",
     summary: "Tarikan utama Mesir dalam tujuh hari — Muzium Mesir, Alexandria, kuil dan makam Luxor, serta Piramid Giza.",
-    overview: "Bagi pengembara yang mempunyai seminggu, perjalanan ini menyaring Mesir kepada tarikan terhebatnya tanpa tergesa-gesa. Kaherah dibuka dengan Muzium Mesir; sehari penuh di pesisir Mediterranean meliputi Alexandria; kemudian kereta api tidur membawa anda ke Luxor untuk kuil-kuil orang hidup dan makam-makam orang mati. Anda kembali ke utara untuk Piramid Giza, Saqqara dan jantung zaman pertengahan Kaherah Islam. Persendirian sepanjang perjalanan, dengan Egyptologist anda sendiri dan hotel empat atau lima bintang.",
+    overview: "Bagi pengembara yang mempunyai seminggu, perjalanan ini menyaring Mesir kepada tarikan terhebatnya tanpa tergesa-gesa. Kaherah dibuka dengan Muzium Mesir; sehari penuh di pesisir Mediterranean meliputi Alexandria; kemudian kereta api tidur membawa anda ke Luxor untuk kuil-kuil orang hidup dan makam-makam orang mati. Anda kembali ke utara untuk Piramid Giza, Saqqara dan jantung zaman pertengahan Kaherah Islam. Persendirian sepanjang perjalanan, dengan Egyptologist anda sendiri.",
     itinerary: [
       {
         title: "Kaherah & Muzium Mesir",

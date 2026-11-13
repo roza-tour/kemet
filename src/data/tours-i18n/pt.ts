@@ -568,7 +568,7 @@ export const pt: TourText[] = [
     durationLabel: "7 dias / 6 noites",
     startPoint: "Cairo (aeroporto ou hotel)",
     summary: "As grandes atrações do Egito em sete dias — o Museu Egípcio, Alexandria, os templos e tumbas de Luxor e as Pirâmides de Gizé.",
-    overview: "Para quem tem uma semana para dar ao Egito, esta viagem destila o país nos seus maiores clássicos, sem correria. O Cairo abre com o Museu Egípcio; um dia inteiro no Mediterrâneo é dedicado a Alexandria; depois, o trem-leito leva vocês a Luxor, para os templos dos vivos e as tumbas dos mortos. A volta para o norte é para as Pirâmides de Gizé, Sacará e o coração medieval do Cairo islâmico. Tudo privativo, com o seu próprio egiptólogo e hotéis de quatro ou cinco estrelas.",
+    overview: "Para quem tem uma semana para dar ao Egito, esta viagem destila o país nos seus maiores clássicos, sem correria. O Cairo abre com o Museu Egípcio; um dia inteiro no Mediterrâneo é dedicado a Alexandria; depois, o trem-leito leva vocês a Luxor, para os templos dos vivos e as tumbas dos mortos. A volta para o norte é para as Pirâmides de Gizé, Sacará e o coração medieval do Cairo islâmico. Tudo privativo, com o seu próprio egiptólogo.",
     itinerary: [
       {
         title: "Cairo e o Museu Egípcio",

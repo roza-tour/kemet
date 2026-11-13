@@ -574,7 +574,7 @@ export const es: TourText[] = [
     durationLabel: "7 días / 6 noches",
     startPoint: "El Cairo (aeropuerto u hotel)",
     summary: "Lo más destacado de Egipto en siete días: el Museo Egipcio, Alejandría, los templos y las tumbas de Luxor y las Pirámides de Guiza.",
-    overview: "Para quienes disponen de una semana, este viaje destila Egipto en sus grandes imprescindibles sin precipitarlos. El Cairo abre con el Museo Egipcio; un día entero junto al Mediterráneo permite conocer Alejandría; después, el tren nocturno lleva hasta Luxor, a los templos de los vivos y las tumbas de los muertos. De vuelta al norte, las Pirámides de Guiza, Saqqara y el corazón medieval de El Cairo islámico. Privado de principio a fin, con su propio egiptólogo y hoteles de cuatro o cinco estrellas.",
+    overview: "Para quienes disponen de una semana, este viaje destila Egipto en sus grandes imprescindibles sin precipitarlos. El Cairo abre con el Museo Egipcio; un día entero junto al Mediterráneo permite conocer Alejandría; después, el tren nocturno lleva hasta Luxor, a los templos de los vivos y las tumbas de los muertos. De vuelta al norte, las Pirámides de Guiza, Saqqara y el corazón medieval de El Cairo islámico. Privado de principio a fin, con su propio egiptólogo.",
     itinerary: [
       {
         title: "El Cairo y el Museo Egipcio",

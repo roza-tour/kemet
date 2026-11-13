@@ -177,7 +177,7 @@ export const de: TourText[] = [
     summary:
       "Die großen Namen Ägyptens in sieben Tagen — das Ägyptische Museum, Alexandria, die Tempel und Gräber von Luxor und die Pyramiden von Gizeh.",
     overview:
-      "Für Reisende, die eine Woche haben, bringt diese Reise Ägypten auf seine stärksten Stücke, ohne sie zu hetzen. Kairo beginnt mit dem Ägyptischen Museum; ein ganzer Tag am Mittelmeer gehört Alexandria; dann trägt Sie der Nachtzug nach Luxor zu den Tempeln der Lebenden und den Gräbern der Toten. Zurück im Norden stehen die Pyramiden von Gizeh, Sakkara und das mittelalterliche Herz des islamischen Kairo. Durchgehend privat, mit Ihrem eigenen Ägyptologen und Hotels der vier- bis fünf-Sterne-Kategorie.",
+      "Für Reisende, die eine Woche haben, bringt diese Reise Ägypten auf seine stärksten Stücke, ohne sie zu hetzen. Kairo beginnt mit dem Ägyptischen Museum; ein ganzer Tag am Mittelmeer gehört Alexandria; dann trägt Sie der Nachtzug nach Luxor zu den Tempeln der Lebenden und den Gräbern der Toten. Zurück im Norden stehen die Pyramiden von Gizeh, Sakkara und das mittelalterliche Herz des islamischen Kairo. Durchgehend privat, mit Ihrem eigenen Ägyptologen.",
     itinerary: [
       {
         title: "Kairo & das Ägyptische Museum",

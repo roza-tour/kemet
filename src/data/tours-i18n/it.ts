@@ -107,7 +107,7 @@ export const it: TourText[] = [
     durationLabel: "7 giorni / 6 notti",
     startPoint: "Il Cairo (aeroporto o hotel)",
     summary: "I grandi nomi dell'Egitto in sette giorni — il Museo Egizio, Alessandria, i templi e le tombe di Luxor e le piramidi di Giza.",
-    overview: "Per chi ha una settimana, questo viaggio distilla l'Egitto nelle sue pagine più belle senza sbrigarle. Il Cairo si apre con il Museo Egizio; una giornata intera sul Mediterraneo va ad Alessandria; poi il treno notturno vi porta a Luxor, ai templi dei vivi e alle tombe dei morti. Si risale a nord per le piramidi di Giza, Saqqara e il cuore medievale del Cairo islamico. Privato dall'inizio alla fine, con il vostro egittologo e hotel a quattro o cinque stelle.",
+    overview: "Per chi ha una settimana, questo viaggio distilla l'Egitto nelle sue pagine più belle senza sbrigarle. Il Cairo si apre con il Museo Egizio; una giornata intera sul Mediterraneo va ad Alessandria; poi il treno notturno vi porta a Luxor, ai templi dei vivi e alle tombe dei morti. Si risale a nord per le piramidi di Giza, Saqqara e il cuore medievale del Cairo islamico. Privato dall'inizio alla fine, con il vostro egittologo.",
     itinerary: [
       { title: "Il Cairo & il Museo Egizio", items: [
         "Accoglienza privata in aeroporto e trasferimento in hotel",

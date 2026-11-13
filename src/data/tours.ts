@@ -279,7 +279,7 @@ export const tours: Tour[] = [
     summary:
       "The headline acts of Egypt in seven days — the Egyptian Museum, Alexandria, the temples and tombs of Luxor, and the Pyramids of Giza.",
     overview:
-      "For travellers with a week to give, this journey distils Egypt to its greatest hits without rushing them. Cairo opens with the Egyptian Museum; a full day on the Mediterranean takes in Alexandria; then the sleeper train carries you to Luxor for the temples of the living and the tombs of the dead. You return north for the Pyramids of Giza, Saqqara and the medieval heart of Islamic Cairo. Private throughout, with your own Egyptologist and four- or five-star hotels.",
+      "For travellers with a week to give, this journey distils Egypt to its greatest hits without rushing them. Cairo opens with the Egyptian Museum; a full day on the Mediterranean takes in Alexandria; then the sleeper train carries you to Luxor for the temples of the living and the tombs of the dead. You return north for the Pyramids of Giza, Saqqara and the medieval heart of Islamic Cairo. Private throughout, with your own Egyptologist.",
     itinerary: [
       {
         label: "Day",

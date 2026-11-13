@@ -572,7 +572,7 @@ export const id: TourText[] = [
     durationLabel: "7 Hari / 6 Malam",
     startPoint: "Kairo (bandara atau hotel)",
     summary: "Daya tarik utama Mesir dalam tujuh hari — Museum Mesir, Alexandria, kuil dan makam Luxor, serta Piramida Giza.",
-    overview: "Bagi Anda yang punya waktu sepekan, perjalanan ini menyaring Mesir hingga ke hal-hal terbaiknya tanpa terburu-buru. Kairo dibuka dengan Museum Mesir; sehari penuh di tepi Mediterania untuk Alexandria; lalu kereta tidur membawa Anda ke Luxor, ke kuil-kuil bagi yang hidup dan makam-makam bagi yang telah tiada. Anda kembali ke utara untuk Piramida Giza, Saqqara, dan jantung abad pertengahan Kairo Islam. Privat sepanjang perjalanan, dengan Egyptologist Anda sendiri dan hotel bintang empat atau lima.",
+    overview: "Bagi Anda yang punya waktu sepekan, perjalanan ini menyaring Mesir hingga ke hal-hal terbaiknya tanpa terburu-buru. Kairo dibuka dengan Museum Mesir; sehari penuh di tepi Mediterania untuk Alexandria; lalu kereta tidur membawa Anda ke Luxor, ke kuil-kuil bagi yang hidup dan makam-makam bagi yang telah tiada. Anda kembali ke utara untuk Piramida Giza, Saqqara, dan jantung abad pertengahan Kairo Islam. Privat sepanjang perjalanan, dengan Egyptologist Anda sendiri.",
     itinerary: [
       {
         title: "Kairo & Museum Mesir",

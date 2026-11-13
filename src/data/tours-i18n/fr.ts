@@ -115,7 +115,7 @@ export const fr: TourText[] = [
     summary:
       "Les grands noms de l'Égypte en sept jours — le Musée égyptien, Alexandrie, les temples et les tombes de Louxor, et les pyramides de Gizeh.",
     overview:
-      "Pour qui dispose d'une semaine, ce voyage ramène l'Égypte à ses plus belles pages sans les expédier. Le Caire s'ouvre sur le Musée égyptien ; une journée entière en Méditerranée revient à Alexandrie ; puis le train de nuit vous emmène à Louxor, vers les temples des vivants et les tombes des morts. Retour au nord pour les pyramides de Gizeh, Saqqarah et le cœur médiéval du Caire islamique. Privé d'un bout à l'autre, avec votre égyptologue et des hôtels quatre ou cinq étoiles.",
+      "Pour qui dispose d'une semaine, ce voyage ramène l'Égypte à ses plus belles pages sans les expédier. Le Caire s'ouvre sur le Musée égyptien ; une journée entière en Méditerranée revient à Alexandrie ; puis le train de nuit vous emmène à Louxor, vers les temples des vivants et les tombes des morts. Retour au nord pour les pyramides de Gizeh, Saqqarah et le cœur médiéval du Caire islamique. Privé d'un bout à l'autre, avec votre égyptologue.",
     itinerary: [
       { title: "Le Caire & le Musée égyptien", items: [
         "Accueil privé à l'aéroport et transfert à l'hôtel",
