@@ -2,15 +2,24 @@
 //
 // The map, the stops and the catalogue journeys are already in the page. This
 // keeps the list of chosen stops in the order they were tapped, draws the
-// route through them, lets each stop's nights be changed, and writes the
-// message that goes to WhatsApp or email — from the visitor's own app; nothing
-// is stored and nothing is sent to us by the page.
+// route through them, lets each stop's nights and place in the order be
+// changed, shows a line about the place just tapped, and writes the message
+// that goes to WhatsApp or email — from the visitor's own app; nothing is
+// stored and nothing is sent to us by the page.
+//
+// What it tells the site's own analytics (scripts/enhance.client.js listens
+// for kemet:track): that someone began a route, and that a route was sent,
+// with the stops in it. No message text and nothing personal.
 (function () {
   var root = document.querySelector(".jmap[data-jmap]");
   if (!root) return;
   var cfg;
   try { cfg = JSON.parse(root.getAttribute("data-jmap")); } catch (e) { return; }
   root.classList.add("is-live");
+
+  function track(name, detail) {
+    try { document.dispatchEvent(new CustomEvent("kemet:track", { detail: { name: name, detail: detail } })); } catch (e) {}
+  }
 
   var stops = {};
   var nodes = root.querySelectorAll(".jm-stop");
@@ -19,11 +28,13 @@
     stops[g.getAttribute("data-stop")] = {
       el: g, x: Number(g.getAttribute("data-x")), y: Number(g.getAttribute("data-y")),
       name: g.getAttribute("data-name"), def: Number(g.getAttribute("data-nights")),
+      about: g.getAttribute("data-about") || "", photo: g.getAttribute("data-photo") || "",
     };
   }
   var order = [];       // stop keys, in the order tapped
   var nights = {};      // key → nights
   var cruise = false;
+  var began = false;
 
   var route = root.querySelector(".jm-route");
   var list = root.querySelector(".jmap-list");
@@ -36,6 +47,8 @@
   var wa = root.querySelector(".jmap-wa");
   var mail = root.querySelector(".jmap-mail");
   var near = root.querySelectorAll(".jmap-near li");
+  var info = root.querySelector(".jmap-info");
+  var picks = root.querySelectorAll("[data-pick]");
 
   /** Arabic pages write their numbers in Arabic-Indic digits. */
   function digits(n) {
@@ -47,6 +60,7 @@
     if (text != null) e.textContent = text;
     return e;
   }
+  function has(k) { return order.indexOf(k) !== -1; }
 
   /** A gentle curve from stop to stop, bowing the same way each time. */
   function path() {
@@ -74,7 +88,17 @@
     if (cruise && has("luxor") && has("aswan")) lines.push(cfg.cruise);
     return lines.join("\n");
   }
-  function has(k) { return order.indexOf(k) !== -1; }
+
+  /** The place just tapped: its photograph, where we have one, and a line about it. */
+  function describe(key) {
+    var s = stops[key];
+    if (!s || !s.about) { info.hidden = true; return; }
+    var img = info.querySelector("img");
+    if (s.photo) { img.src = s.photo.replace(/\.webp$/, "-320w.webp"); img.hidden = false; } else { img.hidden = true; img.removeAttribute("src"); }
+    info.querySelector("b").textContent = s.name;
+    info.querySelector("span").textContent = s.about;
+    info.hidden = false;
+  }
 
   function render() {
     var some = order.length > 0;
@@ -84,6 +108,7 @@
       stops[key].el.setAttribute("aria-pressed", at === -1 ? "false" : "true");
       stops[key].el.querySelector(".jm-num").textContent = at === -1 ? "" : digits(at + 1);
     }
+    for (var p = 0; p < picks.length; p++) picks[p].setAttribute("aria-pressed", has(picks[p].getAttribute("data-pick")) ? "true" : "false");
 
     list.textContent = "";
     var sum = 0;
@@ -95,6 +120,10 @@
       var nm = el("span", "nm", stops[key].name);
       nm.appendChild(el("small", "", v ? cfg.nights : cfg.dayVisit));
       li.appendChild(nm);
+      var up = el("button", "up", "↑"); up.type = "button"; up.setAttribute("aria-label", cfg.earlier + " — " + stops[key].name);
+      up.disabled = n === 0;
+      up.addEventListener("click", function () { order.splice(n, 1); order.splice(n - 1, 0, key); render(); });
+      li.appendChild(up);
       var step = el("span", "jmap-step");
       var minus = el("button", "", "−"); minus.type = "button"; minus.setAttribute("aria-label", cfg.fewer + " — " + stops[key].name);
       var plus = el("button", "", "+"); plus.type = "button"; plus.setAttribute("aria-label", cfg.more + " — " + stops[key].name);
@@ -143,14 +172,25 @@
 
   function toggle(key) {
     var at = order.indexOf(key);
-    if (at === -1) { order.push(key); if (nights[key] == null) nights[key] = stops[key].def; }
-    else order.splice(at, 1);
+    if (at === -1) {
+      order.push(key);
+      if (nights[key] == null) nights[key] = stops[key].def;
+      describe(key);
+      if (!began) { began = true; track("map-start", key); }
+    } else order.splice(at, 1);
     render();
   }
 
   root.addEventListener("click", function (e) {
-    var g = e.target.closest ? e.target.closest(".jm-stop") : null;
-    if (g) toggle(g.getAttribute("data-stop"));
+    var t = e.target.closest ? e.target : null;
+    if (!t) return;
+    var g = t.closest(".jm-stop");
+    if (g) return toggle(g.getAttribute("data-stop"));
+    var pick = t.closest("[data-pick]");
+    if (pick) return toggle(pick.getAttribute("data-pick"));
+    // A route that leaves the page for WhatsApp or email: which stops, in order.
+    var out = t.closest(".jmap-wa, .jmap-mail");
+    if (out && order.length) track("map-send", (out.classList.contains("jmap-wa") ? "wa:" : "mail:") + order.join(">"));
   });
   root.addEventListener("keydown", function (e) {
     if (e.key !== "Enter" && e.key !== " ") return;
@@ -158,7 +198,7 @@
     if (g) { e.preventDefault(); toggle(g.getAttribute("data-stop")); }
   });
   cruiseBox.addEventListener("change", function () { cruise = cruiseBox.checked; render(); });
-  clear.addEventListener("click", function () { order = []; nights = {}; cruise = false; cruiseBox.checked = false; render(); });
+  clear.addEventListener("click", function () { order = []; nights = {}; cruise = false; cruiseBox.checked = false; info.hidden = true; render(); });
 
   render();
 })();

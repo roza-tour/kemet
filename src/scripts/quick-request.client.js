@@ -64,6 +64,12 @@
   var t = T[lang] || T.en;
   var dlg = null, state = null, opener = null;
 
+  // The site's own analytics hears that a request was opened, completed and
+  // sent — the kind of journey, never the message (enhance.client.js).
+  function track(name, detail) {
+    try { document.dispatchEvent(new CustomEvent("kemet:track", { detail: { name: name, detail: detail } })); } catch (e) {}
+  }
+
   function el(tag, cls, text) {
     var e = document.createElement(tag);
     if (cls) e.className = cls;
@@ -139,12 +145,16 @@
       });
       body.appendChild(sum);
       var msg = message();
+      var kindAt = t.k.indexOf(state.kind);
+      track("qr-ready", "kind" + kindAt);
       var send = el("div", "qr-send");
       var wa = el("a", "qr-wa", t.wa);
       wa.href = "https://wa.me/" + dlg.getAttribute("data-wa") + "?text=" + encodeURIComponent(msg);
       wa.target = "_blank"; wa.rel = "noopener";
       var mail = el("a", "qr-mail", t.mail);
       mail.href = "mailto:" + dlg.getAttribute("data-mail") + "?subject=" + encodeURIComponent(t.subject) + "&body=" + encodeURIComponent(msg);
+      wa.addEventListener("click", function () { track("qr-send", "wa:kind" + kindAt); });
+      mail.addEventListener("click", function () { track("qr-send", "mail:kind" + kindAt); });
       send.appendChild(wa); send.appendChild(mail);
       body.appendChild(send);
       body.appendChild(el("p", "qr-note", t.note));
@@ -196,5 +206,6 @@
     state = { step: 1, when: null, who: null, kids: false, kind: null };
     render();
     dlg.showModal();
+    track("qr-open");
   });
 })();

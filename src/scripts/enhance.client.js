@@ -230,6 +230,16 @@ const DUST_DENSITY = 15000; // px² of viewport per particle
       }
     });
 
+    /* The quick request and the journey map (quick-request.client.js,
+       journey-map.client.js) report here: that one was opened or begun, and
+       that one was sent — never the message itself. Only these names are
+       accepted, so nothing else on a page can write to the log through it. */
+    var TRACKED={'qr-open':1,'qr-ready':1,'qr-send':1,'map-start':1,'map-send':1};
+    document.addEventListener('kemet:track',function(e){
+      var d=e.detail||{};
+      if(TRACKED[d.name])KEV(d.name,d.detail);
+    });
+
     /* Site search. A query that found nothing is recorded under its own event
        name: that list is visitors stating, in their own words, what they came
        for and did not find. */
