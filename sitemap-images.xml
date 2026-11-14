@@ -941,6 +941,32 @@
     </image:image>
   </url>
   <url>
+    <loc>https://kemet-travel.com/destinations/abu-simbel.html</loc>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/abu-simbel-both-temples.webp</image:loc>
+      <image:caption>The two rock temples of Abu Simbel above Lake Nasser</image:caption>
+      <image:title>Abu Simbel</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/abu-simbel-nefertari-facade.webp</image:loc>
+      <image:caption>The façade of the Temple of Hathor and Nefertari at Abu Simbel</image:caption>
+      <image:title>The Temple of Nefertari</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/abu-simbel-hathor-hall.webp</image:loc>
+      <image:caption>The pillared hall of the Temple of Hathor at Abu Simbel</image:caption>
+      <image:title>The Hathor hall</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://kemet-travel.com/destinations/siwa.html</loc>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/siwa-shali-fortress.webp</image:loc>
+      <image:caption>The mud-brick fortress of Shali rising above Siwa Oasis</image:caption>
+      <image:title>Siwa Oasis</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://kemet-travel.com/experiences/sunrise-giza-pyramids.html</loc>
     <image:image>
       <image:loc>https://kemet-travel.com/images/giza/giza-camel-pyramids-sunrise.webp</image:loc>
