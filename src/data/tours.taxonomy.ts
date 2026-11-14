@@ -489,7 +489,7 @@ export const tourMetadata: Record<string, TourMeta> = {
       },
     },
     relationships: {
-      destinations: dest("cairo", "giza", "alexandria", "aswan", "luxor"),
+      destinations: dest("cairo", "giza", "alexandria", "aswan", "luxor", "abu-simbel"),
       categories: cat("multi-day", "nile-cruises"),
       relatedTours: related("tour-10-day", "tour-sharm-5day"),
     },
@@ -675,7 +675,7 @@ export const tourMetadata: Record<string, TourMeta> = {
       },
     },
     relationships: {
-      destinations: dest("aswan"),
+      destinations: dest("aswan", "abu-simbel"),
       categories: cat("day-tours", "cultural-heritage"),
       relatedTours: related("tour-nile-cruise", "tour-3-day"),
     },

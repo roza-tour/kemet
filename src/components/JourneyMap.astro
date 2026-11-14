@@ -15,7 +15,7 @@
 // prices (data-eur, so the header's currency choice applies to them too).
 import { LOCALE_META } from "@/config/i18n";
 import type { SiteLocale, TranslatedLocale } from "@/config/i18n";
-import { MAP_STOPS, MAP_WORDS, EGYPT_OUTLINE, NILE, NILE_ROSETTA, NILE_DAMIETTA } from "@/config/journey-map";
+import { MAP_STOPS, MAP_WORDS, EGYPT_OUTLINE, NILE, NILE_ROSETTA, NILE_DAMIETTA, STOP_PAGE } from "@/config/journey-map";
 import { multidayTours } from "@/data/tours";
 import { tourRouteFor, tourTextFor } from "@/config/tour-i18n";
 import { publicPath } from "@/utils/links";
@@ -47,7 +47,9 @@ const stops = MAP_STOPS.map((s) => {
   const lx = s.side === "left" ? -14 : s.side === "right" ? 14 : 0;
   const ly = s.side === "above" ? -15 : s.side === "below" ? 26 : 5;
   const anchor = s.side === "left" ? "end" : s.side === "right" ? "start" : "middle";
-  return { ...s, x, y, lx, ly, anchor, name: w.stops[s.key], about: w.about[s.key] };
+  // Each place has a page of its own in English only, so only the English map links to it.
+  const more = locale === "en" ? `${base}destinations/${STOP_PAGE[s.key]}.html` : undefined;
+  return { ...s, x, y, lx, ly, anchor, more, name: w.stops[s.key], about: w.about[s.key] };
 });
 
 // The catalogue's multi-day journeys, each with the stops it covers.
@@ -101,7 +103,7 @@ const data = JSON.stringify({
           <path class="jm-nile" d={line(NILE_DAMIETTA)} />
           <path class="jm-route" d="" />
           {stops.map((s) => (
-            <g class="jm-stop" data-stop={s.key} data-x={s.x} data-y={s.y} data-nights={s.nights} data-name={s.name} data-about={s.about} data-photo={s.photo?.src}
+            <g class="jm-stop" data-stop={s.key} data-x={s.x} data-y={s.y} data-nights={s.nights} data-name={s.name} data-about={s.about} data-photo={s.photo?.src} data-more={s.more}
                role="button" tabindex="0" aria-pressed="false" aria-label={s.name} transform={`translate(${s.x} ${s.y})`}>
               <circle class="jm-hit" r="15" />
               <circle class="jm-halo" r="13" />
@@ -113,7 +115,7 @@ const data = JSON.stringify({
         </svg>
         <div class="jmap-info" aria-live="polite" hidden>
           <img alt="" width="96" height="96" loading="lazy" decoding="async" hidden />
-          <p><b></b><span></span></p>
+          <p><b></b><span></span>{locale === "en" && <a class="jmap-more" href="#" hidden>About this place →</a>}</p>
         </div>
         <div class="jmap-pick">
           <p>{w.pick}</p>
@@ -220,6 +222,8 @@ const data = JSON.stringify({
   .jmap-info img { width: 96px; height: 96px; object-fit: cover; display: block; }
   .jmap-info p { margin: 0; color: var(--muted); font-size: var(--t-sm); line-height: 1.65; }
   .jmap-info b { display: block; font-family: var(--ff-display); font-weight: 300; font-size: 1.25rem; color: var(--gold-bright); margin-bottom: 2px; }
+  .jmap-more { display: inline-block; margin-top: 6px; color: var(--gold-bright); font-size: var(--t-tiny); text-decoration: underline; text-underline-offset: 3px; }
+  .jmap-more[hidden] { display: none; }
   .jmap-pick { margin-top: 14px; }
   .jmap-pick p { margin: 0 0 8px; color: var(--muted-2); font-size: var(--t-nano); letter-spacing: .18em; text-transform: uppercase; }
   [lang="ar"] .jmap-pick p { letter-spacing: 0; }

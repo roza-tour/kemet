@@ -28,7 +28,7 @@
     stops[g.getAttribute("data-stop")] = {
       el: g, x: Number(g.getAttribute("data-x")), y: Number(g.getAttribute("data-y")),
       name: g.getAttribute("data-name"), def: Number(g.getAttribute("data-nights")),
-      about: g.getAttribute("data-about") || "", photo: g.getAttribute("data-photo") || "",
+      about: g.getAttribute("data-about") || "", photo: g.getAttribute("data-photo") || "", more: g.getAttribute("data-more") || "",
     };
   }
   var order = [];       // stop keys, in the order tapped
@@ -97,6 +97,8 @@
     if (s.photo) { img.src = s.photo.replace(/\.webp$/, "-320w.webp"); img.hidden = false; } else { img.hidden = true; img.removeAttribute("src"); }
     info.querySelector("b").textContent = s.name;
     info.querySelector("span").textContent = s.about;
+    var more = info.querySelector(".jmap-more");
+    if (more) { more.hidden = !s.more; if (s.more) more.href = s.more; }
     info.hidden = false;
   }
 

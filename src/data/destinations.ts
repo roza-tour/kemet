@@ -100,7 +100,7 @@ export const destinations: Destination[] = [
         a: "The Giza plateau is approximately 25 kilometres from central Cairo — about 45 minutes by private vehicle or Uber. Cairo Metro Line 2 reaches Giza station, from which a taxi or Uber covers the final 5 km to the plateau in 10–15 minutes. On a guided tour, all transfers are arranged.",
       },
     ],
-    relationships: { nearbyDestinations: near("giza", "alexandria") },
+    relationships: { nearbyDestinations: near("giza", "alexandria", "fayoum", "port-said") },
     seo: {
       title: "Cairo Travel Guide — Museums, Islamic & Coptic Cairo | Kemet",
       description:
@@ -289,7 +289,7 @@ export const destinations: Destination[] = [
       },
     ],
     relationships: {
-      nearbyDestinations: near("aswan"),
+      nearbyDestinations: near("aswan", "dendera-abydos"),
       // The 2027 eclipse is centred on Luxor; first in its guides until the day.
       guides: beforeDate(ECLIPSE_2027, [{ domain: "guide" as const, id: "total-solar-eclipse-2027-luxor" }]),
     },
@@ -387,7 +387,7 @@ export const destinations: Destination[] = [
         a: "Yes. The classic Nile cruise between Aswan and Luxor runs approximately 200 kilometres northbound along the river, stopping at Kom Ombo and Edfu over three to four nights. Cruises depart in both directions — Aswan-northbound is the more common direction, as it allows a visit to the High Dam and Philae before embarking. Your tour operator confirms the direction and schedule based on your overall itinerary.",
       },
     ],
-    relationships: { nearbyDestinations: near("luxor") },
+    relationships: { nearbyDestinations: near("luxor", "abu-simbel") },
     seo: {
       title: "Aswan, Egypt — Temple of Philae, Nile & Nubian Culture | Kemet",
       description:
@@ -478,7 +478,7 @@ export const destinations: Destination[] = [
         a: "Pompey's Pillar is a 27-metre Roman triumphal column standing among the ruins of the ancient Serapeum in Alexandria — the largest ancient monolithic column outside Constantinople. Despite the popular name, it has nothing to do with the Roman general Pompey: it was erected in 297 CE in honour of the Emperor Diocletian. The misnaming originated with medieval European travellers who incorrectly connected it to Pompey's death in Egypt. The column is carved from a single piece of Aswan pink granite.",
       },
     ],
-    relationships: { nearbyDestinations: near("cairo") },
+    relationships: { nearbyDestinations: near("cairo", "marsa-matruh-north-coast") },
     seo: {
       title: "Alexandria, Egypt — Catacombs, Qaitbay & the Library | Kemet",
       description:
@@ -548,7 +548,7 @@ export const destinations: Destination[] = [
       description:
         "Hurghada travel guide: Giftun Island reefs, private boat days, the old harbour quarter — and how to pair the Red Sea with a Luxor or Nile itinerary.",
     },
-    relationships: { nearbyDestinations: near("luxor") },
+    relationships: { nearbyDestinations: near("luxor", "marsa-alam") },
   },
   {
     id: "sharm-el-sheikh",
@@ -613,7 +613,7 @@ export const destinations: Destination[] = [
       description:
         "Sharm El Sheikh travel guide: Ras Mohammed National Park, the Tiran reefs, shore snorkelling, Bedouin stargazing — and how Sinai fits an itinerary.",
     },
-    relationships: { nearbyDestinations: near("hurghada") },
+    relationships: { nearbyDestinations: near("hurghada", "dahab", "saint-catherine") },
   },
   {
     id: "fayoum",
@@ -679,7 +679,625 @@ export const destinations: Destination[] = [
       description:
         "The Fayoum from Cairo: UNESCO's Wadi Al-Hitan whale fossils, Wadi El Rayan waterfalls, sandboarding above Magic Lake and the potters of Tunis village.",
     },
-    relationships: { nearbyDestinations: near("cairo", "giza") },
+    relationships: { nearbyDestinations: near("cairo", "giza", "bahariya-white-desert") },
+  },
+
+  // ===== Added November 2026: the places the journey map names that had no
+  // page of their own. Facts only — no prices, and photographs only where the
+  // site has its own (the rest await the owner's pictures). ===================
+  {
+    id: "abu-simbel",
+    slug: "abu-simbel",
+    domain: "destination",
+    title: "Abu Simbel",
+    locales: ["en"],
+    shortSummary:
+      "Two temples cut into a cliff by Ramesses II on the shore of Lake Nasser — and moved, block by block, in the 1960s.",
+    longDescription:
+      "Abu Simbel is the far south of Egypt, about 280 kilometres beyond Aswan, and the one monument people cross a desert to see. Ramesses II had two temples cut directly into a sandstone cliff around 1264 BCE: the Great Temple, fronted by four seated colossi of the king twenty metres high, and beside it a smaller temple for Hathor and his queen Nefertari. When the High Dam created Lake Nasser, a UNESCO campaign sawed both temples into more than a thousand blocks between 1964 and 1968 and rebuilt them sixty-five metres higher, inside an artificial hill. Twice a year, on 22 February and 22 October, the rising sun reaches the innermost sanctuary of the Great Temple.",
+    region: "nubia",
+    coordinates: { lat: 22.3372, lng: 31.6258 },
+    unesco: { listed: true, siteName: "Nubian Monuments from Abu Simbel to Philae" },
+    bestSeasons: ["autumn", "winter", "spring"],
+    climateSummary:
+      "Among the hottest and driest places in Egypt: mild October–March, fierce from May to September, when visits belong to the first hours of the day.",
+    recommendedStay: "A day from Aswan, or 1 night",
+    travelStyles: ["historical", "photography", "cultural"],
+    familyFriendly: true,
+    luxuryFriendly: true,
+    adventureFriendly: false,
+    highlights: [
+      "The Great Temple of Ramesses II — four twenty-metre colossi on the façade and the hall of Osiride pillars behind it",
+      "The Temple of Hathor and Nefertari, where a queen stands as tall as her king",
+      "The sun alignment of 22 February and 22 October, when dawn lights the sanctuary",
+      "The view across Lake Nasser from the temple terrace",
+      "The evening sound and light show, for those who stay the night",
+    ],
+    thingsToKnow: [
+      "From Aswan it is about three to three and a half hours each way by road, or a short flight; road departures are before dawn.",
+      "Staying a night means seeing the temples at sunrise and late afternoon, after the day visitors have gone.",
+      "The sun-festival dates draw large crowds and rooms sell out months ahead.",
+      "Photography rules inside the temples change from time to time; your Egyptologist will know the current ones.",
+    ],
+    whyVisit: [
+      "The most dramatic temple façade in Egypt",
+      "A feat of ancient building and of modern rescue in the same place",
+      "The natural end of a journey up the Nile",
+    ],
+    symbol: "sun",
+    hero: {
+      alt: "The two rock temples of Abu Simbel above Lake Nasser",
+      label: "Abu Simbel",
+      src: "/images/stock/abu-simbel-both-temples.webp",
+      width: 1024, height: 768,
+    },
+    gallery: [
+      { alt: "The façade of the Temple of Hathor and Nefertari at Abu Simbel", label: "The Temple of Nefertari", src: "/images/stock/abu-simbel-nefertari-facade.webp", width: 768, height: 1024 },
+      { alt: "The pillared hall of the Temple of Hathor at Abu Simbel", label: "The Hathor hall", src: "/images/stock/abu-simbel-hathor-hall.webp", width: 768, height: 1024 },
+    ],
+    faqs: [
+      { q: "Is Abu Simbel worth the journey from Aswan?",
+        a: "Yes, if you have a day to give it. The drive is long and the start is early, but there is nothing else in Egypt like the first sight of the four colossi, and the story of how the temples were moved is as remarkable as the temples themselves. Travellers who dislike early starts can fly, or stay a night." },
+      { q: "Should I visit by road, by air, or stay overnight?",
+        a: "By road is the classic way: a pre-dawn departure across open desert, about three to three and a half hours each way. The flight from Aswan is short and suits a tight schedule. An overnight stay is the calmest: you see the temples twice, in the late light and at sunrise, with far fewer people." },
+      { q: "What happens on 22 February and 22 October?",
+        a: "At sunrise on those two days the light travels the length of the Great Temple and falls on the statues in the sanctuary. It lasts a few minutes and thousands come for it, so it has to be planned and booked well ahead." },
+    ],
+    seo: {
+      title: "Abu Simbel, Egypt — The Temples of Ramesses II | Kemet",
+      description:
+        "Abu Simbel from Aswan: the Great Temple of Ramesses II, the Temple of Nefertari, the 1960s rescue and the sun alignment of 22 February and 22 October.",
+    },
+    relationships: { nearbyDestinations: near("aswan") },
+  },
+  {
+    id: "siwa",
+    slug: "siwa",
+    domain: "destination",
+    title: "Siwa Oasis",
+    locales: ["en"],
+    shortSummary:
+      "A remote oasis near the Libyan border: the Oracle of Amun, a mud-and-salt citadel, springs among the palms and the dunes of the Great Sand Sea.",
+    longDescription:
+      "Siwa lies in a depression below sea level in Egypt's far west, some fifty kilometres from the Libyan border and a long day's drive from Cairo. Its distance kept it apart for most of its history: Siwans are Amazigh, speak their own language, and built in kershef, a mix of mud and salt. Alexander the Great came here in 331 BCE to consult the Oracle of Amun, and the temple he walked into still stands on the rock of Aghurmi. The old town, Shali, is a thirteenth-century citadel that the rains of 1926 half dissolved into the shapes it has today. Around them are date and olive gardens, cold and warm springs, salt lakes of an improbable blue, and to the south the first great dunes of the Sahara.",
+    region: "western-desert",
+    coordinates: { lat: 29.2032, lng: 25.5195 },
+    elevationMeters: -18,
+    bestSeasons: ["autumn", "winter", "spring"],
+    climateSummary:
+      "A true desert climate: warm days and cold nights from October to April, very hot in summer.",
+    recommendedStay: "2–3 nights",
+    travelStyles: ["cultural", "nature", "adventure", "photography", "relaxed"],
+    familyFriendly: true,
+    luxuryFriendly: true,
+    adventureFriendly: true,
+    highlights: [
+      "The Temple of the Oracle of Amun at Aghurmi, where Alexander the Great was received in 331 BCE",
+      "Shali, the mud-and-salt citadel at the centre of the town",
+      "Cleopatra's Spring and the gardens of date palms and olives",
+      "The salt lakes, and sunset from Fatnas Island",
+      "An afternoon in the dunes of the Great Sand Sea, with the spring-fed pool at Bir Wahed",
+      "Gebel al-Mawta, the Mountain of the Dead, with its painted tomb of Si-Amun",
+    ],
+    thingsToKnow: [
+      "Siwa is far: about three and a half hours' drive from Marsa Matruh and a full day from Cairo. A journey here is usually paired with the Mediterranean coast or Alexandria.",
+      "The desert beyond the oasis needs a 4x4 and a permit, both arranged for you.",
+      "Siwa is conservative; modest dress in the town is appreciated.",
+      "Lodges are small and built in the local style; the best of them fill early in the cool months.",
+    ],
+    whyVisit: [
+      "The most distinct culture in Egypt, in its most remote oasis",
+      "An oracle that Alexander the Great crossed the desert to consult",
+      "Springs, salt lakes and the Sahara's dunes within a few kilometres of each other",
+    ],
+    symbol: "lotus",
+    hero: {
+      alt: "The mud-brick fortress of Shali rising above Siwa Oasis",
+      label: "Siwa Oasis",
+      src: "/images/stock/siwa-shali-fortress.webp",
+      width: 1280, height: 960,
+    },
+    faqs: [
+      { q: "How do you get to Siwa?",
+        a: "By road. The usual way is along the Mediterranean coast to Marsa Matruh and then south across the desert, about three and a half hours from Matruh. From Cairo it is a full day, which is why most journeys break it with a night in Alexandria or on the coast." },
+      { q: "How many nights does Siwa need?",
+        a: "Two at the least, three if you can. One day goes to the oasis itself — the Oracle temple, Shali, the springs and the salt lakes — and one to the desert, ending with sunset on the dunes. A third lets the place slow you down, which is what it is for." },
+      { q: "When is the best time to visit Siwa?",
+        a: "From October to April. The days are warm and clear and the nights cold enough for a fire. In summer the heat is severe and the desert excursions move to the very early morning." },
+    ],
+    seo: {
+      title: "Siwa Oasis, Egypt — The Oracle, Shali & the Sand Sea | Kemet",
+      description:
+        "Siwa Oasis: the Oracle of Amun, the Shali citadel, Cleopatra's Spring, salt lakes and the dunes of the Great Sand Sea — how to get there and how long to stay.",
+    },
+    relationships: { nearbyDestinations: near("marsa-matruh-north-coast", "alexandria") },
+  },
+  {
+    id: "marsa-matruh-north-coast",
+    slug: "marsa-matruh-north-coast",
+    domain: "destination",
+    title: "Marsa Matruh & the North Coast",
+    locales: ["en"],
+    shortSummary:
+      "Egypt's Mediterranean shore west of Alexandria: white sand, turquoise coves, and the battlefield memorials of El Alamein.",
+    longDescription:
+      "West of Alexandria the Mediterranean coast runs for hundreds of kilometres of pale sand and water of a colour people do not expect from Egypt. Marsa Matruh, about three hours along it, sits on a sheltered bay with its best beaches a short drive away: Agiba, a cove under limestone cliffs, and the rock pool known as Cleopatra's Bath. On the way lies El Alamein, where the desert war turned in 1942; the Commonwealth cemetery, the German and Italian memorials and the military museum stand a few kilometres apart beside the road. This is where Egyptians themselves come in summer, and it is also the road to Siwa, which lies about three and a half hours south of Matruh.",
+    region: "mediterranean",
+    coordinates: { lat: 31.3543, lng: 27.2373 },
+    bestSeasons: ["spring", "summer", "autumn"],
+    climateSummary:
+      "Mediterranean: warm, breezy summers that are far milder than the Nile Valley; cool, sometimes rainy winters, when much of the coast is closed.",
+    recommendedStay: "2–3 nights",
+    travelStyles: ["relaxed", "family", "historical", "nature"],
+    familyFriendly: true,
+    luxuryFriendly: true,
+    adventureFriendly: false,
+    highlights: [
+      "Agiba Beach, a small cove beneath limestone cliffs",
+      "Cleopatra's Bath, a natural rock pool open to the sea",
+      "The Commonwealth War Cemetery at El Alamein and the German and Italian memorials",
+      "The El Alamein Military Museum",
+      "Rommel's Cave, the field headquarters turned small museum at Matruh",
+    ],
+    thingsToKnow: [
+      "The season is summer — roughly June to September — the reverse of the Nile Valley. In winter the sea is cold and many hotels close.",
+      "El Alamein is about an hour and a half from Alexandria; Marsa Matruh about three hours.",
+      "Egyptian school holidays fill the coast in July and August; June and September are calmer.",
+      "It pairs naturally with Alexandria before it and Siwa after it.",
+    ],
+    whyVisit: [
+      "A Mediterranean beach holiday few foreign visitors know Egypt has",
+      "The El Alamein memorials, among the most moving sites of the Second World War",
+      "The natural stop on the way to Siwa",
+    ],
+    symbol: "greco",
+    faqs: [
+      { q: "When is the best time for Egypt's North Coast?",
+        a: "Summer. From June to September the sea is warm and the breeze keeps the coast far cooler than Cairo or Luxor. It is the one part of Egypt where July and August are the season rather than something to avoid — though they are also the busiest weeks." },
+      { q: "Can El Alamein be visited in a day?",
+        a: "Yes, from Alexandria or on the way west. The Commonwealth cemetery, the museum and the German and Italian memorials are close to one another along the coast road and take half a day together." },
+      { q: "Is Marsa Matruh a good stop on the way to Siwa?",
+        a: "It is the usual one. The road to Siwa leaves the coast at Matruh, so a night or two by the sea breaks a long drive and gives you both of the west's landscapes: the Mediterranean and the oasis." },
+    ],
+    seo: {
+      title: "Marsa Matruh & Egypt's North Coast — Beaches, El Alamein | Kemet",
+      description:
+        "Egypt's Mediterranean coast west of Alexandria: Marsa Matruh's Agiba Beach and Cleopatra's Bath, the El Alamein war memorials, and the road to Siwa.",
+    },
+    relationships: { nearbyDestinations: near("alexandria", "siwa") },
+  },
+  {
+    id: "port-said",
+    slug: "port-said",
+    domain: "destination",
+    title: "Port Said",
+    locales: ["en"],
+    shortSummary:
+      "The city at the northern mouth of the Suez Canal — nineteenth-century balconies, ships passing at the end of the street, and a ferry between two continents.",
+    longDescription:
+      "Port Said was founded in 1859, when work on the Suez Canal began, and it still looks like the nineteenth-century port it was built to be: streets of timber balconies and arcades, and the green-domed Canal Authority building on the waterfront. The canal is the sight. Ships the size of buildings slide past the end of the corniche on their way between the Mediterranean and the Red Sea, and a free ferry crosses in a few minutes to Port Fouad, on the Asian bank. For travellers arriving by cruise ship, Port Said is also one of the gateways to Cairo and the Pyramids, about three hours away by road.",
+    region: "mediterranean",
+    coordinates: { lat: 31.2653, lng: 32.3019 },
+    bestSeasons: ["spring", "autumn", "winter"],
+    climateSummary:
+      "Mediterranean and mild: warm, humid summers eased by sea breezes; cool winters with occasional rain.",
+    recommendedStay: "Half a day to 1 day",
+    travelStyles: ["historical", "cultural", "relaxed"],
+    familyFriendly: true,
+    luxuryFriendly: false,
+    adventureFriendly: false,
+    highlights: [
+      "Watching ships enter the Suez Canal from the waterfront",
+      "The free ferry to Port Fouad — Africa to Asia in a few minutes",
+      "The Suez Canal Authority building and its green domes",
+      "The old quarter's wooden balconies and arcades",
+      "The Port Said Military Museum",
+    ],
+    thingsToKnow: [
+      "About two and a half to three hours from Cairo by road.",
+      "For cruise passengers, a private day from the port to Giza and back is possible but long; it is planned around the ship's times.",
+      "The city is walkable and flat; the waterfront is best in the late afternoon.",
+    ],
+    whyVisit: [
+      "The Suez Canal seen from the street, not from a map",
+      "A nineteenth-century port city few visitors reach",
+      "A gateway to Cairo for travellers arriving by sea",
+    ],
+    symbol: "greco",
+    faqs: [
+      { q: "What is there to see in Port Said?",
+        a: "The canal itself, above all: ships passing within a few hundred metres of the corniche. Then the nineteenth-century streets with their wooden balconies, the Canal Authority building, and the short ferry crossing to Port Fouad on the Asian side." },
+      { q: "Can I visit the Pyramids from a cruise ship in Port Said?",
+        a: "Yes. It is about three hours each way by road, so the day is long and is planned around your ship's arrival and departure. A private car and Egyptologist make the most of the hours you have at Giza." },
+      { q: "Is Port Said worth a stop on a journey through Egypt?",
+        a: "For travellers interested in the canal, in modern history or in a different kind of Egyptian city, yes — as a day from Cairo or a stop between Cairo and the coast. Travellers with only a week usually give that day to Alexandria instead." },
+    ],
+    seo: {
+      title: "Port Said, Egypt — The Suez Canal City | Kemet",
+      description:
+        "Port Said at the mouth of the Suez Canal: ships passing the corniche, the ferry to Port Fouad, nineteenth-century streets, and the road to Cairo.",
+    },
+    relationships: { nearbyDestinations: near("cairo", "alexandria") },
+  },
+  {
+    id: "saint-catherine",
+    slug: "saint-catherine",
+    domain: "destination",
+    title: "Saint Catherine & Mount Sinai",
+    locales: ["en"],
+    shortSummary:
+      "A sixth-century monastery at the foot of Mount Sinai, in the high granite mountains of the peninsula — and the climb to the summit for sunrise.",
+    longDescription:
+      "In the mountains of southern Sinai, some 1,500 metres above the sea, the Monastery of Saint Catherine has stood since the Emperor Justinian had it built between 548 and 565. It is one of the oldest working Christian monasteries in the world: its walls enclose the church of the Transfiguration, a collection of early icons, a celebrated library of manuscripts, and the bush tradition identifies with the one Moses saw burning. Above it rises Mount Sinai — Jebel Musa — at 2,285 metres, climbed by a long camel path or by the monks' stone steps, most often at night to reach the summit for sunrise. The monastery and the mountains around it are a UNESCO World Heritage site, and the country here is Bedouin, the land of the Jebeliya.",
+    region: "red-sea",
+    coordinates: { lat: 28.5559, lng: 33.9760 },
+    elevationMeters: 1586,
+    unesco: { listed: true, siteName: "Saint Catherine Area" },
+    bestSeasons: ["spring", "autumn"],
+    climateSummary:
+      "Mountain climate: warm days and cool nights in spring and autumn, hot summers, and winters cold enough for frost and occasional snow on the peaks.",
+    recommendedStay: "1 night",
+    travelStyles: ["historical", "cultural", "adventure", "nature", "photography"],
+    familyFriendly: false,
+    luxuryFriendly: false,
+    adventureFriendly: true,
+    highlights: [
+      "The Monastery of Saint Catherine, built between 548 and 565",
+      "The climb of Mount Sinai for sunrise, by the camel path or the Steps of Repentance",
+      "The monastery's icons and the mosaic of the Transfiguration",
+      "The granite mountains of the Sinai high range",
+      "Bedouin gardens in the wadis around the town",
+    ],
+    thingsToKnow: [
+      "The monastery opens to visitors for only a few hours in the morning and not every day; the visit has to be timed to it.",
+      "The summit climb takes about two and a half to three hours up. It is cold at the top before dawn in every season — warm layers are essential.",
+      "It is about two hours' drive from Dahab and two and a half to three from Sharm El Sheikh.",
+      "The climb is steady rather than technical, but it is a real mountain walk at night and not for everyone.",
+    ],
+    whyVisit: [
+      "One of the oldest working monasteries in Christendom",
+      "A summit sacred to three faiths, reached on foot",
+      "Sinai's interior, a world away from its beaches",
+    ],
+    symbol: "ankh",
+    faqs: [
+      { q: "How hard is the climb of Mount Sinai?",
+        a: "It is a long uphill walk rather than a climb. The camel path rises gently for most of the way and ends with about 750 stone steps to the summit; allow two and a half to three hours up and a little less down. Most people do it at night to arrive for sunrise, which means a head torch, warm clothing and steady footing." },
+      { q: "Can I visit the monastery without climbing the mountain?",
+        a: "Yes. The monastery is at the foot of the mountain and is visited on its own, as a day from Dahab or Sharm El Sheikh. Its opening hours are short and it closes on certain days, so the visit is planned around them." },
+      { q: "When is the best time to go?",
+        a: "Spring and autumn. Summer days are hot on the lower path, and in winter the summit before dawn is below freezing, sometimes with snow. In every season the top is far colder than the coast." },
+    ],
+    seo: {
+      title: "Saint Catherine & Mount Sinai — Monastery and Summit | Kemet",
+      description:
+        "Saint Catherine in Sinai: the sixth-century monastery, the sunrise climb of Mount Sinai, how long it takes, and how to reach it from Dahab or Sharm.",
+    },
+    relationships: { nearbyDestinations: near("dahab", "sharm-el-sheikh") },
+  },
+  {
+    id: "dahab",
+    slug: "dahab",
+    domain: "destination",
+    title: "Dahab",
+    locales: ["en"],
+    shortSummary:
+      "A relaxed town on the Gulf of Aqaba, with reefs a few steps from the shore, the Blue Hole to the north and the Sinai mountains behind.",
+    longDescription:
+      "Dahab began as a Bedouin fishing village on the Gulf of Aqaba, about an hour north of Sharm El Sheikh, and it has kept the pace of one. A promenade of cafés runs along the water, and the reef begins almost at their feet: this is one of the few places on the Red Sea where the best diving and snorkelling is reached by walking in from the beach. A short drive north is the Blue Hole, a sinkhole in the reef more than a hundred metres deep, with a rim of coral that snorkellers follow and depths that belong only to trained technical divers. The lagoon to the south has steady wind for windsurfing and kitesurfing, and inland the granite of Sinai begins — canyons, Bedouin dinners under the stars, and Saint Catherine two hours away.",
+    region: "red-sea",
+    coordinates: { lat: 28.5091, lng: 34.5136 },
+    bestSeasons: ["spring", "autumn", "winter"],
+    climateSummary:
+      "Dry desert coast: warm in winter, hot in summer, with a wind that is steadiest from spring to autumn.",
+    recommendedStay: "2–4 nights",
+    travelStyles: ["relaxed", "adventure", "nature"],
+    familyFriendly: true,
+    luxuryFriendly: false,
+    adventureFriendly: true,
+    highlights: [
+      "The Blue Hole — snorkelling along its coral rim",
+      "Shore diving at the Canyon, the Lighthouse and the Eel Garden",
+      "Windsurfing and kitesurfing in the lagoon",
+      "A Bedouin dinner in the desert behind the town",
+      "A day to Saint Catherine's Monastery, or the night climb of Mount Sinai",
+    ],
+    thingsToKnow: [
+      "About an hour by road from Sharm El Sheikh airport.",
+      "Dahab is informal: small hotels, a walking promenade, few large resorts. Travellers wanting a full resort stay usually choose Sharm El Sheikh.",
+      "The Blue Hole's depths have a serious reputation; snorkelling and guided recreational dives along the rim are a different matter and are done every day.",
+      "Leave a full day between your last dive and a flight.",
+    ],
+    whyVisit: [
+      "Reefs you reach from the beach, without a boat",
+      "The easiest-going town on the Egyptian Red Sea",
+      "Sea and mountain in the same stay",
+    ],
+    symbol: "sun",
+    faqs: [
+      { q: "Dahab or Sharm El Sheikh?",
+        a: "Sharm is a resort city: large hotels, boat days to Ras Mohammed and Tiran, everything arranged. Dahab is a town: smaller places to stay, reefs reached from the shore, and a slower, more independent feel. Divers and travellers who dislike resorts tend to prefer Dahab; families wanting a full-service stay tend to prefer Sharm." },
+      { q: "Is the Blue Hole safe to visit?",
+        a: "For snorkellers and for recreational divers staying within their limits along the reef, it is visited safely every day. Its dangers lie in the deep, in dives that should only be attempted by trained technical divers. Go with a reputable dive centre and stay within your certification." },
+      { q: "How do I combine Dahab with the rest of Egypt?",
+        a: "Most travellers fly into Sharm El Sheikh from Cairo or Luxor and drive an hour north. Dahab works well as the last chapter of a journey — a few unstructured days by the sea after the temples — with Saint Catherine as a day inland." },
+    ],
+    seo: {
+      title: "Dahab, Egypt — The Blue Hole, Shore Reefs & Sinai | Kemet",
+      description:
+        "Dahab on the Gulf of Aqaba: snorkelling the Blue Hole, shore diving, windsurfing, Bedouin dinners and Saint Catherine — and how it differs from Sharm.",
+    },
+    relationships: { nearbyDestinations: near("sharm-el-sheikh", "saint-catherine") },
+  },
+  {
+    id: "marsa-alam",
+    slug: "marsa-alam",
+    domain: "destination",
+    title: "Marsa Alam",
+    locales: ["en"],
+    shortSummary:
+      "The quieter southern Red Sea: reefs in fine condition, sea turtles in the bays, and dolphins at Samadai.",
+    longDescription:
+      "Marsa Alam is the south of Egypt's Red Sea coast, some 270 kilometres below Hurghada, with its own airport and a fraction of the visitors. What it has is the sea in better condition than almost anywhere further north. Green turtles graze on the seagrass of Abu Dabbab bay, where a dugong is sometimes seen; spinner dolphins rest in the horseshoe reef of Samadai, visited under rules that keep boats and swimmers to marked zones; and offshore, Elphinstone is one of the celebrated walls of the Red Sea, for experienced divers. Inland lies Wadi el-Gemal, a national park of mangrove, desert and Ababda Bedouin country. The resorts are spread thinly along a long coast, and the nights are dark and quiet.",
+    region: "red-sea",
+    coordinates: { lat: 25.0676, lng: 34.8790 },
+    bestSeasons: ["spring", "autumn", "winter"],
+    climateSummary:
+      "Warm and dry all year; hot in summer, and the sea stays warm enough to swim in every month.",
+    recommendedStay: "3–5 nights",
+    travelStyles: ["nature", "relaxed", "adventure", "family"],
+    familyFriendly: true,
+    luxuryFriendly: true,
+    adventureFriendly: true,
+    highlights: [
+      "Snorkelling with green turtles at Abu Dabbab",
+      "The spinner dolphins of Samadai Reef, seen under protected-area rules",
+      "Elphinstone Reef, for experienced divers",
+      "Wadi el-Gemal National Park — mangroves, desert and coast",
+      "House reefs that begin a few steps from the beach",
+    ],
+    thingsToKnow: [
+      "Marsa Alam has its own airport; by road it is about three and a half hours from Hurghada.",
+      "Wild animals keep their own hours: turtles are seen most days, dolphins often, dugongs only with luck.",
+      "Resorts are far apart and there is little town life; this is a place for the sea and for rest.",
+      "Elphinstone and the offshore reefs are for certified, experienced divers.",
+    ],
+    whyVisit: [
+      "Some of the healthiest reefs on the Egyptian coast",
+      "Turtles and dolphins in their own bays",
+      "The Red Sea without the crowds",
+    ],
+    symbol: "sun",
+    faqs: [
+      { q: "Marsa Alam or Hurghada?",
+        a: "Hurghada has more of everything — hotels, restaurants, boat trips, nightlife — and is closer to Luxor. Marsa Alam has less, by design: fewer people, darker nights and reefs in better condition. Choose Hurghada for convenience and variety, Marsa Alam for the sea itself." },
+      { q: "Will I see turtles and dolphins?",
+        a: "Turtles at Abu Dabbab are seen on most days. Dolphins at Samadai are seen often but not always, and the reef is managed so they are not disturbed. A dugong is a matter of luck. No one can promise a wild animal, and an operator who does should be doubted." },
+      { q: "Is Marsa Alam good for non-divers?",
+        a: "Yes. Many of the best sites are shallow bays and house reefs seen with a mask and snorkel, and the appeal for many guests is simply a quiet beach and warm water. It suits families and travellers who want rest at the end of a journey." },
+    ],
+    seo: {
+      title: "Marsa Alam, Egypt — Turtles, Dolphins & Quiet Reefs | Kemet",
+      description:
+        "Marsa Alam on the southern Red Sea: turtles at Abu Dabbab, the dolphins of Samadai, Elphinstone Reef and Wadi el-Gemal — and how it compares with Hurghada.",
+    },
+    relationships: { nearbyDestinations: near("hurghada") },
+  },
+  {
+    id: "bahariya-white-desert",
+    slug: "bahariya-white-desert",
+    domain: "destination",
+    title: "Bahariya & the White Desert",
+    locales: ["en"],
+    shortSummary:
+      "An oasis four to five hours from Cairo, and beyond it the chalk formations of the White Desert — best seen at sunset and from a camp under the stars.",
+    longDescription:
+      "Bahariya is the nearest of the Western Desert oases to Cairo, about 370 kilometres to the south-west, and the starting point for one of the strangest landscapes in Egypt. South of the oasis the road crosses the Black Desert, where hills are dusted with dark volcanic stone, passes Crystal Mountain and the cliffs of Agabat, and reaches the White Desert National Park: a plain of chalk that the wind has carved into mushrooms, domes and shapes that look deliberate. It is white enough to resemble snow at midday and turns rose and gold at sunset. Most travellers spend the night there, in a camp on the sand. Bahariya itself has hot springs, palm gardens, and the gilded mummies found here in the 1990s.",
+    region: "western-desert",
+    coordinates: { lat: 28.3491, lng: 28.8647 },
+    bestSeasons: ["autumn", "winter", "spring"],
+    climateSummary:
+      "Desert: pleasant days from October to April with cold nights, especially in the open desert; very hot in summer.",
+    recommendedStay: "2 nights, one of them in the desert",
+    travelStyles: ["adventure", "nature", "photography"],
+    familyFriendly: true,
+    luxuryFriendly: false,
+    adventureFriendly: true,
+    highlights: [
+      "The chalk formations of the White Desert National Park at sunset and sunrise",
+      "A night in a desert camp under a sky with no light for a hundred kilometres",
+      "The Black Desert and the view from its volcanic hills",
+      "Crystal Mountain and the valley of Agabat",
+      "The gilded mummies of Bahariya, in the small museum at Bawiti",
+    ],
+    thingsToKnow: [
+      "Bahariya is about four to five hours' drive from Cairo; the White Desert is a further two hours or so by 4x4.",
+      "Desert travel here needs permits and an authorised 4x4 crew, arranged for you; routes can change when the rules do.",
+      "Camping is simple by nature — tents, a fire, a cooked dinner. Winter nights in the desert are cold and call for proper layers.",
+      "It is best as a two-night journey from Cairo rather than a rushed single night.",
+    ],
+    whyVisit: [
+      "A landscape unlike any other in Egypt",
+      "The night sky of the open Sahara",
+      "A complete change of register from temples and museums",
+    ],
+    symbol: "sun",
+    faqs: [
+      { q: "How many days does the White Desert need?",
+        a: "Two nights from Cairo is the comfortable way: drive to Bahariya, continue through the Black Desert to camp in the White Desert, and return the next day or after a second night in the oasis. It can be done with one night, but the long drives then crowd out the desert itself." },
+      { q: "What is camping in the White Desert like?",
+        a: "Simple and memorable. The crew pitches tents or a windbreak among the formations, cooks dinner over a fire, and the desert does the rest. There are no facilities in the park, the silence is complete, and on a clear night the stars are the brightest most visitors have ever seen." },
+      { q: "Is it suitable for children?",
+        a: "For children who enjoy the outdoors, very much so — the formations are a natural playground and the night under the stars is the part they remember. The drives are long, so it suits school-age children better than very young ones." },
+    ],
+    seo: {
+      title: "Bahariya & the White Desert — Camping in the Sahara | Kemet",
+      description:
+        "Bahariya Oasis and the White Desert from Cairo: the chalk formations, the Black Desert, Crystal Mountain, a night under the stars, and how long to allow.",
+    },
+    relationships: { nearbyDestinations: near("fayoum", "cairo") },
+  },
+  {
+    id: "kharga-dakhla-oases",
+    slug: "kharga-dakhla-oases",
+    domain: "destination",
+    title: "Kharga & Dakhla Oases",
+    locales: ["en"],
+    shortSummary:
+      "The southern oases of the Western Desert: a Persian-period temple, one of the earliest Christian cemeteries, and a medieval town of mud brick.",
+    longDescription:
+      "Kharga and Dakhla lie deep in the Western Desert, on the old caravan routes that ran between the Nile and the interior of Africa. Kharga, the larger, holds the Temple of Hibis, built under the Persian king Darius I and the best-preserved temple of that period in Egypt, and beside it the necropolis of Bagawat, where hundreds of mud-brick chapels — some with painted domes — make up one of the oldest Christian cemeteries anywhere. Roman forts stand out in the desert to the north. Dakhla, about three hours further west, is greener and quieter: the medieval town of Al-Qasr is a maze of covered lanes and carved wooden lintels, the Roman temple of Deir el-Hagar stands alone at the edge of the dunes, and warm springs rise in the fields.",
+    region: "western-desert",
+    coordinates: { lat: 25.4390, lng: 30.5586 },
+    bestSeasons: ["autumn", "winter", "spring"],
+    climateSummary:
+      "Among the driest places on earth: warm, clear days from October to April, cold nights in winter, extreme heat in summer.",
+    recommendedStay: "3–4 nights for both oases",
+    travelStyles: ["historical", "cultural", "adventure", "photography"],
+    familyFriendly: false,
+    luxuryFriendly: false,
+    adventureFriendly: true,
+    highlights: [
+      "The Temple of Hibis at Kharga, from the Persian period",
+      "The painted chapels of the Bagawat necropolis",
+      "Al-Qasr, the medieval mud-brick town of Dakhla",
+      "The Roman temple of Deir el-Hagar at the edge of the dunes",
+      "Desert forts on the old caravan routes north of Kharga",
+    ],
+    thingsToKnow: [
+      "These are long distances: Kharga is about three to four hours by road from Luxor, and Dakhla about three hours beyond Kharga.",
+      "Hotels are simple, with a small number of comfortable lodges; this is travel for the sites and the desert, not for resort comforts.",
+      "The journey is usually built as a loop from Luxor, or linked with Bahariya and the White Desert for a full Western Desert circuit.",
+      "Summer travel here is not advised.",
+    ],
+    whyVisit: [
+      "Monuments of periods the Nile Valley rarely shows: Persian, Roman and early Christian",
+      "A medieval Islamic town still standing in mud brick",
+      "The Western Desert at its most remote and least visited",
+    ],
+    symbol: "ankh",
+    faqs: [
+      { q: "How do you reach Kharga and Dakhla?",
+        a: "By road. The most practical approach is from Luxor to Kharga, about three to four hours, continuing to Dakhla on the following day. Travellers doing the whole Western Desert can carry on north through Farafra to the White Desert and Bahariya, returning to Cairo." },
+      { q: "Who are these oases for?",
+        a: "For travellers on a second or longer visit to Egypt, or anyone who values empty sites over famous ones. The monuments are remarkable and you will often have them to yourselves, but the drives are long and the comforts modest." },
+      { q: "How long should I allow?",
+        a: "Three to four nights for both oases from Luxor. Kharga alone can be seen in a long two-day trip. Adding the White Desert and Bahariya makes a circuit of about a week." },
+    ],
+    seo: {
+      title: "Kharga & Dakhla Oases, Egypt — Hibis, Bagawat & Al-Qasr | Kemet",
+      description:
+        "Egypt's southern oases: the Temple of Hibis and the Bagawat chapels at Kharga, the mud-brick town of Al-Qasr and Deir el-Hagar at Dakhla, and how to reach them.",
+    },
+    relationships: { nearbyDestinations: near("luxor", "bahariya-white-desert") },
+  },
+  {
+    id: "minya",
+    slug: "minya",
+    domain: "destination",
+    title: "Minya & Middle Egypt",
+    locales: ["en"],
+    shortSummary:
+      "The stretch of the Nile most journeys skip: the painted tombs of Beni Hasan, Akhenaten's city at Tell el-Amarna, and the necropolis of Tuna el-Gebel.",
+    longDescription:
+      "Between Cairo and Luxor lies Middle Egypt, and at its centre the riverside city of Minya, about 245 kilometres south of the capital. Few itineraries stop here, which is the reason to. At Beni Hasan, tombs cut into the cliff for the governors of the Middle Kingdom are painted with wrestlers, hunters, acrobats and craftsmen — daily life four thousand years ago, in rows. At Tell el-Amarna, the pharaoh Akhenaten and Nefertiti built a new capital for a single god and abandoned it within a generation; its tombs and boundary stelae remain on the edge of an empty plain. Further south, Tuna el-Gebel holds the tomb of Petosiris, half Egyptian and half Greek in its carving, and galleries where thousands of mummified ibises and baboons were laid for the god Thoth.",
+    region: "nile-valley",
+    coordinates: { lat: 28.0991, lng: 30.7503 },
+    bestSeasons: ["autumn", "winter", "spring"],
+    climateSummary:
+      "Nile Valley climate: warm, dry days from October to April; hot from May to September.",
+    recommendedStay: "1–2 nights",
+    travelStyles: ["historical", "cultural", "photography"],
+    familyFriendly: false,
+    luxuryFriendly: false,
+    adventureFriendly: false,
+    highlights: [
+      "The painted tombs of Beni Hasan, from the Middle Kingdom",
+      "Tell el-Amarna — the northern tombs and the royal tomb of Akhenaten's city",
+      "The tomb of Petosiris and the animal catacombs at Tuna el-Gebel",
+      "The remains of Hermopolis and its colossal baboons of Thoth",
+      "The Nile corniche at Minya in the evening",
+    ],
+    thingsToKnow: [
+      "Minya is about three to three and a half hours from Cairo by road, and is also on the main railway line.",
+      "The sites are spread along both banks; two full days cover them without hurry, one day covers Beni Hasan and Amarna at a brisk pace.",
+      "Tell el-Amarna rewards imagination more than the eye: little of the city itself stands, and an Egyptologist makes the difference.",
+      "Hotels are limited and simple compared with Cairo or Luxor.",
+    ],
+    whyVisit: [
+      "Painted tombs with almost no other visitors",
+      "The city of Akhenaten and Nefertiti, where Egypt's strangest reign was lived",
+      "The missing chapter between Cairo and Luxor",
+    ],
+    symbol: "horus",
+    faqs: [
+      { q: "Is Minya worth adding to a journey?",
+        a: "For a first visit of a week, usually not — Cairo, Luxor and Aswan come first. For a longer or second journey, or for anyone drawn to Akhenaten and the Amarna period, it is one of the most rewarding additions in Egypt, and you will share the sites with almost no one." },
+      { q: "What is there to see at Tell el-Amarna?",
+        a: "The rock-cut tombs of Akhenaten's officials, with their reliefs of the royal family under the rays of the sun disc; the royal tomb in its desert valley; and the boundary stelae that marked out the city. Of the city itself, only foundations remain — which is why a good Egyptologist is essential here." },
+      { q: "How do I fit Middle Egypt between Cairo and Luxor?",
+        a: "The simplest way is by road from Cairo with one or two nights in Minya, continuing south afterwards by road or rail. It can also be a two-day excursion from Cairo and back." },
+    ],
+    seo: {
+      title: "Minya & Middle Egypt — Beni Hasan and Tell el-Amarna | Kemet",
+      description:
+        "Middle Egypt from Cairo: the painted tombs of Beni Hasan, Akhenaten's city at Tell el-Amarna, Tuna el-Gebel and Hermopolis, and how to fit them in.",
+    },
+    relationships: { nearbyDestinations: near("cairo", "dendera-abydos") },
+  },
+  {
+    id: "dendera-abydos",
+    slug: "dendera-abydos",
+    domain: "destination",
+    title: "Dendera & Abydos",
+    locales: ["en"],
+    shortSummary:
+      "Two temples north of Luxor that many travellers rank above the famous ones: Hathor's at Dendera, with its ceilings in colour, and Seti I's at Abydos.",
+    longDescription:
+      "North of Luxor, away from the cruise route, stand two of the best-preserved temples in Egypt. Dendera, about sixty kilometres downstream near Qena, is the Temple of Hathor: built under the last Ptolemies and the first Roman emperors, roofed and almost complete, with astronomical ceilings whose blues have been cleaned back to brightness, crypts in its walls, chapels on its roof, and a relief of Cleopatra VII and her son Caesarion on the rear wall. Abydos, further north, was the holiest ground in Egypt, the cult centre of Osiris. The temple Seti I built there around 1290 BCE holds reliefs many consider the finest ever carved in Egypt, still carrying their colour, and the Abydos King List, a roll of seventy-six pharaohs. Behind it lies the Osireion, a sunken hall of granite.",
+    region: "nile-valley",
+    coordinates: { lat: 26.1417, lng: 32.6703 },
+    bestSeasons: ["autumn", "winter", "spring"],
+    climateSummary:
+      "Upper Egypt: warm, dry and sunny from October to April; very hot from May to September.",
+    recommendedStay: "A day from Luxor",
+    travelStyles: ["historical", "photography", "cultural"],
+    familyFriendly: true,
+    luxuryFriendly: true,
+    adventureFriendly: false,
+    highlights: [
+      "The coloured astronomical ceilings of the Temple of Hathor at Dendera",
+      "Dendera's roof chapels and crypts",
+      "The relief of Cleopatra VII and Caesarion on Dendera's rear wall",
+      "The painted reliefs of the Temple of Seti I at Abydos",
+      "The Abydos King List and the Osireion",
+    ],
+    thingsToKnow: [
+      "Dendera is about an hour to an hour and a half from Luxor; Abydos about two and a half to three hours.",
+      "Seeing both in one day is a long but very good day, usually ten to eleven hours door to door. Dendera alone is an easy half day.",
+      "Neither is on the standard Nile cruise, so they are far less crowded than Luxor's own sites.",
+      "The zodiac ceiling at Dendera is a cast; the original has been in the Louvre since the nineteenth century.",
+    ],
+    whyVisit: [
+      "Colour as the ancient Egyptians saw it",
+      "Carving of a quality the larger temples do not match",
+      "Great temples without the crowds",
+    ],
+    symbol: "horus",
+    faqs: [
+      { q: "Can Dendera and Abydos be visited in one day from Luxor?",
+        a: "Yes, and most people who do call it a highlight of their journey. It is a full day, about ten to eleven hours, with Abydos first while the day is cool and Dendera on the way back. With less time, Dendera alone makes an easy half-day excursion." },
+      { q: "Which should I choose if I can only see one?",
+        a: "Dendera if you want the more complete building and the famous ceilings, and a shorter drive. Abydos if you care most about the quality of the carving and the place's meaning in Egyptian religion. They are different enough that seeing both is worth the long day." },
+      { q: "Why are these temples so well preserved?",
+        a: "Dendera is late — built under the last Ptolemies and the Romans — and for centuries sand and a village built over it protected its walls and roof. At Abydos, the roofed halls of Seti I's temple sheltered the reliefs and their paint." },
+    ],
+    seo: {
+      title: "Dendera & Abydos from Luxor — Hathor and Seti I | Kemet",
+      description:
+        "Dendera and Abydos as a day from Luxor: the coloured ceilings of the Temple of Hathor, the reliefs of Seti I's temple, the King List and the Osireion.",
+    },
+    relationships: { nearbyDestinations: near("luxor", "minya") },
   },
 ];
 

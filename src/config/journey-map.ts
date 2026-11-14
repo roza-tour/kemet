@@ -456,3 +456,11 @@ export const MAP_ROUTE: Record<SiteLocale, string> = {
   pt: "pt/desenhe-sua-viagem-ao-egito.html",
   ar: "ar/sammem-rehlatak-fi-masr.html",
 };
+
+/** The destination page for each stop (data/destinations.ts). Those pages are English only for now, so only the English map links to them. */
+export const STOP_PAGE: Record<StopKey, string> = {
+  alexandria: "alexandria", matruh: "marsa-matruh-north-coast", portsaid: "port-said", cairo: "cairo", fayoum: "fayoum", siwa: "siwa",
+  bahariya: "bahariya-white-desert", minya: "minya", kharga: "kharga-dakhla-oases", stcatherine: "saint-catherine", dahab: "dahab",
+  sharm: "sharm-el-sheikh", hurghada: "hurghada", marsaalam: "marsa-alam", abydos: "dendera-abydos", dendera: "dendera-abydos",
+  luxor: "luxor", aswan: "aswan", abusimbel: "abu-simbel",
+};
