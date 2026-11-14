@@ -101,6 +101,8 @@ export interface MapWords {
   /** The two seas, written on the map. */
   med: string;
   red: string;
+  /** The link from a tapped place to its own page. */
+  aboutPlace: string;
   /** Under the map: the same stops as a list, for small screens and keyboards. */
   pick: string;
   /** Moves a stop one place earlier in the route. */
@@ -120,6 +122,7 @@ export const MAP_WORDS: Record<SiteLocale, MapWords> = {
     closest: "The closest journeys in our catalogue", from: "from", clear: "Start again", remove: "Remove", moreNight: "One night more", fewerNight: "One night fewer",
     hello: "Hello Kemet — this is the route I have in mind:", subject: "My route across Egypt",
     med: "Mediterranean Sea", red: "Red Sea",
+    aboutPlace: "About this place",
     pick: "Or choose from the list", earlier: "Move earlier",
     stops: { alexandria: "Alexandria", cairo: "Cairo & Giza", fayoum: "Fayoum", siwa: "Siwa Oasis", luxor: "Luxor", aswan: "Aswan", abusimbel: "Abu Simbel", hurghada: "Hurghada", sharm: "Sharm El Sheikh", matruh: "Marsa Matruh", portsaid: "Port Said", stcatherine: "Saint Catherine", dahab: "Dahab", marsaalam: "Marsa Alam", minya: "Minya", abydos: "Abydos", dendera: "Dendera", bahariya: "Bahariya Oasis", kharga: "Kharga & Dakhla" },
     about: {
@@ -153,6 +156,7 @@ export const MAP_WORDS: Record<SiteLocale, MapWords> = {
     closest: "Die ähnlichsten Reisen aus unserem Programm", from: "ab", clear: "Neu beginnen", remove: "Entfernen", moreNight: "Eine Nacht mehr", fewerNight: "Eine Nacht weniger",
     hello: "Hallo Kemet — diese Route stelle ich mir vor:", subject: "Meine Route durch Ägypten",
     med: "Mittelmeer", red: "Rotes Meer",
+    aboutPlace: "Mehr über diesen Ort",
     pick: "Oder aus der Liste wählen", earlier: "Früher einordnen",
     stops: { alexandria: "Alexandria", cairo: "Kairo & Gizeh", fayoum: "Fayyum", siwa: "Oase Siwa", luxor: "Luxor", aswan: "Assuan", abusimbel: "Abu Simbel", hurghada: "Hurghada", sharm: "Scharm el-Scheich", matruh: "Marsa Matruh", portsaid: "Port Said", stcatherine: "Katharinenkloster", dahab: "Dahab", marsaalam: "Marsa Alam", minya: "Minia", abydos: "Abydos", dendera: "Dendera", bahariya: "Oase Bahariya", kharga: "Charga & Dachla" },
     about: {
@@ -186,6 +190,7 @@ export const MAP_WORDS: Record<SiteLocale, MapWords> = {
     closest: "Les voyages les plus proches dans notre catalogue", from: "dès", clear: "Recommencer", remove: "Retirer", moreNight: "Une nuit de plus", fewerNight: "Une nuit de moins",
     hello: "Bonjour Kemet — voici l'itinéraire que j'ai en tête :", subject: "Mon itinéraire en Égypte",
     med: "Méditerranée", red: "Mer Rouge",
+    aboutPlace: "En savoir plus sur ce lieu",
     pick: "Ou choisissez dans la liste", earlier: "Placer plus tôt",
     stops: { alexandria: "Alexandrie", cairo: "Le Caire & Gizeh", fayoum: "Le Fayoum", siwa: "Oasis de Siwa", luxor: "Louxor", aswan: "Assouan", abusimbel: "Abou Simbel", hurghada: "Hurghada", sharm: "Charm el-Cheikh", matruh: "Marsa Matrouh", portsaid: "Port-Saïd", stcatherine: "Sainte-Catherine", dahab: "Dahab", marsaalam: "Marsa Alam", minya: "Minya", abydos: "Abydos", dendera: "Dendérah", bahariya: "Oasis de Bahariya", kharga: "Kharga & Dakhla" },
     about: {
@@ -219,6 +224,7 @@ export const MAP_WORDS: Record<SiteLocale, MapWords> = {
     closest: "I viaggi più vicini nel nostro catalogo", from: "da", clear: "Ricomincia", remove: "Rimuovi", moreNight: "Una notte in più", fewerNight: "Una notte in meno",
     hello: "Buongiorno Kemet — questo è l'itinerario che ho in mente:", subject: "Il mio itinerario in Egitto",
     med: "Mar Mediterraneo", red: "Mar Rosso",
+    aboutPlace: "Scopri questo luogo",
     pick: "Oppure scegliete dall'elenco", earlier: "Sposta prima",
     stops: { alexandria: "Alessandria", cairo: "Il Cairo e Giza", fayoum: "Fayyum", siwa: "Oasi di Siwa", luxor: "Luxor", aswan: "Assuan", abusimbel: "Abu Simbel", hurghada: "Hurghada", sharm: "Sharm el-Sheikh", matruh: "Marsa Matruh", portsaid: "Porto Said", stcatherine: "Santa Caterina", dahab: "Dahab", marsaalam: "Marsa Alam", minya: "Minya", abydos: "Abido", dendera: "Dendera", bahariya: "Oasi di Bahariya", kharga: "Kharga e Dakhla" },
     about: {
@@ -252,6 +258,7 @@ export const MAP_WORDS: Record<SiteLocale, MapWords> = {
     closest: "Los viajes más parecidos de nuestro catálogo", from: "desde", clear: "Empezar de nuevo", remove: "Quitar", moreNight: "Una noche más", fewerNight: "Una noche menos",
     hello: "Hola Kemet — esta es la ruta que tengo en mente:", subject: "Mi ruta por Egipto",
     med: "Mar Mediterráneo", red: "Mar Rojo",
+    aboutPlace: "Más sobre este lugar",
     pick: "O elija de la lista", earlier: "Mover antes",
     stops: { alexandria: "Alejandría", cairo: "El Cairo y Guiza", fayoum: "El Fayum", siwa: "Oasis de Siwa", luxor: "Luxor", aswan: "Asuán", abusimbel: "Abu Simbel", hurghada: "Hurghada", sharm: "Sharm el-Sheikh", matruh: "Marsa Matruh", portsaid: "Puerto Saíd", stcatherine: "Santa Catalina", dahab: "Dahab", marsaalam: "Marsa Alam", minya: "Minia", abydos: "Abidos", dendera: "Dendera", bahariya: "Oasis de Bahariya", kharga: "Jarga y Dajla" },
     about: {
@@ -285,6 +292,7 @@ export const MAP_WORDS: Record<SiteLocale, MapWords> = {
     closest: "As viagens mais próximas do nosso catálogo", from: "a partir de", clear: "Recomeçar", remove: "Remover", moreNight: "Uma noite a mais", fewerNight: "Uma noite a menos",
     hello: "Olá, Kemet — este é o roteiro que tenho em mente:", subject: "Meu roteiro pelo Egito",
     med: "Mar Mediterrâneo", red: "Mar Vermelho",
+    aboutPlace: "Mais sobre este lugar",
     pick: "Ou escolham na lista", earlier: "Mover para antes",
     stops: { alexandria: "Alexandria", cairo: "Cairo e Gizé", fayoum: "Faium", siwa: "Oásis de Siwa", luxor: "Luxor", aswan: "Assuã", abusimbel: "Abu Simbel", hurghada: "Hurghada", sharm: "Sharm el-Sheikh", matruh: "Marsa Matruh", portsaid: "Porto Said", stcatherine: "Santa Catarina", dahab: "Dahab", marsaalam: "Marsa Alam", minya: "Minia", abydos: "Abidos", dendera: "Dendera", bahariya: "Oásis de Bahariya", kharga: "Kharga e Dakhla" },
     about: {
@@ -318,6 +326,7 @@ export const MAP_WORDS: Record<SiteLocale, MapWords> = {
     closest: "Самые близкие путешествия из нашего каталога", from: "от", clear: "Начать заново", remove: "Убрать", moreNight: "На ночь больше", fewerNight: "На ночь меньше",
     hello: "Здравствуйте, Kemet — вот маршрут, который я задумал(а):", subject: "Мой маршрут по Египту",
     med: "Средиземное море", red: "Красное море",
+    aboutPlace: "Подробнее об этом месте",
     pick: "Или выберите из списка", earlier: "Переместить раньше",
     stops: { alexandria: "Александрия", cairo: "Каир и Гиза", fayoum: "Файюм", siwa: "Оазис Сива", luxor: "Луксор", aswan: "Асуан", abusimbel: "Абу-Симбел", hurghada: "Хургада", sharm: "Шарм-эш-Шейх", matruh: "Марса-Матрух", portsaid: "Порт-Саид", stcatherine: "Святая Екатерина", dahab: "Дахаб", marsaalam: "Марса-Алам", minya: "Эль-Минья", abydos: "Абидос", dendera: "Дендера", bahariya: "Оазис Бахария", kharga: "Харга и Дахла" },
     about: {
@@ -351,6 +360,7 @@ export const MAP_WORDS: Record<SiteLocale, MapWords> = {
     closest: "Perjalanan terdekat dalam katalog kami", from: "mulai", clear: "Mulai lagi", remove: "Hapus", moreNight: "Tambah satu malam", fewerNight: "Kurangi satu malam",
     hello: "Halo Kemet — inilah rute yang saya inginkan:", subject: "Rute saya di Mesir",
     med: "Laut Tengah", red: "Laut Merah",
+    aboutPlace: "Tentang tempat ini",
     pick: "Atau pilih dari daftar", earlier: "Pindahkan lebih awal",
     stops: { alexandria: "Aleksandria", cairo: "Kairo & Giza", fayoum: "Fayoum", siwa: "Oasis Siwa", luxor: "Luxor", aswan: "Aswan", abusimbel: "Abu Simbel", hurghada: "Hurghada", sharm: "Sharm El Sheikh", matruh: "Marsa Matruh", portsaid: "Port Said", stcatherine: "Santa Katarina", dahab: "Dahab", marsaalam: "Marsa Alam", minya: "Minya", abydos: "Abydos", dendera: "Dendera", bahariya: "Oasis Bahariya", kharga: "Kharga & Dakhla" },
     about: {
@@ -384,6 +394,7 @@ export const MAP_WORDS: Record<SiteLocale, MapWords> = {
     closest: "Perjalanan paling hampir dalam katalog kami", from: "dari", clear: "Mula semula", remove: "Buang", moreNight: "Tambah satu malam", fewerNight: "Kurang satu malam",
     hello: "Helo Kemet — inilah laluan yang saya inginkan:", subject: "Laluan saya di Mesir",
     med: "Laut Mediterranean", red: "Laut Merah",
+    aboutPlace: "Tentang tempat ini",
     pick: "Atau pilih daripada senarai", earlier: "Alihkan lebih awal",
     stops: { alexandria: "Alexandria", cairo: "Kaherah & Giza", fayoum: "Fayoum", siwa: "Oasis Siwa", luxor: "Luxor", aswan: "Aswan", abusimbel: "Abu Simbel", hurghada: "Hurghada", sharm: "Sharm El Sheikh", matruh: "Marsa Matruh", portsaid: "Port Said", stcatherine: "Saint Catherine", dahab: "Dahab", marsaalam: "Marsa Alam", minya: "Minya", abydos: "Abydos", dendera: "Dendera", bahariya: "Oasis Bahariya", kharga: "Kharga & Dakhla" },
     about: {
@@ -417,6 +428,7 @@ export const MAP_WORDS: Record<SiteLocale, MapWords> = {
     closest: "أقرب الرحلات في برامجنا", from: "من", clear: "البدء من جديد", remove: "حذف", moreNight: "ليلة إضافية", fewerNight: "ليلة أقل",
     hello: "مرحبًا كيميت — هذا هو المسار الذي أفكر فيه:", subject: "مساري في مصر",
     med: "البحر المتوسط", red: "البحر الأحمر",
+    aboutPlace: "المزيد عن هذا المكان",
     pick: "أو اختاروا من القائمة", earlier: "تقديم المحطة",
     stops: { alexandria: "الإسكندرية", cairo: "القاهرة والجيزة", fayoum: "الفيوم", siwa: "واحة سيوة", luxor: "الأقصر", aswan: "أسوان", abusimbel: "أبو سمبل", hurghada: "الغردقة", sharm: "شرم الشيخ", matruh: "مرسى مطروح", portsaid: "بورسعيد", stcatherine: "سانت كاترين", dahab: "دهب", marsaalam: "مرسى علم", minya: "المنيا", abydos: "أبيدوس", dendera: "دندرة", bahariya: "الواحات البحرية", kharga: "الخارجة والداخلة" },
     about: {
@@ -457,7 +469,7 @@ export const MAP_ROUTE: Record<SiteLocale, string> = {
   ar: "ar/sammem-rehlatak-fi-masr.html",
 };
 
-/** The destination page for each stop (data/destinations.ts). Those pages are English only for now, so only the English map links to them. */
+/** The destination page for each stop (data/destinations.ts); each language has its own through the "destination-<id>" translation group. */
 export const STOP_PAGE: Record<StopKey, string> = {
   alexandria: "alexandria", matruh: "marsa-matruh-north-coast", portsaid: "port-said", cairo: "cairo", fayoum: "fayoum", siwa: "siwa",
   bahariya: "bahariya-white-desert", minya: "minya", kharga: "kharga-dakhla-oases", stcatherine: "saint-catherine", dahab: "dahab",

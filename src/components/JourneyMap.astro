@@ -15,6 +15,7 @@
 // prices (data-eur, so the header's currency choice applies to them too).
 import { LOCALE_META } from "@/config/i18n";
 import type { SiteLocale, TranslatedLocale } from "@/config/i18n";
+import { TRANSLATION_GROUPS } from "@/config/i18n";
 import { MAP_STOPS, MAP_WORDS, EGYPT_OUTLINE, NILE, NILE_ROSETTA, NILE_DAMIETTA, STOP_PAGE } from "@/config/journey-map";
 import { multidayTours } from "@/data/tours";
 import { tourRouteFor, tourTextFor } from "@/config/tour-i18n";
@@ -47,8 +48,9 @@ const stops = MAP_STOPS.map((s) => {
   const lx = s.side === "left" ? -14 : s.side === "right" ? 14 : 0;
   const ly = s.side === "above" ? -15 : s.side === "below" ? 26 : 5;
   const anchor = s.side === "left" ? "end" : s.side === "right" ? "start" : "middle";
-  // Each place has a page of its own in English only, so only the English map links to it.
-  const more = locale === "en" ? `${base}destinations/${STOP_PAGE[s.key]}.html` : undefined;
+  // The place's own page, in this language (the "destination-<id>" translation group).
+  const page = TRANSLATION_GROUPS.find((g) => g.key === `destination-${STOP_PAGE[s.key]}`);
+  const more = locale === "en" ? `${base}destinations/${STOP_PAGE[s.key]}.html` : page ? `${base}${publicPath(page[locale as TranslatedLocale])}` : undefined;
   return { ...s, x, y, lx, ly, anchor, more, name: w.stops[s.key], about: w.about[s.key] };
 });
 
@@ -115,7 +117,7 @@ const data = JSON.stringify({
         </svg>
         <div class="jmap-info" aria-live="polite" hidden>
           <img alt="" width="96" height="96" loading="lazy" decoding="async" hidden />
-          <p><b></b><span></span>{locale === "en" && <a class="jmap-more" href="#" hidden>About this place →</a>}</p>
+          <p><b></b><span></span><a class="jmap-more" href="#" hidden>{w.aboutPlace} →</a></p>
         </div>
         <div class="jmap-pick">
           <p>{w.pick}</p>

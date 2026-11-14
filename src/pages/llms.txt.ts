@@ -281,17 +281,23 @@ export const GET: APIRoute = () => {
     cost: "what it costs", "when-to-go": "when to go", safety: "whether Egypt is safe", ultra: "Kemet Ultra, the top tier",
     easter: "Easter in Egypt",
   };
-  const missing = TRANSLATION_GROUPS.filter((g) => !GROUP_NAME[g.key]);
+  // The destination pages are one group each ("destination-<id>"); they are
+  // counted in a sentence of their own rather than named one by one.
+  const isDestination = (g: { key: string }) => g.key.startsWith("destination-");
+  const keyGroups = TRANSLATION_GROUPS.filter((g) => !isDestination(g));
+  const destinationGroups = TRANSLATION_GROUPS.filter(isDestination);
+  const missing = keyGroups.filter((g) => !GROUP_NAME[g.key]);
   if (missing.length) throw new Error(`llms.txt: no name for translation group(s) ${missing.map((g) => g.key).join(", ")}`);
-  const groupNames = TRANSLATION_GROUPS.map((g) => GROUP_NAME[g.key]);
+  const groupNames = keyGroups.map((g) => GROUP_NAME[g.key]);
   const named = `${groupNames.slice(0, -1).join(", ")} and ${groupNames.at(-1)}`;
   lines.push(
-    `${TRANSLATION_GROUPS.length} key pages — ${named} — are published in ` +
+    `${keyGroups.length} key pages — ${named} — are published in ` +
     `${TRANSLATED_LOCALES.length} languages besides English: ` +
     `${TRANSLATED_LOCALES.map((l) => LOCALE_META[l].endonym).join(", ")}. ` +
     `Each set is written for its market rather than translated word for word, so ` +
     `the flight times, school holidays, entry rules and reference points differ ` +
-    `between them. The translated pages carry the same facts and the same prices.`,
+    `between them. The translated pages carry the same facts and the same prices.` +
+    (destinationGroups.length ? ` The ${destinationGroups.length} destination pages are published in the same languages.` : ""),
   );
   lines.push("");
   // THE CATALOGUE, PER LANGUAGE. Until 8 Oct 2026 this section listed only the

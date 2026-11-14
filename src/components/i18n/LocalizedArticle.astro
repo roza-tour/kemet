@@ -222,7 +222,8 @@ if (isEclipse) jsonld.push(...eclipseDayEvent(locale, route, page.photos?.[0]?.s
             <span class="lz-n">{String(i + 1).padStart(2, "0")}</span>
             <div>
               <h2>{s.title}</h2>
-              <p>{s.body}</p>
+              {s.body && <p>{s.body}</p>}
+              {s.items && s.items.length > 0 && <ul class="lz-items">{s.items.map((x) => <li>{x}</li>)}</ul>}
             </div>
           </div>
         ))}

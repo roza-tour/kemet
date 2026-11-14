@@ -1433,3 +1433,8 @@ small.fx{display:block;margin-top:2px;font-family:var(--ff-body);font-size:var(-
 
 /* Each language's journeys page: the way to the map (components/JourneyMapPage). */
 .lz-maplink{margin:var(--s-6) 0 0;text-align:center}
+
+/* A list inside a numbered section of a translated page (destination pages). */
+.lz-items{list-style:none;margin:0;padding:0;display:grid;gap:var(--s-2)}
+.lz-items li{position:relative;padding-inline-start:20px;color:var(--muted);font-size:var(--t-base);line-height:1.8}
+.lz-items li::before{content:"";position:absolute;inset-inline-start:2px;top:.72em;width:5px;height:5px;transform:rotate(45deg);background:var(--gold)}

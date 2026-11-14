@@ -14,7 +14,10 @@ import type { MediaPlaceholder, Film } from "@/types/primitives";
 
 export interface LocalizedSection {
   title: string;
+  /** A paragraph. May be empty when the section is a list (`items`). */
   body: string;
+  /** A short list under the heading — the destination pages' "why go" and "good to know". */
+  items?: string[];
 }
 
 export interface LocalizedFact {
