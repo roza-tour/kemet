@@ -236,15 +236,18 @@ const labelFor = (route: string) =>
           besides English, written for those markets rather than translated word for word.
           The full catalogue remains in English.
         </p>
+        {/* One heading per language rather than the language's name beside every
+            link: with the destinations translated there are several hundred of
+            them, and the page has a weight budget (scripts/audit.mjs). */}
         {TRANSLATED_LOCALES.map((loc) => (
-          <ul class="sm-list sm-cols">
-            {TRANSLATION_GROUPS.map((g) => (
-              <li>
-                <a href={publicPath(g[loc])} hreflang={loc} lang={loc}>{labelFor(g[loc])}</a>
-                <span>{LOCALE_META[loc].endonym}</span>
-              </li>
-            ))}
-          </ul>
+          <>
+            <h3 class="sm-lang" lang={loc}>{LOCALE_META[loc].endonym}</h3>
+            <ul class="sm-list sm-cols" lang={loc}>
+              {TRANSLATION_GROUPS.map((g) => (
+                <li><a href={publicPath(g[loc])} hreflang={loc}>{labelFor(g[loc])}</a></li>
+              ))}
+            </ul>
+          </>
         ))}
       </div>
 
@@ -269,6 +272,7 @@ const labelFor = (route: string) =>
   .sm-list span { color: var(--muted-2); font-size:var(--t-sm); flex: 1 1 300px; }
   .sm-cols { columns: 2; column-gap:var(--s-6); }
   .sm-cols li { break-inside: avoid; }
+  .sm-lang { margin:var(--s-5) 0 0; font-family: inherit; font-size:var(--t-tiny); font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
   .sm-langnote { color: var(--muted-2); font-size:var(--t-sm); line-height: 1.7; margin:var(--s-2) 0 4px; max-width: 640px; }
   .sm-machine { margin-top:var(--s-1); font-size:var(--t-tiny); color: var(--muted-2); }
   .sm-machine a { color: var(--gold); border-bottom: 1px solid var(--line-2); }

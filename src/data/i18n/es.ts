@@ -8,6 +8,8 @@
 // a Latin American reader is well used to reading peninsular Spanish.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { destinationPages } from "./destinations/build";
+import { esDestinations } from "./destinations/es";
 import { esZahra } from "./zahra";
 import { tours } from "@/data/tours";
 
@@ -522,4 +524,7 @@ export const es: LocalizedPage[] = [
 
   // ===== The Oberoi Zahra — the words are in ./zahra.ts ====================
   esZahra,
+
+  // ===== The 19 destinations — the words are in ./destinations/es.ts ==========
+  ...destinationPages("es", esDestinations),
 ];

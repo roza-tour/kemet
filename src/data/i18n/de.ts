@@ -8,6 +8,8 @@
 // charter traffic that dominates the market.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { destinationPages } from "./destinations/build";
+import { deDestinations } from "./destinations/de";
 import { deZahra } from "./zahra";
 import { tours } from "@/data/tours";
 
@@ -524,4 +526,7 @@ export const de: LocalizedPage[] = [
 
   // ===== The Oberoi Zahra — the words are in ./zahra.ts ====================
   deZahra,
+
+  // ===== The 19 destinations — the words are in ./destinations/de.ts ==========
+  ...destinationPages("de", deDestinations),
 ];

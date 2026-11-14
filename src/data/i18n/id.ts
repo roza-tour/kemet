@@ -10,6 +10,8 @@
 // through the Gulf, Lebaran and the June–July school holidays.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { destinationPages } from "./destinations/build";
+import { idDestinations } from "./destinations/id";
 import { idZahra } from "./zahra";
 import { tours } from "@/data/tours";
 
@@ -535,4 +537,7 @@ export const id: LocalizedPage[] = [
 
   // ===== The Oberoi Zahra — the words are in ./zahra.ts ====================
   idZahra,
+
+  // ===== The 19 destinations — the words are in ./destinations/id.ts ==========
+  ...destinationPages("id", idDestinations),
 ];

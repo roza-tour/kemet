@@ -32,6 +32,8 @@
 // deposit, 8–10 days for the full route, €8–12 a day in tips.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { destinationPages } from "./destinations/build";
+import { arDestinations } from "./destinations/ar";
 import { arZahra } from "./zahra";
 import { beforeDate, ECLIPSE_2027 } from "@/data/timeboxed";
 
@@ -502,4 +504,7 @@ export const ar: LocalizedPage[] = [
 
   // ===== The Oberoi Zahra — the words are in ./zahra.ts ====================
   arZahra,
+
+  // ===== The 19 destinations — the words are in ./destinations/ar.ts ==========
+  ...destinationPages("ar", arDestinations),
 ];

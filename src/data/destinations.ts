@@ -232,7 +232,7 @@ export const destinations: Destination[] = [
     culturalImportance:
       "The richest surviving record of ancient Egyptian temple art, royal funerary practice and New Kingdom theology. Every major Egyptological discovery of the last two centuries has centred on Luxor's monuments — Karnak alone was under excavation for over a century before its main features were fully mapped.",
     highlights: [
-      "Karnak Temple and its great hypostyle hall — 134 columns up to 23 metres tall, built for Ramesses II",
+      "Karnak Temple and its great hypostyle hall — 134 columns up to 23 metres tall, begun under Seti I and completed by Ramesses II",
       "Luxor Temple in the heart of the city, illuminated along the Avenue of Sphinxes after dark",
       "The Valley of the Kings — 62 royal tombs including Tutankhamun, Ramesses II and Seti I",
       "The mortuary temple of Hatshepsut, terraced into the Theban cliffs at Deir el-Bahri",
@@ -372,7 +372,7 @@ export const destinations: Destination[] = [
     faqs: [
       {
         q: "How do I get to Abu Simbel from Aswan?",
-        a: "By road: a 3.5-hour drive each way through open desert, leaving Aswan at 3–4 am to arrive before the heat. There are police checkpoints on the way, so carry your passport. By air: EgyptAir operates a limited number of flights (approximately 45 minutes) from Aswan Airport — advance booking is essential and seats sell out quickly. Most visitors make Abu Simbel a day trip from Aswan. Those who stay overnight at Abu Simbel can attend the early-morning Sun Festival illumination, when the rising sun penetrates the inner sanctuary and illuminates the four seated statues — a remarkable and rarely seen event.",
+        a: "By road: a 3.5-hour drive each way through open desert, leaving Aswan at 3–4 am to arrive before the heat. There are police checkpoints on the way, so carry your passport. By air: EgyptAir operates a limited number of flights (approximately 45 minutes) from Aswan Airport — advance booking is essential and seats sell out quickly. Most visitors make Abu Simbel a day trip from Aswan. Those who stay overnight at Abu Simbel see the temples at first light, before the day visitors arrive. Twice a year, on 22 February and 22 October, the rising sun reaches the inner sanctuary and lights three of its four seated statues.",
       },
       {
         q: "What is Nubian culture?",
@@ -404,7 +404,7 @@ export const destinations: Destination[] = [
     shortSummary:
       "Egypt's Mediterranean port founded by Alexander the Great — Greco-Roman ruins and the reborn Library.",
     longDescription:
-      "Alexandria was founded in 331 BCE by Alexander the Great on a narrow strip of land between the Mediterranean Sea and Lake Mareotis, chosen for its natural harbour and its position as a pivot between Africa and the Greek world. For three centuries under the Ptolemaic dynasty it was the foremost intellectual city in the ancient world — home to the great Library, founded around 295 BCE, which sought to gather a copy of every text in existence; the Mouseion, an early academy of scholars; and the Pharos lighthouse, built around 280 BCE and one of the Seven Ancient Wonders, which guided ships into the harbour for eight centuries before earthquakes brought it down in the fourteenth century CE. The city's layered past is visible across its surviving monuments. The Catacombs of Kom El Shoqafa, a second-century CE Roman-era necropolis discovered in 1900 when a donkey fell through the entrance, descend three levels underground and blend Egyptian, Greek and Roman funerary motifs in a way unique in the ancient world. Pompey's Pillar — actually raised in honour of the Emperor Diocletian in 297 CE — is a 27-metre monolithic column standing among the ruins of the ancient Serapeum, the largest Roman column outside Constantinople. The Citadel of Qaitbay, built by the Mamluk sultan in 1477 CE using stones from the ruined Pharos, looks out to sea from the exact spot where the ancient lighthouse stood. Modern Alexandria is a working Mediterranean port city of over five million people — cooler and breezier than the Nile valley, with a 20-kilometre corniche seafront. The Bibliotheca Alexandrina, opened in 2002, is a deliberate revival of the ancient Library's spirit: a vast circular building of grey granite and glass holding over two million volumes.",
+      "Alexandria was founded in 331 BCE by Alexander the Great on a narrow strip of land between the Mediterranean Sea and Lake Mareotis, chosen for its natural harbour and its position as a pivot between Africa and the Greek world. For three centuries under the Ptolemaic dynasty it was the foremost intellectual city in the ancient world — home to the great Library, founded around 295 BCE, which sought to gather a copy of every text in existence; the Mouseion, an early academy of scholars; and the Pharos lighthouse, built around 280 BCE and one of the Seven Ancient Wonders, which guided ships into the harbour for more than a thousand years before earthquakes brought it down in the fourteenth century CE. The city's layered past is visible across its surviving monuments. The Catacombs of Kom El Shoqafa, a second-century CE Roman-era necropolis discovered in 1900 when a donkey fell through the entrance, descend three levels underground and blend Egyptian, Greek and Roman funerary motifs in a way unique in the ancient world. Pompey's Pillar — actually raised in honour of the Emperor Diocletian in 297 CE — is a 27-metre monolithic column standing among the ruins of the ancient Serapeum, the largest Roman column outside Constantinople. The Citadel of Qaitbay, built by the Mamluk sultan in 1477 CE using stones from the ruined Pharos, looks out to sea from the exact spot where the ancient lighthouse stood. Modern Alexandria is a working Mediterranean port city of over five million people — cooler and breezier than the Nile valley, with a 20-kilometre corniche seafront. The Bibliotheca Alexandrina, opened in 2002, is a deliberate revival of the ancient Library's spirit: a vast circular building of grey granite and glass holding over two million volumes.",
     region: "mediterranean",
     coordinates: { lat: 31.2001, lng: 29.9187 },
     bestSeasons: ["spring", "summer", "autumn"],
@@ -438,7 +438,7 @@ export const destinations: Destination[] = [
       "Sea breezes make Alexandria noticeably cooler than the Nile valley — a genuine advantage in summer, worth a light layer in winter evenings.",
       "Seafood ordered by weight and grilled or fried to order at corniche restaurants is the local speciality.",
       "The Catacombs of Kom El Shoqafa involve a spiral staircase descending three levels underground — not suitable for visitors with limited mobility.",
-      "The Greco-Roman Museum was undergoing renovation as of 2026 — confirm its status when planning your visit.",
+      "The Greco-Roman Museum reopened in October 2023 after a long restoration and is worth adding to your visit.",
     ],
     whyVisit: [
       "The Catacombs of Kom El Shoqafa — one of antiquity's most unusual and compelling underground monuments",

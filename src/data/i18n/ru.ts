@@ -11,6 +11,8 @@
 // Slugs are transliterated to Latin — see config/i18n for why.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { destinationPages } from "./destinations/build";
+import { ruDestinations } from "./destinations/ru";
 import { ruZahra } from "./zahra";
 import { tours } from "@/data/tours";
 
@@ -515,4 +517,7 @@ export const ru: LocalizedPage[] = [
 
   // ===== The Oberoi Zahra — the words are in ./zahra.ts ====================
   ruZahra,
+
+  // ===== The 19 destinations — the words are in ./destinations/ru.ts ==========
+  ...destinationPages("ru", ruDestinations),
 ];

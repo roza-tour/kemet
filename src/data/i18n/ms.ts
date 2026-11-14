@@ -11,6 +11,8 @@
 // to an Umrah in Saudi Arabia.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { destinationPages } from "./destinations/build";
+import { msDestinations } from "./destinations/ms";
 import { msZahra } from "./zahra";
 import { tours } from "@/data/tours";
 
@@ -535,4 +537,7 @@ export const ms: LocalizedPage[] = [
 
   // ===== The Oberoi Zahra — the words are in ./zahra.ts ====================
   msZahra,
+
+  // ===== The 19 destinations — the words are in ./destinations/ms.ts ==========
+  ...destinationPages("ms", msDestinations),
 ];

@@ -13,6 +13,8 @@
 // Prices stay in euros, as on every other page of the site.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { destinationPages } from "./destinations/build";
+import { ptDestinations } from "./destinations/pt";
 import { ptZahra } from "./zahra";
 import { tours } from "@/data/tours";
 import { BUILD_YEAR } from "@/utils/format";
@@ -530,4 +532,7 @@ export const pt: LocalizedPage[] = [
 
   // ===== The Oberoi Zahra — the words are in ./zahra.ts ====================
   ptZahra,
+
+  // ===== The 19 destinations — the words are in ./destinations/pt.ts ==========
+  ...destinationPages("pt", ptDestinations),
 ];
