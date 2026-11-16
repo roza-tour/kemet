@@ -332,3 +332,53 @@
   src: url(/fonts/plex-arabic-500.woff2) format('woff2');
   unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0898-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FEFF;
 }
+
+/* ===========================================================================
+   CYRILLIC — Spectral for display, Manrope for text. Russian pages only.
+
+   WHY THESE EXIST. Fraunces and Outfit are drawn for Latin alone: neither has
+   a Cyrillic alphabet. Until November 2026 every Russian page therefore fell
+   through to the fallbacks above — headlines in Times New Roman, text in
+   Arial — which is the one thing a page selling the top of the market cannot
+   look like.
+
+   WHY THESE TWO. Compared side by side with the Latin faces at the weights the
+   site actually uses: Spectral Light sits next to Fraunces 300 at the same
+   colour and contrast, so "Оазис Сива — Kemet 2027" reads as one typeface;
+   Manrope matches Outfit's x-height and weight where Jost ran visibly small.
+   Both are SIL Open Font License 1.1, served from this domain like the rest.
+
+   Only the Cyrillic block is shipped, and unicode-range keeps it to Cyrillic
+   characters: Latin words and figures on a Russian page stay in Fraunces and
+   Outfit, and no other language's page ever requests these files.
+   =========================================================================== */
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal; font-weight: 300; font-display: swap;
+  src: url(/fonts/spectral-cyrillic-300.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Spectral';
+  font-style: italic; font-weight: 300; font-display: swap;
+  src: url(/fonts/spectral-cyrillic-300-italic.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal; font-weight: 400; font-display: swap;
+  src: url(/fonts/spectral-cyrillic-400.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal; font-weight: 500 700; font-display: swap;
+  src: url(/fonts/spectral-cyrillic-500.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal; font-weight: 200 800; font-display: swap;
+  src: url(/fonts/manrope-cyrillic.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}

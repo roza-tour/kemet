@@ -16,6 +16,7 @@ import { TRANSLATION_GROUPS } from "@/config/i18n";
 import type { LocalizedPage } from "../types";
 import type { DestText } from "./types";
 import { DEST_LABELS } from "./labels";
+import { DEST_HUB, destHubRoute } from "./hub";
 import { destinations } from "@/data/destinations";
 
 export function destinationPages(locale: TranslatedLocale, texts: DestText[]): LocalizedPage[] {
@@ -61,7 +62,10 @@ export function destinationPages(locale: TranslatedLocale, texts: DestText[]): L
       cta: { heading: L.cta.heading, text: L.cta.text, whatsapp: fill(L.cta.whatsapp), emailSubject: fill(L.cta.emailSubject) },
       moreLabel: L.moreLabel,
       moreText: L.moreText,
-      links: near.map((n) => ({ label: n.name, route: `${locale}/${n.localeSlug}.html` })),
+      links: [
+        ...near.map((n) => ({ label: n.name, route: `${locale}/${n.localeSlug}.html` })),
+        { label: DEST_HUB[locale].all, route: destHubRoute(locale) },
+      ],
       photos: shots.map((p, i) => ({ ...p!, alt: t.photos[i].alt, label: t.photos[i].label })),
     };
   });

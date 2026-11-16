@@ -179,6 +179,19 @@
       "ar": "ar/al-fish-wa-sham-al-nasim-fi-masr.html"
     },
     {
+      "key": "destinations",
+      "en": "destinations.html",
+      "de": "de/reiseziele-in-aegypten.html",
+      "it": "it/destinazioni-in-egitto.html",
+      "es": "es/destinos-en-egipto.html",
+      "fr": "fr/destinations-en-egypte.html",
+      "ru": "ru/napravleniya-egipta.html",
+      "id": "id/destinasi-wisata-mesir.html",
+      "ms": "ms/destinasi-di-mesir.html",
+      "pt": "pt/destinos-no-egito.html",
+      "ar": "ar/al-wijhat-fi-masr.html"
+    },
+    {
       "key": "destination-cairo",
       "en": "destinations/cairo.html",
       "de": "de/kairo-sehenswuerdigkeiten.html",

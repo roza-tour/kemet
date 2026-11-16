@@ -15,6 +15,8 @@ import { occasions } from "@/data/occasions";
 import { months } from "@/data/months";
 import { comparisons } from "@/data/comparisons";
 import { TRANSLATION_GROUPS, TRANSLATED_LOCALES, LOCALE_META } from "@/config/i18n";
+import { DEST_HUB, destHubRoute } from "@/data/i18n/destinations/hub";
+import { MAP_WORDS, MAP_ROUTE } from "@/config/journey-map";
 import { de as deP } from "@/data/i18n/de";
 import { it as itP } from "@/data/i18n/it";
 import { es as esP } from "@/data/i18n/es";
@@ -100,6 +102,8 @@ for (const loc of TRANSLATED_LOCALES) {
   const ultraRoute = TRANSLATION_GROUPS.find((x) => x.key === "ultra")?.[loc];
   const ultraText = ULTRA_TEXT[loc as keyof typeof ULTRA_TEXT];
   if (ultraRoute && ultraText?.crumb) localLabel.set(ultraRoute, ultraText.crumb);
+  localLabel.set(destHubRoute(loc), DEST_HUB[loc].crumb);
+  localLabel.set(MAP_ROUTE[loc], MAP_WORDS[loc].heading);
 }
 const labelFor = (route: string) =>
   localLabel.get(route) ?? route.split("/")[1].replace(".html", "").replace(/-/g, " ");
@@ -244,7 +248,7 @@ const labelFor = (route: string) =>
             <h3 class="sm-lang" lang={loc}>{LOCALE_META[loc].endonym}</h3>
             <ul class="sm-list sm-cols" lang={loc}>
               {TRANSLATION_GROUPS.map((g) => (
-                <li><a href={publicPath(g[loc])} hreflang={loc}>{labelFor(g[loc])}</a></li>
+                <li><a href={publicPath(g[loc])}>{labelFor(g[loc])}</a></li>
               ))}
             </ul>
           </>

@@ -26,6 +26,7 @@ import { TRANSLATION_GROUPS } from "@/config/i18n";
 import type { LocalizedPage } from "@/data/i18n/types";
 import { STANDALONE_PAGES, standaloneRoute } from "@/data/i18n/standalone";
 import { ui } from "@/config/ui";
+import { DEST_HUB, destHubRoute } from "@/data/i18n/destinations/hub";
 import { de } from "@/data/i18n/de";
 import { it } from "@/data/i18n/it";
 import { es } from "@/data/i18n/es";
@@ -58,6 +59,12 @@ const ULTRA: Record<TranslatedLocale, UltraText> = {
 /** The groups each menu is built from, in the order a traveller reads them. */
 const JOURNEY_GROUPS = ["journeys", "nile-cruise", "ultra", "private-access", "cost"] as const;
 const PLAN_GROUPS = ["when-to-go", "safety"] as const;
+/** The places most journeys are built from; the hub — the group's last item —
+ *  lists all of them by region. (The footer names only the hub.) */
+const PLACE_GROUPS = [
+  "destination-cairo", "destination-giza", "destination-luxor", "destination-aswan",
+  "destination-alexandria", "destination-hurghada", "destination-sharm-el-sheikh", "destination-siwa",
+] as const;
 
 /** A page's label in its own language, taken from the page's own breadcrumb. */
 function entry(locale: TranslatedLocale, groupId: string): NavItem | null {
@@ -107,6 +114,13 @@ export function localeNav(locale: TranslatedLocale): NavItem[] {
 
   const out: NavItem[] = [];
   if (journeys.length) out.push(group(t.navJourneys, journeys));
+  // Destinations: the hub is the parent, eight places sit under it, and the
+  // last item says there are more — the hub lists every one, by region.
+  const places = present(locale, PLACE_GROUPS);
+  if (places.length) {
+    const hub = { label: DEST_HUB[locale].all, href: destHubRoute(locale) };
+    out.push({ label: DEST_HUB[locale].crumb, href: hub.href, children: [...places, hub] });
+  }
   if (plan.length) out.push(group(t.navPlan, plan));
   // Said plainly, in their language, rather than discovered after the click.
   // The href is empty on purpose: callers write `${base}${href}`, and from a

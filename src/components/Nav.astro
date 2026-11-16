@@ -106,7 +106,7 @@ const isCurrent = (item: (typeof primaryNav)[number]) =>
       ) : (
         <a
           href={`${base}${item.href}`}
-          class={item.href === active ? "active" : undefined}
+          class:list={[item.href === active && "active", locale !== UI_DEFAULT && item.href === "" && "nav-out"]}
           aria-current={item.href === active ? "page" : undefined}
         >{item.label}</a>
       )

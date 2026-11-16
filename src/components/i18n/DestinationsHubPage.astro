@@ -1,0 +1,140 @@
+---
+// The destinations hub in a translated language — the same page as the English
+// /destinations.html, built from that language's own destination pages: every
+// place the language has a page for, grouped by region, each card opening the
+// page in that language. Nothing on it links to an English page.
+//
+// The words are in data/i18n/destinations/hub.ts (the hub's own) and in each
+// language's destination texts (the cards). Each language's route file is three
+// lines; the address is checked against config/translation-groups.json here.
+import Base from "@/layouts/Base.astro";
+import PageHero from "@/components/PageHero.astro";
+import SectionHeader from "@/components/SectionHeader.astro";
+import SymbolIcon from "@/components/SymbolIcon.astro";
+import LangSwitch from "@/components/LangSwitch.astro";
+import Frieze from "@/components/Frieze.astro";
+import { destinations } from "@/data/destinations";
+import { regions } from "@/config/taxonomy";
+import { TRANSLATION_GROUPS, LOCALE_META } from "@/config/i18n";
+import type { TranslatedLocale } from "@/config/i18n";
+import { canonical, whatsappHref, mailtoLink } from "@/utils/links";
+import { DEST_LABELS } from "@/data/i18n/destinations/labels";
+import { DEST_HUB, destHubRoute } from "@/data/i18n/destinations/hub";
+import type { DestText } from "@/data/i18n/destinations/types";
+import { deDestinations } from "@/data/i18n/destinations/de";
+import { itDestinations } from "@/data/i18n/destinations/it";
+import { esDestinations } from "@/data/i18n/destinations/es";
+import { frDestinations } from "@/data/i18n/destinations/fr";
+import { ruDestinations } from "@/data/i18n/destinations/ru";
+import { idDestinations } from "@/data/i18n/destinations/id";
+import { msDestinations } from "@/data/i18n/destinations/ms";
+import { ptDestinations } from "@/data/i18n/destinations/pt";
+import { arDestinations } from "@/data/i18n/destinations/ar";
+
+interface Props {
+  locale: TranslatedLocale;
+}
+const { locale } = Astro.props;
+
+const TEXTS: Record<TranslatedLocale, DestText[]> = {
+  de: deDestinations, it: itDestinations, es: esDestinations, fr: frDestinations, ru: ruDestinations,
+  id: idDestinations, ms: msDestinations, pt: ptDestinations, ar: arDestinations,
+};
+const w = DEST_HUB[locale];
+const L = DEST_LABELS[locale];
+const texts = TEXTS[locale];
+const route = destHubRoute(locale);
+
+const declared = TRANSLATION_GROUPS.find((g) => g.key === "destinations")?.[locale];
+if (declared !== route) {
+  throw new Error(`destinations hub (${locale}): the page is at ${route}, but translation-groups.json says ${declared ?? "nothing (no group)"}.`);
+}
+
+// Region by region, in the order the English hub uses; a destination the
+// language has no page for is simply not listed.
+const byRegion = regions
+  .map((region) => ({
+    label: L.regions[region.id] ?? region.id,
+    items: destinations
+      .filter((d) => d.region === region.id)
+      .map((d) => ({ d, t: texts.find((x) => x.id === d.id) }))
+      .filter((x): x is { d: (typeof destinations)[number]; t: DestText } => !!x.t),
+  }))
+  .filter((g) => g.items.length > 0);
+const listed = byRegion.flatMap((g) => g.items);
+
+const jsonld = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: LOCALE_META[locale].home, item: canonical(`${locale}/index.html`) },
+      { "@type": "ListItem", position: 2, name: w.crumb, item: canonical(route) },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: w.title,
+    description: w.metaDescription,
+    url: canonical(route),
+    inLanguage: LOCALE_META[locale].tag,
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: listed.map(({ t }, i) => ({
+        "@type": "ListItem", position: i + 1, name: t.name, url: canonical(`${locale}/${t.localeSlug}.html`),
+      })),
+    },
+  },
+];
+const mail = mailtoLink(L.cta.emailSubject.replace("%s", w.title));
+---
+<Base title={w.metaTitle} description={w.metaDescription} active={route} jsonld={jsonld} showCta={false}>
+  <PageHero
+    rootLabel={LOCALE_META[locale].home}
+    rootHref={`/${locale}/`}
+    crumb={w.crumb}
+    symbol="lotus"
+    title={w.title}
+    text={w.text}
+  />
+
+  <section style="padding-top:var(--s-4);padding-bottom:0">
+    <div class="wrap lz-wrap">
+      <LangSwitch route={route} />
+    </div>
+  </section>
+
+  {byRegion.map((group) => (
+    <section style="padding-top:var(--s-5)">
+      <div class="wrap">
+        <SectionHeader eyebrow={L.region} title={group.label} />
+        <div class="grid-3">
+          {group.items.map(({ d, t }) => (
+            <a class="tease reveal" href={`${t.localeSlug}.html`} data-tilt>
+              {d.symbol && <div class="sym"><SymbolIcon name={d.symbol} title={t.name} /></div>}
+              <h3>{t.name}</h3>
+              <p>{t.summary}</p>
+              <span class="more">{w.explore} <b>{locale === "ar" ? "←" : "→"}</b></span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <Frieze />
+
+  <section style="padding-top:0">
+    <div class="wrap lz-wrap">
+      <div class="lz-cta reveal" id="enquire">
+        <h2>{L.cta.heading}</h2>
+        <p>{L.cta.text}</p>
+        <div class="lz-actions">
+          <a class="btn btn-solid" href={whatsappHref()} target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn btn-ghost" href={mail}>E-Mail</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

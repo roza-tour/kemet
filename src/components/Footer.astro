@@ -9,6 +9,7 @@ import TravellingFrom from "@/components/TravellingFrom.astro";
 import { company, socialLabel } from "@/data/company";
 import SocialIcon from "@/components/SocialIcon.astro";
 import { localeNav } from "@/config/nav-i18n";
+import { destHubRoute } from "@/data/i18n/destinations/hub";
 import { ui, UI_DEFAULT } from "@/config/ui";
 import type { SiteLocale, TranslatedLocale } from "@/config/i18n";
 
@@ -29,7 +30,11 @@ const isEn = locale === UI_DEFAULT;
 // translated heading. The last item of localeNav is the way out to the
 // English site, which the footer shows on its own line.
 const localeItems = isEn ? [] : localeNav(locale as TranslatedLocale);
-const localeLinks = localeItems.flatMap((i) => i.children ?? []);
+// The destinations group is the exception: the footer names the hub once
+// instead of repeating the places under it, which the bar already lists.
+const destHub = isEn ? "" : destHubRoute(locale as TranslatedLocale);
+const localeLinks = localeItems.flatMap((i) =>
+  i.href === destHub ? [{ href: i.href, label: i.label }] : i.children ?? []);
 const englishWayOut = localeItems.find((i) => !i.children);
 const enquire = mailtoLink("Kemet enquiry");
 const wa = whatsappLink("Hello Kemet — I'd like to plan a journey to Egypt.");

@@ -280,6 +280,7 @@ export const GET: APIRoute = () => {
     "design-journey": "the map for designing a journey of your own",
     cost: "what it costs", "when-to-go": "when to go", safety: "whether Egypt is safe", ultra: "Kemet Ultra, the top tier",
     easter: "Easter in Egypt",
+    destinations: "the list of destinations",
   };
   // The destination pages are one group each ("destination-<id>"); they are
   // counted in a sentence of their own rather than named one by one.

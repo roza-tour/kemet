@@ -718,6 +718,26 @@ footer{background:var(--ink-2);border-top:1px solid var(--line);padding:var(--s-
 @media(max-width:1280px) and (min-width:1081px){
   .navlinks a{letter-spacing:.22em}
 }
+/* A translated bar carries three groups and, last, the way out to the English
+   site (.nav-out). That last link is the one that goes when the bar is tight:
+   the language control beside it and the footer both lead to the same place,
+   and without this the Contact button was pushed off the right edge. Russian,
+   Indonesian and Malay set the longest labels and need the room for longer.
+   Below 1081px the bar is the drawer, and the link is back. */
+@media(min-width:1081px) and (max-width:1399px){
+  .navlinks a.nav-out{display:none}
+}
+@media(min-width:1400px) and (max-width:1599px){
+  :root:is(:lang(ru),:lang(id),:lang(ms)) .navlinks a.nav-out{display:none}
+}
+/* The same three languages: the season chip keeps to its mark alone a little
+   longer (components/SeasonalSkin.astro does this for everyone up to 1180px).
+   Its label is the season's name, and "Рождество и Новый год" beside four
+   Russian menu groups left the bar 16px short at 1181px. */
+@media(min-width:1181px) and (max-width:1320px){
+  :root:is(:lang(ru),:lang(id),:lang(ms)) .schip{padding:var(--s-1);gap:0}
+  :root:is(:lang(ru),:lang(id),:lang(ms)) .schip-label{display:none}
+}
 @media(max-width:1080px){
   .navlinks{display:none}
   /* Displayed as a real touch target from the moment it appears. */
@@ -1091,6 +1111,15 @@ footer::before{content:"";position:absolute;top:0;left:0;right:0;height:32px;bac
 [lang="ar"] {
   --ff-display: 'Amiri', 'Fraunces', 'Fraunces Fallback', serif;
   --ff-body: 'Plex Arabic', 'Outfit', 'Outfit Fallback', system-ui, sans-serif;
+}
+
+/* Russian: Fraunces and Outfit have no Cyrillic, so the Cyrillic faces join
+   the stack (styles/fonts.css says why these two). Set on the page's root
+   only — the word "Русский" in another language's switcher must not make that
+   page fetch a font for seven letters. */
+:root:lang(ru) {
+  --ff-display: 'Fraunces', 'Spectral', 'Fraunces Fallback', serif;
+  --ff-body: 'Outfit', 'Manrope', 'Outfit Fallback', system-ui, sans-serif;
 }
 
 /* Arabic runs taller than Latin at the same size: the ascenders and the dots
