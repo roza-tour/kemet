@@ -3,12 +3,12 @@
 22ec2ad73324afe14c2b7badc0edb43f.txt
 404.html
 BingSiteAuth.xml
-_astro/_slug_.B0xakMOy.css
 _astro/_slug_.Bwazh5bX.css
 _astro/_slug_.C37nzwvn.css
 _astro/_slug_.D63V5Zx3.css
 _astro/_slug_.tIrjNeqs.css
 _astro/about.rWJrEa1c.css
+_astro/al-wijhat-fi-masr.B0xakMOy.css
 _astro/cuisine.EYXUyvBE.css
 _astro/egyptian-incense-stones-cotton.CyXhzFvt.css
 _astro/hoisted.DvqKDJzg.js
@@ -18,8 +18,8 @@ _astro/index.is2Hpzi7.css
 _astro/oberoi-zahra-nile-cruise.0ngJ58d0.css
 _astro/page.DCTgdEH6.js
 _astro/rehlat-fakhira-jiddan-fi-masr.aH_AhgbZ.css
+_astro/sammem-rehlatak-fi-masr.8bQExjo4.css
 _astro/sammem-rehlatak-fi-masr.B_PO3Ujm.css
-_astro/sammem-rehlatak-fi-masr.MOP2nZiq.css
 about.html
 activities.html
 activities/banana-boat-sharm.html
@@ -57,6 +57,7 @@ ar/al-siyaha-fi-sharm-al-sheikh.html
 ar/al-uqsur-3-ayyam.html
 ar/al-uqsur-wa-aswan-3-ayyam-min-al-qahira.html
 ar/al-wahat-al-bahariya-wa-al-sahra-al-bayda.html
+ar/al-wijhat-fi-masr.html
 ar/dalil-ahramat-al-giza.html
 ar/dandara-wa-abydos.html
 ar/hajz-mawaqea-athariya-khas.html
@@ -170,6 +171,7 @@ de/port-said-suezkanal.html
 de/pyramiden-von-gizeh-halbtags.html
 de/ramadan-in-aegypten.html
 de/reise-auf-der-karte-entwerfen.html
+de/reiseziele-in-aegypten.html
 de/religioeses-kairo-und-zitadelle.html
 de/rotes-meer-scharm-5-tage.html
 de/sakkara-memphis-dahschur.html
@@ -214,6 +216,7 @@ es/amanecer-en-las-piramides-de-giza.html
 es/buceo-mar-rojo-4-dias.html
 es/crucero-por-el-nilo.html
 es/cuanto-cuesta-viajar-a-egipto.html
+es/destinos-en-egipto.html
 es/disene-su-viaje-a-egipto.html
 es/eclipse-solar-2027-luxor.html
 es/egipto-10-dias-con-crucero-por-el-nilo.html
@@ -295,9 +298,14 @@ fonts/amiri-arabic-700.woff2
 fonts/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYp3tKgS4.woff2
 fonts/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYqXtK.woff2
 fonts/hieroglyphs-subset.woff2
+fonts/manrope-cyrillic.woff2
 fonts/plex-arabic-300.woff2
 fonts/plex-arabic-400.woff2
 fonts/plex-arabic-500.woff2
+fonts/spectral-cyrillic-300-italic.woff2
+fonts/spectral-cyrillic-300.woff2
+fonts/spectral-cyrillic-400.woff2
+fonts/spectral-cyrillic-500.woff2
 fr/abou-simbel-depuis-assouan.html
 fr/alexandrie-excursion-journee.html
 fr/alexandrie-une-nuit.html
@@ -307,6 +315,7 @@ fr/croisiere-sur-le-nil.html
 fr/dahab-blue-hole.html
 fr/denderah-abydos.html
 fr/dessinez-votre-voyage-en-egypte.html
+fr/destinations-en-egypte.html
 fr/eclipse-solaire-2027-louxor.html
 fr/egypte-7-jours.html
 fr/egypte-en-famille-8-jours.html
@@ -390,6 +399,7 @@ id/biara-santa-katarina-gunung-sinai.html
 id/biaya-liburan-ke-mesir.html
 id/bulan-madu-ke-mesir.html
 id/bulan-madu-mesir-9-hari.html
+id/destinasi-wisata-mesir.html
 id/gerhana-matahari-2027-luxor.html
 id/gunung-sinai.html
 id/halal-dan-waktu-salat.html
@@ -1214,6 +1224,7 @@ it/crociera-sul-nilo.html
 it/dahab-mar-rosso.html
 it/dendera-e-abido.html
 it/deserto-bianco-bahariya.html
+it/destinazioni-in-egitto.html
 it/disegna-il-tuo-viaggio-in-egitto.html
 it/dove-dormire-in-egitto.html
 it/e-sicuro-viaggiare-in-egitto.html
@@ -1279,6 +1290,7 @@ ms/bukit-tursina.html
 ms/bulan-madu-ke-mesir.html
 ms/bulan-madu-sungai-nil-9-hari.html
 ms/cuti-hujung-tahun-ke-mesir.html
+ms/destinasi-di-mesir.html
 ms/easter-di-mesir.html
 ms/gerhana-matahari-2027-luxor.html
 ms/halal-dan-waktu-solat.html
@@ -1454,6 +1466,7 @@ pt/cairo-vip-3-dias.html
 pt/carnaval-no-egito.html
 pt/cruzeiro-pelo-nilo.html
 pt/desenhe-sua-viagem-ao-egito.html
+pt/destinos-no-egito.html
 pt/e-seguro-viajar-para-o-egito.html
 pt/eclipse-solar-2027-luxor.html
 pt/egito-10-dias-com-cruzeiro-no-nilo.html
@@ -1543,6 +1556,7 @@ ru/medovyy-mesyats-na-nile-9-dney.html
 ru/medovyy-mesyats-v-egipte.html
 ru/monastyr-svyatoy-ekateriny-i-gora-sinay.html
 ru/muzei-kaira-i-tsarskie-mumii.html
+ru/napravleniya-egipta.html
 ru/novyy-god-v-egipte.html
 ru/oazis-bahariya-i-belaya-pustynya.html
 ru/oazis-fayyum-ekskursiya.html
