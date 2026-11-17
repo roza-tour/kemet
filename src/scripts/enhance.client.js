@@ -85,6 +85,31 @@ const DUST_DENSITY = 15000; // px² of viewport per particle
       if(document.readyState==='complete')setTimeout(begin,400);
       else addEventListener('load',function(){setTimeout(begin,400);});}}
 
+  /* The Google tag's library (components/GoogleTag.astro explains the timing):
+     at once for a visit that came from an ad, otherwise on the first touch,
+     key or scroll, or four seconds after the page has loaded. */
+  (function(){
+    var id=window.KEMET_ADS_ID;if(!id)return;
+    var done=false,ev=['pointerdown','keydown','touchstart','scroll'];
+    function load(){
+      if(done)return;done=true;
+      for(var i=0;i<ev.length;i++)removeEventListener(ev[i],load,true);
+      var sc=document.createElement('script');sc.async=true;
+      sc.src='https://www.googletagmanager.com/gtag/js?id='+id;
+      document.head.appendChild(sc);
+    }
+    var ad=false;
+    try{
+      ad=/[?&](gclid|wbraid|gbraid|gad_source|gclsrc|dclid)=/.test(location.search)
+        ||!!sessionStorage.getItem('kemet_gclid')
+        ||/(^|; )(_gcl_aw|_gcl_gb|_gcl_dc|_gac_)/.test(document.cookie);
+    }catch(e){ad=true;}
+    if(ad){load();return;}
+    for(var i=0;i<ev.length;i++)addEventListener(ev[i],load,{capture:true,passive:true});
+    if(document.readyState==='complete')setTimeout(load,4000);
+    else addEventListener('load',function(){setTimeout(load,4000);});
+  })();
+
   /* A themed page's ornament (collection/SeasonalTheme) keeps dozens of small
      things moving in the hero. Once the hero has scrolled out of view nobody
      is watching them, so they pause until it comes back. */
