@@ -545,6 +545,8 @@ export const esDestinations: DestText[] = [
     ],
     photos: [
       { alt: "La fortaleza de adobe de Shali se alza sobre el oasis de Siwa", label: "Oasis de Siwa" },
+      { alt: "Lago salado turquesa con una orilla blanca cubierta de sal en el oasis de Siwa", label: "Lagos salados" },
+      { alt: "Ruinas de adobe y un alminar que se estrecha en Aghurmi, sede del templo del Oráculo de Siwa", label: "Templo del Oráculo" },
     ],
   },
   // ===== Marsa Matruh & the North Coast =====
@@ -591,7 +593,11 @@ export const esDestinations: DestText[] = [
         a: "Es la habitual. La carretera a Siwa se separa de la costa en Matruh, así que una noche o dos junto al mar parten un trayecto largo y le ofrecen los dos paisajes del oeste: el Mediterráneo y el oasis.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Mar turquesa brillante bajo acantilados de piedra caliza clara y plataformas rocosas en Agiba, Marsa Matruh", label: "Agiba" },
+      { alt: "Cala de arena bajo un cabo calizo con mar turquesa en la playa de Agiba, cerca de Marsa Matruh", label: "Playa de Agiba" },
+      { alt: "Filas de lápidas blancas y un solo árbol en la arena del cementerio de guerra de El Alamein", label: "El Alamein" },
+    ],
   },
   // ===== Port Said =====
   {
@@ -636,7 +642,11 @@ export const esDestinations: DestText[] = [
         a: "Para quienes se interesan por el canal, por la historia moderna o por una ciudad egipcia de otro tipo, sí: como excursión de un día desde El Cairo o como parada entre El Cairo y la costa. Quienes solo disponen de una semana suelen dedicar ese día a Alejandría.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Barcas rojas de madera con cabinas talladas amarradas en el canal de Suez en Port Said, con la ciudad en la orilla opuesta", label: "Canal de Suez" },
+      { alt: "Edificio blanco con arcadas de la Autoridad del Canal de Suez y tres cúpulas verdes, visto al otro lado del canal en Port Said", label: "Autoridad del Canal" },
+      { alt: "Ferri verde para automóviles cruzando el canal de Suez bajo los dos alminares de la mezquita de Port Fuad", label: "Ferri" },
+    ],
   },
   // ===== Saint Catherine & Mount Sinai =====
   {
@@ -682,7 +692,11 @@ export const esDestinations: DestText[] = [
         a: "La primavera y el otoño. En verano los días son calurosos en el tramo bajo del camino, y en invierno la cumbre está bajo cero antes del amanecer, a veces con nieve. En cualquier estación, arriba hace mucho más frío que en la costa.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Crestas de granito rojo en capas de las montañas del Sinaí al amanecer, vistas desde el monte Sinaí", label: "Monte Sinaí" },
+      { alt: "Murallas fortificadas, campanario y jardín de cipreses del monasterio de Santa Catalina bajo una ladera de granito", label: "Monasterio" },
+      { alt: "Picos de granito dentados del alto Sinaí con la primera luz, vistos desde la escalera rocosa del monte Sinaí", label: "Alto Sinaí" },
+    ],
   },
   // ===== Dahab =====
   {
@@ -728,7 +742,11 @@ export const esDestinations: DestText[] = [
         a: "La mayoría de los viajeros vuela a Sharm el-Sheikh desde El Cairo o Luxor y recorre una hora por carretera hacia el norte. Dahab funciona bien como último capítulo de un viaje —unos días sin programa junto al mar después de los templos—, con Santa Catalina como excursión de un día tierra adentro.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Montañas desnudas del Sinaí que descienden hasta una costa bordeada de arrecifes y un mar azul profundo en el Blue Hole, Dahab", label: "Blue Hole" },
+      { alt: "Cometas sobre una laguna turquesa con las montañas del Sinaí al fondo en Dahab", label: "Laguna" },
+      { alt: "Terrazas de cafés y edificios blancos en el paseo marítimo de Dahab sobre agua azul y clara con un barco amarrado", label: "Paseo marítimo" },
+    ],
   },
   // ===== Marsa Alam =====
   {
@@ -774,7 +792,11 @@ export const esDestinations: DestText[] = [
         a: "Sí. Muchos de los mejores puntos son bahías someras y arrecifes de hotel que se ven con máscara y tubo, y para muchos viajeros el atractivo es sencillamente una playa tranquila y agua templada. Conviene a familias y a quienes buscan descanso al final de un viaje.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Tortuga verde pastando en una pradera de posidonia bajo el agua en Abu Dabbab, Marsa Alam", label: "Abu Dabbab" },
+      { alt: "Corales blandos rosas y amarillos con un banco de anthias naranjas en un arrecife del mar Rojo frente a Marsa Alam", label: "Arrecife de coral" },
+      { alt: "Camellos caminando en fila junto a una acacia y colinas rocosas en el Wadi el-Gemal", label: "Wadi el-Gemal" },
+    ],
   },
   // ===== Bahariya & the White Desert =====
   {
@@ -820,7 +842,11 @@ export const esDestinations: DestText[] = [
         a: "Para los niños que disfrutan al aire libre, muchísimo: las formaciones son un parque de juegos natural y la noche bajo las estrellas es lo que recuerdan. Los trayectos son largos, así que conviene más a niños en edad escolar que a los muy pequeños.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Formaciones redondeadas de creta blanca que emergen de la arena en el Desierto Blanco de Egipto con luz rasante", label: "Desierto Blanco" },
+      { alt: "Colinas volcánicas oscuras en forma de cono sobre una llanura de arena clara en el Desierto Negro, cerca de Bahariya", label: "Desierto Negro" },
+      { alt: "Tiendas iluminadas junto a una roca de creta en forma de seta, de noche, en el Desierto Blanco", label: "Campamento" },
+    ],
   },
   // ===== Kharga & Dakhla Oases =====
   {
@@ -866,7 +892,11 @@ export const esDestinations: DestText[] = [
         a: "De tres a cuatro noches para ambos oasis desde Luxor. Jarga sola puede verse en una escapada larga de dos días. Si se añaden el Desierto Blanco y Bahariya, sale un circuito de alrededor de una semana.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Tejados planos de adobe de la antigua Al-Qasr en el oasis de Dakhla con un palmeral y el desierto al fondo", label: "Al-Qasr" },
+      { alt: "Portal y columnas de arenisca del templo de Hibis en el oasis de Kharga con palmeras detrás", label: "Templo de Hibis" },
+      { alt: "Tumbas-capilla de adobe con nichos en arco en una ladera de la necrópolis de Bagawat, oasis de Kharga", label: "Bagawat" },
+    ],
   },
   // ===== Minya & Middle Egypt =====
   {
@@ -912,7 +942,11 @@ export const esDestinations: DestText[] = [
         a: "Lo más sencillo es ir por carretera desde El Cairo, con una o dos noches en Minia, y continuar después hacia el sur por carretera o en tren. También puede ser una excursión de dos días desde El Cairo, ida y vuelta.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Pequeña barca de remos en el tranquilo Nilo en Minya, con palmeras y claros acantilados calizos en la orilla opuesta", label: "Nilo en Minya" },
+      { alt: "Pórtico con dos columnas excavadas en la roca en la entrada de una tumba en el acantilado calizo de Beni Hasan", label: "Beni Hasan" },
+      { alt: "Tumba de Petosiris con forma de templo, con cuatro columnas y muros de cerramiento en la arena de Tuna el-Gebel", label: "Tuna el-Gebel" },
+    ],
   },
   // ===== Dendera & Abydos =====
   {
@@ -958,6 +992,10 @@ export const esDestinations: DestText[] = [
         a: "Dendera es tardío —construido bajo los últimos Ptolomeos y los romanos— y, durante siglos, la arena y una aldea levantada encima protegieron sus muros y su techo. En Abidos, las salas techadas del templo de Seti I resguardaron los relieves y su pintura.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Columnas con cabezas de Hathor y techo pintado de azul en la sala hipóstila del templo de Hathor en Dendera", label: "Dendera" },
+      { alt: "Relieve pintado del rey ofreciendo incienso a las barcas sagradas en el templo de Seti I en Abydos", label: "Templo Seti I" },
+      { alt: "Enormes pilares de granito en pie sobre agua verde en la sala hundida del Osireion de Abydos", label: "Osireion" },
+    ],
   },
 ];

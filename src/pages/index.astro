@@ -59,6 +59,17 @@ const stripKicker: Record<string, string> = {
   hurghada: "The Reef Coast",
   "sharm-el-sheikh": "The Sinai Edge",
   fayoum: "The Oasis",
+  "abu-simbel": "The Far South",
+  siwa: "The Far Oasis",
+  "marsa-matruh-north-coast": "The North Coast",
+  "port-said": "The Canal City",
+  "saint-catherine": "The Holy Mountain",
+  dahab: "The Gulf of Aqaba",
+  "marsa-alam": "The Southern Reefs",
+  "bahariya-white-desert": "The White Desert",
+  "kharga-dakhla-oases": "The Inner Oases",
+  minya: "Middle Egypt",
+  "dendera-abydos": "The Painted Temples",
 };
 const stripLine: Record<string, string> = {
   cairo: "Two great museums & a medieval city",
@@ -69,8 +80,20 @@ const stripLine: Record<string, string> = {
   hurghada: "Island reefs & the beach coda",
   "sharm-el-sheikh": "Ras Mohammed & desert stars",
   fayoum: "Whale fossils & desert waterfalls",
+  "abu-simbel": "Ramesses II's temples on Lake Nasser",
+  siwa: "The Oracle, Shali & the Great Sand Sea",
+  "marsa-matruh-north-coast": "Turquoise coves & El Alamein",
+  "port-said": "Where the Suez Canal meets the sea",
+  "saint-catherine": "Mount Sinai & its monastery",
+  dahab: "The Blue Hole & a slower shore",
+  "marsa-alam": "Turtles, dolphins & quiet reefs",
+  "bahariya-white-desert": "Chalk formations & a night outdoors",
+  "kharga-dakhla-oases": "Hibis, Bagawat & Al-Qasr",
+  minya: "Beni Hasan & Tell el-Amarna",
+  "dendera-abydos": "Hathor's ceiling & Seti's reliefs",
 };
-const roman = ["i", "ii", "iii", "iv", "v", "vi", "vii", "viii"];
+// One numeral per card: the strip shows every destination that has a photograph.
+const roman = ["i", "ii", "iii", "iv", "v", "vi", "vii", "viii", "ix", "x", "xi", "xii", "xiii", "xiv", "xv", "xvi", "xvii", "xviii", "xix", "xx"];
 
 // The questions people settle before they will look at an itinerary. Each one
 // already has a full page behind it; until now those pages were only reachable

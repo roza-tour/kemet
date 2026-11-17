@@ -599,7 +599,11 @@ export const itDestinations: DestText[] = [
         a: "Da ottobre ad aprile. Le giornate sono tiepide e limpide e le notti abbastanza fredde da accendere un fuoco. D'estate il caldo è severo e le escursioni nel deserto si spostano alle primissime ore del mattino.",
       },
     ],
-    photos: [{ alt: "La fortezza di mattoni di fango di Shali che domina l'oasi di Siwa", label: "Oasi di Siwa" }],
+    photos: [
+      { alt: "La fortezza di mattoni di fango di Shali che domina l'oasi di Siwa", label: "Oasi di Siwa" },
+      { alt: "Lago salato turchese con una riva bianca incrostata di sale nell'oasi di Siwa", label: "Laghi salati" },
+      { alt: "Rovine in mattoni di fango e un minareto affusolato ad Aghurmi, sede del tempio dell'Oracolo di Siwa", label: "Tempio dell'Oracolo" },
+    ],
   },
 
   // ===== Marsa Matruh & the North Coast =====
@@ -651,7 +655,11 @@ export const itDestinations: DestText[] = [
         a: "È quella abituale. La strada per Siwa lascia la costa a Matruh: una notte o due sul mare spezzano così un lungo tragitto e vi regalano entrambi i paesaggi dell'ovest, il Mediterraneo e l'oasi.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Mare turchese brillante sotto chiare scogliere calcaree e piattaforme rocciose ad Agiba, Marsa Matruh", label: "Agiba" },
+      { alt: "Insenatura sabbiosa sotto un promontorio calcareo con mare turchese sulla spiaggia di Agiba vicino a Marsa Matruh", label: "Spiaggia di Agiba" },
+      { alt: "File di lapidi bianche e un albero solitario nella sabbia al cimitero di guerra di El Alamein", label: "El Alamein" },
+    ],
   },
 
   // ===== Port Said =====
@@ -702,7 +710,11 @@ export const itDestinations: DestText[] = [
         a: "Per chi è interessato al canale, alla storia moderna o a un tipo diverso di città egiziana, sì — come giornata dal Cairo o come tappa tra Il Cairo e la costa. Chi ha una sola settimana di solito dedica quel giorno ad Alessandria.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Barche rosse in legno con cabine intagliate ormeggiate sul canale di Suez a Port Said, con la città sulla riva opposta", label: "Canale di Suez" },
+      { alt: "Edificio bianco con portici dell'Autorità del Canale di Suez e tre cupole verdi, visto dall'altra parte del canale a Port Said", label: "Autorità del Canale" },
+      { alt: "Traghetto verde per auto che attraversa il canale di Suez sotto i due minareti della moschea di Port Fuad", label: "Traghetto" },
+    ],
   },
 
   // ===== Saint Catherine & Mount Sinai =====
@@ -754,7 +766,11 @@ export const itDestinations: DestText[] = [
         a: "La primavera e l'autunno. D'estate le giornate sono calde sul tratto basso del sentiero, e d'inverno in vetta prima dell'alba si va sotto zero, a volte con la neve. In ogni stagione la cima è molto più fredda della costa.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Creste di granito rosso stratificato dei monti del Sinai all'alba, viste dal monte Sinai", label: "Monte Sinai" },
+      { alt: "Mura fortificate, campanile e giardino di cipressi del monastero di Santa Caterina sotto un pendio di granito", label: "Monastero" },
+      { alt: "Cime frastagliate di granito dell'alto Sinai alla prima luce, viste dalla scalinata rocciosa del monte Sinai", label: "Alto Sinai" },
+    ],
   },
 
   // ===== Dahab =====
@@ -806,7 +822,11 @@ export const itDestinations: DestText[] = [
         a: "La maggior parte dei viaggiatori arriva in aereo a Sharm el-Sheikh dal Cairo o da Luxor e prosegue in auto per un'ora verso nord. Dahab funziona bene come ultimo capitolo di un viaggio — qualche giorno senza programma in riva al mare dopo i templi — con Santa Caterina come giornata nell'entroterra.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Montagne spoglie del Sinai che scendono verso una costa orlata da barriera corallina e un mare blu profondo al Blue Hole di Dahab", label: "Blue Hole" },
+      { alt: "Kite sopra una laguna turchese con le montagne del Sinai sullo sfondo a Dahab", label: "Laguna" },
+      { alt: "Terrazze di caffè ed edifici bianchi sul lungomare di Dahab sopra acque azzurre e limpide con una barca ormeggiata", label: "Lungomare" },
+    ],
   },
 
   // ===== Marsa Alam =====
@@ -858,7 +878,11 @@ export const itDestinations: DestText[] = [
         a: "Sì. Molti dei siti migliori sono baie poco profonde e reef sotto riva che si vedono con maschera e boccaglio, e per molti ospiti il richiamo è semplicemente una spiaggia tranquilla e l'acqua calda. È adatta alle famiglie e a chi cerca riposo alla fine di un viaggio.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Tartaruga verde che bruca una prateria di fanerogame sott'acqua ad Abu Dabbab, Marsa Alam", label: "Abu Dabbab" },
+      { alt: "Coralli molli rosa e gialli con un banco di anthias arancioni su una barriera del Mar Rosso al largo di Marsa Alam", label: "Barriera corallina" },
+      { alt: "Cammelli in fila accanto a un'acacia e a colline rocciose nel Wadi el-Gemal", label: "Wadi el-Gemal" },
+    ],
   },
 
   // ===== Bahariya & the White Desert =====
@@ -910,7 +934,11 @@ export const itDestinations: DestText[] = [
         a: "Per i bambini che amano stare all'aria aperta, moltissimo — le formazioni sono un parco giochi naturale e la notte sotto le stelle è la parte che ricordano. I tragitti sono lunghi, quindi è più adatto ai bambini in età scolare che ai più piccoli.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Formazioni rotonde di gesso bianco che emergono dalla sabbia nel Deserto Bianco egiziano con luce radente", label: "Deserto Bianco" },
+      { alt: "Colline vulcaniche a cono scure su una pianura di sabbia chiara nel Deserto Nero vicino a Bahariya", label: "Deserto Nero" },
+      { alt: "Tende illuminate accanto a una roccia di gesso a forma di fungo, di notte, nel Deserto Bianco", label: "Campo nel deserto" },
+    ],
   },
 
   // ===== Kharga & Dakhla Oases =====
@@ -962,7 +990,11 @@ export const itDestinations: DestText[] = [
         a: "Da tre a quattro notti per entrambe le oasi, partendo da Luxor. La sola Kharga si può vedere in un lungo viaggio di due giorni. Aggiungendo il Deserto Bianco e Bahariya si ottiene un circuito di circa una settimana.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Tetti piatti in mattoni di fango dell'antica Al-Qasr nell'oasi di Dakhla con un palmeto e il deserto oltre", label: "Al-Qasr" },
+      { alt: "Portale e colonne in arenaria del tempio di Hibis nell'oasi di Kharga con palme sullo sfondo", label: "Tempio di Hibis" },
+      { alt: "Tombe a cappella in mattoni di fango con nicchie ad arco su un pendio nella necropoli di Bagawat, oasi di Kharga", label: "Bagawat" },
+    ],
   },
 
   // ===== Minya & Middle Egypt =====
@@ -1013,7 +1045,11 @@ export const itDestinations: DestText[] = [
         a: "Il modo più semplice è partire dal Cairo su strada, con una o due notti a Minya, e proseguire poi verso sud su strada o in treno. Può essere anche un'escursione di due giorni dal Cairo, andata e ritorno.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Piccola barca a remi sul Nilo calmo a Minya, con palme e chiare scogliere calcaree sulla riva opposta", label: "Nilo a Minya" },
+      { alt: "Portico con due colonne scavate nella roccia all'ingresso di una tomba nella scogliera calcarea di Beni Hasan", label: "Beni Hasan" },
+      { alt: "Tomba a forma di tempio di Petosiris con quattro colonne e muri di recinzione nella sabbia a Tuna el-Gebel", label: "Tuna el-Gebel" },
+    ],
   },
 
   // ===== Dendera & Abydos =====
@@ -1064,6 +1100,10 @@ export const itDestinations: DestText[] = [
         a: "Dendera è tardo — costruito sotto gli ultimi Tolomei e i Romani — e per secoli la sabbia e un villaggio costruitovi sopra ne hanno protetto pareti e tetto. Ad Abido, le sale coperte del tempio di Seti I hanno riparato i rilievi e la loro pittura.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Colonne con teste di Hathor e soffitto dipinto di blu nella sala ipostila del tempio di Hathor a Dendera", label: "Dendera" },
+      { alt: "Rilievo dipinto del re che offre incenso alle barche sacre nel tempio di Seti I ad Abydos", label: "Tempio Seti I" },
+      { alt: "Massicci pilastri di granito in piedi nell'acqua verde nella sala sommersa dell'Osireion di Abydos", label: "Osireion" },
+    ],
   },
 ];

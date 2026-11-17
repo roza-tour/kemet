@@ -598,7 +598,11 @@ export const deDestinations: DestText[] = [
         a: "Von Oktober bis April. Die Tage sind warm und klar, die Nächte kalt genug für ein Feuer. Im Sommer ist die Hitze extrem, und die Wüstenausflüge werden auf den ganz frühen Morgen verlegt.",
       },
     ],
-    photos: [{ alt: "Die Lehmziegelfestung Shali erhebt sich über der Oase Siwa", label: "Oase Siwa" }],
+    photos: [
+      { alt: "Die Lehmziegelfestung Shali erhebt sich über der Oase Siwa", label: "Oase Siwa" },
+      { alt: "Türkisfarbener Salzsee mit weißem, salzverkrustetem Ufer in der Oase Siwa", label: "Salzseen" },
+      { alt: "Lehmziegelruinen und ein spitz zulaufendes Minarett in Aghurmi, dem Standort des Orakeltempels von Siwa", label: "Orakeltempel" },
+    ],
   },
 
   // ===== Marsa Matruh & the North Coast =====
@@ -650,7 +654,11 @@ export const deDestinations: DestText[] = [
         a: "Es ist die übliche. Die Straße nach Siwa verlässt die Küste bei Matruh; eine oder zwei Nächte am Meer unterbrechen also eine lange Fahrt und schenken Ihnen beide Landschaften des Westens: das Mittelmeer und die Oase.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Leuchtend türkisfarbenes Meer unter hellen Kalksteinklippen und Felsplatten bei Agiba, Marsa Matruh", label: "Agiba" },
+      { alt: "Sandbucht unter einer Kalksteinlandzunge mit türkisfarbenem Meer am Strand von Agiba bei Marsa Matruh", label: "Strand von Agiba" },
+      { alt: "Reihen weißer Grabsteine und ein einzelner Baum im Sand auf dem Kriegsfriedhof von El Alamein", label: "El Alamein" },
+    ],
   },
 
   // ===== Port Said =====
@@ -701,7 +709,11 @@ export const deDestinations: DestText[] = [
         a: "Für Reisende, die sich für den Kanal, für neuere Geschichte oder für eine andere Art ägyptischer Stadt interessieren: ja — als Tagesausflug von Kairo oder als Station zwischen Kairo und der Küste. Wer nur eine Woche Zeit hat, schenkt diesen Tag meist lieber Alexandria.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Rote Holzboote mit geschnitzten Kabinen am Suezkanal in Port Said, die Stadt am gegenüberliegenden Ufer", label: "Suezkanal" },
+      { alt: "Weißes Gebäude der Suezkanalbehörde mit Arkaden und drei grünen Kuppeln, vom Kanal in Port Said aus gesehen", label: "Kanalbehörde" },
+      { alt: "Grüne Autofähre auf dem Suezkanal unter den Zwillingsminaretten der Moschee von Port Fuad", label: "Port-Fuad-Fähre" },
+    ],
   },
 
   // ===== Saint Catherine & Mount Sinai =====
@@ -753,7 +765,11 @@ export const deDestinations: DestText[] = [
         a: "Frühjahr und Herbst. Im Sommer sind die Tage auf dem unteren Pfad heiß, und im Winter herrscht auf dem Gipfel vor Tagesanbruch Frost, manchmal mit Schnee. Zu jeder Jahreszeit ist es oben weit kälter als an der Küste.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Geschichtete rote Granitrücken des Sinai-Gebirges bei Sonnenaufgang, gesehen vom Berg Sinai", label: "Berg Sinai" },
+      { alt: "Befestigte Mauern, Glockenturm und Zypressengarten des Katharinenklosters unterhalb eines Granithangs", label: "Katharinenkloster" },
+      { alt: "Zerklüftete Granitgipfel des Hochsinai im frühen Licht, gesehen von der felsigen Treppe auf dem Berg Sinai", label: "Hochsinai" },
+    ],
   },
 
   // ===== Dahab =====
@@ -805,7 +821,11 @@ export const deDestinations: DestText[] = [
         a: "Die meisten Reisenden fliegen von Kairo oder Luxor nach Scharm el-Scheich und fahren eine Stunde nach Norden. Dahab eignet sich gut als letztes Kapitel einer Reise — ein paar unverplante Tage am Meer nach den Tempeln —, mit dem Katharinenkloster als Tagesausflug ins Landesinnere.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Kahle Sinai-Berge fallen zu einer von Riffen gesäumten Küste und tiefblauem Meer am Blue Hole in Dahab ab", label: "Blue Hole" },
+      { alt: "Kites über einer türkisfarbenen Lagune vor den Bergen des Sinai bei Dahab", label: "Lagune" },
+      { alt: "Caféterrassen und weiße Gebäude an der Strandpromenade von Dahab über klarem blauem Wasser mit einem Boot", label: "Promenade" },
+    ],
   },
 
   // ===== Marsa Alam =====
@@ -857,7 +877,11 @@ export const deDestinations: DestText[] = [
         a: "Ja. Viele der besten Plätze sind flache Buchten und Hausriffe, die man mit Maske und Schnorchel erkundet, und für viele Gäste liegt der Reiz schlicht in einem ruhigen Strand und warmem Wasser. Es passt zu Familien und zu Reisenden, die sich am Ende einer Reise erholen möchten.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Grüne Meeresschildkröte beim Fressen auf einer Seegraswiese unter Wasser bei Abu Dabbab, Marsa Alam", label: "Abu Dabbab" },
+      { alt: "Rosafarbene und gelbe Weichkorallen mit einem Schwarm oranger Fahnenbarsche an einem Riff im Roten Meer vor Marsa Alam", label: "Korallenriff" },
+      { alt: "Kamele laufen in einer Reihe an einer Akazie und felsigen Hügeln im Wadi el-Gemal vorbei", label: "Wadi el-Gemal" },
+    ],
   },
 
   // ===== Bahariya & the White Desert =====
@@ -909,7 +933,11 @@ export const deDestinations: DestText[] = [
         a: "Für Kinder, die gern draußen sind, sehr — die Formationen sind ein natürlicher Spielplatz, und die Nacht unter den Sternen ist das, woran sie sich erinnern. Die Fahrten sind lang, deshalb passt es besser zu Schulkindern als zu ganz kleinen.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Runde weiße Kreideformationen ragen im Streiflicht aus dem Sand der Weißen Wüste Ägyptens", label: "Weiße Wüste" },
+      { alt: "Dunkle vulkanische Kegelhügel auf einer hellen Sandebene in der Schwarzen Wüste bei Bahariya", label: "Schwarze Wüste" },
+      { alt: "Leuchtende Zelte neben einem pilzförmigen Kreidefelsen bei Nacht in der Weißen Wüste", label: "Wüstencamp" },
+    ],
   },
 
   // ===== Kharga & Dakhla Oases =====
@@ -961,7 +989,11 @@ export const deDestinations: DestText[] = [
         a: "Drei bis vier Nächte für beide Oasen ab Luxor. Charga allein lässt sich in einer langen Zweitagesfahrt sehen. Mit der Weißen Wüste und Bahariya wird daraus eine Runde von etwa einer Woche.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Flache Lehmziegeldächer des alten Al-Qasr in der Oase Dakhla mit Dattelpalmenhain und Wüste dahinter", label: "Al-Qasr" },
+      { alt: "Sandsteintor und Säulen des Hibis-Tempels in der Oase Kharga mit Palmen im Hintergrund", label: "Hibis-Tempel" },
+      { alt: "Lehmziegel-Grabkapellen mit Bogennischen an einem Hang in der Nekropole Bagawat, Oase Kharga", label: "Bagawat" },
+    ],
   },
 
   // ===== Minya & Middle Egypt =====
@@ -1012,7 +1044,11 @@ export const deDestinations: DestText[] = [
         a: "Am einfachsten auf der Straße ab Kairo mit einer oder zwei Nächten in Minia und anschließender Weiterreise nach Süden auf der Straße oder mit der Bahn. Es geht auch als zweitägiger Ausflug ab Kairo und zurück.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Kleines Ruderboot auf dem ruhigen Nil bei Minya, am anderen Ufer Palmen und helle Kalksteinfelsen", label: "Nil bei Minya" },
+      { alt: "Vorhalle mit zwei in den Fels gehauenen Säulen am Eingang eines Grabes in der Kalksteinklippe bei Beni Hasan", label: "Beni Hasan" },
+      { alt: "Tempelförmiges Grab des Petosiris mit vier Säulen und Schrankenwänden im Sand bei Tuna el-Gebel", label: "Tuna el-Gebel" },
+    ],
   },
 
   // ===== Dendera & Abydos =====
@@ -1063,6 +1099,10 @@ export const deDestinations: DestText[] = [
         a: "Dendera ist spät — unter den letzten Ptolemäern und den Römern erbaut —, und jahrhundertelang schützten Sand und ein darüber gebautes Dorf seine Mauern und sein Dach. In Abydos haben die überdachten Hallen im Tempel Sethos' I. die Reliefs und ihre Bemalung geschützt.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Hathor-Säulen und blau bemalte Decke in der Säulenhalle des Hathor-Tempels von Dendera", label: "Dendera" },
+      { alt: "Bemaltes Relief des Königs, der heiligen Barken Weihrauch darbringt, im Tempel Sethos' I. in Abydos", label: "Tempel Sethos' I." },
+      { alt: "Mächtige Granitpfeiler stehen im grünen Wasser in der versunkenen Halle des Osireions von Abydos", label: "Osireion" },
+    ],
   },
 ];

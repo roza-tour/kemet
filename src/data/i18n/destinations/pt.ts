@@ -545,6 +545,8 @@ export const ptDestinations: DestText[] = [
     ],
     photos: [
       { alt: "A fortaleza de barro de Shali erguendo-se acima do Oásis de Siwa", label: "Oásis de Siwa" },
+      { alt: "Lago salgado turquesa com margem branca coberta de crosta de sal no oásis de Siwa", label: "Lagos salgados" },
+      { alt: "Ruínas de tijolos de barro e um minarete afilado em Aghurmi, local do templo do Oráculo em Siwa", label: "Templo do Oráculo" },
     ],
   },
   // ===== Marsa Matruh & the North Coast =====
@@ -591,7 +593,11 @@ export const ptDestinations: DestText[] = [
         a: "É a habitual. A estrada para Siwa deixa a costa em Matruh, de modo que uma noite ou duas à beira-mar dividem um trajeto longo e mostram a vocês as duas paisagens do oeste: o Mediterrâneo e o oásis.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Mar turquesa brilhante sob falésias de calcário claro e plataformas rochosas em Agiba, Marsa Matruh", label: "Agiba" },
+      { alt: "Enseada de areia sob um promontório de calcário com mar turquesa na praia de Agiba, perto de Marsa Matruh", label: "Praia de Agiba" },
+      { alt: "Fileiras de lápides brancas e uma única árvore na areia no cemitério de guerra de El Alamein", label: "El Alamein" },
+    ],
   },
   // ===== Port Said =====
   {
@@ -636,7 +642,11 @@ export const ptDestinations: DestText[] = [
         a: "Para quem se interessa pelo canal, pela história moderna ou por um tipo diferente de cidade egípcia, sim — como passeio de um dia a partir do Cairo ou como parada entre o Cairo e a costa. Quem tem só uma semana costuma dedicar esse dia a Alexandria.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Barcos vermelhos de madeira com cabines entalhadas ancorados no canal de Suez, em Port Said, com a cidade na margem oposta", label: "Canal de Suez" },
+      { alt: "Edifício branco com arcadas da Autoridade do Canal de Suez e três cúpulas verdes, visto do outro lado do canal em Port Said", label: "Autoridade do Canal" },
+      { alt: "Balsa verde de carros atravessando o canal de Suez sob os dois minaretes da mesquita de Port Fuad", label: "Balsa" },
+    ],
   },
   // ===== Saint Catherine & Mount Sinai =====
   {
@@ -682,7 +692,11 @@ export const ptDestinations: DestText[] = [
         a: "Primavera e outono. No verão os dias são quentes no trecho mais baixo do caminho, e no inverno o cume, antes do amanhecer, fica abaixo de zero, às vezes com neve. Em qualquer estação, o topo é muito mais frio do que a costa.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Cristas de granito vermelho em camadas das montanhas do Sinai ao nascer do sol, vistas do monte Sinai", label: "Monte Sinai" },
+      { alt: "Muralhas fortificadas, campanário e jardim de ciprestes do mosteiro de Santa Catarina sob uma encosta de granito", label: "Mosteiro" },
+      { alt: "Picos de granito pontiagudos do Alto Sinai com a luz da manhã, vistos da escadaria rochosa do monte Sinai", label: "Alto Sinai" },
+    ],
   },
   // ===== Dahab =====
   {
@@ -728,7 +742,11 @@ export const ptDestinations: DestText[] = [
         a: "A maioria dos viajantes voa do Cairo ou de Luxor para Sharm el-Sheikh e segue uma hora de carro para o norte. Dahab funciona bem como último capítulo de uma viagem — alguns dias sem programação à beira-mar depois dos templos —, com Santa Catarina como passeio de um dia pelo interior.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Montanhas áridas do Sinai descendo até uma costa com recifes e um mar azul profundo no Blue Hole, em Dahab", label: "Blue Hole" },
+      { alt: "Kites sobre uma lagoa turquesa com as montanhas do Sinai ao fundo, em Dahab", label: "Lagoa" },
+      { alt: "Terraços de cafés e prédios brancos na orla de Dahab sobre água azul e límpida, com um barco ancorado", label: "Orla" },
+    ],
   },
   // ===== Marsa Alam =====
   {
@@ -774,7 +792,11 @@ export const ptDestinations: DestText[] = [
         a: "Sim. Muitos dos melhores pontos são baías rasas e recifes junto aos resorts, vistos com máscara e snorkel, e para muitos hóspedes o atrativo é simplesmente uma praia tranquila e água morna. Combina com famílias e com viajantes que querem descanso no fim de uma viagem.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Tartaruga-verde pastando em um campo de ervas marinhas debaixo d'água em Abu Dabbab, Marsa Alam", label: "Abu Dabbab" },
+      { alt: "Corais moles rosa e amarelos com um cardume de antias laranja em um recife do mar Vermelho ao largo de Marsa Alam", label: "Recife de coral" },
+      { alt: "Camelos caminhando em fila ao lado de uma acácia e de colinas rochosas no Wadi el-Gemal", label: "Wadi el-Gemal" },
+    ],
   },
   // ===== Bahariya & the White Desert =====
   {
@@ -820,7 +842,11 @@ export const ptDestinations: DestText[] = [
         a: "Para crianças que gostam de ar livre, muito — as formações são um parque de diversões natural, e a noite sob as estrelas é a parte de que elas se lembram. Os trechos de carro são longos, por isso combina mais com crianças em idade escolar do que com as muito pequenas.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Formações arredondadas de giz branco emergindo da areia no Deserto Branco do Egito, sob luz baixa", label: "Deserto Branco" },
+      { alt: "Colinas vulcânicas em forma de cone, escuras, sobre uma planície de areia clara no Deserto Negro, perto de Bahariya", label: "Deserto Negro" },
+      { alt: "Tendas iluminadas ao lado de uma rocha de giz em forma de cogumelo, à noite, no Deserto Branco", label: "Acampamento no deserto" },
+    ],
   },
   // ===== Kharga & Dakhla Oases =====
   {
@@ -866,7 +892,11 @@ export const ptDestinations: DestText[] = [
         a: "De três a quatro noites para os dois oásis, a partir de Luxor. Kharga sozinho pode ser visto em uma longa viagem de dois dias. Acrescentando o Deserto Branco e Bahariya, forma-se um circuito de cerca de uma semana.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Telhados planos de tijolos de barro da antiga Al-Qasr no oásis de Dakhla, com um palmeiral e o deserto ao fundo", label: "Al-Qasr" },
+      { alt: "Portal e colunas de arenito do templo de Hibis no oásis de Kharga, com palmeiras ao fundo", label: "Templo de Hibis" },
+      { alt: "Tumbas-capela de tijolos de barro com nichos em arco em uma encosta da necrópole de Bagawat, oásis de Kharga", label: "Bagawat" },
+    ],
   },
   // ===== Minya & Middle Egypt =====
   {
@@ -912,7 +942,11 @@ export const ptDestinations: DestText[] = [
         a: "O modo mais simples é ir por estrada a partir do Cairo, com uma ou duas noites em Minia, e depois seguir para o sul por estrada ou de trem. Também pode ser uma excursão de dois dias, com ida e volta do Cairo.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Pequeno barco a remo no Nilo calmo em Minya, com palmeiras e falésias de calcário claro na margem oposta", label: "Nilo em Minya" },
+      { alt: "Pórtico com duas colunas escavadas na rocha na entrada de um túmulo na falésia de calcário em Beni Hasan", label: "Beni Hasan" },
+      { alt: "Túmulo de Petosiris em forma de templo, com quatro colunas e muros de fechamento na areia em Tuna el-Gebel", label: "Tuna el-Gebel" },
+    ],
   },
   // ===== Dendera & Abydos =====
   {
@@ -958,6 +992,10 @@ export const ptDestinations: DestText[] = [
         a: "Dendera é tardio — construído sob os últimos Ptolomeus e os romanos — e, durante séculos, a areia e uma aldeia construída sobre ele protegeram as paredes e a cobertura. Em Abidos, as salas cobertas do templo de Seti I abrigaram os relevos e a sua pintura.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Colunas com cabeças de Hathor e teto pintado de azul no salão hipostilo do templo de Hathor em Dendera", label: "Dendera" },
+      { alt: "Relevo pintado do rei oferecendo incenso às barcas sagradas no templo de Seti I em Abydos", label: "Templo Seti I" },
+      { alt: "Maciços pilares de granito de pé na água verde no salão submerso do Osireion em Abydos", label: "Osireion" },
+    ],
   },
 ];

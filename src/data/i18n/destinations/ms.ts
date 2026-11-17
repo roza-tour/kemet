@@ -554,6 +554,8 @@ export const msDestinations: DestText[] = [
     ],
     photos: [
       { alt: "Kubu bata lumpur Shali menjulang di atas Oasis Siwa", label: "Oasis Siwa" },
+      { alt: "Tasik garam berwarna turkuoi dengan tebing putih bersalut garam di Oasis Siwa", label: "Tasik garam" },
+      { alt: "Runtuhan bata lumpur dan menara yang meruncing di Aghurmi, tapak kuil Oracle di Siwa", label: "Kuil Oracle" },
     ],
   },
 
@@ -601,7 +603,11 @@ export const msDestinations: DestText[] = [
         a: "Itulah persinggahan yang lazim. Jalan ke Siwa meninggalkan pantai di Matruh, jadi satu atau dua malam di tepi laut memecahkan pemanduan yang panjang dan memberi anda kedua-dua landskap di barat: Mediterranean dan oasis.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Laut turkuoi cerah di bawah tebing batu kapur pucat dan para batu di Agiba, Marsa Matruh", label: "Agiba" },
+      { alt: "Teluk berpasir di bawah tanjung batu kapur dengan laut turkuoi di Pantai Agiba berhampiran Marsa Matruh", label: "Pantai Agiba" },
+      { alt: "Barisan batu nisan putih dan sebatang pokok di atas pasir di Perkuburan Perang El Alamein", label: "El Alamein" },
+    ],
   },
 
   // ===== Port Said =====
@@ -647,7 +653,11 @@ export const msDestinations: DestText[] = [
         a: "Bagi pengembara yang berminat dengan terusan itu, sejarah moden atau wajah kota Mesir yang berbeza, ya — sebagai lawatan sehari dari Kaherah atau persinggahan antara Kaherah dan pantai. Pengembara yang hanya ada seminggu biasanya memberikan hari itu kepada Alexandria.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Bot kayu merah berkabin ukiran ditambat di Terusan Suez di Port Said, dengan bandar di seberang", label: "Terusan Suez" },
+      { alt: "Bangunan putih berlengkung Pihak Berkuasa Terusan Suez dengan tiga kubah hijau, dilihat dari seberang terusan di Port Said", label: "Pihak Berkuasa Terusan" },
+      { alt: "Feri kereta hijau menyeberangi Terusan Suez di bawah dua menara masjid Port Fouad", label: "Feri Port Fouad" },
+    ],
   },
 
   // ===== Saint Catherine & Mount Sinai =====
@@ -694,7 +704,11 @@ export const msDestinations: DestText[] = [
         a: "Musim bunga dan musim luruh. Siang musim panas terasa panas di bahagian bawah laluan, dan pada musim sejuk suhu di puncak sebelum fajar berada di bawah takat beku, kadangkala bersalji. Pada setiap musim, puncaknya jauh lebih sejuk daripada pantai.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Banjaran granit merah berlapis Pergunungan Sinai ketika matahari terbit, dilihat dari Gunung Sinai", label: "Gunung Sinai" },
+      { alt: "Tembok kubu, menara loceng dan taman pokok sipres Biara Saint Catherine di bawah cerun granit", label: "Biara" },
+      { alt: "Puncak granit bergerigi Sinai Tinggi dalam cahaya awal pagi, dilihat dari tangga berbatu di Gunung Sinai", label: "Sinai Tinggi" },
+    ],
   },
 
   // ===== Dahab =====
@@ -741,7 +755,11 @@ export const msDestinations: DestText[] = [
         a: "Kebanyakan pengembara terbang ke Sharm El Sheikh dari Kaherah atau Luxor dan memandu sejam ke utara. Dahab sesuai sebagai bab terakhir sesebuah perjalanan — beberapa hari tanpa jadual di tepi laut selepas kuil-kuil — dengan Saint Catherine sebagai lawatan sehari ke pedalaman.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Pergunungan Sinai yang gondol menurun ke pantai bertebing karang dan laut biru pekat di Blue Hole, Dahab", label: "Blue Hole" },
+      { alt: "Layang-layang kite di atas lagun turkuoi dengan Pergunungan Sinai di latar belakang di Dahab", label: "Lagun" },
+      { alt: "Teres kafe dan bangunan putih di tepi laut Dahab di atas air biru jernih dengan sebuah bot ditambat", label: "Tepi laut" },
+    ],
   },
 
   // ===== Marsa Alam =====
@@ -788,7 +806,11 @@ export const msDestinations: DestText[] = [
         a: "Ya. Banyak lokasi terbaiknya ialah teluk cetek dan terumbu di hadapan resort yang dapat dilihat dengan topeng selam dan snorkel, dan bagi ramai tetamu daya tarikannya hanyalah pantai yang tenang dan air yang suam. Ia sesuai untuk keluarga dan pengembara yang mahu berehat di penghujung perjalanan.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Penyu hijau meragut di padang rumput laut di bawah air di Abu Dabbab, Marsa Alam", label: "Abu Dabbab" },
+      { alt: "Karang lembut merah jambu dan kuning dengan sekumpulan ikan anthias oren di terumbu Laut Merah di luar Marsa Alam", label: "Terumbu karang" },
+      { alt: "Unta berjalan berbaris melepasi pokok akasia dan bukit berbatu di Wadi el-Gemal", label: "Wadi el-Gemal" },
+    ],
   },
 
   // ===== Bahariya & the White Desert =====
@@ -835,7 +857,11 @@ export const msDestinations: DestText[] = [
         a: "Bagi kanak-kanak yang gemar aktiviti luar, sangat sesuai — formasi-formasinya ialah taman permainan semula jadi dan malam di bawah bintang ialah bahagian yang mereka ingati. Pemanduannya panjang, jadi ia lebih sesuai untuk kanak-kanak usia sekolah berbanding yang masih kecil.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Formasi kapur putih membulat yang menjulang dari pasir di Gurun Putih Mesir dalam cahaya matahari rendah", label: "Gurun Putih" },
+      { alt: "Bukit kon gunung berapi yang gelap di dataran pasir pucat di Gurun Hitam berhampiran Bahariya", label: "Gurun Hitam" },
+      { alt: "Khemah bercahaya di sebelah batu kapur berbentuk cendawan pada waktu malam di Gurun Putih", label: "Perkhemahan gurun" },
+    ],
   },
 
   // ===== Kharga & Dakhla Oases =====
@@ -882,7 +908,11 @@ export const msDestinations: DestText[] = [
         a: "Tiga hingga empat malam untuk kedua-dua oasis dari Luxor. Kharga sahaja boleh dilihat dalam lawatan dua hari yang panjang. Menambah Gurun Putih dan Bahariya menjadikannya satu litar kira-kira seminggu.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Bumbung rata bata lumpur Al-Qasr lama di Oasis Dakhla dengan kebun kurma dan gurun di belakangnya", label: "Al-Qasr" },
+      { alt: "Pintu gerbang dan tiang batu pasir Kuil Hibis di Oasis Kharga dengan pokok palma di belakangnya", label: "Kuil Hibis" },
+      { alt: "Makam kapel bata lumpur dengan ceruk melengkung di lereng bukit di nekropolis Bagawat, Oasis Kharga", label: "Bagawat" },
+    ],
   },
 
   // ===== Minya & Middle Egypt =====
@@ -929,7 +959,11 @@ export const msDestinations: DestText[] = [
         a: "Cara paling mudah ialah melalui jalan darat dari Kaherah dengan satu atau dua malam di Minya, kemudian meneruskan perjalanan ke selatan dengan jalan darat atau kereta api. Ia juga boleh dijadikan lawatan dua hari dari Kaherah dan kembali.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Sampan kecil di Sungai Nil yang tenang di Minya, dengan pokok palma dan tebing batu kapur pucat di seberang", label: "Nil di Minya" },
+      { alt: "Serambi dengan dua tiang yang dipahat pada batu di pintu masuk makam di tebing batu kapur di Beni Hasan", label: "Beni Hasan" },
+      { alt: "Makam Petosiris berbentuk kuil dengan empat tiang dan dinding penghadang di atas pasir di Tuna el-Gebel", label: "Tuna el-Gebel" },
+    ],
   },
 
   // ===== Dendera & Abydos =====
@@ -976,6 +1010,10 @@ export const msDestinations: DestText[] = [
         a: "Dendera berasal dari zaman lewat — dibina di bawah raja-raja Ptolemy yang terakhir dan orang Rom — dan selama berabad-abad pasir serta sebuah kampung yang dibina di atasnya melindungi dinding dan bumbungnya. Di Abydos, dewan-dewan berbumbung kuil Seti I melindungi relief dan catnya.",
       },
     ],
-    photos: [],
+    photos: [
+      { alt: "Tiang berkepala Hathor dan siling berlukis biru di dewan hipostil Kuil Hathor di Dendera", label: "Dendera" },
+      { alt: "Relief berwarna yang menggambarkan raja mempersembahkan kemenyan kepada bahtera suci di Kuil Seti I di Abydos", label: "Kuil Seti I" },
+      { alt: "Tiang granit besar berdiri dalam air hijau di dewan yang tenggelam di Osireion di Abydos", label: "Osireion" },
+    ],
   },
 ];
