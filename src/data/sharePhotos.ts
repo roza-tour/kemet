@@ -238,7 +238,7 @@ const CHOICES: Choice[] = [
   { src: img("fayoum/fayoum-desert-camp"), alt: { en: "Travellers around a campfire in the Fayoum desert at dusk" }, routes: ["occasions/returning-to-egypt.html"] },
   { src: img("fayoum/fayoum-waterwheels"), alt: { en: "Traditional wooden waterwheels of the Fayoum" }, routes: ["occasions/three-generations-egypt.html"] },
   // ---- The hubs
-  { src: img("activities/act-quad-biking"), alt: { en: "Guests quad biking across desert dunes near the Giza pyramids" }, routes: ["activities.html"] },
+  { src: img("activities/act-quad-biking"), alt: { en: "A line of red quad bikes riding across open desert, riders in scarves and sunglasses" }, routes: ["activities.html"] },
   { src: img("activities/balloons-luxor-silhouettes-dawn"), alt: { en: "Balloons in silhouette as the sun clears the horizon over Luxor" }, routes: ["collections.html"] },
   { src: img("alexandria/alexandria-bibliotheca"), alt: { en: "The disc of the Bibliotheca Alexandrina on the waterfront" }, routes: ["guides.html"] },
   { src: img("giza/giza-great-sphinx-frontal"), alt: { en: "The Great Sphinx of Giza facing the dawn" }, routes: ["faq.html"] },
