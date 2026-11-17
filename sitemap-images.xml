@@ -965,6 +965,178 @@
       <image:caption>The mud-brick fortress of Shali rising above Siwa Oasis</image:caption>
       <image:title>Siwa Oasis</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/siwa-salt-lake.webp</image:loc>
+      <image:caption>Turquoise salt lake with a white salt-crusted shore in Siwa Oasis</image:caption>
+      <image:title>Salt lakes</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/siwa-aghurmi-oracle-temple.webp</image:loc>
+      <image:caption>Mud-brick ruins and a tapering minaret at Aghurmi, site of the Oracle temple in Siwa</image:caption>
+      <image:title>Oracle temple</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://kemet-travel.com/destinations/marsa-matruh-north-coast.html</loc>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/marsa-matruh-agiba-cove.webp</image:loc>
+      <image:caption>Bright turquoise sea below pale limestone cliffs and rock shelves at Agiba, Marsa Matruh</image:caption>
+      <image:title>Agiba</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/marsa-matruh-agiba-beach.webp</image:loc>
+      <image:caption>Sandy cove beneath a limestone headland with turquoise sea at Agiba beach near Marsa Matruh</image:caption>
+      <image:title>Agiba beach</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/el-alamein-war-cemetery.webp</image:loc>
+      <image:caption>Rows of white headstones and a single tree in the sand at the El Alamein War Cemetery</image:caption>
+      <image:title>El Alamein</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://kemet-travel.com/destinations/port-said.html</loc>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/port-said-canal-boats.webp</image:loc>
+      <image:caption>Red wooden boats with carved cabins moored on the Suez Canal at Port Said, city on the far bank</image:caption>
+      <image:title>Suez Canal</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/port-said-suez-canal-authority-building.webp</image:loc>
+      <image:caption>White arcaded Suez Canal Authority building with three green domes seen across the canal at Port Said</image:caption>
+      <image:title>Canal Authority</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/port-said-port-fuad-ferry.webp</image:loc>
+      <image:caption>Green car ferry crossing the Suez Canal below the twin minarets of the Port Fuad mosque</image:caption>
+      <image:title>Port Fuad ferry</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://kemet-travel.com/destinations/saint-catherine.html</loc>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/mount-sinai-sunrise.webp</image:loc>
+      <image:caption>Layered red granite ridges of the Sinai mountains at sunrise seen from Mount Sinai</image:caption>
+      <image:title>Mount Sinai</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/saint-catherine-monastery.webp</image:loc>
+      <image:caption>Fortified walls, bell tower and cypress garden of Saint Catherine&apos;s Monastery below a granite slope</image:caption>
+      <image:title>Monastery</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/mount-sinai-high-range-early-light.webp</image:loc>
+      <image:caption>Jagged granite peaks of the high Sinai in early light, seen from the rocky stairway on Mount Sinai</image:caption>
+      <image:title>High Sinai</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://kemet-travel.com/destinations/dahab.html</loc>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/dahab-blue-hole-coast.webp</image:loc>
+      <image:caption>Bare Sinai mountains dropping to a reef-fringed shore and deep blue sea at the Blue Hole, Dahab</image:caption>
+      <image:title>Blue Hole</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/dahab-lagoon-kites.webp</image:loc>
+      <image:caption>Kites above a turquoise lagoon backed by the Sinai mountains at Dahab</image:caption>
+      <image:title>Lagoon</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/dahab-seafront.webp</image:loc>
+      <image:caption>Café terraces and white buildings on the Dahab seafront above clear blue water with a moored boat</image:caption>
+      <image:title>Seafront</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://kemet-travel.com/destinations/marsa-alam.html</loc>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/marsa-alam-abu-dabbab-green-turtle.webp</image:loc>
+      <image:caption>Green sea turtle grazing on a seagrass meadow underwater at Abu Dabbab, Marsa Alam</image:caption>
+      <image:title>Abu Dabbab</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/marsa-alam-coral-reef.webp</image:loc>
+      <image:caption>Pink and yellow soft corals with a shoal of orange anthias on a Red Sea reef off Marsa Alam</image:caption>
+      <image:title>Coral reef</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/wadi-el-gemal-camels.webp</image:loc>
+      <image:caption>Camels walking in a line past an acacia tree and rocky hills in Wadi el-Gemal</image:caption>
+      <image:title>Wadi el-Gemal</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://kemet-travel.com/destinations/bahariya-white-desert.html</loc>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/white-desert-chalk-formations.webp</image:loc>
+      <image:caption>Rounded white chalk formations rising from sand in Egypt&apos;s White Desert in low sunlight</image:caption>
+      <image:title>White Desert</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/black-desert-volcanic-hills.webp</image:loc>
+      <image:caption>Dark volcanic cone hills on a pale sand plain in the Black Desert near Bahariya</image:caption>
+      <image:title>Black Desert</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/white-desert-camp-night.webp</image:loc>
+      <image:caption>Glowing tents beside a mushroom-shaped chalk rock at night in the White Desert</image:caption>
+      <image:title>Desert camp</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://kemet-travel.com/destinations/kharga-dakhla-oases.html</loc>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/dakhla-al-qasr-old-town.webp</image:loc>
+      <image:caption>Flat mud-brick roofs of old Al-Qasr in Dakhla Oasis with a date-palm grove and desert beyond</image:caption>
+      <image:title>Al-Qasr</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/kharga-hibis-temple.webp</image:loc>
+      <image:caption>Sandstone gateway and columns of the Temple of Hibis in Kharga Oasis with palm trees behind</image:caption>
+      <image:title>Temple of Hibis</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/kharga-bagawat-necropolis.webp</image:loc>
+      <image:caption>Mud-brick chapel tombs with arched niches on a hillside at the Bagawat necropolis, Kharga Oasis</image:caption>
+      <image:title>Bagawat</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://kemet-travel.com/destinations/minya.html</loc>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/minya-nile-rowing-boat.webp</image:loc>
+      <image:caption>Small rowing boat on the calm Nile at Minya with palms and pale limestone cliffs on the far bank</image:caption>
+      <image:title>Nile at Minya</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/beni-hasan-rock-tomb-entrance.webp</image:loc>
+      <image:caption>Portico with two rock-cut columns at the entrance to a tomb in the limestone cliff at Beni Hasan</image:caption>
+      <image:title>Beni Hasan</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/tuna-el-gebel-tomb-of-petosiris.webp</image:loc>
+      <image:caption>Temple-shaped tomb of Petosiris with four columns and screen walls in the sand at Tuna el-Gebel</image:caption>
+      <image:title>Tuna el-Gebel</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://kemet-travel.com/destinations/dendera-abydos.html</loc>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/dendera-hathor-temple-columns.webp</image:loc>
+      <image:caption>Hathor-headed columns and blue painted ceiling in the hypostyle hall of the Temple of Hathor at Dendera</image:caption>
+      <image:title>Dendera</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/abydos-seti-temple-barque-relief.webp</image:loc>
+      <image:caption>Painted relief of the king offering incense to sacred barques in the Temple of Seti I at Abydos</image:caption>
+      <image:title>Seti I temple</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://kemet-travel.com/images/stock/abydos-osireion.webp</image:loc>
+      <image:caption>Massive granite pillars standing in green water in the sunken hall of the Osireion at Abydos</image:caption>
+      <image:title>Osireion</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://kemet-travel.com/experiences/sunrise-giza-pyramids.html</loc>
@@ -1040,7 +1212,7 @@
     <loc>https://kemet-travel.com/experiences/private-nile-dinner-cruise.html</loc>
     <image:image>
       <image:loc>https://kemet-travel.com/images/cairo/cairo-tower-nile-skyline.webp</image:loc>
-      <image:caption>A felucca on the Nile in Cairo, the Cairo Tower behind it</image:caption>
+      <image:caption>The Cairo Tower and the Nile skyline, with a felucca on the water — the river the dinner cruise sails</image:caption>
       <image:title>Private Nile Dinner Cruise</image:title>
     </image:image>
   </url>
@@ -1513,7 +1685,7 @@
     <loc>https://kemet-travel.com/activities/quad-biking-desert.html</loc>
     <image:image>
       <image:loc>https://kemet-travel.com/images/activities/act-quad-biking.webp</image:loc>
-      <image:caption>Guests quad biking across desert dunes near the Giza pyramids</image:caption>
+      <image:caption>A line of red quad bikes riding across open desert, riders in scarves and sunglasses</image:caption>
     </image:image>
   </url>
   <url>
