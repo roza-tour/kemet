@@ -283,11 +283,14 @@ export const GET: APIRoute = () => {
     cost: "what it costs", "when-to-go": "when to go", safety: "whether Egypt is safe", ultra: "Kemet Ultra, the top tier",
     easter: "Easter in Egypt",
     destinations: "the list of destinations",
+    experiences: "the list of experiences",
   };
   // The destination pages are one group each ("destination-<id>"); they are
   // counted in a sentence of their own rather than named one by one.
   const isDestination = (g: { key: string }) => g.key.startsWith("destination-");
-  const keyGroups = TRANSLATION_GROUPS.filter((g) => !isDestination(g));
+  const isExperience = (g: { key: string }) => g.key.startsWith("experience-") || g.key.startsWith("activity-");
+  const keyGroups = TRANSLATION_GROUPS.filter((g) => !isDestination(g) && !isExperience(g));
+  const experienceGroups = TRANSLATION_GROUPS.filter(isExperience);
   const destinationGroups = TRANSLATION_GROUPS.filter(isDestination);
   const missing = keyGroups.filter((g) => !GROUP_NAME[g.key]);
   if (missing.length) throw new Error(`llms.txt: no name for translation group(s) ${missing.map((g) => g.key).join(", ")}`);
@@ -300,7 +303,8 @@ export const GET: APIRoute = () => {
     `Each set is written for its market rather than translated word for word, so ` +
     `the flight times, school holidays, entry rules and reference points differ ` +
     `between them. The translated pages carry the same facts and the same prices.` +
-    (destinationGroups.length ? ` The ${destinationGroups.length} destination pages are published in the same languages.` : ""),
+    (destinationGroups.length ? ` The ${destinationGroups.length} destination pages are published in the same languages.` : "") +
+    (experienceGroups.length ? ` So are ${experienceGroups.length} experience and activity pages.` : ""),
   );
   lines.push("");
   // THE CATALOGUE, PER LANGUAGE. Until 8 Oct 2026 this section listed only the

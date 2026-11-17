@@ -7,6 +7,12 @@
 // photographs, what is related to what — from data/experiences.ts and
 // data/activities.ts.
 //
+// NOT EVERY GROUP HAS A TEXT HERE. Sunrise at Giza was already published in
+// all nine languages, and the balloon flight in Italian, as pages of their own
+// (i18n/standalone.ts) before this family existed. Their groups point at
+// those pages — so the English page and the older translations are tied
+// together — and no second page on the same subject is built.
+//
 // Each page is one translation group ("experience-<slug>" or
 // "activity-<slug>" in config/translation-groups.json). The build stops if a
 // text's address is not the one its group declares, or if the photograph
@@ -17,6 +23,7 @@ import { TRANSLATION_GROUPS } from "@/config/i18n";
 import type { LocalizedPage, LocalizedSection } from "../types";
 import type { ExpText } from "./types";
 import { EXP_LABELS } from "./labels";
+import { EXP_HUB, expHubRoute } from "./hub";
 import { DEST_LABELS } from "../destinations/labels";
 import { experiences } from "@/data/experiences";
 import { activities } from "@/data/activities";
@@ -69,9 +76,12 @@ export function experiencePages(locale: TranslatedLocale, texts: ExpText[]): Loc
       : [
           ...list(L.goodFor, t.goodFor),
           ...list(D.know, t.goodToKnow),
+          // An activity's best time is a sentence, not a season: it reads as a
+          // short section, where in the fact strip it filled a whole cell.
+          ...(t.bestTime ? [{ title: D.when, body: t.bestTime }] : []),
         ];
 
-    const best = exp ? (exp.bestSeasons ?? []).map((s) => D.seasons[s]).join(D.comma) : t.bestTime;
+    const best = exp ? (exp.bestSeasons ?? []).map((s) => D.seasons[s]).join(D.comma) : "";
     const fill = (s: string) => s.replace("%s", t.name);
     return {
       groupId,
@@ -94,7 +104,10 @@ export function experiencePages(locale: TranslatedLocale, texts: ExpText[]): Loc
       cta: { heading: D.cta.heading, text: D.cta.text, whatsapp: fill(L.whatsapp), emailSubject: fill(D.cta.emailSubject) },
       moreLabel: D.moreLabel,
       moreText: L.moreText,
-      links: related.map((r) => ({ label: r.name, route: `${locale}/${r.localeSlug}.html` })),
+      links: [
+        ...related.map((r) => ({ label: r.name, route: `${locale}/${r.localeSlug}.html` })),
+        { label: EXP_HUB[locale].all, route: expHubRoute(locale) },
+      ],
       photos: shots.map((p, i) => ({ ...p, alt: t.photos[i].alt, label: t.photos[i].label })),
     };
   });

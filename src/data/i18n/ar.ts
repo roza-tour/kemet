@@ -32,6 +32,8 @@
 // deposit, 8–10 days for the full route, €8–12 a day in tips.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { experiencePages } from "./experiences/build";
+import { arExperiences } from "./experiences/ar";
 import { destinationPages } from "./destinations/build";
 import { arDestinations } from "./destinations/ar";
 import { arZahra } from "./zahra";
@@ -507,4 +509,7 @@ export const ar: LocalizedPage[] = [
 
   // ===== The 19 destinations — the words are in ./destinations/ar.ts ==========
   ...destinationPages("ar", arDestinations),
+
+  // ===== Experiences and activities — the words are in ./experiences/ar.ts =====
+  ...experiencePages("ar", arExperiences),
 ];

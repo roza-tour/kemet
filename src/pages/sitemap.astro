@@ -16,6 +16,7 @@ import { months } from "@/data/months";
 import { comparisons } from "@/data/comparisons";
 import { TRANSLATION_GROUPS, TRANSLATED_LOCALES, LOCALE_META } from "@/config/i18n";
 import { DEST_HUB, destHubRoute } from "@/data/i18n/destinations/hub";
+import { EXP_HUB, expHubRoute } from "@/data/i18n/experiences/hub";
 import { MAP_WORDS, MAP_ROUTE } from "@/config/journey-map";
 import { de as deP } from "@/data/i18n/de";
 import { it as itP } from "@/data/i18n/it";
@@ -103,8 +104,15 @@ for (const loc of TRANSLATED_LOCALES) {
   const ultraText = ULTRA_TEXT[loc as keyof typeof ULTRA_TEXT];
   if (ultraRoute && ultraText?.crumb) localLabel.set(ultraRoute, ultraText.crumb);
   localLabel.set(destHubRoute(loc), DEST_HUB[loc].crumb);
+  localLabel.set(expHubRoute(loc), EXP_HUB[loc].crumb);
   localLabel.set(MAP_ROUTE[loc], MAP_WORDS[loc].heading);
 }
+// The translated destination, experience and activity pages are listed on
+// their own hubs in each language (which this index links); naming all of
+// them again here, nine times over, was most of this page's weight.
+const isCatalogue = (key: string) => /^(destination|experience|activity)-/.test(key);
+const LISTED_GROUPS = TRANSLATION_GROUPS.filter((g) => !isCatalogue(g.key));
+const CATALOGUE_COUNT = TRANSLATION_GROUPS.length - LISTED_GROUPS.length;
 const labelFor = (route: string) =>
   localLabel.get(route) ?? route.split("/")[1].replace(".html", "").replace(/-/g, " ");
 
@@ -236,9 +244,10 @@ const labelFor = (route: string) =>
             and both were wrong the moment a language or a page was added. */}
         <h2>{TRANSLATED_LOCALES.map((loc) => LOCALE_META[loc].endonym).join(" · ")}</h2>
         <p class="sm-langnote">
-          {TRANSLATION_GROUPS.length} key pages are published in each of {TRANSLATED_LOCALES.length} languages
-          besides English, written for those markets rather than translated word for word.
-          The full catalogue remains in English.
+          {LISTED_GROUPS.length} key pages are published in each of {TRANSLATED_LOCALES.length} languages
+          besides English, written for those markets rather than translated word for word —
+          and {CATALOGUE_COUNT} destination, experience and activity pages, which each language
+          lists on its own destinations and experiences pages below.
         </p>
         {/* One heading per language rather than the language's name beside every
             link: with the destinations translated there are several hundred of
@@ -247,7 +256,7 @@ const labelFor = (route: string) =>
           <>
             <h3 class="sm-lang" lang={loc}>{LOCALE_META[loc].endonym}</h3>
             <ul class="sm-list sm-cols" lang={loc}>
-              {TRANSLATION_GROUPS.map((g) => (
+              {LISTED_GROUPS.map((g) => (
                 <li><a href={publicPath(g[loc])}>{labelFor(g[loc])}</a></li>
               ))}
             </ul>

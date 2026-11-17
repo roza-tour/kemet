@@ -27,6 +27,7 @@ import type { LocalizedPage } from "@/data/i18n/types";
 import { STANDALONE_PAGES, standaloneRoute } from "@/data/i18n/standalone";
 import { ui } from "@/config/ui";
 import { DEST_HUB, destHubRoute } from "@/data/i18n/destinations/hub";
+import { EXP_HUB, expHubRoute } from "@/data/i18n/experiences/hub";
 import { de } from "@/data/i18n/de";
 import { it } from "@/data/i18n/it";
 import { es } from "@/data/i18n/es";
@@ -96,7 +97,9 @@ const standalone = (locale: TranslatedLocale): NavItem[] =>
  */
 export function localeNav(locale: TranslatedLocale): NavItem[] {
   const t = ui(locale);
-  const journeys = present(locale, JOURNEY_GROUPS);
+  // The experiences hub closes the journeys group: one item, which lists the
+  // language's experience and activity pages.
+  const journeys = [...present(locale, JOURNEY_GROUPS), { label: EXP_HUB[locale].crumb, href: expHubRoute(locale) }];
   // The planning group carries this locale's own one-language pages too: the
   // German Christmas page and the Indonesian Umrah pages have nowhere else to
   // be, and they are exactly what that market came looking for.

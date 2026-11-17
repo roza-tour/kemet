@@ -8,6 +8,8 @@
 // than German school terms, Rome and Milan rather than Frankfurt.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { experiencePages } from "./experiences/build";
+import { itExperiences } from "./experiences/it";
 import { destinationPages } from "./destinations/build";
 import { itDestinations } from "./destinations/it";
 import { itZahra } from "./zahra";
@@ -527,4 +529,7 @@ export const it: LocalizedPage[] = [
 
   // ===== The 19 destinations — the words are in ./destinations/it.ts ==========
   ...destinationPages("it", itDestinations),
+
+  // ===== Experiences and activities — the words are in ./experiences/it.ts =====
+  ...experiencePages("it", itExperiences),
 ];

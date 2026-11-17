@@ -1,0 +1,143 @@
+---
+// The experiences hub in a translated language — every experience and
+// activity page that language has, each card opening the page in that
+// language. Nothing on it links to an English page.
+//
+// The words are in data/i18n/experiences/hub.ts (the hub's own) and in each
+// language's texts (the cards). Each language's route file is three lines; the
+// address is checked against config/translation-groups.json here.
+import Base from "@/layouts/Base.astro";
+import PageHero from "@/components/PageHero.astro";
+import SectionHeader from "@/components/SectionHeader.astro";
+import LangSwitch from "@/components/LangSwitch.astro";
+import Frieze from "@/components/Frieze.astro";
+import { TRANSLATION_GROUPS, LOCALE_META } from "@/config/i18n";
+import type { TranslatedLocale } from "@/config/i18n";
+import { canonical, whatsappHref, mailtoLink } from "@/utils/links";
+import { DEST_LABELS } from "@/data/i18n/destinations/labels";
+import { DEST_HUB } from "@/data/i18n/destinations/hub";
+import { EXP_HUB, expHubRoute } from "@/data/i18n/experiences/hub";
+import type { ExpText } from "@/data/i18n/experiences/types";
+import { STANDALONE_PAGES, standaloneRoute } from "@/data/i18n/standalone";
+import { deExperiences } from "@/data/i18n/experiences/de";
+import { itExperiences } from "@/data/i18n/experiences/it";
+import { esExperiences } from "@/data/i18n/experiences/es";
+import { frExperiences } from "@/data/i18n/experiences/fr";
+import { ruExperiences } from "@/data/i18n/experiences/ru";
+import { idExperiences } from "@/data/i18n/experiences/id";
+import { msExperiences } from "@/data/i18n/experiences/ms";
+import { ptExperiences } from "@/data/i18n/experiences/pt";
+import { arExperiences } from "@/data/i18n/experiences/ar";
+
+interface Props {
+  locale: TranslatedLocale;
+}
+const { locale } = Astro.props;
+
+const TEXTS: Record<TranslatedLocale, ExpText[]> = {
+  de: deExperiences, it: itExperiences, es: esExperiences, fr: frExperiences, ru: ruExperiences,
+  id: idExperiences, ms: msExperiences, pt: ptExperiences, ar: arExperiences,
+};
+const w = EXP_HUB[locale];
+const L = DEST_LABELS[locale];
+const texts = TEXTS[locale];
+const route = expHubRoute(locale);
+
+const declared = TRANSLATION_GROUPS.find((g) => g.key === "experiences")?.[locale];
+if (declared !== route) {
+  throw new Error(`experiences hub (${locale}): the page is at ${route}, but translation-groups.json says ${declared ?? "nothing (no group)"}.`);
+}
+
+// A card per page. Most come from this language's texts; an experience that
+// was published earlier as a page of its own (i18n/standalone.ts — see
+// experiences/build.ts) is listed from that page, at its existing address.
+interface Card { name: string; summary: string; where: string; href: string }
+const fromText = (t: ExpText): Card => ({ name: t.name, summary: t.summary, where: t.where, href: `${t.localeSlug}.html` });
+const earlier: Card[] = TRANSLATION_GROUPS
+  .filter((g) => g.key.startsWith("experience-") && !texts.some((t) => `${t.kind}-${t.id}` === g.key))
+  .flatMap((g) => {
+    const sp = STANDALONE_PAGES.find((p) => standaloneRoute(p) === g[locale]);
+    return sp ? [{ name: sp.page.h1, summary: sp.page.standfirst, where: "", href: `${sp.slug}.html` }] : [];
+  });
+const groups = [
+  { label: w.experiences, items: [...earlier, ...texts.filter((t) => t.kind === "experience").map(fromText)] },
+  { label: w.activities, items: texts.filter((t) => t.kind === "activity").map(fromText) },
+].filter((g) => g.items.length > 0);
+const listed = groups.flatMap((g) => g.items);
+
+const jsonld = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: LOCALE_META[locale].home, item: canonical(`${locale}/index.html`) },
+      { "@type": "ListItem", position: 2, name: w.crumb, item: canonical(route) },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: w.title,
+    description: w.metaDescription,
+    url: canonical(route),
+    inLanguage: LOCALE_META[locale].tag,
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: listed.map((c, i) => ({
+        "@type": "ListItem", position: i + 1, name: c.name, url: canonical(`${locale}/${c.href}`),
+      })),
+    },
+  },
+];
+const mail = mailtoLink(L.cta.emailSubject.replace("%s", w.title));
+const arrow = locale === "ar" ? "←" : "→";
+---
+<Base title={w.metaTitle} description={w.metaDescription} active={route} jsonld={jsonld} showCta={false}>
+  <PageHero
+    rootLabel={LOCALE_META[locale].home}
+    rootHref={`/${locale}/`}
+    crumb={w.crumb}
+    symbol="lotus"
+    title={w.title}
+    text={w.text}
+  />
+
+  <section style="padding-top:var(--s-4);padding-bottom:0">
+    <div class="wrap lz-wrap">
+      <LangSwitch route={route} />
+    </div>
+  </section>
+
+  {groups.map((group) => (
+    <section style="padding-top:var(--s-5)">
+      <div class="wrap">
+        <SectionHeader title={group.label} />
+        <div class="grid-3">
+          {group.items.map((c) => (
+            <a class="tease reveal" href={c.href} data-tilt>
+              {c.where && <div class="eyebrow" style="margin-bottom:var(--s-1)">{c.where}</div>}
+              <h3>{c.name}</h3>
+              <p>{c.summary}</p>
+              <span class="more">{DEST_HUB[locale].explore} <b>{arrow}</b></span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <Frieze />
+
+  <section style="padding-top:0">
+    <div class="wrap lz-wrap">
+      <div class="lz-cta reveal" id="enquire">
+        <h2>{L.cta.heading}</h2>
+        <p>{L.cta.text}</p>
+        <div class="lz-actions">
+          <a class="btn btn-solid" href={whatsappHref()} target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn btn-ghost" href={mail}>E-Mail</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
