@@ -177,7 +177,7 @@ export const pt: TourText[] = [
     durationLabel: "14 dias / 13 noites",
     startPoint: "Cairo (aeroporto ou hotel)",
     summary: "A nossa viagem mais completa: Cairo e Alexandria, um cruzeiro pelo Nilo, o templo de Ramsés II escavado na montanha, em Abu Simbel, e três noites no Mar Vermelho para assentar tudo.",
-    overview: "Este é o roteiro de quem pretende vir uma vez e ver o Egito inteiro. Os dez primeiros dias pertencem à história: as Pirâmides e o Grande Museu Egípcio, os bairros medieval e copta do Cairo, Alexandria no Mediterrâneo e depois um voo para o sul rumo a Abu Simbel — o templo de Ramsés II escavado na montanha, sobre o lago Nasser —, antes que um cruzeiro de três noites leve vocês pelo Nilo, de Assuã a Luxor. Os quatro últimos dias mudam completamente de tom: depois das tumbas e dos templos de Luxor, vocês voam para Sharm el-Sheikh, onde o deserto encontra algumas das águas mais claras do planeta. Três noites no Mar Vermelho fecham a viagem, com snorkel sobre os recifes de Ras Mohammed e nada na programação que não possa ser cancelado em favor da piscina. Todos os voos internos estão incluídos; todos os dias guiados são privativos.",
+    overview: "Este é o roteiro de quem pretende vir uma vez e ver o Egito inteiro. Os dez primeiros dias pertencem à história: as Pirâmides e o Grande Museu Egípcio, os bairros medieval e copta do Cairo, Alexandria no Mediterrâneo e depois um voo para o sul rumo a Abu Simbel — o templo de Ramsés II escavado na montanha, sobre o lago Nasser —, antes que um cruzeiro de três noites leve vocês pelo Nilo, de Assuã a Luxor. Os quatro últimos dias mudam completamente de tom: depois das tumbas e dos templos de Luxor, vocês voam para Sharm el-Sheikh, onde o deserto encontra algumas das águas mais claras do planeta. Três noites no Mar Vermelho fecham a viagem, com snorkel sobre os recifes de Ras Mohammed e nada na programação que não possa ser cancelado em favor da piscina. Todos os voos internos estão incluídos; todos os dias guiados são privativos. A ordem dos dias é definida assim que as datas de vocês estão fixadas: os voos internos do Egito não operam todos os dias em todas as rotas, então organizamos os dias em torno dos voos e dos horários de funcionamento de cada visita.",
     itinerary: [
       {
         title: "Chegada ao Cairo",
@@ -257,7 +257,7 @@ export const pt: TourText[] = [
       {
         title: "Voo para o Mar Vermelho",
         items: [
-          "Voo pela manhã para Sharm el-Sheikh",
+          "Voo para Sharm el-Sheikh — o voo direto da manhã, quando há um na data de vocês; caso contrário, via Cairo",
           "Check-in; a programação termina aqui, de propósito",
         ],
       },
@@ -290,7 +290,7 @@ export const pt: TourText[] = [
     faqs: [
       { q: "Catorze dias é demais para uma primeira visita?", a: "É o tempo de que o Egito precisa para ser visto por inteiro, e não só provado. São os dias de Mar Vermelho no final que tornam a semana de história sustentável — a viagem respira, em vez de acumular cansaço." },
       { q: "Quanto desta viagem é feito de avião?", a: "Três voos internos, de cerca de uma hora cada, que substituem o que de outra forma seriam trechos de doze horas por estrada ou trem. Dois trajetos longos continuam na estrada: o passeio de um dia a Alexandria e a ida e volta de Assuã a Abu Simbel — e este segundo já faz parte da experiência, cruzando o deserto aberto ao amanhecer." },
-      { q: "Dá para trocar ou estender o trecho no Mar Vermelho?", a: "À vontade. Alguns viajantes trocam esses dias por noites extras em Luxor ou por Siwa; outros estendem Sharm até completar uma semana. Os dez primeiros dias formam a espinha dorsal, e o ato final vocês moldam como quiserem." },
+      { q: "Dá para trocar ou estender o trecho no Mar Vermelho?", a: "À vontade. Alguns viajantes trocam esses dias por noites extras em Luxor; outros estendem Sharm até completar uma semana ou acrescentam um capítulo em Siwa, com dias extras — Siwa fica a um dia de carro em cada sentido, por isso não cabe nas três noites no Mar Vermelho. Os dez primeiros dias formam a espinha dorsal, e o ato final vocês moldam como quiserem." },
     ],
   },
   // ===== Honeymoon on the Nile =====
@@ -839,7 +839,7 @@ export const pt: TourText[] = [
     durationLabel: "5 dias / 4 noites",
     startPoint: "Sharm el-Sheikh (aeroporto ou hotel)",
     summary: "O Mar Vermelho feito com intenção — um dia de barco privativo em Ras Mohammed, uma noite sob as estrelas no deserto do Sinai e tempo deixado vazio de propósito.",
-    overview: "Sharm el-Sheikh fica na ponta da Península do Sinai, onde montanhas desérticas mergulham em uma água tão clara que, vistos da superfície, os recifes se leem como mapas. É o grande respiro do Egito — e é exatamente assim que este roteiro o trata. Dois dias-âncora são organizados de forma privativa: um dia de barco no Parque Nacional de Ras Mohammed, cujas paredes de coral, no encontro dos golfos de Suez e de Ácaba, estão entre os melhores pontos de snorkel do planeta, e uma noite no deserto do Sinai, com chá beduíno, jantar na brasa e observação do céu sob alguns dos céus mais escuros ao alcance de qualquer resort. O resto fica sem programação, por princípio. Funciona como uma escapada por si só ou como o capítulo final de uma viagem mais longa pelo Egito — Luxor fica a menos de uma hora de voo.",
+    overview: "Sharm el-Sheikh fica na ponta da Península do Sinai, onde montanhas desérticas mergulham em uma água tão clara que, vistos da superfície, os recifes se leem como mapas. É o grande respiro do Egito — e é exatamente assim que este roteiro o trata. Dois dias-âncora são organizados de forma privativa: um dia de barco no Parque Nacional de Ras Mohammed, cujas paredes de coral, no encontro dos golfos de Suez e de Ácaba, estão entre os melhores pontos de snorkel do planeta, e uma noite no deserto do Sinai, com chá beduíno, jantar na brasa e observação do céu sob alguns dos céus mais escuros ao alcance de qualquer resort. O resto fica sem programação, por princípio. Funciona como uma escapada por si só ou como o capítulo final de uma viagem mais longa pelo Egito — Luxor fica a cerca de uma hora de voo. O voo direto não opera todos os dias, então a ordem dos dias de vocês é definida em torno dos voos nas suas datas.",
     itinerary: [
       {
         title: "Chegada ao Mar Vermelho",
@@ -883,7 +883,7 @@ export const pt: TourText[] = [
     faqs: [
       { q: "Quando o mar está quente o bastante?", a: "Praticamente sempre. A água vai de 21 °C no inverno a 28 °C no fim do verão; dá para fazer snorkel o ano todo, e mesmo em janeiro fica confortável com uma roupa de neoprene curta (shorty), que o barco leva a bordo." },
       { q: "É preciso saber mergulhar?", a: "Não. Os recifes de Ras Mohammed sobem tão perto da superfície que o snorkel mostra a maior parte do espetáculo. Se vocês quiserem experimentar o mergulho, organizamos um batismo com um centro licenciado no recife do próprio resort." },
-      { q: "Dá para combinar com os roteiros pelo Nilo?", a: "Perfeitamente — é assim que a maioria dos nossos viajantes o aproveita. Luxor–Sharm é um voo curto, e quatro dias de Mar Vermelho depois de uma semana de templos é a versão mais bem ordenada do Egito que conhecemos." },
+      { q: "Dá para combinar com os roteiros pelo Nilo?", a: "Perfeitamente — é assim que a maioria dos nossos viajantes o aproveita. Luxor–Sharm leva cerca de uma hora no ar, mas o voo direto não opera todos os dias: definimos a ordem dos dias de vocês em torno dos voos nas suas datas e, nos demais dias, o trajeto passa pelo Cairo. Quatro dias de Mar Vermelho depois de uma semana de templos é a versão mais bem ordenada do Egito que conhecemos." },
     ],
   },
   // ===== Dive the Red Sea =====

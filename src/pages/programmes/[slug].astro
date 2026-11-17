@@ -1,0 +1,221 @@
+---
+// A programme (/programmes/<slug>.html) — one template for all nine, from
+// data/programmes.ts. Read that file's header first: no price, no hotel names,
+// and the days are said to be reordered around flights and opening times.
+import Base from "@/layouts/Base.astro";
+import PageHero from "@/components/PageHero.astro";
+import Frieze from "@/components/Frieze.astro";
+import Faq from "@/components/Faq.astro";
+import SectionHeader from "@/components/SectionHeader.astro";
+import LeadCapture from "@/components/conversion/LeadCapture.astro";
+import Placeholder from "@/components/Placeholder.astro";
+import TourCard from "@/components/TourCard.astro";
+import DestinationCard from "@/components/destination/DestinationCard.astro";
+import { programmes, programmeRoute, ORDER_NOTE, PRICE_NOTE, PROGRAMME_HUB } from "@/data/programmes";
+import type { Programme } from "@/data/programmes";
+import { destinations } from "@/data/destinations";
+import { tours } from "@/data/tours";
+import { programmeSchema } from "@/schemas/jsonld";
+import { canonical } from "@/utils/links";
+import { SITE_URL } from "@/config/site";
+
+export function getStaticPaths() {
+  return programmes.map((p) => ({ params: { slug: p.slug }, props: { programme: p } }));
+}
+const p = Astro.props.programme as Programme;
+const route = programmeRoute(p);
+
+const dest = destinations.find((d) => d.id === p.photo.destination)!;
+const shots = [dest.hero, ...(dest.gallery ?? [])].filter((x) => x && x.src);
+const hero = shots[p.photo.index] ?? shots[0]!;
+// Two more photographs from the places it goes, for the strip under the plan.
+const strip = p.places
+  .map((id) => destinations.find((d) => d.id === id))
+  .flatMap((d) => (d ? [d.hero, ...(d.gallery ?? [])].filter((x) => x && x.src && x.src !== hero.src) : []))
+  .slice(0, 3);
+const places = p.places.map((id) => destinations.find((d) => d.id === id)).filter((d): d is NonNullable<typeof d> => !!d);
+const alongside = p.alongside.map((slug) => tours.find((t) => t.slug === slug)).filter((t): t is NonNullable<typeof t> => !!t);
+
+const faqs = [
+  ...p.faqs,
+  { q: "How is the order of the days decided?", a: ORDER_NOTE },
+  { q: "What does it cost?", a: PRICE_NOTE },
+];
+const jsonld = programmeSchema({
+  title: p.title,
+  standfirst: p.standfirst,
+  url: canonical(route),
+  image: `${SITE_URL}${hero.src}`,
+  days: p.days,
+  faqs,
+  trail: [["Home", "index.html"], ["Programmes", PROGRAMME_HUB.route], [p.title, route]],
+});
+const kind = p.kind === "stand-alone" ? "A journey of its own" : p.kind === "extension" ? "An extension to a longer journey" : "An add-on";
+const waMessage = `Hello Kemet — I'd like to ask about "${p.title}". My dates: `;
+---
+<Base title={p.seoTitle} description={p.seoDescription} active={route} jsonld={jsonld} keywords={p.keywords} ogImage={hero.src} showCta={false}>
+  <PageHero
+    crumb={p.title}
+    symbol="lotus"
+    overline={`${p.length} · priced on request`}
+    title={p.title}
+    text={p.standfirst}
+    heroSrc={hero.src}
+    heroAlt={hero.alt}
+    heroWidth={hero.width}
+    heroHeight={hero.height}
+  />
+
+  <section style="padding-top:var(--s-4)">
+    <div class="wrap pg-wrap">
+      <dl class="pg-facts reveal">
+        <div><dt>Length</dt><dd>{p.length}</dd></div>
+        <div><dt>Route</dt><dd>{p.route}</dd></div>
+        <div><dt>Best months</dt><dd>{p.bestMonths}</dd></div>
+        <div><dt>Use it as</dt><dd>{kind}</dd></div>
+        <div><dt>Price</dt><dd>On request</dd></div>
+      </dl>
+      <p class="pg-for reveal"><b>For:</b> {p.forWhom}</p>
+    </div>
+  </section>
+
+  <Frieze />
+
+  <section>
+    <div class="wrap pg-wrap">
+      <div class="pg-head reveal">
+        <div class="eyebrow">The plan</div>
+        <h2>Day by day</h2>
+        <div class="rule"></div>
+      </div>
+      <ol class="pg-days">
+        {p.days.map((d) => (
+          <li class="reveal">
+            <span class="pg-dl">{d.label}</span>
+            <div>
+              <h3>{d.title}</h3>
+              {d.text && <p>{d.text}</p>}
+            </div>
+          </li>
+        ))}
+      </ol>
+
+      <div class="pg-note reveal">
+        <h3>How the days are ordered</h3>
+        <p>{ORDER_NOTE}</p>
+        <p class="pg-fixed"><b>What sets the order here.</b> {p.fixed}</p>
+      </div>
+    </div>
+  </section>
+
+  {strip.length > 0 && (
+    <section style="padding-top:0">
+      <div class="wrap">
+        <div class="pg-strip">
+          {strip.map((x) => (
+            <Placeholder sizes="half" class="pg-shot" src={x!.src} alt={x!.alt} width={x!.width} height={x!.height} label={x!.label ?? "Egypt"} />
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <Frieze />
+
+  <section>
+    <div class="wrap pg-wrap">
+      <div class="pg-head reveal">
+        <div class="eyebrow">What makes it different</div>
+        <h2>Not the usual version</h2>
+        <div class="rule"></div>
+      </div>
+      <ul class="pg-diff">
+        {p.different.map((x) => <li class="reveal">{x}</li>)}
+      </ul>
+      <div class="pg-two">
+        <div class="pg-cell reveal"><h3>What is private</h3><p>{p.privateNote}</p></div>
+        <div class="pg-cell reveal"><h3>Where you sleep</h3><p>{p.stay}</p></div>
+      </div>
+      <p class="pg-avoid reveal"><b>When not to go.</b> {p.avoid}</p>
+    </div>
+  </section>
+
+  <Frieze />
+
+  <section>
+    <div class="wrap pg-wrap">
+      <Faq items={faqs} heading="Asked before booking" />
+    </div>
+  </section>
+
+  {places.length > 0 && (
+    <section style="padding-top:0">
+      <div class="wrap">
+        <SectionHeader sym="destinations" eyebrow="Where it goes" title="The places on this programme" />
+        <div class="grid-3">
+          {places.map((d) => <DestinationCard destination={d} base="../" />)}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {alongside.length > 0 && (
+    <section style="padding-top:0">
+      <div class="wrap">
+        <SectionHeader sym="journeys" eyebrow="Pairs well with" title="Journeys it follows or extends" />
+        <div class="grid-3">
+          {alongside.slice(0, 3).map((t) => <TourCard tour={t} base="../" />)}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <LeadCapture
+    variant="consultation"
+    heading="Send us your dates"
+    subtext="Dates and the number of travellers are enough. We reply in writing, within one working day, with the days in their final order and the price."
+    whatsappMessage={waMessage}
+    emailSubject={`${p.title} — enquiry`}
+  />
+</Base>
+
+<style is:global>
+  .pg-facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-4) var(--s-5); margin: 0; padding: var(--s-5) 0 0; border-top: 1px solid var(--line); }
+  .pg-facts dt { font-size: var(--t-nano); letter-spacing: .24em; text-transform: uppercase; color: var(--gold); margin-bottom: var(--s-1); }
+  .pg-facts dd { margin: 0; color: var(--bone); font-family: var(--ff-display); font-weight: 300; font-size: 1.15rem; line-height: 1.45; }
+  .pg-for { margin: var(--s-5) 0 0; color: var(--muted); line-height: 1.85; max-width: 720px; }
+  .pg-for b { color: var(--gold-bright); font-weight: 500; }
+  .pg-head { margin-bottom: var(--s-5); }
+  .pg-head h2 { font-family: var(--ff-display); font-weight: 300; font-size: clamp(1.9rem, 3.4vw, 2.6rem); color: var(--bone); margin-top: var(--s-3); line-height: 1.15; }
+  .pg-days { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+  .pg-days li { display: grid; grid-template-columns: 110px 1fr; gap: var(--s-4); padding: var(--s-4) 0; border-top: 1px solid var(--line); }
+  .pg-days li:first-child { border-top: 0; }
+  .pg-dl { font-size: var(--t-nano); letter-spacing: .22em; text-transform: uppercase; color: var(--gold); padding-top: .55em; }
+  .pg-days h3 { font-family: var(--ff-display); font-weight: 400; font-size: 1.25rem; color: var(--bone); margin: 0 0 var(--s-1); }
+  .pg-days p { margin: 0; color: var(--muted); line-height: 1.85; max-width: 720px; }
+  .pg-note { margin-top: var(--s-6); padding: var(--s-5); border-inline-start: 2px solid var(--gold); background: rgba(217,180,90,.05); }
+  .pg-note h3 { font-family: var(--ff-display); font-weight: 300; font-size: 1.3rem; color: var(--gold-bright); margin: 0 0 var(--s-2); }
+  .pg-note p { margin: 0 0 var(--s-2); color: var(--muted); font-size: var(--t-sm); line-height: 1.88; max-width: 760px; }
+  .pg-note .pg-fixed { margin: var(--s-3) 0 0; }
+  .pg-note b, .pg-avoid b { color: var(--bone); font-weight: 500; }
+  .pg-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-3); }
+  .pg-shot { aspect-ratio: 4 / 3; }
+  .pg-diff { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-3); }
+  .pg-diff li { position: relative; padding-inline-start: 22px; color: var(--muted); line-height: 1.85; max-width: 760px; }
+  .pg-diff li::before { content: ""; position: absolute; inset-inline-start: 0; top: .8em; width: 6px; height: 6px; transform: rotate(45deg); background: var(--gold); }
+  .pg-two { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-4); margin-top: var(--s-5); }
+  .pg-cell { border: 1px solid var(--line); border-radius: 2px; padding: var(--s-5); background: linear-gradient(165deg, rgba(30,25,18,.85), rgba(14,17,21,.6)); }
+  .pg-cell h3 { font-size: var(--t-md); color: var(--bone); font-weight: 500; margin: 0 0 var(--s-2); }
+  .pg-cell p { margin: 0; color: var(--muted); font-size: var(--t-sm); line-height: 1.85; }
+  .pg-avoid { margin: var(--s-5) 0 0; color: var(--muted); font-size: var(--t-sm); line-height: 1.85; max-width: 760px; }
+  @media (max-width: 900px) {
+    .pg-facts { grid-template-columns: 1fr 1fr; }
+    .pg-two { grid-template-columns: 1fr; }
+    .pg-strip { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 600px) {
+    .pg-facts { grid-template-columns: 1fr; }
+    .pg-days li { grid-template-columns: 1fr; gap: var(--s-1); }
+    .pg-dl { padding-top: 0; }
+  }
+</style>

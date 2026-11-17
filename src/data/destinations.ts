@@ -559,7 +559,7 @@ export const destinations: Destination[] = [
     shortSummary:
       "Sinai's resort capital between desert mountains and the Red Sea — gateway to Ras Mohammed, the Tiran reefs and Bedouin stargazing nights.",
     longDescription:
-      "Sharm El Sheikh occupies the tip of the Sinai Peninsula, where bare red mountains fall straight into some of the clearest water in the world. That geography is the whole story: Ras Mohammed National Park — routinely ranked among the finest dive sites anywhere — is twenty minutes away by boat, the Straits of Tiran a little further, and reef walls plunge within metres of the shore along the whole coast. Naama Bay supplies the promenade-and-restaurants side; the quieter bays north and south hold the resorts. And an hour inland, the desert takes over entirely — Bedouin camps, canyon walks and some of the darkest, clearest night skies within reach of any beach holiday.",
+      "Sharm El Sheikh occupies the tip of the Sinai Peninsula, where bare red mountains fall straight into some of the clearest water in the world. That geography is the whole story: Ras Mohammed National Park — routinely ranked among the finest dive sites anywhere — is under an hour away by boat, the Straits of Tiran a little further, and reef walls plunge within metres of the shore along the whole coast. Naama Bay supplies the promenade-and-restaurants side; the quieter bays north and south hold the resorts. And an hour inland, the desert takes over entirely — Bedouin camps, canyon walks and some of the darkest, clearest night skies within reach of any beach holiday.",
     region: "red-sea",
     coordinates: { lat: 27.9158, lng: 34.33 },
     bestSeasons: ["spring", "autumn", "summer"],
@@ -606,7 +606,7 @@ export const destinations: Destination[] = [
       { q: "Is Sharm El Sheikh only for divers?",
         a: "Not at all. The shore snorkelling is world-class in its own right, the resorts are genuinely relaxing, and the Sinai interior adds a second holiday: Bedouin camp dinners, canyon walks and stargazing under some of the darkest accessible skies anywhere. Plenty of guests never put a tank on and leave delighted." },
       { q: "How do I fit Sharm into an Egypt itinerary?",
-        a: "Fly — Cairo to Sharm is about an hour, which makes a three-or-four-night Sinai finish practical after Cairo and the Nile. Remember the 24-hour no-fly buffer after a final dive when placing the last day, and consider arriving or departing on Sharm's own international airport to save a Cairo transit." },
+        a: "Fly — Cairo to Sharm is about an hour, which makes a three-or-four-night Sinai finish practical after Cairo and the Nile. Remember the 24-hour no-fly buffer after a final dive when placing the last day, and consider arriving or departing on Sharm's own international airport to save a Cairo transit. One caution: the free entry stamp issued at Sharm's airport covers South Sinai only — if your journey continues to Cairo, Luxor or the Nile, take the standard Egyptian visa instead." },
     ],
     seo: {
       title: "Sharm El Sheikh — Ras Mohammed, Reefs & Sinai Desert | Kemet",
@@ -780,7 +780,7 @@ export const destinations: Destination[] = [
       "Gebel al-Mawta, the Mountain of the Dead, with its painted tomb of Si-Amun",
     ],
     thingsToKnow: [
-      "Siwa is far: about three and a half hours' drive from Marsa Matruh and a full day from Cairo. A journey here is usually paired with the Mediterranean coast or Alexandria.",
+      "Siwa is far: about four hours' drive from Marsa Matruh and a full day from Cairo. A journey here is usually paired with the Mediterranean coast or Alexandria.",
       "The desert beyond the oasis needs a 4x4 and a permit, both arranged for you.",
       "Siwa is conservative; modest dress in the town is appreciated.",
       "Lodges are small and built in the local style; the best of them fill early in the cool months.",
@@ -803,7 +803,7 @@ export const destinations: Destination[] = [
     ],
     faqs: [
       { q: "How do you get to Siwa?",
-        a: "By road. The usual way is along the Mediterranean coast to Marsa Matruh and then south across the desert, about three and a half hours from Matruh. From Cairo it is a full day, which is why most journeys break it with a night in Alexandria or on the coast." },
+        a: "By road. The usual way is along the Mediterranean coast to Marsa Matruh and then south across the desert, about four hours from Matruh. From Cairo it is a full day, which is why most journeys break it with a night in Alexandria or on the coast." },
       { q: "How many nights does Siwa need?",
         a: "Two at the least, three if you can. One day goes to the oasis itself — the Oracle temple, Shali, the springs and the salt lakes — and one to the desert, ending with sunset on the dunes. A third lets the place slow you down, which is what it is for." },
       { q: "When is the best time to visit Siwa?",
@@ -825,7 +825,7 @@ export const destinations: Destination[] = [
     shortSummary:
       "Egypt's Mediterranean shore west of Alexandria: white sand, turquoise coves, and the battlefield memorials of El Alamein.",
     longDescription:
-      "West of Alexandria the Mediterranean coast runs for hundreds of kilometres of pale sand and water of a colour people do not expect from Egypt. Marsa Matruh, about three hours along it, sits on a sheltered bay with its best beaches a short drive away: Agiba, a cove under limestone cliffs, and the rock pool known as Cleopatra's Bath. On the way lies El Alamein, where the desert war turned in 1942; the Commonwealth cemetery, the German and Italian memorials and the military museum stand a few kilometres apart beside the road. This is where Egyptians themselves come in summer, and it is also the road to Siwa, which lies about three and a half hours south of Matruh.",
+      "West of Alexandria the Mediterranean coast runs for hundreds of kilometres of pale sand and water of a colour people do not expect from Egypt. Marsa Matruh, about three hours along it, sits on a sheltered bay with its best beaches a short drive away: Agiba, a cove under limestone cliffs, and the rock pool known as Cleopatra's Bath. On the way lies El Alamein, where the desert war turned in 1942; the Commonwealth cemetery, the German and Italian memorials and the military museum stand a few kilometres apart beside the road. This is where Egyptians themselves come in summer, and it is also the road to Siwa, which lies about four hours south of Matruh.",
     region: "mediterranean",
     coordinates: { lat: 31.3543, lng: 27.2373 },
     bestSeasons: ["spring", "summer", "autumn"],

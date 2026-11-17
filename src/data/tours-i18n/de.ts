@@ -275,7 +275,7 @@ export const de: TourText[] = [
     summary:
       "Unsere vollständigste Reise: Kairo und Alexandria, eine Nilkreuzfahrt, der Bergtempel Ramses' II. in Abu Simbel und drei Nächte am Roten Meer, um alles sacken zu lassen.",
     overview:
-      "Das ist die Reise für alle, die einmal kommen und es ganz sehen wollen. Die ersten zehn Tage gehören der Geschichte: die Pyramiden und das Grand Egyptian Museum, das mittelalterliche und das koptische Kairo, Alexandria am Mittelmeer, dann ein Flug nach Süden zu Abu Simbel — dem Bergtempel Ramses' II. über dem Nassersee —, bevor eine dreitägige Kreuzfahrt Sie von Assuan nach Luxor trägt. Die letzten vier Tage wechseln vollständig die Tonart: nach Luxors Gräbern und Tempeln fliegen Sie nach Scharm el-Scheich, wo die Wüste auf eines der klarsten Gewässer der Erde trifft. Drei Nächte am Roten Meer beschließen die Reise, mit Schnorcheln über den Riffen von Ras Mohammed und nichts im Programm, das sich nicht zugunsten des Pools streichen ließe. Alle Inlandsflüge sind inbegriffen; jeder geführte Tag ist privat.",
+      "Das ist die Reise für alle, die einmal kommen und es ganz sehen wollen. Die ersten zehn Tage gehören der Geschichte: die Pyramiden und das Grand Egyptian Museum, das mittelalterliche und das koptische Kairo, Alexandria am Mittelmeer, dann ein Flug nach Süden zu Abu Simbel — dem Bergtempel Ramses' II. über dem Nassersee —, bevor eine dreitägige Kreuzfahrt Sie von Assuan nach Luxor trägt. Die letzten vier Tage wechseln vollständig die Tonart: nach Luxors Gräbern und Tempeln fliegen Sie nach Scharm el-Scheich, wo die Wüste auf eines der klarsten Gewässer der Erde trifft. Drei Nächte am Roten Meer beschließen die Reise, mit Schnorcheln über den Riffen von Ras Mohammed und nichts im Programm, das sich nicht zugunsten des Pools streichen ließe. Alle Inlandsflüge sind inbegriffen; jeder geführte Tag ist privat. Die Reihenfolge der Tage legen wir fest, sobald Ihre Reisedaten stehen: Ägyptens Inlandsflüge gehen nicht auf jeder Strecke täglich, deshalb planen wir die Tage um die Flüge und die Öffnungszeiten jeder Besichtigung herum.",
     itinerary: [
       {
         title: "Ankunft in Kairo",
@@ -355,7 +355,7 @@ export const de: TourText[] = [
       {
         title: "Flug ans Rote Meer",
         items: [
-          "Vormittags Flug nach Scharm el-Scheich",
+          "Flug nach Scharm el-Scheich — vormittags nonstop, wo an Ihrem Datum ein solcher Flug geht, sonst über Kairo",
           "Check-in; hier endet das Programm mit Absicht",
         ],
       },
@@ -395,7 +395,7 @@ export const de: TourText[] = [
       },
       {
         q: "Lässt sich der Teil am Roten Meer tauschen oder verlängern?",
-        a: "Ohne Weiteres. Manche Gäste tauschen ihn gegen zusätzliche Nächte in Luxor oder gegen Siwa, andere dehnen Scharm auf eine volle Woche aus. Die ersten zehn Tage sind das Rückgrat, der Schluss gehört Ihnen.",
+        a: "Ohne Weiteres. Manche Gäste tauschen ihn gegen zusätzliche Nächte in Luxor, andere dehnen Scharm auf eine volle Woche aus oder fügen mit zusätzlichen Tagen ein Siwa-Kapitel hinzu — Siwa ist eine Tagesfahrt pro Strecke entfernt und passt deshalb nicht in die drei Nächte am Roten Meer. Die ersten zehn Tage sind das Rückgrat, der Schluss gehört Ihnen.",
       },
     ],
   },
@@ -1209,7 +1209,7 @@ export const de: TourText[] = [
     summary:
       "Das Rote Meer mit Absicht — ein privater Bootstag im Ras-Mohammed-Nationalpark, ein Abend in der Sinai-Wüste unter Sternen, und bewusst leer gelassene Zeit.",
     overview:
-      "Scharm el-Scheich liegt an der Spitze der Sinai-Halbinsel, wo Wüstenberge in Wasser abfallen, das so klar ist, dass sich die Riffe von der Oberfläche aus wie Karten lesen. Es ist Ägyptens großes Ausatmen — und genau so behandelt diese Reise es. Zwei Tage sind privat arrangiert: ein Bootstag im Ras-Mohammed-Nationalpark, dessen Korallenwände am Treffpunkt der Golfe von Suez und Akaba zum Besten gehören, was sich auf der Welt schnorcheln lässt, und ein Abend in der Sinai-Wüste mit beduinischem Tee, gegrilltem Abendessen und Sternenhimmel in einer der dunkelsten Nächte, die von einem Resort aus erreichbar sind. Der Rest ist aus Prinzip nicht verplant. Funktioniert als eigenständige Auszeit oder als Schlusskapitel einer längeren Ägypten-Reise — Luxor ist keine Flugstunde entfernt.",
+      "Scharm el-Scheich liegt an der Spitze der Sinai-Halbinsel, wo Wüstenberge in Wasser abfallen, das so klar ist, dass sich die Riffe von der Oberfläche aus wie Karten lesen. Es ist Ägyptens großes Ausatmen — und genau so behandelt diese Reise es. Zwei Tage sind privat arrangiert: ein Bootstag im Ras-Mohammed-Nationalpark, dessen Korallenwände am Treffpunkt der Golfe von Suez und Akaba zum Besten gehören, was sich auf der Welt schnorcheln lässt, und ein Abend in der Sinai-Wüste mit beduinischem Tee, gegrilltem Abendessen und Sternenhimmel in einer der dunkelsten Nächte, die von einem Resort aus erreichbar sind. Der Rest ist aus Prinzip nicht verplant. Funktioniert als eigenständige Auszeit oder als Schlusskapitel einer längeren Ägypten-Reise — Luxor ist etwa eine Flugstunde entfernt. Der Nonstop-Flug geht nicht täglich, deshalb legen wir die Reihenfolge Ihrer Tage um die Flüge an Ihren Terminen herum fest.",
     itinerary: [
       {
         title: "Ankunft am Roten Meer",
@@ -1259,7 +1259,7 @@ export const de: TourText[] = [
       },
       {
         q: "Lässt sich das mit den Nil-Reisen verbinden?",
-        a: "Hervorragend — so nutzen es die meisten Gäste. Luxor–Scharm ist ein Kurzflug, und vier Tage am Roten Meer nach einer Woche Tempel sind die am besten sortierte Fassung von Ägypten, die wir kennen.",
+        a: "Hervorragend — so nutzen es die meisten Gäste. Luxor–Scharm sind etwa eine Flugstunde, aber der Nonstop-Flug geht nicht täglich: Wir legen die Reihenfolge Ihrer Tage um die Flüge an Ihren Terminen herum fest, und an den übrigen Tagen führt die Route über Kairo. Vier Tage am Roten Meer nach einer Woche Tempel sind die am besten sortierte Fassung von Ägypten, die wir kennen.",
       },
     ],
   },

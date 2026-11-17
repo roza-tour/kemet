@@ -150,6 +150,43 @@ export function breadcrumb(items: BreadcrumbItem[]): JsonLd {
 }
 
 /**
+ * Structured data for a programme page (data/programmes.ts): a TouristTrip with
+ * its day-by-day ItemList, the FAQ, and the trail. NO Offer — a programme has no
+ * published price, and an Offer with a made-up one would be worse than none.
+ */
+export function programmeSchema(p: {
+  title: string; standfirst: string; url: string; image: string;
+  days: Array<{ label: string; title: string }>;
+  faqs: Array<{ q: string; a: string }>;
+  trail: BreadcrumbItem[];
+}): JsonLd[] {
+  return [
+    {
+      "@context": SCHEMA_CONTEXT,
+      "@type": "TouristTrip",
+      name: p.title,
+      description: p.standfirst,
+      url: p.url,
+      image: p.image,
+      inLanguage: "en",
+      touristType: "Luxury travellers",
+      provider: orgRef(),
+      itinerary: {
+        "@type": "ItemList",
+        numberOfItems: p.days.length,
+        itemListElement: p.days.map((d, i) => ({ "@type": "ListItem", position: i + 1, name: `${d.label}: ${d.title}` })),
+      },
+    },
+    {
+      "@context": SCHEMA_CONTEXT,
+      "@type": "FAQPage",
+      mainEntity: p.faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+    },
+    breadcrumb(p.trail),
+  ];
+}
+
+/**
  * Full structured-data set for a tour detail page:
  * TouristTrip (+ ItemList itinerary) · Offer · FAQPage · BreadcrumbList.
  */

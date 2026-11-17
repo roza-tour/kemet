@@ -29,6 +29,7 @@
 // synonyms a visitor is likely to type ("pyramids" for Giza, "red sea" for
 // Hurghada). Matching happens against it as well as the title.
 // ---------------------------------------------------------------------------
+import { programmes, programmeRoute } from "@/data/programmes";
 import type { APIRoute } from "astro";
 import { tours } from "@/data/tours";
 import { destinations } from "@/data/destinations";
@@ -101,6 +102,7 @@ export const GET: APIRoute = () => {
     ["culture.html", "Culture", "Culture", "The gods, hieroglyphs and living crafts behind the monuments."],
     ["cuisine.html", "Cuisine", "Cuisine", "Koshari, molokhia, kunafa — what to eat in Egypt and where."],
     ["egyptian-incense-stones-cotton.html", "Incense, oils, stones & cotton", "Egypt", "Myrrh, luban dakar, oud; jasmine, black seed and massage oils; turquoise, lapis, carnelian; Egyptian cotton and linen — on your journey or sent home."],
+    ["programmes.html", "Programmes beyond the Nile", "Programmes", "Nine private programmes — Siwa, Red Sea islands, Sinai, the White Desert, Marsa Alam, Aswan — priced on request."],
     ["oberoi-zahra-nile-cruise.html", "The Oberoi Zahra", "Nile cruise", "A luxury Nile cruiser between Luxor and Aswan — 28 river-view cabins and suites, 3, 4 or 7 nights — booked on request."],
     ["design-your-journey.html", "Design your journey on the map", "Planning", "Tap the places you want to see across Egypt, set the nights, and send us the route for a private itinerary and a price."],
     ["plan.html", "Plan your journey", "Planning", "Five questions that narrow the catalogue to the right journey for you."],
@@ -120,6 +122,15 @@ export const GET: APIRoute = () => {
     ["terms.html", "Terms of use", "Practical", "The terms behind the site and our quotes."],
   ];
   for (const [u, t, s, d] of staticPages) docs.push({ u, t, s, d, k: terms(t, d) });
+
+  // --- Programmes (data/programmes.ts) — no price in the record, by design ---
+  for (const p of programmes) {
+    docs.push({
+      u: programmeRoute(p), t: p.title, s: "Programme", d: clean(p.standfirst),
+      m: `${p.length} · priced on request`,
+      k: terms(p.title, p.standfirst, p.keywords, p.days.map((d) => d.title), "programme private extension siwa red sea sinai desert islands"),
+    });
+  }
 
   // --- Catalogue ------------------------------------------------------------
   for (const x of tours) {

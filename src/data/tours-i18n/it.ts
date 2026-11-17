@@ -169,7 +169,7 @@ export const it: TourText[] = [
     durationLabel: "14 giorni / 13 notti",
     startPoint: "Il Cairo (aeroporto o hotel)",
     summary: "Il nostro viaggio più completo: Il Cairo e Alessandria, una crociera sul Nilo, il tempio di montagna di Ramesse II ad Abu Simbel e tre notti sul Mar Rosso per lasciar sedimentare tutto.",
-    overview: "È l'itinerario di chi conta di venire una volta e vedere tutto. I primi dieci giorni appartengono alla storia: le piramidi e il Grand Egyptian Museum, il Cairo medievale e quello copto, Alessandria sul Mediterraneo, poi un volo a sud per Abu Simbel — il tempio di montagna di Ramesse II sopra il lago Nasser — prima che una crociera di tre notti vi porti da Assuan a Luxor. Gli ultimi quattro giorni cambiano registro del tutto: dopo le tombe e i templi di Luxor si vola a Sharm el-Sheikh, dove il deserto incontra una delle acque più limpide del pianeta. Tre notti sul Mar Rosso chiudono il viaggio, con lo snorkeling sulle barriere di Ras Mohammed e nulla in programma che non possa essere annullato in favore della piscina. Tutti i voli interni sono inclusi; ogni giornata guidata è privata.",
+    overview: "È l'itinerario di chi conta di venire una volta e vedere tutto. I primi dieci giorni appartengono alla storia: le piramidi e il Grand Egyptian Museum, il Cairo medievale e quello copto, Alessandria sul Mediterraneo, poi un volo a sud per Abu Simbel — il tempio di montagna di Ramesse II sopra il lago Nasser — prima che una crociera di tre notti vi porti da Assuan a Luxor. Gli ultimi quattro giorni cambiano registro del tutto: dopo le tombe e i templi di Luxor si vola a Sharm el-Sheikh, dove il deserto incontra una delle acque più limpide del pianeta. Tre notti sul Mar Rosso chiudono il viaggio, con lo snorkeling sulle barriere di Ras Mohammed e nulla in programma che non possa essere annullato in favore della piscina. Tutti i voli interni sono inclusi; ogni giornata guidata è privata. L'ordine dei giorni si stabilisce una volta fissate le vostre date: i voli interni egiziani non operano ogni giorno su ogni tratta, perciò organizziamo le giornate intorno ai voli e agli orari di apertura di ogni visita.",
     itinerary: [
       { title: "Arrivo al Cairo", items: [
         "Accoglienza privata in aeroporto e trasferimento in hotel",
@@ -217,7 +217,7 @@ export const it: TourText[] = [
         "Sbarco verso il vostro hotel di Luxor",
       ]},
       { title: "Volo sul Mar Rosso", items: [
-        "Volo mattutino per Sharm el-Sheikh",
+        "Volo per Sharm el-Sheikh — il diretto del mattino dove ce n'è uno nella vostra data, altrimenti passando dal Cairo",
         "Check-in; il programma finisce qui, di proposito",
       ]},
       { title: "Le barriere di Ras Mohammed", items: [
@@ -238,7 +238,7 @@ export const it: TourText[] = [
     faqs: [
       { q: "Quattordici giorni sono troppi per un primo viaggio?", a: "È la durata che serve all'Egitto per essere visto per intero, non solo assaggiato. Sono proprio le giornate sul Mar Rosso a rendere sostenibile la settimana di storia: il viaggio respira invece di accumulare stanchezza." },
       { q: "Quanto si vola in questo viaggio?", a: "Tre voli interni di circa un'ora ciascuno, che sostituiscono quelle che sarebbero dodici ore di strada o di treno. Due lunghi tragitti restano su strada: l'escursione ad Alessandria e Assuan–Abu Simbel andata e ritorno — il secondo fa parte dell'esperienza: deserto aperto all'alba." },
-      { q: "Si può scambiare o prolungare la parte sul Mar Rosso?", a: "Liberamente. Alcuni la scambiano con notti in più a Luxor o con Siwa, altri allungano Sharm a una settimana intera. I primi dieci giorni sono la spina dorsale; il finale è vostro." },
+      { q: "Si può scambiare o prolungare la parte sul Mar Rosso?", a: "Liberamente. Alcuni la scambiano con notti in più a Luxor, altri allungano Sharm a una settimana intera o aggiungono un capitolo a Siwa con giorni extra — Siwa dista un giorno di strada per tratta, quindi non sta dentro le tre notti sul Mar Rosso. I primi dieci giorni sono la spina dorsale; il finale è vostro." },
     ],
   },
 
@@ -736,7 +736,7 @@ export const it: TourText[] = [
     durationLabel: "5 giorni / 4 notti",
     startPoint: "Sharm el-Sheikh (aeroporto o hotel)",
     summary: "Il Mar Rosso con un'idea precisa — una giornata in barca privata a Ras Mohammed, una serata nel deserto del Sinai sotto le stelle e spazi lasciati vuoti di proposito.",
-    overview: "Sharm el-Sheikh sta sulla punta della penisola del Sinai, dove le montagne del deserto scendono in un'acqua così limpida che le barriere si leggono dalla superficie come una mappa. È il grande respiro dell'Egitto — ed è esattamente così che questo itinerario la tratta. Due giornate cardine sono organizzate in privato: una giornata in barca nel parco nazionale di Ras Mohammed, le cui pareti di corallo all'incontro tra i golfi di Suez e Aqaba sono tra i migliori luoghi di snorkeling del mondo, e una serata nel deserto del Sinai con tè beduino, cena alla griglia e astronomia in uno dei cieli più scuri raggiungibili da un resort. Il resto è senza programma, per scelta. Funziona come fuga a sé stante o come capitolo finale di un viaggio egiziano più lungo — Luxor è a meno di un'ora di volo.",
+    overview: "Sharm el-Sheikh sta sulla punta della penisola del Sinai, dove le montagne del deserto scendono in un'acqua così limpida che le barriere si leggono dalla superficie come una mappa. È il grande respiro dell'Egitto — ed è esattamente così che questo itinerario la tratta. Due giornate cardine sono organizzate in privato: una giornata in barca nel parco nazionale di Ras Mohammed, le cui pareti di corallo all'incontro tra i golfi di Suez e Aqaba sono tra i migliori luoghi di snorkeling del mondo, e una serata nel deserto del Sinai con tè beduino, cena alla griglia e astronomia in uno dei cieli più scuri raggiungibili da un resort. Il resto è senza programma, per scelta. Funziona come fuga a sé stante o come capitolo finale di un viaggio egiziano più lungo — Luxor è a circa un'ora di volo. Il diretto non opera ogni giorno, perciò l'ordine delle vostre giornate si stabilisce intorno ai voli nelle vostre date.",
     itinerary: [
       { title: "Arrivo sul Mar Rosso", items: [
         "Accoglienza privata in aeroporto e check-in in resort",
@@ -763,7 +763,7 @@ export const it: TourText[] = [
     faqs: [
       { q: "Quando il mare è abbastanza caldo?", a: "Praticamente sempre. L'acqua va dai 21 °C d'inverno ai 28 °C di fine estate; lo snorkeling si fa tutto l'anno, e anche gennaio è comodo con una muta corta, che la barca mette a disposizione." },
       { q: "Devo saper fare immersioni?", a: "No. Le barriere di Ras Mohammed salgono abbastanza vicino alla superficie perché lo snorkeling mostri quasi tutto lo spettacolo. Se volete provare l'immersione, organizziamo un battesimo del mare autorizzato sulla barriera del vostro resort." },
-      { q: "Si abbina agli itinerari sul Nilo?", a: "Perfettamente — ed è così che la maggior parte dei nostri ospiti lo usa. Luxor–Sharm è un volo breve, e quattro giorni di Mar Rosso dopo una settimana di templi sono la versione dell'Egitto meglio ordinata che conosciamo." },
+      { q: "Si abbina agli itinerari sul Nilo?", a: "Perfettamente — ed è così che la maggior parte dei nostri ospiti lo usa. Luxor–Sharm è circa un'ora in aria, ma il diretto non opera ogni giorno: stabiliamo l'ordine delle vostre giornate intorno ai voli nelle vostre date, e negli altri giorni il percorso passa dal Cairo. Quattro giorni di Mar Rosso dopo una settimana di templi sono la versione dell'Egitto meglio ordinata che conosciamo." },
     ],
   },
   {

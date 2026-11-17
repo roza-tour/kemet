@@ -47,6 +47,9 @@ export const primaryNav: NavItem[] = [
       // A ship booked on request, not a catalogue journey — so it sits with
       // the two pages that are arranged rather than chosen.
       { label: "The Oberoi Zahra", href: "oberoi-zahra-nile-cruise.html" },
+      // Nine programmes beyond the Nile — Siwa, the islands, Sinai, the deserts —
+      // each priced on request.
+      { label: "Programmes", href: "programmes.html" },
       { label: "All journeys", href: "tours.html" },
       { label: "Design your journey", href: "design-your-journey.html" },
       { label: "By occasion", href: "occasions.html" },

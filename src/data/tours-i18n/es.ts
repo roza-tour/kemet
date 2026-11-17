@@ -179,7 +179,7 @@ export const es: TourText[] = [
     durationLabel: "14 días / 13 noches",
     startPoint: "El Cairo (aeropuerto u hotel)",
     summary: "Nuestro viaje más completo: El Cairo y Alejandría, un crucero por el Nilo, el templo de Ramsés II excavado en la montaña de Abu Simbel y tres noches en el mar Rojo para asimilarlo todo.",
-    overview: "Es el itinerario para quienes piensan venir una sola vez y verlo entero. Los diez primeros días pertenecen a la historia: las Pirámides y el Gran Museo Egipcio, los barrios medieval y copto de El Cairo, Alejandría junto al Mediterráneo y luego un vuelo al sur para ver Abu Simbel —el templo de Ramsés II excavado en la montaña, sobre el lago Nasser— antes de bajar el Nilo de Asuán a Luxor en un crucero de tres noches. Los cuatro últimos días cambian por completo de tono: tras las tumbas y los templos de Luxor, vuela a Sharm el-Sheikh, donde el desierto se encuentra con algunas de las aguas más transparentes del planeta. Tres noches en el mar Rojo cierran el viaje con esnórquel sobre los arrecifes de Ras Mohammed y nada en el programa que no pueda cancelarse en favor de la piscina. Todos los vuelos internos están incluidos; cada día guiado es privado.",
+    overview: "Es el itinerario para quienes piensan venir una sola vez y verlo entero. Los diez primeros días pertenecen a la historia: las Pirámides y el Gran Museo Egipcio, los barrios medieval y copto de El Cairo, Alejandría junto al Mediterráneo y luego un vuelo al sur para ver Abu Simbel —el templo de Ramsés II excavado en la montaña, sobre el lago Nasser— antes de bajar el Nilo de Asuán a Luxor en un crucero de tres noches. Los cuatro últimos días cambian por completo de tono: tras las tumbas y los templos de Luxor, vuela a Sharm el-Sheikh, donde el desierto se encuentra con algunas de las aguas más transparentes del planeta. Tres noches en el mar Rojo cierran el viaje con esnórquel sobre los arrecifes de Ras Mohammed y nada en el programa que no pueda cancelarse en favor de la piscina. Todos los vuelos internos están incluidos; cada día guiado es privado. El orden de los días se fija una vez confirmadas sus fechas: los vuelos internos de Egipto no operan todos los días en todas las rutas, por lo que organizamos los días en torno a los vuelos y a los horarios de apertura de cada visita.",
     itinerary: [
       {
         title: "Llegada a El Cairo",
@@ -259,7 +259,7 @@ export const es: TourText[] = [
       {
         title: "Vuelo al mar Rojo",
         items: [
-          "Vuelo a Sharm el-Sheikh por la mañana",
+          "Vuelo a Sharm el-Sheikh: el directo de la mañana cuando opera en su fecha; si no, vía El Cairo",
           "Llegada al hotel; el programa termina aquí, a propósito",
         ],
       },
@@ -292,7 +292,7 @@ export const es: TourText[] = [
     faqs: [
       { q: "¿Son demasiados catorce días para una primera visita?", a: "Es lo que Egipto necesita para verse entero y no a pequeñas dosis. Los días de mar Rojo del final son los que hacen llevadera la semana de historia: el viaje respira en lugar de acumular cansancio." },
       { q: "¿Cuánto de este viaje se hace en avión?", a: "Tres vuelos internos, de alrededor de una hora cada uno, que sustituyen lo que de otro modo serían trayectos de doce horas por carretera o en tren. Dos trayectos largos siguen siendo por carretera: la excursión a Alejandría y la ida y vuelta de Asuán a Abu Simbel; el segundo forma parte de la experiencia, porque cruza el desierto abierto al amanecer." },
-      { q: "¿Se puede cambiar o alargar la parte del mar Rojo?", a: "Con total libertad. Algunos viajeros la cambian por más noches en Luxor o por Siwa; otros alargan Sharm hasta una semana entera. Los diez primeros días son la columna vertebral, y el acto final lo define usted." },
+      { q: "¿Se puede cambiar o alargar la parte del mar Rojo?", a: "Con total libertad. Algunos viajeros la cambian por más noches en Luxor; otros alargan Sharm hasta una semana entera o añaden un capítulo en Siwa con días extra: Siwa queda a un día de carretera por trayecto, así que no cabe en las tres noches del mar Rojo. Los diez primeros días son la columna vertebral, y el acto final lo define usted." },
     ],
   },
 
@@ -848,7 +848,7 @@ export const es: TourText[] = [
     durationLabel: "5 días / 4 noches",
     startPoint: "Sharm el-Sheikh (aeropuerto u hotel)",
     summary: "El mar Rojo con intención: un día en barco privado por Ras Mohammed, una velada bajo las estrellas en el desierto del Sinaí y tiempo que se deja libre a propósito.",
-    overview: "Sharm el-Sheikh ocupa el extremo de la península del Sinaí, donde las montañas del desierto se hunden en un agua tan clara que, desde la superficie, los arrecifes se leen como mapas. Es el gran respiro de Egipto, y así lo trata este itinerario. Dos días clave se organizan en privado: una jornada en barco por el Parque Nacional de Ras Mohammed, cuyas paredes de coral, en el punto donde se encuentran los golfos de Suez y Áqaba, figuran entre los mejores lugares del mundo para hacer esnórquel; y una velada en el desierto del Sinaí con té beduino, cena a la brasa y astronomía bajo algunos de los cielos más oscuros a los que se llega desde un resort. El resto queda sin programar, por principio. Funciona como escapada independiente o como capítulo final de un viaje más largo por Egipto: Luxor está a menos de una hora de vuelo.",
+    overview: "Sharm el-Sheikh ocupa el extremo de la península del Sinaí, donde las montañas del desierto se hunden en un agua tan clara que, desde la superficie, los arrecifes se leen como mapas. Es el gran respiro de Egipto, y así lo trata este itinerario. Dos días clave se organizan en privado: una jornada en barco por el Parque Nacional de Ras Mohammed, cuyas paredes de coral, en el punto donde se encuentran los golfos de Suez y Áqaba, figuran entre los mejores lugares del mundo para hacer esnórquel; y una velada en el desierto del Sinaí con té beduino, cena a la brasa y astronomía bajo algunos de los cielos más oscuros a los que se llega desde un resort. El resto queda sin programar, por principio. Funciona como escapada independiente o como capítulo final de un viaje más largo por Egipto: Luxor está a cerca de una hora de vuelo. El vuelo directo no opera todos los días, así que el orden de sus días se fija en función de los vuelos de sus fechas.",
     itinerary: [
       {
         title: "Llegada al mar Rojo",
@@ -890,7 +890,7 @@ export const es: TourText[] = [
     faqs: [
       { q: "¿Cuándo está el mar lo bastante templado?", a: "Prácticamente siempre. El agua va de 21 °C en invierno a 28 °C a finales del verano; el esnórquel se practica todo el año, e incluso en enero se está cómodo con un neopreno corto, que se lleva a bordo." },
       { q: "¿Necesito saber bucear?", a: "No. Los arrecifes de Ras Mohammed llegan tan cerca de la superficie que con esnórquel se ve la mayor parte del espectáculo. Si quiere probar el buceo, organizamos un bautismo homologado en el arrecife de su propio resort." },
-      { q: "¿Se puede combinar con los itinerarios por el Nilo?", a: "Perfectamente: así lo aprovecha la mayoría de nuestros viajeros. Luxor–Sharm es un vuelo corto, y cuatro días de mar Rojo después de una semana de templos es el orden más acertado que conocemos para Egipto." },
+      { q: "¿Se puede combinar con los itinerarios por el Nilo?", a: "Perfectamente: así lo aprovecha la mayoría de nuestros viajeros. Luxor–Sharm son cerca de una hora de vuelo, pero el directo no opera todos los días: fijamos el orden de sus días en función de los vuelos de sus fechas, y los demás días la ruta pasa por El Cairo. Cuatro días de mar Rojo después de una semana de templos es el orden más acertado que conocemos para Egipto." },
     ],
   },
   // ===== Dive the Red Sea =====

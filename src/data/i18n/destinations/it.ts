@@ -393,7 +393,7 @@ export const itDestinations: DestText[] = [
     summary:
       "La capitale dei resort del Sinai, tra le montagne del deserto e il Mar Rosso — porta d'accesso a Ras Mohammed, ai reef di Tiran e alle notti sotto le stelle con i beduini.",
     description:
-      "Sharm el-Sheikh occupa la punta della penisola del Sinai, dove nude montagne rosse precipitano in alcune delle acque più limpide del mondo. Tutto sta in questa geografia: il parco nazionale di Ras Mohammed — regolarmente annoverato tra i migliori siti d'immersione in assoluto — è a venti minuti di barca, lo stretto di Tiran poco più in là, e lungo tutta la costa le pareti coralline sprofondano a pochi metri dalla riva. Naama Bay offre il lato passeggiata e ristoranti; le baie più tranquille a nord e a sud ospitano i resort. E a un'ora nell'entroterra il deserto prende del tutto il sopravvento — campi beduini, camminate nei canyon e alcuni dei cieli notturni più bui e limpidi che una vacanza al mare possa avere a portata di mano.",
+      "Sharm el-Sheikh occupa la punta della penisola del Sinai, dove nude montagne rosse precipitano in alcune delle acque più limpide del mondo. Tutto sta in questa geografia: il parco nazionale di Ras Mohammed — regolarmente annoverato tra i migliori siti d'immersione in assoluto — è a meno di un'ora di barca, lo stretto di Tiran poco più in là, e lungo tutta la costa le pareti coralline sprofondano a pochi metri dalla riva. Naama Bay offre il lato passeggiata e ristoranti; le baie più tranquille a nord e a sud ospitano i resort. E a un'ora nell'entroterra il deserto prende del tutto il sopravvento — campi beduini, camminate nei canyon e alcuni dei cieli notturni più bui e limpidi che una vacanza al mare possa avere a portata di mano.",
     stay: "3–5 giorni",
     climate:
       "Arido e con sole assicurato; mare a 22–28 °C. D'inverno più fresco e ventilato della costa continentale, caldo in piena estate.",
@@ -426,7 +426,7 @@ export const itDestinations: DestText[] = [
       },
       {
         q: "Come si inserisce Sharm in un itinerario in Egitto?",
-        a: "In aereo — dal Cairo a Sharm ci vuole circa un'ora, il che rende pratico un finale di tre o quattro notti nel Sinai dopo Il Cairo e il Nilo. Nel collocare l'ultimo giorno ricordate le 24 ore senza volo dopo l'ultima immersione, e valutate di arrivare o ripartire dall'aeroporto internazionale di Sharm per risparmiarvi uno scalo al Cairo.",
+        a: "In aereo — dal Cairo a Sharm ci vuole circa un'ora, il che rende pratico un finale di tre o quattro notti nel Sinai dopo Il Cairo e il Nilo. Nel collocare l'ultimo giorno ricordate le 24 ore senza volo dopo l'ultima immersione, e valutate di arrivare o ripartire dall'aeroporto internazionale di Sharm per risparmiarvi uno scalo al Cairo. Una precauzione: il timbro d'ingresso gratuito rilasciato all'aeroporto di Sharm vale solo per il Sinai meridionale — se il vostro viaggio prosegue al Cairo, a Luxor o sul Nilo, prendete invece il normale visto egiziano.",
       },
     ],
     photos: [
@@ -580,7 +580,7 @@ export const itDestinations: DestText[] = [
       "Gebel al-Mawta, la Montagna dei Morti, con la tomba dipinta di Si-Amon",
     ],
     thingsToKnow: [
-      "Siwa è lontana: circa tre ore e mezza di auto da Marsa Matruh e un'intera giornata dal Cairo. Un viaggio fin qui si abbina di solito alla costa mediterranea o ad Alessandria.",
+      "Siwa è lontana: circa quattro ore di auto da Marsa Matruh e un'intera giornata dal Cairo. Un viaggio fin qui si abbina di solito alla costa mediterranea o ad Alessandria.",
       "Per il deserto oltre l'oasi servono un 4x4 e un permesso, entrambi predisposti per voi.",
       "Siwa è conservatrice; in paese un abbigliamento sobrio è apprezzato.",
       "I lodge sono piccoli e costruiti nello stile locale; i migliori si riempiono presto nei mesi freschi.",
@@ -588,7 +588,7 @@ export const itDestinations: DestText[] = [
     faqs: [
       {
         q: "Come si arriva a Siwa?",
-        a: "Su strada. Il percorso abituale segue la costa mediterranea fino a Marsa Matruh e poi punta a sud attraverso il deserto, circa tre ore e mezza da Matruh. Dal Cairo è un'intera giornata, ed è per questo che la maggior parte dei viaggi la spezza con una notte ad Alessandria o sulla costa.",
+        a: "Su strada. Il percorso abituale segue la costa mediterranea fino a Marsa Matruh e poi punta a sud attraverso il deserto, circa quattro ore da Matruh. Dal Cairo è un'intera giornata, ed è per questo che la maggior parte dei viaggi la spezza con una notte ad Alessandria o sulla costa.",
       },
       {
         q: "Quante notti servono a Siwa?",

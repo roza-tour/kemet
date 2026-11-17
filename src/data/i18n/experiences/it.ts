@@ -392,7 +392,7 @@ export const itExperiences: ExpText[] = [
       },
     ],
     photos: [
-      { alt: "Una feluca sul Nilo al Cairo, con la Torre del Cairo alle spalle", label: "Cena sul Nilo" },
+      { alt: "La Torre del Cairo e lo skyline sul Nilo, con una feluca sull'acqua — il fiume su cui naviga la crociera con cena", label: "Cena sul Nilo" },
     ],
   },
 
@@ -598,7 +598,7 @@ export const itExperiences: ExpText[] = [
     ],
     prepare: [
       "Portate il brevetto e il logbook — il centro li chiederà, ed è un buon segno",
-      "Non prendete l'aereo nelle 18–24 ore dopo l'immersione; organizziamo il vostro itinerario di conseguenza",
+      "Non prendete l'aereo per almeno 24 ore dopo l'ultima immersione; organizziamo il vostro itinerario di conseguenza",
     ],
     goodToKnow: [
       "L'inverno è ottimo per immergersi — a bordo c'è una muta da 5 mm e i siti sono più tranquilli",
@@ -619,7 +619,7 @@ export const itExperiences: ExpText[] = [
       },
       {
         q: "Come si inserisce in un itinerario sul Nilo?",
-        a: "Senza problemi — da Luxor a Sharm El Sheikh il volo è breve. L'unica regola è l'intervallo senza voli dopo l'immersione, perciò programmiamo i giorni di immersione almeno un giorno intero prima di qualsiasi volo.",
+        a: "Senza problemi — da Luxor a Sharm El Sheikh il volo dura circa un'ora, anche se il diretto non opera ogni giorno. L'unica regola è l'intervallo senza voli dopo l'immersione, perciò programmiamo i giorni di immersione almeno un giorno intero prima di qualsiasi volo.",
       },
     ],
     photos: [
@@ -657,7 +657,7 @@ export const itExperiences: ExpText[] = [
       { label: "Tipo di gruppo", value: "Privato — solo il vostro gruppo" },
       { label: "Cielo migliore", value: "Intorno alla luna nuova" },
       { label: "Terreno", value: "Facile — tappeti e sedute basse al campo" },
-      { label: "Temperatura", value: "Le notti nel deserto si raffreddano di colpo — strati forniti" },
+      { label: "Temperatura", value: "Le notti nel deserto si raffreddano di colpo — portate uno strato caldo" },
     ],
     included: [
       "Trasferimenti privati in 4x4 dal vostro hotel di Sharm",
@@ -1155,7 +1155,7 @@ export const itExperiences: ExpText[] = [
     excluded: [],
     prepare: [],
     goodToKnow: [
-      "Gli operatori fissano limiti di peso a entrambe le estremità — troppo leggeri e non si vola, troppo pesanti e si vola in tandem; confermate in anticipo",
+      "Gli operatori fissano limiti di peso per i voli singoli e per quelli in tandem; confermate in anticipo",
       "Non adatto in gravidanza o con problemi cardiaci, alla schiena o alle spalle",
       "Il vento decide tutto: i voli vengono annullati o spostati alla mattina seguente se si alza",
       "Fissate o lasciate a terra cappelli, occhiali e telefoni — ciò che cade è perso",
@@ -1182,7 +1182,7 @@ export const itExperiences: ExpText[] = [
       },
       {
         q: "Si può fare parasailing in due?",
-        a: "Sì — i voli in tandem sono la norma e sono spesso la scelta predefinita per gli ospiti più pesanti. Le coppie di solito li preferiscono, e gli operatori indicano la fascia di peso per il volo singolo o in tandem quando il volo viene organizzato.",
+        a: "Sì — i voli in tandem sono la norma. Le coppie di solito li preferiscono, e gli operatori indicano la fascia di peso per il volo singolo o in tandem quando il volo viene organizzato.",
       },
     ],
     photos: [
@@ -1205,7 +1205,7 @@ export const itExperiences: ExpText[] = [
       "Un breve giro in cammello lungo il margine del deserto di Giza fino al punto panoramico — l'approccio classico, organizzato perché nessuno debba contrattare.",
     description:
       "Il giro in cammello a Giza ha una cattiva fama, in buona parte meritata: la piana è uno dei luoghi dell'Egitto più insistenti per i procacciatori, e un giro non organizzato può trasformarsi in una trattativa a metà strada sulla sabbia. Organizzato come si deve, è tutt'altra cosa. Un breve giro lungo il margine del deserto vi porta al punto panoramico in cui le tre piramidi si allineano, su un percorso più tranquillo della strada e usato per avvicinarsi a Giza da sempre, da quando c'è chi viene qui. Venti o trenta minuti bastano davvero — abbastanza per la vista e le fotografie, abbastanza pochi per restare comodi.",
-    duration: "20–40 minuti in sella, all'interno di una mezza giornata o di una giornata intera a Giza",
+    duration: "20–30 minuti in sella, all'interno di una mezza giornata o di una giornata intera a Giza",
     where: "Giza",
     bestTime:
       "Al primo mattino o nel tardo pomeriggio. In estate evitate del tutto il mezzogiorno.",
@@ -1388,7 +1388,7 @@ export const itExperiences: ExpText[] = [
       },
     ],
     photos: [
-      { alt: "Ospiti in quad tra le dune del deserto vicino alle piramidi di Giza", label: "Quad" },
+      { alt: "Una fila di quad rossi che attraversano il deserto aperto, con i guidatori in sciarpa e occhiali da sole", label: "Quad" },
     ],
   },
 ];

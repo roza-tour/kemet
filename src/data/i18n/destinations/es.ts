@@ -355,7 +355,7 @@ export const esDestinations: DestText[] = [
     keywords: "sharm el sheikh, qué ver en sharm el sheikh, ras mohammed, buceo en sharm el sheikh, esnórquel en el mar rojo, sinaí egipto",
     name: "Sharm el-Sheikh",
     summary: "La capital de los resorts del Sinaí, entre montañas desérticas y el mar Rojo: puerta de entrada a Ras Mohammed, los arrecifes de Tirán y las noches beduinas de observación de estrellas.",
-    description: "Sharm el-Sheikh ocupa la punta de la península del Sinaí, donde unas montañas rojas y desnudas caen directamente sobre algunas de las aguas más transparentes del mundo. Esa geografía lo explica todo: el Parque Nacional de Ras Mohammed —clasificado habitualmente entre los mejores puntos de buceo del planeta— está a veinte minutos en barco, el estrecho de Tirán un poco más lejos, y a lo largo de toda la costa las paredes de arrecife se desploman a pocos metros de la orilla. La bahía de Naama pone el paseo marítimo y los restaurantes; las bahías más tranquilas, al norte y al sur, acogen los resorts. Y a una hora tierra adentro, el desierto se impone por completo: campamentos beduinos, caminatas por cañones y algunos de los cielos nocturnos más oscuros y limpios al alcance de unas vacaciones de playa.",
+    description: "Sharm el-Sheikh ocupa la punta de la península del Sinaí, donde unas montañas rojas y desnudas caen directamente sobre algunas de las aguas más transparentes del mundo. Esa geografía lo explica todo: el Parque Nacional de Ras Mohammed —clasificado habitualmente entre los mejores puntos de buceo del planeta— está a menos de una hora en barco, el estrecho de Tirán un poco más lejos, y a lo largo de toda la costa las paredes de arrecife se desploman a pocos metros de la orilla. La bahía de Naama pone el paseo marítimo y los restaurantes; las bahías más tranquilas, al norte y al sur, acogen los resorts. Y a una hora tierra adentro, el desierto se impone por completo: campamentos beduinos, caminatas por cañones y algunos de los cielos nocturnos más oscuros y limpios al alcance de unas vacaciones de playa.",
     stay: "3–5 días",
     climate: "Árido y de sol seguro; mar a 22–28 °C. Más fresco y ventoso que la costa continental en invierno, caluroso en pleno verano.",
     whyVisit: [
@@ -387,7 +387,7 @@ export const esDestinations: DestText[] = [
       },
       {
         q: "¿Cómo encaja Sharm en un itinerario por Egipto?",
-        a: "En avión: de El Cairo a Sharm hay alrededor de una hora, lo que hace viable un final de tres o cuatro noches en el Sinaí después de El Cairo y el Nilo. Al situar el último día, recuerde el margen de 24 horas sin volar tras la última inmersión, y valore llegar o salir por el aeropuerto internacional de Sharm para ahorrarse una escala en El Cairo.",
+        a: "En avión: de El Cairo a Sharm hay alrededor de una hora, lo que hace viable un final de tres o cuatro noches en el Sinaí después de El Cairo y el Nilo. Al situar el último día, recuerde el margen de 24 horas sin volar tras la última inmersión, y valore llegar o salir por el aeropuerto internacional de Sharm para ahorrarse una escala en El Cairo. Una advertencia: el sello de entrada gratuito que se expide en el aeropuerto de Sharm cubre únicamente el Sinaí Sur; si su viaje continúa hacia El Cairo, Luxor o el Nilo, tramite en su lugar el visado egipcio estándar.",
       },
     ],
     photos: [
@@ -524,7 +524,7 @@ export const esDestinations: DestText[] = [
       "Gebel al-Mawta, la Montaña de los Muertos, con su tumba pintada de Si-Amón",
     ],
     thingsToKnow: [
-      "Siwa está lejos: a unas tres horas y media en coche de Marsa Matruh y a un día entero de El Cairo. El viaje hasta aquí suele combinarse con la costa mediterránea o con Alejandría.",
+      "Siwa está lejos: a unas cuatro horas en coche de Marsa Matruh y a un día entero de El Cairo. El viaje hasta aquí suele combinarse con la costa mediterránea o con Alejandría.",
       "El desierto más allá del oasis requiere un 4x4 y un permiso, y ambos se gestionan por usted.",
       "Siwa es conservadora; en la población se agradece una vestimenta recatada.",
       "Los alojamientos son pequeños y están construidos al estilo local; los mejores se llenan pronto en los meses frescos.",
@@ -532,7 +532,7 @@ export const esDestinations: DestText[] = [
     faqs: [
       {
         q: "¿Cómo se llega a Siwa?",
-        a: "Por carretera. Lo habitual es seguir la costa mediterránea hasta Marsa Matruh y después ir hacia el sur a través del desierto, unas tres horas y media desde Matruh. Desde El Cairo es un día entero, y por eso la mayoría de los viajes lo dividen con una noche en Alejandría o en la costa.",
+        a: "Por carretera. Lo habitual es seguir la costa mediterránea hasta Marsa Matruh y después ir hacia el sur a través del desierto, unas cuatro horas desde Matruh. Desde El Cairo es un día entero, y por eso la mayoría de los viajes lo dividen con una noche en Alejandría o en la costa.",
       },
       {
         q: "¿Cuántas noches necesita Siwa?",
@@ -558,7 +558,7 @@ export const esDestinations: DestText[] = [
     keywords: "marsa matruh, costa norte de egipto, playas de egipto en el mediterráneo, el alamein, playa de agiba, baño de cleopatra",
     name: "Marsa Matruh y la Costa Norte",
     summary: "La orilla mediterránea de Egipto al oeste de Alejandría: arena blanca, calas turquesas y los memoriales del campo de batalla de El Alamein.",
-    description: "Al oeste de Alejandría, la costa mediterránea se extiende a lo largo de cientos de kilómetros de arena clara y de un agua de un color que nadie espera de Egipto. Marsa Matruh, a unas tres horas siguiendo la costa, se asienta en una bahía resguardada, con sus mejores playas a poca distancia en coche: Agiba, una cala bajo acantilados de caliza, y la poza de roca conocida como el Baño de Cleopatra. De camino queda El Alamein, donde la guerra del desierto dio un vuelco en 1942; el cementerio de la Commonwealth, los memoriales alemán e italiano y el museo militar se encuentran a pocos kilómetros unos de otros, junto a la carretera. Aquí es donde veranean los propios egipcios, y es también la ruta hacia Siwa, que queda a unas tres horas y media al sur de Matruh.",
+    description: "Al oeste de Alejandría, la costa mediterránea se extiende a lo largo de cientos de kilómetros de arena clara y de un agua de un color que nadie espera de Egipto. Marsa Matruh, a unas tres horas siguiendo la costa, se asienta en una bahía resguardada, con sus mejores playas a poca distancia en coche: Agiba, una cala bajo acantilados de caliza, y la poza de roca conocida como el Baño de Cleopatra. De camino queda El Alamein, donde la guerra del desierto dio un vuelco en 1942; el cementerio de la Commonwealth, los memoriales alemán e italiano y el museo militar se encuentran a pocos kilómetros unos de otros, junto a la carretera. Aquí es donde veranean los propios egipcios, y es también la ruta hacia Siwa, que queda a unas cuatro horas al sur de Matruh.",
     stay: "2–3 noches",
     climate: "Mediterráneo: veranos cálidos y con brisa, mucho más suaves que en el valle del Nilo; inviernos frescos y a veces lluviosos, cuando buena parte de la costa está cerrada.",
     whyVisit: [

@@ -46,6 +46,7 @@ import { TRANSLATED_TOURS } from "@/config/tour-i18n";
 import { marketDirectory, marketRegions } from "@/utils/marketsDirectory";
 import { incenses, oils, stones, sacredFaqs, sacredBrief } from "@/data/sacred";
 import { ZAHRA_ANSWER, zahraRooms, zahraSailings, zahraFaqs, zahraDisclosure } from "@/data/zahra";
+import { programmes, programmeRoute, PROGRAMME_HUB, ORDER_NOTE } from "@/data/programmes";
 
 const u = (path: string) => `${SITE_URL}/${path}`;
 const clean = (s: string) => s.replace(/\s+/g, " ").trim();
@@ -212,6 +213,19 @@ export const GET: APIRoute = () => {
   for (const f of zahraFaqs) L.push(`- **${clean(f.q)}** ${clean(f.a)}`);
   L.push("");
   p(zahraDisclosure);
+
+  // Programmes beyond the Nile (data/programmes.ts). No price: each is quoted for the dates.
+  h(2, "Programmes beyond the Nile — private, priced on request");
+  p(`${PROGRAMME_HUB.text} ${ORDER_NOTE} ${u("programmes.html")}`);
+  for (const pr of programmes) {
+    h(3, pr.title);
+    p(`${pr.length}. ${pr.route}. Best months: ${pr.bestMonths}. ${pr.standfirst} ${u(programmeRoute(pr))}`);
+    for (const d of pr.days) L.push(`- **${clean(d.label)} — ${clean(d.title)}.** ${clean(d.text)}`);
+    L.push("");
+    p(`What sets the order: ${pr.fixed}`);
+    for (const f of pr.faqs) L.push(`- **${clean(f.q)}** ${clean(f.a)}`);
+    L.push("");
+  }
 
   // The Sacred Senses page: what it offers and who it is for (data/sacred.ts).
   h(2, sacredBrief.title);

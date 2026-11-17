@@ -7,6 +7,7 @@ import TourCard from "@/components/TourCard.astro";
 import Frieze from "@/components/Frieze.astro";
 import CustomTrip from "@/components/conversion/CustomTrip.astro";
 import { multidayTours, dayTours, tours } from "@/data/tours";
+import { programmes, programmeRoute } from "@/data/programmes";
 import { breadcrumb, collectionSchema } from "@/schemas/jsonld";
 
 const jsonld = [
@@ -61,6 +62,27 @@ const jsonld = [
       <div class="grid-3 grid-all">
         {dayTours.map((tour) => <TourCard tour={tour} />)}
       </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <SectionHeader sym="journeys"
+        eyebrow="Beyond the Nile"
+        title="Programmes, priced on request"
+        text="Siwa, the Red Sea islands, Sinai, the White Desert, Marsa Alam, a slower Aswan — nine programmes planned around your dates."
+      />
+      <div class="grid-3 grid-all">
+        {programmes.slice(0, 3).map((p) => (
+          <a class="tease reveal" href={programmeRoute(p)} data-tilt>
+            <div class="eyebrow" style="margin-bottom:var(--s-1)">{p.length} · priced on request</div>
+            <h3>{p.title}</h3>
+            <p>{p.standfirst}</p>
+            <span class="more">See the plan <b>→</b></span>
+          </a>
+        ))}
+      </div>
+      <p style="margin-top:var(--s-4)"><a class="btn btn-ghost" href="programmes.html">All nine programmes</a></p>
     </div>
   </section>
 

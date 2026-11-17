@@ -374,7 +374,7 @@ export const deExperiences: ExpText[] = [
       },
     ],
     photos: [
-      { alt: "Eine Feluke auf dem Nil in Kairo, dahinter der Kairo-Turm", label: "Nil-Dinnerfahrt" },
+      { alt: "Der Kairo-Turm und die Skyline am Nil, mit einer Feluke auf dem Wasser — der Fluss, auf dem die Dinnerfahrt unterwegs ist", label: "Nil-Dinnerfahrt" },
     ],
   },
 
@@ -651,7 +651,7 @@ export const deExperiences: ExpText[] = [
     ],
     prepare: [
       "Bringen Sie Ihre Tauchzertifikatskarte und Ihr Logbuch mit — das Zentrum wird danach fragen, was ein gutes Zeichen ist",
-      "Fliegen Sie nicht innerhalb von 18–24 Stunden nach dem Tauchen; wir legen Ihren Reiseplan entsprechend",
+      "Fliegen Sie frühestens 24 Stunden nach Ihrem letzten Tauchgang; wir legen Ihren Reiseplan entsprechend",
     ],
     goodToKnow: [
       "Tauchen im Winter ist ausgezeichnet — ein 5-mm-Anzug wird an Bord mitgeführt, und die Plätze sind ruhiger",
@@ -669,7 +669,7 @@ export const deExperiences: ExpText[] = [
       },
       {
         q: "Wie fügt sich das in eine Nilreise ein?",
-        a: "Reibungslos — von Luxor nach Scharm el-Scheich ist es ein kurzer Flug. Die einzige Regel ist die Flugpause nach dem Tauchen, daher legen wir Tauchtage mindestens einen vollen Tag vor einen Flug.",
+        a: "Reibungslos — von Luxor nach Scharm el-Scheich sind es etwa eine Flugstunde, auch wenn der Nonstop-Flug nicht täglich geht. Die einzige Regel ist die Flugpause nach dem Tauchen, daher legen wir Tauchtage mindestens einen vollen Tag vor einen Flug.",
       },
     ],
     photos: [
@@ -707,7 +707,7 @@ export const deExperiences: ExpText[] = [
       { label: "Gruppenart", value: "Privat — nur Ihre Reisegruppe" },
       { label: "Bester Himmel", value: "Um Neumond" },
       { label: "Gelände", value: "Leicht — Teppiche und niedrige Sitzgelegenheiten im Camp" },
-      { label: "Temperatur", value: "Wüstennächte kühlen stark ab — Wärmeschichten werden gestellt" },
+      { label: "Temperatur", value: "Wüstennächte kühlen stark ab — bringen Sie eine warme Schicht mit" },
     ],
     included: [
       "Private 4x4-Transfers ab Ihrem Hotel in Scharm",
@@ -1187,7 +1187,7 @@ export const deExperiences: ExpText[] = [
     excluded: [],
     prepare: [],
     goodToKnow: [
-      "Die Anbieter setzen Gewichtsgrenzen nach oben und unten — zu leicht, und Sie heben nicht ab; zu schwer, und Sie fliegen im Tandem; klären Sie das vorab",
+      "Die Anbieter setzen Gewichtsgrenzen für Einzel- und für Tandemflüge; klären Sie das vorab",
       "Nicht geeignet in der Schwangerschaft oder bei Herz-, Rücken- oder Schulterleiden",
       "Der Wind entscheidet alles: Flüge werden abgesagt oder auf den folgenden Morgen verschoben, wenn er auffrischt",
       "Sichern Sie Hüte, Brillen und Handys oder lassen Sie sie zurück — was herunterfällt, ist verloren",
@@ -1214,7 +1214,7 @@ export const deExperiences: ExpText[] = [
       },
       {
         q: "Können zwei Personen gemeinsam parasailen?",
-        a: "Ja — Tandemflüge sind üblich und oft die Regel für schwerere Gäste. Paare bevorzugen sie meist, und die Anbieter beraten zum Gewichtsbereich für Einzel- und Tandemflug, wenn der Flug organisiert wird.",
+        a: "Ja — Tandemflüge sind üblich. Paare bevorzugen sie meist, und die Anbieter beraten zum Gewichtsbereich für Einzel- und Tandemflug, wenn der Flug organisiert wird.",
       },
     ],
     photos: [
@@ -1237,7 +1237,7 @@ export const deExperiences: ExpText[] = [
       "Ein kurzer Kamelritt am Wüstenrand von Gizeh zum Panorama-Aussichtspunkt — der klassische Zugang, so organisiert, dass niemand feilschen muss.",
     description:
       "Der Kamelritt in Gizeh hat einen Ruf, und er ist weitgehend verdient: Das Plateau gehört zu den hartnäckigeren Orten Ägyptens, was aufdringliche Anbieter betrifft, und ein nicht arrangierter Ritt kann mitten im Sand zu einer Verhandlung werden. Richtig organisiert ist er etwas ganz anderes. Ein kurzer Ritt am Wüstenrand bringt Sie zum Panorama-Aussichtspunkt, an dem sich alle drei Pyramiden aufreihen, auf einer Route, die ruhiger ist als die Straße und seit jeher für die Annäherung an Gizeh genutzt wird. Zwanzig bis dreißig Minuten genügen wirklich — lang genug für den Ausblick und die Fotos, kurz genug, um bequem zu bleiben.",
-    duration: "20–40 Minuten Reitzeit, im Rahmen eines halben oder ganzen Tages in Gizeh",
+    duration: "20–30 Minuten Reitzeit, im Rahmen eines halben oder ganzen Tages in Gizeh",
     where: "Gizeh",
     bestTime: "Früher Morgen oder später Nachmittag. Die Mittagszeit im Sommer ganz meiden.",
     highlights: [
@@ -1417,7 +1417,7 @@ export const deExperiences: ExpText[] = [
       },
     ],
     photos: [
-      { alt: "Gäste auf Quads über Wüstendünen in der Nähe der Pyramiden von Gizeh", label: "Quad-Tour" },
+      { alt: "Eine Reihe roter Quads fährt über offenes Wüstengelände, die Fahrer in Schals und mit Sonnenbrillen", label: "Quad-Tour" },
     ],
   },
 ];

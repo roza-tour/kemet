@@ -48,6 +48,7 @@ import { publicPath } from "@/utils/links";
 import { marketDirectory, marketRegions } from "@/utils/marketsDirectory";
 import { sacredBrief } from "@/data/sacred";
 import { zahraOneLine } from "@/data/zahra";
+import { programmes, programmeRoute } from "@/data/programmes";
 
 const u = (path: string) => `${SITE_URL}/${path}`;
 /** One Markdown list entry: - [Title](url): description */
@@ -168,6 +169,15 @@ export const GET: APIRoute = () => {
           (t.comfort ? ` Walking: ${t.comfort.walking.toLowerCase()}. Nights: ${t.comfort.sleep}.${t.comfort.drives ? ` By road: ${t.comfort.drives}.` : ""}${t.comfort.early ? ` Early starts: ${t.comfort.early}.` : ""}` : ""),
       ),
     );
+  }
+  lines.push("");
+
+  lines.push("## Programmes beyond the Nile (private, priced on request)");
+  lines.push("");
+  lines.push(`Nine programmes for the places the catalogue does not yet price — Siwa, the Red Sea islands, Sinai, the deserts, Marsa Alam and a slower Aswan. No price is published: each is quoted in writing for the dates. The days are reordered around flights and opening times. Index: ${u("programmes.html")}`);
+  lines.push("");
+  for (const p of programmes) {
+    lines.push(item(p.title, programmeRoute(p), `${p.length}. ${p.standfirst} Priced on request.`));
   }
   lines.push("");
 

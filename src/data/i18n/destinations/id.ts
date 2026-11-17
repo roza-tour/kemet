@@ -361,7 +361,7 @@ export const idDestinations: DestText[] = [
     keywords: "wisata sharm el sheikh, liburan sharm el sheikh, ras mohammed, diving sharm el sheikh, snorkeling laut merah, selat tiran",
     name: "Sharm El Sheikh",
     summary: "Ibu kota resor Sinai di antara pegunungan gurun dan Laut Merah — gerbang menuju Ras Mohammed, terumbu Tiran, dan malam-malam memandang bintang bersama orang Badui.",
-    description: "Sharm El Sheikh menempati ujung Semenanjung Sinai, tempat pegunungan merah yang gundul jatuh langsung ke salah satu perairan paling jernih di dunia. Geografi itulah seluruh ceritanya: Taman Nasional Ras Mohammed — yang kerap digolongkan sebagai salah satu lokasi selam terbaik di mana pun — berjarak dua puluh menit dengan perahu, Selat Tiran sedikit lebih jauh, dan dinding-dinding terumbu menghunjam hanya beberapa meter dari pantai di sepanjang pesisir ini. Naama Bay menyediakan sisi promenade dan restorannya; teluk-teluk yang lebih tenang di utara dan selatan menjadi tempat resor-resornya. Dan satu jam ke pedalaman, gurun mengambil alih sepenuhnya — perkemahan Badui, jalan kaki menyusuri ngarai, dan langit malam yang termasuk paling gelap dan paling jernih yang terjangkau dari liburan pantai mana pun.",
+    description: "Sharm El Sheikh menempati ujung Semenanjung Sinai, tempat pegunungan merah yang gundul jatuh langsung ke salah satu perairan paling jernih di dunia. Geografi itulah seluruh ceritanya: Taman Nasional Ras Mohammed — yang kerap digolongkan sebagai salah satu lokasi selam terbaik di mana pun — berjarak kurang dari satu jam dengan perahu, Selat Tiran sedikit lebih jauh, dan dinding-dinding terumbu menghunjam hanya beberapa meter dari pantai di sepanjang pesisir ini. Naama Bay menyediakan sisi promenade dan restorannya; teluk-teluk yang lebih tenang di utara dan selatan menjadi tempat resor-resornya. Dan satu jam ke pedalaman, gurun mengambil alih sepenuhnya — perkemahan Badui, jalan kaki menyusuri ngarai, dan langit malam yang termasuk paling gelap dan paling jernih yang terjangkau dari liburan pantai mana pun.",
     stay: "3–5 hari",
     climate: "Kering dan hampir selalu cerah; suhu laut 22–28 °C. Lebih sejuk dan lebih berangin daripada pesisir daratan utama pada musim dingin, panas pada puncak musim panas.",
     whyVisit: [
@@ -393,7 +393,7 @@ export const idDestinations: DestText[] = [
       },
       {
         q: "Bagaimana memasukkan Sharm ke dalam rencana perjalanan di Mesir?",
-        a: "Dengan pesawat — Kairo ke Sharm sekitar satu jam, sehingga penutup tiga atau empat malam di Sinai menjadi praktis setelah Kairo dan Sungai Nil. Ingat jeda 24 jam tanpa terbang setelah penyelaman terakhir saat menentukan hari terakhir, dan pertimbangkan untuk tiba atau berangkat melalui bandara internasional Sharm sendiri agar tidak perlu transit di Kairo.",
+        a: "Dengan pesawat — Kairo ke Sharm sekitar satu jam, sehingga penutup tiga atau empat malam di Sinai menjadi praktis setelah Kairo dan Sungai Nil. Ingat jeda 24 jam tanpa terbang setelah penyelaman terakhir saat menentukan hari terakhir, dan pertimbangkan untuk tiba atau berangkat melalui bandara internasional Sharm sendiri agar tidak perlu transit di Kairo. Satu hal yang perlu diwaspadai: cap masuk gratis yang diterbitkan di bandara Sharm hanya berlaku untuk Sinai Selatan — jika perjalanan Anda berlanjut ke Kairo, Luxor, atau Sungai Nil, ambillah visa standar Mesir.",
       },
     ],
     photos: [
@@ -533,7 +533,7 @@ export const idDestinations: DestText[] = [
       "Gebel al-Mawta, Gunung Orang Mati, dengan makam berlukis Si-Amun",
     ],
     thingsToKnow: [
-      "Siwa itu jauh: sekitar tiga setengah jam berkendara dari Marsa Matruh dan sehari penuh dari Kairo. Perjalanan ke sini biasanya dipadukan dengan pesisir Laut Tengah atau Aleksandria.",
+      "Siwa itu jauh: sekitar empat jam berkendara dari Marsa Matruh dan sehari penuh dari Kairo. Perjalanan ke sini biasanya dipadukan dengan pesisir Laut Tengah atau Aleksandria.",
       "Gurun di luar oasis memerlukan kendaraan 4x4 dan izin, keduanya diuruskan untuk Anda.",
       "Siwa bersifat konservatif; berpakaian sopan di kota sangat dihargai.",
       "Penginapannya kecil dan dibangun dengan gaya setempat; yang terbaik cepat penuh pada bulan-bulan sejuk.",
@@ -541,7 +541,7 @@ export const idDestinations: DestText[] = [
     faqs: [
       {
         q: "Bagaimana cara menuju Siwa?",
-        a: "Lewat darat. Cara yang lazim adalah menyusuri pesisir Laut Tengah ke Marsa Matruh, lalu ke selatan melintasi gurun, sekitar tiga setengah jam dari Matruh. Dari Kairo perjalanannya sehari penuh, itulah sebabnya kebanyakan perjalanan memecahnya dengan semalam di Aleksandria atau di pesisir.",
+        a: "Lewat darat. Cara yang lazim adalah menyusuri pesisir Laut Tengah ke Marsa Matruh, lalu ke selatan melintasi gurun, sekitar empat jam dari Matruh. Dari Kairo perjalanannya sehari penuh, itulah sebabnya kebanyakan perjalanan memecahnya dengan semalam di Aleksandria atau di pesisir.",
       },
       {
         q: "Berapa malam yang dibutuhkan untuk Siwa?",
@@ -568,7 +568,7 @@ export const idDestinations: DestText[] = [
     keywords: "marsa matruh, pantai utara mesir, wisata pantai laut tengah mesir, el alamein, pantai agiba, pemandian cleopatra",
     name: "Marsa Matruh & Pantai Utara",
     summary: "Pesisir Laut Tengah Mesir di barat Aleksandria: pasir putih, teluk-teluk kecil berair biru kehijauan, dan tugu-tugu peringatan medan perang El Alamein.",
-    description: "Di barat Aleksandria, pesisir Laut Tengah membentang ratusan kilometer berupa pasir pucat dan air dengan warna yang tak disangka orang ada di Mesir. Marsa Matruh, sekitar tiga jam menyusuri pesisir itu, terletak di sebuah teluk yang terlindung, dengan pantai-pantai terbaiknya tak jauh berkendara: Agiba, teluk kecil di bawah tebing batu kapur, dan kolam batu yang dikenal sebagai Pemandian Cleopatra. Di perjalanan terletak El Alamein, tempat perang gurun berbalik arah pada 1942; pemakaman Persemakmuran, tugu peringatan Jerman dan Italia, serta museum militer berdiri terpaut beberapa kilometer di tepi jalan. Ke sinilah orang Mesir sendiri datang pada musim panas, dan ini pula jalan menuju Siwa, yang terletak sekitar tiga setengah jam di selatan Matruh.",
+    description: "Di barat Aleksandria, pesisir Laut Tengah membentang ratusan kilometer berupa pasir pucat dan air dengan warna yang tak disangka orang ada di Mesir. Marsa Matruh, sekitar tiga jam menyusuri pesisir itu, terletak di sebuah teluk yang terlindung, dengan pantai-pantai terbaiknya tak jauh berkendara: Agiba, teluk kecil di bawah tebing batu kapur, dan kolam batu yang dikenal sebagai Pemandian Cleopatra. Di perjalanan terletak El Alamein, tempat perang gurun berbalik arah pada 1942; pemakaman Persemakmuran, tugu peringatan Jerman dan Italia, serta museum militer berdiri terpaut beberapa kilometer di tepi jalan. Ke sinilah orang Mesir sendiri datang pada musim panas, dan ini pula jalan menuju Siwa, yang terletak sekitar empat jam di selatan Matruh.",
     stay: "2–3 malam",
     climate: "Mediterania: musim panas hangat dan berangin yang jauh lebih sejuk daripada Lembah Nil; musim dingin sejuk, kadang berhujan, ketika sebagian besar pesisir tutup.",
     whyVisit: [

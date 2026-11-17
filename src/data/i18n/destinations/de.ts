@@ -393,7 +393,7 @@ export const deDestinations: DestText[] = [
     summary:
       "Die Resorthauptstadt des Sinai zwischen Wüstenbergen und Rotem Meer — Tor zu Ras Mohammed, den Riffen von Tiran und Sternennächten bei den Beduinen.",
     description:
-      "Scharm el-Scheich liegt an der Spitze der Sinai-Halbinsel, wo kahle rote Berge unmittelbar in eines der klarsten Gewässer der Welt abfallen. Diese Geografie ist die ganze Geschichte: Der Nationalpark Ras Mohammed — regelmäßig unter die besten Tauchreviere überhaupt gezählt — liegt zwanzig Bootsminuten entfernt, die Straße von Tiran ein wenig weiter, und entlang der gesamten Küste stürzen Riffwände wenige Meter vom Ufer in die Tiefe. Die Naama Bay liefert die Seite mit Promenade und Restaurants; in den ruhigeren Buchten nördlich und südlich liegen die Resorts. Und eine Stunde landeinwärts übernimmt die Wüste ganz — Beduinencamps, Canyonwanderungen und einige der dunkelsten, klarsten Nachthimmel, die sich von einem Strandurlaub aus erreichen lassen.",
+      "Scharm el-Scheich liegt an der Spitze der Sinai-Halbinsel, wo kahle rote Berge unmittelbar in eines der klarsten Gewässer der Welt abfallen. Diese Geografie ist die ganze Geschichte: Der Nationalpark Ras Mohammed — regelmäßig unter die besten Tauchreviere überhaupt gezählt — liegt weniger als eine Bootsstunde entfernt, die Straße von Tiran ein wenig weiter, und entlang der gesamten Küste stürzen Riffwände wenige Meter vom Ufer in die Tiefe. Die Naama Bay liefert die Seite mit Promenade und Restaurants; in den ruhigeren Buchten nördlich und südlich liegen die Resorts. Und eine Stunde landeinwärts übernimmt die Wüste ganz — Beduinencamps, Canyonwanderungen und einige der dunkelsten, klarsten Nachthimmel, die sich von einem Strandurlaub aus erreichen lassen.",
     stay: "3–5 Tage",
     climate:
       "Trocken und verlässlich sonnig; Meer 22–28 °C. Im Winter kühler und windiger als die Festlandküste, im Hochsommer heiß.",
@@ -426,7 +426,7 @@ export const deDestinations: DestText[] = [
       },
       {
         q: "Wie füge ich Scharm in eine Ägyptenreise ein?",
-        a: "Mit dem Flugzeug — von Kairo nach Scharm ist es etwa eine Stunde, was einen Sinai-Ausklang von drei oder vier Nächten nach Kairo und dem Nil praktikabel macht. Denken Sie bei der Planung des letzten Tages an die 24-stündige Flugpause nach dem letzten Tauchgang, und erwägen Sie, über den eigenen internationalen Flughafen von Scharm an- oder abzureisen, um sich das Umsteigen in Kairo zu sparen.",
+        a: "Mit dem Flugzeug — von Kairo nach Scharm ist es etwa eine Stunde, was einen Sinai-Ausklang von drei oder vier Nächten nach Kairo und dem Nil praktikabel macht. Denken Sie bei der Planung des letzten Tages an die 24-stündige Flugpause nach dem letzten Tauchgang, und erwägen Sie, über den eigenen internationalen Flughafen von Scharm an- oder abzureisen, um sich das Umsteigen in Kairo zu sparen. Eine Warnung: Der kostenlose Einreisestempel, der am Flughafen von Scharm ausgestellt wird, gilt nur für den Süd-Sinai — wenn Ihre Reise weiter nach Kairo, Luxor oder an den Nil führt, nehmen Sie stattdessen das reguläre ägyptische Visum.",
       },
     ],
     photos: [
@@ -579,7 +579,7 @@ export const deDestinations: DestText[] = [
       "Gebel al-Mawta, der Berg der Toten, mit dem ausgemalten Grab des Si-Amun",
     ],
     thingsToKnow: [
-      "Siwa ist weit: etwa dreieinhalb Stunden Fahrt von Marsa Matruh und ein ganzer Tag von Kairo. Eine Reise hierher wird meist mit der Mittelmeerküste oder mit Alexandria verbunden.",
+      "Siwa ist weit: etwa vier Stunden Fahrt von Marsa Matruh und ein ganzer Tag von Kairo. Eine Reise hierher wird meist mit der Mittelmeerküste oder mit Alexandria verbunden.",
       "Für die Wüste jenseits der Oase braucht es einen Geländewagen und eine Genehmigung — beides wird für Sie organisiert.",
       "Siwa ist konservativ; zurückhaltende Kleidung im Ort wird geschätzt.",
       "Die Lodges sind klein und im lokalen Stil gebaut; die besten sind in den kühlen Monaten früh ausgebucht.",
@@ -587,7 +587,7 @@ export const deDestinations: DestText[] = [
     faqs: [
       {
         q: "Wie kommt man nach Siwa?",
-        a: "Auf der Straße. Der übliche Weg führt die Mittelmeerküste entlang nach Marsa Matruh und dann nach Süden durch die Wüste, etwa dreieinhalb Stunden ab Matruh. Von Kairo aus ist es ein ganzer Tag, weshalb die meisten Reisen die Strecke mit einer Nacht in Alexandria oder an der Küste unterbrechen.",
+        a: "Auf der Straße. Der übliche Weg führt die Mittelmeerküste entlang nach Marsa Matruh und dann nach Süden durch die Wüste, etwa vier Stunden ab Matruh. Von Kairo aus ist es ein ganzer Tag, weshalb die meisten Reisen die Strecke mit einer Nacht in Alexandria oder an der Küste unterbrechen.",
       },
       {
         q: "Wie viele Nächte braucht Siwa?",
@@ -618,7 +618,7 @@ export const deDestinations: DestText[] = [
     summary:
       "Ägyptens Mittelmeerufer westlich von Alexandria: weißer Sand, türkisfarbene Buchten und die Gedenkstätten des Schlachtfelds von El Alamein.",
     description:
-      "Westlich von Alexandria zieht sich die Mittelmeerküste über Hunderte Kilometer hin — heller Sand und Wasser von einer Farbe, die man von Ägypten nicht erwartet. Marsa Matruh, etwa drei Stunden die Küste entlang, liegt an einer geschützten Bucht; seine besten Strände sind eine kurze Fahrt entfernt: Agiba, eine Bucht unter Kalksteinklippen, und das als Bad der Kleopatra bekannte Felsbecken. Auf dem Weg liegt El Alamein, wo sich 1942 der Wüstenkrieg wendete; der Commonwealth-Friedhof, die deutsche und die italienische Gedenkstätte und das Militärmuseum stehen wenige Kilometer voneinander entfernt an der Straße. Hierher kommen die Ägypter selbst im Sommer, und es ist zugleich der Weg nach Siwa, das etwa dreieinhalb Stunden südlich von Matruh liegt.",
+      "Westlich von Alexandria zieht sich die Mittelmeerküste über Hunderte Kilometer hin — heller Sand und Wasser von einer Farbe, die man von Ägypten nicht erwartet. Marsa Matruh, etwa drei Stunden die Küste entlang, liegt an einer geschützten Bucht; seine besten Strände sind eine kurze Fahrt entfernt: Agiba, eine Bucht unter Kalksteinklippen, und das als Bad der Kleopatra bekannte Felsbecken. Auf dem Weg liegt El Alamein, wo sich 1942 der Wüstenkrieg wendete; der Commonwealth-Friedhof, die deutsche und die italienische Gedenkstätte und das Militärmuseum stehen wenige Kilometer voneinander entfernt an der Straße. Hierher kommen die Ägypter selbst im Sommer, und es ist zugleich der Weg nach Siwa, das etwa vier Stunden südlich von Matruh liegt.",
     stay: "2–3 Nächte",
     climate:
       "Mediterran: warme, windige Sommer, weit milder als im Niltal; kühle, mitunter regnerische Winter, in denen ein Großteil der Küste geschlossen ist.",

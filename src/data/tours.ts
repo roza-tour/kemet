@@ -1949,7 +1949,7 @@ export const tours: Tour[] = [
     summary:
       "Our most complete journey: Cairo and Alexandria, a Nile cruise, Ramesses II's mountain temple at Abu Simbel, and three Red Sea nights to absorb it all.",
     overview:
-      "This is the itinerary for travellers who intend to come once and see it whole. The first ten days belong to history: the Pyramids and the Grand Egyptian Museum, Cairo's medieval and Coptic quarters, Alexandria on the Mediterranean, then a flight south for Abu Simbel — the mountain temple of Ramesses II above Lake Nasser — before a three-night cruise carries you down the Nile from Aswan to Luxor. The last four days change key entirely: after Luxor's tombs and temples you fly to Sharm El Sheikh, where the desert meets some of the clearest water on earth. Three nights on the Red Sea close the journey with snorkelling over the reefs of Ras Mohammed and nothing on the schedule that cannot be cancelled in favour of the pool. All domestic flights are included; every guided day is private.",
+      "This is the itinerary for travellers who intend to come once and see it whole. The first ten days belong to history: the Pyramids and the Grand Egyptian Museum, Cairo's medieval and Coptic quarters, Alexandria on the Mediterranean, then a flight south for Abu Simbel — the mountain temple of Ramesses II above Lake Nasser — before a three-night cruise carries you down the Nile from Aswan to Luxor. The last four days change key entirely: after Luxor's tombs and temples you fly to Sharm El Sheikh, where the desert meets some of the clearest water on earth. Three nights on the Red Sea close the journey with snorkelling over the reefs of Ras Mohammed and nothing on the schedule that cannot be cancelled in favour of the pool. All domestic flights are included; every guided day is private. The order of the days is set once your dates are fixed: Egypt's domestic flights do not run every day on every route, so we arrange the days around the flights and the opening times of each visit.",
     itinerary: [
       {
         label: "Day",
@@ -2015,7 +2015,7 @@ export const tours: Tour[] = [
         label: "Day",
         num: "11",
         title: "Fly to the Red Sea",
-        items: ["Morning flight to Sharm El Sheikh", "Check in; the schedule ends here on purpose"],
+        items: ["Flight to Sharm El Sheikh — the morning non-stop where one runs on your date, otherwise via Cairo", "Check in; the schedule ends here on purpose"],
       },
       {
         label: "Day",
@@ -2062,7 +2062,7 @@ export const tours: Tour[] = [
       },
       {
         q: "Can the Red Sea leg be swapped or extended?",
-        a: "Freely. Some guests trade it for extra Luxor nights or Siwa; others extend Sharm to a full week. The first ten days form the spine and the final act is yours to shape.",
+        a: "Freely. Some guests trade it for extra Luxor nights; others extend Sharm to a full week, or add a Siwa chapter with extra days — Siwa is a day's drive each way, so it does not fit inside the three Red Sea nights. The first ten days form the spine and the final act is yours to shape.",
       },
     ],
     order: 18,
@@ -2214,7 +2214,7 @@ export const tours: Tour[] = [
     summary:
       "The Red Sea done with intent — a private reef-boat day in Ras Mohammed, a Sinai desert evening under the stars, and space left deliberately empty.",
     overview:
-      "Sharm El Sheikh sits at the tip of the Sinai Peninsula, where desert mountains drop into water so clear the reefs read like maps from the surface. It is Egypt's great exhale — which is exactly how this itinerary treats it. Two anchor days are arranged privately: a boat day in Ras Mohammed National Park, whose coral walls at the meeting point of the gulfs of Suez and Aqaba rank among the finest snorkelling on earth, and a Sinai desert evening of Bedouin tea, grilled dinner and astronomy in some of the darkest skies reachable from any resort. The rest is unscheduled on principle. Works as a stand-alone escape or the closing chapter of a longer Egypt journey — Luxor is under an hour's flight away.",
+      "Sharm El Sheikh sits at the tip of the Sinai Peninsula, where desert mountains drop into water so clear the reefs read like maps from the surface. It is Egypt's great exhale — which is exactly how this itinerary treats it. Two anchor days are arranged privately: a boat day in Ras Mohammed National Park, whose coral walls at the meeting point of the gulfs of Suez and Aqaba rank among the finest snorkelling on earth, and a Sinai desert evening of Bedouin tea, grilled dinner and astronomy in some of the darkest skies reachable from any resort. The rest is unscheduled on principle. Works as a stand-alone escape or the closing chapter of a longer Egypt journey — Luxor is about an hour's flight away. The non-stop does not run every day, so the order of your days is set around the flights on your dates.",
     itinerary: [
       {
         label: "Day",
@@ -2290,7 +2290,7 @@ export const tours: Tour[] = [
       },
       {
         q: "Does this combine with the Nile itineraries?",
-        a: "Perfectly — that is how most guests use it. Luxor–Sharm is a short flight, and four Red Sea days after a week of temples is the best-ordered version of Egypt we know.",
+        a: "Perfectly — that is how most guests use it. Luxor–Sharm is about an hour in the air, but the non-stop does not run every day: we set the order of your days around the flights on your dates, and on the other days the route goes through Cairo. Four Red Sea days after a week of temples is the best-ordered version of Egypt we know.",
       },
     ],
     order: 20,

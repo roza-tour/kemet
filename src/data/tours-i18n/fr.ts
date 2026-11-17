@@ -181,7 +181,7 @@ export const fr: TourText[] = [
     summary:
       "Notre voyage le plus complet : Le Caire et Alexandrie, une croisière sur le Nil, le temple de montagne de Ramsès II à Abou Simbel, et trois nuits en mer Rouge pour tout laisser décanter.",
     overview:
-      "C'est l'itinéraire de ceux qui comptent venir une fois et tout voir. Les dix premiers jours appartiennent à l'histoire : les pyramides et le Grand Musée égyptien, le Caire médiéval et le Caire copte, Alexandrie sur la Méditerranée, puis un vol vers le sud pour Abou Simbel — le temple de montagne de Ramsès II au-dessus du lac Nasser — avant qu'une croisière de trois nuits ne vous porte d'Assouan à Louxor. Les quatre derniers jours changent entièrement de ton : après les tombes et les temples de Louxor, vous volez vers Charm el-Cheikh, là où le désert rencontre l'une des eaux les plus claires de la planète. Trois nuits en mer Rouge referment le voyage, avec le snorkeling sur les récifs de Ras Mohammed et rien au programme qui ne puisse être annulé au profit de la piscine. Tous les vols intérieurs sont compris ; chaque journée guidée est privée.",
+      "C'est l'itinéraire de ceux qui comptent venir une fois et tout voir. Les dix premiers jours appartiennent à l'histoire : les pyramides et le Grand Musée égyptien, le Caire médiéval et le Caire copte, Alexandrie sur la Méditerranée, puis un vol vers le sud pour Abou Simbel — le temple de montagne de Ramsès II au-dessus du lac Nasser — avant qu'une croisière de trois nuits ne vous porte d'Assouan à Louxor. Les quatre derniers jours changent entièrement de ton : après les tombes et les temples de Louxor, vous volez vers Charm el-Cheikh, là où le désert rencontre l'une des eaux les plus claires de la planète. Trois nuits en mer Rouge referment le voyage, avec le snorkeling sur les récifs de Ras Mohammed et rien au programme qui ne puisse être annulé au profit de la piscine. Tous les vols intérieurs sont compris ; chaque journée guidée est privée. L'ordre des journées est arrêté une fois vos dates fixées : les vols intérieurs égyptiens ne circulent pas tous les jours sur toutes les lignes, c'est pourquoi nous organisons les journées autour des vols et des horaires d'ouverture de chaque visite.",
     itinerary: [
       { title: "Arrivée au Caire", items: [
         "Accueil privé à l'aéroport et transfert à l'hôtel",
@@ -229,7 +229,7 @@ export const fr: TourText[] = [
         "Débarquement vers votre hôtel de Louxor",
       ]},
       { title: "Vol vers la mer Rouge", items: [
-        "Vol matinal vers Charm el-Cheikh",
+        "Vol vers Charm el-Cheikh — le vol direct du matin lorsqu'il y en a un à votre date, sinon via Le Caire",
         "Installation ; le programme s'arrête ici, volontairement",
       ]},
       { title: "Les récifs de Ras Mohammed", items: [
@@ -250,7 +250,7 @@ export const fr: TourText[] = [
     faqs: [
       { q: "Quatorze jours, est-ce trop pour un premier voyage ?", a: "C'est la durée qu'il faut à l'Égypte pour être vue en entier plutôt qu'effleurée. Ce sont précisément les journées en mer Rouge qui rendent la semaine d'histoire tenable : le voyage respire au lieu d'accumuler la fatigue." },
       { q: "Quelle part du voyage se fait en avion ?", a: "Trois vols intérieurs d'environ une heure chacun, qui remplacent ce qui serait sinon douze heures de route ou de rail. Deux longs trajets restent sur la route : l'excursion à Alexandrie, et l'aller-retour Assouan–Abou Simbel — le second fait lui-même partie de l'expérience : le désert ouvert à l'aube." },
-      { q: "Peut-on échanger ou prolonger la mer Rouge ?", a: "Sans difficulté. Certains la troquent contre des nuits supplémentaires à Louxor ou contre Siwa, d'autres prolongent Charm d'une semaine entière. Les dix premiers jours forment la colonne vertébrale ; la fin vous appartient." },
+      { q: "Peut-on échanger ou prolonger la mer Rouge ?", a: "Sans difficulté. Certains la troquent contre des nuits supplémentaires à Louxor ; d'autres prolongent Charm d'une semaine entière, ou ajoutent un chapitre à Siwa avec des jours en plus — Siwa est à une journée de route dans chaque sens, elle ne tient donc pas dans les trois nuits en mer Rouge. Les dix premiers jours forment la colonne vertébrale ; la fin vous appartient." },
     ],
   },
 
@@ -763,7 +763,7 @@ export const fr: TourText[] = [
     durationLabel: "5 jours / 4 nuits",
     startPoint: "Charm el-Cheikh (aéroport ou hôtel)",
     summary: "La mer Rouge avec intention — une journée bateau privée à Ras Mohammed, une soirée sous les étoiles dans le désert du Sinaï, et du temps laissé volontairement vide.",
-    overview: "Charm el-Cheikh occupe la pointe de la péninsule du Sinaï, là où des montagnes désertiques tombent dans une eau si claire que les récifs se lisent depuis la surface comme des cartes. C'est la grande respiration de l'Égypte — et c'est exactement ainsi que cet itinéraire la traite. Deux journées sont organisées en privé : une sortie en bateau dans le parc national de Ras Mohammed, dont les murs de corail, au point de rencontre des golfes de Suez et d'Aqaba, comptent parmi les plus beaux sites de snorkeling du monde, et une soirée dans le désert du Sinaï, thé bédouin, dîner au charbon et ciel étoilé parmi les plus noirs accessibles depuis un resort. Le reste n'est pas programmé, par principe. Fonctionne en escapade autonome ou en dernier chapitre d'un voyage plus long — Louxor est à moins d'une heure de vol.",
+    overview: "Charm el-Cheikh occupe la pointe de la péninsule du Sinaï, là où des montagnes désertiques tombent dans une eau si claire que les récifs se lisent depuis la surface comme des cartes. C'est la grande respiration de l'Égypte — et c'est exactement ainsi que cet itinéraire la traite. Deux journées sont organisées en privé : une sortie en bateau dans le parc national de Ras Mohammed, dont les murs de corail, au point de rencontre des golfes de Suez et d'Aqaba, comptent parmi les plus beaux sites de snorkeling du monde, et une soirée dans le désert du Sinaï, thé bédouin, dîner au charbon et ciel étoilé parmi les plus noirs accessibles depuis un resort. Le reste n'est pas programmé, par principe. Fonctionne en escapade autonome ou en dernier chapitre d'un voyage plus long — Louxor est à environ une heure de vol. Le vol direct ne circule pas tous les jours, si bien que l'ordre de vos journées se fixe autour des vols à vos dates.",
     itinerary: [
       { title: "Arrivée en mer Rouge", items: [
         "Accueil privé à l'aéroport et installation au resort",
@@ -788,7 +788,7 @@ export const fr: TourText[] = [
     faqs: [
       { q: "Quand la mer est-elle assez chaude ?", a: "Pratiquement toujours. L'eau va de 21 °C en hiver à 28 °C en fin d'été ; le snorkeling se pratique toute l'année, et même janvier reste confortable en shorty, que le bateau fournit." },
       { q: "Faut-il savoir plonger ?", a: "Non. Les récifs de Ras Mohammed remontent assez près de la surface pour que le snorkeling montre l'essentiel du spectacle. Si vous voulez essayer la plongée, nous organisons un baptême encadré au récif maison de votre resort." },
-      { q: "Est-ce compatible avec les circuits du Nil ?", a: "Parfaitement — c'est ainsi que la plupart des voyageurs l'utilisent. Louxor–Charm est un vol court, et quatre jours de mer Rouge après une semaine de temples sont la meilleure façon d'ordonner l'Égypte." },
+      { q: "Est-ce compatible avec les circuits du Nil ?", a: "Parfaitement — c'est ainsi que la plupart des voyageurs l'utilisent. Louxor–Charm représente environ une heure de vol, mais le vol direct ne circule pas tous les jours : nous fixons l'ordre de vos journées autour des vols à vos dates, et les autres jours l'itinéraire passe par Le Caire. Quatre jours de mer Rouge après une semaine de temples sont la meilleure façon d'ordonner l'Égypte." },
     ],
   },
 

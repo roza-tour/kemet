@@ -177,7 +177,7 @@ export const id: TourText[] = [
     durationLabel: "14 Hari / 13 Malam",
     startPoint: "Kairo (bandara atau hotel)",
     summary: "Perjalanan kami yang paling lengkap: Kairo dan Alexandria, pesiar Nil, kuil Ramses II yang dipahat di gunung di Abu Simbel, dan tiga malam di Laut Merah untuk meresapi semuanya.",
-    overview: "Inilah rencana perjalanan bagi mereka yang berniat datang sekali dan melihat semuanya. Sepuluh hari pertama milik sejarah: Piramida dan Grand Egyptian Museum, kawasan abad pertengahan dan Koptik di Kairo, Alexandria di tepi Mediterania, lalu terbang ke selatan untuk Abu Simbel — kuil Ramses II yang dipahat di gunung, di atas Danau Nasser — sebelum pesiar tiga malam membawa Anda menghilir Sungai Nil dari Aswan ke Luxor. Empat hari terakhir berganti nada sepenuhnya: setelah makam dan kuil Luxor, Anda terbang ke Sharm El Sheikh, tempat gurun bertemu sebagian perairan paling jernih di bumi. Tiga malam di Laut Merah menutup perjalanan dengan snorkeling di atas terumbu karang Ras Mohammed, tanpa satu pun agenda yang tak bisa dibatalkan demi kolam renang. Semua penerbangan domestik sudah termasuk; setiap hari berpemandu bersifat privat.",
+    overview: "Inilah rencana perjalanan bagi mereka yang berniat datang sekali dan melihat semuanya. Sepuluh hari pertama milik sejarah: Piramida dan Grand Egyptian Museum, kawasan abad pertengahan dan Koptik di Kairo, Alexandria di tepi Mediterania, lalu terbang ke selatan untuk Abu Simbel — kuil Ramses II yang dipahat di gunung, di atas Danau Nasser — sebelum pesiar tiga malam membawa Anda menghilir Sungai Nil dari Aswan ke Luxor. Empat hari terakhir berganti nada sepenuhnya: setelah makam dan kuil Luxor, Anda terbang ke Sharm El Sheikh, tempat gurun bertemu sebagian perairan paling jernih di bumi. Tiga malam di Laut Merah menutup perjalanan dengan snorkeling di atas terumbu karang Ras Mohammed, tanpa satu pun agenda yang tak bisa dibatalkan demi kolam renang. Semua penerbangan domestik sudah termasuk; setiap hari berpemandu bersifat privat. Urutan hari ditetapkan setelah tanggal Anda pasti: penerbangan domestik Mesir tidak beroperasi setiap hari di setiap rute, jadi kami menyusun hari-hari perjalanan mengikuti penerbangan dan jam buka setiap kunjungan.",
     itinerary: [
       {
         title: "Tiba di Kairo",
@@ -257,7 +257,7 @@ export const id: TourText[] = [
       {
         title: "Terbang ke Laut Merah",
         items: [
-          "Penerbangan pagi ke Sharm El Sheikh",
+          "Penerbangan ke Sharm El Sheikh — penerbangan langsung pagi hari jika ada pada tanggal Anda, selain itu melalui Kairo",
           "Check-in; jadwal sengaja berakhir di sini",
         ],
       },
@@ -290,7 +290,7 @@ export const id: TourText[] = [
     faqs: [
       { q: "Apakah empat belas hari terlalu lama untuk kunjungan pertama?", a: "Itulah lama yang dibutuhkan Mesir untuk dilihat secara utuh, bukan sekadar dicicipi. Hari-hari di Laut Merah pada akhir perjalanan itulah yang membuat sepekan penuh sejarah tetap terasa ringan — perjalanan ini bernapas, bukan menumpuk lelah." },
       { q: "Berapa banyak penerbangan dalam perjalanan ini?", a: "Tiga penerbangan domestik, masing-masing sekitar satu jam, menggantikan perjalanan darat atau kereta yang bila tidak demikian akan memakan dua belas jam. Dua perjalanan panjang tetap lewat darat: perjalanan sehari ke Alexandria, serta Aswan ke Abu Simbel pulang-pergi — yang kedua justru menjadi bagian dari pengalaman itu sendiri, melintasi gurun terbuka saat fajar." },
-      { q: "Bisakah bagian Laut Merah diganti atau diperpanjang?", a: "Tentu, sebebas yang Anda mau. Sebagian tamu menukarnya dengan malam tambahan di Luxor atau dengan Siwa; yang lain memperpanjang Sharm menjadi sepekan penuh. Sepuluh hari pertama adalah tulang punggungnya, dan babak terakhirnya Anda sendiri yang membentuk." },
+      { q: "Bisakah bagian Laut Merah diganti atau diperpanjang?", a: "Tentu, sebebas yang Anda mau. Sebagian tamu menukarnya dengan malam tambahan di Luxor; yang lain memperpanjang Sharm menjadi sepekan penuh, atau menambahkan bab Siwa dengan hari tambahan — Siwa berjarak sehari perjalanan darat sekali jalan, sehingga tidak muat dalam tiga malam di Laut Merah. Sepuluh hari pertama adalah tulang punggungnya, dan babak terakhirnya Anda sendiri yang membentuk." },
     ],
   },
 
@@ -846,7 +846,7 @@ export const id: TourText[] = [
     durationLabel: "5 hari / 4 malam",
     startPoint: "Sharm El Sheikh (bandara atau hotel)",
     summary: "Laut Merah yang dijalani dengan sengaja — sehari penuh berperahu privat di Ras Mohammed, satu malam di bawah bintang di gurun Sinai, dan waktu yang sengaja dibiarkan kosong.",
-    overview: "Sharm El Sheikh terletak di ujung Semenanjung Sinai, tempat pegunungan gurun terjun ke dalam air yang begitu jernih sehingga dari permukaan pun terumbu karangnya terbaca seperti peta. Di sinilah Mesir menghela napas panjang — dan begitulah rute ini memperlakukannya. Dua hari utama diatur secara privat: sehari berperahu di Taman Nasional Ras Mohammed, yang dinding-dinding karangnya, di titik pertemuan Teluk Suez dan Teluk Aqaba, termasuk lokasi snorkeling terbaik di dunia; dan satu malam di gurun Sinai dengan teh Badui, makan malam bakar, dan pengamatan bintang di bawah salah satu langit tergelap yang bisa dijangkau dari resort mana pun. Selebihnya sengaja tidak dijadwalkan. Cocok sebagai liburan tersendiri atau sebagai bab penutup perjalanan yang lebih panjang di Mesir — Luxor tak sampai satu jam penerbangan dari sini.",
+    overview: "Sharm El Sheikh terletak di ujung Semenanjung Sinai, tempat pegunungan gurun terjun ke dalam air yang begitu jernih sehingga dari permukaan pun terumbu karangnya terbaca seperti peta. Di sinilah Mesir menghela napas panjang — dan begitulah rute ini memperlakukannya. Dua hari utama diatur secara privat: sehari berperahu di Taman Nasional Ras Mohammed, yang dinding-dinding karangnya, di titik pertemuan Teluk Suez dan Teluk Aqaba, termasuk lokasi snorkeling terbaik di dunia; dan satu malam di gurun Sinai dengan teh Badui, makan malam bakar, dan pengamatan bintang di bawah salah satu langit tergelap yang bisa dijangkau dari resort mana pun. Selebihnya sengaja tidak dijadwalkan. Cocok sebagai liburan tersendiri atau sebagai bab penutup perjalanan yang lebih panjang di Mesir — Luxor sekitar satu jam penerbangan dari sini. Penerbangan langsungnya tidak beroperasi setiap hari, jadi urutan hari Anda diatur mengikuti penerbangan pada tanggal Anda.",
     itinerary: [
       { title: "Tiba di Laut Merah", items: ["Penyambutan privat di bandara dan check-in di resort", "Perkenalan sambil menikmati minuman — pekan Anda disusun mengikuti keinginan Anda"] },
       { title: "Ras Mohammed dengan perahu", items: ["Sehari penuh dengan perahu privat ke dalam taman nasional", "Dua atau tiga titik snorkeling di atas dinding dan taman karang", "Makan siang di geladak perahu"] },
@@ -858,7 +858,7 @@ export const id: TourText[] = [
     faqs: [
       { q: "Kapan air lautnya cukup hangat?", a: "Bisa dibilang selalu. Suhu air berkisar dari 21 °C pada musim dingin hingga 28 °C pada akhir musim panas; snorkeling bisa dilakukan sepanjang tahun, dan bahkan bulan Januari tetap nyaman dengan wetsuit pendek (shorty), yang tersedia di perahu." },
       { q: "Apakah saya harus bisa menyelam?", a: "Tidak. Terumbu karang Ras Mohammed naik cukup dekat ke permukaan sehingga dengan snorkeling Anda sudah melihat sebagian besar keindahannya. Jika ingin mencoba menyelam, kami mengatur sesi perkenalan menyelam berlisensi di house reef resort Anda." },
-      { q: "Bisakah digabung dengan rute Sungai Nil?", a: "Sangat bisa — begitulah kebanyakan tamu memanfaatkannya. Luxor–Sharm hanya penerbangan singkat, dan empat hari di Laut Merah setelah sepekan menjelajahi kuil adalah urutan Mesir terbaik yang kami tahu." },
+      { q: "Bisakah digabung dengan rute Sungai Nil?", a: "Sangat bisa — begitulah kebanyakan tamu memanfaatkannya. Luxor–Sharm sekitar satu jam di udara, tetapi penerbangan langsungnya tidak beroperasi setiap hari: kami mengatur urutan hari Anda mengikuti penerbangan pada tanggal Anda, dan pada hari lainnya rute melewati Kairo. Empat hari di Laut Merah setelah sepekan menjelajahi kuil adalah urutan Mesir terbaik yang kami tahu." },
     ],
   },
 

@@ -354,7 +354,7 @@ export const frExperiences: ExpText[] = [
       },
     ],
     photos: [
-      { alt: "Une felouque sur le Nil au Caire, la tour du Caire derrière elle", label: "Dîner-croisière" },
+      { alt: "La tour du Caire et la ligne d'horizon du Nil, avec une felouque sur l'eau — le fleuve que parcourt le dîner-croisière", label: "Dîner-croisière" },
     ],
   },
 
@@ -615,7 +615,7 @@ export const frExperiences: ExpText[] = [
     ],
     prepare: [
       "Apportez votre carte de brevet et votre carnet de plongées — le centre vous les demandera, ce qui est bon signe",
-      "Ne prenez pas l'avion dans les 18 à 24 heures qui suivent une plongée ; nous organisons votre itinéraire en conséquence",
+      "Ne prenez pas l'avion pendant au moins 24 heures après votre dernière plongée ; nous organisons votre itinéraire en conséquence",
     ],
     goodToKnow: [
       "La plongée d'hiver est excellente — une combinaison de 5 mm est à bord et les sites sont plus calmes",
@@ -633,7 +633,7 @@ export const frExperiences: ExpText[] = [
       },
       {
         q: "Comment cela s'intègre-t-il dans un itinéraire sur le Nil ?",
-        a: "Sans difficulté — de Louxor à Charm el-Cheikh, le vol est court. La seule règle est l'intervalle sans avion après la plongée : nous programmons donc les jours de plongée au moins une journée entière avant tout vol.",
+        a: "Sans difficulté — de Louxor à Charm el-Cheikh, le vol dure environ une heure, mais le vol direct ne circule pas tous les jours. La seule règle est l'intervalle sans avion après la plongée : nous programmons donc les jours de plongée au moins une journée entière avant tout vol.",
       },
     ],
     photos: [
@@ -667,7 +667,7 @@ export const frExperiences: ExpText[] = [
       { label: "Type de groupe", value: "Privé — votre groupe seul" },
       { label: "Meilleur ciel", value: "Autour de la nouvelle lune" },
       { label: "Terrain", value: "Facile — tapis et assises basses au camp" },
-      { label: "Température", value: "Les nuits du désert se rafraîchissent fortement — couches fournies" },
+      { label: "Température", value: "Les nuits du désert se rafraîchissent fortement — emportez une couche chaude" },
     ],
     included: [
       "Transferts privés en 4x4 depuis votre hôtel de Charm",
@@ -1119,7 +1119,7 @@ export const frExperiences: ExpText[] = [
     excluded: [],
     prepare: [],
     goodToKnow: [
-      "Les opérateurs fixent des limites de poids aux deux extrémités — trop léger et vous ne décollez pas, trop lourd et vous volez en tandem ; confirmez à l'avance",
+      "Les opérateurs fixent des limites de poids pour les vols en solo et en tandem ; confirmez à l'avance",
       "Déconseillé pendant la grossesse ou en cas de problèmes cardiaques, de dos ou d'épaules",
       "Le vent décide de tout : les vols sont annulés ou reportés au lendemain matin s'il se lève",
       "Fixez ou laissez à terre chapeaux, lunettes et téléphones — tout ce qui tombe est perdu",
@@ -1146,7 +1146,7 @@ export const frExperiences: ExpText[] = [
       },
       {
         q: "Peut-on voler à deux ?",
-        a: "Oui — les vols en tandem sont courants et sont souvent la formule par défaut pour les personnes plus lourdes. Les couples les préfèrent généralement, et les opérateurs vous indiqueront la tranche de poids pour un vol en solo ou en tandem lors de l'organisation du vol.",
+        a: "Oui — les vols en tandem sont courants. Les couples les préfèrent généralement, et les opérateurs vous indiqueront la tranche de poids pour un vol en solo ou en tandem lors de l'organisation du vol.",
       },
     ],
     photos: [
@@ -1165,7 +1165,7 @@ export const frExperiences: ExpText[] = [
     name: "Balade à dos de chameau aux pyramides",
     summary: "Une courte balade à dos de chameau le long de la lisière du désert, à Gizeh, jusqu'au point de vue panoramique — la formule classique, organisée pour que personne n'ait à marchander.",
     description: "La balade à dos de chameau à Gizeh a une réputation, et elle est en grande partie méritée : le plateau est l'un des endroits d'Égypte où les rabatteurs sont les plus tenaces, et une balade non organisée peut tourner à la négociation au milieu du sable. Bien organisée, c'est tout autre chose. Une courte balade le long de la lisière du désert vous conduit au point de vue panoramique où les trois pyramides s'alignent, par un itinéraire plus calme que la route et emprunté pour approcher Gizeh depuis aussi longtemps que l'on vient ici. Vingt à trente minutes suffisent vraiment — assez longtemps pour la vue et les photos, assez peu pour rester confortable.",
-    duration: "20 à 40 minutes de monte, au sein d'une demi-journée ou d'une journée entière à Gizeh",
+    duration: "20 à 30 minutes de monte, au sein d'une demi-journée ou d'une journée entière à Gizeh",
     where: "Gizeh",
     bestTime: "Tôt le matin ou en fin d'après-midi. À éviter complètement à midi en été.",
     highlights: [
@@ -1337,7 +1337,7 @@ export const frExperiences: ExpText[] = [
       },
     ],
     photos: [
-      { alt: "Des voyageurs en quad sur les dunes du désert, près des pyramides de Gizeh", label: "Quad" },
+      { alt: "Une file de quads rouges traversant le désert ouvert, les pilotes en foulards et lunettes de soleil", label: "Quad" },
     ],
   },
 ];

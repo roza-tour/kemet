@@ -361,7 +361,7 @@ export const msDestinations: DestText[] = [
     keywords: "tempat menarik di sharm el sheikh, percutian sharm el sheikh, ras mohammed, snorkeling laut merah, menyelam sharm el sheikh, gurun sinai",
     name: "Sharm El Sheikh",
     summary: "Ibu kota resort Sinai di antara gunung-ganang gurun dan Laut Merah — pintu masuk ke Ras Mohammed, terumbu Tiran dan malam-malam cerapan bintang Badwi.",
-    description: "Sharm El Sheikh terletak di hujung Semenanjung Sinai, tempat gunung-ganang merah yang gondol menjunam terus ke dalam antara perairan paling jernih di dunia. Geografi itulah keseluruhan ceritanya: Taman Negara Ras Mohammed — yang lazim disenaraikan antara lokasi selam terbaik di mana-mana — hanya dua puluh minit dengan bot, Selat Tiran sedikit lebih jauh, dan dinding terumbu menjunam hanya beberapa meter dari pantai di sepanjang seluruh pesisirnya. Naama Bay menyediakan sisi persiaran dan restoran; teluk-teluk yang lebih tenang di utara dan selatan menempatkan resort. Dan sejam ke pedalaman, gurun mengambil alih sepenuhnya — perkhemahan Badwi, jalan kaki di ngarai dan antara langit malam paling gelap dan paling jernih yang boleh dicapai dari mana-mana percutian pantai.",
+    description: "Sharm El Sheikh terletak di hujung Semenanjung Sinai, tempat gunung-ganang merah yang gondol menjunam terus ke dalam antara perairan paling jernih di dunia. Geografi itulah keseluruhan ceritanya: Taman Negara Ras Mohammed — yang lazim disenaraikan antara lokasi selam terbaik di mana-mana — kurang sejam dengan bot, Selat Tiran sedikit lebih jauh, dan dinding terumbu menjunam hanya beberapa meter dari pantai di sepanjang seluruh pesisirnya. Naama Bay menyediakan sisi persiaran dan restoran; teluk-teluk yang lebih tenang di utara dan selatan menempatkan resort. Dan sejam ke pedalaman, gurun mengambil alih sepenuhnya — perkhemahan Badwi, jalan kaki di ngarai dan antara langit malam paling gelap dan paling jernih yang boleh dicapai dari mana-mana percutian pantai.",
     stay: "3–5 hari",
     climate: "Kering dan hampir sentiasa cerah; suhu laut 22–28 °C. Lebih sejuk dan lebih berangin daripada pantai tanah besar pada musim sejuk, panas pada kemuncak musim panas.",
     whyVisit: [
@@ -393,7 +393,7 @@ export const msDestinations: DestText[] = [
       },
       {
         q: "Bagaimana cara memasukkan Sharm ke dalam jadual perjalanan Mesir?",
-        a: "Terbang — Kaherah ke Sharm kira-kira sejam, yang menjadikan penutup tiga atau empat malam di Sinai praktikal selepas Kaherah dan Sungai Nil. Ingat selang 24 jam tanpa terbang selepas selaman terakhir semasa menentukan hari terakhir, dan pertimbangkan untuk tiba atau berlepas melalui lapangan terbang antarabangsa Sharm sendiri bagi mengelakkan transit di Kaherah.",
+        a: "Terbang — Kaherah ke Sharm kira-kira sejam, yang menjadikan penutup tiga atau empat malam di Sinai praktikal selepas Kaherah dan Sungai Nil. Ingat selang 24 jam tanpa terbang selepas selaman terakhir semasa menentukan hari terakhir, dan pertimbangkan untuk tiba atau berlepas melalui lapangan terbang antarabangsa Sharm sendiri bagi mengelakkan transit di Kaherah. Satu peringatan: cop kemasukan percuma yang dikeluarkan di lapangan terbang Sharm hanya sah untuk Sinai Selatan — jika perjalanan anda diteruskan ke Kaherah, Luxor atau Sungai Nil, ambil visa Mesir yang standard sebaliknya.",
       },
     ],
     photos: [
@@ -533,7 +533,7 @@ export const msDestinations: DestText[] = [
       "Gebel al-Mawta, Gunung Orang Mati, dengan makam berlukis Si-Amun",
     ],
     thingsToKnow: [
-      "Siwa jauh: kira-kira tiga jam setengah pemanduan dari Marsa Matruh dan sehari penuh dari Kaherah. Perjalanan ke sini lazimnya digandingkan dengan pantai Mediterranean atau Alexandria.",
+      "Siwa jauh: kira-kira empat jam pemanduan dari Marsa Matruh dan sehari penuh dari Kaherah. Perjalanan ke sini lazimnya digandingkan dengan pantai Mediterranean atau Alexandria.",
       "Gurun di luar oasis memerlukan 4x4 dan permit, kedua-duanya diuruskan untuk anda.",
       "Siwa bersifat konservatif; pakaian sopan di pekan amat dihargai.",
       "Rumah penginapan di sini kecil dan dibina mengikut gaya tempatan; yang terbaik penuh awal pada bulan-bulan yang sejuk.",
@@ -541,7 +541,7 @@ export const msDestinations: DestText[] = [
     faqs: [
       {
         q: "Bagaimana cara ke Siwa?",
-        a: "Melalui jalan darat. Cara yang lazim ialah menyusuri pantai Mediterranean ke Marsa Matruh, kemudian ke selatan merentasi gurun, kira-kira tiga jam setengah dari Matruh. Dari Kaherah ia mengambil sehari penuh, sebab itulah kebanyakan perjalanan memecahkannya dengan satu malam di Alexandria atau di pantai.",
+        a: "Melalui jalan darat. Cara yang lazim ialah menyusuri pantai Mediterranean ke Marsa Matruh, kemudian ke selatan merentasi gurun, kira-kira empat jam dari Matruh. Dari Kaherah ia mengambil sehari penuh, sebab itulah kebanyakan perjalanan memecahkannya dengan satu malam di Alexandria atau di pantai.",
       },
       {
         q: "Berapa malam yang diperlukan untuk Siwa?",

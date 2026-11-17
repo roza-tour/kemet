@@ -152,7 +152,7 @@ export const activities: Activity[] = [
       "A winch back down to the deck, normally landing dry",
     ],
     practicalities: [
-      "Operators set weight limits at both ends — too light and you will not fly, too heavy and you fly tandem; confirm in advance",
+      "Operators set weight limits for solo and for tandem flights; confirm in advance",
       "Not suitable in pregnancy, or with heart, back or shoulder conditions",
       "Wind decides everything: flights are cancelled or moved to the following morning if it builds",
       "Secure or leave behind hats, glasses and phones — anything dropped is gone",
@@ -164,7 +164,7 @@ export const activities: Activity[] = [
       { q: "How high do you go parasailing?",
         a: "Typically around a hundred metres, depending on the line length and the wind. It is high enough to read the whole reef structure below you and see the Sinai mountains behind the coast, and the ride is calm once you are up." },
       { q: "Can two people parasail together?",
-        a: "Yes — tandem flights are standard and are often the default for heavier guests. Couples usually prefer them, and operators will advise on the weight range for solo versus tandem when the flight is arranged." },
+        a: "Yes — tandem flights are standard. Couples usually prefer them, and operators will advise on the weight range for solo versus tandem when the flight is arranged." },
     ],
     lastReviewed: "2026-07",
   },
@@ -224,7 +224,7 @@ export const activities: Activity[] = [
       "A short camel ride along the desert edge at Giza to the panoramic viewpoint — the classic approach, arranged so nobody haggles.",
     longDescription:
       "The camel ride at Giza has a reputation, and it is largely deserved: the plateau is one of the more persistent places in Egypt for touts, and an unarranged ride can turn into a negotiation halfway across the sand. Arranged properly, it is something else. A short ride along the desert edge takes you to the panoramic viewpoint where all three pyramids line up, on a route that is quieter than the road and has been used to approach Giza for as long as anyone has been coming here. Twenty to thirty minutes is genuinely enough — long enough for the view and the photographs, short enough to stay comfortable.",
-    durationLabel: "20–40 minutes riding, within a half or full day at Giza",
+    durationLabel: "20–30 minutes riding, within a half or full day at Giza",
     bestTime: "Early morning or late afternoon. Avoid midday in summer entirely.",
     goodFor: ["First-time visitors", "Photographers", "Families with older children", "The classic Giza photograph"],
     whatToExpect: [
@@ -298,7 +298,7 @@ export const activities: Activity[] = [
     place: "Western Desert",
     blurb:
       "Throttle across open dunes into the silence of the desert, stopping for sweet tea and a sunset that runs the full spectrum of gold.",
-    image: { src: "/images/activities/act-quad-biking.webp", alt: "Guests quad biking across desert dunes near the Giza pyramids", width: 1280, height: 720 },
+    image: { src: "/images/activities/act-quad-biking.webp", alt: "A line of red quad bikes riding across open desert, riders in scarves and sunglasses", width: 1280, height: 720 },
     slug: "quad-biking-desert",
     shortSummary:
       "A guided quad run into the open desert with a Bedouin tea stop and sunset — dunes, silence and a sky that goes from gold to violet.",

@@ -22,6 +22,7 @@ import HighlightList from "@/components/destination/HighlightList.astro";
 import ExperienceCard from "@/components/experience/ExperienceCard.astro";
 import GuideCard from "@/components/guide/GuideCard.astro";
 import { destinations } from "@/data/destinations";
+import { programmes, programmeRoute } from "@/data/programmes";
 import { relatedTours, relatedExperiences, nearbyDestinations, guidesForDestinationPage } from "@/data/registry";
 import { entityStaticPaths, relativePrefix, routeFor } from "@/config/routes";
 import { regions, seasons, travelStyles, labelOf } from "@/config/taxonomy";
@@ -71,6 +72,8 @@ const essentialsFacts = [
 // Relationships — all derived from the registry, never hand-maintained.
 // The tour grid is capped at six; the full catalogue lives on the tours hub.
 const tours = relatedTours(dest.id).slice(0, 6);
+// Programmes beyond the Nile that go here (data/programmes.ts) — priced on request.
+const programmesHere = programmes.filter((p) => p.places.includes(dest.id));
 const experiences = relatedExperiences(dest.id);
 const nearby = nearbyDestinations(dest);
 // Until now no destination page linked a single guide, though eight guides
@@ -191,6 +194,24 @@ const jsonld = entitySchema("destination", dest);
           <SectionHeader sym="journeys" eyebrow="Journeys" title="Featured tours" text={`Private journeys that visit ${dest.title}.`} />
           <div class="grid-3">
             {tours.map((tour) => <TourCard tour={tour} base={base} />)}
+          </div>
+        </div>
+      </section>
+    )}
+
+    {programmesHere.length > 0 && (
+      <section>
+        <div class="wrap">
+          <SectionHeader sym="journeys" eyebrow="Programmes" title={`Programmes that go to ${dest.title}`} text="Planned around your dates and priced on request." />
+          <div class="grid-3">
+            {programmesHere.map((p) => (
+              <a class="tease reveal" href={`${base}${programmeRoute(p)}`} data-tilt>
+                <div class="eyebrow" style="margin-bottom:var(--s-1)">{p.length} · priced on request</div>
+                <h3>{p.title}</h3>
+                <p>{p.standfirst}</p>
+                <span class="more">See the plan <b>→</b></span>
+              </a>
+            ))}
           </div>
         </div>
       </section>

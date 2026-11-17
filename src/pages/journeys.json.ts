@@ -18,6 +18,7 @@ import { tours } from "@/data/tours";
 import { TRANSLATED_TOURS } from "@/config/tour-i18n";
 import { TRANSLATION_GROUPS, TRANSLATED_LOCALES } from "@/config/i18n";
 import { canonical } from "@/utils/links";
+import { programmes, programmeRoute } from "@/data/programmes";
 
 export const GET: APIRoute = () => {
   const journeys = [...tours]
@@ -70,6 +71,14 @@ export const GET: APIRoute = () => {
         },
         count: journeys.length,
         journeys,
+        programmes: {
+          note: "Programmes beyond the Nile, priced on request: no price is published, because each is quoted for the dates. The days are reordered around flights and opening times.",
+          items: programmes.map((p) => ({
+            id: p.slug, name: p.title, length: p.length, route: p.route, bestMonths: p.bestMonths,
+            use: p.kind === "stand-alone" ? "a journey of its own" : p.kind === "extension" ? "an extension to a longer journey" : "an add-on",
+            price: "on request", summary: p.standfirst, page: canonical(programmeRoute(p)),
+          })),
+        },
       },
       null,
       2,

@@ -324,7 +324,7 @@ export const idExperiences: ExpText[] = [
       { q: "Bisakah kebutuhan diet dilayani?", a: "Bisa. Menu disesuaikan untuk vegetarian, pescatarian, dan sebagian besar alergi dengan pemberitahuan lebih awal; sampaikan kepada kami saat pemesanan, bukan di dermaga." },
     ],
     photos: [
-      { alt: "Sebuah felucca di Sungai Nil di Kairo, dengan Menara Kairo di belakangnya", label: "Pesiar Sungai Nil" },
+      { alt: "Menara Kairo dan cakrawala Sungai Nil, dengan sebuah felucca di atas air — sungai yang dilayari pesiar makan malam", label: "Pesiar Sungai Nil" },
     ],
   },
 
@@ -564,7 +564,7 @@ export const idExperiences: ExpText[] = [
     ],
     prepare: [
       "Bawa kartu sertifikasi dan logbook Anda; pusat selam akan memintanya, dan itu pertanda baik",
-      "Jangan terbang dalam 18–24 jam setelah menyelam; kami menyusun jadwal perjalanan Anda dengan memperhitungkan hal ini",
+      "Jangan terbang setidaknya 24 jam setelah penyelaman terakhir Anda; kami menyusun jadwal perjalanan Anda dengan memperhitungkan hal ini",
     ],
     goodToKnow: [
       "Menyelam di musim dingin sangat bagus: pakaian selam 5 mm tersedia di atas kapal dan lokasinya lebih sepi",
@@ -577,7 +577,7 @@ export const idExperiences: ExpText[] = [
     priceNote: "Harga dikonfirmasi saat Anda mengajukan pertanyaan. Perlengkapan, perahu, dan biaya taman sudah termasuk.",
     faqs: [
       { q: "Saya belum pernah menyelam, bisakah tetap ikut?", a: "Bisa, melalui pengenalan Discover Scuba Diving: teori dan latihan di perairan terbatas pada pagi hari, lalu penyelaman terumbu dangkal berpemandu bersama instruktur dengan rasio satu lawan satu. Tidak perlu sertifikasi, dan pengalaman ini dihitung untuk kursus Open Water bila Anda ketagihan." },
-      { q: "Bagaimana ini cocok dengan itinerari Sungai Nil?", a: "Sangat mulus: Luxor ke Sharm El Sheikh hanya penerbangan singkat. Satu-satunya aturan adalah jeda tidak terbang setelah menyelam, sehingga kami menjadwalkan hari menyelam setidaknya satu hari penuh sebelum penerbangan apa pun." },
+      { q: "Bagaimana ini cocok dengan itinerari Sungai Nil?", a: "Sangat mulus: Luxor ke Sharm El Sheikh sekitar satu jam di udara, tetapi penerbangan langsungnya tidak beroperasi setiap hari, sehingga kami menyusun urutan hari mengikuti penerbangan pada tanggal Anda. Satu-satunya aturan adalah jeda tidak terbang setelah menyelam, sehingga kami menjadwalkan hari menyelam setidaknya satu hari penuh sebelum penerbangan apa pun." },
     ],
     photos: [
       { alt: "Terumbu karang Laut Merah yang semarak dengan ikan tropis", label: "Menyelam" },
@@ -610,7 +610,7 @@ export const idExperiences: ExpText[] = [
       { label: "Jenis grup", value: "Privat, hanya rombongan Anda" },
       { label: "Langit terbaik", value: "Sekitar bulan baru" },
       { label: "Medan", value: "Mudah, permadani dan tempat duduk rendah di kamp" },
-      { label: "Suhu", value: "Malam gurun turun tajam, pakaian berlapis disediakan" },
+      { label: "Suhu", value: "Malam gurun turun tajam, bawalah satu lapis pakaian hangat" },
     ],
     included: [
       "Transfer 4x4 privat dari hotel Anda di Sharm",
@@ -1014,7 +1014,7 @@ export const idExperiences: ExpText[] = [
     excluded: [],
     prepare: [],
     goodToKnow: [
-      "Operator menetapkan batas berat di kedua ujung: terlalu ringan Anda tidak akan terbang, terlalu berat Anda terbang berdua; konfirmasikan sebelumnya",
+      "Operator menetapkan batas berat untuk penerbangan sendiri dan penerbangan berdua; konfirmasikan sebelumnya",
       "Tidak cocok saat hamil, atau bagi yang memiliki kondisi jantung, punggung, atau bahu",
       "Angin menentukan segalanya: penerbangan dibatalkan atau dipindah ke pagi berikutnya jika angin menguat",
       "Amankan atau tinggalkan topi, kacamata, dan ponsel; apa pun yang jatuh akan hilang",
@@ -1033,7 +1033,7 @@ export const idExperiences: ExpText[] = [
     faqs: [
       { q: "Apakah parasailing di Sharm El Sheikh aman?", a: "Ini salah satu kegiatan air yang lebih terkendali di pesisir: Anda lepas landas dan mendarat dari perahu itu sendiri dengan winch, harness diperiksa sebelum setiap penerbangan, dan operasional dihentikan sepenuhnya saat kondisi angin meragukan. Tidak ada lompatan dan tidak ada berlari; perahulah yang bekerja." },
       { q: "Setinggi apa kita terbang saat parasailing?", a: "Biasanya sekitar seratus meter, tergantung panjang tali dan angin. Cukup tinggi untuk membaca seluruh struktur terumbu di bawah Anda dan melihat pegunungan Sinai di belakang pesisir, dan tunggangannya tenang begitu Anda sudah di atas." },
-      { q: "Bisakah dua orang parasailing bersama?", a: "Bisa. Penerbangan berdua adalah standar dan sering menjadi pilihan bawaan bagi tamu yang lebih berat. Pasangan biasanya lebih menyukainya, dan operator akan memberi saran tentang rentang berat untuk terbang sendiri atau berdua saat penerbangan diatur." },
+      { q: "Bisakah dua orang parasailing bersama?", a: "Bisa. Penerbangan berdua adalah standar. Pasangan biasanya lebih menyukainya, dan operator akan memberi saran tentang rentang berat untuk terbang sendiri atau berdua saat penerbangan diatur." },
     ],
     photos: [
       { alt: "Sepasang orang ber-parasailing di atas Laut Merah di bawah kanopi berwarna-warni", label: "Parasailing" },
@@ -1051,7 +1051,7 @@ export const idExperiences: ExpText[] = [
     name: "Naik Unta di Piramida",
     summary: "Naik unta singkat menyusuri tepi gurun Giza menuju titik pandang panorama: cara klasik mendekat, diatur agar tak perlu tawar-menawar.",
     description: "Tunggangan unta di Giza punya reputasi, dan sebagian besar memang pantas: dataran ini salah satu tempat paling gigih di Mesir bagi para calo, dan tunggangan yang tidak diatur dapat berubah menjadi tawar-menawar di tengah hamparan pasir. Bila diatur dengan benar, ini menjadi hal yang lain. Tunggangan singkat menyusuri tepi gurun membawa Anda ke titik pandang panorama tempat ketiga piramida berjajar, melalui rute yang lebih tenang daripada jalan raya dan telah dipakai untuk mendekati Giza selama ada orang yang datang ke sini. Dua puluh hingga tiga puluh menit sungguh cukup: cukup lama untuk pemandangan dan foto, cukup singkat untuk tetap nyaman.",
-    duration: "20–40 menit menunggang, dalam setengah hari atau sehari penuh di Giza",
+    duration: "20–30 menit menunggang, dalam setengah hari atau sehari penuh di Giza",
     where: "Giza",
     bestTime: "Pagi-pagi sekali atau sore hari. Hindari tengah hari di musim panas sepenuhnya.",
     highlights: [
@@ -1193,7 +1193,7 @@ export const idExperiences: ExpText[] = [
       { q: "Apakah quad biking cocok untuk anak-anak?", a: "Anak yang lebih besar dan remaja biasanya berkendara, sesuai usia minimum operator bagi pengendara solo; anak yang lebih kecil membonceng bersama pemandu. Tidak cocok saat hamil, atau bagi siapa pun yang bermasalah dengan punggung, pergelangan tangan, atau bahu, karena perjalanannya memang kasar." },
     ],
     photos: [
-      { alt: "Para tamu berkendara quad melintasi bukit pasir gurun di dekat piramida Giza", label: "Quad bike" },
+      { alt: "Barisan quad bike merah melaju melintasi gurun terbuka, para pengendara bersyal dan berkacamata hitam", label: "Quad bike" },
     ],
   },
 ];

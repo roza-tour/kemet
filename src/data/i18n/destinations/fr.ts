@@ -393,7 +393,7 @@ export const frDestinations: DestText[] = [
     summary:
       "La capitale balnéaire du Sinaï, entre montagnes du désert et mer Rouge — porte d'entrée de Ras Mohammed, des récifs de Tiran et des nuits bédouines sous les étoiles.",
     description:
-      "Charm el-Cheikh occupe la pointe de la péninsule du Sinaï, là où des montagnes rouges et nues tombent droit dans une eau parmi les plus claires du monde. Cette géographie dit tout : le parc national de Ras Mohammed — régulièrement classé parmi les plus beaux sites de plongée qui soient — est à vingt minutes en bateau, le détroit de Tiran un peu plus loin, et des tombants coralliens plongent à quelques mètres du rivage tout le long de la côte. La baie de Naama fournit le côté promenade et restaurants ; les baies plus calmes, au nord et au sud, abritent les resorts. Et à une heure dans les terres, le désert reprend tous ses droits — campements bédouins, marches dans les canyons et certains des ciels nocturnes les plus sombres et les plus purs qui soient à portée de vacances balnéaires.",
+      "Charm el-Cheikh occupe la pointe de la péninsule du Sinaï, là où des montagnes rouges et nues tombent droit dans une eau parmi les plus claires du monde. Cette géographie dit tout : le parc national de Ras Mohammed — régulièrement classé parmi les plus beaux sites de plongée qui soient — est à moins d'une heure en bateau, le détroit de Tiran un peu plus loin, et des tombants coralliens plongent à quelques mètres du rivage tout le long de la côte. La baie de Naama fournit le côté promenade et restaurants ; les baies plus calmes, au nord et au sud, abritent les resorts. Et à une heure dans les terres, le désert reprend tous ses droits — campements bédouins, marches dans les canyons et certains des ciels nocturnes les plus sombres et les plus purs qui soient à portée de vacances balnéaires.",
     stay: "3 à 5 jours",
     climate:
       "Aride et ensoleillé avec constance ; mer à 22–28 °C. Plus frais et plus venté que la côte continentale en hiver, chaud au cœur de l'été.",
@@ -426,7 +426,7 @@ export const frDestinations: DestText[] = [
       },
       {
         q: "Comment intégrer Charm à un itinéraire en Égypte ?",
-        a: "En avion — le vol Le Caire–Charm dure environ une heure, ce qui rend réaliste un final de trois ou quatre nuits au Sinaï après Le Caire et le Nil. Pensez au délai de 24 heures sans vol après une dernière plongée au moment de placer le dernier jour, et envisagez d'arriver ou de repartir par l'aéroport international de Charm pour vous épargner un transit par Le Caire.",
+        a: "En avion — le vol Le Caire–Charm dure environ une heure, ce qui rend réaliste un final de trois ou quatre nuits au Sinaï après Le Caire et le Nil. Pensez au délai de 24 heures sans vol après une dernière plongée au moment de placer le dernier jour, et envisagez d'arriver ou de repartir par l'aéroport international de Charm pour vous épargner un transit par Le Caire. Une mise en garde : le tampon d'entrée gratuit délivré à l'aéroport de Charm ne couvre que le Sud-Sinaï — si votre voyage se poursuit au Caire, à Louxor ou sur le Nil, prenez plutôt le visa égyptien standard.",
       },
     ],
     photos: [
@@ -579,7 +579,7 @@ export const frDestinations: DestText[] = [
       "Gebel al-Mawta, la montagne des Morts, et sa tombe peinte de Si-Amon",
     ],
     thingsToKnow: [
-      "Siwa est loin : environ trois heures et demie de route depuis Marsa Matrouh, et une journée entière depuis Le Caire. Un voyage ici s'associe en général à la côte méditerranéenne ou à Alexandrie.",
+      "Siwa est loin : environ quatre heures de route depuis Marsa Matrouh, et une journée entière depuis Le Caire. Un voyage ici s'associe en général à la côte méditerranéenne ou à Alexandrie.",
       "Le désert au-delà de l'oasis exige un 4x4 et un permis, tous deux organisés pour vous.",
       "Siwa est conservatrice ; une tenue discrète en ville est appréciée.",
       "Les lodges sont petits et construits dans le style local ; les meilleurs affichent complet de bonne heure pendant les mois frais.",
@@ -587,7 +587,7 @@ export const frDestinations: DestText[] = [
     faqs: [
       {
         q: "Comment se rend-on à Siwa ?",
-        a: "Par la route. L'itinéraire habituel longe la côte méditerranéenne jusqu'à Marsa Matrouh, puis file vers le sud à travers le désert, à environ trois heures et demie de Matrouh. Depuis Le Caire, c'est une journée entière, raison pour laquelle la plupart des voyages la coupent par une nuit à Alexandrie ou sur la côte.",
+        a: "Par la route. L'itinéraire habituel longe la côte méditerranéenne jusqu'à Marsa Matrouh, puis file vers le sud à travers le désert, à environ quatre heures de Matrouh. Depuis Le Caire, c'est une journée entière, raison pour laquelle la plupart des voyages la coupent par une nuit à Alexandrie ou sur la côte.",
       },
       {
         q: "Combien de nuits faut-il à Siwa ?",

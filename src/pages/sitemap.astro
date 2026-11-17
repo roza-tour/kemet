@@ -15,6 +15,7 @@ import { occasions } from "@/data/occasions";
 import { months } from "@/data/months";
 import { comparisons } from "@/data/comparisons";
 import { TRANSLATION_GROUPS, TRANSLATED_LOCALES, LOCALE_META } from "@/config/i18n";
+import { programmes, programmeRoute } from "@/data/programmes";
 import { DEST_HUB, destHubRoute } from "@/data/i18n/destinations/hub";
 import { EXP_HUB, expHubRoute } from "@/data/i18n/experiences/hub";
 import { MAP_WORDS, MAP_ROUTE } from "@/config/journey-map";
@@ -59,6 +60,7 @@ const main = [
   ["Cuisine", "cuisine.html", "What to eat, and where."],
   ["Incense, oils, stones & cotton", "egyptian-incense-stones-cotton.html", "The sacred senses of Egypt: incense, oils, stones, cotton and linen."],
   ["The Oberoi Zahra", "oberoi-zahra-nile-cruise.html", "A luxury Nile cruiser between Luxor and Aswan, booked on request."],
+  ["Programmes", "programmes.html", "Nine private programmes beyond the Nile — Siwa, the islands, Sinai, the deserts — priced on request."],
   ["Design your journey", "design-your-journey.html", "Draw your own route on the map of Egypt and send it to us."],
   ["About Kemet", "about.html", "Who we are and how we work."],
   ["Our travellers", "travellers.html", "Our guests across Egypt, on film and in photographs."],
@@ -85,7 +87,7 @@ const jsonld = [
 ];
 
 const pageCount =
-  main.length + support.length + tours.length + collections.length +
+  main.length + support.length + tours.length + programmes.length + collections.length +
   destinations.length + experiences.length + guides.length +
   activities.filter((a) => a.slug).length + occasions.length + months.length + comparisons.length + TRANSLATION_GROUPS.length * TRANSLATED_LOCALES.length;
 
@@ -159,6 +161,18 @@ const labelFor = (route: string) =>
         <ul class="sm-list">
           {collections.map((c) => (
             <li><a href={`collections/${c.slug}.html`}>{c.title}</a><span>{c.subtitle}</span></li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="sm-group reveal">
+        <h2>Programmes <em>({programmes.length})</em></h2>
+        <ul class="sm-list sm-cols">
+          {programmes.map((p) => (
+            <li>
+              <a href={programmeRoute(p)}>{p.title}</a>
+              <span>{p.length} · priced on request</span>
+            </li>
           ))}
         </ul>
       </div>

@@ -319,7 +319,7 @@ export const ptExperiences: ExpText[] = [
       { q: "Vocês atendem a restrições alimentares?", a: "Sim. O menu se adapta a dietas vegetarianas, pescetarianas e à maioria das alergias, com aviso prévio — avisem na reserva, e não no cais." },
     ],
     photos: [
-      { alt: "Uma faluca no Nilo, no Cairo, com a Torre do Cairo ao fundo", label: "Jantar no Nilo" },
+      { alt: "A Torre do Cairo e o horizonte do Nilo, com uma faluca na água — o rio por onde navega o cruzeiro com jantar", label: "Jantar no Nilo" },
     ],
   },
   // ===== Hot-Air Balloon over Luxor =====
@@ -555,7 +555,7 @@ export const ptExperiences: ExpText[] = [
     ],
     prepare: [
       "Levem o cartão de certificação e o diário de mergulho — o centro vai pedir, e isso é bom sinal",
-      "Não voem nas 18 a 24 horas seguintes ao mergulho; organizamos o seu roteiro em função disso",
+      "Não voem durante pelo menos 24 horas depois do último mergulho; organizamos o seu roteiro em função disso",
     ],
     goodToKnow: [
       "O mergulho no inverno é excelente — uma roupa de 5 mm vai a bordo e os pontos ficam mais tranquilos",
@@ -568,7 +568,7 @@ export const ptExperiences: ExpText[] = [
     priceNote: "Valor confirmado sob consulta. Equipamento, barco e taxas do parque incluídos.",
     faqs: [
       { q: "Nunca mergulhei — posso participar mesmo assim?", a: "Sim, como introdução Discover Scuba Diving: teoria e prática em águas confinadas pela manhã e, depois, um mergulho raso guiado no recife com um instrutor numa proporção individual. Não é preciso certificação, e a experiência vale como parte de um curso Open Water, se o mergulho pegar vocês." },
-      { q: "Como isso se encaixa num roteiro pelo Nilo?", a: "Sem esforço — de Luxor a Sharm el-Sheikh é um voo curto. A única regra é o intervalo sem voar depois de mergulhar, por isso marcamos os dias de mergulho pelo menos um dia inteiro antes de qualquer voo." },
+      { q: "Como isso se encaixa num roteiro pelo Nilo?", a: "Sem esforço — de Luxor a Sharm el-Sheikh são cerca de uma hora de voo, mas o voo direto não opera todos os dias; por isso ordenamos os dias em torno dos voos nas suas datas. A única regra é o intervalo sem voar depois de mergulhar, por isso marcamos os dias de mergulho pelo menos um dia inteiro antes de qualquer voo." },
     ],
     photos: [
       { alt: "Um vívido recife de coral do Mar Vermelho fervilhando de peixes tropicais", label: "Mergulho no Mar Vermelho" },
@@ -600,7 +600,7 @@ export const ptExperiences: ExpText[] = [
       { label: "Tipo de grupo", value: "Privativo — somente o seu grupo" },
       { label: "Melhor céu", value: "Em torno da lua nova" },
       { label: "Terreno", value: "Fácil — tapetes e assentos baixos no acampamento" },
-      { label: "Temperatura", value: "As noites no deserto esfriam bruscamente — agasalhos fornecidos" },
+      { label: "Temperatura", value: "As noites no deserto esfriam bruscamente — levem um agasalho" },
     ],
     included: [
       "Traslados privativos de 4x4 saindo do seu hotel em Sharm",
@@ -997,7 +997,7 @@ export const ptExperiences: ExpText[] = [
     excluded: [],
     prepare: [],
     goodToKnow: [
-      "Os operadores definem limites de peso nos dois extremos — leve demais e não se voa, pesado demais e se voa em dupla; confirmem com antecedência",
+      "Os operadores definem limites de peso para voos solo e em dupla; confirmem com antecedência",
       "Não é indicado na gravidez nem com problemas cardíacos, nas costas ou nos ombros",
       "O vento decide tudo: os voos são cancelados ou passam para a manhã seguinte se ele aumentar",
       "Prendam ou deixem para trás chapéus, óculos e celulares — o que cair se perde",
@@ -1016,7 +1016,7 @@ export const ptExperiences: ExpText[] = [
     faqs: [
       { q: "O parasailing em Sharm el-Sheikh é seguro?", a: "É uma das atividades aquáticas mais controladas da costa: decola-se e pousa-se no próprio barco, por guincho, os arneses são verificados antes de cada voo, e a operação para totalmente quando as condições de vento são duvidosas. Não há pulo nem corrida — quem faz o trabalho é o barco." },
       { q: "A que altura se chega no parasailing?", a: "Em geral, a cerca de cem metros, dependendo do comprimento do cabo e do vento. É alto o bastante para ler toda a estrutura do recife lá embaixo e ver as montanhas do Sinai atrás da costa, e o voo é tranquilo depois que se está no alto." },
-      { q: "Duas pessoas podem fazer parasailing juntas?", a: "Sim — os voos em dupla são padrão e muitas vezes são o padrão para os hóspedes mais pesados. Os casais costumam preferi-los, e os operadores orientam sobre a faixa de peso para voo solo ou em dupla quando o voo é organizado." },
+      { q: "Duas pessoas podem fazer parasailing juntas?", a: "Sim — os voos em dupla são padrão. Os casais costumam preferi-los, e os operadores orientam sobre a faixa de peso para voo solo ou em dupla quando o voo é organizado." },
     ],
     photos: [
       { alt: "Um casal fazendo parasailing sobre o Mar Vermelho, sob uma vela colorida", label: "Parasailing" },
@@ -1033,7 +1033,7 @@ export const ptExperiences: ExpText[] = [
     name: "Passeio de camelo nas Pirâmides",
     summary: "Um curto passeio de camelo pela borda do deserto em Gizé até o mirante panorâmico — a aproximação clássica, organizada para que ninguém precise pechinchar.",
     description: "O passeio de camelo em Gizé tem má fama, e em boa parte ela é merecida: o planalto é um dos lugares mais insistentes do Egito em matéria de aliciadores, e um passeio sem arranjo prévio pode virar uma negociação no meio da areia. Bem organizado, é outra coisa. Um curto trajeto pela borda do deserto leva vocês ao mirante panorâmico onde as três pirâmides se alinham, por um caminho mais sossegado do que a estrada e que se usa para chegar a Gizé desde que há quem venha aqui. Vinte a trinta minutos são realmente suficientes — o bastante para a vista e as fotos, e pouco o bastante para continuar confortável.",
-    duration: "20 a 40 minutos de passeio, dentro de meio dia ou de um dia inteiro em Gizé",
+    duration: "20 a 30 minutos de passeio, dentro de meio dia ou de um dia inteiro em Gizé",
     where: "Gizé",
     bestTime: "De manhã cedo ou no fim da tarde. Evitem completamente o meio-dia no verão.",
     highlights: [
@@ -1173,7 +1173,7 @@ export const ptExperiences: ExpText[] = [
       { q: "O quadriciclo é indicado para crianças?", a: "Crianças mais velhas e adolescentes geralmente pilotam, sujeitos à idade mínima do operador para quem pilota sozinho; as crianças menores vão na garupa, com um guia. Não é indicado durante a gravidez, nem para quem tem problemas nas costas, nos punhos ou nos ombros, porque o trajeto é realmente irregular." },
     ],
     photos: [
-      { alt: "Hóspedes de quadriciclo pelas dunas do deserto, perto das pirâmides de Gizé", label: "Quadriciclo" },
+      { alt: "Uma fila de quadriciclos vermelhos atravessando o deserto aberto, com os pilotos de lenço e óculos de sol", label: "Quadriciclo" },
     ],
   },
 ];

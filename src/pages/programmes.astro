@@ -1,0 +1,96 @@
+---
+// The programmes hub (/programmes.html): the nine private programmes beyond
+// the Nile, from data/programmes.ts. No prices — each is priced on request.
+import Base from "@/layouts/Base.astro";
+import PageHero from "@/components/PageHero.astro";
+import Frieze from "@/components/Frieze.astro";
+import SectionHeader from "@/components/SectionHeader.astro";
+import LeadCapture from "@/components/conversion/LeadCapture.astro";
+import { programmes, programmeRoute, ORDER_NOTE, PRICE_NOTE, PROGRAMME_HUB } from "@/data/programmes";
+import { destinations } from "@/data/destinations";
+import { breadcrumb } from "@/schemas/jsonld";
+import { canonical } from "@/utils/links";
+
+const cards = programmes.map((p) => {
+  const d = destinations.find((x) => x.id === p.photo.destination)!;
+  const photo = [d.hero, ...(d.gallery ?? [])].filter((x) => x && x.src)[p.photo.index] ?? d.hero!;
+  return { p, photo: photo! };
+});
+const groups = [
+  { label: "Journeys of their own", note: "Planned from first to last day.", items: cards.filter((c) => c.p.kind === "stand-alone") },
+  { label: "Extensions", note: "To add to the end of a Cairo, Luxor or Nile journey.", items: cards.filter((c) => c.p.kind === "extension") },
+  { label: "Add-ons", note: "One more day or two, from where you already are.", items: cards.filter((c) => c.p.kind === "add-on") },
+].filter((g) => g.items.length > 0);
+
+const jsonld = [
+  breadcrumb([["Home", "index.html"], ["Programmes", PROGRAMME_HUB.route]]),
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Private programmes beyond the Nile",
+    description: PROGRAMME_HUB.description,
+    url: canonical(PROGRAMME_HUB.route),
+    inLanguage: "en",
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: programmes.map((p, i) => ({ "@type": "ListItem", position: i + 1, name: p.title, url: canonical(programmeRoute(p)) })),
+    },
+  },
+];
+---
+<Base title={PROGRAMME_HUB.title} description={PROGRAMME_HUB.description} active={PROGRAMME_HUB.route} jsonld={jsonld} showCta={false}>
+  <PageHero
+    crumb="Programmes"
+    symbol="lotus"
+    title={PROGRAMME_HUB.heading}
+    text={PROGRAMME_HUB.text}
+    heroSrc={cards[0].photo.src}
+    heroAlt={cards[0].photo.alt}
+    heroWidth={cards[0].photo.width}
+    heroHeight={cards[0].photo.height}
+  />
+
+  {groups.map((g) => (
+    <section style="padding-top:var(--s-5)">
+      <div class="wrap">
+        <SectionHeader eyebrow={g.note} title={g.label} />
+        <div class="grid-3">
+          {g.items.map(({ p }) => (
+            <a class="tease reveal" href={programmeRoute(p)} data-tilt>
+              <div class="eyebrow" style="margin-bottom:var(--s-1)">{p.length} · priced on request</div>
+              <h3>{p.title}</h3>
+              <p>{p.standfirst}</p>
+              <span class="more">See the plan <b>→</b></span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <Frieze />
+
+  <section style="padding-top:0">
+    <div class="wrap pg-wrap">
+      <div class="pg-note reveal">
+        <h3>How the days are ordered</h3>
+        <p>{ORDER_NOTE}</p>
+        <p>{PRICE_NOTE}</p>
+      </div>
+    </div>
+  </section>
+
+  <LeadCapture
+    variant="consultation"
+    heading="Send us your dates"
+    subtext="Dates and the number of travellers are enough. We reply in writing, within one working day, with the days in their final order and the price."
+    whatsappMessage="Hello Kemet — I'd like to ask about your programmes beyond the Nile. My dates: "
+    emailSubject="Programmes — enquiry"
+  />
+</Base>
+
+<style is:global>
+  .pg-note { margin-top: var(--s-6); padding: var(--s-5); border-inline-start: 2px solid var(--gold); background: rgba(217,180,90,.05); }
+  .pg-note h3 { font-family: var(--ff-display); font-weight: 300; font-size: 1.3rem; color: var(--gold-bright); margin: 0 0 var(--s-2); }
+  .pg-note p { margin: 0 0 var(--s-2); color: var(--muted); font-size: var(--t-sm); line-height: 1.88; max-width: 760px; }
+</style>

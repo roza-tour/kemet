@@ -613,7 +613,7 @@ export const experiences: Experience[] = [
       },
     ],
     hero: {
-      alt: "A felucca on the Nile in Cairo, the Cairo Tower behind it",
+      alt: "The Cairo Tower and the Nile skyline, with a felucca on the water — the river the dinner cruise sails",
       label: "Private Nile Dinner Cruise",
       src: "/images/cairo/cairo-tower-nile-skyline.webp",
       width: 736,
@@ -991,7 +991,7 @@ export const experiences: Experience[] = [
     ],
     preparationTips: [
       "Bring your certification card and logbook — the centre will ask, which is a good sign",
-      "Do not fly within 18–24 hours after diving; we sequence your itinerary around it",
+      "Do not fly for at least 24 hours after your last dive; we sequence your itinerary around it",
     ],
     goodToKnow: [
       "Winter diving is excellent — a 5 mm suit is carried aboard and the sites are quieter",
@@ -1004,7 +1004,7 @@ export const experiences: Experience[] = [
       },
       {
         q: "How does this fit into a Nile itinerary?",
-        a: "Cleanly — Luxor to Sharm El Sheikh is a short flight. The only rule is the no-fly interval after diving, so we schedule dive days at least a full day before any flight.",
+        a: "Cleanly — Luxor to Sharm El Sheikh is about an hour in the air, though the non-stop does not run every day, so we set the order of your days around the flights on your dates. The only other rule is the no-fly interval after diving, so we schedule dive days at least a full day before any flight.",
       },
     ],
     hero: {
@@ -1064,7 +1064,7 @@ export const experiences: Experience[] = [
       { label: "Group type", value: "Private — your party only" },
       { label: "Best sky", value: "Around the new moon" },
       { label: "Terrain", value: "Easy — carpets and low seating at camp" },
-      { label: "Temperature", value: "Desert nights drop sharply — layers provided" },
+      { label: "Temperature", value: "Desert nights drop sharply — bring a warm layer" },
     ],
     whatsIncluded: [
       "Private 4x4 transfers from your Sharm hotel",

@@ -319,7 +319,7 @@ export const esExperiences: ExpText[] = [
       { q: "¿Pueden atender necesidades dietéticas?", a: "Sí. El menú se adapta a dietas vegetarianas, pescetarianas y a la mayoría de las alergias con previo aviso: díganoslo al reservar y no en el muelle." },
     ],
     photos: [
-      { alt: "Una faluca sobre el Nilo en El Cairo, con la Torre de El Cairo al fondo", label: "Cena en el Nilo" },
+      { alt: "La Torre de El Cairo y el perfil urbano junto al Nilo, con una faluca sobre el agua: el río por el que navega la cena crucero", label: "Cena en el Nilo" },
     ],
   },
   // ===== Hot-Air Balloon over Luxor =====
@@ -556,7 +556,7 @@ export const esExperiences: ExpText[] = [
     ],
     prepare: [
       "Traiga su carné de titulación y su cuaderno de inmersiones: el centro se los pedirá, y eso es buena señal",
-      "No vuele en las 18–24 horas posteriores a bucear; organizamos su itinerario teniéndolo en cuenta",
+      "No vuele durante al menos las 24 horas posteriores a su última inmersión; organizamos su itinerario teniéndolo en cuenta",
     ],
     goodToKnow: [
       "El buceo en invierno es excelente: se lleva a bordo un traje de 5 mm y los puntos de inmersión están más tranquilos",
@@ -569,7 +569,7 @@ export const esExperiences: ExpText[] = [
     priceNote: "Precio confirmado bajo consulta. Incluye equipo, barco y tasas del parque.",
     faqs: [
       { q: "Nunca he buceado: ¿puedo participar igualmente?", a: "Sí, con un bautismo de buceo (Discover Scuba Diving): teoría y práctica en aguas confinadas por la mañana y, después, una inmersión guiada poco profunda en el arrecife con un instructor que mantiene una proporción de uno a uno. No hace falta titulación, y cuenta para un curso Open Water si le pica el gusanillo." },
-      { q: "¿Cómo encaja en un itinerario por el Nilo?", a: "Sin problema: de Luxor a Sharm el-Sheikh hay un vuelo corto. La única regla es el intervalo sin volar tras bucear, así que programamos los días de buceo al menos un día completo antes de cualquier vuelo." },
+      { q: "¿Cómo encaja en un itinerario por el Nilo?", a: "Sin problema: de Luxor a Sharm el-Sheikh hay cerca de una hora de vuelo, aunque el directo no opera todos los días. La única regla es el intervalo sin volar tras bucear, así que programamos los días de buceo al menos un día completo antes de cualquier vuelo." },
     ],
     photos: [
       { alt: "Un vivo arrecife de coral del mar Rojo lleno de peces tropicales", label: "Buceo en el mar Rojo" },
@@ -601,7 +601,7 @@ export const esExperiences: ExpText[] = [
       { label: "Tipo de grupo", value: "Privado: solo su grupo" },
       { label: "Mejor cielo", value: "En torno a la luna nueva" },
       { label: "Terreno", value: "Fácil: alfombras y asientos bajos en el campamento" },
-      { label: "Temperatura", value: "Las noches del desierto refrescan de golpe: se facilitan prendas de abrigo" },
+      { label: "Temperatura", value: "Las noches del desierto refrescan de golpe: traiga una prenda de abrigo" },
     ],
     included: [
       "Traslados privados en 4x4 desde su hotel de Sharm",
@@ -999,7 +999,7 @@ export const esExperiences: ExpText[] = [
     excluded: [],
     prepare: [],
     goodToKnow: [
-      "Los operadores fijan límites de peso en ambos extremos: si pesa muy poco, no volará; si pesa mucho, volará en tándem; confírmelo con antelación",
+      "Los operadores fijan límites de peso para los vuelos en solitario y para los vuelos en tándem; confírmelo con antelación",
       "No es adecuado durante el embarazo ni con problemas cardíacos, de espalda o de hombros",
       "El viento lo decide todo: los vuelos se cancelan o se trasladan a la mañana siguiente si se levanta",
       "Asegure o deje en tierra sombreros, gafas y móviles: lo que se cae, se pierde",
@@ -1018,7 +1018,7 @@ export const esExperiences: ExpText[] = [
     faqs: [
       { q: "¿Es seguro el parasailing en Sharm el-Sheikh?", a: "Es una de las actividades acuáticas más controladas de la costa: se despega y se aterriza desde el propio barco con un cabrestante, los arneses se comprueban antes de cada vuelo y las operaciones se detienen por completo cuando las condiciones del viento son dudosas. No se salta ni se corre: el barco hace el trabajo." },
       { q: "¿A qué altura se llega con el parasailing?", a: "Normalmente a unos cien metros, según la longitud del cable y el viento. Es suficiente para leer toda la estructura del arrecife que queda debajo y ver las montañas del Sinaí tras la costa, y el vuelo es sereno una vez arriba." },
-      { q: "¿Pueden volar dos personas a la vez?", a: "Sí: los vuelos en tándem son lo habitual y a menudo son la opción por defecto para los huéspedes de más peso. Las parejas suelen preferirlos, y los operadores indican el intervalo de peso para volar en solitario o en tándem cuando se organiza el vuelo." },
+      { q: "¿Pueden volar dos personas a la vez?", a: "Sí: los vuelos en tándem son lo habitual. Las parejas suelen preferirlos, y los operadores indican el intervalo de peso para volar en solitario o en tándem cuando se organiza el vuelo." },
     ],
     photos: [
       { alt: "Una pareja practica parasailing sobre el mar Rojo bajo un paracaídas de colores", label: "Parasailing" },
@@ -1035,7 +1035,7 @@ export const esExperiences: ExpText[] = [
     name: "Paseo en camello por las Pirámides",
     summary: "Un breve paseo en camello por el borde del desierto de Guiza hasta el mirador panorámico: la aproximación clásica, organizada para que nadie regatee.",
     description: "El paseo en camello de Guiza tiene fama, y en gran parte merecida: la meseta es uno de los lugares de Egipto más persistentes en cuanto a vendedores que abordan al visitante, y un paseo sin organizar puede convertirse en una negociación a mitad de camino sobre la arena. Bien organizado, es otra cosa. Un breve paseo por el borde del desierto le lleva al mirador panorámico donde se alinean las tres pirámides, por una ruta más tranquila que la carretera y usada para acercarse a Guiza desde que hay quien viene aquí. Veinte o treinta minutos bastan de verdad: lo justo para la vista y las fotografías, y lo bastante breve para seguir cómodo.",
-    duration: "20–40 minutos a lomos del camello, dentro de una media jornada o una jornada completa en Guiza",
+    duration: "20–30 minutos a lomos del camello, dentro de una media jornada o una jornada completa en Guiza",
     where: "Guiza",
     bestTime: "A primera hora de la mañana o a última de la tarde. En verano, evite por completo el mediodía.",
     highlights: [
@@ -1175,7 +1175,7 @@ export const esExperiences: ExpText[] = [
       { q: "¿Es adecuado el quad para niños?", a: "Los niños mayores y los adolescentes suelen conducir, según la edad mínima que fije el operador para conducir en solitario; los más pequeños van de paquete con un guía. No es adecuado durante el embarazo ni para quien tenga problemas de espalda, muñecas u hombros, porque el recorrido es realmente accidentado." },
     ],
     photos: [
-      { alt: "Huéspedes en quad por las dunas del desierto, cerca de las pirámides de Guiza", label: "Quad" },
+      { alt: "Una hilera de quads rojos avanza por el desierto abierto, con los pilotos en bufanda y gafas de sol", label: "Quad" },
     ],
   },
 ];
