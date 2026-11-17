@@ -1478,6 +1478,17 @@ function dates(x: number, y: number): Array<{ cx: number; cy: number }> {
   .dish figcaption { margin-top: 7px; text-align: center; font-family: var(--ff-display); font-style: italic;
     font-size: var(--t-sm); color: #3A2214; }
 
+  /* WHAT THE ORNAMENT COSTS. Each moving piece is its own layer for the phone
+     to composite on every frame; the Easter page had 62 of them running and
+     scored 45 on a phone (Lighthouse, 17 Nov 2026). Two limits, neither of
+     which changes what the ornament is: out of view it stops (the script adds
+     .sth-off), and on a phone every other falling piece is left out — a
+     narrow screen was showing them twice as densely as a wide one anyway. */
+  .sth.sth-off, .sth.sth-off * { animation-play-state: paused !important; }
+  @media (max-width: 600px) {
+    .sth-petal:nth-child(2n), .sth-conf:nth-child(2n), .sth-flake:nth-child(2n), .sth-mote:nth-child(2n), .sth-bubble:nth-child(2n) { display: none; }
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .sth-lantern, .sth-star, .sth-petal, .sth-bubble, .sth-mote, .sth-conf,
     .sth-summer-rays, .sth-felucca, .sth-corona-glow, .sth-bulb, .sth-halo, .sth-flake,

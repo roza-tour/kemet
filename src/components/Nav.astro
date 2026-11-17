@@ -56,7 +56,10 @@ const isCurrent = (item: (typeof primaryNav)[number]) =>
 <nav class="nav" id="nav">
   <a class="brand" href={homeHref} aria-label={t.brandHome}>
     <span class="logo-plaque">
-      <img src="/images/brand/kemet-logo-gold.webp" alt="Kemet — Luxury Egypt Travel" width="52" height="50" decoding="async" />
+      {/* Drawn 52px wide, so it gets a 156px file (three times over for the
+          sharpest phones) — 16 KB. The 440px original it used to load on
+          every page is 98 KB. */}
+      <img src="/images/brand/kemet-logo-gold-nav.webp" alt="Kemet — Luxury Egypt Travel" width="52" height="50" decoding="async" />
     </span>
   </a>
 

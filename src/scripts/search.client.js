@@ -31,7 +31,9 @@
     function load() {
       if (docs) return Promise.resolve(docs);
       if (loading) return loading;
-      loading = fetch(prefix + "search-index.json", { credentials: "omit" })
+      // .txt, not .json: the same file, but the host only compresses it under
+      // this name (pages/search-index.txt.ts).
+      loading = fetch(prefix + "search-index.txt", { credentials: "omit" })
         .then(function (r) { return r.json(); })
         .then(function (d) {
           // Fold once per document, here, rather than on every keystroke of

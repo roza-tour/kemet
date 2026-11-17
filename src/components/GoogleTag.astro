@@ -77,6 +77,38 @@ window.KEMET_ADS_SEND_TO='${enquirySendTo}';
 
 gtag('js',new Date());
 gtag('config','${GOOGLE_ADS_ID}');
+
+/* WHEN THE LIBRARY ITSELF LOADS.
+   gtag.js is 165 KB — a third of a typical page here, and on a mid-range
+   phone 350-560 ms of main-thread time while the page is still drawing
+   (Lighthouse, live site, 17 Nov 2026). Everything above is only a queue:
+   nothing is lost by fetching the library a moment later.
+
+   A visitor who arrived from an ad is the exception and gets it at once, as
+   before: the click id is read from the URL on the landing page, and that is
+   the one thing here that cannot wait. So: a click id in the address, one
+   parked earlier in this visit, or Google's own click cookie -> load now.
+   Everyone else -> on the first touch, key or scroll, or four seconds after
+   the page has loaded, whichever comes first. */
+(function(){
+  var done=0,ev=['pointerdown','keydown','touchstart','scroll'];
+  function load(){
+    if(done)return;done=1;
+    for(var i=0;i<ev.length;i++)removeEventListener(ev[i],load,true);
+    var s=document.createElement('script');s.async=true;
+    s.src='https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}';
+    document.head.appendChild(s);
+  }
+  var ad=false;
+  try{
+    ad=/[?&](gclid|wbraid|gbraid|gad_source|gclsrc|dclid)=/.test(location.search)
+      ||!!sessionStorage.getItem('kemet_gclid')
+      ||/(^|; )(_gcl_aw|_gcl_gb|_gcl_dc|_gac_)/.test(document.cookie);
+  }catch(e){ad=true;}
+  if(ad){load();return;}
+  for(var i=0;i<ev.length;i++)addEventListener(ev[i],load,{capture:true,passive:true});
+  if(document.readyState==='complete')setTimeout(load,4000);
+  else addEventListener('load',function(){setTimeout(load,4000);});
+})();
 `}
 />
-<script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`}></script>

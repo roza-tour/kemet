@@ -121,7 +121,7 @@ ErrorDocument 404 /404.html
   # "noindex" alone (links still followed): Google keeps processing a sitemap
   # that carries it, and it has no bearing on assistants that fetch llms.txt.
   # robots.txt and the site-verification files are deliberately left alone.
-  <FilesMatch "^(?:sitemap[a-z0-9-]*\.xml|llms(?:-full)?\.txt|search-index\.json|seasons\.json|build\.txt)$">
+  <FilesMatch "^(?:sitemap[a-z0-9-]*\.xml|llms(?:-full)?\.txt|search-index\.(?:json|txt)|(?:seasons|journeys)\.json|build\.txt)$">
     Header set X-Robots-Tag "noindex"
   </FilesMatch>
 </IfModule>
@@ -144,6 +144,19 @@ ErrorDocument 404 /404.html
 <IfModule mod_headers.c>
   <FilesMatch "\.txt$">
     Header set Content-Type "text/plain; charset=utf-8"
+  </FilesMatch>
+</IfModule>
+
+# The web app manifest. The host has no type for .webmanifest and sent it as
+# application/octet-stream (seen live, 17 Nov 2026), which some browsers will
+# not read as a manifest at all. AddType for Apache; Header for LiteSpeed,
+# which is the one that is actually listened to here (see above).
+<IfModule mod_mime.c>
+  AddType application/manifest+json .webmanifest
+</IfModule>
+<IfModule mod_headers.c>
+  <FilesMatch "\.webmanifest$">
+    Header set Content-Type "application/manifest+json; charset=utf-8"
   </FilesMatch>
 </IfModule>
 

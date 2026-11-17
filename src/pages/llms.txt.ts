@@ -156,6 +156,8 @@ export const GET: APIRoute = () => {
 
   lines.push("## Journeys (private, per person, from-prices in EUR)");
   lines.push("");
+  lines.push(`The same catalogue as data, with each journey's page in every language it is published in: ${u("journeys.json")}`);
+  lines.push("");
   for (const t of [...tours].sort((a, b) => a.price - b.price)) {
     lines.push(
       item(

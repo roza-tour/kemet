@@ -17,7 +17,10 @@ interface Props {
   /** Intrinsic dimensions — improve CLS and are good SEO practice. */
   width?: number;
   height?: number;
-  /** Eager-load above-the-fold heroes; defaults to lazy. */
+  /** Eager-load above-the-fold heroes; defaults to lazy. An eager photo is
+   *  the page's largest paint, so it is also fetched ahead of everything
+   *  else (fetchpriority) — without that the browser queued it behind the
+   *  fonts and it arrived 2.5s late on a phone (Lighthouse, 17 Nov 2026). */
   loading?: "lazy" | "eager";
   /**
    * How wide this frame is drawn — a key into the measured SIZES table. The
@@ -51,6 +54,7 @@ const credit = creditFor(src);
       width={width}
       height={height}
       loading={loading}
+      fetchpriority={loading === "eager" ? "high" : undefined}
       decoding="async"
       style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block"
     />
