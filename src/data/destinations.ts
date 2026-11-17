@@ -797,6 +797,10 @@ export const destinations: Destination[] = [
       src: "/images/stock/siwa-shali-fortress.webp",
       width: 1280, height: 960,
     },
+    gallery: [
+      { alt: "Turquoise salt lake with a white salt-crusted shore in Siwa Oasis", label: "Salt lakes", src: "/images/stock/siwa-salt-lake.webp", width: 1600, height: 1068 },
+      { alt: "Mud-brick ruins and a tapering minaret at Aghurmi, site of the Oracle temple in Siwa", label: "Oracle temple", src: "/images/stock/siwa-aghurmi-oracle-temple.webp", width: 1600, height: 1200 },
+    ],
     faqs: [
       { q: "How do you get to Siwa?",
         a: "By road. The usual way is along the Mediterranean coast to Marsa Matruh and then south across the desert, about three and a half hours from Matruh. From Cairo it is a full day, which is why most journeys break it with a night in Alexandria or on the coast." },
@@ -851,6 +855,11 @@ export const destinations: Destination[] = [
       "The natural stop on the way to Siwa",
     ],
     symbol: "greco",
+    hero: { alt: "Bright turquoise sea below pale limestone cliffs and rock shelves at Agiba, Marsa Matruh", label: "Agiba", src: "/images/stock/marsa-matruh-agiba-cove.webp", width: 1600, height: 1184 },
+    gallery: [
+      { alt: "Sandy cove beneath a limestone headland with turquoise sea at Agiba beach near Marsa Matruh", label: "Agiba beach", src: "/images/stock/marsa-matruh-agiba-beach.webp", width: 1600, height: 1045 },
+      { alt: "Rows of white headstones and a single tree in the sand at the El Alamein War Cemetery", label: "El Alamein", src: "/images/stock/el-alamein-war-cemetery.webp", width: 1600, height: 1068 },
+    ],
     faqs: [
       { q: "When is the best time for Egypt's North Coast?",
         a: "Summer. From June to September the sea is warm and the breeze keeps the coast far cooler than Cairo or Luxor. It is the one part of Egypt where July and August are the season rather than something to avoid — though they are also the busiest weeks." },
@@ -904,6 +913,11 @@ export const destinations: Destination[] = [
       "A gateway to Cairo for travellers arriving by sea",
     ],
     symbol: "greco",
+    hero: { alt: "Red wooden boats with carved cabins moored on the Suez Canal at Port Said, city on the far bank", label: "Suez Canal", src: "/images/stock/port-said-canal-boats.webp", width: 1600, height: 2000 },
+    gallery: [
+      { alt: "White arcaded Suez Canal Authority building with three green domes seen across the canal at Port Said", label: "Canal Authority", src: "/images/stock/port-said-suez-canal-authority-building.webp", width: 1600, height: 1067 },
+      { alt: "Green car ferry crossing the Suez Canal below the twin minarets of the Port Fuad mosque", label: "Port Fuad ferry", src: "/images/stock/port-said-port-fuad-ferry.webp", width: 1600, height: 1067 },
+    ],
     faqs: [
       { q: "What is there to see in Port Said?",
         a: "The canal itself, above all: ships passing within a few hundred metres of the corniche. Then the nineteenth-century streets with their wooden balconies, the Canal Authority building, and the short ferry crossing to Port Fouad on the Asian side." },
@@ -960,6 +974,11 @@ export const destinations: Destination[] = [
       "Sinai's interior, a world away from its beaches",
     ],
     symbol: "ankh",
+    hero: { alt: "Layered red granite ridges of the Sinai mountains at sunrise seen from Mount Sinai", label: "Mount Sinai", src: "/images/stock/mount-sinai-sunrise.webp", width: 1600, height: 1067 },
+    gallery: [
+      { alt: "Fortified walls, bell tower and cypress garden of Saint Catherine's Monastery below a granite slope", label: "Monastery", src: "/images/stock/saint-catherine-monastery.webp", width: 1600, height: 844 },
+      { alt: "Jagged granite peaks of the high Sinai in early light, seen from the rocky stairway on Mount Sinai", label: "High Sinai", src: "/images/stock/mount-sinai-high-range-early-light.webp", width: 1600, height: 2000 },
+    ],
     faqs: [
       { q: "How hard is the climb of Mount Sinai?",
         a: "It is a long uphill walk rather than a climb. The camel path rises gently for most of the way and ends with about 750 stone steps to the summit; allow two and a half to three hours up and a little less down. Most people do it at night to arrive for sunrise, which means a head torch, warm clothing and steady footing." },
@@ -1014,6 +1033,11 @@ export const destinations: Destination[] = [
       "Sea and mountain in the same stay",
     ],
     symbol: "sun",
+    hero: { alt: "Bare Sinai mountains dropping to a reef-fringed shore and deep blue sea at the Blue Hole, Dahab", label: "Blue Hole", src: "/images/stock/dahab-blue-hole-coast.webp", width: 1600, height: 1067 },
+    gallery: [
+      { alt: "Kites above a turquoise lagoon backed by the Sinai mountains at Dahab", label: "Lagoon", src: "/images/stock/dahab-lagoon-kites.webp", width: 1600, height: 1067 },
+      { alt: "Café terraces and white buildings on the Dahab seafront above clear blue water with a moored boat", label: "Seafront", src: "/images/stock/dahab-seafront.webp", width: 1600, height: 1067 },
+    ],
     faqs: [
       { q: "Dahab or Sharm El Sheikh?",
         a: "Sharm is a resort city: large hotels, boat days to Ras Mohammed and Tiran, everything arranged. Dahab is a town: smaller places to stay, reefs reached from the shore, and a slower, more independent feel. Divers and travellers who dislike resorts tend to prefer Dahab; families wanting a full-service stay tend to prefer Sharm." },
@@ -1068,6 +1092,11 @@ export const destinations: Destination[] = [
       "The Red Sea without the crowds",
     ],
     symbol: "sun",
+    hero: { alt: "Green sea turtle grazing on a seagrass meadow underwater at Abu Dabbab, Marsa Alam", label: "Abu Dabbab", src: "/images/stock/marsa-alam-abu-dabbab-green-turtle.webp", width: 1600, height: 900 },
+    gallery: [
+      { alt: "Pink and yellow soft corals with a shoal of orange anthias on a Red Sea reef off Marsa Alam", label: "Coral reef", src: "/images/stock/marsa-alam-coral-reef.webp", width: 1600, height: 1067 },
+      { alt: "Camels walking in a line past an acacia tree and rocky hills in Wadi el-Gemal", label: "Wadi el-Gemal", src: "/images/stock/wadi-el-gemal-camels.webp", width: 1600, height: 865 },
+    ],
     faqs: [
       { q: "Marsa Alam or Hurghada?",
         a: "Hurghada has more of everything — hotels, restaurants, boat trips, nightlife — and is closer to Luxor. Marsa Alam has less, by design: fewer people, darker nights and reefs in better condition. Choose Hurghada for convenience and variety, Marsa Alam for the sea itself." },
@@ -1122,6 +1151,11 @@ export const destinations: Destination[] = [
       "A complete change of register from temples and museums",
     ],
     symbol: "sun",
+    hero: { alt: "Rounded white chalk formations rising from sand in Egypt's White Desert in low sunlight", label: "White Desert", src: "/images/stock/white-desert-chalk-formations.webp", width: 1600, height: 900 },
+    gallery: [
+      { alt: "Dark volcanic cone hills on a pale sand plain in the Black Desert near Bahariya", label: "Black Desert", src: "/images/stock/black-desert-volcanic-hills.webp", width: 1600, height: 1067 },
+      { alt: "Glowing tents beside a mushroom-shaped chalk rock at night in the White Desert", label: "Desert camp", src: "/images/stock/white-desert-camp-night.webp", width: 1600, height: 1063 },
+    ],
     faqs: [
       { q: "How many days does the White Desert need?",
         a: "Two nights from Cairo is the comfortable way: drive to Bahariya, continue through the Black Desert to camp in the White Desert, and return the next day or after a second night in the oasis. It can be done with one night, but the long drives then crowd out the desert itself." },
@@ -1176,6 +1210,11 @@ export const destinations: Destination[] = [
       "The Western Desert at its most remote and least visited",
     ],
     symbol: "ankh",
+    hero: { alt: "Flat mud-brick roofs of old Al-Qasr in Dakhla Oasis with a date-palm grove and desert beyond", label: "Al-Qasr", src: "/images/stock/dakhla-al-qasr-old-town.webp", width: 1600, height: 1000 },
+    gallery: [
+      { alt: "Sandstone gateway and columns of the Temple of Hibis in Kharga Oasis with palm trees behind", label: "Temple of Hibis", src: "/images/stock/kharga-hibis-temple.webp", width: 1600, height: 1067 },
+      { alt: "Mud-brick chapel tombs with arched niches on a hillside at the Bagawat necropolis, Kharga Oasis", label: "Bagawat", src: "/images/stock/kharga-bagawat-necropolis.webp", width: 1600, height: 1067 },
+    ],
     faqs: [
       { q: "How do you reach Kharga and Dakhla?",
         a: "By road. The most practical approach is from Luxor to Kharga, about three to four hours, continuing to Dakhla on the following day. Travellers doing the whole Western Desert can carry on north through Farafra to the White Desert and Bahariya, returning to Cairo." },
@@ -1230,6 +1269,11 @@ export const destinations: Destination[] = [
       "The missing chapter between Cairo and Luxor",
     ],
     symbol: "horus",
+    hero: { alt: "Small rowing boat on the calm Nile at Minya with palms and pale limestone cliffs on the far bank", label: "Nile at Minya", src: "/images/stock/minya-nile-rowing-boat.webp", width: 1600, height: 900 },
+    gallery: [
+      { alt: "Portico with two rock-cut columns at the entrance to a tomb in the limestone cliff at Beni Hasan", label: "Beni Hasan", src: "/images/stock/beni-hasan-rock-tomb-entrance.webp", width: 1600, height: 1199 },
+      { alt: "Temple-shaped tomb of Petosiris with four columns and screen walls in the sand at Tuna el-Gebel", label: "Tuna el-Gebel", src: "/images/stock/tuna-el-gebel-tomb-of-petosiris.webp", width: 1600, height: 904 },
+    ],
     faqs: [
       { q: "Is Minya worth adding to a journey?",
         a: "For a first visit of a week, usually not — Cairo, Luxor and Aswan come first. For a longer or second journey, or for anyone drawn to Akhenaten and the Amarna period, it is one of the most rewarding additions in Egypt, and you will share the sites with almost no one." },
@@ -1284,6 +1328,11 @@ export const destinations: Destination[] = [
       "Great temples without the crowds",
     ],
     symbol: "horus",
+    hero: { alt: "Hathor-headed columns and blue painted ceiling in the hypostyle hall of the Temple of Hathor at Dendera", label: "Dendera", src: "/images/stock/dendera-hathor-temple-columns.webp", width: 1600, height: 900 },
+    gallery: [
+      { alt: "Painted relief of the king offering incense to sacred barques in the Temple of Seti I at Abydos", label: "Seti I temple", src: "/images/stock/abydos-seti-temple-barque-relief.webp", width: 1600, height: 661 },
+      { alt: "Massive granite pillars standing in green water in the sunken hall of the Osireion at Abydos", label: "Osireion", src: "/images/stock/abydos-osireion.webp", width: 1600, height: 1200 },
+    ],
     faqs: [
       { q: "Can Dendera and Abydos be visited in one day from Luxor?",
         a: "Yes, and most people who do call it a highlight of their journey. It is a full day, about ten to eleven hours, with Abydos first while the day is cool and Dendera on the way back. With less time, Dendera alone makes an easy half-day excursion." },
