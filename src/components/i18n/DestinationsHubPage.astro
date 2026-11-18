@@ -19,7 +19,17 @@ import { TRANSLATION_GROUPS, LOCALE_META } from "@/config/i18n";
 import type { TranslatedLocale } from "@/config/i18n";
 import { canonical, whatsappHref, mailtoLink } from "@/utils/links";
 import { DEST_LABELS } from "@/data/i18n/destinations/labels";
-import { DEST_HUB, destHubRoute } from "@/data/i18n/destinations/hub";
+import { DEST_HUB, destHubRoute, PROGRAMMES_HEADING } from "@/data/i18n/destinations/hub";
+import { programmes } from "@/data/programmes";
+import { de as deP } from "@/data/i18n/de";
+import { it as itP } from "@/data/i18n/it";
+import { es as esP } from "@/data/i18n/es";
+import { fr as frP } from "@/data/i18n/fr";
+import { ru as ruP } from "@/data/i18n/ru";
+import { id as idP } from "@/data/i18n/id";
+import { ms as msP } from "@/data/i18n/ms";
+import { pt as ptP } from "@/data/i18n/pt";
+import { ar as arP } from "@/data/i18n/ar";
 import type { DestText } from "@/data/i18n/destinations/types";
 import { deDestinations } from "@/data/i18n/destinations/de";
 import { itDestinations } from "@/data/i18n/destinations/it";
@@ -87,6 +97,13 @@ const jsonld = [
     },
   },
 ];
+// The programmes translated into this language, by their translation groups.
+const LOCAL_PAGES = { de: deP, it: itP, es: esP, fr: frP, ru: ruP, id: idP, ms: msP, pt: ptP, ar: arP }[locale];
+const progCards = programmes.flatMap((p) => {
+  const g = TRANSLATION_GROUPS.find((x) => x.key === `programme-${p.slug}`);
+  const page = LOCAL_PAGES.find((x) => x.groupId === `programme-${p.slug}`);
+  return g && page ? [{ href: g[locale].split("/")[1], title: page.h1, text: page.standfirst }] : [];
+});
 const mail = mailtoLink(L.cta.emailSubject.replace("%s", w.title));
 ---
 <Base title={w.metaTitle} description={w.metaDescription} active={route} jsonld={jsonld} showCta={false}>
@@ -122,6 +139,23 @@ const mail = mailtoLink(L.cta.emailSubject.replace("%s", w.title));
       </div>
     </section>
   ))}
+
+  {progCards.length > 0 && (
+    <section style="padding-top:var(--s-5)">
+      <div class="wrap">
+        <SectionHeader eyebrow={PROGRAMMES_HEADING[locale].note} title={PROGRAMMES_HEADING[locale].title} />
+        <div class="grid-3">
+          {progCards.map((c) => (
+            <a class="tease reveal" href={c.href} data-tilt>
+              <h3>{c.title}</h3>
+              <p>{c.text}</p>
+              <span class="more">{w.explore} <b>{locale === "ar" ? "←" : "→"}</b></span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
 
   <Frieze />
 

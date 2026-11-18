@@ -100,5 +100,18 @@ export const DEST_HUB: Record<TranslatedLocale, DestHubWords> = {
   },
 };
 
+/** Heading of the programmes section on the hub (data/programmes.ts, translated in ../programmes/). */
+export const PROGRAMMES_HEADING: Record<TranslatedLocale, { title: string; note: string }> = {
+  de: { title: "Programme jenseits des Nils", note: "Privat geplant, Preis auf Anfrage." },
+  it: { title: "Programmi oltre il Nilo", note: "Privati, prezzo su richiesta." },
+  es: { title: "Programas más allá del Nilo", note: "Privados, precio bajo consulta." },
+  fr: { title: "Programmes au-delà du Nil", note: "Privés, prix sur demande." },
+  ru: { title: "Программы за пределами Нила", note: "Частные, цена по запросу." },
+  id: { title: "Program di luar Lembah Nil", note: "Privat, harga berdasarkan permintaan." },
+  ms: { title: "Program di luar Lembah Nil", note: "Persendirian, harga atas permintaan." },
+  pt: { title: "Programas além do Nilo", note: "Privados, preço sob consulta." },
+  ar: { title: "برامج ما وراء النيل", note: "خاصة، والسعر عند الطلب." },
+};
+
 /** The hub's route in a language, as config/translation-groups.json declares it. */
 export const destHubRoute = (locale: TranslatedLocale) => `${locale}/${DEST_HUB[locale].slug}.html`;
