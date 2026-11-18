@@ -313,7 +313,7 @@ Kemet welcomes travellers from every country and has written for these 50 by nam
 
 ## Other languages
 
-13 key pages — the home page, private access to monuments, The Oberoi Zahra, a luxury Nile cruiser booked on request, the map for designing a journey of your own, the journeys, the Nile cruise, what it costs, when to go, whether Egypt is safe, Kemet Ultra, the top tier, Easter in Egypt, the list of destinations and the list of experiences — are published in 9 languages besides English: Deutsch, Italiano, Español, Français, Русский, Bahasa Indonesia, Bahasa Melayu, Português, العربية. Each set is written for its market rather than translated word for word, so the flight times, school holidays, entry rules and reference points differ between them. The translated pages carry the same facts and the same prices. The 19 destination pages are published in the same languages. So are 30 experience, activity and programme pages.
+13 key pages — the home page, private access to monuments, The Oberoi Zahra, a luxury Nile cruiser booked on request, the map for designing a journey of your own, the journeys, the Nile cruise, what it costs, when to go, whether Egypt is safe, Kemet Ultra, the top tier, Easter in Egypt, the list of destinations and the list of experiences — are published in 9 languages besides English: Deutsch, Italiano, Español, Français, Русский, Bahasa Indonesia, Bahasa Melayu, Português, العربية. Each set is written for its market rather than translated word for word, so the flight times, school holidays, entry rules and reference points differ between them. The translated pages carry the same facts and the same prices. The 19 destination pages are published in the same languages. So are 48 experience, activity, programme, month and comparison pages.
 
 The whole journey catalogue is also published in Deutsch, Italiano, Español, Français, Русский, Bahasa Indonesia, Bahasa Melayu, Português and العربية: each journey page is listed under its language below, in that language, with a link to its English original. Experiences, activities, guides and the month-by-month pages are in English only.
 
@@ -379,6 +379,24 @@ The whole journey catalogue is also published in Deutsch, Italiano, Español, Fr
 - https://kemet-travel.com/de/marsa-alam-hamata-inseln-reise.html
 - https://kemet-travel.com/de/weisse-wueste-uebernachtung-camp.html
 - https://kemet-travel.com/de/assuan-inseln-abu-simbel-uebernachtung.html
+- https://kemet-travel.com/de/aegypten-im-januar.html
+- https://kemet-travel.com/de/aegypten-im-februar.html
+- https://kemet-travel.com/de/aegypten-im-maerz.html
+- https://kemet-travel.com/de/aegypten-im-april.html
+- https://kemet-travel.com/de/aegypten-im-mai.html
+- https://kemet-travel.com/de/aegypten-im-juni.html
+- https://kemet-travel.com/de/aegypten-im-juli.html
+- https://kemet-travel.com/de/aegypten-im-august.html
+- https://kemet-travel.com/de/aegypten-im-september.html
+- https://kemet-travel.com/de/aegypten-im-oktober.html
+- https://kemet-travel.com/de/aegypten-im-november.html
+- https://kemet-travel.com/de/aegypten-im-dezember.html
+- https://kemet-travel.com/de/nachtzug-oder-flug-luxor-assuan.html
+- https://kemet-travel.com/de/nilkreuzfahrt-oder-landreise.html
+- https://kemet-travel.com/de/dahabiya-oder-kreuzfahrtschiff.html
+- https://kemet-travel.com/de/luxor-oder-assuan.html
+- https://kemet-travel.com/de/aegyptisches-museum-oder-grand-egyptian-museum.html
+- https://kemet-travel.com/de/scharm-el-scheich-oder-hurghada.html
 - https://kemet-travel.com/de/weihnachten-in-aegypten.html — Weihnachten und Silvester in Ägypten: 24–26°C in Luxor, während es zu Hause dunkel ist — und die am stärksten umkämpften zwei Wochen des ägyptischen Jahres.
 - https://kemet-travel.com/de/sonnenaufgang-pyramiden-gizeh.html — Sonnenaufgang an den neun Pyramiden von Gizeh: Vor Sonnenaufgang an einem stillen Aussichtspunkt, von dem aus alle neun Pyramiden zu sehen sind — die erste Stunde gehört Ihnen: für Yoga, ein Fotoshooting oder einfach den Blick.
 - https://kemet-travel.com/de/sonnenfinsternis-2027-luxor.html — Die totale Sonnenfinsternis 2027 in Luxor: Am Montag, dem 2. August 2027, verdeckt der Mond über Luxor rund sechs Minuten und 22 Sekunden lang die Sonne — die längste totale Finsternis auf gut erreichbarem Land in diesem Jahrhundert.
@@ -475,6 +493,24 @@ Journeys in Deutsch (24), from-prices per person, the same as in English:
 - https://kemet-travel.com/it/marsa-alam-isole-hamata-estremo-sud-mar-rosso.html
 - https://kemet-travel.com/it/notte-nel-deserto-bianco-campo-privato-3-giorni.html
 - https://kemet-travel.com/it/assuan-isole-prima-cataratta-notte-abu-simbel.html
+- https://kemet-travel.com/it/egitto-a-gennaio.html
+- https://kemet-travel.com/it/egitto-a-febbraio.html
+- https://kemet-travel.com/it/egitto-a-marzo.html
+- https://kemet-travel.com/it/egitto-ad-aprile.html
+- https://kemet-travel.com/it/egitto-a-maggio.html
+- https://kemet-travel.com/it/egitto-a-giugno.html
+- https://kemet-travel.com/it/egitto-a-luglio.html
+- https://kemet-travel.com/it/egitto-ad-agosto.html
+- https://kemet-travel.com/it/egitto-a-settembre.html
+- https://kemet-travel.com/it/egitto-a-ottobre.html
+- https://kemet-travel.com/it/egitto-a-novembre.html
+- https://kemet-travel.com/it/egitto-a-dicembre.html
+- https://kemet-travel.com/it/aereo-o-treno-notturno-luxor-assuan.html
+- https://kemet-travel.com/it/crociera-sul-nilo-o-tour-via-terra.html
+- https://kemet-travel.com/it/dahabiya-o-nave-da-crociera-sul-nilo.html
+- https://kemet-travel.com/it/luxor-o-assuan-quale-scegliere.html
+- https://kemet-travel.com/it/museo-egizio-o-grand-egyptian-museum.html
+- https://kemet-travel.com/it/sharm-el-sheikh-o-hurghada.html
 - https://kemet-travel.com/it/ferragosto-in-egitto.html — Ferragosto in Egitto: metà sì, metà no: 15 agosto 2027 — il Mar Rosso è al suo meglio assoluto, la valle del Nilo è a 42–44°C. Sono due viaggi diversi.
 - https://kemet-travel.com/it/natale-e-capodanno-in-egitto.html — Natale, Capodanno ed Epifania in Egitto: 24–26°C a Luxor mentre a casa fa buio alle cinque — e le scuole italiane che riaprono solo dopo l'Epifania, il 6 gennaio.
 - https://kemet-travel.com/it/dove-dormire-in-egitto.html — Dove dormire in Egitto: i migliori hotel, città per città: Gli alberghi su cui vale la pena costruire un viaggio — e quali dei più famosi si possono davvero prenotare per la stagione 2026–27.
@@ -575,6 +611,24 @@ Journeys in Italiano (24), from-prices per person, the same as in English:
 - https://kemet-travel.com/es/marsa-alam-islas-hamata-viaje-privado.html
 - https://kemet-travel.com/es/noche-desierto-blanco-campamento-privado.html
 - https://kemet-travel.com/es/asuan-islas-noche-abu-simbel-privado.html
+- https://kemet-travel.com/es/egipto-en-enero.html
+- https://kemet-travel.com/es/egipto-en-febrero.html
+- https://kemet-travel.com/es/egipto-en-marzo.html
+- https://kemet-travel.com/es/egipto-en-abril.html
+- https://kemet-travel.com/es/egipto-en-mayo.html
+- https://kemet-travel.com/es/egipto-en-junio.html
+- https://kemet-travel.com/es/egipto-en-julio.html
+- https://kemet-travel.com/es/egipto-en-agosto.html
+- https://kemet-travel.com/es/egipto-en-septiembre.html
+- https://kemet-travel.com/es/egipto-en-octubre.html
+- https://kemet-travel.com/es/egipto-en-noviembre.html
+- https://kemet-travel.com/es/egipto-en-diciembre.html
+- https://kemet-travel.com/es/volar-o-tren-cama-a-luxor-y-asuan.html
+- https://kemet-travel.com/es/crucero-por-el-nilo-o-viaje-por-tierra.html
+- https://kemet-travel.com/es/dahabiya-o-barco-de-crucero-por-el-nilo.html
+- https://kemet-travel.com/es/luxor-o-asuan.html
+- https://kemet-travel.com/es/museo-egipcio-o-gran-museo-egipcio.html
+- https://kemet-travel.com/es/sharm-el-sheikh-o-hurghada.html
 - https://kemet-travel.com/es/viajar-a-egipto-desde-latinoamerica.html — Viajar a Egipto desde Latinoamérica: Desde México, Colombia, Argentina, Chile o Perú: una escala, una visa en línea y la mejor temporada de Egipto.
 - https://kemet-travel.com/es/semana-santa-en-egipto.html — Semana Santa en Egipto: Del 21 de marzo al 28 de marzo de 2027 — primavera en el Nilo, y la última ventana buena antes del calor.
 - https://kemet-travel.com/es/amanecer-en-las-piramides-de-giza.html — El amanecer sobre las nueve pirámides de Giza: Antes de que salga el sol, en un mirador tranquilo desde el que se ven las nueve pirámides — la primera hora es suya: yoga, una sesión de fotos o simplemente la vista.
@@ -673,6 +727,24 @@ Journeys in Español (24), from-prices per person, the same as in English:
 - https://kemet-travel.com/fr/marsa-alam-iles-hamata-voyage-prive.html
 - https://kemet-travel.com/fr/nuit-desert-blanc-camp-prive-depuis-le-caire.html
 - https://kemet-travel.com/fr/assouan-iles-nuit-abou-simbel-voyage-prive.html
+- https://kemet-travel.com/fr/egypte-en-janvier.html
+- https://kemet-travel.com/fr/egypte-en-fevrier.html
+- https://kemet-travel.com/fr/egypte-en-mars.html
+- https://kemet-travel.com/fr/egypte-en-avril.html
+- https://kemet-travel.com/fr/egypte-en-mai.html
+- https://kemet-travel.com/fr/egypte-en-juin.html
+- https://kemet-travel.com/fr/egypte-en-juillet.html
+- https://kemet-travel.com/fr/egypte-en-aout.html
+- https://kemet-travel.com/fr/egypte-en-septembre.html
+- https://kemet-travel.com/fr/egypte-en-octobre.html
+- https://kemet-travel.com/fr/egypte-en-novembre.html
+- https://kemet-travel.com/fr/egypte-en-decembre.html
+- https://kemet-travel.com/fr/avion-ou-train-couchette-louxor-assouan.html
+- https://kemet-travel.com/fr/croisiere-sur-le-nil-ou-circuit-terrestre.html
+- https://kemet-travel.com/fr/dahabieh-ou-bateau-de-croisiere-nil.html
+- https://kemet-travel.com/fr/louxor-ou-assouan-que-choisir.html
+- https://kemet-travel.com/fr/musee-egyptien-ou-grand-musee-egyptien-que-choisir.html
+- https://kemet-travel.com/fr/charm-el-cheikh-ou-hurghada-que-choisir.html
 - https://kemet-travel.com/fr/toussaint-en-egypte.html — La Toussaint tombe pile sur le changement de saison: Du 18 octobre au 3 novembre 2027 — deux semaines pendant lesquelles la Haute-Égypte passe de l'été à la saison.
 - https://kemet-travel.com/fr/lever-du-soleil-pyramides-gizeh.html — Le lever du soleil sur les neuf pyramides de Gizeh: Avant l'aube, un point de vue tranquille d'où l'on voit les neuf pyramides — la première heure vous appartient : yoga, séance photo ou simplement le regard.
 - https://kemet-travel.com/fr/eclipse-solaire-2027-louxor.html — L'éclipse totale de Soleil de 2027 à Louxor: Le lundi 2 août 2027, la Lune masque le Soleil au-dessus de Louxor pendant environ six minutes et 22 secondes — la plus longue éclipse totale de ce siècle sur une terre facile d'accès.
@@ -771,6 +843,24 @@ Journeys in Français (24), from-prices per person, the same as in English:
 - https://kemet-travel.com/ru/marsa-alam-ostrova-hamata-chastnyj-tur.html
 - https://kemet-travel.com/ru/belaya-pustynya-noch-v-lagere-iz-kaira.html
 - https://kemet-travel.com/ru/asuan-ostrova-pervogo-poroga-abu-simbel-nochyu.html
+- https://kemet-travel.com/ru/egipet-v-yanvare.html
+- https://kemet-travel.com/ru/egipet-v-fevrale.html
+- https://kemet-travel.com/ru/egipet-v-marte.html
+- https://kemet-travel.com/ru/egipet-v-aprele.html
+- https://kemet-travel.com/ru/egipet-v-mae.html
+- https://kemet-travel.com/ru/egipet-v-iyune.html
+- https://kemet-travel.com/ru/egipet-v-iyule.html
+- https://kemet-travel.com/ru/egipet-v-avguste.html
+- https://kemet-travel.com/ru/egipet-v-sentyabre.html
+- https://kemet-travel.com/ru/egipet-v-oktyabre.html
+- https://kemet-travel.com/ru/egipet-v-noyabre.html
+- https://kemet-travel.com/ru/egipet-v-dekabre.html
+- https://kemet-travel.com/ru/samolet-ili-nochnoy-poezd-luksor-asuan.html
+- https://kemet-travel.com/ru/kruiz-po-nilu-ili-nazemnyy-tur.html
+- https://kemet-travel.com/ru/dahabiya-ili-kruiznyy-lajner.html
+- https://kemet-travel.com/ru/luksor-ili-asuan.html
+- https://kemet-travel.com/ru/egipetskiy-muzey-ili-bolshoy-egipetskiy-muzey.html
+- https://kemet-travel.com/ru/sharm-el-sheykh-ili-hurgada.html
 - https://kemet-travel.com/ru/novyy-god-v-egipte.html — Новогодние каникулы в Египте: С 31 декабря по 8 января — десять дней подряд, и это единственный длинный отпуск в году, который совпадает с лучшим сезоном в долине Нила.
 - https://kemet-travel.com/ru/rassvet-u-piramid-gizy.html — Рассвет над девятью пирамидами Гизы: До восхода солнца — тихая смотровая точка, откуда видны все девять пирамид. Первый час принадлежит вам: йога, фотосессия или просто вид.
 - https://kemet-travel.com/ru/solnechnoe-zatmenie-2027-luksor.html — Полное солнечное затмение 2027 года в Луксоре: В понедельник, 2 августа 2027 года, Луна закроет Солнце над Луксором примерно на шесть минут 22 секунды — это самое продолжительное полное затмение века на легкодоступной суше.
@@ -868,6 +958,24 @@ Journeys in Русский (24), from-prices per person, the same as in English:
 - https://kemet-travel.com/id/marsa-alam-pulau-hamata.html
 - https://kemet-travel.com/id/semalam-di-gurun-putih.html
 - https://kemet-travel.com/id/pulau-aswan-abu-simbel.html
+- https://kemet-travel.com/id/mesir-di-bulan-januari.html
+- https://kemet-travel.com/id/mesir-di-bulan-februari.html
+- https://kemet-travel.com/id/mesir-di-bulan-maret.html
+- https://kemet-travel.com/id/mesir-di-bulan-april.html
+- https://kemet-travel.com/id/mesir-di-bulan-mei.html
+- https://kemet-travel.com/id/mesir-di-bulan-juni.html
+- https://kemet-travel.com/id/mesir-di-bulan-juli.html
+- https://kemet-travel.com/id/mesir-di-bulan-agustus.html
+- https://kemet-travel.com/id/mesir-di-bulan-september.html
+- https://kemet-travel.com/id/mesir-di-bulan-oktober.html
+- https://kemet-travel.com/id/mesir-di-bulan-november.html
+- https://kemet-travel.com/id/mesir-di-bulan-desember.html
+- https://kemet-travel.com/id/naik-pesawat-atau-kereta-tidur-ke-luxor-aswan.html
+- https://kemet-travel.com/id/pelayaran-sungai-nil-atau-tur-darat.html
+- https://kemet-travel.com/id/dahabiya-atau-kapal-pesiar-sungai-nil.html
+- https://kemet-travel.com/id/luxor-atau-aswan-mana-yang-dipilih.html
+- https://kemet-travel.com/id/museum-mesir-atau-grand-egyptian-museum.html
+- https://kemet-travel.com/id/sharm-el-sheikh-atau-hurghada.html
 - https://kemet-travel.com/id/umrah-plus-mesir.html — Menyambung Mesir dengan umrah Anda: Jeddah ke Kairo sekitar dua jam. Itulah satu-satunya alasan teknis mengapa penggabungan ini masuk akal.
 - https://kemet-travel.com/id/ziarah-kairo-islam.html — Kairo Islam, dalam satu hari penuh: Bukan satu jam yang diselipkan di antara piramida — ini hari tersendiri, dan memang menuntutnya.
 - https://kemet-travel.com/id/gunung-sinai.html — Gunung Sinai, dan biara di kakinya: Naik dalam gelap, tiba saat fajar, turun sebelum panas. Tiga jam mendaki, dan tidak perlu menjadi pendaki.
@@ -969,6 +1077,24 @@ Journeys in Bahasa Indonesia (24), from-prices per person, the same as in Englis
 - https://kemet-travel.com/ms/marsa-alam-pulau-hamata-selatan-jauh.html
 - https://kemet-travel.com/ms/bermalam-di-gurun-putih-perkhemahan-persendirian.html
 - https://kemet-travel.com/ms/pulau-aswan-bermalam-di-abu-simbel.html
+- https://kemet-travel.com/ms/mesir-pada-bulan-januari.html
+- https://kemet-travel.com/ms/mesir-pada-bulan-februari.html
+- https://kemet-travel.com/ms/mesir-pada-bulan-mac.html
+- https://kemet-travel.com/ms/mesir-pada-bulan-april.html
+- https://kemet-travel.com/ms/mesir-pada-bulan-mei.html
+- https://kemet-travel.com/ms/mesir-pada-bulan-jun.html
+- https://kemet-travel.com/ms/mesir-pada-bulan-julai.html
+- https://kemet-travel.com/ms/mesir-pada-bulan-ogos.html
+- https://kemet-travel.com/ms/mesir-pada-bulan-september.html
+- https://kemet-travel.com/ms/mesir-pada-bulan-oktober.html
+- https://kemet-travel.com/ms/mesir-pada-bulan-november.html
+- https://kemet-travel.com/ms/mesir-pada-bulan-disember.html
+- https://kemet-travel.com/ms/terbang-atau-kereta-api-tidur-ke-luxor-aswan.html
+- https://kemet-travel.com/ms/pelayaran-sungai-nil-atau-lawatan-darat.html
+- https://kemet-travel.com/ms/dahabiya-atau-kapal-persiaran-sungai-nil.html
+- https://kemet-travel.com/ms/luxor-atau-aswan-mana-lebih-baik.html
+- https://kemet-travel.com/ms/muzium-mesir-atau-grand-egyptian-museum.html
+- https://kemet-travel.com/ms/sharm-el-sheikh-atau-hurghada.html
 - https://kemet-travel.com/ms/umrah-plus-mesir.html — Menyambungkan Mesir dengan umrah anda: Jeddah ke Kaherah lebih kurang dua jam. Itu sahaja sebab teknikal mengapa gabungan ini masuk akal.
 - https://kemet-travel.com/ms/ziarah-kaherah-islam.html — Kaherah Islam, dalam satu hari penuh: Bukan sejam yang diselitkan antara piramid — ini hari tersendiri, dan ia memang menuntutnya.
 - https://kemet-travel.com/ms/bukit-tursina.html — Bukit Tursina, dan biara di kakinya: Naik dalam gelap, tiba ketika fajar, turun sebelum panas. Tiga jam mendaki, dan anda tidak perlu menjadi pendaki.
@@ -1070,6 +1196,24 @@ Journeys in Bahasa Melayu (24), from-prices per person, the same as in English:
 - https://kemet-travel.com/pt/marsa-alam-e-ilhas-hamata.html
 - https://kemet-travel.com/pt/noite-no-deserto-branco.html
 - https://kemet-travel.com/pt/ilhas-de-assua-e-noite-em-abu-simbel.html
+- https://kemet-travel.com/pt/egito-em-janeiro.html
+- https://kemet-travel.com/pt/egito-em-fevereiro.html
+- https://kemet-travel.com/pt/egito-em-marco.html
+- https://kemet-travel.com/pt/egito-em-abril.html
+- https://kemet-travel.com/pt/egito-em-maio.html
+- https://kemet-travel.com/pt/egito-em-junho.html
+- https://kemet-travel.com/pt/egito-em-julho.html
+- https://kemet-travel.com/pt/egito-em-agosto.html
+- https://kemet-travel.com/pt/egito-em-setembro.html
+- https://kemet-travel.com/pt/egito-em-outubro.html
+- https://kemet-travel.com/pt/egito-em-novembro.html
+- https://kemet-travel.com/pt/egito-em-dezembro.html
+- https://kemet-travel.com/pt/voo-ou-trem-noturno-luxor-assua.html
+- https://kemet-travel.com/pt/cruzeiro-no-nilo-ou-roteiro-por-terra.html
+- https://kemet-travel.com/pt/dahabiya-ou-navio-de-cruzeiro-nilo.html
+- https://kemet-travel.com/pt/luxor-ou-assua-qual-escolher.html
+- https://kemet-travel.com/pt/museu-egipcio-ou-grande-museu-egipcio.html
+- https://kemet-travel.com/pt/sharm-el-sheikh-ou-hurghada-mar-vermelho.html
 - https://kemet-travel.com/pt/carnaval-no-egito.html — Carnaval no Egito, 2027: Em 2027 o Carnaval cai de 6 a 10 de fevereiro — em fevereiro, o melhor mês do ano para os monumentos.
 - https://kemet-travel.com/pt/viajar-ao-egito-saindo-do-brasil.html — Viajar ao Egito saindo do Brasil: Uma escala, um visto pela internet e o melhor inverno do Egito bem nas suas férias de verão.
 - https://kemet-travel.com/pt/nascer-do-sol-nas-piramides-de-gize.html — O nascer do sol sobre as nove pirâmides de Gizé: Antes do sol nascer, num mirante tranquilo de onde se veem as nove pirâmides — a primeira hora é sua: ioga, um ensaio fotográfico ou simplesmente a vista.
@@ -1169,6 +1313,24 @@ Journeys in Português (24), from-prices per person, the same as in English:
 - https://kemet-travel.com/ar/marsa-alam-wa-juzur-hamata.html
 - https://kemet-travel.com/ar/layla-fi-al-sahra-al-bayda.html
 - https://kemet-travel.com/ar/juzur-aswan-wa-layla-fi-abu-simbel.html
+- https://kemet-travel.com/ar/misr-fi-shahr-yanayir.html
+- https://kemet-travel.com/ar/misr-fi-shahr-fibrayir.html
+- https://kemet-travel.com/ar/misr-fi-shahr-mars.html
+- https://kemet-travel.com/ar/misr-fi-shahr-abril.html
+- https://kemet-travel.com/ar/misr-fi-shahr-mayo.html
+- https://kemet-travel.com/ar/misr-fi-shahr-yunyu.html
+- https://kemet-travel.com/ar/misr-fi-shahr-yulyu.html
+- https://kemet-travel.com/ar/misr-fi-shahr-aghustus.html
+- https://kemet-travel.com/ar/misr-fi-shahr-sibtambir.html
+- https://kemet-travel.com/ar/misr-fi-shahr-uktubar.html
+- https://kemet-travel.com/ar/misr-fi-shahr-nufambir.html
+- https://kemet-travel.com/ar/misr-fi-shahr-disambir.html
+- https://kemet-travel.com/ar/tayara-am-qitar-al-nawm-al-uqsur-aswan.html
+- https://kemet-travel.com/ar/rihla-nilia-am-jawla-barriya-al-uqsur-aswan.html
+- https://kemet-travel.com/ar/dhahabiya-nilia-am-safina-siyahiya.html
+- https://kemet-travel.com/ar/al-uqsur-am-aswan-ayyuhuma-afdal.html
+- https://kemet-travel.com/ar/al-mathaf-al-misri-am-al-mathaf-al-misri-al-kabir.html
+- https://kemet-travel.com/ar/sharm-al-sheikh-am-al-ghardaqa.html
 - https://kemet-travel.com/ar/sayf-masr-lil-aailat-al-khalijiya.html — صيف مصر للعائلات الخليجية: نسيم الإسكندرية، ومياه البحر الأحمر، وليالي القاهرة على النيل — برحلة خاصة لعائلتكم وحدها.
 - https://kemet-travel.com/ar/shorouq-al-shams-ind-al-ahramat.html — الشروق فوق أهرامات الجيزة التسعة: قبل شروق الشمس، في نقطة مطلّة هادئة تُرى منها الأهرامات التسعة معاً — والساعة الأولى لكم: يوغا، أو جلسة تصوير، أو مجرد التأمل في المنظر.
 - https://kemet-travel.com/ar/kusuf-al-shams-2027-al-uqsur.html — كسوف الشمس الكلي ٢٠٢٧ في الأقصر: يوم الاثنين ٢ أغسطس ٢٠٢٧ يحجب القمر الشمس فوق الأقصر نحو ست دقائق و٢٢ ثانية — أطول كسوف كلي في هذا القرن على أرض يسهل الوصول إليها.
