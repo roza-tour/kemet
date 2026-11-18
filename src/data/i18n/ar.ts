@@ -32,6 +32,10 @@
 // deposit, 8–10 days for the full route, €8–12 a day in tips.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { comparePages } from "./compare/build";
+import { arCompare, arCompLabels } from "./compare/ar";
+import { monthPages } from "./months/build";
+import { arMonths, arMonthLabels } from "./months/ar";
 import { programmePages } from "./programmes/build";
 import { arProgrammes, arProgLabels } from "./programmes/ar";
 import { experiencePages } from "./experiences/build";
@@ -517,4 +521,10 @@ export const ar: LocalizedPage[] = [
 
   // ===== The nine programmes — the words are in ./programmes/ar.ts =====
   ...programmePages("ar", arProgLabels, arProgrammes),
+
+  // ===== The twelve months — the words are in ./months/ar.ts =====
+  ...monthPages("ar", arMonthLabels, arMonths),
+
+  // ===== The six comparisons — the words are in ./compare/ar.ts =====
+  ...comparePages("ar", arCompLabels, arCompare),
 ];

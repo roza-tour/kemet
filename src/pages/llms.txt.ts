@@ -298,7 +298,7 @@ export const GET: APIRoute = () => {
   // The destination pages are one group each ("destination-<id>"); they are
   // counted in a sentence of their own rather than named one by one.
   const isDestination = (g: { key: string }) => g.key.startsWith("destination-");
-  const isExperience = (g: { key: string }) => g.key.startsWith("experience-") || g.key.startsWith("activity-") || g.key.startsWith("programme-");
+  const isExperience = (g: { key: string }) => g.key.startsWith("experience-") || g.key.startsWith("activity-") || g.key.startsWith("programme-") || g.key.startsWith("month-") || g.key.startsWith("compare-");
   const keyGroups = TRANSLATION_GROUPS.filter((g) => !isDestination(g) && !isExperience(g));
   const experienceGroups = TRANSLATION_GROUPS.filter(isExperience);
   const destinationGroups = TRANSLATION_GROUPS.filter(isDestination);
@@ -314,7 +314,7 @@ export const GET: APIRoute = () => {
     `the flight times, school holidays, entry rules and reference points differ ` +
     `between them. The translated pages carry the same facts and the same prices.` +
     (destinationGroups.length ? ` The ${destinationGroups.length} destination pages are published in the same languages.` : "") +
-    (experienceGroups.length ? ` So are ${experienceGroups.length} experience, activity and programme pages.` : ""),
+    (experienceGroups.length ? ` So are ${experienceGroups.length} experience, activity, programme, month and comparison pages.` : ""),
   );
   lines.push("");
   // THE CATALOGUE, PER LANGUAGE. Until 8 Oct 2026 this section listed only the

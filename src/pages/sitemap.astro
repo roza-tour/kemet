@@ -112,7 +112,7 @@ for (const loc of TRANSLATED_LOCALES) {
 // The translated destination, experience and activity pages are listed on
 // their own hubs in each language (which this index links); naming all of
 // them again here, nine times over, was most of this page's weight.
-const isCatalogue = (key: string) => /^(destination|experience|activity|programme)-/.test(key);
+const isCatalogue = (key: string) => /^(destination|experience|activity|programme|month|compare)-/.test(key);
 const LISTED_GROUPS = TRANSLATION_GROUPS.filter((g) => !isCatalogue(g.key));
 const CATALOGUE_COUNT = TRANSLATION_GROUPS.length - LISTED_GROUPS.length;
 const labelFor = (route: string) =>

@@ -13,6 +13,10 @@
 // Prices stay in euros, as on every other page of the site.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { comparePages } from "./compare/build";
+import { ptCompare, ptCompLabels } from "./compare/pt";
+import { monthPages } from "./months/build";
+import { ptMonths, ptMonthLabels } from "./months/pt";
 import { programmePages } from "./programmes/build";
 import { ptProgrammes, ptProgLabels } from "./programmes/pt";
 import { experiencePages } from "./experiences/build";
@@ -545,4 +549,10 @@ export const pt: LocalizedPage[] = [
 
   // ===== The nine programmes — the words are in ./programmes/pt.ts =====
   ...programmePages("pt", ptProgLabels, ptProgrammes),
+
+  // ===== The twelve months — the words are in ./months/pt.ts =====
+  ...monthPages("pt", ptMonthLabels, ptMonths),
+
+  // ===== The six comparisons — the words are in ./compare/pt.ts =====
+  ...comparePages("pt", ptCompLabels, ptCompare),
 ];

@@ -23,6 +23,8 @@ export function monthPages(locale: TranslatedLocale, L: MonthLabels, texts: Mont
     const at = (i: number) => texts.find((x) => months.find((y) => y.slug === x.id)?.index === ((i + 11) % 12) + 1);
     const prev = at(m.index - 1), next = at(m.index + 1);
     const fill = (s: string) => s.replace("%s", t.monthName);
+    // Arabic pages write their numbers in Arabic-Indic digits, as the rest of the Arabic site does.
+    const n = (v: string) => (locale === "ar" ? v.replace(/[0-9]/g, (d) => String.fromCharCode(0x660 + Number(d))) : v);
     return {
       groupId: `month-${t.id}`,
       symbol: "sun",
@@ -34,10 +36,10 @@ export function monthPages(locale: TranslatedLocale, L: MonthLabels, texts: Mont
       standfirst: t.shortSummary,
       lede: t.lede,
       facts: [
-        { label: L.luxor, value: m.temps.luxor },
-        { label: L.cairo, value: m.temps.cairo },
-        { label: L.aswan, value: m.temps.aswan },
-        { label: L.redSea, value: `${m.temps.redSea} · ${L.sea} ${m.seaTemp}` },
+        { label: L.luxor, value: n(m.temps.luxor) },
+        { label: L.cairo, value: n(m.temps.cairo) },
+        { label: L.aswan, value: n(m.temps.aswan) },
+        { label: L.redSea, value: n(`${m.temps.redSea} · ${L.sea} ${m.seaTemp}`) },
         { label: L.crowds, value: L.crowdLevels[m.crowds] },
         { label: L.prices, value: L.priceLevels[m.prices] },
       ],

@@ -8,6 +8,10 @@
 // a Latin American reader is well used to reading peninsular Spanish.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { comparePages } from "./compare/build";
+import { esCompare, esCompLabels } from "./compare/es";
+import { monthPages } from "./months/build";
+import { esMonths, esMonthLabels } from "./months/es";
 import { programmePages } from "./programmes/build";
 import { esProgrammes, esProgLabels } from "./programmes/es";
 import { experiencePages } from "./experiences/build";
@@ -537,4 +541,10 @@ export const es: LocalizedPage[] = [
 
   // ===== The nine programmes — the words are in ./programmes/es.ts =====
   ...programmePages("es", esProgLabels, esProgrammes),
+
+  // ===== The twelve months — the words are in ./months/es.ts =====
+  ...monthPages("es", esMonthLabels, esMonths),
+
+  // ===== The six comparisons — the words are in ./compare/es.ts =====
+  ...comparePages("es", esCompLabels, esCompare),
 ];

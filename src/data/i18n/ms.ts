@@ -11,6 +11,10 @@
 // to an Umrah in Saudi Arabia.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { comparePages } from "./compare/build";
+import { msCompare, msCompLabels } from "./compare/ms";
+import { monthPages } from "./months/build";
+import { msMonths, msMonthLabels } from "./months/ms";
 import { programmePages } from "./programmes/build";
 import { msProgrammes, msProgLabels } from "./programmes/ms";
 import { experiencePages } from "./experiences/build";
@@ -550,4 +554,10 @@ export const ms: LocalizedPage[] = [
 
   // ===== The nine programmes — the words are in ./programmes/ms.ts =====
   ...programmePages("ms", msProgLabels, msProgrammes),
+
+  // ===== The twelve months — the words are in ./months/ms.ts =====
+  ...monthPages("ms", msMonthLabels, msMonths),
+
+  // ===== The six comparisons — the words are in ./compare/ms.ts =====
+  ...comparePages("ms", msCompLabels, msCompare),
 ];
