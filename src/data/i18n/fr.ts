@@ -10,6 +10,8 @@
 // avoids France-only administrative detail where a neutral wording works.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { programmePages } from "./programmes/build";
+import { frProgrammes, frProgLabels } from "./programmes/fr";
 import { experiencePages } from "./experiences/build";
 import { frExperiences } from "./experiences/fr";
 import { destinationPages } from "./destinations/build";
@@ -523,4 +525,7 @@ export const fr: LocalizedPage[] = [
 
   // ===== Experiences and activities — the words are in ./experiences/fr.ts =====
   ...experiencePages("fr", frExperiences),
+
+  // ===== The nine programmes — the words are in ./programmes/fr.ts =====
+  ...programmePages("fr", frProgLabels, frProgrammes),
 ];

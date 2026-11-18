@@ -11,6 +11,8 @@
 // to an Umrah in Saudi Arabia.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { programmePages } from "./programmes/build";
+import { msProgrammes, msProgLabels } from "./programmes/ms";
 import { experiencePages } from "./experiences/build";
 import { msExperiences } from "./experiences/ms";
 import { destinationPages } from "./destinations/build";
@@ -545,4 +547,7 @@ export const ms: LocalizedPage[] = [
 
   // ===== Experiences and activities — the words are in ./experiences/ms.ts =====
   ...experiencePages("ms", msExperiences),
+
+  // ===== The nine programmes — the words are in ./programmes/ms.ts =====
+  ...programmePages("ms", msProgLabels, msProgrammes),
 ];

@@ -10,6 +10,8 @@
 // through the Gulf, Lebaran and the June–July school holidays.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { programmePages } from "./programmes/build";
+import { idProgrammes, idProgLabels } from "./programmes/id";
 import { experiencePages } from "./experiences/build";
 import { idExperiences } from "./experiences/id";
 import { destinationPages } from "./destinations/build";
@@ -545,4 +547,7 @@ export const id: LocalizedPage[] = [
 
   // ===== Experiences and activities — the words are in ./experiences/id.ts =====
   ...experiencePages("id", idExperiences),
+
+  // ===== The nine programmes — the words are in ./programmes/id.ts =====
+  ...programmePages("id", idProgLabels, idProgrammes),
 ];

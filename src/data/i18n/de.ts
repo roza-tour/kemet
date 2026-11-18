@@ -8,6 +8,8 @@
 // charter traffic that dominates the market.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { programmePages } from "./programmes/build";
+import { deProgrammes, deProgLabels } from "./programmes/de";
 import { experiencePages } from "./experiences/build";
 import { deExperiences } from "./experiences/de";
 import { destinationPages } from "./destinations/build";
@@ -534,4 +536,7 @@ export const de: LocalizedPage[] = [
 
   // ===== Experiences and activities — the words are in ./experiences/de.ts =====
   ...experiencePages("de", deExperiences),
+
+  // ===== The nine programmes — the words are in ./programmes/de.ts =====
+  ...programmePages("de", deProgLabels, deProgrammes),
 ];

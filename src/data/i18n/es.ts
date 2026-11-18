@@ -8,6 +8,8 @@
 // a Latin American reader is well used to reading peninsular Spanish.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { programmePages } from "./programmes/build";
+import { esProgrammes, esProgLabels } from "./programmes/es";
 import { experiencePages } from "./experiences/build";
 import { esExperiences } from "./experiences/es";
 import { destinationPages } from "./destinations/build";
@@ -532,4 +534,7 @@ export const es: LocalizedPage[] = [
 
   // ===== Experiences and activities — the words are in ./experiences/es.ts =====
   ...experiencePages("es", esExperiences),
+
+  // ===== The nine programmes — the words are in ./programmes/es.ts =====
+  ...programmePages("es", esProgLabels, esProgrammes),
 ];

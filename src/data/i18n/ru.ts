@@ -11,6 +11,8 @@
 // Slugs are transliterated to Latin — see config/i18n for why.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { programmePages } from "./programmes/build";
+import { ruProgrammes, ruProgLabels } from "./programmes/ru";
 import { experiencePages } from "./experiences/build";
 import { ruExperiences } from "./experiences/ru";
 import { destinationPages } from "./destinations/build";
@@ -525,4 +527,7 @@ export const ru: LocalizedPage[] = [
 
   // ===== Experiences and activities — the words are in ./experiences/ru.ts =====
   ...experiencePages("ru", ruExperiences),
+
+  // ===== The nine programmes — the words are in ./programmes/ru.ts =====
+  ...programmePages("ru", ruProgLabels, ruProgrammes),
 ];

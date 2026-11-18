@@ -306,7 +306,7 @@ export const programmes: Programme[] = [
     ],
     privateNote: "Your guide, vehicle and driver; the mountain guide.",
     stay: "Simple, and said to be: St Catherine has no hotel at the standard of the rest of our catalogue.",
-    fixed: "The monastery is closed on Fridays, Sundays and Greek Orthodox feast days, so day 2 cannot fall on one. Place it before dive days, or after a full surface day.",
+    fixed: "The monastery is closed on Fridays, Sundays and Greek Orthodox feast days, so day 2 cannot fall on one. If you are diving, we place it before the dive days, or after a full day out of the water.",
     places: ["saint-catherine", "sharm-el-sheikh", "dahab"],
     photo: { destination: "saint-catherine", index: 1 },
     alongside: ["tour-sharm-5day", "tour-grand-14day"],

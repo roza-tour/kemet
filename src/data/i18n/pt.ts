@@ -13,6 +13,8 @@
 // Prices stay in euros, as on every other page of the site.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { programmePages } from "./programmes/build";
+import { ptProgrammes, ptProgLabels } from "./programmes/pt";
 import { experiencePages } from "./experiences/build";
 import { ptExperiences } from "./experiences/pt";
 import { destinationPages } from "./destinations/build";
@@ -540,4 +542,7 @@ export const pt: LocalizedPage[] = [
 
   // ===== Experiences and activities — the words are in ./experiences/pt.ts =====
   ...experiencePages("pt", ptExperiences),
+
+  // ===== The nine programmes — the words are in ./programmes/pt.ts =====
+  ...programmePages("pt", ptProgLabels, ptProgrammes),
 ];
