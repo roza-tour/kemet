@@ -323,10 +323,10 @@ export const guides: Guide[] = [
     lastUpdated: "2026-09",
     keyFacts: [
       { label: "Cairo → Luxor (flight)", value: "~55 minutes" },
-      { label: "Cairo → Luxor (Talgo train)", value: "~4.5 hours" },
+      { label: "Cairo → Luxor (train)", value: "~9–10 hours" },
       { label: "Luxor → Aswan (cruise)", value: "3–4 nights" },
       { label: "Aswan → Abu Simbel (road)", value: "3.5 hours each way" },
-      { label: "Cairo Metro lines", value: "3 lines, 61 stations" },
+      { label: "Cairo Metro lines", value: "3 lines, ~90 stations" },
       { label: "Nile cruise departs", value: "Luxor (southbound) or Aswan (northbound)" },
     ],
     keyTakeaways: [
