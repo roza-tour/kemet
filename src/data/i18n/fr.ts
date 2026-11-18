@@ -10,6 +10,8 @@
 // avoids France-only administrative detail where a neutral wording works.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { articlePages } from "./articles/build";
+import { frArticles, frArtLabels } from "./articles/fr";
 import { comparePages } from "./compare/build";
 import { frCompare, frCompLabels } from "./compare/fr";
 import { monthPages } from "./months/build";
@@ -538,4 +540,7 @@ export const fr: LocalizedPage[] = [
 
   // ===== The six comparisons — the words are in ./compare/fr.ts =====
   ...comparePages("fr", frCompLabels, frCompare),
+
+  // ===== The occasions and guides — the words are in ./articles/fr.ts =====
+  ...articlePages("fr", frArtLabels, frArticles),
 ];

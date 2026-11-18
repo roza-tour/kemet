@@ -11,6 +11,8 @@
 // Slugs are transliterated to Latin — see config/i18n for why.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { articlePages } from "./articles/build";
+import { ruArticles, ruArtLabels } from "./articles/ru";
 import { comparePages } from "./compare/build";
 import { ruCompare, ruCompLabels } from "./compare/ru";
 import { monthPages } from "./months/build";
@@ -540,4 +542,7 @@ export const ru: LocalizedPage[] = [
 
   // ===== The six comparisons — the words are in ./compare/ru.ts =====
   ...comparePages("ru", ruCompLabels, ruCompare),
+
+  // ===== The occasions and guides — the words are in ./articles/ru.ts =====
+  ...articlePages("ru", ruArtLabels, ruArticles),
 ];

@@ -8,6 +8,8 @@
 // charter traffic that dominates the market.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { articlePages } from "./articles/build";
+import { deArticles, deArtLabels } from "./articles/de";
 import { comparePages } from "./compare/build";
 import { deCompare, deCompLabels } from "./compare/de";
 import { monthPages } from "./months/build";
@@ -549,4 +551,7 @@ export const de: LocalizedPage[] = [
 
   // ===== The six comparisons — the words are in ./compare/de.ts =====
   ...comparePages("de", deCompLabels, deCompare),
+
+  // ===== The occasions and guides — the words are in ./articles/de.ts =====
+  ...articlePages("de", deArtLabels, deArticles),
 ];

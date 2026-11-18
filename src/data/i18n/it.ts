@@ -8,6 +8,8 @@
 // than German school terms, Rome and Milan rather than Frankfurt.
 // ---------------------------------------------------------------------------
 import type { LocalizedPage } from "./types";
+import { articlePages } from "./articles/build";
+import { itArticles, itArtLabels } from "./articles/it";
 import { comparePages } from "./compare/build";
 import { itCompare, itCompLabels } from "./compare/it";
 import { monthPages } from "./months/build";
@@ -547,4 +549,7 @@ export const it: LocalizedPage[] = [
 
   // ===== The six comparisons — the words are in ./compare/it.ts =====
   ...comparePages("it", itCompLabels, itCompare),
+
+  // ===== The occasions and guides — the words are in ./articles/it.ts =====
+  ...articlePages("it", itArtLabels, itArticles),
 ];
