@@ -196,7 +196,7 @@ if (isEclipse) jsonld.push(...eclipseDayEvent(locale, route, page.photos?.[0]?.s
         </div>
       )}
 
-      <p class="lz-lede">{page.lede}</p>
+      {page.lede && <p class="lz-lede">{page.lede}</p>}
       {isEclipse && <EclipseDay locale={locale} route={route} variant="banner" />}
     </div>
   </section>
@@ -222,7 +222,7 @@ if (isEclipse) jsonld.push(...eclipseDayEvent(locale, route, page.photos?.[0]?.s
             <span class="lz-n">{String(i + 1).padStart(2, "0")}</span>
             <div>
               <h2>{s.title}</h2>
-              {s.body && <p>{s.body}</p>}
+              {s.body && s.body.split(/\n\n+/).map((para) => <p>{para}</p>)}
               {s.items && s.items.length > 0 && <ul class="lz-items">{s.items.map((x) => <li>{x}</li>)}</ul>}
             </div>
           </div>
