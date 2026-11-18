@@ -148,7 +148,7 @@ export const months: MonthGuide[] = [
     seaTemp: "27–28°C", crowds: "Quiet", prices: "Lowest",
     lede: "June opens the cheapest season of the Egyptian year — June, July and August share the lowest prices — and, for the right trip, one of the most rewarding. Upper Egypt is very hot — forty-two degrees in Aswan is a normal afternoon — but the light at dawn is extraordinary, the sites are empty, and the Red Sea is warm and clear. It is a month that rewards a plan and punishes an improvised one.",
     goodFor: ["The lowest prices of the year across hotels, boats and private journeys", "Diving: warm water, excellent visibility, and the northern reefs at their best", "Genuinely empty monuments — you can have Abu Simbel almost to yourself"],
-    watchFor: ["Midday heat inland is a health matter, not a comfort one: hydration, shade and a restructured day are non-negotiable", "Some Nile cruise operators pause or reduce services in high summer", "Cairo can be hazy, and the city's heat is heavier than the dry heat further south"],
+    watchFor: ["Midday heat inland is more than a matter of comfort: water, shade and a restructured day are non-negotiable", "Some Nile cruise operators pause or reduce services in high summer", "Cairo can be hazy, and the city's heat is heavier than the dry heat further south"],
     occasions: "The Islamic New Year falls in early June in 2027. Eid al-Adha, which fell in June until 2025, now comes in May.",
     verdict: "A superb month for the Red Sea and for a photographer willing to work at dawn. For a first classical itinerary with children or older travellers, wait.",
     faqs: [
