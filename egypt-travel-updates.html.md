@@ -2,7 +2,7 @@
 title: "Egypt Travel Updates, November 2026 | Kemet"
 url: https://kemet-travel.com/egypt-travel-updates.html
 language: en
-description: "What has changed for visitors to Egypt this season: museum tickets and hours, the visa fee, the new Giza entrance, hotel closures and the dates ahead."
+description: "What has changed for visitors to Egypt this season: museum tickets and hours, paying at the sites, the new Giza entrance, hotel closures and the dates ahead."
 ---
 
 # Egypt travel updates: November 2026
@@ -11,17 +11,17 @@ What has changed for a visitor this season, each entry with the date it was last
 
 ## What has changed for travellers to Egypt this season?
 
-For the 2026–27 season in Egypt, Grand Egyptian Museum tickets are sold online for a dated slot, the tourist visa costs USD 30, and the Giza plateau is entered from the Fayoum road with buses inside. In Luxor the Winter Palace is closed until July 2027 and the tomb of Amenhotep III has reopened.
+For the 2026–27 season in Egypt, Grand Egyptian Museum tickets are sold online for a dated entry slot, monument tickets are paid by card, and the Giza plateau is entered from the Fayoum road with buses inside. In Luxor the Winter Palace is closed until July 2027 and the tomb of Amenhotep III has reopened.
 
 Edition **November 2026**
 
 Last checked **21 November 2026**
 
-Entries **10**
+Entries **9**
 
 Revised **Monthly**
 
-Guidebooks are printed once and Egypt is not. Ticket rules, visa fees and hotel openings changed several times during 2026, and a figure that was right in spring can be wrong by autumn. This page is the short list of what is different now, kept apart from the guides so that it can be dated: every entry says when it was last checked, and where there is an official place to check it again, it is linked.
+Guidebooks are printed once and Egypt is not. Ticket rules, site entrances and hotel openings changed several times during 2026, and a figure that was right in spring can be wrong by autumn. This page is the short list of what is different now, kept apart from the guides so that it can be dated: every entry says when it was last checked, and where there is an official place to check it again, it is linked.
 
 Last gone through on 21 November 2026. Where the official source and the published reports disagree on a number, the entry tells you where to read it for your date and prints none.
 
@@ -70,22 +70,6 @@ The tomb of Amenhotep III in the Western Valley of the Kings reopened on 4 Octob
 **On the day.** It sits apart from the main valley, so it needs its own place in a West Bank morning. Ask for it by name when the journey is planned.
 
 Checked 21 November 2026 · [Luxor](https://kemet-travel.com/destinations/luxor.html)
-
-Entry
-
-## Visas and arrival
-
-Fees move more often than guidebooks are reprinted. These are the current ones, with the date they were read.
-
-### Tourist visa: USD 30 since spring 2026
-
-Changed
-
-The single-entry tourist visa on arrival has cost USD 30 since 1 March 2026, up from USD 25. The single-entry e-visa was raised to the same USD 30 in late April 2026, and the multiple-entry e-visa to USD 65. A further change to visa charges from 1 January 2027 has been reported, but it is not yet in the published fee schedule. Whether you can take a visa on arrival at all depends on your nationality.
-
-**On the day.** If you travel after 1 January 2027, read the fee on the e-visa portal or ask your nearest Egyptian consulate before you fly, and do not rely on a figure printed earlier, this one included.
-
-Checked 21 November 2026 · Official source: [Egypt e-Visa portal](https://visa2egypt.gov.eg/) · [Egypt travel guide: visa and entry](https://kemet-travel.com/guides/egypt-travel-guide.html)
 
 Hotels
 
@@ -158,10 +142,6 @@ Questions
 ### Do I need to book Grand Egyptian Museum tickets in advance?
 
 Yes. The Grand Egyptian Museum sells tickets through its own ticketing site for a dated entry slot, and says it is not responsible for tickets bought elsewhere. The galleries open at 9:00 and close at 18:00, or at 21:00 on Wednesday and Saturday, with last entry an hour before closing. A ticket allows one entry only.
-
-### How much is the Egypt tourist visa?
-
-The single-entry tourist visa costs USD 30, on arrival since 1 March 2026 and as an e-visa since late April 2026; the multiple-entry e-visa costs USD 65. A further change from 1 January 2027 has been reported but not yet published in the official fee schedule, so check the e-visa portal before you travel.
 
 ### Is the Winter Palace in Luxor open?
 

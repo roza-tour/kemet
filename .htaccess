@@ -249,6 +249,12 @@ RewriteCond %{HTTP_ACCEPT} !^text/html [NC]
 RewriteCond %{DOCUMENT_ROOT}/$1index.html.md -f
 RewriteRule ^((?:[a-z]{2}/)?)$ $1index.html.md [L]
 
+# ── MCP SERVER ──────────────────────────────────────────────────────────────
+# /mcp is the address an assistant is given as a connector; it is answered by
+# mcp.php (read-only: journeys, pages, travel updates — see that file). An
+# internal rewrite, so the address assistants store never shows the .php.
+RewriteRule ^mcp/?$ mcp.php [L]
+
 # A directory index has ONE public URL: the directory. /index.html and
 # /de/index.html are 301'd to / and /de/ so the same document is never served
 # at two addresses. Every internal link, canonical, hreflang and sitemap entry

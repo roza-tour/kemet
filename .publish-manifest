@@ -2620,6 +2620,7 @@ lib-source.php
 llms-full.txt
 llms.txt
 markets.json
+mcp.php
 media/balloon-flight-west-bank-poster.webp
 media/balloon-flight-west-bank.mp4
 media/balloons-luxor-sunrise-poster.webp
