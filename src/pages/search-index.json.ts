@@ -112,6 +112,7 @@ export const GET: APIRoute = () => {
     ["when-to-go.html", "When to visit Egypt", "Planning", "Month by month — heat, crowds, prices and festivals."],
     ["egypt-tour-cost.html", "What a private Egypt journey costs", "Planning", "Price bands per person per day and the five things that move them."],
     ["egypt-safety.html", "Is Egypt safe to visit?", "Planning", "Region by region, solo female travel, water, and the Sinai advisory."],
+    ["egypt-travel-updates.html", "Egypt travel updates", "Planning", "What has changed this season: museum tickets, visa fee, Giza entrance, hotel closures, dates ahead."],
     ["compare.html", "Compare the options", "Planning", "Nile cruise or land tour, dahabiya or ship, Luxor or Aswan."],
     ["faq.html", "Egypt travel FAQ", "Planning", "Straight answers to what travellers ask us most."],
     ["booking.html", "Booking & cancellation", "Practical", "Deposit, balance, payment methods and the cancellation schedule."],

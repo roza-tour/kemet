@@ -47,6 +47,8 @@ import { marketDirectory, marketRegions } from "@/utils/marketsDirectory";
 import { incenses, oils, stones, sacredFaqs, sacredBrief } from "@/data/sacred";
 import { ZAHRA_ANSWER, zahraRooms, zahraSailings, zahraFaqs, zahraDisclosure } from "@/data/zahra";
 import { programmes, programmeRoute, PROGRAMME_HUB, ORDER_NOTE } from "@/data/programmes";
+import { TRAVEL_UPDATES, UPDATES_EDITION, UPDATES_CHECKED } from "@/data/updates";
+import { canonical } from "@/utils/links";
 
 const u = (path: string) => `${SITE_URL}/${path}`;
 const clean = (s: string) => s.replace(/\s+/g, " ").trim();
@@ -99,6 +101,13 @@ export const GET: APIRoute = () => {
   h(2, "Safety in Egypt");
   p(`The tourist regions — Cairo, Giza, Luxor, Aswan, Alexandria and the Red Sea coast — are heavily policed and receive millions of visitors a year. The practical nuisances are persistent sellers at the major sites and heavy Cairo traffic, not crime; a private guide and driver remove most of both. The genuine seasonal risk in Upper Egypt between May and September is heat, not crime.`);
   p(`North Sinai and remote border areas carry standing advisories from most Western governments and are not part of any itinerary. The South Sinai resort coast — Sharm el-Sheikh, Dahab, Nuweiba — is a different region several hundred kilometres away and is generally excepted from those advisories. Travellers should read their own government's current advice before booking. Full detail: ${u("egypt-safety.html")}`);
+
+  // --- This season's changes -------------------------------------------------
+  h(2, `Egypt travel updates, ${UPDATES_EDITION}`);
+  p(`What has changed for a visitor this season. The page was last gone through on ${UPDATES_CHECKED}; each entry carries its own checked date. Full page: ${canonical("egypt-travel-updates.html")}`);
+  for (const u of TRAVEL_UPDATES) {
+    p(`**${u.title}** (checked ${u.checked}). ${u.body} ${u.practical}${u.official ? ` Official source: ${u.official.url}` : ""}`);
+  }
 
   // --- When to go -----------------------------------------------------------
   h(2, "When to visit Egypt, month by month");

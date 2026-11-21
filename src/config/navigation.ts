@@ -80,6 +80,8 @@ export const primaryNav: NavItem[] = [
       { label: "Which journey is yours", href: "plan.html" },
       { label: "When to go", href: "when-to-go.html" },
       { label: "Is Egypt safe?", href: "egypt-safety.html" },
+      // The dated page: what has changed this season. data/updates.ts.
+      { label: "What's new this season", href: "egypt-travel-updates.html" },
       { label: "Travel FAQ", href: "faq.html" },
       { label: "Travel guides", href: hubFor("guide") },
       // Every page written for a nationality, two clicks from anywhere.
@@ -120,6 +122,7 @@ export const footerExplore: FooterColumn = {
     { label: "Compare", href: "compare.html" },
     { label: "Travel FAQ", href: "faq.html" },
     { label: "Is Egypt safe?", href: "egypt-safety.html" },
+    { label: "Egypt travel updates", href: "egypt-travel-updates.html" },
   ],
 };
 

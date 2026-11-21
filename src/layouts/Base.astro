@@ -231,6 +231,11 @@ const ogLocaleAlternates = alternates
   <meta name="description" content={description} />
   <meta name="keywords" content={keywords} />
   <link rel="canonical" href={canonicalUrl} />
+  {/* The same page as plain Markdown, for assistants and agents — written by
+      scripts/markdown-pages.mjs after the build, and also what the server
+      answers with when a request asks for text/markdown (.htaccess). Declared
+      only where a copy is written: an indexable page that is its own canonical. */}
+  {selfCanonical && <link rel="alternate" type="text/markdown" href={`${canonicalUrl.endsWith("/") ? `${canonicalUrl}index.html` : canonicalUrl}.md`} />}
   {/* hreflang. Where a page has translations the set is generated from the
       registry in config/i18n and is self-referential and reciprocal — the
       requirement Google enforces before it will honour any of it. Pages with no

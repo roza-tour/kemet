@@ -1,0 +1,212 @@
+---
+// /egypt-travel-updates.html — what has changed for a visitor this season.
+//
+// WHY THE PAGE EXISTS
+// Every other page here explains something that stays true. The questions a
+// traveller asks in the last weeks before a trip are the other kind: is the
+// museum open in the evening, has the visa fee gone up, is that hotel still
+// closed. Those answers were scattered through guides where nobody could tell
+// when they were last looked at. Here each one carries its date.
+//
+// WHAT IT DELIBERATELY DOES NOT DO
+// It names no reviewer and prints no monument ticket price. See the rules at
+// the top of data/updates.ts — both are choices, not omissions.
+import Base from "@/layouts/Base.astro";
+import PageHero from "@/components/PageHero.astro";
+import Frieze from "@/components/Frieze.astro";
+import Faq from "@/components/Faq.astro";
+import AnswerBox from "@/components/aeo/AnswerBox.astro";
+import LeadCapture from "@/components/conversion/LeadCapture.astro";
+import SectionHeader from "@/components/SectionHeader.astro";
+import { breadcrumb, SPEAKABLE } from "@/schemas/jsonld";
+import { canonical } from "@/utils/links";
+import { monthYear } from "@/utils/format";
+import { SITE_URL, site } from "@/config/site";
+import {
+  TRAVEL_UPDATES, UPDATE_GROUPS, UPDATES_CHECKED, UPDATES_EDITION,
+  UPDATES_ANSWER_Q, UPDATES_ANSWER_A, UPDATES_FAQS,
+} from "@/data/updates";
+
+const ROUTE = "egypt-travel-updates.html";
+const TITLE = `Egypt Travel Updates, ${UPDATES_EDITION} | Kemet`;
+const DESCRIPTION =
+  "What has changed for visitors to Egypt this season: museum tickets and hours, the visa fee, the new Giza entrance, hotel closures and the dates ahead.";
+
+const checkedLabel = monthYear(UPDATES_CHECKED);
+
+const facts = [
+  { label: "Edition", value: UPDATES_EDITION },
+  { label: "Last checked", value: checkedLabel },
+  { label: "Entries", value: String(TRAVEL_UPDATES.length) },
+  { label: "Revised", value: "Monthly" },
+];
+
+const groups = UPDATE_GROUPS
+  .map((g) => ({ ...g, items: TRAVEL_UPDATES.filter((u) => u.group === g.id) }))
+  .filter((g) => g.items.length);
+
+const jsonld: Record<string, unknown>[] = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: `Egypt travel updates, ${UPDATES_EDITION}`,
+    description: DESCRIPTION,
+    url: canonical(ROUTE),
+    inLanguage: "en",
+    dateModified: UPDATES_CHECKED,
+    isPartOf: { "@type": "WebSite", "@id": `${SITE_URL}#website`, name: site.name, url: SITE_URL },
+    speakable: SPEAKABLE,
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: TRAVEL_UPDATES.length,
+      itemListElement: TRAVEL_UPDATES.map((u, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: u.title,
+        description: u.body,
+        url: `${canonical(ROUTE)}#${u.id}`,
+      })),
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: UPDATES_FAQS.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  },
+  breadcrumb([["Home", "index.html"], ["Egypt travel updates", ROUTE]]),
+];
+---
+<Base
+  title={TITLE}
+  description={DESCRIPTION}
+  active={ROUTE}
+  jsonld={jsonld}
+  keywords="egypt travel updates, egypt travel news 2026, grand egyptian museum tickets, egypt visa fee 2026, giza pyramids new entrance, winter palace luxor closed, ramadan 2027 egypt"
+>
+  <PageHero
+    crumb="Egypt travel updates"
+    symbol="horus"
+    title={`Egypt travel updates: ${UPDATES_EDITION}`}
+    text="What has changed for a visitor this season, each entry with the date it was last checked."
+  />
+
+  <section style="padding-top:var(--s-4)">
+    <div class="wrap up-wrap">
+      <AnswerBox question={UPDATES_ANSWER_Q} answer={UPDATES_ANSWER_A} checked={false} />
+
+      <div class="up-facts">
+        {facts.map((f) => (
+          <div>
+            <span class="up-k">{f.label}</span>
+            <b>{f.value}</b>
+          </div>
+        ))}
+      </div>
+
+      <p class="up-lede">
+        Guidebooks are printed once and Egypt is not. Ticket rules, visa fees and
+        hotel openings changed several times during 2026, and a figure that was
+        right in spring can be wrong by autumn. This page is the short list of
+        what is different now, kept apart from the guides so that it can be
+        dated: every entry says when it was last checked, and where there is an
+        official place to check it again, it is linked.
+      </p>
+      <p class="up-lede">
+        Last gone through on <time datetime={UPDATES_CHECKED}>{checkedLabel}</time>.
+        Where the official source and the published reports disagree on a
+        number, the entry tells you where to read it for your date and prints
+        none.
+      </p>
+    </div>
+  </section>
+
+  {groups.map((g) => (
+    <>
+      <Frieze />
+      <section style="padding-top:0">
+        <div class="wrap">
+          <SectionHeader sym="guides" eyebrow={g.eyebrow} title={g.title} text={g.text} />
+          <div class="up-list">
+            {g.items.map((u) => (
+              <article class="up-item" id={u.id}>
+                <div class="up-head">
+                  <h3>{u.title}</h3>
+                  <span class:list={["up-status", u.status === "Closed" && "is-warn"]}>{u.status}</span>
+                </div>
+                <p>{u.body}</p>
+                <p class="up-practical"><b>On the day.</b> {u.practical}</p>
+                <p class="up-meta">
+                  Checked <time datetime={u.checked}>{monthYear(u.checked)}</time>
+                  {u.official && (
+                    <> · Official source: <a href={u.official.url} rel="noopener external" target="_blank">{u.official.label}</a></>
+                  )}
+                  {u.more && (
+                    <> · <a href={u.more.href}>{u.more.label}</a></>
+                  )}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
+  ))}
+
+  <Frieze />
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <SectionHeader sym="questions" eyebrow="Questions" title="Asked this month" />
+      <Faq items={UPDATES_FAQS} />
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <LeadCapture
+        heading="Travelling soon?"
+        subtext="Tell us your dates and we will tell you what is open, what is closed and what it changes for the days you have."
+        whatsappMessage="Hello Kemet — I am travelling to Egypt soon and have a question about what is open."
+        emailSubject="Kemet — a question about travelling to Egypt this season"
+      />
+    </div>
+  </section>
+</Base>
+
+<style>
+  .up-wrap { max-width: 900px; }
+  .up-facts {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+    border: 1px solid var(--line); margin:var(--s-5) 0 var(--s-6);
+  }
+  .up-facts > div { padding:var(--s-3) var(--s-4); border-left: 1px solid var(--line); }
+  .up-facts > div:first-child { border-left: 0; }
+  .up-k { display: block; font-size:var(--t-nano); letter-spacing: .28em; text-transform: uppercase;
+    color: var(--gold); margin-bottom:var(--s-1); }
+  .up-facts b { font-weight: 400; color: var(--bone); font-size:var(--t-sm); line-height: 1.6; }
+  .up-lede { color: var(--muted); font-size:var(--t-base); line-height: 1.9; margin:0 0 var(--s-4); }
+
+  .up-list { display: grid; grid-template-columns: 1fr 1fr; gap:var(--s-4); margin-top:var(--s-5); }
+  .up-item { border: 1px solid var(--line); padding:var(--s-4) var(--s-4) var(--s-3); scroll-margin-top: 110px; }
+  .up-head { display: flex; align-items: baseline; justify-content: space-between; gap:var(--s-3);
+    margin-bottom:var(--s-2); }
+  .up-head h3 { margin: 0; font-size:var(--t-lg); font-weight: 400; color: var(--bone); line-height: 1.35; }
+  .up-status { flex: none; font-size:var(--t-nano); letter-spacing: .24em; text-transform: uppercase;
+    color: var(--gold); border: 1px solid var(--line-2); padding: 3px 9px; white-space: nowrap; }
+  .up-status.is-warn { color: var(--bone); border-color: var(--muted-2); }
+  .up-item p { color: var(--muted); font-size:var(--t-sm); line-height: 1.85; margin:0 0 var(--s-2); }
+  .up-practical b { color: var(--gold); font-weight: 400; }
+  .up-meta { font-size:var(--t-tiny) !important; color: var(--muted-2) !important; margin-bottom: 0 !important; }
+  .up-meta a { color: var(--gold); }
+
+  @media (max-width: 860px) {
+    .up-facts { grid-template-columns: 1fr 1fr; }
+    .up-facts > div:nth-child(3) { border-left: 0; }
+    .up-facts > div:nth-child(n+3) { border-top: 1px solid var(--line); }
+    .up-list { grid-template-columns: 1fr; }
+  }
+</style>

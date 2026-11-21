@@ -49,6 +49,7 @@ import { marketDirectory, marketRegions } from "@/utils/marketsDirectory";
 import { sacredBrief } from "@/data/sacred";
 import { zahraOneLine } from "@/data/zahra";
 import { programmes, programmeRoute } from "@/data/programmes";
+import { UPDATES_EDITION, UPDATES_CHECKED } from "@/data/updates";
 
 const u = (path: string) => `${SITE_URL}/${path}`;
 /** One Markdown list entry: - [Title](url): description */
@@ -137,6 +138,7 @@ export const GET: APIRoute = () => {
 
   lines.push(
     `- Full content as a single Markdown document: ${u("llms-full.txt")} — the substance of these pages in one file, for when fetching each page individually is not practical.`,
+    `- Every page as Markdown: add \`.md\` to a page address (${u("tours.html")}.md; ${u("tours.html").replace("tours.html", "index.html.md")} for the home page), or request the page itself with the header \`Accept: text/markdown\`. Same text as the page, without navigation or scripts.`,
   );
   lines.push("");
   lines.push("## Start here");
@@ -147,6 +149,7 @@ export const GET: APIRoute = () => {
   lines.push(item("All journeys", "tours.html", `Every private journey, ${tours.length} in total, from day tours to a 14-day grand tour.`));
   lines.push(item("Egypt Travel FAQ", "faq.html", "Answers to the most common Egypt travel questions: safety, visas, best time to visit, how many days, costs, getting around, food."));
   lines.push(item("Is Egypt safe to visit?", "egypt-safety.html", "Safety in Egypt region by region: Cairo, Luxor, the Red Sea and the North Sinai advisory, plus solo female travel, water and the persistent-seller problem at Giza."));
+  lines.push(item(`Egypt travel updates, ${UPDATES_EDITION}`, "egypt-travel-updates.html", `What has changed for visitors this season, each entry dated: Grand Egyptian Museum tickets and hours, the visa fee, the Giza entrance, hotel closures and the dates ahead. Last checked ${UPDATES_CHECKED}.`));
   lines.push(item("What a private Egypt journey costs", "egypt-tour-cost.html", `Honest price bands for the Egyptian market and where Kemet sits: its multi-day journeys work out at EUR ${perDayLow}-${perDayHigh} per person per day, fully inclusive — the entry to the private, tailor-made band (EUR 200-450) rather than its middle — plus the five variables that move a quote.`));
   lines.push(item("Booking, payment & cancellation", "booking.html", "How booking works, deposit and balance terms, accepted payment methods and the cancellation schedule."));
   lines.push(item("About Kemet", "about.html", "Who we are, how we design journeys, and our editorial standards."));

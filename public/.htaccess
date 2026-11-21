@@ -160,6 +160,30 @@ ErrorDocument 404 /404.html
   </FilesMatch>
 </IfModule>
 
+# The Markdown copies of the pages (scripts/markdown-pages.mjs writes one
+# beside every indexable page: tours.html → tours.html.md). They are for
+# assistants and agents, so: the right type, UTF-8, and never a search result
+# of their own — the page is the thing to index, the copy is a convenience.
+# AddType for Apache, Header for LiteSpeed (see the .txt note above).
+<IfModule mod_mime.c>
+  AddType text/markdown .md
+  AddCharset utf-8 .md
+</IfModule>
+<IfModule mod_headers.c>
+  <FilesMatch "\.html\.md$">
+    Header set Content-Type "text/markdown; charset=utf-8"
+    Header set X-Robots-Tag "noindex"
+    Header set Cache-Control "public, max-age=3600"
+    Header append Vary Accept
+  </FilesMatch>
+  # A page can now be answered in two forms depending on the Accept header
+  # (the rewrite further down), so a cache between us and the reader has to
+  # be told that the answer depends on it.
+  <FilesMatch "\.html$">
+    Header append Vary Accept
+  </FilesMatch>
+</IfModule>
+
 # Send the first byte before the whole page is assembled.
 <IfModule mod_env.c>
   SetEnv no-gzip-flush 0
@@ -204,6 +228,26 @@ RewriteRule \.(?:ts|astro|mjs|sh)$ - [R=404,L]
 # right answer to anyone who asks for it directly. Including it still works —
 # an include reads the filesystem, not the web server.
 RewriteRule ^lib-[a-z-]+\.php$ - [R=404,L]
+
+# ── MARKDOWN FOR AGENTS ─────────────────────────────────────────────────────
+# A request that asks for Markdown (Accept: text/markdown) is answered with
+# the page's Markdown copy, at the SAME address. No redirect, no new URL: an
+# internal rewrite, and only when all three hold —
+#   · the client asked for text/markdown,
+#   · and did not put text/html first (no browser sends text/markdown at all;
+#     this is for a client that lists both and prefers HTML),
+#   · and the copy exists. A page without one is served as HTML as before.
+# Browsers and search crawlers do not send this header, so nothing changes
+# for them. The second rule is the same thing for / and /de/ … /ar/.
+RewriteCond %{HTTP_ACCEPT} text/markdown [NC]
+RewriteCond %{HTTP_ACCEPT} !^text/html [NC]
+RewriteCond %{DOCUMENT_ROOT}/$1.md -f
+RewriteRule ^(.+\.html)$ $1.md [L]
+
+RewriteCond %{HTTP_ACCEPT} text/markdown [NC]
+RewriteCond %{HTTP_ACCEPT} !^text/html [NC]
+RewriteCond %{DOCUMENT_ROOT}/$1index.html.md -f
+RewriteRule ^((?:[a-z]{2}/)?)$ $1index.html.md [L]
 
 # A directory index has ONE public URL: the directory. /index.html and
 # /de/index.html are 301'd to / and /de/ so the same document is never served
