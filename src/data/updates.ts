@@ -17,6 +17,9 @@
 //     booking portal), the entry says where to read the figure for the day
 //     of the visit and does not print one.
 //   · `official` is the body that sets the rule, never a blog or a reseller.
+//   · No visa entry. The site retired its visa section, and the owner asked
+//     for visas to stay off this page too (21 Nov 2026): entry rules and fees
+//     depend on nationality and are the consulate's to state, not ours.
 //   · Nothing here is signed by the reviewer on the About page: these were
 //     checked against sources, not read by her as a passage, so the page
 //     carries no "checked by" line and its schema no reviewedBy.
@@ -32,7 +35,7 @@ export const UPDATES_CHECKED = "2026-11-21";
 /** The edition named in the title and the heading. */
 export const UPDATES_EDITION = "November 2026";
 
-export type UpdateGroup = "sites" | "entry" | "hotels" | "dates";
+export type UpdateGroup = "sites" | "hotels" | "dates";
 
 export interface TravelUpdate {
   id: string;
@@ -57,12 +60,6 @@ export const UPDATE_GROUPS: { id: UpdateGroup; eyebrow: string; title: string; t
     eyebrow: "Museums & sites",
     title: "At the monuments",
     text: "What has changed about getting in, and what is open that was not.",
-  },
-  {
-    id: "entry",
-    eyebrow: "Entry",
-    title: "Visas and arrival",
-    text: "Fees move more often than guidebooks are reprinted. These are the current ones, with the date they were read.",
   },
   {
     id: "hotels",
@@ -130,19 +127,6 @@ export const TRAVEL_UPDATES: TravelUpdate[] = [
     more: { label: "Luxor", href: "destinations/luxor.html" },
   },
   {
-    id: "visa-fee",
-    group: "entry",
-    status: "Changed",
-    title: "Tourist visa: USD 30 since spring 2026",
-    body:
-      "The single-entry tourist visa on arrival has cost USD 30 since 1 March 2026, up from USD 25. The single-entry e-visa was raised to the same USD 30 in late April 2026, and the multiple-entry e-visa to USD 65. A further change to visa charges from 1 January 2027 has been reported, but it is not yet in the published fee schedule. Whether you can take a visa on arrival at all depends on your nationality.",
-    practical:
-      "If you travel after 1 January 2027, read the fee on the e-visa portal or ask your nearest Egyptian consulate before you fly, and do not rely on a figure printed earlier, this one included.",
-    checked: "2026-11-21",
-    official: { label: "Egypt e-Visa portal", url: "https://visa2egypt.gov.eg/" },
-    more: { label: "Egypt travel guide: visa and entry", href: "guides/egypt-travel-guide.html" },
-  },
-  {
     id: "winter-palace",
     group: "hotels",
     status: "Closed",
@@ -206,16 +190,12 @@ export const TRAVEL_UPDATES: TravelUpdate[] = [
 
 export const UPDATES_ANSWER_Q = "What has changed for travellers to Egypt this season?";
 export const UPDATES_ANSWER_A =
-  "For the 2026–27 season in Egypt, Grand Egyptian Museum tickets are sold online for a dated slot, the tourist visa costs USD 30, and the Giza plateau is entered from the Fayoum road with buses inside. In Luxor the Winter Palace is closed until July 2027 and the tomb of Amenhotep III has reopened.";
+  "For the 2026–27 season in Egypt, Grand Egyptian Museum tickets are sold online for a dated entry slot, monument tickets are paid by card, and the Giza plateau is entered from the Fayoum road with buses inside. In Luxor the Winter Palace is closed until July 2027 and the tomb of Amenhotep III has reopened.";
 
 export const UPDATES_FAQS: { q: string; a: string }[] = [
   {
     q: "Do I need to book Grand Egyptian Museum tickets in advance?",
     a: "Yes. The Grand Egyptian Museum sells tickets through its own ticketing site for a dated entry slot, and says it is not responsible for tickets bought elsewhere. The galleries open at 9:00 and close at 18:00, or at 21:00 on Wednesday and Saturday, with last entry an hour before closing. A ticket allows one entry only.",
-  },
-  {
-    q: "How much is the Egypt tourist visa?",
-    a: "The single-entry tourist visa costs USD 30, on arrival since 1 March 2026 and as an e-visa since late April 2026; the multiple-entry e-visa costs USD 65. A further change from 1 January 2027 has been reported but not yet published in the official fee schedule, so check the e-visa portal before you travel.",
   },
   {
     q: "Is the Winter Palace in Luxor open?",

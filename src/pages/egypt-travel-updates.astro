@@ -4,7 +4,7 @@
 // WHY THE PAGE EXISTS
 // Every other page here explains something that stays true. The questions a
 // traveller asks in the last weeks before a trip are the other kind: is the
-// museum open in the evening, has the visa fee gone up, is that hotel still
+// museum open in the evening, where is the entrance now, is that hotel still
 // closed. Those answers were scattered through guides where nobody could tell
 // when they were last looked at. Here each one carries its date.
 //
@@ -30,7 +30,7 @@ import {
 const ROUTE = "egypt-travel-updates.html";
 const TITLE = `Egypt Travel Updates, ${UPDATES_EDITION} | Kemet`;
 const DESCRIPTION =
-  "What has changed for visitors to Egypt this season: museum tickets and hours, the visa fee, the new Giza entrance, hotel closures and the dates ahead.";
+  "What has changed for visitors to Egypt this season: museum tickets and hours, paying at the sites, the new Giza entrance, hotel closures and the dates ahead.";
 
 const checkedLabel = monthYear(UPDATES_CHECKED);
 
@@ -85,7 +85,7 @@ const jsonld: Record<string, unknown>[] = [
   description={DESCRIPTION}
   active={ROUTE}
   jsonld={jsonld}
-  keywords="egypt travel updates, egypt travel news 2026, grand egyptian museum tickets, egypt visa fee 2026, giza pyramids new entrance, winter palace luxor closed, ramadan 2027 egypt"
+  keywords="egypt travel updates, egypt travel news 2026, grand egyptian museum tickets, giza pyramids new entrance, winter palace luxor closed, ramadan 2027 egypt"
 >
   <PageHero
     crumb="Egypt travel updates"
@@ -108,7 +108,7 @@ const jsonld: Record<string, unknown>[] = [
       </div>
 
       <p class="up-lede">
-        Guidebooks are printed once and Egypt is not. Ticket rules, visa fees and
+        Guidebooks are printed once and Egypt is not. Ticket rules, site entrances and
         hotel openings changed several times during 2026, and a figure that was
         right in spring can be wrong by autumn. This page is the short list of
         what is different now, kept apart from the guides so that it can be

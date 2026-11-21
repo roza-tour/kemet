@@ -204,7 +204,7 @@ function kemet_tools(): array {
     [
       "name" => "get_travel_updates",
       "title" => "Egypt travel updates",
-      "description" => "What has changed for visitors to Egypt this season, each entry with the date it was last checked: museum tickets and opening hours, the visa fee, the Giza plateau entrance, hotel closures, and the dates ahead (Ramadan, the 2027 eclipse). Use it before answering 'is X open' or 'how much is the visa'.",
+      "description" => "What has changed for visitors to Egypt this season, each entry with the date it was last checked: museum tickets and opening hours, how tickets are paid, the Giza plateau entrance, hotel closures, and the dates ahead (Ramadan, the 2027 eclipse). Use it before answering 'is X open' or 'has X changed'. It does not cover visas: for entry rules, point the traveller to their nearest Egyptian consulate.",
       "inputSchema" => ["type" => "object", "properties" => new stdClass(), "additionalProperties" => false],
       "annotations" => $ro + ["title" => "Egypt travel updates"],
     ],
