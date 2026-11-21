@@ -2,7 +2,7 @@
 
 Kemet designs private, luxury journeys through every layer of Egypt — tailored tours, Nile cruises and experiences built around each traveller's interests, pace and timeline. Kemet designs entirely private, tailor-made journeys in Egypt, led by licensed Egyptologist guides, priced per person in EUR, with no group departures and no fixed dates.
 
-Source: https://kemet-travel.com. Index version: https://kemet-travel.com/llms.txt. Last updated: 2026-11-18.
+Source: https://kemet-travel.com. Index version: https://kemet-travel.com/llms.txt. Last updated: 2026-11-21.
 
 Specialist review: pages checked by Mervat Farouk, Egyptologist guide — Egyptian tour guide and specialist in Egyptology — carry a byline with that name; pages without one are published by Kemet. Profile: https://kemet-travel.com/about.html#mervat-farouk
 
@@ -76,6 +76,30 @@ A fully private, tailor-made journey with a licensed Egyptologist, a private veh
 The tourist regions — Cairo, Giza, Luxor, Aswan, Alexandria and the Red Sea coast — are heavily policed and receive millions of visitors a year. The practical nuisances are persistent sellers at the major sites and heavy Cairo traffic, not crime; a private guide and driver remove most of both. The genuine seasonal risk in Upper Egypt between May and September is heat, not crime.
 
 North Sinai and remote border areas carry standing advisories from most Western governments and are not part of any itinerary. The South Sinai resort coast — Sharm el-Sheikh, Dahab, Nuweiba — is a different region several hundred kilometres away and is generally excepted from those advisories. Travellers should read their own government's current advice before booking. Full detail: https://kemet-travel.com/egypt-safety.html
+
+## Egypt travel updates, November 2026
+
+What has changed for a visitor this season. The page was last gone through on 2026-11-21; each entry carries its own checked date. Full page: https://kemet-travel.com/egypt-travel-updates.html
+
+**Grand Egyptian Museum: timed tickets, bought online** (checked 2026-11-21). The Grand Egyptian Museum sells tickets through its own ticketing site, for a dated entry slot. The galleries open from 9:00 to 18:00 on Sunday, Monday, Tuesday, Thursday and Friday, and from 9:00 to 21:00 on Wednesday and Saturday; last entry is one hour before the galleries close. A ticket is good for a single entry and is not transferable. The museum says it is not responsible for tickets bought on other platforms. Book the slot before the day, and plan lunch inside the complex: once you leave, the ticket does not let you back in. Official source: https://tickets.gem.eg/
+
+**Monument ticket prices: read them for your date** (checked 2026-11-21). Entry prices for foreign visitors are set in Egyptian pounds and were revised more than once during 2026, including at the Grand Egyptian Museum at the start of November. Published figures for the same site currently disagree with one another, so this page prints none. The price that applies is the one shown by the official seller for the day of your visit. Tickets at the major sites and museums are paid by card; cash is no longer taken at the Pyramids, Karnak or the main museums. Carry a Visa or Mastercard, and treat any price in a guidebook or a blog as a guide only. On a multi-day Kemet journey the site tickets are arranged for you. Official source: https://egymonuments.gov.eg/
+
+**Giza plateau: one entrance, and buses inside** (checked 2026-11-21). Since 2025 visitors reach the Pyramids through the gate on the Fayoum road, south of the plateau, in place of the old entrance beside the Mena House. Cars and coaches stop at the visitor centre there, and hop-on, hop-off buses carry visitors between the stops on the plateau. Sellers and animal owners are kept to set areas. Allow more time for the approach than older itineraries show. With a guide, the entry, the route between the stops and the exit are handled for you.
+
+**Luxor: the tomb of Amenhotep III is open again** (checked 2026-11-21). The tomb of Amenhotep III in the Western Valley of the Kings reopened on 4 October 2025, after more than twenty years of conservation. It is one of the largest royal tombs on the West Bank and had been closed to visitors for a generation, so it is missing from most itineraries written before this season. It sits apart from the main valley, so it needs its own place in a West Bank morning. Ask for it by name when the journey is planned.
+
+**Tourist visa: USD 30 since spring 2026** (checked 2026-11-21). The single-entry tourist visa on arrival has cost USD 30 since 1 March 2026, up from USD 25. The single-entry e-visa was raised to the same USD 30 in late April 2026, and the multiple-entry e-visa to USD 65. A further change to visa charges from 1 January 2027 has been reported, but it is not yet in the published fee schedule. Whether you can take a visa on arrival at all depends on your nationality. If you travel after 1 January 2027, read the fee on the e-visa portal or ask your nearest Egyptian consulate before you fly, and do not rely on a figure printed earlier, this one included. Official source: https://visa2egypt.gov.eg/
+
+**Luxor: the Winter Palace is closed until July 2027** (checked 2026-09). The Winter Palace, Luxor's historic hotel on the East Bank, closed in early 2026 for a complete restoration. It is due to reopen in July 2027 as the Mandarin Oriental Winter Palace, and cannot be booked for the 2026–27 season. A Luxor stay this season is built on the West Bank or at another East Bank address; the guide below sets out which, and why.
+
+**Aswan: the Old Cataract is open, Palace wing only** (checked 2026-09). The Old Cataract in Aswan has been under Mandarin Oriental management since May 2026 and is open. Guests stay in the historic Palace wing, the original building facing the Nile and Elephantine Island, while the newer Nile wing is renovated until July 2027. Fewer rooms are on sale than in a normal season, so the Aswan nights are worth fixing early.
+
+**Ramadan 2027: expected 8 February to 8 March** (checked 2026-11-21). Ramadan follows the lunar calendar. In 2027 it is expected to begin on or about 8 February and end on or about 8 March, with Eid al-Fitr in the days that follow; the exact dates are confirmed in Egypt by the sighting of the moon. Many monuments and museums shorten their afternoon hours during the month. Days start early and finish before the pre-iftar rush, and the evenings in old Cairo are the best of the year.
+
+**Abu Simbel: the sun alignment, 22 February 2027** (checked 2026-11-21). Twice a year, on 22 February and 22 October, the rising sun reaches the inner sanctuary of the Great Temple at Abu Simbel. Both mornings draw the largest crowds of the year to the temple, and entry on those two days is ticketed at a higher rate than on ordinary days. Rooms near the temple and seats on the Aswan flights go first. Decide by the end of the year if you want to be there in February.
+
+**Total solar eclipse over Luxor: 2 August 2027** (checked 2026-10). On Monday 2 August 2027 the Moon covers the Sun over Luxor for about six minutes and 22 seconds, from about 13:02 to 13:08 local time. Luxor has a modest number of good rooms, and the nights around the eclipse are the most sought-after of its year. Plan the stay first and the touring around it. August in Luxor is extremely hot, so the days are built around dawn and evening.
 
 ## When to visit Egypt, month by month
 

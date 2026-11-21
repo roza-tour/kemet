@@ -1,0 +1,285 @@
+---
+title: "Honeymoon on the Nile — 9 Days / 8 Nights | Kemet"
+url: https://kemet-travel.com/tour-honeymoon-9day.html
+language: en
+description: "Egypt as a honeymoon should be — private sunrise at the pyramids, a felucca at golden hour — private, from €2,045 pp."
+---
+
+Honeymoon · 9 Days / 8 Nights
+
+# Honeymoon on the Nile
+
+Nine days built for two — Cairo's icons, a three-night cruise, Aswan's islands and long golden evenings with nowhere to hurry to.
+
+## What does Honeymoon on the Nile include, and what does it cost?
+
+Honeymoon on the Nile is a private 9-day, 8-night journey through Cairo, Giza, Aswan and Luxor, from €2,045 per person for a party of 2 or more. It includes a private Egyptologist guide throughout; 8 nights — Nile-view suites and a 3-night full-board Nile cruise; and domestic flights Cairo–Aswan and Luxor–Cairo. International flights are not included.
+
+## Overview
+
+A honeymoon itinerary is not a standard itinerary with rose petals. The pacing is different: later starts, longer evenings, one signature moment a day rather than four. This journey opens in Cairo with a private early-access sunrise at Giza before the plateau opens, then the Grand Egyptian Museum at your own pace. You fly south to Aswan — the softest, most romantic city on the river — for a private felucca at golden hour and dinner overlooking the cataract. A three-night cruise carries you to Luxor past Kom Ombo and Edfu, with a dawn hot-air balloon over the Theban hills as the closing image. Hotels and cabins are selected for Nile views throughout, and every guide knows this is a honeymoon, not a forced march.
+
+## Itinerary
+
+Day **01**
+
+### Arrival in Cairo
+
+- Private airport welcome and transfer to a Nile-view suite
+- Evening at leisure — dinner recommendations from your planner
+
+Day **02**
+
+### Sunrise at Giza & the museum
+
+- Sunrise at the nine-pyramid viewpoint, then early access to the plateau before public opening
+- Late breakfast, then the Grand Egyptian Museum at your own pace
+- Afternoon rest; evening felucca drinks on the Cairo Nile
+
+Day **03**
+
+### Fly to Aswan
+
+- Morning flight south
+- Philae — the island temple of Isis, goddess of love, by motorboat
+- Sunset felucca among the granite islands; dinner on a Nubian terrace
+
+Day **04**
+
+### Aswan & embarkation
+
+- Slow morning — the botanical island or the souk, as you prefer
+- Board your Nile cruise before lunch
+- Sail-away afternoon on the sundeck
+
+Day **05**
+
+### Kom Ombo & Edfu
+
+- The twin temple of Kom Ombo in morning light
+- Edfu's Temple of Horus in the afternoon
+- Dinner aboard as the ship moors for the night
+
+Day **06**
+
+### Esna lock & arrival in Luxor
+
+- A day on the water — the honeymoon day of doing nothing, beautifully
+- Evening arrival in Luxor; Luxor Temple illuminated, if you wish
+
+Day **07**
+
+### Balloons & the West Bank
+
+- Dawn hot-air balloon over Luxor's West Bank, if you add it (weather permitting)
+- Valley of the Kings and Hatshepsut's temple with your Egyptologist
+- Disembark to a Luxor hotel for the final nights
+
+Day **08**
+
+### Karnak & a day for two
+
+- Karnak in the quiet of early morning
+- Afternoon entirely at leisure — pool, spa or the museum
+- Farewell dinner arranged by your planner
+
+Day **09**
+
+### Fly to Cairo & depart
+
+- Morning flight to Cairo connecting to your international departure
+
+## Included & not included
+
+### Included
+
+- Private Egyptologist guide throughout
+- 8 nights — Nile-view suites and a 3-night full-board Nile cruise
+- Domestic flights Cairo–Aswan and Luxor–Cairo
+- Private early-access Giza sunrise session
+- Sunset felucca charter in Aswan
+- All entrance fees to sites and monuments
+- Private air-conditioned transfers
+- Hotel pickup & drop-off
+- Bottled water every day
+
+### Not included
+
+- Hot-air balloon flight (booked on request, about €120 per person)
+- International flights to and from Egypt
+- Egypt entry visa
+- Tipping (gratuities)
+- Personal expenses
+- Meals, except on board the Nile cruise
+- Optional extras you choose to add — activities, drinks
+
+## Comfort & pace
+
+Walking **Moderate**
+
+Where you sleep **A Nile-view suite in Cairo, a hotel in Aswan, three nights on the Nile cruise, then a hotel in Luxor**
+
+Early starts **Sunrise at Giza, a dawn balloon over Luxor's West Bank, and Karnak in the early morning**
+
+## Good to know
+
+### How is this different from the 10-day Icons journey?
+
+The route overlaps; the rhythm doesn't. This itinerary trades Alexandria and the sleeper trains for flights, Nile-view suites, later mornings and reserved evenings. It is built around couple-time rather than coverage.
+
+### Can you arrange surprises — flowers, a private dinner, a proposal?
+
+Yes, discreetly and often. Tell your planner what you have in mind and we will handle the staging; temple proposals need a little advance choreography and we know exactly where the quiet corners are.
+
+### Is the balloon flight safe to include?
+
+Luxor ballooning is run by licensed operators under civil-aviation oversight, flies only in calm dawn conditions, and is cancelled without hesitation in wind. We book flexible dates so a cancelled morning can roll to the next.
+
+### How demanding is Honeymoon on the Nile?
+
+The walking on Honeymoon on the Nile is moderate, as on any journey built around monuments. Nights: A Nile-view suite in Cairo, a hotel in Aswan, three nights on the Nile cruise, then a hotel in Luxor. There are no long drives. Early starts: Sunrise at Giza, a dawn balloon over Luxor's West Bank, and Karnak in the early morning.
+
+## Is this journey right for you?
+
+Ideal if you
+
+- Travellers who would rather see four things properly than twelve badly
+- Anyone who wants a licensed Egyptologist beside them, not a headset and a flag
+- Couples and families for whom pace, comfort and privacy decide whether a trip works
+- Visitors marking something — a honeymoon, an anniversary, a milestone birthday
+
+Less suited if you
+
+- Anyone looking for the lowest price on Egypt — we are not the cheapest and do not try to be
+- Coach tours, shared group departures and itineraries sold by the seat
+- Hostels, dormitories and hop-on backpacking routes
+- Travellers who would rather organise the logistics themselves
+
+From
+
+€2,045
+
+per person · EUR
+
+Based on a private party of 2 or more.
+
+[Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Honeymoon+on+the+Nile&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Honeymoon+on+the+Nile%22+journey+%289+Days+%2F+8+Nights%2C+from+%E2%82%AC2%2C045+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
+
+[Ask on WhatsApp](https://wa.me/201158367162?text=Hello%20Kemet%20%E2%80%94%20I%27m%20interested%20in%20the%20%22Honeymoon%20on%20the%20Nile%22%20journey%20(9%20Days%20%2F%208%20Nights).%20Could%20you%20share%20availability%3F)
+
+Duration **9 Days / 8 Nights**
+
+Start point **Cairo (airport or hotel)**
+
+Visiting **Cairo · Giza · Aswan · Luxor**
+
+Private **Guide, vehicle and visits — yes; the cruise ship is shared**
+
+[Booking & cancellation terms →](https://kemet-travel.com/booking.html)
+
+The standard
+
+## What this journey is, without exception
+
+Every operator in Egypt uses the word luxury. These are the specifics behind ours — checkable before you pay for anything.
+
+### A licensed Egyptologist, not a guide
+
+Every journey is led by a guide licensed by the Egyptian Ministry of Tourism with a degree in Egyptology. They are with you at the monuments, not waiting in the car park — and they are yours for the day, answering your questions rather than reciting to forty people.
+
+### Your party only
+
+No shared coaches. No fixed departure dates. No strangers on your itinerary. If you are two people, the vehicle, the guide and the pace belong to two people.
+
+### Built around you, then written down
+
+We design the itinerary from your interests and your dates — not from a catalogue page. You receive it in writing before anything is paid, and it changes as often as you want it to until it is right.
+
+### One price, itemised
+
+The quote lists what is included and what is not, line by line, before you commit. Your Egyptologist and private air-conditioned transfers are inside the price on every journey, and entrance fees are inside it on every multi-day one. Where something sits outside — monument tickets on a day tour, or meals, for instance — it is named on the page you are reading, at the rate the ticket office charges, not discovered at the end.
+
+### Reachable while you travel
+
+You have a direct line to the people who planned your journey for the whole time you are in Egypt — not a call centre, and not a number that stops answering after the deposit clears.
+
+### Time protected, not filled
+
+A day with four sites crammed into it is a cheaper day to sell and a worse day to live. We plan around light, heat and crowds — the Valley of the Kings at opening, the Egyptian Museum when the coaches have gone — and we leave the afternoon alone.
+
+### On price, plainly
+
+Kemet sits at the upper end of the Egyptian market and we are comfortable saying so. A private Egyptologist for a week costs what it costs; so does a car that is yours alone and a room that faces the river rather than the car park. What we will not do is quote low, then recover the difference through optional extras, shopping stops and an itinerary that quietly turns into a group. Every price on this site is a per-person starting point for a private journey, and the written quote that follows is the price you pay.
+
+Gallery
+
+## Moments from this journey
+
+Planning
+
+## Preparation reading
+
+Guides to help you prepare for this journey.
+
+Planning Your Trip
+
+### [Egypt Travel Guide](https://kemet-travel.com/guides/egypt-travel-guide.html)
+
+Everything you need to plan a trip to Egypt — visa requirements, the best time to go, getting around, top destinations, culture and practical essentials.
+
+8 min read
+
+Weather & Seasons
+
+### [Best Time to Visit Egypt](https://kemet-travel.com/guides/best-time-to-visit-egypt.html)
+
+Egypt's best travel season is October to April, when Nile Valley temperatures are mild and monuments are comfortable to explore. Here is what to expect season by season and destination by destination.
+
+6 min read
+
+Transportation
+
+### [Getting Around Egypt](https://kemet-travel.com/guides/transportation-in-egypt.html)
+
+How to travel between Egypt's cities and sites — domestic flights, the sleeper train, Nile cruises, the Cairo Metro, taxis and private transfers explained.
+
+7 min read
+
+Journeys
+
+## Similar journeys
+
+14 Days
+
+### [The Grand Tour of Egypt](https://kemet-travel.com/tour-grand-14day.html)
+
+Cairo · Giza · Alexandria · Aswan · Abu Simbel · Luxor · Sharm El Sheikh
+
+Our most complete journey: Cairo and Alexandria, a Nile cruise, Ramesses II's mountain temple at Abu Simbel, and three Red Sea nights to absorb it all.
+
+€2,728 / person from 6 travellers
+
+10 Days
+
+### [Egypt Icons & Nile Cruise](https://kemet-travel.com/tour-10-day.html)
+
+Cairo · Giza · Alexandria · Aswan · Luxor
+
+Our signature journey: Cairo, Alexandria, a sleeper train south, and a three-night Nile cruise from Aswan to Luxor — every layer of Egypt in one arc.
+
+€1,915 / person from 6 travellers
+
+8 Days
+
+### [Family Egypt: Pyramids to the Nile](https://kemet-travel.com/tour-family-8day.html)
+
+Cairo · Giza · Luxor · Aswan
+
+Egypt with children done right: short guided mornings, family-specialist Egyptologists, pool afternoons, and the moments no classroom can match.
+
+€1,524 / person from 6 travellers
+
+---
+
+Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/tour-honeymoon-9day.html
+Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
