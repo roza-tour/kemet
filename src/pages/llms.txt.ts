@@ -139,6 +139,7 @@ export const GET: APIRoute = () => {
   lines.push(
     `- Full content as a single Markdown document: ${u("llms-full.txt")} — the substance of these pages in one file, for when fetching each page individually is not practical.`,
     `- Every page as Markdown: add \`.md\` to a page address (${u("tours.html")}.md; ${u("tours.html").replace("tours.html", "index.html.md")} for the home page), or request the page itself with the header \`Accept: text/markdown\`. Same text as the page, without navigation or scripts.`,
+    `- For assistants that speak MCP (Model Context Protocol): connect to ${u("tours.html").replace("tours.html", "mcp")} — a read-only server with tools to search the journeys by length, place and budget, read any page as Markdown in ten languages, get this season's travel updates, and build the link a traveller uses to enquire. It cannot book or send anything.`,
   );
   lines.push("");
   lines.push("## Start here");

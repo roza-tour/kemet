@@ -279,7 +279,10 @@ for (const t of ['llms.txt', 'llms-full.txt']) {
     // "…/visa.html." is a link at the end of a sentence, not a path called
     // "visa.html.". The first version of this check reported four such
     // false positives.
-    const p = toFile2(m[1].split('#')[0].replace(/[.,;:)]+$/, ''));
+    const path = m[1].split('#')[0].replace(/[.,;:)]+$/, '');
+    // /mcp is not a file: .htaccess rewrites it to mcp.php (the MCP server).
+    // The thing to verify is that the handler was published.
+    const p = path === '/mcp' ? 'mcp.php' : toFile2(path);
     if (!existsSync(p) && !/\.(txt|xml)$/.test(p)) add2('llms-404', `${t}  ${m[0]}`);
   }
 }
