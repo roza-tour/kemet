@@ -79,17 +79,25 @@ To exercise any of these rights, email us at info@kemet-travel.com and we will r
 
 08
 
+## Assistants and the MCP server
+
+AI assistants can read our published pages and journey catalogue through a read-only server at https://kemet-travel.com/mcp. It has no login and sets no cookies. What an assistant sends it (search words, a journey id, a language) is not stored. We keep only an anonymous daily count of which tool was used, with no IP address and no details of the request.
+
+The server cannot book or send anything. If you ask an assistant to contact us, it gives you a link, and a message reaches us only when you open it and send it yourself. What you type into the assistant itself is handled under that assistant's own privacy policy.
+
+09
+
 ## Security
 
 The site is served over encrypted HTTPS, and we take reasonable technical and organisational measures to protect the information you send us. No transmission over the internet can be guaranteed completely secure, but we work to keep your data safe.
 
-09
+10
 
 ## Changes to this policy
 
 We may update this policy from time to time. The date at the top shows when it was last revised; the current version always lives on this page.
 
-10
+11
 
 ## Contact us
 

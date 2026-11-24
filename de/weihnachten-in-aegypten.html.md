@@ -46,7 +46,7 @@ Es gibt einen guten Grund, warum diese Wochen in Ägypten die teuersten des Jahr
   
   Mitternachtsliturgie in der Hängenden Kirche. Gäste sind willkommen.
 
-Noch 32 Tage
+Noch 29 Tage
 
 ## Das ist spät — und wir sagen das auch
 
@@ -118,7 +118,7 @@ Wie es weitergeht
 
 - Reisezeitraum und Personenzahl genügen. Wir antworten innerhalb eines Werktages mit einer ersten Einschätzung und Rückfragen — kostenlos und unverbindlich.
 - 25 % des Reisepreises bestätigen die Buchung und werden auf den Endbetrag angerechnet. Der Rest ist 30 Tage vor Abreise fällig.
-- Stornierung bei einer jetzt bestätigten Buchung: 50 % des Reisepreises (30 bis 44 Tage vor Abreise).
+- Stornierung bei einer jetzt bestätigten Buchung: 75 % des Reisepreises (15 bis 29 Tage vor Abreise).
 - Überweisung oder Kreditkarte. Preise pro Person in Euro, aufgeschlüsselt, mit klar benannten Leistungen — enthalten und nicht enthalten.
 - Nur Ihre Gruppe, durchgehend mit privatem Ägyptologen und eigenem Fahrzeug. Kein Sammelbus, kein Anschluss an eine Gruppe am Eingang.
 

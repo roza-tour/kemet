@@ -366,7 +366,9 @@ function tool_search_journeys(array $args): array {
 
   $journeys = [];
   foreach (($cat["journeys"] ?? []) as $j) {
-    $days = (int)($j["days"] ?? 0);
+    // journeys.json gives `days` for a journey of several days and leaves it
+    // out for a day tour, which is one day — not none.
+    $days = isset($j["days"]) ? (int)$j["days"] : 1;
     if ($min !== null && $days < $min) continue;
     if ($max !== null && $days > $max) continue;
     $price = $j["priceFrom"]["amount"] ?? null;
