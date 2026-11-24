@@ -28,7 +28,7 @@ export const privacyPolicy: LegalDoc = {
   title: "Privacy Policy",
   intro:
     "This policy explains what personal information Kemet collects when you contact us or use this website, how we use it, and the rights you have over it. We collect as little as possible and never sell it.",
-  lastUpdated: "September 2026",
+  lastUpdated: "November 2026",
   sections: [
     {
       heading: "Who we are",
@@ -82,6 +82,16 @@ export const privacyPolicy: LegalDoc = {
       body: [
         "If you are in the EU/EEA, UK or a comparable jurisdiction, you have the right to access the personal information we hold about you, to have it corrected or deleted, to object to or restrict how we use it, and to receive a copy in a portable form.",
         `To exercise any of these rights, email us at ${CONTACT} and we will respond within a reasonable time. You also have the right to complain to your local data-protection authority.`,
+      ],
+    },
+    {
+      // Added 24 Nov 2026 with the MCP server (public/mcp.php). What it says
+      // is what that file does: no login, nothing stored but a tally of tool
+      // names per day. If the server ever records more, this changes first.
+      heading: "Assistants and the MCP server",
+      body: [
+        "AI assistants can read our published pages and journey catalogue through a read-only server at https://kemet-travel.com/mcp. It has no login and sets no cookies. What an assistant sends it (search words, a journey id, a language) is not stored. We keep only an anonymous daily count of which tool was used, with no IP address and no details of the request.",
+        "The server cannot book or send anything. If you ask an assistant to contact us, it gives you a link, and a message reaches us only when you open it and send it yourself. What you type into the assistant itself is handled under that assistant's own privacy policy.",
       ],
     },
     {
