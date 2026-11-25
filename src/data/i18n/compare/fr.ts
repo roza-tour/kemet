@@ -65,7 +65,7 @@ export const frCompare: CompText[] = [
       },
       {
         title: "Comment nous l'organisons",
-        body: "Deux de nos voyages les plus longs — Egypt Icons & Nile Cruise et Egypt Highlights Deluxe — utilisent le train-couchette dans les deux sens, tels que publiés. Tous deux peuvent aussi être organisés avec des vols, ces deux nuits se passant alors à l'hôtel, pour 130 € de plus par personne ; demandez la version avec vols au moment de votre demande. Tous les autres voyages qui descendent vers le sud sont déjà construits autour de vols.",
+        body: "Deux de nos voyages les plus longs — Egypt Icons & Nile Cruise et Egypt Highlights Deluxe — utilisent le train-couchette dans les deux sens, tels que publiés. Tous deux peuvent aussi être organisés avec des vols, ces deux nuits se passant alors à l'hôtel, pour 143 € de plus par personne ; demandez la version avec vols au moment de votre demande. Tous les autres voyages qui descendent vers le sud sont déjà construits autour de vols.",
       },
     ],
     faqs: [

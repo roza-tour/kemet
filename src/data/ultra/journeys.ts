@@ -10,7 +10,8 @@
 // Each price is built up from the unit cost of what the journey contains —
 // suites, charter, private aircraft legs, the private openings, the guide and
 // chauffeur — at the rates published by the hotels, vessels and charter firms
-// for the 2026–27 season, plus Kemet's margin. `price2` is per person for a
+// for the 2026–27 season, plus Kemet's margin, and raised by 10% as the 2027
+// prices (owner, 25 Nov 2026). `price2` is per person for a
 // party of two; `price4` is per person for a party of four, lower because the
 // charter, the aircraft, the openings and the guide are shared between more
 // people while the suites are not. Peak weeks are stated separately (PEAK).
@@ -63,8 +64,8 @@ export const ultraJourneys: UltraJourney[] = [
     numeral: "I",
     days: 7,
     nights: 6,
-    price2: 17400,
-    price4: 11500,
+    price2: 19140,
+    price4: 12650,
     stays: [
       { hotel: "Marriott Mena House", place: "giza", nights: 3, room: "pyramidSuite" },
       { hotel: "Al Moudira", place: "luxor", nights: 3, room: "suite" },
@@ -79,8 +80,8 @@ export const ultraJourneys: UltraJourney[] = [
     numeral: "II",
     days: 10,
     nights: 9,
-    price2: 36700,
-    price4: 21000,
+    price2: 40370,
+    price4: 23100,
     stays: [
       { hotel: "Four Seasons Hotel Cairo at The First Residence", place: "cairo", nights: 3, room: "nileSuite" },
       { hotel: "Old Cataract", place: "aswan", nights: 1, room: "palaceWing" },
@@ -95,8 +96,8 @@ export const ultraJourneys: UltraJourney[] = [
     numeral: "III",
     days: 12,
     nights: 11,
-    price2: 38300,
-    price4: 25300,
+    price2: 42130,
+    price4: 27830,
     stays: [
       { hotel: "Marriott Mena House", place: "giza", nights: 3, room: "pyramidSuite" },
       { hotel: "The Oberoi Philae", place: "nile", nights: 4, room: "cruiseSuite" },
@@ -111,8 +112,8 @@ export const ultraJourneys: UltraJourney[] = [
     numeral: "IV",
     days: 15,
     nights: 14,
-    price2: 66800,
-    price4: 37700,
+    price2: 73480,
+    price4: 41470,
     stays: [
       { hotel: "Marriott Mena House", place: "giza", nights: 3, room: "pyramidSuite" },
       { hotel: "Old Cataract", place: "aswan", nights: 2, room: "palaceWing" },

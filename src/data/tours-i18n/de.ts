@@ -59,7 +59,7 @@ export const de: TourText[] = [
           "Fahrt über die Wüstenstraße nach Alexandria",
           "Katakomben von Kom esch-Schukafa und die Pompeiussäule",
           "Zitadelle von Qaitbay auf dem Platz des alten Pharos und die moderne Bibliotheca Alexandrina",
-          "Fischessen an der Corniche, dann zurück nach Kairo",
+          "Fischessen an der Corniche, vor Ort bezahlt, dann zurück nach Kairo",
         ],
       },
       {
@@ -192,7 +192,7 @@ export const de: TourText[] = [
         items: [
           "Fahrt an die Mittelmeerküste",
           "Katakomben von Kom esch-Schukafa, Pompeiussäule und Zitadelle von Qaitbay",
-          "Bibliotheca Alexandrina und Fischessen an der Corniche",
+          "Bibliotheca Alexandrina und Fischessen an der Corniche, vor Ort bezahlt",
         ],
       },
       {
@@ -304,7 +304,7 @@ export const de: TourText[] = [
         items: [
           "Katakomben von Kom esch-Schukafa und die Pompeiussäule",
           "Zitadelle von Qaitbay auf dem Platz des Pharos",
-          "Fischessen an der Corniche; zurück nach Kairo",
+          "Fischessen an der Corniche, vor Ort bezahlt; zurück nach Kairo",
         ],
       },
       {
@@ -561,7 +561,7 @@ export const de: TourText[] = [
         items: [
           "Katakomben von Kom esch-Schukafa",
           "Zitadelle von Qaitbay und die Bibliotheca Alexandrina",
-          "Pompeiussäule und Fischessen direkt am Meer",
+          "Pompeiussäule und Fischessen direkt am Meer, vor Ort bezahlt",
         ],
       },
       {
@@ -1167,7 +1167,7 @@ export const de: TourText[] = [
         title: "Der Basar & Abreise",
         items: [
           "Khan el-Khalili mit Einordnung — Werkstätten, nicht nur Stände",
-          "Letztes Mittagessen in einem restaurierten osmanischen Haus",
+          "Letztes Mittagessen in einem restaurierten osmanischen Haus, vor Ort bezahlt",
           "Privater Transfer zum Flughafen",
         ],
       },
@@ -1574,7 +1574,7 @@ export const de: TourText[] = [
     summary:
       "Der Qarun-See, die Wasserfälle und Dünen des Wadi El Rayan, die fossilen Wale des Wadi Al-Hitan und die Töpfer des Dorfes Tunis — Ägyptens wilde, grüne andere Hälfte.",
     overview:
-      "Anderthalb Stunden südwestlich von Kairo tauscht die Senke von Fayyum Monumente gegen Landschaft: ein großer Salzsee, Süßwasserfälle in der Wüste, ein UNESCO-Tal voller versteinerter Wale und ein Töpferdorf am Hang. Dieser ganze Tag ist ein vollständiger Tonartwechsel gegenüber den Tempeln — weite Horizonte, Vogelwelt, Dünen und ein Fischessen am See. Gereist wird privat, mit Ihrem Guide und Fahrer für den ganzen Tag.",
+      "Anderthalb Stunden südwestlich von Kairo tauscht die Senke von Fayyum Monumente gegen Landschaft: ein großer Salzsee, Süßwasserfälle in der Wüste, ein UNESCO-Tal voller versteinerter Wale und ein Töpferdorf am Hang. Dieser ganze Tag ist ein vollständiger Tonartwechsel gegenüber den Tempeln — weite Horizonte, Vogelwelt, Dünen und ein Fischessen am See, vor Ort bezahlt. Gereist wird privat, mit Ihrem Guide und Fahrer für den ganzen Tag.",
     itinerary: [
       {
         title: "Der Qarun-See",
@@ -1594,7 +1594,7 @@ export const de: TourText[] = [
       },
       {
         title: "Das Töpferdorf Tunis & Mittagessen am See",
-        text: "Zum Abschluss Tunis, das Hangdorf, das für seine Töpfer und Werkstätten bekannt ist, danach ein entspanntes Fischessen am See vor der Rückfahrt nach Kairo.",
+        text: "Zum Abschluss Tunis, das Hangdorf, das für seine Töpfer und Werkstätten bekannt ist, danach ein entspanntes, vor Ort bezahltes Fischessen am See vor der Rückfahrt nach Kairo.",
       },
     ],
     faqs: [
@@ -1731,9 +1731,9 @@ export const de: TourText[] = [
     durationLabel: "Ganzer Tag (ca. 11 Stunden)",
     startPoint: "Hotel in Kairo oder Gizeh",
     summary:
-      "Die Katakomben von Kom esch-Schukafa, die Pompeiussäule, die Zitadelle von Qaitbay auf dem Platz des alten Pharos und die Bibliotheca Alexandrina, mit einem Fischessen.",
+      "Die Katakomben von Kom esch-Schukafa, die Pompeiussäule, die Zitadelle von Qaitbay auf dem Platz des alten Pharos und die Bibliotheca Alexandrina, mit einem vor Ort bezahlten Fischessen.",
     overview:
-      "Alexanders Stadt trägt ihre griechisch-römische Vergangenheit leichthin entlang einer geschwungenen Mittelmeer-Corniche. Dieser ganze Tag nimmt die unterirdischen Katakomben von Kom esch-Schukafa mit, die aufragende Pompeiussäule, die Zitadelle von Qaitbay auf den Fundamenten des legendären Pharos-Leuchtturms und die emporschwingende moderne Bibliotheca Alexandrina — Erbin der antiken Bibliothek. Ein Fischessen am Meer gehört dazu. Privater Guide und private Transfers ab Kairo.",
+      "Alexanders Stadt trägt ihre griechisch-römische Vergangenheit leichthin entlang einer geschwungenen Mittelmeer-Corniche. Dieser ganze Tag nimmt die unterirdischen Katakomben von Kom esch-Schukafa mit, die aufragende Pompeiussäule, die Zitadelle von Qaitbay auf den Fundamenten des legendären Pharos-Leuchtturms und die emporschwingende moderne Bibliotheca Alexandrina — Erbin der antiken Bibliothek. Ein Fischessen am Meer, vor Ort bezahlt, gehört dazu. Privater Guide und private Transfers ab Kairo.",
     itinerary: [
       {
         title: "Katakomben von Kom esch-Schukafa",
@@ -1749,7 +1749,7 @@ export const de: TourText[] = [
       },
       {
         title: "Bibliotheca Alexandrina & Fischessen",
-        text: "Zum Abschluss die eindrucksvolle moderne Bibliotheca Alexandrina, die wiedergeborene Bibliothek von Alexandria, nach einem entspannten Fischessen direkt am Mittelmeer.",
+        text: "Zum Abschluss die eindrucksvolle moderne Bibliotheca Alexandrina, die wiedergeborene Bibliothek von Alexandria, nach einem entspannten, vor Ort bezahlten Fischessen direkt am Mittelmeer.",
       },
     ],
     faqs: [

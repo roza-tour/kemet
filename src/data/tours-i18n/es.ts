@@ -86,7 +86,7 @@ export const es: TourText[] = [
           "A Alejandría por la carretera del desierto",
           "Catacumbas de Kom el-Shoqafa y Columna de Pompeyo",
           "Ciudadela de Qaitbay, en el lugar del antiguo Faro, y la moderna Bibliotheca Alexandrina",
-          "Almuerzo de pescado y marisco frente al mar antes de volver a El Cairo",
+          "Almuerzo de pescado y marisco frente al mar, pagado en destino, antes de volver a El Cairo",
         ],
       },
       {
@@ -208,7 +208,7 @@ export const es: TourText[] = [
         items: [
           "Catacumbas de Kom el-Shoqafa y Columna de Pompeyo",
           "La Ciudadela de Qaitbay, en el lugar del antiguo Faro",
-          "Almuerzo de pescado y marisco en la Corniche; regreso a El Cairo",
+          "Almuerzo de pescado y marisco en la Corniche, pagado en destino; regreso a El Cairo",
         ],
       },
       {
@@ -589,7 +589,7 @@ export const es: TourText[] = [
         items: [
           "Por carretera hasta la costa mediterránea",
           "Catacumbas de Kom el-Shoqafa, Columna de Pompeyo y Ciudadela de Qaitbay",
-          "La Bibliotheca Alexandrina y almuerzo de pescado y marisco frente al mar",
+          "La Bibliotheca Alexandrina y almuerzo de pescado y marisco frente al mar, pagado en destino",
         ],
       },
       {
@@ -695,7 +695,7 @@ export const es: TourText[] = [
         title: "El bazar y salida",
         items: [
           "Khan el-Khalili con contexto: talleres, no solo puestos",
-          "Último almuerzo en una casa otomana restaurada",
+          "Último almuerzo en una casa otomana restaurada, pagado en destino",
           "Traslado privado al aeropuerto",
         ],
       },
@@ -805,7 +805,7 @@ export const es: TourText[] = [
         items: [
           "Catacumbas de Kom el-Shoqafa",
           "La Ciudadela de Qaitbay y la Bibliotheca Alexandrina",
-          "La Columna de Pompeyo y almuerzo de pescado y marisco frente al mar",
+          "La Columna de Pompeyo y almuerzo de pescado y marisco frente al mar, pagado en destino",
         ],
       },
       {
@@ -1137,7 +1137,7 @@ export const es: TourText[] = [
     durationLabel: "Día completo (unas 10 horas)",
     startPoint: "Hotel en El Cairo o Guiza",
     summary: "El lago Qarun, las cascadas y dunas de Wadi el-Rayan, las ballenas fósiles de Wadi al-Hitan y los alfareros de la aldea de Tunis: la otra mitad de Egipto, verde y salvaje.",
-    overview: "A hora y media al suroeste de El Cairo, la depresión del Fayum cambia los monumentos por el paisaje: un gran lago salado, cascadas de agua dulce en pleno desierto, un valle de ballenas fosilizadas declarado Patrimonio Mundial por la UNESCO y una aldea de alfareros en una ladera. Este día completo supone un cambio total de registro respecto a los templos: horizontes amplios, aves, dunas y un almuerzo de pescado junto al lago. El viaje es privado, con su guía y su conductor durante todo el día.",
+    overview: "A hora y media al suroeste de El Cairo, la depresión del Fayum cambia los monumentos por el paisaje: un gran lago salado, cascadas de agua dulce en pleno desierto, un valle de ballenas fosilizadas declarado Patrimonio Mundial por la UNESCO y una aldea de alfareros en una ladera. Este día completo supone un cambio total de registro respecto a los templos: horizontes amplios, aves, dunas y un almuerzo de pescado junto al lago, pagado en destino. El viaje es privado, con su guía y su conductor durante todo el día.",
     itinerary: [
       {
         title: "El lago Qarun",
@@ -1157,7 +1157,7 @@ export const es: TourText[] = [
       },
       {
         title: "La aldea alfarera de Tunis y almuerzo junto al lago",
-        text: "Se termina en Tunis, la aldea en la ladera famosa por sus alfareros y sus talleres, y después llega un almuerzo tranquilo de pescado junto al lago antes de regresar a El Cairo.",
+        text: "Se termina en Tunis, la aldea en la ladera famosa por sus alfareros y sus talleres, y después llega un almuerzo tranquilo de pescado junto al lago, pagado en destino, antes de regresar a El Cairo.",
       },
     ],
     faqs: [
@@ -1321,15 +1321,15 @@ export const es: TourText[] = [
     slug: "tour-alexandria",
     localeSlug: "excursion-a-alejandria-desde-el-cairo",
     metaTitle: "Alejandría, excursión de un día desde El Cairo | Kemet",
-    metaDescription: "Las Catacumbas de Kom el-Shoqafa, la Columna de Pompeyo, la Ciudadela de Qaitbay sobre el Faro y la Bibliotheca Alexandrina, con almuerzo de pescado.",
+    metaDescription: "Las Catacumbas de Kom el-Shoqafa, la Columna de Pompeyo, la Ciudadela de Qaitbay y la Bibliotheca Alexandrina, con almuerzo de pescado pagado en destino.",
     keywords: "excursión a alejandría, alejandría desde el cairo, qué ver en alejandría, ciudadela de qaitbay, biblioteca de alejandría",
     crumb: "Alejandría en un día",
     title: "Alejandría en un día",
     subtitle: "Un día completo en el Mediterráneo: catacumbas, una columna romana, una ciudadela rodeada de mar y la gran biblioteca moderna.",
     durationLabel: "Día completo (unas 11 horas)",
     startPoint: "Hotel en El Cairo o Guiza",
-    summary: "Las Catacumbas de Kom el-Shoqafa, la Columna de Pompeyo, la Ciudadela de Qaitbay sobre el antiguo emplazamiento del Faro y la Bibliotheca Alexandrina, con un almuerzo de pescado y marisco.",
-    overview: "La ciudad de Alejandro lleva con ligereza su pasado grecorromano a lo largo de la curva de la Corniche, frente al Mediterráneo. Este día completo abarca las Catacumbas subterráneas de Kom el-Shoqafa, la imponente Columna de Pompeyo, la Ciudadela de Qaitbay, construida sobre los cimientos del legendario Faro, y la altísima y moderna Bibliotheca Alexandrina, heredera de la antigua Biblioteca. Un almuerzo de pescado y marisco frente al mar forma parte de la experiencia. Guía y traslados privados desde El Cairo.",
+    summary: "Las Catacumbas de Kom el-Shoqafa, la Columna de Pompeyo, la Ciudadela de Qaitbay sobre el antiguo emplazamiento del Faro y la Bibliotheca Alexandrina, con un almuerzo de pescado y marisco pagado en destino.",
+    overview: "La ciudad de Alejandro lleva con ligereza su pasado grecorromano a lo largo de la curva de la Corniche, frente al Mediterráneo. Este día completo abarca las Catacumbas subterráneas de Kom el-Shoqafa, la imponente Columna de Pompeyo, la Ciudadela de Qaitbay, construida sobre los cimientos del legendario Faro, y la altísima y moderna Bibliotheca Alexandrina, heredera de la antigua Biblioteca. Un almuerzo de pescado y marisco frente al mar, pagado en destino, forma parte de la experiencia. Guía y traslados privados desde El Cairo.",
     itinerary: [
       {
         title: "Catacumbas de Kom el-Shoqafa",
@@ -1345,7 +1345,7 @@ export const es: TourText[] = [
       },
       {
         title: "Bibliotheca Alexandrina y almuerzo de pescado",
-        text: "Tras un almuerzo tranquilo de pescado y marisco frente al Mediterráneo, se termina en la espectacular y moderna Bibliotheca Alexandrina, la Biblioteca de Alejandría renacida.",
+        text: "Tras un almuerzo tranquilo de pescado y marisco frente al Mediterráneo, pagado en destino, se termina en la espectacular y moderna Bibliotheca Alexandrina, la Biblioteca de Alejandría renacida.",
       },
     ],
     faqs: [

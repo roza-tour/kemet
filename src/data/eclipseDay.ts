@@ -18,8 +18,9 @@ import { ECLIPSE_2027 } from "@/data/timeboxed";
 
 export const ECLIPSE_DAY = {
   date: ECLIPSE_2027,
-  /** Per person, EUR, hotel not included. Lowered from 195 to 149 by the owner, 19 Oct 2026. */
-  price: 149,
+  /** Per person, EUR, hotel not included. Lowered from 195 to 149 by the owner,
+   *  19 Oct 2026; 164 from 25 Nov 2026 (2027 prices, +10% on every journey). */
+  price: 164,
   groups: 4,
   groupSize: 12,
   capacity: 48,

@@ -10,6 +10,7 @@
 // through the Gulf, Lebaran and the June–July school holidays.
 // ---------------------------------------------------------------------------
 import { legalPages } from "./legal/build";
+import { companyPages } from "./company/build";
 import type { LocalizedPage } from "./types";
 import { articlePages } from "./articles/build";
 import { idArticles, idArtLabels } from "./articles/id";
@@ -44,7 +45,7 @@ export const id: LocalizedPage[] = [
     crumb: "Beranda",
     h1: "Mesir, hanya untuk rombongan Anda",
     standfirst:
-      "Tanpa bus wisata, tanpa tanggal keberangkatan tetap, tanpa orang asing dalam perjalanan Anda.",
+      "Tanpa bus wisata, tanpa tanggal keberangkatan tetap, tanpa orang asing di kendaraan Anda atau bersama pemandu Anda.",
     lede:
       "Mesir bukan satu negeri, melainkan delapan dunia budaya yang bertumpuk di sepanjang satu sungai. Kemet merancang perjalanan privat yang tidak terburu-buru melintasi dunia-dunia itu — dari Piramida Giza dan Al-Azhar hingga kuil-kuil Luxor dan pelayaran Nil menuju Aswan. Setiap perjalanan dipandu Egyptologist berlisensi Kementerian Pariwisata Mesir, dan disusun sepenuhnya di sekitar Anda.",
     facts: [
@@ -260,7 +261,7 @@ export const id: LocalizedPage[] = [
     standfirst:
       "Kisaran yang nyata — dan lima keputusan yang benar-benar menggerakkan angkanya.",
     lede:
-      "Perjalanan privat di Mesir umumnya berada di kisaran 200–450 euro per orang per hari, di luar tiket pesawat internasional. Jarak antara kedua angka itu bukan kebetulan: ia lahir dari lima keputusan yang Anda ambil saat merencanakan. Ada baiknya mengenali kelimanya sebelum membandingkan dua penawaran.",
+      "Perjalanan privat di Mesir umumnya berada di kisaran 200–450 euro per orang per hari, di luar tiket pesawat internasional. Jarak antara kedua angka itu bukan kebetulan: ia lahir dari lima keputusan yang Anda ambil saat merencanakan. Ada baiknya mengenali kelimanya sebelum membandingkan dua penawaran. Perjalanan multi-hari Kemet sendiri berkisar 170–226 euro per orang per hari untuk rombongan enam orang atau lebih, dan 187–249 euro untuk dua pelancong: sekitar batas bawah kisaran ini, dan untuk rombongan yang lebih besar sedikit di bawahnya.",
     facts: [
       { label: "Tingkat awal", value: "±200 € / orang / hari" },
       { label: "Menengah", value: "±300 € / orang / hari" },
@@ -568,4 +569,6 @@ export const id: LocalizedPage[] = [
   ...articlePages("id", idArtLabels, idArticles),
   // Privacy, terms and booking (i18n/legal).
   ...legalPages("id"),
+  // About and Contact (i18n/company).
+  ...companyPages("id"),
 ];

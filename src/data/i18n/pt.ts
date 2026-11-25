@@ -13,6 +13,7 @@
 // Prices stay in euros, as on every other page of the site.
 // ---------------------------------------------------------------------------
 import { legalPages } from "./legal/build";
+import { companyPages } from "./company/build";
 import type { LocalizedPage } from "./types";
 import { articlePages } from "./articles/build";
 import { ptArticles, ptArtLabels } from "./articles/pt";
@@ -52,7 +53,7 @@ export const pt: LocalizedPage[] = [
     crumb: "Início",
     h1: "O Egito, só para vocês",
     standfirst:
-      "Sem ônibus, sem data de saída fixa, sem desconhecidos no seu roteiro.",
+      "Sem ônibus, sem data de saída fixa, sem desconhecidos no seu veículo nem com o seu guia.",
     lede:
       "O Egito não é um país só: são oito mundos culturais sobrepostos ao longo de um único rio. A Kemet desenha viagens privadas e sem pressa por esses mundos — das Pirâmides de Gizé aos templos de Luxor e à navegação pelo Nilo até Assuã. Toda viagem é conduzida por um egiptólogo credenciado pelo Ministério do Turismo do Egito e construída inteiramente em torno de vocês.",
     facts: [
@@ -272,7 +273,7 @@ export const pt: LocalizedPage[] = [
       {
         title: "Onde a Kemet está",
         body:
-          `Na faixa privada e sob medida, e na entrada dela: as viagens de vários dias da Kemet saem entre ${PER_DAY_LOW} e ${PER_DAY_HIGH} euros por pessoa por dia para grupos a partir de 6 pessoas, com hotéis, todas as entradas, o egiptólogo e os traslados incluídos. O valor sobe com a categoria do hotel e com a dahabiya, e cai por pessoa quando o grupo cresce. Os preços são em euros.`,
+          `A viagem privada e sob medida custa de 200 a 450 euros por pessoa por dia. As viagens de vários dias da Kemet saem entre 170 e 226 euros por pessoa por dia para grupos de seis ou mais pessoas, e entre 187 e 249 euros para dois viajantes: em torno do piso dessa faixa e, para grupos maiores, um pouco abaixo dela, com hotéis, todas as entradas, o egiptólogo e os traslados incluídos. O valor sobe com a categoria do hotel e com a dahabiya, e cai por pessoa quando o grupo cresce. Os preços são em euros.`,
       },
       {
         title: "Quantos vocês são — o fator de maior peso",
@@ -482,7 +483,7 @@ export const pt: LocalizedPage[] = [
       {
         title: "A Grande Pirâmide, duas horas sem mais ninguém",
         body:
-          "A pirâmide fecha ao público e reabre para um só grupo, com duas horas ininterruptas lá dentro. Vocês sobem a Grande Galeria sem fila atrás nem vozes à frente e podem ficar sentados em silêncio na Câmara do Rei — exatamente o que ninguém que visita de dia consegue fazer. Não se compra pela internet por preço nenhum.",
+          "A pirâmide fecha ao público e reabre, por autorização, para um só grupo, com duas horas ininterruptas lá dentro. Vocês sobem a Grande Galeria sem fila atrás nem vozes à frente e podem ficar sentados em silêncio na Câmara do Rei — exatamente o que ninguém que visita de dia consegue fazer. Não se compra pela internet por preço nenhum.",
       },
       {
         title: "O planalto antes do amanhecer",
@@ -516,7 +517,7 @@ export const pt: LocalizedPage[] = [
     faqs: [
       {
         q: "É possível mesmo reservar a Grande Pirâmide só para nós?",
-        a: "Sim, e é a reserva mais difícil do Egito. A pirâmide fecha ao público e reabre para um grupo, com duas horas ininterruptas lá dentro. Cuidamos de todo o processo em nome de vocês. Quem oferece isso como reserva imediata não está oferecendo a coisa de verdade.",
+        a: "Sim, por autorização, e é a reserva mais difícil do Egito. A pirâmide fecha ao público e reabre para um grupo, com duas horas ininterruptas lá dentro. Cuidamos de todo o processo em nome de vocês. Quem oferece isso como reserva imediata não está oferecendo a coisa de verdade.",
       },
       {
         q: "Com quanta antecedência devo pedir?",
@@ -563,4 +564,6 @@ export const pt: LocalizedPage[] = [
   ...articlePages("pt", ptArtLabels, ptArticles),
   // Privacy, terms and booking (i18n/legal).
   ...legalPages("pt"),
+  // About and Contact (i18n/company).
+  ...companyPages("pt"),
 ];

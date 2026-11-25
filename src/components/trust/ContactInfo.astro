@@ -63,7 +63,8 @@ function isExternal(type: CTAType): boolean {
     <div class="eyebrow" style="margin-bottom:var(--s-1);opacity:0.6">Business hours</div>
     {hours.map((h) => (
       <p style="margin:0;font-size:0.9em">
-        {h.days} · {h.opens}–{h.closes} {h.timezone}
+        {/* "00:00–23:59" is how the markup says round the clock; a reader is told it in words. */}
+        {h.opens === "00:00" && h.closes === "23:59" ? `${h.days} (${h.timezone})` : `${h.days} · ${h.opens}–${h.closes} ${h.timezone}`}
       </p>
     ))}
     {showEmergency && company.emergencyContactNote && (

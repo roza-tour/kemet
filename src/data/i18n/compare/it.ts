@@ -65,7 +65,7 @@ export const itCompare: CompText[] = [
       },
       {
         title: "Come lo organizziamo",
-        body: "Due dei nostri viaggi più lunghi — Egypt Icons & Nile Cruise ed Egypt Highlights Deluxe — usano il treno notturno in entrambe le direzioni, come da programma pubblicato. Entrambi si organizzano anche con i voli, con quelle due notti in albergo, per €130 in più a persona; chiedete la versione con i voli quando ci scrivete. Ogni altro viaggio che scende a sud è già costruito sui voli.",
+        body: "Due dei nostri viaggi più lunghi — Egypt Icons & Nile Cruise ed Egypt Highlights Deluxe — usano il treno notturno in entrambe le direzioni, come da programma pubblicato. Entrambi si organizzano anche con i voli, con quelle due notti in albergo, per €143 in più a persona; chiedete la versione con i voli quando ci scrivete. Ogni altro viaggio che scende a sud è già costruito sui voli.",
       },
     ],
     faqs: [

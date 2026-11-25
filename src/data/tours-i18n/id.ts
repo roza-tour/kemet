@@ -84,7 +84,7 @@ export const id: TourText[] = [
           "Perjalanan darat ke Alexandria melalui jalan gurun",
           "Katakombe Kom El Shoqafa dan Pilar Pompey",
           "Benteng Qaitbay di bekas lokasi Mercusuar Pharos dan Bibliotheca Alexandrina yang modern",
-          "Makan siang hidangan laut di tepi pantai sebelum kembali ke Kairo",
+          "Makan siang hidangan laut di tepi pantai, dibayar di tempat, sebelum kembali ke Kairo",
         ],
       },
       {
@@ -206,7 +206,7 @@ export const id: TourText[] = [
         items: [
           "Katakombe Kom El Shoqafa dan Pilar Pompey",
           "Benteng Qaitbay di bekas lokasi Mercusuar Pharos",
-          "Makan siang hidangan laut di tepi laut (corniche); kembali ke Kairo",
+          "Makan siang hidangan laut di tepi laut (corniche), dibayar di tempat; kembali ke Kairo",
         ],
       },
       {
@@ -587,7 +587,7 @@ export const id: TourText[] = [
         items: [
           "Perjalanan darat ke pesisir Mediterania",
           "Katakombe Kom El Shoqafa, Pilar Pompey, dan Benteng Qaitbay",
-          "Bibliotheca Alexandrina dan makan siang hidangan laut di tepi pantai",
+          "Bibliotheca Alexandrina dan makan siang hidangan laut di tepi pantai, dibayar di tempat",
         ],
       },
       {
@@ -693,7 +693,7 @@ export const id: TourText[] = [
         title: "Pasar & keberangkatan",
         items: [
           "Khan el-Khalili beserta konteksnya — bengkel-bengkel perajin, bukan sekadar kios",
-          "Makan siang terakhir di sebuah rumah zaman Utsmaniyah yang telah dipugar",
+          "Makan siang terakhir di sebuah rumah zaman Utsmaniyah yang telah dipugar, dibayar di tempat",
           "Transfer privat ke bandara",
         ],
       },
@@ -803,7 +803,7 @@ export const id: TourText[] = [
         items: [
           "Katakombe Kom El Shoqafa",
           "Benteng Qaitbay dan Bibliotheca Alexandrina",
-          "Pilar Pompey dan makan siang hidangan laut di tepi pantai",
+          "Pilar Pompey dan makan siang hidangan laut di tepi pantai, dibayar di tempat",
         ],
       },
       {
@@ -1010,13 +1010,13 @@ export const id: TourText[] = [
     durationLabel: "Sehari penuh (sekitar 10 jam)",
     startPoint: "Hotel di Kairo atau Giza",
     summary: "Danau Qarun, air terjun dan bukit pasir Wadi El Rayan, fosil paus Wadi Al-Hitan, dan para perajin tembikar desa Tunis — separuh Mesir yang lain, liar dan hijau.",
-    overview: "Satu setengah jam di barat daya Kairo, cekungan Fayoum menukar monumen dengan bentang alam: danau garam yang luas, air terjun air tawar di tengah gurun, lembah fosil paus yang diakui UNESCO, dan desa perajin tembikar di lereng bukit. Hari penuh ini adalah pergantian suasana total dari kuil-kuil — cakrawala lapang, aneka burung, bukit pasir, dan makan siang ikan di tepi danau. Perjalanannya privat, dengan pemandu dan sopir Anda sepanjang hari.",
+    overview: "Satu setengah jam di barat daya Kairo, cekungan Fayoum menukar monumen dengan bentang alam: danau garam yang luas, air terjun air tawar di tengah gurun, lembah fosil paus yang diakui UNESCO, dan desa perajin tembikar di lereng bukit. Hari penuh ini adalah pergantian suasana total dari kuil-kuil — cakrawala lapang, aneka burung, bukit pasir, dan makan siang ikan di tepi danau (dibayar di tempat). Perjalanannya privat, dengan pemandu dan sopir Anda sepanjang hari.",
     itinerary: [
       { title: "Danau Qarun", text: "Dimulai di tepi Danau Qarun, Danau Moeris pada zaman kuno, tempat burung-burung migran berkumpul dan perahu-perahu nelayan tua berjajar di air. Kesan pertama tentang oasis ini sebelum masuk lebih dalam ke gurun." },
       { title: "Air terjun Wadi El Rayan", text: "Air terjun terbesar di Mesir, tempat dua danau Rayan tercurah di antara bukit pasir. Ada waktu untuk berjalan menyusuri tepiannya dan menikmati bentang alam yang sama sekali tidak mirip Lembah Nil." },
       { title: "Lembah Paus (Wadi Al-Hitan)", text: "Situs Warisan Dunia UNESCO yang menyimpan kerangka paus purba berusia 40 juta tahun, terawetkan di tempat yang dahulu merupakan laut purba. Sebuah museum terbuka tentang rentang waktu yang teramat panjang, di tengah hamparan pasir." },
       { title: "Danau Ajaib & Gunung Mudawara", text: "Danau yang dijuluki Danau Ajaib (Magic Lake), dialiri mata air mineral dan berganti warna mengikuti cahaya, di bawah bukit pasir Mudawara — tempat favorit untuk sandboarding dan untuk sejenak berdiam diri." },
-      { title: "Desa tembikar Tunis & makan siang di tepi danau", text: "Perjalanan berakhir di Tunis, desa di lereng bukit yang terkenal dengan perajin dan studio tembikarnya, lalu makan siang ikan yang santai di tepi danau sebelum kembali ke Kairo." },
+      { title: "Desa tembikar Tunis & makan siang di tepi danau", text: "Perjalanan berakhir di Tunis, desa di lereng bukit yang terkenal dengan perajin dan studio tembikarnya, lalu makan siang ikan yang santai di tepi danau, dibayar di tempat, sebelum kembali ke Kairo." },
     ],
     faqs: [
       { q: "Apakah Fayoum cocok untuk keluarga?", a: "Ya — perpaduan danau, bukit pasir, dan fosil menarik bagi segala usia. Medannya mudah, dengan jalan kaki singkat, bukan pendakian panjang." },
@@ -1139,20 +1139,20 @@ export const id: TourText[] = [
     slug: "tour-alexandria",
     localeSlug: "tur-sehari-aleksandria-dari-kairo",
     metaTitle: "Aleksandria — Tur Privat Sehari dari Kairo | Kemet",
-    metaDescription: "Katakombe Kom El Shoqafa, Pilar Pompey, Benteng Qaitbay di tapak Pharos kuno, dan Bibliotheca Alexandrina, dengan makan siang hidangan laut.",
+    metaDescription: "Katakombe Kom El Shoqafa, Pilar Pompey, Benteng Qaitbay di tapak Pharos kuno, dan Bibliotheca Alexandrina, dengan makan siang hidangan laut (dibayar di tempat).",
     keywords: "tur sehari aleksandria, wisata alexandria dari kairo, benteng qaitbay, bibliotheca alexandrina, katakombe kom el shoqafa",
     crumb: "Aleksandria, sehari",
     title: "Menjelajah Aleksandria",
     subtitle: "Sehari penuh di tepi Mediterania — katakombe, pilar Romawi, benteng yang dikelilingi laut, dan perpustakaan modern yang agung.",
     durationLabel: "Sehari penuh (sekitar 11 jam)",
     startPoint: "Hotel di Kairo atau Giza",
-    summary: "Katakombe Kom El Shoqafa, Pilar Pompey, Benteng Qaitbay di tapak Pharos lama, dan Bibliotheca Alexandrina, dengan makan siang hidangan laut.",
-    overview: "Kota Aleksander mengenakan masa lalu Yunani-Romawinya dengan ringan di sepanjang corniche Mediterania yang melengkung. Hari penuh ini mencakup Katakombe Kom El Shoqafa di bawah tanah, Pilar Pompey yang menjulang, Benteng Qaitbay yang dibangun di atas fondasi mercusuar Pharos yang legendaris, dan Bibliotheca Alexandrina yang modern dan menjulang tinggi — pewaris Perpustakaan kuno. Makan siang hidangan laut di tepi laut sudah menjadi bagian dari kunjungan. Pemandu dan transfer privat dari Kairo.",
+    summary: "Katakombe Kom El Shoqafa, Pilar Pompey, Benteng Qaitbay di tapak Pharos lama, dan Bibliotheca Alexandrina, dengan makan siang hidangan laut (dibayar di tempat).",
+    overview: "Kota Aleksander mengenakan masa lalu Yunani-Romawinya dengan ringan di sepanjang corniche Mediterania yang melengkung. Hari penuh ini mencakup Katakombe Kom El Shoqafa di bawah tanah, Pilar Pompey yang menjulang, Benteng Qaitbay yang dibangun di atas fondasi mercusuar Pharos yang legendaris, dan Bibliotheca Alexandrina yang modern dan menjulang tinggi — pewaris Perpustakaan kuno. Makan siang hidangan laut di tepi laut, dibayar di tempat, sudah menjadi bagian dari kunjungan. Pemandu dan transfer privat dari Kairo.",
     itinerary: [
       { title: "Katakombe Kom El Shoqafa", text: "Turun ke Katakombe Kom El Shoqafa, nekropolis Romawi bertingkat tempat gaya Mesir dan klasik berpadu dalam batu berukir — salah satu keajaiban paling ganjil dari zaman kuno." },
       { title: "Pilar Pompey", text: "Kunjungi Pilar Pompey, tiang kemenangan Romawi yang besar, menjulang dari reruntuhan Serapeum dan diapit sphinx-sphinx granit." },
       { title: "Benteng Qaitbay", text: "Menyusuri tembok laut Benteng Qaitbay, yang didirikan tepat di tempat Mercusuar Pharos — salah satu keajaiban dunia kuno — dahulu berdiri." },
-      { title: "Bibliotheca Alexandrina & makan siang hidangan laut", text: "Diakhiri di Bibliotheca Alexandrina yang modern dan dramatis, Perpustakaan Aleksandria yang lahir kembali, setelah makan siang hidangan laut yang santai di tepi Mediterania." },
+      { title: "Bibliotheca Alexandrina & makan siang hidangan laut", text: "Diakhiri di Bibliotheca Alexandrina yang modern dan dramatis, Perpustakaan Aleksandria yang lahir kembali, setelah makan siang hidangan laut yang santai di tepi Mediterania, dibayar di tempat." },
     ],
     faqs: [
       { q: "Berapa lama perjalanan dari Kairo?", a: "Sekitar dua setengah hingga tiga jam sekali jalan melalui jalan gurun — karena itulah ini perjalanan sehari penuh yang panjang, tetapi sepadan." },

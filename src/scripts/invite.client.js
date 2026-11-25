@@ -131,8 +131,12 @@
         .then(function (r) {
           if (r && r.ok) {
             remember();
-            form.innerHTML = '<p class="ainv-done">Thank you — you\'re on the list.<br>'
-              + 'We\'ll write when the season turns, and first when the limited dates open.</p>';
+            // Pending until the address confirms from the email (subscribe.php).
+            var done = document.createElement("p");
+            done.className = "ainv-done";
+            done.textContent = form.getAttribute("data-done") || "Almost done — we have sent you an email. Open the link in it to confirm.";
+            form.innerHTML = "";
+            form.appendChild(done);
           } else {
             btn.disabled = false; btn.textContent = "Keep me posted";
             msg.textContent = (r && r.message) ||

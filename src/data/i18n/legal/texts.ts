@@ -58,7 +58,7 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
      "body": [
       "Wenn Sie uns über das Kontaktformular eine Nachricht senden, erheben wir die Angaben, die Sie selbst machen: Ihren Namen, Ihre E-Mail-Adresse und — sofern Sie sie eingeben — Ihre Telefonnummer, Ihre geplanten Reisedaten und den Inhalt Ihrer Nachricht.",
       "Wie fast alle Websites zeichnet auch unser Server in seinen Protokollen übliche technische Informationen auf (etwa IP-Adresse, Browsertyp und aufgerufene Seiten). Wir verwenden diese nicht, um Sie persönlich zu identifizieren.",
-      "Wenn Sie sich in unsere Liste eintragen — über die Einladung auf dieser Website oder über den Reiseplaner —, speichern wir Ihre E-Mail-Adresse, Ihren Namen, falls Sie ihn angeben, die Seite und die Sprache, von der aus Sie sich angemeldet haben, sowie einen Nachweis Ihrer Einwilligung: wann Sie sie erteilt haben, den Wortlaut, dem Sie zugestimmt haben, und die IP-Adresse, von der sie stammt. Sie können die Liste jederzeit über den Abmeldelink in unseren E-Mails oder durch eine Nachricht an uns verlassen.",
+      "Wenn Sie sich in unsere Liste eintragen — über die Einladung auf dieser Website oder über den Reiseplaner —, senden wir Ihnen zuerst eine E-Mail mit der Bitte um Bestätigung; bis Sie bestätigen, schicken wir Ihnen nichts weiter. Wir speichern Ihre E-Mail-Adresse, Ihren Namen, falls Sie ihn angeben, die Seite und die Sprache, von der aus Sie sich angemeldet haben, sowie einen Nachweis Ihrer Einwilligung: wann Sie sie erteilt und wann Sie bestätigt haben, den Wortlaut, dem Sie zugestimmt haben, und die jeweilige IP-Adresse. Sie können die Liste jederzeit über den Abmeldelink in unseren E-Mails oder durch eine Nachricht an uns verlassen.",
       "Wir führen keine Nutzerkonten und nehmen auf dieser Website keine Zahlungen entgegen; wir erheben hier daher weder Passwörter noch Kartendaten."
      ]
     },
@@ -66,7 +66,8 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
      "heading": "Wie wir Ihre Daten verwenden",
      "body": [
       "Wir verwenden die Angaben aus Ihrer Anfrage ausschließlich, um Ihnen zu antworten, um zu verstehen, was Sie suchen, und — wenn Sie sich dafür entscheiden — um Ihre Reise zu gestalten und zu organisieren. Wir können Sie mit den von Ihnen angegebenen Kontaktdaten per E-Mail, Telefon oder WhatsApp kontaktieren.",
-      "Unsere Rechtsgrundlage ist Ihre Einwilligung sowie die Schritte, die auf Ihren Wunsch hin erforderlich sind, um eine Reiseleistung zu vereinbaren und zu erbringen. Wir verwenden Ihre Daten weder für Werbung noch für automatisierte Entscheidungsfindung."
+      "Wenn Sie nicht gleich mit uns reisen, schreiben wir Ihnen unter Umständen noch einmal zu der Reise, nach der Sie gefragt haben: höchstens dreimal in dem Jahr nach Ihrer Anfrage. Sagen Sie uns jederzeit Bescheid, dann schreiben wir nicht mehr.",
+      "Unsere Rechtsgrundlage ist Ihre Einwilligung, sind die Schritte, die auf Ihren Wunsch hin erforderlich sind, um eine Reiseleistung zu vereinbaren und zu erbringen, und, für diese Folgenachrichten, unser berechtigtes Interesse daran, die Frage zu beantworten, mit der Sie sich an uns gewandt haben. Wir geben Ihre Daten nicht an Werbetreibende weiter und verwenden sie nicht für automatisierte Entscheidungsfindung."
      ]
     },
     {
@@ -89,7 +90,8 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
     {
      "heading": "Wie lange wir Daten aufbewahren",
      "body": [
-      "Den Schriftverkehr zu Anfragen bewahren wir nur so lange auf, wie es nötig ist, um Sie zu betreuen und eine Aufzeichnung über jede von uns organisierte Reise zu führen; danach wird er gelöscht. Kommt es zu einer Buchung, können einige Unterlagen länger aufbewahrt werden, um buchhalterische oder gesetzliche Pflichten zu erfüllen.",
+      "Eine Anfrage bewahren wir drei Jahre ab dem Tag ihres Eingangs auf und löschen sie dann. Kommt eine Buchung zustande, können einzelne Unterlagen länger aufbewahrt werden, um buchhalterische oder gesetzliche Pflichten zu erfüllen.",
+      "Wenn Sie sich in unsere Liste eintragen, bewahren wir Ihre Angaben auf, bis Sie die Liste verlassen. Eine Anmeldung, die nie über die von uns gesendete E-Mail bestätigt wird, wird nach 30 Tagen gelöscht. Wenn Sie die Liste verlassen, behalten wir einen Vermerk mit Ihrer Adresse und dem Datum des Austritts, damit Sie nicht versehentlich erneut eingetragen werden.",
       "Sie können jederzeit die Löschung Ihrer Daten verlangen (siehe „Ihre Rechte“)."
      ]
     },
@@ -211,7 +213,7 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
    "steps": [
     {
      "heading": "Anfragen — kostenlos und unverbindlich",
-     "body": "Senden Sie uns Ihre Reisedaten, Interessen und die Zahl der Reisenden. Wir antworten innerhalb von zwei Stunden mit einer ersten Einschätzung und gegebenenfalls Rückfragen. In diesem Stadium entstehen weder Kosten noch eine Verpflichtung."
+     "body": "Senden Sie uns Ihre Reisedaten, Interessen und die Zahl der Reisenden. Wir antworten innerhalb von zwei Stunden mit einem Reiseplan Tag für Tag und einem klaren Preis. In diesem Stadium entstehen weder Kosten noch eine Verpflichtung."
     },
     {
      "heading": "Vorschlag erhalten und verfeinern",
@@ -316,7 +318,7 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
      "body": [
       "Lorsque vous nous envoyez un message via le formulaire de contact, nous recueillons les informations que vous choisissez de nous fournir : votre nom, votre adresse e-mail et — si vous les saisissez — votre numéro de téléphone, vos dates de voyage envisagées et le contenu de votre message.",
       "Comme presque tous les sites web, notre serveur enregistre également dans ses journaux des informations techniques courantes (telles que l'adresse IP, le type de navigateur et les pages demandées). Nous ne les utilisons pas pour vous identifier personnellement.",
-      "Si vous rejoignez notre liste — depuis l'invitation présente sur ce site ou depuis le concepteur de voyage — nous conservons votre adresse e-mail, votre nom si vous le donnez, la page et la langue depuis lesquelles vous vous êtes inscrit(e), ainsi qu'une trace de votre consentement : la date à laquelle vous l'avez donné, le texte auquel vous avez adhéré et l'adresse IP d'où il provient. Vous pouvez quitter la liste à tout moment grâce au lien de désinscription présent dans nos e-mails, ou en nous écrivant.",
+      "Si vous rejoignez notre liste — depuis l'invitation présente sur ce site ou depuis le concepteur de voyage — nous vous envoyons d'abord un e-mail pour vous demander de confirmer, et rien d'autre n'est envoyé tant que vous ne l'avez pas fait. Nous conservons votre adresse e-mail, votre nom si vous le donnez, la page et la langue depuis lesquelles vous vous êtes inscrit(e), ainsi qu'une trace de votre consentement : la date à laquelle vous l'avez donné et celle à laquelle vous l'avez confirmé, le texte auquel vous avez adhéré et l'adresse IP d'où chacun provient. Vous pouvez quitter la liste à tout moment grâce au lien de désinscription présent dans nos e-mails, ou en nous écrivant.",
       "Nous ne proposons pas de comptes utilisateurs et n'encaissons aucun paiement sur ce site ; nous ne recueillons donc jamais ici de mots de passe ni de données de carte bancaire."
      ]
     },
@@ -324,7 +326,8 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
      "heading": "Comment nous utilisons vos données",
      "body": [
       "Nous utilisons les informations de votre demande uniquement pour vous répondre, pour comprendre ce que vous recherchez et — si vous donnez suite — pour concevoir et organiser votre voyage. Nous pouvons vous contacter par e-mail, par téléphone ou par WhatsApp, à l'aide des coordonnées que vous nous avez fournies.",
-      "Notre base juridique est votre consentement ainsi que les démarches nécessaires à la conclusion et à l'exécution d'un contrat de voyage, à votre demande. Nous n'utilisons pas vos données à des fins publicitaires ni pour une prise de décision automatisée."
+      "Si vous ne voyagez pas tout de suite avec nous, nous pouvons vous écrire de nouveau au sujet du voyage sur lequel vous nous avez interrogés : au plus trois fois dans l'année qui suit votre demande. Dites-le-nous à tout moment et nous ne vous écrirons plus.",
+      "Notre base juridique est votre consentement, les démarches nécessaires à la conclusion et à l'exécution d'un contrat de voyage à votre demande, et, pour ces messages de suivi, notre intérêt légitime à répondre à la question que vous nous avez adressée. Nous ne partageons pas vos données avec des annonceurs et nous ne les utilisons pas pour une prise de décision automatisée."
      ]
     },
     {
@@ -347,7 +350,8 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
     {
      "heading": "Durée de conservation",
      "body": [
-      "Nous conservons la correspondance relative à votre demande uniquement le temps nécessaire pour vous aider et pour garder une trace de tout voyage que nous organisons, après quoi elle est supprimée. Lorsqu'une réservation est conclue, certains documents peuvent être conservés plus longtemps afin de respecter des obligations comptables ou légales.",
+      "Nous conservons une demande pendant trois ans à compter du jour où elle a été envoyée, puis nous la supprimons. Lorsqu'une réservation est conclue, certains documents peuvent être conservés plus longtemps afin de respecter des obligations comptables ou légales.",
+      "Si vous rejoignez notre liste, nous conservons vos coordonnées jusqu'à ce que vous la quittiez. Une inscription qui n'est jamais confirmée depuis l'e-mail que nous envoyons est supprimée au bout de 30 jours. Si vous quittez la liste, nous gardons une trace de votre adresse et de la date de votre départ, afin que vous ne soyez pas réinscrit(e) par erreur.",
       "Vous pouvez nous demander de supprimer vos données à tout moment (voir « Vos droits »)."
      ]
     },
@@ -469,7 +473,7 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
    "steps": [
     {
      "heading": "Faites votre demande — gratuite et sans engagement",
-     "body": "Envoyez-nous vos dates, vos centres d'intérêt et la taille de votre groupe. Nous vous répondons sous deux heures avec une première évaluation et, le cas échéant, nos questions. Cette étape est gratuite et sans engagement."
+     "body": "Envoyez-nous vos dates, vos centres d'intérêt et la taille de votre groupe. Nous vous répondons sous deux heures avec un programme jour par jour et un prix clair. Cette étape est gratuite et sans engagement."
     },
     {
      "heading": "Recevez et affinez votre proposition",
@@ -574,7 +578,7 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
      "body": [
       "Quando ci inviate un messaggio tramite il modulo di contatto, raccogliamo i dati che scegliete di fornire: il vostro nome, l'indirizzo email e — se li inserite — il numero di telefono, le date di viaggio previste e il contenuto del messaggio.",
       "Come quasi tutti i siti web, il nostro server registra nei propri log anche informazioni tecniche standard (come l'indirizzo IP, il tipo di browser e le pagine richieste). Non le usiamo per identificarvi personalmente.",
-      "Se vi iscrivete al nostro elenco — dall'invito presente su questo sito o dal progettista di viaggi — conserviamo il vostro indirizzo email, il vostro nome se lo indicate, la pagina e la lingua da cui vi siete iscritti e la registrazione del vostro consenso: quando lo avete prestato, la formulazione che avete accettato e l'indirizzo IP da cui proviene. Potete uscire dall'elenco in qualsiasi momento tramite il link di annullamento dell'iscrizione presente nelle nostre email, oppure scrivendoci.",
+      "Se vi iscrivete al nostro elenco — dall'invito presente su questo sito o dal progettista di viaggi — vi inviamo prima un'email in cui vi chiediamo di confermare, e finché non lo fate non inviamo nient'altro. Conserviamo il vostro indirizzo email, il vostro nome se lo indicate, la pagina e la lingua da cui vi siete iscritti e la registrazione del vostro consenso: quando lo avete dato e quando lo avete confermato, la formulazione che avete accettato e l'indirizzo IP da cui proveniva ciascuno dei due passaggi. Potete uscire dall'elenco in qualsiasi momento tramite il link di annullamento dell'iscrizione presente nelle nostre email, oppure scrivendoci.",
       "Non gestiamo account utente e su questo sito non riceviamo pagamenti, quindi qui non raccogliamo mai password né dati di carte."
      ]
     },
@@ -582,7 +586,8 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
      "heading": "Come usiamo i vostri dati",
      "body": [
       "Usiamo i dati della vostra richiesta esclusivamente per rispondervi, per capire che cosa cercate e — se decidete di procedere — per progettare e organizzare il vostro viaggio. Potremmo contattarvi per email, telefono o WhatsApp usando i recapiti che ci fornite.",
-      "La nostra base giuridica è il vostro consenso e l'esecuzione di misure necessarie per concludere e dare esecuzione a un accordo di viaggio su vostra richiesta. Non usiamo i vostri dati per pubblicità né per processi decisionali automatizzati."
+      "Se non viaggiate subito con noi, potremmo scrivervi di nuovo a proposito del viaggio per cui ci avete contattato: al massimo tre volte nell'anno successivo alla vostra richiesta. Ditecelo in qualsiasi momento e non vi scriveremo più.",
+      "La nostra base giuridica è il vostro consenso, l'esecuzione di misure necessarie per concludere e dare esecuzione a un accordo di viaggio su vostra richiesta e, per quei messaggi di seguito, il nostro legittimo interesse a rispondere alla domanda che ci avete rivolto. Non condividiamo i vostri dati con inserzionisti e non li usiamo per processi decisionali automatizzati."
      ]
     },
     {
@@ -605,7 +610,8 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
     {
      "heading": "Per quanto tempo li conserviamo",
      "body": [
-      "Conserviamo la corrispondenza relativa alle richieste soltanto per il tempo necessario ad assistervi e a mantenere traccia di ogni viaggio che organizziamo; dopodiché viene eliminata. Quando avviene una prenotazione, alcuni documenti possono essere conservati più a lungo per adempiere a obblighi contabili o di legge.",
+      "Conserviamo una richiesta per tre anni dal giorno in cui è stata inviata, poi la cancelliamo. Se si arriva a una prenotazione, alcuni documenti possono essere conservati più a lungo per adempiere a obblighi contabili o di legge.",
+      "Se vi iscrivete al nostro elenco, conserviamo i vostri dati finché non ne uscite. Un'iscrizione che non viene mai confermata dall'email che inviamo viene cancellata dopo 30 giorni. Se uscite dall'elenco, conserviamo una nota del vostro indirizzo e della data di uscita, in modo che non siate aggiunti di nuovo per errore.",
       "Potete chiederci in qualsiasi momento di cancellare i vostri dati (vedere «I vostri diritti»)."
      ]
     },
@@ -727,7 +733,7 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
    "steps": [
     {
      "heading": "Richiedete — gratis e senza impegno",
-     "body": "Inviateci le vostre date, i vostri interessi e il numero di partecipanti. Rispondiamo entro due ore con una prima valutazione ed eventuali domande. In questa fase non c'è alcun costo né impegno."
+     "body": "Inviateci le vostre date, i vostri interessi e il numero di partecipanti. Rispondiamo entro due ore con un programma giorno per giorno e un prezzo chiaro. In questa fase non c'è alcun costo né impegno."
     },
     {
      "heading": "Ricevete e perfezionate la proposta",
@@ -832,7 +838,7 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
      "body": [
       "Cuando nos envía un mensaje a través del formulario de contacto, recogemos los datos que usted decide facilitar: su nombre, su correo electrónico y —si los introduce— su número de teléfono, las fechas previstas de viaje y el contenido de su mensaje.",
       "Como casi todos los sitios web, nuestro servidor también registra en sus archivos de registro información técnica habitual (como la dirección IP, el tipo de navegador y las páginas solicitadas). No la utilizamos para identificarle personalmente.",
-      "Si se suscribe a nuestra lista —desde la invitación de este sitio o desde el diseñador de viajes—, conservamos su correo electrónico, su nombre si lo indica, la página y el idioma desde los que se suscribió y un registro de su consentimiento: cuándo lo otorgó, el texto que aceptó y la dirección IP desde la que lo hizo. Puede darse de baja de la lista en cualquier momento mediante el enlace de baja de nuestros correos o escribiéndonos.",
+      "Si se unen a nuestra lista —desde la invitación de este sitio o desde el diseñador de viajes—, primero les enviamos un correo para que lo confirmen, y no se envía nada más hasta que lo hagan. Conservamos su dirección de correo electrónico, su nombre si nos lo facilitan, la página y el idioma desde los que se suscribieron y un registro de su consentimiento: cuándo lo dieron y cuándo lo confirmaron, el texto con el que estuvieron de acuerdo y la dirección IP desde la que procedía cada uno. Pueden darse de baja de la lista en cualquier momento mediante el enlace de baja de nuestros correos o escribiéndonos.",
       "No gestionamos cuentas de usuario ni cobramos pagos en este sitio web, por lo que aquí nunca recogemos contraseñas ni datos de tarjetas."
      ]
     },
@@ -840,7 +846,8 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
      "heading": "Cómo utilizamos sus datos",
      "body": [
       "Utilizamos los datos de su consulta únicamente para responderle, para entender lo que busca y —si decide seguir adelante— para diseñar y organizar su viaje. Podemos contactar con usted por correo electrónico, teléfono o WhatsApp con los datos que nos facilite.",
-      "Nuestra base jurídica es su consentimiento y las medidas necesarias para celebrar y ejecutar un viaje organizado a petición suya. No utilizamos sus datos para publicidad ni para decisiones automatizadas."
+      "Si no viajan con nosotros de inmediato, podemos volver a escribirles sobre el viaje por el que preguntaron: como máximo tres veces en el año siguiente a su consulta. Avísennos en cualquier momento y no volveremos a escribirles.",
+      "Nuestra base jurídica es su consentimiento, las gestiones necesarias para celebrar y ejecutar un arreglo de viaje a petición de ustedes y, para esos mensajes de seguimiento, nuestro interés legítimo en responder a la pregunta que nos plantearon. No compartimos su información con anunciantes ni la utilizamos para tomar decisiones automatizadas."
      ]
     },
     {
@@ -863,7 +870,8 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
     {
      "heading": "Cuánto tiempo los conservamos",
      "body": [
-      "Conservamos la correspondencia de las consultas solo durante el tiempo necesario para atenderle y para dejar constancia de cualquier viaje que organicemos; después se elimina. Cuando se realiza una reserva, algunos registros pueden conservarse más tiempo para cumplir obligaciones contables o legales.",
+      "Conservamos una consulta durante tres años desde el día en que se envió y después la eliminamos. Cuando se llega a hacer una reserva, algunos registros pueden conservarse más tiempo para cumplir obligaciones contables o legales.",
+      "Si se unen a nuestra lista, conservamos sus datos hasta que se den de baja. Una suscripción que nunca se confirma desde el correo que enviamos se elimina a los 30 días. Si se dan de baja, guardamos una nota con su dirección y la fecha de la baja, para que no se les vuelva a añadir por error.",
       "Puede pedirnos que eliminemos sus datos en cualquier momento (véase «Sus derechos»)."
      ]
     },
@@ -985,7 +993,7 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
    "steps": [
     {
      "heading": "Consulte, gratis y sin compromiso",
-     "body": "Envíenos sus fechas, sus intereses y el tamaño de su grupo. Le respondemos en un plazo de dos horas con una primera valoración y las preguntas que tengamos. En esta fase no hay ningún coste ni compromiso."
+     "body": "Envíenos sus fechas, sus intereses y el tamaño de su grupo. Le respondemos en un plazo de dos horas con un itinerario día a día y un precio claro. En esta fase no hay ningún coste ni compromiso."
     },
     {
      "heading": "Reciba y afine su propuesta",
@@ -1090,7 +1098,7 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
      "body": [
       "Quando vocês nos enviam uma mensagem pelo formulário de contato, coletamos os dados que escolherem informar: nome, endereço de e-mail e — se os preencherem — número de telefone, datas previstas da viagem e o conteúdo da mensagem.",
       "Como quase todos os sites, o nosso servidor também registra, em seus logs, informações técnicas padrão (como endereço IP, tipo de navegador e páginas solicitadas). Não usamos essas informações para identificar vocês pessoalmente.",
-      "Se vocês entrarem na nossa lista — pelo convite neste site ou pelo desenhador de viagens — guardamos o seu endereço de e-mail, o seu nome, se o informarem, a página e o idioma a partir dos quais se inscreveram e um registro do consentimento: quando foi dado, o texto com o qual concordaram e o endereço IP de onde partiu. Vocês podem sair da lista a qualquer momento pelo link de cancelamento da inscrição nos nossos e-mails, ou escrevendo para nós.",
+      "Se vocês entrarem na nossa lista — pelo convite neste site ou pelo desenhador de viagens — primeiro enviamos um e-mail pedindo que confirmem, e nada mais é enviado até que o façam. Guardamos o seu endereço de e-mail, o seu nome, se o informarem, a página e o idioma a partir dos quais se inscreveram e um registro do consentimento: quando foi dado e quando foi confirmado, o texto com o qual concordaram e o endereço IP de onde partiu cada um. Vocês podem sair da lista a qualquer momento pelo link de cancelamento da inscrição nos nossos e-mails, ou escrevendo para nós.",
       "Não temos contas de usuário e não recebemos pagamentos neste site; por isso nunca coletamos aqui senhas nem dados de cartão."
      ]
     },
@@ -1098,7 +1106,8 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
      "heading": "Como usamos os seus dados",
      "body": [
       "Usamos os dados da sua consulta exclusivamente para responder a vocês, para entender o que procuram e — se seguirem em frente — para desenhar e organizar a sua viagem. Podemos entrar em contato por e-mail, telefone ou WhatsApp, usando os dados que vocês informarem.",
-      "Nossa base legal é o seu consentimento e as providências necessárias para celebrar e executar um serviço de viagem a pedido de vocês. Não usamos os seus dados para publicidade nem para decisões automatizadas."
+      "Se vocês não viajarem conosco de imediato, podemos escrever-lhes novamente sobre a viagem que consultaram: no máximo três vezes no ano seguinte à consulta. Digam-nos a qualquer momento e não escreveremos mais.",
+      "A nossa base legal é o seu consentimento, as providências necessárias para celebrar e executar um serviço de viagem a pedido de vocês e, no caso dessas mensagens de acompanhamento, o nosso interesse legítimo em responder à pergunta que vocês nos trouxeram. Não compartilhamos os seus dados com anunciantes e não os usamos para decisões automatizadas."
      ]
     },
     {
@@ -1121,7 +1130,8 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
     {
      "heading": "Por quanto tempo os guardamos",
      "body": [
-      "Guardamos a correspondência de consulta apenas pelo tempo necessário para atender vocês e manter um registro de qualquer viagem que organizarmos; depois disso, ela é excluída. Quando há uma reserva, alguns registros podem ser mantidos por mais tempo para cumprir obrigações contábeis ou legais.",
+      "Guardamos uma consulta por três anos a contar do dia em que foi enviada e depois a excluímos. Quando há uma reserva, alguns registros podem ser mantidos por mais tempo para cumprir obrigações contábeis ou legais.",
+      "Se vocês entrarem na nossa lista, guardamos os seus dados até saírem dela. Uma inscrição que nunca seja confirmada pelo e-mail que enviamos é excluída após 30 dias. Se vocês saírem da lista, guardamos um registro do seu endereço e da data da saída, para que não sejam acrescentados de novo por engano.",
       "Vocês podem pedir a exclusão dos seus dados a qualquer momento (veja “Os seus direitos”)."
      ]
     },
@@ -1243,7 +1253,7 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
    "steps": [
     {
      "heading": "Consulta — gratuita e sem compromisso",
-     "body": "Enviem-nos as suas datas, os seus interesses e o tamanho do grupo. Respondemos em até duas horas, com uma avaliação inicial e as perguntas que tivermos. Nesta etapa não há cobrança nem compromisso."
+     "body": "Enviem-nos as suas datas, os seus interesses e o tamanho do grupo. Respondemos em até duas horas, com um roteiro dia a dia e um preço claro. Nesta etapa não há cobrança nem compromisso."
     },
     {
      "heading": "Recebam e ajustem a sua proposta",
@@ -1348,7 +1358,7 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
      "body": [
       "Когда вы отправляете нам сообщение через контактную форму, мы собираем те сведения, которые вы решили указать: ваше имя, адрес электронной почты и — если вы их вводите — номер телефона, предполагаемые даты поездки и текст сообщения.",
       "Как почти все сайты, наш сервер также записывает в журналах стандартные технические данные (например, IP-адрес, тип браузера и запрошенные страницы). Мы не используем их для того, чтобы установить вашу личность.",
-      "Если вы подписываетесь на нашу рассылку — по приглашению на этом сайте или из конструктора поездки, — мы храним ваш адрес электронной почты, ваше имя, если вы его указали, страницу и язык, с которых вы подписались, а также запись о вашем согласии: когда вы его дали, на какую формулировку согласились и с какого IP-адреса. Вы можете отписаться в любой момент по ссылке для отписки в наших письмах или написав нам.",
+      "Если вы подписываетесь на нашу рассылку — через приглашение на этом сайте или из конструктора поездок, — мы сначала отправляем письмо с просьбой подтвердить подписку, и до вашего подтверждения ничего больше не отправляется. Мы храним ваш адрес электронной почты, ваше имя, если вы его указали, страницу и язык, с которых вы подписались, и запись о вашем согласии: когда вы его дали и когда подтвердили, формулировку, с которой вы согласились, и IP-адрес, с которого это было сделано в каждом случае. Вы можете в любой момент отписаться по ссылке в наших письмах или написав нам.",
       "На этом сайте нет учётных записей пользователей, и мы не принимаем на нём платежи, поэтому мы никогда не собираем здесь ни пароли, ни данные банковских карт."
      ]
     },
@@ -1356,7 +1366,8 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
      "heading": "Как мы используем ваши данные",
      "body": [
       "Мы используем сведения из вашего запроса исключительно для того, чтобы ответить вам, понять, что вы ищете, и — если вы решите продолжить — составить и организовать ваше путешествие. Мы можем связываться с вами по электронной почте, телефону или в WhatsApp, используя указанные вами контактные данные.",
-      "Правовым основанием служат ваше согласие и действия, необходимые для заключения и исполнения договора об организации поездки по вашей просьбе. Мы не используем ваши данные для рекламы или автоматизированного принятия решений."
+      "Если вы не отправитесь в путешествие с нами сразу, мы можем написать вам ещё раз о поездке, о которой вы спрашивали: не более трёх раз в течение года после вашего запроса. Скажите нам об этом в любой момент — и мы больше не напишем.",
+      "Наши правовые основания — ваше согласие, действия, необходимые для заключения и исполнения договора о поездке по вашей просьбе, а для этих повторных сообщений — наш законный интерес в том, чтобы ответить на вопрос, с которым вы к нам обратились. Мы не передаём ваши данные рекламодателям и не используем их для автоматизированного принятия решений."
      ]
     },
     {
@@ -1379,7 +1390,8 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
     {
      "heading": "Как долго мы храним данные",
      "body": [
-      "Мы храним переписку по запросам только столько, сколько необходимо, чтобы помогать вам и вести учёт любой организованной нами поездки, после чего она удаляется. Если бронирование состоялось, часть записей может храниться дольше в целях выполнения бухгалтерских или иных правовых обязательств.",
+      "Мы храним запрос три года со дня его отправки, после чего удаляем. Если бронирование состоялось, некоторые записи могут храниться дольше, чтобы выполнить требования бухгалтерского учёта или закона.",
+      "Если вы подписываетесь на рассылку, мы храним ваши данные, пока вы не отпишетесь. Подписка, которую так и не подтвердили по отправленному нами письму, удаляется через 30 дней. Если вы отписываетесь, мы сохраняем запись о вашем адресе и дате отписки, чтобы вас по ошибке не добавили снова.",
       "Вы можете в любой момент попросить нас удалить ваши данные (см. раздел «Ваши права»)."
      ]
     },
@@ -1501,7 +1513,7 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
    "steps": [
     {
      "heading": "Запрос — бесплатно и без обязательств",
-     "body": "Пришлите нам даты, интересы и количество участников. Мы отвечаем в течение двух часов с первой оценкой и уточняющими вопросами. На этом этапе нет ни платы, ни обязательств."
+     "body": "Пришлите нам даты, интересы и количество участников. Мы отвечаем в течение двух часов с программой по дням и понятной ценой. На этом этапе нет ни платы, ни обязательств."
     },
     {
      "heading": "Получите и доработайте предложение",
@@ -1606,7 +1618,7 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
      "body": [
       "Saat Anda mengirim pesan melalui formulir kontak, kami mengumpulkan keterangan yang Anda pilih untuk diberikan: nama, alamat email Anda, dan — jika Anda mengisinya — nomor telepon, rencana tanggal perjalanan, serta isi pesan Anda.",
       "Seperti hampir semua situs web, server kami juga mencatat informasi teknis standar (seperti alamat IP, jenis peramban, dan halaman yang diminta) dalam lognya. Kami tidak menggunakannya untuk mengidentifikasi Anda secara pribadi.",
-      "Jika Anda bergabung dalam daftar kami — dari undangan di situs ini atau dari perancang perjalanan — kami menyimpan alamat email Anda, nama Anda jika Anda memberikannya, halaman dan bahasa yang Anda gunakan saat mendaftar, serta catatan persetujuan Anda: kapan persetujuan itu diberikan, kalimat yang Anda setujui, dan alamat IP asalnya. Anda dapat keluar dari daftar kapan saja melalui tautan berhenti berlangganan di email kami, atau dengan menulis kepada kami.",
+      "Jika Anda bergabung dalam daftar kami — dari undangan di situs ini atau dari perancang perjalanan — kami lebih dulu mengirim email yang meminta Anda mengonfirmasi, dan tidak ada email lain yang dikirim sampai Anda melakukannya. Kami menyimpan alamat email Anda, nama Anda jika Anda memberikannya, halaman dan bahasa yang Anda gunakan saat mendaftar, serta catatan persetujuan Anda: kapan persetujuan itu diberikan dan kapan dikonfirmasi, kalimat yang Anda setujui, dan alamat IP asal masing-masing. Anda dapat keluar dari daftar kapan saja melalui tautan berhenti berlangganan di email kami, atau dengan menulis kepada kami.",
       "Kami tidak menyediakan akun pengguna dan tidak menerima pembayaran di situs web ini, sehingga kami tidak pernah mengumpulkan kata sandi atau data kartu di sini."
      ]
     },
@@ -1614,7 +1626,8 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
      "heading": "Cara kami menggunakan data Anda",
      "body": [
       "Kami menggunakan keterangan dari pertanyaan Anda semata-mata untuk membalas Anda, memahami apa yang Anda cari, dan — jika Anda melanjutkan — merancang serta mengatur perjalanan Anda. Kami dapat menghubungi Anda melalui email, telepon, atau WhatsApp menggunakan keterangan yang Anda berikan.",
-      "Dasar hukum kami adalah persetujuan Anda dan langkah-langkah yang diperlukan untuk membuat dan melaksanakan pengaturan perjalanan atas permintaan Anda. Kami tidak menggunakan data Anda untuk iklan atau pengambilan keputusan otomatis."
+      "Jika Anda tidak langsung bepergian bersama kami, kami dapat menulis kepada Anda lagi tentang perjalanan yang Anda tanyakan: paling banyak tiga kali dalam setahun setelah pertanyaan Anda. Beri tahu kami kapan saja dan kami tidak akan menulis lagi.",
+      "Dasar hukum kami adalah persetujuan Anda, langkah-langkah yang diperlukan untuk membuat dan melaksanakan pengaturan perjalanan atas permintaan Anda, dan, untuk pesan tindak lanjut tersebut, kepentingan sah kami dalam menjawab pertanyaan yang Anda sampaikan kepada kami. Kami tidak membagikan data Anda kepada pengiklan dan tidak menggunakannya untuk pengambilan keputusan otomatis."
      ]
     },
     {
@@ -1637,7 +1650,8 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
     {
      "heading": "Berapa lama kami menyimpannya",
      "body": [
-      "Kami menyimpan korespondensi pertanyaan hanya selama diperlukan untuk membantu Anda dan untuk menyimpan catatan perjalanan yang kami atur, setelah itu dihapus. Bila terjadi pemesanan, sebagian catatan dapat disimpan lebih lama untuk memenuhi kewajiban akuntansi atau hukum.",
+      "Kami menyimpan pertanyaan selama tiga tahun sejak hari dikirimkan, lalu menghapusnya. Bila terjadi pemesanan, sebagian catatan dapat disimpan lebih lama untuk memenuhi kewajiban akuntansi atau hukum.",
+      "Jika Anda bergabung dalam daftar kami, kami menyimpan data Anda sampai Anda keluar dari daftar. Pendaftaran yang tidak pernah dikonfirmasi lewat email yang kami kirim akan dihapus setelah 30 hari. Jika Anda keluar dari daftar, kami menyimpan catatan alamat Anda dan tanggal Anda keluar, agar Anda tidak ditambahkan kembali karena kekeliruan.",
       "Anda dapat meminta kami menghapus data Anda kapan saja (lihat “Hak Anda”)."
      ]
     },
@@ -1759,7 +1773,7 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
    "steps": [
     {
      "heading": "Ajukan pertanyaan — gratis dan tanpa kewajiban",
-     "body": "Kirimkan kepada kami tanggal, minat, dan jumlah rombongan Anda. Kami membalas dalam dua jam dengan penilaian awal dan pertanyaan yang diperlukan. Pada tahap ini tidak ada biaya dan tidak ada komitmen."
+     "body": "Kirimkan kepada kami tanggal, minat, dan jumlah rombongan Anda. Kami membalas dalam dua jam dengan rencana perjalanan hari demi hari dan harga yang jelas. Pada tahap ini tidak ada biaya dan tidak ada komitmen."
     },
     {
      "heading": "Terima dan sempurnakan usulan Anda",
@@ -1864,7 +1878,7 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
      "body": [
       "Apabila anda menghantar mesej kepada kami melalui borang hubungan, kami mengumpul butiran yang anda pilih untuk berikan: nama anda, alamat e-mel, dan — jika anda mengisinya — nombor telefon, tarikh perjalanan yang dirancang serta kandungan mesej anda.",
       "Seperti hampir semua laman web, pelayan kami turut merekodkan maklumat teknikal standard (seperti alamat IP, jenis pelayar dan halaman yang diminta) dalam lognya. Kami tidak menggunakan maklumat ini untuk mengenal pasti anda secara peribadi.",
-      "Jika anda menyertai senarai kami — daripada jemputan di laman ini atau daripada perancang perjalanan — kami menyimpan alamat e-mel anda, nama anda jika anda memberikannya, halaman dan bahasa yang anda gunakan semasa mendaftar, serta rekod persetujuan anda: bila anda memberikannya, perkataan yang anda setujui dan alamat IP asalnya. Anda boleh keluar daripada senarai pada bila-bila masa melalui pautan berhenti melanggan dalam e-mel kami, atau dengan menulis kepada kami.",
+      "Jika anda menyertai senarai kami — daripada jemputan di laman ini atau daripada perancang perjalanan — kami mula-mula menghantar e-mel meminta anda mengesahkan, dan tiada apa-apa lagi dihantar sehingga anda berbuat demikian. Kami menyimpan alamat e-mel anda, nama anda jika anda memberikannya, halaman dan bahasa yang anda gunakan semasa mendaftar, serta rekod persetujuan anda: bila anda memberikannya dan bila anda mengesahkannya, perkataan yang anda setujui dan alamat IP asal setiap satunya. Anda boleh keluar daripada senarai pada bila-bila masa melalui pautan berhenti melanggan dalam e-mel kami, atau dengan menulis kepada kami.",
       "Kami tidak mengendalikan akaun pengguna dan tidak menerima pembayaran di laman web ini, jadi kami tidak pernah mengumpul kata laluan atau butiran kad di sini."
      ]
     },
@@ -1872,7 +1886,8 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
      "heading": "Cara kami menggunakan maklumat anda",
      "body": [
       "Kami menggunakan butiran daripada pertanyaan anda semata-mata untuk membalas kepada anda, memahami apa yang anda cari dan — jika anda meneruskan — mereka bentuk serta mengatur perjalanan anda. Kami boleh menghubungi anda melalui e-mel, telefon atau WhatsApp menggunakan butiran yang anda berikan.",
-      "Asas undang-undang kami ialah persetujuan anda dan langkah-langkah yang perlu untuk mengikat dan melaksanakan pengaturan perjalanan atas permintaan anda. Kami tidak menggunakan maklumat anda untuk pengiklanan atau pembuatan keputusan secara automatik."
+      "Jika anda tidak terus melancong bersama kami, kami mungkin menulis kepada anda sekali lagi tentang perjalanan yang anda tanyakan: paling banyak tiga kali dalam tahun selepas pertanyaan anda. Beritahu kami pada bila-bila masa dan kami tidak akan menulis lagi.",
+      "Asas undang-undang kami ialah persetujuan anda, langkah-langkah yang perlu untuk mengikat dan melaksanakan pengaturan perjalanan atas permintaan anda, dan, bagi mesej susulan itu, kepentingan sah kami untuk menjawab soalan yang anda bawa kepada kami. Kami tidak berkongsi maklumat anda dengan pengiklan dan kami tidak menggunakannya untuk pembuatan keputusan secara automatik."
      ]
     },
     {
@@ -1895,7 +1910,8 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
     {
      "heading": "Berapa lama kami menyimpannya",
      "body": [
-      "Kami menyimpan surat-menyurat pertanyaan hanya selama yang diperlukan untuk membantu anda dan untuk menyimpan rekod apa-apa perjalanan yang kami atur, selepas itu ia dipadam. Jika tempahan dibuat, sesetengah rekod mungkin disimpan lebih lama bagi memenuhi obligasi perakaunan atau undang-undang.",
+      "Kami menyimpan sesuatu pertanyaan selama tiga tahun dari hari ia dihantar, kemudian memadamkannya. Jika tempahan dibuat, sesetengah rekod mungkin disimpan lebih lama bagi memenuhi obligasi perakaunan atau undang-undang.",
+      "Jika anda menyertai senarai kami, kami menyimpan butiran anda sehingga anda keluar daripadanya. Pendaftaran yang tidak pernah disahkan daripada e-mel yang kami hantar dipadam selepas 30 hari. Jika anda keluar daripada senarai, kami menyimpan catatan alamat anda dan tarikh anda keluar, supaya anda tidak ditambah semula secara tersilap.",
       "Anda boleh meminta kami memadam maklumat anda pada bila-bila masa (lihat “Hak anda”)."
      ]
     },
@@ -2017,7 +2033,7 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
    "steps": [
     {
      "heading": "Hantar pertanyaan — percuma dan tanpa obligasi",
-     "body": "Hantarkan tarikh, minat dan saiz rombongan anda. Kami membalas dalam tempoh dua jam dengan penilaian awal dan sebarang soalan. Tiada bayaran dan tiada komitmen pada peringkat ini."
+     "body": "Hantarkan tarikh, minat dan saiz rombongan anda. Kami membalas dalam tempoh dua jam dengan jadual perjalanan hari demi hari dan harga yang jelas. Tiada bayaran dan tiada komitmen pada peringkat ini."
     },
     {
      "heading": "Terima dan murnikan cadangan anda",
@@ -2122,7 +2138,7 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
      "body": [
       "عندما ترسلون إلينا رسالة عبر نموذج التواصل، نجمع البيانات التي تختارون تقديمها: اسمكم وبريدكم الإلكتروني، وكذلك — إن أدخلتموها — رقم هاتفكم وتواريخ السفر المزمعة ومحتوى رسالتكم.",
       "وكغالبية المواقع الإلكترونية، يسجّل خادمنا أيضاً في سجلّاته معلومات تقنية اعتيادية (مثل عنوان IP ونوع المتصفح والصفحات المطلوبة). ولا نستخدم ذلك لتحديد هويتكم الشخصية.",
-      "إذا انضممتم إلى قائمتنا البريدية — من الدعوة الظاهرة في هذا الموقع أو من مصمّم الرحلات — فإننا نحتفظ ببريدكم الإلكتروني، واسمكم إن قدّمتموه، والصفحة واللغة اللتين اشتركتم منهما، وسجلّ موافقتكم: وقت إعطائها، والصياغة التي وافقتم عليها، وعنوان IP الذي صدرت منه. ويمكنكم مغادرة القائمة في أي وقت عبر رابط إلغاء الاشتراك في رسائلنا الإلكترونية، أو بمراسلتنا.",
+      "إذا انضممتم إلى قائمتنا — من الدعوة في هذا الموقع أو من مصمّم الرحلات — فإننا نرسل أولاً رسالة بريد إلكتروني نطلب فيها تأكيدكم، ولا يُرسَل إليكم شيء آخر ما لم تؤكدوا. نحتفظ ببريدكم الإلكتروني، واسمكم إن ذكرتموه، والصفحة واللغة اللتين اشتركتم منهما، وسجلّ موافقتكم: وقت إعطائها ووقت تأكيدها، والصياغة التي وافقتم عليها، وعنوان IP الذي صدرت منه كل منهما. ويمكنكم مغادرة القائمة في أي وقت عبر رابط إلغاء الاشتراك في رسائلنا، أو بمراسلتنا.",
       "لا نُدير حسابات للمستخدمين ولا نتلقى مدفوعات عبر هذا الموقع، ولذلك لا نجمع هنا كلمات مرور ولا بيانات بطاقات."
      ]
     },
@@ -2130,7 +2146,8 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
      "heading": "كيف نستخدم معلوماتكم",
      "body": [
       "نستخدم بيانات استفساركم حصراً للردّ عليكم، ولفهم ما تبحثون عنه، وللمضي — إذا قررتم ذلك — في تصميم رحلتكم وترتيبها. وقد نتواصل معكم بالبريد الإلكتروني أو الهاتف أو واتساب باستخدام البيانات التي تقدّمونها.",
-      "أساسنا القانوني هو موافقتكم والخطوات اللازمة لإبرام ترتيبات السفر وتنفيذها بناءً على طلبكم. ولا نستخدم معلوماتكم في الإعلان ولا في اتخاذ قرارات آلية."
+      "إذا لم تسافروا معنا على الفور، فقد نكتب إليكم مجدداً بشأن الرحلة التي سألتم عنها: ثلاث مرات على الأكثر خلال السنة التي تلي استفساركم. أخبرونا في أي وقت ولن نكتب إليكم بعد ذلك.",
+      "أساسنا القانوني هو موافقتكم، والخطوات اللازمة لإبرام ترتيبات السفر وتنفيذها بناءً على طلبكم، وفي ما يخصّ رسائل المتابعة تلك، مصلحتنا المشروعة في الإجابة عن السؤال الذي طرحتموه علينا. ولا نشارك معلوماتكم مع المعلنين، ولا نستخدمها في اتخاذ قرارات آلية."
      ]
     },
     {
@@ -2153,7 +2170,8 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
     {
      "heading": "مدة الاحتفاظ بها",
      "body": [
-      "نحتفظ بمراسلات الاستفسار فقط للمدة اللازمة لمساعدتكم ولحفظ سجلّ لأي رحلة نرتّبها، ثم تُحذف. وعند إتمام حجز، قد تُحفظ بعض السجلات مدة أطول للوفاء بالتزامات محاسبية أو قانونية.",
+      "نحتفظ بالاستفسار ثلاث سنوات من يوم إرساله، ثم نحذفه. وإذا تمّ حجز، فقد يُحتفظ ببعض السجلات مدة أطول للوفاء بالتزامات محاسبية أو قانونية.",
+      "إذا انضممتم إلى قائمتنا، نحتفظ ببياناتكم إلى أن تغادروها. أما الاشتراك الذي لا يُؤكَّد من الرسالة التي نرسلها فيُحذف بعد ٣٠ يوماً. وإذا غادرتم القائمة، نحتفظ بملاحظة تتضمن عنوانكم وتاريخ مغادرتكم، حتى لا تُضافوا مجدداً عن طريق الخطأ.",
       "ويمكنكم أن تطلبوا منا حذف معلوماتكم في أي وقت (انظروا «حقوقكم»)."
      ]
     },
@@ -2275,7 +2293,7 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
    "steps": [
     {
      "heading": "اطلبوا عرضاً — مجاناً ودون التزام",
-     "body": "أرسلوا إلينا تواريخكم واهتماماتكم وعدد المسافرين. نردّ خلال ساعتين بتقييم أولي وبأي أسئلة لدينا. لا رسوم ولا التزام في هذه المرحلة."
+     "body": "أرسلوا إلينا تواريخكم واهتماماتكم وعدد المسافرين. نردّ خلال ساعتين ببرنامج يومًا بيوم وسعر واضح. لا رسوم ولا التزام في هذه المرحلة."
     },
     {
      "heading": "تلقّوا مقترحكم وعدّلوه",

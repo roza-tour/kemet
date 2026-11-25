@@ -8,6 +8,7 @@
 // than German school terms, Rome and Milan rather than Frankfurt.
 // ---------------------------------------------------------------------------
 import { legalPages } from "./legal/build";
+import { companyPages } from "./company/build";
 import type { LocalizedPage } from "./types";
 import { articlePages } from "./articles/build";
 import { itArticles, itArtLabels } from "./articles/it";
@@ -42,7 +43,7 @@ export const it: LocalizedPage[] = [
     crumb: "Home",
     h1: "L'Egitto, in privato",
     standfirst:
-      "Nessun pullman, nessuna data di partenza fissa, nessuno sconosciuto nel vostro itinerario.",
+      "Nessun pullman, nessuna data di partenza fissa, nessuno sconosciuto nel vostro veicolo o con la vostra guida.",
     lede:
       "L'Egitto non è un paese solo: sono otto mondi culturali stratificati lungo un unico fiume. Kemet progetta viaggi privati e senza fretta attraverso questi mondi — dalle Piramidi di Giza ai templi di Luxor, fino alla navigazione del Nilo verso Assuan. Ogni viaggio è accompagnato da un egittologo autorizzato dal Ministero del Turismo egiziano ed è costruito interamente attorno a voi.",
     facts: [
@@ -257,7 +258,7 @@ export const it: LocalizedPage[] = [
       {
         title: "Quattro modi di vedere l'Egitto",
         body:
-          "Viaggio indipendente con mezzi pubblici e alberghi semplici: circa 40-90 euro a persona al giorno. Viaggio di gruppo in pullman con venti-quaranta compagni e date fisse: 90-180 euro. Privato e su misura con egittologo dedicato, mezzo proprio e buoni alberghi: 200-450 euro — qui si colloca Kemet. In cima al mercato, con dahabeya noleggiata interamente e voli privati fra le città: da 600 euro. La distanza fra il fondo e la cima del mercato è in Egitto più ampia che quasi ovunque.",
+          "Viaggio indipendente con mezzi pubblici e alberghi semplici: circa 40-90 euro a persona al giorno. Viaggio di gruppo in pullman con venti-quaranta compagni e date fisse: 90-180 euro. Privato e su misura con egittologo dedicato, mezzo proprio e buoni alberghi: 200-450 euro a persona al giorno. I viaggi di più giorni di Kemet vengono a costare 170-226 euro a persona al giorno per un gruppo di sei o più persone e 187-249 euro in due: all'incirca il limite inferiore di questa fascia e, per i gruppi più numerosi, appena sotto. In cima al mercato, con dahabeya noleggiata interamente e voli privati fra le città: da 600 euro. La distanza fra il fondo e la cima del mercato è in Egitto più ampia che quasi ovunque.",
       },
       {
         title: "In quanti siete — il fattore più pesante",
@@ -555,4 +556,6 @@ export const it: LocalizedPage[] = [
   ...articlePages("it", itArtLabels, itArticles),
   // Privacy, terms and booking (i18n/legal).
   ...legalPages("it"),
+  // About and Contact (i18n/company).
+  ...companyPages("it"),
 ];

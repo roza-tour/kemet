@@ -27,11 +27,13 @@ $site = "https://kemet-travel.com";
 $today = new DateTimeImmutable("today", new DateTimeZone("UTC"));
 
 // --- Subscribers ------------------------------------------------------------
-$subs = ["active" => [], "off" => 0];
+$subs = ["active" => [], "off" => 0, "pending" => 0];
 if (is_readable("$dir/subscribers.csv") && ($fh = fopen("$dir/subscribers.csv", "r")) !== false) {
   while (($r = fgetcsv($fh)) !== false) {
     if (count($r) < 8) { continue; }
     if (strpos((string) $r[7], "unsubscribed") === 0) { $subs["off"]++; continue; }
+    // Not yet confirmed from the email (subscribe.php → confirm.php): not on the list.
+    if ((string) $r[7] === "pending") { $subs["pending"]++; continue; }
     $subs["active"][] = ["when" => $r[0], "email" => $r[1], "name" => $r[2],
                          "source" => $r[3], "detail" => $r[4] ?? ""];
   }
@@ -44,7 +46,10 @@ if (isset($_GET["export"])) {
   header('Content-Disposition: attachment; filename="kemet-list-' . $today->format("Y-m-d") . '.csv"');
   $out = fopen("php://output", "w");
   fputcsv($out, ["email", "name", "joined", "source"]);
-  foreach ($subs["active"] as $s) { fputcsv($out, [$s["email"], $s["name"], $s["when"], $s["source"]]); }
+  // Opened in a spreadsheet: a name typed as "=HYPERLINK(…)" would run as a
+  // formula there, so such a cell gets a leading apostrophe.
+  $cell = function ($v) { $v = (string)$v; return preg_match('/^(?:[=@\t]|[+-](?![\d\s(]))/', $v) ? "'" . $v : $v; };
+  foreach ($subs["active"] as $s) { fputcsv($out, array_map($cell, [$s["email"], $s["name"], $s["when"], $s["source"]])); }
   exit;
 }
 
@@ -56,6 +61,9 @@ $due = [];
 if (is_readable("$dir/enquiries.csv") && ($fh = fopen("$dir/enquiries.csv", "r")) !== false) {
   while (($r = fgetcsv($fh)) !== false) {
     if (count($r) < 4 || !filter_var($r[3] ?? "", FILTER_VALIDATE_EMAIL)) { continue; }
+    // Only real enquiries: a row logged as spam, invalid or a duplicate is not
+    // someone who asked us anything, and must never be written to.
+    if (in_array(trim((string) $r[1]), ["spam", "invalid", "duplicate"], true)) { continue; }
     $when = DateTimeImmutable::createFromFormat("Y-m-d H:i", trim($r[0]), new DateTimeZone("UTC"));
     if (!$when) { continue; }
     $age = (int) $today->diff($when)->days;
@@ -194,6 +202,7 @@ function h($v) { return htmlspecialchars((string) $v, ENT_QUOTES, "UTF-8"); }
 <div class="row">
   <div><span class="k">On the list</span><span class="num"><?= count($subs["active"]) ?></span></div>
   <div><span class="k">Unsubscribed</span><span class="num"><?= (int) $subs["off"] ?></span></div>
+  <div><span class="k">Awaiting confirmation</span><span class="num"><?= (int) $subs["pending"] ?></span></div>
   <div><span class="k">Running now</span><span class="num" style="font-size:1.1rem"><?= h($season["label"] ?? "—") ?></span></div>
 </div>
 

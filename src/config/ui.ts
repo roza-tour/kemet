@@ -105,6 +105,8 @@ export interface UiStrings {
     submit: string;
     note: string;
     privacy: string;
+    /** After sending: the sign-up is pending until confirmed from the email. */
+    done: string;
   };
 }
 
@@ -157,6 +159,7 @@ export const UI: Record<SiteLocale, UiStrings> = {
       submit: "Keep me posted",
       note: "A few times a year.",
       privacy: "How we handle it",
+      done: "Almost done — we have sent you an email. Open the link in it to confirm.",
     },
   },
 
@@ -211,6 +214,7 @@ export const UI: Record<SiteLocale, UiStrings> = {
       submit: "Benachrichtigen Sie mich",
       note: "Ein paar Mal im Jahr.",
       privacy: "Wie wir damit umgehen",
+      done: "Fast geschafft — wir haben Ihnen eine E-Mail geschickt. Bitte bestätigen Sie über den Link darin.",
     },
   },
 
@@ -265,6 +269,7 @@ export const UI: Record<SiteLocale, UiStrings> = {
       submit: "Tienimi aggiornato",
       note: "Qualche volta all'anno.",
       privacy: "Come trattiamo i dati",
+      done: "Quasi fatto — vi abbiamo inviato un'e-mail. Aprite il link che contiene per confermare.",
     },
   },
 
@@ -319,6 +324,7 @@ export const UI: Record<SiteLocale, UiStrings> = {
       submit: "Manténganme al tanto",
       note: "Unas pocas veces al año.",
       privacy: "Cómo tratamos sus datos",
+      done: "Casi listo: le hemos enviado un correo. Abra el enlace que contiene para confirmar.",
     },
   },
 
@@ -374,6 +380,7 @@ export const UI: Record<SiteLocale, UiStrings> = {
       submit: "Tenez-moi au courant",
       note: "Quelques fois par an.",
       privacy: "Ce que nous en faisons",
+      done: "Presque terminé — nous vous avons envoyé un e-mail. Ouvrez le lien qu'il contient pour confirmer.",
     },
   },
 
@@ -431,6 +438,7 @@ export const UI: Record<SiteLocale, UiStrings> = {
       submit: "Сообщите мне",
       note: "Несколько раз в год.",
       privacy: "Как мы обращаемся с данными",
+      done: "Почти готово — мы отправили вам письмо. Откройте ссылку в нём, чтобы подтвердить.",
     },
   },
 
@@ -485,6 +493,7 @@ export const UI: Record<SiteLocale, UiStrings> = {
       submit: "Quero ser avisado",
       note: "Algumas vezes por ano.",
       privacy: "Como tratamos seus dados",
+      done: "Quase pronto — enviamos um e-mail para você. Abra o link nele para confirmar.",
     },
   },
 
@@ -536,6 +545,7 @@ export const UI: Record<SiteLocale, UiStrings> = {
       submit: "Beri tahu saya",
       note: "Beberapa kali setahun.",
       privacy: "Cara kami menanganinya",
+      done: "Hampir selesai — kami telah mengirim email kepada Anda. Buka tautan di dalamnya untuk mengonfirmasi.",
     },
   },
 
@@ -587,6 +597,7 @@ export const UI: Record<SiteLocale, UiStrings> = {
       submit: "Beritahu saya",
       note: "Beberapa kali setahun.",
       privacy: "Cara kami menanganinya",
+      done: "Hampir selesai — kami telah menghantar e-mel kepada anda. Buka pautan di dalamnya untuk mengesahkan.",
     },
   },
 
@@ -643,6 +654,7 @@ export const UI: Record<SiteLocale, UiStrings> = {
       submit: "أبلغوني",
       note: "بضع مرات في السنة.",
       privacy: "كيف نتعامل مع بياناتكم",
+      done: "اقتربنا — أرسلنا إليكم رسالة بالبريد الإلكتروني. افتحوا الرابط فيها للتأكيد.",
     },
   },
 };

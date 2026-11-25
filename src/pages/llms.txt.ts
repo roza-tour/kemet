@@ -152,7 +152,7 @@ export const GET: APIRoute = () => {
   lines.push(item("Kemet Ultra — ultra-luxury Egypt", "vip.html", `Kemet's top tier: four fully private journeys of 7 to 15 days — the Great Pyramid opened for one party, dinner inside Karnak after closing, a chartered dahabiya or crewed Red Sea yacht, private aircraft, suites at the Marriott Mena House, Four Seasons at The First Residence, the Old Cataract (Palace wing), Al Moudira and the Oberois. Priced openly: ${ultraRange}. Published in ${TRANSLATED_LOCALES.length + 1} languages. Enquire by WhatsApp or the private brief at the foot of the page: ${u("vip.html#message-us")}.`));
   lines.push(item("Private access — monuments taken exclusively", "private-hire.html", "Named Egyptian monuments closed to the public and held for one party, for an occasion rather than a journey: the Great Pyramid opened after hours for two uninterrupted hours, the Giza plateau before the gates open, dinner inside the precinct at Karnak for up to ~200, the Grand Egyptian Museum with galleries closed (among them the Tutankhamun galleries, opened for one party for an hour and a half), the Citadel, Philae after the last launch, Hatshepsut's terraces, and whole-boat dahabiya charter. Granted by permit from the Ministry of Tourism and Antiquities (and at Giza the Ministry of Interior and plateau supervision), applied for in the client's name; nothing is charged until the permit is granted. Quoted, never listed."));
   lines.push(item("All journeys", "tours.html", `Every private journey, ${tours.length} in total, from day tours to a 14-day grand tour.`));
-  lines.push(item("Egypt Travel FAQ", "faq.html", "Answers to the most common Egypt travel questions: safety, visas, best time to visit, how many days, costs, getting around, food."));
+  lines.push(item("Egypt Travel FAQ", "faq.html", "Answers to the most common Egypt travel questions: safety, best time to visit, how many days, costs, getting around, food."));
   lines.push(item("Is Egypt safe to visit?", "egypt-safety.html", "Safety in Egypt region by region: Cairo, Luxor, the Red Sea and the North Sinai advisory, plus solo female travel, water and the persistent-seller problem at Giza."));
   lines.push(item(`Egypt travel updates, ${UPDATES_EDITION}`, "egypt-travel-updates.html", `What has changed for visitors this season, each entry dated: Grand Egyptian Museum tickets and hours, paying at the sites, the Giza entrance, hotel closures and the dates ahead. Last checked ${UPDATES_CHECKED}.`));
   lines.push(item("What a private Egypt journey costs", "egypt-tour-cost.html", `Honest price bands for the Egyptian market and where Kemet sits: its multi-day journeys work out at EUR ${perDayLow}-${perDayHigh} per person per day, fully inclusive — the entry to the private, tailor-made band (EUR 200-450) rather than its middle — plus the five variables that move a quote.`));
@@ -310,7 +310,7 @@ export const GET: APIRoute = () => {
   // The destination pages are one group each ("destination-<id>"); they are
   // counted in a sentence of their own rather than named one by one.
   const isDestination = (g: { key: string }) => g.key.startsWith("destination-");
-  const isExperience = (g: { key: string }) => g.key.startsWith("experience-") || g.key.startsWith("activity-") || g.key.startsWith("programme-") || g.key.startsWith("month-") || g.key.startsWith("compare-") || g.key.startsWith("occasion-") || g.key.startsWith("guide-") || g.key.startsWith("collection-") || g.key.startsWith("legal-");
+  const isExperience = (g: { key: string }) => g.key.startsWith("experience-") || g.key.startsWith("activity-") || g.key.startsWith("programme-") || g.key.startsWith("month-") || g.key.startsWith("compare-") || g.key.startsWith("occasion-") || g.key.startsWith("guide-") || g.key.startsWith("collection-") || g.key.startsWith("legal-") || g.key.startsWith("company-");
   const keyGroups = TRANSLATION_GROUPS.filter((g) => !isDestination(g) && !isExperience(g));
   const experienceGroups = TRANSLATION_GROUPS.filter(isExperience);
   const destinationGroups = TRANSLATION_GROUPS.filter(isDestination);
@@ -326,7 +326,7 @@ export const GET: APIRoute = () => {
     `the flight times, school holidays, entry rules and reference points differ ` +
     `between them. The translated pages carry the same facts and the same prices; a few are shorter than their English originals.` +
     (destinationGroups.length ? ` The ${destinationGroups.length} destination pages are published in the same languages.` : "") +
-    (experienceGroups.length ? ` So are ${experienceGroups.length} experience, activity, programme, month, comparison, occasion, guide and legal pages (privacy, terms, booking).` : ""),
+    (experienceGroups.length ? ` So are ${experienceGroups.length} experience, activity, programme, month, comparison, occasion, guide, legal and company pages (privacy, terms, booking, about, contact).` : ""),
   );
   lines.push("");
   // THE CATALOGUE, PER LANGUAGE. Until 8 Oct 2026 this section listed only the

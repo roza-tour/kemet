@@ -40,10 +40,8 @@ const KNOWN = new Map([
   [300,  "market band — mid-point of the private band, per day (fr/id/ms cost pages)"],
   [2800, "market figure — a week for two, total"],
   [6000, "market figure — a week for two, total"],
-  [400,  "rounded prose in faq.ts: 'roughly €400 and €1,950'"],
-  [1950, "rounded prose in faq.ts: 'roughly €400 and €1,950'"],
   [120,  "third-party cost — hot-air balloon add-on, booked on request"],
-  [149,  "Eclipse Day in Luxor, 2 Aug 2027 — small-group day tour, per person (data/eclipseDay.ts)"],
+  [164,  "Eclipse Day in Luxor, 2 Aug 2027 — small-group day tour, per person (data/eclipseDay.ts)"],
   [12,   "gratuities guidance, per day"],
   [8,    "gratuities guidance, per day"],
 ]);

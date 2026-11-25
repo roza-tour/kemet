@@ -43,7 +43,7 @@ export const fr: TourText[] = [
         "Route du désert jusqu'à Alexandrie",
         "Catacombes de Kom el-Chogafa et colonne de Pompée",
         "Citadelle de Qaitbay sur l'emplacement du Phare et la Bibliotheca Alexandrina",
-        "Déjeuner de poisson en front de mer avant le retour au Caire",
+        "Déjeuner de poisson en front de mer, à régler sur place, avant le retour au Caire",
       ]},
       { title: "Le Caire copte & train de nuit vers Assouan", items: [
         "Église suspendue, Abou Serga et les ruelles du Vieux Caire",
@@ -125,7 +125,7 @@ export const fr: TourText[] = [
       { title: "Journée à Alexandrie", items: [
         "Route vers la côte méditerranéenne",
         "Catacombes de Kom el-Chogafa, colonne de Pompée et citadelle de Qaitbay",
-        "Bibliotheca Alexandrina et déjeuner de poisson en front de mer",
+        "Bibliotheca Alexandrina et déjeuner de poisson en front de mer, à régler sur place",
       ]},
       { title: "Le Caire copte & train de nuit vers Louxor", items: [
         "Église suspendue et Vieux Caire le matin",
@@ -199,7 +199,7 @@ export const fr: TourText[] = [
       { title: "Journée à Alexandrie", items: [
         "Catacombes de Kom el-Chogafa et colonne de Pompée",
         "Citadelle de Qaitbay sur l'emplacement du Phare",
-        "Déjeuner de poisson sur la corniche ; retour au Caire",
+        "Déjeuner de poisson sur la corniche, à régler sur place ; retour au Caire",
       ]},
       { title: "Vol vers le sud — Assouan", items: [
         "Vol matinal vers Assouan",
@@ -365,7 +365,7 @@ export const fr: TourText[] = [
       { title: "Journée à Alexandrie", items: [
         "Catacombes de Kom el-Chogafa",
         "Citadelle de Qaitbay et Bibliotheca Alexandrina",
-        "Colonne de Pompée et déjeuner de poisson en front de mer",
+        "Colonne de Pompée et déjeuner de poisson en front de mer, à régler sur place",
       ]},
       { title: "Gizeh & Saqqarah", items: [
         "Pyramides de Gizeh et grand Sphinx",
@@ -738,7 +738,7 @@ export const fr: TourText[] = [
       ]},
       { title: "Le souk & départ", items: [
         "Khan el-Khalili avec le contexte — des ateliers, pas seulement des étals",
-        "Dernier déjeuner dans une maison ottomane restaurée",
+        "Dernier déjeuner, à régler sur place, dans une maison ottomane restaurée",
         "Transfert privé à l'aéroport",
       ]},
     ],
@@ -956,13 +956,13 @@ export const fr: TourText[] = [
     durationLabel: "Journée entière (environ 10 heures)",
     startPoint: "Hôtel au Caire ou à Gizeh",
     summary: "Le lac Qaroun, les cascades et les dunes du Wadi el-Rayan, les baleines fossiles du Wadi al-Hitan et les potiers du village de Tunis — l'autre Égypte, verte et sauvage.",
-    overview: "À une heure et demie au sud-ouest du Caire, la dépression du Fayoum échange les monuments contre le paysage : un grand lac salé, des cascades d'eau douce en plein désert, une vallée classée à l'UNESCO pleine de baleines fossilisées, et un village de potiers à flanc de colline. Cette journée complète est un changement de registre total après les temples — horizons larges, oiseaux, dunes et un déjeuner de poisson au bord du lac. Le voyage est privé, avec votre guide et votre chauffeur pour toute la journée.",
+    overview: "À une heure et demie au sud-ouest du Caire, la dépression du Fayoum échange les monuments contre le paysage : un grand lac salé, des cascades d'eau douce en plein désert, une vallée classée à l'UNESCO pleine de baleines fossilisées, et un village de potiers à flanc de colline. Cette journée complète est un changement de registre total après les temples — horizons larges, oiseaux, dunes et un déjeuner de poisson au bord du lac, à régler sur place. Le voyage est privé, avec votre guide et votre chauffeur pour toute la journée.",
     itinerary: [
       { title: "Le lac Qaroun", text: "Début sur la rive du lac Qaroun, l'antique lac Moeris, où se rassemblent les oiseaux migrateurs et où de vieilles barques de pêche bordent l'eau. Un premier contact avec l'oasis avant d'aller plus loin dans le désert." },
       { title: "Les cascades du Wadi el-Rayan", text: "Les plus grandes cascades d'Égypte, là où les deux lacs du Rayan débordent entre les dunes. Le temps de longer la rive et de prendre la mesure d'un paysage qui ne ressemble en rien à la vallée du Nil." },
       { title: "La vallée des Baleines (Wadi al-Hitan)", text: "Un site du patrimoine mondial de l'UNESCO qui conserve des squelettes de baleines primitives vieux de 40 millions d'années, préservés là où s'étendait une mer ancienne. Un musée à ciel ouvert du temps profond, au milieu des sables." },
       { title: "Le Magic Lake & le mont Mudawara", text: "Le fameux Magic Lake, alimenté par des sources minérales et changeant de couleur avec la lumière, au pied des dunes de Mudawara — un lieu prisé pour le sandboard et pour un moment d'immobilité." },
-      { title: "Le village de potiers de Tunis & déjeuner au lac", text: "Pour finir, Tunis, le village à flanc de colline réputé pour ses potiers et ses ateliers, puis un déjeuner de poisson tranquille au bord du lac avant le retour au Caire." },
+      { title: "Le village de potiers de Tunis & déjeuner au lac", text: "Pour finir, Tunis, le village à flanc de colline réputé pour ses potiers et ses ateliers, puis un déjeuner de poisson tranquille au bord du lac, à régler sur place, avant le retour au Caire." },
     ],
     faqs: [
       { q: "Le Fayoum convient-il aux familles ?", a: "Oui — le mélange de lacs, de dunes et de fossiles plaît à tous les âges. Le terrain est facile, avec de courtes marches plutôt que de longues randonnées." },
@@ -1036,13 +1036,13 @@ export const fr: TourText[] = [
     subtitle: "Une journée entière sur la Méditerranée — catacombes, une colonne romaine, une citadelle cernée par la mer et la grande bibliothèque moderne.",
     durationLabel: "Journée entière (environ 11 heures)",
     startPoint: "Hôtel au Caire ou à Gizeh",
-    summary: "Les catacombes de Kom el-Chogafa, la colonne de Pompée, la citadelle de Qaitbay sur l'emplacement du Phare et la Bibliotheca Alexandrina, avec un déjeuner de poisson.",
-    overview: "La ville d'Alexandre porte son passé gréco-romain avec légèreté le long d'une corniche méditerranéenne incurvée. Cette journée complète prend les catacombes souterraines de Kom el-Chogafa, la colonne de Pompée qui se dresse au-dessus des ruines du Sérapéum, la citadelle de Qaitbay bâtie sur les fondations du légendaire phare, et l'élan de la Bibliotheca Alexandrina moderne — héritière de l'ancienne bibliothèque. Un déjeuner de poisson en front de mer va de soi. Guide et transferts privés depuis Le Caire.",
+    summary: "Les catacombes de Kom el-Chogafa, la colonne de Pompée, la citadelle de Qaitbay sur l'emplacement du Phare et la Bibliotheca Alexandrina, avec un déjeuner de poisson à régler sur place.",
+    overview: "La ville d'Alexandre porte son passé gréco-romain avec légèreté le long d'une corniche méditerranéenne incurvée. Cette journée complète prend les catacombes souterraines de Kom el-Chogafa, la colonne de Pompée qui se dresse au-dessus des ruines du Sérapéum, la citadelle de Qaitbay bâtie sur les fondations du légendaire phare, et l'élan de la Bibliotheca Alexandrina moderne — héritière de l'ancienne bibliothèque. Un déjeuner de poisson en front de mer, à régler sur place, va de soi. Guide et transferts privés depuis Le Caire.",
     itinerary: [
       { title: "Catacombes de Kom el-Chogafa", text: "Descente dans les catacombes de Kom el-Chogafa, nécropole romaine sur plusieurs niveaux où styles égyptien et classique se mêlent dans la pierre sculptée — l'une des curiosités les plus étranges de l'Antiquité." },
       { title: "La colonne de Pompée", text: "Visite de la colonne de Pompée, grande colonne triomphale romaine qui s'élève des ruines du Sérapéum, flanquée de sphinx de granit." },
       { title: "La citadelle de Qaitbay", text: "Promenade sur les remparts maritimes de la citadelle de Qaitbay, élevée à l'endroit exact où se dressait le phare d'Alexandrie, merveille du monde antique." },
-      { title: "Bibliotheca Alexandrina & déjeuner de poisson", text: "Pour finir, la spectaculaire Bibliotheca Alexandrina moderne, la bibliothèque d'Alexandrie renaissante, après un déjeuner de poisson tranquille face à la Méditerranée." },
+      { title: "Bibliotheca Alexandrina & déjeuner de poisson", text: "Pour finir, la spectaculaire Bibliotheca Alexandrina moderne, la bibliothèque d'Alexandrie renaissante, après un déjeuner de poisson tranquille face à la Méditerranée, à régler sur place." },
     ],
     faqs: [
       { q: "Combien de temps dure la route depuis Le Caire ?", a: "Environ deux heures et demie à trois heures par trajet sur la route du désert — d'où une journée longue mais généreuse." },

@@ -395,7 +395,10 @@ export function guideSchema(guide: Guide): JsonLd[] {
     // Attribution. An unsigned travel article is the weakest thing a search
     // system or an answer engine can be handed; naming the specialist who
     // checked it is what makes a claim on this page quotable.
-    ...(guide.noReviewer ? { author: org } : { author: personRef(), reviewedBy: personRef() }),
+    // Kemet writes the guides; Mervat Farouk reviews them, which is what the
+    // byline on the page says ("Reviewed by"). Naming her as author too told
+    // a search engine something the page does not.
+    ...(guide.noReviewer ? { author: org } : { author: org, reviewedBy: personRef() }),
     // Google's Rich Results Test flags an Article with no image. The hero is
     // already published on the page, so this is a field we simply were not
     // passing through rather than one we lack. datePublished stays out: we have
@@ -705,8 +708,8 @@ export function siteSchema(full = true): JsonLd[] {
       {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-        opens: "09:00",
-        closes: "18:00",
+        opens: company.businessHours?.[0]?.opens ?? "00:00",
+        closes: company.businessHours?.[0]?.closes ?? "23:59",
       },
     ],
     contactPoint: [
@@ -965,10 +968,12 @@ export function aboutPageSchema(): JsonLd {
       "Learn about Kemet — our mission, values, and why we design private, tailor-made Egypt journeys for discerning international travellers.",
     url,
     isPartOf: { "@type": "WebSite", "@id": `${SITE_URL}#website`, name: site.name, url: SITE_URL },
+    // The page is about the company, so the company is its main entity. The
+    // Person node still lives here in full — every reviewedBy elsewhere on
+    // the site is a reference back to it.
     about: orgRef(),
-    // The About page is where the Person node lives in full — every byline
-    // and every reviewedBy elsewhere on the site is a reference back to here.
-    mainEntity: personSchema(),
+    mainEntity: orgRef(),
+    mentions: personSchema(),
   };
 }
 

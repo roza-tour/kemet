@@ -36,7 +36,7 @@ export const alwaysTrue: StandardPoint[] = [
     symbol: "ankh",
     title: "Your party only",
     body:
-      "No shared coaches. No fixed departure dates. No strangers on your itinerary. If you are two people, the vehicle, the guide and the pace belong to two people.",
+      "No shared coaches. No fixed departure dates. No strangers in your vehicle or with your guide. If you are two people, the vehicle, the guide and the pace belong to two people.",
   },
   {
     symbol: "lotus",

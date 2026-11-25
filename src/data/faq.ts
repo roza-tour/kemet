@@ -8,6 +8,11 @@
 // src/data/booking.ts) — no fabricated figures.
 // ---------------------------------------------------------------------------
 import { guides } from "@/data/guides";
+import { tours } from "@/data/tours";
+
+const DAY_FROM = Math.min(...tours.filter((t) => t.kind !== "multiday").map((t) => t.price));
+const MULTI_FROM = Math.min(...tours.filter((t) => t.kind === "multiday").map((t) => t.price));
+const MULTI_TO = Math.max(...tours.filter((t) => t.kind === "multiday").map((t) => t.price));
 import type { Faq } from "@/types";
 
 /** Pull a guide's authored FAQs by slug (stays in sync with the guide). */
@@ -27,7 +32,9 @@ const planningAndBooking: Faq[] = [
   },
   {
     q: "How much does a private Egypt tour cost?",
-    a: "Kemet's journeys are priced per person and depend on length, season, accommodation level and party size. Private full-day excursions start from around €57 per person based on a private party of six, with monument tickets paid at the published gate rate; most multi-day private journeys fall between roughly €400 and €1,950 inclusive of entrance fees and hotels, and the 14-day grand tour is €2,728 per person. Our pricing sits at the upper end of the market for Egypt travel rather than competing with coach operators. Every quote is fully itemised — what is included and excluded is shown before you commit, with no hidden costs.",
+    // Computed from the catalogue (data/tours.ts), so a change of price can
+    // no longer leave this answer quoting last year's figures.
+    a: `Kemet's journeys are priced per person and depend on length, season, accommodation level and party size. Private full-day excursions start from €${DAY_FROM} per person for a private party of six, with monument tickets paid at the published gate rate; private journeys of several days run from €${MULTI_FROM.toLocaleString("en-GB")} to €${MULTI_TO.toLocaleString("en-GB")} per person, including entrance fees and hotels. For a party of two, each traveller pays 10% more. Every quote is fully itemised — what is included and excluded is shown before you commit, with no hidden costs.`,
   },
   {
     q: "Is a private tour better than a group tour?",

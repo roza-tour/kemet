@@ -8,6 +8,7 @@
 // a Latin American reader is well used to reading peninsular Spanish.
 // ---------------------------------------------------------------------------
 import { legalPages } from "./legal/build";
+import { companyPages } from "./company/build";
 import type { LocalizedPage } from "./types";
 import { articlePages } from "./articles/build";
 import { esArticles, esArtLabels } from "./articles/es";
@@ -42,7 +43,7 @@ export const es: LocalizedPage[] = [
     crumb: "Inicio",
     h1: "Egipto, en privado",
     standfirst:
-      "Sin autocar, sin fechas de salida fijas, sin desconocidos en su itinerario.",
+      "Sin autocar, sin fechas de salida fijas, sin desconocidos en su vehículo ni con su guía.",
     lede:
       "Egipto no es un país: son ocho mundos culturales superpuestos a lo largo de un solo río. Kemet diseña viajes privados y sin prisa por esos mundos — de las Pirámides de Guiza a los templos de Luxor y la navegación del Nilo hasta Asuán. Cada viaje lo acompaña un egiptólogo titulado por el Ministerio de Turismo egipcio y se construye enteramente en torno a ustedes.",
     facts: [
@@ -257,7 +258,7 @@ export const es: LocalizedPage[] = [
       {
         title: "Cuatro maneras de ver Egipto",
         body:
-          "Viaje independiente con transporte público y hoteles sencillos: unos 40 a 90 euros por persona y día. Viaje de grupo en autocar con veinte o cuarenta acompañantes y fechas fijas: 90 a 180 euros. Privado y a medida con egiptólogo propio, vehículo propio y buenos hoteles: 200 a 450 euros — aquí está Kemet. En la cima del mercado, con dahabiya en exclusiva y vuelos privados entre ciudades: desde 600 euros. La distancia entre el suelo y el techo del mercado es en Egipto mayor que en casi cualquier otro país.",
+          "Viaje independiente con transporte público y hoteles sencillos: unos 40 a 90 euros por persona y día. Viaje de grupo en autocar con veinte o cuarenta acompañantes y fechas fijas: 90 a 180 euros. Privado y a medida con egiptólogo propio, vehículo propio y buenos hoteles: 200 a 450 euros. Los viajes de varios días de Kemet salen a entre 170 y 226 euros por persona y día para un grupo de seis o más, y a entre 187 y 249 euros para dos viajeros: en torno al suelo de esta franja y, para los grupos grandes, justo por debajo. En la cima del mercado, con dahabiya en exclusiva y vuelos privados entre ciudades: desde 600 euros. La distancia entre el suelo y el techo del mercado es en Egipto mayor que en casi cualquier otro país.",
       },
       {
         title: "Cuántos son — el factor de mayor peso",
@@ -555,4 +556,6 @@ export const es: LocalizedPage[] = [
   ...articlePages("es", esArtLabels, esArticles),
   // Privacy, terms and booking (i18n/legal).
   ...legalPages("es"),
+  // About and Contact (i18n/company).
+  ...companyPages("es"),
 ];

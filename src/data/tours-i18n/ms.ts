@@ -84,7 +84,7 @@ export const ms: TourText[] = [
           "Perjalanan ke Alexandria melalui jalan padang pasir",
           "Katakomb Kom El Shoqafa dan Tiang Pompey",
           "Kubu Qaitbay di tapak Rumah Api Pharos purba dan Bibliotheca Alexandrina yang moden",
-          "Makan tengah hari makanan laut di tepi pantai sebelum pulang ke Kaherah",
+          "Makan tengah hari makanan laut di tepi pantai, dibayar di tempat, sebelum pulang ke Kaherah",
         ],
       },
       {
@@ -206,7 +206,7 @@ export const ms: TourText[] = [
         items: [
           "Katakomb Kom El Shoqafa dan Tiang Pompey",
           "Kubu Qaitbay di tapak Rumah Api Pharos",
-          "Makan tengah hari makanan laut di persiaran tepi laut; pulang ke Kaherah",
+          "Makan tengah hari makanan laut di persiaran tepi laut, dibayar di tempat; pulang ke Kaherah",
         ],
       },
       {
@@ -587,7 +587,7 @@ export const ms: TourText[] = [
         items: [
           "Perjalanan ke pesisir Mediterranean",
           "Katakomb Kom El Shoqafa, Tiang Pompey dan Kubu Qaitbay",
-          "Bibliotheca Alexandrina dan makan tengah hari makanan laut di tepi pantai",
+          "Bibliotheca Alexandrina dan makan tengah hari makanan laut di tepi pantai, dibayar di tempat",
         ],
       },
       {
@@ -693,7 +693,7 @@ export const ms: TourText[] = [
         title: "Pasar & berlepas",
         items: [
           "Khan el-Khalili berserta konteksnya — bengkel, bukan sekadar gerai",
-          "Makan tengah hari terakhir di sebuah rumah zaman Uthmaniyah yang dipulihkan",
+          "Makan tengah hari terakhir di sebuah rumah zaman Uthmaniyah yang dipulihkan, dibayar di tempat",
           "Pemindahan peribadi ke lapangan terbang",
         ],
       },
@@ -803,7 +803,7 @@ export const ms: TourText[] = [
         items: [
           "Katakomb Kom El Shoqafa",
           "Kubu Qaitbay dan Bibliotheca Alexandrina",
-          "Tiang Pompey dan makan tengah hari makanan laut di tepi pantai",
+          "Tiang Pompey dan makan tengah hari makanan laut di tepi pantai, dibayar di tempat",
         ],
       },
       {
@@ -1156,7 +1156,7 @@ export const ms: TourText[] = [
     durationLabel: "Sehari penuh (lebih kurang 10 jam)",
     startPoint: "Hotel di Kaherah atau Giza",
     summary: "Tasik Qarun, air terjun dan bukit pasir Wadi El Rayan, fosil ikan paus Wadi Al-Hitan dan tukang tembikar kampung Tunis — separuh lagi Mesir yang liar dan menghijau.",
-    overview: "Sejam setengah ke barat daya Kaherah, lekukan Fayoum menukar monumen dengan landskap: sebuah tasik garam yang luas, air terjun air tawar di tengah gurun, sebuah lembah UNESCO yang menyimpan fosil ikan paus, dan sebuah kampung tukang tembikar di lereng bukit. Hari penuh ini suasana yang sama sekali berbeza daripada kuil-kuil — ufuk yang luas, burung-burung, bukit pasir dan makan tengah hari ikan di tepi tasik. Perjalanan bersifat persendirian, dengan pemandu dan drebar anda sepanjang hari.",
+    overview: "Sejam setengah ke barat daya Kaherah, lekukan Fayoum menukar monumen dengan landskap: sebuah tasik garam yang luas, air terjun air tawar di tengah gurun, sebuah lembah UNESCO yang menyimpan fosil ikan paus, dan sebuah kampung tukang tembikar di lereng bukit. Hari penuh ini suasana yang sama sekali berbeza daripada kuil-kuil — ufuk yang luas, burung-burung, bukit pasir dan makan tengah hari ikan di tepi tasik (dibayar di tempat). Perjalanan bersifat persendirian, dengan pemandu dan drebar anda sepanjang hari.",
     itinerary: [
       {
         title: "Tasik Qarun",
@@ -1176,7 +1176,7 @@ export const ms: TourText[] = [
       },
       {
         title: "Kampung tembikar Tunis & makan tengah hari di tepi tasik",
-        text: "Berakhir di Tunis, kampung di lereng bukit yang terkenal dengan tukang tembikar dan studionya, diikuti makan tengah hari ikan yang santai di tepi tasik sebelum perjalanan pulang ke Kaherah.",
+        text: "Berakhir di Tunis, kampung di lereng bukit yang terkenal dengan tukang tembikar dan studionya, diikuti makan tengah hari ikan yang santai di tepi tasik, dibayar di tempat, sebelum perjalanan pulang ke Kaherah.",
       },
     ],
     faqs: [
@@ -1345,15 +1345,15 @@ export const ms: TourText[] = [
     slug: "tour-alexandria",
     localeSlug: "lawatan-sehari-ke-alexandria",
     metaTitle: "Alexandria — Lawatan Sehari dari Kaherah | Kemet",
-    metaDescription: "Katakomb Kom El Shoqafa, Tiang Pompey, Kubu Qaitbay di tapak Pharos dan Bibliotheca Alexandrina, dengan makan tengah hari makanan laut.",
+    metaDescription: "Katakomb Kom El Shoqafa, Tiang Pompey, Kubu Qaitbay di tapak Pharos dan Bibliotheca Alexandrina, dengan makan tengah hari makanan laut yang dibayar di tempat.",
     keywords: "lawatan sehari alexandria, alexandria dari kaherah, kubu qaitbay, bibliotheca alexandrina, katakomb kom el shoqafa",
     crumb: "Alexandria, sehari",
     title: "Menjelajah Alexandria",
     subtitle: "Sehari penuh di tepi Mediterranean — katakomb, tiang Rom, kubu yang dikelilingi laut dan perpustakaan moden yang agung.",
     durationLabel: "Sehari penuh (lebih kurang 11 jam)",
     startPoint: "Hotel di Kaherah atau Giza",
-    summary: "Katakomb Kom El Shoqafa, Tiang Pompey, Kubu Qaitbay di tapak lama Pharos dan Bibliotheca Alexandrina, bersama makan tengah hari makanan laut.",
-    overview: "Kota Alexander Agung memakai masa lalu Greco-Romnya dengan bersahaja di sepanjang corniche Mediterranean yang melengkung. Hari penuh ini merangkumi Katakomb Kom El Shoqafa di bawah tanah, Tiang Pompey yang menjulang, Kubu Qaitbay yang dibina di atas asas rumah api Pharos yang legenda, dan Bibliotheca Alexandrina moden yang tersergam — pewaris Perpustakaan purba. Makan tengah hari makanan laut di tepi pantai sudah tentu sebahagian daripadanya. Pemandu dan pemindahan persendirian dari Kaherah.",
+    summary: "Katakomb Kom El Shoqafa, Tiang Pompey, Kubu Qaitbay di tapak lama Pharos dan Bibliotheca Alexandrina, bersama makan tengah hari makanan laut yang dibayar di tempat.",
+    overview: "Kota Alexander Agung memakai masa lalu Greco-Romnya dengan bersahaja di sepanjang corniche Mediterranean yang melengkung. Hari penuh ini merangkumi Katakomb Kom El Shoqafa di bawah tanah, Tiang Pompey yang menjulang, Kubu Qaitbay yang dibina di atas asas rumah api Pharos yang legenda, dan Bibliotheca Alexandrina moden yang tersergam — pewaris Perpustakaan purba. Makan tengah hari makanan laut di tepi pantai, dibayar di tempat, sudah tentu sebahagian daripadanya. Pemandu dan pemindahan persendirian dari Kaherah.",
     itinerary: [
       {
         title: "Katakomb Kom El Shoqafa",
@@ -1369,7 +1369,7 @@ export const ms: TourText[] = [
       },
       {
         title: "Bibliotheca Alexandrina & makan tengah hari makanan laut",
-        text: "Berakhir di Bibliotheca Alexandrina yang moden dan dramatik, Perpustakaan Alexandria yang dilahirkan semula, selepas makan tengah hari makanan laut yang santai di tepi Mediterranean.",
+        text: "Berakhir di Bibliotheca Alexandrina yang moden dan dramatik, Perpustakaan Alexandria yang dilahirkan semula, selepas makan tengah hari makanan laut yang santai di tepi Mediterranean, dibayar di tempat,.",
       },
     ],
     faqs: [

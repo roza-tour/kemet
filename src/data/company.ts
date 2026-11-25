@@ -56,10 +56,10 @@ export const company: CompanyProfile = {
 
   businessHours: [
     {
-      // Owner, 25 Nov 2026: the team works every day.
-      days: "Every day",
-      opens: "09:00",
-      closes: "18:00",
+      // Owner, 25 Nov 2026: the team works every day, around the clock.
+      days: "Every day, around the clock",
+      opens: "00:00",
+      closes: "23:59",
       // Egypt keeps summer time (UTC+3 from late April to late October), so a
       // fixed offset here was wrong for half the year.
       timezone: "Cairo time",
@@ -70,7 +70,7 @@ export const company: CompanyProfile = {
     {
       type: "whatsapp",
       label: "WhatsApp",
-      availability: "Typically within 2 hours during business hours",
+      availability: "Typically within 2 hours, at any hour",
     },
     {
       type: "email",
@@ -80,7 +80,7 @@ export const company: CompanyProfile = {
     {
       type: "phone",
       label: "Phone",
-      availability: "Every day, 09:00–18:00 Cairo time",
+      availability: "Every day, around the clock",
     },
   ],
 

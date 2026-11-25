@@ -11,7 +11,7 @@ export const pt: UltraText = {
   heroTag: "Kemet Ultra · sob encomenda privada",
   h1: ["O Egito, aberto", "só para vocês"],
   lede:
-    "Quatro viagens privadas no topo do mercado egípcio: a Grande Pirâmide aberta para o seu grupo, um jantar dentro de Karnak depois que os portões fecham, uma dahabiya ou um iate sem outros hóspedes e os grandes hotéis nos seus melhores quartos. Com preços à vista, e cada item confirmado por escrito antes de vocês pagarem qualquer coisa.",
+    "Quatro viagens privadas no topo do mercado egípcio: a Grande Pirâmide aberta para o seu grupo, por autorização, um jantar dentro de Karnak depois que os portões fecham, uma dahabiya ou um iate sem outros hóspedes e os grandes hotéis nos seus melhores quartos. Com preços à vista, e cada item confirmado por escrito antes de vocês pagarem qualquer coisa.",
   ctaPrimary: "Falar em particular",
   ctaQuiet: "ou envie uma consulta confidencial",
 
@@ -178,7 +178,7 @@ export const pt: UltraText = {
 
   standardOverline: "Como funciona este nível",
   standard: [
-    { title: "Primeiro o preço, depois a prova", body: "Cada preço está nesta página, e cada item da viagem é confirmado por escrito, em nome de vocês, antes de qualquer pagamento." },
+    { title: "Primeiro o preço, depois a prova", body: "Cada preço está nesta página, e cada item da viagem é confirmado por escrito, em nome de vocês, antes de qualquer pagamento; as aberturas privadas dependem de autorização, e uma abertura recusada sai do preço." },
     { title: "Um único interlocutor", body: "Quem desenha a viagem é quem responde a vocês enquanto estão no Egito. Nada de central de atendimento, nem de um número que para de responder depois do sinal." },
     { title: "Mudanças sem complicação", body: "Cada viagem pode ser refeita — dias, hotéis, ritmo, um grupo maior ou equipe que viaja com vocês — e é recalculada pelo mesmo critério." },
     { title: "Discrição por regra", body: "Sem grupos, sem carros compartilhados, sem listas de saídas publicadas. Nada sobre quem vocês são ou para onde vão é comentado fora da equipe que organiza." },
@@ -187,13 +187,13 @@ export const pt: UltraText = {
   faqOverline: "Antes de nos escrever",
   faqs: ({ from2, to2, from4, to4, peak }) => [
     { q: "Quanto custa uma viagem de ultraluxo ao Egito?", a: `As quatro viagens Kemet Ultra custam, para dois, de ${from2} por pessoa por sete dias até ${to2} por quinze. Para quatro, o preço por pessoa cai para entre ${from4} e ${to4}, porque o fretamento, o avião e as aberturas privadas são divididos. As semanas de Natal, Réveillon e Páscoa têm um acréscimo de ${peak} %.` },
-    { q: "Dá mesmo para abrir a Grande Pirâmide só para nós?", a: "Sim. Durante duas horas a Grande Pirâmide abre só para o seu grupo, fora do horário de visita, com o seu egiptólogo ao lado e mais ninguém lá dentro. Cuidamos de tudo; vocês só precisam chegar." },
-    { q: "Como é o jantar dentro de Karnak?", a: "Quando os últimos visitantes vão embora, Karnak abre para o seu grupo. Vocês percorrem a sala hipostila com o seu egiptólogo e o jantar é servido dentro do recinto do templo. Não há nada para vocês organizarem." },
-    { q: "Dá para ver o tesouro de Tutancâmon de forma privativa?", a: "Sim. No Grande Museu Egípcio, as salas de Tutancâmon podem ser abertas só para o seu grupo durante uma hora e meia, sem nenhum outro visitante entre o ouro do rei menino. Isso pode ser somado a qualquer uma das quatro viagens. Em Gizé, um carrinho de golfe privativo também pode levar vocês pelo planalto." },
+    { q: "Dá mesmo para abrir a Grande Pirâmide só para nós?", a: "Sim, por autorização. Durante duas horas a Grande Pirâmide abre só para o seu grupo, fora do horário de visita, com o seu egiptólogo ao lado e mais ninguém lá dentro. A abertura é concedida pelo Ministério do Turismo e das Antiguidades, mediante um pedido que fazemos para as suas datas assim que vocês confirmam, e o resultado é comunicado antes da viagem. Se a autorização for recusada, a abertura sai do preço e nada é cobrado por ela." },
+    { q: "Como é o jantar dentro de Karnak?", a: "Depois que os últimos visitantes vão embora, Karnak é aberto para o seu grupo por autorização, que solicitamos assim que vocês confirmam. Vocês percorrem a sala hipostila com o seu egiptólogo e o jantar é servido dentro do recinto do templo. Não há nada para vocês organizarem; se a autorização for recusada, essa noite sai do preço." },
+    { q: "Dá para ver o tesouro de Tutancâmon de forma privativa?", a: "Sim, por autorização do museu. No Grande Museu Egípcio, as salas de Tutancâmon podem ser abertas só para o seu grupo durante uma hora e meia, sem nenhum outro visitante entre o ouro do rei menino. Isso pode ser somado a qualquer uma das quatro viagens. Em Gizé, um carrinho de golfe privativo também pode levar vocês pelo planalto." },
     { q: "Por que o Winter Palace não está na lista?", a: "O Winter Palace de Luxor fechou no início de 2026 para uma restauração completa e reabre em julho de 2027 como Mandarin Oriental Winter Palace. Até lá, em Luxor vocês ficam no Al Moudira, na margem oeste. O Old Cataract de Assuã continua aberto na sua histórica ala Palace enquanto a ala do Nilo é renovada." },
     { q: "Qual dahabiya é fretada?", a: "Uma dahabiya de primeira linha, de seis a dez cabines, fretada inteira, com tripulação e cozinheiro próprios — escolhida para as suas datas e nomeada na proposta por escrito." },
     { q: "Dá para mudar ou estender uma viagem?", a: "Todas. Dias, hotéis, a ordem do roteiro e o ritmo podem mudar, e o preço é recalculado pelo mesmo critério. Grupos maiores, equipe que viaja com vocês e chegadas de jato particular são planejados desde o início." },
-    { q: "Com quanta antecedência reservar?", a: "De oito a doze semanas para viajar entre outubro e abril, quando as aberturas privadas e os fretamentos de dahabiya são mais disputados. Às vezes dá com menos prazo; antes de se comprometerem, vocês sabem quais itens ainda podem ser garantidos." },
+    { q: "Com quanta antecedência reservar?", a: "De oito a doze semanas para viajar entre outubro e abril, quando as aberturas privadas e os fretamentos de dahabiya são mais disputados, e mais para a Grande Pirâmide, cuja autorização pode levar vários meses. Às vezes dá com menos prazo; antes de se comprometerem, vocês sabem quais itens ainda podem ser garantidos." },
     { q: "Com quem vamos tratar?", a: "Com uma única pessoa, da primeira mensagem ao último dia no Egito. Se a organização fica a cargo de um family office ou de uma assistente, eles também tratam sempre com a mesma pessoa." },
   ],
 

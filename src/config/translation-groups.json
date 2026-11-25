@@ -1321,6 +1321,32 @@
       "ms": "ms/tempahan-bayaran-pembatalan.html",
       "pt": "pt/reserva-pagamento-e-cancelamento.html",
       "ar": "ar/shurut-al-hajz-wa-al-dafa-wa-al-ilgha.html"
+    },
+    {
+      "key": "company-about",
+      "en": "about.html",
+      "de": "de/ueber-kemet.html",
+      "fr": "fr/a-propos-de-kemet.html",
+      "it": "it/chi-siamo-kemet.html",
+      "es": "es/sobre-kemet.html",
+      "pt": "pt/sobre-a-kemet.html",
+      "ru": "ru/o-kemet.html",
+      "id": "id/tentang-kemet.html",
+      "ms": "ms/tentang-kemet.html",
+      "ar": "ar/an-kemet.html"
+    },
+    {
+      "key": "company-contact",
+      "en": "contact.html",
+      "de": "de/kontakt.html",
+      "fr": "fr/contacter-kemet.html",
+      "it": "it/contatti-kemet.html",
+      "es": "es/contacto.html",
+      "pt": "pt/contato.html",
+      "ru": "ru/kontakty.html",
+      "id": "id/hubungi-kemet.html",
+      "ms": "ms/hubungi-kami.html",
+      "ar": "ar/tawasal-ma-kemet.html"
     }
   ],
   "_partial_comment": [

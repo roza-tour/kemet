@@ -8,6 +8,7 @@
 // charter traffic that dominates the market.
 // ---------------------------------------------------------------------------
 import { legalPages } from "./legal/build";
+import { companyPages } from "./company/build";
 import type { LocalizedPage } from "./types";
 import { articlePages } from "./articles/build";
 import { deArticles, deArtLabels } from "./articles/de";
@@ -42,7 +43,7 @@ export const de: LocalizedPage[] = [
     crumb: "Startseite",
     h1: "Ägypten, privat bereist",
     standfirst:
-      "Kein Reisebus, keine festen Abfahrtstermine, keine Fremden auf Ihrer Reiseroute.",
+      "Kein Reisebus, keine festen Abfahrtstermine, keine Fremden in Ihrem Fahrzeug oder bei Ihrem Guide.",
     lede:
       "Ägypten ist nicht ein Land, sondern acht kulturelle Welten entlang eines einzigen Flusses. Kemet plant private, unaufgeregte Reisen durch diese Welten — von den Pyramiden von Gizeh über die Tempel von Luxor bis zur Nilfahrt nach Assuan. Jede Reise wird von einem staatlich lizenzierten Ägyptologen begleitet und vollständig um Sie herum entworfen.",
     facts: [
@@ -257,7 +258,7 @@ export const de: LocalizedPage[] = [
       {
         title: "Vier Arten, Ägypten zu sehen",
         body:
-          "Individualreise mit öffentlichen Verkehrsmitteln und einfachen Hotels: etwa 40 bis 90 Euro pro Person und Tag. Gruppenreise im Bus mit zwanzig bis vierzig Mitreisenden und festen Terminen: 90 bis 180 Euro. Privat und maßgeschneidert mit eigenem Ägyptologen, eigenem Fahrzeug und guten Hotels: 200 bis 450 Euro — hier steht Kemet. Ganz oben, mit gecharterter Dahabiya und Privatflügen zwischen den Städten: ab 600 Euro. Der Abstand zwischen unterem und oberem Ende ist in Ägypten größer als in fast jedem anderen Land.",
+          "Individualreise mit öffentlichen Verkehrsmitteln und einfachen Hotels: etwa 40 bis 90 Euro pro Person und Tag. Gruppenreise im Bus mit zwanzig bis vierzig Mitreisenden und festen Terminen: 90 bis 180 Euro. Privat und maßgeschneidert mit eigenem Ägyptologen, eigenem Fahrzeug und guten Hotels: 200 bis 450 Euro. Die mehrtägigen Reisen von Kemet kommen auf 170 bis 226 Euro pro Person und Tag für Gruppen ab sechs Personen und auf 187 bis 249 Euro für zwei Reisende: etwa an der Untergrenze dieser Spanne, für größere Gruppen knapp darunter. Ganz oben, mit gecharterter Dahabiya und Privatflügen zwischen den Städten: ab 600 Euro. Der Abstand zwischen unterem und oberem Ende ist in Ägypten größer als in fast jedem anderen Land.",
       },
       {
         title: "Wie viele Sie sind — der größte Einzelfaktor",
@@ -557,4 +558,6 @@ export const de: LocalizedPage[] = [
   ...articlePages("de", deArtLabels, deArticles),
   // Privacy, terms and booking (i18n/legal).
   ...legalPages("de"),
+  // About and Contact (i18n/company).
+  ...companyPages("de"),
 ];

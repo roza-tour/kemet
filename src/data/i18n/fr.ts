@@ -10,6 +10,7 @@
 // avoids France-only administrative detail where a neutral wording works.
 // ---------------------------------------------------------------------------
 import { legalPages } from "./legal/build";
+import { companyPages } from "./company/build";
 import type { LocalizedPage } from "./types";
 import { articlePages } from "./articles/build";
 import { frArticles, frArtLabels } from "./articles/fr";
@@ -43,7 +44,7 @@ export const fr: LocalizedPage[] = [
     crumb: "Accueil",
     h1: "L'Égypte, en privé",
     standfirst:
-      "Pas d'autocar, pas de date de départ imposée, personne d'autre dans votre itinéraire.",
+      "Pas d'autocar, pas de date de départ imposée, personne d'autre dans votre véhicule ni avec votre guide.",
     lede:
       "L'Égypte n'est pas un pays mais huit mondes culturels superposés le long d'un même fleuve. Kemet conçoit des voyages privés et sans hâte à travers ces mondes — des pyramides de Gizeh aux temples de Louxor, puis la descente du Nil jusqu'à Assouan. Chaque voyage est accompagné d'un égyptologue agréé par le ministère égyptien du Tourisme, et construit entièrement autour de vous.",
     facts: [
@@ -249,7 +250,7 @@ export const fr: LocalizedPage[] = [
     standfirst:
       "Des fourchettes réelles, et les cinq choses qui font vraiment bouger le chiffre.",
     lede:
-      "Un voyage privé en Égypte se situe le plus souvent entre 200 et 450 euros par personne et par jour, hors vols internationaux. L'écart entre ces deux bornes ne vient pas du hasard : il vient de cinq décisions que vous prenez à la conception, et il est utile de savoir lesquelles avant de comparer deux devis.",
+      "Un voyage privé en Égypte se situe le plus souvent entre 200 et 450 euros par personne et par jour, hors vols internationaux. L'écart entre ces deux bornes ne vient pas du hasard : il vient de cinq décisions que vous prenez à la conception, et il est utile de savoir lesquelles avant de comparer deux devis. Les voyages de plusieurs jours de Kemet reviennent, eux, à 170–226 euros par personne et par jour pour un groupe de six personnes ou plus, et à 187–249 euros pour deux voyageurs : autour du plancher de cette fourchette, et juste en dessous pour les groupes plus nombreux.",
     facts: [
       { label: "Entrée de gamme", value: "≈ 200 € / pers. / jour" },
       { label: "Milieu de gamme", value: "≈ 300 € / pers. / jour" },
@@ -546,4 +547,6 @@ export const fr: LocalizedPage[] = [
   ...articlePages("fr", frArtLabels, frArticles),
   // Privacy, terms and booking (i18n/legal).
   ...legalPages("fr"),
+  // About and Contact (i18n/company).
+  ...companyPages("fr"),
 ];

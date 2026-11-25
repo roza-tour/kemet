@@ -22,6 +22,15 @@
 // and what the box said at the time, because "we have their email" is not a
 // lawful basis and a screenshot of today's form does not prove what last
 // year's form asked. Every message carries a working one-click unsubscribe.
+//
+// DOUBLE OPT-IN (25 Nov 2026)
+// A ticked box proves that someone ticked it, not that the address is theirs:
+// anyone could type a stranger's email. So a new sign-up is stored as
+// "pending" and the only message it triggers is a request to confirm. The
+// address joins the list when its owner opens the link (confirm.php), and
+// that moment — time and network address — is added to the record. Until
+// then nothing else is ever sent to it, and the office is told only on
+// confirmation.
 // ---------------------------------------------------------------------------
 
 $to      = "info@kemet-travel.com";
@@ -117,26 +126,33 @@ if (($rf = @fopen($rateFile, "c+")) !== false) {
 // Re-submitting must not create a second row: two rows means two copies of
 // every send and an unsubscribe that only removes one of them. The existing
 // token is reused so an old unsubscribe link in an old email keeps working.
-$token = "";
+$token = ""; $status = "";
 if (is_readable($store) && ($fh = fopen($store, "r")) !== false) {
   while (($row = fgetcsv($fh)) !== false) {
     if (isset($row[1]) && strcasecmp(trim($row[1]), $email) === 0) {
       $token = $row[6] ?? "";
+      $status = (string)($row[7] ?? "");
       break;
     }
   }
   fclose($fh);
 }
 $already = $token !== "";
+// Confirmed and still subscribed. A pending or unsubscribed address is asked
+// to confirm (again) rather than being told it is on a list it is not on.
+$confirmed = $already && $status === "active";
 if (!$already) { $token = bin2hex(random_bytes(16)); }
 
 // --- The consent record -----------------------------------------------------
-// Columns: when, email, name, source, detail, locale, token, status, ip, wording
+// Columns: when, email, name, source, detail, locale, token, status, ip,
+// wording, confirmed (time and network address, added by confirm.php).
+// A cell that a spreadsheet would read as a formula gets a leading apostrophe.
+$cell = function ($v) { $v = (string)$v; return preg_match('/^(?:[=@\t]|[+-](?![\d\s(]))/', $v) ? "'" . $v : $v; };
 if (!$already) {
-  $line = [
+  $line = array_map($cell, [
     gmdate("Y-m-d H:i"), $email, $name, $source, $detail, $locale,
-    $token, "active", ($_SERVER["REMOTE_ADDR"] ?? ""), $CONSENT_TEXT,
-  ];
+    $token, "pending", ($_SERVER["REMOTE_ADDR"] ?? ""), $CONSENT_TEXT, "",
+  ]);
   $out = fopen($store, "a");
   if ($out !== false) {
     flock($out, LOCK_EX);
@@ -150,36 +166,37 @@ if (!$already) {
 // Past a limit: recorded above if it was new, but nobody is mailed.
 if ($limited) { respond(true, $wantsJson, "Thank you."); }
 
-// --- Tell the office --------------------------------------------------------
-$headers = "From: Kemet <no-reply@kemet-travel.com>\r\nReply-To: " . $email
-         . "\r\nContent-Type: text/plain; charset=UTF-8";
-@mail(
-  $to,
-  ($already ? "List: returning — " : "List: new sign-up — ") . $email,
-  "Source:  $source\nName:    $name\nEmail:   $email\nLocale:  $locale\n"
-  . ($detail !== "" ? "Detail:  $detail\n" : "") . "When:    " . gmdate("Y-m-d H:i") . " UTC\n",
-  $headers,
-  "-fno-reply@kemet-travel.com"
-);
-
-// --- Confirm to the subscriber ---------------------------------------------
-// Sent on every submission, including a repeat: someone who signs up twice has
-// usually lost the first message, and it is also how they get the unsubscribe
-// link if they have changed their mind.
+// --- Write to the address --------------------------------------------------
+// Already confirmed: a reminder with the unsubscribe link (someone who signs up
+// twice has usually lost the first message). Otherwise: a request to confirm,
+// and nothing more until it is answered.
 $unsub = $site . "/unsubscribe.php?t=" . urlencode($token);
-@mail(
-  $email,
-  "Kemet — you're on the list",
-  "Thank you.\n\n"
-  . "You will hear from us when the season turns in Egypt, and first when the\n"
-  . "dates that genuinely run out open: the two mornings a year the sun reaches\n"
-  . "the sanctuary at Abu Simbel, Christmas and New Year on the river, and the\n"
-  . "dahabiya weeks.\n\n"
-  . "A few times a year. Never more.\n\n"
-  . "If you would rather not: $unsub\n\n"
-  . "— Kemet\n$site\n",
-  "From: Kemet <no-reply@kemet-travel.com>\r\nContent-Type: text/plain; charset=UTF-8",
-  "-fno-reply@kemet-travel.com"
-);
+$confirmUrl = $site . "/confirm.php?t=" . urlencode($token);
+$from = "From: Kemet <no-reply@kemet-travel.com>\r\nContent-Type: text/plain; charset=UTF-8";
+if ($confirmed) {
+  @mail(
+    $email,
+    "Kemet — you're on the list",
+    "You are already on our list.\n\n"
+    . "You will hear from us when the season turns in Egypt, and first when the\n"
+    . "dates that genuinely run out open. A few times a year. Never more.\n\n"
+    . "If you would rather not: $unsub\n\n"
+    . "— Kemet\n$site\n",
+    $from,
+    "-fno-reply@kemet-travel.com"
+  );
+} else {
+  @mail(
+    $email,
+    "Kemet — please confirm your address",
+    "Someone, probably you, asked to join Kemet's list with this address.\n\n"
+    . "To confirm, open this link:\n$confirmUrl\n\n"
+    . "Until you do, nothing else will be sent to you. If it was not you, ignore\n"
+    . "this message and you will not hear from us again.\n\n"
+    . "— Kemet\n$site\n",
+    $from,
+    "-fno-reply@kemet-travel.com"
+  );
+}
 
-respond(true, $wantsJson, $already ? "You're already on the list — we've sent a reminder." : "You're on the list.");
+respond(true, $wantsJson, $confirmed ? "You're already on the list — we've sent a reminder." : "Almost done — please confirm from the email we have just sent.");

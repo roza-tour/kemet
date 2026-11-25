@@ -273,12 +273,26 @@ function words(string $q): array {
   $q = lc(trim($q));
   $parts = preg_split('/[^\p{L}\p{N}]+/u', $q, -1, PREG_SPLIT_NO_EMPTY);
   if (!is_array($parts)) return [];
-  // One-letter words match everything; leave them out unless they are all there is.
-  // …and so do the commonest English joining words, which would otherwise
-  // outrank the word the traveller actually meant.
-  $stop = ["in", "on", "at", "of", "to", "the", "and", "for", "is", "it", "an", "or", "by", "with", "from"];
+  // Short words match everything as substrings ("de" is inside half the
+  // catalogue), and so do the joining words of every language the site is in:
+  // "luna di miele" returned all 25 journeys on "di". Words of one or two
+  // letters are dropped unless they are numbers ("10 days"), and so are these,
+  // unless nothing else is left.
+  $stop = [
+    "the", "and", "for", "with", "from", "into", "our", "you", "your", "trip", "tour", "tours",
+    "der", "die", "das", "und", "mit", "für", "von", "ein", "eine", "den", "dem", "des", "nach", "auf", "reise",
+    "les", "des", "une", "pour", "avec", "sur", "dans", "voyage",
+    "della", "delle", "dei", "per", "con", "una", "uno", "viaggio",
+    "los", "las", "del", "una", "por", "para", "con", "viaje",
+    "dos", "das", "uma", "com", "para", "pelo", "pela", "viagem",
+    "для", "при", "или", "тур",
+    "dan", "yang", "untuk", "dengan", "ke", "ini", "itu", "perjalanan",
+    "dari", "bagi", "anda",
+    "في", "من", "إلى", "مع", "على", "عن", "رحلة",
+  ];
   $long = array_values(array_filter($parts, function ($w) use ($stop) {
-    return (function_exists("mb_strlen") ? mb_strlen($w, "UTF-8") : strlen($w)) > 1 && !in_array($w, $stop, true);
+    $n = function_exists("mb_strlen") ? mb_strlen($w, "UTF-8") : strlen($w);
+    return ($n > 2 || ctype_digit($w)) && !in_array($w, $stop, true);
   }));
   return array_slice($long ?: $parts, 0, 12);
 }
@@ -356,14 +370,18 @@ function tool_search_journeys(array $args): array {
   $cat = read_json("journeys.json");
   $lang = arg_lang($args);
   $terms = words(arg_text($args, "query", 200));
+  $phrase = count($terms) > 1 ? lc(trim(preg_replace('/\s+/u', " ", arg_text($args, "query", 200)))) : "";
   $place = lc(arg_text($args, "place", 60));
   $min = isset($args["min_days"]) && is_numeric($args["min_days"]) ? (int)$args["min_days"] : null;
   $max = isset($args["max_days"]) && is_numeric($args["max_days"]) ? (int)$args["max_days"] : null;
   $cap = isset($args["max_price_eur"]) && is_numeric($args["max_price_eur"]) ? (float)$args["max_price_eur"] : null;
 
+  // A word matches at the start of a word, not anywhere inside one: "luna"
+  // found "lungomare"-style fragments and "nil" any word containing it.
+  // "pyramid" still finds "pyramids".
   $hit = function (string $hay) use ($terms): int {
     $n = 0;
-    foreach ($terms as $t) if (strpos($hay, $t) !== false) $n++;
+    foreach ($terms as $t) if (preg_match('/(?<![\p{L}\p{N}])' . preg_quote($t, '/') . '/u', $hay)) $n++;
     return $n;
   };
 
@@ -383,10 +401,16 @@ function tool_search_journeys(array $args): array {
     foreach ((array)($j["i18n"] ?? []) as $tr) {
       if (is_array($tr)) $localText .= " " . ($tr["name"] ?? "") . " " . ($tr["summary"] ?? "");
     }
-    $hay = lc(($j["name"] ?? "") . " " . ($j["subtitle"] ?? "") . " " . ($j["summary"] ?? "") . " " . ($j["kind"] ?? "") . " " . ($j["duration"] ?? "") . $localText) . " " . $places;
+    // The page addresses too: a German page's address is German words
+    // ("…/flitterwochen-…"), which the names do not always repeat.
+    $slugs = str_replace(["-", "/", ".html"], " ", implode(" ", array_map(function ($u) { return (string)parse_url((string)$u, PHP_URL_PATH); }, (array)($j["pages"] ?? []))));
+    $hay = lc(($j["name"] ?? "") . " " . ($j["subtitle"] ?? "") . " " . ($j["summary"] ?? "") . " " . ($j["kind"] ?? "") . " " . ($j["duration"] ?? "") . $localText . " " . $slugs) . " " . $places;
     if ($place !== "" && strpos($hay, $place) === false) continue;
     $score = $terms ? $hit($hay) : 1;
     if ($terms && $score === 0) continue;
+    // The words in the order asked ("luna di miele") rank above the same
+    // words scattered through a longer text.
+    if ($phrase !== "" && strpos($hay, $phrase) !== false) $score += 0.5;
     // The journey as its page in the traveller's language names it.
     $loc = is_array($j["i18n"][$lang] ?? null) ? $j["i18n"][$lang] : [];
     $two = $j["priceForTwo"]["amount"] ?? null;
@@ -401,13 +425,15 @@ function tool_search_journeys(array $args): array {
       "priceFrom" => is_numeric($price) ? ["amount" => $price, "currency" => "EUR", "per" => $j["priceFrom"]["per"] ?? "person", "basis" => $j["priceFrom"]["basis"] ?? ""] : null,
       "priceForTwo" => is_numeric($two) ? ["amount" => $two, "currency" => "EUR", "per" => "person", "basis" => "a private party of two"] : null,
       "summary" => $loc["summary"] ?? ($j["summary"] ?? ""),
+      "note" => $j["note"] ?? null,
+      "date" => $j["date"] ?? null,
       "url" => $j["pages"][$lang] ?? ($j["pages"]["en"] ?? KEMET_SITE . "/tours.html"),
     ]];
   }
   // When some journey has every word asked for, the ones that share a single
   // word only are dropped: "Abu Simbel" should not bring back Abu Serga.
-  if (count($terms) > 1 && $journeys && max(array_map(function ($x) { return $x[0]; }, $journeys)) === count($terms)) {
-    $journeys = array_values(array_filter($journeys, function ($x) use ($terms) { return $x[0] === count($terms); }));
+  if (count($terms) > 1 && $journeys && (int)floor(max(array_map(function ($x) { return $x[0]; }, $journeys))) === count($terms)) {
+    $journeys = array_values(array_filter($journeys, function ($x) use ($terms) { return (int)floor($x[0]) === count($terms); }));
   }
   usort($journeys, function ($a, $b) { return $b[0] <=> $a[0]; });
 
@@ -433,12 +459,13 @@ function tool_search_journeys(array $args): array {
     }
   }
 
+  $found = array_map(function ($x) { return array_filter($x[1], function ($v) { return $v !== null; }); }, $journeys);
   return [
-    "journeys" => array_map(function ($x) { return $x[1]; }, $journeys),
+    "journeys" => $found,
     "programmes" => $programmes,
     "note" => "Prices are from-prices in euros per person. priceFrom is for a private party of six or more unless its basis says otherwise; priceForTwo is what each of two travellers pays. Quote the one that fits the party and say which it is. Programmes have no published price. Any journey can be lengthened, shortened or combined, and one that is not listed can still be planned.",
     "catalogue" => KEMET_SITE . "/tours.html",
-  ];
+  ] + (!$found && !$programmes ? ["hint" => "Nothing in the journey catalogue matched. The search tool covers every page of the site in every language, including themed pages (honeymoons, seasons, occasions)."] : []);
 }
 
 function tool_get_journey(array $args): array {

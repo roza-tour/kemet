@@ -65,7 +65,7 @@ export const ptCompare: CompText[] = [
       },
       {
         title: "Como organizamos",
-        body: "Duas de nossas viagens mais longas — Egypt Icons & Nile Cruise e Egypt Highlights Deluxe — usam o trem-leito nos dois sentidos, conforme publicadas. As duas também podem ser organizadas com voos no lugar, com essas duas noites em hotéis, por € 130 a mais por pessoa; peçam a versão com voos ao nos consultar. Todas as demais viagens que descem ao sul já são desenhadas em torno de voos.",
+        body: "Duas de nossas viagens mais longas — Egypt Icons & Nile Cruise e Egypt Highlights Deluxe — usam o trem-leito nos dois sentidos, conforme publicadas. As duas também podem ser organizadas com voos no lugar, com essas duas noites em hotéis, por € 143 a mais por pessoa; peçam a versão com voos ao nos consultar. Todas as demais viagens que descem ao sul já são desenhadas em torno de voos.",
       },
     ],
     faqs: [

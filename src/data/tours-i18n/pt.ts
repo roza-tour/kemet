@@ -85,7 +85,7 @@ export const pt: TourText[] = [
           "De carro até Alexandria pela estrada do deserto",
           "Catacumbas de Kom el-Shoqafa e Coluna de Pompeu",
           "Cidadela de Qaitbay, no local do antigo Farol, e a moderna Bibliotheca Alexandrina",
-          "Almoço de frutos do mar à beira-mar antes da volta ao Cairo",
+          "Almoço de frutos do mar à beira-mar, pago no local, antes da volta ao Cairo",
         ],
       },
       {
@@ -206,7 +206,7 @@ export const pt: TourText[] = [
         items: [
           "Catacumbas de Kom el-Shoqafa e Coluna de Pompeu",
           "A Cidadela de Qaitbay, no local do Farol",
-          "Almoço de frutos do mar na corniche; volta ao Cairo",
+          "Almoço de frutos do mar na corniche, pago no local; volta ao Cairo",
         ],
       },
       {
@@ -583,7 +583,7 @@ export const pt: TourText[] = [
         items: [
           "De carro até a costa do Mediterrâneo",
           "Catacumbas de Kom el-Shoqafa, Coluna de Pompeu e Cidadela de Qaitbay",
-          "Bibliotheca Alexandrina e almoço de frutos do mar à beira-mar",
+          "Bibliotheca Alexandrina e almoço de frutos do mar à beira-mar, pago no local",
         ],
       },
       {
@@ -688,7 +688,7 @@ export const pt: TourText[] = [
         title: "O bazar e a partida",
         items: [
           "O Khan el-Khalili com contexto — oficinas, não só barracas",
-          "Último almoço numa casa otomana restaurada",
+          "Último almoço, pago no local, numa casa otomana restaurada",
           "Traslado privativo ao aeroporto",
         ],
       },
@@ -796,7 +796,7 @@ export const pt: TourText[] = [
         items: [
           "Catacumbas de Kom el-Shoqafa",
           "Cidadela de Qaitbay e Bibliotheca Alexandrina",
-          "Coluna de Pompeu e almoço de frutos do mar à beira-mar",
+          "Coluna de Pompeu e almoço de frutos do mar à beira-mar, pago no local",
         ],
       },
       {
@@ -1143,7 +1143,7 @@ export const pt: TourText[] = [
     durationLabel: "Dia inteiro (cerca de 10 horas)",
     startPoint: "Hotel no Cairo ou em Gizé",
     summary: "O lago Qarun, as cachoeiras e dunas de Wadi el-Rayan, as baleias fósseis de Wadi al-Hitan e os oleiros da vila de Tunis — a outra metade do Egito, selvagem e verde.",
-    overview: "A uma hora e meia a sudoeste do Cairo, a depressão de Faium troca monumentos por paisagem: um grande lago salgado, cachoeiras de água doce no deserto, um vale da UNESCO com baleias fossilizadas e uma vila de oleiros na encosta. Este dia inteiro é uma completa mudança de registro em relação aos templos — horizontes amplos, aves, dunas e um almoço de peixe à beira do lago. A viagem é privativa, com guia e motorista só de vocês durante o dia todo.",
+    overview: "A uma hora e meia a sudoeste do Cairo, a depressão de Faium troca monumentos por paisagem: um grande lago salgado, cachoeiras de água doce no deserto, um vale da UNESCO com baleias fossilizadas e uma vila de oleiros na encosta. Este dia inteiro é uma completa mudança de registro em relação aos templos — horizontes amplos, aves, dunas e um almoço de peixe à beira do lago, pago no local. A viagem é privativa, com guia e motorista só de vocês durante o dia todo.",
     itinerary: [
       {
         title: "Lago Qarun",
@@ -1163,7 +1163,7 @@ export const pt: TourText[] = [
       },
       {
         title: "Vila de oleiros de Tunis e almoço à beira do lago",
-        text: "Termina-se em Tunis, a vila na encosta famosa por seus oleiros e ateliês, e depois vem um almoço de peixe tranquilo à beira do lago, antes da volta de carro ao Cairo.",
+        text: "Termina-se em Tunis, a vila na encosta famosa por seus oleiros e ateliês, e depois vem um almoço de peixe tranquilo à beira do lago, pago no local, antes da volta de carro ao Cairo.",
       },
     ],
     faqs: [
@@ -1334,8 +1334,8 @@ export const pt: TourText[] = [
     subtitle: "Um dia inteiro no Mediterrâneo — catacumbas, uma coluna romana, uma cidadela cercada pelo mar e a grande biblioteca moderna.",
     durationLabel: "Dia inteiro (cerca de 11 horas)",
     startPoint: "Hotel no Cairo ou em Gizé",
-    summary: "As Catacumbas de Kom el-Shoqafa, a Coluna de Pompeu, a Cidadela de Qaitbay no antigo local do Farol e a Bibliotheca Alexandrina, com almoço de frutos do mar.",
-    overview: "A cidade de Alexandre carrega com leveza o seu passado greco-romano ao longo da curva de uma corniche mediterrânea. Este dia inteiro passa pelas Catacumbas subterrâneas de Kom el-Shoqafa, pela imponente Coluna de Pompeu, pela Cidadela de Qaitbay, construída sobre as fundações do lendário Farol, e pela altiva e moderna Bibliotheca Alexandrina — herdeira da antiga Biblioteca. Um almoço de frutos do mar à beira-mar vem junto, naturalmente. Guia particular e traslados privativos a partir do Cairo.",
+    summary: "As Catacumbas de Kom el-Shoqafa, a Coluna de Pompeu, a Cidadela de Qaitbay no antigo local do Farol e a Bibliotheca Alexandrina, com almoço de frutos do mar, pago no local.",
+    overview: "A cidade de Alexandre carrega com leveza o seu passado greco-romano ao longo da curva de uma corniche mediterrânea. Este dia inteiro passa pelas Catacumbas subterrâneas de Kom el-Shoqafa, pela imponente Coluna de Pompeu, pela Cidadela de Qaitbay, construída sobre as fundações do lendário Farol, e pela altiva e moderna Bibliotheca Alexandrina — herdeira da antiga Biblioteca. Um almoço de frutos do mar à beira-mar, pago no local, vem junto, naturalmente. Guia particular e traslados privativos a partir do Cairo.",
     itinerary: [
       {
         title: "Catacumbas de Kom el-Shoqafa",
@@ -1351,7 +1351,7 @@ export const pt: TourText[] = [
       },
       {
         title: "Bibliotheca Alexandrina e almoço de frutos do mar",
-        text: "O dia termina na impressionante e moderna Bibliotheca Alexandrina, a Biblioteca de Alexandria renascida, depois de um almoço tranquilo de frutos do mar à beira do Mediterrâneo.",
+        text: "O dia termina na impressionante e moderna Bibliotheca Alexandrina, a Biblioteca de Alexandria renascida, depois de um almoço tranquilo de frutos do mar à beira do Mediterrâneo, pago no local.",
       },
     ],
     faqs: [

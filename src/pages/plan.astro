@@ -306,8 +306,8 @@ const jsonld = breadcrumb([["Home", "index.html"], ["Plan your journey", "plan.h
         .catch(function () { return { ok: false }; })
         .then(function (r) {
           if (r && r.ok) {
-            form.innerHTML = '<p class="pl-done">On its way — check your inbox.<br>'
-              + 'We will write again when the season turns, or when the limited dates open.</p>';
+            form.innerHTML = '<p class="pl-done">Almost done — check your inbox.<br>'
+              + 'Open the link in the email we have just sent to confirm your address.</p>';
           } else {
             btn.disabled = false; btn.textContent = "Send me the shortlist";
             msg.textContent = (r && r.message) || "That didn't go through — message us and we'll send it by hand.";

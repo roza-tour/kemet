@@ -40,6 +40,7 @@ function kemet_vid(): string {
     foreach (glob("$dir/.salt-*") as $old) @unlink($old);   // keep only today's
     @file_put_contents($saltFile, bin2hex(random_bytes(16)));
     kemet_prune_stats($dir);                                 // once a day, on the first hit
+    kemet_prune_records($dir);
   }
   $salt = (string)@file_get_contents($saltFile);
   return substr(hash("sha256", $salt . ($_SERVER["REMOTE_ADDR"] ?? "") . ($_SERVER["HTTP_USER_AGENT"] ?? "")), 0, 12);
@@ -48,8 +49,8 @@ function kemet_vid(): string {
 /**
  * Delete monthly analytics files older than 13 months — the retention period
  * the privacy policy states. Only the collector's own YYYY-MM.csv files: the
- * enquiry log and the mailing list are Kemet's business records and are never
- * touched here. Runs once a day, when the day's salt is created.
+ * enquiry log and the mailing list are Kemet's business records, with their
+ * own retention in kemet_prune_records below. Runs once a day, when the day's salt is created.
  */
 function kemet_prune_stats(string $dir): int {
   $keepFrom = gmdate("Y-m", strtotime(gmdate("Y-m-01") . " -12 months"));   // this month + 12 before it
@@ -58,6 +59,37 @@ function kemet_prune_stats(string $dir): int {
     if (basename($f, ".csv") < $keepFrom && @unlink($f)) $gone++;
   }
   return $gone;
+}
+
+/**
+ * The retention the privacy policy states for business records (owner,
+ * 25 Nov 2026): an enquiry is kept for three years and then deleted; a list
+ * sign-up that was never confirmed from its email is deleted after 30 days.
+ * Confirmed and unsubscribed list rows are kept — the second as the record
+ * that the address asked to leave. Rows are dated by their own first column
+ * ("Y-m-d H:i"); a row without a readable date is kept. Once a day.
+ */
+function kemet_prune_records(string $dir): void {
+  $rewrite = function (string $file, callable $keep): void {
+    if (!is_file($file) || ($fh = @fopen($file, "r+")) === false) return;
+    flock($fh, LOCK_EX);
+    $lines = []; $dropped = 0;
+    while (($line = fgets($fh)) !== false) {
+      if ($keep($line)) $lines[] = $line; else $dropped++;
+    }
+    if ($dropped) { ftruncate($fh, 0); rewind($fh); fwrite($fh, implode("", $lines)); }
+    flock($fh, LOCK_UN);
+    fclose($fh);
+  };
+  $enquiryCut = gmdate("Y-m-d", strtotime("-3 years"));
+  $rewrite("$dir/enquiries.csv", function ($line) use ($enquiryCut) {
+    return !preg_match('/^(\d{4}-\d{2}-\d{2})/', $line, $m) || $m[1] >= $enquiryCut;
+  });
+  $pendingCut = gmdate("Y-m-d", strtotime("-30 days"));
+  $rewrite("$dir/subscribers.csv", function ($line) use ($pendingCut) {
+    $r = str_getcsv(rtrim($line, "\r\n"));
+    return !(isset($r[7]) && $r[7] === "pending" && preg_match('/^\d{4}-\d{2}-\d{2}/', (string)$r[0]) && substr((string)$r[0], 0, 10) < $pendingCut);
+  });
 }
 
 /**

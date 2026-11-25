@@ -21,6 +21,19 @@ import { TRANSLATED_TOURS } from "@/config/tour-i18n";
 import { TRANSLATION_GROUPS, TRANSLATED_LOCALES } from "@/config/i18n";
 import { canonical } from "@/utils/links";
 import { programmes, programmeRoute } from "@/data/programmes";
+import { ultraJourneys, PEAK } from "@/data/ultra/journeys";
+import { en as ultraEn } from "@/data/ultra/en";
+import { de as ultraDe } from "@/data/ultra/de";
+import { it as ultraIt } from "@/data/ultra/it";
+import { es as ultraEs } from "@/data/ultra/es";
+import { fr as ultraFr } from "@/data/ultra/fr";
+import { ru as ultraRu } from "@/data/ultra/ru";
+import { id as ultraId } from "@/data/ultra/id";
+import { ms as ultraMs } from "@/data/ultra/ms";
+import { pt as ultraPt } from "@/data/ultra/pt";
+import { ar as ultraAr } from "@/data/ultra/ar";
+import { ECLIPSE_DAY, eclipseDayEn } from "@/data/eclipseDay";
+import { eclipseDayI18n } from "@/data/eclipseDay-i18n";
 
 export const GET: APIRoute = () => {
   const journeys = [...tours]
@@ -72,6 +85,65 @@ export const GET: APIRoute = () => {
         ...(Object.keys(i18n).length ? { i18n } : {}),
       };
     });
+
+  // Kemet Ultra and Eclipse Day were missing: the organisation's price range
+  // includes Ultra, and an assistant asked for a luxury or an eclipse trip got
+  // nothing back from the catalogue or the MCP server. Each carries its own
+  // price basis. No hotel or boat is named here.
+  const ULTRA_TEXT = { de: ultraDe, it: ultraIt, es: ultraEs, fr: ultraFr, ru: ultraRu, id: ultraId, ms: ultraMs, pt: ultraPt, ar: ultraAr } as const;
+  const groupPages = (key: string) => {
+    const g = TRANSLATION_GROUPS.find((x) => x.key === key);
+    const out: Record<string, string> = {};
+    if (g) for (const l of ["en", ...TRANSLATED_LOCALES] as const) if (g[l]) out[l] = canonical(g[l]);
+    return out;
+  };
+  const PLACE: Record<string, string> = { giza: "Giza", cairo: "Cairo", luxor: "Luxor", aswan: "Aswan", nile: "Nile", redsea: "Red Sea" };
+  for (const j of ultraJourneys) {
+    const T = ultraEn.journeys[j.id];
+    const i18n: Record<string, { name: string; summary?: string }> = {};
+    for (const l of TRANSLATED_LOCALES) {
+      const L = ULTRA_TEXT[l].journeys[j.id];
+      if (L) i18n[l] = { name: L.title, summary: L.body };
+    }
+    journeys.push({
+      id: `ultra-${j.id}`,
+      name: `Kemet Ultra — ${T.title}`,
+      subtitle: T.kicker,
+      kind: "ultra-luxury journey",
+      duration: `${j.days} Days / ${j.nights} Nights`,
+      days: j.days,
+      startsFrom: "Cairo",
+      places: [...new Set(j.stays.map((x) => PLACE[x.place] ?? x.place))],
+      privacy: "Yes — your party only",
+      priceFrom: { amount: j.price4, currency: "EUR", per: "person", basis: "a party of four" },
+      priceForTwo: { amount: j.price2, currency: "EUR", per: "person", basis: "a party of two" },
+      note: `Peak weeks (20 December – 5 January, and Easter week) carry a ${PEAK}% supplement. Private openings of monuments are granted by permit; one that is refused is taken off the price.`,
+      summary: T.body,
+      pages: groupPages("ultra"),
+      ...(Object.keys(i18n).length ? { i18n } : {}),
+    } as unknown as (typeof journeys)[number]);
+  }
+  if (new Date().toISOString().slice(0, 10) <= ECLIPSE_DAY.date) {
+    const i18n: Record<string, { name: string; summary?: string }> = {};
+    for (const l of TRANSLATED_LOCALES) {
+      const L = eclipseDayI18n[l as keyof typeof eclipseDayI18n];
+      if (L) i18n[l] = { name: L.title, summary: L.lede };
+    }
+    journeys.push({
+      id: "eclipse-day-2027",
+      name: eclipseDayEn.title,
+      kind: "day tour (small group)",
+      duration: `1 day, ${ECLIPSE_DAY.date}`,
+      date: ECLIPSE_DAY.date,
+      startsFrom: "Luxor",
+      places: ["Luxor"],
+      privacy: `Small groups of up to ${ECLIPSE_DAY.groupSize}, each with its own Egyptologist and vehicle`,
+      priceFrom: { amount: ECLIPSE_DAY.price, currency: "EUR", per: "person", basis: `a place in a group of up to ${ECLIPSE_DAY.groupSize}; hotel not included` },
+      summary: eclipseDayEn.lede,
+      pages: groupPages("guide-total-solar-eclipse-2027-luxor"),
+      ...(Object.keys(i18n).length ? { i18n } : {}),
+    } as unknown as (typeof journeys)[number]);
+  }
 
   return new Response(
     JSON.stringify(

@@ -65,7 +65,7 @@ export const idCompare: CompText[] = [
       },
       {
         title: "Cara kami mengaturnya",
-        body: "Dua perjalanan kami yang lebih panjang — Egypt Icons & Nile Cruise dan Egypt Highlights Deluxe — memakai kereta tidur di kedua arah sebagaimana diterbitkan. Keduanya juga bisa disusun dengan penerbangan sebagai gantinya, dengan dua malam itu di hotel, dengan tambahan €130 per orang; mintalah versi penerbangan saat Anda mengajukan pertanyaan. Setiap perjalanan lain yang menuju selatan sudah dirancang dengan penerbangan.",
+        body: "Dua perjalanan kami yang lebih panjang — Egypt Icons & Nile Cruise dan Egypt Highlights Deluxe — memakai kereta tidur di kedua arah sebagaimana diterbitkan. Keduanya juga bisa disusun dengan penerbangan sebagai gantinya, dengan dua malam itu di hotel, dengan tambahan €143 per orang; mintalah versi penerbangan saat Anda mengajukan pertanyaan. Setiap perjalanan lain yang menuju selatan sudah dirancang dengan penerbangan.",
       },
     ],
     faqs: [

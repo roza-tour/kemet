@@ -40,7 +40,7 @@ export const bookingTerms: BookingTerms = {
     {
       step: 1,
       heading: "Enquire — free and without obligation",
-      body: "Send us your dates, interests and party size. We reply within two hours with an initial assessment and any questions. There is no charge and no commitment at this stage.",
+      body: "Send us your dates, interests and party size. We reply within two hours with a day-by-day itinerary and a clear price. There is no charge and no commitment at this stage.",
     },
     {
       step: 2,

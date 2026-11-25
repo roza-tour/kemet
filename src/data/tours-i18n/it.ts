@@ -39,7 +39,7 @@ export const it: TourText[] = [
         "Strada del deserto fino ad Alessandria",
         "Catacombe di Kom el-Shoqafa e colonna di Pompeo",
         "Cittadella di Qaitbay sul sito del Faro e la moderna Bibliotheca Alexandrina",
-        "Pranzo di pesce sul lungomare prima del rientro al Cairo",
+        "Pranzo di pesce sul lungomare, da saldare in loco, prima del rientro al Cairo",
       ]},
       { title: "Il Cairo copto & treno notturno per Assuan", items: [
         "Chiesa Sospesa, Abu Serga e i vicoli del Cairo Vecchio",
@@ -117,7 +117,7 @@ export const it: TourText[] = [
       { title: "Giornata ad Alessandria", items: [
         "Strada verso la costa mediterranea",
         "Catacombe di Kom el-Shoqafa, colonna di Pompeo e cittadella di Qaitbay",
-        "Bibliotheca Alexandrina e pranzo di pesce sul lungomare",
+        "Bibliotheca Alexandrina e pranzo di pesce sul lungomare, da saldare in loco",
       ]},
       { title: "Il Cairo copto & treno notturno per Luxor", items: [
         "Chiesa Sospesa e Cairo Vecchio in mattinata",
@@ -187,7 +187,7 @@ export const it: TourText[] = [
       { title: "Giornata ad Alessandria", items: [
         "Catacombe di Kom el-Shoqafa e colonna di Pompeo",
         "Cittadella di Qaitbay sul sito del Faro",
-        "Pranzo di pesce sulla corniche; rientro al Cairo",
+        "Pranzo di pesce sulla corniche, da saldare in loco; rientro al Cairo",
       ]},
       { title: "Volo a sud — Assuan", items: [
         "Volo mattutino per Assuan",
@@ -344,7 +344,7 @@ export const it: TourText[] = [
       { title: "Giornata ad Alessandria", items: [
         "Catacombe di Kom el-Shoqafa",
         "Cittadella di Qaitbay e Bibliotheca Alexandrina",
-        "Colonna di Pompeo e pranzo di pesce sul lungomare",
+        "Colonna di Pompeo e pranzo di pesce sul lungomare, da saldare in loco",
       ]},
       { title: "Giza & Saqqara", items: [
         "Piramidi di Giza e Grande Sfinge",
@@ -710,7 +710,7 @@ export const it: TourText[] = [
       ]},
       { title: "Il bazar & partenza", items: [
         "Khan el-Khalili con il suo contesto — le botteghe, non solo le bancarelle",
-        "Pranzo d'addio in una casa ottomana restaurata",
+        "Pranzo d'addio in una casa ottomana restaurata, da saldare in loco",
         "Trasferimento privato in aeroporto",
       ]},
     ],
@@ -927,13 +927,13 @@ export const it: TourText[] = [
     durationLabel: "Giornata intera (≈10 ore)",
     startPoint: "Hotel al Cairo o a Giza",
     summary: "Il lago Qarun, le cascate e le dune di Wadi el-Rayan, le balene fossili di Wadi al-Hitan e i ceramisti del villaggio di Tunis — l'altra metà dell'Egitto, selvatica e verde.",
-    overview: "A un'ora e mezza a sud-ovest del Cairo, la depressione del Fayyum scambia i monumenti con il paesaggio: un grande lago salato, cascate d'acqua dolce in mezzo al deserto, una valle patrimonio UNESCO piena di balene fossilizzate e un villaggio di ceramisti su una collina. Questa giornata intera cambia completamente registro rispetto ai templi — orizzonti larghi, uccelli, dune e un pranzo di pesce in riva al lago. Il viaggio è privato, con la vostra guida e il vostro autista per tutta la giornata.",
+    overview: "A un'ora e mezza a sud-ovest del Cairo, la depressione del Fayyum scambia i monumenti con il paesaggio: un grande lago salato, cascate d'acqua dolce in mezzo al deserto, una valle patrimonio UNESCO piena di balene fossilizzate e un villaggio di ceramisti su una collina. Questa giornata intera cambia completamente registro rispetto ai templi — orizzonti larghi, uccelli, dune e un pranzo di pesce in riva al lago, da saldare in loco. Il viaggio è privato, con la vostra guida e il vostro autista per tutta la giornata.",
     itinerary: [
       { title: "Il lago Qarun", text: "Si comincia sulla riva del lago Qarun, l'antico lago Meride, dove si radunano gli uccelli migratori e le vecchie barche da pesca si allineano sull'acqua. Un primo assaggio dell'oasi prima di entrare più a fondo nel deserto." },
       { title: "Le cascate di Wadi el-Rayan", text: "Le cascate più grandi d'Egitto, dove i due laghi del Rayan si riversano l'uno nell'altro tra le dune. Il tempo per camminare lungo la riva e assorbire un paesaggio che non somiglia in nulla alla valle del Nilo." },
       { title: "La valle delle balene (Wadi al-Hitan)", text: "Patrimonio dell'umanità UNESCO, custodisce scheletri di balene primordiali di 40 milioni di anni, conservati dove un tempo c'era un mare antico. Un museo all'aperto del tempo profondo, in mezzo alla sabbia." },
       { title: "Il lago magico & la montagna di Mudawara", text: "Il cosiddetto lago magico, alimentato da sorgenti minerali e capace di cambiare colore con la luce, sotto le dune di Mudawara — luogo preferito per il sandboarding e per un momento di silenzio." },
-      { title: "Il villaggio di Tunis & pranzo sul lago", text: "Si chiude a Tunis, il villaggio collinare famoso per i suoi ceramisti e i loro laboratori, poi un pranzo di pesce senza fretta in riva al lago prima del rientro al Cairo." },
+      { title: "Il villaggio di Tunis & pranzo sul lago", text: "Si chiude a Tunis, il villaggio collinare famoso per i suoi ceramisti e i loro laboratori, poi un pranzo di pesce senza fretta in riva al lago, da saldare in loco, prima del rientro al Cairo." },
     ],
     faqs: [
       { q: "Il Fayyum è adatto alle famiglie?", a: "Sì — il misto di laghi, dune e fossili funziona a ogni età. Il terreno è facile, con brevi passeggiate e non escursioni impegnative." },
@@ -1004,13 +1004,13 @@ export const it: TourText[] = [
     subtitle: "Una giornata intera sul Mediterraneo — catacombe, una colonna romana, una cittadella sul mare e la grande biblioteca moderna.",
     durationLabel: "Giornata intera (≈11 ore)",
     startPoint: "Hotel al Cairo o a Giza",
-    summary: "Le catacombe di Kom el-Shoqafa, la colonna di Pompeo, la cittadella di Qaitbay sul sito dell'antico faro e la Bibliotheca Alexandrina, con pranzo di pesce.",
-    overview: "La città di Alessandro porta con leggerezza il suo passato greco-romano lungo una corniche che segue la curva del Mediterraneo. Questa giornata intera comprende le catacombe sotterranee di Kom el-Shoqafa, l'altissima colonna di Pompeo, la cittadella di Qaitbay costruita sulle fondazioni del leggendario faro di Alessandria e la slanciata Bibliotheca Alexandrina, erede dell'antica Biblioteca. Un pranzo di pesce sul mare fa parte del pacchetto. Guida privata e trasferimenti dal Cairo.",
+    summary: "Le catacombe di Kom el-Shoqafa, la colonna di Pompeo, la cittadella di Qaitbay sul sito dell'antico faro e la Bibliotheca Alexandrina, con pranzo di pesce da saldare in loco.",
+    overview: "La città di Alessandro porta con leggerezza il suo passato greco-romano lungo una corniche che segue la curva del Mediterraneo. Questa giornata intera comprende le catacombe sotterranee di Kom el-Shoqafa, l'altissima colonna di Pompeo, la cittadella di Qaitbay costruita sulle fondazioni del leggendario faro di Alessandria e la slanciata Bibliotheca Alexandrina, erede dell'antica Biblioteca. Un pranzo di pesce sul mare, da saldare in loco, completa la giornata. Guida privata e trasferimenti dal Cairo.",
     itinerary: [
       { title: "Le catacombe di Kom el-Shoqafa", text: "Si scende nelle catacombe di Kom el-Shoqafa, una necropoli romana su più livelli dove stili egizi e classici si fondono nella pietra scolpita — una delle meraviglie più singolari dell'antichità." },
       { title: "La colonna di Pompeo", text: "Visita alla colonna di Pompeo, la grande colonna trionfale romana che si eleva dalle rovine del Serapeo, affiancata da sfingi di granito." },
       { title: "La cittadella di Qaitbay", text: "Si percorrono le mura sul mare della cittadella di Qaitbay, costruita esattamente dove un tempo si ergeva il faro di Alessandria, una delle meraviglie del mondo antico." },
-      { title: "Bibliotheca Alexandrina & pranzo di pesce", text: "Si chiude alla spettacolare Bibliotheca Alexandrina, la Biblioteca di Alessandria rinata, dopo un pranzo di pesce senza fretta sul fronte mediterraneo." },
+      { title: "Bibliotheca Alexandrina & pranzo di pesce", text: "Si chiude alla spettacolare Bibliotheca Alexandrina, la Biblioteca di Alessandria rinata, dopo un pranzo di pesce senza fretta sul fronte mediterraneo, da saldare in loco." },
     ],
     faqs: [
       { q: "Quanto dura il viaggio dal Cairo?", a: "Dalle due ore e mezza alle tre per tratta sulla strada del deserto: è per questo che si tratta di una giornata lunga, ma che ripaga." },

@@ -92,6 +92,9 @@ export const TWO_TRAVELLERS_UPLIFT = 0.1;
  * a season, never from the build clock: a date that moves on every publish is
  * not a statement about the prices.
  */
+// 2027 prices (owner, 25 Nov 2026): every journey and day tour, and the
+// flight-version supplement, raised by 10% on the 2026 figures and rounded to
+// the euro.
 export const PRICES_VALID_UNTIL = "2027-12-31";
 export const priceForTwo = (t: { price: number; priceBasisPax?: number }): number | undefined =>
   t.priceBasisPax && t.priceBasisPax > 2 ? Math.round(t.price * (1 + TWO_TRAVELLERS_UPLIFT)) : undefined;
@@ -131,7 +134,7 @@ export const tours: Tour[] = [
     cities: ["Cairo", "Giza", "Alexandria", "Aswan", "Luxor"],
     visiting: "Cairo · Giza · Alexandria · Aswan · Luxor",
     isPrivate: sharedShipNote,
-    price: 1915,
+    price: 2107,
     priceBasisPax: PRICE_BASIS_PAX,
     summary:
       "Our signature journey: Cairo, Alexandria, a sleeper train south, and a three-night Nile cruise from Aswan to Luxor — every layer of Egypt in one arc.",
@@ -156,7 +159,7 @@ export const tours: Tour[] = [
           "Drive to Alexandria along the desert road",
           "Catacombs of Kom El Shoqafa and Pompey's Pillar",
           "Citadel of Qaitbay on the old Pharos site and the modern Bibliotheca Alexandrina",
-          "Seafront seafood lunch before returning to Cairo",
+          "A seafront seafood lunch, paid locally, before returning to Cairo",
         ],
       },
       {
@@ -242,7 +245,7 @@ export const tours: Tour[] = [
     ],
     // Both sleeper-train nights replaced by domestic flights and two hotel
     // nights — the version for the traveller who puts comfort before cost.
-    flyOption: { extra: 130, replaces: "the two sleeper-train nights" },
+    flyOption: { extra: 143, replaces: "the two sleeper-train nights" },
     comfort: {
       walking: "Moderate",
       sleep: "Hotels in Cairo and Luxor, three nights on the Nile cruise, and two nights on the sleeper train — hotels instead on the flight version",
@@ -250,12 +253,13 @@ export const tours: Tour[] = [
     },
     included: [
       ...baseIncluded.slice(0, 1),
-      "9 nights' accommodation — hotels and a Nile cruise",
+      // Nine nights: four in hotels, three on the cruise, two on the train.
+      "7 nights' accommodation — hotels and a Nile cruise; the other two nights are on the sleeper train",
       "3-night full-board Nile cruise, Aswan to Luxor",
-      "Sleeper-train berths Cairo–Upper Egypt (both directions)",
+      "Sleeper-train berths Cairo–Upper Egypt (both directions), with dinner and breakfast aboard",
       ...baseIncluded.slice(1),
     ],
-    excluded: cruiseExcluded,
+    excluded: cruiseExcluded.map((x) => (x === "Meals, except on board the Nile cruise" ? "Meals, except on board the Nile cruise and on the sleeper train" : x)),
     faqs: [
       {
         q: "Is the Nile cruise private?",
@@ -304,7 +308,7 @@ export const tours: Tour[] = [
     cities: ["Cairo", "Giza", "Alexandria", "Luxor"],
     visiting: "Cairo · Giza · Alexandria · Luxor",
     isPrivate: privateNote,
-    price: 1179,
+    price: 1297,
     priceBasisPax: PRICE_BASIS_PAX,
     summary:
       "The headline acts of Egypt in seven days — the Egyptian Museum, Alexandria, the temples and tombs of Luxor, and the Pyramids of Giza.",
@@ -328,7 +332,7 @@ export const tours: Tour[] = [
         items: [
           "Drive to the Mediterranean coast",
           "Catacombs of Kom El Shoqafa, Pompey's Pillar and the Citadel of Qaitbay",
-          "Bibliotheca Alexandrina and a seafront seafood lunch",
+          "Bibliotheca Alexandrina and a seafront seafood lunch, paid locally",
         ],
       },
       {
@@ -384,7 +388,7 @@ export const tours: Tour[] = [
     ],
     // Both sleeper-train nights replaced by domestic flights and two hotel
     // nights — the version for the traveller who puts comfort before cost.
-    flyOption: { extra: 130, replaces: "the two sleeper-train nights" },
+    flyOption: { extra: 143, replaces: "the two sleeper-train nights" },
     comfort: {
       walking: "Moderate",
       sleep: "Hotels in Cairo and Luxor, and two nights on the sleeper train — hotels instead on the flight version",
@@ -392,11 +396,12 @@ export const tours: Tour[] = [
     },
     included: [
       ...baseIncluded.slice(0, 1),
-      "6 nights' hotel accommodation",
-      "Sleeper-train berths Cairo–Luxor (both directions)",
+      // Six nights: four in hotels, two on the train.
+      "4 nights' hotel accommodation; the other two nights are on the sleeper train",
+      "Sleeper-train berths Cairo–Luxor (both directions), with dinner and breakfast aboard",
       ...baseIncluded.slice(1),
     ],
-    excluded: baseExcluded,
+    excluded: baseExcluded.map((x) => (x === "Meals" ? "Meals, except dinner and breakfast on the sleeper train" : x)),
     faqs: [
       {
         q: "How much walking should I expect?",
@@ -439,7 +444,7 @@ export const tours: Tour[] = [
     cities: ["Cairo", "Giza", "Alexandria"],
     visiting: "Cairo · Giza · Alexandria",
     isPrivate: privateNote,
-    price: 618,
+    price: 680,
     priceBasisPax: PRICE_BASIS_PAX,
     summary:
       "A compact northern journey — the Egyptian Museum, Alexandria's Greco-Roman layers, the Pyramids of Giza and medieval Cairo.",
@@ -463,7 +468,7 @@ export const tours: Tour[] = [
         items: [
           "Catacombs of Kom El Shoqafa",
           "Citadel of Qaitbay and the Bibliotheca Alexandrina",
-          "Pompey's Pillar and a seafront seafood lunch",
+          "Pompey's Pillar and a seafront seafood lunch, paid locally",
         ],
       },
       {
@@ -540,7 +545,7 @@ export const tours: Tour[] = [
     cities: ["Cairo", "Luxor", "Aswan"],
     visiting: "Luxor · Aswan",
     isPrivate: privateNote,
-    price: 527,
+    price: 580,
     priceBasisPax: PRICE_BASIS_PAX,
     flightsIncluded: true,
     summary:
@@ -635,13 +640,13 @@ export const tours: Tour[] = [
     cities: ["Fayoum"],
     visiting: "Lake Qarun · Wadi El Rayan · Wadi Al-Hitan · Tunis village",
     isPrivate: privateNote,
-    price: 139,
+    price: 153,
     priceBasisPax: PRICE_BASIS_PAX,
     ticketsExcluded: true,
     summary:
       "Lake Qarun, the waterfalls and dunes of Wadi El Rayan, the fossil whales of Wadi Al-Hitan and the potters of Tunis village — Egypt's wild, green other half.",
     overview:
-      "An hour and a half southwest of Cairo, the Fayoum depression trades monuments for landscape: a great salt lake, freshwater waterfalls in the desert, a UNESCO valley of fossilised whales, and a hillside village of potters. This full day is a complete change of register from the temples — wide horizons, birdlife, dunes and a lakeside fish lunch. Travel is private, with your guide and driver for the whole day.",
+      "An hour and a half southwest of Cairo, the Fayoum depression trades monuments for landscape: a great salt lake, freshwater waterfalls in the desert, a UNESCO valley of fossilised whales, and a hillside village of potters. This full day is a complete change of register from the temples — wide horizons, birdlife, dunes and a lakeside fish lunch, paid locally. Travel is private, with your guide and driver for the whole day.",
     itinerary: [
       {
         label: "Stop",
@@ -671,7 +676,7 @@ export const tours: Tour[] = [
         label: "Stop",
         num: "05",
         title: "Tunis pottery village & lakeside lunch",
-        text: "Finish in Tunis, the hillside village famous for its potters and studios, then a relaxed fish lunch by the lake before the drive back to Cairo.",
+        text: "Finish in Tunis, the hillside village famous for its potters and studios, then a relaxed fish lunch by the lake, paid locally, before the drive back to Cairo.",
       },
     ],
     included: [
@@ -722,7 +727,7 @@ export const tours: Tour[] = [
     cities: ["Giza"],
     visiting: "Giza plateau · Great Sphinx · GEM",
     isPrivate: privateNote,
-    price: 79,
+    price: 87,
     priceBasisPax: PRICE_BASIS_PAX,
     ticketsExcluded: true,
     summary:
@@ -813,7 +818,7 @@ export const tours: Tour[] = [
     cities: ["Saqqara", "Memphis", "Dahshur"],
     visiting: "Saqqara · Memphis · Dahshur",
     isPrivate: privateNote,
-    price: 68,
+    price: 75,
     priceBasisPax: PRICE_BASIS_PAX,
     ticketsExcluded: true,
     summary:
@@ -888,7 +893,7 @@ export const tours: Tour[] = [
     cities: ["Cairo"],
     visiting: "Coptic Cairo · Saladin Citadel",
     isPrivate: privateNote,
-    price: 80,
+    price: 88,
     priceBasisPax: PRICE_BASIS_PAX,
     ticketsExcluded: true,
     summary:
@@ -963,7 +968,7 @@ export const tours: Tour[] = [
     cities: ["Cairo"],
     visiting: "Egyptian Museum · NMEC",
     isPrivate: privateNote,
-    price: 64,
+    price: 70,
     priceBasisPax: PRICE_BASIS_PAX,
     ticketsExcluded: true,
     summary:
@@ -1034,11 +1039,11 @@ export const tours: Tour[] = [
     cities: ["Alexandria"],
     visiting: "Catacombs · Qaitbay · Bibliotheca Alexandrina",
     isPrivate: privateNote,
-    price: 57,
+    price: 63,
     priceBasisPax: PRICE_BASIS_PAX,
     ticketsExcluded: true,
     summary:
-      "The Catacombs of Kom El Shoqafa, Pompey's Pillar, the Citadel of Qaitbay on the old Pharos site and the Bibliotheca Alexandrina, with a seafood lunch.",
+      "The Catacombs of Kom El Shoqafa, Pompey's Pillar, the Citadel of Qaitbay on the old Pharos site and the Bibliotheca Alexandrina, with a seafood lunch paid locally.",
     overview:
       "Alexander's city wears its Greco-Roman past lightly along a curving Mediterranean corniche. This full day takes in the underground Catacombs of Kom El Shoqafa, the towering Pompey's Pillar, the Citadel of Qaitbay built on the foundations of the legendary Pharos lighthouse, and the soaring modern Bibliotheca Alexandrina — heir to the ancient Library. A seafront seafood lunch comes with the territory. Private guide and transfers from Cairo.",
     itinerary: [
@@ -1064,7 +1069,7 @@ export const tours: Tour[] = [
         label: "Stop",
         num: "04",
         title: "Bibliotheca Alexandrina & seafood lunch",
-        text: "Finish at the dramatic modern Bibliotheca Alexandrina, the reborn Library of Alexandria, after a relaxed seafood lunch on the Mediterranean front.",
+        text: "Finish at the dramatic modern Bibliotheca Alexandrina, the reborn Library of Alexandria, after a relaxed seafood lunch on the Mediterranean front, paid locally.",
       },
     ],
     included: [
@@ -1116,7 +1121,7 @@ export const tours: Tour[] = [
     cities: ["Giza"],
     visiting: "Giza plateau · Great Sphinx",
     isPrivate: privateNote,
-    price: 66,
+    price: 73,
     priceBasisPax: PRICE_BASIS_PAX,
     ticketsExcluded: true,
     summary:
@@ -1197,7 +1202,7 @@ export const tours: Tour[] = [
     cities: ["Cairo"],
     visiting: "Downtown Cairo · street-food quarters",
     isPrivate: privateNote,
-    price: 59,
+    price: 65,
     priceBasisPax: PRICE_BASIS_PAX,
     // The owner, 15 Oct 2026: this price is for a private party of two or
     // more, not the six the other day tours are quoted from.
@@ -1324,7 +1329,7 @@ export const tours: Tour[] = [
     cities: ["Aswan", "Kom Ombo", "Edfu", "Luxor"],
     visiting: "Aswan · Kom Ombo · Edfu · Luxor",
     isPrivate: sharedShipNote,
-    price: 820,
+    price: 902,
     priceBasisPax: PRICE_BASIS_PAX,
     summary:
       "The essential Nile cruise, done properly — Philae and the High Dam, three nights afloat past Kom Ombo and Edfu, and Luxor's East and West Banks with your own Egyptologist.",
@@ -1426,7 +1431,7 @@ export const tours: Tour[] = [
     cities: ["Luxor", "Edfu", "Kom Ombo", "Aswan"],
     visiting: "Luxor · Edfu · Kom Ombo · Aswan",
     isPrivate: privateNote,
-    price: 1018,
+    price: 1120,
     priceBasisPax: PRICE_BASIS_PAX,
     summary:
       "The deep-history heart of Egypt by private road journey — Karnak, the Valley of the Kings, Edfu, Kom Ombo and Philae, with time to actually absorb them.",
@@ -1546,7 +1551,7 @@ export const tours: Tour[] = [
     visiting: "Cairo · Giza · Aswan · Luxor",
     isPrivate: sharedShipNote,
     // Owner, 1 Nov 2026: raised 10% (from 1,859) and priced for the couple.
-    price: 2045,
+    price: 2250,
     priceBasisPax: 2,
     summary:
       "Egypt as a honeymoon should be — private sunrise at the pyramids, a felucca at golden hour, three nights on the Nile and suites chosen for the view.",
@@ -1702,7 +1707,7 @@ export const tours: Tour[] = [
     cities: ["Cairo", "Giza", "Luxor", "Aswan"],
     visiting: "Cairo · Giza · Luxor · Aswan",
     isPrivate: privateNote,
-    price: 1524,
+    price: 1676,
     priceBasisPax: PRICE_BASIS_PAX,
     summary:
       "Egypt with children done right: short guided mornings, family-specialist Egyptologists, pool afternoons, and the moments no classroom can match.",
@@ -1848,7 +1853,7 @@ export const tours: Tour[] = [
     cities: ["Cairo", "Giza", "Luxor", "Aswan"],
     visiting: "Cairo · Giza · Luxor · Aswan",
     isPrivate: privateNote,
-    price: 1419,
+    price: 1561,
     priceBasisPax: PRICE_BASIS_PAX,
     summary:
       "An itinerary built backwards from the light: early-access Giza at sunrise, Karnak before the crowds, an optional balloon over Thebes and feluccas at golden hour.",
@@ -1989,7 +1994,7 @@ export const tours: Tour[] = [
     cities: ["Cairo", "Giza", "Alexandria", "Aswan", "Abu Simbel", "Luxor", "Sharm El Sheikh"],
     visiting: "Cairo · Alexandria · Aswan · Abu Simbel · Luxor · Red Sea",
     isPrivate: sharedShipNote,
-    price: 2728,
+    price: 3001,
     priceBasisPax: PRICE_BASIS_PAX,
     flightsIncluded: true,
     summary:
@@ -2019,7 +2024,7 @@ export const tours: Tour[] = [
         label: "Day",
         num: "04",
         title: "Alexandria day",
-        items: ["Catacombs of Kom El Shoqafa and Pompey's Pillar", "The Citadel of Qaitbay on the Pharos site", "Seafood lunch on the corniche; return to Cairo"],
+        items: ["Catacombs of Kom El Shoqafa and Pompey's Pillar", "The Citadel of Qaitbay on the Pharos site", "Seafood lunch on the corniche, paid locally; return to Cairo"],
       },
       {
         label: "Day",
@@ -2140,7 +2145,7 @@ export const tours: Tour[] = [
     cities: ["Cairo", "Giza", "Saqqara", "Memphis"],
     visiting: "Cairo · Giza · Saqqara · Memphis",
     isPrivate: privateNote,
-    price: 875,
+    price: 963,
     priceBasisPax: PRICE_BASIS_PAX,
     summary:
       "A deep, slow reading of the world's greatest layered city — its two museums, three faiths, medieval streets and the necropolis where the pyramid was invented.",
@@ -2193,7 +2198,7 @@ export const tours: Tour[] = [
         title: "The bazaar & departure",
         items: [
           "Khan el-Khalili with context — workshops, not just stalls",
-          "Final lunch in a restored Ottoman house",
+          "Final lunch in a restored Ottoman house, paid locally",
           "Private transfer to the airport",
         ],
       },
@@ -2257,7 +2262,7 @@ export const tours: Tour[] = [
     cities: ["Sharm El Sheikh", "Ras Mohammed"],
     visiting: "Sharm El Sheikh · Ras Mohammed",
     isPrivate: privateNote,
-    price: 979,
+    price: 1077,
     priceBasisPax: PRICE_BASIS_PAX,
     summary:
       "The Red Sea done with intent — a private reef-boat day in Ras Mohammed, a Sinai desert evening under the stars, and space left deliberately empty.",
@@ -2370,7 +2375,7 @@ export const tours: Tour[] = [
     cities: ["Sharm El Sheikh", "Ras Mohammed", "Tiran"],
     visiting: "Ras Mohammed · Strait of Tiran",
     isPrivate: privateNote,
-    price: 792,
+    price: 871,
     priceBasisPax: PRICE_BASIS_PAX,
     summary:
       "Four guided boat dives across the two best site groups in Sinai — Ras Mohammed and Tiran — with a PADI centre we have vetted, after a house-reef check dive.",
@@ -2476,7 +2481,7 @@ export const tours: Tour[] = [
     cities: ["Luxor"],
     visiting: "Karnak · Luxor Temple · West Bank",
     isPrivate: privateNote,
-    price: 544,
+    price: 598,
     priceBasisPax: PRICE_BASIS_PAX,
     summary:
       "Luxor without the sprint: Karnak at opening, the Valley of the Kings before the heat, Hatshepsut's terraces and the Avenue of Sphinxes after dark.",
@@ -2572,7 +2577,7 @@ export const tours: Tour[] = [
     cities: ["Cairo", "Giza"],
     visiting: "Giza · GEM · Islamic Cairo",
     isPrivate: privateNote,
-    price: 600,
+    price: 660,
     priceBasisPax: PRICE_BASIS_PAX,
     summary:
       "The essential Cairo, concierge-run: fast-track immigration, private plateau morning, the Grand Egyptian Museum, and lantern-lit Islamic Cairo by night.",
@@ -2668,7 +2673,7 @@ export const tours: Tour[] = [
     cities: ["Alexandria"],
     visiting: "Catacombs · Qaitbay · Bibliotheca · Montaza",
     isPrivate: privateNote,
-    price: 402,
+    price: 442,
     priceBasisPax: PRICE_BASIS_PAX,
     summary:
       "Alexandria with its missing half restored: the Greco-Roman sites by day, then the corniche at dusk, seafood by the water and the morning light day-trips never catch.",
@@ -2751,7 +2756,7 @@ export const tours: Tour[] = [
     cities: ["Abu Simbel"],
     visiting: "Great Temple · Temple of Nefertari",
     isPrivate: privateNote,
-    price: 160,
+    price: 176,
     priceBasisPax: PRICE_BASIS_PAX,
     ticketsExcluded: true,
     summary:

@@ -11,6 +11,7 @@
 // to an Umrah in Saudi Arabia.
 // ---------------------------------------------------------------------------
 import { legalPages } from "./legal/build";
+import { companyPages } from "./company/build";
 import type { LocalizedPage } from "./types";
 import { articlePages } from "./articles/build";
 import { msArticles, msArtLabels } from "./articles/ms";
@@ -45,7 +46,7 @@ export const ms: LocalizedPage[] = [
     crumb: "Utama",
     h1: "Mesir, untuk rombongan anda sahaja",
     standfirst:
-      "Tiada bas pelancong, tiada tarikh berlepas yang ditetapkan, tiada orang luar dalam perjalanan anda.",
+      "Tiada bas pelancong, tiada tarikh berlepas yang ditetapkan, tiada orang luar dalam kenderaan anda atau bersama pemandu anda.",
     lede:
       "Mesir bukan satu negara, tetapi lapan dunia budaya yang bertindan di sepanjang satu sungai. Kemet menyusun perjalanan persendirian yang tidak tergesa-gesa merentasi dunia-dunia itu — dari Piramid Giza dan Al-Azhar hingga kuil-kuil Luxor dan pelayaran Sungai Nil ke Aswan. Setiap perjalanan dibawa oleh Egyptologist berlesen Kementerian Pelancongan Mesir, dan disusun sepenuhnya mengikut anda.",
     facts: [
@@ -261,7 +262,7 @@ export const ms: LocalizedPage[] = [
     standfirst:
       "Julat yang sebenar — dan lima keputusan yang benar-benar menggerakkan angkanya.",
     lede:
-      "Percutian persendirian di Mesir lazimnya berada dalam julat 200–450 euro seorang sehari, tidak termasuk tiket penerbangan antarabangsa. Jurang antara kedua-dua angka itu bukan kebetulan: ia terhasil daripada lima keputusan yang anda buat semasa merancang. Eloklah mengenali kelima-limanya sebelum membandingkan dua sebut harga.",
+      "Percutian persendirian di Mesir lazimnya berada dalam julat 200–450 euro seorang sehari, tidak termasuk tiket penerbangan antarabangsa. Perjalanan berbilang hari Kemet sendiri berjumlah 170–226 euro seorang sehari bagi rombongan enam orang atau lebih, dan 187–249 euro bagi dua pengembara: sekitar had bawah julat ini, dan bagi rombongan yang lebih besar sedikit di bawahnya. Jurang antara kedua-dua angka itu bukan kebetulan: ia terhasil daripada lima keputusan yang anda buat semasa merancang. Eloklah mengenali kelima-limanya sebelum membandingkan dua sebut harga.",
     facts: [
       { label: "Peringkat asas", value: "±200 € seorang sehari" },
       { label: "Pertengahan", value: "±300 € seorang sehari" },
@@ -568,4 +569,6 @@ export const ms: LocalizedPage[] = [
   ...articlePages("ms", msArtLabels, msArticles),
   // Privacy, terms and booking (i18n/legal).
   ...legalPages("ms"),
+  // About and Contact (i18n/company).
+  ...companyPages("ms"),
 ];
