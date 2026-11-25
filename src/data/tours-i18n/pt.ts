@@ -763,7 +763,7 @@ export const pt: TourText[] = [
       early: "Só se vocês escolherem a excursão opcional a Abu Simbel no último dia",
     },
     faqs: [
-      { q: "Por que ir de carro de Luxor a Assuã em vez de fazer um cruzeiro?", a: "A estrada permite ver Edfu e Kom Ombo sem se prender ao horário fixo de um navio de cruzeiro, e garante todas as noites num quarto de hotel de tamanho normal. Se preferirem navegar, o nosso cruzeiro Nile in Style faz o mesmo trecho pela água." },
+      { q: "Por que ir de carro de Luxor a Assuã em vez de fazer um cruzeiro?", a: "A estrada permite ver Edfu e Kom Ombo sem se prender ao horário fixo de um navio de cruzeiro, e garante todas as noites num quarto de hotel de tamanho normal. Se preferirem navegar, o nosso cruzeiro pelo Nilo faz o mesmo trecho pela água." },
       { q: "Esta viagem inclui Abu Simbel?", a: "Não por padrão — mas Abu Simbel se encaixa sem dificuldade como excursão bem cedo a partir de Assuã no último dia, de carro privativo ou num voo curto. Avisem na reserva, para que possamos garantir os horários." },
       { q: "Como chegamos a Luxor para começar?", a: "Num voo da EgyptAir a partir do Cairo (55 minutos) ou no trem-leito noturno. As duas opções se acrescentam facilmente; o roteiro começa assim que vocês chegarem." },
     ],

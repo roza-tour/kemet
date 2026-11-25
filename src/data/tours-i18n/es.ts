@@ -771,7 +771,7 @@ export const es: TourText[] = [
       early: "Solo si elige la excursión opcional a Abu Simbel el último día",
     },
     faqs: [
-      { q: "¿Por qué ir de Luxor a Asuán por carretera y no en crucero?", a: "La carretera permite ver Edfu y Kom Ombo sin atarse al horario fijo de un barco de crucero, y todas las noches se duerme en una habitación de hotel de tamaño completo. Si prefiere navegar, nuestro crucero Nile in Style recorre el mismo tramo por el agua." },
+      { q: "¿Por qué ir de Luxor a Asuán por carretera y no en crucero?", a: "La carretera permite ver Edfu y Kom Ombo sin atarse al horario fijo de un barco de crucero, y todas las noches se duerme en una habitación de hotel de tamaño completo. Si prefiere navegar, nuestro crucero por el Nilo recorre el mismo tramo por el agua." },
       { q: "¿Este viaje incluye Abu Simbel?", a: "No de serie, pero encaja sin problemas como excursión a primera hora desde Asuán el último día, en coche privado o en un vuelo corto. Avísenos al reservar para que podamos asegurar los horarios." },
       { q: "¿Cómo se llega a Luxor para empezar?", a: "En un vuelo de EgyptAir desde El Cairo (55 minutos) o en el tren nocturno. Ambos se añaden fácilmente; el itinerario comienza en cuanto llegue." },
     ],

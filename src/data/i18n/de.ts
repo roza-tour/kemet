@@ -101,7 +101,7 @@ export const de: LocalizedPage[] = [
     },
     moreLabel: "Die vollständige Website",
     moreText:
-      "Diese Seiten sind eine Auswahl auf Deutsch. Der vollständige Kemet-Katalog — alle Reisen, Reiseziele, Erlebnisse und Reiseführer — steht auf Englisch zur Verfügung. Wir antworten selbstverständlich auf Deutsch.",
+      "Alle Reisen, Reiseziele, Erlebnisse und die Monatsseiten dieser Website gibt es auf Deutsch; die englische Seite hat nur wenige Seiten mehr. Wir antworten auf Deutsch.",
     links: [{ label: "Weihnachten & Silvester in Ägypten", route: "de/weihnachten-in-aegypten.html" }],
   },
 
@@ -162,16 +162,16 @@ export const de: LocalizedPage[] = [
     },
     moreLabel: "Alle Reisen ansehen",
     moreText:
-      "Der vollständige Katalog mit allen Reisen, Reisezielen und Erlebnissen steht auf Englisch zur Verfügung. Wir beraten und antworten auf Deutsch.",
+      "Jede Reise hier hat ihre eigene Seite auf Deutsch, mit dem Programm Tag für Tag und dem Preis. Schreiben Sie uns auf Deutsch, wir antworten auf Deutsch.",
   },
 
   // ===== Nilkreuzfahrt =====================================================
   {
     groupId: "nile-cruise",
     symbol: "fish",
-    title: "Nilkreuzfahrt Luxor–Assuan privat | Kemet",
+    title: "Nilkreuzfahrt Luxor–Assuan mit privater Führung | Kemet",
     description:
-      "Private Nilkreuzfahrt zwischen Luxor und Assuan mit eigenem Ägyptologen — Tempel vom Wasser aus, Dahabiya oder Schiff, was wirklich zählt.",
+      "Nilkreuzfahrt zwischen Luxor und Assuan mit eigener ägyptologischer Reiseleitung — Tempel vom Wasser aus, Dahabiya oder Schiff, was wirklich zählt.",
     keywords:
       "nilkreuzfahrt, nilkreuzfahrt luxor assuan, dahabiya nil, nilkreuzfahrt privat, ägypten schiffsreise, kom ombo edfu",
     crumb: "Nilkreuzfahrt",
@@ -229,7 +229,7 @@ export const de: LocalizedPage[] = [
     ],
     moreLabel: "Mehr zur Nilstrecke",
     moreText:
-      "Ausführliche Reiseverläufe, Schiffsbeschreibungen und der vollständige Reisekatalog stehen auf Englisch zur Verfügung.",
+      "Die viertägige Kreuzfahrt steht oben Tag für Tag, mit ihrem Preis. Schreiben Sie uns auf Deutsch, um nach Terminen oder einer privaten Dahabiya zu fragen.",
   },
 
   // ===== Kosten ============================================================
@@ -295,7 +295,7 @@ export const de: LocalizedPage[] = [
     },
     moreLabel: "Ausführliche Preisübersicht",
     moreText:
-      "Die vollständige Preis- und Leistungsübersicht mit allen Reisen steht auf Englisch zur Verfügung.",
+      "Jede Reise hat ihre eigene Seite auf Deutsch, mit ihrem Preis. Für ein Angebot schreiben Sie uns auf Deutsch.",
   },
 
   // ===== Beste Reisezeit ===================================================
@@ -356,7 +356,7 @@ export const de: LocalizedPage[] = [
     links: [{ label: "Ostern in Ägypten", route: "de/ostern-in-aegypten.html" }, ...beforeDate(ECLIPSE_2027, [{ label: "Sonnenfinsternis 2027 in Luxor", route: "de/sonnenfinsternis-2027-luxor.html" }])],
     moreLabel: "Alle zwölf Monate im Detail",
     moreText:
-      "Eine ausführliche Aufschlüsselung jedes einzelnen Monats — mit Temperaturen, Andrang, Preisniveau und Urteil — steht auf Englisch zur Verfügung.",
+      "Jeder der zwölf Monate hat seine eigene Seite auf Deutsch, oben aufgeführt.",
   },
 
   // ===== Visum =============================================================

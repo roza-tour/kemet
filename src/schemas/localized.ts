@@ -19,6 +19,7 @@ import { LOCALE_META } from "@/config/i18n";
 import type { TranslatedLocale } from "@/config/i18n";
 import { canonical } from "@/utils/links";
 import { orgRef } from "@/schemas/jsonld";
+import { PRICES_VALID_UNTIL } from "@/data/tours";
 
 type Ld = Record<string, unknown>;
 const CTX = "https://schema.org";
@@ -30,7 +31,7 @@ const geoOf = (c?: { lat?: number | null; lng?: number | null }) =>
     : {};
 
 export function destinationLd(
-  locale: TranslatedLocale, route: string,
+  _locale: TranslatedLocale, route: string,
   t: { name: string; summary: string; highlights: string[] },
   d: { coordinates?: { lat?: number | null; lng?: number | null }; hero?: { src?: string } },
 ): Ld {
@@ -40,9 +41,7 @@ export function destinationLd(
     name: t.name,
     description: t.summary,
     url: canonical(route),
-    inLanguage: LOCALE_META[locale].tag,
     containedInPlace: egypt,
-    provider: orgRef(),
     ...(d.hero?.src ? { image: abs(d.hero.src) } : {}),
     ...(t.highlights.length ? { includesAttraction: t.highlights.map((name) => ({ "@type": "TouristAttraction", name })) } : {}),
     ...geoOf(d.coordinates),
@@ -50,7 +49,7 @@ export function destinationLd(
 }
 
 export function attractionLd(
-  locale: TranslatedLocale, route: string,
+  _locale: TranslatedLocale, route: string,
   t: { name: string; summary: string; where?: string },
   src: { coordinates?: { lat?: number | null; lng?: number | null }; image?: string },
 ): Ld {
@@ -60,9 +59,7 @@ export function attractionLd(
     name: t.name,
     description: t.summary,
     url: canonical(route),
-    inLanguage: LOCALE_META[locale].tag,
     containedInPlace: egypt,
-    provider: orgRef(),
     ...(src.image ? { image: abs(src.image) } : {}),
     ...(t.where ? { address: { "@type": "PostalAddress", addressLocality: t.where, addressCountry: "EG" } } : {}),
     ...geoOf(src.coordinates),
@@ -99,6 +96,7 @@ export function tripLd(
             priceCurrency: "EUR",
             url: canonical(route),
             availability: "https://schema.org/InStock",
+            priceValidUntil: PRICES_VALID_UNTIL,
             seller: orgRef(),
           },
         }

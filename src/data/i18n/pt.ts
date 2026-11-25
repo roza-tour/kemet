@@ -111,7 +111,7 @@ export const pt: LocalizedPage[] = [
     },
     moreLabel: "O site completo",
     moreText:
-      "Estas páginas são uma seleção em português. O catálogo completo da Kemet — todas as viagens, destinos, experiências e guias — está em inglês. E respondemos, naturalmente, em português.",
+      "Todas as viagens, destinos, experiências e as páginas mês a mês deste site estão em português; o site em inglês tem só algumas páginas a mais. Respondemos em português.",
     links: [{ label: "Carnaval no Egito", route: "pt/carnaval-no-egito.html" }],
   },
 
@@ -172,16 +172,16 @@ export const pt: LocalizedPage[] = [
     },
     moreLabel: "Ver todas as viagens",
     moreText:
-      "O catálogo completo, com todas as viagens, destinos e experiências, está em inglês. O atendimento e as respostas são em português.",
+      "Cada viagem aqui tem a sua própria página em português, com o programa dia a dia e o preço. Escrevam para nós em português e respondemos em português.",
   },
 
   // ===== Cruzeiro ==========================================================
   {
     groupId: "nile-cruise",
     symbol: "fish",
-    title: "Cruzeiro privado pelo Nilo, Luxor–Assuã | Kemet",
+    title: "Cruzeiro pelo Nilo Luxor–Assuã, passeios privados | Kemet",
     description:
-      "Cruzeiro privado pelo Nilo entre Luxor e Assuã com egiptólogo próprio — os templos pela água, dahabiya ou navio, e o que realmente importa.",
+      "Cruzeiro pelo Nilo entre Luxor e Assuã com passeios privados e egiptólogo próprio — os templos pela água, dahabiya ou navio, e o que realmente importa.",
     keywords:
       "cruzeiro no nilo, cruzeiro nilo luxor assuã, dahabiya nilo, cruzeiro privado nilo, barco no nilo egito, kom ombo edfu",
     crumb: "Cruzeiro pelo Nilo",
@@ -239,7 +239,7 @@ export const pt: LocalizedPage[] = [
     ],
     moreLabel: "Mais sobre o trecho do Nilo",
     moreText:
-      "Programas detalhados, descrições das embarcações e o catálogo completo estão disponíveis em inglês.",
+      "O cruzeiro de quatro dias está descrito acima, dia a dia, com o seu preço. Escrevam para nós em português para perguntar sobre datas ou uma dahabiya privativa.",
   },
 
   // ===== Custo =============================================================
@@ -305,7 +305,7 @@ export const pt: LocalizedPage[] = [
     },
     moreLabel: "Todos os preços em detalhe",
     moreText:
-      "O detalhamento completo de preços e serviços, com todas as viagens, está disponível em inglês.",
+      "Cada viagem tem a sua própria página em português, com o seu preço. Para um orçamento, escrevam para nós em português.",
   },
 
   // ===== Quando ir =========================================================
@@ -365,7 +365,7 @@ export const pt: LocalizedPage[] = [
     },
     moreLabel: "Os doze meses em detalhe",
     moreText:
-      "Um detalhamento de cada mês — temperaturas, movimento, preços e veredito — está disponível em inglês.",
+      "Cada um dos doze meses tem a sua própria página em português, listada acima.",
     links: [{ label: "Carnaval no Egito", route: "pt/carnaval-no-egito.html" }, { label: "Páscoa no Egito", route: "pt/pascoa-no-egito.html" }, ...beforeDate(ECLIPSE_2027, [{ label: "Eclipse solar de 2027 em Luxor", route: "pt/eclipse-solar-2027-luxor.html" }])],
   },
 

@@ -104,7 +104,7 @@ export const id: LocalizedPage[] = [
     },
     moreLabel: "Situs lengkap",
     moreText:
-      "Halaman-halaman ini adalah ringkasan dalam Bahasa Indonesia. Katalog lengkap Kemet — seluruh rute, destinasi, pengalaman dan panduan praktis — tersedia dalam Bahasa Inggris. Kami tetap membalas pesan Anda dalam Bahasa Indonesia.",
+      "Semua rute, destinasi, pengalaman, dan halaman bulan demi bulan di situs ini tersedia dalam Bahasa Indonesia; situs berbahasa Inggris hanya memiliki sedikit halaman tambahan. Kami membalas dalam Bahasa Indonesia.",
     links: [
       { label: "Umrah plus Mesir", route: "id/umrah-plus-mesir.html" },
       { label: "Ziarah Kairo Islam", route: "id/ziarah-kairo-islam.html" },
@@ -169,7 +169,7 @@ export const id: LocalizedPage[] = [
     },
     moreLabel: "Katalog lengkap",
     moreText:
-      "Dua puluh lima rute lengkap dengan rincian harian, hotel dan harga tersedia dalam Bahasa Inggris di situs utama. Kirim pertanyaan Anda dalam Bahasa Indonesia — kami balas dalam Bahasa Indonesia.",
+      "Setiap rute di sini memiliki halamannya sendiri dalam Bahasa Indonesia, lengkap dengan program harian dan harganya. Tulis kepada kami dalam Bahasa Indonesia — kami balas dalam Bahasa Indonesia.",
     links: [
       { label: "Ziarah Kairo Islam", route: "id/ziarah-kairo-islam.html" },
       { label: "Gunung Sinai dan Biara Santa Katarina", route: "id/gunung-sinai.html" },
@@ -183,7 +183,7 @@ export const id: LocalizedPage[] = [
     symbol: "boat",
     title: "Pesiar Sungai Nil — dahabiya atau kapal besar | Kemet",
     description:
-      "Pesiar privat di Sungai Nil antara Luxor dan Aswan: dahabiya berlayar atau kapal bintang lima, Egyptologist ikut di kapal, kuil didatangi dari air.",
+      "Pesiar Sungai Nil antara Luxor dan Aswan dengan kunjungan privat: dahabiya berlayar atau kapal bintang lima, Egyptologist di kapal, kuil didatangi dari air.",
     keywords:
       "pesiar sungai nil, cruise nil mesir, dahabiya nil, kapal nil luxor aswan, wisata sungai nil",
     crumb: "Pesiar Sungai Nil",
@@ -243,7 +243,7 @@ export const id: LocalizedPage[] = [
     ],
     moreLabel: "Rincian rute",
     moreText:
-      "Rincian harian pesiar, jenis kapal dan harga tersedia dalam Bahasa Inggris di situs utama. Silakan hubungi kami dalam Bahasa Indonesia.",
+      "Pesiar empat hari dijelaskan di atas, hari demi hari, beserta harganya. Hubungi kami dalam Bahasa Indonesia untuk menanyakan tanggal atau dahabiya privat.",
   },
 
   // ===== Biaya =============================================================
@@ -318,7 +318,7 @@ export const id: LocalizedPage[] = [
     },
     moreLabel: "Rincian harga",
     moreText:
-      "Rincian pos demi pos beserta harga setiap rute diterbitkan dalam Bahasa Inggris di situs utama. Untuk penawaran, tulis saja kepada kami dalam Bahasa Indonesia.",
+      "Setiap rute memiliki halamannya sendiri dalam Bahasa Indonesia, beserta harganya. Untuk penawaran, tulis kepada kami dalam Bahasa Indonesia.",
   },
 
   // ===== Waktu terbaik =====================================================
@@ -379,7 +379,7 @@ export const id: LocalizedPage[] = [
     links: [{ label: "Paskah di Mesir", route: "id/paskah-di-mesir.html" }, ...beforeDate(ECLIPSE_2027, [{ label: "Gerhana matahari 2027 di Luxor", route: "id/gerhana-matahari-2027-luxor.html" }])],
     moreLabel: "Panduan bulan per bulan",
     moreText:
-      "Panduan rinci untuk kedua belas bulan — suhu, keramaian, harga dan hari besar — diterbitkan dalam Bahasa Inggris di situs utama.",
+      "Masing-masing dari kedua belas bulan memiliki halamannya sendiri dalam Bahasa Indonesia, tercantum di atas.",
   },
 
   // ===== Keamanan ==========================================================

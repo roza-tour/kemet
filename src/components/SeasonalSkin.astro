@@ -1,4 +1,5 @@
 ---
+import { translatedRoute } from "@/config/alternates";
 // SeasonalSkin — the site's automatic seasonal dressing.
 //
 // Reads the dated calendar in src/data/seasonalCalendar.ts, finds the window
@@ -115,7 +116,13 @@ const calendar = locale === "en" ? seasonalCalendar : seasonalCalendar.filter((w
 const keys = [...new Set(calendar.map((w) => w.key))];
 const seasonDefs = keys.map((k) => {
   const w = calendar.find((x) => x.key === k)!;
-  return [w.theme, w.slug, text[k].label, text[k].note, LOCAL_SEASON_ROUTES[locale]?.[k] ?? w.href ?? ""];
+  // An English page this language has a translation of opens in this
+  // language ("Herbst in Ägypten" linked the English when-to-go page while
+  // de/beste-reisezeit-aegypten.html existed).
+  const href = LOCAL_SEASON_ROUTES[locale]?.[k] ?? w.href ?? "";
+  // An empty href means the season's collection page (see the client code).
+  const local = locale !== "en" ? translatedRoute(href || `collections/${w.slug}.html`, locale) : undefined;
+  return [w.theme, w.slug, text[k].label, text[k].note, local ?? href];
 });
 const seasonWindows = calendar.map((w) => {
   const i = keys.indexOf(w.key);

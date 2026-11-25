@@ -18,7 +18,12 @@ import { ECLIPSE_DAY } from "@/data/eclipseDay";
 import { ultraJourneys } from "@/data/ultra/journeys";
 import { company } from "@/data/company";
 import { LOCALES } from "@/config/i18n";
-import { sourceMarkets } from "@/data/markets";
+import { guides } from "@/data/guides";
+
+/** The guides written for travellers from one market ("Egypt from the USA &
+ *  Canada"). Counted, not typed: the figure here used to be the size of the
+ *  market list (50), which is not how many guides there are. */
+const MARKET_GUIDES = guides.filter((g) => g.slug.startsWith("egypt-from-")).length;
 
 export interface Reason {
   title: string;
@@ -53,7 +58,7 @@ const guideLanguages = company.languages ?? [];
 export const reasons: Reason[] = [
   {
     title: "Private at every price",
-    body: `Every Kemet tour is for one party only: its own licensed Egyptologist, its own air-conditioned vehicle and driver, its own pace. That is as true of a ${eur(cheapest.price)} day tour as of a 15-day Kemet Ultra journey. Kemet does not sell seats on shared coaches. (On the itineraries with a Nile cruise, the cruise ship itself is shared; the guide, the vehicle and the visits stay private.)${eclipseLive ? ` The one exception is Eclipse Day in Luxor on 2 August 2027, in small groups of up to ${ECLIPSE_DAY.groupSize}, each with its own Egyptologist and vehicle.` : ""}`,
+    body: `Every Kemet tour is for one party only: its own licensed Egyptologist wherever there are sites to see, its own air-conditioned vehicle and driver, its own pace. (The two Red Sea trips are days on the water, with a private boat or a licensed dive centre instead of an Egyptologist.) That is as true of a ${eur(cheapest.price)} day tour as of a 15-day Kemet Ultra journey. Kemet does not sell seats on shared coaches. (On the itineraries with a Nile cruise, the cruise ship itself is shared; the guide, the vehicle and the visits stay private.)${eclipseLive ? ` The one exception is Eclipse Day in Luxor on 2 August 2027, in small groups of up to ${ECLIPSE_DAY.groupSize}, each with its own Egyptologist and vehicle.` : ""}`,
     path: "tours.html",
   },
   {
@@ -83,8 +88,8 @@ export const reasons: Reason[] = [
   },
   {
     title: "Free, detailed help before anyone books",
-    body: `Month-by-month advice on when to go, an honest guide to what a private trip costs, and travel guides written for travellers from ${sourceMarkets.length} countries — flights, visas by passport, time difference and what to pack — all free to read, with no obligation to book.`,
-    path: "guides.html#from",
+    body: `Month-by-month advice on when to go, an honest guide to what a private trip costs, and ${MARKET_GUIDES} travel guides written for travellers from particular countries and regions — flights, time difference and what to pack — all free to read, with no obligation to book.`,
+    path: "guides.html",
   },
   {
     title: "Works with travel agents and organisers",

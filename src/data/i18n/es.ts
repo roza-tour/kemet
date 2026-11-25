@@ -101,7 +101,7 @@ export const es: LocalizedPage[] = [
     },
     moreLabel: "El sitio completo",
     moreText:
-      "Estas páginas son una selección en español. El catálogo completo de Kemet — todos los viajes, destinos, experiencias y guías — está disponible en inglés. Respondemos, naturalmente, en español.",
+      "Todos los viajes, destinos, experiencias y las páginas mes a mes de este sitio están en español; el sitio en inglés solo tiene unas pocas páginas más. Respondemos en español.",
     links: [{ label: "Semana Santa en Egipto", route: "es/semana-santa-en-egipto.html" }],
   },
 
@@ -162,16 +162,16 @@ export const es: LocalizedPage[] = [
     },
     moreLabel: "Ver todos los viajes",
     moreText:
-      "El catálogo completo, con todos los viajes, destinos y experiencias, está disponible en inglés. Asesoramos y respondemos en español.",
+      "Cada viaje tiene aquí su propia página en español, con el programa día a día y el precio. Escríbanos en español y le responderemos en español.",
   },
 
   // ===== Crucero ===========================================================
   {
     groupId: "nile-cruise",
     symbol: "fish",
-    title: "Crucero por el Nilo Luxor–Asuán privado | Kemet",
+    title: "Crucero por el Nilo Luxor–Asuán, visitas privadas | Kemet",
     description:
-      "Crucero privado por el Nilo entre Luxor y Asuán con egiptólogo propio — los templos desde el agua, dahabiya o barco, y qué importa de verdad.",
+      "Crucero por el Nilo entre Luxor y Asuán con visitas privadas y egiptólogo propio — los templos desde el agua, dahabiya o barco, y qué importa de verdad.",
     keywords:
       "crucero por el nilo, crucero nilo luxor asuán, dahabiya nilo, crucero nilo privado, barco nilo egipto, kom ombo edfu",
     crumb: "Crucero por el Nilo",
@@ -229,7 +229,7 @@ export const es: LocalizedPage[] = [
     ],
     moreLabel: "Más sobre el tramo del Nilo",
     moreText:
-      "Programas detallados, descripciones de las embarcaciones y el catálogo completo están disponibles en inglés.",
+      "El crucero de cuatro días se detalla arriba, día a día, con su precio. Escríbanos en español para consultar fechas o una dahabiya privada.",
   },
 
   // ===== Coste =============================================================
@@ -295,7 +295,7 @@ export const es: LocalizedPage[] = [
     },
     moreLabel: "Detalle completo de precios",
     moreText:
-      "El desglose completo de precios y servicios, con todos los viajes, está disponible en inglés.",
+      "Cada viaje tiene su propia página en español, con su precio. Para un presupuesto, escríbanos en español.",
   },
 
   // ===== Cuándo ============================================================
@@ -356,7 +356,7 @@ export const es: LocalizedPage[] = [
     links: [{ label: "Semana Santa en Egipto", route: "es/semana-santa-en-egipto.html" }, ...beforeDate(ECLIPSE_2027, [{ label: "Eclipse solar 2027 en Luxor", route: "es/eclipse-solar-2027-luxor.html" }])],
     moreLabel: "Los doce meses en detalle",
     moreText:
-      "Un desglose detallado de cada mes — temperaturas, afluencia, precios y veredicto — está disponible en inglés.",
+      "Cada uno de los doce meses tiene su propia página en español, enumerada arriba.",
   },
 
   // ===== Visado ============================================================

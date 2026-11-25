@@ -377,7 +377,13 @@ function tool_search_journeys(array $args): array {
     $price = $j["priceFrom"]["amount"] ?? null;
     if ($cap !== null && (!is_numeric($price) || $price > $cap)) continue;
     $places = lc(implode(" ", $j["places"] ?? []));
-    $hay = lc(($j["name"] ?? "") . " " . ($j["subtitle"] ?? "") . " " . ($j["summary"] ?? "") . " " . ($j["kind"] ?? "") . " " . ($j["duration"] ?? "")) . " " . $places;
+    // Searched in every language the journey has a page in: a German query
+    // ("Nilkreuzfahrt") found nothing while only the English was searched.
+    $localText = "";
+    foreach ((array)($j["i18n"] ?? []) as $tr) {
+      if (is_array($tr)) $localText .= " " . ($tr["name"] ?? "") . " " . ($tr["summary"] ?? "");
+    }
+    $hay = lc(($j["name"] ?? "") . " " . ($j["subtitle"] ?? "") . " " . ($j["summary"] ?? "") . " " . ($j["kind"] ?? "") . " " . ($j["duration"] ?? "") . $localText) . " " . $places;
     if ($place !== "" && strpos($hay, $place) === false) continue;
     $score = $terms ? $hit($hay) : 1;
     if ($terms && $score === 0) continue;
@@ -398,6 +404,11 @@ function tool_search_journeys(array $args): array {
       "url" => $j["pages"][$lang] ?? ($j["pages"]["en"] ?? KEMET_SITE . "/tours.html"),
     ]];
   }
+  // When some journey has every word asked for, the ones that share a single
+  // word only are dropped: "Abu Simbel" should not bring back Abu Serga.
+  if (count($terms) > 1 && $journeys && max(array_map(function ($x) { return $x[0]; }, $journeys)) === count($terms)) {
+    $journeys = array_values(array_filter($journeys, function ($x) use ($terms) { return $x[0] === count($terms); }));
+  }
   usort($journeys, function ($a, $b) { return $b[0] <=> $a[0]; });
 
   $programmes = [];
@@ -408,7 +419,7 @@ function tool_search_journeys(array $args): array {
       if ($max !== null && $days && $days > $max) continue;
       $hay = lc(($p["name"] ?? "") . " " . ($p["summary"] ?? "") . " " . ($p["route"] ?? "") . " " . ($p["use"] ?? ""));
       if ($place !== "" && strpos($hay, $place) === false) continue;
-      if ($terms && $hit($hay) === 0) continue;
+      if ($terms && $hit($hay) < (count($terms) > 1 && $journeys ? count($terms) : 1)) continue;
       $programmes[] = [
         "id" => $p["id"] ?? "",
         "name" => $p["name"] ?? "",
@@ -451,7 +462,14 @@ function tool_get_journey(array $args): array {
     "id" => $id,
     "url" => $url,
     "language" => $page["meta"]["language"] ?? $lang,
-    "summary" => $record,
+    // The record named and summarised as the page in this language is.
+    "summary" => (is_array($record["i18n"][$lang] ?? null)
+      ? array_merge($record, array_filter([
+          "name" => $record["i18n"][$lang]["name"] ?? null,
+          "summary" => $record["i18n"][$lang]["summary"] ?? null,
+          "duration" => $record["i18n"][$lang]["duration"] ?? null,
+        ]))
+      : $record),
     "page" => $page["text"] ?? "The page is at " . $url,
     "enquire" => $cat["enquire"] ?? ["page" => KEMET_SITE . "/contact.html"],
   ];

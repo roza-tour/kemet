@@ -59,7 +59,9 @@ export const company: CompanyProfile = {
       days: "Monday – Friday",
       opens: "09:00",
       closes: "18:00",
-      timezone: "EET (UTC+2)",
+      // Egypt keeps summer time (UTC+3 from late April to late October), so a
+      // fixed offset here was wrong for half the year.
+      timezone: "Cairo time",
     },
   ],
 
@@ -190,8 +192,8 @@ export const company: CompanyProfile = {
     },
     {
       id: "responsible-suppliers",
-      headline: "Responsible, licensed operators",
-      body: "Every supplier we use — guides, hotels, vessels — is selected for quality, local ownership and responsible practice.",
+      headline: "Our own team, our own contracts",
+      body: "Your licensed Egyptologist guide and your driver are Kemet's own team, and the hotels are booked under our own contracts with them, chosen for quality and local ownership.",
     },
   ],
 

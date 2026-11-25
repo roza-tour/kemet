@@ -36,3 +36,9 @@ export function allAlternatesFor(route: string): Alternate[] {
   if (partial) return [...partial, { hreflang: "x-default", route: partial.find((a) => a.hreflang === "en")!.route }];
   return tourAlternatesFor(route);
 }
+
+/** The route of an English page in another language, where one exists. */
+export function translatedRoute(enRoute: string, locale: string): string | undefined {
+  const set = allAlternatesFor(enRoute);
+  return set.find((a) => a.hreflang === locale)?.route;
+}

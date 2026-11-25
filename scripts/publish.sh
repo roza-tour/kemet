@@ -46,6 +46,15 @@ if [ ! -f dist/index.html ]; then
   exit 1
 fi
 
+# --- Audit the build: a failing trust or link check stops the publish -------
+echo "==> Auditing the build..."
+(cd dist && node ../scripts/audit.mjs > ../.publish-audit.log) || {
+  grep -A12 "BLOCKING\|^>> " .publish-audit.log >&2 || true
+  echo "ERROR: the audit found a blocking problem (see .publish-audit.log) — aborting." >&2
+  exit 1
+}
+npm run --silent audit:price
+
 # --- Remove stale artefacts from a previous publish -------------------------
 NEW_LIST="$(cd dist && find . -type f | sed 's|^\./||' | sort)"
 if [ -f "$MANIFEST" ]; then

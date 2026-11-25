@@ -185,6 +185,11 @@ ErrorDocument 404 /404.html
     Header set X-Robots-Tag "noindex"
     Header unset X-Robots-Tag env=KEMET_MD_NEG
     Header unset X-Robots-Tag env=REDIRECT_KEMET_MD_NEG
+    # A negotiated copy answers at the page's own address. A shared cache that
+    # ignored Vary could hand it to the next browser in place of the page, so
+    # only the reader's own cache may keep it.
+    Header set Cache-Control "private, max-age=3600" env=KEMET_MD_NEG
+    Header set Cache-Control "private, max-age=3600" env=REDIRECT_KEMET_MD_NEG
   </FilesMatch>
   # A page can now be answered in two forms depending on the Accept header
   # (the rewrite further down), so a cache between us and the reader has to

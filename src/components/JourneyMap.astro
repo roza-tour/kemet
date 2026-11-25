@@ -19,6 +19,7 @@ import { TRANSLATION_GROUPS } from "@/config/i18n";
 import { MAP_STOPS, MAP_WORDS, EGYPT_OUTLINE, NILE, NILE_ROSETTA, NILE_DAMIETTA, STOP_PAGE } from "@/config/journey-map";
 import { multidayTours } from "@/data/tours";
 import { tourRouteFor, tourTextFor } from "@/config/tour-i18n";
+import { LOCAL_STRINGS } from "@/data/i18n/strings";
 import { publicPath } from "@/utils/links";
 import { formatPriceIn } from "@/utils/format";
 import { site } from "@/config/site";
@@ -59,10 +60,13 @@ const journeys = multidayTours.map((t) => {
   const keys = MAP_STOPS.filter((s) => s.cities.some((c) => t.cities.includes(c))).map((s) => s.key);
   const text = locale === "en" ? undefined : tourTextFor(t.slug, locale as TranslatedLocale);
   const route = locale === "en" ? `${t.slug}.html` : tourRouteFor(t.slug, locale as TranslatedLocale) ?? `${t.slug}.html`;
+  const cruise = locale !== "en" && !text && t.slug === "tour-nile-cruise" ? LOCAL_STRINGS[locale as TranslatedLocale].cruise : undefined;
   return {
     href: `${base}${publicPath(route)}`,
-    title: text?.title ?? t.title,
-    duration: text?.durationLabel ?? t.durationLabel,
+    // The Nile cruise has no translated journey page of its own: each language
+    // has its own cruise page instead, headed in that language.
+    title: text?.title ?? (cruise ? cruise.name : t.title),
+    duration: text?.durationLabel ?? (cruise ? cruise.durationLabel : t.durationLabel),
     price: t.price,
     keys: keys.join(" "),
   };
@@ -116,7 +120,7 @@ const data = JSON.stringify({
           ))}
         </svg>
         <div class="jmap-info" aria-live="polite" hidden>
-          <img alt="" width="96" height="96" loading="lazy" decoding="async" hidden />
+          <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" width="96" height="96" loading="lazy" decoding="async" hidden />
           <p><b></b><span></span><a class="jmap-more" href="#" hidden>{w.aboutPlace} {locale === "ar" ? "←" : "→"}</a></p>
         </div>
         <div class="jmap-pick">

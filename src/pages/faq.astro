@@ -26,7 +26,9 @@ const answerLd = answerPageSchema({
   answer: ANSWER_A,
 });
 
-const jsonld = [answerLd, ...faqPageSchema(allFaqs)];
+// The question the answer box asks is shown there, not in the list below,
+// so its FAQ entry carries the answer box's text — the one the page shows.
+const jsonld = [answerLd, ...faqPageSchema(allFaqs.map((f) => (f.q === ANSWER_Q ? { ...f, a: ANSWER_A } : f)))];
 
 const keywords = [
   "Egypt travel FAQ",

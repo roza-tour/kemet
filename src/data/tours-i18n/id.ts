@@ -769,7 +769,7 @@ export const id: TourText[] = [
       early: "Hanya bila Anda memilih perjalanan opsional ke Abu Simbel pada hari terakhir",
     },
     faqs: [
-      { q: "Mengapa lewat darat dari Luxor ke Aswan, bukan berlayar?", a: "Jalan darat memungkinkan Edfu dan Kom Ombo tanpa terikat jadwal tetap kapal pesiar, dan setiap malam Anda tidur di kamar hotel berukuran penuh. Bila Anda lebih suka berlayar, perjalanan pesiar kami, Nile in Style, menempuh koridor yang sama lewat air." },
+      { q: "Mengapa lewat darat dari Luxor ke Aswan, bukan berlayar?", a: "Jalan darat memungkinkan Edfu dan Kom Ombo tanpa terikat jadwal tetap kapal pesiar, dan setiap malam Anda tidur di kamar hotel berukuran penuh. Bila Anda lebih suka berlayar, pesiar Sungai Nil kami menempuh koridor yang sama lewat air." },
       { q: "Apakah perjalanan ini mencakup Abu Simbel?", a: "Tidak secara bawaan — tetapi Abu Simbel mudah disisipkan sebagai perjalanan pagi-pagi dari Aswan pada hari terakhir, dengan mobil pribadi atau penerbangan singkat. Beri tahu kami saat memesan agar kami bisa mengamankan jadwalnya." },
       { q: "Bagaimana cara mencapai Luxor untuk memulai?", a: "Dengan penerbangan EgyptAir dari Kairo (55 menit) atau kereta tidur malam. Keduanya mudah ditambahkan; rencana perjalanan dimulai kapan pun Anda mendarat." },
     ],

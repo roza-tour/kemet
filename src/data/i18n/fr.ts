@@ -102,7 +102,7 @@ export const fr: LocalizedPage[] = [
     },
     moreLabel: "Le site complet",
     moreText:
-      "Ces pages sont une sélection en français. Le catalogue complet de Kemet — tous les voyages, destinations, expériences et guides pratiques — est disponible en anglais. Nous vous répondons évidemment en français.",
+      "Tous les voyages, destinations, expériences et les pages mois par mois de ce site existent en français ; le site anglais ne compte que quelques pages de plus. Nous répondons en français.",
     links: [{ label: "La Toussaint en Égypte", route: "fr/toussaint-en-egypte.html" }],
   },
 
@@ -163,16 +163,16 @@ export const fr: LocalizedPage[] = [
     },
     moreLabel: "Le catalogue complet",
     moreText:
-      "Les vingt-cinq itinéraires, avec jour par jour, hôtels et prix, sont détaillés en anglais sur le site principal. Envoyez-nous une demande en français : nous vous répondons en français.",
+      "Chaque voyage a ici sa propre page en français, avec le programme jour par jour et le prix. Écrivez-nous en français, nous répondons en français.",
   },
 
   // ===== Croisière sur le Nil ==============================================
   {
     groupId: "nile-cruise",
     symbol: "boat",
-    title: "Croisière sur le Nil — bateau privé ou dahabieh | Kemet",
+    title: "Croisière sur le Nil — navire ou dahabieh | Kemet",
     description:
-      "Croisière privée sur le Nil entre Louxor et Assouan : dahabieh à voile ou navire cinq étoiles, égyptologue à bord et temples abordés depuis l'eau.",
+      "Croisière sur le Nil entre Louxor et Assouan, visites privées avec votre égyptologue : dahabieh à voile ou navire cinq étoiles, temples abordés depuis l'eau.",
     keywords:
       "croisiere sur le nil, croisiere nil louxor assouan, dahabieh nil, croisiere egypte prive, bateau nil egypte",
     crumb: "Croisière sur le Nil",
@@ -232,7 +232,7 @@ export const fr: LocalizedPage[] = [
     ],
     moreLabel: "Les itinéraires détaillés",
     moreText:
-      "Le détail jour par jour des croisières, les bateaux et les prix figurent en anglais sur le site principal. Écrivez-nous en français.",
+      "La croisière de quatre jours est détaillée plus haut, jour par jour, avec son prix. Écrivez-nous en français pour les dates ou une dahabieh privée.",
   },
 
   // ===== Prix ==============================================================
@@ -307,7 +307,7 @@ export const fr: LocalizedPage[] = [
     },
     moreLabel: "Le détail des prix",
     moreText:
-      "Le détail poste par poste, avec les prix de chaque itinéraire, est publié en anglais sur le site principal. Écrivez-nous en français pour un devis.",
+      "Chaque voyage a sa propre page en français, avec son prix. Pour un devis, écrivez-nous en français.",
   },
 
   // ===== Quand partir ======================================================
@@ -368,7 +368,7 @@ export const fr: LocalizedPage[] = [
     links: [{ label: "Pâques en Égypte", route: "fr/paques-en-egypte.html" }, ...beforeDate(ECLIPSE_2027, [{ label: "Éclipse solaire 2027 à Louxor", route: "fr/eclipse-solaire-2027-louxor.html" }])],
     moreLabel: "Le guide mois par mois",
     moreText:
-      "Un guide détaillé pour chacun des douze mois — températures, affluence, prix et fêtes — est publié en anglais sur le site principal.",
+      "Chacun des douze mois a sa propre page en français, listée plus haut.",
   },
 
   // ===== Sécurité ==========================================================

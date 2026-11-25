@@ -85,6 +85,14 @@ const PRICE_BASIS_PAX = 6;
  * scripts/price-audit.mjs calls this same function to recognise the figure.
  */
 export const TWO_TRAVELLERS_UPLIFT = 0.1;
+
+/**
+ * Until when the published prices hold — the Offer's priceValidUntil on every
+ * journey page in every language. Set by hand when the prices are reviewed for
+ * a season, never from the build clock: a date that moves on every publish is
+ * not a statement about the prices.
+ */
+export const PRICES_VALID_UNTIL = "2027-12-31";
 export const priceForTwo = (t: { price: number; priceBasisPax?: number }): number | undefined =>
   t.priceBasisPax && t.priceBasisPax > 2 ? Math.round(t.price * (1 + TWO_TRAVELLERS_UPLIFT)) : undefined;
 

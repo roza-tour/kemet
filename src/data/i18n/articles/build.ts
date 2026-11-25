@@ -51,8 +51,10 @@ export function articlePages(locale: TranslatedLocale, L: ArtLabels, texts: ArtT
       // the translation says the same. An occasion page is a WebPage there too.
       ...(t.kind === "guide"
         ? {
-            schema: [articleLd(locale, route, t, { image: hero?.src, dateModified: (src as { lastUpdated?: string }).lastUpdated })],
-            ...((src as { lastUpdated?: string }).lastUpdated ? { dateModified: (src as { lastUpdated?: string }).lastUpdated } : {}),
+            // No dateModified: the English guide's date is when the ENGLISH was
+            // last revised, which for most of them is before this translation
+            // existed. A translation carries its own date or none.
+            schema: [articleLd(locale, route, t, { image: hero?.src })],
           }
         : {}),
     };

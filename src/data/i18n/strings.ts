@@ -21,6 +21,8 @@ export interface LocalStrings {
   alts: Record<string, string>;
   ogAlt: string;
   cruise: {
+    /** The cruise as its page in this language is headed ("Die Nilkreuzfahrt"). */
+    name: string;
     durationLabel: string;
     days: Array<{ title: string; items: string[] }>;
     productHeading: string;
@@ -29,6 +31,8 @@ export interface LocalStrings {
   ui: {
     /** "%p per person for two travellers" — %p is the formatted price. */
     priceForTwo: string;
+    /** The flight version of a journey with sleeper-train nights; %p is its price. */
+    flyVersion: string;
     monthByMonth: string;
     compareOptions: string;
     byOccasion: string;
@@ -48,6 +52,7 @@ export interface LocalStrings {
 /** The English of the same labels, for the English pages and as the fallback. */
 export const EN_STRINGS: LocalStrings["ui"] & { ogAlt: string } = {
   "priceForTwo": "%p per person for two travellers",
+  "flyVersion": "With domestic flights instead of the two sleeper-train nights, and those nights in hotels: %p per person",
   "monthByMonth": "Month by month",
   "compareOptions": "Compare the options",
   "byOccasion": "By occasion",
@@ -107,7 +112,8 @@ export const LOCAL_STRINGS: Record<TranslatedLocale, LocalStrings> = {
     },
     "ogAlt": "Kemet — private Luxusreisen durch Ägypten",
     "cruise": {
-      "durationLabel": "4 Tage / 3 Nächte",
+      "name": "Die Nilkreuzfahrt",
+"durationLabel": "4 Tage / 3 Nächte",
       "days": [
         {
           "title": "Assuan — Philae, Hochdamm & Einschiffung",
@@ -147,6 +153,7 @@ export const LOCAL_STRINGS: Record<TranslatedLocale, LocalStrings> = {
     },
     "ui": {
       "priceForTwo": "%p pro Person bei zwei Reisenden",
+      "flyVersion": "Mit Inlandsflügen statt der zwei Nächte im Schlafwagen, diese Nächte im Hotel: %p pro Person",
       "monthByMonth": "Monat für Monat",
       "compareOptions": "Die Möglichkeiten im Vergleich",
       "byOccasion": "Nach Anlass",
@@ -204,7 +211,8 @@ export const LOCAL_STRINGS: Record<TranslatedLocale, LocalStrings> = {
     },
     "ogAlt": "Kemet — voyages privés de luxe en Égypte",
     "cruise": {
-      "durationLabel": "4 jours / 3 nuits",
+      "name": "La croisière sur le Nil",
+"durationLabel": "4 jours / 3 nuits",
       "days": [
         {
           "title": "Assouan — Philae, le haut barrage et l'embarquement",
@@ -244,6 +252,7 @@ export const LOCAL_STRINGS: Record<TranslatedLocale, LocalStrings> = {
     },
     "ui": {
       "priceForTwo": "%p par personne pour deux voyageurs",
+      "flyVersion": "Avec des vols intérieurs à la place des deux nuits en train-couchettes, ces nuits-là à l'hôtel : %p par personne",
       "monthByMonth": "Mois par mois",
       "compareOptions": "Comparer les options",
       "byOccasion": "Selon l'occasion",
@@ -301,7 +310,8 @@ export const LOCAL_STRINGS: Record<TranslatedLocale, LocalStrings> = {
     },
     "ogAlt": "Kemet — viaggi privati di lusso in Egitto",
     "cruise": {
-      "durationLabel": "4 giorni / 3 notti",
+      "name": "La crociera sul Nilo",
+"durationLabel": "4 giorni / 3 notti",
       "days": [
         {
           "title": "Assuan — File, la Grande Diga e l'imbarco",
@@ -341,6 +351,7 @@ export const LOCAL_STRINGS: Record<TranslatedLocale, LocalStrings> = {
     },
     "ui": {
       "priceForTwo": "%p a persona per due viaggiatori",
+      "flyVersion": "Con voli interni al posto delle due notti in treno letto, quelle notti in hotel: %p a persona",
       "monthByMonth": "Mese per mese",
       "compareOptions": "Confrontare le opzioni",
       "byOccasion": "Per occasione",
@@ -398,7 +409,8 @@ export const LOCAL_STRINGS: Record<TranslatedLocale, LocalStrings> = {
     },
     "ogAlt": "Kemet — viajes privados de lujo por Egipto",
     "cruise": {
-      "durationLabel": "4 días / 3 noches",
+      "name": "El crucero por el Nilo",
+"durationLabel": "4 días / 3 noches",
       "days": [
         {
           "title": "Asuán — File, la Presa Alta y embarque",
@@ -438,6 +450,7 @@ export const LOCAL_STRINGS: Record<TranslatedLocale, LocalStrings> = {
     },
     "ui": {
       "priceForTwo": "%p por persona para dos viajeros",
+      "flyVersion": "Con vuelos internos en lugar de las dos noches en tren cama, y esas noches en hotel: %p por persona",
       "monthByMonth": "Mes a mes",
       "compareOptions": "Comparar las opciones",
       "byOccasion": "Según la ocasión",
@@ -495,7 +508,8 @@ export const LOCAL_STRINGS: Record<TranslatedLocale, LocalStrings> = {
     },
     "ogAlt": "Kemet — viagens privadas de luxo ao Egito",
     "cruise": {
-      "durationLabel": "4 dias / 3 noites",
+      "name": "O cruzeiro pelo Nilo",
+"durationLabel": "4 dias / 3 noites",
       "days": [
         {
           "title": "Assuã — Filae, a Alta Barragem e o embarque",
@@ -535,6 +549,7 @@ export const LOCAL_STRINGS: Record<TranslatedLocale, LocalStrings> = {
     },
     "ui": {
       "priceForTwo": "%p por pessoa, para dois viajantes",
+      "flyVersion": "Com voos domésticos em vez das duas noites no comboio-cama, e essas noites em hotel: %p por pessoa",
       "monthByMonth": "Mês a mês",
       "compareOptions": "Compare as opções",
       "byOccasion": "Por ocasião",
@@ -592,7 +607,8 @@ export const LOCAL_STRINGS: Record<TranslatedLocale, LocalStrings> = {
     },
     "ogAlt": "Kemet — частные люкс-путешествия по Египту",
     "cruise": {
-      "durationLabel": "4 дня / 3 ночи",
+      "name": "Круиз по Нилу",
+"durationLabel": "4 дня / 3 ночи",
       "days": [
         {
           "title": "Асуан — Филе, Высотная плотина и посадка на теплоход",
@@ -632,6 +648,7 @@ export const LOCAL_STRINGS: Record<TranslatedLocale, LocalStrings> = {
     },
     "ui": {
       "priceForTwo": "%p с человека при поездке вдвоём",
+      "flyVersion": "С внутренними перелётами вместо двух ночей в спальном поезде (эти ночи — в отеле): %p с человека",
       "monthByMonth": "По месяцам",
       "compareOptions": "Сравнить варианты",
       "byOccasion": "По поводу поездки",
@@ -689,7 +706,8 @@ export const LOCAL_STRINGS: Record<TranslatedLocale, LocalStrings> = {
     },
     "ogAlt": "Kemet — perjalanan privat mewah ke Mesir",
     "cruise": {
-      "durationLabel": "4 hari / 3 malam",
+      "name": "Pesiar di Sungai Nil",
+"durationLabel": "4 hari / 3 malam",
       "days": [
         {
           "title": "Aswan — Philae, Bendungan Tinggi & naik kapal",
@@ -729,6 +747,7 @@ export const LOCAL_STRINGS: Record<TranslatedLocale, LocalStrings> = {
     },
     "ui": {
       "priceForTwo": "%p per orang untuk dua wisatawan",
+      "flyVersion": "Dengan penerbangan domestik sebagai ganti dua malam di kereta tidur, dan malam-malam itu di hotel: %p per orang",
       "monthByMonth": "Bulan demi bulan",
       "compareOptions": "Bandingkan pilihan",
       "byOccasion": "Menurut kesempatan",
@@ -786,7 +805,8 @@ export const LOCAL_STRINGS: Record<TranslatedLocale, LocalStrings> = {
     },
     "ogAlt": "Kemet — percutian persendirian mewah ke Mesir",
     "cruise": {
-      "durationLabel": "4 hari / 3 malam",
+      "name": "Pelayaran di Sungai Nil",
+"durationLabel": "4 hari / 3 malam",
       "days": [
         {
           "title": "Aswan — Philae, Empangan Tinggi & menaiki kapal",
@@ -826,6 +846,7 @@ export const LOCAL_STRINGS: Record<TranslatedLocale, LocalStrings> = {
     },
     "ui": {
       "priceForTwo": "%p seorang bagi dua pengembara",
+      "flyVersion": "Dengan penerbangan domestik menggantikan dua malam di kereta api tidur, dan malam-malam itu di hotel: %p seorang",
       "monthByMonth": "Bulan demi bulan",
       "compareOptions": "Bandingkan pilihan",
       "byOccasion": "Mengikut majlis",
@@ -883,7 +904,8 @@ export const LOCAL_STRINGS: Record<TranslatedLocale, LocalStrings> = {
     },
     "ogAlt": "Kemet — رحلات خاصة فاخرة إلى مصر",
     "cruise": {
-      "durationLabel": "٤ أيام / ٣ ليالٍ",
+      "name": "رحلة النيل",
+"durationLabel": "٤ أيام / ٣ ليالٍ",
       "days": [
         {
           "title": "أسوان — فيلة والسد العالي وصعود السفينة",
@@ -923,6 +945,7 @@ export const LOCAL_STRINGS: Record<TranslatedLocale, LocalStrings> = {
     },
     "ui": {
       "priceForTwo": "%p للفرد، لمسافرَين اثنين",
+      "flyVersion": "بالطيران الداخلي بدل ليلتَي قطار النوم، مع قضاء هاتين الليلتين في فندق: %p للفرد",
       "monthByMonth": "شهرًا بشهر",
       "compareOptions": "قارنوا بين الخيارات",
       "byOccasion": "بحسب المناسبة",

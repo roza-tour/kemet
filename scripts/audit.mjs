@@ -422,4 +422,15 @@ for (const [t, fs] of Object.entries(schemaTypes).sort((a,b) => b[1].size - a[1]
     for (const l of v.slice(0, 10)) console.log(`     ${l}`);
     if (v.length > 10) console.log(`     … ${v.length - 10} more`);
   }
+
+  // The gate publish.sh relies on: a trust check that fails, or a defect that
+  // a search engine meets as an error, stops the publish. The rest above are
+  // reported and reviewed, with known baselines, and do not.
+  const blocking = ['bad-jsonld', 'broken-link', 'canonical-404', 'sitemap-404', 'sitemap-file-missing', 'hreflang-404', 'multi-canonical']
+    .filter((k) => F[k]?.length)
+    .concat(['island', 'reviewer-unseen', 'org-duplicate', 'alt-english', 'faq-unseen'].filter((k) => T[k]?.length));
+  if (blocking.length) {
+    console.log(`\nBLOCKING: ${blocking.join(', ')}`);
+    process.exitCode = 1;
+  }
 }

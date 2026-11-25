@@ -102,7 +102,9 @@ const CONTENT_SOURCES = [
   [/^when-to-go\//, ["src/pages/when-to-go/[slug].astro", "src/data/months.ts"]],
   [/^occasions\//, ["src/pages/occasions/[slug].astro", "src/data/occasions.ts"]],
   [/^programmes\//, ["src/pages/programmes/[slug].astro", "src/data/programmes.ts"]],
-  [/^tour-/, ["src/pages/[slug].astro", "src/data/tours.ts"]],
+  // The journey template holds layout and markup, not a journey's words: a
+  // change to it re-dated all 25 journeys at once. tours.ts alone dates them.
+  [/^tour-/, ["src/data/tours.ts"]],
 ];
 
 // ---------------------------------------------------------------------------

@@ -23,11 +23,11 @@ import type { TourText } from "@/data/tours-i18n/types";
 import type { TranslatedLocale } from "@/config/i18n";
 import { LOCALE_META } from "@/config/i18n";
 import { TOUR_PHRASEBOOK } from "@/data/tours-i18n/phrasebook";
-import { sharedShipNote, priceForTwo } from "@/data/tours";
+import { sharedShipNote, priceForTwo, PRICES_VALID_UNTIL } from "@/data/tours";
 import { LOCAL_STRINGS, localAlt, localDigits } from "@/data/i18n/strings";
 import { orgRef } from "@/schemas/jsonld";
 import { ui, placeName } from "@/config/ui";
-import { formatPriceIn } from "@/utils/format";
+import { formatPriceIn, flyPrice } from "@/utils/format";
 import { canonical, whatsappLink, mailtoLink, publicPath } from "@/utils/links";
 import { TRANSLATION_GROUPS } from "@/config/i18n";
 
@@ -56,6 +56,9 @@ const S = LOCAL_STRINGS[locale].ui;
 /** What two people pay each (data/tours.ts → priceForTwo), in this language. */
 const twoPrice = priceForTwo(tour);
 const twoLine = twoPrice ? S.priceForTwo.replace("%p", formatPriceIn(twoPrice, LOCALE_META[locale].formatLocale)) : undefined;
+/** The flight version (data/tours.ts → flyOption), stated as the English page states it. */
+const fly = flyPrice(tour);
+const flyLine = fly ? S.flyVersion.replace("%p", formatPriceIn(fly, LOCALE_META[locale].formatLocale)) : undefined;
 
 const wa = whatsappLink(`${p.cta.whatsapp} — ${text.title}`);
 const mail = mailtoLink(`${text.title} — ${p.h.enquire}`, `${p.cta.whatsapp}\n\n`);
@@ -120,6 +123,7 @@ const jsonld: Record<string, unknown>[] = [
       priceCurrency: "EUR",
       url: canonical(route),
       availability: "https://schema.org/InStock",
+      priceValidUntil: PRICES_VALID_UNTIL,
       ...(tour.priceBasisPax
         ? { eligibleQuantity: { "@type": "QuantitativeValue", minValue: tour.priceBasisPax, unitText: "person" } }
         : {}),
@@ -150,6 +154,12 @@ const jsonld: Record<string, unknown>[] = [
     })),
   },
 ];
+// The flight version as its own Offer, as on the English page, and with the
+// sentence the page shows beside the price.
+if (fly) {
+  const trip = jsonld[0] as { offers: Record<string, unknown> };
+  trip.offers = [trip.offers, { ...trip.offers, price: fly, description: flyLine }] as unknown as Record<string, unknown>;
+}
 ---
 <Base
   title={text.metaTitle}
@@ -218,6 +228,7 @@ const jsonld: Record<string, unknown>[] = [
           ].filter(Boolean).join(" · ")}</p>
         )}
         {twoLine && <p class="lt-basis">{twoLine}</p>}
+        {flyLine && <p class="lt-basis">{flyLine}</p>}
         <p>{p.priceNote}{tour.foodExcluded && ` ${p.foodNote}`}</p>
       </div>
 

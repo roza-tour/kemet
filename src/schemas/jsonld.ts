@@ -12,7 +12,8 @@ import { reviewer, type Expert } from "@/data/experts";
 import { LOCALES, LOCALE_META } from "@/config/i18n";
 import { marketCountries } from "@/data/markets";
 import { reviews } from "@/data/reviews";
-import { priceForTwo, tours as allTours } from "@/data/tours";
+import { priceForTwo, tours as allTours, PRICES_VALID_UNTIL } from "@/data/tours";
+import { ultraJourneys } from "@/data/ultra/journeys";
 
 /**
  * Languages the office can genuinely correspond in. A claim about PEOPLE, not
@@ -49,8 +50,11 @@ const SCHEMA_CONTEXT = "https://schema.org";
  * Those slots now emit a bare @id reference instead. JSON-LD merges nodes that
  * share an @id, so the graph carries exactly one business — the complete one.
  */
+// The catalogue's whole span, per person: the day tours at the bottom and
+// Kemet Ultra at the top. Computed from the journeys alone it said €2,728 was
+// the ceiling while the Ultra pages marked up offers ten times that.
 const PRICE_RANGE = (() => {
-  const all = allTours.map((t) => t.price);
+  const all = [...allTours.map((t) => t.price), ...ultraJourneys.flatMap((j) => [j.price2, j.price4])];
   return `€${Math.min(...all)}–€${Math.max(...all)} per person`;
 })();
 
@@ -175,7 +179,7 @@ export function programmeSchema(p: {
       url: p.url,
       image: p.image,
       inLanguage: "en",
-      touristType: "Luxury travellers",
+      touristType: "Private travellers",
       provider: orgRef(),
       itinerary: {
         "@type": "ItemList",
@@ -222,7 +226,7 @@ export function tourSchema(tour: Tour): JsonLd[] {
     url,
     image,
     inLanguage: "en",
-    touristType: "Luxury travellers",
+    touristType: "Private travellers",
     provider: orgRef(),
     itinerary,
     offers: (() => { const base = {
@@ -239,7 +243,7 @@ export function tourSchema(tour: Tour): JsonLd[] {
       // From October the horizon is the end of NEXT year: the prices on the
       // site by then are the coming season's, and "valid until 31 December"
       // printed in late November is a price about to expire.
-      priceValidUntil: `${new Date().getUTCFullYear() + (new Date().getUTCMonth() >= 9 ? 1 : 0)}-12-31`,
+      priceValidUntil: PRICES_VALID_UNTIL,
       // Correct pricing unit (was misusing Offer.category for "per person").
       priceSpecification: {
         "@type": "UnitPriceSpecification",
@@ -325,7 +329,6 @@ export function destinationSchema(dest: Destination): JsonLd[] {
     description: dest.shortSummary,
     url,
     containedInPlace: { "@type": "Country", name: "Egypt" },
-    provider: org,
     ...(dest.highlights?.length
       ? {
           includesAttraction: dest.highlights.map((name) => ({
@@ -452,8 +455,6 @@ export function experienceSchema(experience: Experience): JsonLd[] {
     description: experience.shortSummary,
     url,
     containedInPlace: { "@type": "Country", name: "Egypt" },
-    provider: org,
-    inLanguage: experience.languages ?? ["en"],
     // Both of these come straight from data the page already renders. The
     // Rich Results Test was reporting them missing on 70 pages purely because
     // the builder never forwarded them.

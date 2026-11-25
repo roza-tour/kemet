@@ -71,13 +71,17 @@ const { title, description, canonicalUrl, ogImage, ogImageAlt, keywords } = buil
   title: Astro.props.title,
   description: Astro.props.description,
   route: Astro.props.canonicalTo ?? active,
-  keywords: Astro.props.keywords,
+  // The site-wide default is English: a translated page with no keywords of
+  // its own gets none, rather than English ones.
+  keywords: Astro.props.keywords ?? (/^[a-z]{2}\//.test(active) ? "" : undefined),
   ogImage: share?.src,
   ogImageAlt: share?.alt,
 });
 // Link prefix so shared nav/footer resolve from any directory depth.
 // Root pages → "" (output unchanged); /destinations/* → "../".
-const base = relativePrefix(active);
+// The 404 page is served at whatever address was missing (/guides/x.html),
+// so its links cannot be relative to its own file: they start at the root.
+const base = active === "404.html" ? "/" : relativePrefix(active);
 const rawLd = jsonld ? (Array.isArray(jsonld) ? jsonld : [jsonld]) : [];
 
 // --- Localisation -----------------------------------------------------------
@@ -237,7 +241,7 @@ const ogLocaleAlternates = alternates
   <link rel="manifest" href="/site.webmanifest" />
   <title>{title}</title>
   <meta name="description" content={description} />
-  <meta name="keywords" content={keywords} />
+  {keywords && <meta name="keywords" content={keywords} />}
   {/* A page that asks not to be indexed names no canonical: the 404 page
       used to declare the home page as its canonical, which tells a crawler
       that every missing address is a copy of the front page. */}

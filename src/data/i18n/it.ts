@@ -101,7 +101,7 @@ export const it: LocalizedPage[] = [
     },
     moreLabel: "Il sito completo",
     moreText:
-      "Queste pagine sono una selezione in italiano. Il catalogo completo di Kemet — tutti i viaggi, le destinazioni, le esperienze e le guide — è disponibile in inglese. Rispondiamo naturalmente in italiano.",
+      "Tutti i viaggi, le destinazioni, le esperienze e le pagine mese per mese di questo sito sono in italiano; il sito inglese ha solo poche pagine in più. Rispondiamo in italiano.",
     links: [{ label: "Ferragosto in Egitto", route: "it/ferragosto-in-egitto.html" }],
   },
 
@@ -162,16 +162,16 @@ export const it: LocalizedPage[] = [
     },
     moreLabel: "Vedere tutti i viaggi",
     moreText:
-      "Il catalogo completo con tutti i viaggi, le destinazioni e le esperienze è disponibile in inglese. Consigliamo e rispondiamo in italiano.",
+      "Ogni viaggio qui ha la sua pagina in italiano, con il programma giorno per giorno e il prezzo. Scriveteci in italiano, rispondiamo in italiano.",
   },
 
   // ===== Crociera sul Nilo =================================================
   {
     groupId: "nile-cruise",
     symbol: "fish",
-    title: "Crociera sul Nilo Luxor–Assuan privata | Kemet",
+    title: "Crociera sul Nilo Luxor–Assuan, visite private | Kemet",
     description:
-      "Crociera privata sul Nilo fra Luxor e Assuan con egittologo dedicato — i templi visti dall'acqua, dahabeya o nave, e cosa conta davvero.",
+      "Crociera sul Nilo fra Luxor e Assuan con visite private e guida egittologica dedicata — i templi visti dall'acqua, dahabeya o nave, e cosa conta davvero.",
     keywords:
       "crociera sul nilo, crociera nilo luxor assuan, dahabeya nilo, crociera nilo privata, motonave nilo, kom ombo edfu",
     crumb: "Crociera sul Nilo",
@@ -229,7 +229,7 @@ export const it: LocalizedPage[] = [
     ],
     moreLabel: "Approfondire il tratto del Nilo",
     moreText:
-      "Programmi dettagliati, descrizioni delle imbarcazioni e il catalogo completo sono disponibili in inglese.",
+      "La crociera di quattro giorni è descritta qui sopra, giorno per giorno, con il suo prezzo. Scriveteci in italiano per le date o per una dahabeya privata.",
   },
 
   // ===== Costi =============================================================
@@ -295,7 +295,7 @@ export const it: LocalizedPage[] = [
     },
     moreLabel: "Dettaglio completo dei prezzi",
     moreText:
-      "La panoramica completa di prezzi e servizi, con tutti i viaggi, è disponibile in inglese.",
+      "Ogni viaggio ha la sua pagina in italiano, con il suo prezzo. Per un preventivo scriveteci in italiano.",
   },
 
   // ===== Quando andare =====================================================
@@ -356,7 +356,7 @@ export const it: LocalizedPage[] = [
     links: [{ label: "Pasqua in Egitto", route: "it/pasqua-in-egitto.html" }, ...beforeDate(ECLIPSE_2027, [{ label: "Eclissi solare 2027 a Luxor", route: "it/eclissi-solare-2027-luxor.html" }])],
     moreLabel: "Tutti e dodici i mesi in dettaglio",
     moreText:
-      "Un'analisi dettagliata di ogni singolo mese — temperature, affluenza, prezzi e giudizio — è disponibile in inglese.",
+      "Ciascuno dei dodici mesi ha la sua pagina in italiano, elencata qui sopra.",
   },
 
   // ===== Visto =============================================================
