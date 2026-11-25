@@ -65,7 +65,7 @@ export const esLatam: LocalizedPage = {
     {
       title: "Cómo funciona un viaje privado",
       body:
-        "Todo es privado: su propio egiptólogo, su propio vehículo con conductor y hoteles elegidos por la habitación, no por las estrellas. Díganos sus fechas y cuántos viajan; respondemos en un día hábil con un itinerario real y un precio detallado, sin compromiso.",
+        "Todo es privado: su propio egiptólogo, su propio vehículo con conductor y hoteles elegidos por la habitación, no por las estrellas. Díganos sus fechas y cuántos viajan; respondemos en dos horas con un itinerario real y un precio detallado, sin compromiso.",
     },
   ],
   faqs: [
@@ -138,7 +138,7 @@ export const ptBrasil: LocalizedPage = {
     {
       title: "Como funciona uma viagem privativa",
       body:
-        "Tudo é privativo: seu próprio egiptólogo, seu próprio veículo com motorista e hotéis escolhidos pelo quarto, não pelas estrelas. Nossos próprios egiptólogos guiam em português. Diga-nos as datas e quantas pessoas viajam; respondemos em um dia útil com um roteiro real e um preço detalhado — sem compromisso.",
+        "Tudo é privativo: seu próprio egiptólogo, seu próprio veículo com motorista e hotéis escolhidos pelo quarto, não pelas estrelas. Nossos próprios egiptólogos guiam em português. Diga-nos as datas e quantas pessoas viajam; respondemos em até duas horas com um roteiro real e um preço detalhado — sem compromisso.",
     },
   ],
   faqs: [

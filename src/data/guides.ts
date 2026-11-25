@@ -1235,7 +1235,7 @@ export const guides: Guide[] = [
       {
         heading: "How a private journey works",
         paragraphs: [
-          "Everything is private: your own licensed Egyptologist, your own vehicle and driver, and hotels chosen for the room rather than the star rating. Tell us your dates and how many of you are travelling; we reply within one working day with a real itinerary and a clear price, with no obligation.",
+          "Everything is private: your own licensed Egyptologist, your own vehicle and driver, and hotels chosen for the room rather than the star rating. Tell us your dates and how many of you are travelling; we reply within two hours with a real itinerary and a clear price, with no obligation.",
         ],
       },
     ],
@@ -1365,7 +1365,7 @@ export const guides: Guide[] = [
       {
         heading: "How a private journey works",
         paragraphs: [
-          "Everything is private: your own licensed Egyptologist, your own vehicle and driver, and hotels chosen for the room rather than the star rating. Tell us your dates and how many of you are travelling; we reply within one working day with a real itinerary and a clear price, with no obligation.",
+          "Everything is private: your own licensed Egyptologist, your own vehicle and driver, and hotels chosen for the room rather than the star rating. Tell us your dates and how many of you are travelling; we reply within two hours with a real itinerary and a clear price, with no obligation.",
         ],
       },
     ],
@@ -1476,7 +1476,7 @@ export const guides: Guide[] = [
       {
         heading: "How a private journey works",
         paragraphs: [
-          "Everything is private: your own licensed Egyptologist, your own vehicle and driver, and hotels chosen for the room rather than the star rating. Tell us your dates and how many of you are travelling; we reply within one working day with a real itinerary and a clear price, with no obligation.",
+          "Everything is private: your own licensed Egyptologist, your own vehicle and driver, and hotels chosen for the room rather than the star rating. Tell us your dates and how many of you are travelling; we reply within two hours with a real itinerary and a clear price, with no obligation.",
         ],
       },
     ],
@@ -1572,7 +1572,7 @@ export const guides: Guide[] = [
       {
         heading: "Book in time",
         paragraphs: [
-          "Half-term weeks are among the busiest of the year, for families from across Europe at once. The best Nile cabins, family rooms and connecting rooms go first: three to four months ahead is right; with less, what changes is which boat and which hotel. Tell us your school's dates and how many of you are travelling — we reply within one working day with a real itinerary and a clear price.",
+          "Half-term weeks are among the busiest of the year, for families from across Europe at once. The best Nile cabins, family rooms and connecting rooms go first: three to four months ahead is right; with less, what changes is which boat and which hotel. Tell us your school's dates and how many of you are travelling — we reply within two hours with a real itinerary and a clear price.",
         ],
       },
     ],
@@ -1663,7 +1663,7 @@ export const guides: Guide[] = [
       {
         heading: "How a private journey works",
         paragraphs: [
-          "Everything is private: your own licensed Egyptologist, your own vehicle and driver, and hotels chosen for the room rather than the star rating. Our prices are set in euros — visitors in North America see an approximate dollar figure beside each — and you can pay by PayPal, card or bank transfer. Tell us your dates; we reply within one working day with a real itinerary and a clear price.",
+          "Everything is private: your own licensed Egyptologist, your own vehicle and driver, and hotels chosen for the room rather than the star rating. Our prices are set in euros — visitors in North America see an approximate dollar figure beside each — and you can pay by PayPal, card or bank transfer. Tell us your dates; we reply within two hours with a real itinerary and a clear price.",
         ],
       },
     ],

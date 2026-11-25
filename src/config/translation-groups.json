@@ -1283,5 +1283,28 @@
       "pt": "pt/egito-com-criancas.html",
       "ar": "ar/rehla-aeiliya-ila-masr.html"
     }
+  ],
+  "_partial_comment": [
+    "PARTIAL clusters: the same subject in English and SOME of the other",
+    "languages, where the owner has decided the missing language needs no page",
+    "(Christmas and New Year: no Arabic edition, 25 Nov 2026). hreflang is valid",
+    "for a cluster that is reciprocal, whether or not it is complete; every member",
+    "names the others and itself, and no member is claimed that does not exist.",
+    "Read by src/config/alternates.ts and astro.config.mjs. Not in `groups`,",
+    "which stays all-or-nothing."
+  ],
+  "partial": [
+    {
+      "key": "collection-christmas-new-year-egypt",
+      "en": "collections/christmas-new-year-egypt.html",
+      "de": "de/weihnachten-in-aegypten.html",
+      "it": "it/natale-e-capodanno-in-egitto.html",
+      "es": "es/navidad-y-fin-de-ano-en-egipto.html",
+      "fr": "fr/noel-et-nouvel-an-en-egypte.html",
+      "ru": "ru/novyy-god-v-egipte.html",
+      "id": "id/libur-akhir-tahun-ke-mesir.html",
+      "ms": "ms/cuti-hujung-tahun-ke-mesir.html",
+      "pt": "pt/natal-e-reveillon-no-egito.html"
+    }
   ]
 }

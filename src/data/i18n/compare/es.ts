@@ -5,7 +5,7 @@ export const esCompLabels: CompLabels = {
   verdict: "Nuestro veredicto",
   sideBySide: "Frente a frente",
   ctaHeading: "Envíenos sus fechas",
-  ctaText: "Con las fechas y el número de viajeros nos basta. Respondemos en un día laborable, con un itinerario real y un precio.",
+  ctaText: "Con las fechas y el número de viajeros nos basta. Respondemos en dos horas, con un itinerario real y un precio.",
   whatsapp: "Hola, Kemet: estoy decidiendo entre %s",
   emailSubject: "%s: consulta",
   moreLabel: "Otras comparativas",

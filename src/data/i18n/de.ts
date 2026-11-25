@@ -155,7 +155,7 @@ export const de: LocalizedPage[] = [
     ],
     cta: {
       heading: "Welche Route passt zu Ihnen?",
-      text: "Schicken Sie uns Ihre Reisedaten und Ihre Gruppengröße. Wir antworten persönlich, in der Regel innerhalb eines Werktags, mit einer echten Reiseroute und einem Preis.",
+      text: "Schicken Sie uns Ihre Reisedaten und Ihre Gruppengröße. Wir antworten persönlich, in der Regel innerhalb von zwei Stunden, mit einer echten Reiseroute und einem Preis.",
       whatsapp: "Guten Tag Kemet — ich hätte gern ein Angebot für eine private Ägypten-Rundreise.",
       emailSubject: "Angebotsanfrage — Ägypten-Rundreise",
     },

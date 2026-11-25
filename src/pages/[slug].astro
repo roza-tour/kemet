@@ -7,17 +7,14 @@ import AnswerBox from "@/components/aeo/AnswerBox.astro";
 import Frieze from "@/components/Frieze.astro";
 import SectionHeader from "@/components/SectionHeader.astro";
 import TourCard from "@/components/TourCard.astro";
-import TourFit from "@/components/conversion/TourFit.astro";
-import StandardOfTravel from "@/components/trust/StandardOfTravel.astro";
 import LeadCapture from "@/components/conversion/LeadCapture.astro";
-import GuideCard from "@/components/guide/GuideCard.astro";
 import { tours, priceForTwo } from "@/data/tours";
 import { getTourMeta } from "@/data/tours.taxonomy";
 import { findSimilarTours, findPreparationGuides } from "@/data/registry";
 import type { Tour } from "@/types";
 import { formatPrice, priceBasis, flyFaq, flyPrice, tourAnswer, comfortFaq } from "@/utils/format";
 import { whatsappLink, mailtoLink } from "@/utils/links";
-import { tourStaticPaths } from "@/config/routes";
+import { tourStaticPaths, routeFor } from "@/config/routes";
 import { entitySchema } from "@/schemas/jsonld";
 
 interface Props {
@@ -212,7 +209,21 @@ const keywords = [
               <Faq items={[...tour.faqs, ...(comfortFaq(tour) ? [comfortFaq(tour)!] : []), ...(flyFaq(tour) ? [flyFaq(tour)!] : [])]} />
             </div>
 
-            <TourFit />
+            {/* What used to follow here on all 25 journey pages — "Is this
+                journey right for you?", the seven-part standard, and three
+                guide cards — was the same text every time: two thirds of a
+                day-tour page was not about its day tour. It is one line now,
+                with the links for a reader who wants the long version. */}
+            {prepGuides.length > 0 && (
+              <p class="tnote reveal">
+                Every Kemet journey is private, led by a licensed Egyptologist and priced in writing:
+                {" "}<a href="tours.html#standard">the standard in full</a>.
+                Before you travel:{" "}
+                {prepGuides.map((g, i) => (
+                  <>{i > 0 && " · "}<a href={routeFor("guide", g.slug)}>{g.title}</a></>
+                ))}.
+              </p>
+            )}
           </div>
 
           <div class="side side-lead">
@@ -246,20 +257,6 @@ const keywords = [
 
     <Frieze />
 
-    {/* The tier, on the pages people actually land on from search. A tour page
-        is where a stranger meets the brand, and "private" alone does not tell
-        them which half of the Egyptian market they are looking at. */}
-    <section style="padding-top:0">
-      <div class="wrap">
-        <StandardOfTravel
-          eyebrow="The standard"
-          heading="What this journey is, without exception"
-          intro="Every operator in Egypt uses the word luxury. These are the specifics behind ours — checkable before you pay for anything."
-          compact={true}
-        />
-      </div>
-    </section>
-
     {tour.gallery && tour.gallery.length > 0 && (
       <section>
         <div class="wrap">
@@ -268,17 +265,6 @@ const keywords = [
             {tour.gallery.map((g) => (
               <Placeholder sizes="half" class="tgallery reveal" src={g.src} alt={g.alt} width={g.width} height={g.height} label={g.label ?? tour.title} />
             ))}
-          </div>
-        </div>
-      </section>
-    )}
-
-    {prepGuides.length > 0 && (
-      <section>
-        <div class="wrap">
-          <SectionHeader sym="guides" eyebrow="Planning" title="Preparation reading" text="Guides to help you prepare for this journey." />
-          <div class="grid-3">
-            {prepGuides.map((g) => <GuideCard guide={g} base="" />)}
           </div>
         </div>
       </section>
@@ -302,3 +288,9 @@ const keywords = [
     />
   </article>
 </Base>
+
+<style>
+  .tnote { color: var(--muted-2); font-size: var(--t-sm); line-height: 1.85; margin: var(--s-4) 0 0;
+    padding-top: var(--s-3); border-top: 1px solid var(--line); }
+  .tnote a { color: var(--gold); }
+</style>

@@ -60,7 +60,21 @@ export function withCrossLinks(locale: TranslatedLocale, pages: LocalizedPage[])
     home: [{ heading: S.travelGuides, links: guides }],
   };
 
-  return pages.map((p) => {
+  // Two pages answer "when should I go": the hub, month by month, and the
+  // guide, season by season. Each names the other, so they read as two halves
+  // of one answer and not as two pages competing for it.
+  const whenHub = hub("when-to-go");
+  const seasonGuide = hub("guide-best-time-to-visit-egypt");
+  const pair: Record<string, Link | undefined> = {
+    "when-to-go": seasonGuide,
+    "guide-best-time-to-visit-egypt": whenHub,
+  };
+
+  return pages.map((p0) => {
+    const other = pair[p0.groupId];
+    const p = other && !p0.links?.some((l) => l.route === other.route)
+      ? { ...p0, links: [...(p0.links ?? []), other] }
+      : p0;
     const further = (down[p.groupId] ?? []).filter((b) => b.links.length);
     // The way back up. Months already name their hub; comparisons and
     // occasions go to the journeys page, where they are listed.

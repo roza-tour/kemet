@@ -111,7 +111,7 @@ const de: TourPhrasebook = {
   },
   cta: {
     heading: "Sagen Sie uns Ihre Termine",
-    text: "Reisezeitraum und Personenzahl genügen. Wir antworten innerhalb eines Werktages mit einem echten Reiseverlauf und einem ausgewiesenen Preis — unverbindlich.",
+    text: "Reisezeitraum und Personenzahl genügen. Wir antworten innerhalb von zwei Stunden mit einem echten Reiseverlauf und einem ausgewiesenen Preis — unverbindlich.",
     button: "Anfrage senden",
     whatsapp: "Guten Tag Kemet — wir interessieren uns für diese Reise.",
   },
@@ -348,7 +348,7 @@ const fr: TourPhrasebook = {
   walking: { Moderate: "Modéré", Light: "Léger" },
   cta: {
     heading: "Donnez-nous vos dates",
-    text: "Vos dates et le nombre de voyageurs suffisent. Nous répondons sous un jour ouvré avec un itinéraire réel et un prix détaillé — sans engagement.",
+    text: "Vos dates et le nombre de voyageurs suffisent. Nous répondons sous deux heures avec un itinéraire réel et un prix détaillé — sans engagement.",
     button: "Envoyer la demande",
     whatsapp: "Bonjour Kemet — ce voyage nous intéresse.",
   },
@@ -551,7 +551,7 @@ const it: TourPhrasebook = {
   walking: { Moderate: "Moderato", Light: "Leggero" },
   cta: {
     heading: "Diteci le vostre date",
-    text: "Bastano il periodo e il numero di persone. Rispondiamo entro un giorno lavorativo con un itinerario vero e un prezzo dettagliato — senza impegno.",
+    text: "Bastano il periodo e il numero di persone. Rispondiamo entro due ore con un itinerario vero e un prezzo dettagliato — senza impegno.",
     button: "Invia la richiesta",
     whatsapp: "Buongiorno Kemet — questo viaggio ci interessa.",
   },
@@ -735,7 +735,7 @@ const es: TourPhrasebook = {
   walking: {Moderate: "Moderado", Light: "Ligero"},
   cta: {
     heading: "Díganos sus fechas",
-    text: "Con sus fechas y el número de viajeros es suficiente. Respondemos en un día hábil con un itinerario real y un precio detallado, sin compromiso.",
+    text: "Con sus fechas y el número de viajeros es suficiente. Respondemos en dos horas con un itinerario real y un precio detallado, sin compromiso.",
     button: "Enviar consulta",
     whatsapp: "Hola Kemet — nos interesa este viaje.",
   },
@@ -849,7 +849,7 @@ const pt: TourPhrasebook = {
   walking: {Moderate: "Moderado", Light: "Leve"},
   cta: {
     heading: "Conte-nos suas datas",
-    text: "Suas datas e o número de viajantes bastam. Respondemos em um dia útil com um roteiro real e um preço detalhado — sem compromisso.",
+    text: "Suas datas e o número de viajantes bastam. Respondemos em até duas horas com um roteiro real e um preço detalhado — sem compromisso.",
     button: "Enviar pedido",
     whatsapp: "Olá Kemet — temos interesse nesta viagem.",
   },
@@ -963,7 +963,7 @@ const ru: TourPhrasebook = {
   walking: {Moderate: "Умеренно", Light: "Немного"},
   cta: {
     heading: "Назовите ваши даты",
-    text: "Достаточно дат и числа путешественников. Мы ответим в течение одного рабочего дня с настоящей программой и понятной ценой — без обязательств.",
+    text: "Достаточно дат и числа путешественников. Мы ответим в течение двух часов с настоящей программой и понятной ценой — без обязательств.",
     button: "Отправить запрос",
     whatsapp: "Здравствуйте, Kemet! Нас интересует эта поездка.",
   },
@@ -1077,7 +1077,7 @@ const id: TourPhrasebook = {
   walking: {Moderate: "Sedang", Light: "Ringan"},
   cta: {
     heading: "Beri tahu kami tanggal Anda",
-    text: "Cukup tanggal dan jumlah peserta. Kami membalas dalam satu hari kerja dengan rencana perjalanan nyata dan harga yang jelas — tanpa kewajiban.",
+    text: "Cukup tanggal dan jumlah peserta. Kami membalas dalam dua jam dengan rencana perjalanan nyata dan harga yang jelas — tanpa kewajiban.",
     button: "Kirim permintaan",
     whatsapp: "Halo Kemet — kami tertarik dengan perjalanan ini.",
   },
@@ -1191,7 +1191,7 @@ const ms: TourPhrasebook = {
   walking: {Moderate: "Sederhana", Light: "Ringan"},
   cta: {
     heading: "Beritahu kami tarikh anda",
-    text: "Cukup tarikh dan bilangan peserta. Kami membalas dalam satu hari bekerja dengan jadual perjalanan sebenar dan harga yang jelas — tanpa sebarang komitmen.",
+    text: "Cukup tarikh dan bilangan peserta. Kami membalas dalam dua jam dengan jadual perjalanan sebenar dan harga yang jelas — tanpa sebarang komitmen.",
     button: "Hantar pertanyaan",
     whatsapp: "Salam Kemet — kami berminat dengan perjalanan ini.",
   },
@@ -1305,7 +1305,7 @@ const ar: TourPhrasebook = {
   walking: {Moderate: "متوسط", Light: "خفيف"},
   cta: {
     heading: "أخبرونا بمواعيدكم",
-    text: "تكفينا مواعيدكم وعدد المسافرين. نرد خلال يوم عمل واحد ببرنامج حقيقي وسعر واضح، دون أي التزام.",
+    text: "تكفينا مواعيدكم وعدد المسافرين. نرد خلال ساعتين ببرنامج حقيقي وسعر واضح، دون أي التزام.",
     button: "أرسلوا طلبكم",
     whatsapp: "مرحبًا كيميت، نحن مهتمون بهذه الرحلة.",
   },

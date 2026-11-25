@@ -3,7 +3,7 @@ import type { ArtText, ArtLabels } from "./types";
 
 export const frArtLabels: ArtLabels = {
   ctaHeading: "Envoyez-nous vos dates",
-  ctaText: "Vos dates et le nombre de voyageurs suffisent. Nous répondons sous un jour ouvré, avec un vrai itinéraire et un prix.",
+  ctaText: "Vos dates et le nombre de voyageurs suffisent. Nous répondons sous deux heures, avec un vrai itinéraire et un prix.",
   whatsapp: "Bonjour Kemet, j'ai lu « %s » et je souhaite préparer un voyage.",
   emailSubject: "%s : demande de renseignements",
   moreLabel: "Pour aller plus loin",
@@ -223,7 +223,7 @@ export const frArticles: ArtText[] = [
     metaTitle: "Quand partir en Égypte : guide saison par saison | Kemet",
     metaDescription: "Quand partir en Égypte : d'octobre à avril, haute saison dans la vallée du Nil. Saison par saison au Caire, à Louxor, Assouan, Alexandrie et en mer Rouge.",
     keywords: "quand partir en egypte, meilleure période pour visiter l'egypte, climat egypte, egypte en été chaleur, météo egypte par mois, saison voyage egypte",
-    title: "Quand partir en Égypte",
+    title: "L'Égypte saison par saison",
     summary: "La meilleure saison pour voyager en Égypte va d'octobre à avril, quand les températures de la vallée du Nil sont douces et les monuments agréables à explorer. Voici ce qui vous attend saison par saison et destination par destination.",
     lede: "",
     facts: [

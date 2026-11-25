@@ -85,7 +85,7 @@ export interface SourceMarket {
    * country rather than per language: a Mexican reader is "de México".
    * Every promise in it is one the site already makes — our own
    * Egyptologists in that language (company.languages), private vehicle,
-   * a real itinerary within one working day, prices in dollars where the
+   * a real itinerary within two hours, prices in dollars where the
    * page shows them.
    */
   welcome: string;
@@ -206,7 +206,7 @@ export const sourceMarkets: SourceMarket[] = [
       "The Nile Valley in the October-to-April season",
       "Private guiding rather than group departures",
     ],
-    welcome: "We plan private journeys in Egypt for travellers from the UK — half-term, Christmas and Easter included, with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day.",
+    welcome: "We plan private journeys in Egypt for travellers from the UK — half-term, Christmas and Easter included, with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within two hours.",
   },
   {
     code: "DE", country: "Germany", demonym: "German travellers", region: "Western Europe",
@@ -217,7 +217,7 @@ export const sourceMarkets: SourceMarket[] = [
     interests: [
       "Egyptologists from our own team who guide in German",
       "The Nile Valley from October to April, the Red Sea all year",
-      "A real day-by-day itinerary and a clear price within one working day",
+      "A real day-by-day itinerary and a clear price within two hours",
     ],
     welcome: "Wir planen private Reisen durch Ägypten für Reisende aus Deutschland — auf Deutsch, mit Ägyptologen aus unserem eigenen Team.",
   },
@@ -294,7 +294,7 @@ export const sourceMarkets: SourceMarket[] = [
     interests: [
       "Egyptologists from our own team who guide in German",
       "The Nile Valley from October to April, the Red Sea all year",
-      "A real day-by-day itinerary and a clear price within one working day",
+      "A real day-by-day itinerary and a clear price within two hours",
     ],
     welcome: "Wir planen private Reisen durch Ägypten für Reisende aus Österreich — auf Deutsch, mit Ägyptologen aus unserem eigenen Team.",
   },
@@ -308,7 +308,7 @@ export const sourceMarkets: SourceMarket[] = [
       "The complete site, in English",
       "The Nile Valley from October to April, and the May and autumn school breaks",
     ],
-    welcome: "We plan private journeys in Egypt for travellers from the Netherlands — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day.",
+    welcome: "We plan private journeys in Egypt for travellers from the Netherlands — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within two hours.",
   },
   {
     code: "BE", country: "Belgium", demonym: "Belgian travellers", region: "Western Europe",
@@ -332,7 +332,7 @@ export const sourceMarkets: SourceMarket[] = [
       "One stop to Cairo",
       "The Nile Valley from October to April",
     ],
-    welcome: "We plan private journeys in Egypt for travellers from Ireland — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day.",
+    welcome: "We plan private journeys in Egypt for travellers from Ireland — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within two hours.",
   },
 
   // ===== Northern Europe ===================================================
@@ -346,7 +346,7 @@ export const sourceMarkets: SourceMarket[] = [
       "The darkest months at home are the best months on the Nile",
       "Private guiding, researched and booked in English",
     ],
-    welcome: "We plan private journeys in Egypt for travellers from Sweden — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day.",
+    welcome: "We plan private journeys in Egypt for travellers from Sweden — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within two hours.",
   },
   {
     code: "NO", country: "Norway", demonym: "Norwegian travellers", region: "Northern Europe",
@@ -358,7 +358,7 @@ export const sourceMarkets: SourceMarket[] = [
       "November to March, and the February winter holiday",
       "Private guiding, researched and booked in English",
     ],
-    welcome: "We plan private journeys in Egypt for travellers from Norway — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day.",
+    welcome: "We plan private journeys in Egypt for travellers from Norway — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within two hours.",
   },
   {
     code: "DK", country: "Denmark", demonym: "Danish travellers", region: "Northern Europe",
@@ -370,7 +370,7 @@ export const sourceMarkets: SourceMarket[] = [
       "November to March on the Nile",
       "Private guiding, researched and booked in English",
     ],
-    welcome: "We plan private journeys in Egypt for travellers from Denmark — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day.",
+    welcome: "We plan private journeys in Egypt for travellers from Denmark — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within two hours.",
   },
 
   // ===== Central & Eastern Europe ==========================================
@@ -397,7 +397,7 @@ export const sourceMarkets: SourceMarket[] = [
       "The Nile Valley from October to April, the Red Sea all year",
       "Private guiding in English",
     ],
-    welcome: "We plan private journeys in Egypt for travellers from Poland — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day.",
+    welcome: "We plan private journeys in Egypt for travellers from Poland — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within two hours.",
   },
   {
     code: "CZ", country: "Czechia", demonym: "Czech travellers", region: "Central & Eastern Europe",
@@ -409,7 +409,7 @@ export const sourceMarkets: SourceMarket[] = [
       "Egyptology, with a private specialist guide",
       "The Nile Valley from October to April",
     ],
-    welcome: "We plan private journeys in Egypt for travellers from Czechia — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day.",
+    welcome: "We plan private journeys in Egypt for travellers from Czechia — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within two hours.",
   },
   {
     code: "UA", country: "Ukraine", demonym: "Ukrainian travellers", region: "Central & Eastern Europe",
@@ -556,7 +556,7 @@ export const sourceMarkets: SourceMarket[] = [
       "Ten days or more: Cairo, the Nile, Aswan, perhaps the Red Sea",
       "The southern-summer holidays fall in Egypt's best weather",
     ],
-    welcome: "We plan private journeys in Egypt for travellers from Australia — journeys long enough to be worth the flight, with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day.",
+    welcome: "We plan private journeys in Egypt for travellers from Australia — journeys long enough to be worth the flight, with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within two hours.",
   },
   {
     code: "JP", country: "Japan", demonym: "Japanese travellers", region: "Asia-Pacific",
@@ -636,7 +636,7 @@ export const sourceMarkets: SourceMarket[] = [
       "Ten days or more: Cairo, the Nile, Aswan, perhaps the Red Sea",
       "The southern-summer holidays fall in Egypt's best weather",
     ],
-    welcome: "We plan private journeys in Egypt for travellers from New Zealand — journeys long enough to be worth the flight, with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day.",
+    welcome: "We plan private journeys in Egypt for travellers from New Zealand — journeys long enough to be worth the flight, with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within two hours.",
   },
   // ===== Added October 2026 — English-searching markets with their own page ==
   {
@@ -650,7 +650,7 @@ export const sourceMarkets: SourceMarket[] = [
       "The darkest months at home are the best months on the Nile",
       "The e-visa or a visa on arrival",
     ],
-    welcome: "We plan private journeys in Egypt for travellers from Finland — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day.",
+    welcome: "We plan private journeys in Egypt for travellers from Finland — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within two hours.",
   },
   {
     code: "IS", country: "Iceland", demonym: "Icelandic travellers", region: "Northern Europe",
@@ -662,7 +662,7 @@ export const sourceMarkets: SourceMarket[] = [
       "One stop to Cairo through a European hub",
       "Winter on the Nile",
     ],
-    welcome: "We plan private journeys in Egypt for travellers from Iceland — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day.",
+    welcome: "We plan private journeys in Egypt for travellers from Iceland — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within two hours.",
   },
   {
     code: "LU", country: "Luxembourg", demonym: "Luxembourg travellers", region: "Western Europe",
@@ -689,7 +689,7 @@ export const sourceMarkets: SourceMarket[] = [
       "Egyptologists from our own team who guide in English or Mandarin",
       "The e-visa or a visa on arrival",
     ],
-    welcome: "We plan private journeys in Egypt for travellers from Singapore — with your own licensed Egyptologist, in English or Mandarin, and a real itinerary within one working day.",
+    welcome: "We plan private journeys in Egypt for travellers from Singapore — with your own licensed Egyptologist, in English or Mandarin, and a real itinerary within two hours.",
   },
   {
     code: "HK", country: "Hong Kong", demonym: "Hong Kong travellers", region: "Asia-Pacific",
@@ -702,7 +702,7 @@ export const sourceMarkets: SourceMarket[] = [
       "One stop to Cairo through a Gulf hub or mainland China",
       "Egyptologists from our own team who guide in English or Mandarin",
     ],
-    welcome: "We plan private journeys in Egypt for travellers from Hong Kong — with your own licensed Egyptologist, in English or Mandarin, and a real itinerary within one working day.",
+    welcome: "We plan private journeys in Egypt for travellers from Hong Kong — with your own licensed Egyptologist, in English or Mandarin, and a real itinerary within two hours.",
   },
   {
     code: "TW", country: "Taiwan", demonym: "Taiwanese travellers", region: "Asia-Pacific",
@@ -742,7 +742,7 @@ export const sourceMarkets: SourceMarket[] = [
       "The tourist e-visa, online before you fly",
       "Family and multi-generation journeys",
     ],
-    welcome: "We plan private journeys in Egypt for travellers from South Africa — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day.",
+    welcome: "We plan private journeys in Egypt for travellers from South Africa — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within two hours.",
   },
   {
     code: "NG", country: "Nigeria", demonym: "Nigerian travellers", region: "Africa",
@@ -755,7 +755,7 @@ export const sourceMarkets: SourceMarket[] = [
       "An Egyptian visa from the embassy, applied for well before travel",
       "Family and celebration journeys",
     ],
-    welcome: "We plan private journeys in Egypt for travellers from Nigeria — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day.",
+    welcome: "We plan private journeys in Egypt for travellers from Nigeria — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within two hours.",
   },
   {
     code: "KE", country: "Kenya", demonym: "Kenyan travellers", region: "Africa",
@@ -767,7 +767,7 @@ export const sourceMarkets: SourceMarket[] = [
       "The EgyptAir nonstop from Nairobi",
       "An Egyptian visa from the embassy, applied for well before travel",
     ],
-    welcome: "We plan private journeys in Egypt for travellers from Kenya — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day.",
+    welcome: "We plan private journeys in Egypt for travellers from Kenya — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within two hours.",
   },
   {
     code: "GH", country: "Ghana", demonym: "Ghanaian travellers", region: "Africa",
@@ -779,7 +779,7 @@ export const sourceMarkets: SourceMarket[] = [
       "The EgyptAir nonstop from Accra",
       "An Egyptian visa from the embassy, applied for well before travel",
     ],
-    welcome: "We plan private journeys in Egypt for travellers from Ghana — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day.",
+    welcome: "We plan private journeys in Egypt for travellers from Ghana — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within two hours.",
   },
 ];
 

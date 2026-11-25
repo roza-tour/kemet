@@ -2,7 +2,6 @@
 // /occasions.html — the hub for journeys defined by the reason for travelling.
 import Base from "@/layouts/Base.astro";
 import PageHero from "@/components/PageHero.astro";
-import StandardOfTravel from "@/components/trust/StandardOfTravel.astro";
 import LeadCapture from "@/components/conversion/LeadCapture.astro";
 import SymbolIcon from "@/components/SymbolIcon.astro";
 import { occasions } from "@/data/occasions";
@@ -71,14 +70,6 @@ const jsonld: Record<string, unknown>[] = [
     </div>
   </section>
 
-  <section style="padding-top:0">
-    <div class="wrap">
-      <StandardOfTravel
-        eyebrow="The standard"
-        heading="What every journey here is"
-      />
-    </div>
-  </section>
 
   <LeadCapture
     variant="consultation"

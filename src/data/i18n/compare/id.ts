@@ -5,7 +5,7 @@ export const idCompLabels: CompLabels = {
   verdict: "Kesimpulan kami",
   sideBySide: "Perbandingan langsung",
   ctaHeading: "Kirimkan tanggal perjalanan Anda",
-  ctaText: "Cukup tanggal dan jumlah pelancong. Kami membalas dalam satu hari kerja, lengkap dengan rancangan perjalanan yang nyata dan harganya.",
+  ctaText: "Cukup tanggal dan jumlah pelancong. Kami membalas dalam dua jam, lengkap dengan rancangan perjalanan yang nyata dan harganya.",
   whatsapp: "Halo Kemet — saya sedang menimbang: %s",
   emailSubject: "%s — pertanyaan",
   moreLabel: "Perbandingan lainnya",

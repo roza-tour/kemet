@@ -72,7 +72,7 @@ export const company: CompanyProfile = {
     {
       type: "email",
       label: "Email",
-      availability: "Response within 24 hours",
+      availability: "Response within two hours",
     },
     {
       type: "phone",

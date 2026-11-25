@@ -38,7 +38,6 @@ const alongside = p.alongside.map((slug) => tours.find((t) => t.slug === slug)).
 
 const faqs = [
   ...p.faqs,
-  { q: "How is the order of the days decided?", a: ORDER_NOTE },
   { q: "What does it cost?", a: PRICE_NOTE },
 ];
 const jsonld = programmeSchema({
@@ -173,7 +172,7 @@ const waMessage = `Hello Kemet — I'd like to ask about "${p.title}". My dates:
   <LeadCapture
     variant="consultation"
     heading="Send us your dates"
-    subtext="Dates and the number of travellers are enough. We reply in writing, within one working day, with the days in their final order and the price."
+    subtext="Dates and the number of travellers are enough. We reply in writing, within two hours, with the days in their final order and the price."
     whatsappMessage={waMessage}
     emailSubject={`${p.title} — enquiry`}
   />

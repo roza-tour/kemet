@@ -5,7 +5,7 @@ export const deCompLabels: CompLabels = {
   verdict: "Unser Urteil",
   sideBySide: "Im direkten Vergleich",
   ctaHeading: "Nennen Sie uns Ihre Reisedaten",
-  ctaText: "Reisedaten und Personenzahl genügen. Wir antworten innerhalb eines Werktags – mit einem konkreten Reiseverlauf und einem Preis.",
+  ctaText: "Reisedaten und Personenzahl genügen. Wir antworten innerhalb von zwei Stunden – mit einem konkreten Reiseverlauf und einem Preis.",
   whatsapp: "Guten Tag, Kemet – ich bin gerade am Entscheiden: %s",
   emailSubject: "%s – Anfrage",
   moreLabel: "Weitere Vergleiche",

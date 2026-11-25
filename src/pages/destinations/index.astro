@@ -4,13 +4,11 @@
 // 500). Entirely data-driven: it reads the catalogue and the region vocabulary,
 // so adding a destination surfaces it here automatically — no edit to this page.
 import Base from "@/layouts/Base.astro";
-import StandardOfTravel from "@/components/trust/StandardOfTravel.astro";
 import HubEditorial from "@/components/HubEditorial.astro";
 import { hubs } from "@/data/hubs";
 import PageHero from "@/components/PageHero.astro";
 import SectionHeader from "@/components/SectionHeader.astro";
 import DestinationCard from "@/components/destination/DestinationCard.astro";
-import Frieze from "@/components/Frieze.astro";
 import { destinations } from "@/data/destinations";
 import { regions, labelOf } from "@/config/taxonomy";
 import { hubFor, relativePrefix } from "@/config/routes";
@@ -85,13 +83,4 @@ const faqLd = {
   ))}
 
   <HubEditorial hub={hub} faqHeading="Egypt destination questions" />
-  <Frieze />
-
-  {/* The tier, stated in specifics rather than adjectives — on every hub a
-      first-time visitor can land on, not only the home page. */}
-  <section style="padding-top:0">
-    <div class="wrap">
-      <StandardOfTravel compact={true} />
-    </div>
-  </section>
 </Base>

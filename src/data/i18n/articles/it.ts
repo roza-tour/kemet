@@ -3,7 +3,7 @@ import type { ArtText, ArtLabels } from "./types";
 
 export const itArtLabels: ArtLabels = {
   ctaHeading: "Inviateci le vostre date",
-  ctaText: "Bastano le date e il numero di viaggiatori. Rispondiamo entro un giorno lavorativo, con un itinerario vero e un prezzo.",
+  ctaText: "Bastano le date e il numero di viaggiatori. Rispondiamo entro due ore, con un itinerario vero e un prezzo.",
   whatsapp: "Buongiorno Kemet — ho letto «%s» e vorrei organizzare un viaggio.",
   emailSubject: "%s — richiesta di informazioni",
   moreLabel: "Continuate a leggere",
@@ -487,7 +487,7 @@ export const itArticles: ArtText[] = [
     metaTitle: "Quando andare in Egitto: guida stagione per stagione | Kemet",
     metaDescription: "Quando andare in Egitto: da ottobre ad aprile è l'alta stagione nella valle del Nilo. Cairo, Luxor, Assuan, Alessandria e Mar Rosso stagione per stagione.",
     keywords: "quando andare in egitto, periodo migliore per visitare l'egitto, clima egitto, egitto mese per mese, egitto in estate, meteo egitto",
-    title: "Quando andare in Egitto",
+    title: "L'Egitto stagione per stagione",
     summary: "Il periodo migliore per viaggiare in Egitto va da ottobre ad aprile, quando le temperature nella valle del Nilo sono miti e i monumenti si visitano con piacere. Che cosa aspettarsi stagione per stagione e destinazione per destinazione.",
     lede: "",
     facts: [

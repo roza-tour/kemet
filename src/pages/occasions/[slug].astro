@@ -6,7 +6,6 @@ import PageHero from "@/components/PageHero.astro";
 import Frieze from "@/components/Frieze.astro";
 import Faq from "@/components/Faq.astro";
 import TourCard from "@/components/TourCard.astro";
-import StandardOfTravel from "@/components/trust/StandardOfTravel.astro";
 import LeadCapture from "@/components/conversion/LeadCapture.astro";
 import { occasions } from "@/data/occasions";
 import type { Occasion } from "@/data/occasions";
@@ -140,11 +139,6 @@ const title = `${o.title} | Kemet`;
     </div>
   </section>
 
-  <section style="padding-top:0">
-    <div class="wrap">
-      <StandardOfTravel compact={true} showPrice={false} heading="What every Kemet journey is" />
-    </div>
-  </section>
 
   <section style="padding-top:0">
     <div class="wrap">

@@ -80,7 +80,7 @@ export const GET: APIRoute = () => {
         url: `${SITE_URL}/journeys.json`,
         about:
           "Kemet plans private journeys in Egypt: a licensed Egyptologist from our own team, a private vehicle and driver, " +
-          "hotels chosen for the room, and a real day-by-day itinerary with a clear price within one working day. " +
+          "hotels chosen for the room, and a real day-by-day itinerary with a clear price within two hours. " +
           "These are the journeys with a published price; any of them can be lengthened, shortened or combined.",
         forAssistants:
           "Prices are from-prices in euros per person and are the same in every language. `priceFrom` is for a private party of " +

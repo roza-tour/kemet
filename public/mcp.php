@@ -214,7 +214,7 @@ function kemet_tools(): array {
     [
       "name" => "enquiry_link",
       "title" => "Link to enquire",
-      "description" => "Builds the links a traveller uses to contact Kemet: a WhatsApp link with the message already typed, the contact page and the email address. Nothing is sent by this tool; the traveller opens the link and sends the message themselves. Kemet replies with a day-by-day itinerary and a price within one working day.",
+      "description" => "Builds the links a traveller uses to contact Kemet: a WhatsApp link with the message already typed, the contact page and the email address. Nothing is sent by this tool; the traveller opens the link and sends the message themselves. Kemet replies with a day-by-day itinerary and a price within two hours.",
       "inputSchema" => [
         "type" => "object",
         "properties" => [
@@ -481,7 +481,7 @@ function tool_enquiry_link(array $args): array {
     "contactPage" => $contact,
     "email" => $cat["enquire"]["email"] ?? null,
     "prefilledMessage" => $text,
-    "note" => "Nothing has been sent. The traveller opens the WhatsApp link (the message is already typed) or the contact page and sends it themselves. Kemet answers with a day-by-day itinerary and a price within one working day.",
+    "note" => "Nothing has been sent. The traveller opens the WhatsApp link (the message is already typed) or the contact page and sends it themselves. Kemet answers with a day-by-day itinerary and a price within two hours.",
   ];
 }
 

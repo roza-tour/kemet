@@ -3,7 +3,7 @@ import type { ArtText, ArtLabels } from "./types";
 
 export const deArtLabels: ArtLabels = {
   ctaHeading: "Senden Sie uns Ihre Reisedaten",
-  ctaText: "Reisezeitraum und Personenzahl genügen. Innerhalb eines Werktags antworten wir mit einem konkreten Reiseverlauf und einem Preis.",
+  ctaText: "Reisezeitraum und Personenzahl genügen. Innerhalb von zwei Stunden antworten wir mit einem konkreten Reiseverlauf und einem Preis.",
   whatsapp: "Guten Tag Kemet, ich habe „%s“ gelesen und möchte eine Reise planen.",
   emailSubject: "%s – Anfrage",
   moreLabel: "Weiterlesen",
@@ -487,7 +487,7 @@ export const deArticles: ArtText[] = [
     metaTitle: "Beste Reisezeit Ägypten – Jahreszeiten im Überblick | Kemet",
     metaDescription: "Wann nach Ägypten reisen? Oktober bis April ist im Niltal Hauptsaison. Jahreszeit für Jahreszeit: Kairo, Luxor, Assuan, Alexandria und Rotes Meer.",
     keywords: "beste reisezeit ägypten, ägypten wetter, ägypten klima, wann nach ägypten reisen, ägypten reisezeit monat, ägypten temperaturen",
-    title: "Beste Reisezeit für Ägypten",
+    title: "Ägypten nach Jahreszeiten",
     summary: "Die beste Reisezeit für Ägypten ist von Oktober bis April, wenn die Temperaturen im Niltal mild sind und sich die Monumente angenehm erkunden lassen. Was Sie Jahreszeit für Jahreszeit und Reiseziel für Reiseziel erwartet.",
     lede: "",
     facts: [

@@ -294,7 +294,7 @@ const ogLocaleAlternates = alternates
   <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
   {/* Fonts are self-hosted (src/styles/fonts.css → /fonts/*.woff2) — no
       external font requests. */}
-  {siteSchema().map((ld) => <script type="application/ld+json" is:inline set:html={JSON.stringify(ld)} />)}
+  {siteSchema(active === "index.html" || active === "about.html").map((ld) => <script type="application/ld+json" is:inline set:html={JSON.stringify(ld)} />)}
   {pageLd.map((ld) => <script type="application/ld+json" is:inline set:html={JSON.stringify(ld)} />)}
 </head>
 <body>

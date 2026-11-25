@@ -68,7 +68,7 @@ export const reasons: Reason[] = [
   },
   {
     title: "Answered in the traveller's own language",
-    body: `The site is published in ${LOCALES.length} languages, enquiries are answered in the language they are written in, and the first reply comes within one business day — by email or on WhatsApp. The people who planned a journey stay reachable for the whole time the traveller is in Egypt.`,
+    body: `The site is published in ${LOCALES.length} languages, enquiries are answered in the language they are written in, and the first reply comes within two hours — by email or on WhatsApp. The people who planned a journey stay reachable for the whole time the traveller is in Egypt.`,
     path: "contact.html",
   },
   {

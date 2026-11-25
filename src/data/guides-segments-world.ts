@@ -110,7 +110,7 @@ export const segmentGuidesWorld: Guide[] = [
       {
         heading: "How a private journey works",
         paragraphs: [
-          "Everything is private: your own licensed Egyptologist, your own vehicle and driver, and hotels chosen for the room rather than the star rating. Our prices are set in euros, and you can pay by PayPal, card or bank transfer. Tell us your dates, how many of you are travelling and the language you would like to be guided in; we reply within one working day with a real itinerary and a clear price, with no obligation.",
+          "Everything is private: your own licensed Egyptologist, your own vehicle and driver, and hotels chosen for the room rather than the star rating. Our prices are set in euros, and you can pay by PayPal, card or bank transfer. Tell us your dates, how many of you are travelling and the language you would like to be guided in; we reply within two hours with a real itinerary and a clear price, with no obligation.",
         ],
       },
     ],
@@ -242,7 +242,7 @@ export const segmentGuidesWorld: Guide[] = [
       {
         heading: "How a private journey works",
         paragraphs: [
-          "Everything is private: your own licensed Egyptologist, your own vehicle and driver, and hotels chosen for the room rather than the star rating. Egypt's currency is the Egyptian pound; our prices are set in euros, and you can pay us by PayPal, card or bank transfer. Tell us your dates and how many of you are travelling; we reply within one working day with a real itinerary and a clear price, with no obligation.",
+          "Everything is private: your own licensed Egyptologist, your own vehicle and driver, and hotels chosen for the room rather than the star rating. Egypt's currency is the Egyptian pound; our prices are set in euros, and you can pay us by PayPal, card or bank transfer. Tell us your dates and how many of you are travelling; we reply within two hours with a real itinerary and a clear price, with no obligation.",
         ],
       },
     ],
@@ -375,7 +375,7 @@ export const segmentGuidesWorld: Guide[] = [
       {
         heading: "How a private journey works",
         paragraphs: [
-          "Everything is private: your own licensed Egyptologist, your own vehicle and driver, and hotels chosen for the room rather than the star rating. Our prices are set in euros, and you can pay by PayPal, card or bank transfer. Tell us your dates — even if it is the next long weekend — and how many of you are travelling; we reply within one working day with a real itinerary and a clear price, with no obligation.",
+          "Everything is private: your own licensed Egyptologist, your own vehicle and driver, and hotels chosen for the room rather than the star rating. Our prices are set in euros, and you can pay by PayPal, card or bank transfer. Tell us your dates — even if it is the next long weekend — and how many of you are travelling; we reply within two hours with a real itinerary and a clear price, with no obligation.",
         ],
       },
     ],

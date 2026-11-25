@@ -155,7 +155,7 @@ export const es: LocalizedPage[] = [
     ],
     cta: {
       heading: "¿Qué ruta les encaja?",
-      text: "Envíennos sus fechas y el tamaño del grupo. Respondemos personalmente, normalmente en un día laborable, con un itinerario real y un precio.",
+      text: "Envíennos sus fechas y el tamaño del grupo. Respondemos personalmente, normalmente en dos horas, con un itinerario real y un precio.",
       whatsapp: "Buenos días Kemet — quisiera un presupuesto para un viaje privado a Egipto.",
       emailSubject: "Solicitud de presupuesto — viaje a Egipto",
     },

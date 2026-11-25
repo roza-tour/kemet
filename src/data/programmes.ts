@@ -9,7 +9,7 @@
 // rules, what comparable operators sell). They carry NO PRICE, ON PURPOSE:
 // the rate belongs to the dates, the lodges open then, the boats and the size
 // of the party, and the owner has not yet fixed a rate for any of them. The
-// pages say so and say how a price is given (in writing, within a working day).
+// pages say so and say how a price is given (in writing, within two hours).
 //
 // NOTHING HERE NAMES A HOTEL, A BOAT OR A SUPPLIER. The catalogue never does,
 // and a name on this page would read as a partnership we do not claim. Where a
@@ -78,7 +78,7 @@ export const ORDER_NOTE =
 
 export const PRICE_NOTE =
   "No price is printed here, on purpose. The rate depends on your dates, on what is open and available then, and on the size of your party. " +
-  "Send us the dates and we reply in writing, within one working day, with the route in its final order and the price.";
+  "Send us the dates and we reply in writing, within two hours, with the route in its final order and the price.";
 
 export const PROGRAMME_HUB = {
   route: "programmes.html",

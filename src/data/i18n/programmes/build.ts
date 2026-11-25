@@ -53,7 +53,9 @@ export function programmePages(locale: TranslatedLocale, L: ProgLabels, texts: P
         { title: L.stay, body: t.stay },
         { title: L.avoid, body: t.avoid },
       ],
-      faqs: [...t.faqs, { q: L.orderQ, a: L.orderNote }, { q: L.priceQ, a: L.priceNote }],
+      // The order of the days is its own section above; repeating it as a
+      // question made the same paragraph appear twice on every programme.
+      faqs: [...t.faqs, { q: L.priceQ, a: L.priceNote }],
       cta: { heading: L.ctaHeading, text: L.ctaText, whatsapp: fill(L.whatsapp), emailSubject: fill(L.emailSubject) },
       moreLabel: L.moreLabel,
       moreText: L.moreText,

@@ -3,7 +3,7 @@ import type { ArtText, ArtLabels } from "./types";
 
 export const ptArtLabels: ArtLabels = {
   ctaHeading: "Enviem as suas datas",
-  ctaText: "Basta nos dizer as datas e o número de viajantes. Respondemos em até um dia útil, com um roteiro de verdade e um preço.",
+  ctaText: "Basta nos dizer as datas e o número de viajantes. Respondemos em até duas horas, com um roteiro de verdade e um preço.",
   whatsapp: "Olá, Kemet — li \"%s\" e gostaria de planejar uma viagem.",
   emailSubject: "%s — consulta",
   moreLabel: "Continuem a leitura",
@@ -230,7 +230,7 @@ export const ptArticles: ArtText[] = [
     metaTitle: "Melhor época para viajar ao Egito, estação por estação | Kemet",
     metaDescription: "Quando ir ao Egito: de outubro a abril é a alta temporada no Vale do Nilo. Estação por estação no Cairo, em Luxor, Assuã, Alexandria e no Mar Vermelho.",
     keywords: "melhor época para viajar ao egito, quando ir ao egito, clima no egito, egito em que mês ir, temperatura no egito, egito no verão",
-    title: "Melhor época para viajar ao Egito",
+    title: "O Egito, estação por estação",
     summary: "A melhor temporada para viajar ao Egito vai de outubro a abril, quando as temperaturas no Vale do Nilo são amenas e os monumentos são confortáveis de explorar. Eis o que esperar estação por estação e destino por destino.",
     lede: "",
     facts: [

@@ -3,7 +3,7 @@ import type { ArtText, ArtLabels } from "./types";
 
 export const msArtLabels: ArtLabels = {
   ctaHeading: "Hantar tarikh anda kepada kami",
-  ctaText: "Tarikh dan bilangan pelancong sudah memadai. Kami membalas dalam masa satu hari bekerja, lengkap dengan jadual perjalanan sebenar dan harga.",
+  ctaText: "Tarikh dan bilangan pelancong sudah memadai. Kami membalas dalam dua jam, lengkap dengan jadual perjalanan sebenar dan harga.",
   whatsapp: "Hai Kemet — saya telah membaca \"%s\" dan ingin merancang satu perjalanan.",
   emailSubject: "%s — pertanyaan",
   moreLabel: "Baca seterusnya",
@@ -487,7 +487,7 @@ export const msArticles: ArtText[] = [
     metaTitle: "Waktu Terbaik Melawat Mesir — Panduan Mengikut Musim | Kemet",
     metaDescription: "Bila patut ke Mesir. Oktober hingga April ialah musim puncak di Lembah Nil. Panduan mengikut musim untuk Kaherah, Luxor, Aswan, Alexandria dan Laut Merah.",
     keywords: "waktu terbaik melawat mesir, bila musim terbaik ke mesir, cuaca mesir mengikut bulan, melancong ke mesir bulan apa, mesir musim panas, ramadan di mesir",
-    title: "Waktu Terbaik Melawat Mesir",
+    title: "Mesir mengikut musim",
     summary: "Musim melancong terbaik di Mesir ialah Oktober hingga April, apabila suhu Lembah Nil sederhana dan monumen selesa diterokai. Inilah yang boleh dijangka mengikut musim dan mengikut destinasi.",
     lede: "",
     facts: [

@@ -5,7 +5,7 @@ export const msCompLabels: CompLabels = {
   verdict: "Pendapat kami",
   sideBySide: "Perbandingan sebelah-menyebelah",
   ctaHeading: "Hantarkan tarikh perjalanan anda",
-  ctaText: "Tarikh dan bilangan pelancong sudah memadai. Kami membalas dalam masa satu hari bekerja, lengkap dengan jadual perjalanan sebenar dan harga.",
+  ctaText: "Tarikh dan bilangan pelancong sudah memadai. Kami membalas dalam dua jam, lengkap dengan jadual perjalanan sebenar dan harga.",
   whatsapp: "Helo Kemet — saya sedang membuat keputusan: %s",
   emailSubject: "%s — pertanyaan",
   moreLabel: "Perbandingan lain",

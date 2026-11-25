@@ -16,7 +16,7 @@ export const itMonthLabels: MonthLabels = {
   occasions: "Feste e ricorrenze",
   verdict: "Il nostro giudizio",
   ctaHeading: "Inviateci le vostre date",
-  ctaText: "Bastano le date e il numero di viaggiatori. Rispondiamo entro un giorno lavorativo, con un itinerario concreto e un preventivo.",
+  ctaText: "Bastano le date e il numero di viaggiatori. Rispondiamo entro due ore, con un itinerario concreto e un preventivo.",
   whatsapp: "Buongiorno Kemet, stiamo pensando all'Egitto a %s.",
   emailSubject: "Egitto a %s — richiesta",
   moreLabel: "Altri mesi",

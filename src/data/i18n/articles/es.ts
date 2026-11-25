@@ -3,7 +3,7 @@ import type { ArtText, ArtLabels } from "./types";
 
 export const esArtLabels: ArtLabels = {
   ctaHeading: "Envíenos sus fechas",
-  ctaText: "Bastan las fechas y el número de viajeros. Respondemos en un día laborable, con un itinerario real y un precio.",
+  ctaText: "Bastan las fechas y el número de viajeros. Respondemos en dos horas, con un itinerario real y un precio.",
   whatsapp: "Hola, Kemet: he leído «%s» y me gustaría planificar un viaje.",
   emailSubject: "%s: consulta",
   moreLabel: "Siga leyendo",
@@ -484,10 +484,10 @@ export const esArticles: ArtText[] = [
     kind: "guide",
     id: "best-time-to-visit-egypt",
     localeSlug: "cuando-viajar-a-egipto-mejor-epoca",
-    metaTitle: "Mejor época para viajar a Egipto, mes a mes | Kemet",
+    metaTitle: "Mejor época para viajar a Egipto, estación por estación | Kemet",
     metaDescription: "Cuándo ir a Egipto: de octubre a abril es la temporada alta en el valle del Nilo. Qué esperar por estaciones en El Cairo, Luxor, Asuán, Alejandría y mar Rojo.",
     keywords: "mejor época para viajar a egipto, cuándo viajar a egipto, clima en egipto por meses, egipto en verano, mejor mes para ir a egipto, temporada alta egipto",
-    title: "Mejor época para viajar a Egipto",
+    title: "Egipto, estación por estación",
     summary: "La mejor época para viajar a Egipto es de octubre a abril, cuando las temperaturas del valle del Nilo son suaves y los monumentos se visitan con comodidad. Esto es lo que cabe esperar por estaciones y por destinos.",
     lede: "",
     facts: [

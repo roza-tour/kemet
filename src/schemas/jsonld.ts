@@ -673,7 +673,13 @@ const confirmedCredentials: JsonLd[] = (company.credentials ?? [])
     ...(c.url ? { url: c.url } : {}),
   }));
 
-export function siteSchema(): JsonLd[] {
+/**
+ * `full` carries the list of the fifty countries the business serves. It is
+ * 2.8 KB, and it used to be in every one of 1,269 pages; it is now on the
+ * home and About pages, where the organisation is the subject. Every other
+ * page carries the same node (same @id) without the list.
+ */
+export function siteSchema(full = true): JsonLd[] {
   const org: JsonLd = {
     "@context": SCHEMA_CONTEXT,
     "@type": ["TravelAgency", "LocalBusiness"],
@@ -749,7 +755,7 @@ export function siteSchema(): JsonLd[] {
       audienceType:
         "Private and luxury travellers — couples, families and small private parties " +
         "buying guided, individually arranged travel rather than group departures",
-      geographicArea: marketCountries(),
+      ...(full ? { geographicArea: marketCountries() } : {}),
     },
     serviceArea: { "@type": "AdministrativeArea", name: "Worldwide" },
     serviceType: "Luxury private tours, Nile cruises and tailor-made travel",

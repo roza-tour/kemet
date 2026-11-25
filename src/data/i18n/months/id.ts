@@ -16,7 +16,7 @@ export const idMonthLabels: MonthLabels = {
   occasions: "Perayaan dan hari libur",
   verdict: "Penilaian kami",
   ctaHeading: "Kirimkan tanggal perjalanan Anda",
-  ctaText: "Cukup tanggal dan jumlah pelancong. Kami membalas dalam satu hari kerja, lengkap dengan rancangan perjalanan yang nyata beserta harganya.",
+  ctaText: "Cukup tanggal dan jumlah pelancong. Kami membalas dalam dua jam, lengkap dengan rancangan perjalanan yang nyata beserta harganya.",
   whatsapp: "Halo Kemet — saya sedang mempertimbangkan perjalanan ke Mesir pada %s.",
   emailSubject: "Mesir di Bulan %s — pertanyaan perjalanan",
   moreLabel: "Bulan lainnya",

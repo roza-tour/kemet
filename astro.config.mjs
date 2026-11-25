@@ -193,6 +193,13 @@ for (const g of GROUPS) {
   links.push({ lang: "x-default", url: `${SITE_URL}/${g[0]}` });
   for (const path of g) SITEMAP_ALTERNATES[`${SITE_URL}/${path}`] = links;
 }
+// Partial clusters (translation-groups.json → `partial`): English plus the
+// languages that have the page.
+for (const g of REGISTRY.partial ?? []) {
+  const links = LOCALES.filter((loc) => g[loc]).map((loc) => ({ lang: loc, url: `${SITE_URL}/${g[loc]}` }));
+  links.push({ lang: "x-default", url: `${SITE_URL}/${g.en}` });
+  for (const l of links) if (l.lang !== "x-default") SITEMAP_ALTERNATES[l.url] = links;
+}
 // The translated journeys are clustered in config/tour-i18n.ts, not in the
 // registry above, so their pages declared eleven alternates in <head> and
 // none here: 240 URLs on which the sitemap and the page disagreed.

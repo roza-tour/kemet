@@ -20,8 +20,6 @@
 import Base from "@/layouts/Base.astro";
 import { srcsetFor, SIZES } from "@/utils/images";
 import PageHero from "@/components/PageHero.astro";
-import Frieze from "@/components/Frieze.astro";
-import StandardOfTravel from "@/components/trust/StandardOfTravel.astro";
 import { tours } from "@/data/tours";
 import { getTourMeta } from "@/data/tours.taxonomy";
 import { breadcrumb } from "@/schemas/jsonld";
@@ -178,13 +176,6 @@ const jsonld = breadcrumb([["Home", "index.html"], ["Plan your journey", "plan.h
     </div>
   </section>
 
-  <Frieze />
-
-  <section style="padding-top:0">
-    <div class="wrap">
-      <StandardOfTravel compact={true} />
-    </div>
-  </section>
 </Base>
 
 <script is:inline>

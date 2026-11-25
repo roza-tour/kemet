@@ -235,7 +235,7 @@ export const christmasLanding: LandingPage = {
       ],
       submit: "Send message",
       sending: "Sending…",
-      okNote: "Thank you — your message has been sent. We will reply within one business day.",
+      okNote: "Thank you — your message has been sent. We will reply within two hours.",
       errNote:
         "Something went wrong and the message was not sent. Please check your name, email and message — or write to us on WhatsApp instead.",
       honeypotLabel: "Website",
@@ -307,7 +307,7 @@ export const christmasLanding: LandingPage = {
       ? "Tell us your dates"
       : `Tell us your dates for ${SEASON_Y}–${String(SEASON_Y + 1).slice(2)}`,
     subtext:
-      `One business day, an itemised quote, no obligation${STAGE === "late" || STAGE === "last" ? " — and if the honest answer is that the dates no longer work, we will say that instead" : ""}.`,
+      `A reply within two hours, an itemised quote, no obligation${STAGE === "late" || STAGE === "last" ? " — and if the honest answer is that the dates no longer work, we will say that instead" : ""}.`,
     datesPlaceholder: `e.g. ${d(PEAK_FROM)} – ${d(PEAK_TO)}, or flexible`,
     messagePlaceholder:
       "Party size, whether New Year's Eve on the Nile is the priority, and whether your dates can move.",

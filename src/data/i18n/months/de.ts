@@ -16,7 +16,7 @@ export const deMonthLabels: MonthLabels = {
   occasions: "Feste und Feiertage",
   verdict: "Unser Fazit",
   ctaHeading: "Senden Sie uns Ihre Reisedaten",
-  ctaText: "Reisedaten und Anzahl der Reisenden genügen. Wir antworten innerhalb eines Werktages – mit einem konkreten Reiseverlauf und einem Preis.",
+  ctaText: "Reisedaten und Anzahl der Reisenden genügen. Wir antworten innerhalb von zwei Stunden – mit einem konkreten Reiseverlauf und einem Preis.",
   whatsapp: "Guten Tag, Kemet – ich überlege, im %s nach Ägypten zu reisen.",
   emailSubject: "Ägypten im %s – Anfrage",
   moreLabel: "Weitere Monate",

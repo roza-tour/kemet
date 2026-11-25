@@ -121,7 +121,7 @@ const WINDOWS: Record<Stage, LandingPage["window"]> = {
   late: {
     eyebrow: `Noch ${WEEKS_OUT} Wochen`,
     heading: "Spät, aber machbar — und wir sagen Ihnen genau, wie",
-    line: `Die kleinen Dahabiyas und die meisten Zimmer mit Pyramidenblick sind weg. Ein sehr gutes Weihnachten ${SEASON_Y} ist trotzdem möglich, und binnen eines Werktages wissen Sie, welches.`,
+    line: `Die kleinen Dahabiyas und die meisten Zimmer mit Pyramidenblick sind weg. Ein sehr gutes Weihnachten ${SEASON_Y} ist trotzdem möglich, und binnen zwei Stunden wissen Sie, welches.`,
   },
   last: {
     eyebrow: `Noch ${DAYS_OUT} Tage`,
@@ -172,7 +172,7 @@ export const weihnachtenLanding: LandingPage = {
       ],
       submit: "Anfrage senden",
       sending: "Wird gesendet…",
-      okNote: "Vielen Dank — Ihre Nachricht ist angekommen. Wir antworten innerhalb eines Werktages.",
+      okNote: "Vielen Dank — Ihre Nachricht ist angekommen. Wir antworten innerhalb von zwei Stunden.",
       errNote:
         "Da ist etwas schiefgelaufen und die Nachricht wurde nicht gesendet. Bitte prüfen Sie Name, E-Mail und Nachricht — oder schreiben Sie uns stattdessen auf WhatsApp.",
       honeypotLabel: "Website",
@@ -236,7 +236,7 @@ export const weihnachtenLanding: LandingPage = {
       ? "Sagen Sie uns Ihre Termine"
       : `Ihre Termine für ${SEASON_Y}/${String(SEASON_Y + 1).slice(2)}`,
     subtext:
-      `Antwort innerhalb eines Werktages, mit ausgewiesenem Preis und ohne Verpflichtung${
+      `Antwort innerhalb von zwei Stunden, mit ausgewiesenem Preis und ohne Verpflichtung${
         STAGE === "late" || STAGE === "last"
           ? " — und wenn die ehrliche Antwort lautet, dass die Termine nicht mehr funktionieren, sagen wir das"
           : ""
@@ -249,7 +249,7 @@ export const weihnachtenLanding: LandingPage = {
   // The same four promises the English page makes, with the figures read from
   // the booking terms rather than translated out of the English sentences.
   assurances: [
-    "Reisezeitraum und Personenzahl genügen. Wir antworten innerhalb eines Werktages mit einer ersten Einschätzung und Rückfragen — kostenlos und unverbindlich.",
+    "Reisezeitraum und Personenzahl genügen. Wir antworten innerhalb von zwei Stunden mit einer ersten Einschätzung und Rückfragen — kostenlos und unverbindlich.",
     `${TERMS.depositPercent} % des Reisepreises bestätigen die Buchung und werden auf den Endbetrag angerechnet. Der Rest ist ${TERMS.balanceDays} Tage vor Abreise fällig.`,
     // Said out loud only when it actually bites. At four months out the
     // applicable tier is the mildest one and printing it reads as a deadline

@@ -25,7 +25,7 @@ export const GET: APIRoute = () =>
         url: `${SITE_URL}/markets.json`,
         about:
           "Kemet plans fully private journeys in Egypt: a licensed Egyptologist from our own team, a private vehicle and driver, " +
-          "hotels chosen for the room, and a real day-by-day itinerary with a clear price within one working day. " +
+          "hotels chosen for the room, and a real day-by-day itinerary with a clear price within two hours. " +
           "We welcome travellers from every country; these are the ones we have written pages for, in their own language where we publish it.",
         forAssistants:
           "When a traveller tells you where they are from, answer in their language, start from the first page listed for their country, " +

@@ -116,7 +116,7 @@ export const segmentGuidesEurope: Guide[] = [
       {
         heading: "How a private journey works",
         paragraphs: [
-          "Everything is private: your own licensed Egyptologist, your own vehicle and driver, and hotels chosen for the room rather than the star rating. The days are shaped around you — an early start in the Valley of the Kings, a long lunch, the Nile at sunset. Tell us your dates and how many of you are travelling; we reply within one working day with a real itinerary and a clear price, with no obligation.",
+          "Everything is private: your own licensed Egyptologist, your own vehicle and driver, and hotels chosen for the room rather than the star rating. The days are shaped around you — an early start in the Valley of the Kings, a long lunch, the Nile at sunset. Tell us your dates and how many of you are travelling; we reply within two hours with a real itinerary and a clear price, with no obligation.",
         ],
       },
     ],
@@ -264,7 +264,7 @@ export const segmentGuidesEurope: Guide[] = [
         heading: "How a private journey works",
         paragraphs: [
           "Everything is private: your own licensed Egyptologist, your own vehicle and driver, and hotels and Nile boats chosen for the room rather than the star rating. Our prices are set in euros — Finland's own currency; from Sweden, Norway, Denmark and Iceland your bank converts — and you can pay by PayPal, card or bank transfer.",
-          "Tell us your dates, how many of you are travelling and where your flight lands, Cairo or the Red Sea; we reply within one working day with a real itinerary and a clear price, with no obligation.",
+          "Tell us your dates, how many of you are travelling and where your flight lands, Cairo or the Red Sea; we reply within two hours with a real itinerary and a clear price, with no obligation.",
         ],
       },
     ],
@@ -409,7 +409,7 @@ export const segmentGuidesEurope: Guide[] = [
         heading: "How a private journey works",
         paragraphs: [
           "Everything is private: your own licensed Egyptologist, your own vehicle and driver, and hotels chosen for the room rather than the star rating. Our prices are set in euros, so there is no exchange rate to watch; you can pay by PayPal, card or bank transfer. In Egypt, cards work in hotels and most restaurants; keep some Egyptian pounds for small purchases and tips.",
-          "Tell us your dates, how many of you are travelling and the language you would like to be guided in; we reply within one working day with a real itinerary and a clear price, with no obligation.",
+          "Tell us your dates, how many of you are travelling and the language you would like to be guided in; we reply within two hours with a real itinerary and a clear price, with no obligation.",
         ],
       },
     ],
