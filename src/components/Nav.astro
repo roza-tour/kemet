@@ -20,6 +20,7 @@ import { localeNav } from "@/config/nav-i18n";
 import { ui, namedMenu, UI_DEFAULT } from "@/config/ui";
 import type { SiteLocale } from "@/config/i18n";
 import type { TranslatedLocale } from "@/config/i18n";
+import { LOCAL_STRINGS } from "@/data/i18n/strings";
 
 interface Props {
   /** Route file of the active page, e.g. "tours.html". */
@@ -53,7 +54,7 @@ const contactHref = locale === UI_DEFAULT ? `${base}contact.html` : "#enquire";
 const isCurrent = (item: (typeof primaryNav)[number]) =>
   item.href === active || item.children?.some((c) => c.href === active);
 ---
-<nav class="nav" id="nav">
+<nav class="nav" id="nav" aria-label={locale === UI_DEFAULT ? "Main menu" : LOCAL_STRINGS[locale as TranslatedLocale].ui.ariaMainNav}>
   <a class="brand" href={homeHref} aria-label={t.brandHome}>
     <span class="logo-plaque">
       {/* Drawn 52px wide, so it gets a 156px file (three times over for the

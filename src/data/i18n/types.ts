@@ -96,6 +96,27 @@ export interface LocalizedPage {
   sharePhoto?: string;
   /** Extra subjects for the page's structured data (types/content.ts → SchemaThing). */
   schemaAbout?: SchemaThing[];
+  /**
+   * What the page is ABOUT, as structured data in the page's own language —
+   * the same entity the English original declares (a TouristDestination with
+   * its coordinates, a TouristAttraction, a TouristTrip, an Article). Built by
+   * the family's builder with schemas/localized.ts. Until 25 Nov 2026 every
+   * translated page said only "a WebPage about Egypt", so Luxor was a place
+   * in English and a generic page in nine other languages.
+   */
+  schema?: Record<string, unknown>[];
+  /** ISO date or year-month the content was last revised — the English
+   *  original's own date, where it has one. Never the build date. */
+  dateModified?: string;
+  /** The section this page sits under in its language, where that language
+   *  has a page for the section: the middle crumb of the trail. */
+  parent?: { label: string; route: string };
+  /**
+   * Further reading in this language, as headed lists of links — filled in
+   * by i18n/crosslinks.ts, not by hand. It is how the month, comparison,
+   * occasion and guide pages are reached from their own language's hubs.
+   */
+  further?: Array<{ heading: string; links: Array<{ label: string; route: string }> }>;
 }
 
 export type LocalePageSet = Record<TranslatedLocale, LocalizedPage[]>;

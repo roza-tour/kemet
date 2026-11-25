@@ -11,7 +11,7 @@ import TourFit from "@/components/conversion/TourFit.astro";
 import StandardOfTravel from "@/components/trust/StandardOfTravel.astro";
 import LeadCapture from "@/components/conversion/LeadCapture.astro";
 import GuideCard from "@/components/guide/GuideCard.astro";
-import { tours } from "@/data/tours";
+import { tours, priceForTwo } from "@/data/tours";
 import { getTourMeta } from "@/data/tours.taxonomy";
 import { findSimilarTours, findPreparationGuides } from "@/data/registry";
 import type { Tour } from "@/types";
@@ -44,7 +44,7 @@ const prepGuides = findPreparationGuides(tour);
 // and the brand suffix is short. The full duration is still in the description,
 // the H1 area and the structured data.
 const shortDuration = tour.durationLabel.replace(/\s*\([^)]*\)\s*/g, "").trim();
-const title = `${tour.title} — ${shortDuration} | Kemet`;
+const title = tour.seoTitle ? `${tour.seoTitle} | Kemet` : `${tour.title} — ${shortDuration} | Kemet`;
 
 // Per-tour meta description: the summary is already a strong, specific hook, so
 // we keep it verbatim and append a clean "private, from €X pp." price signal
@@ -82,6 +82,8 @@ const jsonld = entitySchema("tour", tour);
 // What the headline figure assumes — party size and, on day tours, tickets at
 // the gate rate. Stated beside the price rather than left to the exclusions.
 const priceBasisLine = priceBasis(tour);
+/** What two people pay each — data/tours.ts → priceForTwo. */
+const twoPrice = priceForTwo(tour);
 
 // Page-specific keywords and a share card that uses the tour's own hero photo.
 const keywords = [
@@ -222,6 +224,7 @@ const keywords = [
               </div>
               <div class="pp">per person · EUR</div>
               {priceBasisLine && <p class="pbasis">{priceBasisLine}</p>}
+              {twoPrice && <p class="pbasis">For two travellers: {formatPrice(twoPrice)} per person.</p>}
               {tour.flyOption && (
                 <p class="pbasis">Prefer to fly? The same journey with flights in place of {tour.flyOption.replaces} — from {formatPrice(flyPrice(tour)!)} pp.</p>
               )}

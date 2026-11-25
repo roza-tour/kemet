@@ -18,6 +18,7 @@ import type { DestText } from "./types";
 import { DEST_LABELS } from "./labels";
 import { DEST_HUB, destHubRoute } from "./hub";
 import { destinations } from "@/data/destinations";
+import { destinationLd } from "@/schemas/localized";
 
 export function destinationPages(locale: TranslatedLocale, texts: DestText[]): LocalizedPage[] {
   const L = DEST_LABELS[locale];
@@ -67,6 +68,8 @@ export function destinationPages(locale: TranslatedLocale, texts: DestText[]): L
         { label: DEST_HUB[locale].all, route: destHubRoute(locale) },
       ],
       photos: shots.map((p, i) => ({ ...p!, alt: t.photos[i].alt, label: t.photos[i].label })),
+      schema: [destinationLd(locale, route, t, d)],
+      parent: { label: DEST_HUB[locale].crumb, route: destHubRoute(locale) },
     };
   });
 }

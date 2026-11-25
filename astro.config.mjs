@@ -2,7 +2,7 @@ import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import { loadEnv } from "vite";
 import { execSync } from "node:child_process";
-import { readFileSync } from "node:fs";
+import { readFileSync, readdirSync, existsSync } from "node:fs";
 
 // Deploy-time configuration is read from the environment (see .env.example),
 // with safe fallbacks so a default build is fully reproducible. `site` must
@@ -61,13 +61,26 @@ const LANGS = LOCALES;
 // ---------------------------------------------------------------------------
 const FILE_DATES = new Map();
 try {
-  const log = execSync("git log --pretty=format:%x00%cI --name-only", {
+  // A shallow clone's oldest commit has no parent to be compared with, so git
+  // lists EVERY file as changed in it. Read as-is, a file nobody has touched
+  // in a year takes that commit's date. Those boundary commits are skipped:
+  // a file whose last real change is older than the history we have gets no
+  // date, which is the truth ("unknown"), not an invented one.
+  const gitDir = execSync("git rev-parse --git-dir", { stdio: ["ignore", "pipe", "ignore"] }).toString().trim();
+  const boundary = new Set(existsSync(`${gitDir}/shallow`)
+    ? readFileSync(`${gitDir}/shallow`, "utf8").split("\n").map((x) => x.trim()).filter(Boolean)
+    : []);
+  const log = execSync("git log --pretty=format:%x00%H%x09%cI --name-only", {
     maxBuffer: 128 * 1024 * 1024,
     stdio: ["ignore", "pipe", "ignore"],
   }).toString();
   let commitDate = null;
   for (const line of log.split("\n")) {
-    if (line.startsWith("\0")) { commitDate = line.slice(1).trim(); continue; }
+    if (line.startsWith("\0")) {
+      const [hash, date] = line.slice(1).trim().split("\t");
+      commitDate = boundary.has(hash) ? null : date;
+      continue;
+    }
     const file = line.trim();
     // git log is reverse-chronological, so the first sighting is the newest.
     if (commitDate && file.startsWith("src/") && !FILE_DATES.has(file)) {
@@ -88,19 +101,78 @@ const CONTENT_SOURCES = [
   [/^compare\//, ["src/pages/compare/[slug].astro", "src/data/comparisons.ts"]],
   [/^when-to-go\//, ["src/pages/when-to-go/[slug].astro", "src/data/months.ts"]],
   [/^occasions\//, ["src/pages/occasions/[slug].astro", "src/data/occasions.ts"]],
-  [LOCALE_ROUTE, ["src/pages/[locale]/[slug].astro"]],
+  [/^programmes\//, ["src/pages/programmes/[slug].astro", "src/data/programmes.ts"]],
   [/^tour-/, ["src/pages/[slug].astro", "src/data/tours.ts"]],
 ];
+
+// ---------------------------------------------------------------------------
+// WHERE A TRANSLATED PAGE'S WORDS LIVE.
+//
+// Every translated route used to be dated from two files: the one template
+// all of them share, and src/data/i18n/<locale>.ts. But that file holds only
+// the eight funnel pages; the words of the other ~110 pages per language are
+// in destinations/<locale>.ts, experiences/, programmes/, months/, compare/,
+// articles/, tours-i18n/<locale>.ts and the one-language files. So one edit
+// to a locale file re-dated every page in that language, and on 24 Nov 2026
+// 1,103 of 1,266 sitemap URLs carried the same second.
+//
+// A translated page declares its address in the file that holds its text —
+// `localeSlug: "…"` in the family files, `slug: "…"` beside a `locale` in the
+// one-language registry. Those are read here, once, into a map from route to
+// source file. The shared template is deliberately NOT a source: a change to
+// the layout is not a change to what a page says.
+// ---------------------------------------------------------------------------
+const LOCALE_SOURCE = new Map();
+/** English journey slug → { locale: translated route }, for the sitemap's alternates. */
+const TOUR_CLUSTERS = new Map();
+try {
+  const I18N = "src/data/i18n";
+  for (const loc of LOCALES.slice(1)) {
+    const files = [
+      ...readdirSync(I18N, { withFileTypes: true })
+        .filter((d) => d.isDirectory())
+        .map((d) => `${I18N}/${d.name}/${loc}.ts`),
+      `src/data/tours-i18n/${loc}.ts`,
+    ].filter((f) => existsSync(f));
+    for (const file of files) {
+      const text = readFileSync(file, "utf8");
+      for (const m of text.matchAll(/localeSlug:\s*"([^"]+)"/g)) LOCALE_SOURCE.set(`${loc}/${m[1]}.html`, file);
+      if (file.startsWith("src/data/tours-i18n/")) {
+        for (const m of text.matchAll(/\bslug:\s*"(tour-[^"]+)",\s*(?:\/\/[^\n]*\n\s*|\/\*[\s\S]*?\*\/\s*)*localeSlug:\s*"([^"]+)"/g)) {
+          if (!TOUR_CLUSTERS.has(m[1])) TOUR_CLUSTERS.set(m[1], {});
+          TOUR_CLUSTERS.get(m[1])[loc] = `${loc}/${m[2]}.html`;
+        }
+      }
+    }
+  }
+  // One-language pages: `{ locale: "de", slug: "…", page: deEclipse }` in
+  // standalone.ts, where `deEclipse` is imported from the file with the words.
+  const reg = readFileSync(`${I18N}/standalone.ts`, "utf8");
+  const fileOf = new Map();
+  for (const m of reg.matchAll(/import\s*\{([^}]+)\}\s*from\s*"\.\/([^"]+)"/g)) {
+    for (const name of m[1].split(",").map((x) => x.trim()).filter(Boolean)) fileOf.set(name, `${I18N}/${m[2]}.ts`);
+  }
+  for (const m of reg.matchAll(/\{\s*locale:\s*"([a-z]{2})",\s*slug:\s*"([^"]+)",\s*page:\s*([A-Za-z0-9_]+)\s*\}/g)) {
+    if (fileOf.has(m[3])) LOCALE_SOURCE.set(`${m[1]}/${m[2]}.html`, fileOf.get(m[3]));
+  }
+} catch {
+  // Unreadable source tree: translated routes fall back to their locale file.
+}
 
 /** Newest commit date among the sources that decide this route's content. */
 function contentLastmod(route) {
   const sources = [];
+  const locale = route.match(LOCALE_ROUTE);
+  if (locale) {
+    // The file that holds this page's words; a funnel page (home, journeys,
+    // cost…) is in the locale's own module.
+    sources.push(LOCALE_SOURCE.get(route) ?? `src/data/i18n/${locale[1]}.ts`);
+    const dates = sources.map((f) => FILE_DATES.get(f)).filter(Boolean);
+    return dates.length ? dates.sort().at(-1) : undefined;
+  }
   for (const [pattern, files] of CONTENT_SOURCES) {
     if (pattern.test(route)) {
       sources.push(...files);
-      // A localised route's words live in its own locale module.
-      const locale = route.match(LOCALE_ROUTE);
-      if (locale) sources.push(`src/data/i18n/${locale[1]}.ts`);
       break;
     }
   }
@@ -120,6 +192,17 @@ for (const g of GROUPS) {
   const links = g.map((path, i) => ({ lang: LANGS[i], url: `${SITE_URL}/${path}` }));
   links.push({ lang: "x-default", url: `${SITE_URL}/${g[0]}` });
   for (const path of g) SITEMAP_ALTERNATES[`${SITE_URL}/${path}`] = links;
+}
+// The translated journeys are clustered in config/tour-i18n.ts, not in the
+// registry above, so their pages declared eleven alternates in <head> and
+// none here: 240 URLs on which the sitemap and the page disagreed.
+for (const [slug, byLocale] of TOUR_CLUSTERS) {
+  const en = `${SITE_URL}/${slug}.html`;
+  if (SITEMAP_ALTERNATES[en]) continue; // a funnel page (the Nile cruise): already grouped
+  const links = [{ lang: "en", url: en }];
+  for (const loc of LOCALES.slice(1)) if (byLocale[loc]) links.push({ lang: loc, url: `${SITE_URL}/${byLocale[loc]}` });
+  links.push({ lang: "x-default", url: en });
+  for (const l of links) if (l.lang !== "x-default") SITEMAP_ALTERNATES[l.url] = links;
 }
 
 // Static output. build.format "file" emits flat .html files (index.html,

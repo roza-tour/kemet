@@ -24,8 +24,10 @@ import SignatureTouches from "@/components/collection/SignatureTouches.astro";
 import TourCard from "@/components/TourCard.astro";
 import SectionHeader from "@/components/SectionHeader.astro";
 import { TRANSLATED_TOURS } from "@/config/tour-i18n";
-import { TOUR_PHRASEBOOK } from "@/data/tours-i18n/phrasebook";
-import { tours as allTours, multidayTours } from "@/data/tours";
+import { TOUR_PHRASEBOOK, assertPhrasebook } from "@/data/tours-i18n/phrasebook";
+import { tours as allTours, multidayTours, priceForTwo } from "@/data/tours";
+import { tripLd } from "@/schemas/localized";
+import { formatPriceIn } from "@/utils/format";
 import { ui } from "@/config/ui";
 import type { Tour } from "@/types";
 import type { LocalizedPage } from "@/data/i18n/types";
@@ -33,7 +35,8 @@ import { TRANSLATION_GROUPS, LOCALE_META } from "@/config/i18n";
 import type { TranslatedLocale } from "@/config/i18n";
 import { canonical, publicPath, whatsappLink, mailtoLink } from "@/utils/links";
 import { MAP_WORDS, MAP_ROUTE } from "@/config/journey-map";
-import { personRef, videoObject, thingLd } from "@/schemas/jsonld";
+import { orgRef, videoObject, thingLd } from "@/schemas/jsonld";
+import { LOCAL_STRINGS } from "@/data/i18n/strings";
 import EclipseDay from "@/components/EclipseDay.astro";
 import { eclipseDayEvent } from "@/schemas/eclipseEvent";
 import Placeholder from "@/components/Placeholder.astro";
@@ -96,6 +99,38 @@ const themedProps = page.theme ? { class: `themed-${page.theme}` } : {};
 const wa = whatsappLink(page.cta.whatsapp);
 const mail = mailtoLink(page.cta.emailSubject, `${page.cta.whatsapp}\n\n`);
 
+// THE NILE CRUISE AS A PRODUCT, ON THE LANGUAGE'S CRUISE PAGE.
+//
+// The English member of the "nile-cruise" group is the four-day cruise itself
+// (tour-nile-cruise.html: itinerary, inclusions, a price). Its nine alternates
+// were an essay about cruising with none of the three, so hreflang paired a
+// product with pages that were not one, and the catalogue feed sent a German
+// reader to a page that never states the price it had just quoted. Each
+// language's page now carries the cruise as well: the days, what is and is
+// not included, the price for six or more and for two, and the same
+// TouristTrip + Offer the English page declares. One page per language still —
+// a second page would compete with this one for the same query.
+const cruise = page.groupId === "nile-cruise" ? allTours.find((x) => x.slug === "tour-nile-cruise") : undefined;
+const P = TOUR_PHRASEBOOK[locale]!;
+const C = LOCAL_STRINGS[locale].cruise;
+const money = (n: number) => formatPriceIn(n, LOCALE_META[locale].formatLocale);
+const cruiseTwo = cruise ? priceForTwo(cruise) : undefined;
+const cruisePrice = cruise
+  ? [
+      `${P.f.from} ${money(cruise.price)} ${t.perPerson}`,
+      cruise.priceBasisPax ? `(${t.priceBasisPax.replace("%n", String(cruise.priceBasisPax))}).` : ".",
+      cruiseTwo ? `${LOCAL_STRINGS[locale].ui.priceForTwo.replace("%p", money(cruiseTwo))}.` : "",
+      P.priceNote,
+    ].filter(Boolean).join(" ").replace(" .", ".")
+  : "";
+// Every inclusion line must exist in this language's phrasebook, or the list
+// would print a blank row.
+if (cruise) assertPhrasebook(locale, cruise.slug, [...(cruise.included ?? []), ...(cruise.excluded ?? [])]);
+const cruiseDays = cruise ? C.days.map((d, i) => ({ ...d, num: String(i + 1).padStart(2, "0") })) : [];
+if (cruise && C.days.length !== cruise.itinerary.length) {
+  throw new Error(`i18n/strings.ts: the ${locale} cruise has ${C.days.length} days; the English journey has ${cruise.itinerary.length}.`);
+}
+
 const jsonld: Record<string, unknown>[] = [
   {
     "@context": "https://schema.org",
@@ -108,9 +143,21 @@ const jsonld: Record<string, unknown>[] = [
       ? [{ "@type": "Country", name: "Egypt" }, ...page.schemaAbout.map(thingLd)]
       : { "@type": "Country", name: "Egypt" },
     isPartOf: { "@type": "WebSite", "@id": `${SITE_URL}#website`, name: site.name, url: SITE_URL },
-    publisher: { "@type": "TravelAgency", name: site.name, url: SITE_URL },
-    reviewedBy: personRef(),
+    // The one organisation node, by reference — not a second, half-filled
+    // "Kemet" (schemas/jsonld.ts → orgRef explains the validator report that
+    // shorthand caused). And no reviewedBy: these pages show no byline, and
+    // markup must not claim a named reviewer the reader cannot see.
+    publisher: orgRef(),
+    ...(page.dateModified ? { dateModified: page.dateModified } : {}),
   },
+  // What the page is about, as the English original declares it — a place
+  // with coordinates, an attraction, a trip, an article (data/i18n/types.ts).
+  ...(page.schema ?? []),
+  ...(cruise
+    ? [tripLd(locale, route,
+        { title: C.productHeading, summary: C.productLede, days: cruiseDays.map((d) => ({ label: `${P.dayLabel} ${Number(d.num)}`, title: d.title })) },
+        cruise.hero?.src, { price: cruise.price })]
+    : []),
   // Breadcrumbs in the page's own language. These pages render a visible
   // crumb trail but had no BreadcrumbList behind it, so the trail was invisible
   // to a crawler — 21 of the 24 pages missing breadcrumb markup were localised.
@@ -124,7 +171,8 @@ const jsonld: Record<string, unknown>[] = [
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: LOCALE_META[locale].home, item: canonical(`${locale}/index.html`) },
-      { "@type": "ListItem", position: 2, name: page.crumb, item: canonical(route) },
+      ...(page.parent ? [{ "@type": "ListItem", position: 2, name: page.parent.label, item: canonical(page.parent.route) }] : []),
+      { "@type": "ListItem", position: page.parent ? 3 : 2, name: page.crumb, item: canonical(route) },
     ],
   }]),
   ...(page.films ?? []).map(videoObject),
@@ -166,6 +214,9 @@ if (isEclipse) jsonld.push(...eclipseDayEvent(locale, route, page.photos?.[0]?.s
     rootLabel={LOCALE_META[locale].home}
     rootHref={`/${locale}/`}
     crumb={isLocaleHome ? undefined : page.crumb}
+    parentLabel={page.parent?.label}
+    parentHref={page.parent ? `${base}${publicPath(page.parent.route)}` : undefined}
+    crumbAria={LOCAL_STRINGS[locale].ui.ariaBreadcrumb}
     symbol={page.symbol}
     base={base}
     overline={page.landing?.eyebrow}
@@ -209,6 +260,37 @@ if (isEclipse) jsonld.push(...eclipseDayEvent(locale, route, page.photos?.[0]?.s
       visitor came for. The run breaks out of .lz-wrap's 940px measure on
       purpose, because the journey cards are a three-up grid.
       See data/i18n/types.ts → landing. */}
+  {cruise && (
+    <section style="padding-top:0">
+      <div class="wrap lz-wrap">
+        <div class="lz-more reveal" style="border-top:0;padding-top:0">
+          <h2>{C.productHeading}</h2>
+        </div>
+        <p class="lz-lede">{C.productLede}</p>
+        <p class="lz-lede" data-eur={cruise.price}>{cruisePrice}</p>
+        <div class="lz-sections">
+          {cruiseDays.map((d) => (
+            <div class="lz-sec reveal">
+              <span class="lz-n">{d.num}</span>
+              <div>
+                <h3>{P.dayLabel} {Number(d.num)} — {d.title}</h3>
+                <ul class="lz-items">{d.items.map((x) => <li>{x}</li>)}</ul>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div class="lz-high reveal">
+          <h2>{P.h.included}</h2>
+          <ul>{(cruise.included ?? []).map((l) => <li>{P.lines[l]}</li>)}</ul>
+        </div>
+        <div class="lz-high reveal">
+          <h2>{P.h.excluded}</h2>
+          <ul>{(cruise.excluded ?? []).map((l) => <li>{P.lines[l]}</li>)}</ul>
+        </div>
+      </div>
+    </section>
+  )}
+
   {page.landing && <CollectionLanding landing={page.landing} route={route} base={base} locale={locale} />}
 
   {page.story && <CollectionStory story={page.story} />}
@@ -280,6 +362,20 @@ if (isEclipse) jsonld.push(...eclipseDayEvent(locale, route, page.photos?.[0]?.s
 
       {isEclipse && <EclipseDay locale={locale} route={route} variant="embedded" />}
 
+      {/* Further reading in this language (i18n/crosslinks.ts): the months
+          under "when to go", the comparisons and occasions under the
+          journeys, the guides under the home page. */}
+      {page.further?.map((b) => (
+        <div class="lz-more reveal">
+          <h2>{b.heading}</h2>
+          <ul class="lz-links" style="grid-template-columns:repeat(auto-fill,minmax(230px,1fr))">
+            {b.links.map((l) => (
+              <li><a class="lz-morelink" href={`${base}${publicPath(l.route)}`}>{l.label}<i aria-hidden="true"></i></a></li>
+            ))}
+          </ul>
+        </div>
+      ))}
+
       <Frieze />
 
       {/* "Häufige Fragen", "Questions fréquentes"… — the questions block is
@@ -292,7 +388,7 @@ if (isEclipse) jsonld.push(...eclipseDayEvent(locale, route, page.photos?.[0]?.s
         <p>{page.cta.text}</p>
         <div class="lz-actions">
           <a class="btn btn-solid" href={wa} target="_blank" rel="noopener">WhatsApp</a>
-          <a class="btn btn-ghost" href={mail}>E-Mail</a>
+          <a class="btn btn-ghost" href={mail}>{LOCAL_STRINGS[locale].ui.email}</a>
         </div>
       </div>
 

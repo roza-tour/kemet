@@ -76,7 +76,9 @@ export const GET: APIRoute = () => {
     add(`collections/${c.slug}.html`, imagesOf(c.hero, ...(c.gallery ?? [])));
   }
   for (const a of activities) {
-    if (!a.slug) continue;
+    // A page whose canonical points elsewhere is not in the page sitemap,
+    // and must not be submitted here either.
+    if (!a.slug || a.canonicalTo) continue;
     add(`activities/${a.slug}.html`, imagesOf(a.image));
   }
 

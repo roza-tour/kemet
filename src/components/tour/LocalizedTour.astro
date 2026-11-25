@@ -23,12 +23,13 @@ import type { TourText } from "@/data/tours-i18n/types";
 import type { TranslatedLocale } from "@/config/i18n";
 import { LOCALE_META } from "@/config/i18n";
 import { TOUR_PHRASEBOOK } from "@/data/tours-i18n/phrasebook";
-import { sharedShipNote } from "@/data/tours";
+import { sharedShipNote, priceForTwo } from "@/data/tours";
+import { LOCAL_STRINGS, localAlt } from "@/data/i18n/strings";
+import { orgRef } from "@/schemas/jsonld";
 import { ui, placeName } from "@/config/ui";
 import { formatPriceIn } from "@/utils/format";
 import { canonical, whatsappLink, mailtoLink, publicPath } from "@/utils/links";
 import { TRANSLATION_GROUPS } from "@/config/i18n";
-import { site, SITE_URL } from "@/config/site";
 
 interface Props {
   tour: Tour;
@@ -50,6 +51,11 @@ const walking = tour.comfort?.walking ? p.walking[tour.comfort.walking] ?? tour.
 
 /** This language's own journeys page, for the way back up. */
 const journeysRoute = TRANSLATION_GROUPS.find((g) => g.key === "journeys")?.[locale];
+
+const S = LOCAL_STRINGS[locale].ui;
+/** What two people pay each (data/tours.ts → priceForTwo), in this language. */
+const twoPrice = priceForTwo(tour);
+const twoLine = twoPrice ? S.priceForTwo.replace("%p", formatPriceIn(twoPrice, LOCALE_META[locale].formatLocale)) : undefined;
 
 const wa = whatsappLink(`${p.cta.whatsapp} — ${text.title}`);
 const mail = mailtoLink(`${text.title} — ${p.h.enquire}`, `${p.cta.whatsapp}\n\n`);
@@ -103,7 +109,9 @@ const jsonld: Record<string, unknown>[] = [
       itemListElement: days.map((d, i) => ({
         "@type": "ListItem",
         position: i + 1,
-        item: { "@type": "TouristAttraction", name: d.title },
+        // A day of the journey, not a place: "Your morning in Luxor &
+        // departure" is not a TouristAttraction, which is what this said.
+        name: `${d.label} ${Number(d.num)}: ${d.title}`,
       })),
     },
     offers: {
@@ -112,8 +120,13 @@ const jsonld: Record<string, unknown>[] = [
       priceCurrency: "EUR",
       url: canonical(route),
       availability: "https://schema.org/InStock",
+      ...(tour.priceBasisPax
+        ? { eligibleQuantity: { "@type": "QuantitativeValue", minValue: tour.priceBasisPax, unitText: "person" } }
+        : {}),
+      ...(twoLine ? { description: twoLine } : {}),
+      seller: orgRef(),
     },
-    provider: { "@type": "TravelAgency", name: site.name, url: SITE_URL },
+    provider: orgRef(),
   },
   {
     "@context": "https://schema.org",
@@ -151,6 +164,9 @@ const jsonld: Record<string, unknown>[] = [
     rootLabel={LOCALE_META[locale].home}
     rootHref={`/${locale}/`}
     crumb={text.crumb}
+    parentLabel={journeysRoute ? t.navJourneys : undefined}
+    parentHref={journeysRoute ? `${base}${publicPath(journeysRoute)}` : undefined}
+    crumbAria={S.ariaBreadcrumb}
     base={base}
     overline={category}
     title={text.title}
@@ -172,7 +188,7 @@ const jsonld: Record<string, unknown>[] = [
           sizes="wide"
           class="tgallery reveal cur"
           src={tour.hero.src}
-          alt={tour.hero.alt}
+          alt={localAlt(locale, tour.hero.alt)}
           width={tour.hero.width}
           height={tour.hero.height}
           loading="eager"
@@ -201,6 +217,7 @@ const jsonld: Record<string, unknown>[] = [
             tour.ticketsExcluded && t.priceBasisTickets,
           ].filter(Boolean).join(" · ")}</p>
         )}
+        {twoLine && <p class="lt-basis">{twoLine}</p>}
         <p>{p.priceNote}{tour.foodExcluded && ` ${p.foodNote}`}</p>
       </div>
 
@@ -276,15 +293,14 @@ const jsonld: Record<string, unknown>[] = [
         <p>{p.cta.text}</p>
         <div class="lz-actions">
           <a class="btn btn-solid" href={wa} target="_blank" rel="noopener">WhatsApp</a>
-          <a class="btn btn-ghost" href={mail}>E-Mail</a>
+          <a class="btn btn-ghost" href={mail}>{S.email}</a>
         </div>
       </div>
 
       <div class="lz-more reveal">
         <h2>{t.footExplore}</h2>
-        <p>{t.englishNote}</p>
         <a class="lz-morelink" href={`${base}${tour.slug}.html`}>
-          kemet-travel.com/{tour.slug}.html<i aria-hidden="true"></i>
+          {t.thisPageEnglish}<i aria-hidden="true"></i>
         </a>
       </div>
     </div>

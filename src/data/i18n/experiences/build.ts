@@ -28,6 +28,7 @@ import { DEST_LABELS } from "../destinations/labels";
 import { experiences } from "@/data/experiences";
 import { activities } from "@/data/activities";
 import type { MediaPlaceholder } from "@/types";
+import { attractionLd } from "@/schemas/localized";
 
 const withSrc = (p: MediaPlaceholder | undefined): p is MediaPlaceholder => !!p && !!p.src;
 
@@ -109,6 +110,8 @@ export function experiencePages(locale: TranslatedLocale, texts: ExpText[]): Loc
         { label: EXP_HUB[locale].all, route: expHubRoute(locale) },
       ],
       photos: shots.map((p, i) => ({ ...p, alt: t.photos[i].alt, label: t.photos[i].label })),
+      schema: [attractionLd(locale, route, t, { coordinates: exp?.coordinates, image: shots[0]?.src })],
+      parent: { label: EXP_HUB[locale].crumb, route: expHubRoute(locale) },
     };
   });
 }

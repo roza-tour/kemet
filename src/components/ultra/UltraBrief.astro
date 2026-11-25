@@ -48,7 +48,7 @@ const PARTY_VALUES = ["couple", "family", "generations", "group", "solo"] as con
       AI agent acting for a visitor sees this as the "send_ultra_brief" tool;
       the visitor still presses Send. Kept short: the heaviest Ultra page is
       at the 30KB budget, and the visible labels already name each field. */}
-  <form class="cform vbrief-form" method="post" action="/contact-handler.php"
+  <form class="cform vbrief-form" id="enquire" method="post" action="/contact-handler.php"
     toolname="send_ultra_brief"
     tooldescription="Send a brief for Kemet Ultra, Kemet's most private Egypt journeys. A travel designer replies.">
     <label class="cform-hp" aria-hidden="true">
@@ -58,7 +58,6 @@ const PARTY_VALUES = ["couple", "family", "generations", "group", "solo"] as con
     <input type="hidden" name="kt" value="" />
     <input type="hidden" name="return" value={`/${route}`} />
     <input type="hidden" name="context" value={`Kemet Ultra brief (/${route})`} />
-    <input type="hidden" name="gclid" value="" />
 
     <div class="vbrief-grid">
       <label>

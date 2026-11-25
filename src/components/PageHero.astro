@@ -19,6 +19,12 @@ interface Props {
    *  home page. */
   rootLabel?: string;
   rootHref?: string;
+  /** The section between the root and this page, where the page has one:
+   *  "Startseite · Reiseziele · Luxor". */
+  parentLabel?: string;
+  parentHref?: string;
+  /** Screen-reader name of the trail, in the page's language. */
+  crumbAria?: string;
   /** Accepted for call-site consistency with the other hero components.
    *  No longer used here: the Home link is the absolute "/" at every depth. */
   base?: string;
@@ -42,7 +48,7 @@ interface Props {
 }
 const {
   title, text = "", symbol = "", crumb = "", overline = "", framed = false,
-  rootLabel = "Home", rootHref = "/",
+  rootLabel = "Home", rootHref = "/", parentLabel, parentHref, crumbAria = "Breadcrumb",
   heroSrc, heroAlt, heroWidth, heroHeight, theme, plates,
 } = Astro.props;
 ---
@@ -51,8 +57,8 @@ const {
   {framed && <span class="phero-cart" aria-hidden="true"></span>}
   <div class="wrap">
     {crumb && (
-      <nav class="crumb" aria-label="Breadcrumb">
-        <a href={rootHref}>{rootLabel}</a> · <span>{crumb}</span>
+      <nav class="crumb" aria-label={crumbAria}>
+        <a href={rootHref}>{rootLabel}</a> · {parentLabel && parentHref && <><a href={parentHref}>{parentLabel}</a> · </>}<span>{crumb}</span>
       </nav>
     )}
     {symbol && <Medallion name={symbol} size="md" class="phero-med" />}

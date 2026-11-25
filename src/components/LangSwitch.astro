@@ -9,6 +9,7 @@
 //
 // Renders nothing at all on pages with no translations.
 import { LOCALE_META, localeOfRoute, basePrefixFor } from "@/config/i18n";
+import { LOCAL_STRINGS, EN_STRINGS } from "@/data/i18n/strings";
 import { allAlternatesFor } from "@/config/alternates";
 import { publicPath } from "@/utils/links";
 import type { SiteLocale } from "@/config/i18n";
@@ -20,7 +21,9 @@ interface Props {
    *  reader's landmark list does not show two identically-named navigations. */
   label?: string;
 }
-const { route, label = "Language" } = Astro.props;
+const current0 = localeOfRoute(Astro.props.route);
+// The switcher's screen-reader name, in the page's own language.
+const { route, label = current0 === "en" ? EN_STRINGS.ariaLanguage : LOCAL_STRINGS[current0].ui.ariaLanguage } = Astro.props;
 
 const alternates = allAlternatesFor(route).filter((a) => a.hreflang !== "x-default");
 const current = localeOfRoute(route);

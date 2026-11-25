@@ -2,6 +2,7 @@
 // Formatting helpers — pure, presentation-free value formatters.
 // ---------------------------------------------------------------------------
 import { CURRENCY_SYMBOL, NUMBER_LOCALE } from "@/config/site";
+import { priceForTwo } from "@/data/tours";
 
 /** Format a whole-EUR amount, e.g. 1741 → "€1,741". */
 export function formatPrice(amount: number): string {
@@ -137,9 +138,15 @@ export function tourAnswer(tour: {
   // West Bank" — the sights are listed on the page itself.
   const places = list(tour.cities?.length ? tour.cities : tour.visiting.split(/\s*·\s*/));
   const when = tour.durationLabel.replace(/\s*\(.*\)$/, "").replace(/^(Full|Half) day$/i, (x) => x.replace(" ", "-"));
+  // The party the price assumes, and what two people pay each: the figure
+  // most readers are actually asking about (data/tours.ts → priceForTwo).
+  const two = priceForTwo(tour);
+  const basis = tour.priceBasisPax
+    ? ` for a party of ${tour.priceBasisPax} or more${two ? `, or ${formatPrice(two)} per person for two` : ""}`
+    : "";
   const lead = m
-    ? `${tour.title} is a private ${m[1]}-day, ${m[2]}-night journey through ${places}, from ${formatPrice(tour.price)} per person${tour.priceBasisPax ? ` for a party of ${tour.priceBasisPax} or more` : ""}.`
-    : `${tour.title} is a private ${lower(when)} tour of ${places}, from ${formatPrice(tour.price)} per person${tour.priceBasisPax ? ` for a party of ${tour.priceBasisPax} or more` : ""}.`;
+    ? `${tour.title} is a private ${m[1]}-day, ${m[2]}-night journey through ${places}, from ${formatPrice(tour.price)} per person${basis}.`
+    : `${tour.title} is a private ${lower(when)} tour of ${places}, from ${formatPrice(tour.price)} per person${basis}.`;
   const tickets = (tour.ticketsExcluded ? " Entrance tickets are paid at the gate." : "") +
     (tour.foodExcluded ? " Food and drinks are paid directly at each stop." : "");
   // Worth saying on a journey someone flies in for; noise on an afternoon in Giza.

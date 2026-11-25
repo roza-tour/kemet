@@ -417,6 +417,9 @@ export interface Collection extends ContentEntity {
 // taxonomy side-car (src/data/tours.taxonomy.ts) or a future API.
 
 export interface Tour {
+  /** The <title> without the brand: how the journey is searched for. Falls
+   *  back to "name — duration" when absent. Keep under 52 characters. */
+  seoTitle?: string;
   /** Route file stem → e.g. "tour-7-day" emits tour-7-day.html. */
   slug: string;
   title: string;

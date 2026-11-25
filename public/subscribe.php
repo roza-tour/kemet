@@ -69,6 +69,50 @@ if (!$consent) {
 
 if (!is_dir($dir)) { @mkdir($dir, 0755, true); @file_put_contents("$dir/index.html", ""); }
 
+// --- Limits -----------------------------------------------------------------
+// Every submission sends a confirmation to the address typed in. Without a
+// limit that is a way to make this site mail a stranger as often as someone
+// likes, from our domain, with a honeypot as the only obstacle. So:
+//
+//   · one confirmation per address per 24 hours — a second sign-up inside
+//     that window is recorded as before but mails nobody;
+//   · five submissions per network address per hour;
+//   · forty confirmations an hour in total, whoever asks.
+//
+// Past a limit the visitor gets the same "thank you" as anyone else: the
+// form is not a way to find out whether an address is rate-limited or already
+// on the list. The log holds a time and two hashes, never the address itself,
+// and is pruned to the last 24 hours each time it is written.
+$rateFile = $dir . "/subscribe-rate.csv";
+$now = time();
+$ipHash = substr(hash("sha256", "ip|" . ($_SERVER["REMOTE_ADDR"] ?? "")), 0, 24);
+$mailHash = substr(hash("sha256", "mail|" . strtolower($email)), 0, 24);
+$recent = [];
+if (is_readable($rateFile) && ($rf = fopen($rateFile, "r")) !== false) {
+  while (($r = fgetcsv($rf)) !== false) {
+    if (isset($r[2]) && (int)$r[0] > $now - 86400) $recent[] = $r;
+  }
+  fclose($rf);
+}
+$byIpHour = 0; $byMailDay = 0; $allHour = 0;
+foreach ($recent as $r) {
+  $hour = (int)$r[0] > $now - 3600;
+  if ($hour) $allHour++;
+  if ($hour && $r[1] === $ipHash) $byIpHour++;
+  if ($r[2] === $mailHash) $byMailDay++;
+}
+$limited = $byIpHour >= 5 || $byMailDay >= 1 || $allHour >= 40;
+if ($byIpHour >= 5) { respond(true, $wantsJson, "Thank you."); }
+$recent[] = [$now, $ipHash, $mailHash];
+if (($rf = @fopen($rateFile, "c+")) !== false) {
+  flock($rf, LOCK_EX);
+  ftruncate($rf, 0);
+  foreach ($recent as $r) fputcsv($rf, $r);
+  flock($rf, LOCK_UN);
+  fclose($rf);
+  @chmod($rateFile, 0600);
+}
+
 // --- Already on the list? ---------------------------------------------------
 // Re-submitting must not create a second row: two rows means two copies of
 // every send and an unsubscribe that only removes one of them. The existing
@@ -102,6 +146,9 @@ if (!$already) {
     @chmod($store, 0600);
   }
 }
+
+// Past a limit: recorded above if it was new, but nobody is mailed.
+if ($limited) { respond(true, $wantsJson, "Thank you."); }
 
 // --- Tell the office --------------------------------------------------------
 $headers = "From: Kemet <no-reply@kemet-travel.com>\r\nReply-To: " . $email

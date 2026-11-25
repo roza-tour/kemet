@@ -24,7 +24,7 @@
 // ---------------------------------------------------------------------------
 import { readFile, readdir } from "node:fs/promises";
 import { join, extname } from "node:path";
-import { tours } from "../src/data/tours.ts";
+import { tours, priceForTwo } from "../src/data/tours.ts";
 import { ultraJourneys, ULTRA_PER_DAY } from "../src/data/ultra/journeys.ts";
 
 const DIST = new URL("../dist/", import.meta.url).pathname;
@@ -60,6 +60,9 @@ const ultra = new Set(ultraJourneys.flatMap((j) => [j.price2, j.price4]));
 KNOWN.set(ULTRA_PER_DAY.low, "Kemet Ultra — computed per-day floor, party of two");
 KNOWN.set(ULTRA_PER_DAY.high, "Kemet Ultra — computed per-day ceiling, party of two");
 const wases = new Set(tours.filter((t) => t.was).map((t) => t.was));
+// The per-person price for a party of two — the published price plus ten per
+// cent, computed by the same function the pages use (data/tours.ts).
+const twos = new Set(tours.map(priceForTwo).filter(Boolean));
 // Flight versions are priced as the journey plus a stated difference, so they
 // are computed here the same way the pages compute them — never listed by hand,
 // which is how a quoted figure falls behind the moment prices move.
@@ -110,6 +113,7 @@ for (const n of [...seen.keys()].sort((a, b) => a - b)) {
   const kind = prices.has(n) ? "tour price"
     : ultra.has(n) ? "Kemet Ultra price (for two / for four)"
     : wases.has(n) ? "struck-through 'was'"
+    : twos.has(n) ? "price for two travellers (price + 10%)"
     : flies.has(n) ? "flight version (price + stated difference)"
     : KNOWN.has(n) ? KNOWN.get(n)
     : (unexplained.push([n, where]), "*** UNEXPLAINED ***");

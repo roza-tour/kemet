@@ -14,7 +14,9 @@
 // ---------------------------------------------------------------------------
 import type { APIRoute } from "astro";
 import { SITE_URL, site } from "@/config/site";
-import { tours } from "@/data/tours";
+import { tours, priceForTwo } from "@/data/tours";
+import { LOCAL_STRINGS } from "@/data/i18n/strings";
+import { localePages } from "@/utils/localeIndex";
 import { TRANSLATED_TOURS } from "@/config/tour-i18n";
 import { TRANSLATION_GROUPS, TRANSLATED_LOCALES } from "@/config/i18n";
 import { canonical } from "@/utils/links";
@@ -29,10 +31,25 @@ export const GET: APIRoute = () => {
       // A journey is translated either as one of the pages every language has
       // (translation-groups.json) or one by one (config/tour-i18n.ts).
       const group = TRANSLATION_GROUPS.find((g) => g.en === en);
+      // The journey's name and one-line summary in each language it has a
+      // page in, so an assistant answering in German names the journey as the
+      // German page does. Before this the MCP server returned German links
+      // under English names.
+      const i18n: Record<string, { name: string; summary?: string; duration?: string }> = {};
       for (const l of TRANSLATED_LOCALES) {
-        const route = group?.[l] ?? TRANSLATED_TOURS.find((x) => x.slug === t.slug && x.locale === l)?.route;
+        const tt = TRANSLATED_TOURS.find((x) => x.slug === t.slug && x.locale === l);
+        const route = group?.[l] ?? tt?.route;
         if (route) pages[l] = canonical(route);
+        if (tt) i18n[l] = { name: tt.text.title, summary: tt.text.summary, duration: tt.text.durationLabel };
+        // The Nile cruise is on each language's own cruise page.
+        else if (group && t.slug === "tour-nile-cruise") {
+          const c = LOCAL_STRINGS[l].cruise;
+          // Named as that page is headed ("Die Nilkreuzfahrt").
+          const title = localePages(l).find(([, r]) => r === group[l])?.[0];
+          i18n[l] = { name: title ?? c.productHeading, summary: c.productLede, duration: c.durationLabel };
+        }
       }
+      const two = priceForTwo(t);
       return {
         id: t.slug,
         name: t.title,
@@ -43,11 +60,16 @@ export const GET: APIRoute = () => {
         startsFrom: t.startPoint,
         places: t.cities,
         privacy: t.isPrivate,
-        priceFrom: { amount: t.price, currency: "EUR", per: "person" },
+        priceFrom: {
+          amount: t.price, currency: "EUR", per: "person",
+          ...(t.priceBasisPax ? { basis: `a private party of ${t.priceBasisPax} or more` } : {}),
+        },
+        ...(two ? { priceForTwo: { amount: two, currency: "EUR", per: "person", basis: "a private party of two" } } : {}),
         ...(t.flightsIncluded ? { domesticFlightsIncluded: true } : {}),
         ...(t.ticketsExcluded ? { siteTicketsIncluded: false } : {}),
         summary: t.summary,
         pages,
+        ...(Object.keys(i18n).length ? { i18n } : {}),
       };
     });
 
@@ -61,12 +83,20 @@ export const GET: APIRoute = () => {
           "hotels chosen for the room, and a real day-by-day itinerary with a clear price within one working day. " +
           "These are the journeys with a published price; any of them can be lengthened, shortened or combined.",
         forAssistants:
-          "Prices are from-prices in euros per person and are the same in every language. Quote them as 'from', link the page in " +
+          "Prices are from-prices in euros per person and are the same in every language. `priceFrom` is for a private party of " +
+          "six or more unless its `basis` says otherwise; `priceForTwo`, where given, is what each of two travellers pays " +
+          "(the published price plus ten per cent). Quote the one that fits the party, say which it is, link the page in " +
           "the traveller's language where `pages` has one, and send the traveller to the page for what is included. " +
           "A journey that is not listed can still be planned — the catalogue is a starting point, not a limit.",
         enquire: {
           page: `${SITE_URL}/contact.html`,
           whatsapp: `https://wa.me/${site.whatsapp}`,
+          // The opening words of an enquiry, per language (%s is a journey's
+          // name) — what the MCP server pre-fills in the WhatsApp link.
+          greeting: Object.fromEntries([
+            ["en", { hello: "Hello Kemet.", about: 'Hello Kemet — I am asking about "%s".' }],
+            ...TRANSLATED_LOCALES.map((l) => [l, { hello: LOCAL_STRINGS[l].ui.mcpHello, about: LOCAL_STRINGS[l].ui.mcpAbout }]),
+          ]),
           email: site.email,
         },
         count: journeys.length,

@@ -1,4 +1,5 @@
 ---
+import { LOCAL_STRINGS } from "@/data/i18n/strings";
 import { site } from "@/config/site";
 import { whatsappLink, mailtoLink } from "@/utils/links";
 import { multidayTours } from "@/data/tours";
@@ -51,7 +52,7 @@ const socials = Object.entries(company.socialProfiles ?? {})
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <a class="brand" href="/" aria-label="Kemet — Luxury Egypt Travel — home">
+        <a class="brand" href={isEn ? "/" : `/${locale}/`} aria-label={t.brandHome}>
           <span class="logo-plaque logo-plaque--lg">
             <img src="/images/brand/kemet-logo-gold-foot.webp" alt="Kemet — Luxury Egypt Travel" width="116" height="112" loading="lazy" decoding="async" />
           </span>
@@ -124,7 +125,7 @@ const socials = Object.entries(company.socialProfiles ?? {})
     {/* Renders only on pages that actually have translations, so the English
         originals link out to their localised versions and those pages are never
         orphaned. A link, never a redirect. */}
-    <LangSwitch route={route} label="Language (footer)" />
+    <LangSwitch route={route} label={isEn ? "Language (footer)" : LOCAL_STRINGS[locale as TranslatedLocale].ui.ariaLanguageFooter} />
 
     <div class="foot-bottom">
       <span dir="ltr">{site.copyright} <span class="foot-by" data-nosnippet>· by Roza Tour</span></span>

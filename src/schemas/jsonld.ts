@@ -12,6 +12,7 @@ import { reviewer, type Expert } from "@/data/experts";
 import { LOCALES, LOCALE_META } from "@/config/i18n";
 import { marketCountries } from "@/data/markets";
 import { reviews } from "@/data/reviews";
+import { priceForTwo } from "@/data/tours";
 
 /**
  * Languages the office can genuinely correspond in. A claim about PEOPLE, not
@@ -49,7 +50,7 @@ const SCHEMA_CONTEXT = "https://schema.org";
  * share an @id, so the graph carries exactly one business — the complete one.
  */
 export const ORG_ID = `${SITE_URL}#organization`;
-const orgRef = () => ({ "@id": ORG_ID });
+export const orgRef = () => ({ "@id": ORG_ID });
 
 /** Site-relative asset path → absolute URL, as structured data requires. */
 const absolute = (path: string) => (path.startsWith("http") ? path : `${SITE_URL}${path}`);
@@ -230,7 +231,10 @@ export function tourSchema(tour: Tour): JsonLd[] {
       // treat the price as stale. These are published "from" prices reviewed
       // each season, so the honest horizon is the end of the current year —
       // computed, never hardcoded, so it cannot silently fall into the past.
-      priceValidUntil: `${new Date().getUTCFullYear()}-12-31`,
+      // From October the horizon is the end of NEXT year: the prices on the
+      // site by then are the coming season's, and "valid until 31 December"
+      // printed in late November is a price about to expire.
+      priceValidUntil: `${new Date().getUTCFullYear() + (new Date().getUTCMonth() >= 9 ? 1 : 0)}-12-31`,
       // Correct pricing unit (was misusing Offer.category for "per person").
       priceSpecification: {
         "@type": "UnitPriceSpecification",
@@ -251,7 +255,9 @@ export function tourSchema(tour: Tour): JsonLd[] {
             },
           }
         : {}),
-      ...(priceBasis(tour) ? { description: priceBasis(tour) } : {}),
+      ...(priceBasis(tour)
+        ? { description: `${priceBasis(tour)}${priceForTwo(tour) ? ` For two travellers: EUR ${priceForTwo(tour)} per person.` : ""}` }
+        : {}),
       seller: orgRef(),
     };
     if (!tour.flyOption) return base;
@@ -685,6 +691,7 @@ export function siteSchema(): JsonLd[] {
       "Luxury private Egypt travel — tailored tours, Nile cruises and experiences built exclusively for each traveller.",
     email: site.email,
     telephone: phoneHref().replace("tel:", ""),
+    ...(company.founded ? { foundingDate: String(company.founded) } : {}),
     address: {
       "@type": "PostalAddress",
       addressCountry: "EG",

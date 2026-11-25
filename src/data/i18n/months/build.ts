@@ -58,6 +58,7 @@ export function monthPages(locale: TranslatedLocale, L: MonthLabels, texts: Mont
         ...(next ? [{ label: `${next.monthName} →`, route: `${locale}/${next.localeSlug}.html` }] : []),
         ...(hub ? [{ label: L.allMonths, route: hub[locale] }] : []),
       ],
+      ...(hub ? { parent: { label: L.allMonths, route: hub[locale] } } : {}),
     };
   });
 }

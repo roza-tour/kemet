@@ -13,7 +13,7 @@ import type { MonthGuide } from "@/data/months";
 import { tours } from "@/data/tours";
 import { canonical } from "@/utils/links";
 import { site, SITE_URL } from "@/config/site";
-import { breadcrumb } from "@/schemas/jsonld";
+import { breadcrumb, orgRef } from "@/schemas/jsonld";
 
 export function getStaticPaths() {
   return months.map((m) => ({ params: { slug: m.slug }, props: { m } }));
@@ -43,7 +43,7 @@ const jsonld: Record<string, unknown>[] = [
     inLanguage: "en",
     about: { "@type": "Country", name: "Egypt" },
     isPartOf: { "@type": "WebSite", "@id": `${SITE_URL}#website`, name: site.name, url: SITE_URL },
-    publisher: { "@type": "TravelAgency", name: site.name, url: SITE_URL },
+    publisher: orgRef(),
   },
   {
     "@context": "https://schema.org",

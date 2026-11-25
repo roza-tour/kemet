@@ -6,6 +6,7 @@
 // The words are in data/i18n/experiences/hub.ts (the hub's own) and in each
 // language's texts (the cards). Each language's route file is three lines; the
 // address is checked against config/translation-groups.json here.
+import { LOCAL_STRINGS } from "@/data/i18n/strings";
 import Base from "@/layouts/Base.astro";
 import PageHero from "@/components/PageHero.astro";
 import SectionHeader from "@/components/SectionHeader.astro";
@@ -135,7 +136,7 @@ const arrow = locale === "ar" ? "←" : "→";
         <p>{L.cta.text}</p>
         <div class="lz-actions">
           <a class="btn btn-solid" href={whatsappHref()} target="_blank" rel="noopener">WhatsApp</a>
-          <a class="btn btn-ghost" href={mail}>E-Mail</a>
+          <a class="btn btn-ghost" href={mail}>{LOCAL_STRINGS[locale].ui.email}</a>
         </div>
       </div>
     </div>

@@ -121,7 +121,7 @@ ErrorDocument 404 /404.html
   # "noindex" alone (links still followed): Google keeps processing a sitemap
   # that carries it, and it has no bearing on assistants that fetch llms.txt.
   # robots.txt and the site-verification files are deliberately left alone.
-  <FilesMatch "^(?:sitemap[a-z0-9-]*\.xml|llms(?:-full)?\.txt|search-index\.(?:json|txt)|(?:seasons|journeys)\.json|build\.txt)$">
+  <FilesMatch "^(?:sitemap[a-z0-9-]*\.xml|llms(?:-full)?\.txt|search-index\.(?:json|txt)|(?:seasons|journeys|markets)\.json|build\.txt)$">
     Header set X-Robots-Tag "noindex"
   </FilesMatch>
 </IfModule>
@@ -172,9 +172,19 @@ ErrorDocument 404 /404.html
 <IfModule mod_headers.c>
   <FilesMatch "\.html\.md$">
     Header set Content-Type "text/markdown; charset=utf-8"
-    Header set X-Robots-Tag "noindex"
     Header set Cache-Control "public, max-age=3600"
     Header append Vary Accept
+    # "noindex" ONLY when the copy was asked for at its own address
+    # (/tours.html.md). The same file also answers a request for the page
+    # itself that prefers Markdown (the rewrite further down), and there the
+    # address is the canonical one: a noindex on it told any assistant that
+    # negotiates Markdown not to index the page it had just been given.
+    # The rewrite marks a negotiated request with KEMET_MD_NEG; Apache hands
+    # the variable on as REDIRECT_KEMET_MD_NEG after its internal redirect and
+    # LiteSpeed keeps the plain name, so both are read.
+    Header set X-Robots-Tag "noindex"
+    Header unset X-Robots-Tag env=KEMET_MD_NEG
+    Header unset X-Robots-Tag env=REDIRECT_KEMET_MD_NEG
   </FilesMatch>
   # A page can now be answered in two forms depending on the Accept header
   # (the rewrite further down), so a cache between us and the reader has to
@@ -242,12 +252,12 @@ RewriteRule ^lib-[a-z-]+\.php$ - [R=404,L]
 RewriteCond %{HTTP_ACCEPT} text/markdown [NC]
 RewriteCond %{HTTP_ACCEPT} !^text/html [NC]
 RewriteCond %{DOCUMENT_ROOT}/$1.md -f
-RewriteRule ^(.+\.html)$ $1.md [L]
+RewriteRule ^(.+\.html)$ $1.md [L,E=KEMET_MD_NEG:1]
 
 RewriteCond %{HTTP_ACCEPT} text/markdown [NC]
 RewriteCond %{HTTP_ACCEPT} !^text/html [NC]
 RewriteCond %{DOCUMENT_ROOT}/$1index.html.md -f
-RewriteRule ^((?:[a-z]{2}/)?)$ $1index.html.md [L]
+RewriteRule ^((?:[a-z]{2}/)?)$ $1index.html.md [L,E=KEMET_MD_NEG:1]
 
 # ── MCP SERVER ──────────────────────────────────────────────────────────────
 # /mcp is the address an assistant is given as a connector; it is answered by

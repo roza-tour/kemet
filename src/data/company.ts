@@ -13,6 +13,9 @@ import type { CompanyProfile } from "@/types/trust";
 export const company: CompanyProfile = {
   name: "Kemet",
   legalName: undefined, // placeholder — confirm legal entity name before publishing
+  // Owner, 25 Nov 2026. The year only: nothing else about the company's
+  // constitution is published here.
+  founded: 2018,
 
   description:
     "Kemet designs private, luxury journeys through every layer of Egypt — tailored tours, Nile cruises and experiences built around each traveller's interests, pace and timeline.",
@@ -203,6 +206,13 @@ export const company: CompanyProfile = {
     {
       heading: "Verified, not fabricated",
       body: "We do not invent statistics, quotes, reviews or credentials. Where information is not yet confirmed, we note it clearly as a placeholder.",
+    },
+    {
+      // Added 25 Nov 2026. The site said "not stock photography" of its guest
+      // gallery — true of that gallery — while 277 pages carry licensed and
+      // freely-licensed photographs of monuments. Both are now said plainly.
+      heading: "Photographs",
+      body: "The photographs and films of our guests and journeys are our own, taken on the day. Many of the photographs of monuments and landscapes are licensed or freely licensed images, credited where the licence asks for it.",
     },
     {
       heading: "Regularly reviewed",

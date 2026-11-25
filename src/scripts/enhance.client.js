@@ -85,31 +85,6 @@ const DUST_DENSITY = 15000; // px² of viewport per particle
       if(document.readyState==='complete')setTimeout(begin,400);
       else addEventListener('load',function(){setTimeout(begin,400);});}}
 
-  /* The Google tag's library (components/GoogleTag.astro explains the timing):
-     at once for a visit that came from an ad, otherwise on the first touch,
-     key or scroll, or four seconds after the page has loaded. */
-  (function(){
-    var id=window.KEMET_ADS_ID;if(!id)return;
-    var done=false,ev=['pointerdown','keydown','touchstart','scroll'];
-    function load(){
-      if(done)return;done=true;
-      for(var i=0;i<ev.length;i++)removeEventListener(ev[i],load,true);
-      var sc=document.createElement('script');sc.async=true;
-      sc.src='https://www.googletagmanager.com/gtag/js?id='+id;
-      document.head.appendChild(sc);
-    }
-    var ad=false;
-    try{
-      ad=/[?&](gclid|wbraid|gbraid|gad_source|gclsrc|dclid)=/.test(location.search)
-        ||!!sessionStorage.getItem('kemet_gclid')
-        ||/(^|; )(_gcl_aw|_gcl_gb|_gcl_dc|_gac_)/.test(document.cookie);
-    }catch(e){ad=true;}
-    if(ad){load();return;}
-    for(var i=0;i<ev.length;i++)addEventListener(ev[i],load,{capture:true,passive:true});
-    if(document.readyState==='complete')setTimeout(load,4000);
-    else addEventListener('load',function(){setTimeout(load,4000);});
-  })();
-
   /* A themed page's ornament (collection/SeasonalTheme) keeps dozens of small
      things moving in the hero. Once the hero has scrolled out of view nobody
      is watching them, so they pause until it comes back. */
@@ -187,10 +162,10 @@ const DUST_DENSITY = 15000; // px² of viewport per particle
        80-character cut below used to slice through — and, read as-is, the
        visit came from google.com and was filed as unpaid Google search. So a
        paid click is reduced to what the dashboard needs: that it was paid,
-       and which campaign. The click id itself is deliberately NOT written to
-       the analytics log, which by design holds nothing that can be tied back
-       to a person; it reaches the enquiry email instead, where the visitor
-       has chosen to identify themselves (GoogleTag.astro → ContactForm). */
+       and which campaign. The click id itself is not written anywhere: not
+       to the analytics log, which by design holds nothing that can be tied
+       back to a person, and (since 25 Nov 2026, when the Google tag was
+       removed from the site) not to the enquiry either. */
     var QS=(function(){
       var raw=location.search.replace(/^\?/,'');
       try{
@@ -274,12 +249,6 @@ const DUST_DENSITY = 15000; // px² of viewport per particle
     document.addEventListener('kemet:enquiry',function(e){
       var ok=!!(e.detail&&e.detail.ok);
       KEV(ok?'form-submit':'form-failed');
-      /* Google Ads hears about the same outcome, and only the good one. The
-         form posts over fetch, so the URL never changes and Google has no
-         page view to count — this event is the only signal it gets. */
-      if(ok&&window.KEMET_ADS_SEND_TO&&typeof window.gtag==='function'){
-        window.gtag('event','conversion',{send_to:window.KEMET_ADS_SEND_TO});
-      }
     });
 
     /* The quick request and the journey map (quick-request.client.js,
@@ -321,7 +290,6 @@ const DUST_DENSITY = 15000; // px² of viewport per particle
       var bt0=Date.now();
       bf.addEventListener('submit',function(){
         bf.kt.value=String(Math.round((Date.now()-bt0)/1000));
-        try{var gid=sessionStorage.getItem('kemet_gclid');if(gid)bf.gclid.value=gid;}catch(e){}
       });
       if(window.fetch){
         var bbtn=bf.querySelector('.vbrief-send'),blab=bbtn.querySelector('span'),bidle=blab.textContent;
@@ -531,77 +499,6 @@ const DUST_DENSITY = 15000; // px² of viewport per particle
       lh.querySelector('button').addEventListener('click',function(){lhKeep();lh.remove();});
       window.addEventListener('scroll',function(){lh.classList.toggle('lhint--away',scrollY>innerHeight*.8);},{passive:true});
       KEV('lang-hint',lhPref);
-    }
-  }catch(e){}
-
-  /* ---------------------------------------------------------------------
-     Consent bar. Markup and styling are in components/ConsentBanner.astro;
-     this is here rather than inline on the page because the zone list, sent
-     with all 282 pages, pushed the heaviest of them past the audit's budget.
-
-     Which zones. Everything under Europe/ counts as "ask", minus the ones
-     outside the EEA, plus the handful of EEA places filed elsewhere in the
-     tz database. The list that must be right is the SUBTRACTION, because a
-     name missing from it only means someone is asked who need not have been
-     — a shrug. Getting the addition wrong is the one that silently loses an
-     EEA visitor's consent prompt, so the broad Europe/ prefix carries it.
-     --------------------------------------------------------------------- */
-  try{
-    var KEY='kemet_consent_v1';
-    /* European, but not EEA/UK/CH. */
-    var NOT_EEA={'Europe/Moscow':1,'Europe/Istanbul':1,'Europe/Kiev':1,'Europe/Kyiv':1,
-      'Europe/Minsk':1,'Europe/Belgrade':1,'Europe/Sarajevo':1,'Europe/Skopje':1,
-      'Europe/Tirane':1,'Europe/Podgorica':1,'Europe/Chisinau':1,'Europe/Kaliningrad':1,
-      'Europe/Samara':1,'Europe/Simferopol':1,'Europe/Volgograd':1,'Europe/Saratov':1,
-      'Europe/Astrakhan':1,'Europe/Ulyanovsk':1,'Europe/Kirov':1,'Europe/Uzhgorod':1,
-      'Europe/Zaporozhye':1};
-    /* EEA, but not filed under Europe/. */
-    var ALSO={'Atlantic/Azores':1,'Atlantic/Madeira':1,'Atlantic/Canary':1,
-      'Atlantic/Reykjavik':1,'Africa/Ceuta':1,'Asia/Nicosia':1,'Arctic/Longyearbyen':1};
-
-    var bar=document.getElementById('cbar');
-    if(bar){
-      var tell=function(state){
-        if(typeof window.gtag==='function'){
-          window.gtag('consent','update',{ad_storage:state,ad_user_data:state,
-            ad_personalization:state,analytics_storage:state});
-        }
-      };
-      var saved=null;
-      try{saved=localStorage.getItem(KEY)}catch(e){}
-      if(saved==='granted'||saved==='denied'){ tell(saved); }
-      else{
-        var tz='';
-        try{tz=Intl.DateTimeFormat().resolvedOptions().timeZone||''}catch(e){}
-        var ask=(tz.indexOf('Europe/')===0&&!NOT_EEA[tz])||!!ALSO[tz];
-        if(ask){
-          /* Clear the seasonal ribbon. It is position:fixed, so offsetParent
-             is null even when plainly on screen — measure the box instead. */
-          var lift=function(){
-            var rb=document.querySelector('.srb'),h=0;
-            if(rb&&!rb.hidden&&getComputedStyle(rb).display!=='none')
-              h=Math.round(rb.getBoundingClientRect().height);
-            bar.style.setProperty('--cbar-lift',h+'px');
-          };
-          lift();
-          addEventListener('resize',lift,{passive:true});
-          addEventListener('load',lift);
-          setTimeout(lift,1200);
-          var rbEl=document.querySelector('.srb');
-          if(rbEl)rbEl.addEventListener('click',function(){setTimeout(lift,50)});
-
-          bar.hidden=false;
-          bar.addEventListener('click',function(ev){
-            var btn=ev.target.closest('[data-consent]');
-            if(!btn)return;
-            var state=btn.getAttribute('data-consent');
-            try{localStorage.setItem(KEY,state)}catch(e){}
-            tell(state);
-            bar.hidden=true;
-            KEV(state==='granted'?'consent-yes':'consent-no');
-          });
-        }
-      }
     }
   }catch(e){}
 

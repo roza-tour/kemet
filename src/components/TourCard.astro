@@ -6,6 +6,7 @@ import { ui, UI_DEFAULT, tourTag, placeName, priceBasisShort } from "@/config/ui
 import { tourRouteFor, tourTextFor } from "@/config/tour-i18n";
 import type { SiteLocale, TranslatedLocale } from "@/config/i18n";
 import { LOCALE_META } from "@/config/i18n";
+import { localAlt } from "@/data/i18n/strings";
 
 interface Props {
   tour: Tour;
@@ -41,7 +42,7 @@ const route = tour.cities.map((c) => placeName(c, t)).join(" · ");
       sizes="card"
       label={cardTitle}
       src={tour.hero?.src}
-      alt={tour.hero?.alt}
+      alt={localAlt(locale, tour.hero?.alt ?? "")}
       width={tour.hero?.width}
       height={tour.hero?.height}
     />

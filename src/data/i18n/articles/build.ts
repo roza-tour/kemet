@@ -13,6 +13,8 @@ import type { LocalizedPage } from "../types";
 import type { ArtText, ArtLabels } from "./types";
 import { occasions } from "@/data/occasions";
 import { guides } from "@/data/guides";
+import { articleLd } from "@/schemas/localized";
+import { localAlt } from "../strings";
 
 export function articlePages(locale: TranslatedLocale, L: ArtLabels, texts: ArtText[]): LocalizedPage[] {
   const where = `i18n/articles/${locale}.ts`;
@@ -44,7 +46,15 @@ export function articlePages(locale: TranslatedLocale, L: ArtLabels, texts: ArtT
       moreLabel: L.moreLabel,
       moreText: L.moreText,
       links: texts.filter((x) => x.id !== t.id && x.kind === t.kind).map((x) => ({ label: x.title, route: `${locale}/${x.localeSlug}.html` })),
-      ...(hero?.src ? { photos: [{ ...hero, alt: hero.alt, label: hero.label ?? t.title } as never] } : {}),
+      ...(hero?.src ? { photos: [{ ...hero, alt: localAlt(locale, hero.alt), label: hero.label ?? t.title } as never] } : {}),
+      // A guide is an Article in English, dated when the guide carries a date;
+      // the translation says the same. An occasion page is a WebPage there too.
+      ...(t.kind === "guide"
+        ? {
+            schema: [articleLd(locale, route, t, { image: hero?.src, dateModified: (src as { lastUpdated?: string }).lastUpdated })],
+            ...((src as { lastUpdated?: string }).lastUpdated ? { dateModified: (src as { lastUpdated?: string }).lastUpdated } : {}),
+          }
+        : {}),
     };
   });
 }

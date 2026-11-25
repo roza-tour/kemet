@@ -23,6 +23,7 @@ import UltraBrief from "@/components/ultra/UltraBrief.astro";
 import { ultraJourneys, PEAK, ULTRA_PER_DAY } from "@/data/ultra/journeys";
 import type { UltraText } from "@/data/ultra/types";
 import { answerPageSchema, ORG_ID } from "@/schemas/jsonld";
+import { localAlt } from "@/data/i18n/strings";
 
 import { marketCountries } from "@/data/markets";
 import { whatsappLink, mailtoLink, canonical } from "@/utils/links";
@@ -58,7 +59,12 @@ const homeRoute = locale === "en" ? "index.html" : `${locale}/index.html`;
 const pageUrl = canonical(route);
 
 const jsonld: Record<string, unknown>[] = [
-  { ...answerPageSchema({ route, name: T.metaTitle, description: T.metaDescription, question: T.question, answer }), inLanguage: meta.tag },
+  // The named reviewer is claimed on the English page only: nobody has read
+  // the nine translations as a reviewer, and markup must not say otherwise.
+  (() => {
+    const { reviewedBy, ...rest } = answerPageSchema({ route, name: T.metaTitle, description: T.metaDescription, question: T.question, answer });
+    return { ...rest, ...(locale === "en" ? { reviewedBy } : {}), inLanguage: meta.tag };
+  })(),
   {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -125,7 +131,7 @@ const jsonld: Record<string, unknown>[] = [
   keywords={T.keywords}
   showCta={false}
   ogImage="/images/luxor/luxor-karnak-hypostyle-hall.webp"
-  ogImageAlt="The hypostyle hall of Karnak Temple in low light"
+  ogImageAlt={locale === "en" ? "The hypostyle hall of Karnak Temple in low light" : localAlt(locale, "The great hypostyle hall of Karnak Temple in Luxor")}
 >
   <div class="vip">
 

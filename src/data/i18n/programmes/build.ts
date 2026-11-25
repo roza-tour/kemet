@@ -11,6 +11,8 @@ import type { ProgText, ProgLabels } from "./types";
 import { programmes } from "@/data/programmes";
 import { destinations } from "@/data/destinations";
 
+import { tripLd } from "@/schemas/localized";
+import { localAlt } from "../strings";
 export function programmePages(locale: TranslatedLocale, L: ProgLabels, texts: ProgText[]): LocalizedPage[] {
   const where = `i18n/programmes/${locale}.ts`;
   return texts.map((t) => {
@@ -56,7 +58,8 @@ export function programmePages(locale: TranslatedLocale, L: ProgLabels, texts: P
       moreLabel: L.moreLabel,
       moreText: L.moreText,
       links: others.map((o) => ({ label: o.title, route: `${locale}/${o.localeSlug}.html` })),
-      photos: [{ ...photo!, alt: photo!.alt, label: t.title }],
+      photos: [{ ...photo!, alt: localAlt(locale, photo!.alt), label: t.title }],
+      schema: [tripLd(locale, route, { title: t.title, summary: t.standfirst, days: t.days }, photo!.src)],
     };
   });
 }

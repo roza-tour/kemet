@@ -1230,6 +1230,58 @@
       "ms": "ms/senarai-barang-untuk-dibawa-ke-mesir.html",
       "pt": "pt/o-que-levar-para-o-egito.html",
       "ar": "ar/madha-akhudh-maai-ila-misr.html"
+    },
+    {
+      "key": "guide-total-solar-eclipse-2027-luxor",
+      "en": "guides/total-solar-eclipse-2027-luxor.html",
+      "de": "de/sonnenfinsternis-2027-luxor.html",
+      "it": "it/eclissi-solare-2027-luxor.html",
+      "es": "es/eclipse-solar-2027-luxor.html",
+      "fr": "fr/eclipse-solaire-2027-louxor.html",
+      "ru": "ru/solnechnoe-zatmenie-2027-luksor.html",
+      "id": "id/gerhana-matahari-2027-luxor.html",
+      "ms": "ms/gerhana-matahari-2027-luxor.html",
+      "pt": "pt/eclipse-solar-2027-luxor.html",
+      "ar": "ar/kusuf-al-shams-2027-al-uqsur.html"
+    },
+    {
+      "key": "collection-ramadan-in-egypt",
+      "en": "collections/ramadan-in-egypt.html",
+      "de": "de/ramadan-in-aegypten.html",
+      "it": "it/ramadan-in-egitto.html",
+      "es": "es/ramadan-en-egipto.html",
+      "fr": "fr/ramadan-en-egypte.html",
+      "ru": "ru/ramadan-v-egipte.html",
+      "id": "id/ramadan-di-mesir.html",
+      "ms": "ms/ramadan-di-mesir.html",
+      "pt": "pt/ramada-no-egito.html",
+      "ar": "ar/ramadan-fi-masr.html"
+    },
+    {
+      "key": "collection-honeymoon-egypt",
+      "en": "collections/honeymoon-egypt.html",
+      "de": "de/flitterwochen-in-aegypten.html",
+      "it": "it/viaggio-di-nozze-in-egitto.html",
+      "es": "es/luna-de-miel-en-egipto.html",
+      "fr": "fr/voyage-de-noces-en-egypte.html",
+      "ru": "ru/medovyy-mesyats-v-egipte.html",
+      "id": "id/bulan-madu-ke-mesir.html",
+      "ms": "ms/bulan-madu-ke-mesir.html",
+      "pt": "pt/lua-de-mel-no-egito.html",
+      "ar": "ar/shahr-al-asal-fi-masr.html"
+    },
+    {
+      "key": "collection-family-egypt",
+      "en": "collections/family-egypt.html",
+      "de": "de/aegypten-mit-kindern.html",
+      "it": "it/egitto-con-bambini.html",
+      "es": "es/egipto-con-ninos.html",
+      "fr": "fr/egypte-en-famille.html",
+      "ru": "ru/egipet-s-detmi.html",
+      "id": "id/liburan-keluarga-ke-mesir.html",
+      "ms": "ms/percutian-keluarga-ke-mesir.html",
+      "pt": "pt/egito-com-criancas.html",
+      "ar": "ar/rehla-aeiliya-ila-masr.html"
     }
   ]
 }

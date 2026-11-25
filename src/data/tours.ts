@@ -73,10 +73,31 @@ const dayExcluded = [TICKETS_LINE, ...baseExcluded];
 /** Party size every published price is based on. */
 const PRICE_BASIS_PAX = 6;
 
+/**
+ * The per-person price for a party of TWO: the published price plus ten per
+ * cent. Owner, 25 Nov 2026. Until then no page said what two people pay, and
+ * two is who most enquiries come from — the only figure a reader saw was the
+ * one for six or more.
+ *
+ * Computed, never written out, so it moves with the catalogue. A journey that
+ * is not priced on a party of six (the honeymoon, priced for the couple) has
+ * no second figure: its one price already is the price for two.
+ * scripts/price-audit.mjs calls this same function to recognise the figure.
+ */
+export const TWO_TRAVELLERS_UPLIFT = 0.1;
+export const priceForTwo = (t: { price: number; priceBasisPax?: number }): number | undefined =>
+  t.priceBasisPax && t.priceBasisPax > 2 ? Math.round(t.price * (1 + TWO_TRAVELLERS_UPLIFT)) : undefined;
+
+// `seoTitle` is the page's <title>, written the way the journey is searched
+// for ("5-Day Luxor to Aswan Private Tour"), where `title` is its name on the
+// page ("Temples of the South"). Until 25 Nov 2026 the <title> was the name
+// plus the duration, so of 25 journeys one title contained "tour" and five
+// "Egypt". The address, the heading and the name are unchanged.
 export const tours: Tour[] = [
   // ========================= MULTI-DAY =====================================
   {
     slug: "tour-10-day",
+    seoTitle: "10-Day Egypt Private Tour with Nile Cruise",
     hero: {
       alt: "The great hypostyle hall of Karnak Temple in Luxor",
       src: "/images/luxor/luxor-karnak-hypostyle-hall.webp",
@@ -249,6 +270,7 @@ export const tours: Tour[] = [
   },
   {
     slug: "tour-7-day",
+    seoTitle: "7-Day Egypt Private Tour: Cairo, Luxor & Alexandria",
     hero: {
       alt: "The Great Sphinx of Giza facing the dawn",
       src: "/images/giza/giza-great-sphinx-frontal.webp",
@@ -385,6 +407,7 @@ export const tours: Tour[] = [
   },
   {
     slug: "tour-4-day",
+    seoTitle: "4-Day Cairo & Alexandria Private Tour",
     hero: {
       alt: "The lighthouse on the Alexandria seafront on the Mediterranean",
       src: "/images/alexandria/alexandria-lighthouse.webp",
@@ -485,6 +508,7 @@ export const tours: Tour[] = [
   },
   {
     slug: "tour-3-day",
+    seoTitle: "3-Day Luxor & Aswan Private Tour from Cairo",
     hero: {
       alt: "A painted royal tomb in the Valley of the Kings, Luxor",
       src: "/images/luxor/luxor-valley-of-the-kings-tomb.webp",
@@ -579,6 +603,7 @@ export const tours: Tour[] = [
   // ========================= DAY TOURS =====================================
   {
     slug: "tour-fayoum",
+    seoTitle: "Fayoum Oasis Private Day Tour from Cairo",
     hero: {
       alt: "The Magic Lake and desert dunes of the Fayoum oasis under a wide sky",
       src: "/images/fayoum/fayoum-magic-lake.webp",
@@ -665,6 +690,7 @@ export const tours: Tour[] = [
   },
   {
     slug: "tour-giza-museum",
+    seoTitle: "Giza Pyramids & Grand Egyptian Museum Day Tour",
     hero: {
       alt: "The Great Pyramid of Khufu on the Giza plateau",
       src: "/images/giza/giza-great-pyramid-khufu.webp",
@@ -755,6 +781,7 @@ export const tours: Tour[] = [
   },
   {
     slug: "tour-saqqara",
+    seoTitle: "Saqqara, Memphis & Dahshur Private Day Tour",
     hero: {
       alt: "The Step Pyramid of Djoser at Saqqara, the world's oldest stone monument",
       src: "/images/giza/saqqara-step-pyramid-djoser.webp",
@@ -831,6 +858,7 @@ export const tours: Tour[] = [
   },
   {
     slug: "tour-religious-citadel",
+    seoTitle: "Islamic & Coptic Cairo Private Day Tour",
     hero: {
       alt: "The Mosque of Muhammad Ali crowning the Saladin Citadel in Cairo",
       src: "/images/cairo/cairo-mosque-muhammad-ali-citadel.webp",
@@ -905,6 +933,7 @@ export const tours: Tour[] = [
   },
   {
     slug: "tour-cairo-museums",
+    seoTitle: "Cairo Museums Private Day Tour",
     hero: {
       alt: "The grand hall of the Egyptian Museum in Cairo",
       src: "/images/cairo/cairo-egyptian-museum-hall.webp",
@@ -973,6 +1002,7 @@ export const tours: Tour[] = [
   },
   {
     slug: "tour-alexandria",
+    seoTitle: "Alexandria Private Day Tour from Cairo",
     hero: {
       alt: "The Roman Amphitheatre at Kom el-Dikka in Alexandria",
       src: "/images/alexandria/alexandria-roman-amphitheatre.webp",
@@ -1052,6 +1082,7 @@ export const tours: Tour[] = [
   },
   {
     slug: "tour-giza-sphinx",
+    seoTitle: "Giza Pyramids & Sphinx Private Half-Day Tour",
     // The photo here before was a generated image, not the Sphinx: its nose
     // was intact. This one is real (CC0, see photoCredits).
     hero: {
@@ -1140,6 +1171,7 @@ export const tours: Tour[] = [
   },
   {
     slug: "tour-cairo-food",
+    seoTitle: "Cairo Food Tour: Private Evening Tasting",
     hero: {
       alt: "Koshari, with tomato sauce poured over pasta, lentils, chickpeas and crisp fried onions",
       src: "/images/food/koshari-sauce-pour.webp",
@@ -1260,6 +1292,7 @@ export const tours: Tour[] = [
   // ========================= NILE CRUISES ==================================
   {
     slug: "tour-nile-cruise",
+    seoTitle: "4-Day Nile Cruise Aswan to Luxor, Privately Guided",
     hero: {
       alt: "A Nile cruise ship gliding the river between Aswan and Luxor at sunset",
       src: "/images/cruise/nile-cruise-sunset.webp",
@@ -1361,6 +1394,7 @@ export const tours: Tour[] = [
 
   {
     slug: "tour-upper-egypt-5day",
+    seoTitle: "5-Day Luxor to Aswan Private Tour: Edfu & Kom Ombo",
     hero: {
       alt: "A colossus of Ramesses II at the entrance of Luxor Temple",
       src: "/images/luxor/luxor-temple-ramesses-colossus.webp",
@@ -1477,6 +1511,7 @@ export const tours: Tour[] = [
   // ========================= THEMED JOURNEYS ================================
   {
     slug: "tour-honeymoon-9day",
+    seoTitle: "9-Day Egypt Honeymoon: Cairo, Luxor & Aswan",
     hero: {
       alt: "The Nile and desert hills framed through an ancient temple doorway at Aswan",
       src: "/images/aswan/nile-view-temple-window.webp",
@@ -1633,6 +1668,7 @@ export const tours: Tour[] = [
 
   {
     slug: "tour-family-8day",
+    seoTitle: "8-Day Egypt Family Tour: Pyramids, Luxor & Aswan",
     hero: {
       alt: "Kemet guests jumping for joy above the Giza pyramid panorama",
       src: "/images/clients/clients-06-giza-jump.webp",
@@ -1778,6 +1814,7 @@ export const tours: Tour[] = [
 
   {
     slug: "tour-photography-7day",
+    seoTitle: "7-Day Egypt Photography Tour, Private",
     hero: {
       alt: "Hot-air balloons drifting over the West Bank of Luxor at dawn",
       src: "/images/luxor/luxor-hot-air-balloons-dawn.webp",
@@ -1918,6 +1955,7 @@ export const tours: Tour[] = [
 
   {
     slug: "tour-grand-14day",
+    seoTitle: "14-Day Egypt Grand Tour with Abu Simbel & Red Sea",
     hero: {
       alt: "A decorated camel resting before the Pyramids of Giza in early light",
       src: "/images/giza/giza-camel-pyramids-sunrise.webp",
@@ -2070,6 +2108,7 @@ export const tours: Tour[] = [
 
   {
     slug: "tour-cairo-culture-5day",
+    seoTitle: "5-Day Cairo Private Tour: Giza, Saqqara & Old Cairo",
     hero: {
       alt: "The ancient Mosque of Amr ibn al-As in Old Cairo",
       src: "/images/cairo/cairo-amr-ibn-al-as-mosque.webp",
@@ -2186,6 +2225,7 @@ export const tours: Tour[] = [
   // ========================= RED SEA =======================================
   {
     slug: "tour-sharm-5day",
+    seoTitle: "5-Day Sharm El Sheikh Red Sea Private Holiday",
     hero: {
       alt: "A thatched beach camp above the coral reef shallows of the Red Sea at Sharm El Sheikh",
       src: "/images/redsea/sharm-reef-beach-camp.webp",
@@ -2298,6 +2338,7 @@ export const tours: Tour[] = [
 
   {
     slug: "tour-red-sea-diving-4day",
+    seoTitle: "4-Day Red Sea Diving Trip, Sharm El Sheikh",
     hero: {
       alt: "A scuba diver beside a vivid Red Sea coral reef teeming with fish",
       src: "/images/activities/red-sea-diver-reef.webp",
@@ -2403,6 +2444,7 @@ export const tours: Tour[] = [
   // ========================= SHORT BREAKS & DAY TOURS =======================
   {
     slug: "tour-luxor-3day",
+    seoTitle: "3-Day Luxor Private Tour with Egyptologist",
     hero: {
       alt: "Osiride statues of Hatshepsut on the upper terrace of her temple at Deir el-Bahri",
       src: "/images/luxor/hatshepsut-osiride-statues.webp",
@@ -2498,6 +2540,7 @@ export const tours: Tour[] = [
 
   {
     slug: "tour-cairo-vip-3day",
+    seoTitle: "3-Day Cairo & Giza Private Tour",
     hero: {
       alt: "A stone-paved lane of Islamic Cairo glowing with lanterns at night",
       src: "/images/cairo/cairo-islamic-old-street-night.webp",
@@ -2593,6 +2636,7 @@ export const tours: Tour[] = [
 
   {
     slug: "tour-alexandria-2day",
+    seoTitle: "2-Day Alexandria Private Tour with Overnight",
     hero: {
       alt: "The seafront Montaza Palace and its gardens in Alexandria",
       src: "/images/alexandria/alexandria-montaza-palace.webp",
@@ -2675,6 +2719,7 @@ export const tours: Tour[] = [
 
   {
     slug: "tour-abu-simbel",
+    seoTitle: "Abu Simbel Private Day Tour from Aswan",
     hero: {
       alt: "The four seated colossi of Ramesses II at the Great Temple of Abu Simbel",
       src: "/images/aswan/abu-simbel-great-temple-colossi.webp",

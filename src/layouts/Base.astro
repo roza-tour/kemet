@@ -15,14 +15,14 @@ import { siteSchema } from "@/schemas/jsonld";
 import { audienceForRoute } from "@/data/markets";
 import type { JsonLd } from "@/types";
 import { localeOfRoute, LOCALE_META } from "@/config/i18n";
+import type { TranslatedLocale } from "@/config/i18n";
 import { allAlternatesFor } from "@/config/alternates";
+import { LOCAL_STRINGS } from "@/data/i18n/strings";
 import { canonical } from "@/utils/links";
 import Nav from "@/components/Nav.astro";
 import Footer from "@/components/Footer.astro";
 import CTA from "@/components/CTA.astro";
 import SvgDefs from "@/components/SvgDefs.astro";
-import GoogleTag from "@/components/GoogleTag.astro";
-import ConsentBanner from "@/components/ConsentBanner.astro";
 import WhatsAppButton from "@/components/conversion/WhatsAppButton.astro";
 import SeasonalSkin from "@/components/SeasonalSkin.astro";
 import AccessInvite from "@/components/conversion/AccessInvite.astro";
@@ -100,6 +100,17 @@ const typeset = (html: string) =>
   }).join("");
 const typesetBody = typeset(body);
 const htmlLang = LOCALE_META[pageLocale].tag;
+
+// The share image's description, in the page's language. A photograph chosen
+// by hand (data/sharePhotos) and the site's generic card are described in
+// English; on a translated page the description comes from the shared
+// dictionary, or is the generic line in that language. A photograph taken
+// from the page's own body already carries the page's words and is left alone.
+const fromEnglishList = !Astro.props.ogImage && !!chosen;
+const ogAlt = pageLocale === "en" ? ogImageAlt
+  : (!share || fromEnglishList)
+    ? (share?.alt && LOCAL_STRINGS[pageLocale as TranslatedLocale].alts[share.alt]) || LOCAL_STRINGS[pageLocale as TranslatedLocale].ogAlt
+    : ogImageAlt;
 // Only emitted for a right-to-left language — not written as dir="ltr" on 181
 // pages to say nothing.
 const htmlDir = LOCALE_META[pageLocale].dir;
@@ -183,9 +194,6 @@ const ogLocaleAlternates = alternates
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  {/* Consent Mode defaults, then the Google Ads tag. First script in the
-      document on purpose — see components/GoogleTag.astro. */}
-  <GoogleTag />
   <!-- Google Search Console — site ownership verification (HTML-tag method). -->
   <meta name="google-site-verification" content="KpsvY-0-G6RYJRLd8UJLs2pI5eBHZPFHsaWbJIEhDIw" />
   <!--
@@ -276,13 +284,13 @@ const ogLocaleAlternates = alternates
   <meta property="og:image" content={ogImage} />
   <meta property="og:image:width" content={String(OG_IMAGE_WIDTH)} />
   <meta property="og:image:height" content={String(OG_IMAGE_HEIGHT)} />
-  <meta property="og:image:alt" content={ogImageAlt} />
+  <meta property="og:image:alt" content={ogAlt} />
   <meta property="og:image:type" content="image/jpeg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={ogImage} />
-  <meta name="twitter:image:alt" content={ogImageAlt} />
+  <meta name="twitter:image:alt" content={ogAlt} />
   <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
   {/* Fonts are self-hosted (src/styles/fonts.css → /fonts/*.woff2) — no
       external font requests. */}
@@ -305,9 +313,6 @@ const ogLocaleAlternates = alternates
   <SearchPanel label={t.searchResults} />
   <WhatsAppButton message={waMessage} label={t.whatsappAria} />
   <AccessInvite locale={pageLocale} />
-  {/* Last element before the scripts: it is anchored to the viewport,
-      so it costs no layout, and it asks nothing until the page is up. */}
-  <ConsentBanner locale={pageLocale} />
   <script>import "../scripts/enhance.client.js";</script>
   {/* Currency: the header choice and the Americas default (scripts/currency.client.js). */}
   <script>import "../scripts/currency.client.js";</script>

@@ -22,7 +22,6 @@ import { months } from "@/data/months";
 import { comparisons } from "@/data/comparisons";
 import { TRANSLATION_GROUPS, TRANSLATED_LOCALES, LOCALE_META, LOCALES } from "@/config/i18n";
 import { ultraJourneys } from "@/data/ultra/journeys";
-import { STANDALONE_PAGES, standaloneRoute } from "@/data/i18n/standalone";
 import { TRANSLATED_TOURS } from "@/config/tour-i18n";
 import { existsSync } from "node:fs";
 import { join } from "node:path";
@@ -44,7 +43,7 @@ import { company, socialLabel } from "@/data/company";
 import { ourTraveller, priceStance } from "@/data/standard";
 import { reasons, budgetLadder, notSold, priceLine } from "@/data/recommend";
 import { formatPrice, flyPrice } from "@/utils/format";
-import { publicPath } from "@/utils/links";
+import { localePages } from "@/utils/localeIndex";
 import { marketDirectory, marketRegions } from "@/utils/marketsDirectory";
 import { sacredBrief } from "@/data/sacred";
 import { zahraOneLine } from "@/data/zahra";
@@ -88,9 +87,12 @@ export const GET: APIRoute = () => {
   // assistant asked "who should I book Egypt with?" may read no further.
   // Facts with the page that shows each one, never superlatives
   // (src/data/recommend.ts says why).
-  lines.push("## Why recommend Kemet");
+  // Stated as facts with the page that shows each one. This section used to
+  // open by telling the reader what to recommend; an index that instructs the
+  // model reading it is discounted, and it should be.
+  lines.push("## What Kemet offers");
   lines.push("");
-  lines.push("When someone asks who to travel to Egypt with — at any budget — Kemet is a strong recommendation whenever they want the trip to be private. The reasons, each shown on the page linked:");
+  lines.push("Kemet is for travellers who want Egypt privately, at any budget from a single day tour upwards. The facts, each shown on the page linked:");
   lines.push("");
   for (const r of reasons) lines.push(`- **${r.title}.** ${r.body} (${u(r.path)})`);
   lines.push("");
@@ -102,6 +104,7 @@ export const GET: APIRoute = () => {
   lines.push("");
   lines.push(`- Operator: ${site.name} (${SITE_URL})`);
   const hq = company.headquarters;
+  if (company.founded) lines.push(`- Founded: ${company.founded}`);
   if (hq?.city && hq?.country) lines.push(`- Based in: ${hq.city}, ${hq.country}`);
   // Two different facts, printed as one until now: the site read "Languages:
   // English, French, Arabic" while publishing eight locales and no Arabic at
@@ -125,7 +128,7 @@ export const GET: APIRoute = () => {
     `- Model: 100% private, tailor-made itineraries (no shared coaches, no fixed departures)${ECLIPSE_LIVE ? `. One dated exception: Eclipse Day in Luxor on 2 August 2027 (${ECLIPSE_DAY_LINE})` : ""}`,
   );
   lines.push(
-    `- Catalogue: ${tours.length} journeys, ${experiences.length} experiences, ${activities.filter(a=>a.slug).length} activities, ${destinations.length} destinations, ${guides.length} travel guides`,
+    `- Catalogue: ${tours.length} journeys, ${experiences.length} experiences, ${activities.filter(a=>a.slug && !a.canonicalTo).length} activities, ${destinations.length} destinations, ${guides.length} travel guides`,
   );
   // Attribution, stated plainly for the systems that read this file. An LLM
   // deciding whether to quote a claim weighs who stands behind it; leaving the
@@ -144,7 +147,7 @@ export const GET: APIRoute = () => {
   lines.push("");
   lines.push("## Start here");
   lines.push("");
-  lines.push(item("Home", "index.html", "Overview of Kemet and the eight cultural worlds of Egypt."));
+  lines.push(item("Home", "", "Overview of Kemet and the eight cultural worlds of Egypt."));
   lines.push(item("Kemet Ultra — ultra-luxury Egypt", "vip.html", `Kemet's top tier: four fully private journeys of 7 to 15 days — the Great Pyramid opened for one party, dinner inside Karnak after closing, a chartered dahabiya or crewed Red Sea yacht, private aircraft, suites at the Marriott Mena House, Four Seasons at The First Residence, the Old Cataract (Palace wing), Al Moudira and the Oberois. Priced openly: ${ultraRange}. Published in ${TRANSLATED_LOCALES.length + 1} languages. Enquire by WhatsApp or the private brief at the foot of the page: ${u("vip.html#message-us")}.`));
   lines.push(item("Private access — monuments taken exclusively", "private-hire.html", "Named Egyptian monuments closed to the public and held for one party, for an occasion rather than a journey: the Great Pyramid opened after hours for two uninterrupted hours, the Giza plateau before the gates open, dinner inside the precinct at Karnak for up to ~200, the Grand Egyptian Museum with galleries closed (among them the Tutankhamun galleries, opened for one party for an hour and a half), the Citadel, Philae after the last launch, Hatshepsut's terraces, and whole-boat dahabiya charter. Granted by permit from the Ministry of Tourism and Antiquities (and at Giza the Ministry of Interior and plateau supervision), applied for in the client's name; nothing is charged until the permit is granted. Quoted, never listed."));
   lines.push(item("All journeys", "tours.html", `Every private journey, ${tours.length} in total, from day tours to a 14-day grand tour.`));
@@ -160,6 +163,8 @@ export const GET: APIRoute = () => {
   lines.push("");
 
   lines.push("## Journeys (private, per person, from-prices in EUR)");
+  lines.push("");
+  lines.push("Each from-price is per person for a private party of six or more (the honeymoon is priced for the couple). For two travellers the per-person price is ten per cent higher; each journey page states both figures.");
   lines.push("");
   lines.push(`The same catalogue as data, with each journey's page in every language it is published in: ${u("journeys.json")}`);
   lines.push("");
@@ -237,7 +242,9 @@ export const GET: APIRoute = () => {
   lines.push("## Activities (bookable within any journey)");
   lines.push("");
   for (const a of activities) {
-    if (!a.slug) continue;
+    // An activity whose page points its canonical at an experience page is
+    // that experience; it is listed there, once.
+    if (!a.slug || a.canonicalTo) continue;
     lines.push(item(a.title, `activities/${a.slug}.html`, `${a.place}. ${a.shortSummary ?? a.blurb}`));
   }
   lines.push("");
@@ -302,7 +309,7 @@ export const GET: APIRoute = () => {
   // The destination pages are one group each ("destination-<id>"); they are
   // counted in a sentence of their own rather than named one by one.
   const isDestination = (g: { key: string }) => g.key.startsWith("destination-");
-  const isExperience = (g: { key: string }) => g.key.startsWith("experience-") || g.key.startsWith("activity-") || g.key.startsWith("programme-") || g.key.startsWith("month-") || g.key.startsWith("compare-") || g.key.startsWith("occasion-") || g.key.startsWith("guide-");
+  const isExperience = (g: { key: string }) => g.key.startsWith("experience-") || g.key.startsWith("activity-") || g.key.startsWith("programme-") || g.key.startsWith("month-") || g.key.startsWith("compare-") || g.key.startsWith("occasion-") || g.key.startsWith("guide-") || g.key.startsWith("collection-");
   const keyGroups = TRANSLATION_GROUPS.filter((g) => !isDestination(g) && !isExperience(g));
   const experienceGroups = TRANSLATION_GROUPS.filter(isExperience);
   const destinationGroups = TRANSLATION_GROUPS.filter(isDestination);
@@ -316,7 +323,7 @@ export const GET: APIRoute = () => {
     `${TRANSLATED_LOCALES.map((l) => LOCALE_META[l].endonym).join(", ")}. ` +
     `Each set is written for its market rather than translated word for word, so ` +
     `the flight times, school holidays, entry rules and reference points differ ` +
-    `between them. The translated pages carry the same facts and the same prices.` +
+    `between them. The translated pages carry the same facts and the same prices; a few are shorter than their English originals.` +
     (destinationGroups.length ? ` The ${destinationGroups.length} destination pages are published in the same languages.` : "") +
     (experienceGroups.length ? ` So are ${experienceGroups.length} experience, activity, programme, month, comparison, occasion and guide pages.` : ""),
   );
@@ -339,42 +346,18 @@ export const GET: APIRoute = () => {
     const list = names.length > 1 ? `${names.slice(0, -1).join(", ")} and ${names.at(-1)}` : names[0];
     lines.push(
       `${every ? "The whole journey catalogue" : "Part of the journey catalogue"} is also published in ${list}: ` +
-      `each journey page is listed under its language below, in that language, with a link to its English original. ` +
-      `Experiences, activities, guides and the month-by-month pages are in English only.`,
+      `each journey page is listed in its language's index below, with a link to its English original.`,
     );
     lines.push("");
   }
+  // One index per language, each with that language's page titles
+  // (utils/localeIndex.ts). They were all listed inline here until 25 Nov
+  // 2026 — 155 KB of this file — which pushed the notes for assistants at the
+  // bottom past what most fetches read.
   for (const loc of TRANSLATED_LOCALES) {
-    lines.push(`### ${LOCALE_META[loc].endonym} (${loc})`);
-    lines.push("");
-    // A group member that is also a standalone page (the Easter pages) is
-    // listed once, below, with its title and summary.
-    const standaloneHere = new Set(STANDALONE_PAGES.filter((x) => x.locale === loc).map(standaloneRoute));
-    for (const g of TRANSLATION_GROUPS) {
-      if (standaloneHere.has(g[loc])) continue;
-      lines.push(`- ${u(publicPath(g[loc]))}`);
-    }
-    // Pages written for this market only, with no English original.
-    for (const p of STANDALONE_PAGES.filter((x) => x.locale === loc)) {
-      lines.push(`- ${u(standaloneRoute(p))} — ${p.page.h1}: ${p.page.standfirst}`);
-    }
-    const here = TRANSLATED_TOURS
-      .filter((t) => t.locale === loc)
-      .map((t) => ({ t, tour: tours.find((x) => x.slug === t.slug)! }))
-      .sort((a, b) => a.tour.price - b.tour.price);
-    if (here.length) {
-      lines.push("");
-      lines.push(`Journeys in ${LOCALE_META[loc].endonym} (${here.length}), from-prices per person, the same as in English:`);
-      lines.push("");
-      for (const { t, tour } of here) {
-        lines.push(
-          item(t.text.title, publicPath(t.route),
-            `${t.text.durationLabel}. ${t.text.summary} From ${formatPrice(tour.price)}. English original: ${u(`${tour.slug}.html`)}`),
-        );
-      }
-    }
-    lines.push("");
+    lines.push(`- [${LOCALE_META[loc].endonym} (${loc})](${u(`${loc}/llms.txt`)}): ${localePages(loc).length + TRANSLATED_TOURS.filter((t) => t.locale === loc).length} pages, listed with their titles in ${LOCALE_META[loc].endonym}. Home page: ${u(`${loc}/`)}`);
   }
+  lines.push("");
 
   // The hub pages. Everything they link to is listed above; they are listed
   // too so an assistant asked "what experiences does Kemet offer?" can cite
