@@ -11,9 +11,9 @@ Weather & Seasons
 
 Egypt's best travel season is October to April, when Nile Valley temperatures are mild and monuments are comfortable to explore. Here is what to expect season by season and destination by destination.
 
-6 min read · Updated 2026-01
+6 min read
 
-Reviewed by [Mervat Farouk](https://kemet-travel.com/about.html#mervat-farouk) · Egyptologist guide — checked January 2026
+Reviewed by [Mervat Farouk](https://kemet-travel.com/about.html#mervat-farouk) · Egyptologist guide
 
 ## Key takeaways
 

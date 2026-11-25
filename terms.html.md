@@ -21,7 +21,7 @@ By using this website you agree to these terms. If you do not agree with them, p
 
 ## Who we are
 
-Kemet designs and arranges private, tailor-made travel in Egypt, operating from Cairo. Travel services are provided through licensed Egyptian operators and licensed Egyptologist guides. You can contact us at info@kemet-travel.com.
+Kemet designs and arranges private, tailor-made travel in Egypt, operating from Cairo. Your licensed Egyptologist guide and your driver are members of Kemet's own team, and the hotels on a Kemet journey are booked under Kemet's own contracts with them. You can contact us at info@kemet-travel.com.
 
 03
 
@@ -59,9 +59,11 @@ We strongly recommend comprehensive travel insurance covering medical care, canc
 
 08
 
-## Third-party suppliers
+## Who delivers your journey
 
-A journey may include services delivered by independent suppliers — hotels, cruise operators, guides and transport providers. We select them with care, but each provides its services under its own terms, and elements outside our reasonable control may occasionally change.
+Your Egyptologist guide and your driver are Kemet's own team, and your hotels are booked under Kemet's own contracts with them, so the people and places on your itinerary are ones we answer for directly.
+
+Some parts of a journey are run by the companies that operate them: a scheduled Nile cruise ship, domestic flights and trains. They provide those services under their own conditions of carriage, and their schedules can occasionally change for reasons outside our control. When that happens we rearrange the rest of the journey around it and tell you straight away.
 
 09
 

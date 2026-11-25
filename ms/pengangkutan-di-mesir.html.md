@@ -15,7 +15,7 @@ Kaherah → Luxor (kereta api Talgo) **~9–10 jam**
 
 Luxor → Aswan (pelayaran) **3–4 malam**
 
-Aswan → Abu Simbel (jalan raya) **3.5 jam setiap hala**
+Aswan → Abu Simbel (jalan raya) **3 jam setiap hala**
 
 Laluan Metro Kaherah **3 laluan, ~90 stesen**
 
@@ -79,7 +79,7 @@ Untuk perjalanan antara bandar yang tidak sesuai dengan kereta api atau kapal te
 
 ## Ke Abu Simbel
 
-Abu Simbel, kuil batu raksasa Ramses II sejauh 280 kilometer ke selatan Aswan, boleh dicapai dengan penerbangan 45 minit bersama EgyptAir (jadual terhad) atau perjalanan jalan raya 3.5 jam dengan kenderaan persendirian melalui gurun. Kebanyakan pelawat menjadikannya lawatan sehari dengan permulaan awal dari Aswan, bertolak sebelum pukul 4 pagi untuk tiba ketika dibuka dan mengelakkan bahang tengah hari.
+Abu Simbel, kuil batu raksasa Ramses II sejauh 280 kilometer ke selatan Aswan, boleh dicapai dengan penerbangan 45 minit bersama EgyptAir (jadual terhad) atau perjalanan jalan raya 3 jam dengan kenderaan persendirian melalui gurun. Kebanyakan pelawat menjadikannya lawatan sehari dengan permulaan awal dari Aswan, bertolak sebelum pukul 4 pagi untuk tiba ketika dibuka dan mengelakkan bahang tengah hari.
 
 09
 

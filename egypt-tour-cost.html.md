@@ -49,7 +49,7 @@ Where Kemet sits
 
 €200–450 *per person, per day*
 
-Where Kemet sits. Your own licensed Egyptologist, your own vehicle and driver, hotels chosen for the room rather than the star rating, and an itinerary written for you. Kemet's own multi-day journeys work out at €155–205 per person per day for a party of six or more, at the entry to this band rather than the middle of it; the figure climbs with hotel tier and charter, and per-person cost falls as the party grows.
+Where Kemet sits. Your own licensed Egyptologist, your own vehicle and driver, hotels chosen for the room rather than the star rating, and an itinerary written for you. Kemet's own multi-day journeys work out at €155–205 per person per day for a party of six or more, and €171–226 for two travellers: around the floor of this band, and for larger parties just under it. The figure climbs with hotel tier and charter, and per-person cost falls as the party grows.
 
 ### At the very top
 
@@ -141,7 +141,7 @@ A day with four sites crammed into it is a cheaper day to sell and a worse day t
 
 ### On price, plainly
 
-Kemet sits at the upper end of the Egyptian market and we are comfortable saying so. A private Egyptologist for a week costs what it costs; so does a car that is yours alone and a room that faces the river rather than the car park. What we will not do is quote low, then recover the difference through optional extras, shopping stops and an itinerary that quietly turns into a group. Every price on this site is a per-person starting point for a private journey, and the written quote that follows is the price you pay.
+Kemet sits in the private, tailor-made part of the Egyptian market, above the group tours, and we are comfortable saying so. A private Egyptologist for a week costs what it costs; so does a car that is yours alone and a room that faces the river rather than the car park. What we will not do is quote low, then recover the difference through optional extras, shopping stops and an itinerary that quietly turns into a group. Every price on this site is a per-person starting point for a private journey, and the written quote that follows is the price you pay.
 
 04 · In practice
 
@@ -195,7 +195,7 @@ Egypt is one of the least expensive countries in the world for food, transport a
 
 ### How much should I budget for a week in Egypt?
 
-At the private, tailor-made level a week for two people typically lands between €2,800 and €6,000 in total, depending on hotels, season and whether you fly or drive between cities. That covers your Egyptologist throughout, all entrance fees and private transfers. International flights, the entry visa and gratuities sit outside it.
+At the private, tailor-made level a week for two people typically lands between €2,800 and €6,000 in total, depending on hotels, season and whether you fly or drive between cities. That covers your Egyptologist throughout, all entrance fees and private transfers. International flights, the entry visa and gratuities sit outside it. Kemet's own seven-day journey is €1,297 per person for two travellers, €2,594 for the pair; meals are not included.
 
 ### What is included in a Kemet price?
 

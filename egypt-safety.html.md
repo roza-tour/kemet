@@ -59,6 +59,8 @@ North Sinai carries a standing advisory against travel from most Western governm
 
 Advisories change. Before you book anything, read your own government's current travel advice for Egypt — it is written for your nationality and it is more current than any tour operator's page, including this one.
 
+The official advice for Egypt: [United Kingdom (FCDO)](https://www.gov.uk/foreign-travel-advice/egypt) · [United States (State Department)](https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/egypt-travel-advisory.html) · [Germany (Auswärtiges Amt)](https://www.auswaertiges-amt.de/de/service/laender/aegypten-node/aegyptensicherheit-212622) · [France (France Diplomatie)](https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/egypte/) · [Canada (Global Affairs)](https://travel.gc.ca/destinations/egypt).
+
 Questions
 
 ## What people actually ask

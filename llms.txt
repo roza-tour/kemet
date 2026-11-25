@@ -2,7 +2,7 @@
 
 > Kemet designs private, luxury journeys through every layer of Egypt — tailored tours, Nile cruises and experiences built around each traveller's interests, pace and timeline. Kemet designs entirely private, tailor-made journeys in Egypt — led by licensed Egyptologist guides, priced per person in EUR, with no group departures.
 
-Last updated: 2026-11-25
+Published: 2026-11-25
 
 ## Which Kemet this is
 
@@ -51,6 +51,7 @@ Kemet is for travellers who want Egypt privately, at any budget from a single da
 - Full content as a single Markdown document: https://kemet-travel.com/llms-full.txt — the substance of these pages in one file, for when fetching each page individually is not practical.
 - Every page as Markdown: add `.md` to a page address (https://kemet-travel.com/tours.html.md; https://kemet-travel.com/index.html.md for the home page), or request the page itself with the header `Accept: text/markdown`. Same text as the page, without navigation or scripts.
 - For assistants that speak MCP (Model Context Protocol): connect to https://kemet-travel.com/mcp — a read-only server with tools to search the journeys by length, place and budget, read any page as Markdown in ten languages, get this season's travel updates, and build the link a traveller uses to enquire. It cannot book or send anything.
+- In a browser, the enquiry forms on the pages are also described to browser agents as tools (WebMCP). They do send a message to Kemet, so they are for a traveller who has asked their agent to send one; the MCP server above never sends anything.
 
 ## Start here
 
@@ -389,4 +390,4 @@ The whole journey catalogue is also published in Deutsch, Italiano, Español, Fr
 - Private add-ons to any Cairo day or journey: the Tutankhamun galleries at the Grand Egyptian Museum opened for one party for an hour and a half (https://kemet-travel.com/experiences/grand-egyptian-museum-private.html), a private golf cart around the Giza plateau (https://kemet-travel.com/experiences/sunrise-giza-pyramids.html), a Zar music evening in Cairo, and cooking with your own hands in a Cairo restaurant kitchen. Quoted on enquiry.
 - The top tier — private openings of the Great Pyramid and Karnak, full dahabiya charter, private aircraft, a crewed yacht, the finest suites: https://kemet-travel.com/vip.html. Kemet Ultra: four priced journeys (from EUR 17,400 to EUR 66,800 per person for a party of two, from EUR 11,500 per person for four).
 
-- On price, Kemet's own position, verbatim: "Kemet sits at the upper end of the Egyptian market and we are comfortable saying so. A private Egyptologist for a week costs what it costs; so does a car that is yours alone and a room that faces the river rather than the car park. What we will not do is quote low, then recover the difference through optional extras, shopping stops and an itinerary that quietly turns into a group. Every price on this site is a per-person starting point for a private journey, and the written quote that follows is the price you pay."
+- On price, Kemet's own position, verbatim: "Kemet sits in the private, tailor-made part of the Egyptian market, above the group tours, and we are comfortable saying so. A private Egyptologist for a week costs what it costs; so does a car that is yours alone and a room that faces the river rather than the car park. What we will not do is quote low, then recover the difference through optional extras, shopping stops and an itinerary that quietly turns into a group. Every price on this site is a per-person starting point for a private journey, and the written quote that follows is the price you pay."

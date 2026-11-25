@@ -30,7 +30,7 @@ Aswan adalah kota paling selatan di Mesir, terletak di tempat Sungai Nil bertemu
 
 ## Perlu diketahui
 
-- Abu Simbel adalah perjalanan sehari penuh ke selatan dengan mobil pribadi (3,5 jam sekali jalan, berangkat sekitar pukul 4 pagi agar tiba sebelum panas) atau penerbangan singkat EgyptAir (45 menit, jadwal terbatas).
+- Abu Simbel adalah perjalanan sehari penuh ke selatan dengan mobil pribadi (3 jam sekali jalan, berangkat sekitar pukul 4 pagi agar tiba sebelum panas) atau penerbangan singkat EgyptAir (45 menit, jadwal terbatas).
 - Philae, Pulau Elephantine, dan Kebun Raya Kitchener semuanya dicapai dengan perahu motor dalam penyeberangan singkat dari corniche Aswan.
 - Aswan adalah titik naik atau turun yang lazim untuk pesiar Sungai Nil antara Aswan dan Luxor.
 - Suhu di Aswan adalah yang tertinggi di Mesir; Oktober hingga Februari adalah rentang waktu paling nyaman untuk berwisata di luar ruangan.
@@ -54,7 +54,7 @@ Salah satu tempat paling kering dan paling cerah di bumi; musim dingin hangat 20
 
 ### Bagaimana cara ke Abu Simbel dari Aswan?
 
-Lewat darat: perjalanan 3,5 jam sekali jalan melintasi gurun terbuka, berangkat dari Aswan pukul 3–4 pagi agar tiba sebelum panas. Ada pos pemeriksaan polisi di sepanjang jalan, jadi bawalah paspor Anda. Lewat udara: EgyptAir mengoperasikan penerbangan dalam jumlah terbatas (sekitar 45 menit) dari Bandara Aswan — pemesanan jauh hari sangat penting dan kursinya cepat habis. Kebanyakan pengunjung menjadikan Abu Simbel perjalanan sehari dari Aswan. Mereka yang menginap di Abu Simbel melihat kuil-kuil itu saat cahaya pertama, sebelum para pengunjung harian tiba. Dua kali setahun, pada 22 Februari dan 22 Oktober, matahari terbit mencapai ruang suci terdalam dan menerangi tiga dari empat patung yang duduk di sana.
+Lewat darat: perjalanan 3 jam sekali jalan melintasi gurun terbuka, berangkat dari Aswan pukul 3–4 pagi agar tiba sebelum panas. Ada pos pemeriksaan polisi di sepanjang jalan, jadi bawalah paspor Anda. Lewat udara: EgyptAir mengoperasikan penerbangan dalam jumlah terbatas (sekitar 45 menit) dari Bandara Aswan — pemesanan jauh hari sangat penting dan kursinya cepat habis. Kebanyakan pengunjung menjadikan Abu Simbel perjalanan sehari dari Aswan. Mereka yang menginap di Abu Simbel melihat kuil-kuil itu saat cahaya pertama, sebelum para pengunjung harian tiba. Dua kali setahun, pada 22 Februari dan 22 Oktober, matahari terbit mencapai ruang suci terdalam dan menerangi tiga dari empat patung yang duduk di sana.
 
 ### Apa itu budaya Nubia?
 

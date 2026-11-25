@@ -13,7 +13,7 @@ The moments between the monuments — eight experiences we fold into private jou
 
 Luxor
 
-### [Hot-Air Balloon over Luxor](https://kemet-travel.com/activities/hot-air-balloon-luxor.html)
+### [Hot-Air Balloon over Luxor](https://kemet-travel.com/experiences/hot-air-balloon-luxor.html)
 
 Luxor
 
@@ -53,7 +53,7 @@ Explore
 
 Aswan
 
-### [Felucca Sail at Sunset](https://kemet-travel.com/activities/felucca-sunset-aswan.html)
+### [Felucca Sail at Sunset](https://kemet-travel.com/experiences/private-felucca-nile.html)
 
 Aswan
 

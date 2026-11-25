@@ -45,7 +45,7 @@ Private journeys from
   
   Midnight liturgy at the Hanging Church. Visitors are welcome.
 
-29 days out
+28 days out
 
 ## This is late, and we will say so
 
@@ -136,7 +136,7 @@ In full
 
 Four things that decide whether this fortnight is right for you, and one that decides when to book it.
 
-### What 29 days out actually means
+### What 28 days out actually means
 
 20 December to 5 January is close to full, and anything we can still arrange will be shaped by availability rather than by preference. We will look, and we will tell you plainly what is there. But the alternative deserves saying properly: from about 12 January the same weather costs materially less — 22–24°C in Luxor, 19–21°C in Cairo, the same clear winter light, and the New Year pricing gone. The first ten days of January are still peak season at highest prices; after that it eases noticeably while the weather does not change at all. Tell us in the form whether your dates are fixed or movable — at this range it is the single most useful thing you can say. And cancellation on a booking confirmed this close is 75% of the total trip cost (15–29 days before departure).
 

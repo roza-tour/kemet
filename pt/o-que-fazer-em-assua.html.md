@@ -30,7 +30,7 @@ Assuã é a cidade mais ao sul do Egito, no ponto em que o Nilo encontra a Prime
 
 ## Vale saber
 
-- Abu Simbel é um passeio de um dia inteiro rumo ao sul, de carro particular (3,5 horas em cada sentido, saindo por volta das 4h da manhã para chegar antes do calor) ou em um voo curto da EgyptAir (45 minutos, com horários limitados).
+- Abu Simbel é um passeio de um dia inteiro rumo ao sul, de carro particular (3 horas em cada sentido, saindo por volta das 4h da manhã para chegar antes do calor) ou em um voo curto da EgyptAir (45 minutos, com horários limitados).
 - Filae, a ilha Elefantina e o Jardim Botânico de Kitchener ficam todos a uma curta travessia de lancha a partir da corniche de Assuã.
 - Assuã é o ponto habitual de embarque ou desembarque dos cruzeiros pelo Nilo entre Assuã e Luxor.
 - As temperaturas de Assuã são as mais altas do Egito; de outubro a fevereiro é o período mais confortável para passeios ao ar livre.
@@ -54,7 +54,7 @@ Um dos lugares mais secos e ensolarados da Terra; invernos amenos, de 20–25 °
 
 ### Como ir de Assuã a Abu Simbel?
 
-Por estrada: são 3,5 horas de carro em cada sentido, por deserto aberto, saindo de Assuã entre 3h e 4h da manhã para chegar antes do calor. Há postos de controle da polícia no caminho, então levem o passaporte. De avião: a EgyptAir opera um número limitado de voos (aproximadamente 45 minutos) a partir do Aeroporto de Assuã — a reserva antecipada é essencial e os lugares se esgotam depressa. A maioria dos visitantes faz Abu Simbel como bate-volta a partir de Assuã. Quem pernoita em Abu Simbel vê os templos à primeira luz, antes da chegada dos visitantes do dia. Duas vezes por ano, em 22 de fevereiro e 22 de outubro, o sol nascente alcança o santuário interno e ilumina três das suas quatro estátuas sentadas.
+Por estrada: são 3 horas de carro em cada sentido, por deserto aberto, saindo de Assuã entre 3h e 4h da manhã para chegar antes do calor. Há postos de controle da polícia no caminho, então levem o passaporte. De avião: a EgyptAir opera um número limitado de voos (aproximadamente 45 minutos) a partir do Aeroporto de Assuã — a reserva antecipada é essencial e os lugares se esgotam depressa. A maioria dos visitantes faz Abu Simbel como bate-volta a partir de Assuã. Quem pernoita em Abu Simbel vê os templos à primeira luz, antes da chegada dos visitantes do dia. Duas vezes por ano, em 22 de fevereiro e 22 de outubro, o sol nascente alcança o santuário interno e ilumina três das suas quatro estátuas sentadas.
 
 ### O que é a cultura núbia?
 

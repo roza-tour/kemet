@@ -11,9 +11,9 @@ Planning Your Trip
 
 Everything you need to plan a trip to Egypt — visa requirements, the best time to go, getting around, top destinations, culture and practical essentials.
 
-8 min read · Updated 2026-01
+8 min read
 
-Reviewed by [Mervat Farouk](https://kemet-travel.com/about.html#mervat-farouk) · Egyptologist guide — checked January 2026
+Reviewed by [Mervat Farouk](https://kemet-travel.com/about.html#mervat-farouk) · Egyptologist guide
 
 ## Key takeaways
 

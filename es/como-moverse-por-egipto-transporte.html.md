@@ -15,7 +15,7 @@ El Cairo → Luxor (tren Talgo) **~9–10 horas**
 
 Luxor → Asuán (crucero) **3–4 noches**
 
-Asuán → Abu Simbel (carretera) **3,5 horas por sentido**
+Asuán → Abu Simbel (carretera) **3 horas por sentido**
 
 Líneas del metro de El Cairo **3 líneas, ~90 estaciones**
 
@@ -79,7 +79,7 @@ Para los trayectos interurbanos que no resultan cómodos en tren o en avión (la
 
 ## Cómo llegar a Abu Simbel
 
-A Abu Simbel, el colosal templo excavado en la roca de Ramsés II, a 280 kilómetros al sur de Asuán, se llega en un vuelo de 45 minutos con EgyptAir (horario limitado) o en un trayecto de 3,5 horas por carretera en vehículo privado a través del desierto. La mayoría de los visitantes lo hacen en una excursión de un día desde Asuán con salida temprana, antes de las 4 de la mañana, para llegar a la apertura y evitar el calor del mediodía.
+A Abu Simbel, el colosal templo excavado en la roca de Ramsés II, a 280 kilómetros al sur de Asuán, se llega en un vuelo de 45 minutos con EgyptAir (horario limitado) o en un trayecto de 3 horas por carretera en vehículo privado a través del desierto. La mayoría de los visitantes lo hacen en una excursión de un día desde Asuán con salida temprana, antes de las 4 de la mañana, para llegar a la apertura y evitar el calor del mediodía.
 
 09
 

@@ -46,7 +46,7 @@ Es gibt einen guten Grund, warum diese Wochen in Ägypten die teuersten des Jahr
   
   Mitternachtsliturgie in der Hängenden Kirche. Gäste sind willkommen.
 
-Noch 29 Tage
+Noch 28 Tage
 
 ## Das ist spät — und wir sagen das auch
 

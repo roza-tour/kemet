@@ -11,9 +11,9 @@ Food & Drink
 
 A practical guide to Egyptian cuisine — the dishes to seek out, how Egyptians eat, where to find the best food, and what to expect for dietary requirements.
 
-6 min read · Updated 2026-01
+6 min read
 
-Reviewed by [Mervat Farouk](https://kemet-travel.com/about.html#mervat-farouk) · Egyptologist guide — checked January 2026
+Reviewed by [Mervat Farouk](https://kemet-travel.com/about.html#mervat-farouk) · Egyptologist guide
 
 ## Key takeaways
 

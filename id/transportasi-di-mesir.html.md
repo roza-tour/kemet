@@ -15,7 +15,7 @@ Kairo → Luksor (kereta Talgo) **~9–10 jam**
 
 Luksor → Aswan (pelayaran) **3–4 malam**
 
-Aswan → Abu Simbel (darat) **3,5 jam sekali jalan**
+Aswan → Abu Simbel (darat) **3 jam sekali jalan**
 
 Jalur Metro Kairo **3 jalur, ~90 stasiun**
 
@@ -79,7 +79,7 @@ Untuk perjalanan antarkota yang kurang praktis dengan kereta atau pesawat — pe
 
 ## Menuju Abu Simbel
 
-Abu Simbel, kuil pahat batu kolosal Ramses II sejauh 280 kilometer di selatan Aswan, dicapai dengan penerbangan 45 menit bersama EgyptAir (jadwal terbatas) atau perjalanan darat 3,5 jam dengan kendaraan privat melintasi gurun. Sebagian besar pengunjung menjadikannya perjalanan sehari yang berangkat pagi dari Aswan, berangkat sebelum pukul 4 pagi agar tiba saat dibuka dan menghindari panas tengah hari.
+Abu Simbel, kuil pahat batu kolosal Ramses II sejauh 280 kilometer di selatan Aswan, dicapai dengan penerbangan 45 menit bersama EgyptAir (jadwal terbatas) atau perjalanan darat 3 jam dengan kendaraan privat melintasi gurun. Sebagian besar pengunjung menjadikannya perjalanan sehari yang berangkat pagi dari Aswan, berangkat sebelum pukul 4 pagi agar tiba saat dibuka dan menghindari panas tengah hari.
 
 09
 

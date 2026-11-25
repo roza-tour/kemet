@@ -93,7 +93,7 @@ Explore
 
 Luxor
 
-### [Hot-Air Balloon over Luxor](https://kemet-travel.com/activities/hot-air-balloon-luxor.html)
+### [Hot-Air Balloon over Luxor](https://kemet-travel.com/experiences/hot-air-balloon-luxor.html)
 
 Luxor
 

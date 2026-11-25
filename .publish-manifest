@@ -1,5 +1,6 @@
 .gitkeep
 .htaccess
+.well-known/security.txt
 22ec2ad73324afe14c2b7badc0edb43f.txt
 404.html
 BingSiteAuth.xml
@@ -912,6 +913,7 @@ experiences/vip-airport-service.html
 experiences/vip-airport-service.html.md
 faq.html
 faq.html.md
+favicon.ico
 favicon.png
 fonts/6NU78FyLNQOQZAnv9bYEvDiIdE9Ea92uemAk_WBq8U_9v0c2Wa0KxC9TeA.woff2
 fonts/6NU78FyLNQOQZAnv9bYEvDiIdE9Ea92uemAk_WBq8U_9v0c2Wa0KxCFTeO-U.woff2
@@ -1797,6 +1799,11 @@ images/cruise/nile-dahabiya-deck-480w.webp
 images/cruise/nile-dahabiya-deck-640w.webp
 images/cruise/nile-dahabiya-deck-960w.webp
 images/cruise/nile-dahabiya-deck.webp
+images/dahshur/dahshur-red-pyramid-clear-sky-320w.webp
+images/dahshur/dahshur-red-pyramid-clear-sky-480w.webp
+images/dahshur/dahshur-red-pyramid-clear-sky-640w.webp
+images/dahshur/dahshur-red-pyramid-clear-sky-960w.webp
+images/dahshur/dahshur-red-pyramid-clear-sky.webp
 images/fayoum/fayoum-desert-camp-320w.webp
 images/fayoum/fayoum-desert-camp-480w.webp
 images/fayoum/fayoum-desert-camp-640w.webp
@@ -2949,6 +2956,7 @@ og/cruise/nile-cruise-night.jpg
 og/cruise/nile-cruise-ship.jpg
 og/cruise/nile-cruise-sunset.jpg
 og/cruise/nile-dahabiya-deck.jpg
+og/dahshur/dahshur-red-pyramid-clear-sky.jpg
 og/fayoum/fayoum-desert-camp.jpg
 og/fayoum/fayoum-magic-lake.jpg
 og/fayoum/fayoum-wadi-rayan.jpg
@@ -2957,7 +2965,6 @@ og/food/ful-medames-bowl.jpg
 og/food/koshari-sauce-pour.jpg
 og/giza/giza-camel-pyramids-sunrise.jpg
 og/giza/giza-grand-egyptian-museum.jpg
-og/giza/giza-great-pyramid-clear-sky.jpg
 og/giza/giza-great-pyramid-khufu.jpg
 og/giza/giza-great-sphinx-frontal.jpg
 og/giza/giza-sound-and-light-show.jpg

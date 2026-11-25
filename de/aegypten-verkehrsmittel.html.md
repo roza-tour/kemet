@@ -15,7 +15,7 @@ Kairo → Luxor (Talgo-Zug) **ca. 9–10 Stunden**
 
 Luxor → Assuan (Kreuzfahrt) **3–4 Nächte**
 
-Assuan → Abu Simbel (Straße) **3,5 Stunden pro Strecke**
+Assuan → Abu Simbel (Straße) **3 Stunden pro Strecke**
 
 Kairoer Metro **3 Linien, ~90 Stationen**
 
@@ -79,7 +79,7 @@ Für Fahrten zwischen Städten, die sich mit Zug oder Flugzeug nicht bequem erle
 
 ## Anreise nach Abu Simbel
 
-Abu Simbel, der gewaltige Felsentempel Ramses’ II., 280 Kilometer südlich von Assuan, erreicht man mit einem 45-minütigen Flug von EgyptAir (eingeschränkter Flugplan) oder mit einer 3,5-stündigen Fahrt im privaten Fahrzeug durch die Wüste. Die meisten Besucher machen daraus einen Tagesausflug mit frühem Aufbruch ab Assuan, Abfahrt vor 4 Uhr morgens, um zur Öffnung anzukommen und der Mittagshitze zu entgehen.
+Abu Simbel, der gewaltige Felsentempel Ramses’ II., 280 Kilometer südlich von Assuan, erreicht man mit einem 45-minütigen Flug von EgyptAir (eingeschränkter Flugplan) oder mit einer 3-stündigen Fahrt im privaten Fahrzeug durch die Wüste. Die meisten Besucher machen daraus einen Tagesausflug mit frühem Aufbruch ab Assuan, Abfahrt vor 4 Uhr morgens, um zur Öffnung anzukommen und der Mittagshitze zu entgehen.
 
 09
 

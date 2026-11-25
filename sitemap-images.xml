@@ -200,7 +200,7 @@
       <image:title>Bent Pyramid</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://kemet-travel.com/images/giza/giza-great-pyramid-clear-sky.webp</image:loc>
+      <image:loc>https://kemet-travel.com/images/dahshur/dahshur-red-pyramid-clear-sky.webp</image:loc>
       <image:caption>The Red Pyramid of Dahshur, the first true pyramid, under a clear desert sky</image:caption>
       <image:title>Red Pyramid</image:title>
     </image:image>
@@ -1331,7 +1331,7 @@
   <url>
     <loc>https://kemet-travel.com/guides/egypt-travel-guide.html</loc>
     <image:image>
-      <image:loc>https://kemet-travel.com/images/giza/giza-great-pyramid-clear-sky.webp</image:loc>
+      <image:loc>https://kemet-travel.com/images/dahshur/dahshur-red-pyramid-clear-sky.webp</image:loc>
       <image:caption>The Red Pyramid of Dahshur under a clear desert sky</image:caption>
       <image:title>Egypt</image:title>
     </image:image>

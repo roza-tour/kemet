@@ -65,7 +65,7 @@ For intercity journeys that are not convenient by train or air — the two-hour 
 
 ## Getting to Abu Simbel
 
-Abu Simbel, Ramesses II's colossal rock-cut temple 280 kilometres south of Aswan, is reached by a 45-minute flight with EgyptAir (limited schedule) or a 3.5-hour road journey by private vehicle through the desert. Most visitors make it an early-start day trip from Aswan, departing before 4 a.m. to arrive at opening and avoid the midday heat.
+Abu Simbel, Ramesses II's colossal rock-cut temple 280 kilometres south of Aswan, is reached by a 45-minute flight with EgyptAir (limited schedule) or a 3-hour road journey by private vehicle through the desert. Most visitors make it an early-start day trip from Aswan, departing before 4 a.m. to arrive at opening and avoid the midday heat.
 
 ## Frequently asked questions
 
@@ -89,7 +89,7 @@ Cairo → Luxor (train) **~9–10 hours**
 
 Luxor → Aswan (cruise) **3–4 nights**
 
-Aswan → Abu Simbel (road) **3.5 hours each way**
+Aswan → Abu Simbel (road) **3 hours each way**
 
 Cairo Metro lines **3 lines, ~90 stations**
 

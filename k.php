@@ -38,7 +38,12 @@ if (!is_dir($dir)) { @mkdir($dir, 0755, true); @file_put_contents("$dir/index.ht
 function field($k, $max) {
   $v = isset($_GET[$k]) ? (string)$_GET[$k] : "";
   $v = substr($v, 0, $max);
-  return str_replace(["\r", "\n", '"'], " ", $v);
+  $v = str_replace(["\r", "\n", '"'], " ", $v);
+  // The log is a CSV that is opened in a spreadsheet. A value beginning with
+  // = + - @ (or a tab) is read there as a formula; anyone can send one in a
+  // query string. A leading apostrophe makes it text.
+  if ($v !== "" && strpos("=+-@\t", $v[0]) !== false) $v = "'" . $v;
+  return $v;
 }
 
 $type = field("t", 3);                  // "pv" | "ev" | "404"
