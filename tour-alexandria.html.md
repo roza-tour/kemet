@@ -90,6 +90,8 @@ Based on a private party of 6 or more · entrance tickets not included.
 
 For two travellers: €69 per person.
 
+Normal-season price; holiday surcharges are shown separately in your quote.
+
 [Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Alexandria+Sightseeing&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Alexandria+Sightseeing%22+journey+%28Full+day+%28%E2%89%8811+hours%29%2C+from+%E2%82%AC63+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 
 [Ask on WhatsApp](https://wa.me/201158367162?text=Hello%20Kemet%20%E2%80%94%20I%27m%20interested%20in%20the%20%22Alexandria%20Sightseeing%22%20journey%20(Full%20day%20(%E2%89%8811%20hours)).%20Could%20you%20share%20availability%3F)

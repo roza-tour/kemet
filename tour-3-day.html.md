@@ -104,6 +104,8 @@ Based on a private party of 6 or more.
 
 For two travellers: €638 per person.
 
+Normal-season price; holiday surcharges are shown separately in your quote.
+
 [Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Cairo+to+Luxor+%26+Aswan&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Cairo+to+Luxor+%26+Aswan%22+journey+%283+Days+%2F+2+Nights%2C+from+%E2%82%AC580+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 
 [Ask on WhatsApp](https://wa.me/201158367162?text=Hello%20Kemet%20%E2%80%94%20I%27m%20interested%20in%20the%20%22Cairo%20to%20Luxor%20%26%20Aswan%22%20journey%20(3%20Days%20%2F%202%20Nights).%20Could%20you%20share%20availability%3F)

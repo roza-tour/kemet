@@ -111,6 +111,8 @@ Based on a private party of 6 or more.
 
 For two travellers: €748 per person.
 
+Normal-season price; holiday surcharges are shown separately in your quote.
+
 [Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+From+Pyramids+to+the+Sea&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22From+Pyramids+to+the+Sea%22+journey+%284+Days+%2F+3+Nights%2C+from+%E2%82%AC680+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 
 [Ask on WhatsApp](https://wa.me/201158367162?text=Hello%20Kemet%20%E2%80%94%20I%27m%20interested%20in%20the%20%22From%20Pyramids%20to%20the%20Sea%22%20journey%20(4%20Days%20%2F%203%20Nights).%20Could%20you%20share%20availability%3F)

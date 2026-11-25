@@ -141,6 +141,8 @@ Based on a private party of 6 or more.
 
 For two travellers: €1,717 per person.
 
+Normal-season price; holiday surcharges are shown separately in your quote.
+
 [Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Egypt+Through+the+Lens&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Egypt+Through+the+Lens%22+journey+%287+Days+%2F+6+Nights%2C+from+%E2%82%AC1%2C561+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 
 [Ask on WhatsApp](https://wa.me/201158367162?text=Hello%20Kemet%20%E2%80%94%20I%27m%20interested%20in%20the%20%22Egypt%20Through%20the%20Lens%22%20journey%20(7%20Days%20%2F%206%20Nights).%20Could%20you%20share%20availability%3F)

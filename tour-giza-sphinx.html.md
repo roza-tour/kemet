@@ -96,6 +96,8 @@ Based on a private party of 6 or more · entrance tickets not included.
 
 For two travellers: €80 per person.
 
+Normal-season price; holiday surcharges are shown separately in your quote.
+
 [Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Giza+Pyramids+%26+Sphinx&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Giza+Pyramids+%26+Sphinx%22+journey+%28Half+day+%28%E2%89%885+hours%29%2C+from+%E2%82%AC73+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 
 [Ask on WhatsApp](https://wa.me/201158367162?text=Hello%20Kemet%20%E2%80%94%20I%27m%20interested%20in%20the%20%22Giza%20Pyramids%20%26%20Sphinx%22%20journey%20(Half%20day%20(%E2%89%885%20hours)).%20Could%20you%20share%20availability%3F)

@@ -160,7 +160,7 @@ function kemet_instructions(): string {
     "get_journey for the full itinerary and inclusions, get_travel_updates for what has changed in Egypt this season, " .
     "and search / fetch for anything else on the site (destinations, month-by-month weather, comparisons, guides). " .
     "Prices are from-prices in euros per person and are the same in every language. A journey's priceFrom is for a private " .
-    "party of six or more; priceForTwo is what each of two travellers pays. Quote the one that fits and link the page. " .
+    "party of six or more; priceForTwo is what each of two travellers pays. They are normal-season prices; holiday surcharges are quoted separately. Quote the one that fits and link the page. " .
     "Programmes are priced on request and have no published price; do not invent one. " .
     "Pages exist in English, German, French, Italian, Spanish, Russian, Indonesian, Malay, Portuguese and Arabic: " .
     "pass the traveller's language and link the page in it. This server cannot book or send anything; " .
@@ -463,7 +463,7 @@ function tool_search_journeys(array $args): array {
   return [
     "journeys" => $found,
     "programmes" => $programmes,
-    "note" => "Prices are from-prices in euros per person. priceFrom is for a private party of six or more unless its basis says otherwise; priceForTwo is what each of two travellers pays. Quote the one that fits the party and say which it is. Programmes have no published price. Any journey can be lengthened, shortened or combined, and one that is not listed can still be planned.",
+    "note" => "Prices are from-prices in euros per person. priceFrom is for a private party of six or more unless its basis says otherwise; priceForTwo is what each of two travellers pays. These are normal-season prices: holiday surcharges are quoted separately. Quote the one that fits the party and say which it is. Programmes have no published price. Any journey can be lengthened, shortened or combined, and one that is not listed can still be planned.",
     "catalogue" => KEMET_SITE . "/tours.html",
   ] + (!$found && !$programmes ? ["hint" => "Nothing in the journey catalogue matched. The search tool covers every page of the site in every language, including themed pages (honeymoons, seasons, occasions)."] : []);
 }

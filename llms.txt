@@ -71,7 +71,7 @@ Kemet is for travellers who want Egypt privately, at any budget from a single da
 
 ## Journeys (private, per person, from-prices in EUR)
 
-Each from-price is per person for a private party of six or more (the honeymoon is priced for the couple). For two travellers the per-person price is ten per cent higher; each journey page states both figures.
+Each from-price is per person for a private party of six or more (the honeymoon is priced for the couple). For two travellers the per-person price is ten per cent higher; each journey page states both figures. These are normal-season prices: holiday surcharges are quoted separately.
 
 The same catalogue as data, with each journey's page in every language it is published in: https://kemet-travel.com/journeys.json
 

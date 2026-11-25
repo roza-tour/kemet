@@ -88,6 +88,8 @@ Based on a private party of 6 or more · entrance tickets not included.
 
 For two travellers: €194 per person.
 
+Normal-season price; holiday surcharges are shown separately in your quote.
+
 [Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Abu+Simbel+Private+Excursion&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Abu+Simbel+Private+Excursion%22+journey+%28Full+day+%28%E2%89%888+hours%2C+from+Aswan%29%2C+from+%E2%82%AC176+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 
 [Ask on WhatsApp](https://wa.me/201158367162?text=Hello%20Kemet%20%E2%80%94%20I%27m%20interested%20in%20the%20%22Abu%20Simbel%20Private%20Excursion%22%20journey%20(Full%20day%20(%E2%89%888%20hours%2C%20from%20Aswan)).%20Could%20you%20share%20availability%3F)

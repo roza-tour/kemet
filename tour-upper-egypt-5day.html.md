@@ -122,6 +122,8 @@ Based on a private party of 6 or more.
 
 For two travellers: €1,232 per person.
 
+Normal-season price; holiday surcharges are shown separately in your quote.
+
 [Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Temples+of+the+South&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Temples+of+the+South%22+journey+%285+Days+%2F+4+Nights%2C+from+%E2%82%AC1%2C120+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 
 [Ask on WhatsApp](https://wa.me/201158367162?text=Hello%20Kemet%20%E2%80%94%20I%27m%20interested%20in%20the%20%22Temples%20of%20the%20South%22%20journey%20(5%20Days%20%2F%204%20Nights).%20Could%20you%20share%20availability%3F)

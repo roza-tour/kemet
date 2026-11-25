@@ -186,6 +186,8 @@ Based on a private party of 6 or more.
 
 For two travellers: €3,301 per person.
 
+Normal-season price; holiday surcharges are shown separately in your quote.
+
 [Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+The+Grand+Tour+of+Egypt&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22The+Grand+Tour+of+Egypt%22+journey+%2814+Days+%2F+13+Nights%2C+from+%E2%82%AC3%2C001+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 
 [Ask on WhatsApp](https://wa.me/201158367162?text=Hello%20Kemet%20%E2%80%94%20I%27m%20interested%20in%20the%20%22The%20Grand%20Tour%20of%20Egypt%22%20journey%20(14%20Days%20%2F%2013%20Nights).%20Could%20you%20share%20availability%3F)

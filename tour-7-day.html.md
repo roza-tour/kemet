@@ -142,6 +142,8 @@ Based on a private party of 6 or more.
 
 For two travellers: €1,427 per person.
 
+Normal-season price; holiday surcharges are shown separately in your quote.
+
 Prefer to fly? The same journey with flights in place of the two sleeper-train nights — from €1,440 pp.
 
 [Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Egypt+Highlights+Deluxe&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Egypt+Highlights+Deluxe%22+journey+%287+Days+%2F+6+Nights%2C+from+%E2%82%AC1%2C297+per+person%29.%0A%0ATrain+or+flight+version+%28from+%E2%82%AC1%2C440%29%3A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)

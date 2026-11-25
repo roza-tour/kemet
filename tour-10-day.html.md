@@ -172,6 +172,8 @@ Based on a private party of 6 or more.
 
 For two travellers: €2,318 per person.
 
+Normal-season price; holiday surcharges are shown separately in your quote.
+
 Prefer to fly? The same journey with flights in place of the two sleeper-train nights — from €2,250 pp.
 
 [Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Egypt+Icons+%26+Nile+Cruise&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Egypt+Icons+%26+Nile+Cruise%22+journey+%2810+Days+%2F+9+Nights%2C+from+%E2%82%AC2%2C107+per+person%29.%0A%0ATrain+or+flight+version+%28from+%E2%82%AC2%2C250%29%3A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
