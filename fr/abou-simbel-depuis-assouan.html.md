@@ -15,6 +15,8 @@ Les temples de montagne de Ramsès II au-dessus du lac Nasser — une route du d
 
 à partir de 6 voyageurs · billets non inclus
 
+176 € par personne pour deux voyageurs
+
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
 
 Durée **Journée entière (environ 8 heures, depuis Assouan)**
@@ -90,9 +92,7 @@ Les 22 février et 22 octobre, le soleil levant pénètre de 60 mètres dans le 
 
 ## Explorer
 
-Les pages de chaque voyage sont en anglais.
-
-[kemet-travel.com/tour-abu-simbel.html](https://kemet-travel.com/tour-abu-simbel.html)
+[Cette page en anglais](https://kemet-travel.com/tour-abu-simbel.html)
 
 ---
 

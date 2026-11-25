@@ -1,5 +1,5 @@
 ---
-title: "Giza Pyramids & Sphinx — Half day | Kemet"
+title: "Giza Pyramids & Sphinx Private Half-Day Tour | Kemet"
 url: https://kemet-travel.com/tour-giza-sphinx.html
 language: en
 description: "The Great Pyramid, the pyramids of Khafre and Menkaure, the panoramic viewpoint and the Valley Temple with the Great Sphinx — private, from €66 pp."
@@ -13,7 +13,7 @@ A focused half day among the three great pyramids and the Sphinx, with the class
 
 ## What does Giza Pyramids & Sphinx include, and what does it cost?
 
-Giza Pyramids & Sphinx is a private half-day tour of Giza, from €66 per person for a party of 6 or more. It includes a private Egyptologist guide throughout, private air-conditioned transfers, hotel pickup & drop-off and bottled water every day. Entrance tickets are paid at the gate.
+Giza Pyramids & Sphinx is a private half-day tour of Giza, from €66 per person for a party of 6 or more, or €73 per person for two. It includes a private Egyptologist guide throughout, private air-conditioned transfers, hotel pickup & drop-off and bottled water every day. Entrance tickets are paid at the gate.
 
 ## Overview
 
@@ -107,6 +107,8 @@ From
 per person · EUR
 
 Based on a private party of 6 or more · entrance tickets not included.
+
+For two travellers: €73 per person.
 
 [Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Giza+Pyramids+%26+Sphinx&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Giza+Pyramids+%26+Sphinx%22+journey+%28Half+day+%28%E2%89%885+hours%29%2C+from+%E2%82%AC66+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 

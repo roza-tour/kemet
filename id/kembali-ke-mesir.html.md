@@ -83,6 +83,7 @@ Halaman terkait dalam bahasa ini, serta halaman asli dalam bahasa Inggris.
 - [Hari Jadi Pernikahan dan Ulang Tahun Istimewa](https://kemet-travel.com/id/ulang-tahun-pernikahan-di-mesir.html)
 - [Grup Privat, Bukan Tur Grup](https://kemet-travel.com/id/perjalanan-grup-privat-mesir.html)
 - [Tiga Generasi, Satu Perjalanan](https://kemet-travel.com/id/liburan-keluarga-tiga-generasi-mesir.html)
+- [Paket Tour Mesir](https://kemet-travel.com/id/paket-tour-mesir.html)
 
 [Halaman ini dalam bahasa Inggris](https://kemet-travel.com/occasions/returning-to-egypt.html)
 

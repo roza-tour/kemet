@@ -1,5 +1,5 @@
 ---
-title: "Luxor Immersion — 3 Days / 2 Nights | Kemet"
+title: "3-Day Luxor Private Tour with Egyptologist | Kemet"
 url: https://kemet-travel.com/tour-luxor-3day.html
 language: en
 description: "Luxor without the sprint: Karnak at opening, the Valley of the Kings before the heat — private, from €544 pp."
@@ -13,7 +13,7 @@ Three days in the world's greatest open-air museum — both banks properly done,
 
 ## What does Luxor Immersion include, and what does it cost?
 
-Luxor Immersion is a private 3-day, 2-night journey through Luxor, from €544 per person for a party of 6 or more. It includes a private Egyptologist guide throughout; 2 nights' hotel accommodation in Luxor; evening entry to Luxor Temple and the Avenue of Sphinxes; and all entrance fees to sites and monuments. International flights are not included.
+Luxor Immersion is a private 3-day, 2-night journey through Luxor, from €544 per person for a party of 6 or more, or €598 per person for two. It includes a private Egyptologist guide throughout; 2 nights' hotel accommodation in Luxor; and evening entry to Luxor Temple and the Avenue of Sphinxes. International flights are not included.
 
 ## Overview
 
@@ -116,6 +116,8 @@ From
 per person · EUR
 
 Based on a private party of 6 or more.
+
+For two travellers: €598 per person.
 
 [Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Luxor+Immersion&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Luxor+Immersion%22+journey+%283+Days+%2F+2+Nights%2C+from+%E2%82%AC544+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 

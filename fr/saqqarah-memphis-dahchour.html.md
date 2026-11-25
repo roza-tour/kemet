@@ -15,6 +15,8 @@ Le berceau de la pyramide — de la première pyramide à degrés de Djéser aux
 
 à partir de 6 voyageurs · billets non inclus
 
+75 € par personne pour deux voyageurs
+
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
 
 Durée **Journée entière (environ 8 heures)**
@@ -92,9 +94,7 @@ Excellente — moins de monde et un fil narratif clair qui enrichit la visite ul
 
 ## Explorer
 
-Les pages de chaque voyage sont en anglais.
-
-[kemet-travel.com/tour-saqqara.html](https://kemet-travel.com/tour-saqqara.html)
+[Cette page en anglais](https://kemet-travel.com/tour-saqqara.html)
 
 ---
 

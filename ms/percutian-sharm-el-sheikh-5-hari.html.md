@@ -15,6 +15,8 @@ dari €979 / seorang
 
 dari 6 orang
 
+€1,077 seorang bagi dua pengembara
+
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 
 Tempoh **5 hari / 4 malam**
@@ -113,9 +115,7 @@ Sangat boleh — begitulah kebanyakan tetamu menggunakannya. Luxor–Sharm kira-
 
 ## Terokai
 
-Halaman butiran setiap percutian dalam bahasa Inggeris.
-
-[kemet-travel.com/tour-sharm-5day.html](https://kemet-travel.com/tour-sharm-5day.html)
+[Halaman ini dalam bahasa Inggeris](https://kemet-travel.com/tour-sharm-5day.html)
 
 ---
 

@@ -15,6 +15,8 @@ a partir de € 68 / pessoa
 
 a partir de 6 viajantes · ingressos não incluídos
 
+€ 75 por pessoa, para dois viajantes
+
 Por pessoa, em temporada normal. Acréscimos de feriados aparecem separados no orçamento.
 
 Duração **Dia inteiro (cerca de 8 horas)**
@@ -92,9 +94,7 @@ Sim — a Pirâmide Vermelha costuma estar aberta à visitação interna, com um
 
 ## Explorar
 
-As páginas de cada viagem estão em inglês.
-
-[kemet-travel.com/tour-saqqara.html](https://kemet-travel.com/tour-saqqara.html)
+[Esta página em inglês](https://kemet-travel.com/tour-saqqara.html)
 
 ---
 

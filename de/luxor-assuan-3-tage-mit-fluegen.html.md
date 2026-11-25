@@ -15,6 +15,8 @@ ab 527 € / Person
 
 ab 6 Reisenden
 
+580 € pro Person bei zwei Reisenden
+
 Pro Person, Normalsaison. Zuschläge für Feiertage weisen wir im Angebot getrennt aus.
 
 Dauer **3 Tage / 2 Nächte**
@@ -103,9 +105,7 @@ Ja, als Zusatzleistung per Frühflug oder im privaten Wagen. Das verlängert den
 
 ## Entdecken
 
-Die Reiseverläufe im Detail sind auf Englisch.
-
-[kemet-travel.com/tour-3-day.html](https://kemet-travel.com/tour-3-day.html)
+[Diese Seite auf Englisch](https://kemet-travel.com/tour-3-day.html)
 
 ---
 

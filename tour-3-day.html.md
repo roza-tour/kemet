@@ -1,5 +1,5 @@
 ---
-title: "Cairo to Luxor & Aswan — 3 Days / 2 Nights | Kemet"
+title: "3-Day Luxor & Aswan Private Tour from Cairo | Kemet"
 url: https://kemet-travel.com/tour-3-day.html
 language: en
 description: "A fast, flight-included loop through Luxor and Aswan — Karnak, the Valley of the Kings, Philae and the High Dam — private, from €527 pp."
@@ -13,7 +13,7 @@ Three days of Upper Egypt's temples and tombs, with domestic flights folded into
 
 ## What does Cairo to Luxor & Aswan include, and what does it cost?
 
-Cairo to Luxor & Aswan is a private 3-day, 2-night journey through Cairo, Luxor and Aswan, from €527 per person for a party of 6 or more. It includes a private Egyptologist guide throughout; domestic flights Cairo–Luxor and Aswan–Cairo; 2 nights' hotel accommodation; and all entrance fees to sites and monuments. International flights are not included.
+Cairo to Luxor & Aswan is a private 3-day, 2-night journey through Cairo, Luxor and Aswan, from €527 per person for a party of 6 or more, or €580 per person for two. It includes a private Egyptologist guide throughout; domestic flights Cairo–Luxor and Aswan–Cairo; and 2 nights' hotel accommodation. International flights are not included.
 
 ## Overview
 
@@ -115,6 +115,8 @@ From
 per person · EUR
 
 Based on a private party of 6 or more.
+
+For two travellers: €580 per person.
 
 [Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Cairo+to+Luxor+%26+Aswan&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Cairo+to+Luxor+%26+Aswan%22+journey+%283+Days+%2F+2+Nights%2C+from+%E2%82%AC527+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 

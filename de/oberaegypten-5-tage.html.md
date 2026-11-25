@@ -15,6 +15,8 @@ ab 1.018 € / Person
 
 ab 6 Reisenden
 
+1.120 € pro Person bei zwei Reisenden
+
 Pro Person, Normalsaison. Zuschläge für Feiertage weisen wir im Angebot getrennt aus.
 
 Dauer **5 Tage / 4 Nächte**
@@ -121,9 +123,7 @@ Mit EgyptAir ab Kairo (55 Minuten) oder mit dem Nachtzug. Beides ergänzen wir p
 
 ## Entdecken
 
-Die Reiseverläufe im Detail sind auf Englisch.
-
-[kemet-travel.com/tour-upper-egypt-5day.html](https://kemet-travel.com/tour-upper-egypt-5day.html)
+[Diese Seite auf Englisch](https://kemet-travel.com/tour-upper-egypt-5day.html)
 
 ---
 

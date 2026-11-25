@@ -15,6 +15,8 @@ a partir de € 80 / pessoa
 
 a partir de 6 viajantes · ingressos não incluídos
 
+€ 88 por pessoa, para dois viajantes
+
 Por pessoa, em temporada normal. Acréscimos de feriados aparecem separados no orçamento.
 
 Duração **Dia inteiro (cerca de 8 horas)**
@@ -92,9 +94,7 @@ Planejamos em torno dos horários de oração e de eventuais fechamentos, para q
 
 ## Explorar
 
-As páginas de cada viagem estão em inglês.
-
-[kemet-travel.com/tour-religious-citadel.html](https://kemet-travel.com/tour-religious-citadel.html)
+[Esta página em inglês](https://kemet-travel.com/tour-religious-citadel.html)
 
 ---
 

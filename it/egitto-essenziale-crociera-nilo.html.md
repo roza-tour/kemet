@@ -15,6 +15,8 @@ da 1.915 € / persona
 
 da 6 viaggiatori
 
+2.107 € a persona per due viaggiatori
+
 A persona, in stagione normale. I supplementi delle festività sono indicati separatamente nel preventivo.
 
 Durata **10 giorni / 9 notti**
@@ -165,9 +167,7 @@ Da ottobre ad aprile le temperature sono piacevoli sia al Cairo sia in Alto Egit
 
 ## Esplora
 
-Le pagine dei singoli viaggi sono in inglese.
-
-[kemet-travel.com/tour-10-day.html](https://kemet-travel.com/tour-10-day.html)
+[Questa pagina in inglese](https://kemet-travel.com/tour-10-day.html)
 
 ---
 

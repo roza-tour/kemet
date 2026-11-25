@@ -15,6 +15,8 @@ da 979 € / persona
 
 da 6 viaggiatori
 
+1.077 € a persona per due viaggiatori
+
 A persona, in stagione normale. I supplementi delle festività sono indicati separatamente nel preventivo.
 
 Durata **5 giorni / 4 notti**
@@ -113,9 +115,7 @@ Perfettamente — ed è così che la maggior parte dei nostri ospiti lo usa. Lux
 
 ## Esplora
 
-Le pagine dei singoli viaggi sono in inglese.
-
-[kemet-travel.com/tour-sharm-5day.html](https://kemet-travel.com/tour-sharm-5day.html)
+[Questa pagina in inglese](https://kemet-travel.com/tour-sharm-5day.html)
 
 ---
 

@@ -15,6 +15,8 @@ dari €792 / seorang
 
 dari 6 orang
 
+€871 seorang bagi dua pengembara
+
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 
 Tempoh **4 hari / 3 malam**
@@ -107,9 +109,7 @@ Dinding karang lembut yang padat, awan ikan anthias, ikan napoleon, penyu dan je
 
 ## Terokai
 
-Halaman butiran setiap percutian dalam bahasa Inggeris.
-
-[kemet-travel.com/tour-red-sea-diving-4day.html](https://kemet-travel.com/tour-red-sea-diving-4day.html)
+[Halaman ini dalam bahasa Inggeris](https://kemet-travel.com/tour-red-sea-diving-4day.html)
 
 ---
 

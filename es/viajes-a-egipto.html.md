@@ -291,6 +291,23 @@ Los colosales templos rupestres de Ramsés II: excavados en una ladera de Nubia,
 
 160 € / persona desde 6 viajeros · entradas no incluidas
 
+## Comparar las opciones
+
+- [¿Volar o tren cama a Luxor y Asuán?](https://kemet-travel.com/es/volar-o-tren-cama-a-luxor-y-asuan.html)
+- [¿Crucero por el Nilo o viaje por tierra?](https://kemet-travel.com/es/crucero-por-el-nilo-o-viaje-por-tierra.html)
+- [¿Dahabiya o barco de crucero por el Nilo?](https://kemet-travel.com/es/dahabiya-o-barco-de-crucero-por-el-nilo.html)
+- [¿Luxor o Asuán?](https://kemet-travel.com/es/luxor-o-asuan.html)
+- [¿Museo Egipcio o Gran Museo Egipcio?](https://kemet-travel.com/es/museo-egipcio-o-gran-museo-egipcio.html)
+- [¿Sharm el-Sheikh o Hurghada?](https://kemet-travel.com/es/sharm-el-sheikh-o-hurghada.html)
+
+## Según la ocasión
+
+- [Pedir matrimonio en Egipto](https://kemet-travel.com/es/pedir-matrimonio-en-egipto.html)
+- [Aniversarios y cumpleaños señalados](https://kemet-travel.com/es/aniversario-cumpleanos-especial-egipto.html)
+- [Un grupo privado, no un viaje en grupo](https://kemet-travel.com/es/viaje-privado-en-grupo-egipto.html)
+- [Volver a Egipto](https://kemet-travel.com/es/volver-a-egipto-segundo-viaje.html)
+- [Tres generaciones, un solo viaje](https://kemet-travel.com/es/viaje-familiar-tres-generaciones-egipto.html)
+
 ## Preguntas frecuentes
 
 ### ¿Cuántos días se necesitan para visitar Egipto?

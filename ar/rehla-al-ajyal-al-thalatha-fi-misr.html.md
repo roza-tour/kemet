@@ -88,6 +88,7 @@ description: "التخطيط لرحلة إلى مصر عبر ثلاثة أجيا
 - [ذكرى الزواج والأعياد السنوية الكبرى](https://kemet-travel.com/ar/ihtifal-bi-dhikra-zawaj-aw-eid-milad-fi-misr.html)
 - [مجموعة خاصة لا رحلة جماعية](https://kemet-travel.com/ar/rehla-khassa-li-majmoua-fi-misr.html)
 - [العودة إلى مصر](https://kemet-travel.com/ar/al-awda-ila-misr-zyara-thaniya.html)
+- [الرحلات](https://kemet-travel.com/ar/rehlat-masr-khassa.html)
 
 [هذه الصفحة بالإنجليزية](https://kemet-travel.com/occasions/three-generations-egypt.html)
 

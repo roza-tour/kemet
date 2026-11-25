@@ -56,6 +56,16 @@ Kemet berada di segmen atas pasaran Mesir dan kami menyatakannya tanpa segan. Eg
 - Asrama, bilik dikongsi dan laluan bergaya backpacker
 - Mereka yang lebih suka menguruskan logistik sendiri
 
+## Panduan perjalanan
+
+- [Panduan Melancong ke Mesir](https://kemet-travel.com/ms/panduan-melancong-ke-mesir.html)
+- [Waktu Terbaik Melawat Mesir](https://kemet-travel.com/ms/waktu-terbaik-melawat-mesir.html)
+- [Jadual Perjalanan Mesir 10 Hari yang Ideal](https://kemet-travel.com/ms/jadual-perjalanan-mesir-10-hari.html)
+- [Tempat Menginap di Mesir: Hotel Terbaik, Bandar demi Bandar](https://kemet-travel.com/ms/tempat-penginapan-terbaik-di-mesir.html)
+- [Bergerak di Sekitar Mesir](https://kemet-travel.com/ms/pengangkutan-di-mesir.html)
+- [Panduan Makanan Mesir](https://kemet-travel.com/ms/panduan-makanan-mesir.html)
+- [Apa untuk Dibawa ke Mesir](https://kemet-travel.com/ms/senarai-barang-untuk-dibawa-ke-mesir.html)
+
 ## Soalan lazim
 
 ### Berapa kos pakej Mesir persendirian?

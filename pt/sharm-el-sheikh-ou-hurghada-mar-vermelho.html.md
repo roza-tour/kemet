@@ -93,6 +93,7 @@ Outras decisões que as pessoas tomam antes de reservar, e a página original em
 - [Dahabiya ou navio de cruzeiro?](https://kemet-travel.com/pt/dahabiya-ou-navio-de-cruzeiro-nilo.html)
 - [Luxor ou Assuã?](https://kemet-travel.com/pt/luxor-ou-assua-qual-escolher.html)
 - [Museu Egípcio ou Grande Museu Egípcio?](https://kemet-travel.com/pt/museu-egipcio-ou-grande-museu-egipcio.html)
+- [Viagens ao Egito](https://kemet-travel.com/pt/viagens-ao-egito.html)
 
 [Esta página em inglês](https://kemet-travel.com/compare/sharm-el-sheikh-vs-hurghada.html)
 

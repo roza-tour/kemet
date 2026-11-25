@@ -15,6 +15,8 @@ dari €2,728 / seorang
 
 dari 6 orang
 
+€3,001 seorang bagi dua pengembara
+
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 
 Tempoh **14 hari / 13 malam**
@@ -185,9 +187,7 @@ Sudah tentu. Sesetengah tetamu menggantikannya dengan malam tambahan di Luxor; y
 
 ## Terokai
 
-Halaman butiran setiap percutian dalam bahasa Inggeris.
-
-[kemet-travel.com/tour-grand-14day.html](https://kemet-travel.com/tour-grand-14day.html)
+[Halaman ini dalam bahasa Inggeris](https://kemet-travel.com/tour-grand-14day.html)
 
 ---
 

@@ -291,6 +291,23 @@ Les temples rupestres colossaux de Ramsès II — taillés dans un flanc de mont
 
 160 € / personne à partir de 6 voyageurs · billets non inclus
 
+## Comparer les options
+
+- [Avion ou train-couchette pour Louxor et Assouan?](https://kemet-travel.com/fr/avion-ou-train-couchette-louxor-assouan.html)
+- [Croisière sur le Nil ou circuit terrestre?](https://kemet-travel.com/fr/croisiere-sur-le-nil-ou-circuit-terrestre.html)
+- [Dahabieh ou bateau de croisière?](https://kemet-travel.com/fr/dahabieh-ou-bateau-de-croisiere-nil.html)
+- [Louxor ou Assouan?](https://kemet-travel.com/fr/louxor-ou-assouan-que-choisir.html)
+- [Musée égyptien ou Grand Musée égyptien?](https://kemet-travel.com/fr/musee-egyptien-ou-grand-musee-egyptien-que-choisir.html)
+- [Charm el-Cheikh ou Hurghada?](https://kemet-travel.com/fr/charm-el-cheikh-ou-hurghada-que-choisir.html)
+
+## Selon l'occasion
+
+- [Faire sa demande en mariage en Égypte](https://kemet-travel.com/fr/demande-en-mariage-egypte.html)
+- [Anniversaires de mariage et grands anniversaires](https://kemet-travel.com/fr/anniversaire-de-mariage-grand-anniversaire-egypte.html)
+- [Un groupe privé, pas un circuit en groupe](https://kemet-travel.com/fr/voyage-groupe-prive-egypte.html)
+- [Retourner en Égypte](https://kemet-travel.com/fr/retourner-en-egypte-second-voyage.html)
+- [Trois générations, un seul voyage](https://kemet-travel.com/fr/voyage-en-egypte-trois-generations.html)
+
 ## Questions fréquentes
 
 ### Peut-on modifier un itinéraire proposé?

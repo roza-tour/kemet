@@ -15,6 +15,8 @@ dari €1,915 / seorang
 
 dari 6 orang
 
+€2,107 seorang bagi dua pengembara
+
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 
 Tempoh **10 hari / 9 malam**
@@ -165,9 +167,7 @@ Oktober hingga April membawa suhu yang selesa di Kaherah dan juga di Mesir Hulu.
 
 ## Terokai
 
-Halaman butiran setiap percutian dalam bahasa Inggeris.
-
-[kemet-travel.com/tour-10-day.html](https://kemet-travel.com/tour-10-day.html)
+[Halaman ini dalam bahasa Inggeris](https://kemet-travel.com/tour-10-day.html)
 
 ---
 

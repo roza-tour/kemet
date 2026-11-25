@@ -15,6 +15,8 @@ Cinq jours sans hâte à travers la Haute-Égypte — les deux rives de Louxor, 
 
 à partir de 6 voyageurs
 
+1 120 € par personne pour deux voyageurs
+
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
 
 Durée **5 jours / 4 nuits**
@@ -121,9 +123,7 @@ Par vol EgyptAir depuis Le Caire (55 minutes) ou par le train de nuit. Les deux 
 
 ## Explorer
 
-Les pages de chaque voyage sont en anglais.
-
-[kemet-travel.com/tour-upper-egypt-5day.html](https://kemet-travel.com/tour-upper-egypt-5day.html)
+[Cette page en anglais](https://kemet-travel.com/tour-upper-egypt-5day.html)
 
 ---
 

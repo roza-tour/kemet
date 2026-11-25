@@ -15,6 +15,8 @@ Une demi-journée concentrée parmi les trois grandes pyramides et le Sphinx, av
 
 à partir de 6 voyageurs · billets non inclus
 
+73 € par personne pour deux voyageurs
+
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
 
 Durée **Demi-journée (environ 5 heures)**
@@ -98,9 +100,7 @@ Oui, en option privée. Une voiturette de golf réservée à votre groupe vous c
 
 ## Explorer
 
-Les pages de chaque voyage sont en anglais.
-
-[kemet-travel.com/tour-giza-sphinx.html](https://kemet-travel.com/tour-giza-sphinx.html)
+[Cette page en anglais](https://kemet-travel.com/tour-giza-sphinx.html)
 
 ---
 

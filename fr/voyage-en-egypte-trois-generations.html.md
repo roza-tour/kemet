@@ -88,6 +88,7 @@ Pages associées dans cette langue, et la page originale en anglais.
 - [Anniversaires de mariage et grands anniversaires](https://kemet-travel.com/fr/anniversaire-de-mariage-grand-anniversaire-egypte.html)
 - [Un groupe privé, pas un circuit en groupe](https://kemet-travel.com/fr/voyage-groupe-prive-egypte.html)
 - [Retourner en Égypte](https://kemet-travel.com/fr/retourner-en-egypte-second-voyage.html)
+- [Voyages en Égypte](https://kemet-travel.com/fr/voyage-egypte.html)
 
 [Cette page en anglais](https://kemet-travel.com/occasions/three-generations-egypt.html)
 

@@ -15,6 +15,8 @@ mulai €1.915 / orang
 
 mulai 6 orang
 
+€2.107 per orang untuk dua wisatawan
+
 Per orang, musim normal. Biaya tambahan hari libur kami cantumkan terpisah dalam penawaran.
 
 Durasi **10 Hari / 9 Malam**
@@ -165,9 +167,7 @@ Oktober hingga April membawa suhu yang nyaman, baik di Kairo maupun di Mesir Hul
 
 ## Jelajahi
 
-Halaman rincian tiap perjalanan berbahasa Inggris.
-
-[kemet-travel.com/tour-10-day.html](https://kemet-travel.com/tour-10-day.html)
+[Halaman ini dalam bahasa Inggris](https://kemet-travel.com/tour-10-day.html)
 
 ---
 

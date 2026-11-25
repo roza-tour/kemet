@@ -15,6 +15,8 @@ mulai €600 / orang
 
 mulai 6 orang
 
+€660 per orang untuk dua wisatawan
+
 Per orang, musim normal. Biaya tambahan hari libur kami cantumkan terpisah dalam penawaran.
 
 Durasi **3 hari / 2 malam**
@@ -103,9 +105,7 @@ Cukup untuk hal-hal esensial yang dijalani dengan baik — itulah janji rute ini
 
 ## Jelajahi
 
-Halaman rincian tiap perjalanan berbahasa Inggris.
-
-[kemet-travel.com/tour-cairo-vip-3day.html](https://kemet-travel.com/tour-cairo-vip-3day.html)
+[Halaman ini dalam bahasa Inggris](https://kemet-travel.com/tour-cairo-vip-3day.html)
 
 ---
 

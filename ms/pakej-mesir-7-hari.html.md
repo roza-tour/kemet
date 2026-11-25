@@ -15,6 +15,8 @@ dari €1,179 / seorang
 
 dari 6 orang
 
+€1,297 seorang bagi dua pengembara
+
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 
 Tempoh **7 hari / 6 malam**
@@ -135,9 +137,7 @@ Sudah tentu — ramai tetamu menambah pelayaran 3 atau 4 malam antara Aswan dan 
 
 ## Terokai
 
-Halaman butiran setiap percutian dalam bahasa Inggeris.
-
-[kemet-travel.com/tour-7-day.html](https://kemet-travel.com/tour-7-day.html)
+[Halaman ini dalam bahasa Inggeris](https://kemet-travel.com/tour-7-day.html)
 
 ---
 

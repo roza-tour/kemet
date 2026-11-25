@@ -1,5 +1,5 @@
 ---
-title: "Cairo of the Eight Worlds — 5 Days / 4 Nights | Kemet"
+title: "5-Day Cairo Private Tour: Giza, Saqqara & Old Cairo | Kemet"
 url: https://kemet-travel.com/tour-cairo-culture-5day.html
 language: en
 description: "A deep, slow reading of the world's greatest layered city — its two museums, three faiths — private, from €875 pp."
@@ -13,7 +13,7 @@ Five days inside a single city's layers — pharaonic, Coptic, Islamic and moder
 
 ## What does Cairo of the Eight Worlds include, and what does it cost?
 
-Cairo of the Eight Worlds is a private 5-day, 4-night journey through Cairo, Giza, Saqqara and Memphis, from €875 per person for a party of 6 or more. It includes a private historian-Egyptologist guide throughout; 4 nights' hotel accommodation; Sufi tanoura performance tickets; and all entrance fees to sites and monuments. International flights are not included.
+Cairo of the Eight Worlds is a private 5-day, 4-night journey through Cairo, Giza, Saqqara and Memphis, from €875 per person for a party of 6 or more, or €963 per person for two. It includes a private historian-Egyptologist guide throughout, 4 nights' hotel accommodation and Sufi tanoura performance tickets. International flights are not included.
 
 ## Overview
 
@@ -131,6 +131,8 @@ From
 per person · EUR
 
 Based on a private party of 6 or more.
+
+For two travellers: €963 per person.
 
 [Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Cairo+of+the+Eight+Worlds&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Cairo+of+the+Eight+Worlds%22+journey+%285+Days+%2F+4+Nights%2C+from+%E2%82%AC875+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 

@@ -83,6 +83,7 @@ description: "زيارة ثانية إلى مصر: أبيدوس ودندرة و�
 - [ذكرى الزواج والأعياد السنوية الكبرى](https://kemet-travel.com/ar/ihtifal-bi-dhikra-zawaj-aw-eid-milad-fi-misr.html)
 - [مجموعة خاصة لا رحلة جماعية](https://kemet-travel.com/ar/rehla-khassa-li-majmoua-fi-misr.html)
 - [ثلاثة أجيال في رحلة واحدة](https://kemet-travel.com/ar/rehla-al-ajyal-al-thalatha-fi-misr.html)
+- [الرحلات](https://kemet-travel.com/ar/rehlat-masr-khassa.html)
 
 [هذه الصفحة بالإنجليزية](https://kemet-travel.com/occasions/returning-to-egypt.html)
 

@@ -15,6 +15,8 @@ dari €618 / seorang
 
 dari 6 orang
 
+€680 seorang bagi dua pengembara
+
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 
 Tempoh **4 hari / 3 malam**
@@ -110,9 +112,7 @@ Kira-kira dua jam setengah hingga tiga jam sehala melalui jalan padang pasir, de
 
 ## Terokai
 
-Halaman butiran setiap percutian dalam bahasa Inggeris.
-
-[kemet-travel.com/tour-4-day.html](https://kemet-travel.com/tour-4-day.html)
+[Halaman ini dalam bahasa Inggeris](https://kemet-travel.com/tour-4-day.html)
 
 ---
 

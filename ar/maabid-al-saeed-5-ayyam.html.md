@@ -15,6 +15,8 @@ description: "خمسة أيام خاصة في صعيد مصر برًّا: الأ
 
 من 6 أفراد
 
+‏١٬١٢٠ € للفرد، لمسافرَين اثنين
+
 للفرد، في الموسم العادي. رسوم مواسم الأعياد تُذكر منفصلة في عرض السعر.
 
 المدة **٥ أيام / ٤ ليالٍ**
@@ -121,9 +123,7 @@ description: "خمسة أيام خاصة في صعيد مصر برًّا: الأ
 
 ## استكشاف
 
-صفحات تفاصيل كل رحلة بالإنجليزية.
-
-[kemet-travel.com/tour-upper-egypt-5day.html](https://kemet-travel.com/tour-upper-egypt-5day.html)
+[هذه الصفحة بالإنجليزية](https://kemet-travel.com/tour-upper-egypt-5day.html)
 
 ---
 

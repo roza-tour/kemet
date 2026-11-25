@@ -15,6 +15,8 @@ dari €160 / seorang
 
 dari 6 orang · tiket masuk tidak termasuk
 
+€176 seorang bagi dua pengembara
+
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 
 Tempoh **Sehari penuh (lebih kurang 8 jam, dari Aswan)**
@@ -90,9 +92,7 @@ Pada 22 Februari dan 22 Oktober, matahari terbit menembusi 60 meter ke dalam Kui
 
 ## Terokai
 
-Halaman butiran setiap percutian dalam bahasa Inggeris.
-
-[kemet-travel.com/tour-abu-simbel.html](https://kemet-travel.com/tour-abu-simbel.html)
+[Halaman ini dalam bahasa Inggeris](https://kemet-travel.com/tour-abu-simbel.html)
 
 ---
 

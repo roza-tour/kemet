@@ -83,6 +83,7 @@ Verwandte Seiten in dieser Sprache sowie die englische Originalseite.
 - [Eine private Gruppe, keine Gruppenreise](https://kemet-travel.com/de/private-gruppenreise-aegypten.html)
 - [Wieder nach Ägypten](https://kemet-travel.com/de/zweite-reise-aegypten.html)
 - [Drei Generationen, eine Reise](https://kemet-travel.com/de/drei-generationen-reise-aegypten.html)
+- [Ägypten-Reisen](https://kemet-travel.com/de/aegypten-reisen.html)
 
 [Diese Seite auf Englisch](https://kemet-travel.com/occasions/proposal-in-egypt.html)
 

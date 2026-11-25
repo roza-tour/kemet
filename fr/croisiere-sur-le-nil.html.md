@@ -19,11 +19,68 @@ Navire **40 à 80 cabines**
 
 Les temples entre Louxor et Assouan ont été bâtis face au fleuve. On les aborde par l'eau parce que c'est ainsi qu'ils ont été pensés: Edfou et Kôm Ombo apparaissent depuis le pont avant d'apparaître depuis un parking. Trois à quatre nuits suffisent pour la section, et le choix du bateau compte plus que la durée.
 
+## La croisière de quatre jours, jour après jour
+
+Voici la croisière telle que nous la menons: trois nuits sur le fleuve, d'Assouan à Louxor, chaque visite à terre étant privée, avec votre propre égyptologue. Le bateau est partagé; votre guide, votre véhicule et vos visites, eux, ne le sont pas.
+
+à partir de 820 € / personne (à partir de 6 voyageurs). 902 € par personne pour deux voyageurs. Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
+
+01
+
+### Jour 1 — Assouan — Philae, le haut barrage et l'embarquement
+
+- Accueil privé à Assouan, puis visite du haut barrage et de l'obélisque inachevé le matin
+- Bateau à moteur jusqu'au temple insulaire de Philae, sanctuaire d'Isis
+- Embarquement sur votre bateau de croisière avant le déjeuner; après-midi libre sur le pont-soleil
+
+02
+
+### Jour 2 — Kom Ombo et Edfou
+
+- Navigation le matin vers Kom Ombo et son temple double dominant la rive
+- Poursuite vers Edfou — le temple d'Horus, le mieux conservé d'Égypte
+- Soirée à bord, le bateau étant amarré au pied de la ville du temple
+
+03
+
+### Jour 3 — L'écluse d'Esna et l'arrivée à Louxor
+
+- Passage de l'écluse d'Esna, là où la vallée s'ouvre vers Thèbes
+- Arrivée à Louxor dans l'après-midi; en option, visite en soirée du temple de Louxor illuminé
+- Dernière nuit à bord
+
+04
+
+### Jour 4 — Louxor — les deux rives et le débarquement
+
+- La grande salle hypostyle de Karnak, avec votre égyptologue
+- Traversée vers la rive ouest — Vallée des Rois et temple d'Hatchepsout
+- Débarquement et transfert à votre hôtel de Louxor, à la gare ou à l'aéroport
+
+## Compris
+
+- Un égyptologue privé tout au long du voyage
+- Croisière de 3 nuits en pension complète, d'Assouan à Louxor
+- Toutes les escales en visites privées avec votre propre guide
+- Tous les droits d'entrée aux sites et monuments
+- Transferts privés climatisés
+- Prise en charge et retour à l'hôtel
+- De l'eau en bouteille chaque jour
+
+## Non compris
+
+- Les vols internationaux à destination et au départ de l'Égypte
+- Le visa d'entrée en Égypte
+- Les pourboires
+- Les dépenses personnelles
+- Les repas, sauf à bord de la croisière sur le Nil
+- Les options que vous ajoutez — activités, boissons
+
 01
 
 ## Dahabieh ou navire: la vraie différence
 
-Un dahabieh est un voilier de quelques cabines. Il navigue à la voile, il mouille contre un banc de sable où aucun grand bateau ne peut approcher, et il n'y a personne d'autre à bord que votre groupe si vous l'affrétez en entier. Un navire cinq étoiles offre plus d'espace, une piscine et un pont supérieur, mais il suit un horaire partagé et accoste là où accostent les autres. Pour le navire, nous réservons la flotte Sonesta; le bateau exact est confirmé avec vos dates. Les deux sont excellents; ils ne racontent pas la même chose.
+Un dahabieh est un voilier de quelques cabines. Il navigue à la voile, il mouille contre un banc de sable où aucun grand bateau ne peut approcher, et il n'y a personne d'autre à bord que votre groupe si vous l'affrétez en entier. Un navire cinq étoiles offre plus d'espace, une piscine et un pont supérieur, mais il suit un horaire partagé et accoste là où accostent les autres. Le bateau exact est confirmé avec vos dates. Les deux sont excellents; ils ne racontent pas la même chose.
 
 02
 

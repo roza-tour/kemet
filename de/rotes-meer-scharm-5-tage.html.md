@@ -15,6 +15,8 @@ ab 979 € / Person
 
 ab 6 Reisenden
 
+1.077 € pro Person bei zwei Reisenden
+
 Pro Person, Normalsaison. Zuschläge für Feiertage weisen wir im Angebot getrennt aus.
 
 Dauer **5 Tage / 4 Nächte**
@@ -113,9 +115,7 @@ Hervorragend — so nutzen es die meisten Gäste. Luxor–Scharm sind etwa eine 
 
 ## Entdecken
 
-Die Reiseverläufe im Detail sind auf Englisch.
-
-[kemet-travel.com/tour-sharm-5day.html](https://kemet-travel.com/tour-sharm-5day.html)
+[Diese Seite auf Englisch](https://kemet-travel.com/tour-sharm-5day.html)
 
 ---
 

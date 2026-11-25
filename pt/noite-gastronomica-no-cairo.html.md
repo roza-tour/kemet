@@ -15,6 +15,8 @@ a partir de € 59 / pessoa
 
 a partir de 6 viajantes
 
+€ 65 por pessoa, para dois viajantes
+
 Por pessoa, em temporada normal. Acréscimos de feriados aparecem separados no orçamento. Comida e bebidas não estão incluídas: são pagas diretamente em cada parada.
 
 Duração **Noite (cerca de 4 horas)**
@@ -117,9 +119,7 @@ Você decide quanto pedir em cada parada, e dividindo os pratos dá para provar 
 
 ## Explorar
 
-As páginas de cada viagem estão em inglês.
-
-[kemet-travel.com/tour-cairo-food.html](https://kemet-travel.com/tour-cairo-food.html)
+[Esta página em inglês](https://kemet-travel.com/tour-cairo-food.html)
 
 ---
 

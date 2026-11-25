@@ -297,6 +297,23 @@ description: "برامج خاصة في مصر من يوم واحد إلى أسب
 
 ‏١٦٠ € / للفرد من 6 أفراد · التذاكر غير مشمولة
 
+## قارنوا بين الخيارات
+
+- [الطائرة أم قطار النوم إلى الأقصر وأسوان؟](https://kemet-travel.com/ar/tayara-am-qitar-al-nawm-al-uqsur-aswan.html)
+- [رحلة نيلية أم جولة برية؟](https://kemet-travel.com/ar/rihla-nilia-am-jawla-barriya-al-uqsur-aswan.html)
+- [ذهبية نيلية أم باخرة سياحية؟](https://kemet-travel.com/ar/dhahabiya-nilia-am-safina-siyahiya.html)
+- [الأقصر أم أسوان؟](https://kemet-travel.com/ar/al-uqsur-am-aswan-ayyuhuma-afdal.html)
+- [المتحف المصري أم المتحف المصري الكبير؟](https://kemet-travel.com/ar/al-mathaf-al-misri-am-al-mathaf-al-misri-al-kabir.html)
+- [شرم الشيخ أم الغردقة؟](https://kemet-travel.com/ar/sharm-al-sheikh-am-al-ghardaqa.html)
+
+## بحسب المناسبة
+
+- [طلب الزواج في مصر](https://kemet-travel.com/ar/talab-al-zawaj-fi-misr.html)
+- [ذكرى الزواج والأعياد السنوية الكبرى](https://kemet-travel.com/ar/ihtifal-bi-dhikra-zawaj-aw-eid-milad-fi-misr.html)
+- [مجموعة خاصة لا رحلة جماعية](https://kemet-travel.com/ar/rehla-khassa-li-majmoua-fi-misr.html)
+- [العودة إلى مصر](https://kemet-travel.com/ar/al-awda-ila-misr-zyara-thaniya.html)
+- [ثلاثة أجيال في رحلة واحدة](https://kemet-travel.com/ar/rehla-al-ajyal-al-thalatha-fi-misr.html)
+
 ## أسئلة شائعة
 
 ### هل يمكن تعديل البرنامج المعروض؟

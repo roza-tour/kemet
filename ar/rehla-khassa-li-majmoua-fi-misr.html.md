@@ -81,6 +81,7 @@ description: "سفر المجموعات الخاصة في مصر من ستة إ�
 - [ذكرى الزواج والأعياد السنوية الكبرى](https://kemet-travel.com/ar/ihtifal-bi-dhikra-zawaj-aw-eid-milad-fi-misr.html)
 - [العودة إلى مصر](https://kemet-travel.com/ar/al-awda-ila-misr-zyara-thaniya.html)
 - [ثلاثة أجيال في رحلة واحدة](https://kemet-travel.com/ar/rehla-al-ajyal-al-thalatha-fi-misr.html)
+- [الرحلات](https://kemet-travel.com/ar/rehlat-masr-khassa.html)
 
 [هذه الصفحة بالإنجليزية](https://kemet-travel.com/occasions/private-group-egypt.html)
 

@@ -15,6 +15,8 @@ Quatre jours qui associent les monuments du Caire et de Gizeh à une journée m�
 
 à partir de 6 voyageurs
 
+680 € par personne pour deux voyageurs
+
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
 
 Durée **4 jours / 3 nuits**
@@ -110,9 +112,7 @@ Environ deux heures et demie à trois heures par trajet sur la route du désert,
 
 ## Explorer
 
-Les pages de chaque voyage sont en anglais.
-
-[kemet-travel.com/tour-4-day.html](https://kemet-travel.com/tour-4-day.html)
+[Cette page en anglais](https://kemet-travel.com/tour-4-day.html)
 
 ---
 

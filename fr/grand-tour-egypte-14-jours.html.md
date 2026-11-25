@@ -15,6 +15,8 @@ Quatorze jours, tous les registres du pays — Le Caire, Alexandrie, le Nil en c
 
 à partir de 6 voyageurs
 
+3 001 € par personne pour deux voyageurs
+
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
 
 Durée **14 jours / 13 nuits**
@@ -185,9 +187,7 @@ Sans difficulté. Certains la troquent contre des nuits supplémentaires à Loux
 
 ## Explorer
 
-Les pages de chaque voyage sont en anglais.
-
-[kemet-travel.com/tour-grand-14day.html](https://kemet-travel.com/tour-grand-14day.html)
+[Cette page en anglais](https://kemet-travel.com/tour-grand-14day.html)
 
 ---
 

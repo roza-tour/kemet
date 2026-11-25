@@ -93,6 +93,7 @@ description: "شرم الشيخ أم الغردقة لإقامة على البح
 - [ذهبية نيلية أم باخرة سياحية؟](https://kemet-travel.com/ar/dhahabiya-nilia-am-safina-siyahiya.html)
 - [الأقصر أم أسوان؟](https://kemet-travel.com/ar/al-uqsur-am-aswan-ayyuhuma-afdal.html)
 - [المتحف المصري أم المتحف المصري الكبير؟](https://kemet-travel.com/ar/al-mathaf-al-misri-am-al-mathaf-al-misri-al-kabir.html)
+- [الرحلات](https://kemet-travel.com/ar/rehlat-masr-khassa.html)
 
 [هذه الصفحة بالإنجليزية](https://kemet-travel.com/compare/sharm-el-sheikh-vs-hurghada.html)
 

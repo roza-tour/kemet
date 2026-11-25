@@ -15,6 +15,8 @@ dari €68 / seorang
 
 dari 6 orang · tiket masuk tidak termasuk
 
+€75 seorang bagi dua pengembara
+
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 
 Tempoh **Sehari penuh (lebih kurang 8 jam)**
@@ -92,9 +94,7 @@ Sangat sesuai — kurang sesak, dan jalan ceritanya yang jelas menjadikan lawata
 
 ## Terokai
 
-Halaman butiran setiap percutian dalam bahasa Inggeris.
-
-[kemet-travel.com/tour-saqqara.html](https://kemet-travel.com/tour-saqqara.html)
+[Halaman ini dalam bahasa Inggeris](https://kemet-travel.com/tour-saqqara.html)
 
 ---
 

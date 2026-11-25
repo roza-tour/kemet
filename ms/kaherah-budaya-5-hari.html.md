@@ -15,6 +15,8 @@ dari €875 / seorang
 
 dari 6 orang
 
+€963 seorang bagi dua pengembara
+
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 
 Tempoh **5 hari / 4 malam**
@@ -119,9 +121,7 @@ Boleh — hari keenam di tepi Mediterranean memanjangkan perjalanan ini secara s
 
 ## Terokai
 
-Halaman butiran setiap percutian dalam bahasa Inggeris.
-
-[kemet-travel.com/tour-cairo-culture-5day.html](https://kemet-travel.com/tour-cairo-culture-5day.html)
+[Halaman ini dalam bahasa Inggeris](https://kemet-travel.com/tour-cairo-culture-5day.html)
 
 ---
 

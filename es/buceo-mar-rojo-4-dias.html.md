@@ -15,6 +15,8 @@ desde 792 € / persona
 
 desde 6 viajeros
 
+871 € por persona para dos viajeros
+
 Por persona, en temporada normal. Los suplementos de fechas festivas se indican por separado en el presupuesto.
 
 Duración **4 días / 3 noches**
@@ -107,9 +109,7 @@ En Ras Mohammed, densas paredes de coral blando, nubes de anthias, peces napole�
 
 ## Explorar
 
-Las páginas de cada viaje están en inglés.
-
-[kemet-travel.com/tour-red-sea-diving-4day.html](https://kemet-travel.com/tour-red-sea-diving-4day.html)
+[Esta página en inglés](https://kemet-travel.com/tour-red-sea-diving-4day.html)
 
 ---
 

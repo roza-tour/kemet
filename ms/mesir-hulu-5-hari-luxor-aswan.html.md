@@ -15,6 +15,8 @@ dari €1,018 / seorang
 
 dari 6 orang
 
+€1,120 seorang bagi dua pengembara
+
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 
 Tempoh **5 hari / 4 malam**
@@ -121,9 +123,7 @@ Dengan penerbangan EgyptAir dari Kaherah (55 minit) atau kereta api tidur pada w
 
 ## Terokai
 
-Halaman butiran setiap percutian dalam bahasa Inggeris.
-
-[kemet-travel.com/tour-upper-egypt-5day.html](https://kemet-travel.com/tour-upper-egypt-5day.html)
+[Halaman ini dalam bahasa Inggeris](https://kemet-travel.com/tour-upper-egypt-5day.html)
 
 ---
 

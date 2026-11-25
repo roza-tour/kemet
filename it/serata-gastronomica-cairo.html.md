@@ -15,6 +15,8 @@ da 59 € / persona
 
 da 6 viaggiatori
 
+65 € a persona per due viaggiatori
+
 A persona, in stagione normale. I supplementi delle festività sono indicati separatamente nel preventivo. Cibo e bevande non sono inclusi: si pagano direttamente a ogni tappa.
 
 Durata **Serata (≈4 ore)**
@@ -117,9 +119,7 @@ Decidete voi quanto ordinare a ogni tappa, e dividendo i piatti assaggiate molto
 
 ## Esplora
 
-Le pagine dei singoli viaggi sono in inglese.
-
-[kemet-travel.com/tour-cairo-food.html](https://kemet-travel.com/tour-cairo-food.html)
+[Questa pagina in inglese](https://kemet-travel.com/tour-cairo-food.html)
 
 ---
 

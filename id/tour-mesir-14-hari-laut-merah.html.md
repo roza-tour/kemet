@@ -15,6 +15,8 @@ mulai €2.728 / orang
 
 mulai 6 orang
 
+€3.001 per orang untuk dua wisatawan
+
 Per orang, musim normal. Biaya tambahan hari libur kami cantumkan terpisah dalam penawaran.
 
 Durasi **14 Hari / 13 Malam**
@@ -185,9 +187,7 @@ Tentu, sebebas yang Anda mau. Sebagian tamu menukarnya dengan malam tambahan di 
 
 ## Jelajahi
 
-Halaman rincian tiap perjalanan berbahasa Inggris.
-
-[kemet-travel.com/tour-grand-14day.html](https://kemet-travel.com/tour-grand-14day.html)
+[Halaman ini dalam bahasa Inggris](https://kemet-travel.com/tour-grand-14day.html)
 
 ---
 

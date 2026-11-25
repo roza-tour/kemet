@@ -1,5 +1,5 @@
 ---
-title: "Cairo VIP Short Stay — 3 Days / 2 Nights | Kemet"
+title: "3-Day Cairo & Giza Private Tour | Kemet"
 url: https://kemet-travel.com/tour-cairo-vip-3day.html
 language: en
 description: "The essential Cairo, concierge-run: fast-track immigration, private plateau morning, the Grand Egyptian Museum — private, from €600 pp."
@@ -13,7 +13,7 @@ Three days, zero friction — fast-track arrival, the pyramids and the Grand Egy
 
 ## What does Cairo VIP Short Stay include, and what does it cost?
 
-Cairo VIP Short Stay is a private 3-day, 2-night journey through Cairo and Giza, from €600 per person for a party of 6 or more. It includes a private Egyptologist guide throughout; 2 nights' hotel accommodation; VIP airport meet & assist with fast-track, both directions; and all entrance fees to sites and monuments. International flights are not included.
+Cairo VIP Short Stay is a private 3-day, 2-night journey through Cairo and Giza, from €600 per person for a party of 6 or more, or €660 per person for two. It includes a private Egyptologist guide throughout; 2 nights' hotel accommodation; and VIP airport meet & assist with fast-track, both directions. International flights are not included.
 
 ## Overview
 
@@ -115,6 +115,8 @@ From
 per person · EUR
 
 Based on a private party of 6 or more.
+
+For two travellers: €660 per person.
 
 [Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Cairo+VIP+Short+Stay&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Cairo+VIP+Short+Stay%22+journey+%283+Days+%2F+2+Nights%2C+from+%E2%82%AC600+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 

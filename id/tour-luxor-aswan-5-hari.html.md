@@ -15,6 +15,8 @@ mulai €1.018 / orang
 
 mulai 6 orang
 
+€1.120 per orang untuk dua wisatawan
+
 Per orang, musim normal. Biaya tambahan hari libur kami cantumkan terpisah dalam penawaran.
 
 Durasi **5 Hari / 4 Malam**
@@ -121,9 +123,7 @@ Dengan penerbangan EgyptAir dari Kairo (55 menit) atau kereta tidur malam. Kedua
 
 ## Jelajahi
 
-Halaman rincian tiap perjalanan berbahasa Inggris.
-
-[kemet-travel.com/tour-upper-egypt-5day.html](https://kemet-travel.com/tour-upper-egypt-5day.html)
+[Halaman ini dalam bahasa Inggris](https://kemet-travel.com/tour-upper-egypt-5day.html)
 
 ---
 

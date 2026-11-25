@@ -81,6 +81,7 @@ Halaman berkaitan dalam bahasa ini, serta halaman asal dalam bahasa Inggeris.
 - [Ulang tahun dan hari lahir bermakna](https://kemet-travel.com/ms/ulang-tahun-dan-hari-lahir-istimewa-di-mesir.html)
 - [Kembali ke Mesir](https://kemet-travel.com/ms/melawat-mesir-kali-kedua.html)
 - [Tiga generasi, satu perjalanan](https://kemet-travel.com/ms/percutian-tiga-generasi-di-mesir.html)
+- [Pakej Pelancongan](https://kemet-travel.com/ms/pakej-pelancongan-mesir.html)
 
 [Halaman ini dalam bahasa Inggeris](https://kemet-travel.com/occasions/private-group-egypt.html)
 

@@ -15,6 +15,8 @@ a partir de € 979 / pessoa
 
 a partir de 6 viajantes
 
+€ 1.077 por pessoa, para dois viajantes
+
 Por pessoa, em temporada normal. Acréscimos de feriados aparecem separados no orçamento.
 
 Duração **5 dias / 4 noites**
@@ -113,9 +115,7 @@ Perfeitamente — é assim que a maioria dos nossos viajantes o aproveita. Luxor
 
 ## Explorar
 
-As páginas de cada viagem estão em inglês.
-
-[kemet-travel.com/tour-sharm-5day.html](https://kemet-travel.com/tour-sharm-5day.html)
+[Esta página em inglês](https://kemet-travel.com/tour-sharm-5day.html)
 
 ---
 

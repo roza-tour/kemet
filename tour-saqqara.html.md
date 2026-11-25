@@ -1,5 +1,5 @@
 ---
-title: "Saqqara, Memphis & Dahshur — Full day | Kemet"
+title: "Saqqara, Memphis & Dahshur Private Day Tour | Kemet"
 url: https://kemet-travel.com/tour-saqqara.html
 language: en
 description: "Djoser's Step Pyramid, the open-air ruins of Memphis, and the Bent and Red Pyramids of Dahshur — private, from €68 pp."
@@ -13,7 +13,7 @@ The birthplace of the pyramid — from Djoser's first step pyramid to the great 
 
 ## What does Saqqara, Memphis & Dahshur include, and what does it cost?
 
-Saqqara, Memphis & Dahshur is a private full-day tour of Saqqara, Memphis and Dahshur, from €68 per person for a party of 6 or more. It includes a private Egyptologist guide throughout, private air-conditioned transfers, hotel pickup & drop-off and bottled water every day. Entrance tickets are paid at the gate.
+Saqqara, Memphis & Dahshur is a private full-day tour of Saqqara, Memphis and Dahshur, from €68 per person for a party of 6 or more, or €75 per person for two. It includes a private Egyptologist guide throughout, private air-conditioned transfers, hotel pickup & drop-off and bottled water every day. Entrance tickets are paid at the gate.
 
 ## Overview
 
@@ -101,6 +101,8 @@ From
 per person · EUR
 
 Based on a private party of 6 or more · entrance tickets not included.
+
+For two travellers: €75 per person.
 
 [Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Saqqara%2C+Memphis+%26+Dahshur&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Saqqara%2C+Memphis+%26+Dahshur%22+journey+%28Full+day+%28%E2%89%888+hours%29%2C+from+%E2%82%AC68+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 

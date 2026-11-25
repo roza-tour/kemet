@@ -15,6 +15,8 @@ mulai €618 / orang
 
 mulai 6 orang
 
+€680 per orang untuk dua wisatawan
+
 Per orang, musim normal. Biaya tambahan hari libur kami cantumkan terpisah dalam penawaran.
 
 Durasi **4 Hari / 3 Malam**
@@ -110,9 +112,7 @@ Sekitar dua setengah sampai tiga jam sekali jalan melalui jalan gurun, dengan ke
 
 ## Jelajahi
 
-Halaman rincian tiap perjalanan berbahasa Inggris.
-
-[kemet-travel.com/tour-4-day.html](https://kemet-travel.com/tour-4-day.html)
+[Halaman ini dalam bahasa Inggris](https://kemet-travel.com/tour-4-day.html)
 
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Honeymoon on the Nile — 9 Days / 8 Nights | Kemet"
+title: "9-Day Egypt Honeymoon: Cairo, Luxor & Aswan | Kemet"
 url: https://kemet-travel.com/tour-honeymoon-9day.html
 language: en
 description: "Egypt as a honeymoon should be — private sunrise at the pyramids, a felucca at golden hour — private, from €2,045 pp."

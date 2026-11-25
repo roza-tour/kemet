@@ -15,6 +15,8 @@ Deux jours méditerranéens — les catacombes, la citadelle sur l'emplacement d
 
 à partir de 6 voyageurs
 
+442 € par personne pour deux voyageurs
+
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
 
 Durée **2 jours / 1 nuit**
@@ -95,9 +97,7 @@ Absolument. Vous choisissez au poids sur l'étal de glace du jour et il arrive g
 
 ## Explorer
 
-Les pages de chaque voyage sont en anglais.
-
-[kemet-travel.com/tour-alexandria-2day.html](https://kemet-travel.com/tour-alexandria-2day.html)
+[Cette page en anglais](https://kemet-travel.com/tour-alexandria-2day.html)
 
 ---
 

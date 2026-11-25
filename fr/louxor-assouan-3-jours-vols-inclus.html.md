@@ -15,6 +15,8 @@ Trois jours de temples et de tombes en Haute-Égypte, les vols intérieurs compr
 
 à partir de 6 voyageurs
 
+580 € par personne pour deux voyageurs
+
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
 
 Durée **3 jours / 2 nuits**
@@ -103,9 +105,7 @@ Oui, en option par vol matinal ou en voiture privée. Cela allonge la matinée d
 
 ## Explorer
 
-Les pages de chaque voyage sont en anglais.
-
-[kemet-travel.com/tour-3-day.html](https://kemet-travel.com/tour-3-day.html)
+[Cette page en anglais](https://kemet-travel.com/tour-3-day.html)
 
 ---
 

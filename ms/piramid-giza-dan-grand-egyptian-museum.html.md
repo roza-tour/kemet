@@ -15,6 +15,8 @@ dari €79 / seorang
 
 dari 6 orang · tiket masuk tidak termasuk
 
+€87 seorang bagi dua pengembara
+
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 
 Tempoh **Sehari penuh (lebih kurang 8 jam)**
@@ -103,9 +105,7 @@ Boleh, sebagai tambahan pilihan persendirian. Kereta golf untuk rombongan anda s
 
 ## Terokai
 
-Halaman butiran setiap percutian dalam bahasa Inggeris.
-
-[kemet-travel.com/tour-giza-museum.html](https://kemet-travel.com/tour-giza-museum.html)
+[Halaman ini dalam bahasa Inggeris](https://kemet-travel.com/tour-giza-museum.html)
 
 ---
 

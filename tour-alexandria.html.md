@@ -1,5 +1,5 @@
 ---
-title: "Alexandria Sightseeing — Full day | Kemet"
+title: "Alexandria Private Day Tour from Cairo | Kemet"
 url: https://kemet-travel.com/tour-alexandria.html
 language: en
 description: "The Catacombs of Kom El Shoqafa, Pompey's Pillar, the Citadel of Qaitbay on the old Pharos site and the Bibliotheca Alexandrina — private, from €57 pp."
@@ -13,7 +13,7 @@ A full day on the Mediterranean — catacombs, a Roman pillar, a sea-girt citade
 
 ## What does Alexandria Sightseeing include, and what does it cost?
 
-Alexandria Sightseeing is a private full-day tour of Alexandria, from €57 per person for a party of 6 or more. It includes a private Egyptologist guide throughout, private air-conditioned transfers, hotel pickup & drop-off and bottled water every day. Entrance tickets are paid at the gate.
+Alexandria Sightseeing is a private full-day tour of Alexandria, from €57 per person for a party of 6 or more, or €63 per person for two. It includes a private Egyptologist guide throughout, private air-conditioned transfers, hotel pickup & drop-off and bottled water every day. Entrance tickets are paid at the gate.
 
 ## Overview
 
@@ -101,6 +101,8 @@ From
 per person · EUR
 
 Based on a private party of 6 or more · entrance tickets not included.
+
+For two travellers: €63 per person.
 
 [Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Alexandria+Sightseeing&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Alexandria+Sightseeing%22+journey+%28Full+day+%28%E2%89%8811+hours%29%2C+from+%E2%82%AC57+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 

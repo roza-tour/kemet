@@ -15,6 +15,8 @@ Une journée entière dans l'oasis verte au sud-ouest du Caire — lacs, cascade
 
 à partir de 6 voyageurs · billets non inclus
 
+153 € par personne pour deux voyageurs
+
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
 
 Durée **Journée entière (environ 10 heures)**
@@ -99,9 +101,7 @@ Environ 90 minutes à deux heures par trajet en véhicule privé, selon votre h�
 
 ## Explorer
 
-Les pages de chaque voyage sont en anglais.
-
-[kemet-travel.com/tour-fayoum.html](https://kemet-travel.com/tour-fayoum.html)
+[Cette page en anglais](https://kemet-travel.com/tour-fayoum.html)
 
 ---
 

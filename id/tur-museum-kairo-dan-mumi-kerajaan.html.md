@@ -15,6 +15,8 @@ mulai €64 / orang
 
 mulai 6 orang · tiket masuk tidak termasuk
 
+€70 per orang untuk dua wisatawan
+
 Per orang, musim normal. Biaya tambahan hari libur kami cantumkan terpisah dalam penawaran.
 
 Durasi **Sehari penuh (sekitar 7 jam)**
@@ -86,9 +88,7 @@ Tidak, bila ada pemandu yang memilihkan sorotannya. Kami memusatkan perhatian pa
 
 ## Jelajahi
 
-Halaman rincian tiap perjalanan berbahasa Inggris.
-
-[kemet-travel.com/tour-cairo-museums.html](https://kemet-travel.com/tour-cairo-museums.html)
+[Halaman ini dalam bahasa Inggris](https://kemet-travel.com/tour-cairo-museums.html)
 
 ---
 

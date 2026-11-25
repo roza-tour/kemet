@@ -15,6 +15,8 @@ da 160 € / persona
 
 da 6 viaggiatori · biglietti non inclusi
 
+176 € a persona per due viaggiatori
+
 A persona, in stagione normale. I supplementi delle festività sono indicati separatamente nel preventivo.
 
 Durata **Giornata intera (≈8 ore, da Assuan)**
@@ -90,9 +92,7 @@ Il 22 febbraio e il 22 ottobre il sole nascente penetra per 60 metri dentro il G
 
 ## Esplora
 
-Le pagine dei singoli viaggi sono in inglese.
-
-[kemet-travel.com/tour-abu-simbel.html](https://kemet-travel.com/tour-abu-simbel.html)
+[Questa pagina in inglese](https://kemet-travel.com/tour-abu-simbel.html)
 
 ---
 

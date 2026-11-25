@@ -15,6 +15,8 @@ mulai €139 / orang
 
 mulai 6 orang · tiket masuk tidak termasuk
 
+€153 per orang untuk dua wisatawan
+
 Per orang, musim normal. Biaya tambahan hari libur kami cantumkan terpisah dalam penawaran.
 
 Durasi **Sehari penuh (sekitar 10 jam)**
@@ -99,9 +101,7 @@ Sekitar 90 menit hingga dua jam sekali jalan dengan kendaraan pribadi, tergantun
 
 ## Jelajahi
 
-Halaman rincian tiap perjalanan berbahasa Inggris.
-
-[kemet-travel.com/tour-fayoum.html](https://kemet-travel.com/tour-fayoum.html)
+[Halaman ini dalam bahasa Inggris](https://kemet-travel.com/tour-fayoum.html)
 
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Egypt Icons & Nile Cruise — 10 Days / 9 Nights | Kemet"
+title: "10-Day Egypt Private Tour with Nile Cruise | Kemet"
 url: https://kemet-travel.com/tour-10-day.html
 language: en
 description: "Our signature journey: Cairo, Alexandria, a sleeper train south, and a three-night Nile cruise from Aswan to Luxor — private, from €1,915 pp."
@@ -13,7 +13,7 @@ Ten unhurried days from the Pyramids of Giza to the temples of Upper Egypt, thre
 
 ## What does Egypt Icons & Nile Cruise include, and what does it cost?
 
-Egypt Icons & Nile Cruise is a private 10-day, 9-night journey through Cairo, Giza, Alexandria, Aswan and Luxor, from €1,915 per person for a party of 6 or more. It includes a private Egyptologist guide throughout. International flights are not included. A flight version, in place of the two sleeper-train nights, is from €2,045.
+Egypt Icons & Nile Cruise is a private 10-day, 9-night journey through Cairo, Giza, Alexandria, Aswan and Luxor, from €1,915 per person for a party of 6 or more, or €2,107 per person for two. It includes a private Egyptologist guide throughout. International flights are not included. A flight version, in place of the two sleeper-train nights, is from €2,045.
 
 ## Overview
 
@@ -183,6 +183,8 @@ From
 per person · EUR
 
 Based on a private party of 6 or more.
+
+For two travellers: €2,107 per person.
 
 Prefer to fly? The same journey with flights in place of the two sleeper-train nights — from €2,045 pp.
 

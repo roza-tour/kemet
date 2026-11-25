@@ -15,6 +15,8 @@ ab 600 € / Person
 
 ab 6 Reisenden
 
+660 € pro Person bei zwei Reisenden
+
 Pro Person, Normalsaison. Zuschläge für Feiertage weisen wir im Angebot getrennt aus.
 
 Dauer **3 Tage / 2 Nächte**
@@ -103,9 +105,7 @@ Sie reichen für das Wesentliche, gut gemacht — genau das verspricht diese Rei
 
 ## Entdecken
 
-Die Reiseverläufe im Detail sind auf Englisch.
-
-[kemet-travel.com/tour-cairo-vip-3day.html](https://kemet-travel.com/tour-cairo-vip-3day.html)
+[Diese Seite auf Englisch](https://kemet-travel.com/tour-cairo-vip-3day.html)
 
 ---
 

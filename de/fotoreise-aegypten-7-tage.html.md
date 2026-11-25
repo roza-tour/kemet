@@ -15,6 +15,8 @@ ab 1.419 € / Person
 
 ab 6 Reisenden
 
+1.561 € pro Person bei zwei Reisenden
+
 Pro Person, Normalsaison. Zuschläge für Feiertage weisen wir im Angebot getrennt aus.
 
 Dauer **7 Tage / 6 Nächte**
@@ -140,9 +142,7 @@ Wirklich ja. Der Plan bedeutet schlicht, die Stätten in ihren leersten und sch�
 
 ## Entdecken
 
-Die Reiseverläufe im Detail sind auf Englisch.
-
-[kemet-travel.com/tour-photography-7day.html](https://kemet-travel.com/tour-photography-7day.html)
+[Diese Seite auf Englisch](https://kemet-travel.com/tour-photography-7day.html)
 
 ---
 

@@ -15,6 +15,8 @@ ab 160 € / Person
 
 ab 6 Reisenden · Eintritte nicht enthalten
 
+176 € pro Person bei zwei Reisenden
+
 Pro Person, Normalsaison. Zuschläge für Feiertage weisen wir im Angebot getrennt aus.
 
 Dauer **Ganzer Tag (ca. 8 Stunden, ab Assuan)**
@@ -90,9 +92,7 @@ Am 22. Februar und am 22. Oktober dringt die aufgehende Sonne 60 Meter weit in d
 
 ## Entdecken
 
-Die Reiseverläufe im Detail sind auf Englisch.
-
-[kemet-travel.com/tour-abu-simbel.html](https://kemet-travel.com/tour-abu-simbel.html)
+[Diese Seite auf Englisch](https://kemet-travel.com/tour-abu-simbel.html)
 
 ---
 

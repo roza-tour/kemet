@@ -1,5 +1,5 @@
 ---
-title: "Cairo Authentic Food — Evening | Kemet"
+title: "Cairo Food Tour: Private Evening Tasting | Kemet"
 url: https://kemet-travel.com/tour-cairo-food.html
 language: en
 description: "A guided evening tasting of Cairo's best-loved dishes — koshari, ful and ta'meya, hawawshi and grilled pigeon, kunafa and basbousa — private, from €59 pp."
@@ -13,7 +13,7 @@ An evening walking the flavours of Cairo — koshari, street classics, grilled p
 
 ## What does Cairo Authentic Food include, and what does it cost?
 
-Cairo Authentic Food is a private evening tour of Cairo, from €59 per person for a party of 6 or more. It includes a private local food guide for the evening; your guide's choice of places, and help ordering at every stop; bottled water through the evening; and private air-conditioned transfers. Food and drinks are paid directly at each stop.
+Cairo Authentic Food is a private evening tour of Cairo, from €59 per person for a party of 6 or more, or €65 per person for two. It includes a private local food guide for the evening and your guide's choice of places, and help ordering at every stop. Food and drinks are paid directly at each stop.
 
 ## Overview
 
@@ -126,6 +126,8 @@ From
 per person · EUR
 
 Based on a private party of 6 or more · food and drinks not included.
+
+For two travellers: €65 per person.
 
 [Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Cairo+Authentic+Food&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Cairo+Authentic+Food%22+journey+%28Evening+%28%E2%89%884+hours%29%2C+from+%E2%82%AC59+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 

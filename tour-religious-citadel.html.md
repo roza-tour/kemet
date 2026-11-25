@@ -1,5 +1,5 @@
 ---
-title: "Religious Cairo & the Citadel — Full day | Kemet"
+title: "Islamic & Coptic Cairo Private Day Tour | Kemet"
 url: https://kemet-travel.com/tour-religious-citadel.html
 language: en
 description: "The Hanging Church, Ben Ezra Synagogue and Abu Serga in Old Cairo, then Saladin's Citadel and the alabaster Mosque of Muhammad Ali — private, from €80 pp."
@@ -13,7 +13,7 @@ The faiths of Cairo in one day — Coptic churches, an ancient synagogue, and th
 
 ## What does Religious Cairo & the Citadel include, and what does it cost?
 
-Religious Cairo & the Citadel is a private full-day tour of Cairo, from €80 per person for a party of 6 or more. It includes a private Egyptologist guide throughout, private air-conditioned transfers, hotel pickup & drop-off and bottled water every day. Entrance tickets are paid at the gate.
+Religious Cairo & the Citadel is a private full-day tour of Cairo, from €80 per person for a party of 6 or more, or €88 per person for two. It includes a private Egyptologist guide throughout, private air-conditioned transfers, hotel pickup & drop-off and bottled water every day. Entrance tickets are paid at the gate.
 
 ## Overview
 
@@ -101,6 +101,8 @@ From
 per person · EUR
 
 Based on a private party of 6 or more · entrance tickets not included.
+
+For two travellers: €88 per person.
 
 [Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Religious+Cairo+%26+the+Citadel&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Religious+Cairo+%26+the+Citadel%22+journey+%28Full+day+%28%E2%89%888+hours%29%2C+from+%E2%82%AC80+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 

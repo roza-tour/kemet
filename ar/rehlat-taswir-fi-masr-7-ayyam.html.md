@@ -15,6 +15,8 @@ description: "سبعة أيام حول الضوء لا مواعيد الفتح: 
 
 من 6 أفراد
 
+‏١٬٥٦١ € للفرد، لمسافرَين اثنين
+
 للفرد، في الموسم العادي. رسوم مواسم الأعياد تُذكر منفصلة في عرض السعر.
 
 المدة **٧ أيام / ٦ ليالٍ**
@@ -140,9 +142,7 @@ description: "سبعة أيام حول الضوء لا مواعيد الفتح: 
 
 ## استكشاف
 
-صفحات تفاصيل كل رحلة بالإنجليزية.
-
-[kemet-travel.com/tour-photography-7day.html](https://kemet-travel.com/tour-photography-7day.html)
+[هذه الصفحة بالإنجليزية](https://kemet-travel.com/tour-photography-7day.html)
 
 ---
 

@@ -15,6 +15,8 @@ desde 544 € / persona
 
 desde 6 viajeros
 
+598 € por persona para dos viajeros
+
 Por persona, en temporada normal. Los suplementos de fechas festivas se indican por separado en el presupuesto.
 
 Duración **3 días / 2 noches**
@@ -104,9 +106,7 @@ En avión (55 minutos) o en tren nocturno, en cualquiera de los dos sentidos. La
 
 ## Explorar
 
-Las páginas de cada viaje están en inglés.
-
-[kemet-travel.com/tour-luxor-3day.html](https://kemet-travel.com/tour-luxor-3day.html)
+[Esta página en inglés](https://kemet-travel.com/tour-luxor-3day.html)
 
 ---
 

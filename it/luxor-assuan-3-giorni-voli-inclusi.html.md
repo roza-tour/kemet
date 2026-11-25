@@ -15,6 +15,8 @@ da 527 € / persona
 
 da 6 viaggiatori
 
+580 € a persona per due viaggiatori
+
 A persona, in stagione normale. I supplementi delle festività sono indicati separatamente nel preventivo.
 
 Durata **3 giorni / 2 notti**
@@ -103,9 +105,7 @@ Sì, come supplemento con volo mattutino o auto privata. Allunga di qualche ora 
 
 ## Esplora
 
-Le pagine dei singoli viaggi sono in inglese.
-
-[kemet-travel.com/tour-3-day.html](https://kemet-travel.com/tour-3-day.html)
+[Questa pagina in inglese](https://kemet-travel.com/tour-3-day.html)
 
 ---
 

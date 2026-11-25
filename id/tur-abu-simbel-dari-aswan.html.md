@@ -15,6 +15,8 @@ mulai €160 / orang
 
 mulai 6 orang · tiket masuk tidak termasuk
 
+€176 per orang untuk dua wisatawan
+
 Per orang, musim normal. Biaya tambahan hari libur kami cantumkan terpisah dalam penawaran.
 
 Durasi **Sehari penuh (sekitar 8 jam, dari Aswan)**
@@ -90,9 +92,7 @@ Pada 22 Februari dan 22 Oktober, matahari terbit menembus 60 meter ke dalam Kuil
 
 ## Jelajahi
 
-Halaman rincian tiap perjalanan berbahasa Inggris.
-
-[kemet-travel.com/tour-abu-simbel.html](https://kemet-travel.com/tour-abu-simbel.html)
+[Halaman ini dalam bahasa Inggris](https://kemet-travel.com/tour-abu-simbel.html)
 
 ---
 

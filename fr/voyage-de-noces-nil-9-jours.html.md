@@ -150,9 +150,7 @@ Les vols de Louxor sont assurés par des opérateurs agréés sous contrôle de 
 
 ## Explorer
 
-Les pages de chaque voyage sont en anglais.
-
-[kemet-travel.com/tour-honeymoon-9day.html](https://kemet-travel.com/tour-honeymoon-9day.html)
+[Cette page en anglais](https://kemet-travel.com/tour-honeymoon-9day.html)
 
 ---
 

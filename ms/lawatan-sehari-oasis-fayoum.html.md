@@ -15,6 +15,8 @@ dari €139 / seorang
 
 dari 6 orang · tiket masuk tidak termasuk
 
+€153 seorang bagi dua pengembara
+
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 
 Tempoh **Sehari penuh (lebih kurang 10 jam)**
@@ -99,9 +101,7 @@ Lebih kurang 90 minit hingga dua jam sehala dengan kenderaan persendirian, berga
 
 ## Terokai
 
-Halaman butiran setiap percutian dalam bahasa Inggeris.
-
-[kemet-travel.com/tour-fayoum.html](https://kemet-travel.com/tour-fayoum.html)
+[Halaman ini dalam bahasa Inggeris](https://kemet-travel.com/tour-fayoum.html)
 
 ---
 

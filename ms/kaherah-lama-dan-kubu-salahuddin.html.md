@@ -15,6 +15,8 @@ dari €80 / seorang
 
 dari 6 orang · tiket masuk tidak termasuk
 
+€88 seorang bagi dua pengembara
+
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 
 Tempoh **Sehari penuh (lebih kurang 8 jam)**
@@ -92,9 +94,7 @@ Kami merancang mengikut waktu solat dan sebarang penutupan supaya lawatan anda l
 
 ## Terokai
 
-Halaman butiran setiap percutian dalam bahasa Inggeris.
-
-[kemet-travel.com/tour-religious-citadel.html](https://kemet-travel.com/tour-religious-citadel.html)
+[Halaman ini dalam bahasa Inggeris](https://kemet-travel.com/tour-religious-citadel.html)
 
 ---
 

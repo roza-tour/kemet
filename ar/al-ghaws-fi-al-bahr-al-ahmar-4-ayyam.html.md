@@ -15,6 +15,8 @@ description: "أربع غوصات بالقارب بإشراف مرشد في أف
 
 من 6 أفراد
 
+‏٨٧١ € للفرد، لمسافرَين اثنين
+
 للفرد، في الموسم العادي. رسوم مواسم الأعياد تُذكر منفصلة في عرض السعر.
 
 المدة **٤ أيام / ٣ ليالٍ**
@@ -107,9 +109,7 @@ description: "أربع غوصات بالقارب بإشراف مرشد في أف
 
 ## استكشاف
 
-صفحات تفاصيل كل رحلة بالإنجليزية.
-
-[kemet-travel.com/tour-red-sea-diving-4day.html](https://kemet-travel.com/tour-red-sea-diving-4day.html)
+[هذه الصفحة بالإنجليزية](https://kemet-travel.com/tour-red-sea-diving-4day.html)
 
 ---
 

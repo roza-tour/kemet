@@ -98,6 +98,7 @@ Les autres choix que l'on fait avant de réserver, ainsi que la page originale e
 - [Louxor ou Assouan?](https://kemet-travel.com/fr/louxor-ou-assouan-que-choisir.html)
 - [Musée égyptien ou Grand Musée égyptien?](https://kemet-travel.com/fr/musee-egyptien-ou-grand-musee-egyptien-que-choisir.html)
 - [Charm el-Cheikh ou Hurghada?](https://kemet-travel.com/fr/charm-el-cheikh-ou-hurghada-que-choisir.html)
+- [Voyages en Égypte](https://kemet-travel.com/fr/voyage-egypte.html)
 
 [Cette page en anglais](https://kemet-travel.com/compare/fly-or-sleeper-train.html)
 

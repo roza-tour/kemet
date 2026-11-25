@@ -15,6 +15,8 @@ description: "يومان على المتوسط: مقابر كوم الشقافة
 
 من 6 أفراد
 
+‏٤٤٢ € للفرد، لمسافرَين اثنين
+
 للفرد، في الموسم العادي. رسوم مواسم الأعياد تُذكر منفصلة في عرض السعر.
 
 المدة **يومان / ليلة واحدة**
@@ -95,9 +97,7 @@ description: "يومان على المتوسط: مقابر كوم الشقافة
 
 ## استكشاف
 
-صفحات تفاصيل كل رحلة بالإنجليزية.
-
-[kemet-travel.com/tour-alexandria-2day.html](https://kemet-travel.com/tour-alexandria-2day.html)
+[هذه الصفحة بالإنجليزية](https://kemet-travel.com/tour-alexandria-2day.html)
 
 ---
 

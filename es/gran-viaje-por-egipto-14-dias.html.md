@@ -15,6 +15,8 @@ desde 2.728 € / persona
 
 desde 6 viajeros
 
+3.001 € por persona para dos viajeros
+
 Por persona, en temporada normal. Los suplementos de fechas festivas se indican por separado en el presupuesto.
 
 Duración **14 días / 13 noches**
@@ -185,9 +187,7 @@ Con total libertad. Algunos viajeros la cambian por más noches en Luxor; otros 
 
 ## Explorar
 
-Las páginas de cada viaje están en inglés.
-
-[kemet-travel.com/tour-grand-14day.html](https://kemet-travel.com/tour-grand-14day.html)
+[Esta página en inglés](https://kemet-travel.com/tour-grand-14day.html)
 
 ---
 

@@ -15,6 +15,8 @@ ab 618 € / Person
 
 ab 6 Reisenden
 
+680 € pro Person bei zwei Reisenden
+
 Pro Person, Normalsaison. Zuschläge für Feiertage weisen wir im Angebot getrennt aus.
 
 Dauer **4 Tage / 3 Nächte**
@@ -110,9 +112,7 @@ Etwa zweieinhalb bis drei Stunden pro Richtung auf der Wüstenstraße, im privat
 
 ## Entdecken
 
-Die Reiseverläufe im Detail sind auf Englisch.
-
-[kemet-travel.com/tour-4-day.html](https://kemet-travel.com/tour-4-day.html)
+[Diese Seite auf Englisch](https://kemet-travel.com/tour-4-day.html)
 
 ---
 

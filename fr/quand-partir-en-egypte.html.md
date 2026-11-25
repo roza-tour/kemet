@@ -43,6 +43,21 @@ Noël et le Nouvel An sont les deux semaines les plus chargées et les plus chè
 
 Les 22 février et 22 octobre, le soleil traverse le temple d'Abou Simbel et éclaire le sanctuaire — un alignement calculé il y a plus de trois mille ans. Ces deux matinées sont exceptionnelles et se réservent très longtemps à l'avance. La deuxième date tombe en pleine belle saison, ce qui la rend un peu plus facile à combiner.
 
+## Mois par mois
+
+- [L'Égypte en janvier](https://kemet-travel.com/fr/egypte-en-janvier.html)
+- [L'Égypte en février](https://kemet-travel.com/fr/egypte-en-fevrier.html)
+- [L'Égypte en mars](https://kemet-travel.com/fr/egypte-en-mars.html)
+- [L'Égypte en avril](https://kemet-travel.com/fr/egypte-en-avril.html)
+- [L'Égypte en mai](https://kemet-travel.com/fr/egypte-en-mai.html)
+- [L'Égypte en juin](https://kemet-travel.com/fr/egypte-en-juin.html)
+- [L'Égypte en juillet](https://kemet-travel.com/fr/egypte-en-juillet.html)
+- [L'Égypte en août](https://kemet-travel.com/fr/egypte-en-aout.html)
+- [L'Égypte en septembre](https://kemet-travel.com/fr/egypte-en-septembre.html)
+- [L'Égypte en octobre](https://kemet-travel.com/fr/egypte-en-octobre.html)
+- [L'Égypte en novembre](https://kemet-travel.com/fr/egypte-en-novembre.html)
+- [L'Égypte en décembre](https://kemet-travel.com/fr/egypte-en-decembre.html)
+
 ## Questions fréquentes
 
 ### Peut-on visiter l'Égypte en été?

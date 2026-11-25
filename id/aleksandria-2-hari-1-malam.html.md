@@ -15,6 +15,8 @@ mulai €402 / orang
 
 mulai 6 orang
 
+€442 per orang untuk dua wisatawan
+
 Per orang, musim normal. Biaya tambahan hari libur kami cantumkan terpisah dalam penawaran.
 
 Durasi **2 hari / 1 malam**
@@ -95,9 +97,7 @@ Sangat. Anda memilih ikan per berat dari pajangan es tangkapan hari itu, lalu ik
 
 ## Jelajahi
 
-Halaman rincian tiap perjalanan berbahasa Inggris.
-
-[kemet-travel.com/tour-alexandria-2day.html](https://kemet-travel.com/tour-alexandria-2day.html)
+[Halaman ini dalam bahasa Inggris](https://kemet-travel.com/tour-alexandria-2day.html)
 
 ---
 

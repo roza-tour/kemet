@@ -15,6 +15,8 @@ a partir de € 527 / pessoa
 
 a partir de 6 viajantes
 
+€ 580 por pessoa, para dois viajantes
+
 Por pessoa, em temporada normal. Acréscimos de feriados aparecem separados no orçamento.
 
 Duração **3 dias / 2 noites**
@@ -103,9 +105,7 @@ Sim, como extra opcional, por um voo cedo ou de carro particular. Isso acrescent
 
 ## Explorar
 
-As páginas de cada viagem estão em inglês.
-
-[kemet-travel.com/tour-3-day.html](https://kemet-travel.com/tour-3-day.html)
+[Esta página em inglês](https://kemet-travel.com/tour-3-day.html)
 
 ---
 

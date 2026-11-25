@@ -15,6 +15,8 @@ ab 402 € / Person
 
 ab 6 Reisenden
 
+442 € pro Person bei zwei Reisenden
+
 Pro Person, Normalsaison. Zuschläge für Feiertage weisen wir im Angebot getrennt aus.
 
 Dauer **2 Tage / 1 Nacht**
@@ -95,9 +97,7 @@ Unbedingt. Sie wählen den Fisch nach Gewicht aus der Eisauslage des Tages, und 
 
 ## Entdecken
 
-Die Reiseverläufe im Detail sind auf Englisch.
-
-[kemet-travel.com/tour-alexandria-2day.html](https://kemet-travel.com/tour-alexandria-2day.html)
+[Diese Seite auf Englisch](https://kemet-travel.com/tour-alexandria-2day.html)
 
 ---
 

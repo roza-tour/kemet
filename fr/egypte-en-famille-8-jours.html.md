@@ -15,6 +15,8 @@ Huit jours pensés pour des enfants curieux et des parents détendus — momies,
 
 à partir de 6 voyageurs
 
+1 676 € par personne pour deux voyageurs
+
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
 
 Durée **8 jours / 7 nuits**
@@ -143,9 +145,7 @@ Oui. Les hôtels proposent des plats familiers à côté de la cuisine égyptien
 
 ## Explorer
 
-Les pages de chaque voyage sont en anglais.
-
-[kemet-travel.com/tour-family-8day.html](https://kemet-travel.com/tour-family-8day.html)
+[Cette page en anglais](https://kemet-travel.com/tour-family-8day.html)
 
 ---
 

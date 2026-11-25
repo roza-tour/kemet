@@ -15,6 +15,8 @@ Dix jours sans hâte, des pyramides de Gizeh aux temples de Haute-Égypte, reli�
 
 à partir de 6 voyageurs
 
+2 107 € par personne pour deux voyageurs
+
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
 
 Durée **10 jours / 9 nuits**
@@ -165,9 +167,7 @@ D'octobre à avril, les températures sont agréables au Caire comme en Haute-É
 
 ## Explorer
 
-Les pages de chaque voyage sont en anglais.
-
-[kemet-travel.com/tour-10-day.html](https://kemet-travel.com/tour-10-day.html)
+[Cette page en anglais](https://kemet-travel.com/tour-10-day.html)
 
 ---
 

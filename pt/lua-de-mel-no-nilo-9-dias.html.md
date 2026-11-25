@@ -150,9 +150,7 @@ Os balões de Luxor são operados por empresas licenciadas, sob a supervisão da
 
 ## Explorar
 
-As páginas de cada viagem estão em inglês.
-
-[kemet-travel.com/tour-honeymoon-9day.html](https://kemet-travel.com/tour-honeymoon-9day.html)
+[Esta página em inglês](https://kemet-travel.com/tour-honeymoon-9day.html)
 
 ---
 

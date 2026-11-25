@@ -19,6 +19,63 @@ Mejor época **octubre–abril**
 
 Casi todo aquello por lo que merece la pena detenerse entre Luxor y Asuán está a unos cientos de metros del Nilo. Por eso el río es la carretera, y por eso para ese tramo recomendamos casi siempre el barco. La ventaja real no es la embarcación: es la llegada. Bajan y ya están allí, en lugar de entrar cruzando un aparcamiento de autocares.
 
+## El crucero de cuatro días, día a día
+
+Así es el crucero tal como lo organizamos: tres noches en el río de Asuán a Luxor, con todas las visitas en tierra en privado y con su propio egiptólogo. El barco se comparte; su guía, su vehículo y sus visitas, no.
+
+desde 820 € / persona (desde 6 viajeros). 902 € por persona para dos viajeros. Por persona, en temporada normal. Los suplementos de fechas festivas se indican por separado en el presupuesto.
+
+01
+
+### Día 1 — Asuán — File, la Presa Alta y embarque
+
+- Encuentro privado en Asuán y visita matinal a la Presa Alta y al Obelisco Inacabado
+- En lancha a la isla del templo de File, santuario de Isis
+- Embarque en su crucero antes del almuerzo; tarde libre en la cubierta solárium
+
+02
+
+### Día 2 — Kom Ombo y Edfu
+
+- Navegación matinal hasta Kom Ombo y su templo doble sobre la ribera
+- Continuación hasta Edfu, el templo de Horus, el más completo de Egipto
+- Velada a bordo mientras el barco atraca a los pies de la ciudad del templo
+
+03
+
+### Día 3 — La esclusa de Esna y llegada a Luxor
+
+- Paso por la esclusa de Esna mientras el valle se ensancha hacia Tebas
+- Llegada a Luxor por la tarde; visita opcional y nocturna al templo de Luxor iluminado
+- Última noche a bordo
+
+04
+
+### Día 4 — Luxor — las dos orillas y desembarque
+
+- La gran sala hipóstila de Karnak, con su egiptólogo
+- Cruce a la orilla occidental: el Valle de los Reyes y el templo de Hatshepsut
+- Desembarque y traslado a su hotel, a la estación o al aeropuerto de Luxor
+
+## Incluido
+
+- Guía egiptólogo privado durante todo el viaje
+- Crucero por el Nilo de 3 noches en pensión completa, de Asuán a Luxor
+- Todas las excursiones en tierra como visitas privadas con su propio guía
+- Todas las entradas a yacimientos y monumentos
+- Traslados privados con aire acondicionado
+- Recogida y regreso al hotel
+- Agua embotellada todos los días
+
+## No incluido
+
+- Vuelos internacionales hacia y desde Egipto
+- Visa de entrada a Egipto
+- Propinas
+- Gastos personales
+- Comidas, salvo a bordo del crucero por el Nilo
+- Extras opcionales que decida añadir — actividades, bebidas
+
 01
 
 ## Qué se ve por el camino
@@ -29,7 +86,7 @@ Kom Ombo, el insólito templo doble dedicado al dios cocodrilo Sobek y a Horus e
 
 ## Dahabiya o barco de crucero
 
-Una dahabiya es un velero tradicional, normalmente de ocho a doce camarotes. Fondea en bancos de arena y aldeas a las que los barcos grandes no llegan, lleva una décima parte del pasaje y no tiene programa de animación. Cuesta bastante más. Un barco de crucero de sesenta a ciento cuarenta camarotes es el estándar del mercado, tiene buena disponibilidad y es perfectamente adecuado para un primer viaje. Para el barco reservamos los cruceros de la flota Sonesta; cuál será se confirma con sus fechas. Si el viaje celebra algo, la dahabiya es la mejora que recomendamos antes que cualquier otra.
+Una dahabiya es un velero tradicional, normalmente de ocho a doce camarotes. Fondea en bancos de arena y aldeas a las que los barcos grandes no llegan, lleva una décima parte del pasaje y no tiene programa de animación. Cuesta bastante más. Un barco de crucero de sesenta a ciento cuarenta camarotes es el estándar del mercado, tiene buena disponibilidad y es perfectamente adecuado para un primer viaje. El barco se confirma con sus fechas. Si el viaje celebra algo, la dahabiya es la mejora que recomendamos antes que cualquier otra.
 
 03
 

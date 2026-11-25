@@ -1,5 +1,5 @@
 ---
-title: "Family Egypt: Pyramids to the Nile — 8 Days / 7 Nights | Kemet"
+title: "8-Day Egypt Family Tour: Pyramids, Luxor & Aswan | Kemet"
 url: https://kemet-travel.com/tour-family-8day.html
 language: en
 description: "Egypt with children done right: short guided mornings, family-specialist Egyptologists, pool afternoons — private, from €1,524 pp."
@@ -13,7 +13,7 @@ Eight days engineered for curious kids and unhurried parents — mummies, felucc
 
 ## What does Family Egypt: Pyramids to the Nile include, and what does it cost?
 
-Family Egypt: Pyramids to the Nile is a private 8-day, 7-night journey through Cairo, Giza, Luxor and Aswan, from €1,524 per person for a party of 6 or more. It includes a private family-specialist Egyptologist throughout; 7 nights' accommodation — family suites or connecting rooms; and domestic flights Cairo–Luxor and Aswan–Cairo. International flights are not included.
+Family Egypt: Pyramids to the Nile is a private 8-day, 7-night journey through Cairo, Giza, Luxor and Aswan, from €1,524 per person for a party of 6 or more, or €1,676 per person for two. It includes a private family-specialist Egyptologist throughout and 7 nights' accommodation — family suites or connecting rooms. International flights are not included.
 
 ## Overview
 
@@ -155,6 +155,8 @@ From
 per person · EUR
 
 Based on a private party of 6 or more.
+
+For two travellers: €1,676 per person.
 
 [Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Family+Egypt%3A+Pyramids+to+the+Nile&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Family+Egypt%3A+Pyramids+to+the+Nile%22+journey+%288+Days+%2F+7+Nights%2C+from+%E2%82%AC1%2C524+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 

@@ -1,5 +1,5 @@
 ---
-title: "Nile in Style: Aswan to Luxor — 4 Days / 3 Nights | Kemet"
+title: "4-Day Nile Cruise Aswan to Luxor, Privately Guided | Kemet"
 url: https://kemet-travel.com/tour-nile-cruise.html
 language: en
 description: "The essential Nile cruise, done properly — Philae and the High Dam, three nights afloat past Kom Ombo and Edfu — private, from €820 pp."
@@ -13,11 +13,11 @@ Three nights on the river between Aswan and Luxor, with Kom Ombo and Edfu unlock
 
 ## What does Nile in Style: Aswan to Luxor include, and what does it cost?
 
-Nile in Style: Aswan to Luxor is a private 4-day, 3-night journey through Aswan, Kom Ombo, Edfu and Luxor, from €820 per person for a party of 6 or more. It includes a private Egyptologist guide throughout; 3-night full-board Nile cruise, Aswan to Luxor; and all shore excursions as private visits with your own guide. International flights are not included.
+Nile in Style: Aswan to Luxor is a private 4-day, 3-night journey through Aswan, Kom Ombo, Edfu and Luxor, from €820 per person for a party of 6 or more, or €902 per person for two. It includes a private Egyptologist guide throughout and 3-night full-board Nile cruise, Aswan to Luxor. International flights are not included.
 
 ## Overview
 
-Two hundred kilometres of river separate Aswan from Luxor, and for three thousand years this was Egypt's highway of kings. This journey covers it the only way it should be covered: slowly, by water. You board in Aswan after visiting the island Temple of Philae and the High Dam, then sail north with stops at Kom Ombo — the twin temple shared by the crocodile god Sobek and Horus the Elder — and Edfu, the best-preserved temple in Egypt. The cruise ends in Luxor with a private programme across both banks: Karnak on the east, the Valley of the Kings and Hatshepsut's terraces on the west — and, on your last evening aboard, Luxor Temple under floodlights if you wish. You sail aboard one of the Sonesta ships on the Nile; which one is confirmed with your dates. Your Egyptologist sails with you, so every stop is guided privately even though the vessel itself is shared.
+Two hundred kilometres of river separate Aswan from Luxor, and for three thousand years this was Egypt's highway of kings. This journey covers it the only way it should be covered: slowly, by water. You board in Aswan after visiting the island Temple of Philae and the High Dam, then sail north with stops at Kom Ombo — the twin temple shared by the crocodile god Sobek and Horus the Elder — and Edfu, the best-preserved temple in Egypt. The cruise ends in Luxor with a private programme across both banks: Karnak on the east, the Valley of the Kings and Hatshepsut's terraces on the west — and, on your last evening aboard, Luxor Temple under floodlights if you wish. The ship is confirmed with your dates. Your Egyptologist sails with you, so every stop is guided privately even though the vessel itself is shared.
 
 ## Itinerary
 
@@ -121,6 +121,8 @@ From
 per person · EUR
 
 Based on a private party of 6 or more.
+
+For two travellers: €902 per person.
 
 [Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Nile+in+Style%3A+Aswan+to+Luxor&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Nile+in+Style%3A+Aswan+to+Luxor%22+journey+%284+Days+%2F+3+Nights%2C+from+%E2%82%AC820+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 

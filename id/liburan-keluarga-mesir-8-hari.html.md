@@ -15,6 +15,8 @@ mulai €1.524 / orang
 
 mulai 6 orang
 
+€1.676 per orang untuk dua wisatawan
+
 Per orang, musim normal. Biaya tambahan hari libur kami cantumkan terpisah dalam penawaran.
 
 Durasi **8 Hari / 7 Malam**
@@ -143,9 +145,7 @@ Ya. Hotel menyediakan pilihan yang akrab di lidah di samping hidangan Mesir, dan
 
 ## Jelajahi
 
-Halaman rincian tiap perjalanan berbahasa Inggris.
-
-[kemet-travel.com/tour-family-8day.html](https://kemet-travel.com/tour-family-8day.html)
+[Halaman ini dalam bahasa Inggris](https://kemet-travel.com/tour-family-8day.html)
 
 ---
 

@@ -15,6 +15,8 @@ desde 1.179 € / persona
 
 desde 6 viajeros
 
+1.297 € por persona para dos viajeros
+
 Por persona, en temporada normal. Los suplementos de fechas festivas se indican por separado en el presupuesto.
 
 Duración **7 días / 6 noches**
@@ -135,9 +137,7 @@ Por supuesto: muchos viajeros añaden un crucero de 3 o 4 noches entre Asuán y 
 
 ## Explorar
 
-Las páginas de cada viaje están en inglés.
-
-[kemet-travel.com/tour-7-day.html](https://kemet-travel.com/tour-7-day.html)
+[Esta página en inglés](https://kemet-travel.com/tour-7-day.html)
 
 ---
 

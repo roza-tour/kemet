@@ -83,6 +83,7 @@ description: "Второй раз в Египте: Абидос, Дендера,
 - [Годовщины и юбилеи](https://kemet-travel.com/ru/yubiley-i-godovshchina-svadby-v-egipte.html)
 - [Частная группа, а не групповой тур](https://kemet-travel.com/ru/chastnaya-gruppa-v-egipte.html)
 - [Три поколения, одно путешествие](https://kemet-travel.com/ru/egipet-s-tremya-pokoleniyami-semi.html)
+- [Туры в Египет](https://kemet-travel.com/ru/tury-v-egipet.html)
 
 [Эта страница на английском](https://kemet-travel.com/occasions/returning-to-egypt.html)
 

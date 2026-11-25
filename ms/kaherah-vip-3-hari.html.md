@@ -15,6 +15,8 @@ dari €600 / seorang
 
 dari 6 orang
 
+€660 seorang bagi dua pengembara
+
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 
 Tempoh **3 hari / 2 malam**
@@ -103,9 +105,7 @@ Cukup untuk perkara terpenting yang dibuat dengan baik, dan itulah janji laluan 
 
 ## Terokai
 
-Halaman butiran setiap percutian dalam bahasa Inggeris.
-
-[kemet-travel.com/tour-cairo-vip-3day.html](https://kemet-travel.com/tour-cairo-vip-3day.html)
+[Halaman ini dalam bahasa Inggeris](https://kemet-travel.com/tour-cairo-vip-3day.html)
 
 ---
 

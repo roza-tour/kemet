@@ -56,6 +56,16 @@ Kemet trabaja en el segmento alto del mercado egipcio y lo decimos sin rodeos. U
 - Albergues, habitaciones compartidas y rutas de mochilero
 - Viajeros que prefieren organizarse ellos mismos la logística
 
+## Guías de viaje
+
+- [Guía de viaje a Egipto](https://kemet-travel.com/es/guia-de-viaje-egipto.html)
+- [Mejor época para viajar a Egipto](https://kemet-travel.com/es/cuando-viajar-a-egipto-mejor-epoca.html)
+- [El itinerario ideal de 10 días por Egipto](https://kemet-travel.com/es/itinerario-egipto-10-dias.html)
+- [Dónde alojarse en Egipto: los mejores hoteles, ciudad por ciudad](https://kemet-travel.com/es/donde-alojarse-en-egipto-mejores-hoteles.html)
+- [Cómo moverse por Egipto](https://kemet-travel.com/es/como-moverse-por-egipto-transporte.html)
+- [Guía de la comida egipcia](https://kemet-travel.com/es/guia-gastronomia-egipcia-que-comer.html)
+- [Qué llevar a Egipto](https://kemet-travel.com/es/que-llevar-en-la-maleta-a-egipto.html)
+
 ## Preguntas frecuentes
 
 ### ¿Cuánto cuesta un viaje privado a Egipto?

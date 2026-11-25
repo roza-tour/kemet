@@ -1,5 +1,5 @@
 ---
-title: "Dive the Red Sea — 4 Days / 3 Nights | Kemet"
+title: "4-Day Red Sea Diving Trip, Sharm El Sheikh | Kemet"
 url: https://kemet-travel.com/tour-red-sea-diving-4day.html
 language: en
 description: "Four guided boat dives across the two best site groups in Sinai — Ras Mohammed and Tiran — with a PADI centre we have vetted — private, from €792 pp."
@@ -13,7 +13,7 @@ Four days built around bottom time — Ras Mohammed's walls, the Strait of Tiran
 
 ## What does Dive the Red Sea include, and what does it cost?
 
-Dive the Red Sea is a private 4-day, 3-night journey through Sharm El Sheikh, Ras Mohammed and Tiran, from €792 per person for a party of 6 or more. It includes 3 nights in a Red Sea resort and 5 guided dives (1 check dive + 2 two-dive boat days) with a licensed PADI centre. International flights are not included.
+Dive the Red Sea is a private 4-day, 3-night journey through Sharm El Sheikh, Ras Mohammed and Tiran, from €792 per person for a party of 6 or more, or €871 per person for two. It includes 3 nights in a Red Sea resort. International flights are not included.
 
 ## Overview
 
@@ -119,6 +119,8 @@ From
 per person · EUR
 
 Based on a private party of 6 or more.
+
+For two travellers: €871 per person.
 
 [Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Dive+the+Red+Sea&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Dive+the+Red+Sea%22+journey+%284+Days+%2F+3+Nights%2C+from+%E2%82%AC792+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 

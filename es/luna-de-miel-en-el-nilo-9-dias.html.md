@@ -150,9 +150,7 @@ Los vuelos en globo de Luxor los realizan operadores con licencia bajo la superv
 
 ## Explorar
 
-Las páginas de cada viaje están en inglés.
-
-[kemet-travel.com/tour-honeymoon-9day.html](https://kemet-travel.com/tour-honeymoon-9day.html)
+[Esta página en inglés](https://kemet-travel.com/tour-honeymoon-9day.html)
 
 ---
 

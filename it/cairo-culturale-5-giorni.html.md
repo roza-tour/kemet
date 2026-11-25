@@ -15,6 +15,8 @@ da 875 € / persona
 
 da 6 viaggiatori
 
+963 € a persona per due viaggiatori
+
 A persona, in stagione normale. I supplementi delle festività sono indicati separatamente nel preventivo.
 
 Durata **5 giorni / 4 notti**
@@ -119,9 +121,7 @@ Sì — una sesta giornata sul Mediterraneo prolunga questo viaggio in modo natu
 
 ## Esplora
 
-Le pagine dei singoli viaggi sono in inglese.
-
-[kemet-travel.com/tour-cairo-culture-5day.html](https://kemet-travel.com/tour-cairo-culture-5day.html)
+[Questa pagina in inglese](https://kemet-travel.com/tour-cairo-culture-5day.html)
 
 ---
 

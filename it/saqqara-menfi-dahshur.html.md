@@ -15,6 +15,8 @@ da 68 € / persona
 
 da 6 viaggiatori · biglietti non inclusi
 
+75 € a persona per due viaggiatori
+
 A persona, in stagione normale. I supplementi delle festività sono indicati separatamente nel preventivo.
 
 Durata **Giornata intera (≈8 ore)**
@@ -92,9 +94,7 @@ Sì — la piramide rossa è generalmente aperta, con un corridoio in discesa da
 
 ## Esplora
 
-Le pagine dei singoli viaggi sono in inglese.
-
-[kemet-travel.com/tour-saqqara.html](https://kemet-travel.com/tour-saqqara.html)
+[Questa pagina in inglese](https://kemet-travel.com/tour-saqqara.html)
 
 ---
 

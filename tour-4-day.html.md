@@ -1,5 +1,5 @@
 ---
-title: "From Pyramids to the Sea — 4 Days / 3 Nights | Kemet"
+title: "4-Day Cairo & Alexandria Private Tour | Kemet"
 url: https://kemet-travel.com/tour-4-day.html
 language: en
 description: "A compact northern journey — the Egyptian Museum, Alexandria's Greco-Roman layers, the Pyramids of Giza and medieval Cairo — private, from €618 pp."
@@ -13,7 +13,7 @@ Four days pairing the monuments of Cairo and Giza with a day on the Mediterranea
 
 ## What does From Pyramids to the Sea include, and what does it cost?
 
-From Pyramids to the Sea is a private 4-day, 3-night journey through Cairo, Giza and Alexandria, from €618 per person for a party of 6 or more. It includes a private Egyptologist guide throughout; 3 nights' hotel accommodation; all entrance fees to sites and monuments; and private air-conditioned transfers. International flights are not included.
+From Pyramids to the Sea is a private 4-day, 3-night journey through Cairo, Giza and Alexandria, from €618 per person for a party of 6 or more, or €680 per person for two. It includes a private Egyptologist guide throughout; 3 nights' hotel accommodation; all entrance fees to sites and monuments; and private air-conditioned transfers. International flights are not included.
 
 ## Overview
 
@@ -122,6 +122,8 @@ From
 per person · EUR
 
 Based on a private party of 6 or more.
+
+For two travellers: €680 per person.
 
 [Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+From+Pyramids+to+the+Sea&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22From+Pyramids+to+the+Sea%22+journey+%284+Days+%2F+3+Nights%2C+from+%E2%82%AC618+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 

@@ -15,6 +15,8 @@ mulai €792 / orang
 
 mulai 6 orang
 
+€871 per orang untuk dua wisatawan
+
 Per orang, musim normal. Biaya tambahan hari libur kami cantumkan terpisah dalam penawaran.
 
 Durasi **4 hari / 3 malam**
@@ -107,9 +109,7 @@ Di Ras Mohammed: dinding karang lunak yang rapat, awan ikan anthias, ikan napole
 
 ## Jelajahi
 
-Halaman rincian tiap perjalanan berbahasa Inggris.
-
-[kemet-travel.com/tour-red-sea-diving-4day.html](https://kemet-travel.com/tour-red-sea-diving-4day.html)
+[Halaman ini dalam bahasa Inggris](https://kemet-travel.com/tour-red-sea-diving-4day.html)
 
 ---
 

@@ -150,9 +150,7 @@ Belon udara panas di Luxor dikendalikan oleh pengendali berlesen di bawah pengaw
 
 ## Terokai
 
-Halaman butiran setiap percutian dalam bahasa Inggeris.
-
-[kemet-travel.com/tour-honeymoon-9day.html](https://kemet-travel.com/tour-honeymoon-9day.html)
+[Halaman ini dalam bahasa Inggeris](https://kemet-travel.com/tour-honeymoon-9day.html)
 
 ---
 

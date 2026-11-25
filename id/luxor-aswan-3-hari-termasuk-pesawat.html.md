@@ -15,6 +15,8 @@ mulai €527 / orang
 
 mulai 6 orang
 
+€580 per orang untuk dua wisatawan
+
 Per orang, musim normal. Biaya tambahan hari libur kami cantumkan terpisah dalam penawaran.
 
 Durasi **3 hari / 2 malam**
@@ -103,9 +105,7 @@ Bisa, sebagai tambahan opsional dengan penerbangan pagi atau mobil pribadi. Ini 
 
 ## Jelajahi
 
-Halaman rincian tiap perjalanan berbahasa Inggris.
-
-[kemet-travel.com/tour-3-day.html](https://kemet-travel.com/tour-3-day.html)
+[Halaman ini dalam bahasa Inggris](https://kemet-travel.com/tour-3-day.html)
 
 ---
 

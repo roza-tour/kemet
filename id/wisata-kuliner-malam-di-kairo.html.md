@@ -15,6 +15,8 @@ mulai €59 / orang
 
 mulai 6 orang
 
+€65 per orang untuk dua wisatawan
+
 Per orang, musim normal. Biaya tambahan hari libur kami cantumkan terpisah dalam penawaran. Makanan dan minuman tidak termasuk: dibayar langsung di setiap persinggahan.
 
 Durasi **Malam (sekitar 4 jam)**
@@ -117,9 +119,7 @@ Anda sendiri yang menentukan berapa banyak memesan di setiap persinggahan, dan d
 
 ## Jelajahi
 
-Halaman rincian tiap perjalanan berbahasa Inggris.
-
-[kemet-travel.com/tour-cairo-food.html](https://kemet-travel.com/tour-cairo-food.html)
+[Halaman ini dalam bahasa Inggris](https://kemet-travel.com/tour-cairo-food.html)
 
 ---
 

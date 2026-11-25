@@ -15,6 +15,8 @@ desde 1.419 € / persona
 
 desde 6 viajeros
 
+1.561 € por persona para dos viajeros
+
 Por persona, en temporada normal. Los suplementos de fechas festivas se indican por separado en el presupuesto.
 
 Duración **7 días / 6 noches**
@@ -140,9 +142,7 @@ Sí, de verdad. El programa significa simplemente ver los lugares en sus horas m
 
 ## Explorar
 
-Las páginas de cada viaje están en inglés.
-
-[kemet-travel.com/tour-photography-7day.html](https://kemet-travel.com/tour-photography-7day.html)
+[Esta página en inglés](https://kemet-travel.com/tour-photography-7day.html)
 
 ---
 

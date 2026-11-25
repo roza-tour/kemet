@@ -15,6 +15,8 @@ dari €57 / seorang
 
 dari 6 orang · tiket masuk tidak termasuk
 
+€63 seorang bagi dua pengembara
+
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 
 Tempoh **Sehari penuh (lebih kurang 11 jam)**
@@ -92,9 +94,7 @@ Sangat berbaloi — seni binanya sahaja sudah mengagumkan, dan bangunan itu seng
 
 ## Terokai
 
-Halaman butiran setiap percutian dalam bahasa Inggeris.
-
-[kemet-travel.com/tour-alexandria.html](https://kemet-travel.com/tour-alexandria.html)
+[Halaman ini dalam bahasa Inggeris](https://kemet-travel.com/tour-alexandria.html)
 
 ---
 

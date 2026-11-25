@@ -88,6 +88,7 @@ Verwandte Seiten in dieser Sprache sowie die englische Originalseite.
 - [Jahrestage und runde Geburtstage](https://kemet-travel.com/de/jubilaeum-reise-aegypten.html)
 - [Eine private Gruppe, keine Gruppenreise](https://kemet-travel.com/de/private-gruppenreise-aegypten.html)
 - [Wieder nach Ägypten](https://kemet-travel.com/de/zweite-reise-aegypten.html)
+- [Ägypten-Reisen](https://kemet-travel.com/de/aegypten-reisen.html)
 
 [Diese Seite auf Englisch](https://kemet-travel.com/occasions/three-generations-egypt.html)
 

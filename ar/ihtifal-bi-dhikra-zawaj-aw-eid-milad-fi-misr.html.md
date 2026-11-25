@@ -83,6 +83,7 @@ description: "التخطيط لعيد ميلاد مفصلي أو ذكرى زوا
 - [مجموعة خاصة لا رحلة جماعية](https://kemet-travel.com/ar/rehla-khassa-li-majmoua-fi-misr.html)
 - [العودة إلى مصر](https://kemet-travel.com/ar/al-awda-ila-misr-zyara-thaniya.html)
 - [ثلاثة أجيال في رحلة واحدة](https://kemet-travel.com/ar/rehla-al-ajyal-al-thalatha-fi-misr.html)
+- [الرحلات](https://kemet-travel.com/ar/rehlat-masr-khassa.html)
 
 [هذه الصفحة بالإنجليزية](https://kemet-travel.com/occasions/anniversary-in-egypt.html)
 

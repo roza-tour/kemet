@@ -15,6 +15,8 @@ Une semaine qui rassemble l'essentiel — Le Caire, Alexandrie et Louxor — ave
 
 à partir de 6 voyageurs
 
+1 297 € par personne pour deux voyageurs
+
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
 
 Durée **7 jours / 6 nuits**
@@ -135,9 +137,7 @@ Tout à fait — beaucoup de voyageurs ajoutent trois ou quatre nuits entre Asso
 
 ## Explorer
 
-Les pages de chaque voyage sont en anglais.
-
-[kemet-travel.com/tour-7-day.html](https://kemet-travel.com/tour-7-day.html)
+[Cette page en anglais](https://kemet-travel.com/tour-7-day.html)
 
 ---
 

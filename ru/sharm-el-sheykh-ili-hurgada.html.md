@@ -93,6 +93,7 @@ description: "Шарм-эль-Шейх или Хургада для отдыха
 - [Дахабия или круизный лайнер?](https://kemet-travel.com/ru/dahabiya-ili-kruiznyy-lajner.html)
 - [Луксор или Асуан?](https://kemet-travel.com/ru/luksor-ili-asuan.html)
 - [Египетский музей или Большой Египетский музей?](https://kemet-travel.com/ru/egipetskiy-muzey-ili-bolshoy-egipetskiy-muzey.html)
+- [Туры в Египет](https://kemet-travel.com/ru/tury-v-egipet.html)
 
 [Эта страница на английском](https://kemet-travel.com/compare/sharm-el-sheikh-vs-hurghada.html)
 

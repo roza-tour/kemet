@@ -15,6 +15,8 @@ ab 792 € / Person
 
 ab 6 Reisenden
 
+871 € pro Person bei zwei Reisenden
+
 Pro Person, Normalsaison. Zuschläge für Feiertage weisen wir im Angebot getrennt aus.
 
 Dauer **4 Tage / 3 Nächte**
@@ -107,9 +109,7 @@ Dichte Weichkorallenwände, Anthiaswolken, Napoleon-Lippfische, Schildkröten un
 
 ## Entdecken
 
-Die Reiseverläufe im Detail sind auf Englisch.
-
-[kemet-travel.com/tour-red-sea-diving-4day.html](https://kemet-travel.com/tour-red-sea-diving-4day.html)
+[Diese Seite auf Englisch](https://kemet-travel.com/tour-red-sea-diving-4day.html)
 
 ---
 

@@ -98,6 +98,7 @@ description: "الطيران أم قطار النوم الليلي من القا
 - [الأقصر أم أسوان؟](https://kemet-travel.com/ar/al-uqsur-am-aswan-ayyuhuma-afdal.html)
 - [المتحف المصري أم المتحف المصري الكبير؟](https://kemet-travel.com/ar/al-mathaf-al-misri-am-al-mathaf-al-misri-al-kabir.html)
 - [شرم الشيخ أم الغردقة؟](https://kemet-travel.com/ar/sharm-al-sheikh-am-al-ghardaqa.html)
+- [الرحلات](https://kemet-travel.com/ar/rehlat-masr-khassa.html)
 
 [هذه الصفحة بالإنجليزية](https://kemet-travel.com/compare/fly-or-sleeper-train.html)
 

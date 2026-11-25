@@ -291,6 +291,23 @@ Os templos colossais de Ramsés II escavados na rocha — talhados numa encosta 
 
 € 160 / pessoa a partir de 6 viajantes · ingressos não incluídos
 
+## Compare as opções
+
+- [Voo ou trem-leito para Luxor e Assuã?](https://kemet-travel.com/pt/voo-ou-trem-noturno-luxor-assua.html)
+- [Cruzeiro no Nilo ou roteiro por terra?](https://kemet-travel.com/pt/cruzeiro-no-nilo-ou-roteiro-por-terra.html)
+- [Dahabiya ou navio de cruzeiro?](https://kemet-travel.com/pt/dahabiya-ou-navio-de-cruzeiro-nilo.html)
+- [Luxor ou Assuã?](https://kemet-travel.com/pt/luxor-ou-assua-qual-escolher.html)
+- [Museu Egípcio ou Grande Museu Egípcio?](https://kemet-travel.com/pt/museu-egipcio-ou-grande-museu-egipcio.html)
+- [Sharm el-Sheikh ou Hurghada?](https://kemet-travel.com/pt/sharm-el-sheikh-ou-hurghada-mar-vermelho.html)
+
+## Por ocasião
+
+- [Pedido de casamento no Egito](https://kemet-travel.com/pt/pedido-de-casamento-no-egito.html)
+- [Bodas e aniversários especiais](https://kemet-travel.com/pt/aniversario-de-casamento-e-bodas-no-egito.html)
+- [Um grupo privativo, não uma excursão](https://kemet-travel.com/pt/viagem-privativa-em-grupo-egito.html)
+- [Voltar ao Egito](https://kemet-travel.com/pt/segunda-viagem-ao-egito.html)
+- [Três gerações, uma só viagem](https://kemet-travel.com/pt/viagem-ao-egito-tres-geracoes.html)
+
 ## Perguntas frequentes
 
 ### Quantos dias são necessários para conhecer o Egito?

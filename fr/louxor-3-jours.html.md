@@ -15,6 +15,8 @@ Trois jours dans le plus grand musée à ciel ouvert du monde — les deux rives
 
 à partir de 6 voyageurs
 
+598 € par personne pour deux voyageurs
+
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
 
 Durée **3 jours / 2 nuits**
@@ -104,9 +106,7 @@ En avion (55 minutes) ou en train de nuit, dans un sens comme dans l'autre. La p
 
 ## Explorer
 
-Les pages de chaque voyage sont en anglais.
-
-[kemet-travel.com/tour-luxor-3day.html](https://kemet-travel.com/tour-luxor-3day.html)
+[Cette page en anglais](https://kemet-travel.com/tour-luxor-3day.html)
 
 ---
 

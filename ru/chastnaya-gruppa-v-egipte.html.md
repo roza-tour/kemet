@@ -81,6 +81,7 @@ description: "Частные групповые поездки по Египту
 - [Годовщины и юбилеи](https://kemet-travel.com/ru/yubiley-i-godovshchina-svadby-v-egipte.html)
 - [Возвращение в Египет](https://kemet-travel.com/ru/povtornaya-poezdka-v-egipet.html)
 - [Три поколения, одно путешествие](https://kemet-travel.com/ru/egipet-s-tremya-pokoleniyami-semi.html)
+- [Туры в Египет](https://kemet-travel.com/ru/tury-v-egipet.html)
 
 [Эта страница на английском](https://kemet-travel.com/occasions/private-group-egypt.html)
 

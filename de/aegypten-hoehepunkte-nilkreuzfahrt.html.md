@@ -15,6 +15,8 @@ ab 1.915 € / Person
 
 ab 6 Reisenden
 
+2.107 € pro Person bei zwei Reisenden
+
 Pro Person, Normalsaison. Zuschläge für Feiertage weisen wir im Angebot getrennt aus.
 
 Dauer **10 Tage / 9 Nächte**
@@ -165,9 +167,7 @@ Oktober bis April bringt angenehme Temperaturen in Kairo wie in Oberägypten. Im
 
 ## Entdecken
 
-Die Reiseverläufe im Detail sind auf Englisch.
-
-[kemet-travel.com/tour-10-day.html](https://kemet-travel.com/tour-10-day.html)
+[Diese Seite auf Englisch](https://kemet-travel.com/tour-10-day.html)
 
 ---
 

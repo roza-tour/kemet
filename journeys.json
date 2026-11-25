@@ -2,10 +2,52 @@
   "name": "Kemet — private journeys in Egypt, the catalogue",
   "url": "https://kemet-travel.com/journeys.json",
   "about": "Kemet plans private journeys in Egypt: a licensed Egyptologist from our own team, a private vehicle and driver, hotels chosen for the room, and a real day-by-day itinerary with a clear price within one working day. These are the journeys with a published price; any of them can be lengthened, shortened or combined.",
-  "forAssistants": "Prices are from-prices in euros per person and are the same in every language. Quote them as 'from', link the page in the traveller's language where `pages` has one, and send the traveller to the page for what is included. A journey that is not listed can still be planned — the catalogue is a starting point, not a limit.",
+  "forAssistants": "Prices are from-prices in euros per person and are the same in every language. `priceFrom` is for a private party of six or more unless its `basis` says otherwise; `priceForTwo`, where given, is what each of two travellers pays (the published price plus ten per cent). Quote the one that fits the party, say which it is, link the page in the traveller's language where `pages` has one, and send the traveller to the page for what is included. A journey that is not listed can still be planned — the catalogue is a starting point, not a limit.",
   "enquire": {
     "page": "https://kemet-travel.com/contact.html",
     "whatsapp": "https://wa.me/201158367162",
+    "greeting": {
+      "en": {
+        "hello": "Hello Kemet.",
+        "about": "Hello Kemet — I am asking about \"%s\"."
+      },
+      "de": {
+        "hello": "Guten Tag Kemet.",
+        "about": "Guten Tag Kemet — ich interessiere mich für „%s“."
+      },
+      "it": {
+        "hello": "Buongiorno Kemet.",
+        "about": "Buongiorno Kemet — vorrei informazioni su \"%s\"."
+      },
+      "es": {
+        "hello": "Hola, Kemet.",
+        "about": "Hola, Kemet: les escribo para consultar sobre «%s»."
+      },
+      "fr": {
+        "hello": "Bonjour Kemet.",
+        "about": "Bonjour Kemet — je vous écris au sujet de « %s »."
+      },
+      "ru": {
+        "hello": "Здравствуйте, Kemet.",
+        "about": "Здравствуйте, Kemet! Меня интересует «%s»."
+      },
+      "id": {
+        "hello": "Halo Kemet.",
+        "about": "Halo Kemet — saya ingin bertanya tentang \"%s\"."
+      },
+      "ms": {
+        "hello": "Helo Kemet.",
+        "about": "Helo Kemet — saya ingin bertanya tentang \"%s\"."
+      },
+      "pt": {
+        "hello": "Olá, Kemet.",
+        "about": "Olá, Kemet — gostaria de informações sobre \"%s\"."
+      },
+      "ar": {
+        "hello": "مرحبًا Kemet.",
+        "about": "مرحبًا Kemet — أستفسر عن «%s»."
+      }
+    },
     "email": "info@kemet-travel.com"
   },
   "count": 25,
@@ -29,7 +71,14 @@
       "priceFrom": {
         "amount": 1915,
         "currency": "EUR",
-        "per": "person"
+        "per": "person",
+        "basis": "a private party of 6 or more"
+      },
+      "priceForTwo": {
+        "amount": 2107,
+        "currency": "EUR",
+        "per": "person",
+        "basis": "a private party of two"
       },
       "summary": "Our signature journey: Cairo, Alexandria, a sleeper train south, and a three-night Nile cruise from Aswan to Luxor — every layer of Egypt in one arc.",
       "pages": {
@@ -43,6 +92,53 @@
         "ms": "https://kemet-travel.com/ms/pakej-mesir-10-hari-pelayaran-nil.html",
         "pt": "https://kemet-travel.com/pt/egito-10-dias-com-cruzeiro-no-nilo.html",
         "ar": "https://kemet-travel.com/ar/masr-10-ayyam-maa-rehla-niliya.html"
+      },
+      "i18n": {
+        "de": {
+          "name": "Ägyptens Höhepunkte & Nilkreuzfahrt",
+          "summary": "Unsere Signature-Reise: Kairo, Alexandria, mit dem Nachtzug nach Süden und drei Nächte auf dem Nil von Assuan nach Luxor — jede Schicht Ägyptens in einem Bogen.",
+          "duration": "10 Tage / 9 Nächte"
+        },
+        "it": {
+          "name": "L'Egitto essenziale & crociera sul Nilo",
+          "summary": "Il nostro viaggio signature: Il Cairo, Alessandria, un treno notturno verso sud e tre notti di crociera da Assuan a Luxor — ogni strato dell'Egitto in un solo arco.",
+          "duration": "10 giorni / 9 notti"
+        },
+        "es": {
+          "name": "Iconos de Egipto y crucero por el Nilo",
+          "summary": "Nuestro viaje insignia: El Cairo, Alejandría, un tren nocturno hacia el sur y tres noches de crucero por el Nilo de Asuán a Luxor; todas las capas de Egipto en un solo recorrido.",
+          "duration": "10 días / 9 noches"
+        },
+        "fr": {
+          "name": "L'Égypte essentielle & croisière sur le Nil",
+          "summary": "Notre voyage signature : Le Caire, Alexandrie, un train de nuit vers le sud et trois nuits de croisière d'Assouan à Louxor — toutes les couches de l'Égypte en un seul arc.",
+          "duration": "10 jours / 9 nuits"
+        },
+        "ru": {
+          "name": "Символы Египта и круиз по Нилу",
+          "summary": "Наше фирменное путешествие: Каир, Александрия, спальный поезд на юг и три ночи круиза по Нилу из Асуана в Луксор — все пласты Египта на одном маршруте.",
+          "duration": "10 дней / 9 ночей"
+        },
+        "id": {
+          "name": "Ikon Mesir & Pesiar Sungai Nil",
+          "summary": "Perjalanan unggulan kami: Kairo, Alexandria, kereta tidur ke selatan, dan tiga malam pesiar Nil dari Aswan ke Luxor — seluruh lapisan Mesir dalam satu alur.",
+          "duration": "10 Hari / 9 Malam"
+        },
+        "ms": {
+          "name": "Ikon Mesir & Pelayaran Sungai Nil",
+          "summary": "Perjalanan istimewa kami: Kaherah, Alexandria, kereta api tidur ke selatan, dan tiga malam pelayaran Sungai Nil dari Aswan ke Luxor — setiap lapisan Mesir dalam satu perjalanan yang bersambung.",
+          "duration": "10 hari / 9 malam"
+        },
+        "pt": {
+          "name": "Ícones do Egito e cruzeiro pelo Nilo",
+          "summary": "A nossa viagem assinatura: Cairo, Alexandria, um trem-leito rumo ao sul e um cruzeiro de três noites pelo Nilo, de Assuã a Luxor — todas as camadas do Egito num só arco.",
+          "duration": "10 dias / 9 noites"
+        },
+        "ar": {
+          "name": "أيقونات مصر ورحلة النيل",
+          "summary": "رحلتنا المميزة: القاهرة، والإسكندرية، وقطار النوم جنوبًا، ورحلة نيلية من ثلاث ليالٍ من أسوان إلى الأقصر — طبقات مصر كلها في مسار واحد.",
+          "duration": "١٠ أيام / ٩ ليالٍ"
+        }
       }
     },
     {
@@ -63,7 +159,14 @@
       "priceFrom": {
         "amount": 1179,
         "currency": "EUR",
-        "per": "person"
+        "per": "person",
+        "basis": "a private party of 6 or more"
+      },
+      "priceForTwo": {
+        "amount": 1297,
+        "currency": "EUR",
+        "per": "person",
+        "basis": "a private party of two"
       },
       "summary": "The headline acts of Egypt in seven days — the Egyptian Museum, Alexandria, the temples and tombs of Luxor, and the Pyramids of Giza.",
       "pages": {
@@ -77,6 +180,53 @@
         "ms": "https://kemet-travel.com/ms/pakej-mesir-7-hari.html",
         "pt": "https://kemet-travel.com/pt/egito-em-7-dias.html",
         "ar": "https://kemet-travel.com/ar/abraz-maalim-masr-7-ayyam.html"
+      },
+      "i18n": {
+        "de": {
+          "name": "Ägyptens Höhepunkte Deluxe",
+          "summary": "Die großen Namen Ägyptens in sieben Tagen — das Ägyptische Museum, Alexandria, die Tempel und Gräber von Luxor und die Pyramiden von Gizeh.",
+          "duration": "7 Tage / 6 Nächte"
+        },
+        "it": {
+          "name": "L'Egitto essenziale, in una settimana",
+          "summary": "I grandi nomi dell'Egitto in sette giorni — il Museo Egizio, Alessandria, i templi e le tombe di Luxor e le piramidi di Giza.",
+          "duration": "7 giorni / 6 notti"
+        },
+        "es": {
+          "name": "Los imprescindibles de Egipto",
+          "summary": "Lo más destacado de Egipto en siete días: el Museo Egipcio, Alejandría, los templos y las tumbas de Luxor y las Pirámides de Guiza.",
+          "duration": "7 días / 6 noches"
+        },
+        "fr": {
+          "name": "L'Égypte essentielle, en une semaine",
+          "summary": "Les grands noms de l'Égypte en sept jours — le Musée égyptien, Alexandrie, les temples et les tombes de Louxor, et les pyramides de Gizeh.",
+          "duration": "7 jours / 6 nuits"
+        },
+        "ru": {
+          "name": "Египет: всё главное, класс люкс",
+          "summary": "Главное в Египте за семь дней — Египетский музей, Александрия, храмы и гробницы Луксора и пирамиды Гизы.",
+          "duration": "7 дней / 6 ночей"
+        },
+        "id": {
+          "name": "Pesona Utama Mesir dalam Sepekan",
+          "summary": "Daya tarik utama Mesir dalam tujuh hari — Museum Mesir, Alexandria, kuil dan makam Luxor, serta Piramida Giza.",
+          "duration": "7 Hari / 6 Malam"
+        },
+        "ms": {
+          "name": "Intipati Mesir dalam Seminggu",
+          "summary": "Tarikan utama Mesir dalam tujuh hari — Muzium Mesir, Alexandria, kuil dan makam Luxor, serta Piramid Giza.",
+          "duration": "7 hari / 6 malam"
+        },
+        "pt": {
+          "name": "O melhor do Egito, em grande estilo",
+          "summary": "As grandes atrações do Egito em sete dias — o Museu Egípcio, Alexandria, os templos e tumbas de Luxor e as Pirâmides de Gizé.",
+          "duration": "7 dias / 6 noites"
+        },
+        "ar": {
+          "name": "أبرز معالم مصر بلمسة فاخرة",
+          "summary": "أبرز ما في مصر في سبعة أيام — المتحف المصري، والإسكندرية، ومعابد الأقصر ومقابرها، وأهرامات الجيزة.",
+          "duration": "٧ أيام / ٦ ليالٍ"
+        }
       }
     },
     {
@@ -96,7 +246,14 @@
       "priceFrom": {
         "amount": 618,
         "currency": "EUR",
-        "per": "person"
+        "per": "person",
+        "basis": "a private party of 6 or more"
+      },
+      "priceForTwo": {
+        "amount": 680,
+        "currency": "EUR",
+        "per": "person",
+        "basis": "a private party of two"
       },
       "summary": "A compact northern journey — the Egyptian Museum, Alexandria's Greco-Roman layers, the Pyramids of Giza and medieval Cairo.",
       "pages": {
@@ -110,6 +267,53 @@
         "ms": "https://kemet-travel.com/ms/kaherah-alexandria-4-hari.html",
         "pt": "https://kemet-travel.com/pt/cairo-e-alexandria-4-dias.html",
         "ar": "https://kemet-travel.com/ar/al-qahira-wa-al-iskandariya-4-ayyam.html"
+      },
+      "i18n": {
+        "de": {
+          "name": "Von den Pyramiden ans Meer",
+          "summary": "Eine kompakte Reise durch den Norden — das Ägyptische Museum, Alexandrias griechisch-römische Schichten, die Pyramiden von Gizeh und das mittelalterliche Kairo.",
+          "duration": "4 Tage / 3 Nächte"
+        },
+        "it": {
+          "name": "Dalle piramidi al mare",
+          "summary": "Un viaggio compatto nel nord — il Museo Egizio, gli strati greco-romani di Alessandria, le piramidi di Giza e il Cairo medievale.",
+          "duration": "4 giorni / 3 notti"
+        },
+        "es": {
+          "name": "De las pirámides al mar",
+          "summary": "Un viaje compacto por el norte: el Museo Egipcio, las capas grecorromanas de Alejandría, las Pirámides de Guiza y El Cairo medieval.",
+          "duration": "4 días / 3 noches"
+        },
+        "fr": {
+          "name": "Des pyramides à la mer",
+          "summary": "Un voyage compact dans le nord — le Musée égyptien, les strates gréco-romaines d'Alexandrie, les pyramides de Gizeh et le Caire médiéval.",
+          "duration": "4 jours / 3 nuits"
+        },
+        "ru": {
+          "name": "От пирамид к морю",
+          "summary": "Компактное путешествие по северу — Египетский музей, греко-римские слои Александрии, пирамиды Гизы и средневековый Каир.",
+          "duration": "4 дня / 3 ночи"
+        },
+        "id": {
+          "name": "Dari Piramida ke Laut",
+          "summary": "Perjalanan ringkas di utara — Museum Mesir, lapisan Yunani-Romawi Alexandria, Piramida Giza, dan Kairo abad pertengahan.",
+          "duration": "4 Hari / 3 Malam"
+        },
+        "ms": {
+          "name": "Dari Piramid ke Laut",
+          "summary": "Perjalanan ringkas di utara — Muzium Mesir, lapisan Yunani-Rom Alexandria, Piramid Giza dan Kaherah zaman pertengahan.",
+          "duration": "4 hari / 3 malam"
+        },
+        "pt": {
+          "name": "Das pirâmides ao mar",
+          "summary": "Uma viagem compacta pelo norte — o Museu Egípcio, as camadas greco-romanas de Alexandria, as Pirâmides de Gizé e o Cairo medieval.",
+          "duration": "4 dias / 3 noites"
+        },
+        "ar": {
+          "name": "من الأهرامات إلى البحر",
+          "summary": "رحلة شمالية مكثّفة — المتحف المصري، وطبقات الإسكندرية اليونانية الرومانية، وأهرامات الجيزة، والقاهرة التاريخية من العصور الوسطى.",
+          "duration": "٤ أيام / ٣ ليالٍ"
+        }
       }
     },
     {
@@ -129,7 +333,14 @@
       "priceFrom": {
         "amount": 527,
         "currency": "EUR",
-        "per": "person"
+        "per": "person",
+        "basis": "a private party of 6 or more"
+      },
+      "priceForTwo": {
+        "amount": 580,
+        "currency": "EUR",
+        "per": "person",
+        "basis": "a private party of two"
       },
       "domesticFlightsIncluded": true,
       "summary": "A fast, flight-included loop through Luxor and Aswan — Karnak, the Valley of the Kings, Philae and the High Dam — out and back from Cairo.",
@@ -144,6 +355,53 @@
         "ms": "https://kemet-travel.com/ms/luxor-aswan-3-hari-termasuk-penerbangan.html",
         "pt": "https://kemet-travel.com/pt/luxor-e-assua-3-dias-com-voos.html",
         "ar": "https://kemet-travel.com/ar/al-uqsur-wa-aswan-3-ayyam-min-al-qahira.html"
+      },
+      "i18n": {
+        "de": {
+          "name": "Von Kairo nach Luxor und Assuan",
+          "summary": "Eine schnelle Schleife durch Luxor und Assuan mit enthaltenen Flügen — Karnak, Tal der Könige, Philae und der Hochdamm, ab Kairo und zurück.",
+          "duration": "3 Tage / 2 Nächte"
+        },
+        "it": {
+          "name": "Dal Cairo a Luxor e Assuan",
+          "summary": "Un anello rapido per Luxor e Assuan con i voli inclusi — Karnak, la Valle dei Re, File e la Grande Diga, in partenza dal Cairo e ritorno.",
+          "duration": "3 giorni / 2 notti"
+        },
+        "es": {
+          "name": "De El Cairo a Luxor y Asuán",
+          "summary": "Un circuito rápido, con vuelos incluidos, por Luxor y Asuán —Karnak, el Valle de los Reyes, File y la Presa Alta—, con ida y vuelta desde El Cairo.",
+          "duration": "3 días / 2 noches"
+        },
+        "fr": {
+          "name": "Du Caire à Louxor et Assouan",
+          "summary": "Une boucle rapide par Louxor et Assouan, vols compris — Karnak, la Vallée des Rois, Philae et le haut barrage, au départ du Caire et retour.",
+          "duration": "3 jours / 2 nuits"
+        },
+        "ru": {
+          "name": "Из Каира в Луксор и Асуан",
+          "summary": "Быстрая петля по Луксору и Асуану с включёнными перелётами — Карнак, Долина царей, Филе и Асуанская плотина — из Каира и обратно.",
+          "duration": "3 дня / 2 ночи"
+        },
+        "id": {
+          "name": "Dari Kairo ke Luxor & Aswan",
+          "summary": "Putaran cepat lewat Luxor dan Aswan dengan penerbangan sudah termasuk — Karnak, Lembah Para Raja, Philae, dan Bendungan Tinggi — pergi dan pulang dari Kairo.",
+          "duration": "3 hari / 2 malam"
+        },
+        "ms": {
+          "name": "Dari Kaherah ke Luxor & Aswan",
+          "summary": "Laluan pantas termasuk penerbangan melalui Luxor dan Aswan — Karnak, Lembah Raja-Raja, Philae dan Empangan Tinggi — pergi dan balik dari Kaherah.",
+          "duration": "3 hari / 2 malam"
+        },
+        "pt": {
+          "name": "Do Cairo a Luxor e Assuã",
+          "summary": "Um circuito rápido, com voos incluídos, por Luxor e Assuã — Karnak, o Vale dos Reis, Filae e a Alta Barragem —, com ida e volta a partir do Cairo.",
+          "duration": "3 dias / 2 noites"
+        },
+        "ar": {
+          "name": "من القاهرة إلى الأقصر وأسوان",
+          "summary": "جولة سريعة شاملة الطيران بين الأقصر وأسوان، ذهابًا من القاهرة وعودة إليها: الكرنك، ووادي الملوك، وفيلة، والسد العالي.",
+          "duration": "٣ أيام / ليلتان"
+        }
       }
     },
     {
@@ -160,7 +418,14 @@
       "priceFrom": {
         "amount": 139,
         "currency": "EUR",
-        "per": "person"
+        "per": "person",
+        "basis": "a private party of 6 or more"
+      },
+      "priceForTwo": {
+        "amount": 153,
+        "currency": "EUR",
+        "per": "person",
+        "basis": "a private party of two"
       },
       "siteTicketsIncluded": false,
       "summary": "Lake Qarun, the waterfalls and dunes of Wadi El Rayan, the fossil whales of Wadi Al-Hitan and the potters of Tunis village — Egypt's wild, green other half.",
@@ -175,6 +440,53 @@
         "ms": "https://kemet-travel.com/ms/lawatan-sehari-oasis-fayoum.html",
         "pt": "https://kemet-travel.com/pt/oasis-de-faium-passeio-de-um-dia.html",
         "ar": "https://kemet-travel.com/ar/wahat-al-fayoum.html"
+      },
+      "i18n": {
+        "de": {
+          "name": "Die Oase Fayyum",
+          "summary": "Der Qarun-See, die Wasserfälle und Dünen des Wadi El Rayan, die fossilen Wale des Wadi Al-Hitan und die Töpfer des Dorfes Tunis — Ägyptens wilde, grüne andere Hälfte.",
+          "duration": "Ganzer Tag (ca. 10 Stunden)"
+        },
+        "it": {
+          "name": "L'oasi del Fayyum",
+          "summary": "Il lago Qarun, le cascate e le dune di Wadi el-Rayan, le balene fossili di Wadi al-Hitan e i ceramisti del villaggio di Tunis — l'altra metà dell'Egitto, selvatica e verde.",
+          "duration": "Giornata intera (≈10 ore)"
+        },
+        "es": {
+          "name": "El oasis del Fayum",
+          "summary": "El lago Qarun, las cascadas y dunas de Wadi el-Rayan, las ballenas fósiles de Wadi al-Hitan y los alfareros de la aldea de Tunis: la otra mitad de Egipto, verde y salvaje.",
+          "duration": "Día completo (unas 10 horas)"
+        },
+        "fr": {
+          "name": "L'oasis du Fayoum",
+          "summary": "Le lac Qaroun, les cascades et les dunes du Wadi el-Rayan, les baleines fossiles du Wadi al-Hitan et les potiers du village de Tunis — l'autre Égypte, verte et sauvage.",
+          "duration": "Journée entière (environ 10 heures)"
+        },
+        "ru": {
+          "name": "Оазис Файюм",
+          "summary": "Озеро Карун, водопады и дюны Вади-эль-Райян, окаменелые киты Вади-аль-Хитан и гончары деревни Тунис — дикая, зелёная другая половина Египта.",
+          "duration": "Весь день (около 10 часов)"
+        },
+        "id": {
+          "name": "Oasis Fayoum",
+          "summary": "Danau Qarun, air terjun dan bukit pasir Wadi El Rayan, fosil paus Wadi Al-Hitan, dan para perajin tembikar desa Tunis — separuh Mesir yang lain, liar dan hijau.",
+          "duration": "Sehari penuh (sekitar 10 jam)"
+        },
+        "ms": {
+          "name": "Oasis Fayoum",
+          "summary": "Tasik Qarun, air terjun dan bukit pasir Wadi El Rayan, fosil ikan paus Wadi Al-Hitan dan tukang tembikar kampung Tunis — separuh lagi Mesir yang liar dan menghijau.",
+          "duration": "Sehari penuh (lebih kurang 10 jam)"
+        },
+        "pt": {
+          "name": "O oásis de Faium",
+          "summary": "O lago Qarun, as cachoeiras e dunas de Wadi el-Rayan, as baleias fósseis de Wadi al-Hitan e os oleiros da vila de Tunis — a outra metade do Egito, selvagem e verde.",
+          "duration": "Dia inteiro (cerca de 10 horas)"
+        },
+        "ar": {
+          "name": "واحة الفيوم",
+          "summary": "بحيرة قارون، وشلالات وادي الريان وكثبانه، والحيتان المتحجرة في وادي الحيتان، وفخّار قرية تونس: الوجه الآخر لمصر، البري والأخضر.",
+          "duration": "يوم كامل (نحو ١٠ ساعات)"
+        }
       }
     },
     {
@@ -191,7 +503,14 @@
       "priceFrom": {
         "amount": 79,
         "currency": "EUR",
-        "per": "person"
+        "per": "person",
+        "basis": "a private party of 6 or more"
+      },
+      "priceForTwo": {
+        "amount": 87,
+        "currency": "EUR",
+        "per": "person",
+        "basis": "a private party of two"
       },
       "siteTicketsIncluded": false,
       "summary": "The Great Pyramid, the panorama of all three pyramids, the Valley Temple and Sphinx, then the vast new Grand Egyptian Museum beside them.",
@@ -206,6 +525,53 @@
         "ms": "https://kemet-travel.com/ms/piramid-giza-dan-grand-egyptian-museum.html",
         "pt": "https://kemet-travel.com/pt/gize-e-grande-museu-egipcio.html",
         "ar": "https://kemet-travel.com/ar/al-giza-wa-al-mathaf-al-masri-al-kabir.html"
+      },
+      "i18n": {
+        "de": {
+          "name": "Gizeh & das Große Museum",
+          "summary": "Die Cheops-Pyramide, das Panorama aller drei Pyramiden, der Taltempel und die Sphinx, danach das riesige neue Grand Egyptian Museum gleich daneben.",
+          "duration": "Ganzer Tag (ca. 8 Stunden)"
+        },
+        "it": {
+          "name": "Giza & il Grand Museum",
+          "summary": "La Grande Piramide, il panorama sulle tre piramidi, il tempio della valle e la Sfinge, poi l'immenso Grand Egyptian Museum accanto alla piana.",
+          "duration": "Giornata intera (≈8 ore)"
+        },
+        "es": {
+          "name": "Guiza y el Gran Museo",
+          "summary": "La Gran Pirámide, la panorámica de las tres pirámides, el Templo del Valle y la Esfinge, y después el inmenso y nuevo Gran Museo Egipcio, junto a ellas.",
+          "duration": "Día completo (unas 8 horas)"
+        },
+        "fr": {
+          "name": "Gizeh & le Grand Musée",
+          "summary": "La grande pyramide, le panorama des trois pyramides, le temple de la Vallée et le Sphinx, puis l'immense Grand Musée égyptien juste à côté.",
+          "duration": "Journée entière (environ 8 heures)"
+        },
+        "ru": {
+          "name": "Гиза и Большой музей",
+          "summary": "Пирамида Хеопса, панорама всех трёх пирамид, Долинный храм и Сфинкс, а затем огромный новый Большой Египетский музей по соседству.",
+          "duration": "Весь день (около 8 часов)"
+        },
+        "id": {
+          "name": "Giza & Grand Egyptian Museum",
+          "summary": "Piramida Agung, panorama ketiga piramida, Kuil Lembah dan Sphinx, lalu Grand Egyptian Museum yang luas dan baru di sampingnya.",
+          "duration": "Sehari penuh (sekitar 8 jam)"
+        },
+        "ms": {
+          "name": "Giza & Grand Egyptian Museum",
+          "summary": "Piramid Agung, panorama ketiga-tiga piramid, Kuil Lembah dan Sphinx, kemudian Grand Egyptian Museum yang baharu dan luas di sebelahnya.",
+          "duration": "Sehari penuh (lebih kurang 8 jam)"
+        },
+        "pt": {
+          "name": "Gizé e o Grande Museu",
+          "summary": "A Grande Pirâmide, o panorama das três pirâmides, o Templo do Vale e a Esfinge, e depois o imenso novo Grande Museu Egípcio, ao lado delas.",
+          "duration": "Dia inteiro (cerca de 8 horas)"
+        },
+        "ar": {
+          "name": "الجيزة والمتحف الكبير",
+          "summary": "الهرم الأكبر، والإطلالة البانورامية على الأهرامات الثلاثة، ومعبد الوادي وأبو الهول، ثم المتحف المصري الكبير الجديد الشاسع بجوارها.",
+          "duration": "يوم كامل (نحو ٨ ساعات)"
+        }
       }
     },
     {
@@ -224,7 +590,14 @@
       "priceFrom": {
         "amount": 68,
         "currency": "EUR",
-        "per": "person"
+        "per": "person",
+        "basis": "a private party of 6 or more"
+      },
+      "priceForTwo": {
+        "amount": 75,
+        "currency": "EUR",
+        "per": "person",
+        "basis": "a private party of two"
       },
       "siteTicketsIncluded": false,
       "summary": "Djoser's Step Pyramid, the open-air ruins of Memphis, and the Bent and Red Pyramids of Dahshur — the story of how the pyramid was invented.",
@@ -239,6 +612,53 @@
         "ms": "https://kemet-travel.com/ms/lawatan-saqqara-memphis-dahshur.html",
         "pt": "https://kemet-travel.com/pt/sacara-menfis-e-dahshur.html",
         "ar": "https://kemet-travel.com/ar/saqqara-wa-manf-wa-dahshur.html"
+      },
+      "i18n": {
+        "de": {
+          "name": "Sakkara, Memphis & Dahschur",
+          "summary": "Djosers Stufenpyramide, die Freiluftruinen von Memphis und die Knick- und Rote Pyramide von Dahschur — die Geschichte, wie die Pyramide erfunden wurde.",
+          "duration": "Ganzer Tag (ca. 8 Stunden)"
+        },
+        "it": {
+          "name": "Saqqara, Menfi & Dahshur",
+          "summary": "La piramide a gradoni di Djoser, le rovine all'aperto di Menfi e le piramidi romboidale e rossa di Dahshur — la storia di come è stata inventata la piramide.",
+          "duration": "Giornata intera (≈8 ore)"
+        },
+        "es": {
+          "name": "Saqqara, Menfis y Dahshur",
+          "summary": "La Pirámide Escalonada de Zoser, las ruinas al aire libre de Menfis y las pirámides Acodada y Roja de Dahshur: la historia de cómo se inventó la pirámide.",
+          "duration": "Día completo (unas 8 horas)"
+        },
+        "fr": {
+          "name": "Saqqarah, Memphis & Dahchour",
+          "summary": "La pyramide à degrés de Djéser, les ruines à ciel ouvert de Memphis, et les pyramides rhomboïdale et rouge de Dahchour — l'histoire de l'invention de la pyramide.",
+          "duration": "Journée entière (environ 8 heures)"
+        },
+        "ru": {
+          "name": "Саккара, Мемфис и Дахшур",
+          "summary": "Ступенчатая пирамида Джосера, руины Мемфиса под открытым небом и Ломаная и Красная пирамиды Дахшура — история того, как была придумана пирамида.",
+          "duration": "Весь день (около 8 часов)"
+        },
+        "id": {
+          "name": "Saqqara, Memphis & Dahshur",
+          "summary": "Piramida Bertingkat Djoser, reruntuhan terbuka Memphis, serta Piramida Bengkok dan Piramida Merah di Dahshur — kisah bagaimana piramida diciptakan.",
+          "duration": "Sehari penuh (sekitar 8 jam)"
+        },
+        "ms": {
+          "name": "Saqqara, Memphis dan Dahshur",
+          "summary": "Piramid Bertingkat Djoser, runtuhan terbuka Memphis, serta Piramid Bengkok dan Piramid Merah di Dahshur — kisah bagaimana piramid dicipta.",
+          "duration": "Sehari penuh (lebih kurang 8 jam)"
+        },
+        "pt": {
+          "name": "Sacará, Mênfis e Dahshur",
+          "summary": "A Pirâmide de Degraus de Djoser, as ruínas a céu aberto de Mênfis e as pirâmides Curvada e Vermelha de Dahshur — a história de como a pirâmide foi inventada.",
+          "duration": "Dia inteiro (cerca de 8 horas)"
+        },
+        "ar": {
+          "name": "سقارة ومنف ودهشور",
+          "summary": "هرم زوسر المدرج، وأطلال منف المكشوفة، والهرمان المنحني والأحمر في دهشور: قصة اختراع الهرم.",
+          "duration": "يوم كامل (نحو ٨ ساعات)"
+        }
       }
     },
     {
@@ -255,7 +675,14 @@
       "priceFrom": {
         "amount": 80,
         "currency": "EUR",
-        "per": "person"
+        "per": "person",
+        "basis": "a private party of 6 or more"
+      },
+      "priceForTwo": {
+        "amount": 88,
+        "currency": "EUR",
+        "per": "person",
+        "basis": "a private party of two"
       },
       "siteTicketsIncluded": false,
       "summary": "The Hanging Church, Ben Ezra Synagogue and Abu Serga in Old Cairo, then Saladin's Citadel and the alabaster Mosque of Muhammad Ali.",
@@ -270,6 +697,53 @@
         "ms": "https://kemet-travel.com/ms/kaherah-lama-dan-kubu-salahuddin.html",
         "pt": "https://kemet-travel.com/pt/cairo-religioso-e-cidadela.html",
         "ar": "https://kemet-travel.com/ar/al-qahira-al-diniya-wa-al-qalaa.html"
+      },
+      "i18n": {
+        "de": {
+          "name": "Religiöses Kairo & die Zitadelle",
+          "summary": "Die Hängende Kirche, die Ben-Esra-Synagoge und Abu Serga in Alt-Kairo, danach Saladins Zitadelle und die Alabastermoschee Muhammad Alis.",
+          "duration": "Ganzer Tag (ca. 8 Stunden)"
+        },
+        "it": {
+          "name": "Il Cairo religioso & la Cittadella",
+          "summary": "La Chiesa Sospesa, la sinagoga Ben Ezra e Abu Serga nel Cairo antico, poi la Cittadella di Saladino e la moschea di alabastro di Muhammad Ali.",
+          "duration": "Giornata intera (≈8 ore)"
+        },
+        "es": {
+          "name": "El Cairo religioso y la Ciudadela",
+          "summary": "La Iglesia Colgante, la sinagoga de Ben Ezra y Abu Serga en el Viejo Cairo, y después la Ciudadela de Saladino y la mezquita de alabastro de Mohamed Alí.",
+          "duration": "Día completo (unas 8 horas)"
+        },
+        "fr": {
+          "name": "Le Caire religieux & la Citadelle",
+          "summary": "L'Église suspendue, la synagogue Ben Ezra et Abou Serga dans le Vieux Caire, puis la citadelle de Saladin et la mosquée d'albâtre de Méhémet Ali.",
+          "duration": "Journée entière (environ 8 heures)"
+        },
+        "ru": {
+          "name": "Религиозный Каир и Цитадель",
+          "summary": "Висячая церковь, синагога Бен-Эзра и церковь Абу Серга в Старом Каире, затем Цитадель Салах ад-Дина и алебастровая мечеть Мухаммеда Али.",
+          "duration": "Весь день (около 8 часов)"
+        },
+        "id": {
+          "name": "Kairo Religi & Benteng Salahuddin",
+          "summary": "Gereja Gantung, Sinagoge Ben Ezra, dan Gereja Abu Serga di Kairo Lama, lalu Benteng Salahuddin dan Masjid Muhammad Ali yang berlapis alabaster.",
+          "duration": "Sehari penuh (sekitar 8 jam)"
+        },
+        "ms": {
+          "name": "Warisan Agama Kaherah & Kubu Salahuddin",
+          "summary": "Gereja Tergantung, Sinagog Ben Ezra dan Abu Serga di Kaherah Lama, kemudian Kubu Salahuddin dan Masjid Muhammad Ali yang berbalut alabaster.",
+          "duration": "Sehari penuh (lebih kurang 8 jam)"
+        },
+        "pt": {
+          "name": "O Cairo religioso e a Cidadela",
+          "summary": "A Igreja Suspensa, a Sinagoga Ben Ezra e Abu Serga no Cairo Antigo, depois a Cidadela de Saladino e a mesquita de alabastro de Muhammad Ali.",
+          "duration": "Dia inteiro (cerca de 8 horas)"
+        },
+        "ar": {
+          "name": "القاهرة الدينية والقلعة",
+          "summary": "الكنيسة المعلقة ومعبد بن عزرا اليهودي وكنيسة أبو سرجة في مصر القديمة، ثم قلعة صلاح الدين ومسجد محمد علي المرمري.",
+          "duration": "يوم كامل (نحو ٨ ساعات)"
+        }
       }
     },
     {
@@ -286,7 +760,14 @@
       "priceFrom": {
         "amount": 64,
         "currency": "EUR",
-        "per": "person"
+        "per": "person",
+        "basis": "a private party of 6 or more"
+      },
+      "priceForTwo": {
+        "amount": 70,
+        "currency": "EUR",
+        "per": "person",
+        "basis": "a private party of two"
       },
       "siteTicketsIncluded": false,
       "summary": "The treasures of the Egyptian Museum in Tahrir, then the National Museum of Egyptian Civilization and its Royal Mummies Hall.",
@@ -301,6 +782,53 @@
         "ms": "https://kemet-travel.com/ms/lawatan-muzium-kaherah.html",
         "pt": "https://kemet-travel.com/pt/museus-do-cairo.html",
         "ar": "https://kemet-travel.com/ar/matahif-al-qahira.html"
+      },
+      "i18n": {
+        "de": {
+          "name": "Die Museen Kairos",
+          "summary": "Die Schätze des Ägyptischen Museums am Tahrir, danach das Nationalmuseum der Ägyptischen Zivilisation und seine Halle der Königsmumien.",
+          "duration": "Ganzer Tag (ca. 7 Stunden)"
+        },
+        "it": {
+          "name": "I musei del Cairo",
+          "summary": "I tesori del Museo Egizio di Tahrir, poi il Museo Nazionale della Civiltà Egizia e la sua Sala delle Mummie Reali.",
+          "duration": "Giornata intera (≈7 ore)"
+        },
+        "es": {
+          "name": "Los museos de El Cairo",
+          "summary": "Los tesoros del Museo Egipcio de Tahrir y, después, el Museo Nacional de la Civilización Egipcia y su Sala de las Momias Reales.",
+          "duration": "Día completo (unas 7 horas)"
+        },
+        "fr": {
+          "name": "Les musées du Caire",
+          "summary": "Les trésors du Musée égyptien de Tahrir, puis le Musée national de la civilisation égyptienne et sa salle des momies royales.",
+          "duration": "Journée entière (environ 7 heures)"
+        },
+        "ru": {
+          "name": "Музеи Каира",
+          "summary": "Сокровища Египетского музея на Тахрире, затем Национальный музей египетской цивилизации и его Зал царских мумий.",
+          "duration": "Весь день (около 7 часов)"
+        },
+        "id": {
+          "name": "Museum-Museum Kairo",
+          "summary": "Harta karun Museum Mesir di Tahrir, lalu Museum Nasional Peradaban Mesir dan Aula Mumi Kerajaannya.",
+          "duration": "Sehari penuh (sekitar 7 jam)"
+        },
+        "ms": {
+          "name": "Muzium-Muzium Kaherah",
+          "summary": "Khazanah Muzium Mesir di Tahrir, kemudian Muzium Kebangsaan Tamadun Mesir dan Dewan Mumia Dirajanya.",
+          "duration": "Sehari penuh (lebih kurang 7 jam)"
+        },
+        "pt": {
+          "name": "Os museus do Cairo",
+          "summary": "Os tesouros do Museu Egípcio, na Praça Tahrir, e depois o Museu Nacional da Civilização Egípcia e sua Sala das Múmias Reais.",
+          "duration": "Dia inteiro (cerca de 7 horas)"
+        },
+        "ar": {
+          "name": "متاحف القاهرة",
+          "summary": "كنوز المتحف المصري بالتحرير، ثم المتحف القومي للحضارة المصرية وقاعة المومياوات الملكية فيه.",
+          "duration": "يوم كامل (نحو ٧ ساعات)"
+        }
       }
     },
     {
@@ -317,7 +845,14 @@
       "priceFrom": {
         "amount": 57,
         "currency": "EUR",
-        "per": "person"
+        "per": "person",
+        "basis": "a private party of 6 or more"
+      },
+      "priceForTwo": {
+        "amount": 63,
+        "currency": "EUR",
+        "per": "person",
+        "basis": "a private party of two"
       },
       "siteTicketsIncluded": false,
       "summary": "The Catacombs of Kom El Shoqafa, Pompey's Pillar, the Citadel of Qaitbay on the old Pharos site and the Bibliotheca Alexandrina, with a seafood lunch.",
@@ -332,6 +867,53 @@
         "ms": "https://kemet-travel.com/ms/lawatan-sehari-ke-alexandria.html",
         "pt": "https://kemet-travel.com/pt/alexandria-passeio-de-um-dia.html",
         "ar": "https://kemet-travel.com/ar/rehlat-yawm-ila-al-iskandariya.html"
+      },
+      "i18n": {
+        "de": {
+          "name": "Alexandria an einem Tag",
+          "summary": "Die Katakomben von Kom esch-Schukafa, die Pompeiussäule, die Zitadelle von Qaitbay auf dem Platz des alten Pharos und die Bibliotheca Alexandrina, mit einem Fischessen.",
+          "duration": "Ganzer Tag (ca. 11 Stunden)"
+        },
+        "it": {
+          "name": "Alessandria, una giornata sul Mediterraneo",
+          "summary": "Le catacombe di Kom el-Shoqafa, la colonna di Pompeo, la cittadella di Qaitbay sul sito dell'antico faro e la Bibliotheca Alexandrina, con pranzo di pesce.",
+          "duration": "Giornata intera (≈11 ore)"
+        },
+        "es": {
+          "name": "Alejandría en un día",
+          "summary": "Las Catacumbas de Kom el-Shoqafa, la Columna de Pompeyo, la Ciudadela de Qaitbay sobre el antiguo emplazamiento del Faro y la Bibliotheca Alexandrina, con un almuerzo de pescado y marisco.",
+          "duration": "Día completo (unas 11 horas)"
+        },
+        "fr": {
+          "name": "Alexandrie en une journée",
+          "summary": "Les catacombes de Kom el-Chogafa, la colonne de Pompée, la citadelle de Qaitbay sur l'emplacement du Phare et la Bibliotheca Alexandrina, avec un déjeuner de poisson.",
+          "duration": "Journée entière (environ 11 heures)"
+        },
+        "ru": {
+          "name": "Достопримечательности Александрии",
+          "summary": "Катакомбы Ком-эш-Шукафа, Помпеева колонна, цитадель Кайтбей на месте древнего Фароса и Александрийская библиотека, с обедом из морепродуктов.",
+          "duration": "Весь день (около 11 часов)"
+        },
+        "id": {
+          "name": "Menjelajah Aleksandria",
+          "summary": "Katakombe Kom El Shoqafa, Pilar Pompey, Benteng Qaitbay di tapak Pharos lama, dan Bibliotheca Alexandrina, dengan makan siang hidangan laut.",
+          "duration": "Sehari penuh (sekitar 11 jam)"
+        },
+        "ms": {
+          "name": "Menjelajah Alexandria",
+          "summary": "Katakomb Kom El Shoqafa, Tiang Pompey, Kubu Qaitbay di tapak lama Pharos dan Bibliotheca Alexandrina, bersama makan tengah hari makanan laut.",
+          "duration": "Sehari penuh (lebih kurang 11 jam)"
+        },
+        "pt": {
+          "name": "Alexandria em um dia",
+          "summary": "As Catacumbas de Kom el-Shoqafa, a Coluna de Pompeu, a Cidadela de Qaitbay no antigo local do Farol e a Bibliotheca Alexandrina, com almoço de frutos do mar.",
+          "duration": "Dia inteiro (cerca de 11 horas)"
+        },
+        "ar": {
+          "name": "الإسكندرية في يوم واحد",
+          "summary": "مقابر كوم الشقافة، وعمود السواري، وقلعة قايتباي في موقع منارة فاروس القديمة، ومكتبة الإسكندرية، مع غداء من المأكولات البحرية.",
+          "duration": "يوم كامل (نحو ١١ ساعة)"
+        }
       }
     },
     {
@@ -348,7 +930,14 @@
       "priceFrom": {
         "amount": 66,
         "currency": "EUR",
-        "per": "person"
+        "per": "person",
+        "basis": "a private party of 6 or more"
+      },
+      "priceForTwo": {
+        "amount": 73,
+        "currency": "EUR",
+        "per": "person",
+        "basis": "a private party of two"
       },
       "siteTicketsIncluded": false,
       "summary": "The Great Pyramid, the pyramids of Khafre and Menkaure, the panoramic viewpoint and the Valley Temple with the Great Sphinx — Giza in a morning.",
@@ -363,6 +952,53 @@
         "ms": "https://kemet-travel.com/ms/piramid-giza-dan-sphinx-separuh-hari.html",
         "pt": "https://kemet-travel.com/pt/piramides-de-gize-e-esfinge-meio-dia.html",
         "ar": "https://kemet-travel.com/ar/ahramat-al-giza-wa-abu-al-hol.html"
+      },
+      "i18n": {
+        "de": {
+          "name": "Pyramiden von Gizeh & Sphinx",
+          "summary": "Die Cheops-Pyramide, die Pyramiden des Chephren und Mykerinos, der Panoramapunkt und der Taltempel mit der Großen Sphinx — Gizeh an einem Vormittag.",
+          "duration": "Halber Tag (ca. 5 Stunden)"
+        },
+        "it": {
+          "name": "Piramidi di Giza & Sfinge",
+          "summary": "La Grande Piramide, le piramidi di Chefren e Micerino, il punto panoramico e il tempio della valle con la Grande Sfinge — Giza in una mattinata.",
+          "duration": "Mezza giornata (≈5 ore)"
+        },
+        "es": {
+          "name": "Pirámides de Guiza y Esfinge",
+          "summary": "La Gran Pirámide, las pirámides de Kefrén y Micerinos, el mirador panorámico y el Templo del Valle con la Gran Esfinge: Guiza en una mañana.",
+          "duration": "Medio día (unas 5 horas)"
+        },
+        "fr": {
+          "name": "Pyramides de Gizeh & Sphinx",
+          "summary": "La grande pyramide, celles de Khéphren et de Mykérinos, le point de vue panoramique et le temple de la Vallée avec le grand Sphinx — Gizeh en une matinée.",
+          "duration": "Demi-journée (environ 5 heures)"
+        },
+        "ru": {
+          "name": "Пирамиды Гизы и Сфинкс",
+          "summary": "Пирамида Хеопса, пирамиды Хефрена и Микерина, панорамная точка и Долинный храм с Большим Сфинксом — Гиза за одно утро.",
+          "duration": "Полдня (около 5 часов)"
+        },
+        "id": {
+          "name": "Piramida Giza & Sphinx",
+          "summary": "Piramida Agung, piramida Khafre dan Menkaure, titik pandang panorama, serta Kuil Lembah dengan Sphinx Agung — Giza dalam satu pagi.",
+          "duration": "Setengah hari (sekitar 5 jam)"
+        },
+        "ms": {
+          "name": "Piramid Giza & Sphinx",
+          "summary": "Piramid Agung, piramid Khafre dan Menkaure, titik tinjau panorama dan Kuil Lembah bersama Sphinx Agung — Giza dalam satu pagi.",
+          "duration": "Separuh hari (lebih kurang 5 jam)"
+        },
+        "pt": {
+          "name": "Pirâmides de Gizé e Esfinge",
+          "summary": "A Grande Pirâmide, as pirâmides de Quéfren e Miquerinos, o mirante panorâmico e o Templo do Vale com a Grande Esfinge — Gizé em uma manhã.",
+          "duration": "Meio dia (cerca de 5 horas)"
+        },
+        "ar": {
+          "name": "أهرامات الجيزة وأبو الهول",
+          "summary": "الهرم الأكبر، وهرما خفرع ومنكاورع، ونقطة الإطلالة البانورامية، ومعبد الوادي مع أبو الهول العظيم: الجيزة في صباح واحد.",
+          "duration": "نصف يوم (نحو ٥ ساعات)"
+        }
       }
     },
     {
@@ -379,7 +1015,14 @@
       "priceFrom": {
         "amount": 59,
         "currency": "EUR",
-        "per": "person"
+        "per": "person",
+        "basis": "a private party of 6 or more"
+      },
+      "priceForTwo": {
+        "amount": 65,
+        "currency": "EUR",
+        "per": "person",
+        "basis": "a private party of two"
       },
       "summary": "A guided evening tasting of Cairo's best-loved dishes — koshari, ful and ta'meya, hawawshi and grilled pigeon, kunafa and basbousa, finished at a traditional ahwa.",
       "pages": {
@@ -393,6 +1036,53 @@
         "ms": "https://kemet-travel.com/ms/jelajah-makanan-malam-di-kaherah.html",
         "pt": "https://kemet-travel.com/pt/noite-gastronomica-no-cairo.html",
         "ar": "https://kemet-travel.com/ar/jawlat-al-akl-fi-al-qahira.html"
+      },
+      "i18n": {
+        "de": {
+          "name": "Kairo, echt gegessen",
+          "summary": "Eine geführte Verkostung der beliebtesten Gerichte Kairos am Abend — Koshari, Ful und Ta'meya, Hawawshi und gegrillte Taube, Kunafa und Basbousa, zum Abschluss in einem traditionellen Ahwa.",
+          "duration": "Abend (ca. 4 Stunden)"
+        },
+        "it": {
+          "name": "Il Cairo autentico, a tavola",
+          "summary": "Una degustazione serale guidata dei piatti più amati del Cairo — koshari, ful e ta'meya, hawawshi e piccione alla griglia, kunafa e basbousa, con chiusura in un ahwa tradizionale.",
+          "duration": "Serata (≈4 ore)"
+        },
+        "es": {
+          "name": "El Cairo, con todos sus sabores",
+          "summary": "Una degustación guiada por la noche de los platos más queridos de El Cairo: koshari, ful y ta'meya, hawawshi y pichón a la parrilla, kunafa y basbousa, para terminar en un ahwa tradicional.",
+          "duration": "Noche (unas 4 horas)"
+        },
+        "fr": {
+          "name": "Le Caire, vraiment goûté",
+          "summary": "Une dégustation guidée en soirée des plats préférés du Caire — koshari, ful et ta'meya, hawawshi et pigeon grillé, kunafa et basbousa, pour finir dans un ahwa traditionnel.",
+          "duration": "Soirée (environ 4 heures)"
+        },
+        "ru": {
+          "name": "Каир на вкус",
+          "summary": "Вечерняя дегустация с гидом самых любимых блюд Каира — кошари, фуль и таамия, хавауши и голубь на гриле, кунафа и басбуса, а в завершение — традиционная ахва.",
+          "duration": "Вечер (около 4 часов)"
+        },
+        "id": {
+          "name": "Kairo, dari Rasanya",
+          "summary": "Mencicipi hidangan paling dicintai di Kairo bersama pemandu, pada malam hari — koshari, ful dan ta'meya, hawawshi dan merpati panggang, kunafa dan basbousa, ditutup di ahwa tradisional.",
+          "duration": "Malam (sekitar 4 jam)"
+        },
+        "ms": {
+          "name": "Kaherah, Melalui Rasanya",
+          "summary": "Merasa hidangan paling digemari di Kaherah bersama pemandu, pada waktu malam — koshari, ful dan ta'meya, hawawshi dan burung merpati panggang, kunafa dan basbousa, diakhiri di ahwa tradisional.",
+          "duration": "Malam (lebih kurang 4 jam)"
+        },
+        "pt": {
+          "name": "O Cairo, com todos os sabores",
+          "summary": "Uma degustação guiada, à noite, dos pratos mais queridos do Cairo — koshari, ful e ta'meya, hawawshi e pombo grelhado, kunafa e basbousa, terminando em um ahwa tradicional.",
+          "duration": "Noite (cerca de 4 horas)"
+        },
+        "ar": {
+          "name": "القاهرة بطعمها الأصلي",
+          "summary": "سهرة تذوق مع مرشد لأحب أطباق القاهرة: الكشري، والفول والطعمية، والحواوشي والحمام المحشي، والكنافة والبسبوسة، وفي الختام قهوة بلدي تقليدية.",
+          "duration": "مساءً (نحو ٤ ساعات)"
+        }
       }
     },
     {
@@ -413,7 +1103,14 @@
       "priceFrom": {
         "amount": 820,
         "currency": "EUR",
-        "per": "person"
+        "per": "person",
+        "basis": "a private party of 6 or more"
+      },
+      "priceForTwo": {
+        "amount": 902,
+        "currency": "EUR",
+        "per": "person",
+        "basis": "a private party of two"
       },
       "summary": "The essential Nile cruise, done properly — Philae and the High Dam, three nights afloat past Kom Ombo and Edfu, and Luxor's East and West Banks with your own Egyptologist.",
       "pages": {
@@ -427,6 +1124,53 @@
         "ms": "https://kemet-travel.com/ms/pelayaran-sungai-nil.html",
         "pt": "https://kemet-travel.com/pt/cruzeiro-pelo-nilo.html",
         "ar": "https://kemet-travel.com/ar/rehla-niliya-khassa.html"
+      },
+      "i18n": {
+        "de": {
+          "name": "Die Nilkreuzfahrt",
+          "summary": "So führen wir die Kreuzfahrt durch: drei Nächte auf dem Fluss von Assuan nach Luxor, jeder Besuch an Land privat und mit Ihrer eigenen ägyptologischen Reiseleitung. Das Schiff teilen Sie mit anderen; Ihre Reiseleitung, Ihr Fahrzeug und Ihre Besuche gehören Ihnen allein.",
+          "duration": "4 Tage / 3 Nächte"
+        },
+        "it": {
+          "name": "La crociera sul Nilo",
+          "summary": "Questa è la crociera così come la organizziamo: tre notti sul fiume da Assuan a Luxor, con ogni visita a terra in privato insieme alla vostra guida esperta di egittologia. La nave è condivisa; la vostra guida, il vostro veicolo e le vostre visite no.",
+          "duration": "4 giorni / 3 notti"
+        },
+        "es": {
+          "name": "El crucero por el Nilo",
+          "summary": "Así es el crucero tal como lo organizamos: tres noches en el río de Asuán a Luxor, con todas las visitas en tierra en privado y con su propio egiptólogo. El barco se comparte; su guía, su vehículo y sus visitas, no.",
+          "duration": "4 días / 3 noches"
+        },
+        "fr": {
+          "name": "La croisière sur le Nil",
+          "summary": "Voici la croisière telle que nous la menons : trois nuits sur le fleuve, d'Assouan à Louxor, chaque visite à terre étant privée, avec votre propre égyptologue. Le bateau est partagé ; votre guide, votre véhicule et vos visites, eux, ne le sont pas.",
+          "duration": "4 jours / 3 nuits"
+        },
+        "ru": {
+          "name": "Круиз по Нилу",
+          "summary": "Так проходит наш круиз: три ночи на реке из Асуана в Луксор, а все экскурсии на берегу — индивидуальные, с вашим египтологом. Теплоход общий, а вот гид, автомобиль и программа посещений — только ваши.",
+          "duration": "4 дня / 3 ночи"
+        },
+        "id": {
+          "name": "Pesiar di Sungai Nil",
+          "summary": "Inilah pesiar sebagaimana kami menjalankannya: tiga malam di sungai dari Aswan ke Luxor, setiap kunjungan di darat bersifat privat bersama Egyptologist Anda sendiri. Kapalnya dipakai bersama; pemandu, kendaraan, dan kunjungan Anda tidak.",
+          "duration": "4 hari / 3 malam"
+        },
+        "ms": {
+          "name": "Pelayaran di Sungai Nil",
+          "summary": "Inilah pelayaran seperti yang kami jalankan: tiga malam di sungai dari Aswan ke Luxor, setiap lawatan di darat bersifat persendirian bersama Egyptologist anda sendiri. Kapalnya dikongsi; panduan, kenderaan dan lawatan anda tidak.",
+          "duration": "4 hari / 3 malam"
+        },
+        "pt": {
+          "name": "O cruzeiro pelo Nilo",
+          "summary": "Este é o cruzeiro como o realizamos: três noites no rio, de Assuã a Luxor, com todas as visitas em terra privativas e o seu próprio egiptólogo. O navio é compartilhado; o seu guia, o seu veículo e as suas visitas, não.",
+          "duration": "4 dias / 3 noites"
+        },
+        "ar": {
+          "name": "رحلة النيل",
+          "summary": "هذه الرحلة كما ننظّمها: ثلاث ليالٍ على النهر من أسوان إلى الأقصر، وكل زيارة على البر خاصة بكم برفقة مرشدكم المتخصص في المصريات. السفينة مشتركة؛ أما مرشدكم ومركبتكم وزياراتكم فلكم وحدكم.",
+          "duration": "٤ أيام / ٣ ليالٍ"
+        }
       }
     },
     {
@@ -447,7 +1191,14 @@
       "priceFrom": {
         "amount": 1018,
         "currency": "EUR",
-        "per": "person"
+        "per": "person",
+        "basis": "a private party of 6 or more"
+      },
+      "priceForTwo": {
+        "amount": 1120,
+        "currency": "EUR",
+        "per": "person",
+        "basis": "a private party of two"
       },
       "summary": "The deep-history heart of Egypt by private road journey — Karnak, the Valley of the Kings, Edfu, Kom Ombo and Philae, with time to actually absorb them.",
       "pages": {
@@ -461,6 +1212,53 @@
         "ms": "https://kemet-travel.com/ms/mesir-hulu-5-hari-luxor-aswan.html",
         "pt": "https://kemet-travel.com/pt/templos-do-alto-egito-5-dias.html",
         "ar": "https://kemet-travel.com/ar/maabid-al-saeed-5-ayyam.html"
+      },
+      "i18n": {
+        "de": {
+          "name": "Die Tempel des Südens",
+          "summary": "Das geschichtliche Herz Ägyptens als private Straßenreise — Karnak, Tal der Könige, Edfu, Kom Ombo und Philae, mit der Zeit, sie wirklich aufzunehmen.",
+          "duration": "5 Tage / 4 Nächte"
+        },
+        "it": {
+          "name": "I templi del Sud",
+          "summary": "Il cuore storico dell'Egitto in viaggio privato su strada — Karnak, la Valle dei Re, Edfu, Kom Ombo e File, con il tempo di assorbirli davvero.",
+          "duration": "5 giorni / 4 notti"
+        },
+        "es": {
+          "name": "Los templos del sur",
+          "summary": "El corazón de la historia más antigua de Egipto, por carretera y en privado: Karnak, el Valle de los Reyes, Edfu, Kom Ombo y File, con tiempo para asimilarlos de verdad.",
+          "duration": "5 días / 4 noches"
+        },
+        "fr": {
+          "name": "Les temples du Sud",
+          "summary": "Le cœur historique de l'Égypte en voyage privé par la route — Karnak, la Vallée des Rois, Edfou, Kom Ombo et Philae, avec le temps de les absorber.",
+          "duration": "5 jours / 4 nuits"
+        },
+        "ru": {
+          "name": "Храмы Юга",
+          "summary": "Сердце древней истории Египта в индивидуальной поездке по дороге — Карнак, Долина царей, Эдфу, Ком-Омбо и Филе, и время, чтобы действительно всё это прочувствовать.",
+          "duration": "5 дней / 4 ночи"
+        },
+        "id": {
+          "name": "Kuil-Kuil di Selatan",
+          "summary": "Jantung sejarah Mesir yang paling dalam, ditempuh dengan perjalanan darat privat — Karnak, Lembah Para Raja, Edfu, Kom Ombo, dan Philae, dengan waktu untuk benar-benar meresapinya.",
+          "duration": "5 Hari / 4 Malam"
+        },
+        "ms": {
+          "name": "Kuil-Kuil Selatan",
+          "summary": "Jantung sejarah purba Mesir melalui perjalanan darat persendirian — Karnak, Lembah Raja-Raja, Edfu, Kom Ombo dan Philae, dengan masa untuk benar-benar menghayatinya.",
+          "duration": "5 hari / 4 malam"
+        },
+        "pt": {
+          "name": "Os templos do Sul",
+          "summary": "O coração da história antiga do Egito numa viagem privativa por estrada — Karnak, o Vale dos Reis, Edfu, Kom Ombo e Filae, com tempo para absorver tudo de verdade.",
+          "duration": "5 dias / 4 noites"
+        },
+        "ar": {
+          "name": "معابد الجنوب",
+          "summary": "قلب مصر الضارب في التاريخ في رحلة خاصة برًّا — الكرنك، ووادي الملوك، وإدفو، وكوم أمبو، وفيلة، مع وقت لاستيعابها حقًّا.",
+          "duration": "٥ أيام / ٤ ليالٍ"
+        }
       }
     },
     {
@@ -481,7 +1279,8 @@
       "priceFrom": {
         "amount": 2045,
         "currency": "EUR",
-        "per": "person"
+        "per": "person",
+        "basis": "a private party of 2 or more"
       },
       "summary": "Egypt as a honeymoon should be — private sunrise at the pyramids, a felucca at golden hour, three nights on the Nile and suites chosen for the view.",
       "pages": {
@@ -495,6 +1294,53 @@
         "ms": "https://kemet-travel.com/ms/bulan-madu-sungai-nil-9-hari.html",
         "pt": "https://kemet-travel.com/pt/lua-de-mel-no-nilo-9-dias.html",
         "ar": "https://kemet-travel.com/ar/shahr-al-asal-ala-al-nil-9-ayyam.html"
+      },
+      "i18n": {
+        "de": {
+          "name": "Hochzeitsreise am Nil",
+          "summary": "Ägypten, wie eine Hochzeitsreise sein sollte — privater Sonnenaufgang an den Pyramiden, eine Feluke zur goldenen Stunde, drei Nächte auf dem Nil und Suiten, die nach ihrer Aussicht ausgesucht sind.",
+          "duration": "9 Tage / 8 Nächte"
+        },
+        "it": {
+          "name": "Viaggio di nozze sul Nilo",
+          "summary": "L'Egitto come dovrebbe essere un viaggio di nozze — alba privata alle piramidi, feluca nell'ora d'oro, tre notti sul Nilo e suite scelte per la vista.",
+          "duration": "9 giorni / 8 notti"
+        },
+        "es": {
+          "name": "Luna de miel en el Nilo",
+          "summary": "Egipto como debe ser una luna de miel: amanecer privado en las pirámides, faluca a la hora dorada, tres noches en el Nilo y suites elegidas por sus vistas.",
+          "duration": "9 días / 8 noches"
+        },
+        "fr": {
+          "name": "Voyage de noces sur le Nil",
+          "summary": "L'Égypte comme un voyage de noces devrait l'être — lever de soleil privé aux pyramides, felouque à l'heure dorée, trois nuits sur le Nil et des suites choisies pour leur vue.",
+          "duration": "9 jours / 8 nuits"
+        },
+        "ru": {
+          "name": "Медовый месяц на Ниле",
+          "summary": "Египет таким, каким должен быть медовый месяц: рассвет у пирамид только для вас, фелука в золотой час, три ночи на Ниле и люксы, выбранные ради вида.",
+          "duration": "9 дней / 8 ночей"
+        },
+        "id": {
+          "name": "Bulan Madu di Sungai Nil",
+          "summary": "Mesir sebagaimana bulan madu seharusnya — matahari terbit privat di piramida, felucca pada jam keemasan, tiga malam di Sungai Nil, dan suite yang dipilih karena pemandangannya.",
+          "duration": "9 Hari / 8 Malam"
+        },
+        "ms": {
+          "name": "Bulan Madu di Sungai Nil",
+          "summary": "Mesir sebagaimana sepatutnya sebuah bulan madu — matahari terbit persendirian di piramid, felucca pada waktu keemasan, tiga malam di Sungai Nil dan suite yang dipilih kerana pemandangannya.",
+          "duration": "9 hari / 8 malam"
+        },
+        "pt": {
+          "name": "Lua de mel no Nilo",
+          "summary": "O Egito como uma lua de mel deve ser — nascer do sol privativo nas pirâmides, uma falua na hora dourada, três noites no Nilo e suítes escolhidas pela vista.",
+          "duration": "9 dias / 8 noites"
+        },
+        "ar": {
+          "name": "شهر العسل على النيل",
+          "summary": "مصر كما ينبغي أن يكون شهر العسل — شروق خاص عند الأهرامات، وفلوكة في الساعة الذهبية، وثلاث ليالٍ على النيل، وأجنحة اختيرت لإطلالتها.",
+          "duration": "٩ أيام / ٨ ليالٍ"
+        }
       }
     },
     {
@@ -515,7 +1361,14 @@
       "priceFrom": {
         "amount": 1524,
         "currency": "EUR",
-        "per": "person"
+        "per": "person",
+        "basis": "a private party of 6 or more"
+      },
+      "priceForTwo": {
+        "amount": 1676,
+        "currency": "EUR",
+        "per": "person",
+        "basis": "a private party of two"
       },
       "summary": "Egypt with children done right: short guided mornings, family-specialist Egyptologists, pool afternoons, and the moments no classroom can match.",
       "pages": {
@@ -529,6 +1382,53 @@
         "ms": "https://kemet-travel.com/ms/percutian-keluarga-mesir-8-hari.html",
         "pt": "https://kemet-travel.com/pt/egito-em-familia-8-dias.html",
         "ar": "https://kemet-travel.com/ar/rehla-aeiliya-ila-masr-8-ayyam.html"
+      },
+      "i18n": {
+        "de": {
+          "name": "Ägypten für Familien: von den Pyramiden an den Nil",
+          "summary": "Ägypten mit Kindern richtig gemacht: kurze geführte Vormittage, auf Familien spezialisierte Ägyptologen, Nachmittage am Pool und Momente, die kein Klassenzimmer bietet.",
+          "duration": "8 Tage / 7 Nächte"
+        },
+        "it": {
+          "name": "Egitto in famiglia: dalle piramidi al Nilo",
+          "summary": "L'Egitto con i bambini fatto come si deve: mattinate guidate brevi, egittologi specializzati in famiglie, pomeriggi in piscina e momenti che nessuna aula può offrire.",
+          "duration": "8 giorni / 7 notti"
+        },
+        "es": {
+          "name": "Egipto en familia: de las pirámides al Nilo",
+          "summary": "Egipto con niños, bien hecho: mañanas guiadas cortas, egiptólogos con experiencia en familias, tardes de piscina y momentos que ninguna clase puede igualar.",
+          "duration": "8 días / 7 noches"
+        },
+        "fr": {
+          "name": "L'Égypte en famille : des pyramides au Nil",
+          "summary": "L'Égypte avec des enfants, bien faite : matinées guidées courtes, égyptologues spécialistes des familles, après-midi libres, et des moments qu'aucune salle de classe n'égale.",
+          "duration": "8 jours / 7 nuits"
+        },
+        "ru": {
+          "name": "Египет всей семьёй: от пирамид до Нила",
+          "summary": "Египет с детьми как надо: короткие экскурсии по утрам, египтологи — специалисты по семейным поездкам, бассейн после обеда и моменты, с которыми не сравнится ни один урок.",
+          "duration": "8 дней / 7 ночей"
+        },
+        "id": {
+          "name": "Mesir untuk Keluarga: dari Piramida ke Sungai Nil",
+          "summary": "Mesir bersama anak, dengan cara yang tepat: pagi berpemandu yang singkat, Egyptologist yang khusus menangani keluarga, sore di kolam renang, dan momen-momen yang tak tertandingi ruang kelas mana pun.",
+          "duration": "8 Hari / 7 Malam"
+        },
+        "ms": {
+          "name": "Mesir Sekeluarga: Dari Piramid ke Sungai Nil",
+          "summary": "Mesir bersama anak-anak, dengan cara yang betul: pagi berpemandu yang singkat, Egyptologist yang pakar melayan keluarga, petang di kolam renang, dan detik-detik yang tidak dapat ditandingi bilik darjah.",
+          "duration": "8 hari / 7 malam"
+        },
+        "pt": {
+          "name": "Egito em família: das pirâmides ao Nilo",
+          "summary": "O Egito com crianças, do jeito certo: manhãs guiadas curtas, egiptólogos especialistas em famílias, tardes na piscina e momentos que nenhuma sala de aula consegue igualar.",
+          "duration": "8 dias / 7 noites"
+        },
+        "ar": {
+          "name": "مصر للعائلة: من الأهرامات إلى النيل",
+          "summary": "مصر مع الأطفال كما ينبغي: صباحات قصيرة مع مرشد، وخبراء آثار متخصصون في العائلات، وبعد الظهر عند المسبح، ولحظات لا يضاهيها أي فصل دراسي.",
+          "duration": "٨ أيام / ٧ ليالٍ"
+        }
       }
     },
     {
@@ -549,7 +1449,14 @@
       "priceFrom": {
         "amount": 1419,
         "currency": "EUR",
-        "per": "person"
+        "per": "person",
+        "basis": "a private party of 6 or more"
+      },
+      "priceForTwo": {
+        "amount": 1561,
+        "currency": "EUR",
+        "per": "person",
+        "basis": "a private party of two"
       },
       "summary": "An itinerary built backwards from the light: early-access Giza at sunrise, Karnak before the crowds, an optional balloon over Thebes and feluccas at golden hour.",
       "pages": {
@@ -563,6 +1470,53 @@
         "ms": "https://kemet-travel.com/ms/lawatan-fotografi-mesir-7-hari.html",
         "pt": "https://kemet-travel.com/pt/viagem-fotografica-egito-7-dias.html",
         "ar": "https://kemet-travel.com/ar/rehlat-taswir-fi-masr-7-ayyam.html"
+      },
+      "i18n": {
+        "de": {
+          "name": "Ägypten durch die Linse",
+          "summary": "Eine Reise, rückwärts aus dem Licht geplant: privater Zugang zu Gizeh zum Sonnenaufgang, Karnak vor den Gruppen, optional ein Ballon über Theben und Feluken zur goldenen Stunde.",
+          "duration": "7 Tage / 6 Nächte"
+        },
+        "it": {
+          "name": "L'Egitto attraverso l'obiettivo",
+          "summary": "Un itinerario costruito a partire dalla luce: accesso anticipato a Giza all'alba, Karnak prima dei gruppi, una mongolfiera facoltativa sopra Tebe e feluche nell'ora d'oro.",
+          "duration": "7 giorni / 6 notti"
+        },
+        "es": {
+          "name": "Egipto a través del objetivo",
+          "summary": "Un itinerario construido a partir de la luz: Guiza al amanecer con acceso anticipado, Karnak antes de las multitudes, un globo opcional sobre Tebas y falucas a la hora dorada.",
+          "duration": "7 días / 6 noches"
+        },
+        "fr": {
+          "name": "L'Égypte à travers l'objectif",
+          "summary": "Un itinéraire construit à rebours depuis la lumière : accès anticipé à Gizeh au lever du soleil, Karnak avant la foule, une montgolfière sur Thèbes en option et des felouques à l'heure dorée.",
+          "duration": "7 jours / 6 nuits"
+        },
+        "ru": {
+          "name": "Египет в объективе",
+          "summary": "Маршрут, выстроенный от света: ранний доступ в Гизу на рассвете, Карнак до толп, по желанию — воздушный шар над Фивами и фелуки в золотой час.",
+          "duration": "7 дней / 6 ночей"
+        },
+        "id": {
+          "name": "Mesir di Balik Lensa",
+          "summary": "Rencana perjalanan yang disusun mundur dari cahaya: akses awal ke Giza saat matahari terbit, Karnak sebelum keramaian, pilihan balon udara di atas Thebes, dan felucca pada jam keemasan.",
+          "duration": "7 Hari / 6 Malam"
+        },
+        "ms": {
+          "name": "Mesir Melalui Lensa",
+          "summary": "Laluan yang disusun bermula daripada cahaya: Giza ketika matahari terbit dengan akses awal, Karnak sebelum orang ramai, belon pilihan di atas Thebes dan felucca pada waktu keemasan.",
+          "duration": "7 hari / 6 malam"
+        },
+        "pt": {
+          "name": "O Egito pela lente",
+          "summary": "Um roteiro construído de trás para a frente a partir da luz: acesso antecipado a Gizé ao nascer do sol, Karnak antes da multidão, um balão opcional sobre Tebas e faluas na hora dourada.",
+          "duration": "7 dias / 6 noites"
+        },
+        "ar": {
+          "name": "مصر عبر العدسة",
+          "summary": "برنامج بُني بالعكس انطلاقًا من الضوء: دخول مبكر إلى الجيزة عند الشروق، والكرنك قبل الزحام، ومنطاد اختياري فوق طيبة، وفلوكات في الساعة الذهبية.",
+          "duration": "٧ أيام / ٦ ليالٍ"
+        }
       }
     },
     {
@@ -586,7 +1540,14 @@
       "priceFrom": {
         "amount": 2728,
         "currency": "EUR",
-        "per": "person"
+        "per": "person",
+        "basis": "a private party of 6 or more"
+      },
+      "priceForTwo": {
+        "amount": 3001,
+        "currency": "EUR",
+        "per": "person",
+        "basis": "a private party of two"
       },
       "domesticFlightsIncluded": true,
       "summary": "Our most complete journey: Cairo and Alexandria, a Nile cruise, Ramesses II's mountain temple at Abu Simbel, and three Red Sea nights to absorb it all.",
@@ -601,6 +1562,53 @@
         "ms": "https://kemet-travel.com/ms/jelajah-besar-mesir-14-hari.html",
         "pt": "https://kemet-travel.com/pt/grande-viagem-pelo-egito-14-dias.html",
         "ar": "https://kemet-travel.com/ar/al-rehla-al-kubra-fi-masr-14-yawman.html"
+      },
+      "i18n": {
+        "de": {
+          "name": "Die große Ägypten-Rundreise",
+          "summary": "Unsere vollständigste Reise: Kairo und Alexandria, eine Nilkreuzfahrt, der Bergtempel Ramses' II. in Abu Simbel und drei Nächte am Roten Meer, um alles sacken zu lassen.",
+          "duration": "14 Tage / 13 Nächte"
+        },
+        "it": {
+          "name": "Il gran tour dell'Egitto",
+          "summary": "Il nostro viaggio più completo: Il Cairo e Alessandria, una crociera sul Nilo, il tempio di montagna di Ramesse II ad Abu Simbel e tre notti sul Mar Rosso per lasciar sedimentare tutto.",
+          "duration": "14 giorni / 13 notti"
+        },
+        "es": {
+          "name": "El gran viaje por Egipto",
+          "summary": "Nuestro viaje más completo: El Cairo y Alejandría, un crucero por el Nilo, el templo de Ramsés II excavado en la montaña de Abu Simbel y tres noches en el mar Rojo para asimilarlo todo.",
+          "duration": "14 días / 13 noches"
+        },
+        "fr": {
+          "name": "Le grand tour d'Égypte",
+          "summary": "Notre voyage le plus complet : Le Caire et Alexandrie, une croisière sur le Nil, le temple de montagne de Ramsès II à Abou Simbel, et trois nuits en mer Rouge pour tout laisser décanter.",
+          "duration": "14 jours / 13 nuits"
+        },
+        "ru": {
+          "name": "Большое путешествие по Египту",
+          "summary": "Наше самое полное путешествие: Каир и Александрия, круиз по Нилу, скальный храм Рамсеса II в Абу-Симбеле и три ночи на Красном море, чтобы всё увиденное улеглось.",
+          "duration": "14 дней / 13 ночей"
+        },
+        "id": {
+          "name": "Tur Akbar Mesir",
+          "summary": "Perjalanan kami yang paling lengkap: Kairo dan Alexandria, pesiar Nil, kuil Ramses II yang dipahat di gunung di Abu Simbel, dan tiga malam di Laut Merah untuk meresapi semuanya.",
+          "duration": "14 Hari / 13 Malam"
+        },
+        "ms": {
+          "name": "Jelajah Besar Mesir",
+          "summary": "Perjalanan kami yang paling lengkap: Kaherah dan Alexandria, pelayaran Sungai Nil, kuil gunung Ramses II di Abu Simbel, dan tiga malam di Laut Merah untuk menghayati semuanya.",
+          "duration": "14 hari / 13 malam"
+        },
+        "pt": {
+          "name": "A grande viagem pelo Egito",
+          "summary": "A nossa viagem mais completa: Cairo e Alexandria, um cruzeiro pelo Nilo, o templo de Ramsés II escavado na montanha, em Abu Simbel, e três noites no Mar Vermelho para assentar tudo.",
+          "duration": "14 dias / 13 noites"
+        },
+        "ar": {
+          "name": "الرحلة الكبرى في مصر",
+          "summary": "أكمل رحلاتنا: القاهرة والإسكندرية، ورحلة نيلية، ومعبد رمسيس الثاني المنحوت في الجبل في أبو سمبل، وثلاث ليالٍ على البحر الأحمر لتستوعبوا ذلك كله.",
+          "duration": "١٤ يومًا / ١٣ ليلة"
+        }
       }
     },
     {
@@ -621,7 +1629,14 @@
       "priceFrom": {
         "amount": 875,
         "currency": "EUR",
-        "per": "person"
+        "per": "person",
+        "basis": "a private party of 6 or more"
+      },
+      "priceForTwo": {
+        "amount": 963,
+        "currency": "EUR",
+        "per": "person",
+        "basis": "a private party of two"
       },
       "summary": "A deep, slow reading of the world's greatest layered city — its two museums, three faiths, medieval streets and the necropolis where the pyramid was invented.",
       "pages": {
@@ -635,6 +1650,53 @@
         "ms": "https://kemet-travel.com/ms/kaherah-budaya-5-hari.html",
         "pt": "https://kemet-travel.com/pt/cairo-cultural-5-dias.html",
         "ar": "https://kemet-travel.com/ar/rehla-thaqafiya-fi-al-qahira-5-ayyam.html"
+      },
+      "i18n": {
+        "de": {
+          "name": "Kairo der acht Welten",
+          "summary": "Eine tiefe, langsame Lektüre der am stärksten geschichteten Stadt der Welt — ihre zwei Museen, drei Glaubensrichtungen, mittelalterlichen Straßen und die Nekropole, in der die Pyramide erfunden wurde.",
+          "duration": "5 Tage / 4 Nächte"
+        },
+        "it": {
+          "name": "Il Cairo degli otto mondi",
+          "summary": "Una lettura lenta e profonda della città più stratificata del mondo — i suoi due musei, tre fedi, le strade medievali e la necropoli dove è nata la piramide.",
+          "duration": "5 giorni / 4 notti"
+        },
+        "es": {
+          "name": "El Cairo de los ocho mundos",
+          "summary": "Una lectura lenta y profunda de la ciudad con más capas del mundo: sus dos museos, sus tres religiones, sus calles medievales y la necrópolis donde se inventó la pirámide.",
+          "duration": "5 días / 4 noches"
+        },
+        "fr": {
+          "name": "Le Caire aux huit mondes",
+          "summary": "Une lecture lente et profonde de la ville la plus stratifiée du monde — ses deux musées, trois confessions, rues médiévales et la nécropole où la pyramide fut inventée.",
+          "duration": "5 jours / 4 nuits"
+        },
+        "ru": {
+          "name": "Каир восьми миров",
+          "summary": "Глубокое, неспешное чтение величайшего многослойного города мира — двух его музеев, трёх религий, средневековых улиц и некрополя, где была изобретена пирамида.",
+          "duration": "5 дней / 4 ночи"
+        },
+        "id": {
+          "name": "Kairo, Kota Delapan Dunia",
+          "summary": "Pembacaan yang dalam dan perlahan atas kota berlapis terbesar di dunia — dua museumnya, tiga agamanya, jalan-jalan abad pertengahannya, dan nekropolis tempat piramida diciptakan.",
+          "duration": "5 Hari / 4 Malam"
+        },
+        "ms": {
+          "name": "Kaherah Lapan Dunia",
+          "summary": "Bacaan yang mendalam dan perlahan tentang kota berlapis terhebat di dunia — dua muziumnya, tiga agama, jalan-jalan zaman pertengahan dan nekropolis tempat piramid dicipta.",
+          "duration": "5 hari / 4 malam"
+        },
+        "pt": {
+          "name": "O Cairo dos oito mundos",
+          "summary": "Uma leitura profunda e sem pressa da maior cidade em camadas do mundo — os seus dois museus, três religiões, ruas medievais e a necrópole onde a pirâmide foi inventada.",
+          "duration": "5 dias / 4 noites"
+        },
+        "ar": {
+          "name": "قاهرة العوالم الثمانية",
+          "summary": "قراءة عميقة متأنية لأعظم مدينة متعددة الطبقات في العالم — متحفاها، وأديانها الثلاثة، وشوارعها من العصور الوسطى، والجبانة التي اختُرع فيها الهرم.",
+          "duration": "٥ أيام / ٤ ليالٍ"
+        }
       }
     },
     {
@@ -653,7 +1715,14 @@
       "priceFrom": {
         "amount": 979,
         "currency": "EUR",
-        "per": "person"
+        "per": "person",
+        "basis": "a private party of 6 or more"
+      },
+      "priceForTwo": {
+        "amount": 1077,
+        "currency": "EUR",
+        "per": "person",
+        "basis": "a private party of two"
       },
       "summary": "The Red Sea done with intent — a private reef-boat day in Ras Mohammed, a Sinai desert evening under the stars, and space left deliberately empty.",
       "pages": {
@@ -667,6 +1736,53 @@
         "ms": "https://kemet-travel.com/ms/percutian-sharm-el-sheikh-5-hari.html",
         "pt": "https://kemet-travel.com/pt/sharm-el-sheikh-5-dias.html",
         "ar": "https://kemet-travel.com/ar/sharm-al-sheikh-5-ayyam.html"
+      },
+      "i18n": {
+        "de": {
+          "name": "Rückzug ans Rote Meer: Scharm el-Scheich",
+          "summary": "Das Rote Meer mit Absicht — ein privater Bootstag im Ras-Mohammed-Nationalpark, ein Abend in der Sinai-Wüste unter Sternen, und bewusst leer gelassene Zeit.",
+          "duration": "5 Tage / 4 Nächte"
+        },
+        "it": {
+          "name": "Ritiro sul Mar Rosso: Sharm el-Sheikh",
+          "summary": "Il Mar Rosso con un'idea precisa — una giornata in barca privata a Ras Mohammed, una serata nel deserto del Sinai sotto le stelle e spazi lasciati vuoti di proposito.",
+          "duration": "5 giorni / 4 notti"
+        },
+        "es": {
+          "name": "Retiro en el mar Rojo: Sharm el-Sheikh",
+          "summary": "El mar Rojo con intención: un día en barco privado por Ras Mohammed, una velada bajo las estrellas en el desierto del Sinaí y tiempo que se deja libre a propósito.",
+          "duration": "5 días / 4 noches"
+        },
+        "fr": {
+          "name": "Retraite en mer Rouge : Charm el-Cheikh",
+          "summary": "La mer Rouge avec intention — une journée bateau privée à Ras Mohammed, une soirée sous les étoiles dans le désert du Sinaï, et du temps laissé volontairement vide.",
+          "duration": "5 jours / 4 nuits"
+        },
+        "ru": {
+          "name": "Отдых на Красном море: Шарм-эль-Шейх",
+          "summary": "Красное море со смыслом: день на частном катере у рифов Рас-Мохаммеда, вечер под звёздами в Синайской пустыне и время, которое нарочно оставлено пустым.",
+          "duration": "5 дней / 4 ночи"
+        },
+        "id": {
+          "name": "Rehat di Laut Merah: Sharm El Sheikh",
+          "summary": "Laut Merah yang dijalani dengan sengaja — sehari penuh berperahu privat di Ras Mohammed, satu malam di bawah bintang di gurun Sinai, dan waktu yang sengaja dibiarkan kosong.",
+          "duration": "5 hari / 4 malam"
+        },
+        "ms": {
+          "name": "Peranginan di Laut Merah: Sharm El Sheikh",
+          "summary": "Laut Merah dengan tujuan yang jelas — sehari menaiki bot persendirian di Ras Mohammed, satu malam di gurun Sinai di bawah bintang, dan ruang yang sengaja dibiarkan kosong.",
+          "duration": "5 hari / 4 malam"
+        },
+        "pt": {
+          "name": "Refúgio no Mar Vermelho: Sharm el-Sheikh",
+          "summary": "O Mar Vermelho feito com intenção — um dia de barco privativo em Ras Mohammed, uma noite sob as estrelas no deserto do Sinai e tempo deixado vazio de propósito.",
+          "duration": "5 dias / 4 noites"
+        },
+        "ar": {
+          "name": "ملاذ على البحر الأحمر: شرم الشيخ",
+          "summary": "البحر الأحمر بنيّة واضحة: يوم خاص بالقارب في رأس محمد، وسهرة تحت النجوم في صحراء سيناء، ووقت تُرك فارغًا عن قصد.",
+          "duration": "٥ أيام / ٤ ليالٍ"
+        }
       }
     },
     {
@@ -686,7 +1802,14 @@
       "priceFrom": {
         "amount": 792,
         "currency": "EUR",
-        "per": "person"
+        "per": "person",
+        "basis": "a private party of 6 or more"
+      },
+      "priceForTwo": {
+        "amount": 871,
+        "currency": "EUR",
+        "per": "person",
+        "basis": "a private party of two"
       },
       "summary": "Four guided boat dives across the two best site groups in Sinai — Ras Mohammed and Tiran — with a PADI centre we have vetted, after a house-reef check dive.",
       "pages": {
@@ -700,6 +1823,53 @@
         "ms": "https://kemet-travel.com/ms/menyelam-laut-merah-4-hari.html",
         "pt": "https://kemet-travel.com/pt/mergulho-no-mar-vermelho-4-dias.html",
         "ar": "https://kemet-travel.com/ar/al-ghaws-fi-al-bahr-al-ahmar-4-ayyam.html"
+      },
+      "i18n": {
+        "de": {
+          "name": "Tauchen im Roten Meer",
+          "summary": "Vier geführte Bootstauchgänge an den zwei besten Revieren des Sinai — Ras Mohammed und Tiran — mit einem von uns geprüften PADI-Center, nach einem Check-Dive am Hausriff.",
+          "duration": "4 Tage / 3 Nächte"
+        },
+        "it": {
+          "name": "Immersioni nel Mar Rosso",
+          "summary": "Quattro immersioni guidate in barca sui due migliori gruppi di siti del Sinai — Ras Mohammed e Tiran — con un diving PADI che abbiamo verificato, dopo un'immersione di prova sul reef dell'hotel.",
+          "duration": "4 giorni / 3 notti"
+        },
+        "es": {
+          "name": "Bucear en el mar Rojo",
+          "summary": "Cuatro inmersiones guiadas desde barco en los dos mejores conjuntos de puntos de buceo del Sinaí, Ras Mohammed y Tirán, con un centro PADI que hemos verificado, tras una inmersión de chequeo en el arrecife del resort.",
+          "duration": "4 días / 3 noches"
+        },
+        "fr": {
+          "name": "Plonger en mer Rouge",
+          "summary": "Quatre plongées guidées en bateau sur les deux meilleurs ensembles de sites du Sinaï — Ras Mohammed et Tiran — avec un centre PADI vérifié, après une plongée de contrôle sur le récif de l'hôtel.",
+          "duration": "4 jours / 3 nuits"
+        },
+        "ru": {
+          "name": "Дайвинг на Красном море",
+          "summary": "Четыре погружения с катера с гидом на двух лучших группах сайтов Синая — Рас-Мохаммед и Тиран — в проверенном нами центре PADI, после проверочного погружения на домашнем рифе.",
+          "duration": "4 дня / 3 ночи"
+        },
+        "id": {
+          "name": "Menyelam di Laut Merah",
+          "summary": "Empat penyelaman berpemandu dari perahu di dua kelompok situs terbaik Sinai — Ras Mohammed dan Tiran — bersama pusat selam PADI yang telah kami periksa, setelah check dive di house reef.",
+          "duration": "4 hari / 3 malam"
+        },
+        "ms": {
+          "name": "Menyelam di Laut Merah",
+          "summary": "Empat selaman bot berpemandu di dua kumpulan lokasi terbaik Sinai — Ras Mohammed dan Tiran — bersama pusat PADI yang telah kami tapis, selepas selaman semakan di terumbu resort.",
+          "duration": "4 hari / 3 malam"
+        },
+        "pt": {
+          "name": "Mergulhar no Mar Vermelho",
+          "summary": "Quatro mergulhos guiados de barco nos dois melhores conjuntos de pontos do Sinai — Ras Mohammed e Tiran — com um centro PADI avaliado por nós, depois de um mergulho de checagem no recife do resort.",
+          "duration": "4 dias / 3 noites"
+        },
+        "ar": {
+          "name": "الغوص في البحر الأحمر",
+          "summary": "أربع غوصات بالقارب بإشراف مرشد في أفضل مجموعتي مواقع في سيناء، رأس محمد وتيران، مع مركز PADI دقّقنا في اختياره، بعد غوصة تمهيدية عند شعاب المنتجع.",
+          "duration": "٤ أيام / ٣ ليالٍ"
+        }
       }
     },
     {
@@ -717,7 +1887,14 @@
       "priceFrom": {
         "amount": 544,
         "currency": "EUR",
-        "per": "person"
+        "per": "person",
+        "basis": "a private party of 6 or more"
+      },
+      "priceForTwo": {
+        "amount": 598,
+        "currency": "EUR",
+        "per": "person",
+        "basis": "a private party of two"
       },
       "summary": "Luxor without the sprint: Karnak at opening, the Valley of the Kings before the heat, Hatshepsut's terraces and the Avenue of Sphinxes after dark.",
       "pages": {
@@ -731,6 +1908,53 @@
         "ms": "https://kemet-travel.com/ms/pakej-luxor-3-hari.html",
         "pt": "https://kemet-travel.com/pt/luxor-em-3-dias.html",
         "ar": "https://kemet-travel.com/ar/al-uqsur-3-ayyam.html"
+      },
+      "i18n": {
+        "de": {
+          "name": "Luxor in Ruhe",
+          "summary": "Luxor ohne Sprint: Karnak zur Öffnung, das Tal der Könige vor der Hitze, die Terrassen der Hatschepsut und die Sphinxallee nach Einbruch der Dunkelheit.",
+          "duration": "3 Tage / 2 Nächte"
+        },
+        "it": {
+          "name": "Luxor, con calma",
+          "summary": "Luxor senza corsa: Karnak all'apertura, la Valle dei Re prima del caldo, le terrazze di Hatshepsut e il viale delle sfingi dopo il tramonto.",
+          "duration": "3 giorni / 2 notti"
+        },
+        "es": {
+          "name": "Luxor a fondo",
+          "summary": "Luxor sin carreras: Karnak a la apertura, el Valle de los Reyes antes del calor, las terrazas de Hatshepsut y la Avenida de las Esfinges de noche.",
+          "duration": "3 días / 2 noches"
+        },
+        "fr": {
+          "name": "Louxor, sans hâte",
+          "summary": "Louxor sans course : Karnak à l'ouverture, la Vallée des Rois avant la chaleur, les terrasses d'Hatchepsout et l'allée des Sphinx à la nuit tombée.",
+          "duration": "3 jours / 2 nuits"
+        },
+        "ru": {
+          "name": "Луксор без спешки",
+          "summary": "Луксор без гонки: Карнак к открытию, Долина царей до жары, террасы Хатшепсут и аллея сфинксов после заката.",
+          "duration": "3 дня / 2 ночи"
+        },
+        "id": {
+          "name": "Menyelami Luxor",
+          "summary": "Luxor tanpa terburu-buru: Karnak saat baru dibuka, Lembah Para Raja sebelum panas, teras-teras Hatshepsut, dan Jalan Sphinx setelah gelap.",
+          "duration": "3 hari / 2 malam"
+        },
+        "ms": {
+          "name": "Luxor Secara Mendalam",
+          "summary": "Luxor tanpa berkejar: Karnak ketika pintu dibuka, Lembah Raja-Raja sebelum panas, teres Hatshepsut dan Lebuh Sphinx selepas gelap.",
+          "duration": "3 hari / 2 malam"
+        },
+        "pt": {
+          "name": "Imersão em Luxor",
+          "summary": "Luxor sem correria: Karnak na abertura, o Vale dos Reis antes do calor, os terraços de Hatshepsut e a Avenida das Esfinges depois que escurece.",
+          "duration": "3 dias / 2 noites"
+        },
+        "ar": {
+          "name": "في قلب الأقصر",
+          "summary": "الأقصر بلا ركض: الكرنك عند فتح أبوابه، ووادي الملوك قبل اشتداد الحر، ومدرجات حتشبسوت، وطريق الكباش بعد حلول الظلام.",
+          "duration": "٣ أيام / ليلتان"
+        }
       }
     },
     {
@@ -749,7 +1973,14 @@
       "priceFrom": {
         "amount": 600,
         "currency": "EUR",
-        "per": "person"
+        "per": "person",
+        "basis": "a private party of 6 or more"
+      },
+      "priceForTwo": {
+        "amount": 660,
+        "currency": "EUR",
+        "per": "person",
+        "basis": "a private party of two"
       },
       "summary": "The essential Cairo, concierge-run: fast-track immigration, private plateau morning, the Grand Egyptian Museum, and lantern-lit Islamic Cairo by night.",
       "pages": {
@@ -763,6 +1994,53 @@
         "ms": "https://kemet-travel.com/ms/kaherah-vip-3-hari.html",
         "pt": "https://kemet-travel.com/pt/cairo-vip-3-dias.html",
         "ar": "https://kemet-travel.com/ar/al-qahira-vip-3-ayyam.html"
+      },
+      "i18n": {
+        "de": {
+          "name": "Kairo VIP-Kurzreise",
+          "summary": "Kairo auf das Wesentliche gebracht und concierge-geführt: Fast-Track bei der Einreise, ein privater Morgen am Plateau, das Grand Egyptian Museum und das laternenbeleuchtete islamische Kairo.",
+          "duration": "3 Tage / 2 Nächte"
+        },
+        "it": {
+          "name": "Il Cairo VIP, viaggio breve",
+          "summary": "Il Cairo essenziale, gestito come una concierge: corsia prioritaria all'immigrazione, mattinata privata sulla piana, il Grand Egyptian Museum e il Cairo islamico illuminato a lanterne.",
+          "duration": "3 giorni / 2 notti"
+        },
+        "es": {
+          "name": "Escapada VIP a El Cairo",
+          "summary": "Lo esencial de El Cairo, con servicio de conserjería: inmigración por vía rápida, la meseta en privado por la mañana, el Gran Museo Egipcio y El Cairo islámico de noche, a la luz de los faroles.",
+          "duration": "3 días / 2 noches"
+        },
+        "fr": {
+          "name": "Le Caire VIP, court séjour",
+          "summary": "Le Caire essentiel, mené comme une conciergerie : passage prioritaire à l'immigration, matinée privée sur le plateau, le Grand Musée égyptien et le Caire islamique éclairé aux lanternes.",
+          "duration": "3 jours / 2 nuits"
+        },
+        "ru": {
+          "name": "Каир VIP за три дня",
+          "summary": "Главный Каир, организованный как консьерж-сервис: ускоренный паспортный контроль, индивидуальное утро на плато, Большой Египетский музей и исламский Каир в свете фонарей вечером.",
+          "duration": "3 дня / 2 ночи"
+        },
+        "id": {
+          "name": "Singgah Singkat VIP di Kairo",
+          "summary": "Kairo yang esensial, diurus layaknya oleh concierge: imigrasi jalur cepat, pagi privat di plateau Giza, Grand Egyptian Museum, dan Kairo Islam yang diterangi lentera pada malam hari.",
+          "duration": "3 hari / 2 malam"
+        },
+        "ms": {
+          "name": "Kaherah VIP: Singgahan Singkat",
+          "summary": "Kaherah yang terpenting, diuruskan seperti concierge: imigresen laluan pantas, pagi persendirian di dataran Giza, Grand Egyptian Museum, dan Kaherah Islam yang diterangi tanglung pada waktu malam.",
+          "duration": "3 hari / 2 malam"
+        },
+        "pt": {
+          "name": "Cairo VIP, estadia curta",
+          "summary": "O essencial do Cairo, conduzido como um serviço de concierge: imigração expressa, manhã privativa no planalto, o Grande Museu Egípcio e, à noite, o Cairo islâmico à luz das lanternas.",
+          "duration": "3 dias / 2 noites"
+        },
+        "ar": {
+          "name": "إقامة قصيرة في القاهرة بخدمة VIP",
+          "summary": "جوهر القاهرة، وكل تفاصيله تُدار عنكم: إنهاء إجراءات الجوازات بالمسار السريع، وصباح خاص على هضبة الجيزة، والمتحف المصري الكبير، والقاهرة الإسلامية ليلًا على ضوء الفوانيس.",
+          "duration": "٣ أيام / ليلتان"
+        }
       }
     },
     {
@@ -780,7 +2058,14 @@
       "priceFrom": {
         "amount": 402,
         "currency": "EUR",
-        "per": "person"
+        "per": "person",
+        "basis": "a private party of 6 or more"
+      },
+      "priceForTwo": {
+        "amount": 442,
+        "currency": "EUR",
+        "per": "person",
+        "basis": "a private party of two"
       },
       "summary": "Alexandria with its missing half restored: the Greco-Roman sites by day, then the corniche at dusk, seafood by the water and the morning light day-trips never catch.",
       "pages": {
@@ -794,6 +2079,53 @@
         "ms": "https://kemet-travel.com/ms/alexandria-2-hari-1-malam.html",
         "pt": "https://kemet-travel.com/pt/alexandria-com-pernoite-2-dias.html",
         "ar": "https://kemet-travel.com/ar/al-iskandariya-yawmayn-wa-layla.html"
+      },
+      "i18n": {
+        "de": {
+          "name": "Alexandria über Nacht",
+          "summary": "Alexandria mit seiner fehlenden Hälfte: die griechisch-römischen Stätten bei Tag, dann die Corniche in der Dämmerung, Fisch am Wasser und das Morgenlicht, das kein Tagesausflug je erwischt.",
+          "duration": "2 Tage / 1 Nacht"
+        },
+        "it": {
+          "name": "Alessandria, con una notte",
+          "summary": "Alessandria con la sua metà mancante: i siti greco-romani di giorno, poi la corniche al crepuscolo, il pesce in riva al mare e la luce del mattino che nessuna gita riesce a cogliere.",
+          "duration": "2 giorni / 1 notte"
+        },
+        "es": {
+          "name": "Una noche en Alejandría",
+          "summary": "Alejandría con la mitad que le faltaba: los lugares grecorromanos de día y, después, la Corniche al atardecer, pescado y marisco junto al agua y la luz de la mañana que las excursiones de un día nunca alcanzan.",
+          "duration": "2 días / 1 noche"
+        },
+        "fr": {
+          "name": "Alexandrie, une nuit sur place",
+          "summary": "Alexandrie avec sa moitié manquante : les sites gréco-romains le jour, puis la corniche au crépuscule, le poisson au bord de l'eau et la lumière du matin qu'aucune excursion ne saisit.",
+          "duration": "2 jours / 1 nuit"
+        },
+        "ru": {
+          "name": "Александрия с ночёвкой",
+          "summary": "Александрия с возвращённой второй половиной: греко-римские памятники днём, затем набережная на закате, морепродукты у воды и утренний свет, который однодневные поездки никогда не застают.",
+          "duration": "2 дня / 1 ночь"
+        },
+        "id": {
+          "name": "Semalam di Aleksandria",
+          "summary": "Aleksandria dengan separuhnya yang hilang dikembalikan: situs-situs Yunani-Romawi pada siang hari, lalu corniche saat senja, hidangan laut di tepi air, dan cahaya pagi yang tak pernah tertangkap tur sehari.",
+          "duration": "2 hari / 1 malam"
+        },
+        "ms": {
+          "name": "Semalam di Alexandria",
+          "summary": "Alexandria dengan separuhnya yang hilang dikembalikan: tapak Greco-Rom pada siang hari, kemudian corniche ketika senja, makanan laut di tepi air dan cahaya pagi yang tidak pernah sempat dilihat pelawat harian.",
+          "duration": "2 hari / 1 malam"
+        },
+        "pt": {
+          "name": "Alexandria com pernoite",
+          "summary": "Alexandria com a metade que faltava: os sítios greco-romanos de dia, depois a corniche ao entardecer, frutos do mar à beira d'água e a luz da manhã que o bate-volta nunca pega.",
+          "duration": "2 dias / 1 noite"
+        },
+        "ar": {
+          "name": "الإسكندرية، ليلة على المتوسط",
+          "summary": "الإسكندرية وقد استعادت نصفها الغائب: المواقع اليونانية الرومانية نهارًا، ثم الكورنيش عند الغروب، والمأكولات البحرية على الماء، وضوء الصباح الذي لا تدركه رحلات اليوم الواحد.",
+          "duration": "يومان / ليلة واحدة"
+        }
       }
     },
     {
@@ -810,7 +2142,14 @@
       "priceFrom": {
         "amount": 160,
         "currency": "EUR",
-        "per": "person"
+        "per": "person",
+        "basis": "a private party of 6 or more"
+      },
+      "priceForTwo": {
+        "amount": 176,
+        "currency": "EUR",
+        "per": "person",
+        "basis": "a private party of two"
       },
       "siteTicketsIncluded": false,
       "summary": "Ramesses II's colossal rock-cut temples — carved into a Nubian mountainside, moved block by block above the rising lake, and still aligned to the sun.",
@@ -825,6 +2164,53 @@
         "ms": "https://kemet-travel.com/ms/lawatan-abu-simbel-dari-aswan.html",
         "pt": "https://kemet-travel.com/pt/abu-simbel-saindo-de-assua.html",
         "ar": "https://kemet-travel.com/ar/abu-simbel-min-aswan.html"
+      },
+      "i18n": {
+        "de": {
+          "name": "Abu Simbel, privater Ausflug",
+          "summary": "Ramses' II. kolossale Felsentempel — in einen nubischen Berghang geschlagen, Block für Block über den steigenden See versetzt, und noch immer auf die Sonne ausgerichtet.",
+          "duration": "Ganzer Tag (ca. 8 Stunden, ab Assuan)"
+        },
+        "it": {
+          "name": "Abu Simbel, escursione privata",
+          "summary": "I templi colossali di Ramesse II scavati nella roccia — intagliati in una montagna nubiana, spostati blocco per blocco sopra il lago che saliva, e ancora allineati al sole.",
+          "duration": "Giornata intera (≈8 ore, da Assuan)"
+        },
+        "es": {
+          "name": "Excursión privada a Abu Simbel",
+          "summary": "Los colosales templos rupestres de Ramsés II: excavados en una ladera de Nubia, trasladados bloque a bloque por encima de las aguas crecientes del lago y todavía alineados con el sol.",
+          "duration": "Día completo (unas 8 horas, desde Asuán)"
+        },
+        "fr": {
+          "name": "Abou Simbel, excursion privée",
+          "summary": "Les temples rupestres colossaux de Ramsès II — taillés dans un flanc de montagne nubien, déplacés bloc par bloc au-dessus du lac montant, et toujours alignés sur le soleil.",
+          "duration": "Journée entière (environ 8 heures, depuis Assouan)"
+        },
+        "ru": {
+          "name": "Абу-Симбел: индивидуальная экскурсия",
+          "summary": "Колоссальные скальные храмы Рамсеса II — высеченные в нубийской горе, перенесённые блок за блоком выше поднимавшегося озера и по-прежнему выровненные по солнцу.",
+          "duration": "Весь день (около 8 часов, из Асуана)"
+        },
+        "id": {
+          "name": "Tur Privat Abu Simbel",
+          "summary": "Kuil-kuil batu raksasa Ramses II — dipahat di lereng gunung Nubia, dipindahkan blok demi blok ke atas permukaan danau yang naik, dan masih sejajar dengan matahari.",
+          "duration": "Sehari penuh (sekitar 8 jam, dari Aswan)"
+        },
+        "ms": {
+          "name": "Abu Simbel, Lawatan Persendirian",
+          "summary": "Kuil-kuil gergasi Ramses II yang dipahat dalam batu — diukir pada lereng gunung Nubia, dipindahkan blok demi blok ke atas paras tasik yang naik, dan masih sejajar dengan matahari.",
+          "duration": "Sehari penuh (lebih kurang 8 jam, dari Aswan)"
+        },
+        "pt": {
+          "name": "Abu Simbel, passeio privativo",
+          "summary": "Os templos colossais de Ramsés II escavados na rocha — talhados numa encosta da Núbia, transferidos bloco a bloco para cima do lago que subia e ainda alinhados com o sol.",
+          "duration": "Dia inteiro (cerca de 8 horas, saindo de Assuã)"
+        },
+        "ar": {
+          "name": "رحلة خاصة إلى أبو سمبل",
+          "summary": "معابد رمسيس الثاني الهائلة المنحوتة في الصخر: نُقرت في سفح جبل نوبي، ونُقلت كتلة كتلة فوق مياه البحيرة الصاعدة، وما زالت متعامدة مع الشمس.",
+          "duration": "يوم كامل (نحو ٨ ساعات، من أسوان)"
+        }
       }
     }
   ],

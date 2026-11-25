@@ -43,6 +43,21 @@ description: "Когда ехать в Египет: жара, толпы, це�
 
 22 февраля и 22 октября солнце проходит вглубь храма Абу-Симбел и освещает святилище — выравнивание, рассчитанное более трёх тысяч лет назад. Эти два утра исключительны и бронируются очень заранее. Вторая дата приходится на начало хорошего сезона, что делает её удобнее для встраивания в маршрут.
 
+## По месяцам
+
+- [Египет в январе](https://kemet-travel.com/ru/egipet-v-yanvare.html)
+- [Египет в феврале](https://kemet-travel.com/ru/egipet-v-fevrale.html)
+- [Египет в марте](https://kemet-travel.com/ru/egipet-v-marte.html)
+- [Египет в апреле](https://kemet-travel.com/ru/egipet-v-aprele.html)
+- [Египет в мае](https://kemet-travel.com/ru/egipet-v-mae.html)
+- [Египет в июне](https://kemet-travel.com/ru/egipet-v-iyune.html)
+- [Египет в июле](https://kemet-travel.com/ru/egipet-v-iyule.html)
+- [Египет в августе](https://kemet-travel.com/ru/egipet-v-avguste.html)
+- [Египет в сентябре](https://kemet-travel.com/ru/egipet-v-sentyabre.html)
+- [Египет в октябре](https://kemet-travel.com/ru/egipet-v-oktyabre.html)
+- [Египет в ноябре](https://kemet-travel.com/ru/egipet-v-noyabre.html)
+- [Египет в декабре](https://kemet-travel.com/ru/egipet-v-dekabre.html)
+
 ## Частые вопросы
 
 ### Можно ли ехать в Египет летом?

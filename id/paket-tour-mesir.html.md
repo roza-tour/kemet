@@ -291,6 +291,23 @@ Kuil-kuil batu raksasa Ramses II — dipahat di lereng gunung Nubia, dipindahkan
 
 €160 / orang mulai 6 orang · tiket masuk tidak termasuk
 
+## Bandingkan pilihan
+
+- [Pesawat atau kereta tidur ke Luxor dan Aswan?](https://kemet-travel.com/id/naik-pesawat-atau-kereta-tidur-ke-luxor-aswan.html)
+- [Pelayaran Sungai Nil atau tur darat?](https://kemet-travel.com/id/pelayaran-sungai-nil-atau-tur-darat.html)
+- [Dahabiya atau kapal pesiar?](https://kemet-travel.com/id/dahabiya-atau-kapal-pesiar-sungai-nil.html)
+- [Luxor atau Aswan?](https://kemet-travel.com/id/luxor-atau-aswan-mana-yang-dipilih.html)
+- [Museum Mesir atau Grand Egyptian Museum?](https://kemet-travel.com/id/museum-mesir-atau-grand-egyptian-museum.html)
+- [Sharm El Sheikh atau Hurghada?](https://kemet-travel.com/id/sharm-el-sheikh-atau-hurghada.html)
+
+## Menurut kesempatan
+
+- [Melamar di Mesir](https://kemet-travel.com/id/melamar-di-mesir.html)
+- [Hari Jadi Pernikahan dan Ulang Tahun Istimewa](https://kemet-travel.com/id/ulang-tahun-pernikahan-di-mesir.html)
+- [Grup Privat, Bukan Tur Grup](https://kemet-travel.com/id/perjalanan-grup-privat-mesir.html)
+- [Kembali ke Mesir](https://kemet-travel.com/id/kembali-ke-mesir.html)
+- [Tiga Generasi, Satu Perjalanan](https://kemet-travel.com/id/liburan-keluarga-tiga-generasi-mesir.html)
+
 ## Pertanyaan umum
 
 ### Bisakah rute yang ditawarkan diubah?

@@ -15,6 +15,8 @@ description: "الكنيسة المعلقة ومعبد بن عزرا وكنيس�
 
 من 6 أفراد · التذاكر غير مشمولة
 
+‏٨٨ € للفرد، لمسافرَين اثنين
+
 للفرد، في الموسم العادي. رسوم مواسم الأعياد تُذكر منفصلة في عرض السعر.
 
 المدة **يوم كامل (نحو ٨ ساعات)**
@@ -92,9 +94,7 @@ description: "الكنيسة المعلقة ومعبد بن عزرا وكنيس�
 
 ## استكشاف
 
-صفحات تفاصيل كل رحلة بالإنجليزية.
-
-[kemet-travel.com/tour-religious-citadel.html](https://kemet-travel.com/tour-religious-citadel.html)
+[هذه الصفحة بالإنجليزية](https://kemet-travel.com/tour-religious-citadel.html)
 
 ---
 

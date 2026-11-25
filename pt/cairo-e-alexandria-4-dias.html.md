@@ -15,6 +15,8 @@ a partir de € 618 / pessoa
 
 a partir de 6 viajantes
 
+€ 680 por pessoa, para dois viajantes
+
 Por pessoa, em temporada normal. Acréscimos de feriados aparecem separados no orçamento.
 
 Duração **4 dias / 3 noites**
@@ -110,9 +112,7 @@ Cerca de duas horas e meia a três horas em cada sentido, pela estrada do desert
 
 ## Explorar
 
-As páginas de cada viagem estão em inglês.
-
-[kemet-travel.com/tour-4-day.html](https://kemet-travel.com/tour-4-day.html)
+[Esta página em inglês](https://kemet-travel.com/tour-4-day.html)
 
 ---
 

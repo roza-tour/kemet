@@ -15,6 +15,8 @@ dari €544 / seorang
 
 dari 6 orang
 
+€598 seorang bagi dua pengembara
+
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 
 Tempoh **3 hari / 2 malam**
@@ -104,9 +106,7 @@ Terbang (55 minit) atau naik kereta api tidur semalaman, dari mana-mana arah. Ke
 
 ## Terokai
 
-Halaman butiran setiap percutian dalam bahasa Inggeris.
-
-[kemet-travel.com/tour-luxor-3day.html](https://kemet-travel.com/tour-luxor-3day.html)
+[Halaman ini dalam bahasa Inggeris](https://kemet-travel.com/tour-luxor-3day.html)
 
 ---
 

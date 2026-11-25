@@ -15,6 +15,8 @@ dari €59 / seorang
 
 dari 6 orang
 
+€65 seorang bagi dua pengembara
+
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga. Makanan dan minuman tidak termasuk: dibayar terus di setiap hentian.
 
 Tempoh **Malam (lebih kurang 4 jam)**
@@ -117,9 +119,7 @@ Anda sendiri yang menentukan berapa banyak untuk dipesan di setiap hentian, dan 
 
 ## Terokai
 
-Halaman butiran setiap percutian dalam bahasa Inggeris.
-
-[kemet-travel.com/tour-cairo-food.html](https://kemet-travel.com/tour-cairo-food.html)
+[Halaman ini dalam bahasa Inggeris](https://kemet-travel.com/tour-cairo-food.html)
 
 ---
 

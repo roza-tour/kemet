@@ -1,5 +1,5 @@
 ---
-title: "Egypt Highlights Deluxe — 7 Days / 6 Nights | Kemet"
+title: "7-Day Egypt Private Tour: Cairo, Luxor & Alexandria | Kemet"
 url: https://kemet-travel.com/tour-7-day.html
 language: en
 description: "The headline acts of Egypt in seven days — the Egyptian Museum, Alexandria, the temples and tombs of Luxor — private, from €1,179 pp."
@@ -13,7 +13,7 @@ A week that gathers the essentials — Cairo, Alexandria and Luxor — with slee
 
 ## What does Egypt Highlights Deluxe include, and what does it cost?
 
-Egypt Highlights Deluxe is a private 7-day, 6-night journey through Cairo, Giza, Alexandria and Luxor, from €1,179 per person for a party of 6 or more. It includes a private Egyptologist guide throughout and 6 nights' hotel accommodation. International flights are not included. A flight version, in place of the two sleeper-train nights, is from €1,309.
+Egypt Highlights Deluxe is a private 7-day, 6-night journey through Cairo, Giza, Alexandria and Luxor, from €1,179 per person for a party of 6 or more, or €1,297 per person for two. It includes a private Egyptologist guide throughout. International flights are not included. A flight version, in place of the two sleeper-train nights, is from €1,309.
 
 ## Overview
 
@@ -153,6 +153,8 @@ From
 per person · EUR
 
 Based on a private party of 6 or more.
+
+For two travellers: €1,297 per person.
 
 Prefer to fly? The same journey with flights in place of the two sleeper-train nights — from €1,309 pp.
 

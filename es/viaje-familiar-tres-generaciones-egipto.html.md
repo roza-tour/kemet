@@ -88,6 +88,7 @@ Páginas relacionadas en este idioma y la página original en inglés.
 - [Aniversarios y cumpleaños señalados](https://kemet-travel.com/es/aniversario-cumpleanos-especial-egipto.html)
 - [Un grupo privado, no un viaje en grupo](https://kemet-travel.com/es/viaje-privado-en-grupo-egipto.html)
 - [Volver a Egipto](https://kemet-travel.com/es/volver-a-egipto-segundo-viaje.html)
+- [Viajes a Egipto](https://kemet-travel.com/es/viajes-a-egipto.html)
 
 [Esta página en inglés](https://kemet-travel.com/occasions/three-generations-egypt.html)
 

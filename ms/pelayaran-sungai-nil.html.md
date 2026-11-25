@@ -19,11 +19,68 @@ Kapal besar **40–80 kabin**
 
 Kuil-kuil antara Luxor dan Aswan dibina menghadap sungai. Kita mendatanginya dari air kerana begitulah ia direka: Edfu dan Kom Ombo muncul dari geladak sebelum muncul dari tempat letak kereta. Tiga hingga empat malam sudah merangkumi bahagian ini, dan pilihan kapal lebih menentukan daripada tempohnya.
 
+## Pelayaran empat hari, hari demi hari
+
+Inilah pelayaran seperti yang kami jalankan: tiga malam di sungai dari Aswan ke Luxor, setiap lawatan di darat bersifat persendirian bersama Egyptologist anda sendiri. Kapalnya dikongsi; panduan, kenderaan dan lawatan anda tidak.
+
+dari €820 / seorang (dari 6 orang). €902 seorang bagi dua pengembara. Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
+
+01
+
+### Hari 1 — Aswan — Philae, Empangan Tinggi & menaiki kapal
+
+- Disambut secara persendirian di Aswan dan lawatan pagi ke Empangan Tinggi serta Obelisk Tidak Siap
+- Bot bermotor ke Kuil Philae di pulaunya, tempat suci Isis
+- Menaiki kapal pelayaran anda sebelum makan tengah hari; petang bebas di geladak jemur
+
+02
+
+### Hari 2 — Kom Ombo & Edfu
+
+- Belayar pada waktu pagi ke Kom Ombo dan kuil berkembarnya di atas tebing sungai
+- Terus ke Edfu — Kuil Horus, kuil paling terpelihara di Mesir
+- Malam di atas kapal ketika kapal berlabuh di kaki bandar kuil itu
+
+03
+
+### Hari 3 — Pintu air Esna & tiba di Luxor
+
+- Melalui pintu air Esna ketika lembah semakin luas menghala ke Thebes
+- Tiba di Luxor pada petang hari; lawatan malam pilihan ke Kuil Luxor yang diterangi cahaya
+- Malam terakhir di atas kapal
+
+04
+
+### Hari 4 — Luxor — kedua-dua tebing & turun dari kapal
+
+- Dewan hipostil agung Karnak bersama Egyptologist anda
+- Menyeberang ke Tebing Barat — Lembah Raja-Raja dan Kuil Hatshepsut
+- Turun dari kapal dan pemindahan ke hotel anda di Luxor, stesen kereta api atau lapangan terbang
+
+## Termasuk
+
+- Pemandu Egyptologist peribadi sepanjang perjalanan
+- Pelayaran Sungai Nil 3 malam termasuk semua hidangan, dari Aswan ke Luxor
+- Semua lawatan darat sebagai lawatan peribadi bersama pemandu anda sendiri
+- Semua bayaran masuk ke tapak dan monumen
+- Pemindahan peribadi berhawa dingin
+- Ambil dan hantar di hotel
+- Air botol setiap hari
+
+## Tidak termasuk
+
+- Penerbangan antarabangsa ke dan dari Mesir
+- Visa masuk Mesir
+- Tip
+- Perbelanjaan peribadi
+- Makanan, kecuali di atas kapal pelayaran Sungai Nil
+- Tambahan pilihan yang anda pilih sendiri — aktiviti, minuman
+
 01
 
 ## Dahabiya atau kapal besar
 
-Dahabiya ialah kapal layar dengan beberapa kabin sahaja. Ia berlayar, berlabuh di beting pasir yang tidak mampu didekati kapal besar, dan jika disewa penuh tiada penumpang lain selain rombongan anda. Kapal lima bintang memberi ruang lebih luas, kolam renang dan geladak atas, tetapi mengikut jadual bersama dan berlabuh di tempat yang sama dengan kapal lain. Untuk kapal besar, kami menempah armada Sonesta; kapal yang mana disahkan mengikut tarikh anda. Kedua-duanya baik; kedua-duanya bercerita perkara berbeza.
+Dahabiya ialah kapal layar dengan beberapa kabin sahaja. Ia berlayar, berlabuh di beting pasir yang tidak mampu didekati kapal besar, dan jika disewa penuh tiada penumpang lain selain rombongan anda. Kapal lima bintang memberi ruang lebih luas, kolam renang dan geladak atas, tetapi mengikut jadual bersama dan berlabuh di tempat yang sama dengan kapal lain. Kapal besarnya disahkan mengikut tarikh anda. Kedua-duanya baik; kedua-duanya bercerita perkara berbeza.
 
 02
 

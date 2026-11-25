@@ -15,6 +15,8 @@ desde 57 € / persona
 
 desde 6 viajeros · entradas no incluidas
 
+63 € por persona para dos viajeros
+
 Por persona, en temporada normal. Los suplementos de fechas festivas se indican por separado en el presupuesto.
 
 Duración **Día completo (unas 11 horas)**
@@ -92,9 +94,7 @@ Mucho: su arquitectura ya impresiona por sí sola, y el edificio se concibió co
 
 ## Explorar
 
-Las páginas de cada viaje están en inglés.
-
-[kemet-travel.com/tour-alexandria.html](https://kemet-travel.com/tour-alexandria.html)
+[Esta página en inglés](https://kemet-travel.com/tour-alexandria.html)
 
 ---
 

@@ -43,6 +43,21 @@ Sono le due finestre in cui la domanda italiana verso l'Egitto è più forte, e 
 
 Il Ramadan si sposta ogni anno di circa undici giorni. I siti restano aperti, spesso con orari ridotti, e il ritmo della giornata si inverte: pomeriggi silenziosi, poi tutto il paese si accende al tramonto per l'iftar. Molti viaggiatori lo descrivono poi come la parte più memorabile del viaggio. La festa del sole di Abu Simbel cade il 22 febbraio e il 22 ottobre.
 
+## Mese per mese
+
+- [Egitto a gennaio](https://kemet-travel.com/it/egitto-a-gennaio.html)
+- [Egitto a febbraio](https://kemet-travel.com/it/egitto-a-febbraio.html)
+- [Egitto a marzo](https://kemet-travel.com/it/egitto-a-marzo.html)
+- [Egitto ad aprile](https://kemet-travel.com/it/egitto-ad-aprile.html)
+- [Egitto a maggio](https://kemet-travel.com/it/egitto-a-maggio.html)
+- [Egitto a giugno](https://kemet-travel.com/it/egitto-a-giugno.html)
+- [Egitto a luglio](https://kemet-travel.com/it/egitto-a-luglio.html)
+- [Egitto ad agosto](https://kemet-travel.com/it/egitto-ad-agosto.html)
+- [Egitto a settembre](https://kemet-travel.com/it/egitto-a-settembre.html)
+- [Egitto a ottobre](https://kemet-travel.com/it/egitto-a-ottobre.html)
+- [Egitto a novembre](https://kemet-travel.com/it/egitto-a-novembre.html)
+- [Egitto a dicembre](https://kemet-travel.com/it/egitto-a-dicembre.html)
+
 ## Domande frequenti
 
 ### Qual è il periodo migliore per andare in Egitto?

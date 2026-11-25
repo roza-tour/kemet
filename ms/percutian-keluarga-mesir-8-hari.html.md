@@ -15,6 +15,8 @@ dari €1,524 / seorang
 
 dari 6 orang
 
+€1,676 seorang bagi dua pengembara
+
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 
 Tempoh **8 hari / 7 malam**
@@ -143,9 +145,7 @@ Ya. Hotel menyediakan pilihan yang biasa dimakan di samping hidangan Mesir, dan 
 
 ## Terokai
 
-Halaman butiran setiap percutian dalam bahasa Inggeris.
-
-[kemet-travel.com/tour-family-8day.html](https://kemet-travel.com/tour-family-8day.html)
+[Halaman ini dalam bahasa Inggeris](https://kemet-travel.com/tour-family-8day.html)
 
 ---
 

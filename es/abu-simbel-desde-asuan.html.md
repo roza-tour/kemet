@@ -15,6 +15,8 @@ desde 160 € / persona
 
 desde 6 viajeros · entradas no incluidas
 
+176 € por persona para dos viajeros
+
 Por persona, en temporada normal. Los suplementos de fechas festivas se indican por separado en el presupuesto.
 
 Duración **Día completo (unas 8 horas, desde Asuán)**
@@ -90,9 +92,7 @@ El 22 de febrero y el 22 de octubre, el sol naciente penetra 60 metros en el Gra
 
 ## Explorar
 
-Las páginas de cada viaje están en inglés.
-
-[kemet-travel.com/tour-abu-simbel.html](https://kemet-travel.com/tour-abu-simbel.html)
+[Esta página en inglés](https://kemet-travel.com/tour-abu-simbel.html)
 
 ---
 

@@ -15,6 +15,8 @@ a partir de € 1.524 / pessoa
 
 a partir de 6 viajantes
 
+€ 1.676 por pessoa, para dois viajantes
+
 Por pessoa, em temporada normal. Acréscimos de feriados aparecem separados no orçamento.
 
 Duração **8 dias / 7 noites**
@@ -143,9 +145,7 @@ Sem problema. Os hotéis têm opções conhecidas ao lado dos pratos egípcios, 
 
 ## Explorar
 
-As páginas de cada viagem estão em inglês.
-
-[kemet-travel.com/tour-family-8day.html](https://kemet-travel.com/tour-family-8day.html)
+[Esta página em inglês](https://kemet-travel.com/tour-family-8day.html)
 
 ---
 

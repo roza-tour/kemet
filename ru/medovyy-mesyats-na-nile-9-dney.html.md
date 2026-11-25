@@ -150,9 +150,7 @@ description: "Девять дней для двоих: рассвет у пир�
 
 ## Обзор
 
-Страницы отдельных маршрутов — на английском.
-
-[kemet-travel.com/tour-honeymoon-9day.html](https://kemet-travel.com/tour-honeymoon-9day.html)
+[Эта страница на английском](https://kemet-travel.com/tour-honeymoon-9day.html)
 
 ---
 

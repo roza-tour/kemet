@@ -15,6 +15,8 @@ desde 64 € / persona
 
 desde 6 viajeros · entradas no incluidas
 
+70 € por persona para dos viajeros
+
 Por persona, en temporada normal. Los suplementos de fechas festivas se indican por separado en el presupuesto.
 
 Duración **Día completo (unas 7 horas)**
@@ -86,9 +88,7 @@ No, si su guía selecciona lo más destacado. Nos centramos en las piezas esenci
 
 ## Explorar
 
-Las páginas de cada viaje están en inglés.
-
-[kemet-travel.com/tour-cairo-museums.html](https://kemet-travel.com/tour-cairo-museums.html)
+[Esta página en inglés](https://kemet-travel.com/tour-cairo-museums.html)
 
 ---
 

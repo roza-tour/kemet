@@ -28,6 +28,8 @@ To be the most trusted private travel company in Egypt for discerning internatio
 
 **Verified, not fabricated.** We do not invent statistics, quotes, reviews or credentials. Where information is not yet confirmed, we note it clearly as a placeholder.
 
+**Photographs.** The photographs and films of our guests and journeys are our own, taken on the day. Many of the photographs of monuments and landscapes are licensed or freely licensed images, credited where the licence asks for it.
+
 **Regularly reviewed.** Content is reviewed on a rolling basis and updated to reflect changes in visa rules, site access, opening hours and travel conditions.
 
 At a glance
@@ -35,6 +37,8 @@ At a glance
 Service area **Egypt**
 
 Our guides speak **English, German, Italian, Spanish, French, Russian, Indonesian, Malay, Portuguese, Arabic, Mandarin Chinese**
+
+Founded **2018**
 
 Based in **Cairo, Egypt**
 

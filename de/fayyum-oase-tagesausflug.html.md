@@ -15,6 +15,8 @@ ab 139 € / Person
 
 ab 6 Reisenden · Eintritte nicht enthalten
 
+153 € pro Person bei zwei Reisenden
+
 Pro Person, Normalsaison. Zuschläge für Feiertage weisen wir im Angebot getrennt aus.
 
 Dauer **Ganzer Tag (ca. 10 Stunden)**
@@ -99,9 +101,7 @@ Etwa 90 Minuten bis zwei Stunden pro Richtung im privaten Fahrzeug, je nach Hote
 
 ## Entdecken
 
-Die Reiseverläufe im Detail sind auf Englisch.
-
-[kemet-travel.com/tour-fayoum.html](https://kemet-travel.com/tour-fayoum.html)
+[Diese Seite auf Englisch](https://kemet-travel.com/tour-fayoum.html)
 
 ---
 

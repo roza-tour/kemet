@@ -15,6 +15,8 @@ mulai €79 / orang
 
 mulai 6 orang · tiket masuk tidak termasuk
 
+€87 per orang untuk dua wisatawan
+
 Per orang, musim normal. Biaya tambahan hari libur kami cantumkan terpisah dalam penawaran.
 
 Durasi **Sehari penuh (sekitar 8 jam)**
@@ -103,9 +105,7 @@ Bisa, sebagai tambahan opsional yang privat. Mobil golf khusus untuk rombongan A
 
 ## Jelajahi
 
-Halaman rincian tiap perjalanan berbahasa Inggris.
-
-[kemet-travel.com/tour-giza-museum.html](https://kemet-travel.com/tour-giza-museum.html)
+[Halaman ini dalam bahasa Inggris](https://kemet-travel.com/tour-giza-museum.html)
 
 ---
 

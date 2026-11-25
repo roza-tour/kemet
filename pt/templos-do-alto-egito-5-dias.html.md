@@ -15,6 +15,8 @@ a partir de € 1.018 / pessoa
 
 a partir de 6 viajantes
 
+€ 1.120 por pessoa, para dois viajantes
+
 Por pessoa, em temporada normal. Acréscimos de feriados aparecem separados no orçamento.
 
 Duração **5 dias / 4 noites**
@@ -121,9 +123,7 @@ Num voo da EgyptAir a partir do Cairo (55 minutos) ou no trem-leito noturno. As 
 
 ## Explorar
 
-As páginas de cada viagem estão em inglês.
-
-[kemet-travel.com/tour-upper-egypt-5day.html](https://kemet-travel.com/tour-upper-egypt-5day.html)
+[Esta página em inglês](https://kemet-travel.com/tour-upper-egypt-5day.html)
 
 ---
 

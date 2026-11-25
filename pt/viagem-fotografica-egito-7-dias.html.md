@@ -15,6 +15,8 @@ a partir de € 1.419 / pessoa
 
 a partir de 6 viajantes
 
+€ 1.561 por pessoa, para dois viajantes
+
 Por pessoa, em temporada normal. Acréscimos de feriados aparecem separados no orçamento.
 
 Duração **7 dias / 6 noites**
@@ -140,9 +142,7 @@ Sinceramente, sim. A programação significa apenas ver os sítios nas horas mai
 
 ## Explorar
 
-As páginas de cada viagem estão em inglês.
-
-[kemet-travel.com/tour-photography-7day.html](https://kemet-travel.com/tour-photography-7day.html)
+[Esta página em inglês](https://kemet-travel.com/tour-photography-7day.html)
 
 ---
 

@@ -19,6 +19,63 @@ Beste Zeit **Oktober bis April**
 
 Fast alles, wofür es sich auf der Strecke zwischen Luxor und Assuan zu halten lohnt, liegt wenige hundert Meter vom Nil entfernt. Deshalb ist der Fluss die Straße — und deshalb empfehlen wir für diesen Abschnitt praktisch immer das Schiff. Der eigentliche Vorteil ist nicht das Boot, sondern die Ankunft: Sie steigen aus und sind da, statt über einen Busparkplatz hineinzugehen.
 
+## Die viertägige Kreuzfahrt, Tag für Tag
+
+So führen wir die Kreuzfahrt durch: drei Nächte auf dem Fluss von Assuan nach Luxor, jeder Besuch an Land privat und mit Ihrer eigenen ägyptologischen Reiseleitung. Das Schiff teilen Sie mit anderen; Ihre Reiseleitung, Ihr Fahrzeug und Ihre Besuche gehören Ihnen allein.
+
+ab 820 € / Person (ab 6 Reisenden). 902 € pro Person bei zwei Reisenden. Pro Person, Normalsaison. Zuschläge für Feiertage weisen wir im Angebot getrennt aus.
+
+01
+
+### Tag 1 — Assuan — Philae, Hochdamm & Einschiffung
+
+- Private Begrüßung in Assuan und Besuch des Hochdamms und des Unvollendeten Obelisken am Vormittag
+- Mit dem Motorboot zum Inseltempel von Philae, dem Heiligtum der Isis
+- Einschiffung vor dem Mittagessen; Nachmittag zur freien Verfügung auf dem Sonnendeck
+
+02
+
+### Tag 2 — Kom Ombo & Edfu
+
+- Am Morgen Fahrt nach Kom Ombo und zu seinem Doppeltempel über dem Flussufer
+- Weiter nach Edfu — der Horus-Tempel, der besterhaltene Tempel Ägyptens
+- Abend an Bord, während das Schiff unterhalb der Tempelstadt anlegt
+
+03
+
+### Tag 3 — Die Schleuse von Esna & Ankunft in Luxor
+
+- Durchfahrt durch die Schleuse von Esna, während sich das Tal Richtung Theben weitet
+- Ankunft in Luxor am Nachmittag; auf Wunsch abends Besuch des beleuchteten Luxor-Tempels
+- Letzte Nacht an Bord
+
+04
+
+### Tag 4 — Luxor — beide Ufer & Ausschiffung
+
+- Die große Säulenhalle von Karnak mit Ihrer ägyptologischen Reiseleitung
+- Übersetzen zum Westufer — Tal der Könige und Tempel der Hatschepsut
+- Ausschiffung und Transfer zu Ihrem Hotel, Bahnhof oder Flughafen in Luxor
+
+## Inbegriffen
+
+- Durchgehend ein privater Ägyptologe als Reiseleitung
+- Dreitägige Nilkreuzfahrt mit Vollpension, Assuan bis Luxor
+- Alle Landgänge als private Besichtigungen mit Ihrem eigenen Guide
+- Alle Eintrittsgelder für Stätten und Monumente
+- Private, klimatisierte Transfers
+- Abholung und Rückbringung am Hotel
+- Wasser in Flaschen an jedem Tag
+
+## Nicht inbegriffen
+
+- Internationale Flüge nach und aus Ägypten
+- Einreisevisum für Ägypten
+- Trinkgelder
+- Persönliche Ausgaben
+- Mahlzeiten, außer an Bord der Nilkreuzfahrt
+- Optionale Zusatzleistungen nach Wahl — Aktivitäten, Getränke
+
 01
 
 ## Was Sie unterwegs sehen
@@ -29,7 +86,7 @@ Kom Ombo, der ungewöhnliche Doppeltempel für den Krokodilgott Sobek und Horus 
 
 ## Dahabiya oder Kreuzfahrtschiff
 
-Eine Dahabiya ist ein traditionelles Segelschiff mit meist acht bis zwölf Kabinen. Sie ankert an Sandbänken und Dörfern, die große Schiffe nicht anfahren können, trägt ein Zehntel der Passagiere und hat kein Unterhaltungsprogramm. Sie kostet deutlich mehr. Ein Kreuzfahrtschiff mit sechzig bis hundertvierzig Kabinen ist der Marktstandard, gut verfügbar und für eine erste Reise völlig angemessen. Wir buchen dafür die Schiffe der Sonesta-Flotte; welches es wird, steht mit Ihren Reisedaten fest. Wenn Ihre Reise einen Anlass hat, ist die Dahabiya das Upgrade, das wir vor jedem anderen empfehlen.
+Eine Dahabiya ist ein traditionelles Segelschiff mit meist acht bis zwölf Kabinen. Sie ankert an Sandbänken und Dörfern, die große Schiffe nicht anfahren können, trägt ein Zehntel der Passagiere und hat kein Unterhaltungsprogramm. Sie kostet deutlich mehr. Ein Kreuzfahrtschiff mit sechzig bis hundertvierzig Kabinen ist der Marktstandard, gut verfügbar und für eine erste Reise völlig angemessen. Welches Schiff es wird, steht mit Ihren Reisedaten fest. Wenn Ihre Reise einen Anlass hat, ist die Dahabiya das Upgrade, das wir vor jedem anderen empfehlen.
 
 03
 

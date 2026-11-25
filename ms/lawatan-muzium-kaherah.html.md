@@ -15,6 +15,8 @@ dari €64 / seorang
 
 dari 6 orang · tiket masuk tidak termasuk
 
+€70 seorang bagi dua pengembara
+
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 
 Tempoh **Sehari penuh (lebih kurang 7 jam)**
@@ -86,9 +88,7 @@ Tidak, dengan pemandu yang memilih sorotan utama. Kami menumpukan pada artifak t
 
 ## Terokai
 
-Halaman butiran setiap percutian dalam bahasa Inggeris.
-
-[kemet-travel.com/tour-cairo-museums.html](https://kemet-travel.com/tour-cairo-museums.html)
+[Halaman ini dalam bahasa Inggeris](https://kemet-travel.com/tour-cairo-museums.html)
 
 ---
 

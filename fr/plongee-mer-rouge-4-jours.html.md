@@ -15,6 +15,8 @@ Quatre jours construits autour du temps de fond — les murs de Ras Mohammed, le
 
 à partir de 6 voyageurs
 
+871 € par personne pour deux voyageurs
+
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
 
 Durée **4 jours / 3 nuits**
@@ -107,9 +109,7 @@ Des murs de coraux mous denses, des nuages d'anthias, des napoléons, des tortue
 
 ## Explorer
 
-Les pages de chaque voyage sont en anglais.
-
-[kemet-travel.com/tour-red-sea-diving-4day.html](https://kemet-travel.com/tour-red-sea-diving-4day.html)
+[Cette page en anglais](https://kemet-travel.com/tour-red-sea-diving-4day.html)
 
 ---
 

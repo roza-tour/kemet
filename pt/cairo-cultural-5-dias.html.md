@@ -15,6 +15,8 @@ a partir de € 875 / pessoa
 
 a partir de 6 viajantes
 
+€ 963 por pessoa, para dois viajantes
+
 Por pessoa, em temporada normal. Acréscimos de feriados aparecem separados no orçamento.
 
 Duração **5 dias / 4 noites**
@@ -119,9 +121,7 @@ Sim — um sexto dia no Mediterrâneo estende esta viagem com naturalidade. Peç
 
 ## Explorar
 
-As páginas de cada viagem estão em inglês.
-
-[kemet-travel.com/tour-cairo-culture-5day.html](https://kemet-travel.com/tour-cairo-culture-5day.html)
+[Esta página em inglês](https://kemet-travel.com/tour-cairo-culture-5day.html)
 
 ---
 

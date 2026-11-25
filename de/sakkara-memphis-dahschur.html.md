@@ -15,6 +15,8 @@ ab 68 € / Person
 
 ab 6 Reisenden · Eintritte nicht enthalten
 
+75 € pro Person bei zwei Reisenden
+
 Pro Person, Normalsaison. Zuschläge für Feiertage weisen wir im Angebot getrennt aus.
 
 Dauer **Ganzer Tag (ca. 8 Stunden)**
@@ -92,9 +94,7 @@ Ein ausgezeichneter — weniger Andrang und ein klarer roter Faden, der den spä
 
 ## Entdecken
 
-Die Reiseverläufe im Detail sind auf Englisch.
-
-[kemet-travel.com/tour-saqqara.html](https://kemet-travel.com/tour-saqqara.html)
+[Diese Seite auf Englisch](https://kemet-travel.com/tour-saqqara.html)
 
 ---
 

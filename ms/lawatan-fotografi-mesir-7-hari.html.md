@@ -15,6 +15,8 @@ dari €1,419 / seorang
 
 dari 6 orang
 
+€1,561 seorang bagi dua pengembara
+
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 
 Tempoh **7 hari / 6 malam**
@@ -140,9 +142,7 @@ Benar-benar berbaloi. Jadualnya sekadar bermakna melihat tapak-tapak itu pada wa
 
 ## Terokai
 
-Halaman butiran setiap percutian dalam bahasa Inggeris.
-
-[kemet-travel.com/tour-photography-7day.html](https://kemet-travel.com/tour-photography-7day.html)
+[Halaman ini dalam bahasa Inggeris](https://kemet-travel.com/tour-photography-7day.html)
 
 ---
 

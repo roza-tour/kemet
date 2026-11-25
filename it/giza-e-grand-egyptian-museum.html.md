@@ -15,6 +15,8 @@ da 79 € / persona
 
 da 6 viaggiatori · biglietti non inclusi
 
+87 € a persona per due viaggiatori
+
 A persona, in stagione normale. I supplementi delle festività sono indicati separatamente nel preventivo.
 
 Durata **Giornata intera (≈8 ore)**
@@ -103,9 +105,7 @@ Sì, come extra facoltativo privato. Una golf car riservata al vostro gruppo vi 
 
 ## Esplora
 
-Le pagine dei singoli viaggi sono in inglese.
-
-[kemet-travel.com/tour-giza-museum.html](https://kemet-travel.com/tour-giza-museum.html)
+[Questa pagina in inglese](https://kemet-travel.com/tour-giza-museum.html)
 
 ---
 

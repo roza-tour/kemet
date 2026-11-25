@@ -95,6 +95,7 @@ description: "Дахабия или обычный круизный лайнер
 - [Луксор или Асуан?](https://kemet-travel.com/ru/luksor-ili-asuan.html)
 - [Египетский музей или Большой Египетский музей?](https://kemet-travel.com/ru/egipetskiy-muzey-ili-bolshoy-egipetskiy-muzey.html)
 - [Шарм-эль-Шейх или Хургада?](https://kemet-travel.com/ru/sharm-el-sheykh-ili-hurgada.html)
+- [Туры в Египет](https://kemet-travel.com/ru/tury-v-egipet.html)
 
 [Эта страница на английском](https://kemet-travel.com/compare/dahabiya-vs-cruise-ship.html)
 

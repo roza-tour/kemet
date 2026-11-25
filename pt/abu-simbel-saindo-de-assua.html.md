@@ -15,6 +15,8 @@ a partir de € 160 / pessoa
 
 a partir de 6 viajantes · ingressos não incluídos
 
+€ 176 por pessoa, para dois viajantes
+
 Por pessoa, em temporada normal. Acréscimos de feriados aparecem separados no orçamento.
 
 Duração **Dia inteiro (cerca de 8 horas, saindo de Assuã)**
@@ -90,9 +92,7 @@ Em 22 de fevereiro e 22 de outubro, o sol nascente penetra 60 metros no Grande T
 
 ## Explorar
 
-As páginas de cada viagem estão em inglês.
-
-[kemet-travel.com/tour-abu-simbel.html](https://kemet-travel.com/tour-abu-simbel.html)
+[Esta página em inglês](https://kemet-travel.com/tour-abu-simbel.html)
 
 ---
 

@@ -83,6 +83,7 @@ Páginas relacionadas neste idioma e a página original em inglês.
 - [Um grupo privativo, não uma excursão](https://kemet-travel.com/pt/viagem-privativa-em-grupo-egito.html)
 - [Voltar ao Egito](https://kemet-travel.com/pt/segunda-viagem-ao-egito.html)
 - [Três gerações, uma só viagem](https://kemet-travel.com/pt/viagem-ao-egito-tres-geracoes.html)
+- [Viagens ao Egito](https://kemet-travel.com/pt/viagens-ao-egito.html)
 
 [Esta página em inglês](https://kemet-travel.com/occasions/proposal-in-egypt.html)
 

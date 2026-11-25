@@ -43,6 +43,21 @@ Cuti sekolah pertengahan tahun jatuh tepat pada kemuncak panas Mesir Hulu; ia te
 
 Tapak lawatan, muzium dan hotel beroperasi seperti biasa, dan waktu siang justeru lebih tenang. Yang berubah ialah irama kota: sebahagian kedai makan tempatan tutup sehingga maghrib, manakala malam-malam Kaherah menjadi salah satu pengalaman terkuat sepanjang tahun. Bagi tetamu yang berpuasa, kami menyusun jadual lawatan mengikut waktu solat dan berbuka, bukan sebaliknya.
 
+## Bulan demi bulan
+
+- [Mesir pada Januari](https://kemet-travel.com/ms/mesir-pada-bulan-januari.html)
+- [Mesir pada Februari](https://kemet-travel.com/ms/mesir-pada-bulan-februari.html)
+- [Mesir pada Mac](https://kemet-travel.com/ms/mesir-pada-bulan-mac.html)
+- [Mesir pada April](https://kemet-travel.com/ms/mesir-pada-bulan-april.html)
+- [Mesir pada Mei](https://kemet-travel.com/ms/mesir-pada-bulan-mei.html)
+- [Mesir pada Jun](https://kemet-travel.com/ms/mesir-pada-bulan-jun.html)
+- [Mesir pada Julai](https://kemet-travel.com/ms/mesir-pada-bulan-julai.html)
+- [Mesir pada Ogos](https://kemet-travel.com/ms/mesir-pada-bulan-ogos.html)
+- [Mesir pada September](https://kemet-travel.com/ms/mesir-pada-bulan-september.html)
+- [Mesir pada Oktober](https://kemet-travel.com/ms/mesir-pada-bulan-oktober.html)
+- [Mesir pada November](https://kemet-travel.com/ms/mesir-pada-bulan-november.html)
+- [Mesir pada Disember](https://kemet-travel.com/ms/mesir-pada-bulan-disember.html)
+
 ## Soalan lazim
 
 ### Bolehkah ke Mesir pada musim panas?

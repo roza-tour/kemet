@@ -83,6 +83,7 @@ Halaman terkait dalam bahasa ini, serta halaman asli dalam bahasa Inggris.
 - [Grup Privat, Bukan Tur Grup](https://kemet-travel.com/id/perjalanan-grup-privat-mesir.html)
 - [Kembali ke Mesir](https://kemet-travel.com/id/kembali-ke-mesir.html)
 - [Tiga Generasi, Satu Perjalanan](https://kemet-travel.com/id/liburan-keluarga-tiga-generasi-mesir.html)
+- [Paket Tour Mesir](https://kemet-travel.com/id/paket-tour-mesir.html)
 
 [Halaman ini dalam bahasa Inggris](https://kemet-travel.com/occasions/anniversary-in-egypt.html)
 

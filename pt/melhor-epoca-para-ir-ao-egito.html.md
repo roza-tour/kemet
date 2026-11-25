@@ -43,6 +43,21 @@ Julho é o mês mais quente do Egito: Assuã chega com frequência a 42–45 gra
 
 O Ramadã muda de data a cada ano, cerca de onze dias. Os sítios continuam abertos, muitas vezes com horário reduzido, e o ritmo do dia se inverte: tardes silenciosas e, ao pôr do sol, o país inteiro se acende para o iftar. Muitos viajantes contam depois que foi a parte mais marcante da viagem. O festival do sol de Abu Simbel acontece em 22 de fevereiro e 22 de outubro.
 
+## Mês a mês
+
+- [Egito em janeiro](https://kemet-travel.com/pt/egito-em-janeiro.html)
+- [Egito em fevereiro](https://kemet-travel.com/pt/egito-em-fevereiro.html)
+- [Egito em março](https://kemet-travel.com/pt/egito-em-marco.html)
+- [Egito em abril](https://kemet-travel.com/pt/egito-em-abril.html)
+- [Egito em maio](https://kemet-travel.com/pt/egito-em-maio.html)
+- [Egito em junho](https://kemet-travel.com/pt/egito-em-junho.html)
+- [Egito em julho](https://kemet-travel.com/pt/egito-em-julho.html)
+- [Egito em agosto](https://kemet-travel.com/pt/egito-em-agosto.html)
+- [Egito em setembro](https://kemet-travel.com/pt/egito-em-setembro.html)
+- [Egito em outubro](https://kemet-travel.com/pt/egito-em-outubro.html)
+- [Egito em novembro](https://kemet-travel.com/pt/egito-em-novembro.html)
+- [Egito em dezembro](https://kemet-travel.com/pt/egito-em-dezembro.html)
+
 ## Perguntas frequentes
 
 ### Qual é a melhor época para ir ao Egito?

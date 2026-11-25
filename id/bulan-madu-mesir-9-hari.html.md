@@ -150,9 +150,7 @@ Balon udara di Luxor dioperasikan oleh operator berlisensi di bawah pengawasan o
 
 ## Jelajahi
 
-Halaman rincian tiap perjalanan berbahasa Inggris.
-
-[kemet-travel.com/tour-honeymoon-9day.html](https://kemet-travel.com/tour-honeymoon-9day.html)
+[Halaman ini dalam bahasa Inggris](https://kemet-travel.com/tour-honeymoon-9day.html)
 
 ---
 

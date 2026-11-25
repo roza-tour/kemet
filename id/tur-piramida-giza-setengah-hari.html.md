@@ -15,6 +15,8 @@ mulai €66 / orang
 
 mulai 6 orang · tiket masuk tidak termasuk
 
+€73 per orang untuk dua wisatawan
+
 Per orang, musim normal. Biaya tambahan hari libur kami cantumkan terpisah dalam penawaran.
 
 Durasi **Setengah hari (sekitar 5 jam)**
@@ -98,9 +100,7 @@ Bisa, sebagai tambahan opsional yang privat. Mobil golf khusus untuk rombongan A
 
 ## Jelajahi
 
-Halaman rincian tiap perjalanan berbahasa Inggris.
-
-[kemet-travel.com/tour-giza-sphinx.html](https://kemet-travel.com/tour-giza-sphinx.html)
+[Halaman ini dalam bahasa Inggris](https://kemet-travel.com/tour-giza-sphinx.html)
 
 ---
 

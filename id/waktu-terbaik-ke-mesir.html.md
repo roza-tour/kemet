@@ -43,6 +43,21 @@ Liburan sekolah Juni–Juli jatuh tepat di puncak panas Mesir Hulu; itu tetap bi
 
 Situs, museum dan hotel tetap beroperasi normal, dan siang hari justru lebih tenang. Yang berubah adalah irama kota: sebagian rumah makan lokal tutup hingga maghrib, sementara malam-malam Kairo menjadi salah satu pengalaman terkuat sepanjang tahun. Bagi tamu yang berpuasa, kami menyusun jadwal kunjungan mengikuti waktu salat dan berbuka, bukan sebaliknya.
 
+## Bulan demi bulan
+
+- [Mesir di Bulan Januari](https://kemet-travel.com/id/mesir-di-bulan-januari.html)
+- [Mesir di Bulan Februari](https://kemet-travel.com/id/mesir-di-bulan-februari.html)
+- [Mesir di Bulan Maret](https://kemet-travel.com/id/mesir-di-bulan-maret.html)
+- [Mesir di Bulan April](https://kemet-travel.com/id/mesir-di-bulan-april.html)
+- [Mesir di Bulan Mei](https://kemet-travel.com/id/mesir-di-bulan-mei.html)
+- [Mesir di Bulan Juni](https://kemet-travel.com/id/mesir-di-bulan-juni.html)
+- [Mesir di Bulan Juli](https://kemet-travel.com/id/mesir-di-bulan-juli.html)
+- [Mesir di Bulan Agustus](https://kemet-travel.com/id/mesir-di-bulan-agustus.html)
+- [Mesir di Bulan September](https://kemet-travel.com/id/mesir-di-bulan-september.html)
+- [Mesir di Bulan Oktober](https://kemet-travel.com/id/mesir-di-bulan-oktober.html)
+- [Mesir di Bulan November](https://kemet-travel.com/id/mesir-di-bulan-november.html)
+- [Mesir di Bulan Desember](https://kemet-travel.com/id/mesir-di-bulan-desember.html)
+
 ## Pertanyaan umum
 
 ### Bisakah ke Mesir saat musim panas?

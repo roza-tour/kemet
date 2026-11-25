@@ -15,6 +15,8 @@ ab 1.179 € / Person
 
 ab 6 Reisenden
 
+1.297 € pro Person bei zwei Reisenden
+
 Pro Person, Normalsaison. Zuschläge für Feiertage weisen wir im Angebot getrennt aus.
 
 Dauer **7 Tage / 6 Nächte**
@@ -135,9 +137,7 @@ Sehr gern — viele Gäste hängen drei oder vier Nächte zwischen Assuan und Lu
 
 ## Entdecken
 
-Die Reiseverläufe im Detail sind auf Englisch.
-
-[kemet-travel.com/tour-7-day.html](https://kemet-travel.com/tour-7-day.html)
+[Diese Seite auf Englisch](https://kemet-travel.com/tour-7-day.html)
 
 ---
 

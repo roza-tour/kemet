@@ -15,6 +15,8 @@ dari €66 / seorang
 
 dari 6 orang · tiket masuk tidak termasuk
 
+€73 seorang bagi dua pengembara
+
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 
 Tempoh **Separuh hari (lebih kurang 5 jam)**
@@ -98,9 +100,7 @@ Boleh, sebagai tambahan pilihan persendirian. Kereta golf untuk rombongan anda s
 
 ## Terokai
 
-Halaman butiran setiap percutian dalam bahasa Inggeris.
-
-[kemet-travel.com/tour-giza-sphinx.html](https://kemet-travel.com/tour-giza-sphinx.html)
+[Halaman ini dalam bahasa Inggeris](https://kemet-travel.com/tour-giza-sphinx.html)
 
 ---
 

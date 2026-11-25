@@ -15,6 +15,8 @@ mulai €68 / orang
 
 mulai 6 orang · tiket masuk tidak termasuk
 
+€75 per orang untuk dua wisatawan
+
 Per orang, musim normal. Biaya tambahan hari libur kami cantumkan terpisah dalam penawaran.
 
 Durasi **Sehari penuh (sekitar 8 jam)**
@@ -92,9 +94,7 @@ Sangat baik — keramaian lebih sedikit, dan alur ceritanya jelas sehingga kunju
 
 ## Jelajahi
 
-Halaman rincian tiap perjalanan berbahasa Inggris.
-
-[kemet-travel.com/tour-saqqara.html](https://kemet-travel.com/tour-saqqara.html)
+[Halaman ini dalam bahasa Inggris](https://kemet-travel.com/tour-saqqara.html)
 
 ---
 

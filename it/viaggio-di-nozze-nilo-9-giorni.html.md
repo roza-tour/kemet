@@ -150,9 +150,7 @@ I voli di Luxor sono gestiti da operatori autorizzati sotto la vigilanza dell'av
 
 ## Esplora
 
-Le pagine dei singoli viaggi sono in inglese.
-
-[kemet-travel.com/tour-honeymoon-9day.html](https://kemet-travel.com/tour-honeymoon-9day.html)
+[Questa pagina in inglese](https://kemet-travel.com/tour-honeymoon-9day.html)
 
 ---
 

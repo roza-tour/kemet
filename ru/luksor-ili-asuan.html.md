@@ -93,6 +93,7 @@ description: "Луксор или Асуан — что выбрать, если
 - [Дахабия или круизный лайнер?](https://kemet-travel.com/ru/dahabiya-ili-kruiznyy-lajner.html)
 - [Египетский музей или Большой Египетский музей?](https://kemet-travel.com/ru/egipetskiy-muzey-ili-bolshoy-egipetskiy-muzey.html)
 - [Шарм-эль-Шейх или Хургада?](https://kemet-travel.com/ru/sharm-el-sheykh-ili-hurgada.html)
+- [Туры в Египет](https://kemet-travel.com/ru/tury-v-egipet.html)
 
 [Эта страница на английском](https://kemet-travel.com/compare/luxor-vs-aswan.html)
 

@@ -15,6 +15,8 @@ Une soirée à pied dans les saveurs du Caire — koshari, classiques de la rue,
 
 à partir de 6 voyageurs
 
+65 € par personne pour deux voyageurs
+
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis. Les plats et les boissons ne sont pas compris: ils se règlent directement à chaque étape.
 
 Durée **Soirée (environ 4 heures)**
@@ -117,9 +119,7 @@ Vous décidez vous-même de ce que vous commandez à chaque étape, et en partag
 
 ## Explorer
 
-Les pages de chaque voyage sont en anglais.
-
-[kemet-travel.com/tour-cairo-food.html](https://kemet-travel.com/tour-cairo-food.html)
+[Cette page en anglais](https://kemet-travel.com/tour-cairo-food.html)
 
 ---
 

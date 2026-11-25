@@ -291,6 +291,23 @@ description: "Индивидуальные маршруты по Египту �
 
 160 € / чел. от 6 человек · билеты не включены
 
+## Сравнить варианты
+
+- [Самолёт или ночной поезд в Луксор и Асуан?](https://kemet-travel.com/ru/samolet-ili-nochnoy-poezd-luksor-asuan.html)
+- [Круиз по Нилу или наземный тур?](https://kemet-travel.com/ru/kruiz-po-nilu-ili-nazemnyy-tur.html)
+- [Дахабия или круизный лайнер?](https://kemet-travel.com/ru/dahabiya-ili-kruiznyy-lajner.html)
+- [Луксор или Асуан?](https://kemet-travel.com/ru/luksor-ili-asuan.html)
+- [Египетский музей или Большой Египетский музей?](https://kemet-travel.com/ru/egipetskiy-muzey-ili-bolshoy-egipetskiy-muzey.html)
+- [Шарм-эль-Шейх или Хургада?](https://kemet-travel.com/ru/sharm-el-sheykh-ili-hurgada.html)
+
+## По поводу поездки
+
+- [Предложение руки и сердца в Египте](https://kemet-travel.com/ru/predlozhenie-ruki-i-serdtsa-v-egipte.html)
+- [Годовщины и юбилеи](https://kemet-travel.com/ru/yubiley-i-godovshchina-svadby-v-egipte.html)
+- [Частная группа, а не групповой тур](https://kemet-travel.com/ru/chastnaya-gruppa-v-egipte.html)
+- [Возвращение в Египет](https://kemet-travel.com/ru/povtornaya-poezdka-v-egipet.html)
+- [Три поколения, одно путешествие](https://kemet-travel.com/ru/egipet-s-tremya-pokoleniyami-semi.html)
+
 ## Частые вопросы
 
 ### Можно ли изменить предложенный маршрут?

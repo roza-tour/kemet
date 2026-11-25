@@ -150,9 +150,7 @@ Ballonfahrten in Luxor werden von lizenzierten Betreibern unter Aufsicht der Ziv
 
 ## Entdecken
 
-Die Reiseverläufe im Detail sind auf Englisch.
-
-[kemet-travel.com/tour-honeymoon-9day.html](https://kemet-travel.com/tour-honeymoon-9day.html)
+[Diese Seite auf Englisch](https://kemet-travel.com/tour-honeymoon-9day.html)
 
 ---
 

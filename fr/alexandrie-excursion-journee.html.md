@@ -15,6 +15,8 @@ Une journée entière sur la Méditerranée — catacombes, une colonne romaine,
 
 à partir de 6 voyageurs · billets non inclus
 
+63 € par personne pour deux voyageurs
+
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
 
 Durée **Journée entière (environ 11 heures)**
@@ -92,9 +94,7 @@ Tout à fait — son architecture seule est saisissante, et le bâtiment se veut
 
 ## Explorer
 
-Les pages de chaque voyage sont en anglais.
-
-[kemet-travel.com/tour-alexandria.html](https://kemet-travel.com/tour-alexandria.html)
+[Cette page en anglais](https://kemet-travel.com/tour-alexandria.html)
 
 ---
 

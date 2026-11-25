@@ -1,5 +1,5 @@
 ---
-title: "Red Sea Retreat: Sharm El Sheikh — 5 Days / 4 Nights | Kemet"
+title: "5-Day Sharm El Sheikh Red Sea Private Holiday | Kemet"
 url: https://kemet-travel.com/tour-sharm-5day.html
 language: en
 description: "The Red Sea done with intent — a private reef-boat day in Ras Mohammed, a Sinai desert evening under the stars — private, from €979 pp."
@@ -13,7 +13,7 @@ Five days where Sinai's mountains meet the clearest water in the northern hemisp
 
 ## What does Red Sea Retreat: Sharm El Sheikh include, and what does it cost?
 
-Red Sea Retreat: Sharm El Sheikh is a private 5-day, 4-night journey through Sharm El Sheikh and Ras Mohammed, from €979 per person for a party of 6 or more. It includes 4 nights in a Red Sea resort and a private full-day Ras Mohammed boat charter with snorkelling equipment. International flights are not included.
+Red Sea Retreat: Sharm El Sheikh is a private 5-day, 4-night journey through Sharm El Sheikh and Ras Mohammed, from €979 per person for a party of 6 or more, or €1,077 per person for two. It includes 4 nights in a Red Sea resort. International flights are not included.
 
 ## Overview
 
@@ -125,6 +125,8 @@ From
 per person · EUR
 
 Based on a private party of 6 or more.
+
+For two travellers: €1,077 per person.
 
 [Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Red+Sea+Retreat%3A+Sharm+El+Sheikh&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Red+Sea+Retreat%3A+Sharm+El+Sheikh%22+journey+%285+Days+%2F+4+Nights%2C+from+%E2%82%AC979+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 

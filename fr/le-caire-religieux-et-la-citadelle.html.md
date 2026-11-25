@@ -15,6 +15,8 @@ Les confessions du Caire en une journée — églises coptes, une ancienne synag
 
 à partir de 6 voyageurs · billets non inclus
 
+88 € par personne pour deux voyageurs
+
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
 
 Durée **Journée entière (environ 8 heures)**
@@ -92,9 +94,7 @@ Nous organisons la journée autour des heures de prière et des éventuelles fer
 
 ## Explorer
 
-Les pages de chaque voyage sont en anglais.
-
-[kemet-travel.com/tour-religious-citadel.html](https://kemet-travel.com/tour-religious-citadel.html)
+[Cette page en anglais](https://kemet-travel.com/tour-religious-citadel.html)
 
 ---
 

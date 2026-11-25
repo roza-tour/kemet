@@ -15,6 +15,8 @@ Cinq jours dans les strates d'une seule ville — Le Caire pharaonique, copte, i
 
 à partir de 6 voyageurs
 
+963 € par personne pour deux voyageurs
+
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
 
 Durée **5 jours / 4 nuits**
@@ -119,9 +121,7 @@ Oui — une sixième journée méditerranéenne prolonge naturellement ce voyage
 
 ## Explorer
 
-Les pages de chaque voyage sont en anglais.
-
-[kemet-travel.com/tour-cairo-culture-5day.html](https://kemet-travel.com/tour-cairo-culture-5day.html)
+[Cette page en anglais](https://kemet-travel.com/tour-cairo-culture-5day.html)
 
 ---
 

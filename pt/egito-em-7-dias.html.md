@@ -15,6 +15,8 @@ a partir de € 1.179 / pessoa
 
 a partir de 6 viajantes
 
+€ 1.297 por pessoa, para dois viajantes
+
 Por pessoa, em temporada normal. Acréscimos de feriados aparecem separados no orçamento.
 
 Duração **7 dias / 6 noites**
@@ -135,9 +137,7 @@ Com certeza — muitos viajantes acrescentam um cruzeiro de 3 ou 4 noites entre 
 
 ## Explorar
 
-As páginas de cada viagem estão em inglês.
-
-[kemet-travel.com/tour-7-day.html](https://kemet-travel.com/tour-7-day.html)
+[Esta página em inglês](https://kemet-travel.com/tour-7-day.html)
 
 ---
 

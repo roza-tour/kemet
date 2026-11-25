@@ -291,6 +291,23 @@ Ramses' II. kolossale Felsentempel — in einen nubischen Berghang geschlagen, B
 
 160 € / Person ab 6 Reisenden · Eintritte nicht enthalten
 
+## Die Möglichkeiten im Vergleich
+
+- [Flug oder Nachtzug nach Luxor und Assuan?](https://kemet-travel.com/de/nachtzug-oder-flug-luxor-assuan.html)
+- [Nilkreuzfahrt oder Landreise?](https://kemet-travel.com/de/nilkreuzfahrt-oder-landreise.html)
+- [Dahabiya oder Kreuzfahrtschiff?](https://kemet-travel.com/de/dahabiya-oder-kreuzfahrtschiff.html)
+- [Luxor oder Assuan?](https://kemet-travel.com/de/luxor-oder-assuan.html)
+- [Ägyptisches Museum oder Grand Egyptian Museum?](https://kemet-travel.com/de/aegyptisches-museum-oder-grand-egyptian-museum.html)
+- [Scharm el-Scheich oder Hurghada?](https://kemet-travel.com/de/scharm-el-scheich-oder-hurghada.html)
+
+## Nach Anlass
+
+- [Heiratsantrag in Ägypten](https://kemet-travel.com/de/heiratsantrag-in-aegypten.html)
+- [Jahrestage und runde Geburtstage](https://kemet-travel.com/de/jubilaeum-reise-aegypten.html)
+- [Eine private Gruppe, keine Gruppenreise](https://kemet-travel.com/de/private-gruppenreise-aegypten.html)
+- [Wieder nach Ägypten](https://kemet-travel.com/de/zweite-reise-aegypten.html)
+- [Drei Generationen, eine Reise](https://kemet-travel.com/de/drei-generationen-reise-aegypten.html)
+
 ## Häufige Fragen
 
 ### Wie viele Tage braucht man für Ägypten?

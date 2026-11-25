@@ -15,6 +15,8 @@ a partir de € 2.728 / pessoa
 
 a partir de 6 viajantes
 
+€ 3.001 por pessoa, para dois viajantes
+
 Por pessoa, em temporada normal. Acréscimos de feriados aparecem separados no orçamento.
 
 Duração **14 dias / 13 noites**
@@ -185,9 +187,7 @@ Três voos internos, de cerca de uma hora cada, que substituem o que de outra fo
 
 ## Explorar
 
-As páginas de cada viagem estão em inglês.
-
-[kemet-travel.com/tour-grand-14day.html](https://kemet-travel.com/tour-grand-14day.html)
+[Esta página em inglês](https://kemet-travel.com/tour-grand-14day.html)
 
 ---
 

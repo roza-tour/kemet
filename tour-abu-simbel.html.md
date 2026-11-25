@@ -1,5 +1,5 @@
 ---
-title: "Abu Simbel Private Excursion — Full day | Kemet"
+title: "Abu Simbel Private Day Tour from Aswan | Kemet"
 url: https://kemet-travel.com/tour-abu-simbel.html
 language: en
 description: "Ramesses II's colossal rock-cut temples — carved into a Nubian mountainside, moved block by block above the rising lake — private, from €160 pp."
@@ -13,7 +13,7 @@ The mountain temples of Ramesses II above Lake Nasser — a dawn desert road, tw
 
 ## What does Abu Simbel Private Excursion include, and what does it cost?
 
-Abu Simbel Private Excursion is a private full-day tour of Abu Simbel, from €160 per person for a party of 6 or more. It includes a private Egyptologist guide throughout; a private air-conditioned vehicle for the desert road, both ways; bottled water; and hotel or cruise-ship pickup & drop-off in Aswan. Entrance tickets are paid at the gate.
+Abu Simbel Private Excursion is a private full-day tour of Abu Simbel, from €160 per person for a party of 6 or more, or €176 per person for two. It includes a private Egyptologist guide throughout; a private air-conditioned vehicle for the desert road, both ways; and bottled water. Entrance tickets are paid at the gate.
 
 ## Overview
 
@@ -99,6 +99,8 @@ From
 per person · EUR
 
 Based on a private party of 6 or more · entrance tickets not included.
+
+For two travellers: €176 per person.
 
 [Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Abu+Simbel+Private+Excursion&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Abu+Simbel+Private+Excursion%22+journey+%28Full+day+%28%E2%89%888+hours%2C+from+Aswan%29%2C+from+%E2%82%AC160+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 

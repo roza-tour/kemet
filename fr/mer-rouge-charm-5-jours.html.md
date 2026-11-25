@@ -15,6 +15,8 @@ Cinq jours là où les montagnes du Sinaï plongent dans l'eau la plus claire de
 
 à partir de 6 voyageurs
 
+1 077 € par personne pour deux voyageurs
+
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
 
 Durée **5 jours / 4 nuits**
@@ -113,9 +115,7 @@ Parfaitement — c'est ainsi que la plupart des voyageurs l'utilisent. Louxor–
 
 ## Explorer
 
-Les pages de chaque voyage sont en anglais.
-
-[kemet-travel.com/tour-sharm-5day.html](https://kemet-travel.com/tour-sharm-5day.html)
+[Cette page en anglais](https://kemet-travel.com/tour-sharm-5day.html)
 
 ---
 

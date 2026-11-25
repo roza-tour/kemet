@@ -1,5 +1,5 @@
 ---
-title: "Cairo Museums — Full day | Kemet"
+title: "Cairo Museums Private Day Tour | Kemet"
 url: https://kemet-travel.com/tour-cairo-museums.html
 language: en
 description: "The treasures of the Egyptian Museum in Tahrir, then the National Museum of Egyptian Civilization and its Royal Mummies Hall — private, from €64 pp."
@@ -13,7 +13,7 @@ Two great collections in one day — the historic Egyptian Museum and the Nation
 
 ## What does Cairo Museums include, and what does it cost?
 
-Cairo Museums is a private full-day tour of Cairo, from €64 per person for a party of 6 or more. It includes a private Egyptologist guide throughout, private air-conditioned transfers, hotel pickup & drop-off and bottled water every day. Entrance tickets are paid at the gate.
+Cairo Museums is a private full-day tour of Cairo, from €64 per person for a party of 6 or more, or €70 per person for two. It includes a private Egyptologist guide throughout, private air-conditioned transfers, hotel pickup & drop-off and bottled water every day. Entrance tickets are paid at the gate.
 
 ## Overview
 
@@ -95,6 +95,8 @@ From
 per person · EUR
 
 Based on a private party of 6 or more · entrance tickets not included.
+
+For two travellers: €70 per person.
 
 [Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Cairo+Museums&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Cairo+Museums%22+journey+%28Full+day+%28%E2%89%887+hours%29%2C+from+%E2%82%AC64+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 

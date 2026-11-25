@@ -1,5 +1,5 @@
 ---
-title: "Egypt Through the Lens — 7 Days / 6 Nights | Kemet"
+title: "7-Day Egypt Photography Tour, Private | Kemet"
 url: https://kemet-travel.com/tour-photography-7day.html
 language: en
 description: "An itinerary built backwards from the light: early-access Giza at sunrise, Karnak before the crowds — private, from €1,419 pp."
@@ -13,7 +13,7 @@ Seven days scheduled around light, not opening hours — dawn plateaus, blue-hou
 
 ## What does Egypt Through the Lens include, and what does it cost?
 
-Egypt Through the Lens is a private 7-day, 6-night journey through Cairo, Giza, Luxor and Aswan, from €1,419 per person for a party of 6 or more. It includes a private photography-aware Egyptologist guide throughout; 6 nights' hotel accommodation; domestic flights Cairo–Luxor and Aswan–Cairo; and private early-access Giza sunrise session. International flights are not included.
+Egypt Through the Lens is a private 7-day, 6-night journey through Cairo, Giza, Luxor and Aswan, from €1,419 per person for a party of 6 or more, or €1,561 per person for two. It includes a private photography-aware Egyptologist guide throughout; 6 nights' hotel accommodation; and domestic flights Cairo–Luxor and Aswan–Cairo. International flights are not included.
 
 ## Overview
 
@@ -152,6 +152,8 @@ From
 per person · EUR
 
 Based on a private party of 6 or more.
+
+For two travellers: €1,561 per person.
 
 [Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Egypt+Through+the+Lens&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Egypt+Through+the+Lens%22+journey+%287+Days+%2F+6+Nights%2C+from+%E2%82%AC1%2C419+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 

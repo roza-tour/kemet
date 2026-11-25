@@ -1,5 +1,5 @@
 ---
-title: "Fayoum Oasis — Full day | Kemet"
+title: "Fayoum Oasis Private Day Tour from Cairo | Kemet"
 url: https://kemet-travel.com/tour-fayoum.html
 language: en
 description: "Lake Qarun, the waterfalls and dunes of Wadi El Rayan, the fossil whales of Wadi Al-Hitan and the potters of Tunis village — private, from €139 pp."
@@ -13,7 +13,7 @@ A full day in the green oasis southwest of Cairo — lakes, desert waterfalls, f
 
 ## What does Fayoum Oasis include, and what does it cost?
 
-Fayoum Oasis is a private full-day tour of Fayoum, from €139 per person for a party of 6 or more. It includes a private Egyptologist guide throughout, 4x4 desert transfer where required, private air-conditioned transfers and hotel pickup & drop-off. Entrance tickets are paid at the gate.
+Fayoum Oasis is a private full-day tour of Fayoum, from €139 per person for a party of 6 or more, or €153 per person for two. It includes a private Egyptologist guide throughout, 4x4 desert transfer where required, private air-conditioned transfers and hotel pickup & drop-off. Entrance tickets are paid at the gate.
 
 ## Overview
 
@@ -108,6 +108,8 @@ From
 per person · EUR
 
 Based on a private party of 6 or more · entrance tickets not included.
+
+For two travellers: €153 per person.
 
 [Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Fayoum+Oasis&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Fayoum+Oasis%22+journey+%28Full+day+%28%E2%89%8810+hours%29%2C+from+%E2%82%AC139+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 

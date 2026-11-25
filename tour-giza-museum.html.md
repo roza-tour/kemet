@@ -1,5 +1,5 @@
 ---
-title: "Giza & the Grand Museum — Full day | Kemet"
+title: "Giza Pyramids & Grand Egyptian Museum Day Tour | Kemet"
 url: https://kemet-travel.com/tour-giza-museum.html
 language: en
 description: "The Great Pyramid, the panorama of all three pyramids, the Valley Temple and Sphinx — private, from €79 pp."
@@ -13,7 +13,7 @@ The Pyramids and Sphinx in the morning, the Grand Egyptian Museum in the afterno
 
 ## What does Giza & the Grand Museum include, and what does it cost?
 
-Giza & the Grand Museum is a private full-day tour of Giza, from €79 per person for a party of 6 or more. It includes a private Egyptologist guide throughout, private air-conditioned transfers, hotel pickup & drop-off and bottled water every day. Entrance tickets are paid at the gate.
+Giza & the Grand Museum is a private full-day tour of Giza, from €79 per person for a party of 6 or more, or €87 per person for two. It includes a private Egyptologist guide throughout, private air-conditioned transfers, hotel pickup & drop-off and bottled water every day. Entrance tickets are paid at the gate.
 
 ## Overview
 
@@ -112,6 +112,8 @@ From
 per person · EUR
 
 Based on a private party of 6 or more · entrance tickets not included.
+
+For two travellers: €87 per person.
 
 [Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Giza+%26+the+Grand+Museum&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Giza+%26+the+Grand+Museum%22+journey+%28Full+day+%28%E2%89%888+hours%29%2C+from+%E2%82%AC79+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 

@@ -1,5 +1,5 @@
 ---
-title: "The Grand Tour of Egypt — 14 Days / 13 Nights | Kemet"
+title: "14-Day Egypt Grand Tour with Abu Simbel & Red Sea | Kemet"
 url: https://kemet-travel.com/tour-grand-14day.html
 language: en
 description: "Our most complete journey: Cairo and Alexandria, a Nile cruise, Ramesses II's mountain temple at Abu Simbel — private, from €2,728 pp."
@@ -13,7 +13,7 @@ Fourteen days, every register of the country — Cairo, Alexandria, the Nile by 
 
 ## What does The Grand Tour of Egypt include, and what does it cost?
 
-The Grand Tour of Egypt is a private 14-day, 13-night journey through Cairo, Giza, Alexandria, Aswan, Abu Simbel, Luxor and Sharm El Sheikh, from €2,728 per person for a party of 6 or more. It includes a private Egyptologist guide throughout. International flights are not included.
+The Grand Tour of Egypt is a private 14-day, 13-night journey through Cairo, Giza, Alexandria, Aswan, Abu Simbel, Luxor and Sharm El Sheikh, from €2,728 per person for a party of 6 or more, or €3,001 per person for two. It includes a private Egyptologist guide throughout. International flights are not included.
 
 ## Overview
 
@@ -197,6 +197,8 @@ From
 per person · EUR
 
 Based on a private party of 6 or more.
+
+For two travellers: €3,001 per person.
 
 [Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+The+Grand+Tour+of+Egypt&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22The+Grand+Tour+of+Egypt%22+journey+%2814+Days+%2F+13+Nights%2C+from+%E2%82%AC2%2C728+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 

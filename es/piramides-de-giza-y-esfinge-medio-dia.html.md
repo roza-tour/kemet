@@ -15,6 +15,8 @@ desde 66 € / persona
 
 desde 6 viajeros · entradas no incluidas
 
+73 € por persona para dos viajeros
+
 Por persona, en temporada normal. Los suplementos de fechas festivas se indican por separado en el presupuesto.
 
 Duración **Medio día (unas 5 horas)**
@@ -98,9 +100,7 @@ Sí, como extra opcional privado. Un carrito de golf solo para su grupo le lleva
 
 ## Explorar
 
-Las páginas de cada viaje están en inglés.
-
-[kemet-travel.com/tour-giza-sphinx.html](https://kemet-travel.com/tour-giza-sphinx.html)
+[Esta página en inglés](https://kemet-travel.com/tour-giza-sphinx.html)
 
 ---
 

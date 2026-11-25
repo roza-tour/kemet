@@ -15,6 +15,8 @@ a partir de € 600 / pessoa
 
 a partir de 6 viajantes
 
+€ 660 por pessoa, para dois viajantes
+
 Por pessoa, em temporada normal. Acréscimos de feriados aparecem separados no orçamento.
 
 Duração **3 dias / 2 noites**
@@ -103,9 +105,7 @@ Bastam para o essencial bem feito, que é a promessa deste roteiro. Se for poss�
 
 ## Explorar
 
-As páginas de cada viagem estão em inglês.
-
-[kemet-travel.com/tour-cairo-vip-3day.html](https://kemet-travel.com/tour-cairo-vip-3day.html)
+[Esta página em inglês](https://kemet-travel.com/tour-cairo-vip-3day.html)
 
 ---
 

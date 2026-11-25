@@ -81,6 +81,7 @@ Pagine correlate in questa lingua e la pagina originale in inglese.
 - [Anniversari e compleanni importanti](https://kemet-travel.com/it/anniversari-e-compleanni-importanti-in-egitto.html)
 - [Tornare in Egitto](https://kemet-travel.com/it/tornare-in-egitto-secondo-viaggio.html)
 - [Tre generazioni, un solo viaggio](https://kemet-travel.com/it/viaggio-in-egitto-tre-generazioni.html)
+- [Viaggi in Egitto](https://kemet-travel.com/it/viaggi-in-egitto.html)
 
 [Questa pagina in inglese](https://kemet-travel.com/occasions/private-group-egypt.html)
 

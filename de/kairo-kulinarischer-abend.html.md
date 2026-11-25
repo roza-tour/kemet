@@ -15,6 +15,8 @@ ab 59 € / Person
 
 ab 6 Reisenden
 
+65 € pro Person bei zwei Reisenden
+
 Pro Person, Normalsaison. Zuschläge für Feiertage weisen wir im Angebot getrennt aus. Speisen und Getränke sind nicht enthalten — Sie bezahlen sie direkt an jeder Station.
 
 Dauer **Abend (ca. 4 Stunden)**
@@ -117,9 +119,7 @@ Sie entscheiden an jeder Station selbst, wie viel Sie bestellen — und wer Tell
 
 ## Entdecken
 
-Die Reiseverläufe im Detail sind auf Englisch.
-
-[kemet-travel.com/tour-cairo-food.html](https://kemet-travel.com/tour-cairo-food.html)
+[Diese Seite auf Englisch](https://kemet-travel.com/tour-cairo-food.html)
 
 ---
 

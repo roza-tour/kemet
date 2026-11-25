@@ -93,6 +93,7 @@ Weitere Entscheidungen, die vor einer Buchung anstehen – und die englische Ori
 - [Dahabiya oder Kreuzfahrtschiff?](https://kemet-travel.com/de/dahabiya-oder-kreuzfahrtschiff.html)
 - [Luxor oder Assuan?](https://kemet-travel.com/de/luxor-oder-assuan.html)
 - [Scharm el-Scheich oder Hurghada?](https://kemet-travel.com/de/scharm-el-scheich-oder-hurghada.html)
+- [Ägypten-Reisen](https://kemet-travel.com/de/aegypten-reisen.html)
 
 [Diese Seite auf Englisch](https://kemet-travel.com/compare/egyptian-museum-vs-grand-egyptian-museum.html)
 

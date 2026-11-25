@@ -15,6 +15,8 @@ dari €402 / seorang
 
 dari 6 orang
 
+€442 seorang bagi dua pengembara
+
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 
 Tempoh **2 hari / 1 malam**
@@ -95,9 +97,7 @@ Sudah tentu. Anda memilih ikan mengikut berat daripada pameran ais hasil tangkap
 
 ## Terokai
 
-Halaman butiran setiap percutian dalam bahasa Inggeris.
-
-[kemet-travel.com/tour-alexandria-2day.html](https://kemet-travel.com/tour-alexandria-2day.html)
+[Halaman ini dalam bahasa Inggeris](https://kemet-travel.com/tour-alexandria-2day.html)
 
 ---
 

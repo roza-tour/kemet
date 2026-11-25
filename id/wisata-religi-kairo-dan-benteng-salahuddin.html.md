@@ -15,6 +15,8 @@ mulai €80 / orang
 
 mulai 6 orang · tiket masuk tidak termasuk
 
+€88 per orang untuk dua wisatawan
+
 Per orang, musim normal. Biaya tambahan hari libur kami cantumkan terpisah dalam penawaran.
 
 Durasi **Sehari penuh (sekitar 8 jam)**
@@ -92,9 +94,7 @@ Kami menyusun rencana dengan memperhitungkan waktu salat dan penutupan apa pun a
 
 ## Jelajahi
 
-Halaman rincian tiap perjalanan berbahasa Inggris.
-
-[kemet-travel.com/tour-religious-citadel.html](https://kemet-travel.com/tour-religious-citadel.html)
+[Halaman ini dalam bahasa Inggris](https://kemet-travel.com/tour-religious-citadel.html)
 
 ---
 

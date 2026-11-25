@@ -56,6 +56,16 @@ Kemet bekerja di segmen atas pasar Mesir dan kami mengatakannya tanpa sungkan. E
 - Hostel, kamar bersama, dan rute ala backpacker
 - Mereka yang lebih suka mengurus logistik sendiri
 
+## Panduan wisata
+
+- [Panduan Wisata Mesir](https://kemet-travel.com/id/panduan-wisata-mesir.html)
+- [Waktu Terbaik Berkunjung ke Mesir](https://kemet-travel.com/id/bulan-terbaik-berkunjung-ke-mesir.html)
+- [Itinerary Mesir 10 Hari yang Ideal](https://kemet-travel.com/id/itinerary-mesir-10-hari.html)
+- [Tempat Menginap di Mesir: Hotel Terbaik, Kota demi Kota](https://kemet-travel.com/id/tempat-menginap-terbaik-di-mesir.html)
+- [Berkeliling Mesir](https://kemet-travel.com/id/transportasi-di-mesir.html)
+- [Panduan Makanan Mesir](https://kemet-travel.com/id/makanan-khas-mesir.html)
+- [Apa yang Dibawa ke Mesir](https://kemet-travel.com/id/apa-yang-dibawa-ke-mesir.html)
+
 ## Pertanyaan umum
 
 ### Berapa biaya tour privat ke Mesir?

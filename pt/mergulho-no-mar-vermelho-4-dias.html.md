@@ -15,6 +15,8 @@ a partir de € 792 / pessoa
 
 a partir de 6 viajantes
 
+€ 871 por pessoa, para dois viajantes
+
 Por pessoa, em temporada normal. Acréscimos de feriados aparecem separados no orçamento.
 
 Duração **4 dias / 3 noites**
@@ -107,9 +109,7 @@ Paredes densas de coral mole, nuvens de anthias, peixes-napoleão, tartarugas e 
 
 ## Explorar
 
-As páginas de cada viagem estão em inglês.
-
-[kemet-travel.com/tour-red-sea-diving-4day.html](https://kemet-travel.com/tour-red-sea-diving-4day.html)
+[Esta página em inglês](https://kemet-travel.com/tour-red-sea-diving-4day.html)
 
 ---
 

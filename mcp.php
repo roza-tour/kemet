@@ -38,6 +38,8 @@ const KEMET_PROTOCOLS = ["2025-11-25", "2025-06-18", "2025-03-26", "2024-11-05"]
 const KEMET_LOCALES = ["en", "de", "fr", "it", "es", "ru", "id", "ms", "pt", "ar"];
 const KEMET_MAX_BODY = 65536;
 
+// Do not advertise the PHP version.
+header_remove("X-Powered-By");
 header("X-Content-Type-Options: nosniff");
 header("Cache-Control: no-store");
 // Public, read-only data: any origin may call it.
@@ -157,7 +159,8 @@ function kemet_instructions(): string {
     "and a day-by-day itinerary with a written price. Use search_journeys to find journeys by length, place or budget, " .
     "get_journey for the full itinerary and inclusions, get_travel_updates for what has changed in Egypt this season, " .
     "and search / fetch for anything else on the site (destinations, month-by-month weather, comparisons, guides). " .
-    "Prices are from-prices in euros per person and are the same in every language: quote them as 'from' and link the page. " .
+    "Prices are from-prices in euros per person and are the same in every language. A journey's priceFrom is for a private " .
+    "party of six or more; priceForTwo is what each of two travellers pays. Quote the one that fits and link the page. " .
     "Programmes are priced on request and have no published price; do not invent one. " .
     "Pages exist in English, German, French, Italian, Spanish, Russian, Indonesian, Malay, Portuguese and Arabic: " .
     "pass the traveller's language and link the page in it. This server cannot book or send anything; " .
@@ -171,7 +174,7 @@ function kemet_tools(): array {
     [
       "name" => "search_journeys",
       "title" => "Find Kemet journeys",
-      "description" => "Find Kemet's private Egypt journeys and day tours by free text, place, length or budget. Returns name, days, places, from-price in EUR per person and the page link. Also returns matching programmes beyond the Nile (Siwa, Sinai, Red Sea islands, the deserts), which are priced on request. Call with no arguments to list the whole catalogue.",
+      "description" => "Find Kemet's private Egypt journeys and day tours by free text, place, length or budget. Returns name, days, places, the from-price in EUR per person (for a party of six or more) and the price for two travellers, and the page link, named in the traveller's language where the journey has a page in it. Also returns matching programmes beyond the Nile (Siwa, Sinai, Red Sea islands, the deserts), which are priced on request. Call with no arguments to list the whole catalogue.",
       "inputSchema" => [
         "type" => "object",
         "properties" => [
@@ -378,16 +381,20 @@ function tool_search_journeys(array $args): array {
     if ($place !== "" && strpos($hay, $place) === false) continue;
     $score = $terms ? $hit($hay) : 1;
     if ($terms && $score === 0) continue;
+    // The journey as its page in the traveller's language names it.
+    $loc = is_array($j["i18n"][$lang] ?? null) ? $j["i18n"][$lang] : [];
+    $two = $j["priceForTwo"]["amount"] ?? null;
     $journeys[] = [$score, [
       "id" => $j["id"] ?? "",
-      "name" => $j["name"] ?? "",
+      "name" => $loc["name"] ?? ($j["name"] ?? ""),
       "kind" => $j["kind"] ?? "",
-      "duration" => $j["duration"] ?? "",
+      "duration" => $loc["duration"] ?? ($j["duration"] ?? ""),
       "days" => $days,
       "places" => $j["places"] ?? [],
       "private" => $j["privacy"] ?? "",
-      "priceFrom" => is_numeric($price) ? ["amount" => $price, "currency" => "EUR", "per" => $j["priceFrom"]["per"] ?? "person"] : null,
-      "summary" => $j["summary"] ?? "",
+      "priceFrom" => is_numeric($price) ? ["amount" => $price, "currency" => "EUR", "per" => $j["priceFrom"]["per"] ?? "person", "basis" => $j["priceFrom"]["basis"] ?? ""] : null,
+      "priceForTwo" => is_numeric($two) ? ["amount" => $two, "currency" => "EUR", "per" => "person", "basis" => "a private party of two"] : null,
+      "summary" => $loc["summary"] ?? ($j["summary"] ?? ""),
       "url" => $j["pages"][$lang] ?? ($j["pages"]["en"] ?? KEMET_SITE . "/tours.html"),
     ]];
   }
@@ -418,7 +425,7 @@ function tool_search_journeys(array $args): array {
   return [
     "journeys" => array_map(function ($x) { return $x[1]; }, $journeys),
     "programmes" => $programmes,
-    "note" => "Prices are from-prices in euros per person; quote them as 'from'. Programmes have no published price. Any journey can be lengthened, shortened or combined, and one that is not listed can still be planned.",
+    "note" => "Prices are from-prices in euros per person. priceFrom is for a private party of six or more unless its basis says otherwise; priceForTwo is what each of two travellers pays. Quote the one that fits the party and say which it is. Programmes have no published price. Any journey can be lengthened, shortened or combined, and one that is not listed can still be planned.",
     "catalogue" => KEMET_SITE . "/tours.html",
   ];
 }
@@ -458,10 +465,15 @@ function tool_enquiry_link(array $args): array {
   $about = "";
   if ($jid !== "" && preg_match('/^[a-z0-9-]{2,80}$/', $jid)) {
     foreach (array_merge($cat["journeys"] ?? [], $cat["programmes"]["items"] ?? []) as $j) {
-      if (($j["id"] ?? "") === $jid) { $about = (string)($j["name"] ?? ""); break; }
+      // Named as the page in the traveller's language names it.
+      if (($j["id"] ?? "") === $jid) { $about = (string)($j["i18n"][$lang]["name"] ?? ($j["name"] ?? "")); break; }
     }
   }
-  $text = "Hello Kemet" . ($about !== "" ? " — I am asking about \"" . $about . "\"." : ".") . ($message !== "" ? " " . $message : "");
+  // The greeting in the traveller's language (journeys.json → enquire.greeting).
+  $g = is_array($cat["enquire"]["greeting"][$lang] ?? null) ? $cat["enquire"]["greeting"][$lang] : [];
+  $hello = is_string($g["hello"] ?? null) ? $g["hello"] : "Hello Kemet.";
+  $aboutTpl = is_string($g["about"] ?? null) && strpos($g["about"], "%s") !== false ? $g["about"] : 'Hello Kemet — I am asking about "%s".';
+  $text = ($about !== "" ? str_replace("%s", $about, $aboutTpl) : $hello) . ($message !== "" ? " " . $message : "");
   $wa = (string)($cat["enquire"]["whatsapp"] ?? "");
   $contact = $lang === "en" ? KEMET_SITE . "/contact.html" : KEMET_SITE . "/" . $lang . "/#enquire";
   return [
@@ -477,6 +489,7 @@ function tool_search(array $args): array {
   $terms = words(arg_text($args, "query", 200));
   if (!$terms) throw new InvalidArgumentException("Give one or more search words.");
   $index = read_json("search-index.json");
+  $phrase = implode(" ", $terms);
   $found = [];
   foreach ($index as $e) {
     if (!is_array($e)) continue;
@@ -492,6 +505,10 @@ function tool_search(array $args): array {
       if ($s) $matched++;
       $score += $s;
     }
+    // The words as a phrase in the title is the page about exactly that; and
+    // a page outranks one section of another page ("faq.html#…").
+    if ($phrase !== "" && strpos($title, $phrase) !== false) $score += 10;
+    if (strpos((string)($e["u"] ?? ""), "#") === false) $score += 3;
     // Every word has to be somewhere on the page; otherwise a long query
     // returns the whole site ranked by its commonest word.
     if ($matched < count($terms)) continue;
@@ -516,7 +533,7 @@ function tool_search(array $args): array {
     // a result is a page, so keep the best entry for each address.
     if (isset($seen[$f[1]])) continue;
     $seen[$f[1]] = true;
-    $results[] = ["id" => $f[1], "title" => $f[2], "url" => page_url($f[1]) . $f[5], "section" => $f[4], "description" => $f[3]];
+    $results[] = ["id" => $f[1], "title" => $f[2], "url" => page_url($f[1]), "section" => $f[4], "description" => $f[3]];
     if (count($results) === 12) break;
   }
   return ["results" => $results];

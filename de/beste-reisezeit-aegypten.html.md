@@ -43,6 +43,21 @@ Die Herbstferien, Weihnachten und Ostern sind die drei Fenster, in denen deutsch
 
 Ramadan verschiebt sich jährlich um etwa elf Tage. Sehenswürdigkeiten bleiben geöffnet, oft mit verkürzten Zeiten, und der Tagesrhythmus dreht sich: ruhige Nachmittage, dann erwacht das ganze Land bei Sonnenuntergang zum Iftar. Viele Reisende beschreiben es im Nachhinein als den eindrucksvollsten Teil ihrer Reise. Das Sonnenfest von Abu Simbel findet am 22. Februar und am 22. Oktober statt.
 
+## Monat für Monat
+
+- [Ägypten im Januar](https://kemet-travel.com/de/aegypten-im-januar.html)
+- [Ägypten im Februar](https://kemet-travel.com/de/aegypten-im-februar.html)
+- [Ägypten im März](https://kemet-travel.com/de/aegypten-im-maerz.html)
+- [Ägypten im April](https://kemet-travel.com/de/aegypten-im-april.html)
+- [Ägypten im Mai](https://kemet-travel.com/de/aegypten-im-mai.html)
+- [Ägypten im Juni](https://kemet-travel.com/de/aegypten-im-juni.html)
+- [Ägypten im Juli](https://kemet-travel.com/de/aegypten-im-juli.html)
+- [Ägypten im August](https://kemet-travel.com/de/aegypten-im-august.html)
+- [Ägypten im September](https://kemet-travel.com/de/aegypten-im-september.html)
+- [Ägypten im Oktober](https://kemet-travel.com/de/aegypten-im-oktober.html)
+- [Ägypten im November](https://kemet-travel.com/de/aegypten-im-november.html)
+- [Ägypten im Dezember](https://kemet-travel.com/de/aegypten-im-dezember.html)
+
 ## Häufige Fragen
 
 ### Wann ist die beste Reisezeit für Ägypten?

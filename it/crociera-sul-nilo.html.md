@@ -19,6 +19,63 @@ Periodo migliore **ottobre–aprile**
 
 Quasi tutto ciò per cui vale la pena fermarsi fra Luxor e Assuan si trova a poche centinaia di metri dal Nilo. Per questo il fiume è la strada, e per questo per quel tratto consigliamo quasi sempre la barca. Il vantaggio vero non è la nave: è l'arrivo. Scendete e siete già lì, invece di entrare passando da un parcheggio di pullman.
 
+## La crociera di quattro giorni, giorno per giorno
+
+Questa è la crociera così come la organizziamo: tre notti sul fiume da Assuan a Luxor, con ogni visita a terra in privato insieme alla vostra guida esperta di egittologia. La nave è condivisa; la vostra guida, il vostro veicolo e le vostre visite no.
+
+da 820 € / persona (da 6 viaggiatori). 902 € a persona per due viaggiatori. A persona, in stagione normale. I supplementi delle festività sono indicati separatamente nel preventivo.
+
+01
+
+### Giorno 1 — Assuan — File, la Grande Diga e l'imbarco
+
+- Accoglienza privata ad Assuan e visita mattutina alla Grande Diga e all'obelisco incompiuto
+- In motoscafo fino al tempio sull'isola di File, santuario di Iside
+- Imbarco sulla nave prima di pranzo; pomeriggio libero sul ponte sole
+
+02
+
+### Giorno 2 — Kom Ombo ed Edfu
+
+- Navigazione mattutina verso Kom Ombo e il suo tempio doppio sopra la riva del fiume
+- Si prosegue per Edfu — il Tempio di Horus, il più completo d'Egitto
+- Serata a bordo, con la nave ormeggiata sotto la città del tempio
+
+03
+
+### Giorno 3 — La chiusa di Esna e l'arrivo a Luxor
+
+- Passaggio della chiusa di Esna, mentre la valle si apre verso Tebe
+- Arrivo a Luxor nel pomeriggio; in serata, facoltativa, visita al Tempio di Luxor illuminato
+- Ultima notte a bordo
+
+04
+
+### Giorno 4 — Luxor — le due rive e lo sbarco
+
+- La grande sala ipostila di Karnak con la vostra guida esperta di egittologia
+- Si attraversa il fiume verso la riva occidentale — Valle dei Re e Tempio di Hatshepsut
+- Sbarco e trasferimento al vostro hotel di Luxor, alla stazione o all'aeroporto
+
+## Incluso
+
+- Un egittologo privato per tutto il viaggio
+- Crociera di 3 notti in pensione completa, da Assuan a Luxor
+- Tutte le escursioni a terra come visite private con la vostra guida
+- Tutti i biglietti d'ingresso a siti e monumenti
+- Trasferimenti privati con aria condizionata
+- Prelievo e rientro in hotel
+- Acqua in bottiglia ogni giorno
+
+## Non incluso
+
+- I voli internazionali da e per l'Egitto
+- Il visto d'ingresso in Egitto
+- Le mance
+- Le spese personali
+- I pasti, tranne a bordo della crociera sul Nilo
+- I supplementi facoltativi a scelta — attività, bevande
+
 01
 
 ## Cosa si vede lungo il percorso
@@ -29,7 +86,7 @@ Kom Ombo, l'insolito tempio doppio dedicato al dio coccodrillo Sobek e a Horus i
 
 ## Dahabeya o motonave
 
-Una dahabeya è una barca a vela tradizionale, di norma con otto-dodici cabine. Ormeggia su banchi di sabbia e presso villaggi che le navi grandi non possono raggiungere, porta un decimo dei passeggeri e non ha programma di intrattenimento. Costa sensibilmente di più. Una motonave da sessanta-centoquaranta cabine è lo standard di mercato, ben disponibile e del tutto adeguata per un primo viaggio. Per la motonave prenotiamo le navi della flotta Sonesta; quale sarà, lo confermiamo con le vostre date. Se il viaggio celebra qualcosa, la dahabeya è l'unico upgrade che consigliamo prima di ogni altro.
+Una dahabeya è una barca a vela tradizionale, di norma con otto-dodici cabine. Ormeggia su banchi di sabbia e presso villaggi che le navi grandi non possono raggiungere, porta un decimo dei passeggeri e non ha programma di intrattenimento. Costa sensibilmente di più. Una motonave da sessanta-centoquaranta cabine è lo standard di mercato, ben disponibile e del tutto adeguata per un primo viaggio. La motonave viene confermata con le vostre date. Se il viaggio celebra qualcosa, la dahabeya è l'unico upgrade che consigliamo prima di ogni altro.
 
 03
 

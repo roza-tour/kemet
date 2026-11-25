@@ -56,6 +56,16 @@ Kemet arbeitet im oberen Segment des ägyptischen Marktes, und wir sagen das ohn
 - Hostels, Mehrbettzimmer und Backpacking-Routen
 - Reisende, die die Organisation lieber selbst übernehmen
 
+## Reiseführer
+
+- [Ägypten Reiseführer](https://kemet-travel.com/de/aegypten-reisefuehrer.html)
+- [Beste Reisezeit für Ägypten](https://kemet-travel.com/de/wann-nach-aegypten-reisen.html)
+- [Der ideale 10-Tage-Reiseverlauf für Ägypten](https://kemet-travel.com/de/aegypten-10-tage-reiseverlauf.html)
+- [Wo in Ägypten übernachten: die besten Hotels, Stadt für Stadt](https://kemet-travel.com/de/beste-hotels-aegypten.html)
+- [In Ägypten unterwegs](https://kemet-travel.com/de/aegypten-verkehrsmittel.html)
+- [Ägyptische Küche – ein Ratgeber](https://kemet-travel.com/de/aegyptische-kueche.html)
+- [Packliste für Ägypten](https://kemet-travel.com/de/aegypten-packliste.html)
+
 ## Häufige Fragen
 
 ### Was kostet eine private Ägypten-Reise?

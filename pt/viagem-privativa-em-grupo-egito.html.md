@@ -81,6 +81,7 @@ Páginas relacionadas neste idioma e a página original em inglês.
 - [Bodas e aniversários especiais](https://kemet-travel.com/pt/aniversario-de-casamento-e-bodas-no-egito.html)
 - [Voltar ao Egito](https://kemet-travel.com/pt/segunda-viagem-ao-egito.html)
 - [Três gerações, uma só viagem](https://kemet-travel.com/pt/viagem-ao-egito-tres-geracoes.html)
+- [Viagens ao Egito](https://kemet-travel.com/pt/viagens-ao-egito.html)
 
 [Esta página em inglês](https://kemet-travel.com/occasions/private-group-egypt.html)
 

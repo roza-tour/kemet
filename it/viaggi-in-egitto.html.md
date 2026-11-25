@@ -291,6 +291,23 @@ I templi colossali di Ramesse II scavati nella roccia — intagliati in una mont
 
 160 € / persona da 6 viaggiatori · biglietti non inclusi
 
+## Confrontare le opzioni
+
+- [Aereo o treno notturno per Luxor e Assuan?](https://kemet-travel.com/it/aereo-o-treno-notturno-luxor-assuan.html)
+- [Crociera sul Nilo o tour via terra?](https://kemet-travel.com/it/crociera-sul-nilo-o-tour-via-terra.html)
+- [Dahabiya o nave da crociera?](https://kemet-travel.com/it/dahabiya-o-nave-da-crociera-sul-nilo.html)
+- [Luxor o Assuan?](https://kemet-travel.com/it/luxor-o-assuan-quale-scegliere.html)
+- [Museo Egizio o Grand Egyptian Museum?](https://kemet-travel.com/it/museo-egizio-o-grand-egyptian-museum.html)
+- [Sharm el-Sheikh o Hurghada?](https://kemet-travel.com/it/sharm-el-sheikh-o-hurghada.html)
+
+## Per occasione
+
+- [Chiedere la mano in Egitto](https://kemet-travel.com/it/proposta-di-matrimonio-in-egitto.html)
+- [Anniversari e compleanni importanti](https://kemet-travel.com/it/anniversari-e-compleanni-importanti-in-egitto.html)
+- [Un gruppo privato, non un tour di gruppo](https://kemet-travel.com/it/viaggio-di-gruppo-privato-egitto.html)
+- [Tornare in Egitto](https://kemet-travel.com/it/tornare-in-egitto-secondo-viaggio.html)
+- [Tre generazioni, un solo viaggio](https://kemet-travel.com/it/viaggio-in-egitto-tre-generazioni.html)
+
 ## Domande frequenti
 
 ### Quanti giorni servono per visitare l'Egitto?

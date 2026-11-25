@@ -56,6 +56,16 @@ description: "رحلات خاصة إلى مصر تُصمَّم لكم وحدكم
 - من يفضّل ترتيب التنقّلات والحجوزات بنفسه
 - من يريد أربعة مواقع في يوم واحد
 
+## أدلة السفر
+
+- [دليل السفر إلى مصر](https://kemet-travel.com/ar/dalil-al-safar-ila-misr.html)
+- [أفضل وقت لزيارة مصر](https://kemet-travel.com/ar/afdal-mawsim-lizyarat-misr-hasab-al-shuhur.html)
+- [برنامج عشرة أيام مثالي في مصر](https://kemet-travel.com/ar/barnamaj-rehla-ila-misr-10-ayyam.html)
+- [أين تقيمون في مصر: أفضل الفنادق مدينةً بمدينة](https://kemet-travel.com/ar/afdal-fanadiq-misr-madina-bimadina.html)
+- [التنقل في مصر](https://kemet-travel.com/ar/al-tanaqul-fi-misr-qitarat-wa-rehlat-jawwiya.html)
+- [دليل الأكل المصري](https://kemet-travel.com/ar/dalil-al-akl-al-misri-maza-takul-fi-misr.html)
+- [ماذا تأخذون معكم إلى مصر](https://kemet-travel.com/ar/madha-akhudh-maai-ila-misr.html)
+
 ## أسئلة شائعة
 
 ### كم تكلفة رحلة خاصة إلى مصر؟

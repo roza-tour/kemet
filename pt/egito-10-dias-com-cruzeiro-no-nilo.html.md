@@ -15,6 +15,8 @@ a partir de € 1.915 / pessoa
 
 a partir de 6 viajantes
 
+€ 2.107 por pessoa, para dois viajantes
+
 Por pessoa, em temporada normal. Acréscimos de feriados aparecem separados no orçamento.
 
 Duração **10 dias / 9 noites**
@@ -165,9 +167,7 @@ De outubro a abril as temperaturas são agradáveis tanto no Cairo quanto no Alt
 
 ## Explorar
 
-As páginas de cada viagem estão em inglês.
-
-[kemet-travel.com/tour-10-day.html](https://kemet-travel.com/tour-10-day.html)
+[Esta página em inglês](https://kemet-travel.com/tour-10-day.html)
 
 ---
 

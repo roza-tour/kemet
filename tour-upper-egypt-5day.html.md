@@ -1,5 +1,5 @@
 ---
-title: "Temples of the South — 5 Days / 4 Nights | Kemet"
+title: "5-Day Luxor to Aswan Private Tour: Edfu & Kom Ombo | Kemet"
 url: https://kemet-travel.com/tour-upper-egypt-5day.html
 language: en
 description: "The deep-history heart of Egypt by private road journey — Karnak, the Valley of the Kings, Edfu, Kom Ombo and Philae — private, from €1,018 pp."
@@ -13,7 +13,7 @@ Five unhurried days through Upper Egypt — Luxor's two banks, the road south pa
 
 ## What does Temples of the South include, and what does it cost?
 
-Temples of the South is a private 5-day, 4-night journey through Luxor, Edfu, Kom Ombo and Aswan, from €1,018 per person for a party of 6 or more. It includes a private Egyptologist guide throughout; 4 nights' hotel accommodation (Luxor & Aswan); private felucca sail in Aswan; and all entrance fees to sites and monuments. International flights are not included.
+Temples of the South is a private 5-day, 4-night journey through Luxor, Edfu, Kom Ombo and Aswan, from €1,018 per person for a party of 6 or more, or €1,120 per person for two. It includes a private Egyptologist guide throughout, 4 nights' hotel accommodation (Luxor & Aswan) and private felucca sail in Aswan. International flights are not included.
 
 ## Overview
 
@@ -133,6 +133,8 @@ From
 per person · EUR
 
 Based on a private party of 6 or more.
+
+For two travellers: €1,120 per person.
 
 [Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Temples+of+the+South&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Temples+of+the+South%22+journey+%285+Days+%2F+4+Nights%2C+from+%E2%82%AC1%2C018+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 

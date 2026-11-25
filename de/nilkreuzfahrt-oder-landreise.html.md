@@ -93,6 +93,7 @@ Weitere Entscheidungen, die vor einer Buchung anstehen – und die englische Ori
 - [Luxor oder Assuan?](https://kemet-travel.com/de/luxor-oder-assuan.html)
 - [Ägyptisches Museum oder Grand Egyptian Museum?](https://kemet-travel.com/de/aegyptisches-museum-oder-grand-egyptian-museum.html)
 - [Scharm el-Scheich oder Hurghada?](https://kemet-travel.com/de/scharm-el-scheich-oder-hurghada.html)
+- [Ägypten-Reisen](https://kemet-travel.com/de/aegypten-reisen.html)
 
 [Diese Seite auf Englisch](https://kemet-travel.com/compare/nile-cruise-vs-land-tour.html)
 

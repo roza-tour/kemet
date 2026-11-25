@@ -70,7 +70,8 @@ Allow: /
 # @astrojs/sitemap emits sitemap-index.xml at the site root.
 Sitemap: https://kemet-travel.com/sitemap-index.xml
 
-# Image sitemap — original photography, declared separately so Google Images
+# Image sitemap — the photographs on the journey, destination and guide pages,
+# declared separately so Google Images
 # can index it. Multiple Sitemap directives are valid and additive.
 Sitemap: https://kemet-travel.com/sitemap-images.xml
 

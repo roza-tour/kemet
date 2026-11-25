@@ -93,6 +93,7 @@ Keputusan lain yang biasa dipertimbangkan sebelum memesan, beserta halaman aslin
 - [Dahabiya atau kapal pesiar?](https://kemet-travel.com/id/dahabiya-atau-kapal-pesiar-sungai-nil.html)
 - [Luxor atau Aswan?](https://kemet-travel.com/id/luxor-atau-aswan-mana-yang-dipilih.html)
 - [Sharm El Sheikh atau Hurghada?](https://kemet-travel.com/id/sharm-el-sheikh-atau-hurghada.html)
+- [Paket Tour Mesir](https://kemet-travel.com/id/paket-tour-mesir.html)
 
 [Halaman ini dalam bahasa Inggris](https://kemet-travel.com/compare/egyptian-museum-vs-grand-egyptian-museum.html)
 

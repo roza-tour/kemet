@@ -150,9 +150,7 @@ description: "تسعة أيام لاثنين: شروق خاص عند الأهر�
 
 ## استكشاف
 
-صفحات تفاصيل كل رحلة بالإنجليزية.
-
-[kemet-travel.com/tour-honeymoon-9day.html](https://kemet-travel.com/tour-honeymoon-9day.html)
+[هذه الصفحة بالإنجليزية](https://kemet-travel.com/tour-honeymoon-9day.html)
 
 ---
 

@@ -15,6 +15,8 @@ Sept jours réglés sur la lumière et non sur les horaires d'ouverture — plat
 
 à partir de 6 voyageurs
 
+1 561 € par personne pour deux voyageurs
+
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
 
 Durée **7 jours / 6 nuits**
@@ -140,9 +142,7 @@ Vraiment oui. Le programme revient simplement à voir les sites à leurs heures 
 
 ## Explorer
 
-Les pages de chaque voyage sont en anglais.
-
-[kemet-travel.com/tour-photography-7day.html](https://kemet-travel.com/tour-photography-7day.html)
+[Cette page en anglais](https://kemet-travel.com/tour-photography-7day.html)
 
 ---
 

@@ -93,6 +93,7 @@ description: "المتحف المصري بالتحرير أم المتحف ال�
 - [ذهبية نيلية أم باخرة سياحية؟](https://kemet-travel.com/ar/dhahabiya-nilia-am-safina-siyahiya.html)
 - [الأقصر أم أسوان؟](https://kemet-travel.com/ar/al-uqsur-am-aswan-ayyuhuma-afdal.html)
 - [شرم الشيخ أم الغردقة؟](https://kemet-travel.com/ar/sharm-al-sheikh-am-al-ghardaqa.html)
+- [الرحلات](https://kemet-travel.com/ar/rehlat-masr-khassa.html)
 
 [هذه الصفحة بالإنجليزية](https://kemet-travel.com/compare/egyptian-museum-vs-grand-egyptian-museum.html)
 

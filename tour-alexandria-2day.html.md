@@ -1,5 +1,5 @@
 ---
-title: "Alexandria Overnight — 2 Days / 1 Night | Kemet"
+title: "2-Day Alexandria Private Tour with Overnight | Kemet"
 url: https://kemet-travel.com/tour-alexandria-2day.html
 language: en
 description: "Alexandria with its missing half restored: the Greco-Roman sites by day, then the corniche at dusk — private, from €402 pp."
@@ -13,7 +13,7 @@ Two Mediterranean days — the catacombs, the Citadel on the Pharos site, the re
 
 ## What does Alexandria Overnight include, and what does it cost?
 
-Alexandria Overnight is a private 2-day, 1-night journey through Alexandria, from €402 per person for a party of 6 or more. It includes a private Egyptologist guide throughout; 1 night in a seafront hotel; all entrance fees to sites and monuments; and private air-conditioned transfers. International flights are not included.
+Alexandria Overnight is a private 2-day, 1-night journey through Alexandria, from €402 per person for a party of 6 or more, or €442 per person for two. It includes a private Egyptologist guide throughout; 1 night in a seafront hotel; all entrance fees to sites and monuments; and private air-conditioned transfers. International flights are not included.
 
 ## Overview
 
@@ -107,6 +107,8 @@ From
 per person · EUR
 
 Based on a private party of 6 or more.
+
+For two travellers: €442 per person.
 
 [Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Alexandria+Overnight&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Alexandria+Overnight%22+journey+%282+Days+%2F+1+Night%2C+from+%E2%82%AC402+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 

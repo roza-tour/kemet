@@ -15,6 +15,8 @@ mulai €875 / orang
 
 mulai 6 orang
 
+€963 per orang untuk dua wisatawan
+
 Per orang, musim normal. Biaya tambahan hari libur kami cantumkan terpisah dalam penawaran.
 
 Durasi **5 Hari / 4 Malam**
@@ -119,9 +121,7 @@ Bisa — hari keenam di tepi Mediterania memperpanjang perjalanan ini dengan waj
 
 ## Jelajahi
 
-Halaman rincian tiap perjalanan berbahasa Inggris.
-
-[kemet-travel.com/tour-cairo-culture-5day.html](https://kemet-travel.com/tour-cairo-culture-5day.html)
+[Halaman ini dalam bahasa Inggris](https://kemet-travel.com/tour-cairo-culture-5day.html)
 
 ---
 

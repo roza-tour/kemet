@@ -93,6 +93,7 @@ description: "الأقصر أم أسوان، أيهما تختارون إن كا
 - [ذهبية نيلية أم باخرة سياحية؟](https://kemet-travel.com/ar/dhahabiya-nilia-am-safina-siyahiya.html)
 - [المتحف المصري أم المتحف المصري الكبير؟](https://kemet-travel.com/ar/al-mathaf-al-misri-am-al-mathaf-al-misri-al-kabir.html)
 - [شرم الشيخ أم الغردقة؟](https://kemet-travel.com/ar/sharm-al-sheikh-am-al-ghardaqa.html)
+- [الرحلات](https://kemet-travel.com/ar/rehlat-masr-khassa.html)
 
 [هذه الصفحة بالإنجليزية](https://kemet-travel.com/compare/luxor-vs-aswan.html)
 
