@@ -88,4 +88,4 @@ Altri programmi oltre il Nilo e la pagina originale in inglese.
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/it/marsa-alam-isole-hamata-estremo-sud-mar-rosso.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/it/contatti-kemet.html · Site index for assistants: https://kemet-travel.com/it/llms.txt

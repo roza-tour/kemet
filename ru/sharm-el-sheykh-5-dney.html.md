@@ -89,7 +89,7 @@ description: "Пять дней там, где горы Синая встреч�
 - Въездная виза в Египет
 - Чаевые
 - Личные расходы
-- Питание — кроме обеда в день на катере
+- Питание — кроме обеда в день на катере и ужина в пустыне
 - Дополнительные услуги на ваш выбор — развлечения, напитки
 
 ## Темп
@@ -120,4 +120,4 @@ description: "Пять дней там, где горы Синая встреч�
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/ru/sharm-el-sheykh-5-dney.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/ru/kontakty.html · Site index for assistants: https://kemet-travel.com/ru/llms.txt

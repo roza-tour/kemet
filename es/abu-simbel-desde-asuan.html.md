@@ -97,4 +97,4 @@ El 22 de febrero y el 22 de octubre, el sol naciente penetra 60 metros en el Gra
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/es/abu-simbel-desde-asuan.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/es/contacto.html · Site index for assistants: https://kemet-travel.com/es/llms.txt

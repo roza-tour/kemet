@@ -15,8 +15,14 @@ $store = __DIR__ . "/_stats/subscribers.csv";
 $token = preg_replace("/[^a-f0-9]/", "", (string) ($_GET["t"] ?? ""));
 
 $done = false;
+// Only a POST changes anything. Mail security scanners open every link in a
+// message (GET) before the reader does; a GET that unsubscribed would take
+// people off the list without their asking. GET shows a button; the button,
+// and a mail client's one-click unsubscribe (RFC 8058), POST.
+$isPost = ($_SERVER["REQUEST_METHOD"] ?? "GET") === "POST";
+if ($token === "" && $isPost) { $token = preg_replace("/[^a-f0-9]/", "", (string) ($_POST["t"] ?? "")); }
 
-if ($token !== "" && is_readable($store) && ($fh = fopen($store, "r+")) !== false) {
+if ($isPost && $token !== "" && is_readable($store) && ($fh = fopen($store, "r+")) !== false) {
   flock($fh, LOCK_EX);
   $rows = [];
   while (($row = fgetcsv($fh)) !== false) {
@@ -24,7 +30,13 @@ if ($token !== "" && is_readable($store) && ($fh = fopen($store, "r+")) !== fals
       // The row is kept, marked, rather than deleted: proof that consent was
       // given and then withdrawn is the record that protects both sides, and a
       // deleted row would let the next import silently re-add the address.
-      $row[7] = "unsubscribed " . gmdate("Y-m-d");
+      // Already off the list: leave the record and its date as they are.
+      if (strpos((string) ($row[7] ?? ""), "unsubscribed") !== 0) {
+        // What the privacy policy says is kept after leaving: the address and
+        // the date — nothing else (name, trip notes, network addresses and
+        // the consent record go).
+        $row = [$row[0] ?? "", $row[1] ?? "", "", "", "", "", $row[6], "unsubscribed " . gmdate("Y-m-d"), "", "", ""];
+      }
       $done = true;
     }
     $rows[] = $row;
@@ -53,7 +65,14 @@ header("X-Robots-Tag: noindex, nofollow");
   a{color:#D9B45A}
 </style>
 </head><body><div class="box">
-<?php if ($done): ?>
+<?php if (!$isPost && $token !== ""): ?>
+  <h1>Leave Kemet's list?</h1>
+  <p>One click and you will not receive anything further.</p>
+  <form method="post" action="/unsubscribe.php">
+    <input type="hidden" name="t" value="<?= htmlspecialchars($token, ENT_QUOTES, "UTF-8") ?>">
+    <button type="submit" style="font:inherit;padding:12px 26px;border:1px solid #D9B45A;background:#D9B45A;color:#0C0A07;cursor:pointer">Unsubscribe</button>
+  </form>
+<?php elseif ($done): ?>
   <h1>Done — you're off the list</h1>
   <p>You will not receive anything further. Nothing else changes: if you have a
      journey being planned with us, that correspondence is unaffected.</p>

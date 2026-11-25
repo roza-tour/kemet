@@ -54,7 +54,7 @@ Tell us your vision — we design a private journey from scratch.
 
 ### Group Travel
 
-Special programmes for groups of 8 or more travellers.
+Programmes for larger parties travelling together: families, friends, societies and companies.
 
 [WhatsApp](https://wa.me/201158367162?text=Hello%20Kemet%20%E2%80%94%20I%27d%20like%20to%20discuss%20a%20group%20Egypt%20journey.) [Email](mailto:info@kemet-travel.com?subject=Group+travel+enquiry+%E2%80%94+Kemet+Egypt&body=Hello+Kemet%2C%0A%0AI%27d+like+to+discuss+group+travel+to+Egypt.%0A%0AGroup+size%3A%0ATravel+dates%3A%0ASpecial+requirements%3A%0A%0AThank+you.)
 

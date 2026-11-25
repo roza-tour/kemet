@@ -2,9 +2,21 @@
   "name": "Kemet — private journeys in Egypt, the catalogue",
   "url": "https://kemet-travel.com/journeys.json",
   "about": "Kemet plans private journeys in Egypt: a licensed Egyptologist from our own team, a private vehicle and driver, hotels chosen for the room, and a real day-by-day itinerary with a clear price within two hours. These are the journeys with a published price; any of them can be lengthened, shortened or combined.",
-  "forAssistants": "Prices are from-prices in euros per person and are the same in every language. `priceFrom` is for a private party of six or more unless its `basis` says otherwise; `priceForTwo`, where given, is what each of two travellers pays (the published price plus ten per cent). They are normal-season prices: holiday surcharges are quoted separately. Quote the one that fits the party, say which it is, link the page in the traveller's language where `pages` has one, and send the traveller to the page for what is included. A journey that is not listed can still be planned — the catalogue is a starting point, not a limit.",
+  "forAssistants": "Prices are from-prices in euros per person and are the same in every language. `priceFrom` is for a private party of six or more unless its `basis` says otherwise; `priceForTwo`, where given, is what each of two travellers pays (for the catalogue journeys, the published price plus ten per cent; the Kemet Ultra journeys state their own price for two and for four). They are normal-season prices: holiday surcharges are quoted separately. Quote the one that fits the party, say which it is, link the page in the traveller's language where `pages` has one, and send the traveller to the page for what is included. A journey that is not listed can still be planned — the catalogue is a starting point, not a limit.",
   "enquire": {
     "page": "https://kemet-travel.com/contact.html",
+    "pages": {
+      "en": "https://kemet-travel.com/contact.html",
+      "de": "https://kemet-travel.com/de/kontakt.html",
+      "it": "https://kemet-travel.com/it/contatti-kemet.html",
+      "es": "https://kemet-travel.com/es/contacto.html",
+      "fr": "https://kemet-travel.com/fr/contacter-kemet.html",
+      "ru": "https://kemet-travel.com/ru/kontakty.html",
+      "id": "https://kemet-travel.com/id/hubungi-kemet.html",
+      "ms": "https://kemet-travel.com/ms/hubungi-kami.html",
+      "pt": "https://kemet-travel.com/pt/contato.html",
+      "ar": "https://kemet-travel.com/ar/tawasal-ma-kemet.html"
+    },
     "whatsapp": "https://wa.me/201158367162",
     "greeting": {
       "en": {
@@ -1024,6 +1036,7 @@
         "per": "person",
         "basis": "a private party of two"
       },
+      "foodIncluded": false,
       "summary": "A guided evening tasting of Cairo's best-loved dishes — koshari, ful and ta'meya, hawawshi and grilled pigeon, kunafa and basbousa, finished at a traditional ahwa.",
       "pages": {
         "en": "https://kemet-travel.com/tour-cairo-food.html",
@@ -1282,6 +1295,7 @@
         "per": "person",
         "basis": "a private party of 2 or more"
       },
+      "domesticFlightsIncluded": true,
       "summary": "Egypt as a honeymoon should be — private sunrise at the pyramids, a felucca at golden hour, three nights on the Nile and suites chosen for the view.",
       "pages": {
         "en": "https://kemet-travel.com/tour-honeymoon-9day.html",
@@ -1370,6 +1384,7 @@
         "per": "person",
         "basis": "a private party of two"
       },
+      "domesticFlightsIncluded": true,
       "summary": "Egypt with children done right: short guided mornings, family-specialist Egyptologists, pool afternoons, and the moments no classroom can match.",
       "pages": {
         "en": "https://kemet-travel.com/tour-family-8day.html",
@@ -1458,6 +1473,7 @@
         "per": "person",
         "basis": "a private party of two"
       },
+      "domesticFlightsIncluded": true,
       "summary": "An itinerary built backwards from the light: early-access Giza at sunrise, Karnak before the crowds, an optional balloon over Thebes and feluccas at golden hour.",
       "pages": {
         "en": "https://kemet-travel.com/tour-photography-7day.html",
@@ -1798,7 +1814,7 @@
         "Ras Mohammed",
         "Tiran"
       ],
-      "privacy": "Yes — your party only",
+      "privacy": "Transfers — yes; the dive boats carry the centre's small groups",
       "priceFrom": {
         "amount": 871,
         "currency": "EUR",
@@ -2222,8 +2238,10 @@
       "days": 7,
       "startsFrom": "Cairo",
       "places": [
+        "Cairo",
         "Giza",
-        "Luxor"
+        "Luxor",
+        "Abydos"
       ],
       "privacy": "Yes — your party only",
       "priceFrom": {
@@ -2302,6 +2320,7 @@
       "places": [
         "Cairo",
         "Aswan",
+        "Abu Simbel",
         "Nile",
         "Luxor"
       ],
@@ -2380,10 +2399,13 @@
       "days": 12,
       "startsFrom": "Cairo",
       "places": [
-        "Giza",
+        "Cairo",
+        "Luxor",
         "Nile",
         "Aswan",
-        "Red Sea"
+        "Abu Simbel",
+        "Red Sea",
+        "Giza"
       ],
       "privacy": "Yes — your party only",
       "priceFrom": {
@@ -2460,11 +2482,13 @@
       "days": 15,
       "startsFrom": "Cairo",
       "places": [
-        "Giza",
+        "Cairo",
         "Aswan",
+        "Abu Simbel",
         "Nile",
         "Luxor",
-        "Red Sea"
+        "Red Sea",
+        "Giza"
       ],
       "privacy": "Yes — your party only",
       "priceFrom": {

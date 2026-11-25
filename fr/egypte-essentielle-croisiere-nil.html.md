@@ -174,4 +174,4 @@ D'octobre à avril, les températures sont agréables au Caire comme en Haute-É
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/fr/egypte-essentielle-croisiere-nil.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/fr/contacter-kemet.html · Site index for assistants: https://kemet-travel.com/fr/llms.txt

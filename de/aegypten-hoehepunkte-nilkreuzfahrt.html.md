@@ -35,7 +35,7 @@ Unsere Signature-Reise: Kairo, Alexandria, mit dem Nachtzug nach Süden und drei
 
 ## Die Reise
 
-Das ist Ägypten in ganzer Breite, und im Tempo so angelegt, dass man es erlebt statt abhakt. Sie beginnen in Kairo mit den Schätzen des Ägyptischen Museums, verbringen einen Tag am Mittelmeer in Alexandria und fahren dann mit dem Nachtzug nach Assuan. Von dort trägt Sie eine dreitägige Nilkreuzfahrt flussabwärts vorbei an Kom Ombo und Edfu nach Luxor, wo die Tempel von Karnak und die Königsgräber des Westufers warten. Zurück in Kairo stehen die Pyramiden von Gizeh und die alten Gassen des islamischen Kairo. Gereist wird durchgehend privat, geführt von Ihrem eigenen Ägyptologen.
+Das ist Ägypten in ganzer Breite, und im Tempo so angelegt, dass man es erlebt statt abhakt. Sie beginnen in Kairo mit den Schätzen des Ägyptischen Museums, verbringen einen Tag am Mittelmeer in Alexandria und fahren dann mit dem Nachtzug nach Assuan. Von dort trägt Sie eine Nilkreuzfahrt über drei Nächte flussabwärts vorbei an Kom Ombo und Edfu nach Luxor, wo die Tempel von Karnak und die Königsgräber des Westufers warten. Zurück in Kairo stehen die Pyramiden von Gizeh und die alten Gassen des islamischen Kairo. Gereist wird durchgehend privat, geführt von Ihrem eigenen Ägyptologen.
 
 ## Tag für Tag
 
@@ -124,7 +124,7 @@ Das ist Ägypten in ganzer Breite, und im Tempo so angelegt, dass man es erlebt 
 
 - Durchgehend ein privater Ägyptologe als Reiseleitung
 - 7 Übernachtungen — Hotels und eine Nilkreuzfahrt; die übrigen zwei Nächte verbringen Sie im Schlafwagen
-- Dreitägige Nilkreuzfahrt mit Vollpension, Assuan bis Luxor
+- Nilkreuzfahrt über drei Nächte mit Vollpension, Assuan bis Luxor
 - Schlafwagenplätze Kairo–Oberägypten (in beiden Richtungen), mit Abendessen und Frühstück an Bord
 - Alle Eintrittsgelder für Stätten und Monumente
 - Private, klimatisierte Transfers
@@ -174,4 +174,4 @@ Oktober bis April bringt angenehme Temperaturen in Kairo wie in Oberägypten. Im
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/de/aegypten-hoehepunkte-nilkreuzfahrt.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/de/kontakt.html · Site index for assistants: https://kemet-travel.com/de/llms.txt

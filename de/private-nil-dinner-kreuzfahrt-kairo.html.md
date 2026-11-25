@@ -97,4 +97,4 @@ Ja. Das Menü lässt sich bei rechtzeitiger Mitteilung auf vegetarische und pesc
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/de/private-nil-dinner-kreuzfahrt-kairo.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/de/kontakt.html · Site index for assistants: https://kemet-travel.com/de/llms.txt

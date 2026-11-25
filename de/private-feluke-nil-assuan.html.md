@@ -101,4 +101,4 @@ Ja. Schwimmwesten werden gestellt, und die Feluke fährt in ruhigen, geschützte
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/de/private-feluke-nil-assuan.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/de/kontakt.html · Site index for assistants: https://kemet-travel.com/de/llms.txt

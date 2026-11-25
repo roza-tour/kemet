@@ -339,4 +339,4 @@ Setiap rute di sini memiliki halamannya sendiri dalam Bahasa Indonesia, lengkap 
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/id/paket-tour-mesir.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/id/hubungi-kemet.html · Site index for assistants: https://kemet-travel.com/id/llms.txt

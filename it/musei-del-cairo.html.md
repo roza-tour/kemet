@@ -93,4 +93,4 @@ Non con una guida che seleziona i capolavori. Ci concentriamo sugli oggetti esse
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/it/musei-del-cairo.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/it/contatti-kemet.html · Site index for assistants: https://kemet-travel.com/it/llms.txt

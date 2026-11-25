@@ -97,4 +97,4 @@ Il 22 febbraio e il 22 ottobre il sole nascente penetra per 60 metri dentro il G
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/it/abu-simbel-da-assuan.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/it/contatti-kemet.html · Site index for assistants: https://kemet-travel.com/it/llms.txt

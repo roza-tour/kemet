@@ -157,7 +157,7 @@ Es el itinerario para quienes piensan venir una sola vez y verlo entero. Los die
 - Visa de entrada a Egipto
 - Propinas
 - Gastos personales
-- Comidas, salvo a bordo del crucero por el Nilo y el almuerzo del día en barco
+- Comidas, salvo a bordo del crucero por el Nilo, el almuerzo del día en barco y la cena de despedida en Sharm
 - Extras opcionales que decida añadir — actividades, bebidas
 
 ## El ritmo
@@ -192,4 +192,4 @@ Con total libertad. Algunos viajeros la cambian por más noches en Luxor; otros 
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/es/gran-viaje-por-egipto-14-dias.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/es/contacto.html · Site index for assistants: https://kemet-travel.com/es/llms.txt

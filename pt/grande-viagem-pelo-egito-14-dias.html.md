@@ -157,7 +157,7 @@ Este é o roteiro de quem pretende vir uma vez e ver o Egito inteiro. Os dez pri
 - Visto de entrada no Egito
 - Gorjetas
 - Despesas pessoais
-- Refeições, exceto a bordo do cruzeiro pelo Nilo e o almoço do dia de barco
+- Refeições, exceto a bordo do cruzeiro pelo Nilo, o almoço do dia de barco e o jantar de despedida em Sharm
 - Extras opcionais que vocês escolherem acrescentar — atividades, bebidas
 
 ## O ritmo
@@ -192,4 +192,4 @@ Três voos internos, de cerca de uma hora cada, que substituem o que de outra fo
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/pt/grande-viagem-pelo-egito-14-dias.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/pt/contato.html · Site index for assistants: https://kemet-travel.com/pt/llms.txt

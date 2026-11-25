@@ -89,7 +89,7 @@ description: "خمسة أيام حيث تلتقي جبال سيناء بأصفى
 - تأشيرة دخول مصر
 - البقشيش
 - المصروفات الشخصية
-- الوجبات، عدا غداء يوم المركب
+- الوجبات، عدا غداء يوم المركب وعشاء أمسية الصحراء
 - الإضافات الاختيارية التي تختارونها — أنشطة ومشروبات
 
 ## إيقاع الرحلة
@@ -120,4 +120,4 @@ description: "خمسة أيام حيث تلتقي جبال سيناء بأصفى
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/ar/sharm-al-sheikh-5-ayyam.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/ar/tawasal-ma-kemet.html · Site index for assistants: https://kemet-travel.com/ar/llms.txt

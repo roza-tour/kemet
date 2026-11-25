@@ -91,4 +91,4 @@ description: "Восемь дней частного путешествия по
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/ru/doroga-aleksandra-siva-aleksandriya.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/ru/kontakty.html · Site index for assistants: https://kemet-travel.com/ru/llms.txt

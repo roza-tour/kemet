@@ -93,4 +93,4 @@ No, si su guía selecciona lo más destacado. Nos centramos en las piezas esenci
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/es/museos-de-el-cairo.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/es/contacto.html · Site index for assistants: https://kemet-travel.com/es/llms.txt

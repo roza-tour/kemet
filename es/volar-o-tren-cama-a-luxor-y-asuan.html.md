@@ -105,4 +105,4 @@ Otras decisiones que se toman antes de reservar, y la página original en inglé
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/es/volar-o-tren-cama-a-luxor-y-asuan.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/es/contacto.html · Site index for assistants: https://kemet-travel.com/es/llms.txt

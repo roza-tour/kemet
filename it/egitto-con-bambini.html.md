@@ -103,4 +103,4 @@ Tutti i nostri itinerari, giorno per giorno e in italiano, sono nella pagina dei
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/it/egitto-con-bambini.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/it/contatti-kemet.html · Site index for assistants: https://kemet-travel.com/it/llms.txt

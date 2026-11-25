@@ -78,4 +78,4 @@ Os meses vizinhos, nossa visão geral mês a mês e a página original em inglê
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/pt/egito-em-dezembro.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/pt/contato.html · Site index for assistants: https://kemet-travel.com/pt/llms.txt

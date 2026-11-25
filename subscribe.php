@@ -43,6 +43,9 @@ $store   = $dir . "/subscribers.csv";
 $CONSENT_TEXT = "Yes — send me seasonal notes and first notice of limited dates. I can unsubscribe at any time.";
 
 $wantsJson = (($_SERVER["HTTP_X_REQUESTED_WITH"] ?? "") === "fetch");
+// One answer for every outcome — new, pending, already confirmed, rate-limited
+// or a bot — so the form cannot be used to find out who is on the list.
+$SAME = "Almost done — please check your email.";
 
 function respond($ok, $wantsJson, $msg = "") {
   if ($wantsJson) {
@@ -60,7 +63,7 @@ function clean_line($v) { return trim(str_replace(["\r", "\n"], " ", (string) $v
 
 // Honeypot: a hidden field humans never fill. Bots do — answer as if it worked
 // so they stop retrying, and store nothing.
-if (!empty($_POST["website"])) { respond(true, $wantsJson, "Thank you."); }
+if (!empty($_POST["website"])) { respond(true, $wantsJson, $SAME); }
 
 $email   = clean_line(mb_substr($_POST["email"]   ?? "", 0, 190));
 $name    = clean_line(mb_substr($_POST["name"]    ?? "", 0, 120));
@@ -68,6 +71,11 @@ $source  = clean_line(mb_substr($_POST["source"]  ?? "invite", 0, 24));
 $detail  = clean_line(mb_substr($_POST["detail"]  ?? "", 0, 600));
 $locale  = clean_line(mb_substr($_POST["locale"]  ?? "en", 0, 8));
 $consent = !empty($_POST["consent"]);
+// The words next to the box, as that page showed them (each form posts its
+// own label, in its own language). The record keeps what was agreed to, not
+// one English sentence for every form.
+$wording = clean_line(mb_substr($_POST["wording"] ?? "", 0, 300));
+if ($wording === "") { $wording = $CONSENT_TEXT; }
 
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
   respond(false, $wantsJson, "That email address does not look right.");
@@ -94,8 +102,13 @@ if (!is_dir($dir)) { @mkdir($dir, 0755, true); @file_put_contents("$dir/index.ht
 // and is pruned to the last 24 hours each time it is written.
 $rateFile = $dir . "/subscribe-rate.csv";
 $now = time();
-$ipHash = substr(hash("sha256", "ip|" . ($_SERVER["REMOTE_ADDR"] ?? "")), 0, 24);
-$mailHash = substr(hash("sha256", "mail|" . strtolower($email)), 0, 24);
+// Keyed hashes: a plain SHA-256 of an IPv4 address can be reversed by trying
+// all four billion. The key lives beside the log and never leaves the server.
+$keyFile = $dir . "/.subscribe-key";
+if (!is_file($keyFile)) { @file_put_contents($keyFile, bin2hex(random_bytes(32))); @chmod($keyFile, 0600); }
+$hkey = (string)@file_get_contents($keyFile);
+$ipHash = substr(hash_hmac("sha256", "ip|" . ($_SERVER["REMOTE_ADDR"] ?? ""), $hkey), 0, 24);
+$mailHash = substr(hash_hmac("sha256", "mail|" . strtolower($email), $hkey), 0, 24);
 $recent = [];
 if (is_readable($rateFile) && ($rf = fopen($rateFile, "r")) !== false) {
   while (($r = fgetcsv($rf)) !== false) {
@@ -111,7 +124,7 @@ foreach ($recent as $r) {
   if ($r[2] === $mailHash) $byMailDay++;
 }
 $limited = $byIpHour >= 5 || $byMailDay >= 1 || $allHour >= 40;
-if ($byIpHour >= 5) { respond(true, $wantsJson, "Thank you."); }
+if ($byIpHour >= 5) { respond(true, $wantsJson, $SAME); }
 $recent[] = [$now, $ipHash, $mailHash];
 if (($rf = @fopen($rateFile, "c+")) !== false) {
   flock($rf, LOCK_EX);
@@ -142,16 +155,38 @@ $already = $token !== "";
 // to confirm (again) rather than being told it is on a list it is not on.
 $confirmed = $already && $status === "active";
 if (!$already) { $token = bin2hex(random_bytes(16)); }
+$cell = function ($v) { $v = (string)$v; return preg_match('/^(?:[=@\t]|[+-](?![\d\s(]))/', $v) ? "'" . $v : $v; };
+
+// Someone who left the list and signs up again starts again as pending, with
+// this sign-up's time, wording and address — the old consent was withdrawn
+// and cannot stand for the new one. (Before 26 Nov 2026 the old row was kept
+// and confirm.php refused it, so a person who had left could never rejoin.)
+if ($already && strpos($status, "unsubscribed") === 0 && !$limited && ($fh = fopen($store, "r+")) !== false) {
+  flock($fh, LOCK_EX);
+  $rows = [];
+  while (($row = fgetcsv($fh)) !== false) {
+    if (isset($row[6]) && hash_equals((string)$row[6], $token)) {
+      $row = array_map($cell, [
+        gmdate("Y-m-d H:i"), $email, $name, $source, $detail, $locale,
+        $token, "pending", ($_SERVER["REMOTE_ADDR"] ?? ""), $wording, "",
+      ]);
+    }
+    $rows[] = $row;
+  }
+  ftruncate($fh, 0); rewind($fh);
+  foreach ($rows as $row) { fputcsv($fh, $row); }
+  flock($fh, LOCK_UN);
+  fclose($fh);
+}
 
 // --- The consent record -----------------------------------------------------
 // Columns: when, email, name, source, detail, locale, token, status, ip,
 // wording, confirmed (time and network address, added by confirm.php).
 // A cell that a spreadsheet would read as a formula gets a leading apostrophe.
-$cell = function ($v) { $v = (string)$v; return preg_match('/^(?:[=@\t]|[+-](?![\d\s(]))/', $v) ? "'" . $v : $v; };
 if (!$already) {
   $line = array_map($cell, [
     gmdate("Y-m-d H:i"), $email, $name, $source, $detail, $locale,
-    $token, "pending", ($_SERVER["REMOTE_ADDR"] ?? ""), $CONSENT_TEXT, "",
+    $token, "pending", ($_SERVER["REMOTE_ADDR"] ?? ""), $wording, "",
   ]);
   $out = fopen($store, "a");
   if ($out !== false) {
@@ -164,7 +199,7 @@ if (!$already) {
 }
 
 // Past a limit: recorded above if it was new, but nobody is mailed.
-if ($limited) { respond(true, $wantsJson, "Thank you."); }
+if ($limited) { respond(true, $wantsJson, $SAME); }
 
 // --- Write to the address --------------------------------------------------
 // Already confirmed: a reminder with the unsubscribe link (someone who signs up
@@ -199,4 +234,4 @@ if ($confirmed) {
   );
 }
 
-respond(true, $wantsJson, $confirmed ? "You're already on the list — we've sent a reminder." : "Almost done — please confirm from the email we have just sent.");
+respond(true, $wantsJson, $SAME);

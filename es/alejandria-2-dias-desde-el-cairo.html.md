@@ -102,4 +102,4 @@ Sin ninguna duda. Usted elige el pescado al peso en el mostrador de hielo con la
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/es/alejandria-2-dias-desde-el-cairo.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/es/contacto.html · Site index for assistants: https://kemet-travel.com/es/llms.txt

@@ -122,7 +122,7 @@ description: "تسعة أيام لاثنين: شروق خاص عند الأهر�
 - تأشيرة دخول مصر
 - البقشيش
 - المصروفات الشخصية
-- الوجبات، عدا ما يُقدَّم على متن الباخرة النيلية
+- الوجبات، عدا ما يُقدَّم على متن الباخرة النيلية، والعشاء على تراس نوبي في أسوان، وعشاء الوداع
 - الإضافات الاختيارية التي تختارونها — أنشطة ومشروبات
 
 ## إيقاع الرحلة
@@ -155,4 +155,4 @@ description: "تسعة أيام لاثنين: شروق خاص عند الأهر�
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/ar/shahr-al-asal-ala-al-nil-9-ayyam.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/ar/tawasal-ma-kemet.html · Site index for assistants: https://kemet-travel.com/ar/llms.txt

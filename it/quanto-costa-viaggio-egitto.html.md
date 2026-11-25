@@ -80,4 +80,4 @@ Ogni viaggio ha la sua pagina in italiano, con il suo prezzo. Per un preventivo 
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/it/quanto-costa-viaggio-egitto.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/it/contatti-kemet.html · Site index for assistants: https://kemet-travel.com/it/llms.txt

@@ -25,11 +25,11 @@ Anda boleh menghubungi kami mengenai apa-apa perkara dalam dasar ini — termasu
 
 ## Apa yang kami kumpul
 
-Apabila anda menghantar mesej kepada kami melalui borang hubungan, kami mengumpul butiran yang anda pilih untuk berikan: nama anda, alamat e-mel, dan — jika anda mengisinya — nombor telefon, tarikh perjalanan yang dirancang serta kandungan mesej anda.
+Apabila anda menghantar mesej kepada kami melalui borang hubungan, kami mengumpul butiran yang anda pilih untuk berikan: nama anda, alamat e-mel, dan — jika anda mengisinya — nombor telefon, tarikh perjalanan yang dirancang, saiz rombongan anda, rentak dan keutamaan yang anda pilih serta kandungan mesej anda.
 
 Seperti hampir semua laman web, pelayan kami turut merekodkan maklumat teknikal standard (seperti alamat IP, jenis pelayar dan halaman yang diminta) dalam lognya. Kami tidak menggunakan maklumat ini untuk mengenal pasti anda secara peribadi.
 
-Jika anda menyertai senarai kami — daripada jemputan di laman ini atau daripada perancang perjalanan — kami mula-mula menghantar e-mel meminta anda mengesahkan, dan tiada apa-apa lagi dihantar sehingga anda berbuat demikian. Kami menyimpan alamat e-mel anda, nama anda jika anda memberikannya, halaman dan bahasa yang anda gunakan semasa mendaftar, serta rekod persetujuan anda: bila anda memberikannya dan bila anda mengesahkannya, perkataan yang anda setujui dan alamat IP asal setiap satunya. Anda boleh keluar daripada senarai pada bila-bila masa melalui pautan berhenti melanggan dalam e-mel kami, atau dengan menulis kepada kami.
+Jika anda menyertai senarai kami — daripada jemputan di laman ini atau daripada perancang perjalanan — kami mula-mula menghantar e-mel meminta anda mengesahkan, dan tiada apa-apa lagi dihantar sehingga anda berbuat demikian. Kami menyimpan alamat e-mel anda, nama anda jika anda memberikannya, sama ada anda mendaftar daripada jemputan atau daripada perancang perjalanan, bahasa halaman, serta rekod persetujuan anda: bila anda memberikannya dan bila anda mengesahkannya, perkataan yang anda setujui dan alamat IP asal setiap satunya. Anda boleh keluar daripada senarai pada bila-bila masa melalui pautan berhenti melanggan dalam e-mel kami, atau dengan menulis kepada kami.
 
 Kami tidak mengendalikan akaun pengguna dan tidak menerima pembayaran di laman web ini, jadi kami tidak pernah mengumpul kata laluan atau butiran kad di sini.
 
@@ -121,4 +121,4 @@ Dua dokumen lain yang terpakai pada pertanyaan dan tempahan.
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/ms/dasar-privasi.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/ms/hubungi-kami.html · Site index for assistants: https://kemet-travel.com/ms/llms.txt

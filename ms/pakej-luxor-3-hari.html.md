@@ -111,4 +111,4 @@ Terbang (55 minit) atau naik kereta api tidur semalaman, dari mana-mana arah. Ke
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/ms/pakej-luxor-3-hari.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/ms/hubungi-kami.html · Site index for assistants: https://kemet-travel.com/ms/llms.txt

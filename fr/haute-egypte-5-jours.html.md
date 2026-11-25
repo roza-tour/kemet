@@ -128,4 +128,4 @@ Par vol EgyptAir depuis Le Caire (55 minutes) ou par le train de nuit. Les deux 
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/fr/haute-egypte-5-jours.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/fr/contacter-kemet.html · Site index for assistants: https://kemet-travel.com/fr/llms.txt

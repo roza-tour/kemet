@@ -110,4 +110,4 @@ Cukup untuk hal-hal esensial yang dijalani dengan baik — itulah janji rute ini
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/id/kairo-vip-3-hari-2-malam.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/id/hubungi-kemet.html · Site index for assistants: https://kemet-travel.com/id/llms.txt

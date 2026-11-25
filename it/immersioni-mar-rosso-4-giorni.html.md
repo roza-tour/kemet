@@ -25,7 +25,7 @@ Partenza **Sharm el-Sheikh (aeroporto o hotel)**
 
 Tappe **Sharm El Sheikh · Ras Mohammed · Tiran**
 
-Privato **Sì — solo il vostro gruppo**
+Privato **Trasferimenti — sì; le barche da immersione portano i piccoli gruppi del centro**
 
 Quattro immersioni guidate in barca sui due migliori gruppi di siti del Sinai — Ras Mohammed e Tiran — con un diving PADI che abbiamo verificato, dopo un'immersione di prova sul reef dell'hotel.
 
@@ -62,7 +62,7 @@ Il Mar Rosso settentrionale è una delle regioni di riferimento per le immersion
 
 ### Giorno 4 — Mattina senza volo & partenza
 
-- Una mattinata in superficie — l'intervallo di 18–24 ore senza volo è già previsto
+- Una mattinata in superficie — l'intervallo di almeno 24 ore senza volo dopo l'ultima immersione è già previsto
 - Trasferimento privato in aeroporto
 
 ## Incluso
@@ -114,4 +114,4 @@ Pareti dense di coralli molli, nuvole di anthias, pesci Napoleone, tartarughe e 
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/it/immersioni-mar-rosso-4-giorni.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/it/contatti-kemet.html · Site index for assistants: https://kemet-travel.com/it/llms.txt

@@ -105,4 +105,4 @@ Ja, als private Zusatzleistung. Ein Golfcart nur für Ihre Gruppe bringt Sie üb
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/de/pyramiden-von-gizeh-halbtags.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/de/kontakt.html · Site index for assistants: https://kemet-travel.com/de/llms.txt

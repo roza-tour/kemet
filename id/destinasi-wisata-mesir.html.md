@@ -152,4 +152,4 @@ Aswan dituturkan sebagai kepulauan, lima pulau dalam dua hari lewat air, lalu Ab
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/id/destinasi-wisata-mesir.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/id/hubungi-kemet.html · Site index for assistants: https://kemet-travel.com/id/llms.txt

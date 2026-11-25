@@ -150,4 +150,4 @@ Sì. Gli hotel propongono piatti familiari accanto alla cucina egiziana, e la vo
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/it/egitto-in-famiglia-8-giorni.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/it/contatti-kemet.html · Site index for assistants: https://kemet-travel.com/it/llms.txt

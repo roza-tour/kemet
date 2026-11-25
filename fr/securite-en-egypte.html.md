@@ -76,4 +76,4 @@ Le guide détaillé de la sécurité en Égypte, région par région, est publi�
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/fr/securite-en-egypte.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/fr/contacter-kemet.html · Site index for assistants: https://kemet-travel.com/fr/llms.txt

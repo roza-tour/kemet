@@ -106,4 +106,4 @@ Sekitar 90 menit hingga dua jam sekali jalan dengan kendaraan pribadi, tergantun
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/id/wisata-oasis-fayoum-sehari.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/id/hubungi-kemet.html · Site index for assistants: https://kemet-travel.com/id/llms.txt

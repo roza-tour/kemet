@@ -14,10 +14,17 @@
 $store = __DIR__ . "/_stats/subscribers.csv";
 $token = preg_replace("/[^a-f0-9]/", "", (string) ($_GET["t"] ?? ""));
 
-$state = "unknown";   // unknown | confirmed | already | off
+$state = "unknown";   // unknown | confirmed | already | off | ask
 $who = null;
+// Only a POST confirms. Mail security scanners open every link in a message
+// before the reader does; a GET that confirmed would let a scanner — or anyone
+// who typed a stranger's address — complete the double opt-in. GET shows a
+// button that POSTs.
+$isPost = ($_SERVER["REQUEST_METHOD"] ?? "GET") === "POST";
+if ($isPost && $token === "") { $token = preg_replace("/[^a-f0-9]/", "", (string) ($_POST["t"] ?? "")); }
+if (!$isPost && $token !== "") { $state = "ask"; }
 
-if ($token !== "" && is_readable($store) && ($fh = fopen($store, "r+")) !== false) {
+if ($isPost && $token !== "" && is_readable($store) && ($fh = fopen($store, "r+")) !== false) {
   flock($fh, LOCK_EX);
   $rows = [];
   while (($row = fgetcsv($fh)) !== false) {
@@ -43,6 +50,40 @@ if ($token !== "" && is_readable($store) && ($fh = fopen($store, "r+")) !== fals
   }
   flock($fh, LOCK_UN);
   fclose($fh);
+}
+
+// The trip designer promised the reader their shortlist by email: it is sent
+// now, once the address is known to be theirs. The picks are journey ids from
+// the designer (detail: "… | picks: tour-7-day, tour-4-day, …"), looked up in
+// the published catalogue, so the names and prices are the site's own.
+if ($state === "confirmed" && $who && ($who[3] ?? "") === "designer"
+    && preg_match('/picks:\s*([a-z0-9, -]+)/', (string) ($who[4] ?? ""), $pm)) {
+  $cat = json_decode((string) @file_get_contents(__DIR__ . "/journeys.json"), true);
+  $byId = [];
+  foreach (($cat["journeys"] ?? []) as $j) { if (isset($j["id"])) $byId[$j["id"]] = $j; }
+  $lines = [];
+  foreach (array_slice(array_filter(array_map("trim", explode(",", $pm[1]))), 0, 3) as $id) {
+    if (!isset($byId[$id])) continue;
+    $j = $byId[$id];
+    $price = isset($j["priceFrom"]["amount"]) ? "from EUR " . number_format((float) $j["priceFrom"]["amount"]) . " per person"
+      . (isset($j["priceFrom"]["basis"]) ? " (" . $j["priceFrom"]["basis"] . ")" : "") : "";
+    $two = isset($j["priceForTwo"]["amount"]) ? "; EUR " . number_format((float) $j["priceForTwo"]["amount"]) . " each for two" : "";
+    $lines[] = "• " . ($j["name"] ?? $id) . " — " . ($j["duration"] ?? "") . "\n  " . $price . $two
+      . "\n  What is and is not included: " . ($j["pages"]["en"] ?? "https://kemet-travel.com/tours.html");
+  }
+  if ($lines) {
+    @mail(
+      $who[1],
+      "Kemet — your shortlist",
+      "Thank you for confirming. Here are the three journeys the designer chose for you:\n\n"
+      . implode("\n\n", $lines) . "\n\n"
+      . "Prices are normal-season prices; holiday surcharges are shown separately in a quote.\n"
+      . "Reply to this message, or write on WhatsApp, and we will send a day-by-day itinerary\nand a clear price within two hours.\n\n"
+      . "To leave the list: https://kemet-travel.com/unsubscribe.php?t=" . urlencode($token) . "\n\n— Kemet\nhttps://kemet-travel.com\n",
+      "From: Kemet <no-reply@kemet-travel.com>\r\nReply-To: info@kemet-travel.com\r\nContent-Type: text/plain; charset=UTF-8",
+      "-fno-reply@kemet-travel.com"
+    );
+  }
 }
 
 if ($state === "confirmed" && $who) {
@@ -75,7 +116,14 @@ header("Cache-Control: no-store");
   a{color:#D9B45A}
 </style>
 </head><body><div class="box">
-<?php if ($state === "confirmed" || $state === "already"): ?>
+<?php if ($state === "ask"): ?>
+  <h1>Confirm your address</h1>
+  <p>One click to join Kemet's list. If you did not ask to join, close this page and nothing will happen.</p>
+  <form method="post" action="/confirm.php">
+    <input type="hidden" name="t" value="<?= htmlspecialchars($token, ENT_QUOTES, "UTF-8") ?>">
+    <button type="submit" style="font:inherit;padding:12px 26px;border:1px solid #D9B45A;background:#D9B45A;color:#0C0A07;cursor:pointer">Confirm</button>
+  </form>
+<?php elseif ($state === "confirmed" || $state === "already"): ?>
   <h1>Thank you — you're on the list</h1>
   <p>You will hear from us when the season turns in Egypt, and first when the
      dates that genuinely run out open. A few times a year. Never more.</p>

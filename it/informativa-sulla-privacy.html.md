@@ -25,11 +25,11 @@ Potete contattarci per qualsiasi questione relativa a questa informativa — com
 
 ## Cosa raccogliamo
 
-Quando ci inviate un messaggio tramite il modulo di contatto, raccogliamo i dati che scegliete di fornire: il vostro nome, l'indirizzo email e — se li inserite — il numero di telefono, le date di viaggio previste e il contenuto del messaggio.
+Quando ci inviate un messaggio tramite il modulo di contatto, raccogliamo i dati che scegliete di fornire: il vostro nome, l'indirizzo email e — se li inserite — il numero di telefono, le date di viaggio previste, le dimensioni del gruppo, il ritmo e le priorità che scegliete e il contenuto del messaggio.
 
 Come quasi tutti i siti web, il nostro server registra nei propri log anche informazioni tecniche standard (come l'indirizzo IP, il tipo di browser e le pagine richieste). Non le usiamo per identificarvi personalmente.
 
-Se vi iscrivete al nostro elenco — dall'invito presente su questo sito o dal progettista di viaggi — vi inviamo prima un'email in cui vi chiediamo di confermare, e finché non lo fate non inviamo nient'altro. Conserviamo il vostro indirizzo email, il vostro nome se lo indicate, la pagina e la lingua da cui vi siete iscritti e la registrazione del vostro consenso: quando lo avete dato e quando lo avete confermato, la formulazione che avete accettato e l'indirizzo IP da cui proveniva ciascuno dei due passaggi. Potete uscire dall'elenco in qualsiasi momento tramite il link di annullamento dell'iscrizione presente nelle nostre email, oppure scrivendoci.
+Se vi iscrivete al nostro elenco — dall'invito presente su questo sito o dal progettista di viaggi — vi inviamo prima un'email in cui vi chiediamo di confermare, e finché non lo fate non inviamo nient'altro. Conserviamo il vostro indirizzo email, il vostro nome se lo indicate, se vi siete iscritti dall'invito o dal progettista di viaggi, la lingua della pagina e la registrazione del vostro consenso: quando lo avete dato e quando lo avete confermato, la formulazione che avete accettato e l'indirizzo IP da cui proveniva ciascuno dei due passaggi. Potete uscire dall'elenco in qualsiasi momento tramite il link di annullamento dell'iscrizione presente nelle nostre email, oppure scrivendoci.
 
 Non gestiamo account utente e su questo sito non riceviamo pagamenti, quindi qui non raccogliamo mai password né dati di carte.
 
@@ -121,4 +121,4 @@ Gli altri due documenti che si applicano a una richiesta e a una prenotazione.
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/it/informativa-sulla-privacy.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/it/contatti-kemet.html · Site index for assistants: https://kemet-travel.com/it/llms.txt

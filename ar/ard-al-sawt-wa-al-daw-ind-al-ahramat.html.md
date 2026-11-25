@@ -95,4 +95,4 @@ description: "عرض الصوت والضوء في الجيزة كما ينبغي
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/ar/ard-al-sawt-wa-al-daw-ind-al-ahramat.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/ar/tawasal-ma-kemet.html · Site index for assistants: https://kemet-travel.com/ar/llms.txt

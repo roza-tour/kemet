@@ -35,7 +35,7 @@ Menjadi perusahaan perjalanan privat paling tepercaya di Mesir bagi pengunjung m
 ## Mengapa memilih kami
 
 - Keahlian Lokal tentang Mesir — Tim kami tinggal dan bekerja di Mesir. Setiap rencana perjalanan disusun berdasarkan pengetahuan langsung tentang situs, pemandu, dan logistik — bukan riset dari balik meja atau templat generik.
-- Sepenuhnya Privat — Setiap perjalanan hanya milik Anda. Tanpa bus bersama, tanpa tanggal keberangkatan tetap, tanpa kompromi soal ritme maupun prioritas Anda.
+- Sepenuhnya Privat — Setiap perjalanan hanya milik Anda. Tanpa bus bersama, tanpa tanggal keberangkatan tetap, tanpa kompromi soal ritme maupun prioritas Anda. Pengecualiannya disebutkan di tempat berlakunya: kapal itu sendiri pada perjalanan dengan pelayaran Nil, dan Hari Gerhana di Luxor, satu hari bertanggal pasti dalam kelompok kecil.
 - Dibuat Khusus — Kami merancang setiap perjalanan di sekitar Anda — minat Anda, jadwal Anda, ritme Anda. Tidak ada dua rencana perjalanan Kemet yang sama.
 - Harga Transparan — Harga yang kami tawarkan adalah harga akhir Anda. Kami merinci apa yang termasuk dan tidak termasuk sebelum Anda berkomitmen pada apa pun.
 - Dukungan Penuh — Dari pertanyaan pertama hingga Anda kembali dengan selamat, Anda memiliki satu narahubung yang mengenal seluruh perjalanan Anda dan dapat dihubungi sepanjang waktu.
@@ -97,4 +97,4 @@ kemet-travel.com. Bisnis lain juga beroperasi dengan nama "Kemet" di Mesir. Kami
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/id/tentang-kemet.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/id/hubungi-kemet.html · Site index for assistants: https://kemet-travel.com/id/llms.txt

@@ -88,4 +88,4 @@ Gizeh bei Tag, mit dem Grand Egyptian Museum — unsere ganze Tagestour.
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/de/sonnenaufgang-pyramiden-gizeh.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/de/kontakt.html · Site index for assistants: https://kemet-travel.com/de/llms.txt

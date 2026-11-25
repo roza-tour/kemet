@@ -89,7 +89,7 @@ Scharm el-Scheich liegt an der Spitze der Sinai-Halbinsel, wo Wüstenberge in Wa
 - Einreisevisum für Ägypten
 - Trinkgelder
 - Persönliche Ausgaben
-- Mahlzeiten, außer dem Mittagessen am Bootstag
+- Mahlzeiten, außer dem Mittagessen am Bootstag und dem Abendessen am Wüstenabend
 - Optionale Zusatzleistungen nach Wahl — Aktivitäten, Getränke
 
 ## Wie anstrengend ist das
@@ -120,4 +120,4 @@ Hervorragend — so nutzen es die meisten Gäste. Luxor–Scharm sind etwa eine 
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/de/rotes-meer-scharm-5-tage.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/de/kontakt.html · Site index for assistants: https://kemet-travel.com/de/llms.txt

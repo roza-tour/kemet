@@ -35,7 +35,7 @@ Das vertrauenswürdigste private Reiseunternehmen in Ägypten zu sein, für ansp
 ## Warum Kemet
 
 - Ägypten-Expertise vor Ort — Unser Team lebt und arbeitet in Ägypten. Jede Reiseroute beruht auf eigener Kenntnis von Stätten, Guides und Logistik — nicht auf Schreibtischrecherche oder Standardvorlagen.
-- Ganz und gar privat — Jede Reise gehört ausschließlich Ihnen. Keine Gruppenbusse, keine festen Abreisetermine, keine Kompromisse bei Tempo oder Prioritäten.
+- Ganz und gar privat — Jede Reise gehört ausschließlich Ihnen. Keine Gruppenbusse, keine festen Abreisetermine, keine Kompromisse bei Tempo oder Prioritäten. Die Ausnahmen sind dort angegeben, wo sie gelten: das Schiff selbst bei Reisen mit Nilkreuzfahrt und der Finsternistag in Luxor, ein Tag mit festem Datum in kleinen Gruppen.
 - Maßgeschneidert — Wir entwerfen jede Reise rund um Sie — Ihre Interessen, Ihren Zeitplan, Ihr Tempo. Keine zwei Kemet-Reisen gleichen einander.
 - Transparente Preise — Der genannte Preis ist Ihr Endpreis. Wir führen auf, was enthalten ist und was nicht, bevor Sie sich zu irgendetwas verpflichten.
 - Persönliche Betreuung — Von der ersten Anfrage bis zur sicheren Heimkehr haben Sie einen festen Ansprechpartner, der Ihre Reise in allen Einzelheiten kennt und die ganze Zeit erreichbar ist.
@@ -97,4 +97,4 @@ kemet-travel.com. In Ägypten treten auch andere Unternehmen unter dem Namen „
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/de/ueber-kemet.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/de/kontakt.html · Site index for assistants: https://kemet-travel.com/de/llms.txt

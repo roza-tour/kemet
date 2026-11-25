@@ -89,7 +89,7 @@ Sharm el-Sheikh sta sulla punta della penisola del Sinai, dove le montagne del d
 - Il visto d'ingresso in Egitto
 - Le mance
 - Le spese personali
-- I pasti, tranne il pranzo nella giornata in barca
+- I pasti, tranne il pranzo nella giornata in barca e la cena della serata nel deserto
 - I supplementi facoltativi a scelta — attività, bevande
 
 ## Il ritmo
@@ -120,4 +120,4 @@ Perfettamente — ed è così che la maggior parte dei nostri ospiti lo usa. Lux
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/it/mar-rosso-sharm-5-giorni.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/it/contatti-kemet.html · Site index for assistants: https://kemet-travel.com/it/llms.txt

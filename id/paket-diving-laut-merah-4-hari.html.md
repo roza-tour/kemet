@@ -25,7 +25,7 @@ Titik mulai **Sharm El Sheikh (bandara atau hotel)**
 
 Persinggahan **Sharm El Sheikh · Ras Mohammed · Tiran**
 
-Privat **Ya — hanya rombongan Anda**
+Privat **Transfer — ya; kapal selam membawa kelompok kecil milik pusat selam**
 
 Empat penyelaman berpemandu dari perahu di dua kelompok situs terbaik Sinai — Ras Mohammed dan Tiran — bersama pusat selam PADI yang telah kami periksa, setelah check dive di house reef.
 
@@ -62,7 +62,7 @@ Laut Merah bagian utara adalah salah satu kawasan selam yang menjadi tolok ukur 
 
 ### Hari 4 — Pagi jeda terbang & kepulangan
 
-- Pagi di permukaan — jeda bebas terbang 18–24 jam sudah diperhitungkan
+- Pagi di permukaan — jeda bebas terbang sekurang-kurangnya 24 jam setelah penyelaman terakhir sudah diperhitungkan
 - Transfer privat ke bandara
 
 ## Termasuk
@@ -114,4 +114,4 @@ Di Ras Mohammed: dinding karang lunak yang rapat, awan ikan anthias, ikan napole
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/id/paket-diving-laut-merah-4-hari.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/id/hubungi-kemet.html · Site index for assistants: https://kemet-travel.com/id/llms.txt

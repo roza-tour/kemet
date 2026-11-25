@@ -122,7 +122,7 @@ Rencana bulan madu bukanlah rencana perjalanan biasa yang ditaburi kelopak mawar
 - Visa masuk Mesir
 - Tip
 - Pengeluaran pribadi
-- Makanan, kecuali selama di kapal pesiar Nil
+- Makanan, kecuali selama di kapal pesiar Nil, makan malam di teras Nubia di Aswan, dan makan malam perpisahan
 - Tambahan opsional yang Anda pilih — aktivitas, minuman
 
 ## Ritme perjalanan
@@ -155,4 +155,4 @@ Balon udara di Luxor dioperasikan oleh operator berlisensi di bawah pengawasan o
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/id/bulan-madu-mesir-9-hari.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/id/hubungi-kemet.html · Site index for assistants: https://kemet-travel.com/id/llms.txt

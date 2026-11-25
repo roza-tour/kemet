@@ -93,4 +93,4 @@ Pas avec un guide qui sélectionne les pièces maîtresses. Nous nous concentron
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/fr/musees-du-caire.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/fr/contacter-kemet.html · Site index for assistants: https://kemet-travel.com/fr/llms.txt

@@ -111,4 +111,4 @@ Terbang (55 menit) atau naik kereta tidur malam, ke arah mana pun. Kebanyakan ta
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/id/tur-luxor-3-hari-2-malam.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/id/hubungi-kemet.html · Site index for assistants: https://kemet-travel.com/id/llms.txt

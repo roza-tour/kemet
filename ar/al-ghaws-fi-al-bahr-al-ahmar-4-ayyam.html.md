@@ -25,7 +25,7 @@ description: "أربع غوصات بالقارب بإشراف مرشد في أف
 
 المحطات **شرم الشيخ · رأس محمد · تيران**
 
-خاصة **نعم — لمجموعتكم وحدها**
+خاصة **التنقلات — نعم؛ أما مراكب الغوص فتقلّ مجموعات المركز الصغيرة**
 
 أربع غوصات بالقارب بإشراف مرشد في أفضل مجموعتي مواقع في سيناء، رأس محمد وتيران، مع مركز PADI دقّقنا في اختياره، بعد غوصة تمهيدية عند شعاب المنتجع.
 
@@ -62,7 +62,7 @@ description: "أربع غوصات بالقارب بإشراف مرشد في أف
 
 ### اليوم ٤ — صباح بلا غوص ثم المغادرة
 
-- صباح على السطح، فالفاصل المعتاد قبل الطيران، من ١٨ إلى ٢٤ ساعة، محسوب في البرنامج
+- صباح على السطح، فالفاصل قبل الطيران، ٢٤ ساعة على الأقل بعد آخر غطسة، محسوب في البرنامج
 - توصيل خاص إلى المطار
 
 ## يشمل
@@ -114,4 +114,4 @@ description: "أربع غوصات بالقارب بإشراف مرشد في أف
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/ar/al-ghaws-fi-al-bahr-al-ahmar-4-ayyam.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/ar/tawasal-ma-kemet.html · Site index for assistants: https://kemet-travel.com/ar/llms.txt

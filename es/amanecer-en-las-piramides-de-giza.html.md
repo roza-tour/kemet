@@ -88,4 +88,4 @@ Si quieren unir el amanecer a un viaje completo, estos son nuestros recorridos p
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/es/amanecer-en-las-piramides-de-giza.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/es/contacto.html · Site index for assistants: https://kemet-travel.com/es/llms.txt

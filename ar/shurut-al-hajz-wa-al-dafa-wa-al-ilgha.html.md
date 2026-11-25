@@ -89,4 +89,4 @@ description: "كيف يتم حجز رحلة خاصة مع Kemet — الخطوا
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/ar/shurut-al-hajz-wa-al-dafa-wa-al-ilgha.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/ar/tawasal-ma-kemet.html · Site index for assistants: https://kemet-travel.com/ar/llms.txt

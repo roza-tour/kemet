@@ -110,7 +110,7 @@ Day **09**
 - Egypt entry visa
 - Tipping (gratuities)
 - Personal expenses
-- Meals, except on board the Nile cruise
+- Meals, except on board the Nile cruise, the dinner on a Nubian terrace in Aswan and the farewell dinner
 - Optional extras you choose to add — activities, drinks
 
 ## Comfort & pace

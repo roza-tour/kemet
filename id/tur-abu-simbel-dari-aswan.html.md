@@ -97,4 +97,4 @@ Pada 22 Februari dan 22 Oktober, matahari terbit menembus 60 meter ke dalam Kuil
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/id/tur-abu-simbel-dari-aswan.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/id/hubungi-kemet.html · Site index for assistants: https://kemet-travel.com/id/llms.txt

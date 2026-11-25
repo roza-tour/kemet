@@ -174,4 +174,4 @@ Oktober hingga April membawa suhu yang nyaman, baik di Kairo maupun di Mesir Hul
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/id/tour-mesir-10-hari-pesiar-nil.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/id/hubungi-kemet.html · Site index for assistants: https://kemet-travel.com/id/llms.txt

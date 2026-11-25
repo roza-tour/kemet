@@ -157,7 +157,7 @@ C'est l'itinéraire de ceux qui comptent venir une fois et tout voir. Les dix pr
 - Le visa d'entrée en Égypte
 - Les pourboires
 - Les dépenses personnelles
-- Les repas, sauf à bord de la croisière sur le Nil et le déjeuner de la journée en bateau
+- Les repas, sauf à bord de la croisière sur le Nil, le déjeuner de la journée en bateau et le dîner d'adieu à Charm
 - Les options que vous ajoutez — activités, boissons
 
 ## Le rythme
@@ -192,4 +192,4 @@ Sans difficulté. Certains la troquent contre des nuits supplémentaires à Loux
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/fr/grand-tour-egypte-14-jours.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/fr/contacter-kemet.html · Site index for assistants: https://kemet-travel.com/fr/llms.txt

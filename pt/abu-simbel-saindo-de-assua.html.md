@@ -97,4 +97,4 @@ Em 22 de fevereiro e 22 de outubro, o sol nascente penetra 60 metros no Grande T
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/pt/abu-simbel-saindo-de-assua.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/pt/contato.html · Site index for assistants: https://kemet-travel.com/pt/llms.txt

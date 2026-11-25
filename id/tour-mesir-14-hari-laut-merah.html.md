@@ -157,7 +157,7 @@ Inilah rencana perjalanan bagi mereka yang berniat datang sekali dan melihat sem
 - Visa masuk Mesir
 - Tip
 - Pengeluaran pribadi
-- Makanan, kecuali selama di kapal pesiar Nil dan makan siang pada hari di kapal
+- Makanan, kecuali selama di kapal pesiar Nil, makan siang pada hari di kapal, dan makan malam perpisahan di Sharm
 - Tambahan opsional yang Anda pilih — aktivitas, minuman
 
 ## Ritme perjalanan
@@ -192,4 +192,4 @@ Tentu, sebebas yang Anda mau. Sebagian tamu menukarnya dengan malam tambahan di 
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/id/tour-mesir-14-hari-laut-merah.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/id/hubungi-kemet.html · Site index for assistants: https://kemet-travel.com/id/llms.txt

@@ -157,7 +157,7 @@ Il nostro viaggio più completo: Il Cairo e Alessandria, una crociera sul Nilo, 
 - Il visto d'ingresso in Egitto
 - Le mance
 - Le spese personali
-- I pasti, tranne a bordo della crociera sul Nilo e il pranzo nella giornata in barca
+- I pasti, tranne a bordo della crociera sul Nilo, il pranzo nella giornata in barca e la cena d'addio a Sharm
 - I supplementi facoltativi a scelta — attività, bevande
 
 ## Il ritmo
@@ -192,4 +192,4 @@ Liberamente. Alcuni la scambiano con notti in più a Luxor, altri allungano Shar
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/it/gran-tour-egitto-14-giorni.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/it/contatti-kemet.html · Site index for assistants: https://kemet-travel.com/it/llms.txt

@@ -25,7 +25,7 @@ Départ **Charm el-Cheikh (aéroport ou hôtel)**
 
 Étapes **Charm el-Cheikh · Ras Mohammed · Tiran**
 
-Privé **Oui — votre groupe seul**
+Privé **Transferts — oui; les bateaux de plongée emmènent les petits groupes du centre**
 
 Quatre plongées guidées en bateau sur les deux meilleurs ensembles de sites du Sinaï — Ras Mohammed et Tiran — avec un centre PADI vérifié, après une plongée de contrôle sur le récif de l'hôtel.
 
@@ -62,7 +62,7 @@ Le nord de la mer Rouge est l'une des régions de plongée de référence au mon
 
 ### Jour 4 — Matinée sans plongée & départ
 
-- Une matinée en surface — l'intervalle de 18 à 24 heures avant vol est intégré
+- Une matinée en surface — l'intervalle d'au moins 24 heures sans vol après la dernière plongée est intégré
 - Transfert privé à l'aéroport
 
 ## Compris
@@ -114,4 +114,4 @@ Des murs de coraux mous denses, des nuages d'anthias, des napoléons, des tortue
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/fr/plongee-mer-rouge-4-jours.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/fr/contacter-kemet.html · Site index for assistants: https://kemet-travel.com/fr/llms.txt

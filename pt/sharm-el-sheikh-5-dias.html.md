@@ -89,7 +89,7 @@ Sharm el-Sheikh fica na ponta da Península do Sinai, onde montanhas desérticas
 - Visto de entrada no Egito
 - Gorjetas
 - Despesas pessoais
-- Refeições, exceto o almoço do dia de barco
+- Refeições, exceto o almoço do dia de barco e o jantar da noite no deserto
 - Extras opcionais que vocês escolherem acrescentar — atividades, bebidas
 
 ## O ritmo
@@ -120,4 +120,4 @@ Perfeitamente — é assim que a maioria dos nossos viajantes o aproveita. Luxor
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/pt/sharm-el-sheikh-5-dias.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/pt/contato.html · Site index for assistants: https://kemet-travel.com/pt/llms.txt

@@ -96,4 +96,4 @@ Halaman kami tentang Easter di Mesir, dalam bahasa Inggeris, dengan tarikh untuk
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/ms/easter-di-mesir.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/ms/hubungi-kami.html · Site index for assistants: https://kemet-travel.com/ms/llms.txt

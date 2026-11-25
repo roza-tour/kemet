@@ -111,4 +111,4 @@ description: "Три дня в Луксоре без спешки: Карнак 
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/ru/luksor-za-3-dnya.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/ru/kontakty.html · Site index for assistants: https://kemet-travel.com/ru/llms.txt

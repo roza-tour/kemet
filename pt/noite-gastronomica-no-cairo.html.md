@@ -124,4 +124,4 @@ Você decide quanto pedir em cada parada, e dividindo os pratos dá para provar 
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/pt/noite-gastronomica-no-cairo.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/pt/contato.html · Site index for assistants: https://kemet-travel.com/pt/llms.txt

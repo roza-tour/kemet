@@ -86,4 +86,4 @@ La mongolfiera entra in qualsiasi viaggio che passa da Luxor: ecco il nostro Lux
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/it/mongolfiera-luxor-alba.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/it/contatti-kemet.html · Site index for assistants: https://kemet-travel.com/it/llms.txt

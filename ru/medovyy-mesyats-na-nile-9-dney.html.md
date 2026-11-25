@@ -122,7 +122,7 @@ description: "Девять дней для двоих: рассвет у пир�
 - Въездная виза в Египет
 - Чаевые
 - Личные расходы
-- Питание — кроме как на борту во время круиза по Нилу
+- Питание — кроме как на борту во время круиза по Нилу, ужина на нубийской террасе в Асуане и прощального ужина
 - Дополнительные услуги на ваш выбор — развлечения, напитки
 
 ## Темп
@@ -155,4 +155,4 @@ description: "Девять дней для двоих: рассвет у пир�
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/ru/medovyy-mesyats-na-nile-9-dney.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/ru/kontakty.html · Site index for assistants: https://kemet-travel.com/ru/llms.txt

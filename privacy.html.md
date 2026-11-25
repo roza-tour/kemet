@@ -23,11 +23,11 @@ You can reach us about anything in this policy — including any request to acce
 
 ## What we collect
 
-When you send us a message through the contact form, we collect the details you choose to provide: your name, email address, and — if you enter them — your phone number, intended travel dates and the content of your message.
+When you send us a message through the contact form, we collect the details you choose to provide: your name, email address, and — if you enter them — your phone number, intended travel dates, the size of your party, the pace and priorities you choose, and the content of your message.
 
 Like almost all websites, our server also records standard technical information (such as IP address, browser type and the pages requested) in its logs. We do not use this to identify you personally.
 
-If you join our list — from the invitation on this site or from the trip designer — we first send an email asking you to confirm, and nothing else is sent until you do. We keep your email address, your name if you give it, the page and language you signed up from, and a record of your consent: when you gave it and when you confirmed it, the wording you agreed to and the IP address each came from. You can leave the list at any time through the unsubscribe link in our emails, or by writing to us.
+If you join our list — from the invitation on this site or from the trip designer — we first send an email asking you to confirm, and nothing else is sent until you do. We keep your email address, your name if you give it, whether you signed up from the invitation or the trip designer, the language of the page, and a record of your consent: when you gave it and when you confirmed it, the wording you agreed to and the IP address each came from. You can leave the list at any time through the unsubscribe link in our emails, or by writing to us.
 
 We do not operate user accounts and we do not take payments on this website, so we never collect passwords or card details here.
 

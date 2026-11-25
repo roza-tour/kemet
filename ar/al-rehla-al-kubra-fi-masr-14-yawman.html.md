@@ -157,7 +157,7 @@ description: "أربعة عشر يومًا خاصة: القاهرة والإسك
 - تأشيرة دخول مصر
 - البقشيش
 - المصروفات الشخصية
-- الوجبات، عدا ما يُقدَّم على متن الباخرة النيلية وغداء يوم المركب
+- الوجبات، عدا ما يُقدَّم على متن الباخرة النيلية، وغداء يوم المركب، وعشاء الوداع في شرم
 - الإضافات الاختيارية التي تختارونها — أنشطة ومشروبات
 
 ## إيقاع الرحلة
@@ -192,4 +192,4 @@ description: "أربعة عشر يومًا خاصة: القاهرة والإسك
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/ar/al-rehla-al-kubra-fi-masr-14-yawman.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/ar/tawasal-ma-kemet.html · Site index for assistants: https://kemet-travel.com/ar/llms.txt

@@ -75,7 +75,7 @@ Day **05**
 - Egypt entry visa
 - Tipping (gratuities)
 - Personal expenses
-- Meals, except lunch on the boat day
+- Meals, except lunch on the boat day and dinner on the desert evening
 - Optional extras you choose to add — activities, drinks
 
 ## Comfort & pace

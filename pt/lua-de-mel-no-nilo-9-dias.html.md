@@ -122,7 +122,7 @@ Um roteiro de lua de mel não é um roteiro comum com pétalas de rosa. O ritmo 
 - Visto de entrada no Egito
 - Gorjetas
 - Despesas pessoais
-- Refeições, exceto a bordo do cruzeiro pelo Nilo
+- Refeições, exceto a bordo do cruzeiro pelo Nilo, o jantar num terraço núbio em Assuã e o jantar de despedida
 - Extras opcionais que vocês escolherem acrescentar — atividades, bebidas
 
 ## O ritmo
@@ -155,4 +155,4 @@ Os balões de Luxor são operados por empresas licenciadas, sob a supervisão da
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/pt/lua-de-mel-no-nilo-9-dias.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/pt/contato.html · Site index for assistants: https://kemet-travel.com/pt/llms.txt

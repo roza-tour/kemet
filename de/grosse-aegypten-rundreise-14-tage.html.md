@@ -142,7 +142,7 @@ Das ist die Reise für alle, die einmal kommen und es ganz sehen wollen. Die ers
 ## Inbegriffen
 
 - Durchgehend ein privater Ägyptologe als Reiseleitung
-- 13 Übernachtungen — Hotels, dreitägige Nilkreuzfahrt mit Vollpension und ein Resort am Roten Meer
+- 13 Übernachtungen — Hotels, Nilkreuzfahrt über drei Nächte mit Vollpension und ein Resort am Roten Meer
 - Alle Inlandsflüge (Kairo–Assuan, Luxor–Scharm el-Scheich, Scharm–Kairo)
 - Ausflug nach Abu Simbel im privaten Fahrzeug
 - Bootstag im Ras-Mohammed-Nationalpark inklusive Schnorchelausrüstung
@@ -157,7 +157,7 @@ Das ist die Reise für alle, die einmal kommen und es ganz sehen wollen. Die ers
 - Einreisevisum für Ägypten
 - Trinkgelder
 - Persönliche Ausgaben
-- Mahlzeiten, außer an Bord der Nilkreuzfahrt und dem Mittagessen am Bootstag
+- Mahlzeiten, außer an Bord der Nilkreuzfahrt, dem Mittagessen am Bootstag und dem Abschiedsessen in Scharm
 - Optionale Zusatzleistungen nach Wahl — Aktivitäten, Getränke
 
 ## Wie anstrengend ist das
@@ -192,4 +192,4 @@ Ohne Weiteres. Manche Gäste tauschen ihn gegen zusätzliche Nächte in Luxor, a
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/de/grosse-aegypten-rundreise-14-tage.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/de/kontakt.html · Site index for assistants: https://kemet-travel.com/de/llms.txt

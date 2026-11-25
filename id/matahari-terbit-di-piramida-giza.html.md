@@ -88,4 +88,4 @@ Jika ingin menjadikan matahari terbit bagian dari perjalanan lengkap, inilah rut
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/id/matahari-terbit-di-piramida-giza.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/id/hubungi-kemet.html · Site index for assistants: https://kemet-travel.com/id/llms.txt

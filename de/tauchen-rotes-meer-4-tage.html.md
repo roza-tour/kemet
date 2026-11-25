@@ -25,7 +25,7 @@ Start **Scharm el-Scheich (Flughafen oder Hotel)**
 
 Stationen **Scharm el-Scheich · Ras Mohammed · Tiran**
 
-Privat **Ja — nur Ihre Gruppe**
+Privat **Transfers — ja; die Tauchboote fahren mit den kleinen Gruppen der Basis**
 
 Vier geführte Bootstauchgänge an den zwei besten Revieren des Sinai — Ras Mohammed und Tiran — mit einem von uns geprüften PADI-Center, nach einem Check-Dive am Hausriff.
 
@@ -62,7 +62,7 @@ Das nördliche Rote Meer ist eines der Maßstabsreviere der Welt: über 20 Meter
 
 ### Tag 4 — Flugpausen-Vormittag & Abreise
 
-- Ein Vormittag an der Oberfläche — die Flugpause von 18 bis 24 Stunden ist eingeplant
+- Ein Vormittag an der Oberfläche — die Flugpause von mindestens 24 Stunden nach dem letzten Tauchgang ist eingeplant
 - Privater Transfer zum Flughafen
 
 ## Inbegriffen
@@ -114,4 +114,4 @@ Dichte Weichkorallenwände, Anthiaswolken, Napoleon-Lippfische, Schildkröten un
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/de/tauchen-rotes-meer-4-tage.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/de/kontakt.html · Site index for assistants: https://kemet-travel.com/de/llms.txt

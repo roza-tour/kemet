@@ -25,11 +25,11 @@ Vous pouvez nous joindre pour toute question relative à cette politique — y c
 
 ## Ce que nous recueillons
 
-Lorsque vous nous envoyez un message via le formulaire de contact, nous recueillons les informations que vous choisissez de nous fournir: votre nom, votre adresse e-mail et — si vous les saisissez — votre numéro de téléphone, vos dates de voyage envisagées et le contenu de votre message.
+Lorsque vous nous envoyez un message via le formulaire de contact, nous recueillons les informations que vous choisissez de nous fournir: votre nom, votre adresse e-mail et — si vous les saisissez — votre numéro de téléphone, vos dates de voyage envisagées, la taille de votre groupe, le rythme et les priorités que vous choisissez, et le contenu de votre message.
 
 Comme presque tous les sites web, notre serveur enregistre également dans ses journaux des informations techniques courantes (telles que l'adresse IP, le type de navigateur et les pages demandées). Nous ne les utilisons pas pour vous identifier personnellement.
 
-Si vous rejoignez notre liste — depuis l'invitation présente sur ce site ou depuis le concepteur de voyage — nous vous envoyons d'abord un e-mail pour vous demander de confirmer, et rien d'autre n'est envoyé tant que vous ne l'avez pas fait. Nous conservons votre adresse e-mail, votre nom si vous le donnez, la page et la langue depuis lesquelles vous vous êtes inscrit(e), ainsi qu'une trace de votre consentement: la date à laquelle vous l'avez donné et celle à laquelle vous l'avez confirmé, le texte auquel vous avez adhéré et l'adresse IP d'où chacun provient. Vous pouvez quitter la liste à tout moment grâce au lien de désinscription présent dans nos e-mails, ou en nous écrivant.
+Si vous rejoignez notre liste — depuis l'invitation présente sur ce site ou depuis le concepteur de voyage — nous vous envoyons d'abord un e-mail pour vous demander de confirmer, et rien d'autre n'est envoyé tant que vous ne l'avez pas fait. Nous conservons votre adresse e-mail, votre nom si vous le donnez, le fait que vous vous soyez inscrit(e) depuis l'invitation ou depuis le concepteur de voyage, la langue de la page, ainsi qu'une trace de votre consentement: la date à laquelle vous l'avez donné et celle à laquelle vous l'avez confirmé, le texte auquel vous avez adhéré et l'adresse IP d'où chacun provient. Vous pouvez quitter la liste à tout moment grâce au lien de désinscription présent dans nos e-mails, ou en nous écrivant.
 
 Nous ne proposons pas de comptes utilisateurs et n'encaissons aucun paiement sur ce site; nous ne recueillons donc jamais ici de mots de passe ni de données de carte bancaire.
 
@@ -121,4 +121,4 @@ Les deux autres documents qui s'appliquent à une demande et à une réservation
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/fr/politique-de-confidentialite.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/fr/contacter-kemet.html · Site index for assistants: https://kemet-travel.com/fr/llms.txt

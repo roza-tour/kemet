@@ -99,4 +99,4 @@ Mucho: su arquitectura ya impresiona por sí sola, y el edificio se concibió co
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/es/excursion-a-alejandria-desde-el-cairo.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/es/contacto.html · Site index for assistants: https://kemet-travel.com/es/llms.txt

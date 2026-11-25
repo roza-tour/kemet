@@ -25,7 +25,7 @@ description: "Четыре погружения с катера с гидом н
 
 Остановки **Шарм-эш-Шейх · Рас-Мохаммед · Тиран**
 
-Индивидуально **Да — только ваша группа**
+Индивидуально **Трансферы — да; на дайв-ботах — небольшие группы дайв-центра**
 
 Четыре погружения с катера с гидом на двух лучших группах сайтов Синая — Рас-Мохаммед и Тиран — в проверенном нами центре PADI, после проверочного погружения на домашнем рифе.
 
@@ -62,7 +62,7 @@ description: "Четыре погружения с катера с гидом н
 
 ### День 4 — Утро без погружений и отъезд
 
-- Утро на суше — интервал 18–24 часа перед вылетом заложен в программу
+- Утро на суше — интервал не менее 24 часов после последнего погружения перед вылетом заложен в программу
 - Индивидуальный трансфер в аэропорт
 
 ## Включено
@@ -114,4 +114,4 @@ Open Water достаточно для всего, что стоит в прог
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/ru/dayving-na-krasnom-more-4-dnya.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/ru/kontakty.html · Site index for assistants: https://kemet-travel.com/ru/llms.txt

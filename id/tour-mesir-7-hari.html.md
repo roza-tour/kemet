@@ -144,4 +144,4 @@ Tentu saja — banyak tamu menambahkan pesiar 3 atau 4 malam antara Aswan dan Lu
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/id/tour-mesir-7-hari.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/id/hubungi-kemet.html · Site index for assistants: https://kemet-travel.com/id/llms.txt

@@ -25,11 +25,11 @@ Puede contactar con nosotros sobre cualquier asunto de esta política —incluid
 
 ## Qué recogemos
 
-Cuando nos envía un mensaje a través del formulario de contacto, recogemos los datos que usted decide facilitar: su nombre, su correo electrónico y —si los introduce— su número de teléfono, las fechas previstas de viaje y el contenido de su mensaje.
+Cuando nos envía un mensaje a través del formulario de contacto, recogemos los datos que usted decide facilitar: su nombre, su correo electrónico y —si los introduce— su número de teléfono, las fechas previstas de viaje, el tamaño de su grupo, el ritmo y las prioridades que elija y el contenido de su mensaje.
 
 Como casi todos los sitios web, nuestro servidor también registra en sus archivos de registro información técnica habitual (como la dirección IP, el tipo de navegador y las páginas solicitadas). No la utilizamos para identificarle personalmente.
 
-Si se unen a nuestra lista —desde la invitación de este sitio o desde el diseñador de viajes—, primero les enviamos un correo para que lo confirmen, y no se envía nada más hasta que lo hagan. Conservamos su dirección de correo electrónico, su nombre si nos lo facilitan, la página y el idioma desde los que se suscribieron y un registro de su consentimiento: cuándo lo dieron y cuándo lo confirmaron, el texto con el que estuvieron de acuerdo y la dirección IP desde la que procedía cada uno. Pueden darse de baja de la lista en cualquier momento mediante el enlace de baja de nuestros correos o escribiéndonos.
+Si se unen a nuestra lista —desde la invitación de este sitio o desde el diseñador de viajes—, primero les enviamos un correo para que lo confirmen, y no se envía nada más hasta que lo hagan. Conservamos su dirección de correo electrónico, su nombre si nos lo facilitan, si se suscribieron desde la invitación o desde el diseñador de viajes, el idioma de la página y un registro de su consentimiento: cuándo lo dieron y cuándo lo confirmaron, el texto con el que estuvieron de acuerdo y la dirección IP desde la que procedía cada uno. Pueden darse de baja de la lista en cualquier momento mediante el enlace de baja de nuestros correos o escribiéndonos.
 
 No gestionamos cuentas de usuario ni cobramos pagos en este sitio web, por lo que aquí nunca recogemos contraseñas ni datos de tarjetas.
 
@@ -121,4 +121,4 @@ Los otros dos documentos que se aplican a una consulta y a una reserva.
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/es/politica-de-privacidad.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/es/contacto.html · Site index for assistants: https://kemet-travel.com/es/llms.txt

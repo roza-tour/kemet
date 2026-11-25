@@ -106,7 +106,7 @@ Eine Hochzeitsreise ist keine normale Reise mit Rosenblättern. Der Takt ist ein
 ## Inbegriffen
 
 - Durchgehend ein privater Ägyptologe als Reiseleitung
-- 8 Übernachtungen — Suiten mit Nilblick und eine dreitägige Nilkreuzfahrt mit Vollpension
+- 8 Übernachtungen — Suiten mit Nilblick und eine Nilkreuzfahrt über drei Nächte mit Vollpension
 - Inlandsflüge Kairo–Assuan und Luxor–Kairo
 - Privater Zugang zum Plateau von Gizeh zum Sonnenaufgang
 - Private Felukenfahrt zum Sonnenuntergang in Assuan
@@ -122,7 +122,7 @@ Eine Hochzeitsreise ist keine normale Reise mit Rosenblättern. Der Takt ist ein
 - Einreisevisum für Ägypten
 - Trinkgelder
 - Persönliche Ausgaben
-- Mahlzeiten, außer an Bord der Nilkreuzfahrt
+- Mahlzeiten, außer an Bord der Nilkreuzfahrt, dem Abendessen auf einer nubischen Terrasse in Assuan und dem Abschiedsessen
 - Optionale Zusatzleistungen nach Wahl — Aktivitäten, Getränke
 
 ## Wie anstrengend ist das
@@ -155,4 +155,4 @@ Ballonfahrten in Luxor werden von lizenzierten Betreibern unter Aufsicht der Ziv
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/de/hochzeitsreise-aegypten-9-tage.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/de/kontakt.html · Site index for assistants: https://kemet-travel.com/de/llms.txt

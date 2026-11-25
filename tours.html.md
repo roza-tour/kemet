@@ -309,7 +309,7 @@ Every journey is led by a guide licensed by the Egyptian Ministry of Tourism wit
 
 ### Your party only
 
-No shared coaches. No fixed departure dates. No strangers in your vehicle or with your guide. If you are two people, the vehicle, the guide and the pace belong to two people.
+No shared coaches. No fixed departure dates (the one dated day is Eclipse Day in Luxor, 2 August 2027, in small groups). No strangers in your vehicle or with your guide. If you are two people, the vehicle, the guide and the pace belong to two people.
 
 ### Built around you, then written down
 

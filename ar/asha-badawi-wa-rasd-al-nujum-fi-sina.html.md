@@ -96,4 +96,4 @@ description: "أمسية خاصة في ضيافة البدو بعمق سيناء
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/ar/asha-badawi-wa-rasd-al-nujum-fi-sina.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/ar/tawasal-ma-kemet.html · Site index for assistants: https://kemet-travel.com/ar/llms.txt

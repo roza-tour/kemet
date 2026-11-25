@@ -111,4 +111,4 @@ Per Flug (55 Minuten) oder mit dem Nachtzug, in beide Richtungen. Die meisten G�
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/de/luxor-3-tage.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/de/kontakt.html · Site index for assistants: https://kemet-travel.com/de/llms.txt

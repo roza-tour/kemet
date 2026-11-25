@@ -17,7 +17,7 @@ Ditubuhkan **2018**
 
 Berpangkalan di **Kaherah, Mesir**
 
-Menjadi syarikat pelancongan persendirian yang paling dipercayai di Mesir bagi pengunjung antarabangsa yang cerewet dan mahukan lebih daripada jadual perjalanan biasa.
+Menjadi syarikat pelancongan persendirian yang paling dipercayai di Mesir bagi pengunjung antarabangsa yang tahu memilih dan mahukan lebih daripada jadual perjalanan biasa.
 
 01
 
@@ -35,7 +35,7 @@ Menjadi syarikat pelancongan persendirian yang paling dipercayai di Mesir bagi p
 ## Mengapa memilih kami
 
 - Kepakaran Mesir Setempat — Pasukan kami tinggal dan bekerja di Mesir. Setiap jadual perjalanan dibina atas pengetahuan langsung tentang tapak, pemandu dan logistik — bukan kajian dari meja atau templat generik.
-- Sepenuhnya Persendirian — Setiap perjalanan adalah milik anda sepenuhnya. Tiada bas berkongsi, tiada tarikh berlepas yang ditetapkan, tiada kompromi tentang rentak atau keutamaan anda.
+- Sepenuhnya Persendirian — Setiap perjalanan adalah milik anda sepenuhnya. Tiada bas berkongsi, tiada tarikh berlepas yang ditetapkan, tiada kompromi tentang rentak atau keutamaan anda. Pengecualiannya dinyatakan di tempat ia terpakai: kapal itu sendiri pada perjalanan yang menyertakan pelayaran Nil, dan Hari Gerhana di Luxor, satu hari bertarikh dalam kumpulan kecil.
 - Tempahan Khas — Kami mereka bentuk setiap perjalanan di sekeliling anda — minat anda, jadual anda, rentak anda. Tiada dua jadual perjalanan Kemet yang serupa.
 - Harga Telus — Harga yang dinyatakan ialah harga akhir anda. Kami menyenaraikan apa yang termasuk dan tidak termasuk sebelum anda berkomitmen kepada apa-apa.
 - Sokongan Khusus — Dari pertanyaan pertama hingga anda selamat pulang, anda mempunyai seorang wakil yang dinamakan, yang mengenali perjalanan anda sepenuhnya dan boleh dihubungi sepanjang masa.
@@ -97,4 +97,4 @@ kemet-travel.com. Perniagaan lain juga berdagang dengan nama "Kemet" di Mesir. K
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/ms/tentang-kemet.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/ms/hubungi-kami.html · Site index for assistants: https://kemet-travel.com/ms/llms.txt

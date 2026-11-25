@@ -122,7 +122,7 @@ Un voyage de noces n'est pas un itinéraire ordinaire avec des pétales de rose.
 - Le visa d'entrée en Égypte
 - Les pourboires
 - Les dépenses personnelles
-- Les repas, sauf à bord de la croisière sur le Nil
+- Les repas, sauf à bord de la croisière sur le Nil, le dîner sur une terrasse nubienne à Assouan et le dîner d'adieu
 - Les options que vous ajoutez — activités, boissons
 
 ## Le rythme
@@ -155,4 +155,4 @@ Les vols de Louxor sont assurés par des opérateurs agréés sous contrôle de 
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/fr/voyage-de-noces-nil-9-jours.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/fr/contacter-kemet.html · Site index for assistants: https://kemet-travel.com/fr/llms.txt

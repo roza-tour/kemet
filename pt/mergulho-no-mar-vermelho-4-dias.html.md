@@ -25,7 +25,7 @@ Saída **Sharm el-Sheikh (aeroporto ou hotel)**
 
 Paradas **Sharm El Sheikh · Ras Mohammed · Tiran**
 
-Privativo **Sim — só o seu grupo**
+Privativo **Traslados — sim; os barcos de mergulho levam os pequenos grupos do centro**
 
 Quatro mergulhos guiados de barco nos dois melhores conjuntos de pontos do Sinai — Ras Mohammed e Tiran — com um centro PADI avaliado por nós, depois de um mergulho de checagem no recife do resort.
 
@@ -62,7 +62,7 @@ O norte do Mar Vermelho é uma das regiões de mergulho de referência no mundo:
 
 ### Dia 4 — Manhã sem mergulho e partida
 
-- Uma manhã na superfície — o intervalo de 18 a 24 horas antes de voar já está previsto
+- Uma manhã na superfície — o intervalo de pelo menos 24 horas sem voar após o último mergulho já está previsto
 - Traslado privativo ao aeroporto
 
 ## Incluído
@@ -114,4 +114,4 @@ Paredes densas de coral mole, nuvens de anthias, peixes-napoleão, tartarugas e 
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/pt/mergulho-no-mar-vermelho-4-dias.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/pt/contato.html · Site index for assistants: https://kemet-travel.com/pt/llms.txt

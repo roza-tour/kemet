@@ -143,7 +143,7 @@ Day **14**
 - Egypt entry visa
 - Tipping (gratuities)
 - Personal expenses
-- Meals, except on board the Nile cruise and lunch on the boat day
+- Meals, except on board the Nile cruise, lunch on the boat day and the farewell dinner in Sharm
 - Optional extras you choose to add — activities, drinks
 
 ## Comfort & pace

@@ -152,4 +152,4 @@ Assuan als Inselwelt erzählt, fünf Inseln in zwei Tagen auf dem Wasser – dan
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/de/reiseziele-in-aegypten.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/de/kontakt.html · Site index for assistants: https://kemet-travel.com/de/llms.txt

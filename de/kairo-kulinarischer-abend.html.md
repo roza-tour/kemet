@@ -124,4 +124,4 @@ Sie entscheiden an jeder Station selbst, wie viel Sie bestellen — und wer Tell
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/de/kairo-kulinarischer-abend.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/de/kontakt.html · Site index for assistants: https://kemet-travel.com/de/llms.txt

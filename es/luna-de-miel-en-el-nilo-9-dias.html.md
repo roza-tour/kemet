@@ -122,7 +122,7 @@ Un itinerario de luna de miel no es un itinerario estándar con pétalos de rosa
 - Visa de entrada a Egipto
 - Propinas
 - Gastos personales
-- Comidas, salvo a bordo del crucero por el Nilo
+- Comidas, salvo a bordo del crucero por el Nilo, la cena en una terraza nubia en Asuán y la cena de despedida
 - Extras opcionales que decida añadir — actividades, bebidas
 
 ## El ritmo
@@ -155,4 +155,4 @@ Los vuelos en globo de Luxor los realizan operadores con licencia bajo la superv
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/es/luna-de-miel-en-el-nilo-9-dias.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/es/contacto.html · Site index for assistants: https://kemet-travel.com/es/llms.txt

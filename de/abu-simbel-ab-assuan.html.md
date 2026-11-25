@@ -97,4 +97,4 @@ Am 22. Februar und am 22. Oktober dringt die aufgehende Sonne 60 Meter weit in d
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/de/abu-simbel-ab-assuan.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/de/kontakt.html · Site index for assistants: https://kemet-travel.com/de/llms.txt

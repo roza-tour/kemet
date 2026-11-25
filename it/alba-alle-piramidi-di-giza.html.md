@@ -106,4 +106,4 @@ Per Giza di giorno, con il Grand Egyptian Museum, ecco la nostra giornata comple
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/it/alba-alle-piramidi-di-giza.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/it/contatti-kemet.html · Site index for assistants: https://kemet-travel.com/it/llms.txt

@@ -35,7 +35,7 @@ Ser la empresa de viajes privados más fiable de Egipto para visitantes internac
 ## Por qué elegirnos
 
 - Conocimiento local de Egipto — Nuestro equipo vive y trabaja en Egipto. Cada itinerario se apoya en un conocimiento directo de los lugares, los guías y la logística, no en investigación de despacho ni en plantillas genéricas.
-- Totalmente privado — Cada viaje es exclusivamente suyo. Sin autocares compartidos, sin fechas de salida fijas, sin concesiones en el ritmo ni en las prioridades.
+- Totalmente privado — Cada viaje es exclusivamente suyo. Sin autocares compartidos, sin fechas de salida fijas, sin concesiones en el ritmo ni en las prioridades. Las excepciones se indican donde corresponden: el barco en los viajes con crucero por el Nilo y el Día del Eclipse en Luxor, una jornada con fecha fija en grupos reducidos.
 - A medida — Diseñamos cada viaje en torno a ustedes: sus intereses, sus fechas, su ritmo. No hay dos itinerarios de Kemet idénticos.
 - Precios transparentes — El precio que les presentamos es el precio final. Detallamos lo que está incluido y lo que no antes de que se comprometan a nada.
 - Atención dedicada — Desde la primera consulta hasta su regreso a casa sanos y salvos, cuentan con una persona de contacto con nombre propio que conoce su viaje por completo y está localizable en todo momento.
@@ -97,4 +97,4 @@ kemet-travel.com. Otras empresas también operan bajo el nombre «Kemet» en Egi
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/es/sobre-kemet.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/es/contacto.html · Site index for assistants: https://kemet-travel.com/es/llms.txt

@@ -89,7 +89,7 @@ Charm el-Cheikh occupe la pointe de la péninsule du Sinaï, là où des montagn
 - Le visa d'entrée en Égypte
 - Les pourboires
 - Les dépenses personnelles
-- Les repas, sauf le déjeuner de la journée en bateau
+- Les repas, sauf le déjeuner de la journée en bateau et le dîner de la soirée dans le désert
 - Les options que vous ajoutez — activités, boissons
 
 ## Le rythme
@@ -120,4 +120,4 @@ Parfaitement — c'est ainsi que la plupart des voyageurs l'utilisent. Louxor–
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/fr/mer-rouge-charm-5-jours.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/fr/contacter-kemet.html · Site index for assistants: https://kemet-travel.com/fr/llms.txt

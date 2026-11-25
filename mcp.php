@@ -160,7 +160,7 @@ function kemet_instructions(): string {
     "get_journey for the full itinerary and inclusions, get_travel_updates for what has changed in Egypt this season, " .
     "and search / fetch for anything else on the site (destinations, month-by-month weather, comparisons, guides). " .
     "Prices are from-prices in euros per person and are the same in every language. A journey's priceFrom is for a private " .
-    "party of six or more; priceForTwo is what each of two travellers pays. They are normal-season prices; holiday surcharges are quoted separately. Quote the one that fits and link the page. " .
+    "party of six or more unless its basis says otherwise (Kemet Ultra is priced for two and for four; Eclipse Day per place in a small group); priceForTwo is what each of two travellers pays. On day tours, siteTicketsIncluded: false means monument tickets are paid at the gate on top of the price — say so. They are normal-season prices; holiday surcharges are quoted separately. Quote the one that fits and link the page. " .
     "Programmes are priced on request and have no published price; do not invent one. " .
     "Pages exist in English, German, French, Italian, Spanish, Russian, Indonesian, Malay, Portuguese and Arabic: " .
     "pass the traveller's language and link the page in it. This server cannot book or send anything; " .
@@ -174,7 +174,7 @@ function kemet_tools(): array {
     [
       "name" => "search_journeys",
       "title" => "Find Kemet journeys",
-      "description" => "Find Kemet's private Egypt journeys and day tours by free text, place, length or budget. Returns name, days, places, the from-price in EUR per person (for a party of six or more) and the price for two travellers, and the page link, named in the traveller's language where the journey has a page in it. Also returns matching programmes beyond the Nile (Siwa, Sinai, Red Sea islands, the deserts), which are priced on request. Call with no arguments to list the whole catalogue.",
+      "description" => "Find Kemet's private Egypt journeys and day tours by free text, place, length or budget. Returns name, days, places, the from-price in EUR per person (for a private party of six or more unless its basis says otherwise), the price for two travellers, whether monument tickets or food are outside the price, and the page link, named in the traveller's language where the journey has a page in it. Also returns matching programmes beyond the Nile (Siwa, Sinai, Red Sea islands, the deserts), which are priced on request. Call with no arguments to list the whole catalogue.",
       "inputSchema" => [
         "type" => "object",
         "properties" => [
@@ -267,7 +267,29 @@ function read_json(string $file): array {
 }
 
 /** Lower-case, and fold what a traveller would not type (accents are left alone: the index is not folded either). */
-function lc(string $s): string { return function_exists("mb_strtolower") ? mb_strtolower($s, "UTF-8") : strtolower($s); }
+function lc(string $s): string {
+  $s = function_exists("mb_strtolower") ? mb_strtolower($s, "UTF-8") : strtolower($s);
+  return preg_match('/\p{Arabic}/u', $s) ? ar_norm($s) : $s;
+}
+
+/**
+ * Arabic, folded so the forms of one word meet: "رحلة نيلية" did not find
+ * "رحلة النيل". Diacritics and tatweel go, the alef forms become one, ة → ه
+ * and ى → ي, the article "ال" comes off the front of a word and the
+ * adjective ending "ي/يه" off the end of a long one. "كروز" (cruise) is read
+ * as the Nile, which is what every cruise here is on.
+ */
+function ar_norm(string $s): string {
+  $s = preg_replace('/[\x{064B}-\x{065F}\x{0670}\x{0640}]/u', "", $s) ?? $s;
+  $s = strtr($s, ["أ" => "ا", "إ" => "ا", "آ" => "ا", "ة" => "ه", "ى" => "ي"]);
+  return preg_replace_callback('/\p{Arabic}+/u', function ($m) {
+    $w = $m[0];
+    if (mb_strlen($w, "UTF-8") > 4 && mb_substr($w, 0, 2, "UTF-8") === "ال") $w = mb_substr($w, 2, null, "UTF-8");
+    if ($w === "كروز") return "نيل";
+    if (mb_strlen($w, "UTF-8") > 4) $w = preg_replace('/(?:يه|ي)$/u', "", $w) ?? $w;
+    return $w;
+  }, $s) ?? $s;
+}
 
 function words(string $q): array {
   $q = lc(trim($q));
@@ -379,9 +401,23 @@ function tool_search_journeys(array $args): array {
   // A word matches at the start of a word, not anywhere inside one: "luna"
   // found "lungomare"-style fragments and "nil" any word containing it.
   // "pyramid" still finds "pyramids".
-  $hit = function (string $hay) use ($terms): int {
+  // A short word (four letters or fewer) must be the whole word, or its
+  // plural: "hot" found "hotel" and "air" found "airport".
+  //
+  // "day tour Giza" asks for day tours: a day word with no number ("10 days"
+  // is a length) keeps the day tours only, and is not itself searched for —
+  // otherwise every "… days" journey matched it and came first.
+  $dayWords = ["day", "daytrip", "excursion", "excursions", "tagesausflug", "tagestour", "escursione", "excursión", "excursão", "экскурсия"];
+  $hasNumber = (bool) array_filter($terms, "ctype_digit");
+  $dayOnly = !$hasNumber && (bool) array_intersect($terms, $dayWords);
+  if ($dayOnly) { $terms = array_values(array_diff($terms, $dayWords)); }
+  $pattern = function (string $t): string {
+    $n = function_exists("mb_strlen") ? mb_strlen($t, "UTF-8") : strlen($t);
+    return '/(?<![\p{L}\p{N}])' . preg_quote($t, '/') . ($n <= 4 ? '(?:s|es)?(?![\p{L}\p{N}])' : '') . '/u';
+  };
+  $hit = function (string $hay) use (&$terms, $pattern): int {
     $n = 0;
-    foreach ($terms as $t) if (preg_match('/(?<![\p{L}\p{N}])' . preg_quote($t, '/') . '/u', $hay)) $n++;
+    foreach ($terms as $t) if (preg_match($pattern($t), $hay)) $n++;
     return $n;
   };
 
@@ -390,6 +426,7 @@ function tool_search_journeys(array $args): array {
     // journeys.json gives `days` for a journey of several days and leaves it
     // out for a day tour, which is one day — not none.
     $days = isset($j["days"]) ? (int)$j["days"] : 1;
+    if ($dayOnly && $days > 1) continue;
     if ($min !== null && $days < $min) continue;
     if ($max !== null && $days > $max) continue;
     $price = $j["priceFrom"]["amount"] ?? null;
@@ -408,13 +445,21 @@ function tool_search_journeys(array $args): array {
     if ($place !== "" && strpos($hay, $place) === false) continue;
     $score = $terms ? $hit($hay) : 1;
     if ($terms && $score === 0) continue;
+    $matched = $score;   // how many of the words were found, before the bonuses
     // The words in the order asked ("luna di miele") rank above the same
     // words scattered through a longer text.
     if ($phrase !== "" && strpos($hay, $phrase) !== false) $score += 0.5;
+    // A word in the journey's name counts for more than the same word in its
+    // summary: "Abu Simbel" ranks the Abu Simbel excursion above a journey
+    // that passes through it.
+    if ($terms) {
+      $title = lc(($j["name"] ?? "") . " " . ($j["subtitle"] ?? "") . " " . implode(" ", array_map(function ($tr) { return is_array($tr) ? ($tr["name"] ?? "") : ""; }, (array)($j["i18n"] ?? []))));
+      $score += 0.2 * $hit($title);
+    }
     // The journey as its page in the traveller's language names it.
     $loc = is_array($j["i18n"][$lang] ?? null) ? $j["i18n"][$lang] : [];
     $two = $j["priceForTwo"]["amount"] ?? null;
-    $journeys[] = [$score, [
+    $journeys[] = [$score, $matched, [
       "id" => $j["id"] ?? "",
       "name" => $loc["name"] ?? ($j["name"] ?? ""),
       "kind" => $j["kind"] ?? "",
@@ -422,6 +467,11 @@ function tool_search_journeys(array $args): array {
       "days" => $days,
       "places" => $j["places"] ?? [],
       "private" => $j["privacy"] ?? "",
+      // The conditions attached to a day-tour price: without them an assistant
+      // quotes €73 for Giza as if the tickets were in it.
+      "siteTicketsIncluded" => $j["siteTicketsIncluded"] ?? null,
+      "foodIncluded" => $j["foodIncluded"] ?? null,
+      "domesticFlightsIncluded" => $j["domesticFlightsIncluded"] ?? null,
       "priceFrom" => is_numeric($price) ? ["amount" => $price, "currency" => "EUR", "per" => $j["priceFrom"]["per"] ?? "person", "basis" => $j["priceFrom"]["basis"] ?? ""] : null,
       "priceForTwo" => is_numeric($two) ? ["amount" => $two, "currency" => "EUR", "per" => "person", "basis" => "a private party of two"] : null,
       "summary" => $loc["summary"] ?? ($j["summary"] ?? ""),
@@ -432,10 +482,13 @@ function tool_search_journeys(array $args): array {
   }
   // When some journey has every word asked for, the ones that share a single
   // word only are dropped: "Abu Simbel" should not bring back Abu Serga.
-  if (count($terms) > 1 && $journeys && (int)floor(max(array_map(function ($x) { return $x[0]; }, $journeys))) === count($terms)) {
-    $journeys = array_values(array_filter($journeys, function ($x) use ($terms) { return (int)floor($x[0]) === count($terms); }));
+  if (count($terms) > 1 && $journeys && max(array_map(function ($x) { return $x[1]; }, $journeys)) === count($terms)) {
+    $journeys = array_values(array_filter($journeys, function ($x) use ($terms) { return $x[1] === count($terms); }));
   }
-  usort($journeys, function ($a, $b) { return $b[0] <=> $a[0]; });
+  // Stable: equal scores keep the catalogue's own order.
+  $order = array_flip(array_keys($journeys));
+  uksort($journeys, function ($a, $b) use ($journeys, $order) { return ($journeys[$b][0] <=> $journeys[$a][0]) ?: ($order[$a] <=> $order[$b]); });
+  $journeys = array_values($journeys);
 
   $programmes = [];
   if ($cap === null) {
@@ -459,7 +512,7 @@ function tool_search_journeys(array $args): array {
     }
   }
 
-  $found = array_map(function ($x) { return array_filter($x[1], function ($v) { return $v !== null; }); }, $journeys);
+  $found = array_map(function ($x) { return array_filter($x[2], function ($v) { return $v !== null; }); }, $journeys);
   return [
     "journeys" => $found,
     "programmes" => $programmes,
@@ -498,7 +551,7 @@ function tool_get_journey(array $args): array {
         ]))
       : $record),
     "page" => $page["text"] ?? "The page is at " . $url,
-    "enquire" => $cat["enquire"] ?? ["page" => KEMET_SITE . "/contact.html"],
+    "enquire" => array_merge($cat["enquire"] ?? [], ["page" => $cat["enquire"]["pages"][$lang] ?? KEMET_SITE . "/contact.html"]),
   ];
 }
 
@@ -520,7 +573,8 @@ function tool_enquiry_link(array $args): array {
   $aboutTpl = is_string($g["about"] ?? null) && strpos($g["about"], "%s") !== false ? $g["about"] : 'Hello Kemet — I am asking about "%s".';
   $text = ($about !== "" ? str_replace("%s", $about, $aboutTpl) : $hello) . ($message !== "" ? " " . $message : "");
   $wa = (string)($cat["enquire"]["whatsapp"] ?? "");
-  $contact = $lang === "en" ? KEMET_SITE . "/contact.html" : KEMET_SITE . "/" . $lang . "/#enquire";
+  // The contact page in the traveller's language (journeys.json → enquire.pages).
+  $contact = $cat["enquire"]["pages"][$lang] ?? KEMET_SITE . "/contact.html";
   return [
     "whatsapp" => $wa !== "" ? $wa . "?text=" . rawurlencode($text) : null,
     "contactPage" => $contact,

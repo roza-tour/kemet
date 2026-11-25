@@ -73,4 +73,4 @@ Hal-hal praktis lainnya ada di halaman-halaman kami yang lain; katalog lengkap t
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/id/halal-dan-waktu-salat.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/id/hubungi-kemet.html · Site index for assistants: https://kemet-travel.com/id/llms.txt

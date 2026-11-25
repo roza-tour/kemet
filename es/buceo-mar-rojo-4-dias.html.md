@@ -25,7 +25,7 @@ Salida **Sharm el-Sheikh (aeropuerto u hotel)**
 
 Paradas **Sharm El Sheikh · Ras Mohammed · Tiran**
 
-Privado **Sí — solo su grupo**
+Privado **Traslados — sí; los barcos de buceo llevan a los grupos reducidos del centro**
 
 Cuatro inmersiones guiadas desde barco en los dos mejores conjuntos de puntos de buceo del Sinaí, Ras Mohammed y Tirán, con un centro PADI que hemos verificado, tras una inmersión de chequeo en el arrecife del resort.
 
@@ -62,7 +62,7 @@ El norte del mar Rojo es una de las regiones de referencia del buceo mundial: m�
 
 ### Día 4 — Mañana sin inmersiones y salida
 
-- Una mañana en superficie: el intervalo de 18–24 h sin volar ya está previsto
+- Una mañana en superficie: el intervalo de al menos 24 horas sin volar tras la última inmersión ya está previsto
 - Traslado privado al aeropuerto
 
 ## Incluido
@@ -114,4 +114,4 @@ En Ras Mohammed, densas paredes de coral blando, nubes de anthias, peces napole�
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/es/buceo-mar-rojo-4-dias.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/es/contacto.html · Site index for assistants: https://kemet-travel.com/es/llms.txt

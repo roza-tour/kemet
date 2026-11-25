@@ -89,7 +89,7 @@ Sharm el-Sheikh ocupa el extremo de la península del Sinaí, donde las montaña
 - Visa de entrada a Egipto
 - Propinas
 - Gastos personales
-- Comidas, salvo el almuerzo del día en barco
+- Comidas, salvo el almuerzo del día en barco y la cena de la velada en el desierto
 - Extras opcionales que decida añadir — actividades, bebidas
 
 ## El ritmo
@@ -120,4 +120,4 @@ Perfectamente: así lo aprovecha la mayoría de nuestros viajeros. Luxor–Sharm
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/es/sharm-el-sheikh-5-dias.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/es/contacto.html · Site index for assistants: https://kemet-travel.com/es/llms.txt

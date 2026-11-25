@@ -81,4 +81,4 @@ Nein. Da die Riffwände sehr nah an der Oberfläche beginnen, sehen Schnorchler 
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/de/tauchen-marsa-alam-rotes-meer.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/de/kontakt.html · Site index for assistants: https://kemet-travel.com/de/llms.txt

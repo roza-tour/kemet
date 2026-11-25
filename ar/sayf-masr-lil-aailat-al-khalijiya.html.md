@@ -91,4 +91,4 @@ description: "رحلة خاصة لعائلتكم في صيف مصر: نسيم ا
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/ar/sayf-masr-lil-aailat-al-khalijiya.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/ar/tawasal-ma-kemet.html · Site index for assistants: https://kemet-travel.com/ar/llms.txt

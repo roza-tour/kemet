@@ -122,7 +122,7 @@ Un viaggio di nozze non è un itinerario qualsiasi con i petali di rosa. Il ritm
 - Il visto d'ingresso in Egitto
 - Le mance
 - Le spese personali
-- I pasti, tranne a bordo della crociera sul Nilo
+- I pasti, tranne a bordo della crociera sul Nilo, la cena su una terrazza nubiana ad Assuan e la cena d'addio
 - I supplementi facoltativi a scelta — attività, bevande
 
 ## Il ritmo
@@ -155,4 +155,4 @@ I voli di Luxor sono gestiti da operatori autorizzati sotto la vigilanza dell'av
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/it/viaggio-di-nozze-nilo-9-giorni.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/it/contatti-kemet.html · Site index for assistants: https://kemet-travel.com/it/llms.txt

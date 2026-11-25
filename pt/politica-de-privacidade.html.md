@@ -25,11 +25,11 @@ Vocês podem falar conosco sobre qualquer assunto desta política — inclusive 
 
 ## O que coletamos
 
-Quando vocês nos enviam uma mensagem pelo formulário de contato, coletamos os dados que escolherem informar: nome, endereço de e-mail e — se os preencherem — número de telefone, datas previstas da viagem e o conteúdo da mensagem.
+Quando vocês nos enviam uma mensagem pelo formulário de contato, coletamos os dados que escolherem informar: nome, endereço de e-mail e — se os preencherem — número de telefone, datas previstas da viagem, tamanho do grupo, ritmo e prioridades que escolherem e o conteúdo da mensagem.
 
 Como quase todos os sites, o nosso servidor também registra, em seus logs, informações técnicas padrão (como endereço IP, tipo de navegador e páginas solicitadas). Não usamos essas informações para identificar vocês pessoalmente.
 
-Se vocês entrarem na nossa lista — pelo convite neste site ou pelo desenhador de viagens — primeiro enviamos um e-mail pedindo que confirmem, e nada mais é enviado até que o façam. Guardamos o seu endereço de e-mail, o seu nome, se o informarem, a página e o idioma a partir dos quais se inscreveram e um registro do consentimento: quando foi dado e quando foi confirmado, o texto com o qual concordaram e o endereço IP de onde partiu cada um. Vocês podem sair da lista a qualquer momento pelo link de cancelamento da inscrição nos nossos e-mails, ou escrevendo para nós.
+Se vocês entrarem na nossa lista — pelo convite neste site ou pelo desenhador de viagens — primeiro enviamos um e-mail pedindo que confirmem, e nada mais é enviado até que o façam. Guardamos o seu endereço de e-mail, o seu nome, se o informarem, se se inscreveram pelo convite ou pelo desenhador de viagens, o idioma da página e um registro do consentimento: quando foi dado e quando foi confirmado, o texto com o qual concordaram e o endereço IP de onde partiu cada um. Vocês podem sair da lista a qualquer momento pelo link de cancelamento da inscrição nos nossos e-mails, ou escrevendo para nós.
 
 Não temos contas de usuário e não recebemos pagamentos neste site; por isso nunca coletamos aqui senhas nem dados de cartão.
 
@@ -121,4 +121,4 @@ Os outros dois documentos que se aplicam a uma consulta e a uma reserva.
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/pt/politica-de-privacidade.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/pt/contato.html · Site index for assistants: https://kemet-travel.com/pt/llms.txt

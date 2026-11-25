@@ -100,4 +100,4 @@ Les autres choix que l'on fait avant de réserver, ainsi que la page originale e
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/fr/musee-egyptien-ou-grand-musee-egyptien-que-choisir.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/fr/contacter-kemet.html · Site index for assistants: https://kemet-travel.com/fr/llms.txt

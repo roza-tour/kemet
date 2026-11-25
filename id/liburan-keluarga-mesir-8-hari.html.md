@@ -150,4 +150,4 @@ Ya. Hotel menyediakan pilihan yang akrab di lidah di samping hidangan Mesir, dan
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/id/liburan-keluarga-mesir-8-hari.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/id/hubungi-kemet.html · Site index for assistants: https://kemet-travel.com/id/llms.txt

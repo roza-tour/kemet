@@ -60,7 +60,7 @@ ab 902 € / Person (ab 6 Reisenden). 992 € pro Person bei zwei Reisenden. Pro
 ## Inbegriffen
 
 - Durchgehend ein privater Ägyptologe als Reiseleitung
-- Dreitägige Nilkreuzfahrt mit Vollpension, Assuan bis Luxor
+- Nilkreuzfahrt über drei Nächte mit Vollpension, Assuan bis Luxor
 - Alle Landgänge als private Besichtigungen mit Ihrem eigenen Guide
 - Alle Eintrittsgelder für Stätten und Monumente
 - Private, klimatisierte Transfers
@@ -134,4 +134,4 @@ Die viertägige Kreuzfahrt steht oben Tag für Tag, mit ihrem Preis. Schreiben S
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/de/nilkreuzfahrt.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/de/kontakt.html · Site index for assistants: https://kemet-travel.com/de/llms.txt

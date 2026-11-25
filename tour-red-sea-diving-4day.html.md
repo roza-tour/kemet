@@ -46,7 +46,7 @@ Day **04**
 
 ### No-fly morning & departure
 
-- A surface morning — the 18–24 h no-fly interval is built in
+- A surface morning — the no-fly interval of at least 24 hours after the last dive is built in
 - Private airport transfer
 
 ## Included & not included
@@ -120,7 +120,7 @@ Start point **Sharm El Sheikh (airport or hotel)**
 
 Visiting **Ras Mohammed · Strait of Tiran**
 
-Private **Yes — your party only**
+Private **Transfers — yes; the dive boats carry the centre's small groups**
 
 [Booking & cancellation terms →](https://kemet-travel.com/booking.html)
 

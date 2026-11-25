@@ -272,7 +272,7 @@ It is quoted, not listed. The figure is built from the permit fee for that site,
 
 ### What happens if the permit is refused?
 
-Nothing is charged until a permit is granted, so a refusal costs you nothing. We will say at the first conversation how likely we think it is, and if we think a date or a site is unrealistic we will say so then rather than after a deposit. Where a refusal is possible we agree the second choice before applying, so a no does not become a lost occasion.
+Nothing is charged until a permit is granted, so a refusal costs you nothing. We will say at the first conversation how likely we think it is, and if we think a date or a site is unrealistic we will say so then rather than after a deposit. Where a refusal is possible we agree the second choice before applying, so a no does not become a lost occasion. When the opening is part of a longer journey, such as Kemet Ultra, the journey is booked as usual and only the opening waits on its permit: if the permit is refused, the opening is taken off the price.
 
 ### How many people can these sites take?
 
@@ -298,7 +298,7 @@ Every journey is led by a guide licensed by the Egyptian Ministry of Tourism wit
 
 ### Your party only
 
-No shared coaches. No fixed departure dates. No strangers in your vehicle or with your guide. If you are two people, the vehicle, the guide and the pace belong to two people.
+No shared coaches. No fixed departure dates (the one dated day is Eclipse Day in Luxor, 2 August 2027, in small groups). No strangers in your vehicle or with your guide. If you are two people, the vehicle, the guide and the pace belong to two people.
 
 ### Built around you, then written down
 

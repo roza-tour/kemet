@@ -89,7 +89,7 @@ Sharm El Sheikh terletak di ujung Semenanjung Sinai, tempat pegunungan gurun ter
 - Visa masuk Mesir
 - Tip
 - Pengeluaran pribadi
-- Makanan, kecuali makan siang pada hari di kapal
+- Makanan, kecuali makan siang pada hari di kapal dan makan malam pada malam di gurun
 - Tambahan opsional yang Anda pilih — aktivitas, minuman
 
 ## Ritme perjalanan
@@ -120,4 +120,4 @@ Sangat bisa — begitulah kebanyakan tamu memanfaatkannya. Luxor–Sharm sekitar
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/id/liburan-sharm-el-sheikh-5-hari.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/id/hubungi-kemet.html · Site index for assistants: https://kemet-travel.com/id/llms.txt

@@ -157,7 +157,7 @@ Inilah laluan bagi pengembara yang berhasrat datang sekali dan melihat Mesir sep
 - Visa masuk Mesir
 - Tip
 - Perbelanjaan peribadi
-- Makanan, kecuali di atas kapal pelayaran Sungai Nil dan makan tengah hari pada hari di bot
+- Makanan, kecuali di atas kapal pelayaran Sungai Nil, makan tengah hari pada hari di bot dan makan malam perpisahan di Sharm
 - Tambahan pilihan yang anda pilih sendiri — aktiviti, minuman
 
 ## Rentak perjalanan
@@ -192,4 +192,4 @@ Sudah tentu. Sesetengah tetamu menggantikannya dengan malam tambahan di Luxor; y
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/ms/jelajah-besar-mesir-14-hari.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/ms/hubungi-kami.html · Site index for assistants: https://kemet-travel.com/ms/llms.txt

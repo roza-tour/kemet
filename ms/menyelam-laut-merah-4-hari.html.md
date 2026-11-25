@@ -25,7 +25,7 @@ Titik mula **Sharm El Sheikh (lapangan terbang atau hotel)**
 
 Hentian **Sharm El Sheikh · Ras Mohammed · Tiran**
 
-Persendirian **Ya — kumpulan anda sahaja**
+Persendirian **Pemindahan — ya; bot selam membawa kumpulan kecil pusat selam**
 
 Empat selaman bot berpemandu di dua kumpulan lokasi terbaik Sinai — Ras Mohammed dan Tiran — bersama pusat PADI yang telah kami tapis, selepas selaman semakan di terumbu resort.
 
@@ -62,7 +62,7 @@ Laut Merah utara ialah antara kawasan selam penanda aras dunia: jarak penglihata
 
 ### Hari 4 — Pagi tanpa selaman & berlepas
 
-- Pagi di permukaan — selang 18–24 jam sebelum terbang sudah diambil kira
+- Pagi di permukaan — selang sekurang-kurangnya 24 jam sebelum terbang selepas selaman terakhir sudah diambil kira
 - Pemindahan persendirian ke lapangan terbang
 
 ## Termasuk
@@ -114,4 +114,4 @@ Dinding karang lembut yang padat, awan ikan anthias, ikan napoleon, penyu dan je
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/ms/menyelam-laut-merah-4-hari.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/ms/hubungi-kami.html · Site index for assistants: https://kemet-travel.com/ms/llms.txt

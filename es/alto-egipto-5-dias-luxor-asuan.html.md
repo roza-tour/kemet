@@ -128,4 +128,4 @@ En un vuelo de EgyptAir desde El Cairo (55 minutos) o en el tren nocturno. Ambos
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/es/alto-egipto-5-dias-luxor-asuan.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/es/contacto.html · Site index for assistants: https://kemet-travel.com/es/llms.txt

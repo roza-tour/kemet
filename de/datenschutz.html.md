@@ -25,11 +25,11 @@ Zu allem, was in dieser Erklärung steht — auch für jedes Ersuchen um Auskunf
 
 ## Was wir erheben
 
-Wenn Sie uns über das Kontaktformular eine Nachricht senden, erheben wir die Angaben, die Sie selbst machen: Ihren Namen, Ihre E-Mail-Adresse und — sofern Sie sie eingeben — Ihre Telefonnummer, Ihre geplanten Reisedaten und den Inhalt Ihrer Nachricht.
+Wenn Sie uns über das Kontaktformular eine Nachricht senden, erheben wir die Angaben, die Sie selbst machen: Ihren Namen, Ihre E-Mail-Adresse und — sofern Sie sie eingeben — Ihre Telefonnummer, Ihre geplanten Reisedaten, die Größe Ihrer Reisegruppe, das von Ihnen gewählte Tempo und die von Ihnen gewählten Prioritäten sowie den Inhalt Ihrer Nachricht.
 
 Wie fast alle Websites zeichnet auch unser Server in seinen Protokollen übliche technische Informationen auf (etwa IP-Adresse, Browsertyp und aufgerufene Seiten). Wir verwenden diese nicht, um Sie persönlich zu identifizieren.
 
-Wenn Sie sich in unsere Liste eintragen — über die Einladung auf dieser Website oder über den Reiseplaner —, senden wir Ihnen zuerst eine E-Mail mit der Bitte um Bestätigung; bis Sie bestätigen, schicken wir Ihnen nichts weiter. Wir speichern Ihre E-Mail-Adresse, Ihren Namen, falls Sie ihn angeben, die Seite und die Sprache, von der aus Sie sich angemeldet haben, sowie einen Nachweis Ihrer Einwilligung: wann Sie sie erteilt und wann Sie bestätigt haben, den Wortlaut, dem Sie zugestimmt haben, und die jeweilige IP-Adresse. Sie können die Liste jederzeit über den Abmeldelink in unseren E-Mails oder durch eine Nachricht an uns verlassen.
+Wenn Sie sich in unsere Liste eintragen — über die Einladung auf dieser Website oder über den Reiseplaner —, senden wir Ihnen zuerst eine E-Mail mit der Bitte um Bestätigung; bis Sie bestätigen, schicken wir Ihnen nichts weiter. Wir speichern Ihre E-Mail-Adresse, Ihren Namen, falls Sie ihn angeben, ob Sie sich über die Einladung oder über den Reiseplaner angemeldet haben, die Sprache der Seite sowie einen Nachweis Ihrer Einwilligung: wann Sie sie erteilt und wann Sie bestätigt haben, den Wortlaut, dem Sie zugestimmt haben, und die jeweilige IP-Adresse. Sie können die Liste jederzeit über den Abmeldelink in unseren E-Mails oder durch eine Nachricht an uns verlassen.
 
 Wir führen keine Nutzerkonten und nehmen auf dieser Website keine Zahlungen entgegen; wir erheben hier daher weder Passwörter noch Kartendaten.
 
@@ -121,4 +121,4 @@ Die beiden anderen Dokumente, die für eine Anfrage und eine Buchung gelten.
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/de/datenschutz.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/de/kontakt.html · Site index for assistants: https://kemet-travel.com/de/llms.txt

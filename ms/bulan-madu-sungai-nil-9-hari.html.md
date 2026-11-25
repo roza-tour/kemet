@@ -122,7 +122,7 @@ Laluan bulan madu bukan laluan biasa yang ditaburi kelopak mawar. Rentaknya berb
 - Visa masuk Mesir
 - Tip
 - Perbelanjaan peribadi
-- Makanan, kecuali di atas kapal pelayaran Sungai Nil
+- Makanan, kecuali di atas kapal pelayaran Sungai Nil, makan malam di teres Nubia di Aswan dan makan malam perpisahan
 - Tambahan pilihan yang anda pilih sendiri — aktiviti, minuman
 
 ## Rentak perjalanan
@@ -155,4 +155,4 @@ Belon udara panas di Luxor dikendalikan oleh pengendali berlesen di bawah pengaw
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/ms/bulan-madu-sungai-nil-9-hari.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/ms/hubungi-kami.html · Site index for assistants: https://kemet-travel.com/ms/llms.txt

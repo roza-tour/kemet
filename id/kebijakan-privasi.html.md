@@ -25,11 +25,11 @@ Anda dapat menghubungi kami mengenai hal apa pun dalam kebijakan ini — termasu
 
 ## Apa yang kami kumpulkan
 
-Saat Anda mengirim pesan melalui formulir kontak, kami mengumpulkan keterangan yang Anda pilih untuk diberikan: nama, alamat email Anda, dan — jika Anda mengisinya — nomor telepon, rencana tanggal perjalanan, serta isi pesan Anda.
+Saat Anda mengirim pesan melalui formulir kontak, kami mengumpulkan keterangan yang Anda pilih untuk diberikan: nama, alamat email Anda, dan — jika Anda mengisinya — nomor telepon, rencana tanggal perjalanan, jumlah rombongan Anda, ritme dan prioritas yang Anda pilih, serta isi pesan Anda.
 
 Seperti hampir semua situs web, server kami juga mencatat informasi teknis standar (seperti alamat IP, jenis peramban, dan halaman yang diminta) dalam lognya. Kami tidak menggunakannya untuk mengidentifikasi Anda secara pribadi.
 
-Jika Anda bergabung dalam daftar kami — dari undangan di situs ini atau dari perancang perjalanan — kami lebih dulu mengirim email yang meminta Anda mengonfirmasi, dan tidak ada email lain yang dikirim sampai Anda melakukannya. Kami menyimpan alamat email Anda, nama Anda jika Anda memberikannya, halaman dan bahasa yang Anda gunakan saat mendaftar, serta catatan persetujuan Anda: kapan persetujuan itu diberikan dan kapan dikonfirmasi, kalimat yang Anda setujui, dan alamat IP asal masing-masing. Anda dapat keluar dari daftar kapan saja melalui tautan berhenti berlangganan di email kami, atau dengan menulis kepada kami.
+Jika Anda bergabung dalam daftar kami — dari undangan di situs ini atau dari perancang perjalanan — kami lebih dulu mengirim email yang meminta Anda mengonfirmasi, dan tidak ada email lain yang dikirim sampai Anda melakukannya. Kami menyimpan alamat email Anda, nama Anda jika Anda memberikannya, apakah Anda mendaftar dari undangan atau dari perancang perjalanan, bahasa halaman, serta catatan persetujuan Anda: kapan persetujuan itu diberikan dan kapan dikonfirmasi, kalimat yang Anda setujui, dan alamat IP asal masing-masing. Anda dapat keluar dari daftar kapan saja melalui tautan berhenti berlangganan di email kami, atau dengan menulis kepada kami.
 
 Kami tidak menyediakan akun pengguna dan tidak menerima pembayaran di situs web ini, sehingga kami tidak pernah mengumpulkan kata sandi atau data kartu di sini.
 
@@ -121,4 +121,4 @@ Dua dokumen lain yang berlaku untuk pertanyaan dan pemesanan.
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/id/kebijakan-privasi.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/id/hubungi-kemet.html · Site index for assistants: https://kemet-travel.com/id/llms.txt

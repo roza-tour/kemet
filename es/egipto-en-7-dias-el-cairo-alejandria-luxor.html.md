@@ -144,4 +144,4 @@ Por supuesto: muchos viajeros añaden un crucero de 3 o 4 noches entre Asuán y 
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/es/egipto-en-7-dias-el-cairo-alejandria-luxor.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/es/contacto.html · Site index for assistants: https://kemet-travel.com/es/llms.txt

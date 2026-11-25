@@ -60,7 +60,7 @@ Our team lives and works in Egypt. Every itinerary is built on first-hand knowle
 
 ### Entirely Private
 
-Every journey is exclusively yours. No shared coaches, no set departure dates, no compromises on pace or priorities.
+Every journey is exclusively yours. No shared coaches, no set departure dates, no compromises on pace or priorities. The exceptions are stated where they apply: the ship itself on journeys with a Nile cruise, and Eclipse Day in Luxor, a dated day in small groups.
 
 ### Tailor-Made
 
@@ -173,7 +173,7 @@ Every journey is led by a guide licensed by the Egyptian Ministry of Tourism wit
 
 ### Your party only
 
-No shared coaches. No fixed departure dates. No strangers in your vehicle or with your guide. If you are two people, the vehicle, the guide and the pace belong to two people.
+No shared coaches. No fixed departure dates (the one dated day is Eclipse Day in Luxor, 2 August 2027, in small groups). No strangers in your vehicle or with your guide. If you are two people, the vehicle, the guide and the pace belong to two people.
 
 ### Built around you, then written down
 

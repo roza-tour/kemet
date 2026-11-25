@@ -110,4 +110,4 @@ Oui, en option par vol matinal ou en voiture privée. Cela allonge la matinée d
 ---
 
 Kemet — private journeys in Egypt. This is the Markdown copy of https://kemet-travel.com/fr/louxor-assouan-3-jours-vols-inclus.html
-Enquiries: https://kemet-travel.com/contact.html · Site index for assistants: https://kemet-travel.com/llms.txt
+Enquiries: https://kemet-travel.com/fr/contacter-kemet.html · Site index for assistants: https://kemet-travel.com/fr/llms.txt
