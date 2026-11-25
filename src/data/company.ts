@@ -56,7 +56,8 @@ export const company: CompanyProfile = {
 
   businessHours: [
     {
-      days: "Monday – Friday",
+      // Owner, 25 Nov 2026: the team works every day.
+      days: "Every day",
       opens: "09:00",
       closes: "18:00",
       // Egypt keeps summer time (UTC+3 from late April to late October), so a
@@ -79,7 +80,7 @@ export const company: CompanyProfile = {
     {
       type: "phone",
       label: "Phone",
-      availability: "Mon–Fri, 09:00–18:00 EET",
+      availability: "Every day, 09:00–18:00 Cairo time",
     },
   ],
 
