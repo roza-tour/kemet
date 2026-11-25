@@ -2101,7 +2101,8 @@ export const tours: Tour[] = [
       "Ras Mohammed boat day with snorkelling equipment",
       ...baseIncluded.slice(1),
     ],
-    excluded: cruiseExcluded,
+    // Lunch on deck is part of the Ras Mohammed boat day (owner, 25 Nov 2026).
+    excluded: cruiseExcluded.map((x) => (x === "Meals, except on board the Nile cruise" ? "Meals, except on board the Nile cruise and lunch on the boat day" : x)),
     faqs: [
       {
         q: "Is fourteen days too long for a first visit?",
@@ -2330,7 +2331,8 @@ export const tours: Tour[] = [
     excluded: [
       "Scuba diving (arranged on request with licensed centres)",
       "Marine park fees where applicable",
-      ...baseExcluded,
+      // Lunch on deck is part of the boat day (owner, 25 Nov 2026).
+      ...baseExcluded.map((x) => (x === "Meals" ? "Meals, except lunch on the boat day" : x)),
     ],
     faqs: [
       {
@@ -2435,7 +2437,8 @@ export const tours: Tour[] = [
     excluded: [
       "Dive insurance (mandatory — arranged at booking if you have none)",
       "Certification courses (available as an alternative programme)",
-      ...baseExcluded,
+      // Lunch on deck is part of each boat day (owner, 25 Nov 2026).
+      ...baseExcluded.map((x) => (x === "Meals" ? "Meals, except lunch on board on the boat days" : x)),
     ],
     faqs: [
       {
