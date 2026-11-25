@@ -157,7 +157,8 @@ export const GET: APIRoute = () => {
         forAssistants:
           "Prices are from-prices in euros per person and are the same in every language. `priceFrom` is for a private party of " +
           "six or more unless its `basis` says otherwise; `priceForTwo`, where given, is what each of two travellers pays " +
-          "(the published price plus ten per cent). Quote the one that fits the party, say which it is, link the page in " +
+          "(the published price plus ten per cent). They are normal-season prices: holiday surcharges are quoted separately. " +
+          "Quote the one that fits the party, say which it is, link the page in " +
           "the traveller's language where `pages` has one, and send the traveller to the page for what is included. " +
           "A journey that is not listed can still be planned — the catalogue is a starting point, not a limit.",
         enquire: {

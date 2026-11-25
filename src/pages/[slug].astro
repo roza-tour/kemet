@@ -8,7 +8,7 @@ import Frieze from "@/components/Frieze.astro";
 import SectionHeader from "@/components/SectionHeader.astro";
 import TourCard from "@/components/TourCard.astro";
 import LeadCapture from "@/components/conversion/LeadCapture.astro";
-import { tours, priceForTwo } from "@/data/tours";
+import { tours, priceForTwo, SEASON_NOTE } from "@/data/tours";
 import { getTourMeta } from "@/data/tours.taxonomy";
 import { findSimilarTours, findPreparationGuides } from "@/data/registry";
 import type { Tour } from "@/types";
@@ -236,6 +236,7 @@ const keywords = [
               <div class="pp">per person · EUR</div>
               {priceBasisLine && <p class="pbasis">{priceBasisLine}</p>}
               {twoPrice && <p class="pbasis">For two travellers: {formatPrice(twoPrice)} per person.</p>}
+              <p class="pbasis">{SEASON_NOTE}</p>
               {tour.flyOption && (
                 <p class="pbasis">Prefer to fly? The same journey with flights in place of {tour.flyOption.replaces} — from {formatPrice(flyPrice(tour)!)} pp.</p>
               )}

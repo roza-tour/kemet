@@ -165,7 +165,7 @@ export const GET: APIRoute = () => {
 
   lines.push("## Journeys (private, per person, from-prices in EUR)");
   lines.push("");
-  lines.push("Each from-price is per person for a private party of six or more (the honeymoon is priced for the couple). For two travellers the per-person price is ten per cent higher; each journey page states both figures.");
+  lines.push("Each from-price is per person for a private party of six or more (the honeymoon is priced for the couple). For two travellers the per-person price is ten per cent higher; each journey page states both figures. These are normal-season prices: holiday surcharges are quoted separately.");
   lines.push("");
   lines.push(`The same catalogue as data, with each journey's page in every language it is published in: ${u("journeys.json")}`);
   lines.push("");

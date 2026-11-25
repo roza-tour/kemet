@@ -96,6 +96,10 @@ export const TWO_TRAVELLERS_UPLIFT = 0.1;
 // flight-version supplement, raised by 10% on the 2026 figures and rounded to
 // the euro.
 export const PRICES_VALID_UNTIL = "2027-12-31";
+/** Published prices are normal-season prices (owner, 25 Nov 2026): holiday
+ *  surcharges are quoted separately. The translated pages said so; the
+ *  English, the markup and the catalogue did not. */
+export const SEASON_NOTE = "Normal-season price; holiday surcharges are shown separately in your quote.";
 export const priceForTwo = (t: { price: number; priceBasisPax?: number }): number | undefined =>
   t.priceBasisPax && t.priceBasisPax > 2 ? Math.round(t.price * (1 + TWO_TRAVELLERS_UPLIFT)) : undefined;
 

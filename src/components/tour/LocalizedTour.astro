@@ -127,7 +127,9 @@ const jsonld: Record<string, unknown>[] = [
       ...(tour.priceBasisPax
         ? { eligibleQuantity: { "@type": "QuantitativeValue", minValue: tour.priceBasisPax, unitText: "person" } }
         : {}),
-      ...(twoLine ? { description: twoLine } : {}),
+      // The same two facts the price block shows: the price for two, and
+      // that it is the normal-season price.
+      description: [twoLine, p.priceNote].filter(Boolean).join(". ").replace(/\.\. /g, ". "),
       seller: orgRef(),
     },
     provider: orgRef(),

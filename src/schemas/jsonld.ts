@@ -12,7 +12,7 @@ import { reviewer, type Expert } from "@/data/experts";
 import { LOCALES, LOCALE_META } from "@/config/i18n";
 import { marketCountries } from "@/data/markets";
 import { reviews } from "@/data/reviews";
-import { priceForTwo, tours as allTours, PRICES_VALID_UNTIL } from "@/data/tours";
+import { priceForTwo, tours as allTours, PRICES_VALID_UNTIL, SEASON_NOTE } from "@/data/tours";
 import { ultraJourneys } from "@/data/ultra/journeys";
 
 /**
@@ -264,9 +264,11 @@ export function tourSchema(tour: Tour): JsonLd[] {
             },
           }
         : {}),
-      ...(priceBasis(tour)
-        ? { description: `${priceBasis(tour)}${priceForTwo(tour) ? ` For two travellers: EUR ${priceForTwo(tour)} per person.` : ""}` }
-        : {}),
+      description: [
+        priceBasis(tour),
+        priceForTwo(tour) ? `For two travellers: EUR ${priceForTwo(tour)} per person.` : "",
+        SEASON_NOTE,
+      ].filter(Boolean).join(" "),
       seller: orgRef(),
     };
     if (!tour.flyOption) return base;
