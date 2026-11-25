@@ -2,7 +2,7 @@
 title: "14-Day Egypt Grand Tour with Abu Simbel & Red Sea | Kemet"
 url: https://kemet-travel.com/tour-grand-14day.html
 language: en
-description: "Our most complete journey: Cairo and Alexandria, a Nile cruise, Ramesses II's mountain temple at Abu Simbel — private, from €2,728 pp."
+description: "Our most complete journey: Cairo and Alexandria, a Nile cruise, Ramesses II's mountain temple at Abu Simbel — private, from €3,001 pp."
 ---
 
 Grand Tour · 14 Days / 13 Nights
@@ -13,7 +13,7 @@ Fourteen days, every register of the country — Cairo, Alexandria, the Nile by 
 
 ## What does The Grand Tour of Egypt include, and what does it cost?
 
-The Grand Tour of Egypt is a private 14-day, 13-night journey through Cairo, Giza, Alexandria, Aswan, Abu Simbel, Luxor and Sharm El Sheikh, from €2,728 per person for a party of 6 or more, or €3,001 per person for two. It includes a private Egyptologist guide throughout. International flights are not included.
+The Grand Tour of Egypt is a private 14-day, 13-night journey through Cairo, Giza, Alexandria, Aswan, Abu Simbel, Luxor and Sharm El Sheikh, from €3,001 per person for a party of 6 or more, or €3,301 per person for two. It includes a private Egyptologist guide throughout. International flights are not included.
 
 ## Overview
 
@@ -49,7 +49,7 @@ Day **04**
 
 - Catacombs of Kom El Shoqafa and Pompey's Pillar
 - The Citadel of Qaitbay on the Pharos site
-- Seafood lunch on the corniche; return to Cairo
+- Seafood lunch on the corniche, paid locally; return to Cairo
 
 Day **05**
 
@@ -143,7 +143,7 @@ Day **14**
 - Egypt entry visa
 - Tipping (gratuities)
 - Personal expenses
-- Meals, except on board the Nile cruise
+- Meals, except on board the Nile cruise and lunch on the boat day
 - Optional extras you choose to add — activities, drinks
 
 ## Comfort & pace
@@ -178,15 +178,15 @@ Every Kemet journey is private, led by a licensed Egyptologist and priced in wri
 
 From
 
-€2,728
+€3,001
 
 per person · EUR
 
 Based on a private party of 6 or more.
 
-For two travellers: €3,001 per person.
+For two travellers: €3,301 per person.
 
-[Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+The+Grand+Tour+of+Egypt&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22The+Grand+Tour+of+Egypt%22+journey+%2814+Days+%2F+13+Nights%2C+from+%E2%82%AC2%2C728+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
+[Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+The+Grand+Tour+of+Egypt&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22The+Grand+Tour+of+Egypt%22+journey+%2814+Days+%2F+13+Nights%2C+from+%E2%82%AC3%2C001+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 
 [Ask on WhatsApp](https://wa.me/201158367162?text=Hello%20Kemet%20%E2%80%94%20I%27m%20interested%20in%20the%20%22The%20Grand%20Tour%20of%20Egypt%22%20journey%20(14%20Days%20%2F%2013%20Nights).%20Could%20you%20share%20availability%3F)
 
@@ -218,7 +218,7 @@ Cairo · Giza · Alexandria · Aswan · Luxor
 
 Our signature journey: Cairo, Alexandria, a sleeper train south, and a three-night Nile cruise from Aswan to Luxor — every layer of Egypt in one arc.
 
-€1,915 / person from 6 travellers
+€2,107 / person from 6 travellers
 
 9 Days
 
@@ -228,7 +228,7 @@ Cairo · Giza · Aswan · Luxor
 
 Egypt as a honeymoon should be — private sunrise at the pyramids, a felucca at golden hour, three nights on the Nile and suites chosen for the view.
 
-€2,045 / person from 2 travellers
+€2,250 / person from 2 travellers
 
 7 Days
 
@@ -238,7 +238,7 @@ Cairo · Giza · Alexandria · Luxor
 
 The headline acts of Egypt in seven days — the Egyptian Museum, Alexandria, the temples and tombs of Luxor, and the Pyramids of Giza.
 
-€1,179 / person from 6 travellers
+€1,297 / person from 6 travellers
 
 ---
 

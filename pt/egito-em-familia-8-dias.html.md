@@ -11,11 +11,11 @@ Viagem em família
 
 Oito dias pensados para crianças curiosas e pais sem pressa — múmias, faluas, as cores das tumbas pintadas e tardes na piscina.
 
-a partir de € 1.524 / pessoa
+a partir de € 1.676 / pessoa
 
 a partir de 6 viajantes
 
-€ 1.676 por pessoa, para dois viajantes
+€ 1.844 por pessoa, para dois viajantes
 
 Por pessoa, em temporada normal. Acréscimos de feriados aparecem separados no orçamento.
 

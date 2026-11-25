@@ -41,7 +41,7 @@ Non è una scelta obbligata. A dicembre il Mar Rosso è caldo senza essere torri
 
 ## Quanto costa, e perché
 
-Il nostro viaggio di 10 giorni parte da 1.915 € a persona, per gruppi da 6 viaggiatori. Tra Natale e Capodanno si aggiungono i supplementi che alberghi e navi applicano a noi: li riportiamo a parte nel preventivo, senza nasconderli nel totale. Chi è flessibile trova i primi di dicembre e la seconda metà di gennaio sensibilmente più economici, con lo stesso clima.
+Il nostro viaggio di 10 giorni parte da 2.107 € a persona, per gruppi da 6 viaggiatori. Tra Natale e Capodanno si aggiungono i supplementi che alberghi e navi applicano a noi: li riportiamo a parte nel preventivo, senza nasconderli nel totale. Chi è flessibile trova i primi di dicembre e la seconda metà di gennaio sensibilmente più economici, con lo stesso clima.
 
 ## In breve
 

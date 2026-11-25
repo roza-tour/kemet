@@ -11,11 +11,11 @@ Mar Rojo
 
 Cinco días donde las montañas del Sinaí se encuentran con el agua más clara del hemisferio norte: arrecifes, veladas en el desierto y una ociosidad deliberada.
 
-desde 979 € / persona
+desde 1.077 € / persona
 
 desde 6 viajeros
 
-1.077 € por persona para dos viajeros
+1.185 € por persona para dos viajeros
 
 Por persona, en temporada normal. Los suplementos de fechas festivas se indican por separado en el presupuesto.
 
@@ -89,7 +89,7 @@ Sharm el-Sheikh ocupa el extremo de la península del Sinaí, donde las montaña
 - Visa de entrada a Egipto
 - Propinas
 - Gastos personales
-- Comidas
+- Comidas, salvo el almuerzo del día en barco
 - Extras opcionales que decida añadir — actividades, bebidas
 
 ## El ritmo

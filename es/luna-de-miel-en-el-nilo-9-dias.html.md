@@ -11,7 +11,7 @@ Luna de miel
 
 Nueve días pensados para dos: los iconos de El Cairo, tres noches de crucero, las islas de Asuán y largos atardeceres dorados sin ninguna prisa.
 
-desde 2.045 € / persona
+desde 2.250 € / persona
 
 desde 2 viajeros
 

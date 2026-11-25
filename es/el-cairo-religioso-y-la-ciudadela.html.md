@@ -11,11 +11,11 @@ Excursión de un día
 
 Las religiones de El Cairo en un día: iglesias coptas, una antigua sinagoga y la gran Ciudadela coronada por su mezquita.
 
-desde 80 € / persona
+desde 88 € / persona
 
 desde 6 viajeros · entradas no incluidas
 
-88 € por persona para dos viajeros
+97 € por persona para dos viajeros
 
 Por persona, en temporada normal. Los suplementos de fechas festivas se indican por separado en el presupuesto.
 

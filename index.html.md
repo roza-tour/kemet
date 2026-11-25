@@ -9,7 +9,7 @@ Luxury Travel · Egypt
 
 # Egypt, privately. *At your pace.*
 
-No coach, no fixed departures, no strangers on your itinerary. Private journeys through Egypt — the Pyramids, Luxor, a Nile cruise to Aswan — with your own licensed Egyptologist and driver, and days paced around the heat. Every price in writing before you pay.
+No coach, no fixed departures, no strangers in your vehicle or with your guide. Private journeys through Egypt — the Pyramids, Luxor, a Nile cruise to Aswan — with your own licensed Egyptologist and driver, and days paced around the heat. Every price in writing before you pay.
 
 01 · The Premise
 
@@ -51,7 +51,7 @@ Cairo · Giza · Alexandria · Aswan · Luxor
 
 Our signature journey: Cairo, Alexandria, a sleeper train south, and a three-night Nile cruise from Aswan to Luxor — every layer of Egypt in one arc.
 
-€1,915 / person from 6 travellers
+€2,107 / person from 6 travellers
 
 7 Days
 
@@ -61,7 +61,7 @@ Cairo · Giza · Alexandria · Luxor
 
 The headline acts of Egypt in seven days — the Egyptian Museum, Alexandria, the temples and tombs of Luxor, and the Pyramids of Giza.
 
-€1,179 / person from 6 travellers
+€1,297 / person from 6 travellers
 
 4 Days
 
@@ -71,7 +71,7 @@ Cairo · Giza · Alexandria
 
 A compact northern journey — the Egyptian Museum, Alexandria's Greco-Roman layers, the Pyramids of Giza and medieval Cairo.
 
-€618 / person from 6 travellers
+€680 / person from 6 travellers
 
 3 Days
 
@@ -81,7 +81,7 @@ Cairo · Luxor · Aswan
 
 A fast, flight-included loop through Luxor and Aswan — Karnak, the Valley of the Kings, Philae and the High Dam — out and back from Cairo.
 
-€527 / person from 6 travellers
+€580 / person from 6 travellers
 
 Full Day
 
@@ -91,7 +91,7 @@ Fayoum
 
 Lake Qarun, the waterfalls and dunes of Wadi El Rayan, the fossil whales of Wadi Al-Hitan and the potters of Tunis village — Egypt's wild, green other half.
 
-€139 / person from 6 travellers · tickets not included
+€153 / person from 6 travellers · tickets not included
 
 Full Day
 
@@ -101,7 +101,7 @@ Giza
 
 The Great Pyramid, the panorama of all three pyramids, the Valley Temple and Sphinx, then the vast new Grand Egyptian Museum beside them.
 
-€79 / person from 6 travellers · tickets not included
+€87 / person from 6 travellers · tickets not included
 
 25
 
@@ -131,7 +131,7 @@ Every journey is led by a guide licensed by the Egyptian Ministry of Tourism wit
 
 ### Your party only
 
-No shared coaches. No fixed departure dates. No strangers on your itinerary. If you are two people, the vehicle, the guide and the pace belong to two people.
+No shared coaches. No fixed departure dates. No strangers in your vehicle or with your guide. If you are two people, the vehicle, the guide and the pace belong to two people.
 
 ### Built around you, then written down
 

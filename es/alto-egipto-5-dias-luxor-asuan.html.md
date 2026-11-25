@@ -11,11 +11,11 @@ Viaje insignia
 
 Cinco días sin prisa por el Alto Egipto: las dos orillas de Luxor, la carretera hacia el sur por Edfu y Kom Ombo y las islas de Asuán.
 
-desde 1.018 € / persona
+desde 1.120 € / persona
 
 desde 6 viajeros
 
-1.120 € por persona para dos viajeros
+1.232 € por persona para dos viajeros
 
 Por persona, en temporada normal. Los suplementos de fechas festivas se indican por separado en el presupuesto.
 

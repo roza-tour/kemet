@@ -11,11 +11,11 @@ Laut Merah
 
 Empat hari yang disusun demi waktu di bawah air — dinding karang Ras Mohammed, terumbu berarus di Selat Tiran, dan perahu berkelompok kecil yang berangkat pagi.
 
-mulai €792 / orang
+mulai €871 / orang
 
 mulai 6 orang
 
-€871 per orang untuk dua wisatawan
+€958 per orang untuk dua wisatawan
 
 Per orang, musim normal. Biaya tambahan hari libur kami cantumkan terpisah dalam penawaran.
 
@@ -83,7 +83,7 @@ Laut Merah bagian utara adalah salah satu kawasan selam yang menjadi tolok ukur 
 - Visa masuk Mesir
 - Tip
 - Pengeluaran pribadi
-- Makanan
+- Makanan, kecuali makan siang di kapal pada hari-hari di kapal
 - Tambahan opsional yang Anda pilih — aktivitas, minuman
 
 ## Ritme perjalanan

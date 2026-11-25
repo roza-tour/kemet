@@ -23,7 +23,7 @@ Há lugares no Egito que podem ser fechados ao público e reservados para um ún
 
 ## A Grande Pirâmide, duas horas sem mais ninguém
 
-A pirâmide fecha ao público e reabre para um só grupo, com duas horas ininterruptas lá dentro. Vocês sobem a Grande Galeria sem fila atrás nem vozes à frente e podem ficar sentados em silêncio na Câmara do Rei — exatamente o que ninguém que visita de dia consegue fazer. Não se compra pela internet por preço nenhum.
+A pirâmide fecha ao público e reabre, por autorização, para um só grupo, com duas horas ininterruptas lá dentro. Vocês sobem a Grande Galeria sem fila atrás nem vozes à frente e podem ficar sentados em silêncio na Câmara do Rei — exatamente o que ninguém que visita de dia consegue fazer. Não se compra pela internet por preço nenhum.
 
 02
 
@@ -58,7 +58,7 @@ De uma celebração privada não publicamos, não nomeamos nem fotografamos nada
 
 ### É possível mesmo reservar a Grande Pirâmide só para nós?
 
-Sim, e é a reserva mais difícil do Egito. A pirâmide fecha ao público e reabre para um grupo, com duas horas ininterruptas lá dentro. Cuidamos de todo o processo em nome de vocês. Quem oferece isso como reserva imediata não está oferecendo a coisa de verdade.
+Sim, por autorização, e é a reserva mais difícil do Egito. A pirâmide fecha ao público e reabre para um grupo, com duas horas ininterruptas lá dentro. Cuidamos de todo o processo em nome de vocês. Quem oferece isso como reserva imediata não está oferecendo a coisa de verdade.
 
 ### Com quanta antecedência devo pedir?
 

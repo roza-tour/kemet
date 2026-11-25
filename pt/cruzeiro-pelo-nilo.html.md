@@ -23,7 +23,7 @@ Quase tudo o que vale uma parada entre Luxor e Assuã está a poucas centenas de
 
 Este é o cruzeiro como o realizamos: três noites no rio, de Assuã a Luxor, com todas as visitas em terra privativas e o seu próprio egiptólogo. O navio é compartilhado; o seu guia, o seu veículo e as suas visitas, não.
 
-a partir de € 820 / pessoa (a partir de 6 viajantes). € 902 por pessoa, para dois viajantes. Por pessoa, em temporada normal. Acréscimos de feriados aparecem separados no orçamento.
+a partir de € 902 / pessoa (a partir de 6 viajantes). € 992 por pessoa, para dois viajantes. Por pessoa, em temporada normal. Acréscimos de feriados aparecem separados no orçamento.
 
 01
 
@@ -120,7 +120,7 @@ Três a quatro meses para hotéis e barcos convencionais; seis meses se há uma 
 
 ### Avião ou trem noturno para Luxor e Assuã?
 
-Se o conforto vem antes do preço, é melhor voar: Cairo–Luxor é menos de uma hora de voo, e Cairo–Assuã cerca de uma hora e quinze. O trem leva umas dez horas até Luxor e treze até Assuã, por isso costuma ser feito à noite: cabine de duas camas com pia, jantar e café da manhã, mas banheiros compartilhados; no sentido sul, chega a Luxor por volta das cinco e meia da manhã. Nossas viagens com trem noturno também são oferecidas com voos internos e noites de hotel, por 130 € a mais por pessoa.
+Se o conforto vem antes do preço, é melhor voar: Cairo–Luxor é menos de uma hora de voo, e Cairo–Assuã cerca de uma hora e quinze. O trem leva umas dez horas até Luxor e treze até Assuã, por isso costuma ser feito à noite: cabine de duas camas com pia, jantar e café da manhã, mas banheiros compartilhados; no sentido sul, chega a Luxor por volta das cinco e meia da manhã. Nossas viagens com trem noturno também são oferecidas com voos internos e noites de hotel, por 143 € a mais por pessoa.
 
 ## Mais sobre o trecho do Nilo
 

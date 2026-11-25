@@ -19,7 +19,7 @@ Le Caire **partielle seulement, environ 95 %**
 
 Une éclipse totale, ce sont ces quelques minutes où la Lune couvre entièrement le Soleil: le ciel s'assombrit en plein jour, la température baisse, la couronne solaire apparaît en halo blanc et tout l'horizon s'embrase comme au coucher du soleil. La totalité dure d'ordinaire deux ou trois minutes. Le 2 août 2027, c'est au-dessus de la Haute-Égypte qu'elle dure le plus longtemps — au-dessus de l'ancienne Thèbes, de Karnak, du temple de Louxor et de la Vallée des Rois, dans une ville dont les bâtisseurs orientaient leurs temples sur le Soleil.
 
-Journée de l'éclipse à Louxor, 2 août 2027 — une excursion d'une journée en petit groupe.**149 €**par personne S'inscrire
+Journée de l'éclipse à Louxor, 2 août 2027 — une excursion d'une journée en petit groupe.**164 €**par personne S'inscrire
 
 01
 
@@ -70,7 +70,7 @@ Journée de l'éclipse · lundi 2 août 2027
 
 Une journée construite autour de six minutes: la Vallée des Rois à l'ouverture, un lieu d'observation ombragé sur la rive ouest pour la totalité, un déjeuner égyptien tardif et une felouque au coucher du soleil. De petits groupes de 12 personnes au plus, chacun avec son égyptologue et son véhicule — notre seul départ à date fixe, car la date, c'est le ciel qui la choisit.
 
-**149 €** par personne · Hôtel non compris · 48 places en quatre groupes de 12 personnes au plus
+**164 €** par personne · Hôtel non compris · 48 places en quatre groupes de 12 personnes au plus
 
 ### Le déroulé
 

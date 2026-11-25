@@ -11,11 +11,11 @@ Percutian singkat
 
 Tiga hari tanpa sebarang kerenah — ketibaan laluan pantas, piramid dan Grand Egyptian Museum, serta Kaherah zaman pertengahan selepas pelawat harian beredar.
 
-dari €600 / seorang
+dari €660 / seorang
 
 dari 6 orang
 
-€660 seorang bagi dua pengembara
+€726 seorang bagi dua pengembara
 
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 

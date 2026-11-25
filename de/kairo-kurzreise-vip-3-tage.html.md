@@ -11,11 +11,11 @@ Kurzreise
 
 Drei Tage, null Reibung — Fast-Track bei der Ankunft, die Pyramiden und das Grand Egyptian Museum, und das mittelalterliche Kairo, wenn die Tagesgäste weg sind.
 
-ab 600 € / Person
+ab 660 € / Person
 
 ab 6 Reisenden
 
-660 € pro Person bei zwei Reisenden
+726 € pro Person bei zwei Reisenden
 
 Pro Person, Normalsaison. Zuschläge für Feiertage weisen wir im Angebot getrennt aus.
 

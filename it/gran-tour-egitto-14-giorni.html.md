@@ -11,11 +11,11 @@ Gran tour
 
 Quattordici giorni, tutti i registri del paese — Il Cairo, Alessandria, il Nilo in crociera, Abu Simbel e il Mar Rosso per finire.
 
-da 2.728 € / persona
+da 3.001 € / persona
 
 da 6 viaggiatori
 
-3.001 € a persona per due viaggiatori
+3.301 € a persona per due viaggiatori
 
 A persona, in stagione normale. I supplementi delle festività sono indicati separatamente nel preventivo.
 
@@ -65,7 +65,7 @@ Il nostro viaggio più completo: Il Cairo e Alessandria, una crociera sul Nilo, 
 
 - Catacombe di Kom el-Shoqafa e colonna di Pompeo
 - Cittadella di Qaitbay sul sito del Faro
-- Pranzo di pesce sulla corniche; rientro al Cairo
+- Pranzo di pesce sulla corniche, da saldare in loco; rientro al Cairo
 
 05
 
@@ -157,7 +157,7 @@ Il nostro viaggio più completo: Il Cairo e Alessandria, una crociera sul Nilo, 
 - Il visto d'ingresso in Egitto
 - Le mance
 - Le spese personali
-- I pasti, tranne a bordo della crociera sul Nilo
+- I pasti, tranne a bordo della crociera sul Nilo e il pranzo nella giornata in barca
 - I supplementi facoltativi a scelta — attività, bevande
 
 ## Il ritmo

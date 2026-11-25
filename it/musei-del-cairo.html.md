@@ -11,11 +11,11 @@ Escursione in giornata
 
 Due grandi collezioni in una giornata — lo storico Museo Egizio e il Museo Nazionale della Civiltà Egizia, con le Mummie Reali.
 
-da 64 € / persona
+da 70 € / persona
 
 da 6 viaggiatori · biglietti non inclusi
 
-70 € a persona per due viaggiatori
+77 € a persona per due viaggiatori
 
 A persona, in stagione normale. I supplementi delle festività sono indicati separatamente nel preventivo.
 

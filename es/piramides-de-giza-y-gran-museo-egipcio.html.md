@@ -11,11 +11,11 @@ Excursión de un día
 
 Las pirámides y la Esfinge por la mañana, el Gran Museo Egipcio por la tarde: la antigua maravilla y la nueva, en un solo día.
 
-desde 79 € / persona
+desde 87 € / persona
 
 desde 6 viajeros · entradas no incluidas
 
-87 € por persona para dos viajeros
+96 € por persona para dos viajeros
 
 Por persona, en temporada normal. Los suplementos de fechas festivas se indican por separado en el presupuesto.
 

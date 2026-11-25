@@ -11,11 +11,11 @@ Laut Merah
 
 Lima hari di tempat gunung-ganang Sinai bertemu air paling jernih di hemisfera utara — terumbu karang, malam di gurun dan masa terluang yang sengaja dibiarkan.
 
-dari €979 / seorang
+dari €1,077 / seorang
 
 dari 6 orang
 
-€1,077 seorang bagi dua pengembara
+€1,185 seorang bagi dua pengembara
 
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 
@@ -89,7 +89,7 @@ Sharm El Sheikh terletak di hujung Semenanjung Sinai, tempat gunung-ganang gurun
 - Visa masuk Mesir
 - Tip
 - Perbelanjaan peribadi
-- Makanan
+- Makanan, kecuali makan tengah hari pada hari di bot
 - Tambahan pilihan yang anda pilih sendiri — aktiviti, minuman
 
 ## Rentak perjalanan

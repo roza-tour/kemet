@@ -78,7 +78,7 @@ Cairo · Giza · Saqqara · Memphis
 
 A deep, slow reading of the world's greatest layered city — its two museums, three faiths, medieval streets and the necropolis where the pyramid was invented.
 
-€875 / person from 6 travellers
+€963 / person from 6 travellers
 
 Full Day
 
@@ -88,7 +88,7 @@ Giza
 
 The Great Pyramid, the panorama of all three pyramids, the Valley Temple and Sphinx, then the vast new Grand Egyptian Museum beside them.
 
-€79 / person from 6 travellers · tickets not included
+€87 / person from 6 travellers · tickets not included
 
 3 Days
 
@@ -98,7 +98,7 @@ Luxor
 
 Luxor without the sprint: Karnak at opening, the Valley of the Kings before the heat, Hatshepsut's terraces and the Avenue of Sphinxes after dark.
 
-€544 / person from 6 travellers
+€598 / person from 6 travellers
 
 5 Days
 
@@ -108,7 +108,7 @@ Luxor · Edfu · Kom Ombo · Aswan
 
 The deep-history heart of Egypt by private road journey — Karnak, the Valley of the Kings, Edfu, Kom Ombo and Philae, with time to actually absorb them.
 
-€1,018 / person from 6 travellers
+€1,120 / person from 6 travellers
 
 Evening
 
@@ -118,7 +118,7 @@ Cairo
 
 A guided evening tasting of Cairo's best-loved dishes — koshari, ful and ta'meya, hawawshi and grilled pigeon, kunafa and basbousa, finished at a traditional ahwa.
 
-€59 / person from 6 travellers · food not included
+€65 / person from 6 travellers · food not included
 
 Destinations
 

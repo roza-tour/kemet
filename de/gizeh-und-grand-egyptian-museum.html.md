@@ -11,11 +11,11 @@ Tagesausflug
 
 Die Pyramiden und die Sphinx am Vormittag, das Grand Egyptian Museum am Nachmittag — das alte Wunder und das neue, an einem Tag.
 
-ab 79 € / Person
+ab 87 € / Person
 
 ab 6 Reisenden · Eintritte nicht enthalten
 
-87 € pro Person bei zwei Reisenden
+96 € pro Person bei zwei Reisenden
 
 Pro Person, Normalsaison. Zuschläge für Feiertage weisen wir im Angebot getrennt aus.
 

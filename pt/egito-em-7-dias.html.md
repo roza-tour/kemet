@@ -11,13 +11,13 @@ Viagem assinatura
 
 Uma semana que reúne o essencial — Cairo, Alexandria e Luxor — com noites de trem-leito entre eles.
 
-a partir de € 1.179 / pessoa
+a partir de € 1.297 / pessoa
 
 a partir de 6 viajantes
 
-€ 1.297 por pessoa, para dois viajantes
+€ 1.427 por pessoa, para dois viajantes
 
-Com voos domésticos em vez das duas noites no comboio-cama, e essas noites em hotel: € 1.309 por pessoa
+Com voos domésticos em vez das duas noites no comboio-cama, e essas noites em hotel: € 1.440 por pessoa
 
 Por pessoa, em temporada normal. Acréscimos de feriados aparecem separados no orçamento.
 
@@ -53,7 +53,7 @@ Para quem tem uma semana para dar ao Egito, esta viagem destila o país nos seus
 
 - De carro até a costa do Mediterrâneo
 - Catacumbas de Kom el-Shoqafa, Coluna de Pompeu e Cidadela de Qaitbay
-- Bibliotheca Alexandrina e almoço de frutos do mar à beira-mar
+- Bibliotheca Alexandrina e almoço de frutos do mar à beira-mar, pago no local
 
 03
 
@@ -98,8 +98,8 @@ Para quem tem uma semana para dar ao Egito, esta viagem destila o país nos seus
 ## Incluído
 
 - Guia egiptólogo privativo durante toda a viagem
-- 6 noites de hotel
-- Cabines no trem-leito Cairo–Luxor (ida e volta)
+- 4 noites de hotel; as outras duas noites são no trem-leito
+- Cabines no trem-leito Cairo–Luxor (ida e volta), com jantar e café da manhã a bordo
 - Todas as entradas dos sítios e monumentos
 - Traslados privativos com ar-condicionado
 - Busca e retorno no hotel
@@ -111,7 +111,7 @@ Para quem tem uma semana para dar ao Egito, esta viagem destila o país nos seus
 - Visto de entrada no Egito
 - Gorjetas
 - Despesas pessoais
-- Refeições
+- Refeições, exceto o jantar e o café da manhã no trem-leito
 - Extras opcionais que vocês escolherem acrescentar — atividades, bebidas
 
 ## O ritmo

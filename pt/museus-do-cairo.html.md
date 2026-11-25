@@ -11,11 +11,11 @@ Passeio de um dia
 
 Duas grandes coleções em um dia — o histórico Museu Egípcio e o Museu Nacional da Civilização Egípcia, com as Múmias Reais.
 
-a partir de € 64 / pessoa
+a partir de € 70 / pessoa
 
 a partir de 6 viajantes · ingressos não incluídos
 
-€ 70 por pessoa, para dois viajantes
+€ 77 por pessoa, para dois viajantes
 
 Por pessoa, em temporada normal. Acréscimos de feriados aparecem separados no orçamento.
 

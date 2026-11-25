@@ -11,11 +11,11 @@ Kulturreise
 
 Fünf Tage in den Schichten einer einzigen Stadt — das pharaonische, koptische, islamische und moderne Kairo, Straße für Straße mit einem Historiker gelesen.
 
-ab 875 € / Person
+ab 963 € / Person
 
 ab 6 Reisenden
 
-963 € pro Person bei zwei Reisenden
+1.059 € pro Person bei zwei Reisenden
 
 Pro Person, Normalsaison. Zuschläge für Feiertage weisen wir im Angebot getrennt aus.
 
@@ -74,7 +74,7 @@ Die meisten Besucher geben Kairo zwei Nächte und eine Liste. Diese Reise gibt i
 ### Tag 5 — Der Basar & Abreise
 
 - Khan el-Khalili mit Einordnung — Werkstätten, nicht nur Stände
-- Letztes Mittagessen in einem restaurierten osmanischen Haus
+- Letztes Mittagessen in einem restaurierten osmanischen Haus, vor Ort bezahlt
 - Privater Transfer zum Flughafen
 
 ## Inbegriffen

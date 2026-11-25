@@ -11,11 +11,11 @@ Escursione in giornata
 
 Una giornata intera nell'oasi verde a sud-ovest del Cairo — laghi, cascate nel deserto, balene fossili e un villaggio di ceramisti.
 
-da 139 € / persona
+da 153 € / persona
 
 da 6 viaggiatori · biglietti non inclusi
 
-153 € a persona per due viaggiatori
+168 € a persona per due viaggiatori
 
 A persona, in stagione normale. I supplementi delle festività sono indicati separatamente nel preventivo.
 
@@ -33,7 +33,7 @@ Il lago Qarun, le cascate e le dune di Wadi el-Rayan, le balene fossili di Wadi 
 
 ## Il viaggio
 
-A un'ora e mezza a sud-ovest del Cairo, la depressione del Fayyum scambia i monumenti con il paesaggio: un grande lago salato, cascate d'acqua dolce in mezzo al deserto, una valle patrimonio UNESCO piena di balene fossilizzate e un villaggio di ceramisti su una collina. Questa giornata intera cambia completamente registro rispetto ai templi — orizzonti larghi, uccelli, dune e un pranzo di pesce in riva al lago. Il viaggio è privato, con la vostra guida e il vostro autista per tutta la giornata.
+A un'ora e mezza a sud-ovest del Cairo, la depressione del Fayyum scambia i monumenti con il paesaggio: un grande lago salato, cascate d'acqua dolce in mezzo al deserto, una valle patrimonio UNESCO piena di balene fossilizzate e un villaggio di ceramisti su una collina. Questa giornata intera cambia completamente registro rispetto ai templi — orizzonti larghi, uccelli, dune e un pranzo di pesce in riva al lago, da saldare in loco. Il viaggio è privato, con la vostra guida e il vostro autista per tutta la giornata.
 
 ## Giorno per giorno
 
@@ -65,7 +65,7 @@ Il cosiddetto lago magico, alimentato da sorgenti minerali e capace di cambiare 
 
 ### Tappa 5 — Il villaggio di Tunis & pranzo sul lago
 
-Si chiude a Tunis, il villaggio collinare famoso per i suoi ceramisti e i loro laboratori, poi un pranzo di pesce senza fretta in riva al lago prima del rientro al Cairo.
+Si chiude a Tunis, il villaggio collinare famoso per i suoi ceramisti e i loro laboratori, poi un pranzo di pesce senza fretta in riva al lago, da saldare in loco, prima del rientro al Cairo.
 
 ## Incluso
 

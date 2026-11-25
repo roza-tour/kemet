@@ -15,7 +15,7 @@ Duración ideal **9 a 12 noches**
 
 Amanecer **sobre las nueve pirámides**
 
-Viaje de 9 días desde **2.045 € por persona**
+Viaje de 9 días desde **2.250 € por persona**
 
 Aquí una luna de miel no es un hotel de playa con un templo de excursión. Es una dahabiya a vela, el amanecer en las pirámides antes de que abran, y el mar Rojo para terminar, organizado para que nunca sean dos personas dentro de un grupo. El loto, entrelazado por parejas, era en el antiguo Egipto el símbolo de la unión. Viene al caso.
 

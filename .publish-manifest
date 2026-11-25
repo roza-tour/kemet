@@ -12,9 +12,9 @@ _astro/about.rWJrEa1c.css
 _astro/al-wijhat-fi-masr.D_fGpx9a.css
 _astro/cuisine.EYXUyvBE.css
 _astro/egyptian-incense-stones-cotton.CyXhzFvt.css
-_astro/hoisted.ByxretG2.js
-_astro/hoisted.CIRuvahO.js
-_astro/hoisted.Ckyw_tIP.js
+_astro/hoisted.BkiZ-j52.js
+_astro/hoisted.CEcc3ly1.js
+_astro/hoisted.DMt5jbBj.js
 _astro/index.is2Hpzi7.css
 _astro/oberoi-zahra-nile-cruise.0ngJ58d0.css
 _astro/page.DCTgdEH6.js
@@ -112,6 +112,8 @@ ar/al-wahat-al-bahariya-wa-al-sahra-al-bayda.html
 ar/al-wahat-al-bahariya-wa-al-sahra-al-bayda.html.md
 ar/al-wijhat-fi-masr.html
 ar/al-wijhat-fi-masr.html.md
+ar/an-kemet.html
+ar/an-kemet.html.md
 ar/ard-al-sawt-wa-al-daw-ind-al-ahramat.html
 ar/ard-al-sawt-wa-al-daw-ind-al-ahramat.html.md
 ar/ard-al-tanoura-al-sufi-fi-al-qahira.html
@@ -277,6 +279,8 @@ ar/talab-al-zawaj-fi-misr.html
 ar/talab-al-zawaj-fi-misr.html.md
 ar/tariq-al-iskandar-siwa.html
 ar/tariq-al-iskandar-siwa.html.md
+ar/tawasal-ma-kemet.html
+ar/tawasal-ma-kemet.html.md
 ar/tayara-am-qitar-al-nawm-al-uqsur-aswan.html
 ar/tayara-am-qitar-al-nawm-al-uqsur-aswan.html.md
 ar/wahat-al-fayoum.html
@@ -336,6 +340,7 @@ compare/nile-cruise-vs-land-tour.html
 compare/nile-cruise-vs-land-tour.html.md
 compare/sharm-el-sheikh-vs-hurghada.html
 compare/sharm-el-sheikh-vs-hurghada.html.md
+confirm.php
 contact-handler.php
 contact.html
 contact.html.md
@@ -483,6 +488,8 @@ de/kamelritt-pyramiden-gizeh.html
 de/kamelritt-pyramiden-gizeh.html.md
 de/katharinenkloster-berg-sinai.html
 de/katharinenkloster-berg-sinai.html.md
+de/kontakt.html
+de/kontakt.html.md
 de/llms.txt
 de/luxor-3-tage.html
 de/luxor-3-tage.html.md
@@ -580,6 +587,8 @@ de/tauchen-rotes-meer-scharm-el-scheich.html
 de/tauchen-rotes-meer-scharm-el-scheich.html.md
 de/ton-und-licht-show-pyramiden-privat.html
 de/ton-und-licht-show-pyramiden-privat.html.md
+de/ueber-kemet.html
+de/ueber-kemet.html.md
 de/ultra-luxusreisen-aegypten.html
 de/ultra-luxusreisen-aegypten.html.md
 de/vip-flughafen-service-kairo.html
@@ -674,6 +683,8 @@ es/como-moverse-por-egipto-transporte.html
 es/como-moverse-por-egipto-transporte.html.md
 es/condiciones-de-uso.html
 es/condiciones-de-uso.html.md
+es/contacto.html
+es/contacto.html.md
 es/crucero-por-el-nilo-o-viaje-por-tierra.html
 es/crucero-por-el-nilo-o-viaje-por-tierra.html.md
 es/crucero-por-el-nilo.html
@@ -867,6 +878,8 @@ es/sinai-arrecife-monte-sinai-monasterio.html
 es/sinai-arrecife-monte-sinai-monasterio.html.md
 es/siwa-cosecha-de-datiles-viaje-privado.html
 es/siwa-cosecha-de-datiles-viaje-privado.html.md
+es/sobre-kemet.html
+es/sobre-kemet.html.md
 es/templo-de-luxor-de-noche-avenida-de-las-esfinges.html
 es/templo-de-luxor-de-noche-avenida-de-las-esfinges.html.md
 es/templos-de-abu-simbel.html
@@ -950,6 +963,8 @@ fonts/spectral-cyrillic-300-italic.woff2
 fonts/spectral-cyrillic-300.woff2
 fonts/spectral-cyrillic-400.woff2
 fonts/spectral-cyrillic-500.woff2
+fr/a-propos-de-kemet.html
+fr/a-propos-de-kemet.html.md
 fr/abou-simbel-depuis-assouan.html
 fr/abou-simbel-depuis-assouan.html.md
 fr/accueil-vip-aeroport-du-caire.html
@@ -976,6 +991,8 @@ fr/charm-el-cheikh-ou-hurghada-que-choisir.html
 fr/charm-el-cheikh-ou-hurghada-que-choisir.html.md
 fr/conditions-d-utilisation.html
 fr/conditions-d-utilisation.html.md
+fr/contacter-kemet.html
+fr/contacter-kemet.html.md
 fr/cours-de-cuisine-egyptienne-le-caire.html
 fr/cours-de-cuisine-egyptienne-le-caire.html.md
 fr/croisiere-sur-le-nil-ou-circuit-terrestre.html
@@ -1282,6 +1299,8 @@ id/gunung-sinai.html
 id/gunung-sinai.html.md
 id/halal-dan-waktu-salat.html
 id/halal-dan-waktu-salat.html.md
+id/hubungi-kemet.html
+id/hubungi-kemet.html.md
 id/index.html
 id/index.html.md
 id/itinerary-mesir-10-hari.html
@@ -1455,6 +1474,8 @@ id/siwa-musim-panen-kurma.html
 id/siwa-musim-panen-kurma.html.md
 id/tempat-menginap-terbaik-di-mesir.html
 id/tempat-menginap-terbaik-di-mesir.html.md
+id/tentang-kemet.html
+id/tentang-kemet.html.md
 id/tour-fotografi-mesir-7-hari.html
 id/tour-fotografi-mesir-7-hari.html.md
 id/tour-kairo-alexandria-4-hari.html
@@ -2445,8 +2466,12 @@ it/cairo-religioso-e-cittadella.html
 it/cairo-religioso-e-cittadella.html.md
 it/cena-privata-sul-nilo-cairo.html
 it/cena-privata-sul-nilo-cairo.html.md
+it/chi-siamo-kemet.html
+it/chi-siamo-kemet.html.md
 it/condizioni-di-utilizzo.html
 it/condizioni-di-utilizzo.html.md
+it/contatti-kemet.html
+it/contatti-kemet.html.md
 it/corso-di-cucina-egiziana-cairo.html
 it/corso-di-cucina-egiziana-cairo.html.md
 it/cosa-mettere-in-valigia-per-l-egitto.html
@@ -2710,6 +2735,8 @@ ms/gunung-sinai-matahari-terbenam-bermalam.html
 ms/gunung-sinai-matahari-terbenam-bermalam.html.md
 ms/halal-dan-waktu-solat.html
 ms/halal-dan-waktu-solat.html.md
+ms/hubungi-kami.html
+ms/hubungi-kami.html.md
 ms/index.html
 ms/index.html.md
 ms/jadual-perjalanan-mesir-10-hari.html
@@ -2917,6 +2944,8 @@ ms/tempat-menarik-di-sharm-el-sheikh.html
 ms/tempat-menarik-di-sharm-el-sheikh.html.md
 ms/tempat-penginapan-terbaik-di-mesir.html
 ms/tempat-penginapan-terbaik-di-mesir.html.md
+ms/tentang-kemet.html
+ms/tentang-kemet.html.md
 ms/terbang-atau-kereta-api-tidur-ke-luxor-aswan.html
 ms/terbang-atau-kereta-api-tidur-ke-luxor-aswan.html.md
 ms/terma-penggunaan.html
@@ -3108,6 +3137,8 @@ pt/comida-egipcia-o-que-comer-no-egito.html
 pt/comida-egipcia-o-que-comer-no-egito.html.md
 pt/como-se-locomover-no-egito.html
 pt/como-se-locomover-no-egito.html.md
+pt/contato.html
+pt/contato.html.md
 pt/cruzeiro-no-nilo-ou-roteiro-por-terra.html
 pt/cruzeiro-no-nilo-ou-roteiro-por-terra.html.md
 pt/cruzeiro-pelo-nilo.html
@@ -3301,6 +3332,8 @@ pt/sinai-recife-montanha-mosteiro.html
 pt/sinai-recife-montanha-mosteiro.html.md
 pt/siwa-na-colheita-das-tamaras.html
 pt/siwa-na-colheita-das-tamaras.html.md
+pt/sobre-a-kemet.html
+pt/sobre-a-kemet.html.md
 pt/templo-de-luxor-a-noite-avenida-das-esfinges.html
 pt/templo-de-luxor-a-noite-avenida-das-esfinges.html.md
 pt/templos-de-abu-simbel.html
@@ -3454,6 +3487,8 @@ ru/katanie-na-banane-sharm-el-shejh.html
 ru/katanie-na-banane-sharm-el-shejh.html.md
 ru/kogda-luchshe-ehat-v-egipet.html
 ru/kogda-luchshe-ehat-v-egipet.html.md
+ru/kontakty.html
+ru/kontakty.html.md
 ru/kruiz-po-nilu-ili-nazemnyy-tur.html
 ru/kruiz-po-nilu-ili-nazemnyy-tur.html.md
 ru/kruiz-po-nilu.html
@@ -3497,6 +3532,8 @@ ru/novyy-god-v-egipte.html
 ru/novyy-god-v-egipte.html.md
 ru/nubijskaya-derevnya-asuan-chastnyj-vizit.html
 ru/nubijskaya-derevnya-asuan-chastnyj-vizit.html.md
+ru/o-kemet.html
+ru/o-kemet.html.md
 ru/oazis-bahariya-i-belaya-pustynya.html
 ru/oazis-bahariya-i-belaya-pustynya.html.md
 ru/oazis-fayyum-ekskursiya.html

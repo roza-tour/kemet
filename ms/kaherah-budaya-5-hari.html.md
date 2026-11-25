@@ -11,11 +11,11 @@ Perjalanan budaya
 
 Lima hari di dalam lapisan-lapisan sebuah kota — Kaherah firaun, Koptik, Islam dan moden, dibaca jalan demi jalan bersama seorang sejarawan.
 
-dari €875 / seorang
+dari €963 / seorang
 
 dari 6 orang
 
-€963 seorang bagi dua pengembara
+€1,059 seorang bagi dua pengembara
 
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 
@@ -74,7 +74,7 @@ Kebanyakan pelawat memberi Kaherah dua malam dan satu senarai semak. Perjalanan 
 ### Hari 5 — Pasar & berlepas
 
 - Khan el-Khalili berserta konteksnya — bengkel, bukan sekadar gerai
-- Makan tengah hari terakhir di sebuah rumah zaman Uthmaniyah yang dipulihkan
+- Makan tengah hari terakhir di sebuah rumah zaman Uthmaniyah yang dipulihkan, dibayar di tempat
 - Pemindahan peribadi ke lapangan terbang
 
 ## Termasuk

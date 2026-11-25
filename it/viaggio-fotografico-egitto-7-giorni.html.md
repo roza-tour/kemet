@@ -11,11 +11,11 @@ Viaggio fotografico
 
 Sette giorni organizzati sulla luce, non sugli orari di apertura — piane all'alba, templi nell'ora blu e il Nilo nell'ora d'oro.
 
-da 1.419 € / persona
+da 1.561 € / persona
 
 da 6 viaggiatori
 
-1.561 € a persona per due viaggiatori
+1.717 € a persona per due viaggiatori
 
 A persona, in stagione normale. I supplementi delle festività sono indicati separatamente nel preventivo.
 

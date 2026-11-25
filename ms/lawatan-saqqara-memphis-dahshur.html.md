@@ -11,11 +11,11 @@ Lawatan sehari
 
 Tempat lahirnya piramid — dari piramid bertingkat pertama Djoser hingga makam geometri yang agung di Dahshur.
 
-dari €68 / seorang
+dari €75 / seorang
 
 dari 6 orang · tiket masuk tidak termasuk
 
-€75 seorang bagi dua pengembara
+€83 seorang bagi dua pengembara
 
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 

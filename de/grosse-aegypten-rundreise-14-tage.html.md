@@ -11,11 +11,11 @@ Große Rundreise
 
 Vierzehn Tage, jede Tonlage des Landes — Kairo, Alexandria, der Nil per Schiff, Abu Simbel und zum Schluss das Rote Meer.
 
-ab 2.728 € / Person
+ab 3.001 € / Person
 
 ab 6 Reisenden
 
-3.001 € pro Person bei zwei Reisenden
+3.301 € pro Person bei zwei Reisenden
 
 Pro Person, Normalsaison. Zuschläge für Feiertage weisen wir im Angebot getrennt aus.
 
@@ -65,7 +65,7 @@ Das ist die Reise für alle, die einmal kommen und es ganz sehen wollen. Die ers
 
 - Katakomben von Kom esch-Schukafa und die Pompeiussäule
 - Zitadelle von Qaitbay auf dem Platz des Pharos
-- Fischessen an der Corniche; zurück nach Kairo
+- Fischessen an der Corniche, vor Ort bezahlt; zurück nach Kairo
 
 05
 
@@ -157,7 +157,7 @@ Das ist die Reise für alle, die einmal kommen und es ganz sehen wollen. Die ers
 - Einreisevisum für Ägypten
 - Trinkgelder
 - Persönliche Ausgaben
-- Mahlzeiten, außer an Bord der Nilkreuzfahrt
+- Mahlzeiten, außer an Bord der Nilkreuzfahrt und dem Mittagessen am Bootstag
 - Optionale Zusatzleistungen nach Wahl — Aktivitäten, Getränke
 
 ## Wie anstrengend ist das

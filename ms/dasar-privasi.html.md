@@ -29,7 +29,7 @@ Apabila anda menghantar mesej kepada kami melalui borang hubungan, kami mengumpu
 
 Seperti hampir semua laman web, pelayan kami turut merekodkan maklumat teknikal standard (seperti alamat IP, jenis pelayar dan halaman yang diminta) dalam lognya. Kami tidak menggunakan maklumat ini untuk mengenal pasti anda secara peribadi.
 
-Jika anda menyertai senarai kami — daripada jemputan di laman ini atau daripada perancang perjalanan — kami menyimpan alamat e-mel anda, nama anda jika anda memberikannya, halaman dan bahasa yang anda gunakan semasa mendaftar, serta rekod persetujuan anda: bila anda memberikannya, perkataan yang anda setujui dan alamat IP asalnya. Anda boleh keluar daripada senarai pada bila-bila masa melalui pautan berhenti melanggan dalam e-mel kami, atau dengan menulis kepada kami.
+Jika anda menyertai senarai kami — daripada jemputan di laman ini atau daripada perancang perjalanan — kami mula-mula menghantar e-mel meminta anda mengesahkan, dan tiada apa-apa lagi dihantar sehingga anda berbuat demikian. Kami menyimpan alamat e-mel anda, nama anda jika anda memberikannya, halaman dan bahasa yang anda gunakan semasa mendaftar, serta rekod persetujuan anda: bila anda memberikannya dan bila anda mengesahkannya, perkataan yang anda setujui dan alamat IP asal setiap satunya. Anda boleh keluar daripada senarai pada bila-bila masa melalui pautan berhenti melanggan dalam e-mel kami, atau dengan menulis kepada kami.
 
 Kami tidak mengendalikan akaun pengguna dan tidak menerima pembayaran di laman web ini, jadi kami tidak pernah mengumpul kata laluan atau butiran kad di sini.
 
@@ -39,7 +39,9 @@ Kami tidak mengendalikan akaun pengguna dan tidak menerima pembayaran di laman w
 
 Kami menggunakan butiran daripada pertanyaan anda semata-mata untuk membalas kepada anda, memahami apa yang anda cari dan — jika anda meneruskan — mereka bentuk serta mengatur perjalanan anda. Kami boleh menghubungi anda melalui e-mel, telefon atau WhatsApp menggunakan butiran yang anda berikan.
 
-Asas undang-undang kami ialah persetujuan anda dan langkah-langkah yang perlu untuk mengikat dan melaksanakan pengaturan perjalanan atas permintaan anda. Kami tidak menggunakan maklumat anda untuk pengiklanan atau pembuatan keputusan secara automatik.
+Jika anda tidak terus melancong bersama kami, kami mungkin menulis kepada anda sekali lagi tentang perjalanan yang anda tanyakan: paling banyak tiga kali dalam tahun selepas pertanyaan anda. Beritahu kami pada bila-bila masa dan kami tidak akan menulis lagi.
+
+Asas undang-undang kami ialah persetujuan anda, langkah-langkah yang perlu untuk mengikat dan melaksanakan pengaturan perjalanan atas permintaan anda, dan, bagi mesej susulan itu, kepentingan sah kami untuk menjawab soalan yang anda bawa kepada kami. Kami tidak berkongsi maklumat anda dengan pengiklan dan kami tidak menggunakannya untuk pembuatan keputusan secara automatik.
 
 04
 
@@ -67,7 +69,9 @@ Laman web dan e-mel kami dihoskan oleh penyedia pengehosan kami, yang memproses 
 
 ## Berapa lama kami menyimpannya
 
-Kami menyimpan surat-menyurat pertanyaan hanya selama yang diperlukan untuk membantu anda dan untuk menyimpan rekod apa-apa perjalanan yang kami atur, selepas itu ia dipadam. Jika tempahan dibuat, sesetengah rekod mungkin disimpan lebih lama bagi memenuhi obligasi perakaunan atau undang-undang.
+Kami menyimpan sesuatu pertanyaan selama tiga tahun dari hari ia dihantar, kemudian memadamkannya. Jika tempahan dibuat, sesetengah rekod mungkin disimpan lebih lama bagi memenuhi obligasi perakaunan atau undang-undang.
+
+Jika anda menyertai senarai kami, kami menyimpan butiran anda sehingga anda keluar daripadanya. Pendaftaran yang tidak pernah disahkan daripada e-mel yang kami hantar dipadam selepas 30 hari. Jika anda keluar daripada senarai, kami menyimpan catatan alamat anda dan tarikh anda keluar, supaya anda tidak ditambah semula secara tersilap.
 
 Anda boleh meminta kami memadam maklumat anda pada bila-bila masa (lihat “Hak anda”).
 

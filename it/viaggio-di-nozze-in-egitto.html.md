@@ -15,7 +15,7 @@ Durata ideale **9–12 notti**
 
 L'alba **sulle nove piramidi**
 
-Viaggio di 9 giorni da **2.045 € a persona**
+Viaggio di 9 giorni da **2.250 € a persona**
 
 Qui un viaggio di nozze non è un resort con un tempio aggiunto. È una dahabiya a vela, l'alba sulle piramidi prima dell'apertura e il Mar Rosso per finire, organizzato perché non siate mai due persone dentro un gruppo. Il loto, intrecciato a coppie, era nell'antico Egitto il simbolo dell'unione. Calza a pennello.
 

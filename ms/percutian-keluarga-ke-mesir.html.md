@@ -15,7 +15,7 @@ Umur ideal **dari sekitar 7 tahun**
 
 Untuk ibu bapa **pengasuh atas permintaan**
 
-Lawatan keluarga 8 hari dari **€1,524 seorang, dari 6 orang**
+Lawatan keluarga 8 hari dari **€1,676 seorang, dari 6 orang**
 
 Mesir ialah salah satu tempat yang jarang ada, di mana kanak-kanak dan ibu bapa kagum pada perkara yang sama. Piramid Agung betul-betul sebesar yang dibayangkan kanak-kanak; mumia betul-betul semisteri itu; unta betul-betul selucu itu. Makanan halal dan waktu solat diambil kira setiap hari perjalanan.
 

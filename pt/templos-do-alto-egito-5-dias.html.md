@@ -11,11 +11,11 @@ Viagem assinatura
 
 Cinco dias sem pressa pelo Alto Egito — as duas margens de Luxor, a estrada para o sul passando por Edfu e Kom Ombo, e as ilhas de Assuã.
 
-a partir de € 1.018 / pessoa
+a partir de € 1.120 / pessoa
 
 a partir de 6 viajantes
 
-€ 1.120 por pessoa, para dois viajantes
+€ 1.232 por pessoa, para dois viajantes
 
 Por pessoa, em temporada normal. Acréscimos de feriados aparecem separados no orçamento.
 

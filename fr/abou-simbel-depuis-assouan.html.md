@@ -11,11 +11,11 @@ Excursion à la journée
 
 Les temples de montagne de Ramsès II au-dessus du lac Nasser — une route du désert à l'aube, deux sanctuaires taillés dans le roc, et retour à Assouan pour le déjeuner.
 
-à partir de 160 € / personne
+à partir de 176 € / personne
 
 à partir de 6 voyageurs · billets non inclus
 
-176 € par personne pour deux voyageurs
+194 € par personne pour deux voyageurs
 
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
 

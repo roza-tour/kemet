@@ -11,11 +11,11 @@ Escapada
 
 Tres días en el mayor museo al aire libre del mundo: las dos orillas vistas como merecen, con el templo iluminado de noche como eje.
 
-desde 544 € / persona
+desde 598 € / persona
 
 desde 6 viajeros
 
-598 € por persona para dos viajeros
+658 € por persona para dos viajeros
 
 Por persona, en temporada normal. Los suplementos de fechas festivas se indican por separado en el presupuesto.
 

@@ -11,13 +11,13 @@ Viagem assinatura
 
 Dez dias sem pressa, das Pirâmides de Gizé aos templos do Alto Egito, costurados por um cruzeiro de três noites pelo Nilo.
 
-a partir de € 1.915 / pessoa
+a partir de € 2.107 / pessoa
 
 a partir de 6 viajantes
 
-€ 2.107 por pessoa, para dois viajantes
+€ 2.318 por pessoa, para dois viajantes
 
-Com voos domésticos em vez das duas noites no comboio-cama, e essas noites em hotel: € 2.045 por pessoa
+Com voos domésticos em vez das duas noites no comboio-cama, e essas noites em hotel: € 2.250 por pessoa
 
 Por pessoa, em temporada normal. Acréscimos de feriados aparecem separados no orçamento.
 
@@ -54,7 +54,7 @@ Este é o Egito por inteiro, num ritmo feito para ser vivido, e não riscado de 
 - De carro até Alexandria pela estrada do deserto
 - Catacumbas de Kom el-Shoqafa e Coluna de Pompeu
 - Cidadela de Qaitbay, no local do antigo Farol, e a moderna Bibliotheca Alexandrina
-- Almoço de frutos do mar à beira-mar antes da volta ao Cairo
+- Almoço de frutos do mar à beira-mar, pago no local, antes da volta ao Cairo
 
 03
 
@@ -123,9 +123,9 @@ Este é o Egito por inteiro, num ritmo feito para ser vivido, e não riscado de 
 ## Incluído
 
 - Guia egiptólogo privativo durante toda a viagem
-- 9 noites de hospedagem — hotéis e um cruzeiro pelo Nilo
+- 7 noites de hospedagem — hotéis e um cruzeiro pelo Nilo; as outras duas noites são no trem-leito
 - Cruzeiro de 3 noites pelo Nilo com pensão completa, de Assuã a Luxor
-- Cabines no trem-leito Cairo–Alto Egito (ida e volta)
+- Cabines no trem-leito Cairo–Alto Egito (ida e volta), com jantar e café da manhã a bordo
 - Todas as entradas dos sítios e monumentos
 - Traslados privativos com ar-condicionado
 - Busca e retorno no hotel
@@ -137,7 +137,7 @@ Este é o Egito por inteiro, num ritmo feito para ser vivido, e não riscado de 
 - Visto de entrada no Egito
 - Gorjetas
 - Despesas pessoais
-- Refeições, exceto a bordo do cruzeiro pelo Nilo
+- Refeições, exceto a bordo do cruzeiro pelo Nilo e no trem-leito
 - Extras opcionais que vocês escolherem acrescentar — atividades, bebidas
 
 ## O ritmo

@@ -19,7 +19,7 @@ Il Cairo **solo parziale, circa 95%**
 
 Un'eclissi totale sono quei pochi minuti in cui la Luna copre completamente il Sole: il cielo si oscura in pieno giorno, la temperatura scende, la corona solare appare come un alone bianco e tutto l'orizzonte si accende come al tramonto. Di solito la totalità dura due o tre minuti. Il 2 agosto 2027 dura più a lungo proprio sopra l'Alto Egitto, e accade sopra l'antica Tebe — Karnak, il tempio di Luxor, la Valle dei Re — in una città i cui costruttori orientavano i templi sul Sole.
 
-Giornata dell'eclissi a Luxor, 2 agosto 2027 — escursione di un giorno in piccolo gruppo.**149 €**a persona Iscrivetevi
+Giornata dell'eclissi a Luxor, 2 agosto 2027 — escursione di un giorno in piccolo gruppo.**164 €**a persona Iscrivetevi
 
 01
 
@@ -70,7 +70,7 @@ Giornata dell'eclissi · lunedì 2 agosto 2027
 
 Una giornata costruita intorno a sei minuti: la Valle dei Re all'apertura, un punto di osservazione all'ombra sulla riva occidentale per la totalità, un pranzo egiziano tardivo e una feluca al tramonto. Piccoli gruppi fino a 12 persone, ciascuno con la sua guida specializzata in egittologia e il suo veicolo — l'unica partenza a data fissa che proponiamo, perché la data la decide il cielo.
 
-**149 €** a persona · Hotel non incluso · 48 posti in quattro gruppi fino a 12 persone
+**164 €** a persona · Hotel non incluso · 48 posti in quattro gruppi fino a 12 persone
 
 ### La giornata
 

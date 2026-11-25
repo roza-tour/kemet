@@ -11,11 +11,11 @@ Lawatan sehari
 
 Kuil-kuil gunung Ramses II di atas Tasik Nasser — jalan gurun pada waktu fajar, dua tempat suci yang dipahat dalam batu, dan kembali ke Aswan untuk makan tengah hari.
 
-dari €160 / seorang
+dari €176 / seorang
 
 dari 6 orang · tiket masuk tidak termasuk
 
-€176 seorang bagi dua pengembara
+€194 seorang bagi dua pengembara
 
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 

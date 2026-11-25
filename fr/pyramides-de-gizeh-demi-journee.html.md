@@ -11,11 +11,11 @@ Excursion à la journée
 
 Une demi-journée concentrée parmi les trois grandes pyramides et le Sphinx, avec le point de vue panoramique classique.
 
-à partir de 66 € / personne
+à partir de 73 € / personne
 
 à partir de 6 voyageurs · billets non inclus
 
-73 € par personne pour deux voyageurs
+80 € par personne pour deux voyageurs
 
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
 

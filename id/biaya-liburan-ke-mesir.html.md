@@ -17,7 +17,7 @@ Atas **450 € ke atas**
 
 Uang muka **25 %**
 
-Perjalanan privat di Mesir umumnya berada di kisaran 200–450 euro per orang per hari, di luar tiket pesawat internasional. Jarak antara kedua angka itu bukan kebetulan: ia lahir dari lima keputusan yang Anda ambil saat merencanakan. Ada baiknya mengenali kelimanya sebelum membandingkan dua penawaran.
+Perjalanan privat di Mesir umumnya berada di kisaran 200–450 euro per orang per hari, di luar tiket pesawat internasional. Jarak antara kedua angka itu bukan kebetulan: ia lahir dari lima keputusan yang Anda ambil saat merencanakan. Ada baiknya mengenali kelimanya sebelum membandingkan dua penawaran. Perjalanan multi-hari Kemet sendiri berkisar 170–226 euro per orang per hari untuk rombongan enam orang atau lebih, dan 187–249 euro untuk dua pelancong: sekitar batas bawah kisaran ini, dan untuk rombongan yang lebih besar sedikit di bawahnya.
 
 01
 

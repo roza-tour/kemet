@@ -65,7 +65,7 @@ Masa di udara memang singkat, tetapi perjalanan bukan hanya penerbangan. Hitung 
 
 ## Cara kami mengaturkannya
 
-Dua daripada perjalanan kami yang lebih panjang — Egypt Icons & Nile Cruise dan Egypt Highlights Deluxe — menggunakan kereta api tidur pada kedua-dua hala seperti yang diterbitkan. Kedua-duanya juga boleh diaturkan dengan penerbangan sebaliknya, dengan dua malam itu di hotel, dengan tambahan €130 seorang; mintalah versi penerbangan semasa membuat pertanyaan. Setiap perjalanan lain yang menuju ke selatan sudah pun dibina berasaskan penerbangan.
+Dua daripada perjalanan kami yang lebih panjang — Egypt Icons & Nile Cruise dan Egypt Highlights Deluxe — menggunakan kereta api tidur pada kedua-dua hala seperti yang diterbitkan. Kedua-duanya juga boleh diaturkan dengan penerbangan sebaliknya, dengan dua malam itu di hotel, dengan tambahan €143 seorang; mintalah versi penerbangan semasa membuat pertanyaan. Setiap perjalanan lain yang menuju ke selatan sudah pun dibina berasaskan penerbangan.
 
 ## Soalan lazim
 

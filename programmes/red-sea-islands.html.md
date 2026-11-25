@@ -118,7 +118,7 @@ Sharm El Sheikh · Ras Mohammed
 
 The Red Sea done with intent — a private reef-boat day in Ras Mohammed, a Sinai desert evening under the stars, and space left deliberately empty.
 
-€979 / person from 6 travellers
+€1,077 / person from 6 travellers
 
 4 Days
 
@@ -128,7 +128,7 @@ Sharm El Sheikh · Ras Mohammed · Tiran
 
 Four guided boat dives across the two best site groups in Sinai — Ras Mohammed and Tiran — with a PADI centre we have vetted, after a house-reef check dive.
 
-€792 / person from 6 travellers
+€871 / person from 6 travellers
 
 10 Days
 
@@ -138,7 +138,7 @@ Cairo · Giza · Alexandria · Aswan · Luxor
 
 Our signature journey: Cairo, Alexandria, a sleeper train south, and a three-night Nile cruise from Aswan to Luxor — every layer of Egypt in one arc.
 
-€1,915 / person from 6 travellers
+€2,107 / person from 6 travellers
 
 ---
 

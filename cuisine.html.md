@@ -144,7 +144,7 @@ Cairo
 
 A guided evening tasting of Cairo's best-loved dishes — koshari, ful and ta'meya, hawawshi and grilled pigeon, kunafa and basbousa, finished at a traditional ahwa.
 
-€59 / person from 6 travellers · food not included
+€65 / person from 6 travellers · food not included
 
 How Egypt eats
 

@@ -23,7 +23,7 @@ Quasi tutte le pagine che rispondono a questa domanda sono scritte per un altro 
 
 ## Quattro modi di vedere l'Egitto
 
-Viaggio indipendente con mezzi pubblici e alberghi semplici: circa 40-90 euro a persona al giorno. Viaggio di gruppo in pullman con venti-quaranta compagni e date fisse: 90-180 euro. Privato e su misura con egittologo dedicato, mezzo proprio e buoni alberghi: 200-450 euro — qui si colloca Kemet. In cima al mercato, con dahabeya noleggiata interamente e voli privati fra le città: da 600 euro. La distanza fra il fondo e la cima del mercato è in Egitto più ampia che quasi ovunque.
+Viaggio indipendente con mezzi pubblici e alberghi semplici: circa 40-90 euro a persona al giorno. Viaggio di gruppo in pullman con venti-quaranta compagni e date fisse: 90-180 euro. Privato e su misura con egittologo dedicato, mezzo proprio e buoni alberghi: 200-450 euro a persona al giorno. I viaggi di più giorni di Kemet vengono a costare 170-226 euro a persona al giorno per un gruppo di sei o più persone e 187-249 euro in due: all'incirca il limite inferiore di questa fascia e, per i gruppi più numerosi, appena sotto. In cima al mercato, con dahabeya noleggiata interamente e voli privati fra le città: da 600 euro. La distanza fra il fondo e la cima del mercato è in Egitto più ampia che quasi ovunque.
 
 02
 

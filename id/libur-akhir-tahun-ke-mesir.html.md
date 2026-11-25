@@ -41,7 +41,7 @@ Di Mesir, 25 Desember bukan hari libur: situs bersejarah dan museum buka seperti
 
 ## Berapa biayanya
 
-Perjalanan 10 hari kami mulai dari €1.915 per orang, untuk rombongan mulai 6 orang. Antara Natal dan Tahun Baru ada biaya tambahan yang dikenakan hotel dan kapal kepada kami; kami mencantumkannya terpisah dalam penawaran, tidak disembunyikan di dalam total.
+Perjalanan 10 hari kami mulai dari €2.107 per orang, untuk rombongan mulai 6 orang. Antara Natal dan Tahun Baru ada biaya tambahan yang dikenakan hotel dan kapal kepada kami; kami mencantumkannya terpisah dalam penawaran, tidak disembunyikan di dalam total.
 
 ## Sekilas
 

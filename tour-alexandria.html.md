@@ -2,7 +2,7 @@
 title: "Alexandria Private Day Tour from Cairo | Kemet"
 url: https://kemet-travel.com/tour-alexandria.html
 language: en
-description: "The Catacombs of Kom El Shoqafa, Pompey's Pillar, the Citadel of Qaitbay on the old Pharos site and the Bibliotheca Alexandrina — private, from €57 pp."
+description: "The Catacombs of Kom El Shoqafa, Pompey's Pillar, the Citadel of Qaitbay on the old Pharos site and the Bibliotheca Alexandrina — private, from €63 pp."
 ---
 
 Day Tour · Full day (≈11 hours)
@@ -13,7 +13,7 @@ A full day on the Mediterranean — catacombs, a Roman pillar, a sea-girt citade
 
 ## What does Alexandria Sightseeing include, and what does it cost?
 
-Alexandria Sightseeing is a private full-day tour of Alexandria, from €57 per person for a party of 6 or more, or €63 per person for two. It includes a private Egyptologist guide throughout, private air-conditioned transfers, hotel pickup & drop-off and bottled water every day. Entrance tickets are paid at the gate.
+Alexandria Sightseeing is a private full-day tour of Alexandria, from €63 per person for a party of 6 or more, or €69 per person for two. It includes a private Egyptologist guide throughout, private air-conditioned transfers, hotel pickup & drop-off and bottled water every day. Entrance tickets are paid at the gate.
 
 ## Overview
 
@@ -43,7 +43,7 @@ Stop **04**
 
 ### Bibliotheca Alexandrina & seafood lunch
 
-Finish at the dramatic modern Bibliotheca Alexandrina, the reborn Library of Alexandria, after a relaxed seafood lunch on the Mediterranean front.
+Finish at the dramatic modern Bibliotheca Alexandrina, the reborn Library of Alexandria, after a relaxed seafood lunch on the Mediterranean front, paid locally.
 
 ## Included & not included
 
@@ -82,15 +82,15 @@ Every Kemet journey is private, led by a licensed Egyptologist and priced in wri
 
 From
 
-€57
+€63
 
 per person · EUR
 
 Based on a private party of 6 or more · entrance tickets not included.
 
-For two travellers: €63 per person.
+For two travellers: €69 per person.
 
-[Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Alexandria+Sightseeing&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Alexandria+Sightseeing%22+journey+%28Full+day+%28%E2%89%8811+hours%29%2C+from+%E2%82%AC57+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
+[Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Alexandria+Sightseeing&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Alexandria+Sightseeing%22+journey+%28Full+day+%28%E2%89%8811+hours%29%2C+from+%E2%82%AC63+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 
 [Ask on WhatsApp](https://wa.me/201158367162?text=Hello%20Kemet%20%E2%80%94%20I%27m%20interested%20in%20the%20%22Alexandria%20Sightseeing%22%20journey%20(Full%20day%20(%E2%89%8811%20hours)).%20Could%20you%20share%20availability%3F)
 
@@ -120,7 +120,7 @@ Alexandria
 
 Alexandria with its missing half restored: the Greco-Roman sites by day, then the corniche at dusk, seafood by the water and the morning light day-trips never catch.
 
-€402 / person from 6 travellers
+€442 / person from 6 travellers
 
 4 Days
 
@@ -130,7 +130,7 @@ Cairo · Giza · Alexandria
 
 A compact northern journey — the Egyptian Museum, Alexandria's Greco-Roman layers, the Pyramids of Giza and medieval Cairo.
 
-€618 / person from 6 travellers
+€680 / person from 6 travellers
 
 10 Days
 
@@ -140,7 +140,7 @@ Cairo · Giza · Alexandria · Aswan · Luxor
 
 Our signature journey: Cairo, Alexandria, a sleeper train south, and a three-night Nile cruise from Aswan to Luxor — every layer of Egypt in one arc.
 
-€1,915 / person from 6 travellers
+€2,107 / person from 6 travellers
 
 ---
 

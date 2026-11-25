@@ -11,11 +11,11 @@ Liburan singkat
 
 Tiga hari tanpa hambatan — kedatangan jalur cepat, piramida dan Grand Egyptian Museum, serta Kairo abad pertengahan setelah wisatawan harian pulang.
 
-mulai €600 / orang
+mulai €660 / orang
 
 mulai 6 orang
 
-€660 per orang untuk dua wisatawan
+€726 per orang untuk dua wisatawan
 
 Per orang, musim normal. Biaya tambahan hari libur kami cantumkan terpisah dalam penawaran.
 

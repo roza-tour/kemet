@@ -2,7 +2,7 @@
 title: "Abu Simbel Private Day Tour from Aswan | Kemet"
 url: https://kemet-travel.com/tour-abu-simbel.html
 language: en
-description: "Ramesses II's colossal rock-cut temples — carved into a Nubian mountainside, moved block by block above the rising lake — private, from €160 pp."
+description: "Ramesses II's colossal rock-cut temples — carved into a Nubian mountainside, moved block by block above the rising lake — private, from €176 pp."
 ---
 
 Day Tour · Full day (≈8 hours, from Aswan)
@@ -13,7 +13,7 @@ The mountain temples of Ramesses II above Lake Nasser — a dawn desert road, tw
 
 ## What does Abu Simbel Private Excursion include, and what does it cost?
 
-Abu Simbel Private Excursion is a private full-day tour of Abu Simbel, from €160 per person for a party of 6 or more, or €176 per person for two. It includes a private Egyptologist guide throughout; a private air-conditioned vehicle for the desert road, both ways; and bottled water. Entrance tickets are paid at the gate.
+Abu Simbel Private Excursion is a private full-day tour of Abu Simbel, from €176 per person for a party of 6 or more, or €194 per person for two. It includes a private Egyptologist guide throughout; a private air-conditioned vehicle for the desert road, both ways; and bottled water. Entrance tickets are paid at the gate.
 
 ## Overview
 
@@ -80,15 +80,15 @@ Every Kemet journey is private, led by a licensed Egyptologist and priced in wri
 
 From
 
-€160
+€176
 
 per person · EUR
 
 Based on a private party of 6 or more · entrance tickets not included.
 
-For two travellers: €176 per person.
+For two travellers: €194 per person.
 
-[Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Abu+Simbel+Private+Excursion&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Abu+Simbel+Private+Excursion%22+journey+%28Full+day+%28%E2%89%888+hours%2C+from+Aswan%29%2C+from+%E2%82%AC160+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
+[Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Abu+Simbel+Private+Excursion&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Abu+Simbel+Private+Excursion%22+journey+%28Full+day+%28%E2%89%888+hours%2C+from+Aswan%29%2C+from+%E2%82%AC176+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 
 [Ask on WhatsApp](https://wa.me/201158367162?text=Hello%20Kemet%20%E2%80%94%20I%27m%20interested%20in%20the%20%22Abu%20Simbel%20Private%20Excursion%22%20journey%20(Full%20day%20(%E2%89%888%20hours%2C%20from%20Aswan)).%20Could%20you%20share%20availability%3F)
 
@@ -118,7 +118,7 @@ Cairo · Giza · Alexandria · Aswan · Abu Simbel · Luxor · Sharm El Sheikh
 
 Our most complete journey: Cairo and Alexandria, a Nile cruise, Ramesses II's mountain temple at Abu Simbel, and three Red Sea nights to absorb it all.
 
-€2,728 / person from 6 travellers
+€3,001 / person from 6 travellers
 
 7 Days
 
@@ -128,7 +128,7 @@ Cairo · Giza · Luxor · Aswan
 
 An itinerary built backwards from the light: early-access Giza at sunrise, Karnak before the crowds, an optional balloon over Thebes and feluccas at golden hour.
 
-€1,419 / person from 6 travellers
+€1,561 / person from 6 travellers
 
 4 Days
 
@@ -138,7 +138,7 @@ Aswan · Kom Ombo · Edfu · Luxor
 
 The essential Nile cruise, done properly — Philae and the High Dam, three nights afloat past Kom Ombo and Edfu, and Luxor's East and West Banks with your own Egyptologist.
 
-€820 / person from 6 travellers
+€902 / person from 6 travellers
 
 ---
 

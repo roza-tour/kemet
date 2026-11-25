@@ -2,7 +2,7 @@
 title: "7-Day Egypt Photography Tour, Private | Kemet"
 url: https://kemet-travel.com/tour-photography-7day.html
 language: en
-description: "An itinerary built backwards from the light: early-access Giza at sunrise, Karnak before the crowds — private, from €1,419 pp."
+description: "An itinerary built backwards from the light: early-access Giza at sunrise, Karnak before the crowds — private, from €1,561 pp."
 ---
 
 Photography Journey · 7 Days / 6 Nights
@@ -13,7 +13,7 @@ Seven days scheduled around light, not opening hours — dawn plateaus, blue-hou
 
 ## What does Egypt Through the Lens include, and what does it cost?
 
-Egypt Through the Lens is a private 7-day, 6-night journey through Cairo, Giza, Luxor and Aswan, from €1,419 per person for a party of 6 or more, or €1,561 per person for two. It includes a private photography-aware Egyptologist guide throughout; 6 nights' hotel accommodation; and domestic flights Cairo–Luxor and Aswan–Cairo. International flights are not included.
+Egypt Through the Lens is a private 7-day, 6-night journey through Cairo, Giza, Luxor and Aswan, from €1,561 per person for a party of 6 or more, or €1,717 per person for two. It includes a private photography-aware Egyptologist guide throughout; 6 nights' hotel accommodation; and domestic flights Cairo–Luxor and Aswan–Cairo. International flights are not included.
 
 ## Overview
 
@@ -133,15 +133,15 @@ Every Kemet journey is private, led by a licensed Egyptologist and priced in wri
 
 From
 
-€1,419
+€1,561
 
 per person · EUR
 
 Based on a private party of 6 or more.
 
-For two travellers: €1,561 per person.
+For two travellers: €1,717 per person.
 
-[Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Egypt+Through+the+Lens&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Egypt+Through+the+Lens%22+journey+%287+Days+%2F+6+Nights%2C+from+%E2%82%AC1%2C419+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
+[Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Egypt+Through+the+Lens&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Egypt+Through+the+Lens%22+journey+%287+Days+%2F+6+Nights%2C+from+%E2%82%AC1%2C561+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 
 [Ask on WhatsApp](https://wa.me/201158367162?text=Hello%20Kemet%20%E2%80%94%20I%27m%20interested%20in%20the%20%22Egypt%20Through%20the%20Lens%22%20journey%20(7%20Days%20%2F%206%20Nights).%20Could%20you%20share%20availability%3F)
 
@@ -171,7 +171,7 @@ Cairo · Giza · Alexandria · Aswan · Luxor
 
 Our signature journey: Cairo, Alexandria, a sleeper train south, and a three-night Nile cruise from Aswan to Luxor — every layer of Egypt in one arc.
 
-€1,915 / person from 6 travellers
+€2,107 / person from 6 travellers
 
 14 Days
 
@@ -181,7 +181,7 @@ Cairo · Giza · Alexandria · Aswan · Abu Simbel · Luxor · Sharm El Sheikh
 
 Our most complete journey: Cairo and Alexandria, a Nile cruise, Ramesses II's mountain temple at Abu Simbel, and three Red Sea nights to absorb it all.
 
-€2,728 / person from 6 travellers
+€3,001 / person from 6 travellers
 
 9 Days
 
@@ -191,7 +191,7 @@ Cairo · Giza · Aswan · Luxor
 
 Egypt as a honeymoon should be — private sunrise at the pyramids, a felucca at golden hour, three nights on the Nile and suites chosen for the view.
 
-€2,045 / person from 2 travellers
+€2,250 / person from 2 travellers
 
 ---
 

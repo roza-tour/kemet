@@ -2,7 +2,7 @@
 title: "3-Day Luxor Private Tour with Egyptologist | Kemet"
 url: https://kemet-travel.com/tour-luxor-3day.html
 language: en
-description: "Luxor without the sprint: Karnak at opening, the Valley of the Kings before the heat — private, from €544 pp."
+description: "Luxor without the sprint: Karnak at opening, the Valley of the Kings before the heat — private, from €598 pp."
 ---
 
 Short Break · 3 Days / 2 Nights
@@ -13,7 +13,7 @@ Three days in the world's greatest open-air museum — both banks properly done,
 
 ## What does Luxor Immersion include, and what does it cost?
 
-Luxor Immersion is a private 3-day, 2-night journey through Luxor, from €544 per person for a party of 6 or more, or €598 per person for two. It includes a private Egyptologist guide throughout; 2 nights' hotel accommodation in Luxor; and evening entry to Luxor Temple and the Avenue of Sphinxes. International flights are not included.
+Luxor Immersion is a private 3-day, 2-night journey through Luxor, from €598 per person for a party of 6 or more, or €658 per person for two. It includes a private Egyptologist guide throughout; 2 nights' hotel accommodation in Luxor; and evening entry to Luxor Temple and the Avenue of Sphinxes. International flights are not included.
 
 ## Overview
 
@@ -97,15 +97,15 @@ Every Kemet journey is private, led by a licensed Egyptologist and priced in wri
 
 From
 
-€544
+€598
 
 per person · EUR
 
 Based on a private party of 6 or more.
 
-For two travellers: €598 per person.
+For two travellers: €658 per person.
 
-[Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Luxor+Immersion&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Luxor+Immersion%22+journey+%283+Days+%2F+2+Nights%2C+from+%E2%82%AC544+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
+[Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Luxor+Immersion&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Luxor+Immersion%22+journey+%283+Days+%2F+2+Nights%2C+from+%E2%82%AC598+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 
 [Ask on WhatsApp](https://wa.me/201158367162?text=Hello%20Kemet%20%E2%80%94%20I%27m%20interested%20in%20the%20%22Luxor%20Immersion%22%20journey%20(3%20Days%20%2F%202%20Nights).%20Could%20you%20share%20availability%3F)
 
@@ -135,7 +135,7 @@ Cairo · Giza · Alexandria · Aswan · Luxor
 
 Our signature journey: Cairo, Alexandria, a sleeper train south, and a three-night Nile cruise from Aswan to Luxor — every layer of Egypt in one arc.
 
-€1,915 / person from 6 travellers
+€2,107 / person from 6 travellers
 
 7 Days
 
@@ -145,7 +145,7 @@ Cairo · Giza · Alexandria · Luxor
 
 The headline acts of Egypt in seven days — the Egyptian Museum, Alexandria, the temples and tombs of Luxor, and the Pyramids of Giza.
 
-€1,179 / person from 6 travellers
+€1,297 / person from 6 travellers
 
 3 Days
 
@@ -155,7 +155,7 @@ Cairo · Luxor · Aswan
 
 A fast, flight-included loop through Luxor and Aswan — Karnak, the Valley of the Kings, Philae and the High Dam — out and back from Cairo.
 
-€527 / person from 6 travellers
+€580 / person from 6 travellers
 
 ---
 

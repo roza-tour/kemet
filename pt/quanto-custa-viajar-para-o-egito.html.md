@@ -11,7 +11,7 @@ Uma resposta honesta, escrita para o segmento alto do mercado e não para o mais
 
 Privado, sob medida **200–450 € p.p./dia**
 
-Viagens da Kemet **155–205 € p.p./dia**
+Viagens da Kemet **170–226 € p.p./dia**
 
 Uma semana a dois **2.800–6.000 € no total**
 
@@ -29,7 +29,7 @@ Viagem independente com transporte público e hotéis simples: uns 40 a 90 euros
 
 ## Onde a Kemet está
 
-Na faixa privada e sob medida, e na entrada dela: as viagens de vários dias da Kemet saem entre 155 e 205 euros por pessoa por dia para grupos a partir de 6 pessoas, com hotéis, todas as entradas, o egiptólogo e os traslados incluídos. O valor sobe com a categoria do hotel e com a dahabiya, e cai por pessoa quando o grupo cresce. Os preços são em euros.
+A viagem privada e sob medida custa de 200 a 450 euros por pessoa por dia. As viagens de vários dias da Kemet saem entre 170 e 226 euros por pessoa por dia para grupos de seis ou mais pessoas, e entre 187 e 249 euros para dois viajantes: em torno do piso dessa faixa e, para grupos maiores, um pouco abaixo dela, com hotéis, todas as entradas, o egiptólogo e os traslados incluídos. O valor sobe com a categoria do hotel e com a dahabiya, e cai por pessoa quando o grupo cresce. Os preços são em euros.
 
 03
 
@@ -53,7 +53,7 @@ Os hotéis são o maior item de quase todo orçamento, e a variação no Egito �
 
 ### Quanto custa uma viagem privada pelo Egito?
 
-No mercado, uma viagem totalmente privada e sob medida, com egiptólogo credenciado, carro com motorista e bons hotéis, fica entre 200 e 450 euros por pessoa por dia. As viagens da Kemet saem entre 155 e 205 euros por pessoa por dia. O valor cai bastante quando o grupo cresce, porque o guia e o carro são divididos.
+No mercado, uma viagem totalmente privada e sob medida, com egiptólogo credenciado, carro com motorista e bons hotéis, fica entre 200 e 450 euros por pessoa por dia. As viagens da Kemet saem entre 170 e 226 euros por pessoa por dia. O valor cai bastante quando o grupo cresce, porque o guia e o carro são divididos.
 
 ### Por que uma viagem privada custa mais do que uma excursão?
 

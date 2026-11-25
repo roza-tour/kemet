@@ -11,13 +11,13 @@ Viaggio signature
 
 Dieci giorni senza fretta, dalle piramidi di Giza ai templi dell'Alto Egitto, tenuti insieme da tre notti di crociera sul Nilo.
 
-da 1.915 € / persona
+da 2.107 € / persona
 
 da 6 viaggiatori
 
-2.107 € a persona per due viaggiatori
+2.318 € a persona per due viaggiatori
 
-Con voli interni al posto delle due notti in treno letto, quelle notti in hotel: 2.045 € a persona
+Con voli interni al posto delle due notti in treno letto, quelle notti in hotel: 2.250 € a persona
 
 A persona, in stagione normale. I supplementi delle festività sono indicati separatamente nel preventivo.
 
@@ -54,7 +54,7 @@ Questo è l'Egitto in tutta la sua ampiezza, con un ritmo pensato per essere vis
 - Strada del deserto fino ad Alessandria
 - Catacombe di Kom el-Shoqafa e colonna di Pompeo
 - Cittadella di Qaitbay sul sito del Faro e la moderna Bibliotheca Alexandrina
-- Pranzo di pesce sul lungomare prima del rientro al Cairo
+- Pranzo di pesce sul lungomare, da saldare in loco, prima del rientro al Cairo
 
 03
 
@@ -123,9 +123,9 @@ Questo è l'Egitto in tutta la sua ampiezza, con un ritmo pensato per essere vis
 ## Incluso
 
 - Un egittologo privato per tutto il viaggio
-- 9 notti — hotel e una crociera sul Nilo
+- 7 notti di pernottamento — hotel e una crociera sul Nilo; le altre due notti sono sul treno notturno con cuccette
 - Crociera di 3 notti in pensione completa, da Assuan a Luxor
-- Cuccette sul treno notturno Il Cairo–Alto Egitto (andata e ritorno)
+- Cuccette sul treno notturno Il Cairo–Alto Egitto (andata e ritorno), con cena e colazione a bordo
 - Tutti i biglietti d'ingresso a siti e monumenti
 - Trasferimenti privati con aria condizionata
 - Prelievo e rientro in hotel
@@ -137,7 +137,7 @@ Questo è l'Egitto in tutta la sua ampiezza, con un ritmo pensato per essere vis
 - Il visto d'ingresso in Egitto
 - Le mance
 - Le spese personali
-- I pasti, tranne a bordo della crociera sul Nilo
+- I pasti, tranne a bordo della crociera sul Nilo e sul treno notturno
 - I supplementi facoltativi a scelta — attività, bevande
 
 ## Il ritmo

@@ -11,13 +11,13 @@ Viaje insignia
 
 Diez días sin prisa, de las Pirámides de Guiza a los templos del Alto Egipto, enlazados por tres noches de crucero por el Nilo.
 
-desde 1.915 € / persona
+desde 2.107 € / persona
 
 desde 6 viajeros
 
-2.107 € por persona para dos viajeros
+2.318 € por persona para dos viajeros
 
-Con vuelos internos en lugar de las dos noches en tren cama, y esas noches en hotel: 2.045 € por persona
+Con vuelos internos en lugar de las dos noches en tren cama, y esas noches en hotel: 2.250 € por persona
 
 Por persona, en temporada normal. Los suplementos de fechas festivas se indican por separado en el presupuesto.
 
@@ -54,7 +54,7 @@ Es Egipto de punta a punta, a un ritmo pensado para vivirlo y no para ir tachand
 - A Alejandría por la carretera del desierto
 - Catacumbas de Kom el-Shoqafa y Columna de Pompeyo
 - Ciudadela de Qaitbay, en el lugar del antiguo Faro, y la moderna Bibliotheca Alexandrina
-- Almuerzo de pescado y marisco frente al mar antes de volver a El Cairo
+- Almuerzo de pescado y marisco frente al mar, pagado en destino, antes de volver a El Cairo
 
 03
 
@@ -123,9 +123,9 @@ Es Egipto de punta a punta, a un ritmo pensado para vivirlo y no para ir tachand
 ## Incluido
 
 - Guía egiptólogo privado durante todo el viaje
-- 9 noches de alojamiento — hoteles y un crucero por el Nilo
+- 7 noches de alojamiento: hoteles y un crucero por el Nilo; las otras dos noches son en el tren nocturno
 - Crucero por el Nilo de 3 noches en pensión completa, de Asuán a Luxor
-- Plazas en coche cama El Cairo–Alto Egipto (ida y vuelta)
+- Plazas en coche cama El Cairo–Alto Egipto (ida y vuelta), con cena y desayuno a bordo
 - Todas las entradas a yacimientos y monumentos
 - Traslados privados con aire acondicionado
 - Recogida y regreso al hotel
@@ -137,7 +137,7 @@ Es Egipto de punta a punta, a un ritmo pensado para vivirlo y no para ir tachand
 - Visa de entrada a Egipto
 - Propinas
 - Gastos personales
-- Comidas, salvo a bordo del crucero por el Nilo
+- Comidas, excepto a bordo del crucero por el Nilo y en el tren nocturno
 - Extras opcionales que decida añadir — actividades, bebidas
 
 ## El ritmo

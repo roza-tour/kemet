@@ -11,13 +11,13 @@ Perjalanan unggulan
 
 Sepuluh hari tanpa terburu-buru, dari Piramida Giza hingga kuil-kuil Mesir Hulu, dirangkai oleh tiga malam pesiar di Sungai Nil.
 
-mulai €1.915 / orang
+mulai €2.107 / orang
 
 mulai 6 orang
 
-€2.107 per orang untuk dua wisatawan
+€2.318 per orang untuk dua wisatawan
 
-Dengan penerbangan domestik sebagai ganti dua malam di kereta tidur, dan malam-malam itu di hotel: €2.045 per orang
+Dengan penerbangan domestik sebagai ganti dua malam di kereta tidur, dan malam-malam itu di hotel: €2.250 per orang
 
 Per orang, musim normal. Biaya tambahan hari libur kami cantumkan terpisah dalam penawaran.
 
@@ -54,7 +54,7 @@ Inilah Mesir secara utuh, dengan ritme untuk dinikmati, bukan sekadar dicentang.
 - Perjalanan darat ke Alexandria melalui jalan gurun
 - Katakombe Kom El Shoqafa dan Pilar Pompey
 - Benteng Qaitbay di bekas lokasi Mercusuar Pharos dan Bibliotheca Alexandrina yang modern
-- Makan siang hidangan laut di tepi pantai sebelum kembali ke Kairo
+- Makan siang hidangan laut di tepi pantai, dibayar di tempat, sebelum kembali ke Kairo
 
 03
 
@@ -123,9 +123,9 @@ Inilah Mesir secara utuh, dengan ritme untuk dinikmati, bukan sekadar dicentang.
 ## Termasuk
 
 - Pemandu Egyptologist pribadi sepanjang perjalanan
-- Akomodasi 9 malam — hotel dan pesiar Sungai Nil
+- Akomodasi 7 malam — hotel dan pesiar Sungai Nil; dua malam lainnya di kereta tidur
 - Pesiar Sungai Nil 3 malam dengan makan lengkap (full board), dari Aswan ke Luxor
-- Kabin kereta tidur Kairo–Mesir Hulu (pulang-pergi)
+- Kabin kereta tidur Kairo–Mesir Hulu (pulang-pergi), dengan makan malam dan sarapan di kereta
 - Semua tiket masuk ke situs dan monumen
 - Transfer pribadi ber-AC
 - Penjemputan dan pengantaran di hotel
@@ -137,7 +137,7 @@ Inilah Mesir secara utuh, dengan ritme untuk dinikmati, bukan sekadar dicentang.
 - Visa masuk Mesir
 - Tip
 - Pengeluaran pribadi
-- Makanan, kecuali selama di kapal pesiar Nil
+- Makanan, kecuali selama di kapal pesiar Nil dan di kereta tidur
 - Tambahan opsional yang Anda pilih — aktivitas, minuman
 
 ## Ritme perjalanan

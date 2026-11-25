@@ -2,7 +2,7 @@
 title: "4-Day Red Sea Diving Trip, Sharm El Sheikh | Kemet"
 url: https://kemet-travel.com/tour-red-sea-diving-4day.html
 language: en
-description: "Four guided boat dives across the two best site groups in Sinai — Ras Mohammed and Tiran — with a PADI centre we have vetted — private, from €792 pp."
+description: "Four guided boat dives across the two best site groups in Sinai — Ras Mohammed and Tiran — with a PADI centre we have vetted — private, from €871 pp."
 ---
 
 Red Sea · 4 Days / 3 Nights
@@ -13,7 +13,7 @@ Four days built around bottom time — Ras Mohammed's walls, the Strait of Tiran
 
 ## What does Dive the Red Sea include, and what does it cost?
 
-Dive the Red Sea is a private 4-day, 3-night journey through Sharm El Sheikh, Ras Mohammed and Tiran, from €792 per person for a party of 6 or more, or €871 per person for two. It includes 3 nights in a Red Sea resort. International flights are not included.
+Dive the Red Sea is a private 4-day, 3-night journey through Sharm El Sheikh, Ras Mohammed and Tiran, from €871 per person for a party of 6 or more, or €958 per person for two. It includes 3 nights in a Red Sea resort. International flights are not included.
 
 ## Overview
 
@@ -69,7 +69,7 @@ Day **04**
 - Egypt entry visa
 - Tipping (gratuities)
 - Personal expenses
-- Meals
+- Meals, except lunch on board on the boat days
 - Optional extras you choose to add — activities, drinks
 
 ## Comfort & pace
@@ -100,15 +100,15 @@ Every Kemet journey is private, led by a licensed Egyptologist and priced in wri
 
 From
 
-€792
+€871
 
 per person · EUR
 
 Based on a private party of 6 or more.
 
-For two travellers: €871 per person.
+For two travellers: €958 per person.
 
-[Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Dive+the+Red+Sea&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Dive+the+Red+Sea%22+journey+%284+Days+%2F+3+Nights%2C+from+%E2%82%AC792+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
+[Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Dive+the+Red+Sea&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Dive+the+Red+Sea%22+journey+%284+Days+%2F+3+Nights%2C+from+%E2%82%AC871+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 
 [Ask on WhatsApp](https://wa.me/201158367162?text=Hello%20Kemet%20%E2%80%94%20I%27m%20interested%20in%20the%20%22Dive%20the%20Red%20Sea%22%20journey%20(4%20Days%20%2F%203%20Nights).%20Could%20you%20share%20availability%3F)
 
@@ -138,7 +138,7 @@ Sharm El Sheikh · Ras Mohammed
 
 The Red Sea done with intent — a private reef-boat day in Ras Mohammed, a Sinai desert evening under the stars, and space left deliberately empty.
 
-€979 / person from 6 travellers
+€1,077 / person from 6 travellers
 
 Full Day
 
@@ -148,7 +148,7 @@ Fayoum
 
 Lake Qarun, the waterfalls and dunes of Wadi El Rayan, the fossil whales of Wadi Al-Hitan and the potters of Tunis village — Egypt's wild, green other half.
 
-€139 / person from 6 travellers · tickets not included
+€153 / person from 6 travellers · tickets not included
 
 14 Days
 
@@ -158,7 +158,7 @@ Cairo · Giza · Alexandria · Aswan · Abu Simbel · Luxor · Sharm El Sheikh
 
 Our most complete journey: Cairo and Alexandria, a Nile cruise, Ramesses II's mountain temple at Abu Simbel, and three Red Sea nights to absorb it all.
 
-€2,728 / person from 6 travellers
+€3,001 / person from 6 travellers
 
 ---
 

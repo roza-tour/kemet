@@ -11,11 +11,11 @@ Passeio de um dia
 
 O berço da pirâmide — da primeira pirâmide de degraus, a de Djoser, às grandes tumbas geométricas de Dahshur.
 
-a partir de € 68 / pessoa
+a partir de € 75 / pessoa
 
 a partir de 6 viajantes · ingressos não incluídos
 
-€ 75 por pessoa, para dois viajantes
+€ 83 por pessoa, para dois viajantes
 
 Por pessoa, em temporada normal. Acréscimos de feriados aparecem separados no orçamento.
 

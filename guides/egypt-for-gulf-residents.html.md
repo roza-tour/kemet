@@ -169,7 +169,7 @@ Cairo · Giza
 
 The essential Cairo, concierge-run: fast-track immigration, private plateau morning, the Grand Egyptian Museum, and lantern-lit Islamic Cairo by night.
 
-€600 / person from 6 travellers
+€660 / person from 6 travellers
 
 Full Day
 
@@ -179,7 +179,7 @@ Giza
 
 The Great Pyramid, the panorama of all three pyramids, the Valley Temple and Sphinx, then the vast new Grand Egyptian Museum beside them.
 
-€79 / person from 6 travellers · tickets not included
+€87 / person from 6 travellers · tickets not included
 
 3 Days
 
@@ -189,7 +189,7 @@ Luxor
 
 Luxor without the sprint: Karnak at opening, the Valley of the Kings before the heat, Hatshepsut's terraces and the Avenue of Sphinxes after dark.
 
-€544 / person from 6 travellers
+€598 / person from 6 travellers
 
 5 Days
 
@@ -199,7 +199,7 @@ Sharm El Sheikh · Ras Mohammed
 
 The Red Sea done with intent — a private reef-boat day in Ras Mohammed, a Sinai desert evening under the stars, and space left deliberately empty.
 
-€979 / person from 6 travellers
+€1,077 / person from 6 travellers
 
 Further reading
 

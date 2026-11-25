@@ -11,11 +11,11 @@ Viaggio breve
 
 Due giorni mediterranei — le catacombe, la cittadella sul sito del Faro, la Biblioteca rinata, e una serata che i gitanti non vedono mai.
 
-da 402 € / persona
+da 442 € / persona
 
 da 6 viaggiatori
 
-442 € a persona per due viaggiatori
+486 € a persona per due viaggiatori
 
 A persona, in stagione normale. I supplementi delle festività sono indicati separatamente nel preventivo.
 

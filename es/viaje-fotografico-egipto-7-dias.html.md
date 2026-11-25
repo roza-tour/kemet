@@ -11,11 +11,11 @@ Viaje fotográfico
 
 Siete días organizados según la luz y no según los horarios de apertura: mesetas al amanecer, templos en la hora azul y el Nilo a la hora dorada.
 
-desde 1.419 € / persona
+desde 1.561 € / persona
 
 desde 6 viajeros
 
-1.561 € por persona para dos viajeros
+1.717 € por persona para dos viajeros
 
 Por persona, en temporada normal. Los suplementos de fechas festivas se indican por separado en el presupuesto.
 

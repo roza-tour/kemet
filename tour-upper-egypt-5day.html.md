@@ -2,7 +2,7 @@
 title: "5-Day Luxor to Aswan Private Tour: Edfu & Kom Ombo | Kemet"
 url: https://kemet-travel.com/tour-upper-egypt-5day.html
 language: en
-description: "The deep-history heart of Egypt by private road journey — Karnak, the Valley of the Kings, Edfu, Kom Ombo and Philae — private, from €1,018 pp."
+description: "The deep-history heart of Egypt by private road journey — Karnak, the Valley of the Kings, Edfu, Kom Ombo and Philae — private, from €1,120 pp."
 ---
 
 Signature Journey · 5 Days / 4 Nights
@@ -13,7 +13,7 @@ Five unhurried days through Upper Egypt — Luxor's two banks, the road south pa
 
 ## What does Temples of the South include, and what does it cost?
 
-Temples of the South is a private 5-day, 4-night journey through Luxor, Edfu, Kom Ombo and Aswan, from €1,018 per person for a party of 6 or more, or €1,120 per person for two. It includes a private Egyptologist guide throughout, 4 nights' hotel accommodation (Luxor & Aswan) and private felucca sail in Aswan. International flights are not included.
+Temples of the South is a private 5-day, 4-night journey through Luxor, Edfu, Kom Ombo and Aswan, from €1,120 per person for a party of 6 or more, or €1,232 per person for two. It includes a private Egyptologist guide throughout, 4 nights' hotel accommodation (Luxor & Aswan) and private felucca sail in Aswan. International flights are not included.
 
 ## Overview
 
@@ -114,15 +114,15 @@ Every Kemet journey is private, led by a licensed Egyptologist and priced in wri
 
 From
 
-€1,018
+€1,120
 
 per person · EUR
 
 Based on a private party of 6 or more.
 
-For two travellers: €1,120 per person.
+For two travellers: €1,232 per person.
 
-[Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Temples+of+the+South&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Temples+of+the+South%22+journey+%285+Days+%2F+4+Nights%2C+from+%E2%82%AC1%2C018+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
+[Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Temples+of+the+South&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Temples+of+the+South%22+journey+%285+Days+%2F+4+Nights%2C+from+%E2%82%AC1%2C120+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 
 [Ask on WhatsApp](https://wa.me/201158367162?text=Hello%20Kemet%20%E2%80%94%20I%27m%20interested%20in%20the%20%22Temples%20of%20the%20South%22%20journey%20(5%20Days%20%2F%204%20Nights).%20Could%20you%20share%20availability%3F)
 
@@ -152,7 +152,7 @@ Cairo · Giza · Alexandria · Aswan · Luxor
 
 Our signature journey: Cairo, Alexandria, a sleeper train south, and a three-night Nile cruise from Aswan to Luxor — every layer of Egypt in one arc.
 
-€1,915 / person from 6 travellers
+€2,107 / person from 6 travellers
 
 14 Days
 
@@ -162,7 +162,7 @@ Cairo · Giza · Alexandria · Aswan · Abu Simbel · Luxor · Sharm El Sheikh
 
 Our most complete journey: Cairo and Alexandria, a Nile cruise, Ramesses II's mountain temple at Abu Simbel, and three Red Sea nights to absorb it all.
 
-€2,728 / person from 6 travellers
+€3,001 / person from 6 travellers
 
 4 Days
 
@@ -172,7 +172,7 @@ Aswan · Kom Ombo · Edfu · Luxor
 
 The essential Nile cruise, done properly — Philae and the High Dam, three nights afloat past Kom Ombo and Edfu, and Luxor's East and West Banks with your own Egyptologist.
 
-€820 / person from 6 travellers
+€902 / person from 6 travellers
 
 ---
 

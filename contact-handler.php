@@ -104,7 +104,14 @@ function log_enquiry($status, $name, $email, $phone, $dates, $message, $source =
   // message typed over several lines (or a registration, which is composed
   // on several) would split into broken rows. Line breaks become " | " here
   // only; the email keeps them.
-  $q = function ($v) { return str_replace('"', "'", preg_replace(['/\s*(\r\n|\r|\n)+\s*/', '/ {2,}/'], [" | ", " "], trim((string)$v))); };
+  // The log is opened in a spreadsheet. A cell beginning with = @ or a tab, or
+  // with + or - followed by anything but a number, is read there as a formula
+  // ("=HYPERLINK(…)" typed as a name), so it gets a leading apostrophe. A phone
+  // number such as +20 100 … is left as it is.
+  $q = function ($v) {
+    $v = str_replace('"', "'", preg_replace(['/\s*(\r\n|\r|\n)+\s*/', '/ {2,}/'], [" | ", " "], trim((string)$v)));
+    return preg_match('/^(?:[=@\t]|[+-](?![\d\s(]))/', $v) ? "'" . $v : $v;
+  };
   $row = sprintf("%s,%s,\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\"\n",
     gmdate("Y-m-d H:i"), $status,
     $q($name), $q($email), $q($phone), $q($dates), $q(mb_substr($message, 0, 5000)),

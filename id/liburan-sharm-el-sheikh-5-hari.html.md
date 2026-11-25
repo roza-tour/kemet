@@ -11,11 +11,11 @@ Laut Merah
 
 Lima hari di tempat pegunungan Sinai bertemu air paling jernih di belahan bumi utara — terumbu karang, malam di gurun, dan bermalas-malasan yang memang disengaja.
 
-mulai €979 / orang
+mulai €1.077 / orang
 
 mulai 6 orang
 
-€1.077 per orang untuk dua wisatawan
+€1.185 per orang untuk dua wisatawan
 
 Per orang, musim normal. Biaya tambahan hari libur kami cantumkan terpisah dalam penawaran.
 
@@ -89,7 +89,7 @@ Sharm El Sheikh terletak di ujung Semenanjung Sinai, tempat pegunungan gurun ter
 - Visa masuk Mesir
 - Tip
 - Pengeluaran pribadi
-- Makanan
+- Makanan, kecuali makan siang pada hari di kapal
 - Tambahan opsional yang Anda pilih — aktivitas, minuman
 
 ## Ritme perjalanan

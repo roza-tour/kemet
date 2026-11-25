@@ -11,11 +11,11 @@ Liburan keluarga
 
 Delapan hari yang dirancang untuk anak-anak yang penuh rasa ingin tahu dan orang tua yang tak ingin terburu-buru — mumi, felucca, warna-warni lukisan makam, dan sore di tepi kolam renang.
 
-mulai €1.524 / orang
+mulai €1.676 / orang
 
 mulai 6 orang
 
-€1.676 per orang untuk dua wisatawan
+€1.844 per orang untuk dua wisatawan
 
 Per orang, musim normal. Biaya tambahan hari libur kami cantumkan terpisah dalam penawaran.
 

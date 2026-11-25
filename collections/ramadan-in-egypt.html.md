@@ -83,7 +83,7 @@ Cairo · Giza · Saqqara · Memphis
 
 A deep, slow reading of the world's greatest layered city — its two museums, three faiths, medieval streets and the necropolis where the pyramid was invented.
 
-€875 / person from 6 travellers
+€963 / person from 6 travellers
 
 Full Day
 
@@ -93,7 +93,7 @@ Cairo
 
 The Hanging Church, Ben Ezra Synagogue and Abu Serga in Old Cairo, then Saladin's Citadel and the alabaster Mosque of Muhammad Ali.
 
-€80 / person from 6 travellers · tickets not included
+€88 / person from 6 travellers · tickets not included
 
 Evening
 
@@ -103,7 +103,7 @@ Cairo
 
 A guided evening tasting of Cairo's best-loved dishes — koshari, ful and ta'meya, hawawshi and grilled pigeon, kunafa and basbousa, finished at a traditional ahwa.
 
-€59 / person from 6 travellers · food not included
+€65 / person from 6 travellers · food not included
 
 Full Day
 
@@ -113,7 +113,7 @@ Cairo
 
 The treasures of the Egyptian Museum in Tahrir, then the National Museum of Egyptian Civilization and its Royal Mummies Hall.
 
-€64 / person from 6 travellers · tickets not included
+€70 / person from 6 travellers · tickets not included
 
 3 Days
 
@@ -123,7 +123,7 @@ Cairo · Giza
 
 The essential Cairo, concierge-run: fast-track immigration, private plateau morning, the Grand Egyptian Museum, and lantern-lit Islamic Cairo by night.
 
-€600 / person from 6 travellers
+€660 / person from 6 travellers
 
 Destinations
 

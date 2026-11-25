@@ -19,7 +19,7 @@ Cairo **só parcial, cerca de 95%**
 
 Um eclipse total são aqueles poucos minutos em que a Lua cobre o Sol por completo: o céu escurece em pleno dia, a temperatura cai, a coroa solar aparece como um halo branco e todo o horizonte brilha como no pôr do sol. A totalidade costuma durar dois ou três minutos. Em 2 de agosto de 2027, ela é mais longa justamente sobre o Alto Egito — e acontece sobre a antiga Tebas, Karnak, o templo de Luxor e o Vale dos Reis, numa cidade cujos construtores alinhavam os templos com o Sol.
 
-Dia do eclipse em Luxor, 2 de agosto de 2027 — passeio de um dia em grupo pequeno.**€ 149**por pessoa Inscreva-se
+Dia do eclipse em Luxor, 2 de agosto de 2027 — passeio de um dia em grupo pequeno.**€ 164**por pessoa Inscreva-se
 
 01
 
@@ -70,7 +70,7 @@ Dia do eclipse · segunda-feira, 2 de agosto de 2027
 
 Um dia planejado em torno de seis minutos: o Vale dos Reis na abertura, um local de observação à sombra na margem oeste para a totalidade, um almoço egípcio tardio e uma faluca ao pôr do sol. Grupos pequenos de até 12 pessoas, cada um com seu próprio veículo e guia especialista em egiptologia — a única saída com data fixa que fazemos, porque quem marca a data é o céu.
 
-**€ 149** por pessoa · Hotel não incluído · 48 vagas em quatro grupos de até 12 pessoas
+**€ 164** por pessoa · Hotel não incluído · 48 vagas em quatro grupos de até 12 pessoas
 
 ### O dia
 

@@ -11,11 +11,11 @@ Tagesausflug
 
 Ein konzentrierter halber Tag zwischen den drei großen Pyramiden und der Sphinx, mit dem klassischen Panoramapunkt.
 
-ab 66 € / Person
+ab 73 € / Person
 
 ab 6 Reisenden · Eintritte nicht enthalten
 
-73 € pro Person bei zwei Reisenden
+80 € pro Person bei zwei Reisenden
 
 Pro Person, Normalsaison. Zuschläge für Feiertage weisen wir im Angebot getrennt aus.
 

@@ -11,11 +11,11 @@ Viaggio breve
 
 Tre giorni, zero attriti — corsia prioritaria all'arrivo, le piramidi e il Grand Egyptian Museum, e il Cairo medievale quando i gitanti se ne sono andati.
 
-da 600 € / persona
+da 660 € / persona
 
 da 6 viaggiatori
 
-660 € a persona per due viaggiatori
+726 € a persona per due viaggiatori
 
 A persona, in stagione normale. I supplementi delle festività sono indicati separatamente nel preventivo.
 

@@ -19,7 +19,7 @@ Kairo **nur partiell, rund 95 %**
 
 Eine totale Sonnenfinsternis sind die wenigen Minuten, in denen der Mond die Sonne vollständig bedeckt: Mitten am Tag wird der Himmel dunkel, die Temperatur fällt, die Korona erscheint als weißer Strahlenkranz, und rundum leuchtet der Horizont wie bei Sonnenuntergang. Meist dauert die Totalität zwei oder drei Minuten. Am 2. August 2027 dauert sie über Oberägypten am längsten — und sie findet über dem alten Theben statt, über Karnak, dem Luxor-Tempel und dem Tal der Könige, in einer Stadt, deren Erbauer ihre Tempel nach der Sonne ausrichteten.
 
-Sonnenfinsternis-Tag in Luxor, 2. August 2027 — eine Tagestour in kleiner Gruppe.**149 €**pro Person Anmelden
+Sonnenfinsternis-Tag in Luxor, 2. August 2027 — eine Tagestour in kleiner Gruppe.**164 €**pro Person Anmelden
 
 01
 
@@ -70,7 +70,7 @@ Sonnenfinsternis-Tag · Montag, 2. August 2027
 
 Ein Tag, geplant um sechs Minuten: das Tal der Könige zur Öffnung, ein schattiger Beobachtungsplatz am Westufer für die Totalität, ein spätes ägyptisches Mittagessen und eine Feluke zum Sonnenuntergang. Kleine Gruppen mit bis zu 12 Personen, jede mit eigener ägyptologischer Reiseleitung und eigenem Fahrzeug — der einzige feste Termin in unserem Programm, denn das Datum bestimmt der Himmel.
 
-**149 €** pro Person · Hotel nicht inbegriffen · 48 Plätze in vier Gruppen mit bis zu 12 Personen
+**164 €** pro Person · Hotel nicht inbegriffen · 48 Plätze in vier Gruppen mit bis zu 12 Personen
 
 ### Der Tagesablauf
 

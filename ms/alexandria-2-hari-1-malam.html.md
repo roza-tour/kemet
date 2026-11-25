@@ -11,11 +11,11 @@ Percutian singkat
 
 Dua hari di tepi Mediterranean — katakomb, kubu di tapak Pharos, Perpustakaan yang dilahirkan semula, dan malam yang tidak pernah dilihat pelawat harian.
 
-dari €402 / seorang
+dari €442 / seorang
 
 dari 6 orang
 
-€442 seorang bagi dua pengembara
+€486 seorang bagi dua pengembara
 
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 

@@ -11,11 +11,11 @@ Signature-Reise
 
 Fünf ruhige Tage durch Oberägypten — Luxors beide Ufer, die Straße nach Süden über Edfu und Kom Ombo, und die Inseln von Assuan.
 
-ab 1.018 € / Person
+ab 1.120 € / Person
 
 ab 6 Reisenden
 
-1.120 € pro Person bei zwei Reisenden
+1.232 € pro Person bei zwei Reisenden
 
 Pro Person, Normalsaison. Zuschläge für Feiertage weisen wir im Angebot getrennt aus.
 

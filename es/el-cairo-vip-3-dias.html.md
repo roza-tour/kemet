@@ -11,11 +11,11 @@ Escapada
 
 Tres días sin fricciones: llegada por vía rápida, las pirámides y el Gran Museo Egipcio, y El Cairo medieval cuando ya se han ido los excursionistas.
 
-desde 600 € / persona
+desde 660 € / persona
 
 desde 6 viajeros
 
-660 € por persona para dos viajeros
+726 € por persona para dos viajeros
 
 Por persona, en temporada normal. Los suplementos de fechas festivas se indican por separado en el presupuesto.
 

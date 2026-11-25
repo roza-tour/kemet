@@ -15,7 +15,7 @@ Tempoh ideal **9–12 malam**
 
 Matahari terbit **di sembilan piramid**
 
-Perjalanan 9 hari dari **€2,045 seorang**
+Perjalanan 9 hari dari **€2,250 seorang**
 
 Bulan madu di sini bukan resort pantai dengan lawatan kuil sebagai tambahan. Ia dahabiya yang belayar, matahari terbit di piramid sebelum pintu dibuka, dan Laut Merah sebagai penutup — disusun supaya anda berdua tidak pernah menjadi sebahagian daripada rombongan. Ramai pasangan memulakannya dengan umrah, lalu meneruskan bulan madu di Mesir; penerbangan Jeddah–Kaherah hanya kira-kira dua jam.
 

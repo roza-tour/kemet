@@ -11,11 +11,11 @@ Liburan singkat
 
 Tiga hari di kuil dan makam Mesir Hulu, dengan penerbangan domestik sudah termasuk dalam harga.
 
-mulai €527 / orang
+mulai €580 / orang
 
 mulai 6 orang
 
-€580 per orang untuk dua wisatawan
+€638 per orang untuk dua wisatawan
 
 Per orang, musim normal. Biaya tambahan hari libur kami cantumkan terpisah dalam penawaran.
 

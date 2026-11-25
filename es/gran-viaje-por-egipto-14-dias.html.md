@@ -11,11 +11,11 @@ Gran viaje
 
 Catorce días con todos los registros del país: El Cairo, Alejandría, el Nilo en crucero, Abu Simbel y, para terminar, el mar Rojo.
 
-desde 2.728 € / persona
+desde 3.001 € / persona
 
 desde 6 viajeros
 
-3.001 € por persona para dos viajeros
+3.301 € por persona para dos viajeros
 
 Por persona, en temporada normal. Los suplementos de fechas festivas se indican por separado en el presupuesto.
 
@@ -65,7 +65,7 @@ Es el itinerario para quienes piensan venir una sola vez y verlo entero. Los die
 
 - Catacumbas de Kom el-Shoqafa y Columna de Pompeyo
 - La Ciudadela de Qaitbay, en el lugar del antiguo Faro
-- Almuerzo de pescado y marisco en la Corniche; regreso a El Cairo
+- Almuerzo de pescado y marisco en la Corniche, pagado en destino; regreso a El Cairo
 
 05
 
@@ -157,7 +157,7 @@ Es el itinerario para quienes piensan venir una sola vez y verlo entero. Los die
 - Visa de entrada a Egipto
 - Propinas
 - Gastos personales
-- Comidas, salvo a bordo del crucero por el Nilo
+- Comidas, salvo a bordo del crucero por el Nilo y el almuerzo del día en barco
 - Extras opcionales que decida añadir — actividades, bebidas
 
 ## El ritmo

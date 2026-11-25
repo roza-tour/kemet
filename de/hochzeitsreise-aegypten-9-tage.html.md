@@ -11,7 +11,7 @@ Hochzeitsreise
 
 Neun Tage für zwei — Kairos große Namen, drei Nächte auf dem Schiff, die Inseln von Assuan und lange goldene Abende, an denen nichts drängt.
 
-ab 2.045 € / Person
+ab 2.250 € / Person
 
 ab 2 Reisenden
 

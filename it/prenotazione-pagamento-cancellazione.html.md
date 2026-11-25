@@ -21,7 +21,7 @@ Questa è una traduzione. In caso di differenze rispetto alla versione inglese, 
 
 ## Come funziona la prenotazione
 
-- Richiedete — gratis e senza impegno — Inviateci le vostre date, i vostri interessi e il numero di partecipanti. Rispondiamo entro due ore con una prima valutazione ed eventuali domande. In questa fase non c'è alcun costo né impegno.
+- Richiedete — gratis e senza impegno — Inviateci le vostre date, i vostri interessi e il numero di partecipanti. Rispondiamo entro due ore con un programma giorno per giorno e un prezzo chiaro. In questa fase non c'è alcun costo né impegno.
 - Ricevete e perfezionate la proposta — Progettiamo un itinerario privato con un preventivo dettagliato voce per voce — che cosa è incluso ed escluso, con prezzi a persona in euro. Lo modifichiamo insieme a voi finché non è esattamente come lo desiderate.
 - Confermate con un acconto — Quando siete soddisfatti, un acconto conferma il vostro viaggio e ci permette di iniziare ad assicurarvi hotel, guide, crociere e permessi a vostro nome.
 - Saldate prima di partire — Il saldo rimanente è dovuto prima della partenza. Una volta saldato, vi inviamo i documenti definitivi, il programma giorno per giorno e il nominativo del vostro referente.

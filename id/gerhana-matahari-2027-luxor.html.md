@@ -19,7 +19,7 @@ Kairo **hanya sebagian, sekitar 95%**
 
 Gerhana matahari total adalah beberapa menit ketika Bulan menutupi Matahari sepenuhnya: langit menjadi gelap di siang hari, suhu turun, korona Matahari tampak seperti lingkaran cahaya putih, dan seluruh cakrawala bercahaya seperti saat matahari terbenam. Biasanya totalitas berlangsung dua atau tiga menit. Pada 2 Agustus 2027, totalitas paling lama justru terjadi di atas Mesir Hulu — di atas Thebes kuno, Karnak, Kuil Luxor, dan Lembah Para Raja, di kota yang para pembangunnya menyelaraskan kuil-kuil mereka dengan Matahari.
 
-Hari Gerhana di Luxor, 2 Agustus 2027 — tur sehari dalam grup kecil.**€149**per orang Daftar
+Hari Gerhana di Luxor, 2 Agustus 2027 — tur sehari dalam grup kecil.**€164**per orang Daftar
 
 01
 
@@ -76,7 +76,7 @@ Hari Gerhana · Senin, 2 Agustus 2027
 
 Satu hari yang dirancang di sekitar enam menit: Lembah Para Raja saat baru dibuka, tempat menyaksikan totalitas yang teduh di Tepi Barat, makan siang khas Mesir yang agak terlambat, dan felucca saat matahari terbenam. Grup kecil maksimal 12 orang, masing-masing dengan Egyptologist dan kendaraannya sendiri — satu-satunya keberangkatan bertanggal tetap yang kami selenggarakan, karena tanggalnya ditentukan oleh langit.
 
-**€149** per orang · Tidak termasuk hotel · 48 tempat dalam empat grup, masing-masing maksimal 12 orang
+**€164** per orang · Tidak termasuk hotel · 48 tempat dalam empat grup, masing-masing maksimal 12 orang
 
 ### Jadwal hari itu
 

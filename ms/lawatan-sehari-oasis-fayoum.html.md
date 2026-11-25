@@ -11,11 +11,11 @@ Lawatan sehari
 
 Sehari penuh di oasis hijau di barat daya Kaherah — tasik, air terjun di gurun, fosil ikan paus dan sebuah kampung tembikar.
 
-dari €139 / seorang
+dari €153 / seorang
 
 dari 6 orang · tiket masuk tidak termasuk
 
-€153 seorang bagi dua pengembara
+€168 seorang bagi dua pengembara
 
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 
@@ -33,7 +33,7 @@ Tasik Qarun, air terjun dan bukit pasir Wadi El Rayan, fosil ikan paus Wadi Al-H
 
 ## Tentang perjalanan
 
-Sejam setengah ke barat daya Kaherah, lekukan Fayoum menukar monumen dengan landskap: sebuah tasik garam yang luas, air terjun air tawar di tengah gurun, sebuah lembah UNESCO yang menyimpan fosil ikan paus, dan sebuah kampung tukang tembikar di lereng bukit. Hari penuh ini suasana yang sama sekali berbeza daripada kuil-kuil — ufuk yang luas, burung-burung, bukit pasir dan makan tengah hari ikan di tepi tasik. Perjalanan bersifat persendirian, dengan pemandu dan drebar anda sepanjang hari.
+Sejam setengah ke barat daya Kaherah, lekukan Fayoum menukar monumen dengan landskap: sebuah tasik garam yang luas, air terjun air tawar di tengah gurun, sebuah lembah UNESCO yang menyimpan fosil ikan paus, dan sebuah kampung tukang tembikar di lereng bukit. Hari penuh ini suasana yang sama sekali berbeza daripada kuil-kuil — ufuk yang luas, burung-burung, bukit pasir dan makan tengah hari ikan di tepi tasik (dibayar di tempat). Perjalanan bersifat persendirian, dengan pemandu dan drebar anda sepanjang hari.
 
 ## Laluan perjalanan
 
@@ -65,7 +65,7 @@ Tasik yang digelar Tasik Ajaib, dialiri mata air mineral dan bertukar warna meng
 
 ### Hentian 5 — Kampung tembikar Tunis & makan tengah hari di tepi tasik
 
-Berakhir di Tunis, kampung di lereng bukit yang terkenal dengan tukang tembikar dan studionya, diikuti makan tengah hari ikan yang santai di tepi tasik sebelum perjalanan pulang ke Kaherah.
+Berakhir di Tunis, kampung di lereng bukit yang terkenal dengan tukang tembikar dan studionya, diikuti makan tengah hari ikan yang santai di tepi tasik, dibayar di tempat, sebelum perjalanan pulang ke Kaherah.
 
 ## Termasuk
 

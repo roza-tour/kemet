@@ -159,7 +159,7 @@ Giza
 
 The Great Pyramid, the pyramids of Khafre and Menkaure, the panoramic viewpoint and the Valley Temple with the Great Sphinx — Giza in a morning.
 
-€66 / person from 6 travellers · tickets not included
+€73 / person from 6 travellers · tickets not included
 
 Full Day
 
@@ -169,7 +169,7 @@ Giza
 
 The Great Pyramid, the panorama of all three pyramids, the Valley Temple and Sphinx, then the vast new Grand Egyptian Museum beside them.
 
-€79 / person from 6 travellers · tickets not included
+€87 / person from 6 travellers · tickets not included
 
 Full Day
 
@@ -177,9 +177,9 @@ Full Day
 
 Alexandria
 
-The Catacombs of Kom El Shoqafa, Pompey's Pillar, the Citadel of Qaitbay on the old Pharos site and the Bibliotheca Alexandrina, with a seafood lunch.
+The Catacombs of Kom El Shoqafa, Pompey's Pillar, the Citadel of Qaitbay on the old Pharos site and the Bibliotheca Alexandrina, with a seafood lunch paid locally.
 
-€57 / person from 6 travellers · tickets not included
+€63 / person from 6 travellers · tickets not included
 
 Further reading
 

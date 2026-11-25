@@ -11,11 +11,11 @@ Mar Rosso
 
 Cinque giorni dove le montagne del Sinai scendono nell'acqua più limpida dell'emisfero settentrionale — coralli, serate nel deserto e ozio voluto.
 
-da 979 € / persona
+da 1.077 € / persona
 
 da 6 viaggiatori
 
-1.077 € a persona per due viaggiatori
+1.185 € a persona per due viaggiatori
 
 A persona, in stagione normale. I supplementi delle festività sono indicati separatamente nel preventivo.
 
@@ -89,7 +89,7 @@ Sharm el-Sheikh sta sulla punta della penisola del Sinai, dove le montagne del d
 - Il visto d'ingresso in Egitto
 - Le mance
 - Le spese personali
-- I pasti
+- I pasti, tranne il pranzo nella giornata in barca
 - I supplementi facoltativi a scelta — attività, bevande
 
 ## Il ritmo

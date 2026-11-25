@@ -2,7 +2,7 @@
 title: "Cairo Food Tour: Private Evening Tasting | Kemet"
 url: https://kemet-travel.com/tour-cairo-food.html
 language: en
-description: "A guided evening tasting of Cairo's best-loved dishes — koshari, ful and ta'meya, hawawshi and grilled pigeon, kunafa and basbousa — private, from €59 pp."
+description: "A guided evening tasting of Cairo's best-loved dishes — koshari, ful and ta'meya, hawawshi and grilled pigeon, kunafa and basbousa — private, from €65 pp."
 ---
 
 Day Tour · Evening (≈4 hours)
@@ -13,7 +13,7 @@ An evening walking the flavours of Cairo — koshari, street classics, grilled p
 
 ## What does Cairo Authentic Food include, and what does it cost?
 
-Cairo Authentic Food is a private evening tour of Cairo, from €59 per person for a party of 6 or more, or €65 per person for two. It includes a private local food guide for the evening and your guide's choice of places, and help ordering at every stop. Food and drinks are paid directly at each stop.
+Cairo Authentic Food is a private evening tour of Cairo, from €65 per person for a party of 6 or more, or €72 per person for two. It includes a private local food guide for the evening and your guide's choice of places, and help ordering at every stop. Food and drinks are paid directly at each stop.
 
 ## Overview
 
@@ -107,15 +107,15 @@ Every Kemet journey is private, led by a licensed Egyptologist and priced in wri
 
 From
 
-€59
+€65
 
 per person · EUR
 
 Based on a private party of 6 or more · food and drinks not included.
 
-For two travellers: €65 per person.
+For two travellers: €72 per person.
 
-[Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Cairo+Authentic+Food&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Cairo+Authentic+Food%22+journey+%28Evening+%28%E2%89%884+hours%29%2C+from+%E2%82%AC59+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
+[Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Cairo+Authentic+Food&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Cairo+Authentic+Food%22+journey+%28Evening+%28%E2%89%884+hours%29%2C+from+%E2%82%AC65+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 
 [Ask on WhatsApp](https://wa.me/201158367162?text=Hello%20Kemet%20%E2%80%94%20I%27m%20interested%20in%20the%20%22Cairo%20Authentic%20Food%22%20journey%20(Evening%20(%E2%89%884%20hours)).%20Could%20you%20share%20availability%3F)
 
@@ -141,7 +141,7 @@ Cairo
 
 The Hanging Church, Ben Ezra Synagogue and Abu Serga in Old Cairo, then Saladin's Citadel and the alabaster Mosque of Muhammad Ali.
 
-€80 / person from 6 travellers · tickets not included
+€88 / person from 6 travellers · tickets not included
 
 Full Day
 
@@ -151,7 +151,7 @@ Cairo
 
 The treasures of the Egyptian Museum in Tahrir, then the National Museum of Egyptian Civilization and its Royal Mummies Hall.
 
-€64 / person from 6 travellers · tickets not included
+€70 / person from 6 travellers · tickets not included
 
 9 Days
 
@@ -161,7 +161,7 @@ Cairo · Giza · Aswan · Luxor
 
 Egypt as a honeymoon should be — private sunrise at the pyramids, a felucca at golden hour, three nights on the Nile and suites chosen for the view.
 
-€2,045 / person from 2 travellers
+€2,250 / person from 2 travellers
 
 ---
 

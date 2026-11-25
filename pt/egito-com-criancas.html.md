@@ -15,7 +15,7 @@ Idade ideal **a partir de uns 7 anos**
 
 Para os pais **babá sob pedido**
 
-Viagem em família de 8 dias a partir de **€ 1.524 por pessoa, a partir de 6 viajantes**
+Viagem em família de 8 dias a partir de **€ 1.676 por pessoa, a partir de 6 viajantes**
 
 O Egito é um dos raros lugares em que crianças e pais se encantam com as mesmas coisas. A Grande Pirâmide é exatamente tão grande quanto a criança imagina; uma múmia, exatamente tão misteriosa; um camelo, exatamente tão engraçado. E as férias de janeiro caem na melhor época do ano no Nilo.
 

@@ -11,11 +11,11 @@ Liburan singkat
 
 Empat hari yang memadukan monumen Kairo dan Giza dengan sehari di tepi Mediterania di Alexandria.
 
-mulai €618 / orang
+mulai €680 / orang
 
 mulai 6 orang
 
-€680 per orang untuk dua wisatawan
+€748 per orang untuk dua wisatawan
 
 Per orang, musim normal. Biaya tambahan hari libur kami cantumkan terpisah dalam penawaran.
 
@@ -51,7 +51,7 @@ Singkat harinya tetapi kaya ragamnya, liburan ini memadukan monumen-monumen peri
 
 - Katakombe Kom El Shoqafa
 - Benteng Qaitbay dan Bibliotheca Alexandrina
-- Pilar Pompey dan makan siang hidangan laut di tepi pantai
+- Pilar Pompey dan makan siang hidangan laut di tepi pantai, dibayar di tempat
 
 03
 

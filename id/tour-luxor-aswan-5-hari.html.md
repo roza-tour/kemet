@@ -11,11 +11,11 @@ Perjalanan unggulan
 
 Lima hari tanpa terburu-buru di Mesir Hulu — kedua tepi Luxor, jalan ke selatan melewati Edfu dan Kom Ombo, dan pulau-pulau Aswan.
 
-mulai €1.018 / orang
+mulai €1.120 / orang
 
 mulai 6 orang
 
-€1.120 per orang untuk dua wisatawan
+€1.232 per orang untuk dua wisatawan
 
 Per orang, musim normal. Biaya tambahan hari libur kami cantumkan terpisah dalam penawaran.
 

@@ -27,7 +27,7 @@ When you send us a message through the contact form, we collect the details you 
 
 Like almost all websites, our server also records standard technical information (such as IP address, browser type and the pages requested) in its logs. We do not use this to identify you personally.
 
-If you join our list — from the invitation on this site or from the trip designer — we keep your email address, your name if you give it, the page and language you signed up from, and a record of your consent: when you gave it, the wording you agreed to and the IP address it came from. You can leave the list at any time through the unsubscribe link in our emails, or by writing to us.
+If you join our list — from the invitation on this site or from the trip designer — we first send an email asking you to confirm, and nothing else is sent until you do. We keep your email address, your name if you give it, the page and language you signed up from, and a record of your consent: when you gave it and when you confirmed it, the wording you agreed to and the IP address each came from. You can leave the list at any time through the unsubscribe link in our emails, or by writing to us.
 
 We do not operate user accounts and we do not take payments on this website, so we never collect passwords or card details here.
 
@@ -37,7 +37,9 @@ We do not operate user accounts and we do not take payments on this website, so 
 
 We use the details from your enquiry solely to reply to you, to understand what you are looking for, and — if you go ahead — to design and arrange your journey. We may contact you by email, phone or WhatsApp using the details you provide.
 
-Our legal basis is your consent and the steps necessary to enter into and perform a travel arrangement at your request. We do not use your information for advertising or automated decision-making.
+If you do not travel with us straight away, we may write to you again about the journey you asked about: at most three times in the year after your enquiry. Tell us at any point and we will not write again.
+
+Our legal basis is your consent, the steps necessary to enter into and perform a travel arrangement at your request, and, for those follow-up messages, our legitimate interest in answering the question you brought us. We do not share your information with advertisers and we do not use it for automated decision-making.
 
 04
 
@@ -65,7 +67,9 @@ Our website and email are hosted by our hosting provider, who processes data on 
 
 ## How long we keep it
 
-We keep enquiry correspondence only for as long as needed to assist you and to keep a record of any trip we arrange, after which it is deleted. Where a booking takes place, some records may be kept longer to meet accounting or legal obligations.
+We keep an enquiry for three years from the day it was sent, and then delete it. Where a booking takes place, some records may be kept longer to meet accounting or legal obligations.
+
+If you join our list, we keep your details until you leave it. A sign-up that is never confirmed from the email we send is deleted after 30 days. If you leave the list, we keep a note of your address and the date you left, so that you are not added again by mistake.
 
 You can ask us to delete your information at any time (see “Your rights”).
 

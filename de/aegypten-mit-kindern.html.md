@@ -15,7 +15,7 @@ Ideales Alter **ab etwa 7 Jahren**
 
 Für die Eltern **Babysitter auf Wunsch**
 
-8-Tage-Familienreise ab **1.524 € p. P., ab 6 Reisenden**
+8-Tage-Familienreise ab **1.676 € p. P., ab 6 Reisenden**
 
 Ägypten ist einer der seltenen Orte, an denen Kinder und Eltern über dasselbe staunen. Die Große Pyramide ist genau so groß, wie ein Kind es sich wünscht; eine Mumie genau so geheimnisvoll; ein Kamel genau so komisch. Und weil die Herbst- und Osterferien in die beste Reisezeit fallen, passt Ägypten auch in den Familienkalender.
 

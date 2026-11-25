@@ -21,7 +21,7 @@ Ini ialah terjemahan. Jika terdapat perbezaan dengan versi bahasa Inggeris, vers
 
 ## Cara tempahan berfungsi
 
-- Hantar pertanyaan — percuma dan tanpa obligasi — Hantarkan tarikh, minat dan saiz rombongan anda. Kami membalas dalam tempoh dua jam dengan penilaian awal dan sebarang soalan. Tiada bayaran dan tiada komitmen pada peringkat ini.
+- Hantar pertanyaan — percuma dan tanpa obligasi — Hantarkan tarikh, minat dan saiz rombongan anda. Kami membalas dalam tempoh dua jam dengan jadual perjalanan hari demi hari dan harga yang jelas. Tiada bayaran dan tiada komitmen pada peringkat ini.
 - Terima dan murnikan cadangan anda — Kami mereka bentuk jadual perjalanan persendirian dengan sebut harga terperinci sepenuhnya — apa yang termasuk dan tidak termasuk, dihargai bagi setiap orang dalam euro. Kami menyemaknya bersama anda sehingga ia betul-betul menepati kehendak anda.
 - Sahkan dengan deposit — Apabila anda berpuas hati, deposit mengesahkan perjalanan anda dan membolehkan kami mula mendapatkan hotel, pemandu, pelayaran dan permit atas nama anda.
 - Jelaskan baki sebelum anda berlepas — Baki yang tinggal perlu dibayar sebelum pelepasan. Setelah dijelaskan, kami mengeluarkan dokumen akhir anda, program hari demi hari dan seorang rujukan hubungan yang dinamakan.

@@ -72,7 +72,7 @@ Cairo · Giza · Alexandria · Aswan · Luxor
 
 Our signature journey: Cairo, Alexandria, a sleeper train south, and a three-night Nile cruise from Aswan to Luxor — every layer of Egypt in one arc.
 
-€1,915 / person from 6 travellers
+€2,107 / person from 6 travellers
 
 7 Days
 
@@ -82,7 +82,7 @@ Cairo · Giza · Alexandria · Luxor
 
 The headline acts of Egypt in seven days — the Egyptian Museum, Alexandria, the temples and tombs of Luxor, and the Pyramids of Giza.
 
-€1,179 / person from 6 travellers
+€1,297 / person from 6 travellers
 
 4 Days
 
@@ -92,7 +92,7 @@ Aswan · Kom Ombo · Edfu · Luxor
 
 The essential Nile cruise, done properly — Philae and the High Dam, three nights afloat past Kom Ombo and Edfu, and Luxor's East and West Banks with your own Egyptologist.
 
-€820 / person from 6 travellers
+€902 / person from 6 travellers
 
 3 Days
 
@@ -102,7 +102,7 @@ Cairo · Luxor · Aswan
 
 A fast, flight-included loop through Luxor and Aswan — Karnak, the Valley of the Kings, Philae and the High Dam — out and back from Cairo.
 
-€527 / person from 6 travellers
+€580 / person from 6 travellers
 
 Full Day
 
@@ -112,7 +112,7 @@ Giza
 
 The Great Pyramid, the panorama of all three pyramids, the Valley Temple and Sphinx, then the vast new Grand Egyptian Museum beside them.
 
-€79 / person from 6 travellers · tickets not included
+€87 / person from 6 travellers · tickets not included
 
 Destinations
 

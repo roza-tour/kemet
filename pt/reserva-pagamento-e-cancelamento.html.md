@@ -21,7 +21,7 @@ Esta é uma tradução. Se houver diferença em relação à versão em inglês,
 
 ## Como funciona a reserva
 
-- Consulta — gratuita e sem compromisso — Enviem-nos as suas datas, os seus interesses e o tamanho do grupo. Respondemos em até duas horas, com uma avaliação inicial e as perguntas que tivermos. Nesta etapa não há cobrança nem compromisso.
+- Consulta — gratuita e sem compromisso — Enviem-nos as suas datas, os seus interesses e o tamanho do grupo. Respondemos em até duas horas, com um roteiro dia a dia e um preço claro. Nesta etapa não há cobrança nem compromisso.
 - Recebam e ajustem a sua proposta — Desenhamos um roteiro privado com um orçamento totalmente detalhado — o que está incluído e o que não está, com preço por pessoa em euros. Ajustamos o roteiro com vocês até que fique exatamente certo.
 - Confirmem com um sinal — Quando estiverem satisfeitos, um sinal confirma a sua viagem e nos permite começar a garantir, em nome de vocês, hotéis, guias, cruzeiros e autorizações.
 - Quitem o saldo antes de viajar — O saldo restante vence antes da partida. Depois de quitado, emitimos os documentos finais, o programa dia a dia e um contato nomeado.

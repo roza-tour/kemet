@@ -21,7 +21,7 @@ Ini adalah terjemahan. Jika terdapat perbedaan dengan versi Bahasa Inggris, yang
 
 ## Cara pemesanan
 
-- Ajukan pertanyaan — gratis dan tanpa kewajiban — Kirimkan kepada kami tanggal, minat, dan jumlah rombongan Anda. Kami membalas dalam dua jam dengan penilaian awal dan pertanyaan yang diperlukan. Pada tahap ini tidak ada biaya dan tidak ada komitmen.
+- Ajukan pertanyaan — gratis dan tanpa kewajiban — Kirimkan kepada kami tanggal, minat, dan jumlah rombongan Anda. Kami membalas dalam dua jam dengan rencana perjalanan hari demi hari dan harga yang jelas. Pada tahap ini tidak ada biaya dan tidak ada komitmen.
 - Terima dan sempurnakan usulan Anda — Kami merancang itinerari privat dengan penawaran harga yang dirinci lengkap — apa yang termasuk dan tidak termasuk, dengan harga per orang dalam euro. Kami merevisinya bersama Anda sampai benar-benar sesuai.
 - Konfirmasi dengan uang muka — Bila Anda sudah puas, uang muka mengonfirmasi perjalanan Anda dan memungkinkan kami mulai mengamankan hotel, pemandu, pesiar, dan izin atas nama Anda.
 - Lunasi sisanya sebelum Anda berangkat — Sisa pembayaran jatuh tempo sebelum keberangkatan. Setelah lunas, kami menerbitkan dokumen akhir, program harian, dan narahubung Anda yang disebutkan namanya.

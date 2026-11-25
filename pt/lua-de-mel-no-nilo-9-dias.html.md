@@ -11,7 +11,7 @@ Lua de mel
 
 Nove dias feitos para dois — os ícones do Cairo, um cruzeiro de três noites, as ilhas de Assuã e longos fins de tarde dourados, sem pressa para nada.
 
-a partir de € 2.045 / pessoa
+a partir de € 2.250 / pessoa
 
 a partir de 2 viajantes
 

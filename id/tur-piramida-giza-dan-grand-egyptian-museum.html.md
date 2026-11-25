@@ -11,11 +11,11 @@ Tur sehari
 
 Piramida dan Sphinx di pagi hari, Grand Egyptian Museum di sore hari — keajaiban lama dan yang baru, dalam satu hari.
 
-mulai €79 / orang
+mulai €87 / orang
 
 mulai 6 orang · tiket masuk tidak termasuk
 
-€87 per orang untuk dua wisatawan
+€96 per orang untuk dua wisatawan
 
 Per orang, musim normal. Biaya tambahan hari libur kami cantumkan terpisah dalam penawaran.
 

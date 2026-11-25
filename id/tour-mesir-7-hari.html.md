@@ -11,13 +11,13 @@ Perjalanan unggulan
 
 Sepekan yang merangkum yang terpenting — Kairo, Alexandria, dan Luxor — dengan malam-malam di kereta tidur di antaranya.
 
-mulai €1.179 / orang
+mulai €1.297 / orang
 
 mulai 6 orang
 
-€1.297 per orang untuk dua wisatawan
+€1.427 per orang untuk dua wisatawan
 
-Dengan penerbangan domestik sebagai ganti dua malam di kereta tidur, dan malam-malam itu di hotel: €1.309 per orang
+Dengan penerbangan domestik sebagai ganti dua malam di kereta tidur, dan malam-malam itu di hotel: €1.440 per orang
 
 Per orang, musim normal. Biaya tambahan hari libur kami cantumkan terpisah dalam penawaran.
 
@@ -53,7 +53,7 @@ Bagi Anda yang punya waktu sepekan, perjalanan ini menyaring Mesir hingga ke hal
 
 - Perjalanan darat ke pesisir Mediterania
 - Katakombe Kom El Shoqafa, Pilar Pompey, dan Benteng Qaitbay
-- Bibliotheca Alexandrina dan makan siang hidangan laut di tepi pantai
+- Bibliotheca Alexandrina dan makan siang hidangan laut di tepi pantai, dibayar di tempat
 
 03
 
@@ -98,8 +98,8 @@ Bagi Anda yang punya waktu sepekan, perjalanan ini menyaring Mesir hingga ke hal
 ## Termasuk
 
 - Pemandu Egyptologist pribadi sepanjang perjalanan
-- Menginap 6 malam di hotel
-- Kabin kereta tidur Kairo–Luxor (pulang-pergi)
+- Menginap 4 malam di hotel; dua malam lainnya di kereta tidur
+- Kabin kereta tidur Kairo–Luxor (pulang-pergi), dengan makan malam dan sarapan di kereta
 - Semua tiket masuk ke situs dan monumen
 - Transfer pribadi ber-AC
 - Penjemputan dan pengantaran di hotel
@@ -111,7 +111,7 @@ Bagi Anda yang punya waktu sepekan, perjalanan ini menyaring Mesir hingga ke hal
 - Visa masuk Mesir
 - Tip
 - Pengeluaran pribadi
-- Makanan
+- Makanan, kecuali makan malam dan sarapan di kereta tidur
 - Tambahan opsional yang Anda pilih — aktivitas, minuman
 
 ## Ritme perjalanan

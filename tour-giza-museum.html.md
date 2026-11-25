@@ -2,7 +2,7 @@
 title: "Giza Pyramids & Grand Egyptian Museum Day Tour | Kemet"
 url: https://kemet-travel.com/tour-giza-museum.html
 language: en
-description: "The Great Pyramid, the panorama of all three pyramids, the Valley Temple and Sphinx — private, from €79 pp."
+description: "The Great Pyramid, the panorama of all three pyramids, the Valley Temple and Sphinx — private, from €87 pp."
 ---
 
 Day Tour · Full day (≈8 hours)
@@ -13,7 +13,7 @@ The Pyramids and Sphinx in the morning, the Grand Egyptian Museum in the afterno
 
 ## What does Giza & the Grand Museum include, and what does it cost?
 
-Giza & the Grand Museum is a private full-day tour of Giza, from €79 per person for a party of 6 or more, or €87 per person for two. It includes a private Egyptologist guide throughout, private air-conditioned transfers, hotel pickup & drop-off and bottled water every day. Entrance tickets are paid at the gate.
+Giza & the Grand Museum is a private full-day tour of Giza, from €87 per person for a party of 6 or more, or €96 per person for two. It includes a private Egyptologist guide throughout, private air-conditioned transfers, hotel pickup & drop-off and bottled water every day. Entrance tickets are paid at the gate.
 
 ## Overview
 
@@ -93,15 +93,15 @@ Every Kemet journey is private, led by a licensed Egyptologist and priced in wri
 
 From
 
-€79
+€87
 
 per person · EUR
 
 Based on a private party of 6 or more · entrance tickets not included.
 
-For two travellers: €87 per person.
+For two travellers: €96 per person.
 
-[Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Giza+%26+the+Grand+Museum&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Giza+%26+the+Grand+Museum%22+journey+%28Full+day+%28%E2%89%888+hours%29%2C+from+%E2%82%AC79+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
+[Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Giza+%26+the+Grand+Museum&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Giza+%26+the+Grand+Museum%22+journey+%28Full+day+%28%E2%89%888+hours%29%2C+from+%E2%82%AC87+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 
 [Ask on WhatsApp](https://wa.me/201158367162?text=Hello%20Kemet%20%E2%80%94%20I%27m%20interested%20in%20the%20%22Giza%20%26%20the%20Grand%20Museum%22%20journey%20(Full%20day%20(%E2%89%888%20hours)).%20Could%20you%20share%20availability%3F)
 
@@ -131,7 +131,7 @@ Giza
 
 The Great Pyramid, the pyramids of Khafre and Menkaure, the panoramic viewpoint and the Valley Temple with the Great Sphinx — Giza in a morning.
 
-€66 / person from 6 travellers · tickets not included
+€73 / person from 6 travellers · tickets not included
 
 3 Days
 
@@ -141,7 +141,7 @@ Cairo · Giza
 
 The essential Cairo, concierge-run: fast-track immigration, private plateau morning, the Grand Egyptian Museum, and lantern-lit Islamic Cairo by night.
 
-€600 / person from 6 travellers
+€660 / person from 6 travellers
 
 4 Days
 
@@ -151,7 +151,7 @@ Cairo · Giza · Alexandria
 
 A compact northern journey — the Egyptian Museum, Alexandria's Greco-Roman layers, the Pyramids of Giza and medieval Cairo.
 
-€618 / person from 6 travellers
+€680 / person from 6 travellers
 
 ---
 

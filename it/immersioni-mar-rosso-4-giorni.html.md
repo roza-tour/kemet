@@ -11,11 +11,11 @@ Mar Rosso
 
 Quattro giorni costruiti sul tempo di fondo — le pareti di Ras Mohammed, le derive dello stretto di Tiran e barche a piccoli gruppi che partono presto.
 
-da 792 € / persona
+da 871 € / persona
 
 da 6 viaggiatori
 
-871 € a persona per due viaggiatori
+958 € a persona per due viaggiatori
 
 A persona, in stagione normale. I supplementi delle festività sono indicati separatamente nel preventivo.
 
@@ -83,7 +83,7 @@ Il Mar Rosso settentrionale è una delle regioni di riferimento per le immersion
 - Il visto d'ingresso in Egitto
 - Le mance
 - Le spese personali
-- I pasti
+- I pasti, tranne il pranzo a bordo nelle giornate in barca
 - I supplementi facoltativi a scelta — attività, bevande
 
 ## Il ritmo

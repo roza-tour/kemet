@@ -11,11 +11,11 @@ Excursion à la journée
 
 Deux grandes collections en une journée — le Musée égyptien historique et le Musée national de la civilisation égyptienne, avec les momies royales.
 
-à partir de 64 € / personne
+à partir de 70 € / personne
 
 à partir de 6 voyageurs · billets non inclus
 
-70 € par personne pour deux voyageurs
+77 € par personne pour deux voyageurs
 
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
 

@@ -82,7 +82,7 @@ Luxor · Edfu · Kom Ombo · Aswan
 
 The deep-history heart of Egypt by private road journey — Karnak, the Valley of the Kings, Edfu, Kom Ombo and Philae, with time to actually absorb them.
 
-€1,018 / person from 6 travellers
+€1,120 / person from 6 travellers
 
 7 Days
 
@@ -92,7 +92,7 @@ Cairo · Giza · Alexandria · Luxor
 
 The headline acts of Egypt in seven days — the Egyptian Museum, Alexandria, the temples and tombs of Luxor, and the Pyramids of Giza.
 
-€1,179 / person from 6 travellers
+€1,297 / person from 6 travellers
 
 8 Days
 
@@ -102,7 +102,7 @@ Cairo · Giza · Luxor · Aswan
 
 Egypt with children done right: short guided mornings, family-specialist Egyptologists, pool afternoons, and the moments no classroom can match.
 
-€1,524 / person from 6 travellers
+€1,676 / person from 6 travellers
 
 5 Days
 
@@ -112,7 +112,7 @@ Cairo · Giza · Saqqara · Memphis
 
 A deep, slow reading of the world's greatest layered city — its two museums, three faiths, medieval streets and the necropolis where the pyramid was invented.
 
-€875 / person from 6 travellers
+€963 / person from 6 travellers
 
 Full Day
 
@@ -122,7 +122,7 @@ Fayoum
 
 Lake Qarun, the waterfalls and dunes of Wadi El Rayan, the fossil whales of Wadi Al-Hitan and the potters of Tunis village — Egypt's wild, green other half.
 
-€139 / person from 6 travellers · tickets not included
+€153 / person from 6 travellers · tickets not included
 
 Full Day
 
@@ -130,9 +130,9 @@ Full Day
 
 Alexandria
 
-The Catacombs of Kom El Shoqafa, Pompey's Pillar, the Citadel of Qaitbay on the old Pharos site and the Bibliotheca Alexandrina, with a seafood lunch.
+The Catacombs of Kom El Shoqafa, Pompey's Pillar, the Citadel of Qaitbay on the old Pharos site and the Bibliotheca Alexandrina, with a seafood lunch paid locally.
 
-€57 / person from 6 travellers · tickets not included
+€63 / person from 6 travellers · tickets not included
 
 Destinations
 

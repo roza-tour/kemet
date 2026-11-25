@@ -11,11 +11,11 @@ Kurzreise
 
 Vier Tage, die die Monumente von Kairo und Gizeh mit einem Tag am Mittelmeer in Alexandria verbinden.
 
-ab 618 € / Person
+ab 680 € / Person
 
 ab 6 Reisenden
 
-680 € pro Person bei zwei Reisenden
+748 € pro Person bei zwei Reisenden
 
 Pro Person, Normalsaison. Zuschläge für Feiertage weisen wir im Angebot getrennt aus.
 
@@ -51,7 +51,7 @@ Wenige Tage, aber große Spannweite: Diese Kurzreise stellt die Gründungsbauten
 
 - Katakomben von Kom esch-Schukafa
 - Zitadelle von Qaitbay und die Bibliotheca Alexandrina
-- Pompeiussäule und Fischessen direkt am Meer
+- Pompeiussäule und Fischessen direkt am Meer, vor Ort bezahlt
 
 03
 

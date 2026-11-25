@@ -11,11 +11,11 @@ Percutian singkat
 
 Empat hari yang menggandingkan monumen Kaherah dan Giza dengan sehari di pesisir Mediterranean di Alexandria.
 
-dari €618 / seorang
+dari €680 / seorang
 
 dari 6 orang
 
-€680 seorang bagi dua pengembara
+€748 seorang bagi dua pengembara
 
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 
@@ -51,7 +51,7 @@ Singkat dari segi hari tetapi luas jangkauannya, percutian ini menggandingkan mo
 
 - Katakomb Kom El Shoqafa
 - Kubu Qaitbay dan Bibliotheca Alexandrina
-- Tiang Pompey dan makan tengah hari makanan laut di tepi pantai
+- Tiang Pompey dan makan tengah hari makanan laut di tepi pantai, dibayar di tempat
 
 03
 

@@ -11,11 +11,11 @@ Familienreise
 
 Acht Tage, gebaut für neugierige Kinder und entspannte Eltern — Mumien, Feluken, die Farben der Grabmalereien und Nachmittage am Pool.
 
-ab 1.524 € / Person
+ab 1.676 € / Person
 
 ab 6 Reisenden
 
-1.676 € pro Person bei zwei Reisenden
+1.844 € pro Person bei zwei Reisenden
 
 Pro Person, Normalsaison. Zuschläge für Feiertage weisen wir im Angebot getrennt aus.
 

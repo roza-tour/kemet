@@ -59,7 +59,7 @@ Kaherah · Giza · Iskandariah · Aswan · Luxor
 
 Perjalanan istimewa kami: Kaherah, Alexandria, kereta api tidur ke selatan, dan tiga malam pelayaran Sungai Nil dari Aswan ke Luxor — setiap lapisan Mesir dalam satu perjalanan yang bersambung.
 
-€1,915 / seorang dari 6 orang
+€2,107 / seorang dari 6 orang
 
 7 Hari
 
@@ -69,7 +69,7 @@ Kaherah · Giza · Iskandariah · Luxor
 
 Tarikan utama Mesir dalam tujuh hari — Muzium Mesir, Alexandria, kuil dan makam Luxor, serta Piramid Giza.
 
-€1,179 / seorang dari 6 orang
+€1,297 / seorang dari 6 orang
 
 4 Hari
 
@@ -79,7 +79,7 @@ Kaherah · Giza · Iskandariah
 
 Perjalanan ringkas di utara — Muzium Mesir, lapisan Yunani-Rom Alexandria, Piramid Giza dan Kaherah zaman pertengahan.
 
-€618 / seorang dari 6 orang
+€680 / seorang dari 6 orang
 
 3 Hari
 
@@ -89,7 +89,7 @@ Kaherah · Luxor · Aswan
 
 Laluan pantas termasuk penerbangan melalui Luxor dan Aswan — Karnak, Lembah Raja-Raja, Philae dan Empangan Tinggi — pergi dan balik dari Kaherah.
 
-€527 / seorang dari 6 orang
+€580 / seorang dari 6 orang
 
 Sehari penuh
 
@@ -99,7 +99,7 @@ Fayoum
 
 Tasik Qarun, air terjun dan bukit pasir Wadi El Rayan, fosil ikan paus Wadi Al-Hitan dan tukang tembikar kampung Tunis — separuh lagi Mesir yang liar dan menghijau.
 
-€139 / seorang dari 6 orang · tiket masuk tidak termasuk
+€153 / seorang dari 6 orang · tiket masuk tidak termasuk
 
 Sehari penuh
 
@@ -109,7 +109,7 @@ Giza
 
 Piramid Agung, panorama ketiga-tiga piramid, Kuil Lembah dan Sphinx, kemudian Grand Egyptian Museum yang baharu dan luas di sebelahnya.
 
-€79 / seorang dari 6 orang · tiket masuk tidak termasuk
+€87 / seorang dari 6 orang · tiket masuk tidak termasuk
 
 Sehari penuh
 
@@ -119,7 +119,7 @@ Saqqara · Memphis · Dahshur
 
 Piramid Bertingkat Djoser, runtuhan terbuka Memphis, serta Piramid Bengkok dan Piramid Merah di Dahshur — kisah bagaimana piramid dicipta.
 
-€68 / seorang dari 6 orang · tiket masuk tidak termasuk
+€75 / seorang dari 6 orang · tiket masuk tidak termasuk
 
 Sehari penuh
 
@@ -129,7 +129,7 @@ Kaherah
 
 Gereja Tergantung, Sinagog Ben Ezra dan Abu Serga di Kaherah Lama, kemudian Kubu Salahuddin dan Masjid Muhammad Ali yang berbalut alabaster.
 
-€80 / seorang dari 6 orang · tiket masuk tidak termasuk
+€88 / seorang dari 6 orang · tiket masuk tidak termasuk
 
 Sehari penuh
 
@@ -139,7 +139,7 @@ Kaherah
 
 Khazanah Muzium Mesir di Tahrir, kemudian Muzium Kebangsaan Tamadun Mesir dan Dewan Mumia Dirajanya.
 
-€64 / seorang dari 6 orang · tiket masuk tidak termasuk
+€70 / seorang dari 6 orang · tiket masuk tidak termasuk
 
 Sehari penuh
 
@@ -147,9 +147,9 @@ Sehari penuh
 
 Iskandariah
 
-Katakomb Kom El Shoqafa, Tiang Pompey, Kubu Qaitbay di tapak lama Pharos dan Bibliotheca Alexandrina, bersama makan tengah hari makanan laut.
+Katakomb Kom El Shoqafa, Tiang Pompey, Kubu Qaitbay di tapak lama Pharos dan Bibliotheca Alexandrina, bersama makan tengah hari makanan laut yang dibayar di tempat.
 
-€57 / seorang dari 6 orang · tiket masuk tidak termasuk
+€63 / seorang dari 6 orang · tiket masuk tidak termasuk
 
 Setengah hari
 
@@ -159,7 +159,7 @@ Giza
 
 Piramid Agung, piramid Khafre dan Menkaure, titik tinjau panorama dan Kuil Lembah bersama Sphinx Agung — Giza dalam satu pagi.
 
-€66 / seorang dari 6 orang · tiket masuk tidak termasuk
+€73 / seorang dari 6 orang · tiket masuk tidak termasuk
 
 Malam
 
@@ -169,7 +169,7 @@ Kaherah
 
 Merasa hidangan paling digemari di Kaherah bersama pemandu, pada waktu malam — koshari, ful dan ta'meya, hawawshi dan burung merpati panggang, kunafa dan basbousa, diakhiri di ahwa tradisional.
 
-€59 / seorang dari 6 orang · makanan tidak termasuk
+€65 / seorang dari 6 orang · makanan tidak termasuk
 
 5 Hari
 
@@ -179,7 +179,7 @@ Luxor · Edfu · Kom Ombo · Aswan
 
 Jantung sejarah purba Mesir melalui perjalanan darat persendirian — Karnak, Lembah Raja-Raja, Edfu, Kom Ombo dan Philae, dengan masa untuk benar-benar menghayatinya.
 
-€1,018 / seorang dari 6 orang
+€1,120 / seorang dari 6 orang
 
 9 Hari
 
@@ -189,7 +189,7 @@ Kaherah · Giza · Aswan · Luxor
 
 Mesir sebagaimana sepatutnya sebuah bulan madu — matahari terbit persendirian di piramid, felucca pada waktu keemasan, tiga malam di Sungai Nil dan suite yang dipilih kerana pemandangannya.
 
-€2,045 / seorang dari 2 orang
+€2,250 / seorang dari 2 orang
 
 8 Hari
 
@@ -199,7 +199,7 @@ Kaherah · Giza · Luxor · Aswan
 
 Mesir bersama anak-anak, dengan cara yang betul: pagi berpemandu yang singkat, Egyptologist yang pakar melayan keluarga, petang di kolam renang, dan detik-detik yang tidak dapat ditandingi bilik darjah.
 
-€1,524 / seorang dari 6 orang
+€1,676 / seorang dari 6 orang
 
 7 Hari
 
@@ -209,7 +209,7 @@ Kaherah · Giza · Luxor · Aswan
 
 Laluan yang disusun bermula daripada cahaya: Giza ketika matahari terbit dengan akses awal, Karnak sebelum orang ramai, belon pilihan di atas Thebes dan felucca pada waktu keemasan.
 
-€1,419 / seorang dari 6 orang
+€1,561 / seorang dari 6 orang
 
 14 Hari
 
@@ -219,7 +219,7 @@ Kaherah · Giza · Iskandariah · Aswan · Abu Simbel · Luxor · Sharm El Sheik
 
 Perjalanan kami yang paling lengkap: Kaherah dan Alexandria, pelayaran Sungai Nil, kuil gunung Ramses II di Abu Simbel, dan tiga malam di Laut Merah untuk menghayati semuanya.
 
-€2,728 / seorang dari 6 orang
+€3,001 / seorang dari 6 orang
 
 5 Hari
 
@@ -229,7 +229,7 @@ Kaherah · Giza · Saqqara · Memphis
 
 Bacaan yang mendalam dan perlahan tentang kota berlapis terhebat di dunia — dua muziumnya, tiga agama, jalan-jalan zaman pertengahan dan nekropolis tempat piramid dicipta.
 
-€875 / seorang dari 6 orang
+€963 / seorang dari 6 orang
 
 5 Hari
 
@@ -239,7 +239,7 @@ Sharm El Sheikh · Ras Mohammed
 
 Laut Merah dengan tujuan yang jelas — sehari menaiki bot persendirian di Ras Mohammed, satu malam di gurun Sinai di bawah bintang, dan ruang yang sengaja dibiarkan kosong.
 
-€979 / seorang dari 6 orang
+€1,077 / seorang dari 6 orang
 
 4 Hari
 
@@ -249,7 +249,7 @@ Sharm El Sheikh · Ras Mohammed · Tiran
 
 Empat selaman bot berpemandu di dua kumpulan lokasi terbaik Sinai — Ras Mohammed dan Tiran — bersama pusat PADI yang telah kami tapis, selepas selaman semakan di terumbu resort.
 
-€792 / seorang dari 6 orang
+€871 / seorang dari 6 orang
 
 3 Hari
 
@@ -259,7 +259,7 @@ Luxor
 
 Luxor tanpa berkejar: Karnak ketika pintu dibuka, Lembah Raja-Raja sebelum panas, teres Hatshepsut dan Lebuh Sphinx selepas gelap.
 
-€544 / seorang dari 6 orang
+€598 / seorang dari 6 orang
 
 3 Hari
 
@@ -269,7 +269,7 @@ Kaherah · Giza
 
 Kaherah yang terpenting, diuruskan seperti concierge: imigresen laluan pantas, pagi persendirian di dataran Giza, Grand Egyptian Museum, dan Kaherah Islam yang diterangi tanglung pada waktu malam.
 
-€600 / seorang dari 6 orang
+€660 / seorang dari 6 orang
 
 2 Hari
 
@@ -279,7 +279,7 @@ Iskandariah
 
 Alexandria dengan separuhnya yang hilang dikembalikan: tapak Greco-Rom pada siang hari, kemudian corniche ketika senja, makanan laut di tepi air dan cahaya pagi yang tidak pernah sempat dilihat pelawat harian.
 
-€402 / seorang dari 6 orang
+€442 / seorang dari 6 orang
 
 Sehari penuh
 
@@ -289,7 +289,7 @@ Abu Simbel
 
 Kuil-kuil gergasi Ramses II yang dipahat dalam batu — diukir pada lereng gunung Nubia, dipindahkan blok demi blok ke atas paras tasik yang naik, dan masih sejajar dengan matahari.
 
-€160 / seorang dari 6 orang · tiket masuk tidak termasuk
+€176 / seorang dari 6 orang · tiket masuk tidak termasuk
 
 ## Bandingkan pilihan
 

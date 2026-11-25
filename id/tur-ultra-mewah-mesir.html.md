@@ -9,13 +9,13 @@ Kemet Ultra · atas permintaan privat
 
 # Mesir, dibuka *hanya untuk Anda*
 
-Mulai **€17.400** per orang, untuk dua orang
+Mulai **€19.140** per orang, untuk dua orang
 
 Sekilas
 
 ## Pilih perjalanan Anda
 
-7 hari / 6 malam **Firaun Privat** Kairo · Giza · Luxor · Abydos *Mulai* €17.400 per orang, untuk dua orang Lihat perjalanan 10 hari / 9 malam **Nil Kerajaan** Kairo · Aswan · Abu Simbel · Sungai Nil · Luxor *Mulai* €36.700 per orang, untuk dua orang Lihat perjalanan 12 hari / 11 malam **Dari Karnak ke Laut Karang** Kairo · Luxor · Sungai Nil · Aswan · Abu Simbel · Laut Merah *Mulai* €38.300 per orang, untuk dua orang Lihat perjalanan 15 hari / 14 malam **Odisei Privat Agung** Kairo · Aswan · Abu Simbel · Sungai Nil · Luxor · Laut Merah *Mulai* €66.800 per orang, untuk dua orang Lihat perjalanan
+7 hari / 6 malam **Firaun Privat** Kairo · Giza · Luxor · Abydos *Mulai* €19.140 per orang, untuk dua orang Lihat perjalanan 10 hari / 9 malam **Nil Kerajaan** Kairo · Aswan · Abu Simbel · Sungai Nil · Luxor *Mulai* €40.370 per orang, untuk dua orang Lihat perjalanan 12 hari / 11 malam **Dari Karnak ke Laut Karang** Kairo · Luxor · Sungai Nil · Aswan · Abu Simbel · Laut Merah *Mulai* €42.130 per orang, untuk dua orang Lihat perjalanan 15 hari / 14 malam **Odisei Privat Agung** Kairo · Aswan · Abu Simbel · Sungai Nil · Luxor · Laut Merah *Mulai* €73.480 per orang, untuk dua orang Lihat perjalanan
 
 Empat perjalanan privat di puncak pasar Mesir: Piramida Agung dibuka untuk rombongan Anda, makan malam di dalam Karnak setelah gerbang ditutup, dahabiya atau yacht tanpa tamu lain, dan hotel-hotel legendaris di kamar terbaiknya. Harga dicantumkan terbuka, dan setiap unsur dikonfirmasi tertulis sebelum apa pun dibayar.
 
@@ -35,7 +35,7 @@ Ciri khas
 
 ## Apa itu Kemet Ultra?
 
-Kemet Ultra adalah tingkat tertinggi Kemet: empat perjalanan Mesir yang sepenuhnya privat selama 7 hingga 15 hari, dengan Piramida Agung dibuka hanya untuk rombongan Anda, makan malam di dalam Karnak setelah tutup, dahabiya atau yacht sewaan, dan suite di Mena House, Old Cataract, serta Oberoi. Untuk dua orang €17.400–€66.800 per orang; untuk empat orang mulai €11.500.
+Kemet Ultra adalah tingkat tertinggi Kemet: empat perjalanan Mesir yang sepenuhnya privat selama 7 hingga 15 hari, dengan Piramida Agung dibuka hanya untuk rombongan Anda, makan malam di dalam Karnak setelah tutup, dahabiya atau yacht sewaan, dan suite di Mena House, Old Cataract, serta Oberoi. Untuk dua orang €19.140–€73.480 per orang; untuk empat orang mulai €12.650.
 
 Perjalanan
 
@@ -49,7 +49,7 @@ Piramida Agung dan Karnak, masing-masing dibuka hanya untuk rombongan Anda
 
 Satu minggu yang dibangun di sekitar dua pintu yang biasanya tertutup. Di Giza, Piramida Agung dibuka dua jam hanya untuk rombongan Anda; di Luxor, Karnak tetap dibuka untuk Anda setelah jam tutup dan makan malam disajikan di dalam kompleks kuil. Di antaranya: Grand Egyptian Museum bersama Egyptologist senior, makam-makam terindah di Lembah Para Raja, dan dua kuil yang jarang dicapai pengunjung.
 
-Mulai **€17.400** per orang, untuk dua orang €11.500 per orang untuk empat orang
+Mulai **€19.140** per orang, untuk dua orang €12.650 per orang untuk empat orang
 
 - Piramida Agung dibuka privat — dua jam, hanya rombongan Anda
 - Karnak dibuka setelah jam tutup, dengan makan malam di kompleks kuil
@@ -111,7 +111,7 @@ Dahabiya disewa untuk rombongan Anda, dari Aswan ke Esna
 
 Empat malam di dahabiya layar tanpa tamu lain: awak, koki, dan tempat berlabuh adalah milik Anda, dan kapal bisa singgah di tempat yang tak bisa dicapai kapal besar. Sebelumnya, Kairo dengan Piramida Agung dibuka privat dan satu malam di Old Cataract; Abu Simbel dengan pesawat privat; dan di akhir, Karnak dibuka untuk makan malam Anda.
 
-Mulai **€36.700** per orang, untuk dua orang €21.000 per orang untuk empat orang
+Mulai **€40.370** per orang, untuk dua orang €23.100 per orang untuk empat orang
 
 - Sewa penuh dahabiya kelas utama — tanpa tamu lain
 - Piramida Agung dibuka privat; makan malam di Karnak setelah tutup
@@ -190,7 +190,7 @@ Oberoi Philae menyusuri Nil, lalu yacht privat di Laut Merah
 
 Pelayaran Nil klasik di kapal paling elegan di sungai itu, dalam suite, lalu ditutup dengan layak: pesawat privat dari Aswan ke Laut Merah, suite dengan kolam renang sendiri, dan yacht berawak untuk seharian di terumbu Giftun. Di sepanjang jalan, Piramida Agung dan Karnak dibuka untuk Anda.
 
-Mulai **€38.300** per orang, untuk dua orang €25.300 per orang untuk empat orang
+Mulai **€42.130** per orang, untuk dua orang €27.830 per orang untuk empat orang
 
 - Oberoi Philae, empat malam di suite mewah
 - Piramida Agung dibuka privat; makan malam di Karnak setelah tutup
@@ -279,7 +279,7 @@ Setiap perpindahan privat — pesawat, dahabiya, dan yacht
 
 Seluruh Mesir tanpa satu momen pun yang dibagi dengan orang lain. Pesawat privat di setiap rute domestik; dahabiya disewa empat malam antara Aswan dan Esna; Piramida Agung dan Karnak dibuka untuk Anda; serta tiga malam di Laut Merah dengan dua hari di atas yacht Anda sendiri. Dirancang untuk kunjungan pertama yang ingin menjadi yang paling berkesan.
 
-Mulai **€66.800** per orang, untuk dua orang €37.700 per orang untuk empat orang
+Mulai **€73.480** per orang, untuk dua orang €41.470 per orang untuk empat orang
 
 - Pesawat privat di setiap rute domestik
 - Sewa penuh dahabiya selama empat malam
@@ -400,19 +400,19 @@ Sebelum Anda menulis
 
 **Berapa biaya perjalanan ultra mewah ke Mesir?**
 
-Empat perjalanan Kemet Ultra untuk dua orang berkisar dari €17.400 per orang untuk tujuh hari hingga €66.800 untuk lima belas hari. Untuk empat orang, harga per orang turun menjadi €11.500–€37.700, karena sewa kapal, pesawat, dan pembukaan privat ditanggung bersama. Pekan Natal, Tahun Baru, dan Paskah dikenakan tambahan 25%.
+Empat perjalanan Kemet Ultra untuk dua orang berkisar dari €19.140 per orang untuk tujuh hari hingga €73.480 untuk lima belas hari. Untuk empat orang, harga per orang turun menjadi €12.650–€41.470, karena sewa kapal, pesawat, dan pembukaan privat ditanggung bersama. Pekan Natal, Tahun Baru, dan Paskah dikenakan tambahan 25%.
 
 **Benarkah Piramida Agung bisa dibuka hanya untuk kami?**
 
-Ya. Selama dua jam, Piramida Agung dibuka hanya untuk rombongan Anda di luar jam umum, dengan Egyptologist di samping Anda dan tak ada orang lain di dalam. Semuanya kami urus; Anda cukup datang.
+Ya, dengan izin. Selama dua jam, Piramida Agung dibuka hanya untuk rombongan Anda di luar jam umum, dengan Egyptologist di samping Anda dan tak ada orang lain di dalam. Pembukaan ini diberikan oleh Kementerian Pariwisata dan Purbakala atas permohonan yang kami ajukan untuk tanggal Anda segera setelah Anda mengonfirmasi, dan hasilnya kami sampaikan sebelum Anda berangkat. Jika izin ditolak, biaya pembukaan dikeluarkan dari harga dan tidak ada yang dikenakan untuknya.
 
 **Bagaimana makan malam di dalam Karnak?**
 
-Setelah pengunjung terakhir pergi, Karnak dibuka untuk rombongan Anda. Anda menyusuri aula hipostil bersama Egyptologist, lalu makan malam disajikan di dalam kompleks kuil. Tak ada yang perlu Anda urus.
+Setelah pengunjung terakhir pergi, Karnak dibuka untuk rombongan Anda dengan izin, yang kami ajukan setelah Anda mengonfirmasi. Anda menyusuri aula hipostil bersama Egyptologist, lalu makan malam disajikan di dalam kompleks kuil. Tak ada yang perlu Anda urus; jika izin ditolak, malam itu dikeluarkan dari harga.
 
 **Bisakah harta Tutankhamun dilihat secara privat?**
 
-Bisa. Di Grand Egyptian Museum, galeri Tutankhamun dapat dibuka hanya untuk rombongan Anda selama satu setengah jam, tanpa pengunjung lain di antara emas sang raja muda. Layanan ini bisa ditambahkan ke salah satu dari keempat perjalanan. Di Giza, mobil golf privat juga bisa membawa Anda berkeliling area piramida.
+Bisa, dengan izin dari museum. Di Grand Egyptian Museum, galeri Tutankhamun dapat dibuka hanya untuk rombongan Anda selama satu setengah jam, tanpa pengunjung lain di antara emas sang raja muda. Layanan ini bisa ditambahkan ke salah satu dari keempat perjalanan. Di Giza, mobil golf privat juga bisa membawa Anda berkeliling area piramida.
 
 **Mengapa Winter Palace tidak termasuk?**
 
@@ -428,7 +428,7 @@ Semuanya bisa. Hari, hotel, urutan rute, dan ritme bisa diubah, dan harga dihitu
 
 **Berapa lama sebelumnya harus memesan?**
 
-Delapan hingga dua belas minggu untuk perjalanan antara Oktober dan April, saat pembukaan privat dan sewa dahabiya paling diminati. Kadang bisa lebih singkat; sebelum Anda berkomitmen, kami sampaikan unsur mana yang masih bisa dipastikan.
+Delapan hingga dua belas minggu untuk perjalanan antara Oktober dan April, saat pembukaan privat dan sewa dahabiya paling diminati, dan lebih lama untuk Piramida Agung, yang izinnya bisa memakan waktu beberapa bulan. Kadang bisa lebih singkat; sebelum Anda berkomitmen, kami sampaikan unsur mana yang masih bisa dipastikan.
 
 **Dengan siapa kami berurusan?**
 

@@ -1,5 +1,5 @@
 ---
-title: "Egypt Travel FAQ — Safety, Visas, Best Time, Costs & Tips | Kemet"
+title: "Egypt Travel FAQ — Safety, Best Time, Costs & Tips | Kemet"
 url: https://kemet-travel.com/faq.html
 language: en
 description: "Answers to the most common Egypt travel questions — safety, the best time to visit, how many days you need, costs, getting around, food and more."
@@ -7,7 +7,7 @@ description: "Answers to the most common Egypt travel questions — safety, the 
 
 # Egypt Travel FAQ
 
-Straight answers to the questions travellers ask us most — from visas and safety to the best time to go, how long to stay and what a private journey costs.
+Straight answers to the questions travellers ask us most — from safety to the best time to go, how long to stay and what a private journey costs.
 
 ## How many days do you need in Egypt?
 
@@ -23,7 +23,7 @@ How long to go for, what it costs and how a private Kemet journey comes together
 
 ### How much does a private Egypt tour cost?
 
-Kemet's journeys are priced per person and depend on length, season, accommodation level and party size. Private full-day excursions start from around €57 per person based on a private party of six, with monument tickets paid at the published gate rate; most multi-day private journeys fall between roughly €400 and €1,950 inclusive of entrance fees and hotels, and the 14-day grand tour is €2,728 per person. Our pricing sits at the upper end of the market for Egypt travel rather than competing with coach operators. Every quote is fully itemised — what is included and excluded is shown before you commit, with no hidden costs.
+Kemet's journeys are priced per person and depend on length, season, accommodation level and party size. Private full-day excursions start from €63 per person for a private party of six, with monument tickets paid at the published gate rate; private journeys of several days run from €442 to €3,001 per person, including entrance fees and hotels. For a party of two, each traveller pays 10% more. Every quote is fully itemised — what is included and excluded is shown before you commit, with no hidden costs.
 
 ### Is a private tour better than a group tour?
 

@@ -11,11 +11,11 @@ Perjalanan istimewa
 
 Lima hari tanpa tergesa-gesa merentasi Mesir Hulu — dua tebing Luxor, jalan ke selatan melepasi Edfu dan Kom Ombo, dan pulau-pulau Aswan.
 
-dari €1,018 / seorang
+dari €1,120 / seorang
 
 dari 6 orang
 
-€1,120 seorang bagi dua pengembara
+€1,232 seorang bagi dua pengembara
 
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 

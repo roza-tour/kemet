@@ -11,11 +11,11 @@ Voyage en famille
 
 Huit jours pensés pour des enfants curieux et des parents détendus — momies, felouques, couleurs des tombes et après-midi au bord de la piscine.
 
-à partir de 1 524 € / personne
+à partir de 1 676 € / personne
 
 à partir de 6 voyageurs
 
-1 676 € par personne pour deux voyageurs
+1 844 € par personne pour deux voyageurs
 
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
 

@@ -11,11 +11,11 @@ Escapada
 
 Três dias sem nenhum atrito — chegada com imigração expressa, as pirâmides e o Grande Museu Egípcio, e o Cairo medieval depois que o pessoal do bate-volta vai embora.
 
-a partir de € 600 / pessoa
+a partir de € 660 / pessoa
 
 a partir de 6 viajantes
 
-€ 660 por pessoa, para dois viajantes
+€ 726 por pessoa, para dois viajantes
 
 Por pessoa, em temporada normal. Acréscimos de feriados aparecem separados no orçamento.
 

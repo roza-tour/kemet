@@ -11,11 +11,11 @@ Excursion à la journée
 
 Les confessions du Caire en une journée — églises coptes, une ancienne synagogue, et la grande Citadelle couronnée d'une mosquée.
 
-à partir de 80 € / personne
+à partir de 88 € / personne
 
 à partir de 6 voyageurs · billets non inclus
 
-88 € par personne pour deux voyageurs
+97 € par personne pour deux voyageurs
 
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
 

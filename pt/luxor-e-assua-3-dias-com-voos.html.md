@@ -11,11 +11,11 @@ Escapada
 
 Três dias pelos templos e tumbas do Alto Egito, com os voos domésticos já incluídos no preço.
 
-a partir de € 527 / pessoa
+a partir de € 580 / pessoa
 
 a partir de 6 viajantes
 
-€ 580 por pessoa, para dois viajantes
+€ 638 por pessoa, para dois viajantes
 
 Por pessoa, em temporada normal. Acréscimos de feriados aparecem separados no orçamento.
 

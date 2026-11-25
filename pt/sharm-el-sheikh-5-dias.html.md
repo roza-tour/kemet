@@ -11,11 +11,11 @@ Mar Vermelho
 
 Cinco dias onde as montanhas do Sinai encontram a água mais clara do hemisfério norte — recifes, noites no deserto e um ócio assumido.
 
-a partir de € 979 / pessoa
+a partir de € 1.077 / pessoa
 
 a partir de 6 viajantes
 
-€ 1.077 por pessoa, para dois viajantes
+€ 1.185 por pessoa, para dois viajantes
 
 Por pessoa, em temporada normal. Acréscimos de feriados aparecem separados no orçamento.
 
@@ -89,7 +89,7 @@ Sharm el-Sheikh fica na ponta da Península do Sinai, onde montanhas desérticas
 - Visto de entrada no Egito
 - Gorjetas
 - Despesas pessoais
-- Refeições
+- Refeições, exceto o almoço do dia de barco
 - Extras opcionais que vocês escolherem acrescentar — atividades, bebidas
 
 ## O ritmo

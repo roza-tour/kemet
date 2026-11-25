@@ -11,7 +11,7 @@ An honest answer, written for travellers at the top of the market rather than th
 
 ## How much does a private Egypt tour cost?
 
-A private, tailor-made Egypt tour with a licensed Egyptologist guide, a private vehicle and good hotels costs roughly €200–450 per person per day. Kemet's own journeys run from €57 per person for a single day to €2,728 for a fourteen-day grand tour, for a private party of six or more; the per-person price falls as the party grows.
+A private, tailor-made Egypt tour with a licensed Egyptologist guide, a private vehicle and good hotels costs roughly €200–450 per person per day. Kemet's own journeys run from €63 per person for a single day to €3,001 for a fourteen-day grand tour, for a private party of six or more; the per-person price falls as the party grows.
 
 Checked by [Mervat Farouk](https://kemet-travel.com/about.html#mervat-farouk), Egyptologist guide
 
@@ -19,7 +19,7 @@ Most pages answering this question are written for a different traveller — per
 
 Private, tailor-made **€200–450** *per person, per day*
 
-Kemet journeys from **€57** *per person, a single day*
+Kemet journeys from **€63** *per person, a single day*
 
 A week for two **€2,800–6,000** *total, typically*
 
@@ -49,13 +49,13 @@ Where Kemet sits
 
 €200–450 *per person, per day*
 
-Where Kemet sits. Your own licensed Egyptologist, your own vehicle and driver, hotels chosen for the room rather than the star rating, and an itinerary written for you. Kemet's own multi-day journeys work out at €155–205 per person per day for a party of six or more, and €171–226 for two travellers: around the floor of this band, and for larger parties just under it. The figure climbs with hotel tier and charter, and per-person cost falls as the party grows.
+Where Kemet sits. Your own licensed Egyptologist, your own vehicle and driver, hotels chosen for the room rather than the star rating, and an itinerary written for you. Kemet's own multi-day journeys work out at €170–226 per person per day for a party of six or more, and €187–249 for two travellers: around the floor of this band, and for larger parties just under it. The figure climbs with hotel tier and charter, and per-person cost falls as the party grows.
 
 ### At the very top
 
 €600+ *per person, per day*
 
-Private charter between cities, a chartered dahabiya on the Nile, suites at the landmark hotels, private openings of the monuments. Kemet plans at this level too: the four Kemet Ultra journeys work out at €2,486–4,453 per person per day for a party of two, and are priced on their own page.
+Private charter between cities, a chartered dahabiya on the Nile, suites at the landmark hotels, private openings of the monuments. Kemet plans at this level too: the four Kemet Ultra journeys work out at €2,734–4,899 per person per day for a party of two, and are priced on their own page.
 
 02 · The variables
 
@@ -105,7 +105,7 @@ Every journey is led by a guide licensed by the Egyptian Ministry of Tourism wit
 
 ### Your party only
 
-No shared coaches. No fixed departure dates. No strangers on your itinerary. If you are two people, the vehicle, the guide and the pace belong to two people.
+No shared coaches. No fixed departure dates. No strangers in your vehicle or with your guide. If you are two people, the vehicle, the guide and the pace belong to two people.
 
 ### Built around you, then written down
 
@@ -157,7 +157,7 @@ Cairo · Giza · Alexandria · Aswan · Abu Simbel · Luxor · Sharm El Sheikh
 
 Our most complete journey: Cairo and Alexandria, a Nile cruise, Ramesses II's mountain temple at Abu Simbel, and three Red Sea nights to absorb it all.
 
-€2,728 / person from 6 travellers
+€3,001 / person from 6 travellers
 
 9 Days
 
@@ -167,7 +167,7 @@ Cairo · Giza · Aswan · Luxor
 
 Egypt as a honeymoon should be — private sunrise at the pyramids, a felucca at golden hour, three nights on the Nile and suites chosen for the view.
 
-€2,045 / person from 2 travellers
+€2,250 / person from 2 travellers
 
 10 Days
 
@@ -177,13 +177,13 @@ Cairo · Giza · Alexandria · Aswan · Luxor
 
 Our signature journey: Cairo, Alexandria, a sleeper train south, and a three-night Nile cruise from Aswan to Luxor — every layer of Egypt in one arc.
 
-€1,915 / person from 6 travellers
+€2,107 / person from 6 travellers
 
 ## Cost questions, answered
 
 ### How much does a private tour of Egypt cost?
 
-For a fully private, tailor-made journey with a licensed Egyptologist, a private vehicle and driver and good hotels, budget roughly €200–450 per person per day. Kemet's own journeys start from €57 per person for a single day and run to €2,728 per person for a fourteen-day grand tour, for a private party of six or more. The per-person figure falls as the party grows, because the guide and the vehicle are shared between more people.
+For a fully private, tailor-made journey with a licensed Egyptologist, a private vehicle and driver and good hotels, budget roughly €200–450 per person per day. Kemet's own journeys start from €63 per person for a single day and run to €3,001 per person for a fourteen-day grand tour, for a private party of six or more. The per-person figure falls as the party grows, because the guide and the vehicle are shared between more people.
 
 ### Why is a private Egypt tour more expensive than a group tour?
 
@@ -195,7 +195,7 @@ Egypt is one of the least expensive countries in the world for food, transport a
 
 ### How much should I budget for a week in Egypt?
 
-At the private, tailor-made level a week for two people typically lands between €2,800 and €6,000 in total, depending on hotels, season and whether you fly or drive between cities. That covers your Egyptologist throughout, all entrance fees and private transfers. International flights, the entry visa and gratuities sit outside it. Kemet's own seven-day journey is €1,297 per person for two travellers, €2,594 for the pair; meals are not included.
+At the private, tailor-made level a week for two people typically lands between €2,800 and €6,000 in total, depending on hotels, season and whether you fly or drive between cities. That covers your Egyptologist throughout, all entrance fees and private transfers. International flights, the entry visa and gratuities sit outside it. Kemet's own seven-day journey is €1,427 per person for two travellers, €2,854 for the pair; meals are not included.
 
 ### What is included in a Kemet price?
 

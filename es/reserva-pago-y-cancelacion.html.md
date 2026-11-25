@@ -21,7 +21,7 @@ Esta es una traducción. Si difiere de la versión en inglés, prevalece la vers
 
 ## Cómo funciona la reserva
 
-- Consulte, gratis y sin compromiso — Envíenos sus fechas, sus intereses y el tamaño de su grupo. Le respondemos en un plazo de dos horas con una primera valoración y las preguntas que tengamos. En esta fase no hay ningún coste ni compromiso.
+- Consulte, gratis y sin compromiso — Envíenos sus fechas, sus intereses y el tamaño de su grupo. Le respondemos en un plazo de dos horas con un itinerario día a día y un precio claro. En esta fase no hay ningún coste ni compromiso.
 - Reciba y afine su propuesta — Diseñamos un itinerario privado con un presupuesto totalmente detallado —qué está incluido y qué no, con precios por persona en euros—. Lo revisamos con usted hasta que sea exactamente lo que desea.
 - Confirme con un depósito — Cuando esté conforme, un depósito confirma su viaje y nos permite empezar a asegurar hoteles, guías, cruceros y permisos a su nombre.
 - Abone el saldo antes de viajar — El saldo restante vence antes de la salida. Una vez abonado, le enviamos su documentación final, el programa día a día y una persona de contacto con nombre.

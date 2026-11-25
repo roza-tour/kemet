@@ -2,7 +2,7 @@
 title: "Alejandría, excursión de un día desde El Cairo | Kemet"
 url: https://kemet-travel.com/es/excursion-a-alejandria-desde-el-cairo.html
 language: es
-description: "Las Catacumbas de Kom el-Shoqafa, la Columna de Pompeyo, la Ciudadela de Qaitbay sobre el Faro y la Bibliotheca Alexandrina, con almuerzo de pescado."
+description: "Las Catacumbas de Kom el-Shoqafa, la Columna de Pompeyo, la Ciudadela de Qaitbay y la Bibliotheca Alexandrina, con almuerzo de pescado pagado en destino."
 ---
 
 Excursión de un día
@@ -11,11 +11,11 @@ Excursión de un día
 
 Un día completo en el Mediterráneo: catacumbas, una columna romana, una ciudadela rodeada de mar y la gran biblioteca moderna.
 
-desde 57 € / persona
+desde 63 € / persona
 
 desde 6 viajeros · entradas no incluidas
 
-63 € por persona para dos viajeros
+69 € por persona para dos viajeros
 
 Por persona, en temporada normal. Los suplementos de fechas festivas se indican por separado en el presupuesto.
 
@@ -27,13 +27,13 @@ Paradas **Alejandría**
 
 Privado **Sí — solo su grupo**
 
-Las Catacumbas de Kom el-Shoqafa, la Columna de Pompeyo, la Ciudadela de Qaitbay sobre el antiguo emplazamiento del Faro y la Bibliotheca Alexandrina, con un almuerzo de pescado y marisco.
+Las Catacumbas de Kom el-Shoqafa, la Columna de Pompeyo, la Ciudadela de Qaitbay sobre el antiguo emplazamiento del Faro y la Bibliotheca Alexandrina, con un almuerzo de pescado y marisco pagado en destino.
 
 01
 
 ## El viaje
 
-La ciudad de Alejandro lleva con ligereza su pasado grecorromano a lo largo de la curva de la Corniche, frente al Mediterráneo. Este día completo abarca las Catacumbas subterráneas de Kom el-Shoqafa, la imponente Columna de Pompeyo, la Ciudadela de Qaitbay, construida sobre los cimientos del legendario Faro, y la altísima y moderna Bibliotheca Alexandrina, heredera de la antigua Biblioteca. Un almuerzo de pescado y marisco frente al mar forma parte de la experiencia. Guía y traslados privados desde El Cairo.
+La ciudad de Alejandro lleva con ligereza su pasado grecorromano a lo largo de la curva de la Corniche, frente al Mediterráneo. Este día completo abarca las Catacumbas subterráneas de Kom el-Shoqafa, la imponente Columna de Pompeyo, la Ciudadela de Qaitbay, construida sobre los cimientos del legendario Faro, y la altísima y moderna Bibliotheca Alexandrina, heredera de la antigua Biblioteca. Un almuerzo de pescado y marisco frente al mar, pagado en destino, forma parte de la experiencia. Guía y traslados privados desde El Cairo.
 
 ## Paso a paso
 
@@ -59,7 +59,7 @@ Paseo por las murallas junto al mar de la Ciudadela de Qaitbay, levantada en el 
 
 ### Parada 4 — Bibliotheca Alexandrina y almuerzo de pescado
 
-Tras un almuerzo tranquilo de pescado y marisco frente al Mediterráneo, se termina en la espectacular y moderna Bibliotheca Alexandrina, la Biblioteca de Alejandría renacida.
+Tras un almuerzo tranquilo de pescado y marisco frente al Mediterráneo, pagado en destino, se termina en la espectacular y moderna Bibliotheca Alexandrina, la Biblioteca de Alejandría renacida.
 
 ## Incluido
 

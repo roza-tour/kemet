@@ -11,11 +11,11 @@ Viaggio breve
 
 Tre giorni nel più grande museo a cielo aperto del mondo — entrambe le rive fatte per bene, con il tempio illuminato di notte come perno.
 
-da 544 € / persona
+da 598 € / persona
 
 da 6 viaggiatori
 
-598 € a persona per due viaggiatori
+658 € a persona per due viaggiatori
 
 A persona, in stagione normale. I supplementi delle festività sono indicati separatamente nel preventivo.
 

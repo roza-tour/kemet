@@ -9,13 +9,13 @@ Kemet Ultra · auf private Anfrage
 
 # Ägypten, geöffnet *nur für Sie*
 
-Ab **17.400 €** pro Person, zu zweit
+Ab **19.140 €** pro Person, zu zweit
 
 Auf einen Blick
 
 ## Wählen Sie Ihre Reise
 
-7 Tage / 6 Nächte **Der private Pharao** Kairo · Gizeh · Luxor · Abydos *Ab* 17.400 € pro Person, zu zweit Zur Reise 10 Tage / 9 Nächte **Der königliche Nil** Kairo · Assuan · Abu Simbel · der Nil · Luxor *Ab* 36.700 € pro Person, zu zweit Zur Reise 12 Tage / 11 Nächte **Von Karnak ans Korallenmeer** Kairo · Luxor · der Nil · Assuan · Abu Simbel · Rotes Meer *Ab* 38.300 € pro Person, zu zweit Zur Reise 15 Tage / 14 Nächte **Die große private Odyssee** Kairo · Assuan · Abu Simbel · der Nil · Luxor · Rotes Meer *Ab* 66.800 € pro Person, zu zweit Zur Reise
+7 Tage / 6 Nächte **Der private Pharao** Kairo · Gizeh · Luxor · Abydos *Ab* 19.140 € pro Person, zu zweit Zur Reise 10 Tage / 9 Nächte **Der königliche Nil** Kairo · Assuan · Abu Simbel · der Nil · Luxor *Ab* 40.370 € pro Person, zu zweit Zur Reise 12 Tage / 11 Nächte **Von Karnak ans Korallenmeer** Kairo · Luxor · der Nil · Assuan · Abu Simbel · Rotes Meer *Ab* 42.130 € pro Person, zu zweit Zur Reise 15 Tage / 14 Nächte **Die große private Odyssee** Kairo · Assuan · Abu Simbel · der Nil · Luxor · Rotes Meer *Ab* 73.480 € pro Person, zu zweit Zur Reise
 
 Vier private Reisen an der Spitze des ägyptischen Marktes: die Cheops-Pyramide für Ihre Gruppe geöffnet, ein Dinner in Karnak, nachdem die Tore geschlossen sind, eine Dahabiya oder eine Jacht ohne andere Gäste und die großen Hotels in ihren besten Zimmern. Mit offenen Preisen — und jedes Element schriftlich bestätigt, bevor Sie etwas bezahlen.
 
@@ -35,7 +35,7 @@ Die Signaturen
 
 ## Was ist Kemet Ultra?
 
-Kemet Ultra ist die höchste Stufe von Kemet: vier vollständig private Ägypten-Reisen von 7 bis 15 Tagen — die Cheops-Pyramide nur für Ihre Gruppe geöffnet, ein Dinner in Karnak nach Schließung, eine gecharterte Dahabiya oder Jacht und Suiten im Mena House, im Old Cataract und bei Oberoi. Zu zweit 17.400 € bis 66.800 € pro Person; zu viert ab 11.500 €.
+Kemet Ultra ist die höchste Stufe von Kemet: vier vollständig private Ägypten-Reisen von 7 bis 15 Tagen — die Cheops-Pyramide nur für Ihre Gruppe geöffnet, ein Dinner in Karnak nach Schließung, eine gecharterte Dahabiya oder Jacht und Suiten im Mena House, im Old Cataract und bei Oberoi. Zu zweit 19.140 € bis 73.480 € pro Person; zu viert ab 12.650 €.
 
 Die Reisen
 
@@ -49,7 +49,7 @@ Die Cheops-Pyramide und Karnak, jeweils nur für Ihre Gruppe geöffnet
 
 Eine Woche, gebaut um zwei Türen, die sonst verschlossen sind. In Gizeh wird die Cheops-Pyramide zwei Stunden lang nur für Ihre Gruppe geöffnet; in Luxor bleibt Karnak nach Schließung für Sie offen, und im Tempelbezirk wird das Dinner serviert. Dazwischen: das Grand Egyptian Museum mit einem erfahrenen Ägyptologen, die schönsten Gräber im Tal der Könige und die zwei Tempel, die die meisten Besucher nie erreichen.
 
-Ab **17.400 €** pro Person, zu zweit 11.500 € pro Person zu viert
+Ab **19.140 €** pro Person, zu zweit 12.650 € pro Person zu viert
 
 - Private Öffnung der Cheops-Pyramide — zwei Stunden, nur Ihre Gruppe
 - Karnak nach Schließung geöffnet, mit Dinner im Tempelbezirk
@@ -111,7 +111,7 @@ Eine Dahabiya nur für Ihre Gruppe, von Assuan nach Esna
 
 Vier Nächte auf einer Segel-Dahabiya ohne andere Gäste: Crew, Koch und Liegeplätze gehören Ihnen, und das Boot hält, wo große Schiffe nicht anlegen können. Davor Kairo mit der privat geöffneten Cheops-Pyramide und eine Nacht im Old Cataract; Abu Simbel im Privatflugzeug; und zum Schluss Karnak, für Ihr Dinner geöffnet.
 
-Ab **36.700 €** pro Person, zu zweit 21.000 € pro Person zu viert
+Ab **40.370 €** pro Person, zu zweit 23.100 € pro Person zu viert
 
 - Vollcharter einer erstklassigen Dahabiya — keine anderen Gäste
 - Private Öffnung der Cheops-Pyramide; Dinner in Karnak nach Schließung
@@ -190,7 +190,7 @@ Mit der Oberoi Philae auf dem Nil, dann eine Privatjacht am Roten Meer
 
 Die klassische Nilreise auf dem feinsten Schiff des Flusses, in einer Suite — und dann ein würdiger Abschluss: im Privatflugzeug von Assuan ans Rote Meer, eine Suite mit eigenem Pool und eine Jacht mit Crew für einen Tag an den Riffen von Giftun. Die Cheops-Pyramide und Karnak werden unterwegs für Sie geöffnet.
 
-Ab **38.300 €** pro Person, zu zweit 25.300 € pro Person zu viert
+Ab **42.130 €** pro Person, zu zweit 27.830 € pro Person zu viert
 
 - Die Oberoi Philae, vier Nächte in einer Luxus-Suite
 - Private Öffnung der Cheops-Pyramide; Dinner in Karnak nach Schließung
@@ -279,7 +279,7 @@ Jede Strecke privat — Flugzeug, Dahabiya und Jacht
 
 Ganz Ägypten, ohne einen einzigen geteilten Moment. Ein Privatflugzeug auf jeder Inlandsstrecke; eine Dahabiya, vier Nächte lang gechartert zwischen Assuan und Esna; die Cheops-Pyramide und Karnak für Sie geöffnet; und drei Nächte am Roten Meer mit zwei Tagen auf Ihrer eigenen Jacht. Für eine erste Reise, die die maßgebliche sein soll.
 
-Ab **66.800 €** pro Person, zu zweit 37.700 € pro Person zu viert
+Ab **73.480 €** pro Person, zu zweit 41.470 € pro Person zu viert
 
 - Privatflugzeug auf jeder Inlandsstrecke
 - Vollcharter einer Dahabiya für vier Nächte
@@ -400,19 +400,19 @@ Bevor Sie schreiben
 
 **Was kostet eine Ultra-Luxusreise in Ägypten?**
 
-Die vier Kemet-Ultra-Reisen kosten zu zweit 17.400 € pro Person für sieben Tage bis 66.800 € für fünfzehn. Zu viert sinkt der Preis pro Person auf 11.500 € bis 37.700 €, weil Charter, Flugzeug und private Öffnungen geteilt werden. In den Spitzenwochen zu Weihnachten, Neujahr und Ostern gilt ein Zuschlag von 25 %.
+Die vier Kemet-Ultra-Reisen kosten zu zweit 19.140 € pro Person für sieben Tage bis 73.480 € für fünfzehn. Zu viert sinkt der Preis pro Person auf 12.650 € bis 41.470 €, weil Charter, Flugzeug und private Öffnungen geteilt werden. In den Spitzenwochen zu Weihnachten, Neujahr und Ostern gilt ein Zuschlag von 25 %.
 
 **Kann die Cheops-Pyramide wirklich nur für uns geöffnet werden?**
 
-Ja. Zwei Stunden lang wird die Cheops-Pyramide außerhalb der Öffnungszeiten nur für Ihre Gruppe geöffnet — Ihr Ägyptologe an Ihrer Seite, sonst niemand darin. Wir kümmern uns um alles; Sie kommen einfach.
+Ja, per Genehmigung. Zwei Stunden lang wird die Cheops-Pyramide außerhalb der Öffnungszeiten nur für Ihre Gruppe geöffnet — Ihr Ägyptologe an Ihrer Seite, sonst niemand darin. Die Öffnung gewährt das Ministerium für Tourismus und Antiquitäten auf einen Antrag, den wir für Ihre Reisedaten stellen, sobald Sie bestätigen; das Ergebnis erfahren Sie vor der Abreise. Wird eine Genehmigung abgelehnt, entfällt die Öffnung im Preis, und dafür wird nichts berechnet.
 
 **Wie funktioniert ein Dinner in Karnak?**
 
-Wenn die letzten Besucher gegangen sind, wird Karnak für Ihre Gruppe geöffnet. Sie gehen mit Ihrem Ägyptologen durch den Säulensaal, und das Dinner wird im Tempelbezirk serviert. Für Sie gibt es nichts zu organisieren.
+Wenn die letzten Besucher gegangen sind, wird Karnak per Genehmigung für Ihre Gruppe geöffnet, die wir beantragen, sobald Sie bestätigen. Sie gehen mit Ihrem Ägyptologen durch den Säulensaal, und das Dinner wird im Tempelbezirk serviert. Für Sie gibt es nichts zu organisieren; wird die Genehmigung abgelehnt, entfällt dieser Abend im Preis.
 
 **Kann man Tutanchamuns Schatz privat sehen?**
 
-Ja. Im Grand Egyptian Museum können die Tutanchamun-Säle anderthalb Stunden lang nur für Ihre Gruppe geöffnet werden, ohne andere Besucher zwischen dem Gold des Kindkönigs. Das lässt sich jeder der vier Reisen hinzufügen. In Gizeh kann Sie außerdem ein privates Golfcart über das Plateau bringen.
+Ja, per Genehmigung des Museums. Im Grand Egyptian Museum können die Tutanchamun-Säle anderthalb Stunden lang nur für Ihre Gruppe geöffnet werden, ohne andere Besucher zwischen dem Gold des Kindkönigs. Das lässt sich jeder der vier Reisen hinzufügen. In Gizeh kann Sie außerdem ein privates Golfcart über das Plateau bringen.
 
 **Warum ist das Winter Palace nicht dabei?**
 
@@ -428,7 +428,7 @@ Jede. Tage, Hotels, Reihenfolge und Tempo lassen sich ändern, und der Preis wir
 
 **Wie früh sollten wir buchen?**
 
-Acht bis zwölf Wochen für Reisen zwischen Oktober und April, wenn private Öffnungen und Dahabiya-Charter am gefragtesten sind. Kürzere Fristen sind manchmal möglich; Sie erfahren vor der Zusage, welche Elemente sich noch sichern lassen.
+Acht bis zwölf Wochen für Reisen zwischen Oktober und April, wenn private Öffnungen und Dahabiya-Charter am gefragtesten sind, und länger für die Cheops-Pyramide, deren Genehmigung mehrere Monate dauern kann. Kürzere Fristen sind manchmal möglich; Sie erfahren vor der Zusage, welche Elemente sich noch sichern lassen.
 
 **Mit wem haben wir zu tun?**
 

@@ -11,11 +11,11 @@ Grande viagem
 
 Catorze dias, todos os registros do país — Cairo, Alexandria, o Nilo de cruzeiro, Abu Simbel e, para terminar, o Mar Vermelho.
 
-a partir de € 2.728 / pessoa
+a partir de € 3.001 / pessoa
 
 a partir de 6 viajantes
 
-€ 3.001 por pessoa, para dois viajantes
+€ 3.301 por pessoa, para dois viajantes
 
 Por pessoa, em temporada normal. Acréscimos de feriados aparecem separados no orçamento.
 
@@ -65,7 +65,7 @@ Este é o roteiro de quem pretende vir uma vez e ver o Egito inteiro. Os dez pri
 
 - Catacumbas de Kom el-Shoqafa e Coluna de Pompeu
 - A Cidadela de Qaitbay, no local do Farol
-- Almoço de frutos do mar na corniche; volta ao Cairo
+- Almoço de frutos do mar na corniche, pago no local; volta ao Cairo
 
 05
 
@@ -157,7 +157,7 @@ Este é o roteiro de quem pretende vir uma vez e ver o Egito inteiro. Os dez pri
 - Visto de entrada no Egito
 - Gorjetas
 - Despesas pessoais
-- Refeições, exceto a bordo do cruzeiro pelo Nilo
+- Refeições, exceto a bordo do cruzeiro pelo Nilo e o almoço do dia de barco
 - Extras opcionais que vocês escolherem acrescentar — atividades, bebidas
 
 ## O ritmo

@@ -50,7 +50,7 @@
     },
     "email": "info@kemet-travel.com"
   },
-  "count": 25,
+  "count": 30,
   "journeys": [
     {
       "id": "tour-10-day",
@@ -69,13 +69,13 @@
       ],
       "privacy": "Guide, vehicle and visits — yes; the cruise ship is shared",
       "priceFrom": {
-        "amount": 1915,
+        "amount": 2107,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of 6 or more"
       },
       "priceForTwo": {
-        "amount": 2107,
+        "amount": 2318,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of two"
@@ -157,13 +157,13 @@
       ],
       "privacy": "Yes — your party only",
       "priceFrom": {
-        "amount": 1179,
+        "amount": 1297,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of 6 or more"
       },
       "priceForTwo": {
-        "amount": 1297,
+        "amount": 1427,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of two"
@@ -244,13 +244,13 @@
       ],
       "privacy": "Yes — your party only",
       "priceFrom": {
-        "amount": 618,
+        "amount": 680,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of 6 or more"
       },
       "priceForTwo": {
-        "amount": 680,
+        "amount": 748,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of two"
@@ -331,13 +331,13 @@
       ],
       "privacy": "Yes — your party only",
       "priceFrom": {
-        "amount": 527,
+        "amount": 580,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of 6 or more"
       },
       "priceForTwo": {
-        "amount": 580,
+        "amount": 638,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of two"
@@ -416,13 +416,13 @@
       ],
       "privacy": "Yes — your party only",
       "priceFrom": {
-        "amount": 139,
+        "amount": 153,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of 6 or more"
       },
       "priceForTwo": {
-        "amount": 153,
+        "amount": 168,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of two"
@@ -501,13 +501,13 @@
       ],
       "privacy": "Yes — your party only",
       "priceFrom": {
-        "amount": 79,
+        "amount": 87,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of 6 or more"
       },
       "priceForTwo": {
-        "amount": 87,
+        "amount": 96,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of two"
@@ -588,13 +588,13 @@
       ],
       "privacy": "Yes — your party only",
       "priceFrom": {
-        "amount": 68,
+        "amount": 75,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of 6 or more"
       },
       "priceForTwo": {
-        "amount": 75,
+        "amount": 83,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of two"
@@ -673,13 +673,13 @@
       ],
       "privacy": "Yes — your party only",
       "priceFrom": {
-        "amount": 80,
+        "amount": 88,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of 6 or more"
       },
       "priceForTwo": {
-        "amount": 88,
+        "amount": 97,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of two"
@@ -758,13 +758,13 @@
       ],
       "privacy": "Yes — your party only",
       "priceFrom": {
-        "amount": 64,
+        "amount": 70,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of 6 or more"
       },
       "priceForTwo": {
-        "amount": 70,
+        "amount": 77,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of two"
@@ -843,19 +843,19 @@
       ],
       "privacy": "Yes — your party only",
       "priceFrom": {
-        "amount": 57,
+        "amount": 63,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of 6 or more"
       },
       "priceForTwo": {
-        "amount": 63,
+        "amount": 69,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of two"
       },
       "siteTicketsIncluded": false,
-      "summary": "The Catacombs of Kom El Shoqafa, Pompey's Pillar, the Citadel of Qaitbay on the old Pharos site and the Bibliotheca Alexandrina, with a seafood lunch.",
+      "summary": "The Catacombs of Kom El Shoqafa, Pompey's Pillar, the Citadel of Qaitbay on the old Pharos site and the Bibliotheca Alexandrina, with a seafood lunch paid locally.",
       "pages": {
         "en": "https://kemet-travel.com/tour-alexandria.html",
         "de": "https://kemet-travel.com/de/alexandria-tagesausflug.html",
@@ -871,47 +871,47 @@
       "i18n": {
         "de": {
           "name": "Alexandria an einem Tag",
-          "summary": "Die Katakomben von Kom esch-Schukafa, die Pompeiussäule, die Zitadelle von Qaitbay auf dem Platz des alten Pharos und die Bibliotheca Alexandrina, mit einem Fischessen.",
+          "summary": "Die Katakomben von Kom esch-Schukafa, die Pompeiussäule, die Zitadelle von Qaitbay auf dem Platz des alten Pharos und die Bibliotheca Alexandrina, mit einem vor Ort bezahlten Fischessen.",
           "duration": "Ganzer Tag (ca. 11 Stunden)"
         },
         "it": {
           "name": "Alessandria, una giornata sul Mediterraneo",
-          "summary": "Le catacombe di Kom el-Shoqafa, la colonna di Pompeo, la cittadella di Qaitbay sul sito dell'antico faro e la Bibliotheca Alexandrina, con pranzo di pesce.",
+          "summary": "Le catacombe di Kom el-Shoqafa, la colonna di Pompeo, la cittadella di Qaitbay sul sito dell'antico faro e la Bibliotheca Alexandrina, con pranzo di pesce da saldare in loco.",
           "duration": "Giornata intera (≈11 ore)"
         },
         "es": {
           "name": "Alejandría en un día",
-          "summary": "Las Catacumbas de Kom el-Shoqafa, la Columna de Pompeyo, la Ciudadela de Qaitbay sobre el antiguo emplazamiento del Faro y la Bibliotheca Alexandrina, con un almuerzo de pescado y marisco.",
+          "summary": "Las Catacumbas de Kom el-Shoqafa, la Columna de Pompeyo, la Ciudadela de Qaitbay sobre el antiguo emplazamiento del Faro y la Bibliotheca Alexandrina, con un almuerzo de pescado y marisco pagado en destino.",
           "duration": "Día completo (unas 11 horas)"
         },
         "fr": {
           "name": "Alexandrie en une journée",
-          "summary": "Les catacombes de Kom el-Chogafa, la colonne de Pompée, la citadelle de Qaitbay sur l'emplacement du Phare et la Bibliotheca Alexandrina, avec un déjeuner de poisson.",
+          "summary": "Les catacombes de Kom el-Chogafa, la colonne de Pompée, la citadelle de Qaitbay sur l'emplacement du Phare et la Bibliotheca Alexandrina, avec un déjeuner de poisson à régler sur place.",
           "duration": "Journée entière (environ 11 heures)"
         },
         "ru": {
           "name": "Достопримечательности Александрии",
-          "summary": "Катакомбы Ком-эш-Шукафа, Помпеева колонна, цитадель Кайтбей на месте древнего Фароса и Александрийская библиотека, с обедом из морепродуктов.",
+          "summary": "Катакомбы Ком-эш-Шукафа, Помпеева колонна, цитадель Кайтбей на месте древнего Фароса и Александрийская библиотека, с обедом из морепродуктов (оплачивается на месте).",
           "duration": "Весь день (около 11 часов)"
         },
         "id": {
           "name": "Menjelajah Aleksandria",
-          "summary": "Katakombe Kom El Shoqafa, Pilar Pompey, Benteng Qaitbay di tapak Pharos lama, dan Bibliotheca Alexandrina, dengan makan siang hidangan laut.",
+          "summary": "Katakombe Kom El Shoqafa, Pilar Pompey, Benteng Qaitbay di tapak Pharos lama, dan Bibliotheca Alexandrina, dengan makan siang hidangan laut (dibayar di tempat).",
           "duration": "Sehari penuh (sekitar 11 jam)"
         },
         "ms": {
           "name": "Menjelajah Alexandria",
-          "summary": "Katakomb Kom El Shoqafa, Tiang Pompey, Kubu Qaitbay di tapak lama Pharos dan Bibliotheca Alexandrina, bersama makan tengah hari makanan laut.",
+          "summary": "Katakomb Kom El Shoqafa, Tiang Pompey, Kubu Qaitbay di tapak lama Pharos dan Bibliotheca Alexandrina, bersama makan tengah hari makanan laut yang dibayar di tempat.",
           "duration": "Sehari penuh (lebih kurang 11 jam)"
         },
         "pt": {
           "name": "Alexandria em um dia",
-          "summary": "As Catacumbas de Kom el-Shoqafa, a Coluna de Pompeu, a Cidadela de Qaitbay no antigo local do Farol e a Bibliotheca Alexandrina, com almoço de frutos do mar.",
+          "summary": "As Catacumbas de Kom el-Shoqafa, a Coluna de Pompeu, a Cidadela de Qaitbay no antigo local do Farol e a Bibliotheca Alexandrina, com almoço de frutos do mar, pago no local.",
           "duration": "Dia inteiro (cerca de 11 horas)"
         },
         "ar": {
           "name": "الإسكندرية في يوم واحد",
-          "summary": "مقابر كوم الشقافة، وعمود السواري، وقلعة قايتباي في موقع منارة فاروس القديمة، ومكتبة الإسكندرية، مع غداء من المأكولات البحرية.",
+          "summary": "مقابر كوم الشقافة، وعمود السواري، وقلعة قايتباي في موقع منارة فاروس القديمة، ومكتبة الإسكندرية، مع غداء من المأكولات البحرية، يُدفع ثمنه محلياً.",
           "duration": "يوم كامل (نحو ١١ ساعة)"
         }
       }
@@ -928,13 +928,13 @@
       ],
       "privacy": "Yes — your party only",
       "priceFrom": {
-        "amount": 66,
+        "amount": 73,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of 6 or more"
       },
       "priceForTwo": {
-        "amount": 73,
+        "amount": 80,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of two"
@@ -1013,13 +1013,13 @@
       ],
       "privacy": "Yes — your party only",
       "priceFrom": {
-        "amount": 59,
+        "amount": 65,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of 6 or more"
       },
       "priceForTwo": {
-        "amount": 65,
+        "amount": 72,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of two"
@@ -1101,13 +1101,13 @@
       ],
       "privacy": "Guide, vehicle and visits — yes; the cruise ship is shared",
       "priceFrom": {
-        "amount": 820,
+        "amount": 902,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of 6 or more"
       },
       "priceForTwo": {
-        "amount": 902,
+        "amount": 992,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of two"
@@ -1189,13 +1189,13 @@
       ],
       "privacy": "Yes — your party only",
       "priceFrom": {
-        "amount": 1018,
+        "amount": 1120,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of 6 or more"
       },
       "priceForTwo": {
-        "amount": 1120,
+        "amount": 1232,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of two"
@@ -1277,7 +1277,7 @@
       ],
       "privacy": "Guide, vehicle and visits — yes; the cruise ship is shared",
       "priceFrom": {
-        "amount": 2045,
+        "amount": 2250,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of 2 or more"
@@ -1359,13 +1359,13 @@
       ],
       "privacy": "Yes — your party only",
       "priceFrom": {
-        "amount": 1524,
+        "amount": 1676,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of 6 or more"
       },
       "priceForTwo": {
-        "amount": 1676,
+        "amount": 1844,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of two"
@@ -1447,13 +1447,13 @@
       ],
       "privacy": "Yes — your party only",
       "priceFrom": {
-        "amount": 1419,
+        "amount": 1561,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of 6 or more"
       },
       "priceForTwo": {
-        "amount": 1561,
+        "amount": 1717,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of two"
@@ -1538,13 +1538,13 @@
       ],
       "privacy": "Guide, vehicle and visits — yes; the cruise ship is shared",
       "priceFrom": {
-        "amount": 2728,
+        "amount": 3001,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of 6 or more"
       },
       "priceForTwo": {
-        "amount": 3001,
+        "amount": 3301,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of two"
@@ -1627,13 +1627,13 @@
       ],
       "privacy": "Yes — your party only",
       "priceFrom": {
-        "amount": 875,
+        "amount": 963,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of 6 or more"
       },
       "priceForTwo": {
-        "amount": 963,
+        "amount": 1059,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of two"
@@ -1713,13 +1713,13 @@
       ],
       "privacy": "Yes — your party only",
       "priceFrom": {
-        "amount": 979,
+        "amount": 1077,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of 6 or more"
       },
       "priceForTwo": {
-        "amount": 1077,
+        "amount": 1185,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of two"
@@ -1800,13 +1800,13 @@
       ],
       "privacy": "Yes — your party only",
       "priceFrom": {
-        "amount": 792,
+        "amount": 871,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of 6 or more"
       },
       "priceForTwo": {
-        "amount": 871,
+        "amount": 958,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of two"
@@ -1885,13 +1885,13 @@
       ],
       "privacy": "Yes — your party only",
       "priceFrom": {
-        "amount": 544,
+        "amount": 598,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of 6 or more"
       },
       "priceForTwo": {
-        "amount": 598,
+        "amount": 658,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of two"
@@ -1971,13 +1971,13 @@
       ],
       "privacy": "Yes — your party only",
       "priceFrom": {
-        "amount": 600,
+        "amount": 660,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of 6 or more"
       },
       "priceForTwo": {
-        "amount": 660,
+        "amount": 726,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of two"
@@ -2056,13 +2056,13 @@
       ],
       "privacy": "Yes — your party only",
       "priceFrom": {
-        "amount": 402,
+        "amount": 442,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of 6 or more"
       },
       "priceForTwo": {
-        "amount": 442,
+        "amount": 486,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of two"
@@ -2140,13 +2140,13 @@
       ],
       "privacy": "Yes — your party only",
       "priceFrom": {
-        "amount": 160,
+        "amount": 176,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of 6 or more"
       },
       "priceForTwo": {
-        "amount": 176,
+        "amount": 194,
         "currency": "EUR",
         "per": "person",
         "basis": "a private party of two"
@@ -2210,6 +2210,394 @@
           "name": "رحلة خاصة إلى أبو سمبل",
           "summary": "معابد رمسيس الثاني الهائلة المنحوتة في الصخر: نُقرت في سفح جبل نوبي، ونُقلت كتلة كتلة فوق مياه البحيرة الصاعدة، وما زالت متعامدة مع الشمس.",
           "duration": "يوم كامل (نحو ٨ ساعات، من أسوان)"
+        }
+      }
+    },
+    {
+      "id": "ultra-private-pharaoh",
+      "name": "Kemet Ultra — The Private Pharaoh",
+      "subtitle": "The Great Pyramid and Karnak, each opened for your party alone",
+      "kind": "ultra-luxury journey",
+      "duration": "7 Days / 6 Nights",
+      "days": 7,
+      "startsFrom": "Cairo",
+      "places": [
+        "Giza",
+        "Luxor"
+      ],
+      "privacy": "Yes — your party only",
+      "priceFrom": {
+        "amount": 12650,
+        "currency": "EUR",
+        "per": "person",
+        "basis": "a party of four"
+      },
+      "priceForTwo": {
+        "amount": 19140,
+        "currency": "EUR",
+        "per": "person",
+        "basis": "a party of two"
+      },
+      "note": "Peak weeks (20 December – 5 January, and Easter week) carry a 25% supplement. Private openings of monuments are granted by permit; one that is refused is taken off the price.",
+      "summary": "A week built around two doors that are normally shut. At Giza the Great Pyramid is opened for your party for two hours, with nobody else inside; in Luxor, Karnak is held for you after closing and dinner is set in the precinct. Between them: the Grand Egyptian Museum with a senior Egyptologist, the finest tombs in the Valley of the Kings, and the two temples most visitors never reach.",
+      "pages": {
+        "en": "https://kemet-travel.com/vip.html",
+        "de": "https://kemet-travel.com/de/ultra-luxusreisen-aegypten.html",
+        "it": "https://kemet-travel.com/it/viaggi-ultra-lusso-egitto.html",
+        "es": "https://kemet-travel.com/es/viajes-ultra-lujo-egipto.html",
+        "fr": "https://kemet-travel.com/fr/voyages-ultra-luxe-egypte.html",
+        "ru": "https://kemet-travel.com/ru/ultra-lyuks-tury-v-egipet.html",
+        "id": "https://kemet-travel.com/id/tur-ultra-mewah-mesir.html",
+        "ms": "https://kemet-travel.com/ms/percutian-ultra-mewah-mesir.html",
+        "pt": "https://kemet-travel.com/pt/viagens-ultra-luxo-egito.html",
+        "ar": "https://kemet-travel.com/ar/rehlat-fakhira-jiddan-fi-masr.html"
+      },
+      "i18n": {
+        "de": {
+          "name": "Der private Pharao",
+          "summary": "Eine Woche, gebaut um zwei Türen, die sonst verschlossen sind. In Gizeh wird die Cheops-Pyramide zwei Stunden lang nur für Ihre Gruppe geöffnet; in Luxor bleibt Karnak nach Schließung für Sie offen, und im Tempelbezirk wird das Dinner serviert. Dazwischen: das Grand Egyptian Museum mit einem erfahrenen Ägyptologen, die schönsten Gräber im Tal der Könige und die zwei Tempel, die die meisten Besucher nie erreichen."
+        },
+        "it": {
+          "name": "Il faraone privato",
+          "summary": "Una settimana costruita intorno a due porte che di solito restano chiuse. A Giza la Grande Piramide viene aperta per due ore solo per voi; a Luxor, Karnak resta aperto dopo la chiusura e la cena viene servita nel recinto del tempio. In mezzo: il Grand Egyptian Museum con un egittologo esperto, le tombe più belle della Valle dei Re e i due templi che quasi nessuno raggiunge."
+        },
+        "es": {
+          "name": "El faraón privado",
+          "summary": "Una semana construida en torno a dos puertas que normalmente están cerradas. En Guiza, la Gran Pirámide se abre dos horas solo para su grupo; en Luxor, Karnak sigue abierto para ustedes tras el cierre y la cena se sirve dentro del recinto. Entre ambas: el Gran Museo Egipcio con un egiptólogo veterano, las mejores tumbas del Valle de los Reyes y los dos templos a los que casi nadie llega."
+        },
+        "fr": {
+          "name": "Le pharaon privé",
+          "summary": "Une semaine construite autour de deux portes d'ordinaire fermées. À Gizeh, la Grande Pyramide s'ouvre deux heures pour votre seul groupe ; à Louxor, Karnak reste ouvert pour vous après la fermeture et le dîner est servi dans l'enceinte. Entre les deux : le Grand Musée égyptien avec un égyptologue chevronné, les plus belles tombes de la Vallée des Rois et les deux temples que presque personne n'atteint."
+        },
+        "ru": {
+          "name": "Частный фараон",
+          "summary": "Неделя, выстроенная вокруг двух дверей, которые обычно закрыты. В Гизе пирамиду Хеопса открывают на два часа только для вашей группы; в Луксоре Карнак остаётся открытым для вас после закрытия, и ужин подают прямо на территории храма. Между ними — Большой Египетский музей с опытным египтологом, лучшие гробницы Долины царей и два храма, до которых почти никто не доезжает."
+        },
+        "id": {
+          "name": "Firaun Privat",
+          "summary": "Satu minggu yang dibangun di sekitar dua pintu yang biasanya tertutup. Di Giza, Piramida Agung dibuka dua jam hanya untuk rombongan Anda; di Luxor, Karnak tetap dibuka untuk Anda setelah jam tutup dan makan malam disajikan di dalam kompleks kuil. Di antaranya: Grand Egyptian Museum bersama Egyptologist senior, makam-makam terindah di Lembah Para Raja, dan dua kuil yang jarang dicapai pengunjung."
+        },
+        "ms": {
+          "name": "Firaun Peribadi",
+          "summary": "Seminggu yang dibina di sekitar dua pintu yang biasanya tertutup. Di Giza, Piramid Agung dibuka selama dua jam hanya untuk rombongan anda; di Luxor, Karnak kekal dibuka untuk anda selepas waktu tutup dan makan malam dihidangkan di dalam kawasan kuil. Di antaranya: Grand Egyptian Museum bersama ahli Egyptologi kanan, makam-makam terindah di Lembah Raja-Raja, dan dua kuil yang jarang sampai dikunjungi pelawat."
+        },
+        "pt": {
+          "name": "O faraó privado",
+          "summary": "Uma semana construída em torno de duas portas que normalmente ficam fechadas. Em Gizé, a Grande Pirâmide abre duas horas só para o seu grupo; em Luxor, Karnak continua aberto para vocês depois do fechamento, e o jantar é servido dentro do recinto. Entre as duas: o Grande Museu Egípcio com um egiptólogo sênior, os melhores túmulos do Vale dos Reis e os dois templos aonde quase ninguém chega."
+        },
+        "ar": {
+          "name": "الفرعون على انفراد",
+          "summary": "أسبوع مبني على بابين لا يُفتحان عادةً. في الجيزة يُفتح الهرم الأكبر لمجموعتكم ساعتين ولا أحد غيركم في الداخل؛ وفي الأقصر يُحجز الكرنك لكم بعد الإغلاق ويُقام العشاء داخل الحرم. وبينهما: المتحف المصري الكبير مع خبير آثار كبير، وأجمل مقابر وادي الملوك، والمعبدان اللذان لا يبلغهما معظم الزوار."
+        }
+      }
+    },
+    {
+      "id": "ultra-royal-nile",
+      "name": "Kemet Ultra — The Royal Nile",
+      "subtitle": "A dahabiya chartered for your party, from Aswan to Esna",
+      "kind": "ultra-luxury journey",
+      "duration": "10 Days / 9 Nights",
+      "days": 10,
+      "startsFrom": "Cairo",
+      "places": [
+        "Cairo",
+        "Aswan",
+        "Nile",
+        "Luxor"
+      ],
+      "privacy": "Yes — your party only",
+      "priceFrom": {
+        "amount": 23100,
+        "currency": "EUR",
+        "per": "person",
+        "basis": "a party of four"
+      },
+      "priceForTwo": {
+        "amount": 40370,
+        "currency": "EUR",
+        "per": "person",
+        "basis": "a party of two"
+      },
+      "note": "Peak weeks (20 December – 5 January, and Easter week) carry a 25% supplement. Private openings of monuments are granted by permit; one that is refused is taken off the price.",
+      "summary": "Four nights on a sailing dahabiya with no other guests aboard: the crew, the chef and the moorings are yours, and the boat stops where large ships cannot. Before it, Cairo with the Great Pyramid opened privately and a night at the Old Cataract; Abu Simbel by private aircraft; and at the end, Karnak held for your dinner.",
+      "pages": {
+        "en": "https://kemet-travel.com/vip.html",
+        "de": "https://kemet-travel.com/de/ultra-luxusreisen-aegypten.html",
+        "it": "https://kemet-travel.com/it/viaggi-ultra-lusso-egitto.html",
+        "es": "https://kemet-travel.com/es/viajes-ultra-lujo-egipto.html",
+        "fr": "https://kemet-travel.com/fr/voyages-ultra-luxe-egypte.html",
+        "ru": "https://kemet-travel.com/ru/ultra-lyuks-tury-v-egipet.html",
+        "id": "https://kemet-travel.com/id/tur-ultra-mewah-mesir.html",
+        "ms": "https://kemet-travel.com/ms/percutian-ultra-mewah-mesir.html",
+        "pt": "https://kemet-travel.com/pt/viagens-ultra-luxo-egito.html",
+        "ar": "https://kemet-travel.com/ar/rehlat-fakhira-jiddan-fi-masr.html"
+      },
+      "i18n": {
+        "de": {
+          "name": "Der königliche Nil",
+          "summary": "Vier Nächte auf einer Segel-Dahabiya ohne andere Gäste: Crew, Koch und Liegeplätze gehören Ihnen, und das Boot hält, wo große Schiffe nicht anlegen können. Davor Kairo mit der privat geöffneten Cheops-Pyramide und eine Nacht im Old Cataract; Abu Simbel im Privatflugzeug; und zum Schluss Karnak, für Ihr Dinner geöffnet."
+        },
+        "it": {
+          "name": "Il Nilo reale",
+          "summary": "Quattro notti su una dahabiya a vela senza altri ospiti: equipaggio, cuoco e ormeggi sono vostri, e la barca si ferma dove le grandi navi non possono. Prima, il Cairo con la Grande Piramide aperta in privato e una notte all'Old Cataract; Abu Simbel in aereo privato; e alla fine Karnak, aperto per la vostra cena."
+        },
+        "es": {
+          "name": "El Nilo real",
+          "summary": "Cuatro noches en una dahabiya de vela sin otros huéspedes: la tripulación, el cocinero y los amarres son suyos, y el barco se detiene donde los grandes cruceros no pueden. Antes, El Cairo con la Gran Pirámide abierta en privado y una noche en el Old Cataract; Abu Simbel en avión privado; y al final, Karnak abierto para su cena."
+        },
+        "fr": {
+          "name": "Le Nil royal",
+          "summary": "Quatre nuits sur une dahabeya à voile sans autres passagers : l'équipage, le cuisinier et les mouillages sont à vous, et le bateau s'arrête là où les grands navires ne peuvent pas. Avant cela, Le Caire avec la Grande Pyramide ouverte en privé et une nuit à l'Old Cataract ; Abou Simbel en avion privé ; et pour finir, Karnak ouvert pour votre dîner."
+        },
+        "ru": {
+          "name": "Царский Нил",
+          "summary": "Четыре ночи на парусной дахабии без других гостей: экипаж, повар и стоянки принадлежат вам, а судно причаливает там, где большие теплоходы не могут. До этого — Каир с пирамидой Хеопса, открытой только для вас, и ночь в Old Cataract; Абу-Симбел на частном самолёте; а в конце — Карнак, открытый для вашего ужина."
+        },
+        "id": {
+          "name": "Nil Kerajaan",
+          "summary": "Empat malam di dahabiya layar tanpa tamu lain: awak, koki, dan tempat berlabuh adalah milik Anda, dan kapal bisa singgah di tempat yang tak bisa dicapai kapal besar. Sebelumnya, Kairo dengan Piramida Agung dibuka privat dan satu malam di Old Cataract; Abu Simbel dengan pesawat privat; dan di akhir, Karnak dibuka untuk makan malam Anda."
+        },
+        "ms": {
+          "name": "Nil Diraja",
+          "summary": "Empat malam di atas dahabiya berlayar tanpa tetamu lain: kru, tukang masak dan tempat berlabuh adalah milik anda, dan kapal boleh singgah di tempat yang tidak dapat dicapai kapal besar. Sebelum itu, Kaherah dengan Piramid Agung dibuka secara peribadi dan satu malam di Old Cataract; Abu Simbel dengan pesawat peribadi; dan di penghujungnya, Karnak dibuka untuk makan malam anda."
+        },
+        "pt": {
+          "name": "O Nilo real",
+          "summary": "Quatro noites numa dahabiya à vela sem outros hóspedes: a tripulação, o cozinheiro e as paradas são de vocês, e o barco para onde os grandes cruzeiros não conseguem. Antes, o Cairo com a Grande Pirâmide aberta em privado e uma noite no Old Cataract; Abu Simbel de avião particular; e, no fim, Karnak aberto para o seu jantar."
+        },
+        "ar": {
+          "name": "النيل الملكي",
+          "summary": "أربع ليالٍ على دهبية شراعية بلا ضيوف آخرين على متنها: الطاقم والطاهي والمراسي لكم، والمركب يقف حيث لا تقف البواخر الكبيرة. وقبلها القاهرة مع فتح خاص للهرم الأكبر وليلة في الأولد كتراكت؛ وأبو سمبل بطائرة خاصة؛ وفي الختام الكرنك محجوزاً لعشائكم."
+        }
+      }
+    },
+    {
+      "id": "ultra-karnak-to-coral-sea",
+      "name": "Kemet Ultra — Karnak to the Coral Sea",
+      "subtitle": "The Oberoi Philae up the Nile, then a private yacht on the Red Sea",
+      "kind": "ultra-luxury journey",
+      "duration": "12 Days / 11 Nights",
+      "days": 12,
+      "startsFrom": "Cairo",
+      "places": [
+        "Giza",
+        "Nile",
+        "Aswan",
+        "Red Sea"
+      ],
+      "privacy": "Yes — your party only",
+      "priceFrom": {
+        "amount": 27830,
+        "currency": "EUR",
+        "per": "person",
+        "basis": "a party of four"
+      },
+      "priceForTwo": {
+        "amount": 42130,
+        "currency": "EUR",
+        "per": "person",
+        "basis": "a party of two"
+      },
+      "note": "Peak weeks (20 December – 5 January, and Easter week) carry a 25% supplement. Private openings of monuments are granted by permit; one that is refused is taken off the price.",
+      "summary": "The classic river journey on the most refined cruiser on the Nile, taken in a suite, then ended properly: a private aircraft from Aswan to the Red Sea, a suite with its own pool, and a crewed yacht for the day among the Giftun reefs. The Great Pyramid and Karnak are opened for you along the way.",
+      "pages": {
+        "en": "https://kemet-travel.com/vip.html",
+        "de": "https://kemet-travel.com/de/ultra-luxusreisen-aegypten.html",
+        "it": "https://kemet-travel.com/it/viaggi-ultra-lusso-egitto.html",
+        "es": "https://kemet-travel.com/es/viajes-ultra-lujo-egipto.html",
+        "fr": "https://kemet-travel.com/fr/voyages-ultra-luxe-egypte.html",
+        "ru": "https://kemet-travel.com/ru/ultra-lyuks-tury-v-egipet.html",
+        "id": "https://kemet-travel.com/id/tur-ultra-mewah-mesir.html",
+        "ms": "https://kemet-travel.com/ms/percutian-ultra-mewah-mesir.html",
+        "pt": "https://kemet-travel.com/pt/viagens-ultra-luxo-egito.html",
+        "ar": "https://kemet-travel.com/ar/rehlat-fakhira-jiddan-fi-masr.html"
+      },
+      "i18n": {
+        "de": {
+          "name": "Von Karnak ans Korallenmeer",
+          "summary": "Die klassische Nilreise auf dem feinsten Schiff des Flusses, in einer Suite — und dann ein würdiger Abschluss: im Privatflugzeug von Assuan ans Rote Meer, eine Suite mit eigenem Pool und eine Jacht mit Crew für einen Tag an den Riffen von Giftun. Die Cheops-Pyramide und Karnak werden unterwegs für Sie geöffnet."
+        },
+        "it": {
+          "name": "Da Karnak al mare dei coralli",
+          "summary": "La classica crociera sul Nilo sulla nave più raffinata del fiume, in suite, e poi un finale all'altezza: un aereo privato da Assuan al Mar Rosso, una suite con piscina propria e uno yacht con equipaggio per una giornata tra le barriere di Giftun. Lungo il viaggio, la Grande Piramide e Karnak vengono aperti per voi."
+        },
+        "es": {
+          "name": "De Karnak al mar de coral",
+          "summary": "El crucero clásico por el Nilo en el barco más refinado del río, en suite, con el final que merece: un avión privado de Asuán al mar Rojo, una suite con piscina propia y un yate con tripulación para pasar el día entre los arrecifes de Giftun. Por el camino, la Gran Pirámide y Karnak se abren para ustedes."
+        },
+        "fr": {
+          "name": "De Karnak à la mer de corail",
+          "summary": "La croisière classique sur le Nil à bord du plus raffiné des bateaux du fleuve, en suite, suivie d'une vraie conclusion : un avion privé d'Assouan à la mer Rouge, une suite avec sa propre piscine et un yacht avec équipage pour une journée parmi les récifs de Giftun. En chemin, la Grande Pyramide et Karnak s'ouvrent pour vous."
+        },
+        "ru": {
+          "name": "От Карнака до кораллового моря",
+          "summary": "Классический круиз по Нилу на самом изысканном судне реки, в люксе, — и достойный финал: частный самолёт из Асуана на Красное море, люкс с собственным бассейном и яхта с экипажем на целый день у рифов Гифтуна. По пути пирамиду Хеопса и Карнак открывают только для вас."
+        },
+        "id": {
+          "name": "Dari Karnak ke Laut Karang",
+          "summary": "Pelayaran Nil klasik di kapal paling elegan di sungai itu, dalam suite, lalu ditutup dengan layak: pesawat privat dari Aswan ke Laut Merah, suite dengan kolam renang sendiri, dan yacht berawak untuk seharian di terumbu Giftun. Di sepanjang jalan, Piramida Agung dan Karnak dibuka untuk Anda."
+        },
+        "ms": {
+          "name": "Dari Karnak ke Laut Karang",
+          "summary": "Pelayaran Nil klasik di atas kapal paling halus di sungai itu, di dalam suite, kemudian diakhiri dengan sewajarnya: pesawat peribadi dari Aswan ke Laut Merah, suite dengan kolam renang sendiri, dan kapal layar berkru untuk sehari di terumbu Giftun. Sepanjang perjalanan, Piramid Agung dan Karnak dibuka untuk anda."
+        },
+        "pt": {
+          "name": "De Karnak ao mar de coral",
+          "summary": "O cruzeiro clássico pelo Nilo no barco mais refinado do rio, em suíte, com o final que ele merece: um avião particular de Assuã ao Mar Vermelho, uma suíte com piscina privativa e um iate com tripulação para passar o dia entre os recifes de Giftun. No caminho, a Grande Pirâmide e Karnak abrem para vocês."
+        },
+        "ar": {
+          "name": "من الكرنك إلى بحر الشعاب",
+          "summary": "الرحلة النهرية الكلاسيكية على أرقى باخرة في النيل، في جناح، ثم تُختَم كما ينبغي: طائرة خاصة من أسوان إلى البحر الأحمر، وجناح بمسبحه الخاص، ويخت بطاقمه ليوم كامل بين شعاب الجفتون. ويُفتح لكم الهرم الأكبر والكرنك في الطريق."
+        }
+      }
+    },
+    {
+      "id": "ultra-grand-odyssey",
+      "name": "Kemet Ultra — The Grand Private Odyssey",
+      "subtitle": "Every movement private — aircraft, dahabiya and yacht",
+      "kind": "ultra-luxury journey",
+      "duration": "15 Days / 14 Nights",
+      "days": 15,
+      "startsFrom": "Cairo",
+      "places": [
+        "Giza",
+        "Aswan",
+        "Nile",
+        "Luxor",
+        "Red Sea"
+      ],
+      "privacy": "Yes — your party only",
+      "priceFrom": {
+        "amount": 41470,
+        "currency": "EUR",
+        "per": "person",
+        "basis": "a party of four"
+      },
+      "priceForTwo": {
+        "amount": 73480,
+        "currency": "EUR",
+        "per": "person",
+        "basis": "a party of two"
+      },
+      "note": "Peak weeks (20 December – 5 January, and Easter week) carry a 25% supplement. Private openings of monuments are granted by permit; one that is refused is taken off the price.",
+      "summary": "The whole of Egypt without a single shared moment. A private aircraft on every internal leg; a dahabiya chartered for four nights between Aswan and Esna; the Great Pyramid and Karnak opened for you; and three nights on the Red Sea with two days aboard your own yacht. Designed for a first visit meant to be the definitive one.",
+      "pages": {
+        "en": "https://kemet-travel.com/vip.html",
+        "de": "https://kemet-travel.com/de/ultra-luxusreisen-aegypten.html",
+        "it": "https://kemet-travel.com/it/viaggi-ultra-lusso-egitto.html",
+        "es": "https://kemet-travel.com/es/viajes-ultra-lujo-egipto.html",
+        "fr": "https://kemet-travel.com/fr/voyages-ultra-luxe-egypte.html",
+        "ru": "https://kemet-travel.com/ru/ultra-lyuks-tury-v-egipet.html",
+        "id": "https://kemet-travel.com/id/tur-ultra-mewah-mesir.html",
+        "ms": "https://kemet-travel.com/ms/percutian-ultra-mewah-mesir.html",
+        "pt": "https://kemet-travel.com/pt/viagens-ultra-luxo-egito.html",
+        "ar": "https://kemet-travel.com/ar/rehlat-fakhira-jiddan-fi-masr.html"
+      },
+      "i18n": {
+        "de": {
+          "name": "Die große private Odyssee",
+          "summary": "Ganz Ägypten, ohne einen einzigen geteilten Moment. Ein Privatflugzeug auf jeder Inlandsstrecke; eine Dahabiya, vier Nächte lang gechartert zwischen Assuan und Esna; die Cheops-Pyramide und Karnak für Sie geöffnet; und drei Nächte am Roten Meer mit zwei Tagen auf Ihrer eigenen Jacht. Für eine erste Reise, die die maßgebliche sein soll."
+        },
+        "it": {
+          "name": "La grande odissea privata",
+          "summary": "Tutto l'Egitto senza un solo momento condiviso. Un aereo privato per ogni tratta interna; una dahabiya noleggiata per quattro notti tra Assuan ed Esna; la Grande Piramide e Karnak aperti per voi; e tre notti sul Mar Rosso con due giornate a bordo del vostro yacht. Pensato per un primo viaggio che vuole essere quello definitivo."
+        },
+        "es": {
+          "name": "La gran odisea privada",
+          "summary": "Todo Egipto sin un solo momento compartido. Un avión privado en cada trayecto interior; una dahabiya fletada cuatro noches entre Asuán y Esna; la Gran Pirámide y Karnak abiertos para ustedes; y tres noches en el mar Rojo con dos días a bordo de su propio yate. Pensado para una primera visita que quiere ser la definitiva."
+        },
+        "fr": {
+          "name": "La grande odyssée privée",
+          "summary": "Toute l'Égypte sans un seul moment partagé. Un avion privé sur chaque trajet intérieur ; une dahabeya privatisée quatre nuits entre Assouan et Esna ; la Grande Pyramide et Karnak ouverts pour vous ; et trois nuits en mer Rouge avec deux journées à bord de votre propre yacht. Conçu pour un premier voyage qui doit être le voyage de référence."
+        },
+        "ru": {
+          "name": "Большая частная одиссея",
+          "summary": "Весь Египет без единого общего момента. Частный самолёт на каждом внутреннем перелёте; дахабия в аренду на четыре ночи между Асуаном и Эсной; пирамида Хеопса и Карнак, открытые только для вас; и три ночи на Красном море с двумя днями на собственной яхте. Для первой поездки, которая должна стать главной."
+        },
+        "id": {
+          "name": "Odisei Privat Agung",
+          "summary": "Seluruh Mesir tanpa satu momen pun yang dibagi dengan orang lain. Pesawat privat di setiap rute domestik; dahabiya disewa empat malam antara Aswan dan Esna; Piramida Agung dan Karnak dibuka untuk Anda; serta tiga malam di Laut Merah dengan dua hari di atas yacht Anda sendiri. Dirancang untuk kunjungan pertama yang ingin menjadi yang paling berkesan."
+        },
+        "ms": {
+          "name": "Odisi Peribadi Agung",
+          "summary": "Seluruh Mesir tanpa satu detik pun dikongsi dengan orang lain. Pesawat peribadi pada setiap laluan domestik; dahabiya disewa empat malam antara Aswan dan Esna; Piramid Agung dan Karnak dibuka untuk anda; dan tiga malam di Laut Merah dengan dua hari di atas kapal layar anda sendiri. Direka untuk lawatan pertama yang mahu menjadi yang paling bermakna."
+        },
+        "pt": {
+          "name": "A grande odisseia privada",
+          "summary": "O Egito inteiro sem um único momento compartilhado. Avião particular em cada trecho interno; uma dahabiya fretada por quatro noites entre Assuã e Esna; a Grande Pirâmide e Karnak abertos para vocês; e três noites no Mar Vermelho com dois dias a bordo do seu próprio iate. Pensada para uma primeira visita que quer ser a definitiva."
+        },
+        "ar": {
+          "name": "الرحلة الكبرى الخاصة",
+          "summary": "مصر كلها دون لحظة واحدة مشتركة. طائرة خاصة في كل تنقّل داخلي؛ ودهبية مستأجرة أربع ليالٍ بين أسوان وإسنا؛ والهرم الأكبر والكرنك يُفتحان لكم؛ وثلاث ليالٍ على البحر الأحمر بيومين على يختكم. مُصمَّمة لزيارة أولى يُراد لها أن تكون الزيارة الفاصلة."
+        }
+      }
+    },
+    {
+      "id": "eclipse-day-2027",
+      "name": "Eclipse Day in Luxor",
+      "kind": "day tour (small group)",
+      "duration": "1 day, 2027-08-02",
+      "date": "2027-08-02",
+      "startsFrom": "Luxor",
+      "places": [
+        "Luxor"
+      ],
+      "privacy": "Small groups of up to 12, each with its own Egyptologist and vehicle",
+      "priceFrom": {
+        "amount": 164,
+        "currency": "EUR",
+        "per": "person",
+        "basis": "a place in a group of up to 12; hotel not included"
+      },
+      "summary": "One day planned around six minutes: the Valley of the Kings at opening, a shaded viewing place on the West Bank for totality, a late Egyptian lunch and a felucca at sunset. Small groups of up to 12, each with its own Egyptologist and its own vehicle — the one fixed-date departure we run, because the date is set by the sky.",
+      "pages": {
+        "en": "https://kemet-travel.com/guides/total-solar-eclipse-2027-luxor.html",
+        "de": "https://kemet-travel.com/de/sonnenfinsternis-2027-luxor.html",
+        "it": "https://kemet-travel.com/it/eclissi-solare-2027-luxor.html",
+        "es": "https://kemet-travel.com/es/eclipse-solar-2027-luxor.html",
+        "fr": "https://kemet-travel.com/fr/eclipse-solaire-2027-louxor.html",
+        "ru": "https://kemet-travel.com/ru/solnechnoe-zatmenie-2027-luksor.html",
+        "id": "https://kemet-travel.com/id/gerhana-matahari-2027-luxor.html",
+        "ms": "https://kemet-travel.com/ms/gerhana-matahari-2027-luxor.html",
+        "pt": "https://kemet-travel.com/pt/eclipse-solar-2027-luxor.html",
+        "ar": "https://kemet-travel.com/ar/kusuf-al-shams-2027-al-uqsur.html"
+      },
+      "i18n": {
+        "de": {
+          "name": "Sonnenfinsternis-Tag in Luxor",
+          "summary": "Ein Tag, geplant um sechs Minuten: das Tal der Könige zur Öffnung, ein schattiger Beobachtungsplatz am Westufer für die Totalität, ein spätes ägyptisches Mittagessen und eine Feluke zum Sonnenuntergang. Kleine Gruppen mit bis zu 12 Personen, jede mit eigener ägyptologischer Reiseleitung und eigenem Fahrzeug — der einzige feste Termin in unserem Programm, denn das Datum bestimmt der Himmel."
+        },
+        "it": {
+          "name": "La giornata dell'eclissi a Luxor",
+          "summary": "Una giornata costruita intorno a sei minuti: la Valle dei Re all'apertura, un punto di osservazione all'ombra sulla riva occidentale per la totalità, un pranzo egiziano tardivo e una feluca al tramonto. Piccoli gruppi fino a 12 persone, ciascuno con la sua guida specializzata in egittologia e il suo veicolo — l'unica partenza a data fissa che proponiamo, perché la data la decide il cielo."
+        },
+        "es": {
+          "name": "El día del eclipse en Luxor",
+          "summary": "Un día pensado en torno a seis minutos: el Valle de los Reyes a la hora de apertura, un lugar de observación a la sombra en la orilla oeste para la totalidad, un almuerzo egipcio tardío y una faluca al atardecer. Grupos reducidos de hasta 12 personas, cada uno con su guía especialista en Egiptología y su propio vehículo: la única salida con fecha fija que organizamos, porque la fecha la pone el cielo."
+        },
+        "fr": {
+          "name": "La journée de l'éclipse à Louxor",
+          "summary": "Une journée construite autour de six minutes : la Vallée des Rois à l'ouverture, un lieu d'observation ombragé sur la rive ouest pour la totalité, un déjeuner égyptien tardif et une felouque au coucher du soleil. De petits groupes de 12 personnes au plus, chacun avec son égyptologue et son véhicule — notre seul départ à date fixe, car la date, c'est le ciel qui la choisit."
+        },
+        "ru": {
+          "name": "День затмения в Луксоре",
+          "summary": "Один день, выстроенный вокруг шести минут: Долина царей к открытию, тенистое место на западном берегу для наблюдения полной фазы, поздний египетский обед и фелука на закате. Небольшие группы до 12 человек, у каждой — свой египтолог и свой автомобиль. Это единственная наша поездка с фиксированной датой: дату назначает небо."
+        },
+        "id": {
+          "name": "Hari Gerhana di Luxor",
+          "summary": "Satu hari yang dirancang di sekitar enam menit: Lembah Para Raja saat baru dibuka, tempat menyaksikan totalitas yang teduh di Tepi Barat, makan siang khas Mesir yang agak terlambat, dan felucca saat matahari terbenam. Grup kecil maksimal 12 orang, masing-masing dengan Egyptologist dan kendaraannya sendiri — satu-satunya keberangkatan bertanggal tetap yang kami selenggarakan, karena tanggalnya ditentukan oleh langit."
+        },
+        "ms": {
+          "name": "Hari Gerhana di Luxor",
+          "summary": "Sehari yang dirancang di sekitar enam minit: Lembah Raja-Raja sebaik dibuka, tempat tontonan yang teduh di Tebing Barat untuk fasa penuh, makan tengah hari Mesir yang agak lewat, dan felucca ketika matahari terbenam. Kumpulan kecil sehingga 12 orang, setiap satu dengan Egyptologist dan kenderaannya sendiri — satu-satunya perjalanan bertarikh tetap yang kami anjurkan, kerana tarikhnya ditentukan oleh langit."
+        },
+        "pt": {
+          "name": "Dia do eclipse em Luxor",
+          "summary": "Um dia planejado em torno de seis minutos: o Vale dos Reis na abertura, um local de observação à sombra na margem oeste para a totalidade, um almoço egípcio tardio e uma faluca ao pôr do sol. Grupos pequenos de até 12 pessoas, cada um com seu próprio veículo e guia especialista em egiptologia — a única saída com data fixa que fazemos, porque quem marca a data é o céu."
+        },
+        "ar": {
+          "name": "يوم الكسوف في الأقصر",
+          "summary": "يوم كامل مُخطَّط حول ست دقائق: وادي الملوك عند فتحه، ومكان مظلّل للمشاهدة في البرّ الغربي لحظة الكسوف الكلي، وغداء مصري متأخر، ورحلة بالفلوكة عند الغروب. مجموعات صغيرة لا تزيد على ١٢ شخصاً، لكلٍّ منها إرشادها المتخصص في علم المصريات وسيارتها الخاصة — وهي الرحلة الوحيدة ذات الموعد الثابت التي ننظّمها، لأن السماء هي التي تحدّد الموعد."
         }
       }
     }

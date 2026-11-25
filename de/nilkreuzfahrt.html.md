@@ -23,7 +23,7 @@ Fast alles, wofür es sich auf der Strecke zwischen Luxor und Assuan zu halten l
 
 So führen wir die Kreuzfahrt durch: drei Nächte auf dem Fluss von Assuan nach Luxor, jeder Besuch an Land privat und mit Ihrer eigenen ägyptologischen Reiseleitung. Das Schiff teilen Sie mit anderen; Ihre Reiseleitung, Ihr Fahrzeug und Ihre Besuche gehören Ihnen allein.
 
-ab 820 € / Person (ab 6 Reisenden). 902 € pro Person bei zwei Reisenden. Pro Person, Normalsaison. Zuschläge für Feiertage weisen wir im Angebot getrennt aus.
+ab 902 € / Person (ab 6 Reisenden). 992 € pro Person bei zwei Reisenden. Pro Person, Normalsaison. Zuschläge für Feiertage weisen wir im Angebot getrennt aus.
 
 01
 
@@ -120,7 +120,7 @@ Drei bis vier Monate im Voraus für Hotels und übliche Kreuzfahrtschiffe; sechs
 
 ### Fliegen oder Schlafwagen nach Luxor und Assuan?
 
-Wer Komfort vor den Preis stellt, sollte fliegen: Kairo–Luxor dauert unter einer Stunde, Kairo–Assuan etwa eine Stunde und fünfzehn Minuten. Der Zug braucht rund zehn Stunden bis Luxor und dreizehn bis Assuan und fährt deshalb meist über Nacht – im Zweibettabteil mit Waschbecken, Abendessen und Frühstück, aber mit Gemeinschaftstoiletten; Richtung Süden erreicht er Luxor gegen halb sechs Uhr morgens. Unsere Reisen mit Schlafwagen gibt es auch mit Inlandsflügen und Hotelnächten, für 130 € mehr pro Person.
+Wer Komfort vor den Preis stellt, sollte fliegen: Kairo–Luxor dauert unter einer Stunde, Kairo–Assuan etwa eine Stunde und fünfzehn Minuten. Der Zug braucht rund zehn Stunden bis Luxor und dreizehn bis Assuan und fährt deshalb meist über Nacht – im Zweibettabteil mit Waschbecken, Abendessen und Frühstück, aber mit Gemeinschaftstoiletten; Richtung Süden erreicht er Luxor gegen halb sechs Uhr morgens. Unsere Reisen mit Schlafwagen gibt es auch mit Inlandsflügen und Hotelnächten, für 143 € mehr pro Person.
 
 ## Mehr zur Nilstrecke
 

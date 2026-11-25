@@ -11,13 +11,13 @@ Viaggio signature
 
 Una settimana che raccoglie l'essenziale — Il Cairo, Alessandria e Luxor — con le notti in treno cuccetta a fare da cerniera.
 
-da 1.179 € / persona
+da 1.297 € / persona
 
 da 6 viaggiatori
 
-1.297 € a persona per due viaggiatori
+1.427 € a persona per due viaggiatori
 
-Con voli interni al posto delle due notti in treno letto, quelle notti in hotel: 1.309 € a persona
+Con voli interni al posto delle due notti in treno letto, quelle notti in hotel: 1.440 € a persona
 
 A persona, in stagione normale. I supplementi delle festività sono indicati separatamente nel preventivo.
 
@@ -53,7 +53,7 @@ Per chi ha una settimana, questo viaggio distilla l'Egitto nelle sue pagine più
 
 - Strada verso la costa mediterranea
 - Catacombe di Kom el-Shoqafa, colonna di Pompeo e cittadella di Qaitbay
-- Bibliotheca Alexandrina e pranzo di pesce sul lungomare
+- Bibliotheca Alexandrina e pranzo di pesce sul lungomare, da saldare in loco
 
 03
 
@@ -98,8 +98,8 @@ Per chi ha una settimana, questo viaggio distilla l'Egitto nelle sue pagine più
 ## Incluso
 
 - Un egittologo privato per tutto il viaggio
-- 6 notti in hotel
-- Cuccette sul treno notturno Il Cairo–Luxor (andata e ritorno)
+- 4 notti in hotel; le altre due notti sono sul treno notturno con cuccette
+- Cuccette sul treno notturno Il Cairo–Luxor (andata e ritorno), con cena e colazione a bordo
 - Tutti i biglietti d'ingresso a siti e monumenti
 - Trasferimenti privati con aria condizionata
 - Prelievo e rientro in hotel
@@ -111,7 +111,7 @@ Per chi ha una settimana, questo viaggio distilla l'Egitto nelle sue pagine più
 - Il visto d'ingresso in Egitto
 - Le mance
 - Le spese personali
-- I pasti
+- I pasti, tranne la cena e la colazione sul treno notturno
 - I supplementi facoltativi a scelta — attività, bevande
 
 ## Il ritmo

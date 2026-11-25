@@ -11,11 +11,11 @@ Percutian singkat
 
 Tiga hari di kuil dan makam Mesir Hulu, dengan penerbangan domestik sudah termasuk dalam harga.
 
-dari €527 / seorang
+dari €580 / seorang
 
 dari 6 orang
 
-€580 seorang bagi dua pengembara
+€638 seorang bagi dua pengembara
 
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 

@@ -15,7 +15,7 @@ Meilleure période **Toussaint et Pâques**
 
 Pour les parents **baby-sitter sur demande**
 
-Voyage famille de 8 jours dès **1 524 € / pers., dès 6 voyageurs**
+Voyage famille de 8 jours dès **1 676 € / pers., dès 6 voyageurs**
 
 L'Égypte est l'un des rares endroits où enfants et parents s'émerveillent des mêmes choses. La Grande Pyramide est exactement aussi grande qu'un enfant l'espère; une momie, exactement aussi mystérieuse; un chameau, exactement aussi drôle. Et les vacances de la Toussaint et de Pâques tombent pile dans la meilleure saison.
 

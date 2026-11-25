@@ -11,11 +11,11 @@ Fotoreise
 
 Sieben Tage, geplant nach dem Licht und nicht nach Öffnungszeiten — Plateaus im Morgengrauen, Tempel zur blauen Stunde und der Nil zur goldenen.
 
-ab 1.419 € / Person
+ab 1.561 € / Person
 
 ab 6 Reisenden
 
-1.561 € pro Person bei zwei Reisenden
+1.717 € pro Person bei zwei Reisenden
 
 Pro Person, Normalsaison. Zuschläge für Feiertage weisen wir im Angebot getrennt aus.
 

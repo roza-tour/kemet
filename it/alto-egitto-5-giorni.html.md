@@ -11,11 +11,11 @@ Viaggio signature
 
 Cinque giorni senza fretta attraverso l'Alto Egitto — entrambe le rive di Luxor, la strada verso sud per Edfu e Kom Ombo, e le isole di Assuan.
 
-da 1.018 € / persona
+da 1.120 € / persona
 
 da 6 viaggiatori
 
-1.120 € a persona per due viaggiatori
+1.232 € a persona per due viaggiatori
 
 A persona, in stagione normale. I supplementi delle festività sono indicati separatamente nel preventivo.
 

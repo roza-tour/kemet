@@ -108,7 +108,7 @@ Cairo · Giza · Alexandria · Aswan · Luxor
 
 Our signature journey: Cairo, Alexandria, a sleeper train south, and a three-night Nile cruise from Aswan to Luxor — every layer of Egypt in one arc.
 
-€1,915 / person from 6 travellers
+€2,107 / person from 6 travellers
 
 7 Days
 
@@ -118,7 +118,7 @@ Cairo · Giza · Alexandria · Luxor
 
 The headline acts of Egypt in seven days — the Egyptian Museum, Alexandria, the temples and tombs of Luxor, and the Pyramids of Giza.
 
-€1,179 / person from 6 travellers
+€1,297 / person from 6 travellers
 
 4 Days
 
@@ -128,7 +128,7 @@ Cairo · Giza · Alexandria
 
 A compact northern journey — the Egyptian Museum, Alexandria's Greco-Roman layers, the Pyramids of Giza and medieval Cairo.
 
-€618 / person from 6 travellers
+€680 / person from 6 travellers
 
 Full Day
 
@@ -136,9 +136,9 @@ Full Day
 
 Alexandria
 
-The Catacombs of Kom El Shoqafa, Pompey's Pillar, the Citadel of Qaitbay on the old Pharos site and the Bibliotheca Alexandrina, with a seafood lunch.
+The Catacombs of Kom El Shoqafa, Pompey's Pillar, the Citadel of Qaitbay on the old Pharos site and the Bibliotheca Alexandrina, with a seafood lunch paid locally.
 
-€57 / person from 6 travellers · tickets not included
+€63 / person from 6 travellers · tickets not included
 
 14 Days
 
@@ -148,7 +148,7 @@ Cairo · Giza · Alexandria · Aswan · Abu Simbel · Luxor · Sharm El Sheikh
 
 Our most complete journey: Cairo and Alexandria, a Nile cruise, Ramesses II's mountain temple at Abu Simbel, and three Red Sea nights to absorb it all.
 
-€2,728 / person from 6 travellers
+€3,001 / person from 6 travellers
 
 2 Days
 
@@ -158,7 +158,7 @@ Alexandria
 
 Alexandria with its missing half restored: the Greco-Roman sites by day, then the corniche at dusk, seafood by the water and the morning light day-trips never catch.
 
-€402 / person from 6 travellers
+€442 / person from 6 travellers
 
 Programmes
 

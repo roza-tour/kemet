@@ -11,11 +11,11 @@ Kurzreise
 
 Drei Tage im größten Freilichtmuseum der Welt — beide Ufer richtig gemacht, mit dem beleuchteten Tempel bei Nacht als Angelpunkt.
 
-ab 544 € / Person
+ab 598 € / Person
 
 ab 6 Reisenden
 
-598 € pro Person bei zwei Reisenden
+658 € pro Person bei zwei Reisenden
 
 Pro Person, Normalsaison. Zuschläge für Feiertage weisen wir im Angebot getrennt aus.
 

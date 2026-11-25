@@ -2,7 +2,7 @@
 title: "4-Day Nile Cruise Aswan to Luxor, Privately Guided | Kemet"
 url: https://kemet-travel.com/tour-nile-cruise.html
 language: en
-description: "The essential Nile cruise, done properly — Philae and the High Dam, three nights afloat past Kom Ombo and Edfu — private, from €820 pp."
+description: "The essential Nile cruise, done properly — Philae and the High Dam, three nights afloat past Kom Ombo and Edfu — private, from €902 pp."
 ---
 
 Nile Cruise · 4 Days / 3 Nights
@@ -13,7 +13,7 @@ Three nights on the river between Aswan and Luxor, with Kom Ombo and Edfu unlock
 
 ## What does Nile in Style: Aswan to Luxor include, and what does it cost?
 
-Nile in Style: Aswan to Luxor is a private 4-day, 3-night journey through Aswan, Kom Ombo, Edfu and Luxor, from €820 per person for a party of 6 or more, or €902 per person for two. It includes a private Egyptologist guide throughout and 3-night full-board Nile cruise, Aswan to Luxor. International flights are not included.
+Nile in Style: Aswan to Luxor is a private 4-day, 3-night journey through Aswan, Kom Ombo, Edfu and Luxor, from €902 per person for a party of 6 or more, or €992 per person for two. It includes a private Egyptologist guide throughout and 3-night full-board Nile cruise, Aswan to Luxor. International flights are not included.
 
 ## Overview
 
@@ -102,15 +102,15 @@ Every Kemet journey is private, led by a licensed Egyptologist and priced in wri
 
 From
 
-€820
+€902
 
 per person · EUR
 
 Based on a private party of 6 or more.
 
-For two travellers: €902 per person.
+For two travellers: €992 per person.
 
-[Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Nile+in+Style%3A+Aswan+to+Luxor&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Nile+in+Style%3A+Aswan+to+Luxor%22+journey+%284+Days+%2F+3+Nights%2C+from+%E2%82%AC820+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
+[Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Nile+in+Style%3A+Aswan+to+Luxor&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Nile+in+Style%3A+Aswan+to+Luxor%22+journey+%284+Days+%2F+3+Nights%2C+from+%E2%82%AC902+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 
 [Ask on WhatsApp](https://wa.me/201158367162?text=Hello%20Kemet%20%E2%80%94%20I%27m%20interested%20in%20the%20%22Nile%20in%20Style%3A%20Aswan%20to%20Luxor%22%20journey%20(4%20Days%20%2F%203%20Nights).%20Could%20you%20share%20availability%3F)
 
@@ -140,7 +140,7 @@ Cairo · Giza · Alexandria · Aswan · Abu Simbel · Luxor · Sharm El Sheikh
 
 Our most complete journey: Cairo and Alexandria, a Nile cruise, Ramesses II's mountain temple at Abu Simbel, and three Red Sea nights to absorb it all.
 
-€2,728 / person from 6 travellers
+€3,001 / person from 6 travellers
 
 9 Days
 
@@ -150,7 +150,7 @@ Cairo · Giza · Aswan · Luxor
 
 Egypt as a honeymoon should be — private sunrise at the pyramids, a felucca at golden hour, three nights on the Nile and suites chosen for the view.
 
-€2,045 / person from 2 travellers
+€2,250 / person from 2 travellers
 
 10 Days
 
@@ -160,7 +160,7 @@ Cairo · Giza · Alexandria · Aswan · Luxor
 
 Our signature journey: Cairo, Alexandria, a sleeper train south, and a three-night Nile cruise from Aswan to Luxor — every layer of Egypt in one arc.
 
-€1,915 / person from 6 travellers
+€2,107 / person from 6 travellers
 
 ---
 

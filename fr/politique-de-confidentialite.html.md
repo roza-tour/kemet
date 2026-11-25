@@ -29,7 +29,7 @@ Lorsque vous nous envoyez un message via le formulaire de contact, nous recueill
 
 Comme presque tous les sites web, notre serveur enregistre également dans ses journaux des informations techniques courantes (telles que l'adresse IP, le type de navigateur et les pages demandées). Nous ne les utilisons pas pour vous identifier personnellement.
 
-Si vous rejoignez notre liste — depuis l'invitation présente sur ce site ou depuis le concepteur de voyage — nous conservons votre adresse e-mail, votre nom si vous le donnez, la page et la langue depuis lesquelles vous vous êtes inscrit(e), ainsi qu'une trace de votre consentement: la date à laquelle vous l'avez donné, le texte auquel vous avez adhéré et l'adresse IP d'où il provient. Vous pouvez quitter la liste à tout moment grâce au lien de désinscription présent dans nos e-mails, ou en nous écrivant.
+Si vous rejoignez notre liste — depuis l'invitation présente sur ce site ou depuis le concepteur de voyage — nous vous envoyons d'abord un e-mail pour vous demander de confirmer, et rien d'autre n'est envoyé tant que vous ne l'avez pas fait. Nous conservons votre adresse e-mail, votre nom si vous le donnez, la page et la langue depuis lesquelles vous vous êtes inscrit(e), ainsi qu'une trace de votre consentement: la date à laquelle vous l'avez donné et celle à laquelle vous l'avez confirmé, le texte auquel vous avez adhéré et l'adresse IP d'où chacun provient. Vous pouvez quitter la liste à tout moment grâce au lien de désinscription présent dans nos e-mails, ou en nous écrivant.
 
 Nous ne proposons pas de comptes utilisateurs et n'encaissons aucun paiement sur ce site; nous ne recueillons donc jamais ici de mots de passe ni de données de carte bancaire.
 
@@ -39,7 +39,9 @@ Nous ne proposons pas de comptes utilisateurs et n'encaissons aucun paiement sur
 
 Nous utilisons les informations de votre demande uniquement pour vous répondre, pour comprendre ce que vous recherchez et — si vous donnez suite — pour concevoir et organiser votre voyage. Nous pouvons vous contacter par e-mail, par téléphone ou par WhatsApp, à l'aide des coordonnées que vous nous avez fournies.
 
-Notre base juridique est votre consentement ainsi que les démarches nécessaires à la conclusion et à l'exécution d'un contrat de voyage, à votre demande. Nous n'utilisons pas vos données à des fins publicitaires ni pour une prise de décision automatisée.
+Si vous ne voyagez pas tout de suite avec nous, nous pouvons vous écrire de nouveau au sujet du voyage sur lequel vous nous avez interrogés: au plus trois fois dans l'année qui suit votre demande. Dites-le-nous à tout moment et nous ne vous écrirons plus.
+
+Notre base juridique est votre consentement, les démarches nécessaires à la conclusion et à l'exécution d'un contrat de voyage à votre demande, et, pour ces messages de suivi, notre intérêt légitime à répondre à la question que vous nous avez adressée. Nous ne partageons pas vos données avec des annonceurs et nous ne les utilisons pas pour une prise de décision automatisée.
 
 04
 
@@ -67,7 +69,9 @@ Notre site web et notre messagerie sont hébergés par notre hébergeur, qui tra
 
 ## Durée de conservation
 
-Nous conservons la correspondance relative à votre demande uniquement le temps nécessaire pour vous aider et pour garder une trace de tout voyage que nous organisons, après quoi elle est supprimée. Lorsqu'une réservation est conclue, certains documents peuvent être conservés plus longtemps afin de respecter des obligations comptables ou légales.
+Nous conservons une demande pendant trois ans à compter du jour où elle a été envoyée, puis nous la supprimons. Lorsqu'une réservation est conclue, certains documents peuvent être conservés plus longtemps afin de respecter des obligations comptables ou légales.
+
+Si vous rejoignez notre liste, nous conservons vos coordonnées jusqu'à ce que vous la quittiez. Une inscription qui n'est jamais confirmée depuis l'e-mail que nous envoyons est supprimée au bout de 30 jours. Si vous quittez la liste, nous gardons une trace de votre adresse et de la date de votre départ, afin que vous ne soyez pas réinscrit(e) par erreur.
 
 Vous pouvez nous demander de supprimer vos données à tout moment (voir « Vos droits »).
 

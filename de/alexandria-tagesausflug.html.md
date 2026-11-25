@@ -11,11 +11,11 @@ Tagesausflug
 
 Ein ganzer Tag am Mittelmeer — Katakomben, eine römische Säule, eine vom Meer umspülte Zitadelle und die große moderne Bibliothek.
 
-ab 57 € / Person
+ab 63 € / Person
 
 ab 6 Reisenden · Eintritte nicht enthalten
 
-63 € pro Person bei zwei Reisenden
+69 € pro Person bei zwei Reisenden
 
 Pro Person, Normalsaison. Zuschläge für Feiertage weisen wir im Angebot getrennt aus.
 
@@ -27,13 +27,13 @@ Stationen **Alexandria**
 
 Privat **Ja — nur Ihre Gruppe**
 
-Die Katakomben von Kom esch-Schukafa, die Pompeiussäule, die Zitadelle von Qaitbay auf dem Platz des alten Pharos und die Bibliotheca Alexandrina, mit einem Fischessen.
+Die Katakomben von Kom esch-Schukafa, die Pompeiussäule, die Zitadelle von Qaitbay auf dem Platz des alten Pharos und die Bibliotheca Alexandrina, mit einem vor Ort bezahlten Fischessen.
 
 01
 
 ## Die Reise
 
-Alexanders Stadt trägt ihre griechisch-römische Vergangenheit leichthin entlang einer geschwungenen Mittelmeer-Corniche. Dieser ganze Tag nimmt die unterirdischen Katakomben von Kom esch-Schukafa mit, die aufragende Pompeiussäule, die Zitadelle von Qaitbay auf den Fundamenten des legendären Pharos-Leuchtturms und die emporschwingende moderne Bibliotheca Alexandrina — Erbin der antiken Bibliothek. Ein Fischessen am Meer gehört dazu. Privater Guide und private Transfers ab Kairo.
+Alexanders Stadt trägt ihre griechisch-römische Vergangenheit leichthin entlang einer geschwungenen Mittelmeer-Corniche. Dieser ganze Tag nimmt die unterirdischen Katakomben von Kom esch-Schukafa mit, die aufragende Pompeiussäule, die Zitadelle von Qaitbay auf den Fundamenten des legendären Pharos-Leuchtturms und die emporschwingende moderne Bibliotheca Alexandrina — Erbin der antiken Bibliothek. Ein Fischessen am Meer, vor Ort bezahlt, gehört dazu. Privater Guide und private Transfers ab Kairo.
 
 ## Tag für Tag
 
@@ -59,7 +59,7 @@ Ein Gang über die Seemauern der Zitadelle von Qaitbay, errichtet genau an der S
 
 ### Station 4 — Bibliotheca Alexandrina & Fischessen
 
-Zum Abschluss die eindrucksvolle moderne Bibliotheca Alexandrina, die wiedergeborene Bibliothek von Alexandria, nach einem entspannten Fischessen direkt am Mittelmeer.
+Zum Abschluss die eindrucksvolle moderne Bibliotheca Alexandrina, die wiedergeborene Bibliothek von Alexandria, nach einem entspannten, vor Ort bezahlten Fischessen direkt am Mittelmeer.
 
 ## Inbegriffen
 

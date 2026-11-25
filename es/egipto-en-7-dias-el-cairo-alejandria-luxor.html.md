@@ -11,13 +11,13 @@ Viaje insignia
 
 Una semana que reúne lo esencial —El Cairo, Alejandría y Luxor— con noches en tren nocturno entre una y otra ciudad.
 
-desde 1.179 € / persona
+desde 1.297 € / persona
 
 desde 6 viajeros
 
-1.297 € por persona para dos viajeros
+1.427 € por persona para dos viajeros
 
-Con vuelos internos en lugar de las dos noches en tren cama, y esas noches en hotel: 1.309 € por persona
+Con vuelos internos en lugar de las dos noches en tren cama, y esas noches en hotel: 1.440 € por persona
 
 Por persona, en temporada normal. Los suplementos de fechas festivas se indican por separado en el presupuesto.
 
@@ -53,7 +53,7 @@ Para quienes disponen de una semana, este viaje destila Egipto en sus grandes im
 
 - Por carretera hasta la costa mediterránea
 - Catacumbas de Kom el-Shoqafa, Columna de Pompeyo y Ciudadela de Qaitbay
-- La Bibliotheca Alexandrina y almuerzo de pescado y marisco frente al mar
+- La Bibliotheca Alexandrina y almuerzo de pescado y marisco frente al mar, pagado en destino
 
 03
 
@@ -98,8 +98,8 @@ Para quienes disponen de una semana, este viaje destila Egipto en sus grandes im
 ## Incluido
 
 - Guía egiptólogo privado durante todo el viaje
-- 6 noches de hotel
-- Plazas en coche cama El Cairo–Luxor (ida y vuelta)
+- 4 noches de alojamiento en hoteles; las otras dos noches son en el tren nocturno
+- Plazas en coche cama El Cairo–Luxor (ida y vuelta), con cena y desayuno a bordo
 - Todas las entradas a yacimientos y monumentos
 - Traslados privados con aire acondicionado
 - Recogida y regreso al hotel
@@ -111,7 +111,7 @@ Para quienes disponen de una semana, este viaje destila Egipto en sus grandes im
 - Visa de entrada a Egipto
 - Propinas
 - Gastos personales
-- Comidas
+- Comidas, excepto la cena y el desayuno en el tren nocturno
 - Extras opcionales que decida añadir — actividades, bebidas
 
 ## El ritmo

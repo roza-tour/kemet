@@ -41,7 +41,7 @@ Di Mesir, 25 Disember bukan cuti umum: tapak bersejarah dan muzium dibuka sepert
 
 ## Berapa kosnya
 
-Perjalanan 10 hari kami bermula dari €1,915 seorang, untuk kumpulan dari 6 orang. Antara Krismas dan Tahun Baru ada caj tambahan yang dikenakan hotel dan kapal kepada kami; kami menyenaraikannya secara berasingan dalam sebut harga, bukan disembunyikan dalam jumlah.
+Perjalanan 10 hari kami bermula dari €2,107 seorang, untuk kumpulan dari 6 orang. Antara Krismas dan Tahun Baru ada caj tambahan yang dikenakan hotel dan kapal kepada kami; kami menyenaraikannya secara berasingan dalam sebut harga, bukan disembunyikan dalam jumlah.
 
 ## Sepintas lalu
 

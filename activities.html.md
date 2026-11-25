@@ -7,7 +7,7 @@ description: "The moments between the monuments — a hot-air balloon over Luxor
 
 # Activities & Experiences
 
-The moments between the monuments — eight experiences we fold into private journeys, from dawn balloons to desert nights.
+The moments between the monuments — 8 activities we fold into private journeys, from dawn balloons to desert nights.
 
 ## Activities we fold into private journeys
 

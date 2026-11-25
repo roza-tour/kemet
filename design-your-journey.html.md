@@ -21,22 +21,22 @@ A route of your own is priced on request. We reply within two hours.
 
 ## The closest journeys in our catalogue
 
-- [**Egypt Icons & Nile Cruise** 10 Days / 9 Nights **from* €1,915*](https://kemet-travel.com/tour-10-day.html)
-- [**Egypt Highlights Deluxe** 7 Days / 6 Nights **from* €1,179*](https://kemet-travel.com/tour-7-day.html)
-- [**From Pyramids to the Sea** 4 Days / 3 Nights **from* €618*](https://kemet-travel.com/tour-4-day.html)
-- [**Cairo to Luxor & Aswan** 3 Days / 2 Nights **from* €527*](https://kemet-travel.com/tour-3-day.html)
-- [**Nile in Style: Aswan to Luxor** 4 Days / 3 Nights **from* €820*](https://kemet-travel.com/tour-nile-cruise.html)
-- [**Temples of the South** 5 Days / 4 Nights **from* €1,018*](https://kemet-travel.com/tour-upper-egypt-5day.html)
-- [**Honeymoon on the Nile** 9 Days / 8 Nights **from* €2,045*](https://kemet-travel.com/tour-honeymoon-9day.html)
-- [**Family Egypt: Pyramids to the Nile** 8 Days / 7 Nights **from* €1,524*](https://kemet-travel.com/tour-family-8day.html)
-- [**Egypt Through the Lens** 7 Days / 6 Nights **from* €1,419*](https://kemet-travel.com/tour-photography-7day.html)
-- [**The Grand Tour of Egypt** 14 Days / 13 Nights **from* €2,728*](https://kemet-travel.com/tour-grand-14day.html)
-- [**Cairo of the Eight Worlds** 5 Days / 4 Nights **from* €875*](https://kemet-travel.com/tour-cairo-culture-5day.html)
-- [**Red Sea Retreat: Sharm El Sheikh** 5 Days / 4 Nights **from* €979*](https://kemet-travel.com/tour-sharm-5day.html)
-- [**Dive the Red Sea** 4 Days / 3 Nights **from* €792*](https://kemet-travel.com/tour-red-sea-diving-4day.html)
-- [**Luxor Immersion** 3 Days / 2 Nights **from* €544*](https://kemet-travel.com/tour-luxor-3day.html)
-- [**Cairo VIP Short Stay** 3 Days / 2 Nights **from* €600*](https://kemet-travel.com/tour-cairo-vip-3day.html)
-- [**Alexandria Overnight** 2 Days / 1 Night **from* €402*](https://kemet-travel.com/tour-alexandria-2day.html)
+- [**Egypt Icons & Nile Cruise** 10 Days / 9 Nights **from* €2,107*](https://kemet-travel.com/tour-10-day.html)
+- [**Egypt Highlights Deluxe** 7 Days / 6 Nights **from* €1,297*](https://kemet-travel.com/tour-7-day.html)
+- [**From Pyramids to the Sea** 4 Days / 3 Nights **from* €680*](https://kemet-travel.com/tour-4-day.html)
+- [**Cairo to Luxor & Aswan** 3 Days / 2 Nights **from* €580*](https://kemet-travel.com/tour-3-day.html)
+- [**Nile in Style: Aswan to Luxor** 4 Days / 3 Nights **from* €902*](https://kemet-travel.com/tour-nile-cruise.html)
+- [**Temples of the South** 5 Days / 4 Nights **from* €1,120*](https://kemet-travel.com/tour-upper-egypt-5day.html)
+- [**Honeymoon on the Nile** 9 Days / 8 Nights **from* €2,250*](https://kemet-travel.com/tour-honeymoon-9day.html)
+- [**Family Egypt: Pyramids to the Nile** 8 Days / 7 Nights **from* €1,676*](https://kemet-travel.com/tour-family-8day.html)
+- [**Egypt Through the Lens** 7 Days / 6 Nights **from* €1,561*](https://kemet-travel.com/tour-photography-7day.html)
+- [**The Grand Tour of Egypt** 14 Days / 13 Nights **from* €3,001*](https://kemet-travel.com/tour-grand-14day.html)
+- [**Cairo of the Eight Worlds** 5 Days / 4 Nights **from* €963*](https://kemet-travel.com/tour-cairo-culture-5day.html)
+- [**Red Sea Retreat: Sharm El Sheikh** 5 Days / 4 Nights **from* €1,077*](https://kemet-travel.com/tour-sharm-5day.html)
+- [**Dive the Red Sea** 4 Days / 3 Nights **from* €871*](https://kemet-travel.com/tour-red-sea-diving-4day.html)
+- [**Luxor Immersion** 3 Days / 2 Nights **from* €598*](https://kemet-travel.com/tour-luxor-3day.html)
+- [**Cairo VIP Short Stay** 3 Days / 2 Nights **from* €660*](https://kemet-travel.com/tour-cairo-vip-3day.html)
+- [**Alexandria Overnight** 2 Days / 1 Night **from* €442*](https://kemet-travel.com/tour-alexandria-2day.html)
 
 ---
 

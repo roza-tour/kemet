@@ -11,11 +11,11 @@ Tur sehari
 
 Sehari penuh di oasis hijau di barat daya Kairo — danau, air terjun di gurun, fosil paus, dan desa perajin tembikar.
 
-mulai €139 / orang
+mulai €153 / orang
 
 mulai 6 orang · tiket masuk tidak termasuk
 
-€153 per orang untuk dua wisatawan
+€168 per orang untuk dua wisatawan
 
 Per orang, musim normal. Biaya tambahan hari libur kami cantumkan terpisah dalam penawaran.
 
@@ -33,7 +33,7 @@ Danau Qarun, air terjun dan bukit pasir Wadi El Rayan, fosil paus Wadi Al-Hitan,
 
 ## Tentang perjalanan
 
-Satu setengah jam di barat daya Kairo, cekungan Fayoum menukar monumen dengan bentang alam: danau garam yang luas, air terjun air tawar di tengah gurun, lembah fosil paus yang diakui UNESCO, dan desa perajin tembikar di lereng bukit. Hari penuh ini adalah pergantian suasana total dari kuil-kuil — cakrawala lapang, aneka burung, bukit pasir, dan makan siang ikan di tepi danau. Perjalanannya privat, dengan pemandu dan sopir Anda sepanjang hari.
+Satu setengah jam di barat daya Kairo, cekungan Fayoum menukar monumen dengan bentang alam: danau garam yang luas, air terjun air tawar di tengah gurun, lembah fosil paus yang diakui UNESCO, dan desa perajin tembikar di lereng bukit. Hari penuh ini adalah pergantian suasana total dari kuil-kuil — cakrawala lapang, aneka burung, bukit pasir, dan makan siang ikan di tepi danau (dibayar di tempat). Perjalanannya privat, dengan pemandu dan sopir Anda sepanjang hari.
 
 ## Rute perjalanan
 
@@ -65,7 +65,7 @@ Danau yang dijuluki Danau Ajaib (Magic Lake), dialiri mata air mineral dan berga
 
 ### Persinggahan 5 — Desa tembikar Tunis & makan siang di tepi danau
 
-Perjalanan berakhir di Tunis, desa di lereng bukit yang terkenal dengan perajin dan studio tembikarnya, lalu makan siang ikan yang santai di tepi danau sebelum kembali ke Kairo.
+Perjalanan berakhir di Tunis, desa di lereng bukit yang terkenal dengan perajin dan studio tembikarnya, lalu makan siang ikan yang santai di tepi danau, dibayar di tempat, sebelum kembali ke Kairo.
 
 ## Termasuk
 

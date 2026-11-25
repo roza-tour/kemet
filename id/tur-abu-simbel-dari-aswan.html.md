@@ -11,11 +11,11 @@ Tur sehari
 
 Kuil-kuil gunung Ramses II di atas Danau Nasser — jalan gurun saat fajar, dua tempat suci yang dipahat di batu, dan kembali di Aswan untuk makan siang.
 
-mulai €160 / orang
+mulai €176 / orang
 
 mulai 6 orang · tiket masuk tidak termasuk
 
-€176 per orang untuk dua wisatawan
+€194 per orang untuk dua wisatawan
 
 Per orang, musim normal. Biaya tambahan hari libur kami cantumkan terpisah dalam penawaran.
 

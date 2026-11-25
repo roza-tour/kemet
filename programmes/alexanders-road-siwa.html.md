@@ -140,7 +140,7 @@ Alexandria
 
 Alexandria with its missing half restored: the Greco-Roman sites by day, then the corniche at dusk, seafood by the water and the morning light day-trips never catch.
 
-€402 / person from 6 travellers
+€442 / person from 6 travellers
 
 4 Days
 
@@ -150,7 +150,7 @@ Cairo · Giza · Alexandria
 
 A compact northern journey — the Egyptian Museum, Alexandria's Greco-Roman layers, the Pyramids of Giza and medieval Cairo.
 
-€618 / person from 6 travellers
+€680 / person from 6 travellers
 
 ---
 

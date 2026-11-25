@@ -11,11 +11,11 @@ Lawatan sehari
 
 Dua koleksi agung dalam satu hari — Muzium Mesir yang bersejarah dan Muzium Kebangsaan Tamadun Mesir, bersama Mumia Diraja.
 
-dari €64 / seorang
+dari €70 / seorang
 
 dari 6 orang · tiket masuk tidak termasuk
 
-€70 seorang bagi dua pengembara
+€77 seorang bagi dua pengembara
 
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 

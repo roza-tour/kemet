@@ -15,7 +15,7 @@ Età ideale **dai 7 anni circa**
 
 Per i genitori **babysitter su richiesta**
 
-Viaggio in famiglia di 8 giorni da **1.524 € a persona, da 6 viaggiatori**
+Viaggio in famiglia di 8 giorni da **1.676 € a persona, da 6 viaggiatori**
 
 L'Egitto è uno dei rari luoghi in cui bambini e genitori si stupiscono delle stesse cose. La Grande Piramide è esattamente grande quanto un bambino spera; una mummia esattamente misteriosa; un cammello esattamente buffo. E le vacanze di Natale e di Pasqua cadono nella stagione migliore.
 

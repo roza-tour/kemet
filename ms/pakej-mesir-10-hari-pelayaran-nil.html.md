@@ -11,13 +11,13 @@ Perjalanan istimewa
 
 Sepuluh hari tanpa tergesa-gesa dari Piramid Giza ke kuil-kuil Mesir Hulu, dirangkai oleh tiga malam pelayaran di Sungai Nil.
 
-dari €1,915 / seorang
+dari €2,107 / seorang
 
 dari 6 orang
 
-€2,107 seorang bagi dua pengembara
+€2,318 seorang bagi dua pengembara
 
-Dengan penerbangan domestik menggantikan dua malam di kereta api tidur, dan malam-malam itu di hotel: €2,045 seorang
+Dengan penerbangan domestik menggantikan dua malam di kereta api tidur, dan malam-malam itu di hotel: €2,250 seorang
 
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 
@@ -54,7 +54,7 @@ Inilah Mesir dalam keseluruhannya, dengan rentak untuk dihayati, bukan sekadar d
 - Perjalanan ke Alexandria melalui jalan padang pasir
 - Katakomb Kom El Shoqafa dan Tiang Pompey
 - Kubu Qaitbay di tapak Rumah Api Pharos purba dan Bibliotheca Alexandrina yang moden
-- Makan tengah hari makanan laut di tepi pantai sebelum pulang ke Kaherah
+- Makan tengah hari makanan laut di tepi pantai, dibayar di tempat, sebelum pulang ke Kaherah
 
 03
 
@@ -123,9 +123,9 @@ Inilah Mesir dalam keseluruhannya, dengan rentak untuk dihayati, bukan sekadar d
 ## Termasuk
 
 - Pemandu Egyptologist peribadi sepanjang perjalanan
-- Penginapan 9 malam — hotel dan pelayaran Sungai Nil
+- Penginapan 7 malam — hotel dan pelayaran Sungai Nil; dua malam lagi di kereta api tidur
 - Pelayaran Sungai Nil 3 malam termasuk semua hidangan, dari Aswan ke Luxor
-- Katil kereta api tidur Kaherah–Mesir Hulu (pergi dan balik)
+- Katil kereta api tidur Kaherah–Mesir Hulu (kedua-dua arah), dengan makan malam dan sarapan di atas kereta api
 - Semua bayaran masuk ke tapak dan monumen
 - Pemindahan peribadi berhawa dingin
 - Ambil dan hantar di hotel
@@ -137,7 +137,7 @@ Inilah Mesir dalam keseluruhannya, dengan rentak untuk dihayati, bukan sekadar d
 - Visa masuk Mesir
 - Tip
 - Perbelanjaan peribadi
-- Makanan, kecuali di atas kapal pelayaran Sungai Nil
+- Makanan, kecuali di atas kapal pelayaran Sungai Nil dan di kereta api tidur
 - Tambahan pilihan yang anda pilih sendiri — aktiviti, minuman
 
 ## Rentak perjalanan

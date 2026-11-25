@@ -11,13 +11,13 @@ Perjalanan istimewa
 
 Seminggu yang menghimpunkan perkara terpenting — Kaherah, Alexandria dan Luxor — dengan malam-malam di kereta api tidur di antaranya.
 
-dari €1,179 / seorang
+dari €1,297 / seorang
 
 dari 6 orang
 
-€1,297 seorang bagi dua pengembara
+€1,427 seorang bagi dua pengembara
 
-Dengan penerbangan domestik menggantikan dua malam di kereta api tidur, dan malam-malam itu di hotel: €1,309 seorang
+Dengan penerbangan domestik menggantikan dua malam di kereta api tidur, dan malam-malam itu di hotel: €1,440 seorang
 
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 
@@ -53,7 +53,7 @@ Bagi pengembara yang mempunyai seminggu, perjalanan ini menyaring Mesir kepada t
 
 - Perjalanan ke pesisir Mediterranean
 - Katakomb Kom El Shoqafa, Tiang Pompey dan Kubu Qaitbay
-- Bibliotheca Alexandrina dan makan tengah hari makanan laut di tepi pantai
+- Bibliotheca Alexandrina dan makan tengah hari makanan laut di tepi pantai, dibayar di tempat
 
 03
 
@@ -98,8 +98,8 @@ Bagi pengembara yang mempunyai seminggu, perjalanan ini menyaring Mesir kepada t
 ## Termasuk
 
 - Pemandu Egyptologist peribadi sepanjang perjalanan
-- Penginapan hotel 6 malam
-- Katil kereta api tidur Kaherah–Luxor (pergi dan balik)
+- Penginapan hotel 4 malam; dua malam lagi di kereta api tidur
+- Katil kereta api tidur Kaherah–Luxor (kedua-dua arah), dengan makan malam dan sarapan di atas kereta api
 - Semua bayaran masuk ke tapak dan monumen
 - Pemindahan peribadi berhawa dingin
 - Ambil dan hantar di hotel
@@ -111,7 +111,7 @@ Bagi pengembara yang mempunyai seminggu, perjalanan ini menyaring Mesir kepada t
 - Visa masuk Mesir
 - Tip
 - Perbelanjaan peribadi
-- Makanan
+- Makanan, kecuali makan malam dan sarapan di kereta api tidur
 - Tambahan pilihan yang anda pilih sendiri — aktiviti, minuman
 
 ## Rentak perjalanan

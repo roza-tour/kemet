@@ -11,11 +11,11 @@ Tagesausflug
 
 Die Geburtsstätte der Pyramide — von Djosers erster Stufenpyramide zu den großen geometrischen Gräbern von Dahschur.
 
-ab 68 € / Person
+ab 75 € / Person
 
 ab 6 Reisenden · Eintritte nicht enthalten
 
-75 € pro Person bei zwei Reisenden
+83 € pro Person bei zwei Reisenden
 
 Pro Person, Normalsaison. Zuschläge für Feiertage weisen wir im Angebot getrennt aus.
 

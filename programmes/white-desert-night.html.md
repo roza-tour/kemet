@@ -103,7 +103,7 @@ Cairo · Giza · Saqqara · Memphis
 
 A deep, slow reading of the world's greatest layered city — its two museums, three faiths, medieval streets and the necropolis where the pyramid was invented.
 
-€875 / person from 6 travellers
+€963 / person from 6 travellers
 
 3 Days
 
@@ -113,7 +113,7 @@ Cairo · Giza
 
 The essential Cairo, concierge-run: fast-track immigration, private plateau morning, the Grand Egyptian Museum, and lantern-lit Islamic Cairo by night.
 
-€600 / person from 6 travellers
+€660 / person from 6 travellers
 
 Full Day
 
@@ -123,7 +123,7 @@ Fayoum
 
 Lake Qarun, the waterfalls and dunes of Wadi El Rayan, the fossil whales of Wadi Al-Hitan and the potters of Tunis village — Egypt's wild, green other half.
 
-€139 / person from 6 travellers · tickets not included
+€153 / person from 6 travellers · tickets not included
 
 ---
 

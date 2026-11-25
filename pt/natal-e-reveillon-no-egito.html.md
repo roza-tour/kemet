@@ -23,7 +23,7 @@ As duas semanas de fim de ano são as mais disputadas do calendário egípcio, e
 
 ## Férias longas, viagem completa
 
-A viagem desde o Brasil é longa — normalmente com conexão na Europa ou no Golfo — e por isso uma semana é pouco. Com as férias de verão, dá para fazer o Egito como ele pede: o Cairo e as pirâmides, Luxor, o Nilo até Assuã, Abu Simbel e, se quiser, alguns dias no mar Vermelho no fim. É o formato da nossa viagem de 14 dias, a partir de € 2.728 por pessoa, para grupos a partir de 6 viajantes.
+A viagem desde o Brasil é longa — normalmente com conexão na Europa ou no Golfo — e por isso uma semana é pouco. Com as férias de verão, dá para fazer o Egito como ele pede: o Cairo e as pirâmides, Luxor, o Nilo até Assuã, Abu Simbel e, se quiser, alguns dias no mar Vermelho no fim. É o formato da nossa viagem de 14 dias, a partir de € 3.001 por pessoa, para grupos a partir de 6 viajantes.
 
 02
 
@@ -41,7 +41,7 @@ O Natal egípcio cai em 7 de janeiro; na noite anterior, a liturgia da meia-noit
 
 ## Quanto custa, e por quê
 
-Nossa viagem de 10 dias começa em € 1.915 por pessoa, para grupos a partir de 6 viajantes. Entre o Natal e o Ano-Novo entram os suplementos que hotéis e barcos cobram de nós: eles aparecem à parte no orçamento, sem se esconder no total. E aqui o calendário brasileiro ajuda: depois do dia 5 de janeiro os preços caem bastante, o clima continua igual — e as férias ainda não acabaram.
+Nossa viagem de 10 dias começa em € 2.107 por pessoa, para grupos a partir de 6 viajantes. Entre o Natal e o Ano-Novo entram os suplementos que hotéis e barcos cobram de nós: eles aparecem à parte no orçamento, sem se esconder no total. E aqui o calendário brasileiro ajuda: depois do dia 5 de janeiro os preços caem bastante, o clima continua igual — e as férias ainda não acabaram.
 
 ## Em resumo
 

@@ -11,13 +11,13 @@ Voyage signature
 
 Une semaine qui rassemble l'essentiel — Le Caire, Alexandrie et Louxor — avec des nuits en train-couchettes entre les deux.
 
-à partir de 1 179 € / personne
+à partir de 1 297 € / personne
 
 à partir de 6 voyageurs
 
-1 297 € par personne pour deux voyageurs
+1 427 € par personne pour deux voyageurs
 
-Avec des vols intérieurs à la place des deux nuits en train-couchettes, ces nuits-là à l'hôtel: 1 309 € par personne
+Avec des vols intérieurs à la place des deux nuits en train-couchettes, ces nuits-là à l'hôtel: 1 440 € par personne
 
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
 
@@ -53,7 +53,7 @@ Pour qui dispose d'une semaine, ce voyage ramène l'Égypte à ses plus belles p
 
 - Route vers la côte méditerranéenne
 - Catacombes de Kom el-Chogafa, colonne de Pompée et citadelle de Qaitbay
-- Bibliotheca Alexandrina et déjeuner de poisson en front de mer
+- Bibliotheca Alexandrina et déjeuner de poisson en front de mer, à régler sur place
 
 03
 
@@ -98,8 +98,8 @@ Pour qui dispose d'une semaine, ce voyage ramène l'Égypte à ses plus belles p
 ## Compris
 
 - Un égyptologue privé tout au long du voyage
-- 6 nuits d'hôtel
-- Couchettes de train de nuit Le Caire–Louxor (aller et retour)
+- 4 nuits à l'hôtel; les deux autres nuits se passent dans le train de nuit
+- Couchettes de train de nuit Le Caire–Louxor (aller et retour), avec dîner et petit-déjeuner à bord
 - Tous les droits d'entrée aux sites et monuments
 - Transferts privés climatisés
 - Prise en charge et retour à l'hôtel
@@ -111,7 +111,7 @@ Pour qui dispose d'une semaine, ce voyage ramène l'Égypte à ses plus belles p
 - Le visa d'entrée en Égypte
 - Les pourboires
 - Les dépenses personnelles
-- Les repas
+- Les repas, hors dîner et petit-déjeuner dans le train de nuit
 - Les options que vous ajoutez — activités, boissons
 
 ## Le rythme

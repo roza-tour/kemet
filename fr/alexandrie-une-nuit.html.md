@@ -11,11 +11,11 @@ Court séjour
 
 Deux jours méditerranéens — les catacombes, la citadelle sur l'emplacement du Phare, la Bibliothèque renaissante, et une soirée que les excursionnistes ne voient jamais.
 
-à partir de 402 € / personne
+à partir de 442 € / personne
 
 à partir de 6 voyageurs
 
-442 € par personne pour deux voyageurs
+486 € par personne pour deux voyageurs
 
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
 

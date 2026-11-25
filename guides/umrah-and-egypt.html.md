@@ -173,7 +173,7 @@ Cairo
 
 The Hanging Church, Ben Ezra Synagogue and Abu Serga in Old Cairo, then Saladin's Citadel and the alabaster Mosque of Muhammad Ali.
 
-€80 / person from 6 travellers · tickets not included
+€88 / person from 6 travellers · tickets not included
 
 Full Day
 
@@ -183,7 +183,7 @@ Giza
 
 The Great Pyramid, the panorama of all three pyramids, the Valley Temple and Sphinx, then the vast new Grand Egyptian Museum beside them.
 
-€79 / person from 6 travellers · tickets not included
+€87 / person from 6 travellers · tickets not included
 
 5 Days
 
@@ -193,7 +193,7 @@ Cairo · Giza · Saqqara · Memphis
 
 A deep, slow reading of the world's greatest layered city — its two museums, three faiths, medieval streets and the necropolis where the pyramid was invented.
 
-€875 / person from 6 travellers
+€963 / person from 6 travellers
 
 Further reading
 

@@ -11,11 +11,11 @@ Excursión de un día
 
 Una noche a pie por los sabores de El Cairo: koshari, clásicos callejeros, pichón a la parrilla y dulces bañados en almíbar.
 
-desde 59 € / persona
+desde 65 € / persona
 
 desde 6 viajeros
 
-65 € por persona para dos viajeros
+72 € por persona para dos viajeros
 
 Por persona, en temporada normal. Los suplementos de fechas festivas se indican por separado en el presupuesto. La comida y las bebidas no están incluidas: se pagan directamente en cada parada.
 

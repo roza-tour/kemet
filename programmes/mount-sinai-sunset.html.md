@@ -105,7 +105,7 @@ Sharm El Sheikh · Ras Mohammed
 
 The Red Sea done with intent — a private reef-boat day in Ras Mohammed, a Sinai desert evening under the stars, and space left deliberately empty.
 
-€979 / person from 6 travellers
+€1,077 / person from 6 travellers
 
 14 Days
 
@@ -115,7 +115,7 @@ Cairo · Giza · Alexandria · Aswan · Abu Simbel · Luxor · Sharm El Sheikh
 
 Our most complete journey: Cairo and Alexandria, a Nile cruise, Ramesses II's mountain temple at Abu Simbel, and three Red Sea nights to absorb it all.
 
-€2,728 / person from 6 travellers
+€3,001 / person from 6 travellers
 
 ---
 

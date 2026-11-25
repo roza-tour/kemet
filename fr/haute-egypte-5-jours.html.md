@@ -11,11 +11,11 @@ Voyage signature
 
 Cinq jours sans hâte à travers la Haute-Égypte — les deux rives de Louxor, la route du sud par Edfou et Kom Ombo, et les îles d'Assouan.
 
-à partir de 1 018 € / personne
+à partir de 1 120 € / personne
 
 à partir de 6 voyageurs
 
-1 120 € par personne pour deux voyageurs
+1 232 € par personne pour deux voyageurs
 
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
 

@@ -11,11 +11,11 @@ Excursion à la journée
 
 Les pyramides et le Sphinx le matin, le Grand Musée égyptien l'après-midi — la vieille merveille et la nouvelle, en une journée.
 
-à partir de 79 € / personne
+à partir de 87 € / personne
 
 à partir de 6 voyageurs · billets non inclus
 
-87 € par personne pour deux voyageurs
+96 € par personne pour deux voyageurs
 
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
 

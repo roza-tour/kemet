@@ -51,10 +51,10 @@ Fevereiro já é alta temporada no Egito, e os melhores barcos do Nilo e os quar
 
 ## Roteiros que cabem no feriado
 
-- Egypt Icons & Nile Cruise — 10 dias: Cairo, Alexandria, Assuã e Luxor, com cruzeiro pelo Nilo. A partir de 1.915 € por pessoa; com voos internos no lugar do trem noturno, 130 € a mais.
-- Honeymoon on the Nile — 9 dias: Cairo, Gizé, Assuã e Luxor, pensado para casais. A partir de 2.045 € por pessoa.
-- Family Egypt: Pyramids to the Nile — 8 dias: Cairo, Gizé, Luxor e Assuã no ritmo de uma família. A partir de 1.524 € por pessoa.
-- Kemet Ultra, O faraó privado — 7 dias, com a Grande Pirâmide e Karnak abertos só para vocês. A partir de 17.400 € por pessoa, para dois.
+- Egypt Icons & Nile Cruise — 10 dias: Cairo, Alexandria, Assuã e Luxor, com cruzeiro pelo Nilo. A partir de 2.107 € por pessoa; com voos internos no lugar do trem noturno, 143 € a mais.
+- Honeymoon on the Nile — 9 dias: Cairo, Gizé, Assuã e Luxor, pensado para casais. A partir de 2.250 € por pessoa.
+- Family Egypt: Pyramids to the Nile — 8 dias: Cairo, Gizé, Luxor e Assuã no ritmo de uma família. A partir de 1.676 € por pessoa.
+- Kemet Ultra, O faraó privado — 7 dias, com a Grande Pirâmide e Karnak abertos só para vocês. A partir de 19.140 € por pessoa, para dois.
 
 ## Perguntas frequentes
 

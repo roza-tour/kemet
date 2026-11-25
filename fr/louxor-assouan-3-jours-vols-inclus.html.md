@@ -11,11 +11,11 @@ Court séjour
 
 Trois jours de temples et de tombes en Haute-Égypte, les vols intérieurs compris dans le prix.
 
-à partir de 527 € / personne
+à partir de 580 € / personne
 
 à partir de 6 voyageurs
 
-580 € par personne pour deux voyageurs
+638 € par personne pour deux voyageurs
 
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
 

@@ -21,7 +21,7 @@ Dies ist eine Übersetzung. Weicht sie von der englischen Fassung ab, gilt die e
 
 ## So funktioniert die Buchung
 
-- Anfragen — kostenlos und unverbindlich — Senden Sie uns Ihre Reisedaten, Interessen und die Zahl der Reisenden. Wir antworten innerhalb von zwei Stunden mit einer ersten Einschätzung und gegebenenfalls Rückfragen. In diesem Stadium entstehen weder Kosten noch eine Verpflichtung.
+- Anfragen — kostenlos und unverbindlich — Senden Sie uns Ihre Reisedaten, Interessen und die Zahl der Reisenden. Wir antworten innerhalb von zwei Stunden mit einem Reiseplan Tag für Tag und einem klaren Preis. In diesem Stadium entstehen weder Kosten noch eine Verpflichtung.
 - Vorschlag erhalten und verfeinern — Wir gestalten eine private Reiseroute mit einem vollständig aufgeschlüsselten Angebot — was enthalten und was nicht enthalten ist, Preise pro Person in Euro. Wir überarbeiten es gemeinsam mit Ihnen, bis es genau stimmt.
 - Mit einer Anzahlung bestätigen — Wenn Sie zufrieden sind, bestätigt eine Anzahlung Ihre Reise und ermöglicht es uns, in Ihrem Namen Hotels, Reiseleitung, Kreuzfahrten und Genehmigungen zu sichern.
 - Restzahlung vor der Reise — Der verbleibende Restbetrag ist vor der Abreise fällig. Sobald er beglichen ist, stellen wir Ihnen die endgültigen Unterlagen, das Tagesprogramm und Ihre namentlich benannte Ansprechperson zur Verfügung.

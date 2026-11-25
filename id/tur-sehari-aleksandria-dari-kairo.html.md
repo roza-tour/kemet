@@ -2,7 +2,7 @@
 title: "Aleksandria — Tur Privat Sehari dari Kairo | Kemet"
 url: https://kemet-travel.com/id/tur-sehari-aleksandria-dari-kairo.html
 language: id
-description: "Katakombe Kom El Shoqafa, Pilar Pompey, Benteng Qaitbay di tapak Pharos kuno, dan Bibliotheca Alexandrina, dengan makan siang hidangan laut."
+description: "Katakombe Kom El Shoqafa, Pilar Pompey, Benteng Qaitbay di tapak Pharos kuno, dan Bibliotheca Alexandrina, dengan makan siang hidangan laut (dibayar di tempat)."
 ---
 
 Tur sehari
@@ -11,11 +11,11 @@ Tur sehari
 
 Sehari penuh di tepi Mediterania — katakombe, pilar Romawi, benteng yang dikelilingi laut, dan perpustakaan modern yang agung.
 
-mulai €57 / orang
+mulai €63 / orang
 
 mulai 6 orang · tiket masuk tidak termasuk
 
-€63 per orang untuk dua wisatawan
+€69 per orang untuk dua wisatawan
 
 Per orang, musim normal. Biaya tambahan hari libur kami cantumkan terpisah dalam penawaran.
 
@@ -27,13 +27,13 @@ Persinggahan **Aleksandria**
 
 Privat **Ya — hanya rombongan Anda**
 
-Katakombe Kom El Shoqafa, Pilar Pompey, Benteng Qaitbay di tapak Pharos lama, dan Bibliotheca Alexandrina, dengan makan siang hidangan laut.
+Katakombe Kom El Shoqafa, Pilar Pompey, Benteng Qaitbay di tapak Pharos lama, dan Bibliotheca Alexandrina, dengan makan siang hidangan laut (dibayar di tempat).
 
 01
 
 ## Tentang perjalanan
 
-Kota Aleksander mengenakan masa lalu Yunani-Romawinya dengan ringan di sepanjang corniche Mediterania yang melengkung. Hari penuh ini mencakup Katakombe Kom El Shoqafa di bawah tanah, Pilar Pompey yang menjulang, Benteng Qaitbay yang dibangun di atas fondasi mercusuar Pharos yang legendaris, dan Bibliotheca Alexandrina yang modern dan menjulang tinggi — pewaris Perpustakaan kuno. Makan siang hidangan laut di tepi laut sudah menjadi bagian dari kunjungan. Pemandu dan transfer privat dari Kairo.
+Kota Aleksander mengenakan masa lalu Yunani-Romawinya dengan ringan di sepanjang corniche Mediterania yang melengkung. Hari penuh ini mencakup Katakombe Kom El Shoqafa di bawah tanah, Pilar Pompey yang menjulang, Benteng Qaitbay yang dibangun di atas fondasi mercusuar Pharos yang legendaris, dan Bibliotheca Alexandrina yang modern dan menjulang tinggi — pewaris Perpustakaan kuno. Makan siang hidangan laut di tepi laut, dibayar di tempat, sudah menjadi bagian dari kunjungan. Pemandu dan transfer privat dari Kairo.
 
 ## Rute perjalanan
 
@@ -59,7 +59,7 @@ Menyusuri tembok laut Benteng Qaitbay, yang didirikan tepat di tempat Mercusuar 
 
 ### Persinggahan 4 — Bibliotheca Alexandrina & makan siang hidangan laut
 
-Diakhiri di Bibliotheca Alexandrina yang modern dan dramatis, Perpustakaan Aleksandria yang lahir kembali, setelah makan siang hidangan laut yang santai di tepi Mediterania.
+Diakhiri di Bibliotheca Alexandrina yang modern dan dramatis, Perpustakaan Aleksandria yang lahir kembali, setelah makan siang hidangan laut yang santai di tepi Mediterania, dibayar di tempat.
 
 ## Termasuk
 

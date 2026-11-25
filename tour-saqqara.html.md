@@ -2,7 +2,7 @@
 title: "Saqqara, Memphis & Dahshur Private Day Tour | Kemet"
 url: https://kemet-travel.com/tour-saqqara.html
 language: en
-description: "Djoser's Step Pyramid, the open-air ruins of Memphis, and the Bent and Red Pyramids of Dahshur — private, from €68 pp."
+description: "Djoser's Step Pyramid, the open-air ruins of Memphis, and the Bent and Red Pyramids of Dahshur — private, from €75 pp."
 ---
 
 Day Tour · Full day (≈8 hours)
@@ -13,7 +13,7 @@ The birthplace of the pyramid — from Djoser's first step pyramid to the great 
 
 ## What does Saqqara, Memphis & Dahshur include, and what does it cost?
 
-Saqqara, Memphis & Dahshur is a private full-day tour of Saqqara, Memphis and Dahshur, from €68 per person for a party of 6 or more, or €75 per person for two. It includes a private Egyptologist guide throughout, private air-conditioned transfers, hotel pickup & drop-off and bottled water every day. Entrance tickets are paid at the gate.
+Saqqara, Memphis & Dahshur is a private full-day tour of Saqqara, Memphis and Dahshur, from €75 per person for a party of 6 or more, or €83 per person for two. It includes a private Egyptologist guide throughout, private air-conditioned transfers, hotel pickup & drop-off and bottled water every day. Entrance tickets are paid at the gate.
 
 ## Overview
 
@@ -82,15 +82,15 @@ Every Kemet journey is private, led by a licensed Egyptologist and priced in wri
 
 From
 
-€68
+€75
 
 per person · EUR
 
 Based on a private party of 6 or more · entrance tickets not included.
 
-For two travellers: €75 per person.
+For two travellers: €83 per person.
 
-[Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Saqqara%2C+Memphis+%26+Dahshur&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Saqqara%2C+Memphis+%26+Dahshur%22+journey+%28Full+day+%28%E2%89%888+hours%29%2C+from+%E2%82%AC68+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
+[Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Saqqara%2C+Memphis+%26+Dahshur&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Saqqara%2C+Memphis+%26+Dahshur%22+journey+%28Full+day+%28%E2%89%888+hours%29%2C+from+%E2%82%AC75+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 
 [Ask on WhatsApp](https://wa.me/201158367162?text=Hello%20Kemet%20%E2%80%94%20I%27m%20interested%20in%20the%20%22Saqqara%2C%20Memphis%20%26%20Dahshur%22%20journey%20(Full%20day%20(%E2%89%888%20hours)).%20Could%20you%20share%20availability%3F)
 
@@ -120,7 +120,7 @@ Giza
 
 The Great Pyramid, the panorama of all three pyramids, the Valley Temple and Sphinx, then the vast new Grand Egyptian Museum beside them.
 
-€79 / person from 6 travellers · tickets not included
+€87 / person from 6 travellers · tickets not included
 
 Full Day
 
@@ -130,7 +130,7 @@ Cairo
 
 The Hanging Church, Ben Ezra Synagogue and Abu Serga in Old Cairo, then Saladin's Citadel and the alabaster Mosque of Muhammad Ali.
 
-€80 / person from 6 travellers · tickets not included
+€88 / person from 6 travellers · tickets not included
 
 Full Day
 
@@ -140,7 +140,7 @@ Cairo
 
 The treasures of the Egyptian Museum in Tahrir, then the National Museum of Egyptian Civilization and its Royal Mummies Hall.
 
-€64 / person from 6 travellers · tickets not included
+€70 / person from 6 travellers · tickets not included
 
 ---
 

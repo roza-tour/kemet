@@ -7,7 +7,7 @@ description: "Percutian Mesir persendirian yang disusun khas: pemandu Egyptologi
 
 # Mesir, untuk rombongan anda sahaja
 
-Tiada bas pelancong, tiada tarikh berlepas yang ditetapkan, tiada orang luar dalam perjalanan anda.
+Tiada bas pelancong, tiada tarikh berlepas yang ditetapkan, tiada orang luar dalam kenderaan anda atau bersama pemandu anda.
 
 Bentuk **Persendirian sepenuhnya**
 

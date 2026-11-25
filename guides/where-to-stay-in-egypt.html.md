@@ -164,7 +164,7 @@ Cairo · Giza · Alexandria · Aswan · Luxor
 
 Our signature journey: Cairo, Alexandria, a sleeper train south, and a three-night Nile cruise from Aswan to Luxor — every layer of Egypt in one arc.
 
-€1,915 / person from 6 travellers
+€2,107 / person from 6 travellers
 
 4 Days
 
@@ -174,7 +174,7 @@ Aswan · Kom Ombo · Edfu · Luxor
 
 The essential Nile cruise, done properly — Philae and the High Dam, three nights afloat past Kom Ombo and Edfu, and Luxor's East and West Banks with your own Egyptologist.
 
-€820 / person from 6 travellers
+€902 / person from 6 travellers
 
 Further reading
 

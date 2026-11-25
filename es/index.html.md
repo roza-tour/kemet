@@ -7,7 +7,7 @@ description: "Viajes privados a medida por Egipto: egiptólogo titulado solo par
 
 # Egipto, en privado
 
-Sin autocar, sin fechas de salida fijas, sin desconocidos en su itinerario.
+Sin autocar, sin fechas de salida fijas, sin desconocidos en su vehículo ni con su guía.
 
 Modalidad **Exclusivamente privado**
 

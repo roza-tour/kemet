@@ -11,11 +11,11 @@ Viaje cultural
 
 Cinco días dentro de las capas de una sola ciudad: El Cairo faraónico, copto, islámico y moderno, leído calle a calle con guía historiador.
 
-desde 875 € / persona
+desde 963 € / persona
 
 desde 6 viajeros
 
-963 € por persona para dos viajeros
+1.059 € por persona para dos viajeros
 
 Por persona, en temporada normal. Los suplementos de fechas festivas se indican por separado en el presupuesto.
 
@@ -74,7 +74,7 @@ La mayoría de los visitantes dedica a El Cairo dos noches y una lista. Este via
 ### Día 5 — El bazar y salida
 
 - Khan el-Khalili con contexto: talleres, no solo puestos
-- Último almuerzo en una casa otomana restaurada
+- Último almuerzo en una casa otomana restaurada, pagado en destino
 - Traslado privado al aeropuerto
 
 ## Incluido

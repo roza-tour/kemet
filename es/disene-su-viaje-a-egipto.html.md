@@ -21,22 +21,22 @@ Una ruta propia se presupuesta bajo petición. Respondemos en dos horas.
 
 ## Los viajes más parecidos de nuestro catálogo
 
-- [**Iconos de Egipto y crucero por el Nilo** 10 días / 9 noches **desde* 1.915 €*](https://kemet-travel.com/es/egipto-10-dias-con-crucero-por-el-nilo.html)
-- [**Los imprescindibles de Egipto** 7 días / 6 noches **desde* 1.179 €*](https://kemet-travel.com/es/egipto-en-7-dias-el-cairo-alejandria-luxor.html)
-- [**De las pirámides al mar** 4 días / 3 noches **desde* 618 €*](https://kemet-travel.com/es/el-cairo-y-alejandria-4-dias.html)
-- [**De El Cairo a Luxor y Asuán** 3 días / 2 noches **desde* 527 €*](https://kemet-travel.com/es/luxor-y-asuan-3-dias-vuelos-incluidos.html)
-- [**El crucero por el Nilo** 4 días / 3 noches **desde* 820 €*](https://kemet-travel.com/es/crucero-por-el-nilo.html)
-- [**Los templos del sur** 5 días / 4 noches **desde* 1.018 €*](https://kemet-travel.com/es/alto-egipto-5-dias-luxor-asuan.html)
-- [**Luna de miel en el Nilo** 9 días / 8 noches **desde* 2.045 €*](https://kemet-travel.com/es/luna-de-miel-en-el-nilo-9-dias.html)
-- [**Egipto en familia: de las pirámides al Nilo** 8 días / 7 noches **desde* 1.524 €*](https://kemet-travel.com/es/egipto-en-familia-8-dias.html)
-- [**Egipto a través del objetivo** 7 días / 6 noches **desde* 1.419 €*](https://kemet-travel.com/es/viaje-fotografico-egipto-7-dias.html)
-- [**El gran viaje por Egipto** 14 días / 13 noches **desde* 2.728 €*](https://kemet-travel.com/es/gran-viaje-por-egipto-14-dias.html)
-- [**El Cairo de los ocho mundos** 5 días / 4 noches **desde* 875 €*](https://kemet-travel.com/es/el-cairo-cultural-5-dias.html)
-- [**Retiro en el mar Rojo: Sharm el-Sheikh** 5 días / 4 noches **desde* 979 €*](https://kemet-travel.com/es/sharm-el-sheikh-5-dias.html)
-- [**Bucear en el mar Rojo** 4 días / 3 noches **desde* 792 €*](https://kemet-travel.com/es/buceo-mar-rojo-4-dias.html)
-- [**Luxor a fondo** 3 días / 2 noches **desde* 544 €*](https://kemet-travel.com/es/luxor-3-dias.html)
-- [**Escapada VIP a El Cairo** 3 días / 2 noches **desde* 600 €*](https://kemet-travel.com/es/el-cairo-vip-3-dias.html)
-- [**Una noche en Alejandría** 2 días / 1 noche **desde* 402 €*](https://kemet-travel.com/es/alejandria-2-dias-desde-el-cairo.html)
+- [**Iconos de Egipto y crucero por el Nilo** 10 días / 9 noches **desde* 2.107 €*](https://kemet-travel.com/es/egipto-10-dias-con-crucero-por-el-nilo.html)
+- [**Los imprescindibles de Egipto** 7 días / 6 noches **desde* 1.297 €*](https://kemet-travel.com/es/egipto-en-7-dias-el-cairo-alejandria-luxor.html)
+- [**De las pirámides al mar** 4 días / 3 noches **desde* 680 €*](https://kemet-travel.com/es/el-cairo-y-alejandria-4-dias.html)
+- [**De El Cairo a Luxor y Asuán** 3 días / 2 noches **desde* 580 €*](https://kemet-travel.com/es/luxor-y-asuan-3-dias-vuelos-incluidos.html)
+- [**El crucero por el Nilo** 4 días / 3 noches **desde* 902 €*](https://kemet-travel.com/es/crucero-por-el-nilo.html)
+- [**Los templos del sur** 5 días / 4 noches **desde* 1.120 €*](https://kemet-travel.com/es/alto-egipto-5-dias-luxor-asuan.html)
+- [**Luna de miel en el Nilo** 9 días / 8 noches **desde* 2.250 €*](https://kemet-travel.com/es/luna-de-miel-en-el-nilo-9-dias.html)
+- [**Egipto en familia: de las pirámides al Nilo** 8 días / 7 noches **desde* 1.676 €*](https://kemet-travel.com/es/egipto-en-familia-8-dias.html)
+- [**Egipto a través del objetivo** 7 días / 6 noches **desde* 1.561 €*](https://kemet-travel.com/es/viaje-fotografico-egipto-7-dias.html)
+- [**El gran viaje por Egipto** 14 días / 13 noches **desde* 3.001 €*](https://kemet-travel.com/es/gran-viaje-por-egipto-14-dias.html)
+- [**El Cairo de los ocho mundos** 5 días / 4 noches **desde* 963 €*](https://kemet-travel.com/es/el-cairo-cultural-5-dias.html)
+- [**Retiro en el mar Rojo: Sharm el-Sheikh** 5 días / 4 noches **desde* 1.077 €*](https://kemet-travel.com/es/sharm-el-sheikh-5-dias.html)
+- [**Bucear en el mar Rojo** 4 días / 3 noches **desde* 871 €*](https://kemet-travel.com/es/buceo-mar-rojo-4-dias.html)
+- [**Luxor a fondo** 3 días / 2 noches **desde* 598 €*](https://kemet-travel.com/es/luxor-3-dias.html)
+- [**Escapada VIP a El Cairo** 3 días / 2 noches **desde* 660 €*](https://kemet-travel.com/es/el-cairo-vip-3-dias.html)
+- [**Una noche en Alejandría** 2 días / 1 noche **desde* 442 €*](https://kemet-travel.com/es/alejandria-2-dias-desde-el-cairo.html)
 
 ---
 

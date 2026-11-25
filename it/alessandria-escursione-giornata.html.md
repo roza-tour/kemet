@@ -11,11 +11,11 @@ Escursione in giornata
 
 Una giornata intera sul Mediterraneo — catacombe, una colonna romana, una cittadella sul mare e la grande biblioteca moderna.
 
-da 57 € / persona
+da 63 € / persona
 
 da 6 viaggiatori · biglietti non inclusi
 
-63 € a persona per due viaggiatori
+69 € a persona per due viaggiatori
 
 A persona, in stagione normale. I supplementi delle festività sono indicati separatamente nel preventivo.
 
@@ -27,13 +27,13 @@ Tappe **Alessandria**
 
 Privato **Sì — solo il vostro gruppo**
 
-Le catacombe di Kom el-Shoqafa, la colonna di Pompeo, la cittadella di Qaitbay sul sito dell'antico faro e la Bibliotheca Alexandrina, con pranzo di pesce.
+Le catacombe di Kom el-Shoqafa, la colonna di Pompeo, la cittadella di Qaitbay sul sito dell'antico faro e la Bibliotheca Alexandrina, con pranzo di pesce da saldare in loco.
 
 01
 
 ## Il viaggio
 
-La città di Alessandro porta con leggerezza il suo passato greco-romano lungo una corniche che segue la curva del Mediterraneo. Questa giornata intera comprende le catacombe sotterranee di Kom el-Shoqafa, l'altissima colonna di Pompeo, la cittadella di Qaitbay costruita sulle fondazioni del leggendario faro di Alessandria e la slanciata Bibliotheca Alexandrina, erede dell'antica Biblioteca. Un pranzo di pesce sul mare fa parte del pacchetto. Guida privata e trasferimenti dal Cairo.
+La città di Alessandro porta con leggerezza il suo passato greco-romano lungo una corniche che segue la curva del Mediterraneo. Questa giornata intera comprende le catacombe sotterranee di Kom el-Shoqafa, l'altissima colonna di Pompeo, la cittadella di Qaitbay costruita sulle fondazioni del leggendario faro di Alessandria e la slanciata Bibliotheca Alexandrina, erede dell'antica Biblioteca. Un pranzo di pesce sul mare, da saldare in loco, completa la giornata. Guida privata e trasferimenti dal Cairo.
 
 ## Giorno per giorno
 
@@ -59,7 +59,7 @@ Si percorrono le mura sul mare della cittadella di Qaitbay, costruita esattament
 
 ### Tappa 4 — Bibliotheca Alexandrina & pranzo di pesce
 
-Si chiude alla spettacolare Bibliotheca Alexandrina, la Biblioteca di Alessandria rinata, dopo un pranzo di pesce senza fretta sul fronte mediterraneo.
+Si chiude alla spettacolare Bibliotheca Alexandrina, la Biblioteca di Alessandria rinata, dopo un pranzo di pesce senza fretta sul fronte mediterraneo, da saldare in loco.
 
 ## Incluso
 

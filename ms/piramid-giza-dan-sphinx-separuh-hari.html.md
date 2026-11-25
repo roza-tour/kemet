@@ -11,11 +11,11 @@ Lawatan sehari
 
 Separuh hari yang terfokus di antara tiga piramid agung dan Sphinx, dengan titik tinjau panorama yang klasik.
 
-dari €66 / seorang
+dari €73 / seorang
 
 dari 6 orang · tiket masuk tidak termasuk
 
-€73 seorang bagi dua pengembara
+€80 seorang bagi dua pengembara
 
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 

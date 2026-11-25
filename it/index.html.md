@@ -7,7 +7,7 @@ description: "Viaggi privati su misura in Egitto: egittologo autorizzato solo pe
 
 # L'Egitto, in privato
 
-Nessun pullman, nessuna data di partenza fissa, nessuno sconosciuto nel vostro itinerario.
+Nessun pullman, nessuna data di partenza fissa, nessuno sconosciuto nel vostro veicolo o con la vostra guida.
 
 Formula **Esclusivamente privato**
 

@@ -11,11 +11,11 @@ Percutian keluarga
 
 Lapan hari yang direka untuk anak-anak yang ingin tahu dan ibu bapa yang tidak mahu tergesa-gesa — mumia, felucca, warna lukisan makam dan petang di tepi kolam renang.
 
-dari €1,524 / seorang
+dari €1,676 / seorang
 
 dari 6 orang
 
-€1,676 seorang bagi dua pengembara
+€1,844 seorang bagi dua pengembara
 
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 

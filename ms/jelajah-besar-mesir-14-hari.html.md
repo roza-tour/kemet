@@ -11,11 +11,11 @@ Jelajah besar
 
 Empat belas hari, setiap wajah negara ini — Kaherah, Alexandria, Sungai Nil dengan kapal pelayaran, Abu Simbel dan Laut Merah sebagai penutup.
 
-dari €2,728 / seorang
+dari €3,001 / seorang
 
 dari 6 orang
 
-€3,001 seorang bagi dua pengembara
+€3,301 seorang bagi dua pengembara
 
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 
@@ -65,7 +65,7 @@ Inilah laluan bagi pengembara yang berhasrat datang sekali dan melihat Mesir sep
 
 - Katakomb Kom El Shoqafa dan Tiang Pompey
 - Kubu Qaitbay di tapak Rumah Api Pharos
-- Makan tengah hari makanan laut di persiaran tepi laut; pulang ke Kaherah
+- Makan tengah hari makanan laut di persiaran tepi laut, dibayar di tempat; pulang ke Kaherah
 
 05
 
@@ -157,7 +157,7 @@ Inilah laluan bagi pengembara yang berhasrat datang sekali dan melihat Mesir sep
 - Visa masuk Mesir
 - Tip
 - Perbelanjaan peribadi
-- Makanan, kecuali di atas kapal pelayaran Sungai Nil
+- Makanan, kecuali di atas kapal pelayaran Sungai Nil dan makan tengah hari pada hari di bot
 - Tambahan pilihan yang anda pilih sendiri — aktiviti, minuman
 
 ## Rentak perjalanan

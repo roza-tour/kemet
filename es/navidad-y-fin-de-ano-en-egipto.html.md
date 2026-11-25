@@ -41,7 +41,7 @@ No hay que elegir. En diciembre el mar Rojo está templado sin ser tórrido, con
 
 ## Cuánto cuesta, y por qué
 
-Nuestro viaje de 10 días empieza en 1.915 € por persona, para grupos desde 6 viajeros. Entre Navidad y Año Nuevo se suman los suplementos que hoteles y barcos nos aplican a nosotros: los indicamos aparte en el presupuesto, sin esconderlos en el total. Quien sea flexible encontrará principios de diciembre y la segunda quincena de enero bastante más baratos, con el mismo clima.
+Nuestro viaje de 10 días empieza en 2.107 € por persona, para grupos desde 6 viajeros. Entre Navidad y Año Nuevo se suman los suplementos que hoteles y barcos nos aplican a nosotros: los indicamos aparte en el presupuesto, sin esconderlos en el total. Quien sea flexible encontrará principios de diciembre y la segunda quincena de enero bastante más baratos, con el mismo clima.
 
 ## En resumen
 

@@ -21,7 +21,7 @@ Ceci est une traduction. En cas de différence avec la version anglaise, la vers
 
 ## Comment fonctionne la réservation
 
-- Faites votre demande — gratuite et sans engagement — Envoyez-nous vos dates, vos centres d'intérêt et la taille de votre groupe. Nous vous répondons sous deux heures avec une première évaluation et, le cas échéant, nos questions. Cette étape est gratuite et sans engagement.
+- Faites votre demande — gratuite et sans engagement — Envoyez-nous vos dates, vos centres d'intérêt et la taille de votre groupe. Nous vous répondons sous deux heures avec un programme jour par jour et un prix clair. Cette étape est gratuite et sans engagement.
 - Recevez et affinez votre proposition — Nous concevons un itinéraire privé accompagné d'un devis entièrement détaillé — ce qui est inclus et exclu, avec des prix par personne en euros. Nous le retravaillons avec vous jusqu'à ce qu'il soit exactement tel que vous le souhaitez.
 - Confirmez avec un acompte — Lorsque vous êtes satisfait(e), un acompte confirme votre voyage et nous permet de commencer à réserver, en votre nom, les hôtels, les guides, les croisières et les autorisations.
 - Réglez le solde avant le départ — Le solde restant est dû avant le départ. Une fois celui-ci réglé, nous vous remettons vos documents définitifs, le programme jour par jour et le nom de votre interlocuteur.

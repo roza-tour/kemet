@@ -11,15 +11,15 @@ Every journey begins with a conversation. Tell us what you're looking for and we
 
 ## Reach us
 
-WhatsApp [+201158367162](https://wa.me/201158367162?text=Hello%20Kemet%20%E2%80%94%20I%27d%20like%20to%20plan%20a%20private%20Egypt%20journey.) Typically within 2 hours during business hours
+WhatsApp [+201158367162](https://wa.me/201158367162?text=Hello%20Kemet%20%E2%80%94%20I%27d%20like%20to%20plan%20a%20private%20Egypt%20journey.) Typically within 2 hours, at any hour
 
 Email [info@kemet-travel.com](mailto:info@kemet-travel.com?subject=Kemet+enquiry) Response within two hours
 
-Phone [+20 11 5836 7162](tel:+201158367162) Every day, 09:00–18:00 Cairo time
+Phone [+20 11 5836 7162](tel:+201158367162) Every day, around the clock
 
 Business hours
 
-Every day · 09:00–18:00 Cairo time
+Every day, around the clock (Cairo time)
 
 ## During your trip
 
@@ -27,10 +27,10 @@ For urgent assistance during an active trip, contact us by WhatsApp at any hour 
 
 What happens next
 
-- We read your enquiry in full and consider your dates and interests.
-- We respond within two hours with an initial assessment and questions.
-- Once we understand your vision, we begin designing your itinerary.
-- You review it, refine it and confirm when you're ready.
+- We read your enquiry in full: your dates, your party and what you want to see.
+- Within two hours we reply with a day-by-day itinerary and a clear price.
+- You tell us what to change, and we revise it until it is right.
+- You confirm when you are ready. There is no deadline.
 
 ## Send us a message
 

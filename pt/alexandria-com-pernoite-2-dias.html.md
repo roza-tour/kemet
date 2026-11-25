@@ -11,11 +11,11 @@ Escapada
 
 Dois dias mediterrâneos — as catacumbas, a Cidadela sobre o local do Farol, a Biblioteca renascida e uma noite que quem faz bate-volta nunca vê.
 
-a partir de € 402 / pessoa
+a partir de € 442 / pessoa
 
 a partir de 6 viajantes
 
-€ 442 por pessoa, para dois viajantes
+€ 486 por pessoa, para dois viajantes
 
 Por pessoa, em temporada normal. Acréscimos de feriados aparecem separados no orçamento.
 

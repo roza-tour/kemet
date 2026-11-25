@@ -11,11 +11,11 @@ Lawatan sehari
 
 Agama-agama Kaherah dalam satu hari — gereja Koptik, sebuah sinagog purba, dan Kubu agung yang dimahkotai masjid.
 
-dari €80 / seorang
+dari €88 / seorang
 
 dari 6 orang · tiket masuk tidak termasuk
 
-€88 seorang bagi dua pengembara
+€97 seorang bagi dua pengembara
 
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 

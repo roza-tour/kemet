@@ -2,7 +2,7 @@
 title: "5-Day Cairo Private Tour: Giza, Saqqara & Old Cairo | Kemet"
 url: https://kemet-travel.com/tour-cairo-culture-5day.html
 language: en
-description: "A deep, slow reading of the world's greatest layered city — its two museums, three faiths — private, from €875 pp."
+description: "A deep, slow reading of the world's greatest layered city — its two museums, three faiths — private, from €963 pp."
 ---
 
 Cultural Journey · 5 Days / 4 Nights
@@ -13,7 +13,7 @@ Five days inside a single city's layers — pharaonic, Coptic, Islamic and moder
 
 ## What does Cairo of the Eight Worlds include, and what does it cost?
 
-Cairo of the Eight Worlds is a private 5-day, 4-night journey through Cairo, Giza, Saqqara and Memphis, from €875 per person for a party of 6 or more, or €963 per person for two. It includes a private historian-Egyptologist guide throughout, 4 nights' hotel accommodation and Sufi tanoura performance tickets. International flights are not included.
+Cairo of the Eight Worlds is a private 5-day, 4-night journey through Cairo, Giza, Saqqara and Memphis, from €963 per person for a party of 6 or more, or €1,059 per person for two. It includes a private historian-Egyptologist guide throughout, 4 nights' hotel accommodation and Sufi tanoura performance tickets. International flights are not included.
 
 ## Overview
 
@@ -58,7 +58,7 @@ Day **05**
 ### The bazaar & departure
 
 - Khan el-Khalili with context — workshops, not just stalls
-- Final lunch in a restored Ottoman house
+- Final lunch in a restored Ottoman house, paid locally
 - Private transfer to the airport
 
 ## Included & not included
@@ -112,15 +112,15 @@ Every Kemet journey is private, led by a licensed Egyptologist and priced in wri
 
 From
 
-€875
+€963
 
 per person · EUR
 
 Based on a private party of 6 or more.
 
-For two travellers: €963 per person.
+For two travellers: €1,059 per person.
 
-[Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Cairo+of+the+Eight+Worlds&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Cairo+of+the+Eight+Worlds%22+journey+%285+Days+%2F+4+Nights%2C+from+%E2%82%AC875+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
+[Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Cairo+of+the+Eight+Worlds&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Cairo+of+the+Eight+Worlds%22+journey+%285+Days+%2F+4+Nights%2C+from+%E2%82%AC963+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 
 [Ask on WhatsApp](https://wa.me/201158367162?text=Hello%20Kemet%20%E2%80%94%20I%27m%20interested%20in%20the%20%22Cairo%20of%20the%20Eight%20Worlds%22%20journey%20(5%20Days%20%2F%204%20Nights).%20Could%20you%20share%20availability%3F)
 
@@ -150,7 +150,7 @@ Cairo · Giza
 
 The essential Cairo, concierge-run: fast-track immigration, private plateau morning, the Grand Egyptian Museum, and lantern-lit Islamic Cairo by night.
 
-€600 / person from 6 travellers
+€660 / person from 6 travellers
 
 10 Days
 
@@ -160,7 +160,7 @@ Cairo · Giza · Alexandria · Aswan · Luxor
 
 Our signature journey: Cairo, Alexandria, a sleeper train south, and a three-night Nile cruise from Aswan to Luxor — every layer of Egypt in one arc.
 
-€1,915 / person from 6 travellers
+€2,107 / person from 6 travellers
 
 7 Days
 
@@ -170,7 +170,7 @@ Cairo · Giza · Alexandria · Luxor
 
 The headline acts of Egypt in seven days — the Egyptian Museum, Alexandria, the temples and tombs of Luxor, and the Pyramids of Giza.
 
-€1,179 / person from 6 travellers
+€1,297 / person from 6 travellers
 
 ---
 

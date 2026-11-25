@@ -23,7 +23,7 @@ Die meisten Seiten zu dieser Frage sind für andere Reisende geschrieben — Tag
 
 ## Vier Arten, Ägypten zu sehen
 
-Individualreise mit öffentlichen Verkehrsmitteln und einfachen Hotels: etwa 40 bis 90 Euro pro Person und Tag. Gruppenreise im Bus mit zwanzig bis vierzig Mitreisenden und festen Terminen: 90 bis 180 Euro. Privat und maßgeschneidert mit eigenem Ägyptologen, eigenem Fahrzeug und guten Hotels: 200 bis 450 Euro — hier steht Kemet. Ganz oben, mit gecharterter Dahabiya und Privatflügen zwischen den Städten: ab 600 Euro. Der Abstand zwischen unterem und oberem Ende ist in Ägypten größer als in fast jedem anderen Land.
+Individualreise mit öffentlichen Verkehrsmitteln und einfachen Hotels: etwa 40 bis 90 Euro pro Person und Tag. Gruppenreise im Bus mit zwanzig bis vierzig Mitreisenden und festen Terminen: 90 bis 180 Euro. Privat und maßgeschneidert mit eigenem Ägyptologen, eigenem Fahrzeug und guten Hotels: 200 bis 450 Euro. Die mehrtägigen Reisen von Kemet kommen auf 170 bis 226 Euro pro Person und Tag für Gruppen ab sechs Personen und auf 187 bis 249 Euro für zwei Reisende: etwa an der Untergrenze dieser Spanne, für größere Gruppen knapp darunter. Ganz oben, mit gecharterter Dahabiya und Privatflügen zwischen den Städten: ab 600 Euro. Der Abstand zwischen unterem und oberem Ende ist in Ägypten größer als in fast jedem anderen Land.
 
 02
 

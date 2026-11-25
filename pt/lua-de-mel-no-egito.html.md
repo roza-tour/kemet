@@ -15,7 +15,7 @@ Duração ideal **9 a 12 noites**
 
 Nascer do sol **nas nove pirâmides**
 
-Viagem de 9 dias a partir de **€ 2.045 por pessoa**
+Viagem de 9 dias a partir de **€ 2.250 por pessoa**
 
 Aqui, uma lua de mel não é um resort com um templo de passeio. É uma dahabiya à vela, o nascer do sol nas pirâmides antes da abertura e o mar Vermelho no fim — organizado para que vocês nunca sejam duas pessoas dentro de um grupo. O lótus, entrelaçado aos pares, era no Egito antigo o símbolo da união. Combina.
 

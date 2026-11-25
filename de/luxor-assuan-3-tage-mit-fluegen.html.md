@@ -11,11 +11,11 @@ Kurzreise
 
 Drei Tage mit den Tempeln und Gräbern Oberägyptens, die Inlandsflüge sind im Preis enthalten.
 
-ab 527 € / Person
+ab 580 € / Person
 
 ab 6 Reisenden
 
-580 € pro Person bei zwei Reisenden
+638 € pro Person bei zwei Reisenden
 
 Pro Person, Normalsaison. Zuschläge für Feiertage weisen wir im Angebot getrennt aus.
 

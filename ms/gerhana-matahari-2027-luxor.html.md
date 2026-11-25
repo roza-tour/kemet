@@ -19,7 +19,7 @@ Kaherah **separa sahaja, kira-kira 95%**
 
 Gerhana matahari penuh ialah beberapa minit apabila Bulan menutup Matahari sepenuhnya: langit menjadi gelap pada siang hari, suhu menurun, korona Matahari kelihatan seperti lingkaran cahaya putih, dan seluruh ufuk bercahaya seperti waktu matahari terbenam. Kebiasaannya fasa penuh berlangsung dua atau tiga minit. Pada 2 Ogos 2027, fasa penuh paling lama berlaku di atas Mesir Hulu — di atas Thebes purba, Karnak, Kuil Luxor dan Lembah Raja-Raja, di kota yang pembinanya menjajarkan kuil-kuil mereka dengan Matahari.
 
-Hari Gerhana di Luxor, 2 Ogos 2027 — lawatan sehari dalam kumpulan kecil.**€149**seorang Daftar
+Hari Gerhana di Luxor, 2 Ogos 2027 — lawatan sehari dalam kumpulan kecil.**€164**seorang Daftar
 
 01
 
@@ -76,7 +76,7 @@ Hari Gerhana · Isnin, 2 Ogos 2027
 
 Sehari yang dirancang di sekitar enam minit: Lembah Raja-Raja sebaik dibuka, tempat tontonan yang teduh di Tebing Barat untuk fasa penuh, makan tengah hari Mesir yang agak lewat, dan felucca ketika matahari terbenam. Kumpulan kecil sehingga 12 orang, setiap satu dengan Egyptologist dan kenderaannya sendiri — satu-satunya perjalanan bertarikh tetap yang kami anjurkan, kerana tarikhnya ditentukan oleh langit.
 
-**€149** seorang · Tidak termasuk hotel · 48 tempat dalam empat kumpulan, setiap satu sehingga 12 orang
+**€164** seorang · Tidak termasuk hotel · 48 tempat dalam empat kumpulan, setiap satu sehingga 12 orang
 
 ### Jadual hari itu
 

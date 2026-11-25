@@ -11,11 +11,11 @@ Escapada
 
 Quatro dias que juntam os monumentos do Cairo e de Gizé a um dia no Mediterrâneo, em Alexandria.
 
-a partir de € 618 / pessoa
+a partir de € 680 / pessoa
 
 a partir de 6 viajantes
 
-€ 680 por pessoa, para dois viajantes
+€ 748 por pessoa, para dois viajantes
 
 Por pessoa, em temporada normal. Acréscimos de feriados aparecem separados no orçamento.
 
@@ -51,7 +51,7 @@ Curta em dias, mas rica em variedade, esta escapada junta os monumentos fundador
 
 - Catacumbas de Kom el-Shoqafa
 - Cidadela de Qaitbay e Bibliotheca Alexandrina
-- Coluna de Pompeu e almoço de frutos do mar à beira-mar
+- Coluna de Pompeu e almoço de frutos do mar à beira-mar, pago no local
 
 03
 

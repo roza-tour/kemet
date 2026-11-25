@@ -65,7 +65,7 @@ El tiempo en el aire es corto, pero el trayecto no es solo el vuelo. Cuente el d
 
 ## Cómo lo organizamos
 
-Dos de nuestros viajes más largos, Egypt Icons & Nile Cruise y Egypt Highlights Deluxe, usan el tren cama en ambos sentidos tal como se publican. Ambos pueden organizarse también con vuelos en su lugar, con esas dos noches en hoteles, por 130 € más por persona; pida la versión con vuelos al consultarnos. Todos los demás viajes que van al sur ya están construidos en torno a vuelos.
+Dos de nuestros viajes más largos, Egypt Icons & Nile Cruise y Egypt Highlights Deluxe, usan el tren cama en ambos sentidos tal como se publican. Ambos pueden organizarse también con vuelos en su lugar, con esas dos noches en hoteles, por 143 € más por persona; pida la versión con vuelos al consultarnos. Todos los demás viajes que van al sur ya están construidos en torno a vuelos.
 
 ## Preguntas frecuentes
 

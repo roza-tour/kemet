@@ -11,11 +11,11 @@ Excursión de un día
 
 Medio día concentrado entre las tres grandes pirámides y la Esfinge, con el clásico mirador panorámico.
 
-desde 66 € / persona
+desde 73 € / persona
 
 desde 6 viajeros · entradas no incluidas
 
-73 € por persona para dos viajeros
+80 € por persona para dos viajeros
 
 Por persona, en temporada normal. Los suplementos de fechas festivas se indican por separado en el presupuesto.
 

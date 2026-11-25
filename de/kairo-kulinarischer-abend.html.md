@@ -11,11 +11,11 @@ Tagesausflug
 
 Ein Abend zu Fuß durch die Aromen Kairos — Koshari, Straßenklassiker, gegrillte Taube und in Sirup getränkte Süßigkeiten.
 
-ab 59 € / Person
+ab 65 € / Person
 
 ab 6 Reisenden
 
-65 € pro Person bei zwei Reisenden
+72 € pro Person bei zwei Reisenden
 
 Pro Person, Normalsaison. Zuschläge für Feiertage weisen wir im Angebot getrennt aus. Speisen und Getränke sind nicht enthalten — Sie bezahlen sie direkt an jeder Station.
 

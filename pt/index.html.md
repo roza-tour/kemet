@@ -7,7 +7,7 @@ description: "Viagens privadas e sob medida pelo Egito: egiptólogo credenciado 
 
 # O Egito, só para vocês
 
-Sem ônibus, sem data de saída fixa, sem desconhecidos no seu roteiro.
+Sem ônibus, sem data de saída fixa, sem desconhecidos no seu veículo nem com o seu guia.
 
 Formato **Exclusivamente privado**
 
@@ -70,7 +70,7 @@ A Kemet trabalha no segmento alto do mercado egípcio, e dizemos isso sem rodeio
 
 ### Quanto custa uma viagem privada ao Egito?
 
-Uma viagem totalmente privada e sob medida, com egiptólogo credenciado, carro com motorista e bons hotéis, fica no mercado entre 200 e 450 euros por pessoa por dia. As viagens da Kemet saem entre 155 e 205 euros por pessoa por dia, para grupos a partir de 6 pessoas. O valor por pessoa cai bastante quando o grupo cresce, porque o guia e o carro são divididos entre mais gente.
+Uma viagem totalmente privada e sob medida, com egiptólogo credenciado, carro com motorista e bons hotéis, fica no mercado entre 200 e 450 euros por pessoa por dia. As viagens da Kemet saem entre 170 e 226 euros por pessoa por dia, para grupos a partir de 6 pessoas. O valor por pessoa cai bastante quando o grupo cresce, porque o guia e o carro são divididos entre mais gente.
 
 ### Existem guias que falam português?
 

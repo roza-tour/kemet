@@ -11,11 +11,11 @@ Court séjour
 
 Trois jours dans le plus grand musée à ciel ouvert du monde — les deux rives faites correctement, avec le temple illuminé la nuit comme pivot.
 
-à partir de 544 € / personne
+à partir de 598 € / personne
 
 à partir de 6 voyageurs
 
-598 € par personne pour deux voyageurs
+658 € par personne pour deux voyageurs
 
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
 

@@ -29,7 +29,7 @@ Cuando nos envía un mensaje a través del formulario de contacto, recogemos los
 
 Como casi todos los sitios web, nuestro servidor también registra en sus archivos de registro información técnica habitual (como la dirección IP, el tipo de navegador y las páginas solicitadas). No la utilizamos para identificarle personalmente.
 
-Si se suscribe a nuestra lista —desde la invitación de este sitio o desde el diseñador de viajes—, conservamos su correo electrónico, su nombre si lo indica, la página y el idioma desde los que se suscribió y un registro de su consentimiento: cuándo lo otorgó, el texto que aceptó y la dirección IP desde la que lo hizo. Puede darse de baja de la lista en cualquier momento mediante el enlace de baja de nuestros correos o escribiéndonos.
+Si se unen a nuestra lista —desde la invitación de este sitio o desde el diseñador de viajes—, primero les enviamos un correo para que lo confirmen, y no se envía nada más hasta que lo hagan. Conservamos su dirección de correo electrónico, su nombre si nos lo facilitan, la página y el idioma desde los que se suscribieron y un registro de su consentimiento: cuándo lo dieron y cuándo lo confirmaron, el texto con el que estuvieron de acuerdo y la dirección IP desde la que procedía cada uno. Pueden darse de baja de la lista en cualquier momento mediante el enlace de baja de nuestros correos o escribiéndonos.
 
 No gestionamos cuentas de usuario ni cobramos pagos en este sitio web, por lo que aquí nunca recogemos contraseñas ni datos de tarjetas.
 
@@ -39,7 +39,9 @@ No gestionamos cuentas de usuario ni cobramos pagos en este sitio web, por lo qu
 
 Utilizamos los datos de su consulta únicamente para responderle, para entender lo que busca y —si decide seguir adelante— para diseñar y organizar su viaje. Podemos contactar con usted por correo electrónico, teléfono o WhatsApp con los datos que nos facilite.
 
-Nuestra base jurídica es su consentimiento y las medidas necesarias para celebrar y ejecutar un viaje organizado a petición suya. No utilizamos sus datos para publicidad ni para decisiones automatizadas.
+Si no viajan con nosotros de inmediato, podemos volver a escribirles sobre el viaje por el que preguntaron: como máximo tres veces en el año siguiente a su consulta. Avísennos en cualquier momento y no volveremos a escribirles.
+
+Nuestra base jurídica es su consentimiento, las gestiones necesarias para celebrar y ejecutar un arreglo de viaje a petición de ustedes y, para esos mensajes de seguimiento, nuestro interés legítimo en responder a la pregunta que nos plantearon. No compartimos su información con anunciantes ni la utilizamos para tomar decisiones automatizadas.
 
 04
 
@@ -67,7 +69,9 @@ Nuestro sitio web y nuestro correo electrónico están alojados por nuestro prov
 
 ## Cuánto tiempo los conservamos
 
-Conservamos la correspondencia de las consultas solo durante el tiempo necesario para atenderle y para dejar constancia de cualquier viaje que organicemos; después se elimina. Cuando se realiza una reserva, algunos registros pueden conservarse más tiempo para cumplir obligaciones contables o legales.
+Conservamos una consulta durante tres años desde el día en que se envió y después la eliminamos. Cuando se llega a hacer una reserva, algunos registros pueden conservarse más tiempo para cumplir obligaciones contables o legales.
+
+Si se unen a nuestra lista, conservamos sus datos hasta que se den de baja. Una suscripción que nunca se confirma desde el correo que enviamos se elimina a los 30 días. Si se dan de baja, guardamos una nota con su dirección y la fecha de la baja, para que no se les vuelva a añadir por error.
 
 Puede pedirnos que eliminemos sus datos en cualquier momento (véase «Sus derechos»).
 

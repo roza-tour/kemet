@@ -11,11 +11,11 @@ Passeio de um dia
 
 Um dia inteiro no oásis verde a sudoeste do Cairo — lagos, cachoeiras no deserto, baleias fósseis e uma vila de oleiros.
 
-a partir de € 139 / pessoa
+a partir de € 153 / pessoa
 
 a partir de 6 viajantes · ingressos não incluídos
 
-€ 153 por pessoa, para dois viajantes
+€ 168 por pessoa, para dois viajantes
 
 Por pessoa, em temporada normal. Acréscimos de feriados aparecem separados no orçamento.
 
@@ -33,7 +33,7 @@ O lago Qarun, as cachoeiras e dunas de Wadi el-Rayan, as baleias fósseis de Wad
 
 ## A viagem
 
-A uma hora e meia a sudoeste do Cairo, a depressão de Faium troca monumentos por paisagem: um grande lago salgado, cachoeiras de água doce no deserto, um vale da UNESCO com baleias fossilizadas e uma vila de oleiros na encosta. Este dia inteiro é uma completa mudança de registro em relação aos templos — horizontes amplos, aves, dunas e um almoço de peixe à beira do lago. A viagem é privativa, com guia e motorista só de vocês durante o dia todo.
+A uma hora e meia a sudoeste do Cairo, a depressão de Faium troca monumentos por paisagem: um grande lago salgado, cachoeiras de água doce no deserto, um vale da UNESCO com baleias fossilizadas e uma vila de oleiros na encosta. Este dia inteiro é uma completa mudança de registro em relação aos templos — horizontes amplos, aves, dunas e um almoço de peixe à beira do lago, pago no local. A viagem é privativa, com guia e motorista só de vocês durante o dia todo.
 
 ## Passo a passo
 
@@ -65,7 +65,7 @@ O chamado Lago Mágico, alimentado por fontes minerais e que muda de cor com a l
 
 ### Parada 5 — Vila de oleiros de Tunis e almoço à beira do lago
 
-Termina-se em Tunis, a vila na encosta famosa por seus oleiros e ateliês, e depois vem um almoço de peixe tranquilo à beira do lago, antes da volta de carro ao Cairo.
+Termina-se em Tunis, a vila na encosta famosa por seus oleiros e ateliês, e depois vem um almoço de peixe tranquilo à beira do lago, pago no local, antes da volta de carro ao Cairo.
 
 ## Incluído
 

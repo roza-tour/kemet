@@ -11,11 +11,11 @@ Lawatan sehari
 
 Semalam berjalan kaki menyusuri rasa Kaherah — koshari, makanan jalanan klasik, burung merpati panggang dan manisan bersirap.
 
-dari €59 / seorang
+dari €65 / seorang
 
 dari 6 orang
 
-€65 seorang bagi dua pengembara
+€72 seorang bagi dua pengembara
 
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga. Makanan dan minuman tidak termasuk: dibayar terus di setiap hentian.
 

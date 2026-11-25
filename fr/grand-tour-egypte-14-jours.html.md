@@ -11,11 +11,11 @@ Grand tour
 
 Quatorze jours, tous les registres du pays — Le Caire, Alexandrie, le Nil en croisière, Abou Simbel et la mer Rouge pour finir.
 
-à partir de 2 728 € / personne
+à partir de 3 001 € / personne
 
 à partir de 6 voyageurs
 
-3 001 € par personne pour deux voyageurs
+3 301 € par personne pour deux voyageurs
 
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
 
@@ -65,7 +65,7 @@ C'est l'itinéraire de ceux qui comptent venir une fois et tout voir. Les dix pr
 
 - Catacombes de Kom el-Chogafa et colonne de Pompée
 - Citadelle de Qaitbay sur l'emplacement du Phare
-- Déjeuner de poisson sur la corniche; retour au Caire
+- Déjeuner de poisson sur la corniche, à régler sur place; retour au Caire
 
 05
 
@@ -157,7 +157,7 @@ C'est l'itinéraire de ceux qui comptent venir une fois et tout voir. Les dix pr
 - Le visa d'entrée en Égypte
 - Les pourboires
 - Les dépenses personnelles
-- Les repas, sauf à bord de la croisière sur le Nil
+- Les repas, sauf à bord de la croisière sur le Nil et le déjeuner de la journée en bateau
 - Les options que vous ajoutez — activités, boissons
 
 ## Le rythme

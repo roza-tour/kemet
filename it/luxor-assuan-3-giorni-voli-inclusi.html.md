@@ -11,11 +11,11 @@ Viaggio breve
 
 Tre giorni di templi e tombe dell'Alto Egitto, con i voli interni compresi nel prezzo.
 
-da 527 € / persona
+da 580 € / persona
 
 da 6 viaggiatori
 
-580 € a persona per due viaggiatori
+638 € a persona per due viaggiatori
 
 A persona, in stagione normale. I supplementi delle festività sono indicati separatamente nel preventivo.
 

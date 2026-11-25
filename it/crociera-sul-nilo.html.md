@@ -23,7 +23,7 @@ Quasi tutto ciò per cui vale la pena fermarsi fra Luxor e Assuan si trova a poc
 
 Questa è la crociera così come la organizziamo: tre notti sul fiume da Assuan a Luxor, con ogni visita a terra in privato insieme alla vostra guida esperta di egittologia. La nave è condivisa; la vostra guida, il vostro veicolo e le vostre visite no.
 
-da 820 € / persona (da 6 viaggiatori). 902 € a persona per due viaggiatori. A persona, in stagione normale. I supplementi delle festività sono indicati separatamente nel preventivo.
+da 902 € / persona (da 6 viaggiatori). 992 € a persona per due viaggiatori. A persona, in stagione normale. I supplementi delle festività sono indicati separatamente nel preventivo.
 
 01
 
@@ -120,7 +120,7 @@ Tre-quattro mesi per alberghi e motonavi consuete; sei mesi se nel piano c'è un
 
 ### Aereo o treno notte per Luxor e Assuan?
 
-Se il comfort viene prima del prezzo, conviene volare: Il Cairo–Luxor è meno di un'ora di volo, Il Cairo–Assuan circa un'ora e un quarto. In treno servono circa dieci ore fino a Luxor e tredici fino ad Assuan, per questo di solito si viaggia di notte — in compartimento a due letti con lavabo, cena e colazione inclusi, ma con i bagni in comune; verso sud il treno arriva a Luxor verso le cinque e mezza del mattino. I nostri viaggi con il treno notte sono disponibili anche con voli interni e notti in hotel, a 130 € in più a persona.
+Se il comfort viene prima del prezzo, conviene volare: Il Cairo–Luxor è meno di un'ora di volo, Il Cairo–Assuan circa un'ora e un quarto. In treno servono circa dieci ore fino a Luxor e tredici fino ad Assuan, per questo di solito si viaggia di notte — in compartimento a due letti con lavabo, cena e colazione inclusi, ma con i bagni in comune; verso sud il treno arriva a Luxor verso le cinque e mezza del mattino. I nostri viaggi con il treno notte sono disponibili anche con voli interni e notti in hotel, a 143 € in più a persona.
 
 ## Approfondire il tratto del Nilo
 

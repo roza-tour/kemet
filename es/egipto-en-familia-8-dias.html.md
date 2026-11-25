@@ -11,11 +11,11 @@ Viaje en familia
 
 Ocho días pensados para niños curiosos y padres sin prisa: momias, falucas, los colores de las tumbas pintadas y tardes junto a la piscina.
 
-desde 1.524 € / persona
+desde 1.676 € / persona
 
 desde 6 viajeros
 
-1.676 € por persona para dos viajeros
+1.844 € por persona para dos viajeros
 
 Por persona, en temporada normal. Los suplementos de fechas festivas se indican por separado en el presupuesto.
 

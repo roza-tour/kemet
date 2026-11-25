@@ -21,7 +21,7 @@ Am 25. Dezember **Alles geöffnet**
 
 Flugzeit **4 Std., +1 Std.**
 
-Private Reisen ab **544 €**
+Private Reisen ab **598 €**
 
 Es gibt einen guten Grund, warum diese Wochen in Ägypten die teuersten des Jahres sind: Dezember ist klimatisch nahezu perfekt. Luxor liegt bei 24–26°C, die Luft ist klar, und man kann eine Tempelanlage auch um drei Uhr nachmittags zu Fuß erkunden. Der Preis dafür ist, dass alle anderen dieselbe Rechnung aufgemacht haben — und die guten Schiffe und Zimmer ein halbes Jahr vorher weg sind.
 
@@ -68,7 +68,7 @@ Kairo · Gizeh · Alexandria · Assuan · Luxor
 
 Unsere Signature-Reise: Kairo, Alexandria, mit dem Nachtzug nach Süden und drei Nächte auf dem Nil von Assuan nach Luxor — jede Schicht Ägyptens in einem Bogen.
 
-1.915 € / Person ab 6 Reisenden
+2.107 € / Person ab 6 Reisenden
 
 7 Tage
 
@@ -78,7 +78,7 @@ Kairo · Gizeh · Alexandria · Luxor
 
 Die großen Namen Ägyptens in sieben Tagen — das Ägyptische Museum, Alexandria, die Tempel und Gräber von Luxor und die Pyramiden von Gizeh.
 
-1.179 € / Person ab 6 Reisenden
+1.297 € / Person ab 6 Reisenden
 
 14 Tage
 
@@ -88,7 +88,7 @@ Kairo · Gizeh · Alexandria · Assuan · Abu Simbel · Luxor · Scharm el-Schei
 
 Unsere vollständigste Reise: Kairo und Alexandria, eine Nilkreuzfahrt, der Bergtempel Ramses' II. in Abu Simbel und drei Nächte am Roten Meer, um alles sacken zu lassen.
 
-2.728 € / Person ab 6 Reisenden
+3.001 € / Person ab 6 Reisenden
 
 3 Tage
 
@@ -98,7 +98,7 @@ Kairo · Gizeh
 
 Kairo auf das Wesentliche gebracht und concierge-geführt: Fast-Track bei der Einreise, ein privater Morgen am Plateau, das Grand Egyptian Museum und das laternenbeleuchtete islamische Kairo.
 
-600 € / Person ab 6 Reisenden
+660 € / Person ab 6 Reisenden
 
 3 Tage
 
@@ -108,7 +108,7 @@ Luxor
 
 Luxor ohne Sprint: Karnak zur Öffnung, das Tal der Könige vor der Hitze, die Terrassen der Hatschepsut und die Sphinxallee nach Einbruch der Dunkelheit.
 
-544 € / Person ab 6 Reisenden
+598 € / Person ab 6 Reisenden
 
 ## Ihre Termine für 2026/27
 
@@ -146,7 +146,7 @@ Die Schiffe und die großen Häuser in Luxor und Assuan machen aus dem 31. Dezem
 
 ## Was das kostet, und woran es liegt
 
-Unsere 10-Tage-Rundreise beginnt bei 1.915 € pro Person ab 6 Reisenden; über Weihnachten und Silvester liegt der Aufschlag im Bereich der Hotel- und Schiffszuschläge, die uns selbst berechnet werden — wir geben sie weiter und weisen sie im Angebot getrennt aus, statt sie im Gesamtpreis verschwinden zu lassen. Wer flexibel ist: Anfang Dezember und die zweite Januarhälfte kosten deutlich weniger bei praktisch gleichem Wetter.
+Unsere 10-Tage-Rundreise beginnt bei 2.107 € pro Person ab 6 Reisenden; über Weihnachten und Silvester liegt der Aufschlag im Bereich der Hotel- und Schiffszuschläge, die uns selbst berechnet werden — wir geben sie weiter und weisen sie im Angebot getrennt aus, statt sie im Gesamtpreis verschwinden zu lassen. Wer flexibel ist: Anfang Dezember und die zweite Januarhälfte kosten deutlich weniger bei praktisch gleichem Wetter.
 
 ## Kurz gefasst
 

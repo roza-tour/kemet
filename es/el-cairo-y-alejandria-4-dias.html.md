@@ -11,11 +11,11 @@ Escapada
 
 Cuatro días que combinan los monumentos de El Cairo y Guiza con un día junto al Mediterráneo, en Alejandría.
 
-desde 618 € / persona
+desde 680 € / persona
 
 desde 6 viajeros
 
-680 € por persona para dos viajeros
+748 € por persona para dos viajeros
 
 Por persona, en temporada normal. Los suplementos de fechas festivas se indican por separado en el presupuesto.
 
@@ -51,7 +51,7 @@ Corta en días pero amplia en variedad, esta escapada une los monumentos fundaci
 
 - Catacumbas de Kom el-Shoqafa
 - La Ciudadela de Qaitbay y la Bibliotheca Alexandrina
-- La Columna de Pompeyo y almuerzo de pescado y marisco frente al mar
+- La Columna de Pompeyo y almuerzo de pescado y marisco frente al mar, pagado en destino
 
 03
 

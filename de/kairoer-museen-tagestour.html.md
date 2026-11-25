@@ -11,11 +11,11 @@ Tagesausflug
 
 Zwei große Sammlungen an einem Tag — das historische Ägyptische Museum und das Nationalmuseum der Ägyptischen Zivilisation mit den Königsmumien.
 
-ab 64 € / Person
+ab 70 € / Person
 
 ab 6 Reisenden · Eintritte nicht enthalten
 
-70 € pro Person bei zwei Reisenden
+77 € pro Person bei zwei Reisenden
 
 Pro Person, Normalsaison. Zuschläge für Feiertage weisen wir im Angebot getrennt aus.
 

@@ -11,11 +11,11 @@ Court séjour
 
 Quatre jours qui associent les monuments du Caire et de Gizeh à une journée méditerranéenne à Alexandrie.
 
-à partir de 618 € / personne
+à partir de 680 € / personne
 
 à partir de 6 voyageurs
 
-680 € par personne pour deux voyageurs
+748 € par personne pour deux voyageurs
 
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
 
@@ -51,7 +51,7 @@ Peu de jours mais une grande amplitude: ce court séjour met les monuments fonda
 
 - Catacombes de Kom el-Chogafa
 - Citadelle de Qaitbay et Bibliotheca Alexandrina
-- Colonne de Pompée et déjeuner de poisson en front de mer
+- Colonne de Pompée et déjeuner de poisson en front de mer, à régler sur place
 
 03
 

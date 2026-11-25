@@ -11,11 +11,11 @@ Excursión de un día
 
 Dos grandes colecciones en un día: el histórico Museo Egipcio y el Museo Nacional de la Civilización Egipcia, con las Momias Reales.
 
-desde 64 € / persona
+desde 70 € / persona
 
 desde 6 viajeros · entradas no incluidas
 
-70 € por persona para dos viajeros
+77 € por persona para dos viajeros
 
 Por persona, en temporada normal. Los suplementos de fechas festivas se indican por separado en el presupuesto.
 

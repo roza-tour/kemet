@@ -2,7 +2,7 @@
 title: "2-Day Alexandria Private Tour with Overnight | Kemet"
 url: https://kemet-travel.com/tour-alexandria-2day.html
 language: en
-description: "Alexandria with its missing half restored: the Greco-Roman sites by day, then the corniche at dusk — private, from €402 pp."
+description: "Alexandria with its missing half restored: the Greco-Roman sites by day, then the corniche at dusk — private, from €442 pp."
 ---
 
 Short Break · 2 Days / 1 Night
@@ -13,7 +13,7 @@ Two Mediterranean days — the catacombs, the Citadel on the Pharos site, the re
 
 ## What does Alexandria Overnight include, and what does it cost?
 
-Alexandria Overnight is a private 2-day, 1-night journey through Alexandria, from €402 per person for a party of 6 or more, or €442 per person for two. It includes a private Egyptologist guide throughout; 1 night in a seafront hotel; all entrance fees to sites and monuments; and private air-conditioned transfers. International flights are not included.
+Alexandria Overnight is a private 2-day, 1-night journey through Alexandria, from €442 per person for a party of 6 or more, or €486 per person for two. It includes a private Egyptologist guide throughout; 1 night in a seafront hotel; all entrance fees to sites and monuments; and private air-conditioned transfers. International flights are not included.
 
 ## Overview
 
@@ -88,15 +88,15 @@ Every Kemet journey is private, led by a licensed Egyptologist and priced in wri
 
 From
 
-€402
+€442
 
 per person · EUR
 
 Based on a private party of 6 or more.
 
-For two travellers: €442 per person.
+For two travellers: €486 per person.
 
-[Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Alexandria+Overnight&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Alexandria+Overnight%22+journey+%282+Days+%2F+1+Night%2C+from+%E2%82%AC402+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
+[Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Alexandria+Overnight&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Alexandria+Overnight%22+journey+%282+Days+%2F+1+Night%2C+from+%E2%82%AC442+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 
 [Ask on WhatsApp](https://wa.me/201158367162?text=Hello%20Kemet%20%E2%80%94%20I%27m%20interested%20in%20the%20%22Alexandria%20Overnight%22%20journey%20(2%20Days%20%2F%201%20Night).%20Could%20you%20share%20availability%3F)
 
@@ -126,7 +126,7 @@ Cairo · Giza · Alexandria · Aswan · Abu Simbel · Luxor · Sharm El Sheikh
 
 Our most complete journey: Cairo and Alexandria, a Nile cruise, Ramesses II's mountain temple at Abu Simbel, and three Red Sea nights to absorb it all.
 
-€2,728 / person from 6 travellers
+€3,001 / person from 6 travellers
 
 Full Day
 
@@ -134,9 +134,9 @@ Full Day
 
 Alexandria
 
-The Catacombs of Kom El Shoqafa, Pompey's Pillar, the Citadel of Qaitbay on the old Pharos site and the Bibliotheca Alexandrina, with a seafood lunch.
+The Catacombs of Kom El Shoqafa, Pompey's Pillar, the Citadel of Qaitbay on the old Pharos site and the Bibliotheca Alexandrina, with a seafood lunch paid locally.
 
-€57 / person from 6 travellers · tickets not included
+€63 / person from 6 travellers · tickets not included
 
 4 Days
 
@@ -146,7 +146,7 @@ Cairo · Giza · Alexandria
 
 A compact northern journey — the Egyptian Museum, Alexandria's Greco-Roman layers, the Pyramids of Giza and medieval Cairo.
 
-€618 / person from 6 travellers
+€680 / person from 6 travellers
 
 ---
 

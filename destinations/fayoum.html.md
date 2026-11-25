@@ -92,7 +92,7 @@ Fayoum
 
 Lake Qarun, the waterfalls and dunes of Wadi El Rayan, the fossil whales of Wadi Al-Hitan and the potters of Tunis village — Egypt's wild, green other half.
 
-€139 / person from 6 travellers · tickets not included
+€153 / person from 6 travellers · tickets not included
 
 Close by
 

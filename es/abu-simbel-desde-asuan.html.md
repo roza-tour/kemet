@@ -11,11 +11,11 @@ Excursión de un día
 
 Los templos de montaña de Ramsés II sobre el lago Nasser: una carretera del desierto al amanecer, dos santuarios excavados en la roca y de vuelta en Asuán para almorzar.
 
-desde 160 € / persona
+desde 176 € / persona
 
 desde 6 viajeros · entradas no incluidas
 
-176 € por persona para dos viajeros
+194 € por persona para dos viajeros
 
 Por persona, en temporada normal. Los suplementos de fechas festivas se indican por separado en el presupuesto.
 

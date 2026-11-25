@@ -11,13 +11,13 @@ Signature-Reise
 
 Eine Woche, die das Wesentliche einsammelt — Kairo, Alexandria und Luxor, mit Nachtzugfahrten dazwischen.
 
-ab 1.179 € / Person
+ab 1.297 € / Person
 
 ab 6 Reisenden
 
-1.297 € pro Person bei zwei Reisenden
+1.427 € pro Person bei zwei Reisenden
 
-Mit Inlandsflügen statt der zwei Nächte im Schlafwagen, diese Nächte im Hotel: 1.309 € pro Person
+Mit Inlandsflügen statt der zwei Nächte im Schlafwagen, diese Nächte im Hotel: 1.440 € pro Person
 
 Pro Person, Normalsaison. Zuschläge für Feiertage weisen wir im Angebot getrennt aus.
 
@@ -53,7 +53,7 @@ Für Reisende, die eine Woche haben, bringt diese Reise Ägypten auf seine stär
 
 - Fahrt an die Mittelmeerküste
 - Katakomben von Kom esch-Schukafa, Pompeiussäule und Zitadelle von Qaitbay
-- Bibliotheca Alexandrina und Fischessen an der Corniche
+- Bibliotheca Alexandrina und Fischessen an der Corniche, vor Ort bezahlt
 
 03
 
@@ -98,8 +98,8 @@ Für Reisende, die eine Woche haben, bringt diese Reise Ägypten auf seine stär
 ## Inbegriffen
 
 - Durchgehend ein privater Ägyptologe als Reiseleitung
-- 6 Übernachtungen im Hotel
-- Schlafwagenplätze Kairo–Luxor (in beiden Richtungen)
+- 4 Hotelübernachtungen; die übrigen zwei Nächte verbringen Sie im Schlafwagen
+- Schlafwagenplätze Kairo–Luxor (in beiden Richtungen), mit Abendessen und Frühstück an Bord
 - Alle Eintrittsgelder für Stätten und Monumente
 - Private, klimatisierte Transfers
 - Abholung und Rückbringung am Hotel
@@ -111,7 +111,7 @@ Für Reisende, die eine Woche haben, bringt diese Reise Ägypten auf seine stär
 - Einreisevisum für Ägypten
 - Trinkgelder
 - Persönliche Ausgaben
-- Mahlzeiten
+- Mahlzeiten, außer Abendessen und Frühstück im Schlafwagen
 - Optionale Zusatzleistungen nach Wahl — Aktivitäten, Getränke
 
 ## Wie anstrengend ist das

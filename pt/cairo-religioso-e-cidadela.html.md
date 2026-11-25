@@ -11,11 +11,11 @@ Passeio de um dia
 
 As religiões do Cairo em um só dia — igrejas coptas, uma sinagoga antiga e a grande Cidadela coroada por uma mesquita.
 
-a partir de € 80 / pessoa
+a partir de € 88 / pessoa
 
 a partir de 6 viajantes · ingressos não incluídos
 
-€ 88 por pessoa, para dois viajantes
+€ 97 por pessoa, para dois viajantes
 
 Por pessoa, em temporada normal. Acréscimos de feriados aparecem separados no orçamento.
 

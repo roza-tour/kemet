@@ -11,11 +11,11 @@ Tur sehari
 
 Ragam iman Kairo dalam satu hari — gereja-gereja Koptik, sinagoge kuno, dan benteng agung bermahkota masjid.
 
-mulai €80 / orang
+mulai €88 / orang
 
 mulai 6 orang · tiket masuk tidak termasuk
 
-€88 per orang untuk dua wisatawan
+€97 per orang untuk dua wisatawan
 
 Per orang, musim normal. Biaya tambahan hari libur kami cantumkan terpisah dalam penawaran.
 

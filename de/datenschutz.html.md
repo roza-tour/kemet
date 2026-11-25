@@ -29,7 +29,7 @@ Wenn Sie uns über das Kontaktformular eine Nachricht senden, erheben wir die An
 
 Wie fast alle Websites zeichnet auch unser Server in seinen Protokollen übliche technische Informationen auf (etwa IP-Adresse, Browsertyp und aufgerufene Seiten). Wir verwenden diese nicht, um Sie persönlich zu identifizieren.
 
-Wenn Sie sich in unsere Liste eintragen — über die Einladung auf dieser Website oder über den Reiseplaner —, speichern wir Ihre E-Mail-Adresse, Ihren Namen, falls Sie ihn angeben, die Seite und die Sprache, von der aus Sie sich angemeldet haben, sowie einen Nachweis Ihrer Einwilligung: wann Sie sie erteilt haben, den Wortlaut, dem Sie zugestimmt haben, und die IP-Adresse, von der sie stammt. Sie können die Liste jederzeit über den Abmeldelink in unseren E-Mails oder durch eine Nachricht an uns verlassen.
+Wenn Sie sich in unsere Liste eintragen — über die Einladung auf dieser Website oder über den Reiseplaner —, senden wir Ihnen zuerst eine E-Mail mit der Bitte um Bestätigung; bis Sie bestätigen, schicken wir Ihnen nichts weiter. Wir speichern Ihre E-Mail-Adresse, Ihren Namen, falls Sie ihn angeben, die Seite und die Sprache, von der aus Sie sich angemeldet haben, sowie einen Nachweis Ihrer Einwilligung: wann Sie sie erteilt und wann Sie bestätigt haben, den Wortlaut, dem Sie zugestimmt haben, und die jeweilige IP-Adresse. Sie können die Liste jederzeit über den Abmeldelink in unseren E-Mails oder durch eine Nachricht an uns verlassen.
 
 Wir führen keine Nutzerkonten und nehmen auf dieser Website keine Zahlungen entgegen; wir erheben hier daher weder Passwörter noch Kartendaten.
 
@@ -39,7 +39,9 @@ Wir führen keine Nutzerkonten und nehmen auf dieser Website keine Zahlungen ent
 
 Wir verwenden die Angaben aus Ihrer Anfrage ausschließlich, um Ihnen zu antworten, um zu verstehen, was Sie suchen, und — wenn Sie sich dafür entscheiden — um Ihre Reise zu gestalten und zu organisieren. Wir können Sie mit den von Ihnen angegebenen Kontaktdaten per E-Mail, Telefon oder WhatsApp kontaktieren.
 
-Unsere Rechtsgrundlage ist Ihre Einwilligung sowie die Schritte, die auf Ihren Wunsch hin erforderlich sind, um eine Reiseleistung zu vereinbaren und zu erbringen. Wir verwenden Ihre Daten weder für Werbung noch für automatisierte Entscheidungsfindung.
+Wenn Sie nicht gleich mit uns reisen, schreiben wir Ihnen unter Umständen noch einmal zu der Reise, nach der Sie gefragt haben: höchstens dreimal in dem Jahr nach Ihrer Anfrage. Sagen Sie uns jederzeit Bescheid, dann schreiben wir nicht mehr.
+
+Unsere Rechtsgrundlage ist Ihre Einwilligung, sind die Schritte, die auf Ihren Wunsch hin erforderlich sind, um eine Reiseleistung zu vereinbaren und zu erbringen, und, für diese Folgenachrichten, unser berechtigtes Interesse daran, die Frage zu beantworten, mit der Sie sich an uns gewandt haben. Wir geben Ihre Daten nicht an Werbetreibende weiter und verwenden sie nicht für automatisierte Entscheidungsfindung.
 
 04
 
@@ -67,7 +69,9 @@ Unsere Website und unser E-Mail-Dienst werden von unserem Hosting-Anbieter betri
 
 ## Wie lange wir Daten aufbewahren
 
-Den Schriftverkehr zu Anfragen bewahren wir nur so lange auf, wie es nötig ist, um Sie zu betreuen und eine Aufzeichnung über jede von uns organisierte Reise zu führen; danach wird er gelöscht. Kommt es zu einer Buchung, können einige Unterlagen länger aufbewahrt werden, um buchhalterische oder gesetzliche Pflichten zu erfüllen.
+Eine Anfrage bewahren wir drei Jahre ab dem Tag ihres Eingangs auf und löschen sie dann. Kommt eine Buchung zustande, können einzelne Unterlagen länger aufbewahrt werden, um buchhalterische oder gesetzliche Pflichten zu erfüllen.
+
+Wenn Sie sich in unsere Liste eintragen, bewahren wir Ihre Angaben auf, bis Sie die Liste verlassen. Eine Anmeldung, die nie über die von uns gesendete E-Mail bestätigt wird, wird nach 30 Tagen gelöscht. Wenn Sie die Liste verlassen, behalten wir einen Vermerk mit Ihrer Adresse und dem Datum des Austritts, damit Sie nicht versehentlich erneut eingetragen werden.
 
 Sie können jederzeit die Löschung Ihrer Daten verlangen (siehe „Ihre Rechte“).
 

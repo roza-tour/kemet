@@ -11,11 +11,11 @@ Excursion à la journée
 
 Une soirée à pied dans les saveurs du Caire — koshari, classiques de la rue, pigeon grillé et pâtisseries gorgées de sirop.
 
-à partir de 59 € / personne
+à partir de 65 € / personne
 
 à partir de 6 voyageurs
 
-65 € par personne pour deux voyageurs
+72 € par personne pour deux voyageurs
 
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis. Les plats et les boissons ne sont pas compris: ils se règlent directement à chaque étape.
 

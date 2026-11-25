@@ -11,11 +11,11 @@ Excursion à la journée
 
 Le berceau de la pyramide — de la première pyramide à degrés de Djéser aux grands tombeaux géométriques de Dahchour.
 
-à partir de 68 € / personne
+à partir de 75 € / personne
 
 à partir de 6 voyageurs · billets non inclus
 
-75 € par personne pour deux voyageurs
+83 € par personne pour deux voyageurs
 
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
 

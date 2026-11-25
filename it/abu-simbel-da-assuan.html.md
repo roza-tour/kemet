@@ -11,11 +11,11 @@ Escursione in giornata
 
 I templi nella montagna di Ramesse II sopra il lago Nasser — la strada del deserto all'alba, due santuari scavati nella roccia, e di nuovo ad Assuan per pranzo.
 
-da 160 € / persona
+da 176 € / persona
 
 da 6 viaggiatori · biglietti non inclusi
 
-176 € a persona per due viaggiatori
+194 € a persona per due viaggiatori
 
 A persona, in stagione normale. I supplementi delle festività sono indicati separatamente nel preventivo.
 

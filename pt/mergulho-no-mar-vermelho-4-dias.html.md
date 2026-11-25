@@ -11,11 +11,11 @@ Mar Vermelho
 
 Quatro dias construídos em torno do tempo de fundo — as paredes de Ras Mohammed, os recifes de correnteza do Estreito de Tiran e barcos com grupos pequenos que saem cedo.
 
-a partir de € 792 / pessoa
+a partir de € 871 / pessoa
 
 a partir de 6 viajantes
 
-€ 871 por pessoa, para dois viajantes
+€ 958 por pessoa, para dois viajantes
 
 Por pessoa, em temporada normal. Acréscimos de feriados aparecem separados no orçamento.
 
@@ -83,7 +83,7 @@ O norte do Mar Vermelho é uma das regiões de mergulho de referência no mundo:
 - Visto de entrada no Egito
 - Gorjetas
 - Despesas pessoais
-- Refeições
+- Refeições, exceto o almoço a bordo nos dias de barco
 - Extras opcionais que vocês escolherem acrescentar — atividades, bebidas
 
 ## O ritmo

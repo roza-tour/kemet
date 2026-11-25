@@ -29,7 +29,7 @@ Quando ci inviate un messaggio tramite il modulo di contatto, raccogliamo i dati
 
 Come quasi tutti i siti web, il nostro server registra nei propri log anche informazioni tecniche standard (come l'indirizzo IP, il tipo di browser e le pagine richieste). Non le usiamo per identificarvi personalmente.
 
-Se vi iscrivete al nostro elenco — dall'invito presente su questo sito o dal progettista di viaggi — conserviamo il vostro indirizzo email, il vostro nome se lo indicate, la pagina e la lingua da cui vi siete iscritti e la registrazione del vostro consenso: quando lo avete prestato, la formulazione che avete accettato e l'indirizzo IP da cui proviene. Potete uscire dall'elenco in qualsiasi momento tramite il link di annullamento dell'iscrizione presente nelle nostre email, oppure scrivendoci.
+Se vi iscrivete al nostro elenco — dall'invito presente su questo sito o dal progettista di viaggi — vi inviamo prima un'email in cui vi chiediamo di confermare, e finché non lo fate non inviamo nient'altro. Conserviamo il vostro indirizzo email, il vostro nome se lo indicate, la pagina e la lingua da cui vi siete iscritti e la registrazione del vostro consenso: quando lo avete dato e quando lo avete confermato, la formulazione che avete accettato e l'indirizzo IP da cui proveniva ciascuno dei due passaggi. Potete uscire dall'elenco in qualsiasi momento tramite il link di annullamento dell'iscrizione presente nelle nostre email, oppure scrivendoci.
 
 Non gestiamo account utente e su questo sito non riceviamo pagamenti, quindi qui non raccogliamo mai password né dati di carte.
 
@@ -39,7 +39,9 @@ Non gestiamo account utente e su questo sito non riceviamo pagamenti, quindi qui
 
 Usiamo i dati della vostra richiesta esclusivamente per rispondervi, per capire che cosa cercate e — se decidete di procedere — per progettare e organizzare il vostro viaggio. Potremmo contattarvi per email, telefono o WhatsApp usando i recapiti che ci fornite.
 
-La nostra base giuridica è il vostro consenso e l'esecuzione di misure necessarie per concludere e dare esecuzione a un accordo di viaggio su vostra richiesta. Non usiamo i vostri dati per pubblicità né per processi decisionali automatizzati.
+Se non viaggiate subito con noi, potremmo scrivervi di nuovo a proposito del viaggio per cui ci avete contattato: al massimo tre volte nell'anno successivo alla vostra richiesta. Ditecelo in qualsiasi momento e non vi scriveremo più.
+
+La nostra base giuridica è il vostro consenso, l'esecuzione di misure necessarie per concludere e dare esecuzione a un accordo di viaggio su vostra richiesta e, per quei messaggi di seguito, il nostro legittimo interesse a rispondere alla domanda che ci avete rivolto. Non condividiamo i vostri dati con inserzionisti e non li usiamo per processi decisionali automatizzati.
 
 04
 
@@ -67,7 +69,9 @@ Il nostro sito web e la nostra posta elettronica sono ospitati dal nostro fornit
 
 ## Per quanto tempo li conserviamo
 
-Conserviamo la corrispondenza relativa alle richieste soltanto per il tempo necessario ad assistervi e a mantenere traccia di ogni viaggio che organizziamo; dopodiché viene eliminata. Quando avviene una prenotazione, alcuni documenti possono essere conservati più a lungo per adempiere a obblighi contabili o di legge.
+Conserviamo una richiesta per tre anni dal giorno in cui è stata inviata, poi la cancelliamo. Se si arriva a una prenotazione, alcuni documenti possono essere conservati più a lungo per adempiere a obblighi contabili o di legge.
+
+Se vi iscrivete al nostro elenco, conserviamo i vostri dati finché non ne uscite. Un'iscrizione che non viene mai confermata dall'email che inviamo viene cancellata dopo 30 giorni. Se uscite dall'elenco, conserviamo una nota del vostro indirizzo e della data di uscita, in modo che non siate aggiunti di nuovo per errore.
 
 Potete chiederci in qualsiasi momento di cancellare i vostri dati (vedere «I vostri diritti»).
 

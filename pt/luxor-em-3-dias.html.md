@@ -11,11 +11,11 @@ Escapada
 
 Três dias no maior museu a céu aberto do mundo — as duas margens vistas como se deve, com o templo iluminado à noite como eixo.
 
-a partir de € 544 / pessoa
+a partir de € 598 / pessoa
 
 a partir de 6 viajantes
 
-€ 598 por pessoa, para dois viajantes
+€ 658 por pessoa, para dois viajantes
 
 Por pessoa, em temporada normal. Acréscimos de feriados aparecem separados no orçamento.
 

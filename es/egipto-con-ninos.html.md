@@ -15,7 +15,7 @@ Edad ideal **desde unos 7 años**
 
 Para los padres **canguro a petición**
 
-Viaje en familia de 8 días desde **1.524 € por persona, desde 6 viajeros**
+Viaje en familia de 8 días desde **1.676 € por persona, desde 6 viajeros**
 
 Egipto es uno de los pocos lugares donde niños y padres se asombran con lo mismo. La Gran Pirámide es exactamente tan grande como un niño espera; una momia, exactamente igual de misteriosa; un camello, exactamente igual de gracioso. Y la Semana Santa cae en plena primavera del Nilo.
 

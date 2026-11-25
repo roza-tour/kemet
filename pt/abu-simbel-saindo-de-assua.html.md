@@ -11,11 +11,11 @@ Passeio de um dia
 
 Os templos na montanha de Ramsés II, acima do lago Nasser — a estrada do deserto ao amanhecer, dois santuários escavados na rocha e a volta a Assuã para o almoço.
 
-a partir de € 160 / pessoa
+a partir de € 176 / pessoa
 
 a partir de 6 viajantes · ingressos não incluídos
 
-€ 176 por pessoa, para dois viajantes
+€ 194 por pessoa, para dois viajantes
 
 Por pessoa, em temporada normal. Acréscimos de feriados aparecem separados no orçamento.
 

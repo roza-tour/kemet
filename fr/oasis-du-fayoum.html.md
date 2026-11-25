@@ -11,11 +11,11 @@ Excursion à la journée
 
 Une journée entière dans l'oasis verte au sud-ouest du Caire — lacs, cascades du désert, baleines fossiles et un village de potiers.
 
-à partir de 139 € / personne
+à partir de 153 € / personne
 
 à partir de 6 voyageurs · billets non inclus
 
-153 € par personne pour deux voyageurs
+168 € par personne pour deux voyageurs
 
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
 
@@ -33,7 +33,7 @@ Le lac Qaroun, les cascades et les dunes du Wadi el-Rayan, les baleines fossiles
 
 ## Le voyage
 
-À une heure et demie au sud-ouest du Caire, la dépression du Fayoum échange les monuments contre le paysage: un grand lac salé, des cascades d'eau douce en plein désert, une vallée classée à l'UNESCO pleine de baleines fossilisées, et un village de potiers à flanc de colline. Cette journée complète est un changement de registre total après les temples — horizons larges, oiseaux, dunes et un déjeuner de poisson au bord du lac. Le voyage est privé, avec votre guide et votre chauffeur pour toute la journée.
+À une heure et demie au sud-ouest du Caire, la dépression du Fayoum échange les monuments contre le paysage: un grand lac salé, des cascades d'eau douce en plein désert, une vallée classée à l'UNESCO pleine de baleines fossilisées, et un village de potiers à flanc de colline. Cette journée complète est un changement de registre total après les temples — horizons larges, oiseaux, dunes et un déjeuner de poisson au bord du lac, à régler sur place. Le voyage est privé, avec votre guide et votre chauffeur pour toute la journée.
 
 ## Jour après jour
 
@@ -65,7 +65,7 @@ Le fameux Magic Lake, alimenté par des sources minérales et changeant de coule
 
 ### Étape 5 — Le village de potiers de Tunis & déjeuner au lac
 
-Pour finir, Tunis, le village à flanc de colline réputé pour ses potiers et ses ateliers, puis un déjeuner de poisson tranquille au bord du lac avant le retour au Caire.
+Pour finir, Tunis, le village à flanc de colline réputé pour ses potiers et ses ateliers, puis un déjeuner de poisson tranquille au bord du lac, à régler sur place, avant le retour au Caire.
 
 ## Compris
 

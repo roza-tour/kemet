@@ -11,11 +11,11 @@ Tagesausflug
 
 Ein ganzer Tag in der grünen Oase südwestlich von Kairo — Seen, Wüstenwasserfälle, fossile Wale und ein Töpferdorf.
 
-ab 139 € / Person
+ab 153 € / Person
 
 ab 6 Reisenden · Eintritte nicht enthalten
 
-153 € pro Person bei zwei Reisenden
+168 € pro Person bei zwei Reisenden
 
 Pro Person, Normalsaison. Zuschläge für Feiertage weisen wir im Angebot getrennt aus.
 
@@ -33,7 +33,7 @@ Der Qarun-See, die Wasserfälle und Dünen des Wadi El Rayan, die fossilen Wale 
 
 ## Die Reise
 
-Anderthalb Stunden südwestlich von Kairo tauscht die Senke von Fayyum Monumente gegen Landschaft: ein großer Salzsee, Süßwasserfälle in der Wüste, ein UNESCO-Tal voller versteinerter Wale und ein Töpferdorf am Hang. Dieser ganze Tag ist ein vollständiger Tonartwechsel gegenüber den Tempeln — weite Horizonte, Vogelwelt, Dünen und ein Fischessen am See. Gereist wird privat, mit Ihrem Guide und Fahrer für den ganzen Tag.
+Anderthalb Stunden südwestlich von Kairo tauscht die Senke von Fayyum Monumente gegen Landschaft: ein großer Salzsee, Süßwasserfälle in der Wüste, ein UNESCO-Tal voller versteinerter Wale und ein Töpferdorf am Hang. Dieser ganze Tag ist ein vollständiger Tonartwechsel gegenüber den Tempeln — weite Horizonte, Vogelwelt, Dünen und ein Fischessen am See, vor Ort bezahlt. Gereist wird privat, mit Ihrem Guide und Fahrer für den ganzen Tag.
 
 ## Tag für Tag
 
@@ -65,7 +65,7 @@ Der sogenannte Magic Lake, von Mineralquellen gespeist und mit dem Licht die Far
 
 ### Station 5 — Das Töpferdorf Tunis & Mittagessen am See
 
-Zum Abschluss Tunis, das Hangdorf, das für seine Töpfer und Werkstätten bekannt ist, danach ein entspanntes Fischessen am See vor der Rückfahrt nach Kairo.
+Zum Abschluss Tunis, das Hangdorf, das für seine Töpfer und Werkstätten bekannt ist, danach ein entspanntes, vor Ort bezahltes Fischessen am See vor der Rückfahrt nach Kairo.
 
 ## Inbegriffen
 

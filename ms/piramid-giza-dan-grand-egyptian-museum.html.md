@@ -11,11 +11,11 @@ Lawatan sehari
 
 Piramid dan Sphinx pada waktu pagi, Grand Egyptian Museum pada waktu petang — keajaiban lama dan yang baharu, dalam satu hari.
 
-dari €79 / seorang
+dari €87 / seorang
 
 dari 6 orang · tiket masuk tidak termasuk
 
-€87 seorang bagi dua pengembara
+€96 seorang bagi dua pengembara
 
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 

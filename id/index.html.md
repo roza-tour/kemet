@@ -7,7 +7,7 @@ description: "Tour Mesir privat yang dirancang khusus: pemandu Egyptologist berl
 
 # Mesir, hanya untuk rombongan Anda
 
-Tanpa bus wisata, tanpa tanggal keberangkatan tetap, tanpa orang asing dalam perjalanan Anda.
+Tanpa bus wisata, tanpa tanggal keberangkatan tetap, tanpa orang asing di kendaraan Anda atau bersama pemandu Anda.
 
 Format **Privat sepenuhnya**
 

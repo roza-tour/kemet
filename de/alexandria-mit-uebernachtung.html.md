@@ -11,11 +11,11 @@ Kurzreise
 
 Zwei Mittelmeertage — die Katakomben, die Zitadelle auf dem Platz des Pharos, die wiedergeborene Bibliothek, und ein Abend, den die Tagesgäste nie erleben.
 
-ab 402 € / Person
+ab 442 € / Person
 
 ab 6 Reisenden
 
-442 € pro Person bei zwei Reisenden
+486 € pro Person bei zwei Reisenden
 
 Pro Person, Normalsaison. Zuschläge für Feiertage weisen wir im Angebot getrennt aus.
 

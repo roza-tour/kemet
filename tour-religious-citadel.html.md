@@ -2,7 +2,7 @@
 title: "Islamic & Coptic Cairo Private Day Tour | Kemet"
 url: https://kemet-travel.com/tour-religious-citadel.html
 language: en
-description: "The Hanging Church, Ben Ezra Synagogue and Abu Serga in Old Cairo, then Saladin's Citadel and the alabaster Mosque of Muhammad Ali — private, from €80 pp."
+description: "The Hanging Church, Ben Ezra Synagogue and Abu Serga in Old Cairo, then Saladin's Citadel and the alabaster Mosque of Muhammad Ali — private, from €88 pp."
 ---
 
 Day Tour · Full day (≈8 hours)
@@ -13,7 +13,7 @@ The faiths of Cairo in one day — Coptic churches, an ancient synagogue, and th
 
 ## What does Religious Cairo & the Citadel include, and what does it cost?
 
-Religious Cairo & the Citadel is a private full-day tour of Cairo, from €80 per person for a party of 6 or more, or €88 per person for two. It includes a private Egyptologist guide throughout, private air-conditioned transfers, hotel pickup & drop-off and bottled water every day. Entrance tickets are paid at the gate.
+Religious Cairo & the Citadel is a private full-day tour of Cairo, from €88 per person for a party of 6 or more, or €97 per person for two. It includes a private Egyptologist guide throughout, private air-conditioned transfers, hotel pickup & drop-off and bottled water every day. Entrance tickets are paid at the gate.
 
 ## Overview
 
@@ -82,15 +82,15 @@ Every Kemet journey is private, led by a licensed Egyptologist and priced in wri
 
 From
 
-€80
+€88
 
 per person · EUR
 
 Based on a private party of 6 or more · entrance tickets not included.
 
-For two travellers: €88 per person.
+For two travellers: €97 per person.
 
-[Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Religious+Cairo+%26+the+Citadel&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Religious+Cairo+%26+the+Citadel%22+journey+%28Full+day+%28%E2%89%888+hours%29%2C+from+%E2%82%AC80+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
+[Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Religious+Cairo+%26+the+Citadel&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Religious+Cairo+%26+the+Citadel%22+journey+%28Full+day+%28%E2%89%888+hours%29%2C+from+%E2%82%AC88+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 
 [Ask on WhatsApp](https://wa.me/201158367162?text=Hello%20Kemet%20%E2%80%94%20I%27m%20interested%20in%20the%20%22Religious%20Cairo%20%26%20the%20Citadel%22%20journey%20(Full%20day%20(%E2%89%888%20hours)).%20Could%20you%20share%20availability%3F)
 
@@ -120,7 +120,7 @@ Cairo
 
 The treasures of the Egyptian Museum in Tahrir, then the National Museum of Egyptian Civilization and its Royal Mummies Hall.
 
-€64 / person from 6 travellers · tickets not included
+€70 / person from 6 travellers · tickets not included
 
 3 Days
 
@@ -130,7 +130,7 @@ Cairo · Giza
 
 The essential Cairo, concierge-run: fast-track immigration, private plateau morning, the Grand Egyptian Museum, and lantern-lit Islamic Cairo by night.
 
-€600 / person from 6 travellers
+€660 / person from 6 travellers
 
 5 Days
 
@@ -140,7 +140,7 @@ Cairo · Giza · Saqqara · Memphis
 
 A deep, slow reading of the world's greatest layered city — its two museums, three faiths, medieval streets and the necropolis where the pyramid was invented.
 
-€875 / person from 6 travellers
+€963 / person from 6 travellers
 
 ---
 

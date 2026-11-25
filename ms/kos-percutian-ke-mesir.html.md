@@ -17,7 +17,7 @@ Peringkat atas **450 € ke atas**
 
 Deposit **25 %**
 
-Percutian persendirian di Mesir lazimnya berada dalam julat 200–450 euro seorang sehari, tidak termasuk tiket penerbangan antarabangsa. Jurang antara kedua-dua angka itu bukan kebetulan: ia terhasil daripada lima keputusan yang anda buat semasa merancang. Eloklah mengenali kelima-limanya sebelum membandingkan dua sebut harga.
+Percutian persendirian di Mesir lazimnya berada dalam julat 200–450 euro seorang sehari, tidak termasuk tiket penerbangan antarabangsa. Perjalanan berbilang hari Kemet sendiri berjumlah 170–226 euro seorang sehari bagi rombongan enam orang atau lebih, dan 187–249 euro bagi dua pengembara: sekitar had bawah julat ini, dan bagi rombongan yang lebih besar sedikit di bawahnya. Jurang antara kedua-dua angka itu bukan kebetulan: ia terhasil daripada lima keputusan yang anda buat semasa merancang. Eloklah mengenali kelima-limanya sebelum membandingkan dua sebut harga.
 
 01
 

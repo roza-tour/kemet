@@ -11,11 +11,11 @@ Laut Merah
 
 Empat hari yang disusun di sekitar masa di dalam air — dinding Ras Mohammed, terumbu berarus hanyut di Selat Tiran dan bot berkumpulan kecil yang bertolak awal.
 
-dari €792 / seorang
+dari €871 / seorang
 
 dari 6 orang
 
-€871 seorang bagi dua pengembara
+€958 seorang bagi dua pengembara
 
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 
@@ -83,7 +83,7 @@ Laut Merah utara ialah antara kawasan selam penanda aras dunia: jarak penglihata
 - Visa masuk Mesir
 - Tip
 - Perbelanjaan peribadi
-- Makanan
+- Makanan, kecuali makan tengah hari di atas bot pada hari-hari di bot
 - Tambahan pilihan yang anda pilih sendiri — aktiviti, minuman
 
 ## Rentak perjalanan

@@ -11,11 +11,11 @@ Escursione in giornata
 
 Una serata a piedi tra i sapori del Cairo — koshari, classici di strada, piccione alla griglia e dolci al miele.
 
-da 59 € / persona
+da 65 € / persona
 
 da 6 viaggiatori
 
-65 € a persona per due viaggiatori
+72 € a persona per due viaggiatori
 
 A persona, in stagione normale. I supplementi delle festività sono indicati separatamente nel preventivo. Cibo e bevande non sono inclusi: si pagano direttamente a ogni tappa.
 

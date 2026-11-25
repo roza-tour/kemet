@@ -11,11 +11,11 @@ Mer Rouge
 
 Quatre jours construits autour du temps de fond — les murs de Ras Mohammed, les récifs en dérive du détroit de Tiran et des bateaux en petit comité qui partent tôt.
 
-à partir de 792 € / personne
+à partir de 871 € / personne
 
 à partir de 6 voyageurs
 
-871 € par personne pour deux voyageurs
+958 € par personne pour deux voyageurs
 
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
 
@@ -83,7 +83,7 @@ Le nord de la mer Rouge est l'une des régions de plongée de référence au mon
 - Le visa d'entrée en Égypte
 - Les pourboires
 - Les dépenses personnelles
-- Les repas
+- Les repas, sauf le déjeuner à bord les jours en bateau
 - Les options que vous ajoutez — activités, boissons
 
 ## Le rythme

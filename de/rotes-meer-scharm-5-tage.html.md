@@ -11,11 +11,11 @@ Rotes Meer
 
 Fünf Tage dort, wo die Berge des Sinai auf das klarste Wasser der Nordhalbkugel treffen — Riffe, Wüstenabende und bewusstes Nichtstun.
 
-ab 979 € / Person
+ab 1.077 € / Person
 
 ab 6 Reisenden
 
-1.077 € pro Person bei zwei Reisenden
+1.185 € pro Person bei zwei Reisenden
 
 Pro Person, Normalsaison. Zuschläge für Feiertage weisen wir im Angebot getrennt aus.
 
@@ -89,7 +89,7 @@ Scharm el-Scheich liegt an der Spitze der Sinai-Halbinsel, wo Wüstenberge in Wa
 - Einreisevisum für Ägypten
 - Trinkgelder
 - Persönliche Ausgaben
-- Mahlzeiten
+- Mahlzeiten, außer dem Mittagessen am Bootstag
 - Optionale Zusatzleistungen nach Wahl — Aktivitäten, Getränke
 
 ## Wie anstrengend ist das

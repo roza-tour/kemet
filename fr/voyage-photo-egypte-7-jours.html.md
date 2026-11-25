@@ -11,11 +11,11 @@ Voyage photo
 
 Sept jours réglés sur la lumière et non sur les horaires d'ouverture — plateaux à l'aube, temples à l'heure bleue et le Nil à l'heure dorée.
 
-à partir de 1 419 € / personne
+à partir de 1 561 € / personne
 
 à partir de 6 voyageurs
 
-1 561 € par personne pour deux voyageurs
+1 717 € par personne pour deux voyageurs
 
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
 

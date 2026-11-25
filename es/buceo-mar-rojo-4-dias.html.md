@@ -11,11 +11,11 @@ Mar Rojo
 
 Cuatro días pensados para el tiempo bajo el agua: las paredes de Ras Mohammed, los arrecifes de deriva del estrecho de Tirán y barcos para grupos pequeños que salen temprano.
 
-desde 792 € / persona
+desde 871 € / persona
 
 desde 6 viajeros
 
-871 € por persona para dos viajeros
+958 € por persona para dos viajeros
 
 Por persona, en temporada normal. Los suplementos de fechas festivas se indican por separado en el presupuesto.
 
@@ -83,7 +83,7 @@ El norte del mar Rojo es una de las regiones de referencia del buceo mundial: m�
 - Visa de entrada a Egipto
 - Propinas
 - Gastos personales
-- Comidas
+- Comidas, salvo el almuerzo a bordo en los días de barco
 - Extras opcionales que decida añadir — actividades, bebidas
 
 ## El ritmo

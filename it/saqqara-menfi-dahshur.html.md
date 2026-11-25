@@ -11,11 +11,11 @@ Escursione in giornata
 
 Il luogo di nascita della piramide — dalla prima piramide a gradoni di Djoser alle grandi tombe geometriche di Dahshur.
 
-da 68 € / persona
+da 75 € / persona
 
 da 6 viaggiatori · biglietti non inclusi
 
-75 € a persona per due viaggiatori
+83 € a persona per due viaggiatori
 
 A persona, in stagione normale. I supplementi delle festività sono indicati separatamente nel preventivo.
 

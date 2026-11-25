@@ -11,11 +11,11 @@ Viagem fotográfica
 
 Sete dias programados pela luz, não pelo horário de abertura — planaltos ao amanhecer, templos na hora azul e o Nilo na hora dourada.
 
-a partir de € 1.419 / pessoa
+a partir de € 1.561 / pessoa
 
 a partir de 6 viajantes
 
-€ 1.561 por pessoa, para dois viajantes
+€ 1.717 por pessoa, para dois viajantes
 
 Por pessoa, em temporada normal. Acréscimos de feriados aparecem separados no orçamento.
 

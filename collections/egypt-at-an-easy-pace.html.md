@@ -19,7 +19,7 @@ Most Egypt itineraries are built to fit the most into the fewest days, and they 
 
 - One bed for the whole stay: Nile in Style: Aswan to Luxor, Cairo of the Eight Worlds, Luxor Immersion and Cairo VIP Short Stay
 - The Nile cruise is the most restful way between Aswan and Luxor — unpack once, and the temples come to you
-- Fly instead of the sleeper train: under an hour to Luxor against around ten on the rails, and €130 per person more on the journeys that use the train
+- Fly instead of the sleeper train: under an hour to Luxor against around ten on the rails, and €143 per person more on the journeys that use the train
 - No pre-dawn starts built into the journeys chosen here; sunrise sessions and balloons are offered, never required
 - Where rest is the whole point: Red Sea Retreat: Sharm El Sheikh and Dive the Red Sea — one resort, light walking
 
@@ -80,7 +80,7 @@ Aswan · Kom Ombo · Edfu · Luxor
 
 The essential Nile cruise, done properly — Philae and the High Dam, three nights afloat past Kom Ombo and Edfu, and Luxor's East and West Banks with your own Egyptologist.
 
-€820 / person from 6 travellers
+€902 / person from 6 travellers
 
 5 Days
 
@@ -90,7 +90,7 @@ Cairo · Giza · Saqqara · Memphis
 
 A deep, slow reading of the world's greatest layered city — its two museums, three faiths, medieval streets and the necropolis where the pyramid was invented.
 
-€875 / person from 6 travellers
+€963 / person from 6 travellers
 
 3 Days
 
@@ -100,7 +100,7 @@ Luxor
 
 Luxor without the sprint: Karnak at opening, the Valley of the Kings before the heat, Hatshepsut's terraces and the Avenue of Sphinxes after dark.
 
-€544 / person from 6 travellers
+€598 / person from 6 travellers
 
 3 Days
 
@@ -110,7 +110,7 @@ Cairo · Giza
 
 The essential Cairo, concierge-run: fast-track immigration, private plateau morning, the Grand Egyptian Museum, and lantern-lit Islamic Cairo by night.
 
-€600 / person from 6 travellers
+€660 / person from 6 travellers
 
 5 Days
 
@@ -120,7 +120,7 @@ Luxor · Edfu · Kom Ombo · Aswan
 
 The deep-history heart of Egypt by private road journey — Karnak, the Valley of the Kings, Edfu, Kom Ombo and Philae, with time to actually absorb them.
 
-€1,018 / person from 6 travellers
+€1,120 / person from 6 travellers
 
 5 Days
 
@@ -130,7 +130,7 @@ Sharm El Sheikh · Ras Mohammed
 
 The Red Sea done with intent — a private reef-boat day in Ras Mohammed, a Sinai desert evening under the stars, and space left deliberately empty.
 
-€979 / person from 6 travellers
+€1,077 / person from 6 travellers
 
 Destinations
 

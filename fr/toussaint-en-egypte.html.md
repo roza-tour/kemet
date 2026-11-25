@@ -29,7 +29,7 @@ Fin octobre, la Haute-Égypte est encore chaude: 35–37°C à Louxor, 36–38°
 
 ## Ce que deux semaines permettent réellement
 
-Dix jours sur place couvrent Le Caire, Louxor, la croisière sur le Nil et Assouan sans courir — c'est la forme de notre circuit de 10 jours, à partir de 1 915 € par personne, pour un groupe de 6 voyageurs ou plus. Avec quatorze jours on ajoute Abou Simbel sans réveil à quatre heures, ou quelques jours en mer Rouge à la fin. Une semaine seule suffit pour Le Caire et Louxor, et c'est déjà un vrai voyage.
+Dix jours sur place couvrent Le Caire, Louxor, la croisière sur le Nil et Assouan sans courir — c'est la forme de notre circuit de 10 jours, à partir de 2 107 € par personne, pour un groupe de 6 voyageurs ou plus. Avec quatorze jours on ajoute Abou Simbel sans réveil à quatre heures, ou quelques jours en mer Rouge à la fin. Une semaine seule suffit pour Le Caire et Louxor, et c'est déjà un vrai voyage.
 
 03
 

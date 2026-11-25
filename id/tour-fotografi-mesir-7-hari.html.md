@@ -11,11 +11,11 @@ Perjalanan fotografi
 
 Tujuh hari yang dijadwalkan menurut cahaya, bukan jam buka — plateau saat fajar, kuil saat blue hour, dan Sungai Nil pada jam keemasan.
 
-mulai €1.419 / orang
+mulai €1.561 / orang
 
 mulai 6 orang
 
-€1.561 per orang untuk dua wisatawan
+€1.717 per orang untuk dua wisatawan
 
 Per orang, musim normal. Biaya tambahan hari libur kami cantumkan terpisah dalam penawaran.
 

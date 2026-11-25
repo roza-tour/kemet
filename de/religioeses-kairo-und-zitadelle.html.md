@@ -11,11 +11,11 @@ Tagesausflug
 
 Die Glaubensrichtungen Kairos an einem Tag — koptische Kirchen, eine alte Synagoge und die große, von einer Moschee gekrönte Zitadelle.
 
-ab 80 € / Person
+ab 88 € / Person
 
 ab 6 Reisenden · Eintritte nicht enthalten
 
-88 € pro Person bei zwei Reisenden
+97 € pro Person bei zwei Reisenden
 
 Pro Person, Normalsaison. Zuschläge für Feiertage weisen wir im Angebot getrennt aus.
 

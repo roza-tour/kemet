@@ -22,7 +22,7 @@ Normal hours
 From Europe
 3–5 hours, +1h
 Private journeys from
-€544
+€598
 
 1. 24 – 25 December
   
@@ -67,7 +67,7 @@ Cairo · Giza · Alexandria · Aswan · Luxor
 
 Our signature journey: Cairo, Alexandria, a sleeper train south, and a three-night Nile cruise from Aswan to Luxor — every layer of Egypt in one arc.
 
-€1,915 / person from 6 travellers
+€2,107 / person from 6 travellers
 
 4 Days
 
@@ -77,7 +77,7 @@ Aswan · Kom Ombo · Edfu · Luxor
 
 The essential Nile cruise, done properly — Philae and the High Dam, three nights afloat past Kom Ombo and Edfu, and Luxor's East and West Banks with your own Egyptologist.
 
-€820 / person from 6 travellers
+€902 / person from 6 travellers
 
 7 Days
 
@@ -87,7 +87,7 @@ Cairo · Giza · Alexandria · Luxor
 
 The headline acts of Egypt in seven days — the Egyptian Museum, Alexandria, the temples and tombs of Luxor, and the Pyramids of Giza.
 
-€1,179 / person from 6 travellers
+€1,297 / person from 6 travellers
 
 14 Days
 
@@ -97,7 +97,7 @@ Cairo · Giza · Alexandria · Aswan · Abu Simbel · Luxor · Sharm El Sheikh
 
 Our most complete journey: Cairo and Alexandria, a Nile cruise, Ramesses II's mountain temple at Abu Simbel, and three Red Sea nights to absorb it all.
 
-€2,728 / person from 6 travellers
+€3,001 / person from 6 travellers
 
 3 Days
 
@@ -107,7 +107,7 @@ Cairo · Giza
 
 The essential Cairo, concierge-run: fast-track immigration, private plateau morning, the Grand Egyptian Museum, and lantern-lit Islamic Cairo by night.
 
-€600 / person from 6 travellers
+€660 / person from 6 travellers
 
 3 Days
 
@@ -117,7 +117,7 @@ Luxor
 
 Luxor without the sprint: Karnak at opening, the Valley of the Kings before the heat, Hatshepsut's terraces and the Avenue of Sphinxes after dark.
 
-€544 / person from 6 travellers
+€598 / person from 6 travellers
 
 ## Tell us your dates for 2026–27
 
@@ -125,7 +125,7 @@ A reply within two hours, an itemised quote, no obligation — and if the honest
 
 What happens next
 
-- Send us your dates, interests and party size. We reply within two hours with an initial assessment and any questions. There is no charge and no commitment at this stage.
+- Send us your dates, interests and party size. We reply within two hours with a day-by-day itinerary and a clear price. There is no charge and no commitment at this stage.
 - 25% of the total trip cost confirms the booking, and it is applied to your final balance, not an additional charge. Balance due 30 days before departure.
 - Bank transfer, major credit & debit cards or PayPal. Priced per person in euros, itemised, with what is and is not included stated.
 - Your party only, with a private Egyptologist and a private vehicle throughout — no seat-in-coach, no joining a group at the gate.

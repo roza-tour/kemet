@@ -23,7 +23,7 @@ Kuil-kuil antara Luxor dan Aswan dibangun menghadap sungai. Kita mendatanginya d
 
 Inilah pesiar sebagaimana kami menjalankannya: tiga malam di sungai dari Aswan ke Luxor, setiap kunjungan di darat bersifat privat bersama Egyptologist Anda sendiri. Kapalnya dipakai bersama; pemandu, kendaraan, dan kunjungan Anda tidak.
 
-mulai €820 / orang (mulai 6 orang). €902 per orang untuk dua wisatawan. Per orang, musim normal. Biaya tambahan hari libur kami cantumkan terpisah dalam penawaran.
+mulai €902 / orang (mulai 6 orang). €992 per orang untuk dua wisatawan. Per orang, musim normal. Biaya tambahan hari libur kami cantumkan terpisah dalam penawaran.
 
 01
 
@@ -124,7 +124,7 @@ Tidak. Sungai Nil tidak berombak dan tidak menimbulkan mabuk laut — airnya ten
 
 ### Naik pesawat atau kereta tidur ke Luxor dan Aswan?
 
-Jika kenyamanan lebih penting daripada harga, lebih baik terbang: Kairo–Luxor kurang dari satu jam, Kairo–Aswan sekitar satu jam seperempat. Kereta memakan waktu sekitar sepuluh jam ke Luxor dan tiga belas jam ke Aswan, sehingga biasanya ditempuh malam hari — di kabin dua tempat tidur dengan wastafel, termasuk makan malam dan sarapan, tetapi toiletnya dipakai bersama; ke arah selatan kereta tiba di Luxor sekitar pukul setengah enam pagi. Perjalanan kami yang memakai kereta tidur juga tersedia dengan penerbangan domestik dan menginap di hotel, dengan tambahan 130 € per orang.
+Jika kenyamanan lebih penting daripada harga, lebih baik terbang: Kairo–Luxor kurang dari satu jam, Kairo–Aswan sekitar satu jam seperempat. Kereta memakan waktu sekitar sepuluh jam ke Luxor dan tiga belas jam ke Aswan, sehingga biasanya ditempuh malam hari — di kabin dua tempat tidur dengan wastafel, termasuk makan malam dan sarapan, tetapi toiletnya dipakai bersama; ke arah selatan kereta tiba di Luxor sekitar pukul setengah enam pagi. Perjalanan kami yang memakai kereta tidur juga tersedia dengan penerbangan domestik dan menginap di hotel, dengan tambahan 143 € per orang.
 
 ## Rincian rute
 

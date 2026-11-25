@@ -11,13 +11,13 @@ Signature-Reise
 
 Zehn ruhige Tage von den Pyramiden von Gizeh bis zu den Tempeln Oberägyptens, zusammengehalten von drei Nächten auf dem Nil.
 
-ab 1.915 € / Person
+ab 2.107 € / Person
 
 ab 6 Reisenden
 
-2.107 € pro Person bei zwei Reisenden
+2.318 € pro Person bei zwei Reisenden
 
-Mit Inlandsflügen statt der zwei Nächte im Schlafwagen, diese Nächte im Hotel: 2.045 € pro Person
+Mit Inlandsflügen statt der zwei Nächte im Schlafwagen, diese Nächte im Hotel: 2.250 € pro Person
 
 Pro Person, Normalsaison. Zuschläge für Feiertage weisen wir im Angebot getrennt aus.
 
@@ -54,7 +54,7 @@ Das ist Ägypten in ganzer Breite, und im Tempo so angelegt, dass man es erlebt 
 - Fahrt über die Wüstenstraße nach Alexandria
 - Katakomben von Kom esch-Schukafa und die Pompeiussäule
 - Zitadelle von Qaitbay auf dem Platz des alten Pharos und die moderne Bibliotheca Alexandrina
-- Fischessen an der Corniche, dann zurück nach Kairo
+- Fischessen an der Corniche, vor Ort bezahlt, dann zurück nach Kairo
 
 03
 
@@ -123,9 +123,9 @@ Das ist Ägypten in ganzer Breite, und im Tempo so angelegt, dass man es erlebt 
 ## Inbegriffen
 
 - Durchgehend ein privater Ägyptologe als Reiseleitung
-- 9 Übernachtungen — Hotels und eine Nilkreuzfahrt
+- 7 Übernachtungen — Hotels und eine Nilkreuzfahrt; die übrigen zwei Nächte verbringen Sie im Schlafwagen
 - Dreitägige Nilkreuzfahrt mit Vollpension, Assuan bis Luxor
-- Schlafwagenplätze Kairo–Oberägypten (in beiden Richtungen)
+- Schlafwagenplätze Kairo–Oberägypten (in beiden Richtungen), mit Abendessen und Frühstück an Bord
 - Alle Eintrittsgelder für Stätten und Monumente
 - Private, klimatisierte Transfers
 - Abholung und Rückbringung am Hotel
@@ -137,7 +137,7 @@ Das ist Ägypten in ganzer Breite, und im Tempo so angelegt, dass man es erlebt 
 - Einreisevisum für Ägypten
 - Trinkgelder
 - Persönliche Ausgaben
-- Mahlzeiten, außer an Bord der Nilkreuzfahrt
+- Mahlzeiten, außer an Bord der Nilkreuzfahrt und im Schlafwagen
 - Optionale Zusatzleistungen nach Wahl — Aktivitäten, Getränke
 
 ## Wie anstrengend ist das

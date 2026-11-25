@@ -2,7 +2,7 @@
 title: "5-Day Sharm El Sheikh Red Sea Private Holiday | Kemet"
 url: https://kemet-travel.com/tour-sharm-5day.html
 language: en
-description: "The Red Sea done with intent — a private reef-boat day in Ras Mohammed, a Sinai desert evening under the stars — private, from €979 pp."
+description: "The Red Sea done with intent — a private reef-boat day in Ras Mohammed, a Sinai desert evening under the stars — private, from €1,077 pp."
 ---
 
 Red Sea · 5 Days / 4 Nights
@@ -13,7 +13,7 @@ Five days where Sinai's mountains meet the clearest water in the northern hemisp
 
 ## What does Red Sea Retreat: Sharm El Sheikh include, and what does it cost?
 
-Red Sea Retreat: Sharm El Sheikh is a private 5-day, 4-night journey through Sharm El Sheikh and Ras Mohammed, from €979 per person for a party of 6 or more, or €1,077 per person for two. It includes 4 nights in a Red Sea resort. International flights are not included.
+Red Sea Retreat: Sharm El Sheikh is a private 5-day, 4-night journey through Sharm El Sheikh and Ras Mohammed, from €1,077 per person for a party of 6 or more, or €1,185 per person for two. It includes 4 nights in a Red Sea resort. International flights are not included.
 
 ## Overview
 
@@ -75,7 +75,7 @@ Day **05**
 - Egypt entry visa
 - Tipping (gratuities)
 - Personal expenses
-- Meals
+- Meals, except lunch on the boat day
 - Optional extras you choose to add — activities, drinks
 
 ## Comfort & pace
@@ -106,15 +106,15 @@ Every Kemet journey is private, led by a licensed Egyptologist and priced in wri
 
 From
 
-€979
+€1,077
 
 per person · EUR
 
 Based on a private party of 6 or more.
 
-For two travellers: €1,077 per person.
+For two travellers: €1,185 per person.
 
-[Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Red+Sea+Retreat%3A+Sharm+El+Sheikh&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Red+Sea+Retreat%3A+Sharm+El+Sheikh%22+journey+%285+Days+%2F+4+Nights%2C+from+%E2%82%AC979+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
+[Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Red+Sea+Retreat%3A+Sharm+El+Sheikh&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Red+Sea+Retreat%3A+Sharm+El+Sheikh%22+journey+%285+Days+%2F+4+Nights%2C+from+%E2%82%AC1%2C077+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 
 [Ask on WhatsApp](https://wa.me/201158367162?text=Hello%20Kemet%20%E2%80%94%20I%27m%20interested%20in%20the%20%22Red%20Sea%20Retreat%3A%20Sharm%20El%20Sheikh%22%20journey%20(5%20Days%20%2F%204%20Nights).%20Could%20you%20share%20availability%3F)
 
@@ -144,7 +144,7 @@ Cairo · Giza · Alexandria · Aswan · Abu Simbel · Luxor · Sharm El Sheikh
 
 Our most complete journey: Cairo and Alexandria, a Nile cruise, Ramesses II's mountain temple at Abu Simbel, and three Red Sea nights to absorb it all.
 
-€2,728 / person from 6 travellers
+€3,001 / person from 6 travellers
 
 4 Days
 
@@ -154,7 +154,7 @@ Sharm El Sheikh · Ras Mohammed · Tiran
 
 Four guided boat dives across the two best site groups in Sinai — Ras Mohammed and Tiran — with a PADI centre we have vetted, after a house-reef check dive.
 
-€792 / person from 6 travellers
+€871 / person from 6 travellers
 
 4 Days
 
@@ -164,7 +164,7 @@ Aswan · Kom Ombo · Edfu · Luxor
 
 The essential Nile cruise, done properly — Philae and the High Dam, three nights afloat past Kom Ombo and Edfu, and Luxor's East and West Banks with your own Egyptologist.
 
-€820 / person from 6 travellers
+€902 / person from 6 travellers
 
 ---
 

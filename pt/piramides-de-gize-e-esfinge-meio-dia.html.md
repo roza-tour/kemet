@@ -11,11 +11,11 @@ Passeio de um dia
 
 Meio dia concentrado entre as três grandes pirâmides e a Esfinge, com o clássico mirante panorâmico.
 
-a partir de € 66 / pessoa
+a partir de € 73 / pessoa
 
 a partir de 6 viajantes · ingressos não incluídos
 
-€ 73 por pessoa, para dois viajantes
+€ 80 por pessoa, para dois viajantes
 
 Por pessoa, em temporada normal. Acréscimos de feriados aparecem separados no orçamento.
 

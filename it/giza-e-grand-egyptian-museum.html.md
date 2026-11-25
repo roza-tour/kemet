@@ -11,11 +11,11 @@ Escursione in giornata
 
 Le piramidi e la Sfinge al mattino, il Grand Egyptian Museum nel pomeriggio — la meraviglia antica e quella nuova, nello stesso giorno.
 
-da 79 € / persona
+da 87 € / persona
 
 da 6 viaggiatori · biglietti non inclusi
 
-87 € a persona per due viaggiatori
+96 € a persona per due viaggiatori
 
 A persona, in stagione normale. I supplementi delle festività sono indicati separatamente nel preventivo.
 

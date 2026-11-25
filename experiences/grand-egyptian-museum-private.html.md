@@ -109,7 +109,7 @@ Cairo · Giza · Alexandria · Aswan · Luxor
 
 Our signature journey: Cairo, Alexandria, a sleeper train south, and a three-night Nile cruise from Aswan to Luxor — every layer of Egypt in one arc.
 
-€1,915 / person from 6 travellers
+€2,107 / person from 6 travellers
 
 7 Days
 
@@ -119,7 +119,7 @@ Cairo · Giza · Alexandria · Luxor
 
 The headline acts of Egypt in seven days — the Egyptian Museum, Alexandria, the temples and tombs of Luxor, and the Pyramids of Giza.
 
-€1,179 / person from 6 travellers
+€1,297 / person from 6 travellers
 
 4 Days
 
@@ -129,7 +129,7 @@ Cairo · Giza · Alexandria
 
 A compact northern journey — the Egyptian Museum, Alexandria's Greco-Roman layers, the Pyramids of Giza and medieval Cairo.
 
-€618 / person from 6 travellers
+€680 / person from 6 travellers
 
 Full Day
 
@@ -139,7 +139,7 @@ Giza
 
 The Great Pyramid, the panorama of all three pyramids, the Valley Temple and Sphinx, then the vast new Grand Egyptian Museum beside them.
 
-€79 / person from 6 travellers · tickets not included
+€87 / person from 6 travellers · tickets not included
 
 Half Day
 
@@ -149,7 +149,7 @@ Giza
 
 The Great Pyramid, the pyramids of Khafre and Menkaure, the panoramic viewpoint and the Valley Temple with the Great Sphinx — Giza in a morning.
 
-€66 / person from 6 travellers · tickets not included
+€73 / person from 6 travellers · tickets not included
 
 9 Days
 
@@ -159,7 +159,7 @@ Cairo · Giza · Aswan · Luxor
 
 Egypt as a honeymoon should be — private sunrise at the pyramids, a felucca at golden hour, three nights on the Nile and suites chosen for the view.
 
-€2,045 / person from 2 travellers
+€2,250 / person from 2 travellers
 
 8 Days
 
@@ -169,7 +169,7 @@ Cairo · Giza · Luxor · Aswan
 
 Egypt with children done right: short guided mornings, family-specialist Egyptologists, pool afternoons, and the moments no classroom can match.
 
-€1,524 / person from 6 travellers
+€1,676 / person from 6 travellers
 
 7 Days
 
@@ -179,7 +179,7 @@ Cairo · Giza · Luxor · Aswan
 
 An itinerary built backwards from the light: early-access Giza at sunrise, Karnak before the crowds, an optional balloon over Thebes and feluccas at golden hour.
 
-€1,419 / person from 6 travellers
+€1,561 / person from 6 travellers
 
 14 Days
 
@@ -189,7 +189,7 @@ Cairo · Giza · Alexandria · Aswan · Abu Simbel · Luxor · Sharm El Sheikh
 
 Our most complete journey: Cairo and Alexandria, a Nile cruise, Ramesses II's mountain temple at Abu Simbel, and three Red Sea nights to absorb it all.
 
-€2,728 / person from 6 travellers
+€3,001 / person from 6 travellers
 
 5 Days
 
@@ -199,7 +199,7 @@ Cairo · Giza · Saqqara · Memphis
 
 A deep, slow reading of the world's greatest layered city — its two museums, three faiths, medieval streets and the necropolis where the pyramid was invented.
 
-€875 / person from 6 travellers
+€963 / person from 6 travellers
 
 3 Days
 
@@ -209,7 +209,7 @@ Cairo · Giza
 
 The essential Cairo, concierge-run: fast-track immigration, private plateau morning, the Grand Egyptian Museum, and lantern-lit Islamic Cairo by night.
 
-€600 / person from 6 travellers
+€660 / person from 6 travellers
 
 Similar experiences
 

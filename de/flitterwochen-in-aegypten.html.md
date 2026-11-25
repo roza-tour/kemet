@@ -15,7 +15,7 @@ Ideale Dauer **9 bis 12 Nächte**
 
 Sonnenaufgang **an den neun Pyramiden**
 
-9-Tage-Reise ab **2.045 € p. P.**
+9-Tage-Reise ab **2.250 € p. P.**
 
 Eine Hochzeitsreise hier ist kein Strandhotel mit angeschraubtem Tempel. Es ist eine Dahabiya unter Segeln, der Sonnenaufgang an den Pyramiden, bevor die Tore öffnen, und am Ende das Rote Meer — so geplant, dass Sie beide nie Teil einer Gruppe sind. Die Lotusblüte, paarweise verschlungen, war im alten Ägypten das Zeichen der Verbindung. Es passt.
 

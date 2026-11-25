@@ -7,7 +7,7 @@ description: "Maßgeschneiderte private Ägypten-Reisen: eigener lizenzierter Ä
 
 # Ägypten, privat bereist
 
-Kein Reisebus, keine festen Abfahrtstermine, keine Fremden auf Ihrer Reiseroute.
+Kein Reisebus, keine festen Abfahrtstermine, keine Fremden in Ihrem Fahrzeug oder bei Ihrem Guide.
 
 Reiseform **Ausschließlich privat**
 

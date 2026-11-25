@@ -11,11 +11,11 @@ Percutian singkat
 
 Tiga hari di muzium terbuka terhebat di dunia — kedua-dua tebing dijelajah dengan sewajarnya, dengan kuil yang bercahaya pada waktu malam sebagai titik tumpunya.
 
-dari €544 / seorang
+dari €598 / seorang
 
 dari 6 orang
 
-€598 seorang bagi dua pengembara
+€658 seorang bagi dua pengembara
 
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 

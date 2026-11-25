@@ -11,11 +11,11 @@ Excursión de un día
 
 La cuna de la pirámide: de la primera pirámide escalonada, la de Zoser, a las grandes tumbas geométricas de Dahshur.
 
-desde 68 € / persona
+desde 75 € / persona
 
 desde 6 viajeros · entradas no incluidas
 
-75 € por persona para dos viajeros
+83 € por persona para dos viajeros
 
 Por persona, en temporada normal. Los suplementos de fechas festivas se indican por separado en el presupuesto.
 

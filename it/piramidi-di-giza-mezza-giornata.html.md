@@ -11,11 +11,11 @@ Escursione in giornata
 
 Mezza giornata concentrata tra le tre grandi piramidi e la Sfinge, con il punto panoramico classico.
 
-da 66 € / persona
+da 73 € / persona
 
 da 6 viaggiatori · biglietti non inclusi
 
-73 € a persona per due viaggiatori
+80 € a persona per due viaggiatori
 
 A persona, in stagione normale. I supplementi delle festività sono indicati separatamente nel preventivo.
 

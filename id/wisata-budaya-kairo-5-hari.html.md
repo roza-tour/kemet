@@ -11,11 +11,11 @@ Perjalanan budaya
 
 Lima hari menyelami lapisan-lapisan satu kota — Kairo firaun, Koptik, Islam, dan modern, dibaca jalan demi jalan bersama seorang sejarawan.
 
-mulai €875 / orang
+mulai €963 / orang
 
 mulai 6 orang
 
-€963 per orang untuk dua wisatawan
+€1.059 per orang untuk dua wisatawan
 
 Per orang, musim normal. Biaya tambahan hari libur kami cantumkan terpisah dalam penawaran.
 
@@ -74,7 +74,7 @@ Kebanyakan pengunjung memberi Kairo dua malam dan sebuah daftar centang. Perjala
 ### Hari 5 — Pasar & keberangkatan
 
 - Khan el-Khalili beserta konteksnya — bengkel-bengkel perajin, bukan sekadar kios
-- Makan siang terakhir di sebuah rumah zaman Utsmaniyah yang telah dipugar
+- Makan siang terakhir di sebuah rumah zaman Utsmaniyah yang telah dipugar, dibayar di tempat
 - Transfer privat ke bandara
 
 ## Termasuk

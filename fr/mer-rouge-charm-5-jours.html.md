@@ -11,11 +11,11 @@ Mer Rouge
 
 Cinq jours là où les montagnes du Sinaï plongent dans l'eau la plus claire de l'hémisphère nord — récifs, soirées dans le désert et oisiveté assumée.
 
-à partir de 979 € / personne
+à partir de 1 077 € / personne
 
 à partir de 6 voyageurs
 
-1 077 € par personne pour deux voyageurs
+1 185 € par personne pour deux voyageurs
 
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
 
@@ -89,7 +89,7 @@ Charm el-Cheikh occupe la pointe de la péninsule du Sinaï, là où des montagn
 - Le visa d'entrée en Égypte
 - Les pourboires
 - Les dépenses personnelles
-- Les repas
+- Les repas, sauf le déjeuner de la journée en bateau
 - Les options que vous ajoutez — activités, boissons
 
 ## Le rythme

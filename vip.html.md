@@ -9,13 +9,13 @@ Kemet Ultra · by private arrangement
 
 # Egypt, opened *for you alone*
 
-From **€17,400** per person, for two
+From **€19,140** per person, for two
 
 At a glance
 
 ## Choose your journey
 
-7 days / 6 nights **The Private Pharaoh** Cairo · Giza · Luxor · Abydos *From* €17,400 per person, for two View the journey 10 days / 9 nights **The Royal Nile** Cairo · Aswan · Abu Simbel · the Nile · Luxor *From* €36,700 per person, for two View the journey 12 days / 11 nights **Karnak to the Coral Sea** Cairo · Luxor · the Nile · Aswan · Abu Simbel · the Red Sea *From* €38,300 per person, for two View the journey 15 days / 14 nights **The Grand Private Odyssey** Cairo · Aswan · Abu Simbel · the Nile · Luxor · the Red Sea *From* €66,800 per person, for two View the journey
+7 days / 6 nights **The Private Pharaoh** Cairo · Giza · Luxor · Abydos *From* €19,140 per person, for two View the journey 10 days / 9 nights **The Royal Nile** Cairo · Aswan · Abu Simbel · the Nile · Luxor *From* €40,370 per person, for two View the journey 12 days / 11 nights **Karnak to the Coral Sea** Cairo · Luxor · the Nile · Aswan · Abu Simbel · the Red Sea *From* €42,130 per person, for two View the journey 15 days / 14 nights **The Grand Private Odyssey** Cairo · Aswan · Abu Simbel · the Nile · Luxor · the Red Sea *From* €73,480 per person, for two View the journey
 
 Four private journeys at the very top of the Egyptian market: the Great Pyramid opened for your party, dinner inside Karnak after the gates close, a dahabiya or a yacht with no other guests, and the landmark hotels in their best rooms. Priced openly, and confirmed in writing before anything is paid.
 
@@ -35,7 +35,7 @@ The signatures
 
 ## What is Kemet Ultra?
 
-Kemet Ultra is Kemet's top tier: four fully private Egypt journeys of 7 to 15 days, with the Great Pyramid opened for your party, dinner inside Karnak after closing, a chartered dahabiya or yacht, and suites at the Mena House, the Old Cataract and the Oberoi. From €17,400 to €66,800 per person for two; from €11,500 for four.
+Kemet Ultra is Kemet's top tier: four fully private Egypt journeys of 7 to 15 days, with the Great Pyramid opened for your party, dinner inside Karnak after closing, a chartered dahabiya or yacht, and suites at the Mena House, the Old Cataract and the Oberoi. From €19,140 to €73,480 per person for two; from €12,650 for four.
 
 The journeys
 
@@ -49,7 +49,7 @@ The Great Pyramid and Karnak, each opened for your party alone
 
 A week built around two doors that are normally shut. At Giza the Great Pyramid is opened for your party for two hours, with nobody else inside; in Luxor, Karnak is held for you after closing and dinner is set in the precinct. Between them: the Grand Egyptian Museum with a senior Egyptologist, the finest tombs in the Valley of the Kings, and the two temples most visitors never reach.
 
-From **€17,400** per person, for two €11,500 per person for four
+From **€19,140** per person, for two €12,650 per person for four
 
 - Great Pyramid private opening — two hours, your party only
 - Karnak opened after closing, with dinner in the precinct
@@ -111,7 +111,7 @@ A dahabiya chartered for your party, from Aswan to Esna
 
 Four nights on a sailing dahabiya with no other guests aboard: the crew, the chef and the moorings are yours, and the boat stops where large ships cannot. Before it, Cairo with the Great Pyramid opened privately and a night at the Old Cataract; Abu Simbel by private aircraft; and at the end, Karnak held for your dinner.
 
-From **€36,700** per person, for two €21,000 per person for four
+From **€40,370** per person, for two €23,100 per person for four
 
 - Full charter of a first-rank dahabiya — no other guests
 - Great Pyramid private opening; dinner in Karnak after closing
@@ -190,7 +190,7 @@ The Oberoi Philae up the Nile, then a private yacht on the Red Sea
 
 The classic river journey on the most refined cruiser on the Nile, taken in a suite, then ended properly: a private aircraft from Aswan to the Red Sea, a suite with its own pool, and a crewed yacht for the day among the Giftun reefs. The Great Pyramid and Karnak are opened for you along the way.
 
-From **€38,300** per person, for two €25,300 per person for four
+From **€42,130** per person, for two €27,830 per person for four
 
 - The Oberoi Philae, four nights in a luxury suite
 - Great Pyramid private opening; dinner in Karnak after closing
@@ -279,7 +279,7 @@ Every movement private — aircraft, dahabiya and yacht
 
 The whole of Egypt without a single shared moment. A private aircraft on every internal leg; a dahabiya chartered for four nights between Aswan and Esna; the Great Pyramid and Karnak opened for you; and three nights on the Red Sea with two days aboard your own yacht. Designed for a first visit meant to be the definitive one.
 
-From **€66,800** per person, for two €37,700 per person for four
+From **€73,480** per person, for two €41,470 per person for four
 
 - A private aircraft on every internal leg
 - Full charter of a dahabiya for four nights
@@ -400,19 +400,19 @@ Before you write
 
 **What does an ultra-luxury journey in Egypt cost?**
 
-Kemet's four Ultra journeys cost from €17,400 per person for seven days to €66,800 for fifteen, for a party of two. For four guests the per-person price falls to between €11,500 and €37,700, because the charter, the aircraft and the private openings are shared. The peak weeks at Christmas, New Year and Easter carry a 25% supplement.
+Kemet's four Ultra journeys cost from €19,140 per person for seven days to €73,480 for fifteen, for a party of two. For four guests the per-person price falls to between €12,650 and €41,470, because the charter, the aircraft and the private openings are shared. The peak weeks at Christmas, New Year and Easter carry a 25% supplement.
 
 **Can the Great Pyramid really be opened just for us?**
 
-Yes. For two hours the Great Pyramid is opened for your party alone, outside public hours, with your Egyptologist beside you and nobody else inside. It is all arranged for you; you simply arrive.
+Yes, by permit. For two hours the Great Pyramid is opened for your party alone, outside public hours, with your Egyptologist beside you and nobody else inside. The opening is granted by the Ministry of Tourism and Antiquities on an application we make for your dates as soon as you confirm, and you are told the outcome before you travel. If a permit is refused, the opening is taken off the price and nothing is charged for it.
 
 **How does dinner inside Karnak work?**
 
-After the last visitors have left, Karnak is opened for your party. You walk the hypostyle hall with your Egyptologist, and dinner is served within the temple precinct. There is nothing for you to arrange.
+After the last visitors have left, Karnak is opened for your party by permit, which we apply for once you confirm. You walk the hypostyle hall with your Egyptologist, and dinner is served within the temple precinct. There is nothing for you to arrange; if the permit is refused, that evening is taken off the price.
 
 **Can Tutankhamun's treasure be seen privately?**
 
-Yes. At the Grand Egyptian Museum the Tutankhamun galleries can be opened for your party alone for an hour and a half, with no other visitors among the boy-king's gold. It can be added to any of the four journeys. At Giza, a private golf cart can also carry you around the plateau.
+Yes, by permit from the museum. At the Grand Egyptian Museum the Tutankhamun galleries can be opened for your party alone for an hour and a half, with no other visitors among the boy-king's gold. It can be added to any of the four journeys. At Giza, a private golf cart can also carry you around the plateau.
 
 **Why is the Winter Palace not in these journeys?**
 
@@ -428,7 +428,7 @@ Every one. Days, hotels, the order of the country and the pace can all change, a
 
 **How far ahead should we book?**
 
-Eight to twelve weeks for travel between October and April, when private openings and dahabiya charters are most contested. Shorter notice is sometimes possible; you will be told which elements can still be secured before you commit.
+Eight to twelve weeks for travel between October and April, when private openings and dahabiya charters are most contested, and longer for the Great Pyramid, whose permit can take several months. Shorter notice is sometimes possible; you will be told which elements can still be secured before you commit.
 
 **Who will we deal with?**
 

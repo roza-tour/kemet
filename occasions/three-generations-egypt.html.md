@@ -74,7 +74,7 @@ Cairo · Giza · Alexandria · Aswan · Abu Simbel · Luxor · Sharm El Sheikh
 
 Our most complete journey: Cairo and Alexandria, a Nile cruise, Ramesses II's mountain temple at Abu Simbel, and three Red Sea nights to absorb it all.
 
-€2,728 / person from 6 travellers
+€3,001 / person from 6 travellers
 
 10 Days
 
@@ -84,7 +84,7 @@ Cairo · Giza · Alexandria · Aswan · Luxor
 
 Our signature journey: Cairo, Alexandria, a sleeper train south, and a three-night Nile cruise from Aswan to Luxor — every layer of Egypt in one arc.
 
-€1,915 / person from 6 travellers
+€2,107 / person from 6 travellers
 
 8 Days
 
@@ -94,7 +94,7 @@ Cairo · Giza · Luxor · Aswan
 
 Egypt with children done right: short guided mornings, family-specialist Egyptologists, pool afternoons, and the moments no classroom can match.
 
-€1,524 / person from 6 travellers
+€1,676 / person from 6 travellers
 
 ## Three generations — questions
 

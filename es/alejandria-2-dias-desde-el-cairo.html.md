@@ -11,11 +11,11 @@ Escapada
 
 Dos días mediterráneos: las catacumbas, la Ciudadela sobre el emplazamiento del Faro, la Biblioteca renacida y una velada que las excursiones de un día nunca ven.
 
-desde 402 € / persona
+desde 442 € / persona
 
 desde 6 viajeros
 
-442 € por persona para dos viajeros
+486 € por persona para dos viajeros
 
 Por persona, en temporada normal. Los suplementos de fechas festivas se indican por separado en el presupuesto.
 

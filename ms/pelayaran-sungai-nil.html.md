@@ -23,7 +23,7 @@ Kuil-kuil antara Luxor dan Aswan dibina menghadap sungai. Kita mendatanginya dar
 
 Inilah pelayaran seperti yang kami jalankan: tiga malam di sungai dari Aswan ke Luxor, setiap lawatan di darat bersifat persendirian bersama Egyptologist anda sendiri. Kapalnya dikongsi; panduan, kenderaan dan lawatan anda tidak.
 
-dari €820 / seorang (dari 6 orang). €902 seorang bagi dua pengembara. Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
+dari €902 / seorang (dari 6 orang). €992 seorang bagi dua pengembara. Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 
 01
 
@@ -124,7 +124,7 @@ Tidak. Sungai Nil tidak berombak dan tidak menyebabkan mabuk laut — airnya ten
 
 ### Naik kapal terbang atau kereta api tidur ke Luxor dan Aswan?
 
-Jika keselesaan lebih penting daripada harga, lebih baik terbang: Kaherah–Luxor kurang daripada sejam, Kaherah–Aswan kira-kira sejam suku. Kereta api mengambil masa kira-kira sepuluh jam ke Luxor dan tiga belas jam ke Aswan, jadi biasanya ia dinaiki pada waktu malam — dalam kabin dua katil dengan sinki, termasuk makan malam dan sarapan, tetapi tandasnya dikongsi; menuju ke selatan ia tiba di Luxor sekitar jam lima setengah pagi. Pakej kami yang menggunakan kereta api tidur juga ditawarkan dengan penerbangan domestik dan bermalam di hotel, dengan tambahan 130 € seorang.
+Jika keselesaan lebih penting daripada harga, lebih baik terbang: Kaherah–Luxor kurang daripada sejam, Kaherah–Aswan kira-kira sejam suku. Kereta api mengambil masa kira-kira sepuluh jam ke Luxor dan tiga belas jam ke Aswan, jadi biasanya ia dinaiki pada waktu malam — dalam kabin dua katil dengan sinki, termasuk makan malam dan sarapan, tetapi tandasnya dikongsi; menuju ke selatan ia tiba di Luxor sekitar jam lima setengah pagi. Pakej kami yang menggunakan kereta api tidur juga ditawarkan dengan penerbangan domestik dan bermalam di hotel, dengan tambahan 143 € seorang.
 
 ## Perincian laluan
 

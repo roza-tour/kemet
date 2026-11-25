@@ -114,7 +114,7 @@ Abu Simbel
 
 Ramesses II's colossal rock-cut temples — carved into a Nubian mountainside, moved block by block above the rising lake, and still aligned to the sun.
 
-€160 / person from 6 travellers · tickets not included
+€176 / person from 6 travellers · tickets not included
 
 5 Days
 
@@ -124,7 +124,7 @@ Luxor · Edfu · Kom Ombo · Aswan
 
 The deep-history heart of Egypt by private road journey — Karnak, the Valley of the Kings, Edfu, Kom Ombo and Philae, with time to actually absorb them.
 
-€1,018 / person from 6 travellers
+€1,120 / person from 6 travellers
 
 4 Days
 
@@ -134,7 +134,7 @@ Aswan · Kom Ombo · Edfu · Luxor
 
 The essential Nile cruise, done properly — Philae and the High Dam, three nights afloat past Kom Ombo and Edfu, and Luxor's East and West Banks with your own Egyptologist.
 
-€820 / person from 6 travellers
+€902 / person from 6 travellers
 
 ---
 

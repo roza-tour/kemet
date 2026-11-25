@@ -11,11 +11,11 @@ Viaggio breve
 
 Quattro giorni che uniscono i monumenti del Cairo e di Giza a una giornata mediterranea ad Alessandria.
 
-da 618 € / persona
+da 680 € / persona
 
 da 6 viaggiatori
 
-680 € a persona per due viaggiatori
+748 € a persona per due viaggiatori
 
 A persona, in stagione normale. I supplementi delle festività sono indicati separatamente nel preventivo.
 
@@ -51,7 +51,7 @@ Pochi giorni ma grande ampiezza: questo viaggio breve affianca i monumenti fonda
 
 - Catacombe di Kom el-Shoqafa
 - Cittadella di Qaitbay e Bibliotheca Alexandrina
-- Colonna di Pompeo e pranzo di pesce sul lungomare
+- Colonna di Pompeo e pranzo di pesce sul lungomare, da saldare in loco
 
 03
 

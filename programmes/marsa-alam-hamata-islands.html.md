@@ -125,7 +125,7 @@ Luxor · Edfu · Kom Ombo · Aswan
 
 The deep-history heart of Egypt by private road journey — Karnak, the Valley of the Kings, Edfu, Kom Ombo and Philae, with time to actually absorb them.
 
-€1,018 / person from 6 travellers
+€1,120 / person from 6 travellers
 
 10 Days
 
@@ -135,7 +135,7 @@ Cairo · Giza · Alexandria · Aswan · Luxor
 
 Our signature journey: Cairo, Alexandria, a sleeper train south, and a three-night Nile cruise from Aswan to Luxor — every layer of Egypt in one arc.
 
-€1,915 / person from 6 travellers
+€2,107 / person from 6 travellers
 
 8 Days
 
@@ -145,7 +145,7 @@ Cairo · Giza · Luxor · Aswan
 
 Egypt with children done right: short guided mornings, family-specialist Egyptologists, pool afternoons, and the moments no classroom can match.
 
-€1,524 / person from 6 travellers
+€1,676 / person from 6 travellers
 
 ---
 

@@ -23,7 +23,7 @@ Les temples entre Louxor et Assouan ont été bâtis face au fleuve. On les abor
 
 Voici la croisière telle que nous la menons: trois nuits sur le fleuve, d'Assouan à Louxor, chaque visite à terre étant privée, avec votre propre égyptologue. Le bateau est partagé; votre guide, votre véhicule et vos visites, eux, ne le sont pas.
 
-à partir de 820 € / personne (à partir de 6 voyageurs). 902 € par personne pour deux voyageurs. Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
+à partir de 902 € / personne (à partir de 6 voyageurs). 992 € par personne pour deux voyageurs. Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
 
 01
 
@@ -124,7 +124,7 @@ Oui. Il n'y a ni houle ni mal de mer sur le fleuve: c'est une eau plate. Le seul
 
 ### Avion ou train de nuit pour Louxor et Assouan?
 
-Si le confort passe avant le prix, mieux vaut prendre l'avion: Le Caire–Louxor, c'est moins d'une heure de vol, Le Caire–Assouan environ une heure et quart. Le train met une dizaine d'heures jusqu'à Louxor et treize jusqu'à Assouan; on le prend donc généralement de nuit — compartiment à deux couchettes avec lavabo, dîner et petit-déjeuner compris, mais toilettes partagées — et vers le sud il arrive à Louxor vers cinq heures et demie du matin. Nos circuits avec train de nuit existent aussi avec vols intérieurs et nuits d'hôtel, pour 130 € de plus par personne.
+Si le confort passe avant le prix, mieux vaut prendre l'avion: Le Caire–Louxor, c'est moins d'une heure de vol, Le Caire–Assouan environ une heure et quart. Le train met une dizaine d'heures jusqu'à Louxor et treize jusqu'à Assouan; on le prend donc généralement de nuit — compartiment à deux couchettes avec lavabo, dîner et petit-déjeuner compris, mais toilettes partagées — et vers le sud il arrive à Louxor vers cinq heures et demie du matin. Nos circuits avec train de nuit existent aussi avec vols intérieurs et nuits d'hôtel, pour 143 € de plus par personne.
 
 ## Les itinéraires détaillés
 

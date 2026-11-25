@@ -41,7 +41,7 @@ Le Noël égyptien tombe le 7 janvier; la veille au soir, la liturgie de minuit 
 
 ## Ce que ça coûte, et pourquoi
 
-Notre voyage de 10 jours commence à 1 915 € par personne, pour un groupe de 6 voyageurs ou plus. Entre Noël et le Nouvel An s'ajoutent les suppléments que les hôtels et les bateaux nous appliquent: nous les indiquons à part dans le devis, sans les fondre dans le total. Pour qui est flexible, début décembre et la seconde moitié de janvier coûtent nettement moins, pour un climat identique.
+Notre voyage de 10 jours commence à 2 107 € par personne, pour un groupe de 6 voyageurs ou plus. Entre Noël et le Nouvel An s'ajoutent les suppléments que les hôtels et les bateaux nous appliquent: nous les indiquons à part dans le devis, sans les fondre dans le total. Pour qui est flexible, début décembre et la seconde moitié de janvier coûtent nettement moins, pour un climat identique.
 
 ## En bref
 

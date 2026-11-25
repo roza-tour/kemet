@@ -11,11 +11,11 @@ Court séjour
 
 Trois jours, zéro friction — passage prioritaire à l'arrivée, les pyramides et le Grand Musée égyptien, et le Caire médiéval une fois les excursionnistes partis.
 
-à partir de 600 € / personne
+à partir de 660 € / personne
 
 à partir de 6 voyageurs
 
-660 € par personne pour deux voyageurs
+726 € par personne pour deux voyageurs
 
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
 

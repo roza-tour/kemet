@@ -23,7 +23,7 @@ Casi todo aquello por lo que merece la pena detenerse entre Luxor y Asuán está
 
 Así es el crucero tal como lo organizamos: tres noches en el río de Asuán a Luxor, con todas las visitas en tierra en privado y con su propio egiptólogo. El barco se comparte; su guía, su vehículo y sus visitas, no.
 
-desde 820 € / persona (desde 6 viajeros). 902 € por persona para dos viajeros. Por persona, en temporada normal. Los suplementos de fechas festivas se indican por separado en el presupuesto.
+desde 902 € / persona (desde 6 viajeros). 992 € por persona para dos viajeros. Por persona, en temporada normal. Los suplementos de fechas festivas se indican por separado en el presupuesto.
 
 01
 
@@ -120,7 +120,7 @@ Tres o cuatro meses para hoteles y barcos convencionales; seis meses si hay una 
 
 ### ¿Avión o tren nocturno a Luxor y Asuán?
 
-Si la comodidad va antes que el precio, mejor volar: El Cairo–Luxor es menos de una hora de vuelo y El Cairo–Asuán, alrededor de una hora y cuarto. El tren tarda unas diez horas hasta Luxor y trece hasta Asuán, por eso suele hacerse de noche: en compartimento de dos camas con lavabo, con cena y desayuno, pero con baños compartidos; en dirección sur llega a Luxor hacia las cinco y media de la mañana. Nuestros viajes con tren nocturno también se ofrecen con vuelos internos y noches de hotel, por 130 € más por persona.
+Si la comodidad va antes que el precio, mejor volar: El Cairo–Luxor es menos de una hora de vuelo y El Cairo–Asuán, alrededor de una hora y cuarto. El tren tarda unas diez horas hasta Luxor y trece hasta Asuán, por eso suele hacerse de noche: en compartimento de dos camas con lavabo, con cena y desayuno, pero con baños compartidos; en dirección sur llega a Luxor hacia las cinco y media de la mañana. Nuestros viajes con tren nocturno también se ofrecen con vuelos internos y noches de hotel, por 143 € más por persona.
 
 ## Más sobre el tramo del Nilo
 

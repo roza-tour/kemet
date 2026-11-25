@@ -11,11 +11,11 @@ Perjalanan fotografi
 
 Tujuh hari yang dijadualkan mengikut cahaya, bukan waktu buka — dataran ketika subuh, kuil pada waktu biru dan Sungai Nil pada waktu keemasan.
 
-dari €1,419 / seorang
+dari €1,561 / seorang
 
 dari 6 orang
 
-€1,561 seorang bagi dua pengembara
+€1,717 seorang bagi dua pengembara
 
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 

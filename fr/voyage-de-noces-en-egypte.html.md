@@ -15,7 +15,7 @@ Durée idéale **9 à 12 nuits**
 
 Lever du soleil **sur les neuf pyramides**
 
-Voyage de 9 jours dès **2 045 € / pers.**
+Voyage de 9 jours dès **2 250 € / pers.**
 
 Ici, un voyage de noces n'est pas un hôtel de plage avec un temple en option. C'est une dahabiya à la voile, le lever du soleil sur les pyramides avant l'ouverture, et la mer Rouge pour finir — organisé pour que vous ne soyez jamais deux au milieu d'un groupe. Le lotus, enlacé par paires, était dans l'Égypte ancienne le symbole de l'union. Cela tombe bien.
 

@@ -2,7 +2,7 @@
 title: "7-Day Egypt Private Tour: Cairo, Luxor & Alexandria | Kemet"
 url: https://kemet-travel.com/tour-7-day.html
 language: en
-description: "The headline acts of Egypt in seven days — the Egyptian Museum, Alexandria, the temples and tombs of Luxor — private, from €1,179 pp."
+description: "The headline acts of Egypt in seven days — the Egyptian Museum, Alexandria, the temples and tombs of Luxor — private, from €1,297 pp."
 ---
 
 Signature Journey · 7 Days / 6 Nights
@@ -13,7 +13,7 @@ A week that gathers the essentials — Cairo, Alexandria and Luxor — with slee
 
 ## What does Egypt Highlights Deluxe include, and what does it cost?
 
-Egypt Highlights Deluxe is a private 7-day, 6-night journey through Cairo, Giza, Alexandria and Luxor, from €1,179 per person for a party of 6 or more, or €1,297 per person for two. It includes a private Egyptologist guide throughout. International flights are not included. A flight version, in place of the two sleeper-train nights, is from €1,309.
+Egypt Highlights Deluxe is a private 7-day, 6-night journey through Cairo, Giza, Alexandria and Luxor, from €1,297 per person for a party of 6 or more, or €1,427 per person for two. It includes a private Egyptologist guide throughout. International flights are not included. A flight version, in place of the two sleeper-train nights, is from €1,440.
 
 ## Overview
 
@@ -35,7 +35,7 @@ Day **02**
 
 - Drive to the Mediterranean coast
 - Catacombs of Kom El Shoqafa, Pompey's Pillar and the Citadel of Qaitbay
-- Bibliotheca Alexandrina and a seafront seafood lunch
+- Bibliotheca Alexandrina and a seafront seafood lunch, paid locally
 
 Day **03**
 
@@ -82,8 +82,8 @@ Day **07**
 ### Included
 
 - Private Egyptologist guide throughout
-- 6 nights' hotel accommodation
-- Sleeper-train berths Cairo–Luxor (both directions)
+- 4 nights' hotel accommodation; the other two nights are on the sleeper train
+- Sleeper-train berths Cairo–Luxor (both directions), with dinner and breakfast aboard
 - All entrance fees to sites and monuments
 - Private air-conditioned transfers
 - Hotel pickup & drop-off
@@ -95,7 +95,7 @@ Day **07**
 - Egypt entry visa
 - Tipping (gratuities)
 - Personal expenses
-- Meals
+- Meals, except dinner and breakfast on the sleeper train
 - Optional extras you choose to add — activities, drinks
 
 ## Comfort & pace
@@ -128,23 +128,23 @@ The walking on Egypt Highlights Deluxe is moderate, as on any journey built arou
 
 ### Can we fly instead of taking the sleeper train?
 
-Yes. Egypt Highlights Deluxe is also arranged with domestic flights in place of the two sleeper-train nights, with those nights in hotels instead — from €1,309 per person. Ask for the flight version when you enquire.
+Yes. Egypt Highlights Deluxe is also arranged with domestic flights in place of the two sleeper-train nights, with those nights in hotels instead — from €1,440 per person. Ask for the flight version when you enquire.
 
 Every Kemet journey is private, led by a licensed Egyptologist and priced in writing: [the standard in full](https://kemet-travel.com/tours.html#standard). Before you travel: [Egypt Travel Guide](https://kemet-travel.com/guides/egypt-travel-guide.html) · [Best Time to Visit Egypt](https://kemet-travel.com/guides/best-time-to-visit-egypt.html) · [Egypt from Dubai, Abu Dhabi, Doha & Riyadh — for Gulf residents](https://kemet-travel.com/guides/egypt-for-gulf-residents.html).
 
 From
 
-€1,179
+€1,297
 
 per person · EUR
 
 Based on a private party of 6 or more.
 
-For two travellers: €1,297 per person.
+For two travellers: €1,427 per person.
 
-Prefer to fly? The same journey with flights in place of the two sleeper-train nights — from €1,309 pp.
+Prefer to fly? The same journey with flights in place of the two sleeper-train nights — from €1,440 pp.
 
-[Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Egypt+Highlights+Deluxe&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Egypt+Highlights+Deluxe%22+journey+%287+Days+%2F+6+Nights%2C+from+%E2%82%AC1%2C179+per+person%29.%0A%0ATrain+or+flight+version+%28from+%E2%82%AC1%2C309%29%3A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
+[Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Egypt+Highlights+Deluxe&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Egypt+Highlights+Deluxe%22+journey+%287+Days+%2F+6+Nights%2C+from+%E2%82%AC1%2C297+per+person%29.%0A%0ATrain+or+flight+version+%28from+%E2%82%AC1%2C440%29%3A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 
 [Ask on WhatsApp](https://wa.me/201158367162?text=Hello%20Kemet%20%E2%80%94%20I%27m%20interested%20in%20the%20%22Egypt%20Highlights%20Deluxe%22%20journey%20(7%20Days%20%2F%206%20Nights).%20Could%20you%20share%20availability%3F)
 
@@ -174,7 +174,7 @@ Cairo · Giza · Alexandria · Aswan · Luxor
 
 Our signature journey: Cairo, Alexandria, a sleeper train south, and a three-night Nile cruise from Aswan to Luxor — every layer of Egypt in one arc.
 
-€1,915 / person from 6 travellers
+€2,107 / person from 6 travellers
 
 14 Days
 
@@ -184,7 +184,7 @@ Cairo · Giza · Alexandria · Aswan · Abu Simbel · Luxor · Sharm El Sheikh
 
 Our most complete journey: Cairo and Alexandria, a Nile cruise, Ramesses II's mountain temple at Abu Simbel, and three Red Sea nights to absorb it all.
 
-€2,728 / person from 6 travellers
+€3,001 / person from 6 travellers
 
 4 Days
 
@@ -194,7 +194,7 @@ Cairo · Giza · Alexandria
 
 A compact northern journey — the Egyptian Museum, Alexandria's Greco-Roman layers, the Pyramids of Giza and medieval Cairo.
 
-€618 / person from 6 travellers
+€680 / person from 6 travellers
 
 ---
 

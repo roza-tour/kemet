@@ -2,7 +2,7 @@
 title: "Alexandria — Lawatan Sehari dari Kaherah | Kemet"
 url: https://kemet-travel.com/ms/lawatan-sehari-ke-alexandria.html
 language: ms
-description: "Katakomb Kom El Shoqafa, Tiang Pompey, Kubu Qaitbay di tapak Pharos dan Bibliotheca Alexandrina, dengan makan tengah hari makanan laut."
+description: "Katakomb Kom El Shoqafa, Tiang Pompey, Kubu Qaitbay di tapak Pharos dan Bibliotheca Alexandrina, dengan makan tengah hari makanan laut yang dibayar di tempat."
 ---
 
 Lawatan sehari
@@ -11,11 +11,11 @@ Lawatan sehari
 
 Sehari penuh di tepi Mediterranean — katakomb, tiang Rom, kubu yang dikelilingi laut dan perpustakaan moden yang agung.
 
-dari €57 / seorang
+dari €63 / seorang
 
 dari 6 orang · tiket masuk tidak termasuk
 
-€63 seorang bagi dua pengembara
+€69 seorang bagi dua pengembara
 
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 
@@ -27,13 +27,13 @@ Hentian **Iskandariah**
 
 Persendirian **Ya — kumpulan anda sahaja**
 
-Katakomb Kom El Shoqafa, Tiang Pompey, Kubu Qaitbay di tapak lama Pharos dan Bibliotheca Alexandrina, bersama makan tengah hari makanan laut.
+Katakomb Kom El Shoqafa, Tiang Pompey, Kubu Qaitbay di tapak lama Pharos dan Bibliotheca Alexandrina, bersama makan tengah hari makanan laut yang dibayar di tempat.
 
 01
 
 ## Tentang perjalanan
 
-Kota Alexander Agung memakai masa lalu Greco-Romnya dengan bersahaja di sepanjang corniche Mediterranean yang melengkung. Hari penuh ini merangkumi Katakomb Kom El Shoqafa di bawah tanah, Tiang Pompey yang menjulang, Kubu Qaitbay yang dibina di atas asas rumah api Pharos yang legenda, dan Bibliotheca Alexandrina moden yang tersergam — pewaris Perpustakaan purba. Makan tengah hari makanan laut di tepi pantai sudah tentu sebahagian daripadanya. Pemandu dan pemindahan persendirian dari Kaherah.
+Kota Alexander Agung memakai masa lalu Greco-Romnya dengan bersahaja di sepanjang corniche Mediterranean yang melengkung. Hari penuh ini merangkumi Katakomb Kom El Shoqafa di bawah tanah, Tiang Pompey yang menjulang, Kubu Qaitbay yang dibina di atas asas rumah api Pharos yang legenda, dan Bibliotheca Alexandrina moden yang tersergam — pewaris Perpustakaan purba. Makan tengah hari makanan laut di tepi pantai, dibayar di tempat, sudah tentu sebahagian daripadanya. Pemandu dan pemindahan persendirian dari Kaherah.
 
 ## Laluan perjalanan
 
@@ -59,7 +59,7 @@ Berjalan di sepanjang tembok laut Kubu Qaitbay, yang didirikan tepat di tempat r
 
 ### Hentian 4 — Bibliotheca Alexandrina & makan tengah hari makanan laut
 
-Berakhir di Bibliotheca Alexandrina yang moden dan dramatik, Perpustakaan Alexandria yang dilahirkan semula, selepas makan tengah hari makanan laut yang santai di tepi Mediterranean.
+Berakhir di Bibliotheca Alexandrina yang moden dan dramatik, Perpustakaan Alexandria yang dilahirkan semula, selepas makan tengah hari makanan laut yang santai di tepi Mediterranean, dibayar di tempat,.
 
 ## Termasuk
 

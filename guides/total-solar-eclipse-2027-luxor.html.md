@@ -15,7 +15,7 @@ On Monday 2 August 2027 the Moon covers the Sun over Luxor for about six minutes
 
 Reviewed by [Mervat Farouk](https://kemet-travel.com/about.html#mervat-farouk) · Egyptologist guide — checked October 2026
 
-Eclipse Day in Luxor, 2 August 2027 — a small-group day tour.**€149**per person Register
+Eclipse Day in Luxor, 2 August 2027 — a small-group day tour.**€164**per person Register
 
 ## Key takeaways
 
@@ -128,7 +128,7 @@ Eclipse Day · Monday 2 August 2027
 
 One day planned around six minutes: the Valley of the Kings at opening, a shaded viewing place on the West Bank for totality, a late Egyptian lunch and a felucca at sunset. Small groups of up to 12, each with its own Egyptologist and its own vehicle — the one fixed-date departure we run, because the date is set by the sky.
 
-**€149** per person · Hotel not included · 48 places in four groups of up to 12
+**€164** per person · Hotel not included · 48 places in four groups of up to 12
 
 ### The day
 
@@ -190,7 +190,7 @@ Luxor
 
 Luxor without the sprint: Karnak at opening, the Valley of the Kings before the heat, Hatshepsut's terraces and the Avenue of Sphinxes after dark.
 
-€544 / person from 6 travellers
+€598 / person from 6 travellers
 
 5 Days
 
@@ -200,7 +200,7 @@ Luxor · Edfu · Kom Ombo · Aswan
 
 The deep-history heart of Egypt by private road journey — Karnak, the Valley of the Kings, Edfu, Kom Ombo and Philae, with time to actually absorb them.
 
-€1,018 / person from 6 travellers
+€1,120 / person from 6 travellers
 
 4 Days
 
@@ -210,7 +210,7 @@ Aswan · Kom Ombo · Edfu · Luxor
 
 The essential Nile cruise, done properly — Philae and the High Dam, three nights afloat past Kom Ombo and Edfu, and Luxor's East and West Banks with your own Egyptologist.
 
-€820 / person from 6 travellers
+€902 / person from 6 travellers
 
 Further reading
 

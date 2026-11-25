@@ -2,7 +2,7 @@
 title: "8-Day Egypt Family Tour: Pyramids, Luxor & Aswan | Kemet"
 url: https://kemet-travel.com/tour-family-8day.html
 language: en
-description: "Egypt with children done right: short guided mornings, family-specialist Egyptologists, pool afternoons — private, from €1,524 pp."
+description: "Egypt with children done right: short guided mornings, family-specialist Egyptologists, pool afternoons — private, from €1,676 pp."
 ---
 
 Family Journey · 8 Days / 7 Nights
@@ -13,7 +13,7 @@ Eight days engineered for curious kids and unhurried parents — mummies, felucc
 
 ## What does Family Egypt: Pyramids to the Nile include, and what does it cost?
 
-Family Egypt: Pyramids to the Nile is a private 8-day, 7-night journey through Cairo, Giza, Luxor and Aswan, from €1,524 per person for a party of 6 or more, or €1,676 per person for two. It includes a private family-specialist Egyptologist throughout and 7 nights' accommodation — family suites or connecting rooms. International flights are not included.
+Family Egypt: Pyramids to the Nile is a private 8-day, 7-night journey through Cairo, Giza, Luxor and Aswan, from €1,676 per person for a party of 6 or more, or €1,844 per person for two. It includes a private family-specialist Egyptologist throughout and 7 nights' accommodation — family suites or connecting rooms. International flights are not included.
 
 ## Overview
 
@@ -136,15 +136,15 @@ Every Kemet journey is private, led by a licensed Egyptologist and priced in wri
 
 From
 
-€1,524
+€1,676
 
 per person · EUR
 
 Based on a private party of 6 or more.
 
-For two travellers: €1,676 per person.
+For two travellers: €1,844 per person.
 
-[Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Family+Egypt%3A+Pyramids+to+the+Nile&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Family+Egypt%3A+Pyramids+to+the+Nile%22+journey+%288+Days+%2F+7+Nights%2C+from+%E2%82%AC1%2C524+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
+[Request this Journey](mailto:info@kemet-travel.com?subject=Request%3A+Family+Egypt%3A+Pyramids+to+the+Nile&body=Hello+Kemet%2C%0A%0AI%27d+like+to+request+the+%22Family+Egypt%3A+Pyramids+to+the+Nile%22+journey+%288+Days+%2F+7+Nights%2C+from+%E2%82%AC1%2C676+per+person%29.%0A%0APreferred+dates%3A%0ANumber+of+travellers%3A%0A%0AThank+you.)
 
 [Ask on WhatsApp](https://wa.me/201158367162?text=Hello%20Kemet%20%E2%80%94%20I%27m%20interested%20in%20the%20%22Family%20Egypt%3A%20Pyramids%20to%20the%20Nile%22%20journey%20(8%20Days%20%2F%207%20Nights).%20Could%20you%20share%20availability%3F)
 
@@ -174,7 +174,7 @@ Cairo · Giza · Alexandria · Aswan · Luxor
 
 Our signature journey: Cairo, Alexandria, a sleeper train south, and a three-night Nile cruise from Aswan to Luxor — every layer of Egypt in one arc.
 
-€1,915 / person from 6 travellers
+€2,107 / person from 6 travellers
 
 14 Days
 
@@ -184,7 +184,7 @@ Cairo · Giza · Alexandria · Aswan · Abu Simbel · Luxor · Sharm El Sheikh
 
 Our most complete journey: Cairo and Alexandria, a Nile cruise, Ramesses II's mountain temple at Abu Simbel, and three Red Sea nights to absorb it all.
 
-€2,728 / person from 6 travellers
+€3,001 / person from 6 travellers
 
 9 Days
 
@@ -194,7 +194,7 @@ Cairo · Giza · Aswan · Luxor
 
 Egypt as a honeymoon should be — private sunrise at the pyramids, a felucca at golden hour, three nights on the Nile and suites chosen for the view.
 
-€2,045 / person from 2 travellers
+€2,250 / person from 2 travellers
 
 ---
 

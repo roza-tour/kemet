@@ -17,7 +17,7 @@ Haut de gamme **450 € et plus**
 
 Acompte **25 %**
 
-Un voyage privé en Égypte se situe le plus souvent entre 200 et 450 euros par personne et par jour, hors vols internationaux. L'écart entre ces deux bornes ne vient pas du hasard: il vient de cinq décisions que vous prenez à la conception, et il est utile de savoir lesquelles avant de comparer deux devis.
+Un voyage privé en Égypte se situe le plus souvent entre 200 et 450 euros par personne et par jour, hors vols internationaux. L'écart entre ces deux bornes ne vient pas du hasard: il vient de cinq décisions que vous prenez à la conception, et il est utile de savoir lesquelles avant de comparer deux devis. Les voyages de plusieurs jours de Kemet reviennent, eux, à 170–226 euros par personne et par jour pour un groupe de six personnes ou plus, et à 187–249 euros pour deux voyageurs: autour du plancher de cette fourchette, et juste en dessous pour les groupes plus nombreux.
 
 01
 

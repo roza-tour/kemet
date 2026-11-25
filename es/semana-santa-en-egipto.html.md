@@ -41,7 +41,7 @@ Las dahabiyas completas, los egiptólogos que guían en español y las habitacio
 
 ## Cuántos días caben
 
-Si encadena Semana Santa con unos días de vacaciones, diez días cubren El Cairo, Luxor, el crucero por el Nilo y Asuán sin prisas — es la forma de nuestro itinerario de 10 días, desde 1.915 € por persona, para grupos desde 6 viajeros. Con solo la semana santa propiamente dicha, El Cairo y Luxor entran bien y el viaje sigue mereciendo la pena.
+Si encadena Semana Santa con unos días de vacaciones, diez días cubren El Cairo, Luxor, el crucero por el Nilo y Asuán sin prisas — es la forma de nuestro itinerario de 10 días, desde 2.107 € por persona, para grupos desde 6 viajeros. Con solo la semana santa propiamente dicha, El Cairo y Luxor entran bien y el viaje sigue mereciendo la pena.
 
 ## Preguntas frecuentes
 

@@ -59,7 +59,7 @@ Il Cairo · Giza · Alessandria · Assuan · Luxor
 
 Il nostro viaggio signature: Il Cairo, Alessandria, un treno notturno verso sud e tre notti di crociera da Assuan a Luxor — ogni strato dell'Egitto in un solo arco.
 
-1.915 € / persona da 6 viaggiatori
+2.107 € / persona da 6 viaggiatori
 
 7 Giorni
 
@@ -69,7 +69,7 @@ Il Cairo · Giza · Alessandria · Luxor
 
 I grandi nomi dell'Egitto in sette giorni — il Museo Egizio, Alessandria, i templi e le tombe di Luxor e le piramidi di Giza.
 
-1.179 € / persona da 6 viaggiatori
+1.297 € / persona da 6 viaggiatori
 
 4 Giorni
 
@@ -79,7 +79,7 @@ Il Cairo · Giza · Alessandria
 
 Un viaggio compatto nel nord — il Museo Egizio, gli strati greco-romani di Alessandria, le piramidi di Giza e il Cairo medievale.
 
-618 € / persona da 6 viaggiatori
+680 € / persona da 6 viaggiatori
 
 3 Giorni
 
@@ -89,7 +89,7 @@ Il Cairo · Luxor · Assuan
 
 Un anello rapido per Luxor e Assuan con i voli inclusi — Karnak, la Valle dei Re, File e la Grande Diga, in partenza dal Cairo e ritorno.
 
-527 € / persona da 6 viaggiatori
+580 € / persona da 6 viaggiatori
 
 Giornata intera
 
@@ -99,7 +99,7 @@ Fayyum
 
 Il lago Qarun, le cascate e le dune di Wadi el-Rayan, le balene fossili di Wadi al-Hitan e i ceramisti del villaggio di Tunis — l'altra metà dell'Egitto, selvatica e verde.
 
-139 € / persona da 6 viaggiatori · biglietti non inclusi
+153 € / persona da 6 viaggiatori · biglietti non inclusi
 
 Giornata intera
 
@@ -109,7 +109,7 @@ Giza
 
 La Grande Piramide, il panorama sulle tre piramidi, il tempio della valle e la Sfinge, poi l'immenso Grand Egyptian Museum accanto alla piana.
 
-79 € / persona da 6 viaggiatori · biglietti non inclusi
+87 € / persona da 6 viaggiatori · biglietti non inclusi
 
 Giornata intera
 
@@ -119,7 +119,7 @@ Saqqara · Menfi · Dahshur
 
 La piramide a gradoni di Djoser, le rovine all'aperto di Menfi e le piramidi romboidale e rossa di Dahshur — la storia di come è stata inventata la piramide.
 
-68 € / persona da 6 viaggiatori · biglietti non inclusi
+75 € / persona da 6 viaggiatori · biglietti non inclusi
 
 Giornata intera
 
@@ -129,7 +129,7 @@ Il Cairo
 
 La Chiesa Sospesa, la sinagoga Ben Ezra e Abu Serga nel Cairo antico, poi la Cittadella di Saladino e la moschea di alabastro di Muhammad Ali.
 
-80 € / persona da 6 viaggiatori · biglietti non inclusi
+88 € / persona da 6 viaggiatori · biglietti non inclusi
 
 Giornata intera
 
@@ -139,7 +139,7 @@ Il Cairo
 
 I tesori del Museo Egizio di Tahrir, poi il Museo Nazionale della Civiltà Egizia e la sua Sala delle Mummie Reali.
 
-64 € / persona da 6 viaggiatori · biglietti non inclusi
+70 € / persona da 6 viaggiatori · biglietti non inclusi
 
 Giornata intera
 
@@ -147,9 +147,9 @@ Giornata intera
 
 Alessandria
 
-Le catacombe di Kom el-Shoqafa, la colonna di Pompeo, la cittadella di Qaitbay sul sito dell'antico faro e la Bibliotheca Alexandrina, con pranzo di pesce.
+Le catacombe di Kom el-Shoqafa, la colonna di Pompeo, la cittadella di Qaitbay sul sito dell'antico faro e la Bibliotheca Alexandrina, con pranzo di pesce da saldare in loco.
 
-57 € / persona da 6 viaggiatori · biglietti non inclusi
+63 € / persona da 6 viaggiatori · biglietti non inclusi
 
 Mezza giornata
 
@@ -159,7 +159,7 @@ Giza
 
 La Grande Piramide, le piramidi di Chefren e Micerino, il punto panoramico e il tempio della valle con la Grande Sfinge — Giza in una mattinata.
 
-66 € / persona da 6 viaggiatori · biglietti non inclusi
+73 € / persona da 6 viaggiatori · biglietti non inclusi
 
 Serata
 
@@ -169,7 +169,7 @@ Il Cairo
 
 Una degustazione serale guidata dei piatti più amati del Cairo — koshari, ful e ta'meya, hawawshi e piccione alla griglia, kunafa e basbousa, con chiusura in un ahwa tradizionale.
 
-59 € / persona da 6 viaggiatori · cibo non incluso
+65 € / persona da 6 viaggiatori · cibo non incluso
 
 5 Giorni
 
@@ -179,7 +179,7 @@ Luxor · Edfu · Kom Ombo · Assuan
 
 Il cuore storico dell'Egitto in viaggio privato su strada — Karnak, la Valle dei Re, Edfu, Kom Ombo e File, con il tempo di assorbirli davvero.
 
-1.018 € / persona da 6 viaggiatori
+1.120 € / persona da 6 viaggiatori
 
 9 Giorni
 
@@ -189,7 +189,7 @@ Il Cairo · Giza · Assuan · Luxor
 
 L'Egitto come dovrebbe essere un viaggio di nozze — alba privata alle piramidi, feluca nell'ora d'oro, tre notti sul Nilo e suite scelte per la vista.
 
-2.045 € / persona da 2 viaggiatori
+2.250 € / persona da 2 viaggiatori
 
 8 Giorni
 
@@ -199,7 +199,7 @@ Il Cairo · Giza · Luxor · Assuan
 
 L'Egitto con i bambini fatto come si deve: mattinate guidate brevi, egittologi specializzati in famiglie, pomeriggi in piscina e momenti che nessuna aula può offrire.
 
-1.524 € / persona da 6 viaggiatori
+1.676 € / persona da 6 viaggiatori
 
 7 Giorni
 
@@ -209,7 +209,7 @@ Il Cairo · Giza · Luxor · Assuan
 
 Un itinerario costruito a partire dalla luce: accesso anticipato a Giza all'alba, Karnak prima dei gruppi, una mongolfiera facoltativa sopra Tebe e feluche nell'ora d'oro.
 
-1.419 € / persona da 6 viaggiatori
+1.561 € / persona da 6 viaggiatori
 
 14 Giorni
 
@@ -219,7 +219,7 @@ Il Cairo · Giza · Alessandria · Assuan · Abu Simbel · Luxor · Sharm El She
 
 Il nostro viaggio più completo: Il Cairo e Alessandria, una crociera sul Nilo, il tempio di montagna di Ramesse II ad Abu Simbel e tre notti sul Mar Rosso per lasciar sedimentare tutto.
 
-2.728 € / persona da 6 viaggiatori
+3.001 € / persona da 6 viaggiatori
 
 5 Giorni
 
@@ -229,7 +229,7 @@ Il Cairo · Giza · Saqqara · Menfi
 
 Una lettura lenta e profonda della città più stratificata del mondo — i suoi due musei, tre fedi, le strade medievali e la necropoli dove è nata la piramide.
 
-875 € / persona da 6 viaggiatori
+963 € / persona da 6 viaggiatori
 
 5 Giorni
 
@@ -239,7 +239,7 @@ Sharm El Sheikh · Ras Mohammed
 
 Il Mar Rosso con un'idea precisa — una giornata in barca privata a Ras Mohammed, una serata nel deserto del Sinai sotto le stelle e spazi lasciati vuoti di proposito.
 
-979 € / persona da 6 viaggiatori
+1.077 € / persona da 6 viaggiatori
 
 4 Giorni
 
@@ -249,7 +249,7 @@ Sharm El Sheikh · Ras Mohammed · Tiran
 
 Quattro immersioni guidate in barca sui due migliori gruppi di siti del Sinai — Ras Mohammed e Tiran — con un diving PADI che abbiamo verificato, dopo un'immersione di prova sul reef dell'hotel.
 
-792 € / persona da 6 viaggiatori
+871 € / persona da 6 viaggiatori
 
 3 Giorni
 
@@ -259,7 +259,7 @@ Luxor
 
 Luxor senza corsa: Karnak all'apertura, la Valle dei Re prima del caldo, le terrazze di Hatshepsut e il viale delle sfingi dopo il tramonto.
 
-544 € / persona da 6 viaggiatori
+598 € / persona da 6 viaggiatori
 
 3 Giorni
 
@@ -269,7 +269,7 @@ Il Cairo · Giza
 
 Il Cairo essenziale, gestito come una concierge: corsia prioritaria all'immigrazione, mattinata privata sulla piana, il Grand Egyptian Museum e il Cairo islamico illuminato a lanterne.
 
-600 € / persona da 6 viaggiatori
+660 € / persona da 6 viaggiatori
 
 2 Giorni
 
@@ -279,7 +279,7 @@ Alessandria
 
 Alessandria con la sua metà mancante: i siti greco-romani di giorno, poi la corniche al crepuscolo, il pesce in riva al mare e la luce del mattino che nessuna gita riesce a cogliere.
 
-402 € / persona da 6 viaggiatori
+442 € / persona da 6 viaggiatori
 
 Giornata intera
 
@@ -289,7 +289,7 @@ Abu Simbel
 
 I templi colossali di Ramesse II scavati nella roccia — intagliati in una montagna nubiana, spostati blocco per blocco sopra il lago che saliva, e ancora allineati al sole.
 
-160 € / persona da 6 viaggiatori · biglietti non inclusi
+176 € / persona da 6 viaggiatori · biglietti non inclusi
 
 ## Confrontare le opzioni
 

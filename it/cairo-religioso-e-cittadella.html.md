@@ -11,11 +11,11 @@ Escursione in giornata
 
 Le fedi del Cairo in una sola giornata — chiese copte, un'antica sinagoga e la grande Cittadella coronata dalla sua moschea.
 
-da 80 € / persona
+da 88 € / persona
 
 da 6 viaggiatori · biglietti non inclusi
 
-88 € a persona per due viaggiatori
+97 € a persona per due viaggiatori
 
 A persona, in stagione normale. I supplementi delle festività sono indicati separatamente nel preventivo.
 

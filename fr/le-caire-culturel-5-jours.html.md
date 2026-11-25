@@ -11,11 +11,11 @@ Voyage culturel
 
 Cinq jours dans les strates d'une seule ville — Le Caire pharaonique, copte, islamique et moderne, lu rue par rue avec un historien.
 
-à partir de 875 € / personne
+à partir de 963 € / personne
 
 à partir de 6 voyageurs
 
-963 € par personne pour deux voyageurs
+1 059 € par personne pour deux voyageurs
 
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
 
@@ -74,7 +74,7 @@ La plupart des visiteurs accordent au Caire deux nuits et une liste. Ce voyage l
 ### Jour 5 — Le souk & départ
 
 - Khan el-Khalili avec le contexte — des ateliers, pas seulement des étals
-- Dernier déjeuner dans une maison ottomane restaurée
+- Dernier déjeuner, à régler sur place, dans une maison ottomane restaurée
 - Transfert privé à l'aéroport
 
 ## Compris

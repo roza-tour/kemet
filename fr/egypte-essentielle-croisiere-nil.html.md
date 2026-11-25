@@ -11,13 +11,13 @@ Voyage signature
 
 Dix jours sans hâte, des pyramides de Gizeh aux temples de Haute-Égypte, reliés par trois nuits de croisière sur le Nil.
 
-à partir de 1 915 € / personne
+à partir de 2 107 € / personne
 
 à partir de 6 voyageurs
 
-2 107 € par personne pour deux voyageurs
+2 318 € par personne pour deux voyageurs
 
-Avec des vols intérieurs à la place des deux nuits en train-couchettes, ces nuits-là à l'hôtel: 2 045 € par personne
+Avec des vols intérieurs à la place des deux nuits en train-couchettes, ces nuits-là à l'hôtel: 2 250 € par personne
 
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
 
@@ -54,7 +54,7 @@ Voici l'Égypte dans toute son étendue, à un rythme fait pour être vécu plut
 - Route du désert jusqu'à Alexandrie
 - Catacombes de Kom el-Chogafa et colonne de Pompée
 - Citadelle de Qaitbay sur l'emplacement du Phare et la Bibliotheca Alexandrina
-- Déjeuner de poisson en front de mer avant le retour au Caire
+- Déjeuner de poisson en front de mer, à régler sur place, avant le retour au Caire
 
 03
 
@@ -123,9 +123,9 @@ Voici l'Égypte dans toute son étendue, à un rythme fait pour être vécu plut
 ## Compris
 
 - Un égyptologue privé tout au long du voyage
-- 9 nuits — hôtels et une croisière sur le Nil
+- 7 nuits — hôtels et croisière sur le Nil; les deux autres nuits se passent dans le train de nuit
 - Croisière de 3 nuits en pension complète, d'Assouan à Louxor
-- Couchettes de train de nuit Le Caire–Haute-Égypte (aller et retour)
+- Couchettes de train de nuit Le Caire–Haute-Égypte (aller et retour), avec dîner et petit-déjeuner à bord
 - Tous les droits d'entrée aux sites et monuments
 - Transferts privés climatisés
 - Prise en charge et retour à l'hôtel
@@ -137,7 +137,7 @@ Voici l'Égypte dans toute son étendue, à un rythme fait pour être vécu plut
 - Le visa d'entrée en Égypte
 - Les pourboires
 - Les dépenses personnelles
-- Les repas, sauf à bord de la croisière sur le Nil
+- Les repas, hors ceux pris à bord de la croisière sur le Nil et dans le train de nuit
 - Les options que vous ajoutez — activités, boissons
 
 ## Le rythme

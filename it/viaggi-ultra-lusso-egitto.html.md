@@ -9,13 +9,13 @@ Kemet Ultra · su richiesta privata
 
 # L'Egitto, aperto *solo per voi*
 
-Da **17.400 €** a persona, in due
+Da **19.140 €** a persona, in due
 
 In sintesi
 
 ## Scegliete il vostro viaggio
 
-7 giorni / 6 notti **Il faraone privato** Il Cairo · Giza · Luxor · Abido *Da* 17.400 € a persona, in due Scopri il viaggio 10 giorni / 9 notti **Il Nilo reale** Il Cairo · Assuan · Abu Simbel · il Nilo · Luxor *Da* 36.700 € a persona, in due Scopri il viaggio 12 giorni / 11 notti **Da Karnak al mare dei coralli** Il Cairo · Luxor · il Nilo · Assuan · Abu Simbel · Mar Rosso *Da* 38.300 € a persona, in due Scopri il viaggio 15 giorni / 14 notti **La grande odissea privata** Il Cairo · Assuan · Abu Simbel · il Nilo · Luxor · Mar Rosso *Da* 66.800 € a persona, in due Scopri il viaggio
+7 giorni / 6 notti **Il faraone privato** Il Cairo · Giza · Luxor · Abido *Da* 19.140 € a persona, in due Scopri il viaggio 10 giorni / 9 notti **Il Nilo reale** Il Cairo · Assuan · Abu Simbel · il Nilo · Luxor *Da* 40.370 € a persona, in due Scopri il viaggio 12 giorni / 11 notti **Da Karnak al mare dei coralli** Il Cairo · Luxor · il Nilo · Assuan · Abu Simbel · Mar Rosso *Da* 42.130 € a persona, in due Scopri il viaggio 15 giorni / 14 notti **La grande odissea privata** Il Cairo · Assuan · Abu Simbel · il Nilo · Luxor · Mar Rosso *Da* 73.480 € a persona, in due Scopri il viaggio
 
 Quattro viaggi privati al vertice del mercato egiziano: la Grande Piramide aperta per il vostro gruppo, la cena dentro Karnak dopo la chiusura, una dahabiya o uno yacht senza altri ospiti e gli alberghi storici nelle loro stanze migliori. Con i prezzi dichiarati, e ogni elemento confermato per iscritto prima di qualsiasi pagamento.
 
@@ -35,7 +35,7 @@ Le firme
 
 ## Che cos'è Kemet Ultra?
 
-Kemet Ultra è il livello più alto di Kemet: quattro viaggi in Egitto interamente privati, da 7 a 15 giorni, con la Grande Piramide aperta solo per voi, la cena dentro Karnak dopo la chiusura, una dahabiya o uno yacht noleggiati e suite al Mena House, all'Old Cataract e agli Oberoi. In due da 17.400 € a 66.800 € a persona; in quattro da 11.500 €.
+Kemet Ultra è il livello più alto di Kemet: quattro viaggi in Egitto interamente privati, da 7 a 15 giorni, con la Grande Piramide aperta solo per voi, la cena dentro Karnak dopo la chiusura, una dahabiya o uno yacht noleggiati e suite al Mena House, all'Old Cataract e agli Oberoi. In due da 19.140 € a 73.480 € a persona; in quattro da 12.650 €.
 
 I viaggi
 
@@ -49,7 +49,7 @@ La Grande Piramide e Karnak, ciascuna aperta solo per il vostro gruppo
 
 Una settimana costruita intorno a due porte che di solito restano chiuse. A Giza la Grande Piramide viene aperta per due ore solo per voi; a Luxor, Karnak resta aperto dopo la chiusura e la cena viene servita nel recinto del tempio. In mezzo: il Grand Egyptian Museum con un egittologo esperto, le tombe più belle della Valle dei Re e i due templi che quasi nessuno raggiunge.
 
-Da **17.400 €** a persona, in due 11.500 € a persona in quattro
+Da **19.140 €** a persona, in due 12.650 € a persona in quattro
 
 - Apertura privata della Grande Piramide — due ore, solo il vostro gruppo
 - Karnak aperto dopo la chiusura, con cena nel recinto
@@ -111,7 +111,7 @@ Una dahabiya noleggiata per il vostro gruppo, da Assuan a Esna
 
 Quattro notti su una dahabiya a vela senza altri ospiti: equipaggio, cuoco e ormeggi sono vostri, e la barca si ferma dove le grandi navi non possono. Prima, il Cairo con la Grande Piramide aperta in privato e una notte all'Old Cataract; Abu Simbel in aereo privato; e alla fine Karnak, aperto per la vostra cena.
 
-Da **36.700 €** a persona, in due 21.000 € a persona in quattro
+Da **40.370 €** a persona, in due 23.100 € a persona in quattro
 
 - Noleggio esclusivo di una dahabiya di prima categoria — nessun altro ospite
 - Apertura privata della Grande Piramide; cena a Karnak dopo la chiusura
@@ -190,7 +190,7 @@ L'Oberoi Philae sul Nilo, poi uno yacht privato sul Mar Rosso
 
 La classica crociera sul Nilo sulla nave più raffinata del fiume, in suite, e poi un finale all'altezza: un aereo privato da Assuan al Mar Rosso, una suite con piscina propria e uno yacht con equipaggio per una giornata tra le barriere di Giftun. Lungo il viaggio, la Grande Piramide e Karnak vengono aperti per voi.
 
-Da **38.300 €** a persona, in due 25.300 € a persona in quattro
+Da **42.130 €** a persona, in due 27.830 € a persona in quattro
 
 - L'Oberoi Philae, quattro notti in suite di lusso
 - Apertura privata della Grande Piramide; cena a Karnak dopo la chiusura
@@ -279,7 +279,7 @@ Ogni spostamento privato — aereo, dahabiya e yacht
 
 Tutto l'Egitto senza un solo momento condiviso. Un aereo privato per ogni tratta interna; una dahabiya noleggiata per quattro notti tra Assuan ed Esna; la Grande Piramide e Karnak aperti per voi; e tre notti sul Mar Rosso con due giornate a bordo del vostro yacht. Pensato per un primo viaggio che vuole essere quello definitivo.
 
-Da **66.800 €** a persona, in due 37.700 € a persona in quattro
+Da **73.480 €** a persona, in due 41.470 € a persona in quattro
 
 - Aereo privato su ogni tratta interna
 - Noleggio esclusivo di una dahabiya per quattro notti
@@ -400,19 +400,19 @@ Prima di scriverci
 
 **Quanto costa un viaggio ultra lusso in Egitto?**
 
-I quattro viaggi Kemet Ultra costano, in due, da 17.400 € a persona per sette giorni a 66.800 € per quindici. In quattro il prezzo a persona scende tra 11.500 € e 37.700 €, perché noleggio, aereo e aperture private vengono condivisi. Le settimane di punta a Natale, Capodanno e Pasqua prevedono un supplemento del 25%.
+I quattro viaggi Kemet Ultra costano, in due, da 19.140 € a persona per sette giorni a 73.480 € per quindici. In quattro il prezzo a persona scende tra 12.650 € e 41.470 €, perché noleggio, aereo e aperture private vengono condivisi. Le settimane di punta a Natale, Capodanno e Pasqua prevedono un supplemento del 25%.
 
 **La Grande Piramide può davvero essere aperta solo per noi?**
 
-Sì. Per due ore la Grande Piramide viene aperta solo per il vostro gruppo, fuori dall'orario pubblico, con il vostro egittologo accanto e nessun altro all'interno. Pensiamo a tutto noi; a voi basta arrivare.
+Sì, con permesso. Per due ore la Grande Piramide viene aperta solo per il vostro gruppo, fuori dall'orario pubblico, con il vostro egittologo accanto e nessun altro all'interno. L'apertura è concessa dal Ministero del Turismo e delle Antichità su una richiesta che presentiamo per le vostre date non appena confermate, e l'esito vi viene comunicato prima della partenza. Se il permesso viene negato, l'apertura viene tolta dal prezzo e non vi viene addebitato nulla.
 
 **Come funziona la cena dentro Karnak?**
 
-Quando gli ultimi visitatori sono usciti, Karnak viene aperto per il vostro gruppo. Attraversate la sala ipostila con il vostro egittologo e la cena viene servita nel recinto del tempio. Non c'è nulla che dobbiate organizzare.
+Quando gli ultimi visitatori sono usciti, Karnak viene aperto per il vostro gruppo con un permesso, che richiediamo una volta che avete confermato. Attraversate la sala ipostila con il vostro egittologo e la cena viene servita nel recinto del tempio. Non c'è nulla che dobbiate organizzare; se il permesso viene negato, quella serata viene tolta dal prezzo.
 
 **Si può vedere il tesoro di Tutankhamon in privato?**
 
-Sì. Al Grand Egyptian Museum le sale di Tutankhamon possono essere aperte solo per il vostro gruppo per un'ora e mezza, senza altri visitatori tra l'oro del re bambino. Si può aggiungere a ciascuno dei quattro viaggi. A Giza, una golf car privata può inoltre portarvi sulla piana.
+Sì, con permesso del museo. Al Grand Egyptian Museum le sale di Tutankhamon possono essere aperte solo per il vostro gruppo per un'ora e mezza, senza altri visitatori tra l'oro del re bambino. Si può aggiungere a ciascuno dei quattro viaggi. A Giza, una golf car privata può inoltre portarvi sulla piana.
 
 **Perché il Winter Palace non è incluso?**
 
@@ -428,7 +428,7 @@ Sempre. Giorni, alberghi, ordine delle tappe e ritmo possono cambiare, e il prez
 
 **Con quanto anticipo prenotare?**
 
-Da otto a dodici settimane per viaggi tra ottobre e aprile, quando aperture private e noleggi di dahabiya sono più richiesti. A volte è possibile con meno preavviso; prima dell'impegno saprete quali elementi si possono ancora assicurare.
+Da otto a dodici settimane per viaggi tra ottobre e aprile, quando aperture private e noleggi di dahabiya sono più richiesti, e di più per la Grande Piramide, il cui permesso può richiedere diversi mesi. A volte è possibile con meno preavviso; prima dell'impegno saprete quali elementi si possono ancora assicurare.
 
 **Con chi avremo a che fare?**
 

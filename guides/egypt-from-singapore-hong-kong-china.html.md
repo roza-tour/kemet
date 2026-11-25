@@ -161,7 +161,7 @@ Cairo · Giza · Alexandria · Aswan · Luxor
 
 Our signature journey: Cairo, Alexandria, a sleeper train south, and a three-night Nile cruise from Aswan to Luxor — every layer of Egypt in one arc.
 
-€1,915 / person from 6 travellers
+€2,107 / person from 6 travellers
 
 8 Days
 
@@ -171,7 +171,7 @@ Cairo · Giza · Luxor · Aswan
 
 Egypt with children done right: short guided mornings, family-specialist Egyptologists, pool afternoons, and the moments no classroom can match.
 
-€1,524 / person from 6 travellers
+€1,676 / person from 6 travellers
 
 Full Day
 
@@ -181,7 +181,7 @@ Abu Simbel
 
 Ramesses II's colossal rock-cut temples — carved into a Nubian mountainside, moved block by block above the rising lake, and still aligned to the sun.
 
-€160 / person from 6 travellers · tickets not included
+€176 / person from 6 travellers · tickets not included
 
 Further reading
 

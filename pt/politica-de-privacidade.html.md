@@ -29,7 +29,7 @@ Quando vocês nos enviam uma mensagem pelo formulário de contato, coletamos os 
 
 Como quase todos os sites, o nosso servidor também registra, em seus logs, informações técnicas padrão (como endereço IP, tipo de navegador e páginas solicitadas). Não usamos essas informações para identificar vocês pessoalmente.
 
-Se vocês entrarem na nossa lista — pelo convite neste site ou pelo desenhador de viagens — guardamos o seu endereço de e-mail, o seu nome, se o informarem, a página e o idioma a partir dos quais se inscreveram e um registro do consentimento: quando foi dado, o texto com o qual concordaram e o endereço IP de onde partiu. Vocês podem sair da lista a qualquer momento pelo link de cancelamento da inscrição nos nossos e-mails, ou escrevendo para nós.
+Se vocês entrarem na nossa lista — pelo convite neste site ou pelo desenhador de viagens — primeiro enviamos um e-mail pedindo que confirmem, e nada mais é enviado até que o façam. Guardamos o seu endereço de e-mail, o seu nome, se o informarem, a página e o idioma a partir dos quais se inscreveram e um registro do consentimento: quando foi dado e quando foi confirmado, o texto com o qual concordaram e o endereço IP de onde partiu cada um. Vocês podem sair da lista a qualquer momento pelo link de cancelamento da inscrição nos nossos e-mails, ou escrevendo para nós.
 
 Não temos contas de usuário e não recebemos pagamentos neste site; por isso nunca coletamos aqui senhas nem dados de cartão.
 
@@ -39,7 +39,9 @@ Não temos contas de usuário e não recebemos pagamentos neste site; por isso n
 
 Usamos os dados da sua consulta exclusivamente para responder a vocês, para entender o que procuram e — se seguirem em frente — para desenhar e organizar a sua viagem. Podemos entrar em contato por e-mail, telefone ou WhatsApp, usando os dados que vocês informarem.
 
-Nossa base legal é o seu consentimento e as providências necessárias para celebrar e executar um serviço de viagem a pedido de vocês. Não usamos os seus dados para publicidade nem para decisões automatizadas.
+Se vocês não viajarem conosco de imediato, podemos escrever-lhes novamente sobre a viagem que consultaram: no máximo três vezes no ano seguinte à consulta. Digam-nos a qualquer momento e não escreveremos mais.
+
+A nossa base legal é o seu consentimento, as providências necessárias para celebrar e executar um serviço de viagem a pedido de vocês e, no caso dessas mensagens de acompanhamento, o nosso interesse legítimo em responder à pergunta que vocês nos trouxeram. Não compartilhamos os seus dados com anunciantes e não os usamos para decisões automatizadas.
 
 04
 
@@ -67,7 +69,9 @@ O nosso site e o nosso e-mail são hospedados pelo nosso provedor de hospedagem,
 
 ## Por quanto tempo os guardamos
 
-Guardamos a correspondência de consulta apenas pelo tempo necessário para atender vocês e manter um registro de qualquer viagem que organizarmos; depois disso, ela é excluída. Quando há uma reserva, alguns registros podem ser mantidos por mais tempo para cumprir obrigações contábeis ou legais.
+Guardamos uma consulta por três anos a contar do dia em que foi enviada e depois a excluímos. Quando há uma reserva, alguns registros podem ser mantidos por mais tempo para cumprir obrigações contábeis ou legais.
+
+Se vocês entrarem na nossa lista, guardamos os seus dados até saírem dela. Uma inscrição que nunca seja confirmada pelo e-mail que enviamos é excluída após 30 dias. Se vocês saírem da lista, guardamos um registro do seu endereço e da data da saída, para que não sejam acrescentados de novo por engano.
 
 Vocês podem pedir a exclusão dos seus dados a qualquer momento (veja “Os seus direitos”).
 

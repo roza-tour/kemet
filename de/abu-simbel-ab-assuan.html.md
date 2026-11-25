@@ -11,11 +11,11 @@ Tagesausflug
 
 Die Bergtempel Ramses' II. über dem Nassersee — eine Wüstenstraße im Morgengrauen, zwei in den Fels geschlagene Heiligtümer, und zum Mittagessen zurück in Assuan.
 
-ab 160 € / Person
+ab 176 € / Person
 
 ab 6 Reisenden · Eintritte nicht enthalten
 
-176 € pro Person bei zwei Reisenden
+194 € pro Person bei zwei Reisenden
 
 Pro Person, Normalsaison. Zuschläge für Feiertage weisen wir im Angebot getrennt aus.
 

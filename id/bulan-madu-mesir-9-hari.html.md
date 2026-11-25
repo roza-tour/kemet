@@ -11,7 +11,7 @@ Bulan madu
 
 Sembilan hari yang dirancang untuk berdua — ikon-ikon Kairo, pesiar tiga malam, pulau-pulau Aswan, dan senja keemasan yang panjang tanpa perlu terburu-buru ke mana pun.
 
-mulai €2.045 / orang
+mulai €2.250 / orang
 
 mulai 2 orang
 

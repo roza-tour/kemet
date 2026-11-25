@@ -23,7 +23,7 @@ Casi todas las páginas que responden a esta pregunta están escritas para otro 
 
 ## Cuatro maneras de ver Egipto
 
-Viaje independiente con transporte público y hoteles sencillos: unos 40 a 90 euros por persona y día. Viaje de grupo en autocar con veinte o cuarenta acompañantes y fechas fijas: 90 a 180 euros. Privado y a medida con egiptólogo propio, vehículo propio y buenos hoteles: 200 a 450 euros — aquí está Kemet. En la cima del mercado, con dahabiya en exclusiva y vuelos privados entre ciudades: desde 600 euros. La distancia entre el suelo y el techo del mercado es en Egipto mayor que en casi cualquier otro país.
+Viaje independiente con transporte público y hoteles sencillos: unos 40 a 90 euros por persona y día. Viaje de grupo en autocar con veinte o cuarenta acompañantes y fechas fijas: 90 a 180 euros. Privado y a medida con egiptólogo propio, vehículo propio y buenos hoteles: 200 a 450 euros. Los viajes de varios días de Kemet salen a entre 170 y 226 euros por persona y día para un grupo de seis o más, y a entre 187 y 249 euros para dos viajeros: en torno al suelo de esta franja y, para los grupos grandes, justo por debajo. En la cima del mercado, con dahabiya en exclusiva y vuelos privados entre ciudades: desde 600 euros. La distancia entre el suelo y el techo del mercado es en Egipto mayor que en casi cualquier otro país.
 
 02
 

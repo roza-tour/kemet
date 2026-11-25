@@ -11,7 +11,7 @@ Bulan madu
 
 Sembilan hari yang dibina untuk berdua — ikon Kaherah, tiga malam pelayaran, pulau-pulau Aswan dan senja keemasan yang panjang tanpa perlu bergegas ke mana-mana.
 
-dari €2,045 / seorang
+dari €2,250 / seorang
 
 dari 2 orang
 

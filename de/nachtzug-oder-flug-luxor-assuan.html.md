@@ -65,7 +65,7 @@ Die Flugzeit ist kurz, aber die Reise besteht nicht nur aus dem Flug. Rechnen Si
 
 ## Wie wir es einrichten
 
-Zwei unserer längeren Reisen – Egypt Icons & Nile Cruise und Egypt Highlights Deluxe – nutzen den Nachtzug wie veröffentlicht in beide Richtungen. Beide lassen sich auch mit Flügen statt Zug einrichten, mit Hotelübernachtungen für diese beiden Nächte, für 130 € mehr pro Person; bitten Sie bei Ihrer Anfrage um die Flugvariante. Jede andere Reise nach Süden ist ohnehin auf Flügen aufgebaut.
+Zwei unserer längeren Reisen – Egypt Icons & Nile Cruise und Egypt Highlights Deluxe – nutzen den Nachtzug wie veröffentlicht in beide Richtungen. Beide lassen sich auch mit Flügen statt Zug einrichten, mit Hotelübernachtungen für diese beiden Nächte, für 143 € mehr pro Person; bitten Sie bei Ihrer Anfrage um die Flugvariante. Jede andere Reise nach Süden ist ohnehin auf Flügen aufgebaut.
 
 ## Häufige Fragen
 

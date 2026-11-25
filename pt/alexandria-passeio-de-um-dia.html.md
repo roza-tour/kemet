@@ -11,11 +11,11 @@ Passeio de um dia
 
 Um dia inteiro no Mediterrâneo — catacumbas, uma coluna romana, uma cidadela cercada pelo mar e a grande biblioteca moderna.
 
-a partir de € 57 / pessoa
+a partir de € 63 / pessoa
 
 a partir de 6 viajantes · ingressos não incluídos
 
-€ 63 por pessoa, para dois viajantes
+€ 69 por pessoa, para dois viajantes
 
 Por pessoa, em temporada normal. Acréscimos de feriados aparecem separados no orçamento.
 
@@ -27,13 +27,13 @@ Paradas **Alexandria**
 
 Privativo **Sim — só o seu grupo**
 
-As Catacumbas de Kom el-Shoqafa, a Coluna de Pompeu, a Cidadela de Qaitbay no antigo local do Farol e a Bibliotheca Alexandrina, com almoço de frutos do mar.
+As Catacumbas de Kom el-Shoqafa, a Coluna de Pompeu, a Cidadela de Qaitbay no antigo local do Farol e a Bibliotheca Alexandrina, com almoço de frutos do mar, pago no local.
 
 01
 
 ## A viagem
 
-A cidade de Alexandre carrega com leveza o seu passado greco-romano ao longo da curva de uma corniche mediterrânea. Este dia inteiro passa pelas Catacumbas subterrâneas de Kom el-Shoqafa, pela imponente Coluna de Pompeu, pela Cidadela de Qaitbay, construída sobre as fundações do lendário Farol, e pela altiva e moderna Bibliotheca Alexandrina — herdeira da antiga Biblioteca. Um almoço de frutos do mar à beira-mar vem junto, naturalmente. Guia particular e traslados privativos a partir do Cairo.
+A cidade de Alexandre carrega com leveza o seu passado greco-romano ao longo da curva de uma corniche mediterrânea. Este dia inteiro passa pelas Catacumbas subterrâneas de Kom el-Shoqafa, pela imponente Coluna de Pompeu, pela Cidadela de Qaitbay, construída sobre as fundações do lendário Farol, e pela altiva e moderna Bibliotheca Alexandrina — herdeira da antiga Biblioteca. Um almoço de frutos do mar à beira-mar, pago no local, vem junto, naturalmente. Guia particular e traslados privativos a partir do Cairo.
 
 ## Passo a passo
 
@@ -59,7 +59,7 @@ Um passeio pelas muralhas sobre o mar da Cidadela de Qaitbay, construída exatam
 
 ### Parada 4 — Bibliotheca Alexandrina e almoço de frutos do mar
 
-O dia termina na impressionante e moderna Bibliotheca Alexandrina, a Biblioteca de Alexandria renascida, depois de um almoço tranquilo de frutos do mar à beira do Mediterrâneo.
+O dia termina na impressionante e moderna Bibliotheca Alexandrina, a Biblioteca de Alexandria renascida, depois de um almoço tranquilo de frutos do mar à beira do Mediterrâneo, pago no local.
 
 ## Incluído
 

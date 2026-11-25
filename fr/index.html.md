@@ -7,7 +7,7 @@ description: "Voyages privés sur mesure en Égypte : un égyptologue diplômé 
 
 # L'Égypte, en privé
 
-Pas d'autocar, pas de date de départ imposée, personne d'autre dans votre itinéraire.
+Pas d'autocar, pas de date de départ imposée, personne d'autre dans votre véhicule ni avec votre guide.
 
 Formule **Exclusivement privé**
 

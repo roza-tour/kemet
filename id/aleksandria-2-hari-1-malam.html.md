@@ -11,11 +11,11 @@ Liburan singkat
 
 Dua hari di tepi Mediterania — katakombe, benteng di tapak Mercusuar Pharos, perpustakaan yang lahir kembali, dan malam yang tak pernah disaksikan wisatawan harian.
 
-mulai €402 / orang
+mulai €442 / orang
 
 mulai 6 orang
 
-€442 per orang untuk dua wisatawan
+€486 per orang untuk dua wisatawan
 
 Per orang, musim normal. Biaya tambahan hari libur kami cantumkan terpisah dalam penawaran.
 

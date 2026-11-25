@@ -11,11 +11,11 @@ Liburan singkat
 
 Tiga hari di museum terbuka terbesar di dunia — kedua tepi sungai dijelajahi dengan layak, dengan kuil yang bermandi cahaya pada malam hari sebagai porosnya.
 
-mulai €544 / orang
+mulai €598 / orang
 
 mulai 6 orang
 
-€598 per orang untuk dua wisatawan
+€658 per orang untuk dua wisatawan
 
 Per orang, musim normal. Biaya tambahan hari libur kami cantumkan terpisah dalam penawaran.
 

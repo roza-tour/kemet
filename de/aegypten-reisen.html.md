@@ -59,7 +59,7 @@ Kairo · Gizeh · Alexandria · Assuan · Luxor
 
 Unsere Signature-Reise: Kairo, Alexandria, mit dem Nachtzug nach Süden und drei Nächte auf dem Nil von Assuan nach Luxor — jede Schicht Ägyptens in einem Bogen.
 
-1.915 € / Person ab 6 Reisenden
+2.107 € / Person ab 6 Reisenden
 
 7 Tage
 
@@ -69,7 +69,7 @@ Kairo · Gizeh · Alexandria · Luxor
 
 Die großen Namen Ägyptens in sieben Tagen — das Ägyptische Museum, Alexandria, die Tempel und Gräber von Luxor und die Pyramiden von Gizeh.
 
-1.179 € / Person ab 6 Reisenden
+1.297 € / Person ab 6 Reisenden
 
 4 Tage
 
@@ -79,7 +79,7 @@ Kairo · Gizeh · Alexandria
 
 Eine kompakte Reise durch den Norden — das Ägyptische Museum, Alexandrias griechisch-römische Schichten, die Pyramiden von Gizeh und das mittelalterliche Kairo.
 
-618 € / Person ab 6 Reisenden
+680 € / Person ab 6 Reisenden
 
 3 Tage
 
@@ -89,7 +89,7 @@ Kairo · Luxor · Assuan
 
 Eine schnelle Schleife durch Luxor und Assuan mit enthaltenen Flügen — Karnak, Tal der Könige, Philae und der Hochdamm, ab Kairo und zurück.
 
-527 € / Person ab 6 Reisenden
+580 € / Person ab 6 Reisenden
 
 Ganzer Tag
 
@@ -99,7 +99,7 @@ Fayyum
 
 Der Qarun-See, die Wasserfälle und Dünen des Wadi El Rayan, die fossilen Wale des Wadi Al-Hitan und die Töpfer des Dorfes Tunis — Ägyptens wilde, grüne andere Hälfte.
 
-139 € / Person ab 6 Reisenden · Eintritte nicht enthalten
+153 € / Person ab 6 Reisenden · Eintritte nicht enthalten
 
 Ganzer Tag
 
@@ -109,7 +109,7 @@ Gizeh
 
 Die Cheops-Pyramide, das Panorama aller drei Pyramiden, der Taltempel und die Sphinx, danach das riesige neue Grand Egyptian Museum gleich daneben.
 
-79 € / Person ab 6 Reisenden · Eintritte nicht enthalten
+87 € / Person ab 6 Reisenden · Eintritte nicht enthalten
 
 Ganzer Tag
 
@@ -119,7 +119,7 @@ Sakkara · Memphis · Dahschur
 
 Djosers Stufenpyramide, die Freiluftruinen von Memphis und die Knick- und Rote Pyramide von Dahschur — die Geschichte, wie die Pyramide erfunden wurde.
 
-68 € / Person ab 6 Reisenden · Eintritte nicht enthalten
+75 € / Person ab 6 Reisenden · Eintritte nicht enthalten
 
 Ganzer Tag
 
@@ -129,7 +129,7 @@ Kairo
 
 Die Hängende Kirche, die Ben-Esra-Synagoge und Abu Serga in Alt-Kairo, danach Saladins Zitadelle und die Alabastermoschee Muhammad Alis.
 
-80 € / Person ab 6 Reisenden · Eintritte nicht enthalten
+88 € / Person ab 6 Reisenden · Eintritte nicht enthalten
 
 Ganzer Tag
 
@@ -139,7 +139,7 @@ Kairo
 
 Die Schätze des Ägyptischen Museums am Tahrir, danach das Nationalmuseum der Ägyptischen Zivilisation und seine Halle der Königsmumien.
 
-64 € / Person ab 6 Reisenden · Eintritte nicht enthalten
+70 € / Person ab 6 Reisenden · Eintritte nicht enthalten
 
 Ganzer Tag
 
@@ -147,9 +147,9 @@ Ganzer Tag
 
 Alexandria
 
-Die Katakomben von Kom esch-Schukafa, die Pompeiussäule, die Zitadelle von Qaitbay auf dem Platz des alten Pharos und die Bibliotheca Alexandrina, mit einem Fischessen.
+Die Katakomben von Kom esch-Schukafa, die Pompeiussäule, die Zitadelle von Qaitbay auf dem Platz des alten Pharos und die Bibliotheca Alexandrina, mit einem vor Ort bezahlten Fischessen.
 
-57 € / Person ab 6 Reisenden · Eintritte nicht enthalten
+63 € / Person ab 6 Reisenden · Eintritte nicht enthalten
 
 Halber Tag
 
@@ -159,7 +159,7 @@ Gizeh
 
 Die Cheops-Pyramide, die Pyramiden des Chephren und Mykerinos, der Panoramapunkt und der Taltempel mit der Großen Sphinx — Gizeh an einem Vormittag.
 
-66 € / Person ab 6 Reisenden · Eintritte nicht enthalten
+73 € / Person ab 6 Reisenden · Eintritte nicht enthalten
 
 Abend
 
@@ -169,7 +169,7 @@ Kairo
 
 Eine geführte Verkostung der beliebtesten Gerichte Kairos am Abend — Koshari, Ful und Ta'meya, Hawawshi und gegrillte Taube, Kunafa und Basbousa, zum Abschluss in einem traditionellen Ahwa.
 
-59 € / Person ab 6 Reisenden · Essen nicht enthalten
+65 € / Person ab 6 Reisenden · Essen nicht enthalten
 
 5 Tage
 
@@ -179,7 +179,7 @@ Luxor · Edfu · Kom Ombo · Assuan
 
 Das geschichtliche Herz Ägyptens als private Straßenreise — Karnak, Tal der Könige, Edfu, Kom Ombo und Philae, mit der Zeit, sie wirklich aufzunehmen.
 
-1.018 € / Person ab 6 Reisenden
+1.120 € / Person ab 6 Reisenden
 
 9 Tage
 
@@ -189,7 +189,7 @@ Kairo · Gizeh · Assuan · Luxor
 
 Ägypten, wie eine Hochzeitsreise sein sollte — privater Sonnenaufgang an den Pyramiden, eine Feluke zur goldenen Stunde, drei Nächte auf dem Nil und Suiten, die nach ihrer Aussicht ausgesucht sind.
 
-2.045 € / Person ab 2 Reisenden
+2.250 € / Person ab 2 Reisenden
 
 8 Tage
 
@@ -199,7 +199,7 @@ Kairo · Gizeh · Luxor · Assuan
 
 Ägypten mit Kindern richtig gemacht: kurze geführte Vormittage, auf Familien spezialisierte Ägyptologen, Nachmittage am Pool und Momente, die kein Klassenzimmer bietet.
 
-1.524 € / Person ab 6 Reisenden
+1.676 € / Person ab 6 Reisenden
 
 7 Tage
 
@@ -209,7 +209,7 @@ Kairo · Gizeh · Luxor · Assuan
 
 Eine Reise, rückwärts aus dem Licht geplant: privater Zugang zu Gizeh zum Sonnenaufgang, Karnak vor den Gruppen, optional ein Ballon über Theben und Feluken zur goldenen Stunde.
 
-1.419 € / Person ab 6 Reisenden
+1.561 € / Person ab 6 Reisenden
 
 14 Tage
 
@@ -219,7 +219,7 @@ Kairo · Gizeh · Alexandria · Assuan · Abu Simbel · Luxor · Scharm el-Schei
 
 Unsere vollständigste Reise: Kairo und Alexandria, eine Nilkreuzfahrt, der Bergtempel Ramses' II. in Abu Simbel und drei Nächte am Roten Meer, um alles sacken zu lassen.
 
-2.728 € / Person ab 6 Reisenden
+3.001 € / Person ab 6 Reisenden
 
 5 Tage
 
@@ -229,7 +229,7 @@ Kairo · Gizeh · Sakkara · Memphis
 
 Eine tiefe, langsame Lektüre der am stärksten geschichteten Stadt der Welt — ihre zwei Museen, drei Glaubensrichtungen, mittelalterlichen Straßen und die Nekropole, in der die Pyramide erfunden wurde.
 
-875 € / Person ab 6 Reisenden
+963 € / Person ab 6 Reisenden
 
 5 Tage
 
@@ -239,7 +239,7 @@ Scharm el-Scheich · Ras Mohammed
 
 Das Rote Meer mit Absicht — ein privater Bootstag im Ras-Mohammed-Nationalpark, ein Abend in der Sinai-Wüste unter Sternen, und bewusst leer gelassene Zeit.
 
-979 € / Person ab 6 Reisenden
+1.077 € / Person ab 6 Reisenden
 
 4 Tage
 
@@ -249,7 +249,7 @@ Scharm el-Scheich · Ras Mohammed · Tiran
 
 Vier geführte Bootstauchgänge an den zwei besten Revieren des Sinai — Ras Mohammed und Tiran — mit einem von uns geprüften PADI-Center, nach einem Check-Dive am Hausriff.
 
-792 € / Person ab 6 Reisenden
+871 € / Person ab 6 Reisenden
 
 3 Tage
 
@@ -259,7 +259,7 @@ Luxor
 
 Luxor ohne Sprint: Karnak zur Öffnung, das Tal der Könige vor der Hitze, die Terrassen der Hatschepsut und die Sphinxallee nach Einbruch der Dunkelheit.
 
-544 € / Person ab 6 Reisenden
+598 € / Person ab 6 Reisenden
 
 3 Tage
 
@@ -269,7 +269,7 @@ Kairo · Gizeh
 
 Kairo auf das Wesentliche gebracht und concierge-geführt: Fast-Track bei der Einreise, ein privater Morgen am Plateau, das Grand Egyptian Museum und das laternenbeleuchtete islamische Kairo.
 
-600 € / Person ab 6 Reisenden
+660 € / Person ab 6 Reisenden
 
 2 Tage
 
@@ -279,7 +279,7 @@ Alexandria
 
 Alexandria mit seiner fehlenden Hälfte: die griechisch-römischen Stätten bei Tag, dann die Corniche in der Dämmerung, Fisch am Wasser und das Morgenlicht, das kein Tagesausflug je erwischt.
 
-402 € / Person ab 6 Reisenden
+442 € / Person ab 6 Reisenden
 
 Ganzer Tag
 
@@ -289,7 +289,7 @@ Abu Simbel
 
 Ramses' II. kolossale Felsentempel — in einen nubischen Berghang geschlagen, Block für Block über den steigenden See versetzt, und noch immer auf die Sonne ausgerichtet.
 
-160 € / Person ab 6 Reisenden · Eintritte nicht enthalten
+176 € / Person ab 6 Reisenden · Eintritte nicht enthalten
 
 ## Die Möglichkeiten im Vergleich
 

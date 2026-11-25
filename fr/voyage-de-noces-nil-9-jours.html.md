@@ -11,7 +11,7 @@ Voyage de noces
 
 Neuf jours faits pour deux — les grands noms du Caire, trois nuits de croisière, les îles d'Assouan et de longues soirées dorées où rien ne presse.
 
-à partir de 2 045 € / personne
+à partir de 2 250 € / personne
 
 à partir de 2 voyageurs
 

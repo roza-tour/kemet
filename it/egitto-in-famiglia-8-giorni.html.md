@@ -11,11 +11,11 @@ Viaggio in famiglia
 
 Otto giorni calibrati su bambini curiosi e genitori senza fretta — mummie, feluche, i colori delle tombe e pomeriggi in piscina.
 
-da 1.524 € / persona
+da 1.676 € / persona
 
 da 6 viaggiatori
 
-1.676 € a persona per due viaggiatori
+1.844 € a persona per due viaggiatori
 
 A persona, in stagione normale. I supplementi delle festività sono indicati separatamente nel preventivo.
 

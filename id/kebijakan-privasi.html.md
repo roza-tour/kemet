@@ -29,7 +29,7 @@ Saat Anda mengirim pesan melalui formulir kontak, kami mengumpulkan keterangan y
 
 Seperti hampir semua situs web, server kami juga mencatat informasi teknis standar (seperti alamat IP, jenis peramban, dan halaman yang diminta) dalam lognya. Kami tidak menggunakannya untuk mengidentifikasi Anda secara pribadi.
 
-Jika Anda bergabung dalam daftar kami — dari undangan di situs ini atau dari perancang perjalanan — kami menyimpan alamat email Anda, nama Anda jika Anda memberikannya, halaman dan bahasa yang Anda gunakan saat mendaftar, serta catatan persetujuan Anda: kapan persetujuan itu diberikan, kalimat yang Anda setujui, dan alamat IP asalnya. Anda dapat keluar dari daftar kapan saja melalui tautan berhenti berlangganan di email kami, atau dengan menulis kepada kami.
+Jika Anda bergabung dalam daftar kami — dari undangan di situs ini atau dari perancang perjalanan — kami lebih dulu mengirim email yang meminta Anda mengonfirmasi, dan tidak ada email lain yang dikirim sampai Anda melakukannya. Kami menyimpan alamat email Anda, nama Anda jika Anda memberikannya, halaman dan bahasa yang Anda gunakan saat mendaftar, serta catatan persetujuan Anda: kapan persetujuan itu diberikan dan kapan dikonfirmasi, kalimat yang Anda setujui, dan alamat IP asal masing-masing. Anda dapat keluar dari daftar kapan saja melalui tautan berhenti berlangganan di email kami, atau dengan menulis kepada kami.
 
 Kami tidak menyediakan akun pengguna dan tidak menerima pembayaran di situs web ini, sehingga kami tidak pernah mengumpulkan kata sandi atau data kartu di sini.
 
@@ -39,7 +39,9 @@ Kami tidak menyediakan akun pengguna dan tidak menerima pembayaran di situs web 
 
 Kami menggunakan keterangan dari pertanyaan Anda semata-mata untuk membalas Anda, memahami apa yang Anda cari, dan — jika Anda melanjutkan — merancang serta mengatur perjalanan Anda. Kami dapat menghubungi Anda melalui email, telepon, atau WhatsApp menggunakan keterangan yang Anda berikan.
 
-Dasar hukum kami adalah persetujuan Anda dan langkah-langkah yang diperlukan untuk membuat dan melaksanakan pengaturan perjalanan atas permintaan Anda. Kami tidak menggunakan data Anda untuk iklan atau pengambilan keputusan otomatis.
+Jika Anda tidak langsung bepergian bersama kami, kami dapat menulis kepada Anda lagi tentang perjalanan yang Anda tanyakan: paling banyak tiga kali dalam setahun setelah pertanyaan Anda. Beri tahu kami kapan saja dan kami tidak akan menulis lagi.
+
+Dasar hukum kami adalah persetujuan Anda, langkah-langkah yang diperlukan untuk membuat dan melaksanakan pengaturan perjalanan atas permintaan Anda, dan, untuk pesan tindak lanjut tersebut, kepentingan sah kami dalam menjawab pertanyaan yang Anda sampaikan kepada kami. Kami tidak membagikan data Anda kepada pengiklan dan tidak menggunakannya untuk pengambilan keputusan otomatis.
 
 04
 
@@ -67,7 +69,9 @@ Situs web dan email kami di-hosting oleh penyedia hosting kami, yang memproses d
 
 ## Berapa lama kami menyimpannya
 
-Kami menyimpan korespondensi pertanyaan hanya selama diperlukan untuk membantu Anda dan untuk menyimpan catatan perjalanan yang kami atur, setelah itu dihapus. Bila terjadi pemesanan, sebagian catatan dapat disimpan lebih lama untuk memenuhi kewajiban akuntansi atau hukum.
+Kami menyimpan pertanyaan selama tiga tahun sejak hari dikirimkan, lalu menghapusnya. Bila terjadi pemesanan, sebagian catatan dapat disimpan lebih lama untuk memenuhi kewajiban akuntansi atau hukum.
+
+Jika Anda bergabung dalam daftar kami, kami menyimpan data Anda sampai Anda keluar dari daftar. Pendaftaran yang tidak pernah dikonfirmasi lewat email yang kami kirim akan dihapus setelah 30 hari. Jika Anda keluar dari daftar, kami menyimpan catatan alamat Anda dan tanggal Anda keluar, agar Anda tidak ditambahkan kembali karena kekeliruan.
 
 Anda dapat meminta kami menghapus data Anda kapan saja (lihat “Hak Anda”).
 

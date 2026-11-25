@@ -11,11 +11,11 @@ Rotes Meer
 
 Vier Tage, gebaut um Grundzeit — die Wände von Ras Mohammed, die Driftriffe der Straße von Tiran und kleine Boote, die früh ablegen.
 
-ab 792 € / Person
+ab 871 € / Person
 
 ab 6 Reisenden
 
-871 € pro Person bei zwei Reisenden
+958 € pro Person bei zwei Reisenden
 
 Pro Person, Normalsaison. Zuschläge für Feiertage weisen wir im Angebot getrennt aus.
 
@@ -83,7 +83,7 @@ Das nördliche Rote Meer ist eines der Maßstabsreviere der Welt: über 20 Meter
 - Einreisevisum für Ägypten
 - Trinkgelder
 - Persönliche Ausgaben
-- Mahlzeiten
+- Mahlzeiten, außer dem Mittagessen an Bord an den Bootstagen
 - Optionale Zusatzleistungen nach Wahl — Aktivitäten, Getränke
 
 ## Wie anstrengend ist das

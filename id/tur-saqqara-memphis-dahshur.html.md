@@ -11,11 +11,11 @@ Tur sehari
 
 Tempat lahirnya piramida — dari piramida bertingkat pertama milik Djoser hingga makam-makam geometris agung di Dahshur.
 
-mulai €68 / orang
+mulai €75 / orang
 
 mulai 6 orang · tiket masuk tidak termasuk
 
-€75 per orang untuk dua wisatawan
+€83 per orang untuk dua wisatawan
 
 Per orang, musim normal. Biaya tambahan hari libur kami cantumkan terpisah dalam penawaran.
 

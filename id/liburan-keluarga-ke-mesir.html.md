@@ -15,7 +15,7 @@ Usia ideal **mulai sekitar 7 tahun**
 
 Untuk orang tua **babysitter atas permintaan**
 
-Tur keluarga 8 hari mulai **€1.524 per orang, mulai 6 orang**
+Tur keluarga 8 hari mulai **€1.676 per orang, mulai 6 orang**
 
 Mesir adalah salah satu tempat langka di mana anak-anak dan orang tua kagum pada hal yang sama. Piramida Agung persis sebesar yang dibayangkan anak-anak; mumi persis semisterius itu; unta persis selucu itu. Makanan halal dan waktu salat kami perhitungkan di setiap hari perjalanan.
 

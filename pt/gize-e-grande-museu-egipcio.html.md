@@ -11,11 +11,11 @@ Passeio de um dia
 
 As Pirâmides e a Esfinge pela manhã, o Grande Museu Egípcio à tarde — a maravilha antiga e a nova, em um só dia.
 
-a partir de € 79 / pessoa
+a partir de € 87 / pessoa
 
 a partir de 6 viajantes · ingressos não incluídos
 
-€ 87 por pessoa, para dois viajantes
+€ 96 por pessoa, para dois viajantes
 
 Por pessoa, em temporada normal. Acréscimos de feriados aparecem separados no orçamento.
 

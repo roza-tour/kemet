@@ -11,11 +11,11 @@ Excursión de un día
 
 Un día completo en el oasis verde al suroeste de El Cairo: lagos, cascadas en el desierto, ballenas fósiles y una aldea de alfareros.
 
-desde 139 € / persona
+desde 153 € / persona
 
 desde 6 viajeros · entradas no incluidas
 
-153 € por persona para dos viajeros
+168 € por persona para dos viajeros
 
 Por persona, en temporada normal. Los suplementos de fechas festivas se indican por separado en el presupuesto.
 
@@ -33,7 +33,7 @@ El lago Qarun, las cascadas y dunas de Wadi el-Rayan, las ballenas fósiles de W
 
 ## El viaje
 
-A hora y media al suroeste de El Cairo, la depresión del Fayum cambia los monumentos por el paisaje: un gran lago salado, cascadas de agua dulce en pleno desierto, un valle de ballenas fosilizadas declarado Patrimonio Mundial por la UNESCO y una aldea de alfareros en una ladera. Este día completo supone un cambio total de registro respecto a los templos: horizontes amplios, aves, dunas y un almuerzo de pescado junto al lago. El viaje es privado, con su guía y su conductor durante todo el día.
+A hora y media al suroeste de El Cairo, la depresión del Fayum cambia los monumentos por el paisaje: un gran lago salado, cascadas de agua dulce en pleno desierto, un valle de ballenas fosilizadas declarado Patrimonio Mundial por la UNESCO y una aldea de alfareros en una ladera. Este día completo supone un cambio total de registro respecto a los templos: horizontes amplios, aves, dunas y un almuerzo de pescado junto al lago, pagado en destino. El viaje es privado, con su guía y su conductor durante todo el día.
 
 ## Paso a paso
 
@@ -65,7 +65,7 @@ El llamado Lago Mágico, alimentado por manantiales minerales y cuyo color cambi
 
 ### Parada 5 — La aldea alfarera de Tunis y almuerzo junto al lago
 
-Se termina en Tunis, la aldea en la ladera famosa por sus alfareros y sus talleres, y después llega un almuerzo tranquilo de pescado junto al lago antes de regresar a El Cairo.
+Se termina en Tunis, la aldea en la ladera famosa por sus alfareros y sus talleres, y después llega un almuerzo tranquilo de pescado junto al lago, pagado en destino, antes de regresar a El Cairo.
 
 ## Incluido
 

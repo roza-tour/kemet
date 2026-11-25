@@ -11,11 +11,11 @@ Passeio de um dia
 
 Uma noite a pé pelos sabores do Cairo — koshari, clássicos de rua, pombo grelhado e doces encharcados de calda.
 
-a partir de € 59 / pessoa
+a partir de € 65 / pessoa
 
 a partir de 6 viajantes
 
-€ 65 por pessoa, para dois viajantes
+€ 72 por pessoa, para dois viajantes
 
 Por pessoa, em temporada normal. Acréscimos de feriados aparecem separados no orçamento. Comida e bebidas não estão incluídas: são pagas diretamente em cada parada.
 

@@ -7,7 +7,7 @@ description: "A complete index of every page on kemet-travel.com — journeys, c
 
 # Site Index
 
-Every page on this site in one place — 1050 in total. If you prefer a machine-readable version, there is an XML sitemap and an llms.txt.
+Every page on this site in one place — 1068 in total. If you prefer a machine-readable version, there is an XML sitemap and an llms.txt.
 
 ## Main pages
 
@@ -71,31 +71,31 @@ Every page on this site in one place — 1050 in total. If you prefer a machine-
 
 ## Journeys *(25)*
 
-- [Alexandria Sightseeing](https://kemet-travel.com/tour-alexandria.html) Full day (≈11 hours) · from €57 pp
-- [Cairo Authentic Food](https://kemet-travel.com/tour-cairo-food.html) Evening (≈4 hours) · from €59 pp
-- [Cairo Museums](https://kemet-travel.com/tour-cairo-museums.html) Full day (≈7 hours) · from €64 pp
-- [Giza Pyramids & Sphinx](https://kemet-travel.com/tour-giza-sphinx.html) Half day (≈5 hours) · from €66 pp
-- [Saqqara, Memphis & Dahshur](https://kemet-travel.com/tour-saqqara.html) Full day (≈8 hours) · from €68 pp
-- [Giza & the Grand Museum](https://kemet-travel.com/tour-giza-museum.html) Full day (≈8 hours) · from €79 pp
-- [Religious Cairo & the Citadel](https://kemet-travel.com/tour-religious-citadel.html) Full day (≈8 hours) · from €80 pp
-- [Fayoum Oasis](https://kemet-travel.com/tour-fayoum.html) Full day (≈10 hours) · from €139 pp
-- [Abu Simbel Private Excursion](https://kemet-travel.com/tour-abu-simbel.html) Full day (≈8 hours, from Aswan) · from €160 pp
-- [Alexandria Overnight](https://kemet-travel.com/tour-alexandria-2day.html) 2 Days / 1 Night · from €402 pp
-- [Cairo to Luxor & Aswan](https://kemet-travel.com/tour-3-day.html) 3 Days / 2 Nights · from €527 pp
-- [Luxor Immersion](https://kemet-travel.com/tour-luxor-3day.html) 3 Days / 2 Nights · from €544 pp
-- [Cairo VIP Short Stay](https://kemet-travel.com/tour-cairo-vip-3day.html) 3 Days / 2 Nights · from €600 pp
-- [From Pyramids to the Sea](https://kemet-travel.com/tour-4-day.html) 4 Days / 3 Nights · from €618 pp
-- [Dive the Red Sea](https://kemet-travel.com/tour-red-sea-diving-4day.html) 4 Days / 3 Nights · from €792 pp
-- [Nile in Style: Aswan to Luxor](https://kemet-travel.com/tour-nile-cruise.html) 4 Days / 3 Nights · from €820 pp
-- [Cairo of the Eight Worlds](https://kemet-travel.com/tour-cairo-culture-5day.html) 5 Days / 4 Nights · from €875 pp
-- [Red Sea Retreat: Sharm El Sheikh](https://kemet-travel.com/tour-sharm-5day.html) 5 Days / 4 Nights · from €979 pp
-- [Temples of the South](https://kemet-travel.com/tour-upper-egypt-5day.html) 5 Days / 4 Nights · from €1,018 pp
-- [Egypt Highlights Deluxe](https://kemet-travel.com/tour-7-day.html) 7 Days / 6 Nights · from €1,179 pp
-- [Egypt Through the Lens](https://kemet-travel.com/tour-photography-7day.html) 7 Days / 6 Nights · from €1,419 pp
-- [Family Egypt: Pyramids to the Nile](https://kemet-travel.com/tour-family-8day.html) 8 Days / 7 Nights · from €1,524 pp
-- [Egypt Icons & Nile Cruise](https://kemet-travel.com/tour-10-day.html) 10 Days / 9 Nights · from €1,915 pp
-- [Honeymoon on the Nile](https://kemet-travel.com/tour-honeymoon-9day.html) 9 Days / 8 Nights · from €2,045 pp
-- [The Grand Tour of Egypt](https://kemet-travel.com/tour-grand-14day.html) 14 Days / 13 Nights · from €2,728 pp
+- [Alexandria Sightseeing](https://kemet-travel.com/tour-alexandria.html) Full day (≈11 hours) · from €63 pp
+- [Cairo Authentic Food](https://kemet-travel.com/tour-cairo-food.html) Evening (≈4 hours) · from €65 pp
+- [Cairo Museums](https://kemet-travel.com/tour-cairo-museums.html) Full day (≈7 hours) · from €70 pp
+- [Giza Pyramids & Sphinx](https://kemet-travel.com/tour-giza-sphinx.html) Half day (≈5 hours) · from €73 pp
+- [Saqqara, Memphis & Dahshur](https://kemet-travel.com/tour-saqqara.html) Full day (≈8 hours) · from €75 pp
+- [Giza & the Grand Museum](https://kemet-travel.com/tour-giza-museum.html) Full day (≈8 hours) · from €87 pp
+- [Religious Cairo & the Citadel](https://kemet-travel.com/tour-religious-citadel.html) Full day (≈8 hours) · from €88 pp
+- [Fayoum Oasis](https://kemet-travel.com/tour-fayoum.html) Full day (≈10 hours) · from €153 pp
+- [Abu Simbel Private Excursion](https://kemet-travel.com/tour-abu-simbel.html) Full day (≈8 hours, from Aswan) · from €176 pp
+- [Alexandria Overnight](https://kemet-travel.com/tour-alexandria-2day.html) 2 Days / 1 Night · from €442 pp
+- [Cairo to Luxor & Aswan](https://kemet-travel.com/tour-3-day.html) 3 Days / 2 Nights · from €580 pp
+- [Luxor Immersion](https://kemet-travel.com/tour-luxor-3day.html) 3 Days / 2 Nights · from €598 pp
+- [Cairo VIP Short Stay](https://kemet-travel.com/tour-cairo-vip-3day.html) 3 Days / 2 Nights · from €660 pp
+- [From Pyramids to the Sea](https://kemet-travel.com/tour-4-day.html) 4 Days / 3 Nights · from €680 pp
+- [Dive the Red Sea](https://kemet-travel.com/tour-red-sea-diving-4day.html) 4 Days / 3 Nights · from €871 pp
+- [Nile in Style: Aswan to Luxor](https://kemet-travel.com/tour-nile-cruise.html) 4 Days / 3 Nights · from €902 pp
+- [Cairo of the Eight Worlds](https://kemet-travel.com/tour-cairo-culture-5day.html) 5 Days / 4 Nights · from €963 pp
+- [Red Sea Retreat: Sharm El Sheikh](https://kemet-travel.com/tour-sharm-5day.html) 5 Days / 4 Nights · from €1,077 pp
+- [Temples of the South](https://kemet-travel.com/tour-upper-egypt-5day.html) 5 Days / 4 Nights · from €1,120 pp
+- [Egypt Highlights Deluxe](https://kemet-travel.com/tour-7-day.html) 7 Days / 6 Nights · from €1,297 pp
+- [Egypt Through the Lens](https://kemet-travel.com/tour-photography-7day.html) 7 Days / 6 Nights · from €1,561 pp
+- [Family Egypt: Pyramids to the Nile](https://kemet-travel.com/tour-family-8day.html) 8 Days / 7 Nights · from €1,676 pp
+- [Egypt Icons & Nile Cruise](https://kemet-travel.com/tour-10-day.html) 10 Days / 9 Nights · from €2,107 pp
+- [Honeymoon on the Nile](https://kemet-travel.com/tour-honeymoon-9day.html) 9 Days / 8 Nights · from €2,250 pp
+- [The Grand Tour of Egypt](https://kemet-travel.com/tour-grand-14day.html) 14 Days / 13 Nights · from €3,001 pp
 
 ## Destinations *(19)*
 
@@ -206,7 +206,7 @@ Every page on this site in one place — 1050 in total. If you prefer a machine-
 
 ## Deutsch · Italiano · Español · Français · Русский · Bahasa Indonesia · Bahasa Melayu · Português · العربية
 
-13 key pages are published in each of 9 languages besides English, written for those markets rather than translated word for word — and 86 destination, experience and activity pages, which each language lists on its own destinations and experiences pages below.
+13 key pages are published in each of 9 languages besides English, written for those markets rather than translated word for word — and 88 destination, experience and activity pages, which each language lists on its own destinations and experiences pages below.
 
 ### Deutsch
 
