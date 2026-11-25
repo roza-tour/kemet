@@ -86,7 +86,7 @@ Les zones touristiques — Le Caire, Gizeh, Louxor, Assouan, Alexandrie et la c�
 
 ## Le site complet
 
-Ces pages sont une sélection en français. Le catalogue complet de Kemet — tous les voyages, destinations, expériences et guides pratiques — est disponible en anglais. Nous vous répondons évidemment en français.
+Tous les voyages, destinations, expériences et les pages mois par mois de ce site existent en français; le site anglais ne compte que quelques pages de plus. Nous répondons en français.
 
 - [La Toussaint en Égypte](https://kemet-travel.com/fr/toussaint-en-egypte.html)
 

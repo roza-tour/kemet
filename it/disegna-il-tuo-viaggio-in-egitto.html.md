@@ -25,7 +25,7 @@ Un itinerario su misura si quota su richiesta. Rispondiamo entro due ore.
 - [**L'Egitto essenziale, in una settimana** 7 giorni / 6 notti **da* 1.179 €*](https://kemet-travel.com/it/egitto-7-giorni.html)
 - [**Dalle piramidi al mare** 4 giorni / 3 notti **da* 618 €*](https://kemet-travel.com/it/cairo-alessandria-4-giorni.html)
 - [**Dal Cairo a Luxor e Assuan** 3 giorni / 2 notti **da* 527 €*](https://kemet-travel.com/it/luxor-assuan-3-giorni-voli-inclusi.html)
-- [**Nile in Style: Aswan to Luxor** 4 Days / 3 Nights **da* 820 €*](https://kemet-travel.com/it/crociera-sul-nilo.html)
+- [**La crociera sul Nilo** 4 giorni / 3 notti **da* 820 €*](https://kemet-travel.com/it/crociera-sul-nilo.html)
 - [**I templi del Sud** 5 giorni / 4 notti **da* 1.018 €*](https://kemet-travel.com/it/alto-egitto-5-giorni.html)
 - [**Viaggio di nozze sul Nilo** 9 giorni / 8 notti **da* 2.045 €*](https://kemet-travel.com/it/viaggio-di-nozze-nilo-9-giorni.html)
 - [**Egitto in famiglia: dalle piramidi al Nilo** 8 giorni / 7 notti **da* 1.524 €*](https://kemet-travel.com/it/egitto-in-famiglia-8-giorni.html)

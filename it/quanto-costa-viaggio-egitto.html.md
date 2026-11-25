@@ -73,7 +73,7 @@ Un acconto del 25% del totale conferma il viaggio; il saldo è dovuto 30 giorni 
 
 ## Dettaglio completo dei prezzi
 
-La panoramica completa di prezzi e servizi, con tutti i viaggi, è disponibile in inglese.
+Ogni viaggio ha la sua pagina in italiano, con il suo prezzo. Per un preventivo scriveteci in italiano.
 
 [Questa pagina in inglese](https://kemet-travel.com/egypt-tour-cost.html)
 

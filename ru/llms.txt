@@ -129,6 +129,9 @@ The from-price is for a private party of six or more; where a second figure is g
 - [Египет в Рамадан](https://kemet-travel.com/ru/ramadan-v-egipte.html): Рамадан 2027 года ожидается с 8 февраля по 8 марта — в самый лучший сезон. Что меняется, что остаётся прежним и почему вечера в Каире в это время — лучшие в году.
 - [Медовый месяц в Египте](https://kemet-travel.com/ru/medovyy-mesyats-v-egipte.html): Двое, пять тысяч лет истории — и никакого расписания, кроме вашего собственного.
 - [Египет с детьми](https://kemet-travel.com/ru/egipet-s-detmi.html): Путешествие, о котором ваши дети однажды расскажут своим детям.
+- [Политика конфиденциальности](https://kemet-travel.com/ru/politika-konfidencialnosti.html): Что мы собираем, как это используем и какие права вы имеете в отношении своих данных. Мы собираем минимум — и никогда не продаём данные.
+- [Условия использования](https://kemet-travel.com/ru/usloviya-ispolzovaniya-sayta.html): Условия, на которых работают наш сайт, запросы и предложения, — изложенные просто и читаемые вместе с условиями бронирования и отмены.
+- [Бронирование, оплата и отмена](https://kemet-travel.com/ru/bronirovanie-oplata-otmena.html): Всё, что нужно знать до подтверждения: как проходит бронирование, когда наступают сроки платежей и каковы условия отмены. Прозрачно и без скрытых расходов.
 - [Новогодние каникулы в Египте](https://kemet-travel.com/ru/novyy-god-v-egipte.html): С 31 декабря по 8 января — десять дней подряд, и это единственный длинный отпуск в году, который совпадает с лучшим сезоном в долине Нила.
 
 Every page is also available as Markdown: add `.md` to its address, or request it with the header `Accept: text/markdown`.

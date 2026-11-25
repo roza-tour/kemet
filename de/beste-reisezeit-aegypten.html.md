@@ -78,7 +78,7 @@ Es ist der Höhepunkt des Jahres. Das Wetter ist ausgezeichnet, und die Preise f
 
 ## Alle zwölf Monate im Detail
 
-Eine ausführliche Aufschlüsselung jedes einzelnen Monats — mit Temperaturen, Andrang, Preisniveau und Urteil — steht auf Englisch zur Verfügung.
+Jeder der zwölf Monate hat seine eigene Seite auf Deutsch, oben aufgeführt.
 
 - [Ostern in Ägypten](https://kemet-travel.com/de/ostern-in-aegypten.html)
 - [Sonnenfinsternis 2027 in Luxor](https://kemet-travel.com/de/sonnenfinsternis-2027-luxor.html)

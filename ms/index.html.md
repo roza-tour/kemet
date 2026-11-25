@@ -90,7 +90,7 @@ Sangat kerap. Ramai tetamu kami tiba di Mesir sebelum atau selepas ibadah di Ara
 
 ## Laman penuh
 
-Halaman-halaman ini ialah pilihan dalam Bahasa Melayu. Katalog penuh Kemet — semua laluan, destinasi, pengalaman dan panduan praktikal — tersedia dalam Bahasa Inggeris. Kami tetap membalas mesej anda dalam Bahasa Melayu.
+Semua laluan, destinasi, pengalaman dan halaman bulan demi bulan di laman ini tersedia dalam Bahasa Melayu; laman Bahasa Inggeris hanya mempunyai beberapa halaman lagi. Kami membalas dalam Bahasa Melayu.
 
 - [Umrah plus Mesir](https://kemet-travel.com/ms/umrah-plus-mesir.html)
 - [Ziarah Kaherah Islam](https://kemet-travel.com/ms/ziarah-kaherah-islam.html)

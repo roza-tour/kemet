@@ -17,6 +17,8 @@ a partir de 6 viajantes
 
 € 2.107 por pessoa, para dois viajantes
 
+Com voos domésticos em vez das duas noites no comboio-cama, e essas noites em hotel: € 2.045 por pessoa
+
 Por pessoa, em temporada normal. Acréscimos de feriados aparecem separados no orçamento.
 
 Duração **10 dias / 9 noites**

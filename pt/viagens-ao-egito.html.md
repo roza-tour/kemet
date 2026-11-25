@@ -328,7 +328,7 @@ Ele muda de qualquer jeito — é essa a ideia. Cada roteiro desta página é um
 
 ## Ver todas as viagens
 
-O catálogo completo, com todas as viagens, destinos e experiências, está em inglês. O atendimento e as respostas são em português.
+Cada viagem aqui tem a sua própria página em português, com o programa dia a dia e o preço. Escrevam para nós em português e respondemos em português.
 
 [Esta página em inglês](https://kemet-travel.com/tours.html)
 

@@ -1,8 +1,8 @@
 ---
-title: "Croisière sur le Nil — bateau privé ou dahabieh | Kemet"
+title: "Croisière sur le Nil — navire ou dahabieh | Kemet"
 url: https://kemet-travel.com/fr/croisiere-sur-le-nil.html
 language: fr
-description: "Croisière privée sur le Nil entre Louxor et Assouan : dahabieh à voile ou navire cinq étoiles, égyptologue à bord et temples abordés depuis l'eau."
+description: "Croisière sur le Nil entre Louxor et Assouan, visites privées avec votre égyptologue : dahabieh à voile ou navire cinq étoiles, temples abordés depuis l'eau."
 ---
 
 # La croisière sur le Nil
@@ -128,7 +128,7 @@ Si le confort passe avant le prix, mieux vaut prendre l'avion: Le Caire–Louxor
 
 ## Les itinéraires détaillés
 
-Le détail jour par jour des croisières, les bateaux et les prix figurent en anglais sur le site principal. Écrivez-nous en français.
+La croisière de quatre jours est détaillée plus haut, jour par jour, avec son prix. Écrivez-nous en français pour les dates ou une dahabieh privée.
 
 - [The Oberoi Zahra — navire de luxe, sur demande](https://kemet-travel.com/fr/oberoi-zahra-croisiere-sur-le-nil.html)
 - [Éclipse solaire 2027 à Louxor](https://kemet-travel.com/fr/eclipse-solaire-2027-louxor.html)

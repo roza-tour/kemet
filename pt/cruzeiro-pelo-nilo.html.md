@@ -1,8 +1,8 @@
 ---
-title: "Cruzeiro privado pelo Nilo, Luxor–Assuã | Kemet"
+title: "Cruzeiro pelo Nilo Luxor–Assuã, passeios privados | Kemet"
 url: https://kemet-travel.com/pt/cruzeiro-pelo-nilo.html
 language: pt
-description: "Cruzeiro privado pelo Nilo entre Luxor e Assuã com egiptólogo próprio — os templos pela água, dahabiya ou navio, e o que realmente importa."
+description: "Cruzeiro pelo Nilo entre Luxor e Assuã com passeios privados e egiptólogo próprio — os templos pela água, dahabiya ou navio, e o que realmente importa."
 ---
 
 # O cruzeiro pelo Nilo
@@ -124,7 +124,7 @@ Se o conforto vem antes do preço, é melhor voar: Cairo–Luxor é menos de uma
 
 ## Mais sobre o trecho do Nilo
 
-Programas detalhados, descrições das embarcações e o catálogo completo estão disponíveis em inglês.
+O cruzeiro de quatro dias está descrito acima, dia a dia, com o seu preço. Escrevam para nós em português para perguntar sobre datas ou uma dahabiya privativa.
 
 - [The Oberoi Zahra — navio de luxo, sob consulta](https://kemet-travel.com/pt/oberoi-zahra-cruzeiro-pelo-nilo.html)
 - [Eclipse solar de 2027 em Luxor](https://kemet-travel.com/pt/eclipse-solar-2027-luxor.html)

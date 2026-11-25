@@ -25,7 +25,7 @@ description: "ارسموا مساركم في مصر: اضغطوا على الأ�
 - [**أبرز معالم مصر بلمسة فاخرة** ٧ أيام / ٦ ليالٍ **من* ‏١٬١٧٩ €*](https://kemet-travel.com/ar/abraz-maalim-masr-7-ayyam.html)
 - [**من الأهرامات إلى البحر** ٤ أيام / ٣ ليالٍ **من* ‏٦١٨ €*](https://kemet-travel.com/ar/al-qahira-wa-al-iskandariya-4-ayyam.html)
 - [**من القاهرة إلى الأقصر وأسوان** ٣ أيام / ليلتان **من* ‏٥٢٧ €*](https://kemet-travel.com/ar/al-uqsur-wa-aswan-3-ayyam-min-al-qahira.html)
-- [**Nile in Style: Aswan to Luxor** 4 Days / 3 Nights **من* ‏٨٢٠ €*](https://kemet-travel.com/ar/rehla-niliya-khassa.html)
+- [**رحلة النيل** ٤ أيام / ٣ ليالٍ **من* ‏٨٢٠ €*](https://kemet-travel.com/ar/rehla-niliya-khassa.html)
 - [**معابد الجنوب** ٥ أيام / ٤ ليالٍ **من* ‏١٬٠١٨ €*](https://kemet-travel.com/ar/maabid-al-saeed-5-ayyam.html)
 - [**شهر العسل على النيل** ٩ أيام / ٨ ليالٍ **من* ‏٢٬٠٤٥ €*](https://kemet-travel.com/ar/shahr-al-asal-ala-al-nil-9-ayyam.html)
 - [**مصر للعائلة: من الأهرامات إلى النيل** ٨ أيام / ٧ ليالٍ **من* ‏١٬٥٢٤ €*](https://kemet-travel.com/ar/rehla-aeiliya-ila-masr-8-ayyam.html)

@@ -7,7 +7,7 @@ description: "A complete index of every page on kemet-travel.com — journeys, c
 
 # Site Index
 
-Every page on this site in one place — 1023 in total. If you prefer a machine-readable version, there is an XML sitemap and an llms.txt.
+Every page on this site in one place — 1050 in total. If you prefer a machine-readable version, there is an XML sitemap and an llms.txt.
 
 ## Main pages
 
@@ -206,7 +206,7 @@ Every page on this site in one place — 1023 in total. If you prefer a machine-
 
 ## Deutsch · Italiano · Español · Français · Русский · Bahasa Indonesia · Bahasa Melayu · Português · العربية
 
-13 key pages are published in each of 9 languages besides English, written for those markets rather than translated word for word — and 83 destination, experience and activity pages, which each language lists on its own destinations and experiences pages below.
+13 key pages are published in each of 9 languages besides English, written for those markets rather than translated word for word — and 86 destination, experience and activity pages, which each language lists on its own destinations and experiences pages below.
 
 ### Deutsch
 

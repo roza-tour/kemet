@@ -17,6 +17,8 @@ Une semaine qui rassemble l'essentiel — Le Caire, Alexandrie et Louxor — ave
 
 1 297 € par personne pour deux voyageurs
 
+Avec des vols intérieurs à la place des deux nuits en train-couchettes, ces nuits-là à l'hôtel: 1 309 € par personne
+
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
 
 Durée **7 jours / 6 nuits**

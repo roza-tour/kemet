@@ -78,7 +78,7 @@ Maggio, giugno, settembre e ottobre. L'acqua raggiunge i 27-30 gradi in estate e
 
 ## Tutti e dodici i mesi in dettaglio
 
-Un'analisi dettagliata di ogni singolo mese — temperature, affluenza, prezzi e giudizio — è disponibile in inglese.
+Ciascuno dei dodici mesi ha la sua pagina in italiano, elencata qui sopra.
 
 - [Pasqua in Egitto](https://kemet-travel.com/it/pasqua-in-egitto.html)
 - [Eclissi solare 2027 a Luxor](https://kemet-travel.com/it/eclissi-solare-2027-luxor.html)

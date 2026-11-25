@@ -78,7 +78,7 @@ Masjid ada di mana-mana, termasuk di dekat sebagian besar situs, dan jadwal hari
 
 ## Panduan bulan per bulan
 
-Panduan rinci untuk kedua belas bulan — suhu, keramaian, harga dan hari besar — diterbitkan dalam Bahasa Inggris di situs utama.
+Masing-masing dari kedua belas bulan memiliki halamannya sendiri dalam Bahasa Indonesia, tercantum di atas.
 
 - [Paskah di Mesir](https://kemet-travel.com/id/paskah-di-mesir.html)
 - [Gerhana matahari 2027 di Luxor](https://kemet-travel.com/id/gerhana-matahari-2027-luxor.html)

@@ -328,7 +328,7 @@ Laluannya disusun semula di sana pada hari yang sama tanpa caj tambahan — itul
 
 ## Katalog penuh
 
-Kesemua dua puluh lima laluan berserta perincian harian, hotel dan harga tersedia dalam Bahasa Inggeris di laman utama. Hantarkan pertanyaan anda dalam Bahasa Melayu — kami balas dalam Bahasa Melayu.
+Setiap laluan di sini mempunyai halamannya sendiri dalam Bahasa Melayu, lengkap dengan program harian dan harganya. Tulis kepada kami dalam Bahasa Melayu — kami balas dalam Bahasa Melayu.
 
 - [Ziarah Kaherah Islam](https://kemet-travel.com/ms/ziarah-kaherah-islam.html)
 - [Bukit Tursina dan Biara Saint Catherine](https://kemet-travel.com/ms/bukit-tursina.html)

@@ -129,6 +129,9 @@ The from-price is for a private party of six or more; where a second figure is g
 - [Ägypten im Ramadan](https://kemet-travel.com/de/ramadan-in-aegypten.html): Der Ramadan 2027 fällt voraussichtlich auf den 8. Februar bis 8. März — mitten in die beste Reisezeit. Was sich ändert, was gleich bleibt, und warum die Abende in Kairo dann die schönsten des Jahres sind.
 - [Flitterwochen in Ägypten](https://kemet-travel.com/de/flitterwochen-in-aegypten.html): Zwei Menschen, fünftausend Jahre — und niemandes Zeitplan außer Ihrem eigenen.
 - [Ägypten mit Kindern](https://kemet-travel.com/de/aegypten-mit-kindern.html): Eine Reise, von der Ihre Kinder noch ihren eigenen Kindern erzählen werden.
+- [Datenschutzerklärung](https://kemet-travel.com/de/datenschutz.html): Was wir erheben, wie wir es verwenden und welche Rechte Sie an Ihren Daten haben. Wir erheben so wenig wie möglich — und verkaufen nie etwas davon.
+- [Nutzungsbedingungen](https://kemet-travel.com/de/nutzungsbedingungen.html): Die Bedingungen hinter unserer Website, unseren Anfragen und Angeboten — verständlich formuliert und zusammen mit unseren Buchungs- und Stornobedingungen zu lesen.
+- [Buchung, Zahlung und Stornierung](https://kemet-travel.com/de/buchung-zahlung-stornierung.html): Alles, was Sie vor Ihrer Bestätigung wissen sollten — wie die Buchung abläuft, wann Zahlungen fällig werden und wie unsere Stornobedingungen lauten. Transparent und ohne versteckte Kosten.
 - [Weihnachten und Silvester in Ägypten](https://kemet-travel.com/de/weihnachten-in-aegypten.html): 24–26°C in Luxor, während es zu Hause dunkel ist — und die am stärksten umkämpften zwei Wochen des ägyptischen Jahres.
 
 Every page is also available as Markdown: add `.md` to its address, or request it with the header `Accept: text/markdown`.

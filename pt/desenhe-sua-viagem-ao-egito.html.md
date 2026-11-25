@@ -25,7 +25,7 @@ Um roteiro próprio é orçado sob consulta. Respondemos em até duas horas.
 - [**O melhor do Egito, em grande estilo** 7 dias / 6 noites **a partir de* € 1.179*](https://kemet-travel.com/pt/egito-em-7-dias.html)
 - [**Das pirâmides ao mar** 4 dias / 3 noites **a partir de* € 618*](https://kemet-travel.com/pt/cairo-e-alexandria-4-dias.html)
 - [**Do Cairo a Luxor e Assuã** 3 dias / 2 noites **a partir de* € 527*](https://kemet-travel.com/pt/luxor-e-assua-3-dias-com-voos.html)
-- [**Nile in Style: Aswan to Luxor** 4 Days / 3 Nights **a partir de* € 820*](https://kemet-travel.com/pt/cruzeiro-pelo-nilo.html)
+- [**O cruzeiro pelo Nilo** 4 dias / 3 noites **a partir de* € 820*](https://kemet-travel.com/pt/cruzeiro-pelo-nilo.html)
 - [**Os templos do Sul** 5 dias / 4 noites **a partir de* € 1.018*](https://kemet-travel.com/pt/templos-do-alto-egito-5-dias.html)
 - [**Lua de mel no Nilo** 9 dias / 8 noites **a partir de* € 2.045*](https://kemet-travel.com/pt/lua-de-mel-no-nilo-9-dias.html)
 - [**Egito em família: das pirâmides ao Nilo** 8 dias / 7 noites **a partir de* € 1.524*](https://kemet-travel.com/pt/egito-em-familia-8-dias.html)

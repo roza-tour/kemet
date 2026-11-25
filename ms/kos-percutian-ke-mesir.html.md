@@ -77,7 +77,7 @@ Sebut harga kami dalam euro. Di Mesir, pound Mesir digunakan untuk perbelanjaan 
 
 ## Perincian harga
 
-Pecahan item demi item berserta harga setiap laluan diterbitkan dalam Bahasa Inggeris di laman utama. Untuk sebut harga, tulis kepada kami dalam Bahasa Melayu.
+Setiap laluan mempunyai halamannya sendiri dalam Bahasa Melayu, berserta harganya. Untuk sebut harga, tulis kepada kami dalam Bahasa Melayu.
 
 [Halaman ini dalam bahasa Inggeris](https://kemet-travel.com/egypt-tour-cost.html)
 

@@ -85,7 +85,7 @@ Le zone turistiche — Il Cairo, Giza, Luxor, Assuan, Alessandria e la costa del
 
 ## Il sito completo
 
-Queste pagine sono una selezione in italiano. Il catalogo completo di Kemet — tutti i viaggi, le destinazioni, le esperienze e le guide — è disponibile in inglese. Rispondiamo naturalmente in italiano.
+Tutti i viaggi, le destinazioni, le esperienze e le pagine mese per mese di questo sito sono in italiano; il sito inglese ha solo poche pagine in più. Rispondiamo in italiano.
 
 - [Ferragosto in Egitto](https://kemet-travel.com/it/ferragosto-in-egitto.html)
 

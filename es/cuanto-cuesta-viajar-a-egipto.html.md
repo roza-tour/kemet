@@ -73,7 +73,7 @@ Una señal del 25 % del total confirma el viaje; el resto se abona 30 días ante
 
 ## Detalle completo de precios
 
-El desglose completo de precios y servicios, con todos los viajes, está disponible en inglés.
+Cada viaje tiene su propia página en español, con su precio. Para un presupuesto, escríbanos en español.
 
 [Esta página en inglés](https://kemet-travel.com/egypt-tour-cost.html)
 

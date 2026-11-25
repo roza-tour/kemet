@@ -1,8 +1,8 @@
 ---
-title: "Nilkreuzfahrt Luxor–Assuan privat | Kemet"
+title: "Nilkreuzfahrt Luxor–Assuan mit privater Führung | Kemet"
 url: https://kemet-travel.com/de/nilkreuzfahrt.html
 language: de
-description: "Private Nilkreuzfahrt zwischen Luxor und Assuan mit eigenem Ägyptologen — Tempel vom Wasser aus, Dahabiya oder Schiff, was wirklich zählt."
+description: "Nilkreuzfahrt zwischen Luxor und Assuan mit eigener ägyptologischer Reiseleitung — Tempel vom Wasser aus, Dahabiya oder Schiff, was wirklich zählt."
 ---
 
 # Die Nilkreuzfahrt
@@ -124,7 +124,7 @@ Wer Komfort vor den Preis stellt, sollte fliegen: Kairo–Luxor dauert unter ein
 
 ## Mehr zur Nilstrecke
 
-Ausführliche Reiseverläufe, Schiffsbeschreibungen und der vollständige Reisekatalog stehen auf Englisch zur Verfügung.
+Die viertägige Kreuzfahrt steht oben Tag für Tag, mit ihrem Preis. Schreiben Sie uns auf Deutsch, um nach Terminen oder einer privaten Dahabiya zu fragen.
 
 - [The Oberoi Zahra — Luxus-Nilschiff auf Anfrage](https://kemet-travel.com/de/oberoi-zahra-nilkreuzfahrt.html)
 - [Sonnenfinsternis 2027 in Luxor](https://kemet-travel.com/de/sonnenfinsternis-2027-luxor.html)

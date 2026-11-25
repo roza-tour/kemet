@@ -86,7 +86,7 @@ Die touristischen Regionen — Kairo, Gizeh, Luxor, Assuan, Alexandria und die K
 
 ## Die vollständige Website
 
-Diese Seiten sind eine Auswahl auf Deutsch. Der vollständige Kemet-Katalog — alle Reisen, Reiseziele, Erlebnisse und Reiseführer — steht auf Englisch zur Verfügung. Wir antworten selbstverständlich auf Deutsch.
+Alle Reisen, Reiseziele, Erlebnisse und die Monatsseiten dieser Website gibt es auf Deutsch; die englische Seite hat nur wenige Seiten mehr. Wir antworten auf Deutsch.
 
 - [Weihnachten & Silvester in Ägypten](https://kemet-travel.com/de/weihnachten-in-aegypten.html)
 

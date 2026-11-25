@@ -25,7 +25,7 @@ Eine eigene Route wird auf Anfrage kalkuliert. Wir antworten innerhalb von zwei 
 - [**Ägyptens Höhepunkte Deluxe** 7 Tage / 6 Nächte **ab* 1.179 €*](https://kemet-travel.com/de/aegypten-rundreise-7-tage.html)
 - [**Von den Pyramiden ans Meer** 4 Tage / 3 Nächte **ab* 618 €*](https://kemet-travel.com/de/kairo-alexandria-4-tage.html)
 - [**Von Kairo nach Luxor und Assuan** 3 Tage / 2 Nächte **ab* 527 €*](https://kemet-travel.com/de/luxor-assuan-3-tage-mit-fluegen.html)
-- [**Nile in Style: Aswan to Luxor** 4 Days / 3 Nights **ab* 820 €*](https://kemet-travel.com/de/nilkreuzfahrt.html)
+- [**Die Nilkreuzfahrt** 4 Tage / 3 Nächte **ab* 820 €*](https://kemet-travel.com/de/nilkreuzfahrt.html)
 - [**Die Tempel des Südens** 5 Tage / 4 Nächte **ab* 1.018 €*](https://kemet-travel.com/de/oberaegypten-5-tage.html)
 - [**Hochzeitsreise am Nil** 9 Tage / 8 Nächte **ab* 2.045 €*](https://kemet-travel.com/de/hochzeitsreise-aegypten-9-tage.html)
 - [**Ägypten für Familien: von den Pyramiden an den Nil** 8 Tage / 7 Nächte **ab* 1.524 €*](https://kemet-travel.com/de/familienreise-aegypten-8-tage.html)

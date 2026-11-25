@@ -328,7 +328,7 @@ L'itinéraire est reconstruit sur place le jour même, sans supplément: c'est l
 
 ## Le catalogue complet
 
-Les vingt-cinq itinéraires, avec jour par jour, hôtels et prix, sont détaillés en anglais sur le site principal. Envoyez-nous une demande en français: nous vous répondons en français.
+Chaque voyage a ici sa propre page en français, avec le programme jour par jour et le prix. Écrivez-nous en français, nous répondons en français.
 
 [Cette page en anglais](https://kemet-travel.com/tours.html)
 

@@ -111,7 +111,7 @@ Só se vocês escolherem a excursão opcional a Abu Simbel no último dia
 
 ### Por que ir de carro de Luxor a Assuã em vez de fazer um cruzeiro?
 
-A estrada permite ver Edfu e Kom Ombo sem se prender ao horário fixo de um navio de cruzeiro, e garante todas as noites num quarto de hotel de tamanho normal. Se preferirem navegar, o nosso cruzeiro Nile in Style faz o mesmo trecho pela água.
+A estrada permite ver Edfu e Kom Ombo sem se prender ao horário fixo de um navio de cruzeiro, e garante todas as noites num quarto de hotel de tamanho normal. Se preferirem navegar, o nosso cruzeiro pelo Nilo faz o mesmo trecho pela água.
 
 ### Esta viagem inclui Abu Simbel?
 

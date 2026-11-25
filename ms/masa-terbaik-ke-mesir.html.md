@@ -78,7 +78,7 @@ Masjid ada di mana-mana, termasuk berhampiran kebanyakan tapak lawatan, dan jadu
 
 ## Panduan bulan demi bulan
 
-Panduan terperinci untuk kesemua dua belas bulan — suhu, kesesakan, harga dan hari besar — diterbitkan dalam Bahasa Inggeris di laman utama.
+Setiap satu daripada dua belas bulan mempunyai halamannya sendiri dalam Bahasa Melayu, disenaraikan di atas.
 
 - [Easter di Mesir](https://kemet-travel.com/ms/easter-di-mesir.html)
 - [Gerhana matahari 2027 di Luxor](https://kemet-travel.com/ms/gerhana-matahari-2027-luxor.html)

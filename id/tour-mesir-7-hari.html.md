@@ -17,6 +17,8 @@ mulai 6 orang
 
 €1.297 per orang untuk dua wisatawan
 
+Dengan penerbangan domestik sebagai ganti dua malam di kereta tidur, dan malam-malam itu di hotel: €1.309 per orang
+
 Per orang, musim normal. Biaya tambahan hari libur kami cantumkan terpisah dalam penawaran.
 
 Durasi **7 Hari / 6 Malam**

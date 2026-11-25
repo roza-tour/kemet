@@ -25,7 +25,7 @@ description: "Проложите свой маршрут по Египту: от
 - [**Египет: всё главное, класс люкс** 7 дней / 6 ночей **от* 1 179 €*](https://kemet-travel.com/ru/tur-v-egipet-na-7-dney.html)
 - [**От пирамид к морю** 4 дня / 3 ночи **от* 618 €*](https://kemet-travel.com/ru/kair-i-aleksandriya-4-dnya.html)
 - [**Из Каира в Луксор и Асуан** 3 дня / 2 ночи **от* 527 €*](https://kemet-travel.com/ru/luksor-i-asuan-3-dnya-s-pereletami.html)
-- [**Nile in Style: Aswan to Luxor** 4 Days / 3 Nights **от* 820 €*](https://kemet-travel.com/ru/kruiz-po-nilu.html)
+- [**Круиз по Нилу** 4 дня / 3 ночи **от* 820 €*](https://kemet-travel.com/ru/kruiz-po-nilu.html)
 - [**Храмы Юга** 5 дней / 4 ночи **от* 1 018 €*](https://kemet-travel.com/ru/luksor-i-asuan-5-dney.html)
 - [**Медовый месяц на Ниле** 9 дней / 8 ночей **от* 2 045 €*](https://kemet-travel.com/ru/medovyy-mesyats-na-nile-9-dney.html)
 - [**Египет всей семьёй: от пирамид до Нила** 8 дней / 7 ночей **от* 1 524 €*](https://kemet-travel.com/ru/semeynyy-tur-v-egipet-8-dney.html)

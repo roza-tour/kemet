@@ -77,7 +77,7 @@ Penawaran kami dalam euro. Di Mesir, pound Mesir dipakai untuk pengeluaran kecil
 
 ## Rincian harga
 
-Rincian pos demi pos beserta harga setiap rute diterbitkan dalam Bahasa Inggris di situs utama. Untuk penawaran, tulis saja kepada kami dalam Bahasa Indonesia.
+Setiap rute memiliki halamannya sendiri dalam Bahasa Indonesia, beserta harganya. Untuk penawaran, tulis kepada kami dalam Bahasa Indonesia.
 
 [Halaman ini dalam bahasa Inggris](https://kemet-travel.com/egypt-tour-cost.html)
 

@@ -215,7 +215,11 @@ $readTxt = implode(", ", array_slice(array_values(array_filter($trail["pages"],
 
 if ($spam) {
   log_enquiry("spam", $name, $email, $phone, $dates, $message, $srcTxt, $trail["first"], $party, $pace, $priority);
-  respond(true, $wantsJson);
+  // A person whose browser runs no script posts a real form with no timer.
+  // They used to be told "sent — we reply within two hours" while nothing
+  // reached anyone's inbox. Told "not sent" instead, they see the WhatsApp
+  // and email alternatives beside the form. A bot learns no more than it did.
+  respond(!($kt === "" && !$wantsJson), $wantsJson);
 }
 
 if ($name === "" || $message === "" || !filter_var($email, FILTER_VALIDATE_EMAIL) || !$eventOk) {

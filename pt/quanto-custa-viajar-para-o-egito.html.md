@@ -73,7 +73,7 @@ Os orçamentos são em euros. Um sinal de 25 % do total confirma a viagem; o sal
 
 ## Todos os preços em detalhe
 
-O detalhamento completo de preços e serviços, com todas as viagens, está disponível em inglês.
+Cada viagem tem a sua própria página em português, com o seu preço. Para um orçamento, escrevam para nós em português.
 
 [Esta página em inglês](https://kemet-travel.com/egypt-tour-cost.html)
 

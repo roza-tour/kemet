@@ -78,7 +78,7 @@ Es el pico del año. El clima es excelente y los precios de los barcos del Nilo 
 
 ## Los doce meses en detalle
 
-Un desglose detallado de cada mes — temperaturas, afluencia, precios y veredicto — está disponible en inglés.
+Cada uno de los doce meses tiene su propia página en español, enumerada arriba.
 
 - [Semana Santa en Egipto](https://kemet-travel.com/es/semana-santa-en-egipto.html)
 - [Eclipse solar 2027 en Luxor](https://kemet-travel.com/es/eclipse-solar-2027-luxor.html)

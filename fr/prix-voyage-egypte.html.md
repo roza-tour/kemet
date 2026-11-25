@@ -77,7 +77,7 @@ Les devis sont en euros. Sur place, la livre égyptienne sert pour les petites d
 
 ## Le détail des prix
 
-Le détail poste par poste, avec les prix de chaque itinéraire, est publié en anglais sur le site principal. Écrivez-nous en français pour un devis.
+Chaque voyage a sa propre page en français, avec son prix. Pour un devis, écrivez-nous en français.
 
 [Cette page en anglais](https://kemet-travel.com/egypt-tour-cost.html)
 

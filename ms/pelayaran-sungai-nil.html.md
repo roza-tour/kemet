@@ -2,7 +2,7 @@
 title: "Pelayaran Sungai Nil — dahabiya atau kapal besar | Kemet"
 url: https://kemet-travel.com/ms/pelayaran-sungai-nil.html
 language: ms
-description: "Pelayaran persendirian di Sungai Nil antara Luxor dan Aswan: dahabiya berlayar atau kapal lima bintang, Egyptologist di atas kapal sepanjang jalan."
+description: "Pelayaran Sungai Nil antara Luxor dan Aswan dengan lawatan persendirian: dahabiya berlayar atau kapal lima bintang, Egyptologist di atas kapal sepanjang jalan."
 ---
 
 # Pelayaran di Sungai Nil
@@ -128,7 +128,7 @@ Jika keselesaan lebih penting daripada harga, lebih baik terbang: Kaherah–Luxo
 
 ## Perincian laluan
 
-Perincian harian pelayaran, jenis kapal dan harga tersedia dalam Bahasa Inggeris di laman utama. Hubungi kami dalam Bahasa Melayu.
+Pelayaran empat hari diterangkan di atas, hari demi hari, berserta harganya. Hubungi kami dalam Bahasa Melayu untuk bertanya tentang tarikh atau dahabiya persendirian.
 
 - [The Oberoi Zahra — kapal persiaran mewah, atas permintaan](https://kemet-travel.com/ms/oberoi-zahra-pelayaran-sungai-nil.html)
 - [Gerhana matahari 2027 di Luxor](https://kemet-travel.com/ms/gerhana-matahari-2027-luxor.html)

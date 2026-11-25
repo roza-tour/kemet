@@ -157,9 +157,9 @@ You deal with one person who knows your trip in detail — not a call centre, no
 
 We take the time needed to get the itinerary right. There is no artificial deadline on a revised proposal.
 
-### Responsible, licensed operators
+### Our own team, our own contracts
 
-Every supplier we use — guides, hotels, vessels — is selected for quality, local ownership and responsible practice.
+Your licensed Egyptologist guide and your driver are Kemet's own team, and the hotels are booked under our own contracts with them, chosen for quality and local ownership.
 
 The standard
 

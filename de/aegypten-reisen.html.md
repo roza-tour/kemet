@@ -328,7 +328,7 @@ Sie wird ohnehin geändert — das ist der Punkt. Jede Route auf dieser Seite is
 
 ## Alle Reisen ansehen
 
-Der vollständige Katalog mit allen Reisen, Reisezielen und Erlebnissen steht auf Englisch zur Verfügung. Wir beraten und antworten auf Deutsch.
+Jede Reise hier hat ihre eigene Seite auf Deutsch, mit dem Programm Tag für Tag und dem Preis. Schreiben Sie uns auf Deutsch, wir antworten auf Deutsch.
 
 [Diese Seite auf Englisch](https://kemet-travel.com/tours.html)
 

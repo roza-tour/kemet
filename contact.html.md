@@ -15,11 +15,11 @@ WhatsApp [+201158367162](https://wa.me/201158367162?text=Hello%20Kemet%20%E2%80%
 
 Email [info@kemet-travel.com](mailto:info@kemet-travel.com?subject=Kemet+enquiry) Response within two hours
 
-Phone [+20 11 5836 7162](tel:+201158367162) Mon–Fri, 09:00–18:00 EET
+Phone [+20 11 5836 7162](tel:+201158367162) Every day, 09:00–18:00 Cairo time
 
 Business hours
 
-Monday – Friday · 09:00–18:00 EET (UTC+2)
+Every day · 09:00–18:00 Cairo time
 
 ## During your trip
 
@@ -98,9 +98,9 @@ You deal with one person who knows your trip in detail — not a call centre, no
 
 We take the time needed to get the itinerary right. There is no artificial deadline on a revised proposal.
 
-### Responsible, licensed operators
+### Our own team, our own contracts
 
-Every supplier we use — guides, hotels, vessels — is selected for quality, local ownership and responsible practice.
+Your licensed Egyptologist guide and your driver are Kemet's own team, and the hotels are booked under our own contracts with them, chosen for quality and local ownership.
 
 ---
 

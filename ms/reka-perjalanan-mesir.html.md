@@ -25,7 +25,7 @@ Laluan rekaan sendiri dikira atas permintaan. Kami membalas dalam dua jam.
 - [**Intipati Mesir dalam Seminggu** 7 hari / 6 malam **dari* €1,179*](https://kemet-travel.com/ms/pakej-mesir-7-hari.html)
 - [**Dari Piramid ke Laut** 4 hari / 3 malam **dari* €618*](https://kemet-travel.com/ms/kaherah-alexandria-4-hari.html)
 - [**Dari Kaherah ke Luxor & Aswan** 3 hari / 2 malam **dari* €527*](https://kemet-travel.com/ms/luxor-aswan-3-hari-termasuk-penerbangan.html)
-- [**Nile in Style: Aswan to Luxor** 4 Days / 3 Nights **dari* €820*](https://kemet-travel.com/ms/pelayaran-sungai-nil.html)
+- [**Pelayaran di Sungai Nil** 4 hari / 3 malam **dari* €820*](https://kemet-travel.com/ms/pelayaran-sungai-nil.html)
 - [**Kuil-Kuil Selatan** 5 hari / 4 malam **dari* €1,018*](https://kemet-travel.com/ms/mesir-hulu-5-hari-luxor-aswan.html)
 - [**Bulan Madu di Sungai Nil** 9 hari / 8 malam **dari* €2,045*](https://kemet-travel.com/ms/bulan-madu-sungai-nil-9-hari.html)
 - [**Mesir Sekeluarga: Dari Piramid ke Sungai Nil** 8 hari / 7 malam **dari* €1,524*](https://kemet-travel.com/ms/percutian-keluarga-mesir-8-hari.html)

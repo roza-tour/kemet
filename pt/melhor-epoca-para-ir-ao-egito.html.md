@@ -78,7 +78,7 @@ Maio, junho, setembro e outubro. A água chega a 27–30 graus no verão e a vis
 
 ## Os doze meses em detalhe
 
-Um detalhamento de cada mês — temperaturas, movimento, preços e veredito — está disponível em inglês.
+Cada um dos doze meses tem a sua própria página em português, listada acima.
 
 - [Carnaval no Egito](https://kemet-travel.com/pt/carnaval-no-egito.html)
 - [Páscoa no Egito](https://kemet-travel.com/pt/pascoa-no-egito.html)

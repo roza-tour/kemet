@@ -111,7 +111,7 @@ Solo si elige la excursión opcional a Abu Simbel el último día
 
 ### ¿Por qué ir de Luxor a Asuán por carretera y no en crucero?
 
-La carretera permite ver Edfu y Kom Ombo sin atarse al horario fijo de un barco de crucero, y todas las noches se duerme en una habitación de hotel de tamaño completo. Si prefiere navegar, nuestro crucero Nile in Style recorre el mismo tramo por el agua.
+La carretera permite ver Edfu y Kom Ombo sin atarse al horario fijo de un barco de crucero, y todas las noches se duerme en una habitación de hotel de tamaño completo. Si prefiere navegar, nuestro crucero por el Nilo recorre el mismo tramo por el agua.
 
 ### ¿Este viaje incluye Abu Simbel?
 

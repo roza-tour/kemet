@@ -17,6 +17,8 @@ Dix jours sans hâte, des pyramides de Gizeh aux temples de Haute-Égypte, reli�
 
 2 107 € par personne pour deux voyageurs
 
+Avec des vols intérieurs à la place des deux nuits en train-couchettes, ces nuits-là à l'hôtel: 2 045 € par personne
+
 Par personne, en saison normale. Les suppléments de fêtes sont indiqués séparément dans le devis.
 
 Durée **10 jours / 9 nuits**

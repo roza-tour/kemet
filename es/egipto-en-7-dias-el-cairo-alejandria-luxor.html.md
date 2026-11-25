@@ -17,6 +17,8 @@ desde 6 viajeros
 
 1.297 € por persona para dos viajeros
 
+Con vuelos internos en lugar de las dos noches en tren cama, y esas noches en hotel: 1.309 € por persona
+
 Por persona, en temporada normal. Los suplementos de fechas festivas se indican por separado en el presupuesto.
 
 Duración **7 días / 6 noches**

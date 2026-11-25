@@ -1,8 +1,8 @@
 ---
-title: "Crociera sul Nilo Luxor–Assuan privata | Kemet"
+title: "Crociera sul Nilo Luxor–Assuan, visite private | Kemet"
 url: https://kemet-travel.com/it/crociera-sul-nilo.html
 language: it
-description: "Crociera privata sul Nilo fra Luxor e Assuan con egittologo dedicato — i templi visti dall'acqua, dahabeya o nave, e cosa conta davvero."
+description: "Crociera sul Nilo fra Luxor e Assuan con visite private e guida egittologica dedicata — i templi visti dall'acqua, dahabeya o nave, e cosa conta davvero."
 ---
 
 # La crociera sul Nilo
@@ -124,7 +124,7 @@ Se il comfort viene prima del prezzo, conviene volare: Il Cairo–Luxor è meno 
 
 ## Approfondire il tratto del Nilo
 
-Programmi dettagliati, descrizioni delle imbarcazioni e il catalogo completo sono disponibili in inglese.
+La crociera di quattro giorni è descritta qui sopra, giorno per giorno, con il suo prezzo. Scriveteci in italiano per le date o per una dahabeya privata.
 
 - [The Oberoi Zahra — motonave di lusso, su richiesta](https://kemet-travel.com/it/oberoi-zahra-crociera-sul-nilo.html)
 - [Eclissi solare 2027 a Luxor](https://kemet-travel.com/it/eclissi-solare-2027-luxor.html)

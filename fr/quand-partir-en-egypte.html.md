@@ -78,7 +78,7 @@ Non. Les sites, les musées et les hôtels fonctionnent normalement et le pays e
 
 ## Le guide mois par mois
 
-Un guide détaillé pour chacun des douze mois — températures, affluence, prix et fêtes — est publié en anglais sur le site principal.
+Chacun des douze mois a sa propre page en français, listée plus haut.
 
 - [Pâques en Égypte](https://kemet-travel.com/fr/paques-en-egypte.html)
 - [Éclipse solaire 2027 à Louxor](https://kemet-travel.com/fr/eclipse-solaire-2027-louxor.html)

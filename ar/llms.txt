@@ -129,6 +129,9 @@ The from-price is for a private party of six or more; where a second figure is g
 - [رمضان في القاهرة](https://kemet-travel.com/ar/ramadan-fi-masr.html): يُتوقَّع أن يكون رمضان ١٤٤٨هـ من ٨ فبراير إلى ٨ مارس ٢٠٢٧، في جوّ معتدل. تراويح في أعرق مساجد القاهرة، وإفطار فوق أسطح المدينة القديمة، وعيد على ضفاف النيل.
 - [شهر العسل في مصر](https://kemet-travel.com/ar/shahr-al-asal-fi-masr.html): اثنان، وخمسة آلاف عام من التاريخ — ولا جدول سوى جدولكما.
 - [رحلة عائلية إلى مصر](https://kemet-travel.com/ar/rehla-aeiliya-ila-masr.html): رحلة سيحكيها أطفالكم يوماً لأطفالهم.
+- [سياسة الخصوصية](https://kemet-travel.com/ar/siyasat-al-khususiya-wa-hamayat-al-bayanat.html): ما الذي نجمعه، وكيف نستخدمه، وما الحقوق التي تملكونها على معلوماتكم. نجمع أقل قدر ممكن — ولا نبيعه أبداً.
+- [شروط الاستخدام](https://kemet-travel.com/ar/shurut-istikhdam-al-mawqea.html): الشروط الحاكمة لموقعنا واستفساراتكم وعروض أسعارنا — مكتوبة بوضوح، وتُقرأ مع شروط الحجز والإلغاء.
+- [الحجز والدفع والإلغاء](https://kemet-travel.com/ar/shurut-al-hajz-wa-al-dafa-wa-al-ilgha.html): كل ما تحتاجون إلى معرفته قبل التأكيد — كيف يتم الحجز، ومتى تستحق الدفعات، وشروط الإلغاء لدينا. بشفافية ودون أي تكاليف خفية.
 - [صيف مصر للعائلات الخليجية](https://kemet-travel.com/ar/sayf-masr-lil-aailat-al-khalijiya.html): نسيم الإسكندرية، ومياه البحر الأحمر، وليالي القاهرة على النيل — برحلة خاصة لعائلتكم وحدها.
 
 Every page is also available as Markdown: add `.md` to its address, or request it with the header `Accept: text/markdown`.

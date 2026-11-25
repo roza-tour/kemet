@@ -73,7 +73,7 @@ Eine Anzahlung von 25 Prozent des Gesamtpreises bestätigt die Reise; die Restza
 
 ## Ausführliche Preisübersicht
 
-Die vollständige Preis- und Leistungsübersicht mit allen Reisen steht auf Englisch zur Verfügung.
+Jede Reise hat ihre eigene Seite auf Deutsch, mit ihrem Preis. Für ein Angebot schreiben Sie uns auf Deutsch.
 
 [Diese Seite auf Englisch](https://kemet-travel.com/egypt-tour-cost.html)
 

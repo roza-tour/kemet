@@ -17,6 +17,8 @@ ab 6 Reisenden
 
 2.107 € pro Person bei zwei Reisenden
 
+Mit Inlandsflügen statt der zwei Nächte im Schlafwagen, diese Nächte im Hotel: 2.045 € pro Person
+
 Pro Person, Normalsaison. Zuschläge für Feiertage weisen wir im Angebot getrennt aus.
 
 Dauer **10 Tage / 9 Nächte**

@@ -17,6 +17,8 @@ dari 6 orang
 
 €2,107 seorang bagi dua pengembara
 
+Dengan penerbangan domestik menggantikan dua malam di kereta api tidur, dan malam-malam itu di hotel: €2,045 seorang
+
 Bagi setiap orang, musim biasa. Caj tambahan cuti umum dinyatakan berasingan dalam sebut harga.
 
 Tempoh **10 hari / 9 malam**

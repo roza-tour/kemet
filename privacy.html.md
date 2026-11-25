@@ -45,7 +45,7 @@ Our legal basis is your consent and the steps necessary to enter into and perfor
 
 This website does not use cookies for advertising or tracking, and it loads no third-party analytics or advertising scripts. It does not build a marketing profile of you.
 
-We measure how the site is used with our own simple analytics, which run only on our server. For each page viewed they record the page, the website or search engine that linked to it, the kind of device (phone, tablet or computer, judged from the screen width), your browser's language setting, and actions such as tapping WhatsApp or searching this site — including the words searched for. Visits are counted with an anonymous code made from your connection and browser that changes every day and cannot be traced back to you; your IP address itself is not stored.
+We measure how the site is used with our own simple analytics, which run only on our server. For each page viewed they record the page, the website or search engine that linked to it, any campaign tag in the link you arrived by, the kind of device (phone, tablet or computer, judged from the screen width) and your browser's language setting. They also record actions on the page: tapping WhatsApp or email, which journey you opened, searches on this site (including the words searched for), how far down a page you read and how long you spent on it. Visits are counted with a code made from your connection and browser together with a secret that changes every day, so a visitor cannot be followed from one day to the next and the code cannot be turned back into an IP address; your IP address itself is not stored.
 
 If your browser sends a Do Not Track or Global Privacy Control signal, none of this is recorded. These analytics records are deleted automatically after 13 months.
 
@@ -57,7 +57,7 @@ The site also remembers a few display choices in your browser, such as that you 
 
 ## Who we share it with
 
-We share your information only where it is necessary to answer you or to arrange a trip you have asked us to plan — for example with the hotels, guides, cruise operators or transport providers involved in your specific itinerary.
+We share your information only where it is necessary to answer you or to arrange a trip you have asked us to plan — for example with the hotels, the cruise ship or the airline booked for your specific itinerary. Your guide and driver are Kemet's own team.
 
 Our website and email are hosted by our hosting provider, who processes data on our behalf under their own security terms. We never sell, rent or trade your personal information to anyone.
 

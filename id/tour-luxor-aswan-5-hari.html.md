@@ -111,7 +111,7 @@ Hanya bila Anda memilih perjalanan opsional ke Abu Simbel pada hari terakhir
 
 ### Mengapa lewat darat dari Luxor ke Aswan, bukan berlayar?
 
-Jalan darat memungkinkan Edfu dan Kom Ombo tanpa terikat jadwal tetap kapal pesiar, dan setiap malam Anda tidur di kamar hotel berukuran penuh. Bila Anda lebih suka berlayar, perjalanan pesiar kami, Nile in Style, menempuh koridor yang sama lewat air.
+Jalan darat memungkinkan Edfu dan Kom Ombo tanpa terikat jadwal tetap kapal pesiar, dan setiap malam Anda tidur di kamar hotel berukuran penuh. Bila Anda lebih suka berlayar, pesiar Sungai Nil kami menempuh koridor yang sama lewat air.
 
 ### Apakah perjalanan ini mencakup Abu Simbel?
 

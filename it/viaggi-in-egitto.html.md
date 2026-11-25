@@ -328,7 +328,7 @@ Viene modificato comunque: è proprio il punto. Ogni itinerario su questa pagina
 
 ## Vedere tutti i viaggi
 
-Il catalogo completo con tutti i viaggi, le destinazioni e le esperienze è disponibile in inglese. Consigliamo e rispondiamo in italiano.
+Ogni viaggio qui ha la sua pagina in italiano, con il programma giorno per giorno e il prezzo. Scriveteci in italiano, rispondiamo in italiano.
 
 [Questa pagina in inglese](https://kemet-travel.com/tours.html)
 

@@ -86,7 +86,7 @@ Las zonas turísticas — El Cairo, Guiza, Luxor, Asuán, Alejandría y la costa
 
 ## El sitio completo
 
-Estas páginas son una selección en español. El catálogo completo de Kemet — todos los viajes, destinos, experiencias y guías — está disponible en inglés. Respondemos, naturalmente, en español.
+Todos los viajes, destinos, experiencias y las páginas mes a mes de este sitio están en español; el sitio en inglés solo tiene unas pocas páginas más. Respondemos en español.
 
 - [Semana Santa en Egipto](https://kemet-travel.com/es/semana-santa-en-egipto.html)
 

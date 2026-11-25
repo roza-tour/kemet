@@ -328,7 +328,7 @@ Rutenya disusun ulang di tempat pada hari itu juga tanpa biaya tambahan — itul
 
 ## Katalog lengkap
 
-Dua puluh lima rute lengkap dengan rincian harian, hotel dan harga tersedia dalam Bahasa Inggris di situs utama. Kirim pertanyaan Anda dalam Bahasa Indonesia — kami balas dalam Bahasa Indonesia.
+Setiap rute di sini memiliki halamannya sendiri dalam Bahasa Indonesia, lengkap dengan program harian dan harganya. Tulis kepada kami dalam Bahasa Indonesia — kami balas dalam Bahasa Indonesia.
 
 - [Ziarah Kairo Islam](https://kemet-travel.com/id/ziarah-kairo-islam.html)
 - [Gunung Sinai dan Biara Santa Katarina](https://kemet-travel.com/id/gunung-sinai.html)

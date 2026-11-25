@@ -86,7 +86,7 @@ As regiões turísticas — Cairo, Gizé, Luxor, Assuã, Alexandria e o litoral 
 
 ## O site completo
 
-Estas páginas são uma seleção em português. O catálogo completo da Kemet — todas as viagens, destinos, experiências e guias — está em inglês. E respondemos, naturalmente, em português.
+Todas as viagens, destinos, experiências e as páginas mês a mês deste site estão em português; o site em inglês tem só algumas páginas a mais. Respondemos em português.
 
 - [Carnaval no Egito](https://kemet-travel.com/pt/carnaval-no-egito.html)
 

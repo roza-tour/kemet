@@ -90,7 +90,7 @@ Sangat sering. Banyak tamu kami tiba di Mesir sebelum atau sesudah ibadah di Ara
 
 ## Situs lengkap
 
-Halaman-halaman ini adalah ringkasan dalam Bahasa Indonesia. Katalog lengkap Kemet — seluruh rute, destinasi, pengalaman dan panduan praktis — tersedia dalam Bahasa Inggris. Kami tetap membalas pesan Anda dalam Bahasa Indonesia.
+Semua rute, destinasi, pengalaman, dan halaman bulan demi bulan di situs ini tersedia dalam Bahasa Indonesia; situs berbahasa Inggris hanya memiliki sedikit halaman tambahan. Kami membalas dalam Bahasa Indonesia.
 
 - [Umrah plus Mesir](https://kemet-travel.com/id/umrah-plus-mesir.html)
 - [Ziarah Kairo Islam](https://kemet-travel.com/id/ziarah-kairo-islam.html)
