@@ -33,7 +33,7 @@ export const COMPANY_EN = {
    },
    {
     "heading": "Entirely Private",
-    "body": "Every journey is exclusively yours. No shared coaches, no set departure dates, no compromises on pace or priorities."
+    "body": "Every journey is exclusively yours. No shared coaches, no set departure dates, no compromises on pace or priorities. The exceptions are stated where they apply: the ship itself on journeys with a Nile cruise, and Eclipse Day in Luxor, a dated day in small groups."
    },
    {
     "heading": "Tailor-Made",
@@ -199,7 +199,7 @@ export const COMPANY: Record<TranslatedLocale, CompanyTexts> = {
     },
     {
      "heading": "Ganz und gar privat",
-     "body": "Jede Reise gehört ausschließlich Ihnen. Keine Gruppenbusse, keine festen Abreisetermine, keine Kompromisse bei Tempo oder Prioritäten."
+     "body": "Jede Reise gehört ausschließlich Ihnen. Keine Gruppenbusse, keine festen Abreisetermine, keine Kompromisse bei Tempo oder Prioritäten. Die Ausnahmen sind dort angegeben, wo sie gelten: das Schiff selbst bei Reisen mit Nilkreuzfahrt und der Finsternistag in Luxor, ein Tag mit festem Datum in kleinen Gruppen."
     },
     {
      "heading": "Maßgeschneidert",
@@ -362,7 +362,7 @@ export const COMPANY: Record<TranslatedLocale, CompanyTexts> = {
     },
     {
      "heading": "Entièrement privé",
-     "body": "Chaque voyage est exclusivement le vôtre. Pas d'autocar partagé, pas de dates de départ imposées, aucun compromis sur le rythme ou sur vos priorités."
+     "body": "Chaque voyage est exclusivement le vôtre. Pas d'autocar partagé, pas de dates de départ imposées, aucun compromis sur le rythme ou sur vos priorités. Les exceptions sont indiquées là où elles s'appliquent : le bateau lui-même pour les voyages incluant une croisière sur le Nil, et le Jour de l'éclipse à Louxor, une journée à date fixe en petits groupes."
     },
     {
      "heading": "Sur mesure",
@@ -525,7 +525,7 @@ export const COMPANY: Record<TranslatedLocale, CompanyTexts> = {
     },
     {
      "heading": "Interamente privato",
-     "body": "Ogni viaggio è esclusivamente vostro. Nessun pullman condiviso, nessuna data di partenza fissa, nessun compromesso su ritmo e priorità."
+     "body": "Ogni viaggio è esclusivamente vostro. Nessun pullman condiviso, nessuna data di partenza fissa, nessun compromesso su ritmo e priorità. Le eccezioni sono indicate dove si applicano: la nave stessa nei viaggi con crociera sul Nilo e il Giorno dell'Eclissi a Luxor, una giornata con data fissa in piccoli gruppi."
     },
     {
      "heading": "Su misura",
@@ -688,7 +688,7 @@ export const COMPANY: Record<TranslatedLocale, CompanyTexts> = {
     },
     {
      "heading": "Totalmente privado",
-     "body": "Cada viaje es exclusivamente suyo. Sin autocares compartidos, sin fechas de salida fijas, sin concesiones en el ritmo ni en las prioridades."
+     "body": "Cada viaje es exclusivamente suyo. Sin autocares compartidos, sin fechas de salida fijas, sin concesiones en el ritmo ni en las prioridades. Las excepciones se indican donde corresponden: el barco en los viajes con crucero por el Nilo y el Día del Eclipse en Luxor, una jornada con fecha fija en grupos reducidos."
     },
     {
      "heading": "A medida",
@@ -851,7 +851,7 @@ export const COMPANY: Record<TranslatedLocale, CompanyTexts> = {
     },
     {
      "heading": "Totalmente privado",
-     "body": "Cada viagem é exclusivamente de vocês. Sem ônibus compartilhados, sem datas de saída fixas, sem concessões quanto ao ritmo ou às prioridades."
+     "body": "Cada viagem é exclusivamente de vocês. Sem ônibus compartilhados, sem datas de saída fixas, sem concessões quanto ao ritmo ou às prioridades. As exceções são indicadas onde se aplicam: o navio em si nas viagens com cruzeiro no Nilo e o Dia do Eclipse em Luxor, um dia com data marcada em grupos pequenos."
     },
     {
      "heading": "Sob medida",
@@ -1014,7 +1014,7 @@ export const COMPANY: Record<TranslatedLocale, CompanyTexts> = {
     },
     {
      "heading": "Полностью индивидуально",
-     "body": "Каждое путешествие принадлежит только вам. Никаких общих автобусов, никаких фиксированных дат выезда, никаких компромиссов в темпе и приоритетах."
+     "body": "Каждое путешествие принадлежит только вам. Никаких общих автобусов, никаких фиксированных дат выезда, никаких компромиссов в темпе и приоритетах. Исключения указаны там, где они действуют: сам корабль в поездках с круизом по Нилу и День затмения в Луксоре — день с фиксированной датой в небольших группах."
     },
     {
      "heading": "Авторский маршрут",
@@ -1177,7 +1177,7 @@ export const COMPANY: Record<TranslatedLocale, CompanyTexts> = {
     },
     {
      "heading": "Sepenuhnya Privat",
-     "body": "Setiap perjalanan hanya milik Anda. Tanpa bus bersama, tanpa tanggal keberangkatan tetap, tanpa kompromi soal ritme maupun prioritas Anda."
+     "body": "Setiap perjalanan hanya milik Anda. Tanpa bus bersama, tanpa tanggal keberangkatan tetap, tanpa kompromi soal ritme maupun prioritas Anda. Pengecualiannya disebutkan di tempat berlakunya: kapal itu sendiri pada perjalanan dengan pelayaran Nil, dan Hari Gerhana di Luxor, satu hari bertanggal pasti dalam kelompok kecil."
     },
     {
      "heading": "Dibuat Khusus",
@@ -1340,7 +1340,7 @@ export const COMPANY: Record<TranslatedLocale, CompanyTexts> = {
     },
     {
      "heading": "Sepenuhnya Persendirian",
-     "body": "Setiap perjalanan adalah milik anda sepenuhnya. Tiada bas berkongsi, tiada tarikh berlepas yang ditetapkan, tiada kompromi tentang rentak atau keutamaan anda."
+     "body": "Setiap perjalanan adalah milik anda sepenuhnya. Tiada bas berkongsi, tiada tarikh berlepas yang ditetapkan, tiada kompromi tentang rentak atau keutamaan anda. Pengecualiannya dinyatakan di tempat ia terpakai: kapal itu sendiri pada perjalanan yang menyertakan pelayaran Nil, dan Hari Gerhana di Luxor, satu hari bertarikh dalam kumpulan kecil."
     },
     {
      "heading": "Tempahan Khas",
@@ -1503,7 +1503,7 @@ export const COMPANY: Record<TranslatedLocale, CompanyTexts> = {
     },
     {
      "heading": "خاصة بالكامل",
-     "body": "كل رحلة لكم وحدكم. لا حافلات مشتركة، ولا مواعيد مغادرة ثابتة، ولا تنازل عن الإيقاع أو الأولويات."
+     "body": "كل رحلة لكم وحدكم. لا حافلات مشتركة، ولا مواعيد مغادرة ثابتة، ولا تنازل عن الإيقاع أو الأولويات. والاستثناءات مذكورة حيث تنطبق: السفينة نفسها في الرحلات التي تتضمن رحلة نيلية، ويوم الكسوف في الأقصر، وهو يوم محدد التاريخ في مجموعات صغيرة."
     },
     {
      "heading": "على قياسكم",

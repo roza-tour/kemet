@@ -101,7 +101,7 @@ export const company: CompanyProfile = {
       id: "entirely-private",
       symbol: "ankh",
       headline: "Entirely Private",
-      body: "Every journey is exclusively yours. No shared coaches, no set departure dates, no compromises on pace or priorities.",
+      body: "Every journey is exclusively yours. No shared coaches, no set departure dates, no compromises on pace or priorities. The exceptions are stated where they apply: the ship itself on journeys with a Nile cruise, and Eclipse Day in Luxor, a dated day in small groups.",
     },
     {
       id: "tailor-made",

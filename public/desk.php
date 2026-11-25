@@ -26,6 +26,30 @@ $dir  = __DIR__ . "/_stats";
 $site = "https://kemet-travel.com";
 $today = new DateTimeImmutable("today", new DateTimeZone("UTC"));
 
+// --- "Do not write again" ----------------------------------------------------
+// The privacy policy promises that anyone who asks will not be written to
+// again. An address marked here never reappears among the follow-ups. Marked
+// by a POST from this page only (the Origin/Referer must be this site, so
+// another site cannot submit it with the browser's saved password).
+$stopFile = "$dir/no-followup.csv";
+if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST" && isset($_POST["stop"])) {
+  $from = (string) ($_SERVER["HTTP_ORIGIN"] ?? $_SERVER["HTTP_REFERER"] ?? "");
+  $host = (string) ($_SERVER["HTTP_HOST"] ?? "");
+  $addr = strtolower(trim((string) $_POST["stop"]));
+  if ($host !== "" && parse_url($from, PHP_URL_HOST) === $host && filter_var($addr, FILTER_VALIDATE_EMAIL)) {
+    @file_put_contents($stopFile, $addr . "," . gmdate("Y-m-d") . "\n", FILE_APPEND | LOCK_EX);
+    @chmod($stopFile, 0600);
+  }
+  header("Location: desk.php", true, 303);
+  exit;
+}
+$stopped = [];
+if (is_readable($stopFile)) {
+  foreach (file($stopFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) ?: [] as $line) {
+    $stopped[strtolower(trim(explode(",", $line)[0]))] = true;
+  }
+}
+
 // --- Subscribers ------------------------------------------------------------
 $subs = ["active" => [], "off" => 0, "pending" => 0];
 if (is_readable("$dir/subscribers.csv") && ($fh = fopen("$dir/subscribers.csv", "r")) !== false) {
@@ -35,7 +59,8 @@ if (is_readable("$dir/subscribers.csv") && ($fh = fopen("$dir/subscribers.csv", 
     // Not yet confirmed from the email (subscribe.php → confirm.php): not on the list.
     if ((string) $r[7] === "pending") { $subs["pending"]++; continue; }
     $subs["active"][] = ["when" => $r[0], "email" => $r[1], "name" => $r[2],
-                         "source" => $r[3], "detail" => $r[4] ?? ""];
+                         "source" => $r[3], "detail" => $r[4] ?? "",
+                         "locale" => $r[5] ?? "", "token" => $r[6] ?? ""];
   }
   fclose($fh);
 }
@@ -45,18 +70,25 @@ if (isset($_GET["export"])) {
   header("Content-Type: text/csv; charset=utf-8");
   header('Content-Disposition: attachment; filename="kemet-list-' . $today->format("Y-m-d") . '.csv"');
   $out = fopen("php://output", "w");
-  fputcsv($out, ["email", "name", "joined", "source"]);
+  // The token is what each message's unsubscribe link needs
+  // (unsubscribe.php?t=…); the language, so each subscriber is written to in theirs.
+  fputcsv($out, ["email", "name", "joined", "source", "language", "unsubscribe"]);
   // Opened in a spreadsheet: a name typed as "=HYPERLINK(…)" would run as a
   // formula there, so such a cell gets a leading apostrophe.
   $cell = function ($v) { $v = (string)$v; return preg_match('/^(?:[=@\t]|[+-](?![\d\s(]))/', $v) ? "'" . $v : $v; };
-  foreach ($subs["active"] as $s) { fputcsv($out, array_map($cell, [$s["email"], $s["name"], $s["when"], $s["source"]])); }
+  foreach ($subs["active"] as $s) {
+    fputcsv($out, array_map($cell, [$s["email"], $s["name"], $s["when"], $s["source"], $s["locale"],
+      $site . "/unsubscribe.php?t=" . $s["token"]]));
+  }
   exit;
 }
 
 // --- 1. Follow-ups due ------------------------------------------------------
 // The milestones are where a decision actually gets revisited: a season later,
 // half a year out, and the anniversary of the first enquiry.
-$MILESTONES = [90 => "three months", 180 => "six months", 365 => "a year"];
+// The last is day 350, not 365: the privacy policy says "at most three times
+// in the year after your enquiry", and the seven-day window must close inside it.
+$MILESTONES = [90 => "three months", 180 => "six months", 350 => "a year"];
 $due = [];
 if (is_readable("$dir/enquiries.csv") && ($fh = fopen("$dir/enquiries.csv", "r")) !== false) {
   while (($r = fgetcsv($fh)) !== false) {
@@ -64,6 +96,7 @@ if (is_readable("$dir/enquiries.csv") && ($fh = fopen("$dir/enquiries.csv", "r")
     // Only real enquiries: a row logged as spam, invalid or a duplicate is not
     // someone who asked us anything, and must never be written to.
     if (in_array(trim((string) $r[1]), ["spam", "invalid", "duplicate"], true)) { continue; }
+    if (isset($stopped[strtolower(trim((string) $r[3]))])) { continue; }
     $when = DateTimeImmutable::createFromFormat("Y-m-d H:i", trim($r[0]), new DateTimeZone("UTC"));
     if (!$when) { continue; }
     $age = (int) $today->diff($when)->days;
@@ -190,6 +223,10 @@ function h($v) { return htmlspecialchars((string) $v, ENT_QUOTES, "UTF-8"); }
         . "If the timing was the problem, tell me roughly when suits and I will\n"
         . "tell you honestly whether it is the right month for what you wanted.\n\n"
         . "— Kemet\n" . $site . "\n") ?>">Write to them</a>
+      <form method="post" action="desk.php" style="display:inline;margin-left:12px">
+        <input type="hidden" name="stop" value="<?= h($d["email"]) ?>">
+        <button type="submit" style="font:inherit;background:none;border:0;color:inherit;opacity:.7;text-decoration:underline;cursor:pointer">They asked us not to write again</button>
+      </form>
     </div>
   </div>
 <?php endforeach; endif; ?>

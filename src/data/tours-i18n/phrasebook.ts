@@ -51,6 +51,8 @@ export interface TourPhrasebook {
   /** For journeys with a scheduled Nile cruise: "Guide, vehicle and visits —
    *  yes; the cruise ship is shared". */
   privateShared: string;
+  /** The dive journey: private transfers, shared dive boats (data/tours → sharedBoatNote). */
+  privateSharedBoat: string;
   /** The journey's editorial category. */
   categories: Record<string, string>;
   /** comfort.walking, which is one of two fixed English values. */
@@ -93,6 +95,7 @@ const de: TourPhrasebook = {
   stopLabel: "Station",
   privateYes: "Ja — nur Ihre Gruppe",
   privateShared: "Guide, Fahrzeug und Besichtigungen — ja; das Schiff teilen Sie mit anderen Gästen",
+  privateSharedBoat: "Transfers — ja; die Tauchboote fahren mit den kleinen Gruppen der Basis",
   categories: {
     "Signature Journey": "Signature-Reise",
     "Short Break": "Kurzreise",
@@ -342,6 +345,7 @@ const fr: TourPhrasebook = {
   stopLabel: "Étape",
   privateYes: "Oui — votre groupe seul",
   privateShared: "Guide, véhicule et visites — oui ; le bateau est partagé avec d’autres passagers",
+  privateSharedBoat: "Transferts — oui ; les bateaux de plongée emmènent les petits groupes du centre",
   categories: {
     "Signature Journey": "Voyage signature",
     "Short Break": "Court séjour",
@@ -554,6 +558,7 @@ const it: TourPhrasebook = {
   stopLabel: "Tappa",
   privateYes: "Sì — solo il vostro gruppo",
   privateShared: "Guida, veicolo e visite — sì; la nave è condivisa con altri ospiti",
+  privateSharedBoat: "Trasferimenti — sì; le barche da immersione portano i piccoli gruppi del centro",
   categories: {
     "Signature Journey": "Viaggio signature",
     "Short Break": "Viaggio breve",
@@ -747,6 +752,7 @@ const es: TourPhrasebook = {
   stopLabel: "Parada",
   privateYes: "Sí — solo su grupo",
   privateShared: "Guía, vehículo y visitas — sí; el barco se comparte con otros pasajeros",
+  privateSharedBoat: "Traslados — sí; los barcos de buceo llevan a los grupos reducidos del centro",
   categories: {
     "Signature Journey": "Viaje insignia",
     "Short Break": "Escapada",
@@ -870,6 +876,7 @@ const pt: TourPhrasebook = {
   stopLabel: "Parada",
   privateYes: "Sim — só o seu grupo",
   privateShared: "Guia, veículo e visitas — sim; o navio é compartilhado com outros hóspedes",
+  privateSharedBoat: "Traslados — sim; os barcos de mergulho levam os pequenos grupos do centro",
   categories: {
     "Signature Journey": "Viagem assinatura",
     "Short Break": "Escapada",
@@ -993,6 +1000,7 @@ const ru: TourPhrasebook = {
   stopLabel: "Остановка",
   privateYes: "Да — только ваша группа",
   privateShared: "Сопровождение, транспорт и экскурсии — да; теплоход общий с другими гостями",
+  privateSharedBoat: "Трансферы — да; на дайв-ботах — небольшие группы дайв-центра",
   categories: {
     "Signature Journey": "Фирменное путешествие",
     "Short Break": "Короткая поездка",
@@ -1116,6 +1124,7 @@ const id: TourPhrasebook = {
   stopLabel: "Persinggahan",
   privateYes: "Ya — hanya rombongan Anda",
   privateShared: "Pemandu, kendaraan, dan kunjungan — ya; kapal pesiar dipakai bersama tamu lain",
+  privateSharedBoat: "Transfer — ya; kapal selam membawa kelompok kecil milik pusat selam",
   categories: {
     "Signature Journey": "Perjalanan unggulan",
     "Short Break": "Liburan singkat",
@@ -1239,6 +1248,7 @@ const ms: TourPhrasebook = {
   stopLabel: "Hentian",
   privateYes: "Ya — kumpulan anda sahaja",
   privateShared: "Pemandu, kenderaan dan lawatan — ya; kapal persiaran dikongsi dengan tetamu lain",
+  privateSharedBoat: "Pemindahan — ya; bot selam membawa kumpulan kecil pusat selam",
   categories: {
     "Signature Journey": "Perjalanan istimewa",
     "Short Break": "Percutian singkat",
@@ -1362,6 +1372,7 @@ const ar: TourPhrasebook = {
   stopLabel: "المحطة",
   privateYes: "نعم — لمجموعتكم وحدها",
   privateShared: "الإرشاد والسيارة والزيارات — نعم؛ أما الباخرة فمشتركة مع ضيوف آخرين",
+  privateSharedBoat: "التنقلات — نعم؛ أما مراكب الغوص فتقلّ مجموعات المركز الصغيرة",
   categories: {
     "Signature Journey": "رحلة مميزة",
     "Short Break": "عطلة قصيرة",

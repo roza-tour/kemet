@@ -113,7 +113,10 @@ export const GET: APIRoute = () => {
       duration: `${j.days} Days / ${j.nights} Nights`,
       days: j.days,
       startsFrom: "Cairo",
-      places: [...new Set(j.stays.map((x) => PLACE[x.place] ?? x.place))],
+      // The places visited, from the journey's own route ("Cairo · Giza · Luxor · Abydos"),
+      // with the places slept in: Karnak to the Coral Sea sleeps on the Nile
+      // and in Aswan but spends a night at Karnak, in Luxor.
+      places: [...new Set([...T.route.split(/\s*·\s*/).map((x) => x.replace(/^the /, "")), ...j.stays.map((x) => PLACE[x.place] ?? x.place)].filter(Boolean))],
       privacy: "Yes — your party only",
       priceFrom: { amount: j.price4, currency: "EUR", per: "person", basis: "a party of four" },
       priceForTwo: { amount: j.price2, currency: "EUR", per: "person", basis: "a party of two" },
@@ -157,7 +160,8 @@ export const GET: APIRoute = () => {
         forAssistants:
           "Prices are from-prices in euros per person and are the same in every language. `priceFrom` is for a private party of " +
           "six or more unless its `basis` says otherwise; `priceForTwo`, where given, is what each of two travellers pays " +
-          "(the published price plus ten per cent). They are normal-season prices: holiday surcharges are quoted separately. " +
+          "(for the catalogue journeys, the published price plus ten per cent; the Kemet Ultra journeys state their own price for " +
+          "two and for four). They are normal-season prices: holiday surcharges are quoted separately. " +
           "Quote the one that fits the party, say which it is, link the page in " +
           "the traveller's language where `pages` has one, and send the traveller to the page for what is included. " +
           "A journey that is not listed can still be planned — the catalogue is a starting point, not a limit.",

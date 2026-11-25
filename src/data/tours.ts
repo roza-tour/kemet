@@ -60,6 +60,9 @@ const privateNote = "Yes — your party only";
  *  contradict the page. LocalizedTour compares against this to pick the
  *  translated wording. */
 export const sharedShipNote = "Guide, vehicle and visits — yes; the cruise ship is shared";
+/** The dive journey: transfers are private, but the dives run from a licensed
+ *  centre's boats in small groups (its own subtitle and overview say so). */
+export const sharedBoatNote = "Transfers — yes; the dive boats carry the centre's small groups";
 
 // Day-tour inclusion bases (see the DAY TOURS pricing note above). Tickets move
 // out of the price and to the top of the exclusions, where a reader looking for
@@ -2380,7 +2383,7 @@ export const tours: Tour[] = [
     startPoint: "Sharm El Sheikh (airport or hotel)",
     cities: ["Sharm El Sheikh", "Ras Mohammed", "Tiran"],
     visiting: "Ras Mohammed · Strait of Tiran",
-    isPrivate: privateNote,
+    isPrivate: sharedBoatNote,
     price: 871,
     priceBasisPax: PRICE_BASIS_PAX,
     summary:

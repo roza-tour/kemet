@@ -56,9 +56,9 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
     {
      "heading": "Was wir erheben",
      "body": [
-      "Wenn Sie uns über das Kontaktformular eine Nachricht senden, erheben wir die Angaben, die Sie selbst machen: Ihren Namen, Ihre E-Mail-Adresse und — sofern Sie sie eingeben — Ihre Telefonnummer, Ihre geplanten Reisedaten und den Inhalt Ihrer Nachricht.",
+      "Wenn Sie uns über das Kontaktformular eine Nachricht senden, erheben wir die Angaben, die Sie selbst machen: Ihren Namen, Ihre E-Mail-Adresse und — sofern Sie sie eingeben — Ihre Telefonnummer, Ihre geplanten Reisedaten, die Größe Ihrer Reisegruppe, das von Ihnen gewählte Tempo und die von Ihnen gewählten Prioritäten sowie den Inhalt Ihrer Nachricht.",
       "Wie fast alle Websites zeichnet auch unser Server in seinen Protokollen übliche technische Informationen auf (etwa IP-Adresse, Browsertyp und aufgerufene Seiten). Wir verwenden diese nicht, um Sie persönlich zu identifizieren.",
-      "Wenn Sie sich in unsere Liste eintragen — über die Einladung auf dieser Website oder über den Reiseplaner —, senden wir Ihnen zuerst eine E-Mail mit der Bitte um Bestätigung; bis Sie bestätigen, schicken wir Ihnen nichts weiter. Wir speichern Ihre E-Mail-Adresse, Ihren Namen, falls Sie ihn angeben, die Seite und die Sprache, von der aus Sie sich angemeldet haben, sowie einen Nachweis Ihrer Einwilligung: wann Sie sie erteilt und wann Sie bestätigt haben, den Wortlaut, dem Sie zugestimmt haben, und die jeweilige IP-Adresse. Sie können die Liste jederzeit über den Abmeldelink in unseren E-Mails oder durch eine Nachricht an uns verlassen.",
+      "Wenn Sie sich in unsere Liste eintragen — über die Einladung auf dieser Website oder über den Reiseplaner —, senden wir Ihnen zuerst eine E-Mail mit der Bitte um Bestätigung; bis Sie bestätigen, schicken wir Ihnen nichts weiter. Wir speichern Ihre E-Mail-Adresse, Ihren Namen, falls Sie ihn angeben, ob Sie sich über die Einladung oder über den Reiseplaner angemeldet haben, die Sprache der Seite sowie einen Nachweis Ihrer Einwilligung: wann Sie sie erteilt und wann Sie bestätigt haben, den Wortlaut, dem Sie zugestimmt haben, und die jeweilige IP-Adresse. Sie können die Liste jederzeit über den Abmeldelink in unseren E-Mails oder durch eine Nachricht an uns verlassen.",
       "Wir führen keine Nutzerkonten und nehmen auf dieser Website keine Zahlungen entgegen; wir erheben hier daher weder Passwörter noch Kartendaten."
      ]
     },
@@ -316,9 +316,9 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
     {
      "heading": "Ce que nous recueillons",
      "body": [
-      "Lorsque vous nous envoyez un message via le formulaire de contact, nous recueillons les informations que vous choisissez de nous fournir : votre nom, votre adresse e-mail et — si vous les saisissez — votre numéro de téléphone, vos dates de voyage envisagées et le contenu de votre message.",
+      "Lorsque vous nous envoyez un message via le formulaire de contact, nous recueillons les informations que vous choisissez de nous fournir : votre nom, votre adresse e-mail et — si vous les saisissez — votre numéro de téléphone, vos dates de voyage envisagées, la taille de votre groupe, le rythme et les priorités que vous choisissez, et le contenu de votre message.",
       "Comme presque tous les sites web, notre serveur enregistre également dans ses journaux des informations techniques courantes (telles que l'adresse IP, le type de navigateur et les pages demandées). Nous ne les utilisons pas pour vous identifier personnellement.",
-      "Si vous rejoignez notre liste — depuis l'invitation présente sur ce site ou depuis le concepteur de voyage — nous vous envoyons d'abord un e-mail pour vous demander de confirmer, et rien d'autre n'est envoyé tant que vous ne l'avez pas fait. Nous conservons votre adresse e-mail, votre nom si vous le donnez, la page et la langue depuis lesquelles vous vous êtes inscrit(e), ainsi qu'une trace de votre consentement : la date à laquelle vous l'avez donné et celle à laquelle vous l'avez confirmé, le texte auquel vous avez adhéré et l'adresse IP d'où chacun provient. Vous pouvez quitter la liste à tout moment grâce au lien de désinscription présent dans nos e-mails, ou en nous écrivant.",
+      "Si vous rejoignez notre liste — depuis l'invitation présente sur ce site ou depuis le concepteur de voyage — nous vous envoyons d'abord un e-mail pour vous demander de confirmer, et rien d'autre n'est envoyé tant que vous ne l'avez pas fait. Nous conservons votre adresse e-mail, votre nom si vous le donnez, le fait que vous vous soyez inscrit(e) depuis l'invitation ou depuis le concepteur de voyage, la langue de la page, ainsi qu'une trace de votre consentement : la date à laquelle vous l'avez donné et celle à laquelle vous l'avez confirmé, le texte auquel vous avez adhéré et l'adresse IP d'où chacun provient. Vous pouvez quitter la liste à tout moment grâce au lien de désinscription présent dans nos e-mails, ou en nous écrivant.",
       "Nous ne proposons pas de comptes utilisateurs et n'encaissons aucun paiement sur ce site ; nous ne recueillons donc jamais ici de mots de passe ni de données de carte bancaire."
      ]
     },
@@ -576,9 +576,9 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
     {
      "heading": "Cosa raccogliamo",
      "body": [
-      "Quando ci inviate un messaggio tramite il modulo di contatto, raccogliamo i dati che scegliete di fornire: il vostro nome, l'indirizzo email e — se li inserite — il numero di telefono, le date di viaggio previste e il contenuto del messaggio.",
+      "Quando ci inviate un messaggio tramite il modulo di contatto, raccogliamo i dati che scegliete di fornire: il vostro nome, l'indirizzo email e — se li inserite — il numero di telefono, le date di viaggio previste, le dimensioni del gruppo, il ritmo e le priorità che scegliete e il contenuto del messaggio.",
       "Come quasi tutti i siti web, il nostro server registra nei propri log anche informazioni tecniche standard (come l'indirizzo IP, il tipo di browser e le pagine richieste). Non le usiamo per identificarvi personalmente.",
-      "Se vi iscrivete al nostro elenco — dall'invito presente su questo sito o dal progettista di viaggi — vi inviamo prima un'email in cui vi chiediamo di confermare, e finché non lo fate non inviamo nient'altro. Conserviamo il vostro indirizzo email, il vostro nome se lo indicate, la pagina e la lingua da cui vi siete iscritti e la registrazione del vostro consenso: quando lo avete dato e quando lo avete confermato, la formulazione che avete accettato e l'indirizzo IP da cui proveniva ciascuno dei due passaggi. Potete uscire dall'elenco in qualsiasi momento tramite il link di annullamento dell'iscrizione presente nelle nostre email, oppure scrivendoci.",
+      "Se vi iscrivete al nostro elenco — dall'invito presente su questo sito o dal progettista di viaggi — vi inviamo prima un'email in cui vi chiediamo di confermare, e finché non lo fate non inviamo nient'altro. Conserviamo il vostro indirizzo email, il vostro nome se lo indicate, se vi siete iscritti dall'invito o dal progettista di viaggi, la lingua della pagina e la registrazione del vostro consenso: quando lo avete dato e quando lo avete confermato, la formulazione che avete accettato e l'indirizzo IP da cui proveniva ciascuno dei due passaggi. Potete uscire dall'elenco in qualsiasi momento tramite il link di annullamento dell'iscrizione presente nelle nostre email, oppure scrivendoci.",
       "Non gestiamo account utente e su questo sito non riceviamo pagamenti, quindi qui non raccogliamo mai password né dati di carte."
      ]
     },
@@ -836,9 +836,9 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
     {
      "heading": "Qué recogemos",
      "body": [
-      "Cuando nos envía un mensaje a través del formulario de contacto, recogemos los datos que usted decide facilitar: su nombre, su correo electrónico y —si los introduce— su número de teléfono, las fechas previstas de viaje y el contenido de su mensaje.",
+      "Cuando nos envía un mensaje a través del formulario de contacto, recogemos los datos que usted decide facilitar: su nombre, su correo electrónico y —si los introduce— su número de teléfono, las fechas previstas de viaje, el tamaño de su grupo, el ritmo y las prioridades que elija y el contenido de su mensaje.",
       "Como casi todos los sitios web, nuestro servidor también registra en sus archivos de registro información técnica habitual (como la dirección IP, el tipo de navegador y las páginas solicitadas). No la utilizamos para identificarle personalmente.",
-      "Si se unen a nuestra lista —desde la invitación de este sitio o desde el diseñador de viajes—, primero les enviamos un correo para que lo confirmen, y no se envía nada más hasta que lo hagan. Conservamos su dirección de correo electrónico, su nombre si nos lo facilitan, la página y el idioma desde los que se suscribieron y un registro de su consentimiento: cuándo lo dieron y cuándo lo confirmaron, el texto con el que estuvieron de acuerdo y la dirección IP desde la que procedía cada uno. Pueden darse de baja de la lista en cualquier momento mediante el enlace de baja de nuestros correos o escribiéndonos.",
+      "Si se unen a nuestra lista —desde la invitación de este sitio o desde el diseñador de viajes—, primero les enviamos un correo para que lo confirmen, y no se envía nada más hasta que lo hagan. Conservamos su dirección de correo electrónico, su nombre si nos lo facilitan, si se suscribieron desde la invitación o desde el diseñador de viajes, el idioma de la página y un registro de su consentimiento: cuándo lo dieron y cuándo lo confirmaron, el texto con el que estuvieron de acuerdo y la dirección IP desde la que procedía cada uno. Pueden darse de baja de la lista en cualquier momento mediante el enlace de baja de nuestros correos o escribiéndonos.",
       "No gestionamos cuentas de usuario ni cobramos pagos en este sitio web, por lo que aquí nunca recogemos contraseñas ni datos de tarjetas."
      ]
     },
@@ -1096,9 +1096,9 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
     {
      "heading": "O que coletamos",
      "body": [
-      "Quando vocês nos enviam uma mensagem pelo formulário de contato, coletamos os dados que escolherem informar: nome, endereço de e-mail e — se os preencherem — número de telefone, datas previstas da viagem e o conteúdo da mensagem.",
+      "Quando vocês nos enviam uma mensagem pelo formulário de contato, coletamos os dados que escolherem informar: nome, endereço de e-mail e — se os preencherem — número de telefone, datas previstas da viagem, tamanho do grupo, ritmo e prioridades que escolherem e o conteúdo da mensagem.",
       "Como quase todos os sites, o nosso servidor também registra, em seus logs, informações técnicas padrão (como endereço IP, tipo de navegador e páginas solicitadas). Não usamos essas informações para identificar vocês pessoalmente.",
-      "Se vocês entrarem na nossa lista — pelo convite neste site ou pelo desenhador de viagens — primeiro enviamos um e-mail pedindo que confirmem, e nada mais é enviado até que o façam. Guardamos o seu endereço de e-mail, o seu nome, se o informarem, a página e o idioma a partir dos quais se inscreveram e um registro do consentimento: quando foi dado e quando foi confirmado, o texto com o qual concordaram e o endereço IP de onde partiu cada um. Vocês podem sair da lista a qualquer momento pelo link de cancelamento da inscrição nos nossos e-mails, ou escrevendo para nós.",
+      "Se vocês entrarem na nossa lista — pelo convite neste site ou pelo desenhador de viagens — primeiro enviamos um e-mail pedindo que confirmem, e nada mais é enviado até que o façam. Guardamos o seu endereço de e-mail, o seu nome, se o informarem, se se inscreveram pelo convite ou pelo desenhador de viagens, o idioma da página e um registro do consentimento: quando foi dado e quando foi confirmado, o texto com o qual concordaram e o endereço IP de onde partiu cada um. Vocês podem sair da lista a qualquer momento pelo link de cancelamento da inscrição nos nossos e-mails, ou escrevendo para nós.",
       "Não temos contas de usuário e não recebemos pagamentos neste site; por isso nunca coletamos aqui senhas nem dados de cartão."
      ]
     },
@@ -1356,9 +1356,9 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
     {
      "heading": "Что мы собираем",
      "body": [
-      "Когда вы отправляете нам сообщение через контактную форму, мы собираем те сведения, которые вы решили указать: ваше имя, адрес электронной почты и — если вы их вводите — номер телефона, предполагаемые даты поездки и текст сообщения.",
+      "Когда вы отправляете нам сообщение через контактную форму, мы собираем те сведения, которые вы решили указать: ваше имя, адрес электронной почты и — если вы их вводите — номер телефона, предполагаемые даты поездки, размер вашей группы, выбранные вами темп и приоритеты и текст сообщения.",
       "Как почти все сайты, наш сервер также записывает в журналах стандартные технические данные (например, IP-адрес, тип браузера и запрошенные страницы). Мы не используем их для того, чтобы установить вашу личность.",
-      "Если вы подписываетесь на нашу рассылку — через приглашение на этом сайте или из конструктора поездок, — мы сначала отправляем письмо с просьбой подтвердить подписку, и до вашего подтверждения ничего больше не отправляется. Мы храним ваш адрес электронной почты, ваше имя, если вы его указали, страницу и язык, с которых вы подписались, и запись о вашем согласии: когда вы его дали и когда подтвердили, формулировку, с которой вы согласились, и IP-адрес, с которого это было сделано в каждом случае. Вы можете в любой момент отписаться по ссылке в наших письмах или написав нам.",
+      "Если вы подписываетесь на нашу рассылку — через приглашение на этом сайте или из конструктора поездок, — мы сначала отправляем письмо с просьбой подтвердить подписку, и до вашего подтверждения ничего больше не отправляется. Мы храним ваш адрес электронной почты, ваше имя, если вы его указали, подписались ли вы через приглашение или из конструктора поездок, язык страницы, и запись о вашем согласии: когда вы его дали и когда подтвердили, формулировку, с которой вы согласились, и IP-адрес, с которого это было сделано в каждом случае. Вы можете в любой момент отписаться по ссылке в наших письмах или написав нам.",
       "На этом сайте нет учётных записей пользователей, и мы не принимаем на нём платежи, поэтому мы никогда не собираем здесь ни пароли, ни данные банковских карт."
      ]
     },
@@ -1616,9 +1616,9 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
     {
      "heading": "Apa yang kami kumpulkan",
      "body": [
-      "Saat Anda mengirim pesan melalui formulir kontak, kami mengumpulkan keterangan yang Anda pilih untuk diberikan: nama, alamat email Anda, dan — jika Anda mengisinya — nomor telepon, rencana tanggal perjalanan, serta isi pesan Anda.",
+      "Saat Anda mengirim pesan melalui formulir kontak, kami mengumpulkan keterangan yang Anda pilih untuk diberikan: nama, alamat email Anda, dan — jika Anda mengisinya — nomor telepon, rencana tanggal perjalanan, jumlah rombongan Anda, ritme dan prioritas yang Anda pilih, serta isi pesan Anda.",
       "Seperti hampir semua situs web, server kami juga mencatat informasi teknis standar (seperti alamat IP, jenis peramban, dan halaman yang diminta) dalam lognya. Kami tidak menggunakannya untuk mengidentifikasi Anda secara pribadi.",
-      "Jika Anda bergabung dalam daftar kami — dari undangan di situs ini atau dari perancang perjalanan — kami lebih dulu mengirim email yang meminta Anda mengonfirmasi, dan tidak ada email lain yang dikirim sampai Anda melakukannya. Kami menyimpan alamat email Anda, nama Anda jika Anda memberikannya, halaman dan bahasa yang Anda gunakan saat mendaftar, serta catatan persetujuan Anda: kapan persetujuan itu diberikan dan kapan dikonfirmasi, kalimat yang Anda setujui, dan alamat IP asal masing-masing. Anda dapat keluar dari daftar kapan saja melalui tautan berhenti berlangganan di email kami, atau dengan menulis kepada kami.",
+      "Jika Anda bergabung dalam daftar kami — dari undangan di situs ini atau dari perancang perjalanan — kami lebih dulu mengirim email yang meminta Anda mengonfirmasi, dan tidak ada email lain yang dikirim sampai Anda melakukannya. Kami menyimpan alamat email Anda, nama Anda jika Anda memberikannya, apakah Anda mendaftar dari undangan atau dari perancang perjalanan, bahasa halaman, serta catatan persetujuan Anda: kapan persetujuan itu diberikan dan kapan dikonfirmasi, kalimat yang Anda setujui, dan alamat IP asal masing-masing. Anda dapat keluar dari daftar kapan saja melalui tautan berhenti berlangganan di email kami, atau dengan menulis kepada kami.",
       "Kami tidak menyediakan akun pengguna dan tidak menerima pembayaran di situs web ini, sehingga kami tidak pernah mengumpulkan kata sandi atau data kartu di sini."
      ]
     },
@@ -1876,9 +1876,9 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
     {
      "heading": "Apa yang kami kumpul",
      "body": [
-      "Apabila anda menghantar mesej kepada kami melalui borang hubungan, kami mengumpul butiran yang anda pilih untuk berikan: nama anda, alamat e-mel, dan — jika anda mengisinya — nombor telefon, tarikh perjalanan yang dirancang serta kandungan mesej anda.",
+      "Apabila anda menghantar mesej kepada kami melalui borang hubungan, kami mengumpul butiran yang anda pilih untuk berikan: nama anda, alamat e-mel, dan — jika anda mengisinya — nombor telefon, tarikh perjalanan yang dirancang, saiz rombongan anda, rentak dan keutamaan yang anda pilih serta kandungan mesej anda.",
       "Seperti hampir semua laman web, pelayan kami turut merekodkan maklumat teknikal standard (seperti alamat IP, jenis pelayar dan halaman yang diminta) dalam lognya. Kami tidak menggunakan maklumat ini untuk mengenal pasti anda secara peribadi.",
-      "Jika anda menyertai senarai kami — daripada jemputan di laman ini atau daripada perancang perjalanan — kami mula-mula menghantar e-mel meminta anda mengesahkan, dan tiada apa-apa lagi dihantar sehingga anda berbuat demikian. Kami menyimpan alamat e-mel anda, nama anda jika anda memberikannya, halaman dan bahasa yang anda gunakan semasa mendaftar, serta rekod persetujuan anda: bila anda memberikannya dan bila anda mengesahkannya, perkataan yang anda setujui dan alamat IP asal setiap satunya. Anda boleh keluar daripada senarai pada bila-bila masa melalui pautan berhenti melanggan dalam e-mel kami, atau dengan menulis kepada kami.",
+      "Jika anda menyertai senarai kami — daripada jemputan di laman ini atau daripada perancang perjalanan — kami mula-mula menghantar e-mel meminta anda mengesahkan, dan tiada apa-apa lagi dihantar sehingga anda berbuat demikian. Kami menyimpan alamat e-mel anda, nama anda jika anda memberikannya, sama ada anda mendaftar daripada jemputan atau daripada perancang perjalanan, bahasa halaman, serta rekod persetujuan anda: bila anda memberikannya dan bila anda mengesahkannya, perkataan yang anda setujui dan alamat IP asal setiap satunya. Anda boleh keluar daripada senarai pada bila-bila masa melalui pautan berhenti melanggan dalam e-mel kami, atau dengan menulis kepada kami.",
       "Kami tidak mengendalikan akaun pengguna dan tidak menerima pembayaran di laman web ini, jadi kami tidak pernah mengumpul kata laluan atau butiran kad di sini."
      ]
     },
@@ -2136,9 +2136,9 @@ export const LEGAL: Record<TranslatedLocale, LegalTexts> = {
     {
      "heading": "ما الذي نجمعه",
      "body": [
-      "عندما ترسلون إلينا رسالة عبر نموذج التواصل، نجمع البيانات التي تختارون تقديمها: اسمكم وبريدكم الإلكتروني، وكذلك — إن أدخلتموها — رقم هاتفكم وتواريخ السفر المزمعة ومحتوى رسالتكم.",
+      "عندما ترسلون إلينا رسالة عبر نموذج التواصل، نجمع البيانات التي تختارون تقديمها: اسمكم وبريدكم الإلكتروني، وكذلك — إن أدخلتموها — رقم هاتفكم وتواريخ السفر المزمعة وحجم مجموعتكم والإيقاع والأولويات التي تختارونها ومحتوى رسالتكم.",
       "وكغالبية المواقع الإلكترونية، يسجّل خادمنا أيضاً في سجلّاته معلومات تقنية اعتيادية (مثل عنوان IP ونوع المتصفح والصفحات المطلوبة). ولا نستخدم ذلك لتحديد هويتكم الشخصية.",
-      "إذا انضممتم إلى قائمتنا — من الدعوة في هذا الموقع أو من مصمّم الرحلات — فإننا نرسل أولاً رسالة بريد إلكتروني نطلب فيها تأكيدكم، ولا يُرسَل إليكم شيء آخر ما لم تؤكدوا. نحتفظ ببريدكم الإلكتروني، واسمكم إن ذكرتموه، والصفحة واللغة اللتين اشتركتم منهما، وسجلّ موافقتكم: وقت إعطائها ووقت تأكيدها، والصياغة التي وافقتم عليها، وعنوان IP الذي صدرت منه كل منهما. ويمكنكم مغادرة القائمة في أي وقت عبر رابط إلغاء الاشتراك في رسائلنا، أو بمراسلتنا.",
+      "إذا انضممتم إلى قائمتنا — من الدعوة في هذا الموقع أو من مصمّم الرحلات — فإننا نرسل أولاً رسالة بريد إلكتروني نطلب فيها تأكيدكم، ولا يُرسَل إليكم شيء آخر ما لم تؤكدوا. نحتفظ ببريدكم الإلكتروني، واسمكم إن ذكرتموه، وما إذا كنتم قد اشتركتم من الدعوة أو من مصمّم الرحلات، ولغة الصفحة، وسجلّ موافقتكم: وقت إعطائها ووقت تأكيدها، والصياغة التي وافقتم عليها، وعنوان IP الذي صدرت منه كل منهما. ويمكنكم مغادرة القائمة في أي وقت عبر رابط إلغاء الاشتراك في رسائلنا، أو بمراسلتنا.",
       "لا نُدير حسابات للمستخدمين ولا نتلقى مدفوعات عبر هذا الموقع، ولذلك لا نجمع هنا كلمات مرور ولا بيانات بطاقات."
      ]
     },

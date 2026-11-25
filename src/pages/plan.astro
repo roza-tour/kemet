@@ -137,11 +137,13 @@ const jsonld = breadcrumb([["Home", "index.html"], ["Plan your journey", "plan.h
 
           <div class="pl-send">
             <h3>Send this shortlist to your inbox</h3>
-            <p>We will email these three with what is and is not included, and
-               write when the season turns in Egypt or the limited dates open.
-               A few times a year, never more.</p>
+            <p>Once you confirm your address, we email you these three, with a
+               link to what each includes and does not. After that we write when
+               the season turns in Egypt or the limited dates open. A few times a
+               year, never more.</p>
             <form id="pl-form" method="post" action="/subscribe.php" novalidate>
               <input type="hidden" name="source" value="designer" />
+              <input type="hidden" name="wording" value="Yes — send me seasonal notes and first notice of limited dates. I can unsubscribe at any time." />
               <input type="hidden" name="detail" id="pl-detail" />
               <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="pl-hp" />
               <div class="pl-row">
