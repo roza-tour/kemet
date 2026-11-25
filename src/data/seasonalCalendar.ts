@@ -128,7 +128,11 @@ const PREP_DAYS = 3;
 // by hand — Ramadan and Easter cannot be derived from a month number — but
 // those degrade to a correct season rather than to nothing.
 const BUILD_YEAR = new Date().getUTCFullYear();
-const BASE_YEARS = Array.from({ length: 13 }, (_, i) => BUILD_YEAR + i);
+// Four years, not thirteen (25 Nov 2026). Every year of horizon is another
+// row per occasion in the inline script on EVERY page — thirteen years was
+// 9.7 KB of each of 1,269 pages. Four is still far longer than this site goes
+// between publishes, and each publish pushes the horizon out again.
+const BASE_YEARS = Array.from({ length: 4 }, (_, i) => BUILD_YEAR + i);
 
 const WINTER = {
   key: "winter" as const,

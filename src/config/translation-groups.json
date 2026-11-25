@@ -1282,6 +1282,45 @@
       "ms": "ms/percutian-keluarga-ke-mesir.html",
       "pt": "pt/egito-com-criancas.html",
       "ar": "ar/rehla-aeiliya-ila-masr.html"
+    },
+    {
+      "key": "legal-privacy",
+      "en": "privacy.html",
+      "de": "de/datenschutz.html",
+      "it": "it/informativa-sulla-privacy.html",
+      "es": "es/politica-de-privacidad.html",
+      "fr": "fr/politique-de-confidentialite.html",
+      "ru": "ru/politika-konfidencialnosti.html",
+      "id": "id/kebijakan-privasi.html",
+      "ms": "ms/dasar-privasi.html",
+      "pt": "pt/politica-de-privacidade.html",
+      "ar": "ar/siyasat-al-khususiya-wa-hamayat-al-bayanat.html"
+    },
+    {
+      "key": "legal-terms",
+      "en": "terms.html",
+      "de": "de/nutzungsbedingungen.html",
+      "it": "it/condizioni-di-utilizzo.html",
+      "es": "es/condiciones-de-uso.html",
+      "fr": "fr/conditions-d-utilisation.html",
+      "ru": "ru/usloviya-ispolzovaniya-sayta.html",
+      "id": "id/ketentuan-penggunaan.html",
+      "ms": "ms/terma-penggunaan.html",
+      "pt": "pt/termos-de-uso.html",
+      "ar": "ar/shurut-istikhdam-al-mawqea.html"
+    },
+    {
+      "key": "legal-booking",
+      "en": "booking.html",
+      "de": "de/buchung-zahlung-stornierung.html",
+      "it": "it/prenotazione-pagamento-cancellazione.html",
+      "es": "es/reserva-pago-y-cancelacion.html",
+      "fr": "fr/reservation-paiement-annulation.html",
+      "ru": "ru/bronirovanie-oplata-otmena.html",
+      "id": "id/pemesanan-pembayaran-pembatalan.html",
+      "ms": "ms/tempahan-bayaran-pembatalan.html",
+      "pt": "pt/reserva-pagamento-e-cancelamento.html",
+      "ar": "ar/shurut-al-hajz-wa-al-dafa-wa-al-ilgha.html"
     }
   ],
   "_partial_comment": [

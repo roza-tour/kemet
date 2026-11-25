@@ -10,6 +10,7 @@
 // fortnight, the Red Sea as the known quantity and Luxor as the discovery.
 // Slugs are transliterated to Latin — see config/i18n for why.
 // ---------------------------------------------------------------------------
+import { legalPages } from "./legal/build";
 import type { LocalizedPage } from "./types";
 import { articlePages } from "./articles/build";
 import { ruArticles, ruArtLabels } from "./articles/ru";
@@ -545,4 +546,6 @@ export const ru: LocalizedPage[] = [
 
   // ===== The occasions and guides — the words are in ./articles/ru.ts =====
   ...articlePages("ru", ruArtLabels, ruArticles),
+  // Privacy, terms and booking (i18n/legal).
+  ...legalPages("ru"),
 ];

@@ -1,4 +1,6 @@
 ---
+import { privacyRoute } from "@/data/i18n/legal/build";
+import type { TranslatedLocale } from "@/config/i18n";
 // AccessInvite — the one interruption on the site, and what it is allowed to say.
 //
 // WHY IT IS NOT A DISCOUNT
@@ -33,10 +35,8 @@ interface Props {
 const { locale = UI_DEFAULT } = Astro.props;
 const t = ui(locale);
 const v = t.invite;
-/** The privacy page is English-only; the link text says so by being the only
- *  English word in the block on a localised page is not acceptable, so the
- *  label itself is translated and the page it opens is the English one. */
-const privacyHref = "/privacy.html";
+/** The privacy policy in the page's language (i18n/legal). */
+const privacyHref = locale === UI_DEFAULT ? "/privacy.html" : `/${privacyRoute(locale as TranslatedLocale)}`;
 ---
 <div class="ainv" id="access-invite" hidden aria-hidden="true">
   <div class="ainv-scrim" data-close></div>

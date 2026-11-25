@@ -7,6 +7,7 @@
 // with long-haul. Reference points follow: Semana/Pasqua and Ferragosto rather
 // than German school terms, Rome and Milan rather than Frankfurt.
 // ---------------------------------------------------------------------------
+import { legalPages } from "./legal/build";
 import type { LocalizedPage } from "./types";
 import { articlePages } from "./articles/build";
 import { itArticles, itArtLabels } from "./articles/it";
@@ -552,4 +553,6 @@ export const it: LocalizedPage[] = [
 
   // ===== The occasions and guides — the words are in ./articles/it.ts =====
   ...articlePages("it", itArtLabels, itArticles),
+  // Privacy, terms and booking (i18n/legal).
+  ...legalPages("it"),
 ];

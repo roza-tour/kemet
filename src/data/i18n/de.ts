@@ -7,6 +7,7 @@
 // Frankfurt and Munich, German school-holiday windows, and the Red Sea winter
 // charter traffic that dominates the market.
 // ---------------------------------------------------------------------------
+import { legalPages } from "./legal/build";
 import type { LocalizedPage } from "./types";
 import { articlePages } from "./articles/build";
 import { deArticles, deArtLabels } from "./articles/de";
@@ -554,4 +555,6 @@ export const de: LocalizedPage[] = [
 
   // ===== The occasions and guides — the words are in ./articles/de.ts =====
   ...articlePages("de", deArtLabels, deArticles),
+  // Privacy, terms and booking (i18n/legal).
+  ...legalPages("de"),
 ];

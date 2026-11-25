@@ -9,6 +9,7 @@
 // advice. Belgium, Switzerland and Quebec read the same pages, so the copy
 // avoids France-only administrative detail where a neutral wording works.
 // ---------------------------------------------------------------------------
+import { legalPages } from "./legal/build";
 import type { LocalizedPage } from "./types";
 import { articlePages } from "./articles/build";
 import { frArticles, frArtLabels } from "./articles/fr";
@@ -543,4 +544,6 @@ export const fr: LocalizedPage[] = [
 
   // ===== The occasions and guides — the words are in ./articles/fr.ts =====
   ...articlePages("fr", frArtLabels, frArticles),
+  // Privacy, terms and booking (i18n/legal).
+  ...legalPages("fr"),
 ];

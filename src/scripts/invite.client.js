@@ -19,7 +19,7 @@
     // terms — and never on a page reached from an email we sent.
     var path = location.pathname;
     if (!preview) {
-      if (/(contact|booking|privacy|terms|unsubscribe)/.test(path)) return;
+      if (/(contact|booking|privacy|terms|unsubscribe)/.test(path) || document.querySelector('[data-legal]')) return;
       try { if (localStorage.getItem(KEY)) return; } catch (e) { return; }
     }
 

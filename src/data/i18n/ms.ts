@@ -10,6 +10,7 @@
 // baseline rather than a special request, and a great many journeys attached
 // to an Umrah in Saudi Arabia.
 // ---------------------------------------------------------------------------
+import { legalPages } from "./legal/build";
 import type { LocalizedPage } from "./types";
 import { articlePages } from "./articles/build";
 import { msArticles, msArtLabels } from "./articles/ms";
@@ -565,4 +566,6 @@ export const ms: LocalizedPage[] = [
 
   // ===== The occasions and guides — the words are in ./articles/ms.ts =====
   ...articlePages("ms", msArtLabels, msArticles),
+  // Privacy, terms and booking (i18n/legal).
+  ...legalPages("ms"),
 ];

@@ -7,6 +7,7 @@
 // the peninsular form, since the flight and price references are European and
 // a Latin American reader is well used to reading peninsular Spanish.
 // ---------------------------------------------------------------------------
+import { legalPages } from "./legal/build";
 import type { LocalizedPage } from "./types";
 import { articlePages } from "./articles/build";
 import { esArticles, esArtLabels } from "./articles/es";
@@ -552,4 +553,6 @@ export const es: LocalizedPage[] = [
 
   // ===== The occasions and guides — the words are in ./articles/es.ts =====
   ...articlePages("es", esArtLabels, esArticles),
+  // Privacy, terms and booking (i18n/legal).
+  ...legalPages("es"),
 ];

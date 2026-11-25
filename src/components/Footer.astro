@@ -1,4 +1,7 @@
 ---
+import { legalPages } from "@/data/i18n/legal/build";
+import { TRANSLATION_GROUPS } from "@/config/i18n";
+import { publicPath } from "@/utils/links";
 import { LOCAL_STRINGS } from "@/data/i18n/strings";
 import { site } from "@/config/site";
 import { whatsappLink, mailtoLink } from "@/utils/links";
@@ -37,6 +40,10 @@ const destHub = isEn ? "" : destHubRoute(locale as TranslatedLocale);
 const localeLinks = localeItems.flatMap((i) =>
   i.href === destHub ? [{ href: i.href, label: i.label }] : i.children ?? []);
 const englishWayOut = localeItems.find((i) => !i.children);
+const legalLinks = isEn ? [] : legalPages(locale as TranslatedLocale).map((p) => ({
+  label: p.crumb,
+  href: publicPath(TRANSLATION_GROUPS.find((g) => g.key === p.groupId)![locale as TranslatedLocale]),
+}));
 // The message a reader's WhatsApp or mail opens with is in the page's own
 // language: a German reader's chat used to begin "Hello Kemet" in English.
 const hello = isEn ? "" : LOCAL_STRINGS[locale as TranslatedLocale].ui.mcpHello;
@@ -95,6 +102,10 @@ const socials = Object.entries(company.socialProfiles ?? {})
           {englishWayOut && (
             <a class="foot-en" href={`${base}${englishWayOut.href}`}>{t.fullSiteEnglish}</a>
           )}
+          {/* Privacy, terms and booking, in this language (i18n/legal). */}
+          {legalLinks.map(({ href, label }) => (
+            <a class="foot-legal" href={`${base}${href}`}>{label}</a>
+          ))}
         </div>
       )}
       <div class="foot-col">

@@ -9,6 +9,7 @@
 // that ordering. Reference points: Jakarta and Surabaya, one-stop routings
 // through the Gulf, Lebaran and the June–July school holidays.
 // ---------------------------------------------------------------------------
+import { legalPages } from "./legal/build";
 import type { LocalizedPage } from "./types";
 import { articlePages } from "./articles/build";
 import { idArticles, idArtLabels } from "./articles/id";
@@ -565,4 +566,6 @@ export const id: LocalizedPage[] = [
 
   // ===== The occasions and guides — the words are in ./articles/id.ts =====
   ...articlePages("id", idArtLabels, idArticles),
+  // Privacy, terms and booking (i18n/legal).
+  ...legalPages("id"),
 ];

@@ -31,6 +31,7 @@
 // All figures match the other locales: €200–450 per person per day, 25%
 // deposit, 8–10 days for the full route, €8–12 a day in tips.
 // ---------------------------------------------------------------------------
+import { legalPages } from "./legal/build";
 import type { LocalizedPage } from "./types";
 import { articlePages } from "./articles/build";
 import { arArticles, arArtLabels } from "./articles/ar";
@@ -532,4 +533,6 @@ export const ar: LocalizedPage[] = [
 
   // ===== The occasions and guides — the words are in ./articles/ar.ts =====
   ...articlePages("ar", arArtLabels, arArticles),
+  // Privacy, terms and booking (i18n/legal).
+  ...legalPages("ar"),
 ];

@@ -66,7 +66,7 @@ export const privacyPolicy: LegalDoc = {
     {
       heading: "Who we share it with",
       body: [
-        "We share your information only where it is necessary to answer you or to arrange a trip you have asked us to plan — for example with the hotels, guides, cruise operators or transport providers involved in your specific itinerary.",
+        "We share your information only where it is necessary to answer you or to arrange a trip you have asked us to plan — for example with the hotels, the cruise ship or the airline booked for your specific itinerary. Your guide and driver are Kemet's own team.",
         "Our website and email are hosted by our hosting provider, who processes data on our behalf under their own security terms. We never sell, rent or trade your personal information to anyone.",
       ],
     },

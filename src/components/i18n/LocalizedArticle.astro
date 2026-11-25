@@ -176,7 +176,7 @@ const jsonld: Record<string, unknown>[] = [
     ],
   }]),
   ...(page.films ?? []).map(videoObject),
-  {
+  ...(page.faqs.length ? [{
     "@context": "https://schema.org",
     "@type": "FAQPage",
     inLanguage: lang,
@@ -184,7 +184,7 @@ const jsonld: Record<string, unknown>[] = [
       "@type": "Question", name: f.q,
       acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
-  },
+  }] : []),
 ];
 /** The photograph this page is shared with, when it names one. */
 const share = page.sharePhoto ? page.photos?.find((g) => g.src === page.sharePhoto) : undefined;
@@ -206,6 +206,9 @@ if (isEclipse) jsonld.push(...eclipseDayEvent(locale, route, page.photos?.[0]?.s
   {/* An occasion page wears its occasion: the palette here, the ornament in
       the hero (data/i18n/types.ts → theme). Unthemed pages get no wrapper. */}
   <Themed {...themedProps}>
+  {/* Marks the privacy, terms and booking pages, on which the list
+      invitation (scripts/invite.client.js) never opens. */}
+  {page.groupId.startsWith("legal-") && <span data-legal hidden></span>}
   {/* On a page carrying a landing layer the hero speaks for the campaign: the
       dates as an overline, the layer's shorter standfirst, and two buttons.
       The H1 is still the page's own — it is what the page ranks for, and a
@@ -381,7 +384,7 @@ if (isEclipse) jsonld.push(...eclipseDayEvent(locale, route, page.photos?.[0]?.s
       {/* "Häufige Fragen", "Questions fréquentes"… — the questions block is
           headed as questions, not with the page's breadcrumb label (which read
           "Startseite" on the German home page). */}
-      <Faq items={page.faqs} heading={TOUR_PHRASEBOOK[locale]?.h.faq ?? page.crumb} />
+      {page.faqs.length > 0 && <Faq items={page.faqs} heading={TOUR_PHRASEBOOK[locale]?.h.faq ?? page.crumb} />}
 
       <div class="lz-cta reveal" id="enquire">
         <h2>{page.cta.heading}</h2>

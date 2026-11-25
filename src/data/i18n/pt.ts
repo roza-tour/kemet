@@ -12,6 +12,7 @@
 //
 // Prices stay in euros, as on every other page of the site.
 // ---------------------------------------------------------------------------
+import { legalPages } from "./legal/build";
 import type { LocalizedPage } from "./types";
 import { articlePages } from "./articles/build";
 import { ptArticles, ptArtLabels } from "./articles/pt";
@@ -560,4 +561,6 @@ export const pt: LocalizedPage[] = [
 
   // ===== The occasions and guides — the words are in ./articles/pt.ts =====
   ...articlePages("pt", ptArtLabels, ptArticles),
+  // Privacy, terms and booking (i18n/legal).
+  ...legalPages("pt"),
 ];
