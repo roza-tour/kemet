@@ -1667,7 +1667,8 @@ export const tours: Tour[] = [
     ],
     excluded: [
       "Hot-air balloon flight (booked on request, about €120 per person)",
-      ...cruiseExcluded,
+      // The two dinners in the itinerary are part of the price (owner, 26 Nov 2026).
+      ...cruiseExcluded.map((x) => (x === "Meals, except on board the Nile cruise" ? "Meals, except on board the Nile cruise, the dinner on a Nubian terrace in Aswan and the farewell dinner" : x)),
     ],
     faqs: [
       {
@@ -2109,7 +2110,7 @@ export const tours: Tour[] = [
       ...baseIncluded.slice(1),
     ],
     // Lunch on deck is part of the Ras Mohammed boat day (owner, 25 Nov 2026).
-    excluded: cruiseExcluded.map((x) => (x === "Meals, except on board the Nile cruise" ? "Meals, except on board the Nile cruise and lunch on the boat day" : x)),
+    excluded: cruiseExcluded.map((x) => (x === "Meals, except on board the Nile cruise" ? "Meals, except on board the Nile cruise, lunch on the boat day and the farewell dinner in Sharm" : x)),
     faqs: [
       {
         q: "Is fourteen days too long for a first visit?",
@@ -2338,8 +2339,8 @@ export const tours: Tour[] = [
     excluded: [
       "Scuba diving (arranged on request with licensed centres)",
       "Marine park fees where applicable",
-      // Lunch on deck is part of the boat day (owner, 25 Nov 2026).
-      ...baseExcluded.map((x) => (x === "Meals" ? "Meals, except lunch on the boat day" : x)),
+      // Lunch on deck on the boat day and the desert-evening dinner are part of the price (owner, 25–26 Nov 2026).
+      ...baseExcluded.map((x) => (x === "Meals" ? "Meals, except lunch on the boat day and dinner on the desert evening" : x)),
     ],
     faqs: [
       {
