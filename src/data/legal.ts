@@ -119,7 +119,7 @@ export const termsOfService: LegalDoc = {
   title: "Terms of Use",
   intro:
     "These terms govern your use of the Kemet website and set out the basis on which we provide information and quotes. Please read them alongside our Booking & Cancellation terms, which cover deposits, payment and cancellation for a confirmed trip.",
-  lastUpdated: "July 2026",
+  lastUpdated: "November 2026",
   sections: [
     {
       heading: "About these terms",
@@ -130,7 +130,7 @@ export const termsOfService: LegalDoc = {
     {
       heading: "Who we are",
       body: [
-        `Kemet designs and arranges private, tailor-made travel in Egypt, operating from Cairo. Travel services are provided through licensed Egyptian operators and licensed Egyptologist guides. You can contact us at ${CONTACT}.`,
+        `Kemet designs and arranges private, tailor-made travel in Egypt, operating from Cairo. Your licensed Egyptologist guide and your driver are members of Kemet's own team, and the hotels on a Kemet journey are booked under Kemet's own contracts with them. You can contact us at ${CONTACT}.`,
       ],
     },
     {
@@ -166,9 +166,13 @@ export const termsOfService: LegalDoc = {
       ],
     },
     {
-      heading: "Third-party suppliers",
+      // Owner, 25 Nov 2026: guides and drivers are Kemet's own team, and
+      // hotels are under Kemet's own contracts. This section used to call all
+      // of them "independent suppliers", which contradicted every other page.
+      heading: "Who delivers your journey",
       body: [
-        "A journey may include services delivered by independent suppliers — hotels, cruise operators, guides and transport providers. We select them with care, but each provides its services under its own terms, and elements outside our reasonable control may occasionally change.",
+        "Your Egyptologist guide and your driver are Kemet's own team, and your hotels are booked under Kemet's own contracts with them, so the people and places on your itinerary are ones we answer for directly.",
+        "Some parts of a journey are run by the companies that operate them: a scheduled Nile cruise ship, domestic flights and trains. They provide those services under their own conditions of carriage, and their schedules can occasionally change for reasons outside our control. When that happens we rearrange the rest of the journey around it and tell you straight away.",
       ],
     },
     {
