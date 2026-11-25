@@ -82,6 +82,7 @@ Un desglose detallado de cada mes — temperaturas, afluencia, precios y veredic
 
 - [Semana Santa en Egipto](https://kemet-travel.com/es/semana-santa-en-egipto.html)
 - [Eclipse solar 2027 en Luxor](https://kemet-travel.com/es/eclipse-solar-2027-luxor.html)
+- [Egipto, estación por estación](https://kemet-travel.com/es/cuando-viajar-a-egipto-mejor-epoca.html)
 
 [Esta página en inglés](https://kemet-travel.com/when-to-go.html)
 

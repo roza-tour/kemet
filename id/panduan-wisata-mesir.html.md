@@ -119,7 +119,7 @@ Satu minggu adalah durasi paling umum untuk kunjungan pertama: Kairo dan Giza du
 
 Halaman terkait dalam bahasa ini, serta halaman asli dalam bahasa Inggris.
 
-- [Waktu Terbaik Berkunjung ke Mesir](https://kemet-travel.com/id/bulan-terbaik-berkunjung-ke-mesir.html)
+- [Mesir musim demi musim](https://kemet-travel.com/id/bulan-terbaik-berkunjung-ke-mesir.html)
 - [Itinerary Mesir 10 Hari yang Ideal](https://kemet-travel.com/id/itinerary-mesir-10-hari.html)
 - [Tempat Menginap di Mesir: Hotel Terbaik, Kota demi Kota](https://kemet-travel.com/id/tempat-menginap-terbaik-di-mesir.html)
 - [Berkeliling Mesir](https://kemet-travel.com/id/transportasi-di-mesir.html)

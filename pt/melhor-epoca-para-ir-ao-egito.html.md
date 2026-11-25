@@ -83,6 +83,7 @@ Um detalhamento de cada mês — temperaturas, movimento, preços e veredito —
 - [Carnaval no Egito](https://kemet-travel.com/pt/carnaval-no-egito.html)
 - [Páscoa no Egito](https://kemet-travel.com/pt/pascoa-no-egito.html)
 - [Eclipse solar de 2027 em Luxor](https://kemet-travel.com/pt/eclipse-solar-2027-luxor.html)
+- [O Egito, estação por estação](https://kemet-travel.com/pt/melhor-epoca-para-viajar-ao-egito.html)
 
 [Esta página em inglês](https://kemet-travel.com/when-to-go.html)
 

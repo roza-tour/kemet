@@ -82,6 +82,7 @@ Eine ausführliche Aufschlüsselung jedes einzelnen Monats — mit Temperaturen,
 
 - [Ostern in Ägypten](https://kemet-travel.com/de/ostern-in-aegypten.html)
 - [Sonnenfinsternis 2027 in Luxor](https://kemet-travel.com/de/sonnenfinsternis-2027-luxor.html)
+- [Ägypten nach Jahreszeiten](https://kemet-travel.com/de/wann-nach-aegypten-reisen.html)
 
 [Diese Seite auf Englisch](https://kemet-travel.com/when-to-go.html)
 

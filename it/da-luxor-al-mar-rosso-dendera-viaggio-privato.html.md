@@ -69,13 +69,9 @@ Circa quattro ore senza soste. Con Dendera lungo la strada la giornata è più l
 
 Richiede da mezza giornata a una giornata intera in 4x4 dalla costa, su piste che esigono i permessi giusti e un autista che le conosca. Ci occupiamo di entrambi e lasciamo libera la giornata, così può spostarsi con il tempo.
 
-### Come viene deciso l'ordine dei giorni?
-
-I giorni qui sotto seguono il loro ordine naturale, non quello definitivo. I voli interni in Egitto non operano ogni giorno su ogni tratta, le barche restano in porto quando si alza il vento e ogni sito ha i propri orari: una volta fissate le vostre date, riordiniamo i giorni in base ai voli e agli orari di apertura che cadono in quei giorni.
-
 ### Quanto costa?
 
-Qui non è indicato alcun prezzo, ed è una scelta precisa. La tariffa dipende dalle vostre date, da ciò che è aperto e disponibile in quel momento e dal numero di persone del gruppo. Inviateci le date e vi rispondiamo per iscritto, entro un giorno lavorativo, con l'itinerario nel suo ordine definitivo e il prezzo.
+Qui non è indicato alcun prezzo, ed è una scelta precisa. La tariffa dipende dalle vostre date, da ciò che è aperto e disponibile in quel momento e dal numero di persone del gruppo. Inviateci le date e vi rispondiamo per iscritto, entro due ore, con l'itinerario nel suo ordine definitivo e il prezzo.
 
 ## Altri programmi
 

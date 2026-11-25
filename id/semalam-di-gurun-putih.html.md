@@ -68,13 +68,9 @@ Pada malam hari, ya: dari Desember hingga Februari mendekati titik beku di gurun
 
 Hari-hari di gurun memerlukan izin, yang kami urus. Izin itu membutuhkan pemberitahuan berminggu-minggu, jadi beri tahu kami tanggal Anda sebulan sebelumnya jika bisa.
 
-### Bagaimana urutan hari ditentukan?
-
-Hari-hari di bawah ini disusun menurut urutan yang paling alami, bukan urutan akhirnya. Penerbangan domestik Mesir tidak beroperasi setiap hari di setiap rute, kapal berhenti berlayar saat angin menguat, dan setiap situs memiliki jam bukanya sendiri. Karena itu, begitu tanggal Anda pasti, kami menata ulang hari-harinya mengikuti jadwal penerbangan dan jam buka yang jatuh pada hari tersebut.
-
 ### Berapa biayanya?
 
-Sengaja tidak ada harga yang dicantumkan di sini. Tarifnya bergantung pada tanggal Anda, pada apa yang buka dan tersedia saat itu, serta pada jumlah rombongan. Kirimkan tanggal Anda, dan kami membalas secara tertulis dalam satu hari kerja, lengkap dengan rute dalam urutan akhirnya dan harganya.
+Sengaja tidak ada harga yang dicantumkan di sini. Tarifnya bergantung pada tanggal Anda, pada apa yang buka dan tersedia saat itu, serta pada jumlah rombongan. Kirimkan tanggal Anda, dan kami membalas secara tertulis dalam dua jam, lengkap dengan rute dalam urutan akhirnya dan harganya.
 
 ## Program lainnya
 

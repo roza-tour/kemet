@@ -17,7 +17,7 @@ O elija de la lista
 
 Toque un lugar en el mapa para empezar.
 
-Una ruta propia se presupuesta bajo petición. Respondemos en un día hábil.
+Una ruta propia se presupuesta bajo petición. Respondemos en dos horas.
 
 ## Los viajes más parecidos de nuestro catálogo
 

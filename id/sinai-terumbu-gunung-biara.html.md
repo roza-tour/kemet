@@ -72,13 +72,9 @@ Pendakiannya stabil dan tidak teknis, namun tetap berupa jalan kaki di gunung ya
 
 Tidak pada hari-hari sebelum gunung: ketinggian tidak cocok setelah hari menyelam, dan aturan jeda minimal 24 jam sebelum terbang juga berlaku. Dahab adalah tempat untuk menyelam, dan kami menata hari-harinya agar jeda itu terjaga.
 
-### Bagaimana urutan hari ditentukan?
-
-Hari-hari di bawah ini disusun menurut urutan yang paling alami, bukan urutan akhirnya. Penerbangan domestik Mesir tidak beroperasi setiap hari di setiap rute, kapal berhenti berlayar saat angin menguat, dan setiap situs memiliki jam bukanya sendiri. Karena itu, begitu tanggal Anda pasti, kami menata ulang hari-harinya mengikuti jadwal penerbangan dan jam buka yang jatuh pada hari tersebut.
-
 ### Berapa biayanya?
 
-Sengaja tidak ada harga yang dicantumkan di sini. Tarifnya bergantung pada tanggal Anda, pada apa yang buka dan tersedia saat itu, serta pada jumlah rombongan. Kirimkan tanggal Anda, dan kami membalas secara tertulis dalam satu hari kerja, lengkap dengan rute dalam urutan akhirnya dan harganya.
+Sengaja tidak ada harga yang dicantumkan di sini. Tarifnya bergantung pada tanggal Anda, pada apa yang buka dan tersedia saat itu, serta pada jumlah rombongan. Kirimkan tanggal Anda, dan kami membalas secara tertulis dalam dua jam, lengkap dengan rute dalam urutan akhirnya dan harganya.
 
 ## Program lainnya
 

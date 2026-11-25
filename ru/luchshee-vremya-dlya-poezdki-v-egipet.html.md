@@ -5,7 +5,7 @@ language: ru
 description: "Когда ехать в Египет: с октября по апрель — высокий сезон в долине Нила. Сезон за сезоном: Каир, Луксор, Асуан, Александрия и Красное море."
 ---
 
-# Лучшее время для поездки в Египет
+# Египет по сезонам
 
 Лучший сезон для поездки в Египет — с октября по апрель, когда температура в долине Нила умеренная, а памятники комфортно осматривать. Чего ожидать по сезонам и по направлениям.
 
@@ -122,6 +122,7 @@ description: "Когда ехать в Египет: с октября по ап
 - [Как добраться по Египту](https://kemet-travel.com/ru/transport-v-egipte.html)
 - [Египетская кухня: что попробовать](https://kemet-travel.com/ru/egipetskaya-kuhnya-chto-poprobovat.html)
 - [Что взять с собой в Египет](https://kemet-travel.com/ru/chto-vzyat-s-soboy-v-egipet.html)
+- [Когда ехать](https://kemet-travel.com/ru/kogda-luchshe-ehat-v-egipet.html)
 
 [Эта страница на английском](https://kemet-travel.com/guides/best-time-to-visit-egypt.html)
 

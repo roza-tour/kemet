@@ -114,7 +114,7 @@ Es moderado y asumible. Los días más intensos (Guiza con Saqqara, la ribera oc
 Páginas relacionadas en este idioma y la página original en inglés.
 
 - [Guía de viaje a Egipto](https://kemet-travel.com/es/guia-de-viaje-egipto.html)
-- [Mejor época para viajar a Egipto](https://kemet-travel.com/es/cuando-viajar-a-egipto-mejor-epoca.html)
+- [Egipto, estación por estación](https://kemet-travel.com/es/cuando-viajar-a-egipto-mejor-epoca.html)
 - [Dónde alojarse en Egipto: los mejores hoteles, ciudad por ciudad](https://kemet-travel.com/es/donde-alojarse-en-egipto-mejores-hoteles.html)
 - [Cómo moverse por Egipto](https://kemet-travel.com/es/como-moverse-por-egipto-transporte.html)
 - [Guía de la comida egipcia](https://kemet-travel.com/es/guia-gastronomia-egipcia-que-comer.html)

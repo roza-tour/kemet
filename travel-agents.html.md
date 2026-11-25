@@ -52,7 +52,7 @@ How it works
   
   ### Itinerary and trade rates
   
-  Within one working day: a real itinerary, day by day, at trade rates.
+  Within two hours: a real itinerary, day by day, at trade rates.
 3. 03
   
   ### Confirmation
@@ -82,7 +82,7 @@ Yes. Everything we run is private — couples, families, friends travelling toge
 
 ### How quickly do you reply?
 
-Within one working day, with a real itinerary and a clear price.
+Within two hours, with a real itinerary and a clear price.
 
 ### How can partners pay?
 

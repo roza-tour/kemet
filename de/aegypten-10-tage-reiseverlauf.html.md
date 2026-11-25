@@ -114,7 +114,7 @@ Mäßig und gut machbar. Die großen Tage – Gizeh mit Sakkara, das Westufer, A
 Verwandte Seiten in dieser Sprache sowie die englische Originalseite.
 
 - [Ägypten Reiseführer](https://kemet-travel.com/de/aegypten-reisefuehrer.html)
-- [Beste Reisezeit für Ägypten](https://kemet-travel.com/de/wann-nach-aegypten-reisen.html)
+- [Ägypten nach Jahreszeiten](https://kemet-travel.com/de/wann-nach-aegypten-reisen.html)
 - [Wo in Ägypten übernachten: die besten Hotels, Stadt für Stadt](https://kemet-travel.com/de/beste-hotels-aegypten.html)
 - [In Ägypten unterwegs](https://kemet-travel.com/de/aegypten-verkehrsmittel.html)
 - [Ägyptische Küche – ein Ratgeber](https://kemet-travel.com/de/aegyptische-kueche.html)

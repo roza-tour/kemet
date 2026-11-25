@@ -67,13 +67,9 @@ Simple, and said to be: St Catherine has no hotel at the standard of the rest of
 
 Yes. It takes the place of the retreat's free day, and we choose the day around the monastery's opening days and the retreat's flights.
 
-### How is the order of the days decided?
-
-The days below are in their natural order, not their final one. Egypt's domestic flights do not run every day on every route, boats stop when the wind rises, and each site keeps its own hours — so once your dates are fixed we rearrange the days around the flights and the opening times that fall on them.
-
 ### What does it cost?
 
-No price is printed here, on purpose. The rate depends on your dates, on what is open and available then, and on the size of your party. Send us the dates and we reply in writing, within one working day, with the route in its final order and the price.
+No price is printed here, on purpose. The rate depends on your dates, on what is open and available then, and on the size of your party. Send us the dates and we reply in writing, within two hours, with the route in its final order and the price.
 
 Where it goes
 

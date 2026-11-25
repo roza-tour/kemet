@@ -133,7 +133,7 @@ Leitungswasser wird aufbereitet und ist technisch trinkbar, doch die Leitungen i
 Verwandte Seiten in dieser Sprache sowie die englische Originalseite.
 
 - [Ägypten Reiseführer](https://kemet-travel.com/de/aegypten-reisefuehrer.html)
-- [Beste Reisezeit für Ägypten](https://kemet-travel.com/de/wann-nach-aegypten-reisen.html)
+- [Ägypten nach Jahreszeiten](https://kemet-travel.com/de/wann-nach-aegypten-reisen.html)
 - [Der ideale 10-Tage-Reiseverlauf für Ägypten](https://kemet-travel.com/de/aegypten-10-tage-reiseverlauf.html)
 - [Wo in Ägypten übernachten: die besten Hotels, Stadt für Stadt](https://kemet-travel.com/de/beste-hotels-aegypten.html)
 - [In Ägypten unterwegs](https://kemet-travel.com/de/aegypten-verkehrsmittel.html)

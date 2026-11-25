@@ -59,7 +59,7 @@ Kemet berada di segmen atas pasaran Mesir dan kami menyatakannya tanpa segan. Eg
 ## Panduan perjalanan
 
 - [Panduan Melancong ke Mesir](https://kemet-travel.com/ms/panduan-melancong-ke-mesir.html)
-- [Waktu Terbaik Melawat Mesir](https://kemet-travel.com/ms/waktu-terbaik-melawat-mesir.html)
+- [Mesir mengikut musim](https://kemet-travel.com/ms/waktu-terbaik-melawat-mesir.html)
 - [Jadual Perjalanan Mesir 10 Hari yang Ideal](https://kemet-travel.com/ms/jadual-perjalanan-mesir-10-hari.html)
 - [Tempat Menginap di Mesir: Hotel Terbaik, Bandar demi Bandar](https://kemet-travel.com/ms/tempat-penginapan-terbaik-di-mesir.html)
 - [Bergerak di Sekitar Mesir](https://kemet-travel.com/ms/pengangkutan-di-mesir.html)

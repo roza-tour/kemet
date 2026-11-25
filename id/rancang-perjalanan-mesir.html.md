@@ -17,7 +17,7 @@ Atau pilih dari daftar
 
 Ketuk satu tempat di peta untuk memulai.
 
-Rute buatan sendiri dihitung atas permintaan. Kami membalas dalam satu hari kerja.
+Rute buatan sendiri dihitung atas permintaan. Kami membalas dalam dua jam.
 
 ## Perjalanan terdekat dalam katalog kami
 

@@ -59,7 +59,7 @@ Kemet lavora nella fascia alta del mercato egiziano e lo diciamo senza imbarazzo
 ## Guide di viaggio
 
 - [Guida di viaggio all'Egitto](https://kemet-travel.com/it/guida-di-viaggio-egitto.html)
-- [Quando andare in Egitto](https://kemet-travel.com/it/periodo-migliore-per-visitare-l-egitto.html)
+- [L'Egitto stagione per stagione](https://kemet-travel.com/it/periodo-migliore-per-visitare-l-egitto.html)
 - [L'itinerario ideale di 10 giorni in Egitto](https://kemet-travel.com/it/itinerario-egitto-10-giorni.html)
 - [Come spostarsi in Egitto](https://kemet-travel.com/it/trasporti-in-egitto-come-spostarsi.html)
 - [Guida alla cucina egiziana](https://kemet-travel.com/it/cucina-egiziana-cosa-mangiare.html)

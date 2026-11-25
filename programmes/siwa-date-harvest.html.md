@@ -87,13 +87,9 @@ It is a gathering of the Siwan community, not a performance. Whether and how vis
 
 A private charter is possible on request. Siwa's airstrip is military, landing needs permission (about two weeks), and the aircraft cannot stay overnight, so we confirm it for your dates before we plan around it.
 
-### How is the order of the days decided?
-
-The days below are in their natural order, not their final one. Egypt's domestic flights do not run every day on every route, boats stop when the wind rises, and each site keeps its own hours — so once your dates are fixed we rearrange the days around the flights and the opening times that fall on them.
-
 ### What does it cost?
 
-No price is printed here, on purpose. The rate depends on your dates, on what is open and available then, and on the size of your party. Send us the dates and we reply in writing, within one working day, with the route in its final order and the price.
+No price is printed here, on purpose. The rate depends on your dates, on what is open and available then, and on the size of your party. Send us the dates and we reply in writing, within two hours, with the route in its final order and the price.
 
 Where it goes
 

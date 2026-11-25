@@ -63,7 +63,7 @@ Gulf households are international, and so are our guides. Your licensed Egyptolo
 
 ## How a private journey works
 
-Everything is private: your own licensed Egyptologist, your own vehicle and driver, and hotels chosen for the room rather than the star rating. Our prices are set in euros, and you can pay by PayPal, card or bank transfer. Tell us your dates — even if it is the next long weekend — and how many of you are travelling; we reply within one working day with a real itinerary and a clear price, with no obligation.
+Everything is private: your own licensed Egyptologist, your own vehicle and driver, and hotels chosen for the room rather than the star rating. Our prices are set in euros, and you can pay by PayPal, card or bank transfer. Tell us your dates — even if it is the next long weekend — and how many of you are travelling; we reply within two hours with a real itinerary and a clear price, with no obligation.
 
 ## Frequently asked questions
 

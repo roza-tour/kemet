@@ -69,13 +69,9 @@ Nein. Der Tagesausflug ist ein früher Aufbruch ab Assuan und ein paar Stunden a
 
 Zweimal im Jahr, am 22. Februar und am 22. Oktober, erreicht die aufgehende Sonne das Heiligtum und beleuchtet drei seiner vier sitzenden Statuen. Diese Termine sind Monate im Voraus ausgebucht, sagen Sie uns also früh Bescheid, wenn sie Ihnen wichtig sind.
 
-### Wie wird die Reihenfolge der Tage festgelegt?
-
-Die Tage unten stehen in ihrer natürlichen Reihenfolge, nicht in ihrer endgültigen. Ägyptens Inlandsflüge verkehren nicht jeden Tag auf jeder Strecke, Boote bleiben im Hafen, wenn der Wind auffrischt, und jede Stätte hat ihre eigenen Öffnungszeiten. Sobald Ihre Reisedaten feststehen, ordnen wir die Tage deshalb um die Flüge und die Öffnungszeiten herum neu.
-
 ### Was kostet die Reise?
 
-Einen Preis nennen wir hier mit Absicht nicht. Er hängt von Ihren Reisedaten ab, davon, was zu dieser Zeit geöffnet und verfügbar ist, und von der Größe Ihrer Gruppe. Senden Sie uns Ihre Daten, und wir antworten Ihnen innerhalb eines Werktags schriftlich mit der Route in ihrer endgültigen Reihenfolge und dem Preis.
+Einen Preis nennen wir hier mit Absicht nicht. Er hängt von Ihren Reisedaten ab, davon, was zu dieser Zeit geöffnet und verfügbar ist, und von der Größe Ihrer Gruppe. Senden Sie uns Ihre Daten, und wir antworten Ihnen innerhalb von zwei Stunden schriftlich mit der Route in ihrer endgültigen Reihenfolge und dem Preis.
 
 ## Weitere Programme
 

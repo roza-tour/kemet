@@ -82,6 +82,7 @@ Panduan rinci untuk kedua belas bulan — suhu, keramaian, harga dan hari besar 
 
 - [Paskah di Mesir](https://kemet-travel.com/id/paskah-di-mesir.html)
 - [Gerhana matahari 2027 di Luxor](https://kemet-travel.com/id/gerhana-matahari-2027-luxor.html)
+- [Mesir musim demi musim](https://kemet-travel.com/id/bulan-terbaik-berkunjung-ke-mesir.html)
 
 [Halaman ini dalam bahasa Inggris](https://kemet-travel.com/when-to-go.html)
 

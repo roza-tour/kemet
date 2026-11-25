@@ -114,7 +114,7 @@ Modérée et supportable. Les grandes journées (Gizeh avec Saqqarah, la rive ou
 Pages associées dans cette langue, et la page originale en anglais.
 
 - [Guide de voyage en Égypte](https://kemet-travel.com/fr/guide-de-voyage-egypte.html)
-- [Quand partir en Égypte](https://kemet-travel.com/fr/meilleure-periode-pour-visiter-egypte.html)
+- [L'Égypte saison par saison](https://kemet-travel.com/fr/meilleure-periode-pour-visiter-egypte.html)
 - [Où dormir en Égypte: les meilleurs hôtels, ville par ville](https://kemet-travel.com/fr/ou-dormir-en-egypte-meilleurs-hotels.html)
 - [Se déplacer en Égypte](https://kemet-travel.com/fr/se-deplacer-en-egypte-train-avion-croisiere.html)
 - [Guide de la cuisine égyptienne](https://kemet-travel.com/fr/cuisine-egyptienne-que-manger-en-egypte.html)

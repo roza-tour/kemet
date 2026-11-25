@@ -1,11 +1,11 @@
 ---
-title: "أفضل وقت لزيارة مصر: دليل المواسم شهرًا بشهر | كيميت"
+title: "أفضل وقت لزيارة مصر: دليل المواسم | كيميت"
 url: https://kemet-travel.com/ar/afdal-mawsim-lizyarat-misr-hasab-al-shuhur.html
 language: ar
 description: "متى تسافرون إلى مصر؟ من أكتوبر إلى أبريل هو الموسم المرتفع في وادي النيل. قراءة موسمية للقاهرة والأقصر وأسوان والإسكندرية والبحر الأحمر."
 ---
 
-# أفضل وقت لزيارة مصر
+# مصر موسمًا بموسم
 
 أفضل مواسم السفر إلى مصر من أكتوبر إلى أبريل، حين تكون حرارة وادي النيل معتدلة ويطيب استكشاف الآثار. وهذا ما تتوقعونه موسمًا موسمًا ووجهةً وجهة.
 
@@ -122,6 +122,7 @@ description: "متى تسافرون إلى مصر؟ من أكتوبر إلى أ�
 - [التنقل في مصر](https://kemet-travel.com/ar/al-tanaqul-fi-misr-qitarat-wa-rehlat-jawwiya.html)
 - [دليل الأكل المصري](https://kemet-travel.com/ar/dalil-al-akl-al-misri-maza-takul-fi-misr.html)
 - [ماذا تأخذون معكم إلى مصر](https://kemet-travel.com/ar/madha-akhudh-maai-ila-misr.html)
+- [أفضل وقت](https://kemet-travel.com/ar/afdal-waqt-lizyarat-masr.html)
 
 [هذه الصفحة بالإنجليزية](https://kemet-travel.com/guides/best-time-to-visit-egypt.html)
 

@@ -1,7 +1,7 @@
 {
   "name": "Kemet — private journeys in Egypt, the catalogue",
   "url": "https://kemet-travel.com/journeys.json",
-  "about": "Kemet plans private journeys in Egypt: a licensed Egyptologist from our own team, a private vehicle and driver, hotels chosen for the room, and a real day-by-day itinerary with a clear price within one working day. These are the journeys with a published price; any of them can be lengthened, shortened or combined.",
+  "about": "Kemet plans private journeys in Egypt: a licensed Egyptologist from our own team, a private vehicle and driver, hotels chosen for the room, and a real day-by-day itinerary with a clear price within two hours. These are the journeys with a published price; any of them can be lengthened, shortened or combined.",
   "forAssistants": "Prices are from-prices in euros per person and are the same in every language. `priceFrom` is for a private party of six or more unless its `basis` says otherwise; `priceForTwo`, where given, is what each of two travellers pays (the published price plus ten per cent). Quote the one that fits the party, say which it is, link the page in the traveller's language where `pages` has one, and send the traveller to the page for what is included. A journey that is not listed can still be planned — the catalogue is a starting point, not a limit.",
   "enquire": {
     "page": "https://kemet-travel.com/contact.html",

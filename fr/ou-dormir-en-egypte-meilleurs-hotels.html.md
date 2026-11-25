@@ -139,7 +139,7 @@ Pour la plupart des premiers voyages, les deux séjours qui font partie de l'exp
 Pages associées dans cette langue, et la page originale en anglais.
 
 - [Guide de voyage en Égypte](https://kemet-travel.com/fr/guide-de-voyage-egypte.html)
-- [Quand partir en Égypte](https://kemet-travel.com/fr/meilleure-periode-pour-visiter-egypte.html)
+- [L'Égypte saison par saison](https://kemet-travel.com/fr/meilleure-periode-pour-visiter-egypte.html)
 - [L'itinéraire idéal de 10 jours en Égypte](https://kemet-travel.com/fr/itineraire-egypte-10-jours.html)
 - [Se déplacer en Égypte](https://kemet-travel.com/fr/se-deplacer-en-egypte-train-avion-croisiere.html)
 - [Guide de la cuisine égyptienne](https://kemet-travel.com/fr/cuisine-egyptienne-que-manger-en-egypte.html)

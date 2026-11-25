@@ -112,11 +112,11 @@ Luxor ohne Sprint: Karnak zur Öffnung, das Tal der Könige vor der Hitze, die T
 
 ## Ihre Termine für 2026/27
 
-Antwort innerhalb eines Werktages, mit ausgewiesenem Preis und ohne Verpflichtung — und wenn die ehrliche Antwort lautet, dass die Termine nicht mehr funktionieren, sagen wir das.
+Antwort innerhalb von zwei Stunden, mit ausgewiesenem Preis und ohne Verpflichtung — und wenn die ehrliche Antwort lautet, dass die Termine nicht mehr funktionieren, sagen wir das.
 
 Wie es weitergeht
 
-- Reisezeitraum und Personenzahl genügen. Wir antworten innerhalb eines Werktages mit einer ersten Einschätzung und Rückfragen — kostenlos und unverbindlich.
+- Reisezeitraum und Personenzahl genügen. Wir antworten innerhalb von zwei Stunden mit einer ersten Einschätzung und Rückfragen — kostenlos und unverbindlich.
 - 25 % des Reisepreises bestätigen die Buchung und werden auf den Endbetrag angerechnet. Der Rest ist 30 Tage vor Abreise fällig.
 - Stornierung bei einer jetzt bestätigten Buchung: 75 % des Reisepreises (15 bis 29 Tage vor Abreise).
 - Überweisung oder Kreditkarte. Preise pro Person in Euro, aufgeschlüsselt, mit klar benannten Leistungen — enthalten und nicht enthalten.

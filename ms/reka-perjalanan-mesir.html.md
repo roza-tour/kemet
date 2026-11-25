@@ -17,7 +17,7 @@ Atau pilih daripada senarai
 
 Ketik satu tempat pada peta untuk bermula.
 
-Laluan rekaan sendiri dikira atas permintaan. Kami membalas dalam satu hari bekerja.
+Laluan rekaan sendiri dikira atas permintaan. Kami membalas dalam dua jam.
 
 ## Perjalanan paling hampir dalam katalog kami
 

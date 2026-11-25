@@ -65,7 +65,7 @@ Halal food is the norm in Egypt's restaurants and hotels. Tell us any dietary ru
 
 ## How a private journey works
 
-Everything is private: your own licensed Egyptologist, your own vehicle and driver, and hotels chosen for the room rather than the star rating. Egypt's currency is the Egyptian pound; our prices are set in euros, and you can pay us by PayPal, card or bank transfer. Tell us your dates and how many of you are travelling; we reply within one working day with a real itinerary and a clear price, with no obligation.
+Everything is private: your own licensed Egyptologist, your own vehicle and driver, and hotels chosen for the room rather than the star rating. Egypt's currency is the Egyptian pound; our prices are set in euros, and you can pay us by PayPal, card or bank transfer. Tell us your dates and how many of you are travelling; we reply within two hours with a real itinerary and a clear price, with no obligation.
 
 ## Frequently asked questions
 

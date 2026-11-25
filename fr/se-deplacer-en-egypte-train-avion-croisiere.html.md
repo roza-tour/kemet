@@ -123,7 +123,7 @@ Une dahabieh est un bateau à voile égyptien traditionnel en bois, utilisé pou
 Pages associées dans cette langue, et la page originale en anglais.
 
 - [Guide de voyage en Égypte](https://kemet-travel.com/fr/guide-de-voyage-egypte.html)
-- [Quand partir en Égypte](https://kemet-travel.com/fr/meilleure-periode-pour-visiter-egypte.html)
+- [L'Égypte saison par saison](https://kemet-travel.com/fr/meilleure-periode-pour-visiter-egypte.html)
 - [L'itinéraire idéal de 10 jours en Égypte](https://kemet-travel.com/fr/itineraire-egypte-10-jours.html)
 - [Où dormir en Égypte: les meilleurs hôtels, ville par ville](https://kemet-travel.com/fr/ou-dormir-en-egypte-meilleurs-hotels.html)
 - [Guide de la cuisine égyptienne](https://kemet-travel.com/fr/cuisine-egyptienne-que-manger-en-egypte.html)

@@ -117,7 +117,7 @@ Casi todo, con facilidad. Las farmacias son excelentes, están en todas partes y
 Páginas relacionadas en este idioma y la página original en inglés.
 
 - [Guía de viaje a Egipto](https://kemet-travel.com/es/guia-de-viaje-egipto.html)
-- [Mejor época para viajar a Egipto](https://kemet-travel.com/es/cuando-viajar-a-egipto-mejor-epoca.html)
+- [Egipto, estación por estación](https://kemet-travel.com/es/cuando-viajar-a-egipto-mejor-epoca.html)
 - [El itinerario ideal de 10 días por Egipto](https://kemet-travel.com/es/itinerario-egipto-10-dias.html)
 - [Dónde alojarse en Egipto: los mejores hoteles, ciudad por ciudad](https://kemet-travel.com/es/donde-alojarse-en-egipto-mejores-hoteles.html)
 - [Cómo moverse por Egipto](https://kemet-travel.com/es/como-moverse-por-egipto-transporte.html)

@@ -17,7 +17,7 @@ Or choose from the list
 
 Tap a place on the map to begin.
 
-A route of your own is priced on request. We reply within one working day.
+A route of your own is priced on request. We reply within two hours.
 
 ## The closest journeys in our catalogue
 

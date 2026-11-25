@@ -119,7 +119,7 @@ Una settimana è la durata più comune per un primo viaggio: Il Cairo e Giza in 
 
 Pagine correlate in questa lingua e la pagina originale in inglese.
 
-- [Quando andare in Egitto](https://kemet-travel.com/it/periodo-migliore-per-visitare-l-egitto.html)
+- [L'Egitto stagione per stagione](https://kemet-travel.com/it/periodo-migliore-per-visitare-l-egitto.html)
 - [L'itinerario ideale di 10 giorni in Egitto](https://kemet-travel.com/it/itinerario-egitto-10-giorni.html)
 - [Come spostarsi in Egitto](https://kemet-travel.com/it/trasporti-in-egitto-come-spostarsi.html)
 - [Guida alla cucina egiziana](https://kemet-travel.com/it/cucina-egiziana-cosa-mangiare.html)

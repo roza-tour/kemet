@@ -70,13 +70,9 @@ Elas ficam dentro de um parque nacional, e são as regras que decidem onde um ba
 
 Por estrada até Hurghada ou de avião a partir de Marsa Alam, nos dias em que há voo — são poucos, e por isso o último dia é a última coisa que fixamos.
 
-### Como se decide a ordem dos dias?
-
-Os dias abaixo seguem a ordem natural, não a definitiva. Os voos domésticos do Egito não operam todos os dias em todas as rotas, os barcos não saem quando o vento aumenta e cada sítio tem o seu próprio horário — por isso, assim que as datas de vocês estiverem definidas, reorganizamos os dias em torno dos voos e dos horários de abertura que coincidirem com eles.
-
 ### Quanto custa?
 
-Não publicamos preço aqui, de propósito. O valor depende das datas de vocês, do que estiver aberto e disponível nessa época e do tamanho do grupo. Enviem-nos as datas e respondemos por escrito, em até um dia útil, com o roteiro na ordem final e o preço.
+Não publicamos preço aqui, de propósito. O valor depende das datas de vocês, do que estiver aberto e disponível nessa época e do tamanho do grupo. Enviem-nos as datas e respondemos por escrito, em até duas horas, com o roteiro na ordem final e o preço.
 
 ## Mais programas
 

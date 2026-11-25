@@ -59,7 +59,7 @@ Trabajamos con egiptólogos titulados de nuestro propio equipo que guían en esp
 
 ## Cómo funciona un viaje privado
 
-Todo es privado: su propio egiptólogo, su propio vehículo con conductor y hoteles elegidos por la habitación, no por las estrellas. Díganos sus fechas y cuántos viajan; respondemos en un día hábil con un itinerario real y un precio detallado, sin compromiso.
+Todo es privado: su propio egiptólogo, su propio vehículo con conductor y hoteles elegidos por la habitación, no por las estrellas. Díganos sus fechas y cuántos viajan; respondemos en dos horas con un itinerario real y un precio detallado, sin compromiso.
 
 ## Preguntas frecuentes
 

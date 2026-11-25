@@ -79,7 +79,7 @@ The mountain and the monastery without a night on a coach: up in the afternoon, 
 
 The days below are in their natural order, not their final one. Egypt's domestic flights do not run every day on every route, boats stop when the wind rises, and each site keeps its own hours — so once your dates are fixed we rearrange the days around the flights and the opening times that fall on them.
 
-No price is printed here, on purpose. The rate depends on your dates, on what is open and available then, and on the size of your party. Send us the dates and we reply in writing, within one working day, with the route in its final order and the price.
+No price is printed here, on purpose. The rate depends on your dates, on what is open and available then, and on the size of your party. Send us the dates and we reply in writing, within two hours, with the route in its final order and the price.
 
 ---
 

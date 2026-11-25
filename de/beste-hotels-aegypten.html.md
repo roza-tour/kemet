@@ -139,7 +139,7 @@ Für die meisten ersten Reisen sind die beiden Aufenthalte, die selbst Teil des 
 Verwandte Seiten in dieser Sprache sowie die englische Originalseite.
 
 - [Ägypten Reiseführer](https://kemet-travel.com/de/aegypten-reisefuehrer.html)
-- [Beste Reisezeit für Ägypten](https://kemet-travel.com/de/wann-nach-aegypten-reisen.html)
+- [Ägypten nach Jahreszeiten](https://kemet-travel.com/de/wann-nach-aegypten-reisen.html)
 - [Der ideale 10-Tage-Reiseverlauf für Ägypten](https://kemet-travel.com/de/aegypten-10-tage-reiseverlauf.html)
 - [In Ägypten unterwegs](https://kemet-travel.com/de/aegypten-verkehrsmittel.html)
 - [Ägyptische Küche – ein Ratgeber](https://kemet-travel.com/de/aegyptische-kueche.html)

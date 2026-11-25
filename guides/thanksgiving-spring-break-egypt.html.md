@@ -40,7 +40,7 @@ The winter holidays are the other American window — and the single busiest for
 
 ## How a private journey works
 
-Everything is private: your own licensed Egyptologist, your own vehicle and driver, and hotels chosen for the room rather than the star rating. Our prices are set in euros — visitors in North America see an approximate dollar figure beside each — and you can pay by PayPal, card or bank transfer. Tell us your dates; we reply within one working day with a real itinerary and a clear price.
+Everything is private: your own licensed Egyptologist, your own vehicle and driver, and hotels chosen for the room rather than the star rating. Our prices are set in euros — visitors in North America see an approximate dollar figure beside each — and you can pay by PayPal, card or bank transfer. Tell us your dates; we reply within two hours with a real itinerary and a clear price.
 
 ## Frequently asked questions
 

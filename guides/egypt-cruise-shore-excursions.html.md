@@ -63,7 +63,7 @@ Shore passes and port formalities are arranged through your cruise line, and the
 
 ## How a private journey works
 
-Everything is private: your own licensed Egyptologist and your own vehicle and driver, for your party alone. Tell us your ship, the date, the port, your arrival and all-aboard times and how many of you are coming; we reply within one working day with a real plan for the day and a clear price, with no obligation. Our prices are set in euros, and you can pay by PayPal, card or bank transfer.
+Everything is private: your own licensed Egyptologist and your own vehicle and driver, for your party alone. Tell us your ship, the date, the port, your arrival and all-aboard times and how many of you are coming; we reply within two hours with a real plan for the day and a clear price, with no obligation. Our prices are set in euros, and you can pay by PayPal, card or bank transfer.
 
 ## Frequently asked questions
 

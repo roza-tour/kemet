@@ -73,13 +73,9 @@ Do Cairo, um dia inteiro — de oito a dez horas. Esta viagem o divide em Alexan
 
 Dá. “Siwa na Colheita das Tâmaras” mantém quatro noites e, nos meses mais frescos, uma estadia mais curta em Siwa, de três noites, parte do Cairo por estrada. Digam-nos de quantos dias dispõem.
 
-### Como se decide a ordem dos dias?
-
-Os dias abaixo seguem a ordem natural, não a definitiva. Os voos domésticos do Egito não operam todos os dias em todas as rotas, os barcos não saem quando o vento aumenta e cada sítio tem o seu próprio horário — por isso, assim que as datas de vocês estiverem definidas, reorganizamos os dias em torno dos voos e dos horários de abertura que coincidirem com eles.
-
 ### Quanto custa?
 
-Não publicamos preço aqui, de propósito. O valor depende das datas de vocês, do que estiver aberto e disponível nessa época e do tamanho do grupo. Enviem-nos as datas e respondemos por escrito, em até um dia útil, com o roteiro na ordem final e o preço.
+Não publicamos preço aqui, de propósito. O valor depende das datas de vocês, do que estiver aberto e disponível nessa época e do tamanho do grupo. Enviem-nos as datas e respondemos por escrito, em até duas horas, com o roteiro na ordem final e o preço.
 
 ## Mais programas
 

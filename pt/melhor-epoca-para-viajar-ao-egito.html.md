@@ -5,7 +5,7 @@ language: pt
 description: "Quando ir ao Egito: de outubro a abril é a alta temporada no Vale do Nilo. Estação por estação no Cairo, em Luxor, Assuã, Alexandria e no Mar Vermelho."
 ---
 
-# Melhor época para viajar ao Egito
+# O Egito, estação por estação
 
 A melhor temporada para viajar ao Egito vai de outubro a abril, quando as temperaturas no Vale do Nilo são amenas e os monumentos são confortáveis de explorar. Eis o que esperar estação por estação e destino por destino.
 
@@ -122,6 +122,7 @@ Páginas relacionadas neste idioma e a página original em inglês.
 - [Como se locomover no Egito](https://kemet-travel.com/pt/como-se-locomover-no-egito.html)
 - [Guia da comida egípcia](https://kemet-travel.com/pt/comida-egipcia-o-que-comer-no-egito.html)
 - [O que levar para o Egito](https://kemet-travel.com/pt/o-que-levar-para-o-egito.html)
+- [Melhor época](https://kemet-travel.com/pt/melhor-epoca-para-ir-ao-egito.html)
 
 [Esta página em inglês](https://kemet-travel.com/guides/best-time-to-visit-egypt.html)
 

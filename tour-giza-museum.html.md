@@ -89,21 +89,7 @@ Yes, as an optional extra: the Tutankhamun galleries are opened for your party a
 
 Yes, as a private optional extra. A golf cart for your party alone carries you around the plateau instead of walking the long stretches between the monuments — welcome with young children, for older travellers, or in the midday heat.
 
-## Is this journey right for you?
-
-Ideal if you
-
-- Travellers who would rather see four things properly than twelve badly
-- Anyone who wants a licensed Egyptologist beside them, not a headset and a flag
-- Couples and families for whom pace, comfort and privacy decide whether a trip works
-- Visitors marking something — a honeymoon, an anniversary, a milestone birthday
-
-Less suited if you
-
-- Anyone looking for the lowest price on Egypt — we are not the cheapest and do not try to be
-- Coach tours, shared group departures and itineraries sold by the seat
-- Hostels, dormitories and hop-on backpacking routes
-- Travellers who would rather organise the logistics themselves
+Every Kemet journey is private, led by a licensed Egyptologist and priced in writing: [the standard in full](https://kemet-travel.com/tours.html#standard). Before you travel: [Egypt Travel Guide](https://kemet-travel.com/guides/egypt-travel-guide.html) · [Best Time to Visit Egypt](https://kemet-travel.com/guides/best-time-to-visit-egypt.html) · [Getting Around Egypt](https://kemet-travel.com/guides/transportation-in-egypt.html).
 
 From
 
@@ -129,73 +115,9 @@ Private **Yes — your party only**
 
 [Booking & cancellation terms →](https://kemet-travel.com/booking.html)
 
-The standard
-
-## What this journey is, without exception
-
-Every operator in Egypt uses the word luxury. These are the specifics behind ours — checkable before you pay for anything.
-
-### A licensed Egyptologist, not a guide
-
-Every journey is led by a guide licensed by the Egyptian Ministry of Tourism with a degree in Egyptology. They are with you at the monuments, not waiting in the car park — and they are yours for the day, answering your questions rather than reciting to forty people.
-
-### Your party only
-
-No shared coaches. No fixed departure dates. No strangers on your itinerary. If you are two people, the vehicle, the guide and the pace belong to two people.
-
-### Built around you, then written down
-
-We design the itinerary from your interests and your dates — not from a catalogue page. You receive it in writing before anything is paid, and it changes as often as you want it to until it is right.
-
-### One price, itemised
-
-The quote lists what is included and what is not, line by line, before you commit. Your Egyptologist and private air-conditioned transfers are inside the price on every journey, and entrance fees are inside it on every multi-day one. Where something sits outside — monument tickets on a day tour, or meals, for instance — it is named on the page you are reading, at the rate the ticket office charges, not discovered at the end.
-
-### Reachable while you travel
-
-You have a direct line to the people who planned your journey for the whole time you are in Egypt — not a call centre, and not a number that stops answering after the deposit clears.
-
-### Time protected, not filled
-
-A day with four sites crammed into it is a cheaper day to sell and a worse day to live. We plan around light, heat and crowds — the Valley of the Kings at opening, the Egyptian Museum when the coaches have gone — and we leave the afternoon alone.
-
-### On price, plainly
-
-Kemet sits at the upper end of the Egyptian market and we are comfortable saying so. A private Egyptologist for a week costs what it costs; so does a car that is yours alone and a room that faces the river rather than the car park. What we will not do is quote low, then recover the difference through optional extras, shopping stops and an itinerary that quietly turns into a group. Every price on this site is a per-person starting point for a private journey, and the written quote that follows is the price you pay.
-
 Gallery
 
 ## Moments from this journey
-
-Planning
-
-## Preparation reading
-
-Guides to help you prepare for this journey.
-
-Planning Your Trip
-
-### [Egypt Travel Guide](https://kemet-travel.com/guides/egypt-travel-guide.html)
-
-Everything you need to plan a trip to Egypt — visa requirements, the best time to go, getting around, top destinations, culture and practical essentials.
-
-8 min read
-
-Weather & Seasons
-
-### [Best Time to Visit Egypt](https://kemet-travel.com/guides/best-time-to-visit-egypt.html)
-
-Egypt's best travel season is October to April, when Nile Valley temperatures are mild and monuments are comfortable to explore. Here is what to expect season by season and destination by destination.
-
-6 min read
-
-Transportation
-
-### [Getting Around Egypt](https://kemet-travel.com/guides/transportation-in-egypt.html)
-
-How to travel between Egypt's cities and sites — domestic flights, the sleeper train, Nile cruises, the Cairo Metro, taxis and private transfers explained.
-
-7 min read
 
 Journeys
 

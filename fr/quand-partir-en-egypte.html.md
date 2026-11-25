@@ -82,6 +82,7 @@ Un guide détaillé pour chacun des douze mois — températures, affluence, pri
 
 - [Pâques en Égypte](https://kemet-travel.com/fr/paques-en-egypte.html)
 - [Éclipse solaire 2027 à Louxor](https://kemet-travel.com/fr/eclipse-solaire-2027-louxor.html)
+- [L'Égypte saison par saison](https://kemet-travel.com/fr/meilleure-periode-pour-visiter-egypte.html)
 
 [Cette page en anglais](https://kemet-travel.com/when-to-go.html)
 

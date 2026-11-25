@@ -1,11 +1,11 @@
 ---
-title: "Mejor época para viajar a Egipto, mes a mes | Kemet"
+title: "Mejor época para viajar a Egipto, estación por estación | Kemet"
 url: https://kemet-travel.com/es/cuando-viajar-a-egipto-mejor-epoca.html
 language: es
 description: "Cuándo ir a Egipto: de octubre a abril es la temporada alta en el valle del Nilo. Qué esperar por estaciones en El Cairo, Luxor, Asuán, Alejandría y mar Rojo."
 ---
 
-# Mejor época para viajar a Egipto
+# Egipto, estación por estación
 
 La mejor época para viajar a Egipto es de octubre a abril, cuando las temperaturas del valle del Nilo son suaves y los monumentos se visitan con comodidad. Esto es lo que cabe esperar por estaciones y por destinos.
 
@@ -122,6 +122,7 @@ Páginas relacionadas en este idioma y la página original en inglés.
 - [Cómo moverse por Egipto](https://kemet-travel.com/es/como-moverse-por-egipto-transporte.html)
 - [Guía de la comida egipcia](https://kemet-travel.com/es/guia-gastronomia-egipcia-que-comer.html)
 - [Qué llevar a Egipto](https://kemet-travel.com/es/que-llevar-en-la-maleta-a-egipto.html)
+- [Mejor época](https://kemet-travel.com/es/mejor-epoca-para-viajar-a-egipto.html)
 
 [Esta página en inglés](https://kemet-travel.com/guides/best-time-to-visit-egypt.html)
 

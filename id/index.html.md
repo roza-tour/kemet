@@ -59,7 +59,7 @@ Kemet bekerja di segmen atas pasar Mesir dan kami mengatakannya tanpa sungkan. E
 ## Panduan wisata
 
 - [Panduan Wisata Mesir](https://kemet-travel.com/id/panduan-wisata-mesir.html)
-- [Waktu Terbaik Berkunjung ke Mesir](https://kemet-travel.com/id/bulan-terbaik-berkunjung-ke-mesir.html)
+- [Mesir musim demi musim](https://kemet-travel.com/id/bulan-terbaik-berkunjung-ke-mesir.html)
 - [Itinerary Mesir 10 Hari yang Ideal](https://kemet-travel.com/id/itinerary-mesir-10-hari.html)
 - [Tempat Menginap di Mesir: Hotel Terbaik, Kota demi Kota](https://kemet-travel.com/id/tempat-menginap-terbaik-di-mesir.html)
 - [Berkeliling Mesir](https://kemet-travel.com/id/transportasi-di-mesir.html)

@@ -121,11 +121,11 @@ Luxor without the sprint: Karnak at opening, the Valley of the Kings before the 
 
 ## Tell us your dates for 2026–27
 
-One business day, an itemised quote, no obligation — and if the honest answer is that the dates no longer work, we will say that instead.
+A reply within two hours, an itemised quote, no obligation — and if the honest answer is that the dates no longer work, we will say that instead.
 
 What happens next
 
-- Send us your dates, interests and party size. We reply within one business day with an initial assessment and any questions. There is no charge and no commitment at this stage.
+- Send us your dates, interests and party size. We reply within two hours with an initial assessment and any questions. There is no charge and no commitment at this stage.
 - 25% of the total trip cost confirms the booking, and it is applied to your final balance, not an additional charge. Balance due 30 days before departure.
 - Bank transfer, major credit & debit cards or PayPal. Priced per person in euros, itemised, with what is and is not included stated.
 - Your party only, with a private Egyptologist and a private vehicle throughout — no seat-in-coach, no joining a group at the gate.

@@ -5,7 +5,7 @@ language: ms
 description: "Bila patut ke Mesir. Oktober hingga April ialah musim puncak di Lembah Nil. Panduan mengikut musim untuk Kaherah, Luxor, Aswan, Alexandria dan Laut Merah."
 ---
 
-# Waktu Terbaik Melawat Mesir
+# Mesir mengikut musim
 
 Musim melancong terbaik di Mesir ialah Oktober hingga April, apabila suhu Lembah Nil sederhana dan monumen selesa diterokai. Inilah yang boleh dijangka mengikut musim dan mengikut destinasi.
 
@@ -122,6 +122,7 @@ Halaman berkaitan dalam bahasa ini, serta halaman asal dalam bahasa Inggeris.
 - [Bergerak di Sekitar Mesir](https://kemet-travel.com/ms/pengangkutan-di-mesir.html)
 - [Panduan Makanan Mesir](https://kemet-travel.com/ms/panduan-makanan-mesir.html)
 - [Apa untuk Dibawa ke Mesir](https://kemet-travel.com/ms/senarai-barang-untuk-dibawa-ke-mesir.html)
+- [Masa terbaik](https://kemet-travel.com/ms/masa-terbaik-ke-mesir.html)
 
 [Halaman ini dalam bahasa Inggeris](https://kemet-travel.com/guides/best-time-to-visit-egypt.html)
 

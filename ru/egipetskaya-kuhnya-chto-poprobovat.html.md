@@ -133,7 +133,7 @@ description: "Путеводитель по египетской кухне: г�
 Связанные страницы на русском языке и оригинал на английском.
 
 - [Египет: путеводитель](https://kemet-travel.com/ru/egipet-putevoditel.html)
-- [Лучшее время для поездки в Египет](https://kemet-travel.com/ru/luchshee-vremya-dlya-poezdki-v-egipet.html)
+- [Египет по сезонам](https://kemet-travel.com/ru/luchshee-vremya-dlya-poezdki-v-egipet.html)
 - [Идеальный маршрут по Египту на 10 дней](https://kemet-travel.com/ru/marshrut-po-egiptu-na-10-dney.html)
 - [Где остановиться в Египте: лучшие отели по городам](https://kemet-travel.com/ru/gde-ostanovitsya-v-egipte.html)
 - [Как добраться по Египту](https://kemet-travel.com/ru/transport-v-egipte.html)

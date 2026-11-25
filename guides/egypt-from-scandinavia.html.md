@@ -79,7 +79,7 @@ The October autumn break catches the start of the season: Luxor is still hot, 35
 
 Everything is private: your own licensed Egyptologist, your own vehicle and driver, and hotels and Nile boats chosen for the room rather than the star rating. Our prices are set in euros — Finland's own currency; from Sweden, Norway, Denmark and Iceland your bank converts — and you can pay by PayPal, card or bank transfer.
 
-Tell us your dates, how many of you are travelling and where your flight lands, Cairo or the Red Sea; we reply within one working day with a real itinerary and a clear price, with no obligation.
+Tell us your dates, how many of you are travelling and where your flight lands, Cairo or the Red Sea; we reply within two hours with a real itinerary and a clear price, with no obligation.
 
 ## Frequently asked questions
 

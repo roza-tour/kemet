@@ -82,6 +82,7 @@ Un'analisi dettagliata di ogni singolo mese — temperature, affluenza, prezzi e
 
 - [Pasqua in Egitto](https://kemet-travel.com/it/pasqua-in-egitto.html)
 - [Eclissi solare 2027 a Luxor](https://kemet-travel.com/it/eclissi-solare-2027-luxor.html)
+- [L'Egitto stagione per stagione](https://kemet-travel.com/it/periodo-migliore-per-visitare-l-egitto.html)
 
 [Questa pagina in inglese](https://kemet-travel.com/when-to-go.html)
 

@@ -123,7 +123,7 @@ description: "كيف تسافرون بين مدن مصر: الرحلات الج�
 صفحات ذات صلة بهذه اللغة، والصفحة الإنجليزية الأصلية.
 
 - [دليل السفر إلى مصر](https://kemet-travel.com/ar/dalil-al-safar-ila-misr.html)
-- [أفضل وقت لزيارة مصر](https://kemet-travel.com/ar/afdal-mawsim-lizyarat-misr-hasab-al-shuhur.html)
+- [مصر موسمًا بموسم](https://kemet-travel.com/ar/afdal-mawsim-lizyarat-misr-hasab-al-shuhur.html)
 - [برنامج عشرة أيام مثالي في مصر](https://kemet-travel.com/ar/barnamaj-rehla-ila-misr-10-ayyam.html)
 - [أين تقيمون في مصر: أفضل الفنادق مدينةً بمدينة](https://kemet-travel.com/ar/afdal-fanadiq-misr-madina-bimadina.html)
 - [دليل الأكل المصري](https://kemet-travel.com/ar/dalil-al-akl-al-misri-maza-takul-fi-misr.html)

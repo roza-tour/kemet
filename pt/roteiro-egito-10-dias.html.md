@@ -114,7 +114,7 @@ Moderado e administrável. Os dias fortes — Gizé com Sacará, a margem oeste,
 Páginas relacionadas neste idioma e a página original em inglês.
 
 - [Guia de viagem do Egito](https://kemet-travel.com/pt/guia-de-viagem-egito.html)
-- [Melhor época para viajar ao Egito](https://kemet-travel.com/pt/melhor-epoca-para-viajar-ao-egito.html)
+- [O Egito, estação por estação](https://kemet-travel.com/pt/melhor-epoca-para-viajar-ao-egito.html)
 - [Onde ficar no Egito: os melhores hotéis, cidade por cidade](https://kemet-travel.com/pt/onde-ficar-no-egito.html)
 - [Como se locomover no Egito](https://kemet-travel.com/pt/como-se-locomover-no-egito.html)
 - [Guia da comida egípcia](https://kemet-travel.com/pt/comida-egipcia-o-que-comer-no-egito.html)

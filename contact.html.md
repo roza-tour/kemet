@@ -2,7 +2,7 @@
 title: "Contact Kemet — Plan Your Egypt Journey"
 url: https://kemet-travel.com/contact.html
 language: en
-description: "Get in touch with Kemet to start planning your private Egypt journey. We respond to all enquiries within 24 hours."
+description: "Get in touch with Kemet to start planning your private Egypt journey. We respond to all enquiries within two hours."
 ---
 
 # Plan Your Egypt Journey
@@ -13,7 +13,7 @@ Every journey begins with a conversation. Tell us what you're looking for and we
 
 WhatsApp [+201158367162](https://wa.me/201158367162?text=Hello%20Kemet%20%E2%80%94%20I%27d%20like%20to%20plan%20a%20private%20Egypt%20journey.) Typically within 2 hours during business hours
 
-Email [info@kemet-travel.com](mailto:info@kemet-travel.com?subject=Kemet+enquiry) Response within 24 hours
+Email [info@kemet-travel.com](mailto:info@kemet-travel.com?subject=Kemet+enquiry) Response within two hours
 
 Phone [+20 11 5836 7162](tel:+201158367162) Mon–Fri, 09:00–18:00 EET
 
@@ -28,13 +28,13 @@ For urgent assistance during an active trip, contact us by WhatsApp at any hour 
 What happens next
 
 - We read your enquiry in full and consider your dates and interests.
-- We respond within 24 hours with an initial assessment and questions.
+- We respond within two hours with an initial assessment and questions.
 - Once we understand your vision, we begin designing your itinerary.
 - You review it, refine it and confirm when you're ready.
 
 ## Send us a message
 
-Write to us directly — your message lands in our inbox and we reply within one business day.
+Write to us directly — your message lands in our inbox and we reply within two hours.
 
 ## What kind of journey are you planning?
 

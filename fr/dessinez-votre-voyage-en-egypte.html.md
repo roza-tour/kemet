@@ -17,7 +17,7 @@ Ou choisissez dans la liste
 
 Touchez un lieu sur la carte pour commencer.
 
-Un itinéraire sur mesure est chiffré sur demande. Nous répondons sous un jour ouvré.
+Un itinéraire sur mesure est chiffré sur demande. Nous répondons sous deux heures.
 
 ## Les voyages les plus proches dans notre catalogue
 

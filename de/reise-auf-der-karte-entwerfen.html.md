@@ -17,7 +17,7 @@ Oder aus der Liste wählen
 
 Tippen Sie einen Ort auf der Karte an.
 
-Eine eigene Route wird auf Anfrage kalkuliert. Wir antworten innerhalb eines Werktags.
+Eine eigene Route wird auf Anfrage kalkuliert. Wir antworten innerhalb von zwei Stunden.
 
 ## Die ähnlichsten Reisen aus unserem Programm
 

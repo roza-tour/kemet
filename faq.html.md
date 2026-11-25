@@ -35,7 +35,7 @@ Inclusions vary by itinerary and are listed in full on every tour page. A multi-
 
 ### How do I book a trip with Kemet?
 
-Start by sending an enquiry with your dates, interests and party size — there is no charge or obligation. We reply within one business day and design a private itinerary with a fully itemised quote, refining it with you until it is right. A deposit then confirms your journey and lets us secure hotels, guides and permits in your name, with the balance due before departure. Full details are on our Booking & Cancellation page.
+Start by sending an enquiry with your dates, interests and party size — there is no charge or obligation. We reply within two hours and design a private itinerary with a fully itemised quote, refining it with you until it is right. A deposit then confirms your journey and lets us secure hotels, guides and permits in your name, with the balance due before departure. Full details are on our Booking & Cancellation page.
 
 ### Do you arrange honeymoons, family trips and solo travel?
 

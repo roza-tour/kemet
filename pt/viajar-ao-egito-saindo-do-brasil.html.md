@@ -53,7 +53,7 @@ Nossos preços são definidos em euros; quem nos visita das Américas vê ao lad
 
 ## Como funciona uma viagem privativa
 
-Tudo é privativo: seu próprio egiptólogo, seu próprio veículo com motorista e hotéis escolhidos pelo quarto, não pelas estrelas. Nossos próprios egiptólogos guiam em português. Diga-nos as datas e quantas pessoas viajam; respondemos em um dia útil com um roteiro real e um preço detalhado — sem compromisso.
+Tudo é privativo: seu próprio egiptólogo, seu próprio veículo com motorista e hotéis escolhidos pelo quarto, não pelas estrelas. Nossos próprios egiptólogos guiam em português. Diga-nos as datas e quantas pessoas viajam; respondemos em até duas horas com um roteiro real e um preço detalhado — sem compromisso.
 
 ## Perguntas frequentes
 

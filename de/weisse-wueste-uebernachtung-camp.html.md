@@ -68,13 +68,9 @@ Nachts ja: von Dezember bis Februar nahe dem Gefrierpunkt in der offenen Wüste.
 
 Für Wüstentage braucht es Genehmigungen, die wir einholen. Sie erfordern Wochen Vorlauf, nennen Sie uns Ihre Daten daher möglichst einen Monat im Voraus.
 
-### Wie wird die Reihenfolge der Tage festgelegt?
-
-Die Tage unten stehen in ihrer natürlichen Reihenfolge, nicht in ihrer endgültigen. Ägyptens Inlandsflüge verkehren nicht jeden Tag auf jeder Strecke, Boote bleiben im Hafen, wenn der Wind auffrischt, und jede Stätte hat ihre eigenen Öffnungszeiten. Sobald Ihre Reisedaten feststehen, ordnen wir die Tage deshalb um die Flüge und die Öffnungszeiten herum neu.
-
 ### Was kostet die Reise?
 
-Einen Preis nennen wir hier mit Absicht nicht. Er hängt von Ihren Reisedaten ab, davon, was zu dieser Zeit geöffnet und verfügbar ist, und von der Größe Ihrer Gruppe. Senden Sie uns Ihre Daten, und wir antworten Ihnen innerhalb eines Werktags schriftlich mit der Route in ihrer endgültigen Reihenfolge und dem Preis.
+Einen Preis nennen wir hier mit Absicht nicht. Er hängt von Ihren Reisedaten ab, davon, was zu dieser Zeit geöffnet und verfügbar ist, und von der Größe Ihrer Gruppe. Senden Sie uns Ihre Daten, und wir antworten Ihnen innerhalb von zwei Stunden schriftlich mit der Route in ihrer endgültigen Reihenfolge und dem Preis.
 
 ## Weitere Programme
 

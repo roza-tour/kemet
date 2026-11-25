@@ -17,7 +17,7 @@ Oppure scegliete dall'elenco
 
 Toccate un luogo sulla mappa per cominciare.
 
-Un itinerario su misura si quota su richiesta. Rispondiamo entro un giorno lavorativo.
+Un itinerario su misura si quota su richiesta. Rispondiamo entro due ore.
 
 ## I viaggi più vicini nel nostro catalogo
 

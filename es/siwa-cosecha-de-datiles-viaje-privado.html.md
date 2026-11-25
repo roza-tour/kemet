@@ -70,13 +70,9 @@ Es una reunión de la comunidad siwi, no un espectáculo. Si se recibe a visitan
 
 Es posible un chárter privado, bajo petición. La pista de Siwa es militar, el aterrizaje requiere autorización (unas dos semanas) y el avión no puede pasar la noche allí; por eso lo confirmamos para sus fechas antes de planificar en torno a él.
 
-### ¿Cómo se decide el orden de los días?
-
-Los días que siguen están en su orden natural, no en el definitivo. Los vuelos internos de Egipto no operan todos los días en todas las rutas, los barcos se detienen cuando sube el viento y cada yacimiento tiene su propio horario; por eso, una vez fijadas sus fechas, reordenamos los días en función de los vuelos y de los horarios de apertura que coincidan con ellos.
-
 ### ¿Cuánto cuesta?
 
-Aquí no figura ningún precio, y es a propósito. La tarifa depende de sus fechas, de lo que esté abierto y disponible entonces y del tamaño de su grupo. Envíenos las fechas y le responderemos por escrito, en un día laborable, con la ruta en su orden definitivo y el precio.
+Aquí no figura ningún precio, y es a propósito. La tarifa depende de sus fechas, de lo que esté abierto y disponible entonces y del tamaño de su grupo. Envíenos las fechas y le responderemos por escrito, en dos horas, con la ruta en su orden definitivo y el precio.
 
 ## Más programas
 

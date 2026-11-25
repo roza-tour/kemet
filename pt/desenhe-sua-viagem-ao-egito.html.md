@@ -17,7 +17,7 @@ Ou escolham na lista
 
 Toquem em um lugar do mapa para começar.
 
-Um roteiro próprio é orçado sob consulta. Respondemos em um dia útil.
+Um roteiro próprio é orçado sob consulta. Respondemos em até duas horas.
 
 ## As viagens mais próximas do nosso catálogo
 

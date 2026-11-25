@@ -133,7 +133,7 @@ Air paip dirawat dan secara teknikal boleh diminum, tetapi prasarana paip di kaw
 Halaman berkaitan dalam bahasa ini, serta halaman asal dalam bahasa Inggeris.
 
 - [Panduan Melancong ke Mesir](https://kemet-travel.com/ms/panduan-melancong-ke-mesir.html)
-- [Waktu Terbaik Melawat Mesir](https://kemet-travel.com/ms/waktu-terbaik-melawat-mesir.html)
+- [Mesir mengikut musim](https://kemet-travel.com/ms/waktu-terbaik-melawat-mesir.html)
 - [Jadual Perjalanan Mesir 10 Hari yang Ideal](https://kemet-travel.com/ms/jadual-perjalanan-mesir-10-hari.html)
 - [Tempat Menginap di Mesir: Hotel Terbaik, Bandar demi Bandar](https://kemet-travel.com/ms/tempat-penginapan-terbaik-di-mesir.html)
 - [Bergerak di Sekitar Mesir](https://kemet-travel.com/ms/pengangkutan-di-mesir.html)

@@ -117,7 +117,7 @@ description: "قائمة حقيبة مصر التي تناسب الرحلة ال
 صفحات ذات صلة بهذه اللغة، والصفحة الإنجليزية الأصلية.
 
 - [دليل السفر إلى مصر](https://kemet-travel.com/ar/dalil-al-safar-ila-misr.html)
-- [أفضل وقت لزيارة مصر](https://kemet-travel.com/ar/afdal-mawsim-lizyarat-misr-hasab-al-shuhur.html)
+- [مصر موسمًا بموسم](https://kemet-travel.com/ar/afdal-mawsim-lizyarat-misr-hasab-al-shuhur.html)
 - [برنامج عشرة أيام مثالي في مصر](https://kemet-travel.com/ar/barnamaj-rehla-ila-misr-10-ayyam.html)
 - [أين تقيمون في مصر: أفضل الفنادق مدينةً بمدينة](https://kemet-travel.com/ar/afdal-fanadiq-misr-madina-bimadina.html)
 - [التنقل في مصر](https://kemet-travel.com/ar/al-tanaqul-fi-misr-qitarat-wa-rehlat-jawwiya.html)

@@ -61,7 +61,7 @@ Before any trip abroad, read your government's advice — the US State Departmen
 
 ## How a private journey works
 
-Everything is private: your own licensed Egyptologist, your own vehicle and driver, and hotels chosen for the room rather than the star rating. Tell us your dates and how many of you are travelling; we reply within one working day with a real itinerary and a clear price, with no obligation.
+Everything is private: your own licensed Egyptologist, your own vehicle and driver, and hotels chosen for the room rather than the star rating. Tell us your dates and how many of you are travelling; we reply within two hours with a real itinerary and a clear price, with no obligation.
 
 ## Frequently asked questions
 

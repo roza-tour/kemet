@@ -72,7 +72,7 @@ Five hours from Amsterdam or Brussels makes short trips worthwhile:
 
 Everything is private: your own licensed Egyptologist, your own vehicle and driver, and hotels chosen for the room rather than the star rating. Our prices are set in euros, so there is no exchange rate to watch; you can pay by PayPal, card or bank transfer. In Egypt, cards work in hotels and most restaurants; keep some Egyptian pounds for small purchases and tips.
 
-Tell us your dates, how many of you are travelling and the language you would like to be guided in; we reply within one working day with a real itinerary and a clear price, with no obligation.
+Tell us your dates, how many of you are travelling and the language you would like to be guided in; we reply within two hours with a real itinerary and a clear price, with no obligation.
 
 ## Frequently asked questions
 

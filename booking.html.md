@@ -17,7 +17,7 @@ The process
 
 ### Enquire — free and without obligation
 
-Send us your dates, interests and party size. We reply within one business day with an initial assessment and any questions. There is no charge and no commitment at this stage.
+Send us your dates, interests and party size. We reply within two hours with an initial assessment and any questions. There is no charge and no commitment at this stage.
 
 2
 

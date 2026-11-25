@@ -42,7 +42,7 @@ British passport holders can apply for Egypt's tourist e-visa online before they
 
 ## Book in time
 
-Half-term weeks are among the busiest of the year, for families from across Europe at once. The best Nile cabins, family rooms and connecting rooms go first: three to four months ahead is right; with less, what changes is which boat and which hotel. Tell us your school's dates and how many of you are travelling — we reply within one working day with a real itinerary and a clear price.
+Half-term weeks are among the busiest of the year, for families from across Europe at once. The best Nile cabins, family rooms and connecting rooms go first: three to four months ahead is right; with less, what changes is which boat and which hotel. Tell us your school's dates and how many of you are travelling — we reply within two hours with a real itinerary and a clear price.
 
 ## Frequently asked questions
 

@@ -82,6 +82,7 @@ description: "Когда ехать в Египет: жара, толпы, це�
 
 - [Пасха в Египте](https://kemet-travel.com/ru/pasha-v-egipte.html)
 - [Солнечное затмение 2027 в Луксоре](https://kemet-travel.com/ru/solnechnoe-zatmenie-2027-luksor.html)
+- [Египет по сезонам](https://kemet-travel.com/ru/luchshee-vremya-dlya-poezdki-v-egipet.html)
 
 [Эта страница на английском](https://kemet-travel.com/when-to-go.html)
 

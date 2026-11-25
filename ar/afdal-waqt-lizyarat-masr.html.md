@@ -88,6 +88,7 @@ description: "متى تزورون مصر: الحرارة والزحام والأ
 
 - [عيد الفصح وشم النسيم في مصر](https://kemet-travel.com/ar/al-fish-wa-sham-al-nasim-fi-masr.html)
 - [كسوف الشمس ٢٠٢٧ في الأقصر](https://kemet-travel.com/ar/kusuf-al-shams-2027-al-uqsur.html)
+- [مصر موسمًا بموسم](https://kemet-travel.com/ar/afdal-mawsim-lizyarat-misr-hasab-al-shuhur.html)
 
 [هذه الصفحة بالإنجليزية](https://kemet-travel.com/when-to-go.html)
 

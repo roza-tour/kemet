@@ -70,13 +70,9 @@ Sie liegen in einem Nationalpark, und die Regeln bestimmen, wo ein Boot anlanden
 
 Auf der Straße nach Hurghada oder per Flug ab Marsa Alam an den Tagen, an denen er geht – die Flüge sind begrenzt, weshalb der letzte Tag das Letzte ist, was wir festlegen.
 
-### Wie wird die Reihenfolge der Tage festgelegt?
-
-Die Tage unten stehen in ihrer natürlichen Reihenfolge, nicht in ihrer endgültigen. Ägyptens Inlandsflüge verkehren nicht jeden Tag auf jeder Strecke, Boote bleiben im Hafen, wenn der Wind auffrischt, und jede Stätte hat ihre eigenen Öffnungszeiten. Sobald Ihre Reisedaten feststehen, ordnen wir die Tage deshalb um die Flüge und die Öffnungszeiten herum neu.
-
 ### Was kostet die Reise?
 
-Einen Preis nennen wir hier mit Absicht nicht. Er hängt von Ihren Reisedaten ab, davon, was zu dieser Zeit geöffnet und verfügbar ist, und von der Größe Ihrer Gruppe. Senden Sie uns Ihre Daten, und wir antworten Ihnen innerhalb eines Werktags schriftlich mit der Route in ihrer endgültigen Reihenfolge und dem Preis.
+Einen Preis nennen wir hier mit Absicht nicht. Er hängt von Ihren Reisedaten ab, davon, was zu dieser Zeit geöffnet und verfügbar ist, und von der Größe Ihrer Gruppe. Senden Sie uns Ihre Daten, und wir antworten Ihnen innerhalb von zwei Stunden schriftlich mit der Route in ihrer endgültigen Reihenfolge und dem Preis.
 
 ## Weitere Programme
 

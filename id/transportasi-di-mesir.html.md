@@ -123,7 +123,7 @@ Dahabiya adalah perahu layar kayu tradisional Mesir yang digunakan untuk perjala
 Halaman terkait dalam bahasa ini, serta halaman asli dalam bahasa Inggris.
 
 - [Panduan Wisata Mesir](https://kemet-travel.com/id/panduan-wisata-mesir.html)
-- [Waktu Terbaik Berkunjung ke Mesir](https://kemet-travel.com/id/bulan-terbaik-berkunjung-ke-mesir.html)
+- [Mesir musim demi musim](https://kemet-travel.com/id/bulan-terbaik-berkunjung-ke-mesir.html)
 - [Itinerary Mesir 10 Hari yang Ideal](https://kemet-travel.com/id/itinerary-mesir-10-hari.html)
 - [Tempat Menginap di Mesir: Hotel Terbaik, Kota demi Kota](https://kemet-travel.com/id/tempat-menginap-terbaik-di-mesir.html)
 - [Panduan Makanan Mesir](https://kemet-travel.com/id/makanan-khas-mesir.html)

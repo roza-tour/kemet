@@ -5,7 +5,7 @@ language: fr
 description: "Quand partir en Égypte : d'octobre à avril, haute saison dans la vallée du Nil. Saison par saison au Caire, à Louxor, Assouan, Alexandrie et en mer Rouge."
 ---
 
-# Quand partir en Égypte
+# L'Égypte saison par saison
 
 La meilleure saison pour voyager en Égypte va d'octobre à avril, quand les températures de la vallée du Nil sont douces et les monuments agréables à explorer. Voici ce qui vous attend saison par saison et destination par destination.
 
@@ -122,6 +122,7 @@ Pages associées dans cette langue, et la page originale en anglais.
 - [Se déplacer en Égypte](https://kemet-travel.com/fr/se-deplacer-en-egypte-train-avion-croisiere.html)
 - [Guide de la cuisine égyptienne](https://kemet-travel.com/fr/cuisine-egyptienne-que-manger-en-egypte.html)
 - [Que mettre dans sa valise pour l'Égypte](https://kemet-travel.com/fr/que-mettre-dans-sa-valise-pour-l-egypte.html)
+- [Quand partir](https://kemet-travel.com/fr/quand-partir-en-egypte.html)
 
 [Cette page en anglais](https://kemet-travel.com/guides/best-time-to-visit-egypt.html)
 

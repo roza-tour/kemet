@@ -82,6 +82,7 @@ Panduan terperinci untuk kesemua dua belas bulan — suhu, kesesakan, harga dan 
 
 - [Easter di Mesir](https://kemet-travel.com/ms/easter-di-mesir.html)
 - [Gerhana matahari 2027 di Luxor](https://kemet-travel.com/ms/gerhana-matahari-2027-luxor.html)
+- [Mesir mengikut musim](https://kemet-travel.com/ms/waktu-terbaik-melawat-mesir.html)
 
 [Halaman ini dalam bahasa Inggeris](https://kemet-travel.com/when-to-go.html)
 

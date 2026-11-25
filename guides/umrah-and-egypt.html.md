@@ -76,7 +76,7 @@ October to April suits sightseeing. From June to August Cairo reaches 34–37°C
 
 ## How a private journey works
 
-Everything is private: your own licensed Egyptologist, in English, Arabic or any of our other guiding languages, your own vehicle and driver, and hotels chosen for the room rather than the star rating. Tell us your dates in and out of Saudi Arabia and how many of you are travelling; we reply within one working day with a real itinerary and a clear price, with no obligation.
+Everything is private: your own licensed Egyptologist, in English, Arabic or any of our other guiding languages, your own vehicle and driver, and hotels chosen for the room rather than the star rating. Tell us your dates in and out of Saudi Arabia and how many of you are travelling; we reply within two hours with a real itinerary and a clear price, with no obligation.
 
 If your Umrah dates are not fixed yet, we plan with provisional ones, and nothing is paid until they are. Our prices are set in euros, and you can pay by PayPal, card or bank transfer.
 

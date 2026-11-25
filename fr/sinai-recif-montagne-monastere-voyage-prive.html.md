@@ -72,13 +72,9 @@ Elle est régulière plutôt que technique, et c'est une vraie marche en montagn
 
 Pas dans les jours qui précèdent la montagne: l'altitude succède mal à une journée de plongée, et la règle des 24 heures minimum avant de prendre l'avion s'applique également. Dahab est l'endroit où plonger, et nous répartissons les jours de façon à respecter ce délai.
 
-### Comment l'ordre des journées est-il décidé?
-
-Les jours ci-dessous sont présentés dans leur ordre naturel, non dans leur ordre définitif. Les vols intérieurs égyptiens ne circulent pas tous les jours sur toutes les lignes, les bateaux restent à quai quand le vent se lève, et chaque site a ses propres horaires: une fois vos dates arrêtées, nous réorganisons les journées autour des vols et des heures d'ouverture qui les concernent.
-
 ### Combien cela coûte-t-il?
 
-Aucun tarif n'est affiché ici, et c'est volontaire. Il dépend de vos dates, de ce qui est ouvert et disponible à ce moment-là, et de la taille de votre groupe. Envoyez-nous vos dates: nous vous répondons par écrit, sous un jour ouvré, avec l'itinéraire dans son ordre définitif et le tarif.
+Aucun tarif n'est affiché ici, et c'est volontaire. Il dépend de vos dates, de ce qui est ouvert et disponible à ce moment-là, et de la taille de votre groupe. Envoyez-nous vos dates: nous vous répondons par écrit, sous deux heures, avec l'itinéraire dans son ordre définitif et le tarif.
 
 ## Autres programmes
 

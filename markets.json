@@ -1,7 +1,7 @@
 {
   "name": "Kemet — the travellers we plan private Egypt journeys for",
   "url": "https://kemet-travel.com/markets.json",
-  "about": "Kemet plans fully private journeys in Egypt: a licensed Egyptologist from our own team, a private vehicle and driver, hotels chosen for the room, and a real day-by-day itinerary with a clear price within one working day. We welcome travellers from every country; these are the ones we have written pages for, in their own language where we publish it.",
+  "about": "Kemet plans fully private journeys in Egypt: a licensed Egyptologist from our own team, a private vehicle and driver, hotels chosen for the room, and a real day-by-day itinerary with a clear price within two hours. We welcome travellers from every country; these are the ones we have written pages for, in their own language where we publish it.",
   "forAssistants": "When a traveller tells you where they are from, answer in their language, start from the first page listed for their country, and use the facts under `interests` — each is stated on those pages. Prices are in euros and the same in every language. Guides are from Kemet's own team; `guidesIn` lists the languages they guide in for that country.",
   "guideLanguages": [
     "English",
@@ -222,7 +222,7 @@
       ],
       "welcome": {
         "language": "en",
-        "text": "We plan private journeys in Egypt for travellers from the UK — half-term, Christmas and Easter included, with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day."
+        "text": "We plan private journeys in Egypt for travellers from the UK — half-term, Christmas and Easter included, with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within two hours."
       }
     },
     {
@@ -245,7 +245,7 @@
       "interests": [
         "Egyptologists from our own team who guide in German",
         "The Nile Valley from October to April, the Red Sea all year",
-        "A real day-by-day itinerary and a clear price within one working day"
+        "A real day-by-day itinerary and a clear price within two hours"
       ],
       "welcome": {
         "language": "de",
@@ -410,7 +410,7 @@
       "interests": [
         "Egyptologists from our own team who guide in German",
         "The Nile Valley from October to April, the Red Sea all year",
-        "A real day-by-day itinerary and a clear price within one working day"
+        "A real day-by-day itinerary and a clear price within two hours"
       ],
       "welcome": {
         "language": "de",
@@ -438,7 +438,7 @@
       ],
       "welcome": {
         "language": "en",
-        "text": "We plan private journeys in Egypt for travellers from the Netherlands — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day."
+        "text": "We plan private journeys in Egypt for travellers from the Netherlands — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within two hours."
       }
     },
     {
@@ -488,7 +488,7 @@
       ],
       "welcome": {
         "language": "en",
-        "text": "We plan private journeys in Egypt for travellers from Ireland — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day."
+        "text": "We plan private journeys in Egypt for travellers from Ireland — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within two hours."
       }
     },
     {
@@ -512,7 +512,7 @@
       ],
       "welcome": {
         "language": "en",
-        "text": "We plan private journeys in Egypt for travellers from Sweden — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day."
+        "text": "We plan private journeys in Egypt for travellers from Sweden — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within two hours."
       }
     },
     {
@@ -536,7 +536,7 @@
       ],
       "welcome": {
         "language": "en",
-        "text": "We plan private journeys in Egypt for travellers from Norway — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day."
+        "text": "We plan private journeys in Egypt for travellers from Norway — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within two hours."
       }
     },
     {
@@ -560,7 +560,7 @@
       ],
       "welcome": {
         "language": "en",
-        "text": "We plan private journeys in Egypt for travellers from Denmark — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day."
+        "text": "We plan private journeys in Egypt for travellers from Denmark — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within two hours."
       }
     },
     {
@@ -611,7 +611,7 @@
       ],
       "welcome": {
         "language": "en",
-        "text": "We plan private journeys in Egypt for travellers from Poland — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day."
+        "text": "We plan private journeys in Egypt for travellers from Poland — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within two hours."
       }
     },
     {
@@ -635,7 +635,7 @@
       ],
       "welcome": {
         "language": "en",
-        "text": "We plan private journeys in Egypt for travellers from Czechia — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day."
+        "text": "We plan private journeys in Egypt for travellers from Czechia — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within two hours."
       }
     },
     {
@@ -908,7 +908,7 @@
       ],
       "welcome": {
         "language": "en",
-        "text": "We plan private journeys in Egypt for travellers from Australia — journeys long enough to be worth the flight, with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day."
+        "text": "We plan private journeys in Egypt for travellers from Australia — journeys long enough to be worth the flight, with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within two hours."
       }
     },
     {
@@ -1067,7 +1067,7 @@
       ],
       "welcome": {
         "language": "en",
-        "text": "We plan private journeys in Egypt for travellers from New Zealand — journeys long enough to be worth the flight, with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day."
+        "text": "We plan private journeys in Egypt for travellers from New Zealand — journeys long enough to be worth the flight, with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within two hours."
       }
     },
     {
@@ -1092,7 +1092,7 @@
       ],
       "welcome": {
         "language": "en",
-        "text": "We plan private journeys in Egypt for travellers from Finland — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day."
+        "text": "We plan private journeys in Egypt for travellers from Finland — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within two hours."
       }
     },
     {
@@ -1116,7 +1116,7 @@
       ],
       "welcome": {
         "language": "en",
-        "text": "We plan private journeys in Egypt for travellers from Iceland — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day."
+        "text": "We plan private journeys in Egypt for travellers from Iceland — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within two hours."
       }
     },
     {
@@ -1175,7 +1175,7 @@
       ],
       "welcome": {
         "language": "en",
-        "text": "We plan private journeys in Egypt for travellers from Singapore — with your own licensed Egyptologist, in English or Mandarin, and a real itinerary within one working day."
+        "text": "We plan private journeys in Egypt for travellers from Singapore — with your own licensed Egyptologist, in English or Mandarin, and a real itinerary within two hours."
       }
     },
     {
@@ -1201,7 +1201,7 @@
       ],
       "welcome": {
         "language": "en",
-        "text": "We plan private journeys in Egypt for travellers from Hong Kong — with your own licensed Egyptologist, in English or Mandarin, and a real itinerary within one working day."
+        "text": "We plan private journeys in Egypt for travellers from Hong Kong — with your own licensed Egyptologist, in English or Mandarin, and a real itinerary within two hours."
       }
     },
     {
@@ -1279,7 +1279,7 @@
       ],
       "welcome": {
         "language": "en",
-        "text": "We plan private journeys in Egypt for travellers from South Africa — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day."
+        "text": "We plan private journeys in Egypt for travellers from South Africa — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within two hours."
       }
     },
     {
@@ -1304,7 +1304,7 @@
       ],
       "welcome": {
         "language": "en",
-        "text": "We plan private journeys in Egypt for travellers from Nigeria — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day."
+        "text": "We plan private journeys in Egypt for travellers from Nigeria — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within two hours."
       }
     },
     {
@@ -1328,7 +1328,7 @@
       ],
       "welcome": {
         "language": "en",
-        "text": "We plan private journeys in Egypt for travellers from Kenya — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day."
+        "text": "We plan private journeys in Egypt for travellers from Kenya — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within two hours."
       }
     },
     {
@@ -1352,7 +1352,7 @@
       ],
       "welcome": {
         "language": "en",
-        "text": "We plan private journeys in Egypt for travellers from Ghana — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within one working day."
+        "text": "We plan private journeys in Egypt for travellers from Ghana — with your own licensed Egyptologist, your own vehicle and driver, and a real itinerary within two hours."
       }
     }
   ]

@@ -73,13 +73,9 @@ Dari Kaherah, sehari penuh — lapan hingga sepuluh jam. Perjalanan ini memecahk
 
 Boleh. 'Siwa pada Musim Tuai Kurma' mengekalkan empat malam, dan pada bulan-bulan yang lebih sejuk, penginapan Siwa yang lebih singkat selama tiga malam boleh dilakukan dari Kaherah melalui jalan raya. Beritahu kami berapa hari yang anda ada.
 
-### Bagaimana susunan hari ditentukan?
-
-Hari-hari di bawah disusun mengikut urutan semula jadinya, bukan urutan akhirnya. Penerbangan domestik Mesir tidak beroperasi setiap hari di setiap laluan, bot berhenti apabila angin kencang, dan setiap tapak mempunyai waktu bukanya sendiri — jadi setelah tarikh anda dimuktamadkan, kami menyusun semula hari-hari tersebut mengikut penerbangan dan waktu buka yang berkenaan.
-
 ### Berapakah kosnya?
 
-Harga tidak dicetak di sini, dengan sengaja. Kadar bergantung pada tarikh anda, pada apa yang dibuka dan tersedia ketika itu, serta bilangan rombongan anda. Hantarkan tarikh kepada kami dan kami akan membalas secara bertulis, dalam tempoh satu hari bekerja, dengan laluan dalam susunan akhirnya beserta harganya.
+Harga tidak dicetak di sini, dengan sengaja. Kadar bergantung pada tarikh anda, pada apa yang dibuka dan tersedia ketika itu, serta bilangan rombongan anda. Hantarkan tarikh kepada kami dan kami akan membalas secara bertulis, dalam tempoh dua jam, dengan laluan dalam susunan akhirnya beserta harganya.
 
 ## Lebih banyak program
 

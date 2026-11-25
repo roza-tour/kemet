@@ -72,13 +72,9 @@ Da dicembre a febbraio (sulla vetta, dopo il tramonto, si scende sotto zero); da
 
 Non nei giorni che precedono la montagna: la quota segue male una giornata di immersioni, e vale anche la regola di almeno 24 ore prima di volare. Dahab è il luogo per immergersi, e disponiamo i giorni in modo da mantenere questo intervallo.
 
-### Come viene deciso l'ordine dei giorni?
-
-I giorni qui sotto seguono il loro ordine naturale, non quello definitivo. I voli interni in Egitto non operano ogni giorno su ogni tratta, le barche restano in porto quando si alza il vento e ogni sito ha i propri orari: una volta fissate le vostre date, riordiniamo i giorni in base ai voli e agli orari di apertura che cadono in quei giorni.
-
 ### Quanto costa?
 
-Qui non è indicato alcun prezzo, ed è una scelta precisa. La tariffa dipende dalle vostre date, da ciò che è aperto e disponibile in quel momento e dal numero di persone del gruppo. Inviateci le date e vi rispondiamo per iscritto, entro un giorno lavorativo, con l'itinerario nel suo ordine definitivo e il prezzo.
+Qui non è indicato alcun prezzo, ed è una scelta precisa. La tariffa dipende dalle vostre date, da ciò che è aperto e disponibile in quel momento e dal numero di persone del gruppo. Inviateci le date e vi rispondiamo per iscritto, entro due ore, con l'itinerario nel suo ordine definitivo e il prezzo.
 
 ## Altri programmi
 
