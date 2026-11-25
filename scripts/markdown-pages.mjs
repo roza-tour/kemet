@@ -33,6 +33,16 @@ import { join, relative, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { fromHtml } from "hast-util-from-html";
 
+// The contact page in each language (config/translation-groups.json →
+// company-contact), for the footer of every Markdown copy.
+const CONTACT = await (async () => {
+  try {
+    const reg = JSON.parse(await readFile(new URL("../src/config/translation-groups.json", import.meta.url), "utf8"));
+    const g = (reg.groups ?? []).find((x) => x.key === "company-contact") ?? {};
+    return Object.fromEntries(Object.entries(g).filter(([k]) => k !== "key"));
+  } catch { return {}; }
+})();
+
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const DIST = join(ROOT, "dist");
 const SITE = "https://kemet-travel.com";
@@ -233,7 +243,7 @@ for await (const file of htmlFiles(DIST)) {
     (meta("description") ? `description: ${yaml(meta("description"))}\n` : "") +
     `---\n\n${body}\n\n---\n\n` +
     `Kemet — private journeys in Egypt. This is the Markdown copy of ${own}\n` +
-    `Enquiries: ${SITE}/contact.html · Site index for assistants: ${SITE}/llms.txt\n`;
+    `Enquiries: ${SITE}/${CONTACT[String(lang).slice(0, 2)] ?? "contact.html"} · Site index for assistants: ${SITE}/${String(lang).slice(0, 2) !== "en" && CONTACT[String(lang).slice(0, 2)] ? `${String(lang).slice(0, 2)}/` : ""}llms.txt\n`;
 
   await writeFile(`${file}.md`, out);
   written++; bytesIn += html.length; bytesOut += out.length;

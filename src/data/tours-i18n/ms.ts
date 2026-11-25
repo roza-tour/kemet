@@ -933,7 +933,7 @@ export const ms: TourText[] = [
       {
         title: "Pagi tanpa selaman & berlepas",
         items: [
-          "Pagi di permukaan — selang 18–24 jam sebelum terbang sudah diambil kira",
+          "Pagi di permukaan — selang sekurang-kurangnya 24 jam sebelum terbang selepas selaman terakhir sudah diambil kira",
           "Pemindahan persendirian ke lapangan terbang",
         ],
       },

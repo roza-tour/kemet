@@ -43,7 +43,7 @@ export const de: TourText[] = [
     summary:
       "Unsere Signature-Reise: Kairo, Alexandria, mit dem Nachtzug nach Süden und drei Nächte auf dem Nil von Assuan nach Luxor — jede Schicht Ägyptens in einem Bogen.",
     overview:
-      "Das ist Ägypten in ganzer Breite, und im Tempo so angelegt, dass man es erlebt statt abhakt. Sie beginnen in Kairo mit den Schätzen des Ägyptischen Museums, verbringen einen Tag am Mittelmeer in Alexandria und fahren dann mit dem Nachtzug nach Assuan. Von dort trägt Sie eine dreitägige Nilkreuzfahrt flussabwärts vorbei an Kom Ombo und Edfu nach Luxor, wo die Tempel von Karnak und die Königsgräber des Westufers warten. Zurück in Kairo stehen die Pyramiden von Gizeh und die alten Gassen des islamischen Kairo. Gereist wird durchgehend privat, geführt von Ihrem eigenen Ägyptologen.",
+      "Das ist Ägypten in ganzer Breite, und im Tempo so angelegt, dass man es erlebt statt abhakt. Sie beginnen in Kairo mit den Schätzen des Ägyptischen Museums, verbringen einen Tag am Mittelmeer in Alexandria und fahren dann mit dem Nachtzug nach Assuan. Von dort trägt Sie eine Nilkreuzfahrt über drei Nächte flussabwärts vorbei an Kom Ombo und Edfu nach Luxor, wo die Tempel von Karnak und die Königsgräber des Westufers warten. Zurück in Kairo stehen die Pyramiden von Gizeh und die alten Gassen des islamischen Kairo. Gereist wird durchgehend privat, geführt von Ihrem eigenen Ägyptologen.",
     itinerary: [
       {
         title: "Kairo & das Ägyptische Museum",
@@ -1308,7 +1308,7 @@ export const de: TourText[] = [
       {
         title: "Flugpausen-Vormittag & Abreise",
         items: [
-          "Ein Vormittag an der Oberfläche — die Flugpause von 18 bis 24 Stunden ist eingeplant",
+          "Ein Vormittag an der Oberfläche — die Flugpause von mindestens 24 Stunden nach dem letzten Tauchgang ist eingeplant",
           "Privater Transfer zum Flughafen",
         ],
       },

@@ -1322,7 +1322,7 @@ export const COMPANY: Record<TranslatedLocale, CompanyTexts> = {
    "h1": "Tentang Kemet",
    "standfirst": "Untuk mereka bentuk perjalanan Mesir yang sepenuhnya persendirian dan dikaji secara mendalam, yang menghubungkan pelancong antarabangsa dengan kedalaman penuh negara ini — bukan sekadar monumennya, malah budaya, landskap dan sejarahnya yang masih hidup.",
    "visionHeading": "Wawasan kami",
-   "vision": "Menjadi syarikat pelancongan persendirian yang paling dipercayai di Mesir bagi pengunjung antarabangsa yang cerewet dan mahukan lebih daripada jadual perjalanan biasa.",
+   "vision": "Menjadi syarikat pelancongan persendirian yang paling dipercayai di Mesir bagi pengunjung antarabangsa yang tahu memilih dan mahukan lebih daripada jadual perjalanan biasa.",
    "valuesHeading": "Apa yang kami percayai",
    "values": [
     "Pengetahuan setempat, bukan kajian dari meja",

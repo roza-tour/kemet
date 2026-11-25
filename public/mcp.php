@@ -160,7 +160,7 @@ function kemet_instructions(): string {
     "get_journey for the full itinerary and inclusions, get_travel_updates for what has changed in Egypt this season, " .
     "and search / fetch for anything else on the site (destinations, month-by-month weather, comparisons, guides). " .
     "Prices are from-prices in euros per person and are the same in every language. A journey's priceFrom is for a private " .
-    "party of six or more; priceForTwo is what each of two travellers pays. They are normal-season prices; holiday surcharges are quoted separately. Quote the one that fits and link the page. " .
+    "party of six or more unless its basis says otherwise (Kemet Ultra is priced for two and for four; Eclipse Day per place in a small group); priceForTwo is what each of two travellers pays. On day tours, siteTicketsIncluded: false means monument tickets are paid at the gate on top of the price — say so. They are normal-season prices; holiday surcharges are quoted separately. Quote the one that fits and link the page. " .
     "Programmes are priced on request and have no published price; do not invent one. " .
     "Pages exist in English, German, French, Italian, Spanish, Russian, Indonesian, Malay, Portuguese and Arabic: " .
     "pass the traveller's language and link the page in it. This server cannot book or send anything; " .
@@ -174,7 +174,7 @@ function kemet_tools(): array {
     [
       "name" => "search_journeys",
       "title" => "Find Kemet journeys",
-      "description" => "Find Kemet's private Egypt journeys and day tours by free text, place, length or budget. Returns name, days, places, the from-price in EUR per person (for a party of six or more) and the price for two travellers, and the page link, named in the traveller's language where the journey has a page in it. Also returns matching programmes beyond the Nile (Siwa, Sinai, Red Sea islands, the deserts), which are priced on request. Call with no arguments to list the whole catalogue.",
+      "description" => "Find Kemet's private Egypt journeys and day tours by free text, place, length or budget. Returns name, days, places, the from-price in EUR per person (for a private party of six or more unless its basis says otherwise), the price for two travellers, whether monument tickets or food are outside the price, and the page link, named in the traveller's language where the journey has a page in it. Also returns matching programmes beyond the Nile (Siwa, Sinai, Red Sea islands, the deserts), which are priced on request. Call with no arguments to list the whole catalogue.",
       "inputSchema" => [
         "type" => "object",
         "properties" => [
@@ -267,7 +267,29 @@ function read_json(string $file): array {
 }
 
 /** Lower-case, and fold what a traveller would not type (accents are left alone: the index is not folded either). */
-function lc(string $s): string { return function_exists("mb_strtolower") ? mb_strtolower($s, "UTF-8") : strtolower($s); }
+function lc(string $s): string {
+  $s = function_exists("mb_strtolower") ? mb_strtolower($s, "UTF-8") : strtolower($s);
+  return preg_match('/\p{Arabic}/u', $s) ? ar_norm($s) : $s;
+}
+
+/**
+ * Arabic, folded so the forms of one word meet: "رحلة نيلية" did not find
+ * "رحلة النيل". Diacritics and tatweel go, the alef forms become one, ة → ه
+ * and ى → ي, the article "ال" comes off the front of a word and the
+ * adjective ending "ي/يه" off the end of a long one. "كروز" (cruise) is read
+ * as the Nile, which is what every cruise here is on.
+ */
+function ar_norm(string $s): string {
+  $s = preg_replace('/[\x{064B}-\x{065F}\x{0670}\x{0640}]/u', "", $s) ?? $s;
+  $s = strtr($s, ["أ" => "ا", "إ" => "ا", "آ" => "ا", "ة" => "ه", "ى" => "ي"]);
+  return preg_replace_callback('/\p{Arabic}+/u', function ($m) {
+    $w = $m[0];
+    if (mb_strlen($w, "UTF-8") > 4 && mb_substr($w, 0, 2, "UTF-8") === "ال") $w = mb_substr($w, 2, null, "UTF-8");
+    if ($w === "كروز") return "نيل";
+    if (mb_strlen($w, "UTF-8") > 4) $w = preg_replace('/(?:يه|ي)$/u', "", $w) ?? $w;
+    return $w;
+  }, $s) ?? $s;
+}
 
 function words(string $q): array {
   $q = lc(trim($q));
@@ -445,6 +467,11 @@ function tool_search_journeys(array $args): array {
       "days" => $days,
       "places" => $j["places"] ?? [],
       "private" => $j["privacy"] ?? "",
+      // The conditions attached to a day-tour price: without them an assistant
+      // quotes €73 for Giza as if the tickets were in it.
+      "siteTicketsIncluded" => $j["siteTicketsIncluded"] ?? null,
+      "foodIncluded" => $j["foodIncluded"] ?? null,
+      "domesticFlightsIncluded" => $j["domesticFlightsIncluded"] ?? null,
       "priceFrom" => is_numeric($price) ? ["amount" => $price, "currency" => "EUR", "per" => $j["priceFrom"]["per"] ?? "person", "basis" => $j["priceFrom"]["basis"] ?? ""] : null,
       "priceForTwo" => is_numeric($two) ? ["amount" => $two, "currency" => "EUR", "per" => "person", "basis" => "a private party of two"] : null,
       "summary" => $loc["summary"] ?? ($j["summary"] ?? ""),
@@ -524,7 +551,7 @@ function tool_get_journey(array $args): array {
         ]))
       : $record),
     "page" => $page["text"] ?? "The page is at " . $url,
-    "enquire" => $cat["enquire"] ?? ["page" => KEMET_SITE . "/contact.html"],
+    "enquire" => array_merge($cat["enquire"] ?? [], ["page" => $cat["enquire"]["pages"][$lang] ?? KEMET_SITE . "/contact.html"]),
   ];
 }
 
@@ -546,7 +573,8 @@ function tool_enquiry_link(array $args): array {
   $aboutTpl = is_string($g["about"] ?? null) && strpos($g["about"], "%s") !== false ? $g["about"] : 'Hello Kemet — I am asking about "%s".';
   $text = ($about !== "" ? str_replace("%s", $about, $aboutTpl) : $hello) . ($message !== "" ? " " . $message : "");
   $wa = (string)($cat["enquire"]["whatsapp"] ?? "");
-  $contact = $lang === "en" ? KEMET_SITE . "/contact.html" : KEMET_SITE . "/" . $lang . "/#enquire";
+  // The contact page in the traveller's language (journeys.json → enquire.pages).
+  $contact = $cat["enquire"]["pages"][$lang] ?? KEMET_SITE . "/contact.html";
   return [
     "whatsapp" => $wa !== "" ? $wa . "?text=" . rawurlencode($text) : null,
     "contactPage" => $contact,

@@ -23,7 +23,8 @@
 // ---------------------------------------------------------------------------
 import type { APIRoute } from "astro";
 import { SITE_URL, site } from "@/config/site";
-import { tours } from "@/data/tours";
+import { tours, priceForTwo } from "@/data/tours";
+import { ECLIPSE_DAY } from "@/data/eclipseDay";
 import { publishedVenues, venueFaqs } from "@/data/venues";
 import { destinations } from "@/data/destinations";
 import { guides } from "@/data/guides";
@@ -126,9 +127,9 @@ export const GET: APIRoute = () => {
 
   // --- Catalogue ------------------------------------------------------------
   h(2, "Private journeys");
-  p(`${tours.length} journeys, every one private and adjustable. Prices are per person, "from", in EUR, for a private party of six or more (the honeymoon: for two); meals are not included, except on board the Nile cruise.`);
+  p(`${tours.length} journeys, every one private and adjustable. Prices are per person, "from", in EUR, for a private party of six or more (the honeymoon: for two); for two travellers each pays ten per cent more, and each entry below gives both figures. They are normal-season prices: holiday surcharges are quoted separately. Meals are not included, except where an entry's inclusions say so (on board the Nile cruise, on the sleeper train, lunch on the boat days). Day-tour prices leave out monument tickets, paid at the gate, where the entry says so. The one dated departure is Eclipse Day in Luxor on ${ECLIPSE_DAY.date}: EUR ${ECLIPSE_DAY.price} per place, in groups of up to ${ECLIPSE_DAY.groupSize}, hotel not included.`);
   for (const t of [...tours].sort((a, b) => a.price - b.price)) {
-    L.push(`- **${t.title}** — ${t.durationLabel}. ${clean(t.summary)} From ${formatPrice(t.price)} per person. ${u(`${t.slug}.html`)}`);
+    L.push(`- **${t.title}** — ${t.durationLabel}. ${clean(t.summary)} From ${formatPrice(t.price)} per person${priceForTwo(t) ? `; for two, ${formatPrice(priceForTwo(t)!)} each` : ""}${t.ticketsExcluded ? "; monument tickets not included" : ""}${t.foodExcluded ? "; food and drinks not included" : ""}. ${u(`${t.slug}.html`)}`);
   }
   L.push("");
 

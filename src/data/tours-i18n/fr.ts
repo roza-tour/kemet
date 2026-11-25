@@ -820,7 +820,7 @@ export const fr: TourText[] = [
         "Troisième plongée en option l'après-midi, ou retour anticipé pour le spa",
       ]},
       { title: "Matinée sans plongée & départ", items: [
-        "Une matinée en surface — l'intervalle de 18 à 24 heures avant vol est intégré",
+        "Une matinée en surface — l'intervalle d'au moins 24 heures sans vol après la dernière plongée est intégré",
         "Transfert privé à l'aéroport",
       ]},
     ],

@@ -2423,7 +2423,7 @@ export const tours: Tour[] = [
         num: "04",
         title: "No-fly morning & departure",
         items: [
-          "A surface morning — the 18–24 h no-fly interval is built in",
+          "A surface morning — the no-fly interval of at least 24 hours after the last dive is built in",
           "Private airport transfer",
         ],
       },

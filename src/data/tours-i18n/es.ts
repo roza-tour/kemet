@@ -932,7 +932,7 @@ export const es: TourText[] = [
       {
         title: "Mañana sin inmersiones y salida",
         items: [
-          "Una mañana en superficie: el intervalo de 18–24 h sin volar ya está previsto",
+          "Una mañana en superficie: el intervalo de al menos 24 horas sin volar tras la última inmersión ya está previsto",
           "Traslado privado al aeropuerto",
         ],
       },

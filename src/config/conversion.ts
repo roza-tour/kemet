@@ -62,7 +62,7 @@ export const enquiryTypes: EnquiryType[] = [
   {
     id: "group-travel",
     label: "Group Travel",
-    description: "Special programmes for groups of 8 or more travellers.",
+    description: "Programmes for larger parties travelling together: families, friends, societies and companies.",
     icon: "𓀀",
     whatsappMessage:
       "Hello Kemet — I'd like to discuss a group Egypt journey.",

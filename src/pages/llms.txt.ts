@@ -12,7 +12,7 @@ import { ECLIPSE_DAY } from "@/data/eclipseDay";
 import { EASTER, EASTER_Y, fmtDay } from "@/data/easter";
 import type { APIRoute } from "astro";
 import { SITE_URL, site } from "@/config/site";
-import { tours } from "@/data/tours";
+import { tours, priceForTwo } from "@/data/tours";
 import { destinations } from "@/data/destinations";
 import { experiences } from "@/data/experiences";
 import { guides } from "@/data/guides";
@@ -174,7 +174,12 @@ export const GET: APIRoute = () => {
       item(
         t.title,
         `${t.slug}.html`,
-        `${t.durationLabel}. ${t.summary} From ${formatPrice(t.price)} per person.` +
+        `${t.durationLabel}. ${t.summary} From ${formatPrice(t.price)} per person` +
+          (priceForTwo(t) ? `; for two, ${formatPrice(priceForTwo(t)!)} each` : "") +
+          // The conditions on a day-tour price, as the page states them: €73
+          // for Giza is not the cost of the day when the tickets are extra.
+          (t.ticketsExcluded ? "; monument tickets not included, paid at the gate" : "") +
+          (t.foodExcluded ? "; food and drinks not included" : "") + "." +
           (t.flyOption ? ` Also available with flights in place of ${t.flyOption.replaces}, from ${formatPrice(flyPrice(t)!)}.` : "") +
           (t.comfort ? ` Walking: ${t.comfort.walking.toLowerCase()}. Nights: ${t.comfort.sleep}.${t.comfort.drives ? ` By road: ${t.comfort.drives}.` : ""}${t.comfort.early ? ` Early starts: ${t.comfort.early}.` : ""}` : ""),
       ),

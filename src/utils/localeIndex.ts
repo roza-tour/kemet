@@ -30,6 +30,24 @@ import { pt } from "@/data/i18n/pt";
 import { ar } from "@/data/i18n/ar";
 import { DEST_HUB } from "@/data/i18n/destinations/hub";
 import { EXP_HUB } from "@/data/i18n/experiences/hub";
+import { MAP_WORDS } from "@/config/journey-map";
+import { LOCAL_STRINGS } from "@/data/i18n/strings";
+import { ECLIPSE_DAY } from "@/data/eclipseDay";
+import { eclipseDayI18n } from "@/data/eclipseDay-i18n";
+import { ultraJourneys } from "@/data/ultra/journeys";
+import type { UltraText } from "@/data/ultra/types";
+import { de as ultraDe } from "@/data/ultra/de";
+import { it as ultraIt } from "@/data/ultra/it";
+import { es as ultraEs } from "@/data/ultra/es";
+import { fr as ultraFr } from "@/data/ultra/fr";
+import { ru as ultraRu } from "@/data/ultra/ru";
+import { id as ultraId } from "@/data/ultra/id";
+import { ms as ultraMs } from "@/data/ultra/ms";
+import { pt as ultraPt } from "@/data/ultra/pt";
+import { ar as ultraAr } from "@/data/ultra/ar";
+
+const ULTRA: Record<TranslatedLocale, UltraText> = { de: ultraDe, it: ultraIt, es: ultraEs, fr: ultraFr, ru: ultraRu, id: ultraId, ms: ultraMs, pt: ultraPt, ar: ultraAr };
+const noBrand = (t: string) => t.replace(/\s*\|\s*Kemet\s*$/i, "");
 
 const SETS: Record<TranslatedLocale, LocalizedPage[]> = { de, it, es, fr, ru, id, ms, pt, ar };
 const u = (path: string) => `${SITE_URL}/${path}`;
@@ -52,6 +70,13 @@ export function localePages(loc: TranslatedLocale): Array<[string, string, strin
     if (page) add(page.h1, route, page.standfirst);
     else if (g.key === "destinations") add(DEST_HUB[loc].title, route, DEST_HUB[loc].text);
     else if (g.key === "experiences") add(EXP_HUB[loc].title, route, EXP_HUB[loc].text);
+    // Pages rendered by their own templates, named as those pages are.
+    else if (g.key === "ultra") {
+      const lo4 = Math.min(...ultraJourneys.map((j) => j.price4));
+      const lo2 = Math.min(...ultraJourneys.map((j) => j.price2));
+      add(noBrand(ULTRA[loc].metaTitle), route, `${ULTRA[loc].metaDescription} From ${formatPrice(lo4)} per person for four, ${formatPrice(lo2)} for two.`);
+    }
+    else if (g.key === "design-journey") add(noBrand(MAP_WORDS[loc].metaTitle), route, MAP_WORDS[loc].metaDescription);
     // A page rendered by its own template (Kemet Ultra, the journey map, the
     // Oberoi Zahra): listed by address, with its English counterpart.
     else add(route.split("/").pop()!.replace(/\.html$/, "").replace(/-/g, " "), route, `English: ${u(publicPath(g.en))}`);
@@ -73,14 +98,32 @@ export function localeIndex(loc: TranslatedLocale): string {
     .map((t) => ({ t, tour: tours.find((x) => x.slug === t.slug)! }))
     .sort((a, b) => a.tour.price - b.tour.price);
   if (journeys.length) {
-    L.push(`## Journeys (${journeys.length}), from-prices in EUR per person`);
+    L.push(`## Journeys (${journeys.length + 1}), from-prices in EUR per person`);
     L.push("");
-    L.push("The from-price is for a private party of six or more; where a second figure is given it is what each of two travellers pays.");
+    L.push("The from-price is for a private party of six or more; where a second figure is given it is what each of two travellers pays. Normal-season prices: holiday surcharges are quoted separately. Day tours leave out monument tickets where the line says so.");
     L.push("");
     for (const { t, tour } of journeys) {
       const two = priceForTwo(tour);
-      L.push(`- [${one(t.text.title)}](${u(publicPath(t.route))}): ${t.text.durationLabel}. ${one(t.text.summary)} From ${formatPrice(tour.price)}${two ? `; for two, ${formatPrice(two)} each` : ""}. English: ${u(`${tour.slug}.html`)}`);
+      L.push(`- [${one(t.text.title)}](${u(publicPath(t.route))}): ${t.text.durationLabel}. ${one(t.text.summary)} From ${formatPrice(tour.price)}${two ? `; for two, ${formatPrice(two)} each` : ""}${tour.ticketsExcluded ? "; monument tickets not included" : ""}${tour.foodExcluded ? "; food and drinks not included" : ""}. English: ${u(`${tour.slug}.html`)}`);
     }
+    // The Nile cruise has a page of its own in each language rather than a
+    // translated journey page, so it was missing from this list.
+    const cruise = tours.find((x) => x.slug === "tour-nile-cruise");
+    const cruiseRoute = TRANSLATION_GROUPS.find((g) => g.key === "nile-cruise")?.[loc];
+    if (cruise && cruiseRoute) {
+      const two = priceForTwo(cruise);
+      const c = LOCAL_STRINGS[loc].cruise;
+      L.push(`- [${one(c.name)}](${u(publicPath(cruiseRoute))}): ${c.durationLabel}. ${one(c.productLede)} From ${formatPrice(cruise.price)}${two ? `; for two, ${formatPrice(two)} each` : ""}. English: ${u("tour-nile-cruise.html")}`);
+    }
+    L.push("");
+  }
+  // The one dated departure.
+  const eclipseRoute = TRANSLATION_GROUPS.find((g) => g.key === "guide-total-solar-eclipse-2027-luxor")?.[loc];
+  const E = eclipseDayI18n[loc as keyof typeof eclipseDayI18n];
+  if (eclipseRoute && E && new Date().toISOString().slice(0, 10) <= ECLIPSE_DAY.date) {
+    L.push(`## ${one(E.title)}`);
+    L.push("");
+    L.push(`- [${one(E.title)}](${u(publicPath(eclipseRoute))}): ${ECLIPSE_DAY.date}. ${one(E.lede)} EUR ${ECLIPSE_DAY.price} per place, groups of up to ${ECLIPSE_DAY.groupSize}, hotel not included.`);
     L.push("");
   }
   L.push("## Pages");

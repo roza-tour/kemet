@@ -287,7 +287,7 @@ export const venueFaqs: Array<{ q: string; a: string }> = [
   },
   {
     q: "What happens if the permit is refused?",
-    a: "Nothing is charged until a permit is granted, so a refusal costs you nothing. We will say at the first conversation how likely we think it is, and if we think a date or a site is unrealistic we will say so then rather than after a deposit. Where a refusal is possible we agree the second choice before applying, so a no does not become a lost occasion.",
+    a: "Nothing is charged until a permit is granted, so a refusal costs you nothing. We will say at the first conversation how likely we think it is, and if we think a date or a site is unrealistic we will say so then rather than after a deposit. Where a refusal is possible we agree the second choice before applying, so a no does not become a lost occasion. When the opening is part of a longer journey, such as Kemet Ultra, the journey is booked as usual and only the opening waits on its permit: if the permit is refused, the opening is taken off the price.",
   },
   {
     q: "How many people can these sites take?",

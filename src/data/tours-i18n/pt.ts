@@ -925,7 +925,7 @@ export const pt: TourText[] = [
       {
         title: "Manhã sem mergulho e partida",
         items: [
-          "Uma manhã na superfície — o intervalo de 18 a 24 horas antes de voar já está previsto",
+          "Uma manhã na superfície — o intervalo de pelo menos 24 horas sem voar após o último mergulho já está previsto",
           "Traslado privativo ao aeroporto",
         ],
       },

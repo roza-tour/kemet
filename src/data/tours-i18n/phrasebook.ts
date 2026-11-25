@@ -134,7 +134,7 @@ const de: TourPhrasebook = {
     "9 nights' accommodation — 4- or 5-star hotels and a deluxe Nile cruise":
       "9 Übernachtungen — 4- oder 5-Sterne-Hotels und eine Deluxe-Nilkreuzfahrt",
     "3-night full-board Nile cruise, Aswan to Luxor":
-      "Dreitägige Nilkreuzfahrt mit Vollpension, Assuan bis Luxor",
+      "Nilkreuzfahrt über drei Nächte mit Vollpension, Assuan bis Luxor",
     "Sleeper-train berths Cairo–Upper Egypt (both directions)":
       "Schlafwagenplätze Kairo–Oberägypten (in beiden Richtungen)",
     "6 nights' accommodation in 4- or 5-star hotels":
@@ -144,7 +144,7 @@ const de: TourPhrasebook = {
     "All shore excursions as private visits with your own guide":
       "Alle Landgänge als private Besichtigungen mit Ihrem eigenen Guide",
     "13 nights — 4- or 5-star hotels, a 3-night full-board Nile cruise and a Red Sea resort":
-      "13 Übernachtungen — 4- oder 5-Sterne-Hotels, dreitägige Nilkreuzfahrt mit Vollpension und ein Resort am Roten Meer",
+      "13 Übernachtungen — 4- oder 5-Sterne-Hotels, Nilkreuzfahrt über drei Nächte mit Vollpension und ein Resort am Roten Meer",
     "All domestic flights (Cairo–Aswan, Luxor–Sharm El Sheikh, Sharm–Cairo)":
       "Alle Inlandsflüge (Kairo–Assuan, Luxor–Scharm el-Scheich, Scharm–Kairo)",
     "Abu Simbel excursion by private vehicle":
@@ -167,9 +167,9 @@ const de: TourPhrasebook = {
     "Tipping (gratuities)": "Trinkgelder",
     "Personal expenses": "Persönliche Ausgaben",
     "9 nights' accommodation — hotels and a Nile cruise": "9 Übernachtungen — Hotels und eine Nilkreuzfahrt",
-    "3-night Nile cruise, Aswan to Luxor": "Dreitägige Nilkreuzfahrt, Assuan bis Luxor",
+    "3-night Nile cruise, Aswan to Luxor": "Nilkreuzfahrt über drei Nächte, Assuan bis Luxor",
     "6 nights' hotel accommodation": "6 Übernachtungen im Hotel",
-    "13 nights — hotels, a 3-night Nile cruise and a Red Sea resort": "13 Übernachtungen — Hotels, dreitägige Nilkreuzfahrt und ein Resort am Roten Meer",
+    "13 nights — hotels, a 3-night Nile cruise and a Red Sea resort": "13 Übernachtungen — Hotels, Nilkreuzfahrt über drei Nächte und ein Resort am Roten Meer",
     "2 nights' hotel accommodation in Luxor": "2 Übernachtungen im Hotel in Luxor",
     "2 nights' hotel accommodation": "2 Übernachtungen im Hotel",
     "3 nights' hotel accommodation": "3 Übernachtungen im Hotel",
@@ -177,7 +177,7 @@ const de: TourPhrasebook = {
     "4 nights' hotel accommodation": "4 Übernachtungen im Hotel",
     "1 night in a seafront hotel": "1 Übernachtung in einem Hotel direkt am Meer",
     "7 nights' accommodation — family suites or connecting rooms": "7 Übernachtungen — Familiensuiten oder Verbindungszimmer",
-    "8 nights — Nile-view suites and a 3-night Nile cruise": "8 Übernachtungen — Suiten mit Nilblick und eine dreitägige Nilkreuzfahrt",
+    "8 nights — Nile-view suites and a 3-night Nile cruise": "8 Übernachtungen — Suiten mit Nilblick und eine Nilkreuzfahrt über drei Nächte",
     "4 nights in a Red Sea resort": "4 Übernachtungen in einem Resort am Roten Meer",
     "3 nights in a Red Sea resort": "3 Übernachtungen in einem Resort am Roten Meer",
     "Sinai desert evening under the stars": "Abend unter Sternen in der Sinai-Wüste",
@@ -193,8 +193,8 @@ const de: TourPhrasebook = {
     "Meals, except on board the Nile cruise and lunch on the boat day": "Mahlzeiten, außer an Bord der Nilkreuzfahrt und dem Mittagessen am Bootstag",
     "Meals, except lunch on the boat day": "Mahlzeiten, außer dem Mittagessen am Bootstag",
     "Meals, except lunch on board on the boat days": "Mahlzeiten, außer dem Mittagessen an Bord an den Bootstagen",
-    "8 nights — Nile-view suites and a 3-night full-board Nile cruise": "8 Übernachtungen — Suiten mit Nilblick und eine dreitägige Nilkreuzfahrt mit Vollpension",
-    "13 nights — hotels, a 3-night full-board Nile cruise and a Red Sea resort": "13 Übernachtungen — Hotels, dreitägige Nilkreuzfahrt mit Vollpension und ein Resort am Roten Meer",
+    "8 nights — Nile-view suites and a 3-night full-board Nile cruise": "8 Übernachtungen — Suiten mit Nilblick und eine Nilkreuzfahrt über drei Nächte mit Vollpension",
+    "13 nights — hotels, a 3-night full-board Nile cruise and a Red Sea resort": "13 Übernachtungen — Hotels, Nilkreuzfahrt über drei Nächte mit Vollpension und ein Resort am Roten Meer",
     "A Zar music evening in Cairo (optional extra)": "Ein Zar-Musikabend in Kairo (optionale Zusatzleistung)",
     "Cooking with your own hands in a Cairo restaurant kitchen (optional extra)": "Selbst kochen in einer Restaurantküche in Kairo (optionale Zusatzleistung)",
     "Optional extras you choose to add — activities, drinks":
@@ -218,7 +218,7 @@ const de: TourPhrasebook = {
     "7 nights' accommodation — family suites or connecting rooms, 4- or 5-star":
       "7 Übernachtungen — Familiensuiten oder Verbindungszimmer, 4 oder 5 Sterne",
     "8 nights — Nile-view suites, 4- or 5-star hotels and a 3-night full-board cruise":
-      "8 Übernachtungen — Suiten mit Nilblick, 4- oder 5-Sterne-Hotels und eine dreitägige Nilkreuzfahrt mit Vollpension",
+      "8 Übernachtungen — Suiten mit Nilblick, 4- oder 5-Sterne-Hotels und eine Nilkreuzfahrt über drei Nächte mit Vollpension",
     "4 nights' accommodation in a 4- or 5-star Red Sea resort (half board)":
       "4 Übernachtungen in einem 4- oder 5-Sterne-Resort am Roten Meer (Halbpension)",
     "3 nights' accommodation in a 4- or 5-star Red Sea resort (half board)":

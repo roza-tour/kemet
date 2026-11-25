@@ -78,8 +78,11 @@ export const GET: APIRoute = () => {
           ...(t.priceBasisPax ? { basis: `a private party of ${t.priceBasisPax} or more` } : {}),
         },
         ...(two ? { priceForTwo: { amount: two, currency: "EUR", per: "person", basis: "a private party of two" } } : {}),
-        ...(t.flightsIncluded ? { domesticFlightsIncluded: true } : {}),
+        // Read from what the page lists as included, not from a flag set by
+        // hand on two of the five journeys that include flights.
+        ...(t.flightsIncluded || (t.included ?? []).some((x) => /domestic flights/i.test(x)) ? { domesticFlightsIncluded: true } : {}),
         ...(t.ticketsExcluded ? { siteTicketsIncluded: false } : {}),
+        ...(t.foodExcluded ? { foodIncluded: false } : {}),
         summary: t.summary,
         pages,
         ...(Object.keys(i18n).length ? { i18n } : {}),
@@ -167,6 +170,8 @@ export const GET: APIRoute = () => {
           "A journey that is not listed can still be planned — the catalogue is a starting point, not a limit.",
         enquire: {
           page: `${SITE_URL}/contact.html`,
+          // The contact page in each language (i18n/company).
+          pages: groupPages("company-contact"),
           whatsapp: `https://wa.me/${site.whatsapp}`,
           // The opening words of an enquiry, per language (%s is a journey's
           // name) — what the MCP server pre-fills in the WhatsApp link.

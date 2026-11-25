@@ -880,7 +880,7 @@ export const id: TourText[] = [
       { title: "Tiba & check dive", items: ["Penyambutan privat di bandara dan check-in di resort", "Sore hari: mencoba perlengkapan dan check dive di house reef"] },
       { title: "Sehari di perahu: Ras Mohammed", items: ["Dua penyelaman berpemandu — terumbu Shark & Yolanda bila kondisi memungkinkan", "Makan siang di geladak dan surface interval yang panjang di tempat-tempat berlabuh di taman nasional"] },
       { title: "Sehari di perahu: Selat Tiran", items: ["Dua drift dive berpemandu di rangkaian terumbu Tiran", "Pilihan penyelaman ketiga pada sore hari, atau kembali lebih awal untuk spa"] },
-      { title: "Pagi jeda terbang & kepulangan", items: ["Pagi di permukaan — jeda bebas terbang 18–24 jam sudah diperhitungkan", "Transfer privat ke bandara"] },
+      { title: "Pagi jeda terbang & kepulangan", items: ["Pagi di permukaan — jeda bebas terbang sekurang-kurangnya 24 jam setelah penyelaman terakhir sudah diperhitungkan", "Transfer privat ke bandara"] },
     ],
     comfort: { sleep: "Satu resort di Laut Merah untuk ketiga malam" },
     faqs: [

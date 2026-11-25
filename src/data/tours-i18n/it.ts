@@ -794,7 +794,7 @@ export const it: TourText[] = [
         "Terza immersione pomeridiana facoltativa, o rientro anticipato per la spa",
       ]},
       { title: "Mattina senza volo & partenza", items: [
-        "Una mattinata in superficie — l'intervallo di 18–24 ore senza volo è già previsto",
+        "Una mattinata in superficie — l'intervallo di almeno 24 ore senza volo dopo l'ultima immersione è già previsto",
         "Trasferimento privato in aeroporto",
       ]},
     ],
