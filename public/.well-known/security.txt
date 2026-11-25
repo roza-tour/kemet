@@ -1,0 +1,5 @@
+# Reporting a security problem with kemet-travel.com
+Contact: mailto:info@kemet-travel.com
+Expires: 2027-11-25T00:00:00.000Z
+Preferred-Languages: en, ar
+Canonical: https://kemet-travel.com/.well-known/security.txt

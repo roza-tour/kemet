@@ -956,3 +956,14 @@ export function localAlt(locale: SiteLocale | undefined, alt: string): string {
   }
   return alt;
 }
+
+/**
+ * Numbers a template prints itself (a section's "01", "Day 3"), in the digits
+ * the page's language reads. The Arabic pages write their prices and dates in
+ * Arabic-Indic digits; the template's own numbering was Western, so 89 of the
+ * 121 Arabic pages mixed the two on one screen.
+ */
+export function localDigits(locale: SiteLocale | undefined, value: string | number): string {
+  const text = String(value);
+  return locale === "ar" ? text.replace(/[0-9]/g, (d) => String.fromCharCode(0x660 + Number(d))) : text;
+}

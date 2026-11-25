@@ -36,7 +36,7 @@ import type { TranslatedLocale } from "@/config/i18n";
 import { canonical, publicPath, whatsappLink, mailtoLink } from "@/utils/links";
 import { MAP_WORDS, MAP_ROUTE } from "@/config/journey-map";
 import { orgRef, videoObject, thingLd } from "@/schemas/jsonld";
-import { LOCAL_STRINGS } from "@/data/i18n/strings";
+import { LOCAL_STRINGS, localDigits } from "@/data/i18n/strings";
 import EclipseDay from "@/components/EclipseDay.astro";
 import { eclipseDayEvent } from "@/schemas/eclipseEvent";
 import Placeholder from "@/components/Placeholder.astro";
@@ -271,9 +271,9 @@ if (isEclipse) jsonld.push(...eclipseDayEvent(locale, route, page.photos?.[0]?.s
         <div class="lz-sections">
           {cruiseDays.map((d) => (
             <div class="lz-sec reveal">
-              <span class="lz-n">{d.num}</span>
+              <span class="lz-n">{localDigits(locale, d.num)}</span>
               <div>
-                <h3>{P.dayLabel} {Number(d.num)} — {d.title}</h3>
+                <h3>{P.dayLabel} {localDigits(locale, Number(d.num))} — {d.title}</h3>
                 <ul class="lz-items">{d.items.map((x) => <li>{x}</li>)}</ul>
               </div>
             </div>
@@ -301,7 +301,7 @@ if (isEclipse) jsonld.push(...eclipseDayEvent(locale, route, page.photos?.[0]?.s
       <div class="lz-sections">
         {page.sections.map((s, i) => (
           <div class="lz-sec reveal">
-            <span class="lz-n">{String(i + 1).padStart(2, "0")}</span>
+            <span class="lz-n">{localDigits(locale, String(i + 1).padStart(2, "0"))}</span>
             <div>
               <h2>{s.title}</h2>
               {s.body && s.body.split(/\n\n+/).map((para) => <p>{para}</p>)}

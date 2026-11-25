@@ -59,11 +59,13 @@ const homeRoute = locale === "en" ? "index.html" : `${locale}/index.html`;
 const pageUrl = canonical(route);
 
 const jsonld: Record<string, unknown>[] = [
-  // The named reviewer is claimed on the English page only: nobody has read
-  // the nine translations as a reviewer, and markup must not say otherwise.
+  // No named reviewer in the markup: this page shows no byline in any
+  // language, and markup must not claim one the reader cannot see
+  // (scripts/audit.mjs → reviewer-unseen found the English page doing so).
   (() => {
     const { reviewedBy, ...rest } = answerPageSchema({ route, name: T.metaTitle, description: T.metaDescription, question: T.question, answer });
-    return { ...rest, ...(locale === "en" ? { reviewedBy } : {}), inLanguage: meta.tag };
+    void reviewedBy;
+    return { ...rest, inLanguage: meta.tag };
   })(),
   {
     "@context": "https://schema.org",

@@ -106,12 +106,18 @@ const LOCAL_SEASON_ROUTES: Partial<Record<SiteLocale, Partial<Record<SeasonKey, 
   ms: { ...christmasIn("ms/cuti-hujung-tahun-ke-mesir.html"), ...ramadanIn("ms/ramadan-di-mesir.html"), ...easterIn("ms/easter-di-mesir.html") },
   ar: { ...ramadanIn("ar/ramadan-fi-masr.html"), ...easterIn("ar/al-fish-wa-sham-al-nasim-fi-masr.html") },
 };
-const keys = [...new Set(seasonalCalendar.map((w) => w.key))];
+// An occasion is shown where it is an occasion. US Thanksgiving was on the
+// German, Arabic and every other language's pages ("Thanksgiving-Woche"),
+// which marks a holiday those readers do not have; it is on the English
+// pages only. The season's own theme shows underneath, as on any other week.
+const ENGLISH_ONLY = new Set(["thanksgiving"]);
+const calendar = locale === "en" ? seasonalCalendar : seasonalCalendar.filter((w) => !ENGLISH_ONLY.has(w.key));
+const keys = [...new Set(calendar.map((w) => w.key))];
 const seasonDefs = keys.map((k) => {
-  const w = seasonalCalendar.find((x) => x.key === k)!;
+  const w = calendar.find((x) => x.key === k)!;
   return [w.theme, w.slug, text[k].label, text[k].note, LOCAL_SEASON_ROUTES[locale]?.[k] ?? w.href ?? ""];
 });
-const seasonWindows = seasonalCalendar.map((w) => {
+const seasonWindows = calendar.map((w) => {
   const i = keys.indexOf(w.key);
   const row: (string | number)[] = [i, w.start, w.end, w.priority, localDates(w.eventFrom, w.eventTo, w.eventDate ?? "")];
   if (w.theme !== seasonDefs[i][0]) row.push(w.theme);

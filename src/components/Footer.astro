@@ -37,8 +37,11 @@ const destHub = isEn ? "" : destHubRoute(locale as TranslatedLocale);
 const localeLinks = localeItems.flatMap((i) =>
   i.href === destHub ? [{ href: i.href, label: i.label }] : i.children ?? []);
 const englishWayOut = localeItems.find((i) => !i.children);
-const enquire = mailtoLink("Kemet enquiry");
-const wa = whatsappLink("Hello Kemet — I'd like to plan a journey to Egypt.");
+// The message a reader's WhatsApp or mail opens with is in the page's own
+// language: a German reader's chat used to begin "Hello Kemet" in English.
+const hello = isEn ? "" : LOCAL_STRINGS[locale as TranslatedLocale].ui.mcpHello;
+const enquire = isEn ? mailtoLink("Kemet enquiry") : mailtoLink("Kemet", `${hello}\n\n`);
+const wa = whatsappLink(isEn ? "Hello Kemet — I'd like to plan a journey to Egypt." : hello);
 
 const socials = Object.entries(company.socialProfiles ?? {})
   .filter(([, url]) => typeof url === "string" && /^https:\/\//.test(url))

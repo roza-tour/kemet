@@ -14,9 +14,9 @@
 //
 // EXPECTED FINDINGS — these are correct, do not "fix" them:
 //   noindex               404.html only.
-//   canonical-not-self    404.html (points at the home page) and the activities
-//                         duplicate of the balloon experience, which is
-//                         deliberately consolidated onto the experiences page.
+//   canonical-not-self    the activities duplicates of the balloon and felucca
+//                         experiences, deliberately consolidated onto the
+//                         experiences pages. (404.html declares no canonical.)
 //   not-in-sitemap        that same consolidated duplicate. A URL cannot both
 //                         be submitted for indexing and point somewhere else.
 //   desc-long             ~20 pages sit at 159-168 characters against a 158
@@ -89,7 +89,9 @@ for (const f of html) {
 
   // --- canonical ----------------------------------------------------------
   const can = [...s.matchAll(/<link[^>]+rel=["']canonical["'][^>]*href=["']([^"']+)["']/gi)].map(m => m[1]);
-  if (!can.length) add('no-canonical', f);
+  // A page that asks not to be indexed declares no canonical, on purpose
+  // (layouts/Base.astro): only an indexable page without one is a finding.
+  if (!can.length && !robots.some((r) => /noindex|none/i.test(r))) add('no-canonical', f);
   if (can.length > 1) add('multi-canonical', `${f}  ${can.join(' | ')}`);
   if (can[0]) {
     canonOf[f] = can[0];
@@ -338,3 +340,86 @@ for (const k of keys) {
 console.log('\nSchema types in use:');
 for (const [t, fs] of Object.entries(schemaTypes).sort((a,b) => b[1].size - a[1].size))
   console.log(`   ${String(fs.size).padStart(4)}  ${t}`);
+
+
+// ===========================================================================
+// TRUST CHECKS — added 25 Nov 2026.
+//
+// Two outside audits found defects this script had been passing for weeks,
+// because it asked easier questions than a search engine does. Each check
+// below is one of those defects, asked properly:
+//
+//   island          a translated page that cannot be reached from its own
+//                   language's home page by same-language links. The old
+//                   orphan test counted a link from ANY page, so a language
+//                   chip on the Russian page "linked" the German one.
+//   reviewer-unseen structured data names a reviewer the page does not show.
+//   org-duplicate   a second, bare TravelAgency node beside the organisation.
+//   alt-english     a translated page carrying an English page's alt text.
+//   faq-unseen      a marked-up question that is not on the page.
+//
+// All five should print "ok". None has an expected exception.
+// ===========================================================================
+{
+  const T = {}; const flag = (k, v) => (T[k] ||= []).push(v);
+  const langOf = (f) => { const m = /^([a-z]{2})\//.exec(f); return m && LOCALES.includes(m[1]) && m[1] !== 'en' ? m[1] : 'en'; };
+  const mainOf = (s) => { const i = s.indexOf('<main'); const j = s.indexOf('</main>'); return i >= 0 && j > i ? s.slice(i, j) : ''; };
+  const textOf = (s) => s.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;|&apos;/g, "'")
+    .replace(/&[a-z#0-9]+;/gi, ' ').replace(/\s+/g, ' ');
+  const norm = (x) => x.toLowerCase().replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
+  const raw = {}; for (const f of html2) raw[f] = readFileSync(f, 'utf8');
+
+  // island
+  const links = {};
+  for (const f of html2) {
+    const out = new Set();
+    for (const m of raw[f].matchAll(/<a\b[^>]*\bhref="([^"#?]+)/g)) {
+      let h = m[1];
+      if (h.startsWith(SITE)) h = h.slice(SITE.length);
+      else if (/^[a-z]+:|^\/\//i.test(h)) continue;
+      const t = toFile2(h.startsWith('/') ? h : `${f.includes('/') ? f.slice(0, f.lastIndexOf('/') + 1) : ''}${h}`);
+      if (raw[t] !== undefined) out.add(t);
+    }
+    links[f] = out;
+  }
+  for (const l of LOCALES.filter((x) => x !== 'en')) {
+    const home = `${l}/index.html`;
+    if (raw[home] === undefined) continue;
+    const seen = new Set([home]); const queue = [home];
+    while (queue.length) for (const y of links[queue.pop()]) if (langOf(y) === l && !seen.has(y)) { seen.add(y); queue.push(y); }
+    for (const f of html2) if (langOf(f) === l && !seen.has(f)) flag('island', f);
+  }
+
+  const enAlts = new Set();
+  for (const f of html2) if (langOf(f) === 'en') for (const m of mainOf(raw[f]).matchAll(/<img[^>]*\balt="([^"]+)"/g)) enAlts.add(m[1]);
+
+  for (const f of html2) {
+    const s = raw[f]; const visible = norm(textOf(s.slice(s.indexOf('<body'))));
+    const blocks = [...s.matchAll(/<script[^>]+application\/ld\+json[^>]*>([\s\S]*?)<\/script>/gi)].map((m) => { try { return JSON.parse(m[1]); } catch { return null; } }).filter(Boolean);
+    const walk = (n, fn) => { if (Array.isArray(n)) n.forEach((x) => walk(x, fn)); else if (n && typeof n === 'object') { fn(n); Object.values(n).forEach((x) => walk(x, fn)); } };
+    const reviewers = new Set(); let bare = 0; const questions = [];
+    walk(blocks, (n) => {
+      if (n.reviewedBy && n.reviewedBy.name) reviewers.add(n.reviewedBy.name);
+      if (n['@type'] === 'TravelAgency' && !n['@id']) bare++;
+      if (n['@type'] === 'Question' && typeof n.name === 'string') questions.push(n.name);
+    });
+    for (const name of reviewers) if (!visible.includes(norm(name))) flag('reviewer-unseen', `${f}  ${name}`);
+    if (bare) flag('org-duplicate', f);
+    for (const q of questions) if (!visible.includes(norm(q))) flag('faq-unseen', `${f}  "${q.slice(0, 70)}"`);
+    if (langOf(f) !== 'en') {
+      for (const m of mainOf(s).matchAll(/<img[^>]*\balt="([^"]+)"/g)) {
+        if (enAlts.has(m[1]) && /[a-z]{4}/.test(m[1])) { flag('alt-english', `${f}  "${m[1].slice(0, 60)}"`); break; }
+      }
+    }
+  }
+
+  console.log('\nTrust checks:');
+  for (const k of ['island', 'reviewer-unseen', 'org-duplicate', 'alt-english', 'faq-unseen']) {
+    const v = T[k];
+    if (!v?.length) { console.log(`  ok    ${k}`); continue; }
+    console.log(`\n>> ${k.toUpperCase()}  (${v.length})`);
+    for (const l of v.slice(0, 10)) console.log(`     ${l}`);
+    if (v.length > 10) console.log(`     … ${v.length - 10} more`);
+  }
+}

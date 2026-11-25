@@ -24,7 +24,7 @@ import type { TranslatedLocale } from "@/config/i18n";
 import { LOCALE_META } from "@/config/i18n";
 import { TOUR_PHRASEBOOK } from "@/data/tours-i18n/phrasebook";
 import { sharedShipNote, priceForTwo } from "@/data/tours";
-import { LOCAL_STRINGS, localAlt } from "@/data/i18n/strings";
+import { LOCAL_STRINGS, localAlt, localDigits } from "@/data/i18n/strings";
 import { orgRef } from "@/schemas/jsonld";
 import { ui, placeName } from "@/config/ui";
 import { formatPriceIn } from "@/utils/format";
@@ -230,7 +230,7 @@ const jsonld: Record<string, unknown>[] = [
       <p class="lz-lede">{text.summary}</p>
 
       <div class="lz-sec reveal" style="border-bottom:0">
-        <span class="lz-n">01</span>
+        <span class="lz-n">{localDigits(locale, "01")}</span>
         <div>
           <h2>{p.h.overview}</h2>
           <p>{text.overview}</p>
@@ -243,9 +243,9 @@ const jsonld: Record<string, unknown>[] = [
       <div class="lz-sections">
         {days.map((d) => (
           <div class="lz-sec reveal">
-            <span class="lz-n">{d.num}</span>
+            <span class="lz-n">{localDigits(locale, d.num)}</span>
             <div>
-              <h3 class="lt-day">{d.label} {Number(d.num)} — {d.title}{d.native && locale !== "ar" && <span class="native" lang="ar" dir="rtl">{d.native}</span>}</h3>
+              <h3 class="lt-day">{d.label} {localDigits(locale, Number(d.num))} — {d.title}{d.native && locale !== "ar" && <span class="native" lang="ar" dir="rtl">{d.native}</span>}</h3>
               {d.items
                 ? <ul class="lt-items">{d.items.map((i) => <li>{i}</li>)}</ul>
                 : <p class="lt-text">{d.text}</p>}
