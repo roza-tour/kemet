@@ -24,7 +24,7 @@
 // ---------------------------------------------------------------------------
 import { readFile, readdir } from "node:fs/promises";
 import { join, extname } from "node:path";
-import { tours, priceForTwo } from "../src/data/tours.ts";
+import { tours, priceForTwo, TWO_TRAVELLERS_UPLIFT } from "../src/data/tours.ts";
 import { ultraJourneys, ULTRA_PER_DAY } from "../src/data/ultra/journeys.ts";
 
 const DIST = new URL("../dist/", import.meta.url).pathname;
@@ -76,6 +76,12 @@ const perDay = multi.filter((t) => t.priceBasisPax === 6).map((t) => t.price / d
 // The computed per-day range the cost page prints, so it is not "unexplained".
 KNOWN.set(Math.round(Math.min(...perDay)), "computed per-day floor, printed on the cost page");
 KNOWN.set(Math.round(Math.max(...perDay)), "computed per-day ceiling, printed on the cost page");
+// The same range for a party of two, and the seven-day journey for the pair —
+// both printed on the cost page, both computed there the same way.
+KNOWN.set(Math.round(Math.round(Math.min(...perDay)) * (1 + TWO_TRAVELLERS_UPLIFT)), "computed per-day floor for two travellers, cost page");
+KNOWN.set(Math.round(Math.round(Math.max(...perDay)) * (1 + TWO_TRAVELLERS_UPLIFT)), "computed per-day ceiling for two travellers, cost page");
+const week = tours.find((t) => t.slug === "tour-7-day");
+if (week && priceForTwo(week)) KNOWN.set(priceForTwo(week) * 2, "seven-day journey for a pair, total — cost page");
 
 async function walk(dir) {
   const out = [];

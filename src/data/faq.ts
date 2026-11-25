@@ -22,7 +22,7 @@ export interface FaqGroup {
 // Authored, grounded in real catalogue data (prices per person, EUR).
 const planningAndBooking: Faq[] = [
   {
-    q: "How many days do I need in Egypt?",
+    q: "How many days do you need in Egypt?",
     a: "A week is the most popular length for a first visit — enough for Cairo and Giza, Luxor and Aswan, and a stretch of the Nile at an unhurried pace. Five days covers the essentials if time is short; ten days to two weeks lets you add Abu Simbel, Alexandria or the Red Sea without rushing. Kemet's private journeys range from 3-day short breaks to a 14-day grand tour, and because every itinerary is built from scratch, the length is matched to you rather than a fixed package.",
   },
   {

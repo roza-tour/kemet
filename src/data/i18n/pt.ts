@@ -27,7 +27,7 @@ import { destinationPages } from "./destinations/build";
 import { ptDestinations } from "./destinations/pt";
 import { ptZahra } from "./zahra";
 import { tours } from "@/data/tours";
-import { BUILD_YEAR } from "@/utils/format";
+import { REVIEWED_YEAR } from "@/utils/format";
 import { beforeDate, ECLIPSE_2027 } from "@/data/timeboxed";
 
 // Read from the journeys, so the figures follow the catalogue when prices move.
@@ -245,7 +245,7 @@ export const pt: LocalizedPage[] = [
   {
     groupId: "cost",
     symbol: "sun",
-    title: `Quanto custa viajar para o Egito? (${BUILD_YEAR}) | Kemet`,
+    title: `Quanto custa viajar para o Egito? (${REVIEWED_YEAR}) | Kemet`,
     description:
       "Quanto custa de verdade uma viagem privada ao Egito — as faixas reais do mercado, os fatores que mexem no preço e onde a Kemet está.",
     keywords:

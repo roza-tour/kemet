@@ -162,7 +162,7 @@ export const GET: APIRoute = () => {
   for (const x of activities) {
     if (!x.slug) continue;
     docs.push({
-      u: `activities/${x.slug}.html`, t: x.title, s: "Activity", d: clean(x.shortSummary),
+      u: x.canonicalTo ?? `activities/${x.slug}.html`, t: x.title, s: "Activity", d: clean(x.shortSummary),
       k: terms(x.title, x.shortSummary, "activity thing to do"),
     });
   }

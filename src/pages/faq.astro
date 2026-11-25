@@ -74,7 +74,7 @@ const keywords = [
               </div>
             </div>
             {/* The answer box above already answers "how many days": not again straight under it. */}
-            <Faq items={group.items.filter((f) => f.q !== "How many days do I need in Egypt?")} heading="" />
+            <Faq items={group.items.filter((f) => f.q !== ANSWER_Q)} heading="" />
           </div>
         </Fragment>
       ))}

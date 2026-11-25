@@ -20,10 +20,10 @@ import Faq from "@/components/Faq.astro";
 import TourCard from "@/components/TourCard.astro";
 import StandardOfTravel from "@/components/trust/StandardOfTravel.astro";
 import LeadCapture from "@/components/conversion/LeadCapture.astro";
-import { tours } from "@/data/tours";
+import { tours, priceForTwo, TWO_TRAVELLERS_UPLIFT } from "@/data/tours";
 import { bookingTerms } from "@/data/booking";
 import { breadcrumb, answerPageSchema } from "@/schemas/jsonld";
-import { formatPrice, BUILD_YEAR } from "@/utils/format";
+import { formatPrice, REVIEWED_YEAR } from "@/utils/format";
 
 const ROUTE = "egypt-tour-cost.html";
 
@@ -58,6 +58,13 @@ const nightsOf = (label: string) => {
 const perDay = multiDay.filter((t) => t.priceBasisPax === 6).map((t) => t.price / nightsOf(t.durationLabel));
 const perDayLow = Math.round(Math.min(...perDay));
 const perDayHigh = Math.round(Math.max(...perDay));
+// The same range for a party of two (data/tours.ts → priceForTwo), and the
+// seven-day journey for two, so the page states Kemet's own figures beside
+// the market's and a reader does not have to work them out.
+const perDayLowTwo = Math.round(perDayLow * (1 + TWO_TRAVELLERS_UPLIFT));
+const perDayHighTwo = Math.round(perDayHigh * (1 + TWO_TRAVELLERS_UPLIFT));
+const sevenDay = tours.find((t) => t.slug === "tour-7-day");
+const weekTwo = sevenDay ? priceForTwo(sevenDay) : undefined;
 
 /** What actually moves the number, in the order it moves it. */
 const drivers = [
@@ -116,7 +123,7 @@ const bands = [
     range: "€200–450",
     per: "per person, per day",
     body:
-      `Where Kemet sits. Your own licensed Egyptologist, your own vehicle and driver, hotels chosen for the room rather than the star rating, and an itinerary written for you. Kemet's own multi-day journeys work out at ${formatPrice(perDayLow)}–${perDayHigh} per person per day for a party of six or more, at the entry to this band rather than the middle of it; the figure climbs with hotel tier and charter, and per-person cost falls as the party grows.`,
+      `Where Kemet sits. Your own licensed Egyptologist, your own vehicle and driver, hotels chosen for the room rather than the star rating, and an itinerary written for you. Kemet's own multi-day journeys work out at ${formatPrice(perDayLow)}–${perDayHigh} per person per day for a party of six or more, and ${formatPrice(perDayLowTwo)}–${perDayHighTwo} for two travellers: around the floor of this band, and for larger parties just under it. The figure climbs with hotel tier and charter, and per-person cost falls as the party grows.`,
     us: true,
   },
   {
@@ -144,7 +151,7 @@ const faqs = [
   },
   {
     q: "How much should I budget for a week in Egypt?",
-    a: `At the private, tailor-made level a week for two people typically lands between €2,800 and €6,000 in total, depending on hotels, season and whether you fly or drive between cities. That covers your Egyptologist throughout, all entrance fees and private transfers. International flights, the entry visa and gratuities sit outside it.`,
+    a: `At the private, tailor-made level a week for two people typically lands between €2,800 and €6,000 in total, depending on hotels, season and whether you fly or drive between cities. That covers your Egyptologist throughout, all entrance fees and private transfers. International flights, the entry visa and gratuities sit outside it.${weekTwo ? ` Kemet's own seven-day journey is ${formatPrice(weekTwo)} per person for two travellers, ${formatPrice(weekTwo * 2)} for the pair; meals are not included.` : ""}`,
   },
   {
     q: "What is included in a Kemet price?",
@@ -193,7 +200,7 @@ const jsonld: Record<string, unknown>[] = [
 ];
 ---
 <Base
-  title={`How Much a Private Egypt Tour Costs (${BUILD_YEAR}) | Kemet`}
+  title={`How Much a Private Egypt Tour Costs (${REVIEWED_YEAR}) | Kemet`}
   description="What a private, tailor-made Egypt journey costs per person per day, the five things that move the price, and exactly where Kemet sits in the market."
   active={ROUTE}
   jsonld={jsonld}

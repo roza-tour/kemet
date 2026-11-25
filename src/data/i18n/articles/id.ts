@@ -400,7 +400,7 @@ export const idArticles: ArtText[] = [
       { label: "Kairo → Luksor (pesawat)", value: "~55 menit" },
       { label: "Kairo → Luksor (kereta Talgo)", value: "~9–10 jam" },
       { label: "Luksor → Aswan (pelayaran)", value: "3–4 malam" },
-      { label: "Aswan → Abu Simbel (darat)", value: "3,5 jam sekali jalan" },
+      { label: "Aswan → Abu Simbel (darat)", value: "3 jam sekali jalan" },
       { label: "Jalur Metro Kairo", value: "3 jalur, ~90 stasiun" },
       { label: "Pelayaran Nil berangkat dari", value: "Luksor (ke selatan) atau Aswan (ke utara)" },
     ],
@@ -412,7 +412,7 @@ export const idArticles: ArtText[] = [
       { title: "Metro Kairo", body: "Metro Kairo bersih, murah, dan efisien untuk menjelajahi kota pada poros utara–selatan. Tiga jalur dan hampir 90 stasiun menghubungkan Heliopolis, pusat kota, Lapangan Tahrir, Giza, dan pinggiran selatan. Sekali perjalanan berbiaya EGP 10–20 tergantung jarak (tarif 2026). Gerbong khusus wanita beroperasi di bagian depan dan belakang setiap kereta.\n\nMetro tidak menjangkau Piramida secara langsung. Stasiun terdekat (Giza di Jalur 2) menyisakan jarak 5 kilometer ke dataran tinggi — taksi atau Uber menyelesaikan perjalanan dalam 10–15 menit.", items: [] },
       { title: "Taksi dan Uber", body: "Uber beroperasi di seluruh Kairo Raya dan merupakan pilihan transportasi paling dapat diprediksi bagi wisatawan: harga ditetapkan sebelum perjalanan, kendala bahasa hilang, dan rute terlacak. Aplikasinya menerima kartu internasional dan metode pembayaran lokal.\n\nTaksi putih berlisensi di Kairo seharusnya memakai argo, tetapi tarif argo jarang dipakai dalam praktik — tawar harga sebelum naik, atau gunakan Uber. Taksi bandara berharga tetap (ditampilkan di papan di area kedatangan) dan agak lebih mahal daripada taksi kota, tetapi menghemat tawar-menawar saat tiba.", items: [] },
       { title: "Transfer privat", body: "Untuk perjalanan antarkota yang kurang praktis dengan kereta atau pesawat — perjalanan dua jam dari Luksor ke Qena, atau jalan ke selatan dari Aswan menuju Abu Simbel — kendaraan privat dengan sopir adalah pengaturan standar pada tur berpemandu. Ini memberi keleluasaan penuh soal waktu, perhentian, dan rute, dan biasanya sudah termasuk dalam paket tur privat.", items: [] },
-      { title: "Menuju Abu Simbel", body: "Abu Simbel, kuil pahat batu kolosal Ramses II sejauh 280 kilometer di selatan Aswan, dicapai dengan penerbangan 45 menit bersama EgyptAir (jadwal terbatas) atau perjalanan darat 3,5 jam dengan kendaraan privat melintasi gurun. Sebagian besar pengunjung menjadikannya perjalanan sehari yang berangkat pagi dari Aswan, berangkat sebelum pukul 4 pagi agar tiba saat dibuka dan menghindari panas tengah hari.", items: [] },
+      { title: "Menuju Abu Simbel", body: "Abu Simbel, kuil pahat batu kolosal Ramses II sejauh 280 kilometer di selatan Aswan, dicapai dengan penerbangan 45 menit bersama EgyptAir (jadwal terbatas) atau perjalanan darat 3 jam dengan kendaraan privat melintasi gurun. Sebagian besar pengunjung menjadikannya perjalanan sehari yang berangkat pagi dari Aswan, berangkat sebelum pukul 4 pagi agar tiba saat dibuka dan menghindari panas tengah hari.", items: [] },
       { title: "Tips perencanaan", body: "", items: [
         "Pesan kereta tidur semalam paling lambat 2–3 minggu sebelumnya, terutama untuk Desember–Januari.",
         "Jika rencana perjalanan Anda mencakup pelayaran Nil, pastikan apakah kapalnya kapal pesiar bermotor atau dahabiya — pengalamannya berbeda jauh.",

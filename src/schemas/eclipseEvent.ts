@@ -16,7 +16,11 @@ export function eclipseDayEvent(locale: SiteLocale, route: string, image?: strin
   return [{
     "@context": "https://schema.org",
     "@type": "Event",
-    "@id": url,
+    // ONE event, described in ten languages. Its identity is the English
+    // page's; each translation's node carries its own `url`. With an @id per
+    // page this was ten different events on the same morning.
+    "@id": `${canonical("guides/total-solar-eclipse-2027-luxor.html")}#eclipse-day`,
+    url,
     name: `${T.title} — 2027-08-02`,
     description: T.lede,
     startDate: ECLIPSE_DAY.start,

@@ -106,5 +106,5 @@ export const tierLine = "Private · Tailor-made · Never a group";
 export const priceStance = {
   headline: "On price, plainly",
   body:
-    "Kemet sits at the upper end of the Egyptian market and we are comfortable saying so. A private Egyptologist for a week costs what it costs; so does a car that is yours alone and a room that faces the river rather than the car park. What we will not do is quote low, then recover the difference through optional extras, shopping stops and an itinerary that quietly turns into a group. Every price on this site is a per-person starting point for a private journey, and the written quote that follows is the price you pay.",
+    "Kemet sits in the private, tailor-made part of the Egyptian market, above the group tours, and we are comfortable saying so. A private Egyptologist for a week costs what it costs; so does a car that is yours alone and a room that faces the river rather than the car park. What we will not do is quote low, then recover the difference through optional extras, shopping stops and an itinerary that quietly turns into a group. Every price on this site is a per-person starting point for a private journey, and the written quote that follows is the price you pay.",
 };

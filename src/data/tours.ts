@@ -791,7 +791,7 @@ export const tours: Tour[] = [
     gallery: [
       { alt: "A family of Kemet guests celebrating at the Step Pyramid of Saqqara", label: "Saqqara", src: "/images/clients/clients-07-saqqara-family.webp", width: 680, height: 680 },
       { alt: "Kemet guests at the Bent Pyramid of Dahshur", label: "Bent Pyramid", src: "/images/clients/clients-15-dahshur-bent-pyramid.webp", width: 680, height: 680 },
-      { alt: "The Red Pyramid of Dahshur, the first true pyramid, under a clear desert sky", label: "Red Pyramid", src: "/images/giza/giza-great-pyramid-clear-sky.webp", width: 1600, height: 1062 },
+      { alt: "The Red Pyramid of Dahshur, the first true pyramid, under a clear desert sky", label: "Red Pyramid", src: "/images/dahshur/dahshur-red-pyramid-clear-sky.webp", width: 1600, height: 1062 },
       { alt: "A family of Kemet guests at the base of the Red Pyramid of Dahshur", label: "Red Pyramid", src: "/images/clients/clients-19-red-pyramid.webp", width: 680, height: 680 },
     ],
     title: "Saqqara, Memphis & Dahshur",

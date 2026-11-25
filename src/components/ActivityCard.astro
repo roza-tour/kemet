@@ -9,7 +9,11 @@ interface Props {
 }
 const { activity, base = "" } = Astro.props;
 // Activities with a slug have a detail page; any without stay as plain cards.
-const href = activity.slug ? `${base}activities/${activity.slug}.html` : undefined;
+// An activity whose page points its canonical at an experience page is that
+// experience: the card links to the canonical page, not to its duplicate.
+const href = activity.canonicalTo
+  ? `${base}${activity.canonicalTo}`
+  : activity.slug ? `${base}activities/${activity.slug}.html` : undefined;
 const Tag = href ? "a" : "article";
 ---
 <Tag

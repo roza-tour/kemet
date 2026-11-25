@@ -226,7 +226,7 @@ export const deDestinations: DestText[] = [
       "Felukenfahrt zwischen den Granitinseln des Ersten Katarakts bei Sonnenuntergang",
     ],
     thingsToKnow: [
-      "Abu Simbel ist ein ganzer Tagesausflug nach Süden im privaten Wagen (3,5 Stunden pro Strecke, Abfahrt gegen 4 Uhr, um vor der Hitze anzukommen) oder ein kurzer Flug mit EgyptAir (45 Minuten, eingeschränkter Flugplan).",
+      "Abu Simbel ist ein ganzer Tagesausflug nach Süden im privaten Wagen (3 Stunden pro Strecke, Abfahrt gegen 4 Uhr, um vor der Hitze anzukommen) oder ein kurzer Flug mit EgyptAir (45 Minuten, eingeschränkter Flugplan).",
       "Philae, die Insel Elephantine und Kitcheners Botanischer Garten sind jeweils mit einer kurzen Motorbootfahrt von der Corniche in Assuan aus zu erreichen.",
       "Assuan ist der übliche Ein- oder Ausschiffungshafen für Nilkreuzfahrten zwischen Assuan und Luxor.",
       "Die Temperaturen in Assuan sind die höchsten in Ägypten; Oktober bis Februar ist das angenehmste Zeitfenster für Besichtigungen im Freien.",
@@ -235,7 +235,7 @@ export const deDestinations: DestText[] = [
     faqs: [
       {
         q: "Wie komme ich von Assuan nach Abu Simbel?",
-        a: "Auf der Straße: 3,5 Stunden Fahrt pro Strecke durch offene Wüste, Abfahrt in Assuan um 3–4 Uhr, um vor der Hitze anzukommen. Unterwegs gibt es Polizeikontrollpunkte — führen Sie also Ihren Reisepass mit. Mit dem Flugzeug: EgyptAir bietet eine begrenzte Zahl von Flügen (rund 45 Minuten) ab dem Flughafen Assuan an — eine frühzeitige Buchung ist unerlässlich, die Plätze sind schnell vergeben. Die meisten Gäste besuchen Abu Simbel als Tagesausflug von Assuan aus. Wer in Abu Simbel übernachtet, erlebt die Tempel im ersten Licht, bevor die Tagesgäste eintreffen. Zweimal im Jahr, am 22. Februar und am 22. Oktober, erreicht die aufgehende Sonne das innere Heiligtum und beleuchtet drei seiner vier sitzenden Statuen.",
+        a: "Auf der Straße: 3 Stunden Fahrt pro Strecke durch offene Wüste, Abfahrt in Assuan um 3–4 Uhr, um vor der Hitze anzukommen. Unterwegs gibt es Polizeikontrollpunkte — führen Sie also Ihren Reisepass mit. Mit dem Flugzeug: EgyptAir bietet eine begrenzte Zahl von Flügen (rund 45 Minuten) ab dem Flughafen Assuan an — eine frühzeitige Buchung ist unerlässlich, die Plätze sind schnell vergeben. Die meisten Gäste besuchen Abu Simbel als Tagesausflug von Assuan aus. Wer in Abu Simbel übernachtet, erlebt die Tempel im ersten Licht, bevor die Tagesgäste eintreffen. Zweimal im Jahr, am 22. Februar und am 22. Oktober, erreicht die aufgehende Sonne das innere Heiligtum und beleuchtet drei seiner vier sitzenden Statuen.",
       },
       {
         q: "Was ist nubische Kultur?",

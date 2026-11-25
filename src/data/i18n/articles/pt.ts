@@ -410,7 +410,7 @@ export const ptArticles: ArtText[] = [
       { label: "Cairo → Luxor (voo)", value: "~55 minutos" },
       { label: "Cairo → Luxor (trem Talgo)", value: "~9–10 horas" },
       { label: "Luxor → Assuã (cruzeiro)", value: "3–4 noites" },
-      { label: "Assuã → Abu Simbel (estrada)", value: "3,5 horas em cada sentido" },
+      { label: "Assuã → Abu Simbel (estrada)", value: "3 horas em cada sentido" },
       { label: "Linhas do metrô do Cairo", value: "3 linhas, ~90 estações" },
       { label: "Saída do cruzeiro no Nilo", value: "Luxor (rumo ao sul) ou Assuã (rumo ao norte)" },
     ],
@@ -422,7 +422,7 @@ export const ptArticles: ArtText[] = [
       { title: "Metrô do Cairo", body: "O metrô do Cairo é limpo, barato e eficiente para percorrer a cidade nos eixos norte–sul. Três linhas e quase 90 estações ligam Heliópolis, o centro, a praça Tahrir, Gizé e os subúrbios do sul. Uma viagem simples custa de EGP 10 a 20, conforme a distância (tarifas de 2026). Há vagões exclusivos para mulheres na frente e no fim de cada trem.\n\nO metrô não chega diretamente às Pirâmides. A estação mais próxima (Giza, na Linha 2) deixa uma distância de 5 quilômetros até o planalto — um táxi ou Uber completa o trajeto em 10 a 15 minutos.", items: [] },
       { title: "Táxis e Uber", body: "O Uber opera em toda a Grande Cairo e é a opção de transporte mais previsível para turistas: o preço é fixado antes da viagem, a barreira do idioma desaparece e o trajeto é rastreado. O aplicativo aceita cartões internacionais e meios de pagamento locais.\n\nOs táxis brancos licenciados do Cairo deveriam ter taxímetro, mas na prática as tarifas medidas raramente são usadas — negociem o preço antes de entrar ou usem o Uber. Os táxis do aeroporto têm preço fixo (exibido em um quadro na chegada) e são um pouco mais caros do que os da cidade, mas poupam a negociação na chegada.", items: [] },
       { title: "Traslados privativos", body: "Para trajetos entre cidades que não são convenientes de trem ou avião — as duas horas de carro de Luxor a Qena, ou a estrada ao sul de Assuã até Abu Simbel — um veículo privativo com motorista é o arranjo padrão nas viagens guiadas. Isso dá total flexibilidade de horário, paradas e rota, e costuma estar incluído nos pacotes de viagem privativa.", items: [] },
-      { title: "Como chegar a Abu Simbel", body: "Abu Simbel, o colossal templo escavado na rocha de Ramsés II, a 280 quilômetros ao sul de Assuã, é alcançado por um voo de 45 minutos com a EgyptAir (horários limitados) ou por 3,5 horas de estrada em veículo privativo pelo deserto. A maioria dos visitantes faz um bate-volta saindo cedo de Assuã, partindo antes das 4 da manhã para chegar na abertura e evitar o calor do meio-dia.", items: [] },
+      { title: "Como chegar a Abu Simbel", body: "Abu Simbel, o colossal templo escavado na rocha de Ramsés II, a 280 quilômetros ao sul de Assuã, é alcançado por um voo de 45 minutos com a EgyptAir (horários limitados) ou por 3 horas de estrada em veículo privativo pelo deserto. A maioria dos visitantes faz um bate-volta saindo cedo de Assuã, partindo antes das 4 da manhã para chegar na abertura e evitar o calor do meio-dia.", items: [] },
       { title: "Dicas de planejamento", body: "", items: [
         "Reservem o trem-leito noturno com pelo menos 2 a 3 semanas de antecedência, sobretudo para dezembro e janeiro.",
         "Se o roteiro inclui um cruzeiro no Nilo, confirmem se a embarcação é um cruzeiro a motor ou uma dahabiya — a experiência difere muito.",

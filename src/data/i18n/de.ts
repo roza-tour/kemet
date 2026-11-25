@@ -25,7 +25,7 @@ import { tours } from "@/data/tours";
 
 // Read from the journeys, so the figure follows the catalogue when prices move.
 const FLY_EXTRA = tours.find((t) => t.flyOption)?.flyOption?.extra ?? 0;
-import { BUILD_YEAR } from "@/utils/format";
+import { REVIEWED_YEAR } from "@/utils/format";
 import { beforeDate, ECLIPSE_2027 } from "@/data/timeboxed";
 
 export const de: LocalizedPage[] = [
@@ -235,7 +235,7 @@ export const de: LocalizedPage[] = [
   {
     groupId: "cost",
     symbol: "sun",
-    title: `Was kostet eine Ägypten-Reise? (${BUILD_YEAR}) | Kemet`,
+    title: `Was kostet eine Ägypten-Reise? (${REVIEWED_YEAR}) | Kemet`,
     description:
       "Was eine private Ägypten-Reise wirklich kostet — Preisspannen des Marktes, die fünf Faktoren, die den Preis bestimmen, und wo Kemet steht.",
     keywords:

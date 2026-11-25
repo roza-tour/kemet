@@ -85,7 +85,6 @@ export const DEFAULT_KEYWORDS = [
   "trip to Egypt",
   "Egypt travel packages",
   "Egypt tour operator",
-  "all-inclusive Egypt tours",
   "Nile cruise",
   "Nile river cruise",
   "Cairo tours",

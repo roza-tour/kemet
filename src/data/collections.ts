@@ -191,7 +191,6 @@ export const collections: Collection[] = [
       width: 1000,
       height: 600,
     },
-    lastReviewed: "2026-01",
     relationships: {
       tours: tour("tour-10-day", "tour-nile-cruise", "tour-abu-simbel", "tour-7-day", "tour-3-day", "tour-giza-museum"),
       destinations: dest("luxor", "aswan", "cairo", "giza"),
@@ -260,7 +259,6 @@ export const collections: Collection[] = [
       width: 736,
       height: 1104,
     },
-    lastReviewed: "2026-01",
     relationships: {
       tours: tour("tour-giza-museum", "tour-cairo-museums", "tour-alexandria-2day", "tour-sharm-5day", "tour-religious-citadel"),
       destinations: dest("cairo", "giza", "alexandria"),
@@ -332,7 +330,6 @@ export const collections: Collection[] = [
       width: 1024,
       height: 680,
     },
-    lastReviewed: "2026-01",
     relationships: {
       tours: tour("tour-10-day", "tour-7-day", "tour-nile-cruise", "tour-3-day", "tour-giza-museum"),
       destinations: dest("cairo", "giza", "luxor", "aswan", "alexandria"),
@@ -414,7 +411,6 @@ export const collections: Collection[] = [
       width: 736,
       height: 1275,
     },
-    lastReviewed: "2026-01",
     relationships: {
       tours: tour("tour-honeymoon-9day", "tour-grand-14day", "tour-10-day", "tour-nile-cruise", "tour-cairo-vip-3day"),
       destinations: dest("luxor", "aswan", "cairo", "giza"),
@@ -511,7 +507,6 @@ export const collections: Collection[] = [
       width: 680,
       height: 680,
     },
-    lastReviewed: "2026-01",
     relationships: {
       tours: tour("tour-family-8day", "tour-7-day", "tour-4-day", "tour-fayoum", "tour-giza-museum"),
       destinations: dest("giza", "cairo", "luxor", "fayoum"),

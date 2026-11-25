@@ -822,7 +822,7 @@ export const deArticles: ArtText[] = [
       { label: "Kairo → Luxor (Flug)", value: "ca. 55 Minuten" },
       { label: "Kairo → Luxor (Talgo-Zug)", value: "ca. 9–10 Stunden" },
       { label: "Luxor → Assuan (Kreuzfahrt)", value: "3–4 Nächte" },
-      { label: "Assuan → Abu Simbel (Straße)", value: "3,5 Stunden pro Strecke" },
+      { label: "Assuan → Abu Simbel (Straße)", value: "3 Stunden pro Strecke" },
       { label: "Kairoer Metro", value: "3 Linien, ~90 Stationen" },
       { label: "Nilkreuzfahrt startet in", value: "Luxor (flussaufwärts) oder Assuan (flussabwärts)" },
     ],
@@ -864,7 +864,7 @@ export const deArticles: ArtText[] = [
       },
       {
         title: "Anreise nach Abu Simbel",
-        body: "Abu Simbel, der gewaltige Felsentempel Ramses’ II., 280 Kilometer südlich von Assuan, erreicht man mit einem 45-minütigen Flug von EgyptAir (eingeschränkter Flugplan) oder mit einer 3,5-stündigen Fahrt im privaten Fahrzeug durch die Wüste. Die meisten Besucher machen daraus einen Tagesausflug mit frühem Aufbruch ab Assuan, Abfahrt vor 4 Uhr morgens, um zur Öffnung anzukommen und der Mittagshitze zu entgehen.",
+        body: "Abu Simbel, der gewaltige Felsentempel Ramses’ II., 280 Kilometer südlich von Assuan, erreicht man mit einem 45-minütigen Flug von EgyptAir (eingeschränkter Flugplan) oder mit einer 3-stündigen Fahrt im privaten Fahrzeug durch die Wüste. Die meisten Besucher machen daraus einen Tagesausflug mit frühem Aufbruch ab Assuan, Abfahrt vor 4 Uhr morgens, um zur Öffnung anzukommen und der Mittagshitze zu entgehen.",
         items: [],
       },
       {

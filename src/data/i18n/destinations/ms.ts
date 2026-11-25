@@ -208,7 +208,7 @@ export const msDestinations: DestText[] = [
       "Belayar dengan felucca di celah pulau-pulau granit Jeram Pertama ketika matahari terbenam",
     ],
     thingsToKnow: [
-      "Abu Simbel ialah lawatan sehari penuh ke selatan dengan kereta persendirian (3.5 jam sehala, bertolak sekitar pukul 4 pagi untuk tiba sebelum panas) atau dengan penerbangan singkat EgyptAir (45 minit, jadual terhad).",
+      "Abu Simbel ialah lawatan sehari penuh ke selatan dengan kereta persendirian (3 jam sehala, bertolak sekitar pukul 4 pagi untuk tiba sebelum panas) atau dengan penerbangan singkat EgyptAir (45 minit, jadual terhad).",
       "Philae, Pulau Elephantine dan Taman Botani Kitchener semuanya dicapai dengan perjalanan bot bermotor yang singkat dari corniche Aswan.",
       "Aswan ialah tempat lazim untuk menaiki atau turun dari kapal bagi pelayaran Sungai Nil antara Aswan dan Luxor.",
       "Suhu di Aswan adalah yang tertinggi di Mesir; Oktober hingga Februari ialah tempoh paling selesa untuk lawatan di luar bangunan.",
@@ -217,7 +217,7 @@ export const msDestinations: DestText[] = [
     faqs: [
       {
         q: "Bagaimana cara ke Abu Simbel dari Aswan?",
-        a: "Melalui jalan darat: pemanduan 3.5 jam sehala merentasi gurun terbuka, bertolak dari Aswan pada pukul 3–4 pagi untuk tiba sebelum panas. Terdapat pusat pemeriksaan polis di sepanjang jalan, jadi bawalah pasport anda. Melalui udara: EgyptAir mengendalikan sebilangan terhad penerbangan (kira-kira 45 minit) dari Lapangan Terbang Aswan — tempahan awal amat penting dan tempat duduk cepat habis. Kebanyakan pengunjung menjadikan Abu Simbel lawatan sehari dari Aswan. Mereka yang bermalam di Abu Simbel melihat kuil-kuil itu pada cahaya pertama pagi, sebelum pengunjung harian tiba. Dua kali setahun, pada 22 Februari dan 22 Oktober, matahari terbit sampai ke ruang suci paling dalam dan menyinari tiga daripada empat arca yang duduk di situ.",
+        a: "Melalui jalan darat: pemanduan 3 jam sehala merentasi gurun terbuka, bertolak dari Aswan pada pukul 3–4 pagi untuk tiba sebelum panas. Terdapat pusat pemeriksaan polis di sepanjang jalan, jadi bawalah pasport anda. Melalui udara: EgyptAir mengendalikan sebilangan terhad penerbangan (kira-kira 45 minit) dari Lapangan Terbang Aswan — tempahan awal amat penting dan tempat duduk cepat habis. Kebanyakan pengunjung menjadikan Abu Simbel lawatan sehari dari Aswan. Mereka yang bermalam di Abu Simbel melihat kuil-kuil itu pada cahaya pertama pagi, sebelum pengunjung harian tiba. Dua kali setahun, pada 22 Februari dan 22 Oktober, matahari terbit sampai ke ruang suci paling dalam dan menyinari tiga daripada empat arca yang duduk di situ.",
       },
       {
         q: "Apakah budaya Nubia?",

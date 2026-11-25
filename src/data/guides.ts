@@ -65,7 +65,6 @@ export const guides: Guide[] = [
     shortSummary:
       "Everything you need to plan a trip to Egypt — visa requirements, the best time to go, getting around, top destinations, culture and practical essentials.",
     readingTimeMinutes: 8,
-    lastUpdated: "2026-01",
     keyFacts: [
       { label: "Capital", value: "Cairo" },
       { label: "Currency", value: "Egyptian Pound (EGP)" },
@@ -161,7 +160,7 @@ export const guides: Guide[] = [
     hero: {
       alt: "The Red Pyramid of Dahshur under a clear desert sky",
       label: "Egypt",
-      src: "/images/giza/giza-great-pyramid-clear-sky.webp",
+      src: "/images/dahshur/dahshur-red-pyramid-clear-sky.webp",
       width: 1600,
       height: 1062,
     },
@@ -192,7 +191,6 @@ export const guides: Guide[] = [
       "Egypt's best travel season is October to April, when Nile Valley temperatures are mild and monuments are comfortable to explore. Here is what to expect season by season and destination by destination.",
     difficulty: "easy",
     readingTimeMinutes: 6,
-    lastUpdated: "2026-01",
     keyFacts: [
       { label: "Peak season", value: "October – April" },
       { label: "Shoulder season", value: "Apr–May and Sep–Oct" },
@@ -325,7 +323,7 @@ export const guides: Guide[] = [
       { label: "Cairo → Luxor (flight)", value: "~55 minutes" },
       { label: "Cairo → Luxor (train)", value: "~9–10 hours" },
       { label: "Luxor → Aswan (cruise)", value: "3–4 nights" },
-      { label: "Aswan → Abu Simbel (road)", value: "3.5 hours each way" },
+      { label: "Aswan → Abu Simbel (road)", value: "3 hours each way" },
       { label: "Cairo Metro lines", value: "3 lines, ~90 stations" },
       { label: "Nile cruise departs", value: "Luxor (southbound) or Aswan (northbound)" },
     ],
@@ -390,7 +388,7 @@ export const guides: Guide[] = [
       {
         heading: "Getting to Abu Simbel",
         paragraphs: [
-          "Abu Simbel, Ramesses II's colossal rock-cut temple 280 kilometres south of Aswan, is reached by a 45-minute flight with EgyptAir (limited schedule) or a 3.5-hour road journey by private vehicle through the desert. Most visitors make it an early-start day trip from Aswan, departing before 4 a.m. to arrive at opening and avoid the midday heat.",
+          "Abu Simbel, Ramesses II's colossal rock-cut temple 280 kilometres south of Aswan, is reached by a 45-minute flight with EgyptAir (limited schedule) or a 3-hour road journey by private vehicle through the desert. Most visitors make it an early-start day trip from Aswan, departing before 4 a.m. to arrive at opening and avoid the midday heat.",
         ],
       },
     ],
@@ -451,7 +449,6 @@ export const guides: Guide[] = [
       "A practical guide to Egyptian cuisine — the dishes to seek out, how Egyptians eat, where to find the best food, and what to expect for dietary requirements.",
     difficulty: "easy",
     readingTimeMinutes: 6,
-    lastUpdated: "2026-01",
     keyFacts: [
       { label: "Cuisine character", value: "Levantine–North African; generous, communal, legume-rich" },
       { label: "Staple", value: "Aish (bread) — flat or leavened, baked daily" },

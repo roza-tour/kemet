@@ -84,6 +84,14 @@ export function monthYear(iso: string): string {
 export const BUILD_YEAR = new Date().getUTCFullYear();
 
 /**
+ * The year printed in titles such as "Is Egypt Safe to Visit in 2026?".
+ * Set by hand when those pages are read through again — NOT the build clock:
+ * a page rebuilt on 1 January would otherwise announce itself as this year's
+ * answer without anyone having looked at it ("a rebuild is not a review").
+ */
+export const REVIEWED_YEAR = 2026;
+
+/**
  * The question a flight version answers, as a FAQ entry. Built in one place
  * because it is shown in the page's FAQ and emitted in its FAQPage schema, and
  * the two must say the same thing — schema whose answer differs from the page

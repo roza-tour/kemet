@@ -205,7 +205,7 @@ export const esDestinations: DestText[] = [
       "La navegación en faluca entre las islas de granito de la Primera Catarata al atardecer",
     ],
     thingsToKnow: [
-      "Abu Simbel es una excursión de un día entero hacia el sur en coche privado (3,5 horas por trayecto, con salida hacia las 4 de la madrugada para llegar antes del calor) o en un vuelo corto de EgyptAir (45 minutos, horarios limitados).",
+      "Abu Simbel es una excursión de un día entero hacia el sur en coche privado (3 horas por trayecto, con salida hacia las 4 de la madrugada para llegar antes del calor) o en un vuelo corto de EgyptAir (45 minutos, horarios limitados).",
       "A File, la isla Elefantina y el Jardín Botánico de Kitchener se llega en un breve traslado en lancha motora desde la Corniche de Asuán.",
       "Asuán es el punto habitual de embarque o desembarque de los cruceros por el Nilo entre Asuán y Luxor.",
       "Las temperaturas de Asuán son las más altas de Egipto; de octubre a febrero es el periodo más agradable para las visitas al aire libre.",
@@ -214,7 +214,7 @@ export const esDestinations: DestText[] = [
     faqs: [
       {
         q: "¿Cómo se llega a Abu Simbel desde Asuán?",
-        a: "Por carretera: 3,5 horas por trayecto a través del desierto abierto, con salida de Asuán entre las 3 y las 4 de la madrugada para llegar antes del calor. En el camino hay controles policiales, así que lleve consigo el pasaporte. En avión: EgyptAir opera un número limitado de vuelos (unos 45 minutos) desde el aeropuerto de Asuán; es imprescindible reservar con antelación y las plazas se agotan pronto. La mayoría de los visitantes hace Abu Simbel como excursión de un día desde Asuán. Quienes pernoctan en Abu Simbel ven los templos con la primera luz, antes de que lleguen los visitantes del día. Dos veces al año, el 22 de febrero y el 22 de octubre, el sol naciente alcanza el santuario interior e ilumina tres de sus cuatro estatuas sedentes.",
+        a: "Por carretera: 3 horas por trayecto a través del desierto abierto, con salida de Asuán entre las 3 y las 4 de la madrugada para llegar antes del calor. En el camino hay controles policiales, así que lleve consigo el pasaporte. En avión: EgyptAir opera un número limitado de vuelos (unos 45 minutos) desde el aeropuerto de Asuán; es imprescindible reservar con antelación y las plazas se agotan pronto. La mayoría de los visitantes hace Abu Simbel como excursión de un día desde Asuán. Quienes pernoctan en Abu Simbel ven los templos con la primera luz, antes de que lleguen los visitantes del día. Dos veces al año, el 22 de febrero y el 22 de octubre, el sol naciente alcanza el santuario interior e ilumina tres de sus cuatro estatuas sedentes.",
       },
       {
         q: "¿Qué es la cultura nubia?",

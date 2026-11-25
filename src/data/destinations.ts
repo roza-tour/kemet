@@ -343,7 +343,7 @@ export const destinations: Destination[] = [
       "Philae Temple rising from the water as the motorboat approaches",
     ],
     thingsToKnow: [
-      "Abu Simbel is a full day's trip south by private car (3.5 hours each way, leaving around 4 am to arrive before the heat) or a short EgyptAir flight (45 minutes, limited schedule).",
+      "Abu Simbel is a full day's trip south by private car (3 hours each way, leaving around 4 am to arrive before the heat) or a short EgyptAir flight (45 minutes, limited schedule).",
       "Philae, Elephantine Island and Kitchener's Botanical Garden are all reached by short motorboat transfer from the Aswan corniche.",
       "Aswan is the standard embarkation or disembarkation point for Nile cruises between Aswan and Luxor.",
       "Temperatures in Aswan are the highest in Egypt; October to February is the most comfortable window for outdoor sightseeing.",
@@ -372,7 +372,7 @@ export const destinations: Destination[] = [
     faqs: [
       {
         q: "How do I get to Abu Simbel from Aswan?",
-        a: "By road: a 3.5-hour drive each way through open desert, leaving Aswan at 3–4 am to arrive before the heat. There are police checkpoints on the way, so carry your passport. By air: EgyptAir operates a limited number of flights (approximately 45 minutes) from Aswan Airport — advance booking is essential and seats sell out quickly. Most visitors make Abu Simbel a day trip from Aswan. Those who stay overnight at Abu Simbel see the temples at first light, before the day visitors arrive. Twice a year, on 22 February and 22 October, the rising sun reaches the inner sanctuary and lights three of its four seated statues.",
+        a: "By road: a 3-hour drive each way through open desert, leaving Aswan at 3–4 am to arrive before the heat. There are police checkpoints on the way, so carry your passport. By air: EgyptAir operates a limited number of flights (approximately 45 minutes) from Aswan Airport — advance booking is essential and seats sell out quickly. Most visitors make Abu Simbel a day trip from Aswan. Those who stay overnight at Abu Simbel see the temples at first light, before the day visitors arrive. Twice a year, on 22 February and 22 October, the rising sun reaches the inner sanctuary and lights three of its four seated statues.",
       },
       {
         q: "What is Nubian culture?",

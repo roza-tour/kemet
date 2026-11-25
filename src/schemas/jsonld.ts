@@ -12,7 +12,7 @@ import { reviewer, type Expert } from "@/data/experts";
 import { LOCALES, LOCALE_META } from "@/config/i18n";
 import { marketCountries } from "@/data/markets";
 import { reviews } from "@/data/reviews";
-import { priceForTwo } from "@/data/tours";
+import { priceForTwo, tours as allTours } from "@/data/tours";
 
 /**
  * Languages the office can genuinely correspond in. A claim about PEOPLE, not
@@ -49,6 +49,11 @@ const SCHEMA_CONTEXT = "https://schema.org";
  * Those slots now emit a bare @id reference instead. JSON-LD merges nodes that
  * share an @id, so the graph carries exactly one business — the complete one.
  */
+const PRICE_RANGE = (() => {
+  const all = allTours.map((t) => t.price);
+  return `€${Math.min(...all)}–€${Math.max(...all)} per person`;
+})();
+
 export const ORG_ID = `${SITE_URL}#organization`;
 export const orgRef = () => ({ "@id": ORG_ID });
 
@@ -274,25 +279,16 @@ export function tourSchema(tour: Tour): JsonLd[] {
     })(),
   };
 
-  // "What is included?" and "Are flights included?" are the first two questions
-  // anyone asks about a tour, and the page answers both — in the Included & not
-  // included block, as two plain <ul>s. A list is readable by a person and
-  // invisible as an ANSWER: an assistant asked "does the 10-day trip include
-  // domestic flights?" had nothing to quote and would say it did not know.
-  //
-  // These two entries carry the same lines the page already shows, which is
-  // also what FAQPage requires — the answer must be visible on the page, and
-  // it is, a few centimetres above. Nothing here is written for the schema.
-  const listed = (xs: readonly string[]) => xs.join("; ") + ".";
+  // The FAQ markup carries the questions the page visibly asks, and no
+  // others. What is and is not included is answered in prose by the answer
+  // box at the top of the page (utils/format.ts → tourAnswer), which is the
+  // passage an assistant quotes.
   const derivedFaqs = [
     ...(comfortFaq(tour) ? [comfortFaq(tour)!] : []),
     ...(flyFaq(tour) ? [flyFaq(tour)!] : []),
-    ...(tour.included?.length
-      ? [{ q: `What is included in ${tour.title}?`, a: `Included: ${listed(tour.included)}` }]
-      : []),
-    ...(tour.excluded?.length
-      ? [{ q: `What is not included in ${tour.title}?`, a: `Not included: ${listed(tour.excluded)}` }]
-      : []),
+    // "What is included in …?" and "What is not included in …?" were marked
+    // up here as questions on all 25 journeys while the page shows two lists
+    // and asks neither. FAQ markup is for questions the page visibly asks.
   ];
 
   const faqPage: JsonLd = {
@@ -759,7 +755,9 @@ export function siteSchema(full = true): JsonLd[] {
     },
     serviceArea: { "@type": "AdministrativeArea", name: "Worldwide" },
     serviceType: "Luxury private tours, Nile cruises and tailor-made travel",
-    priceRange: "€€€€",
+    // The catalogue's real span, per person — not a row of symbols. "€€€€"
+    // beside a €57 day tour was a claim the pages themselves contradicted.
+    priceRange: PRICE_RANGE,
     knowsLanguage: [...SPOKEN_LANGUAGES],
     // Verified profiles that represent this same entity. Populated from
     // company data so adding a profile is a one-line change; omitted entirely

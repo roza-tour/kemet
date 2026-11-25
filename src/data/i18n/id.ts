@@ -27,7 +27,7 @@ import { tours } from "@/data/tours";
 
 // Read from the journeys, so the figure follows the catalogue when prices move.
 const FLY_EXTRA = tours.find((t) => t.flyOption)?.flyOption?.extra ?? 0;
-import { BUILD_YEAR } from "@/utils/format";
+import { REVIEWED_YEAR } from "@/utils/format";
 import { beforeDate, ECLIPSE_2027 } from "@/data/timeboxed";
 
 export const id: LocalizedPage[] = [
@@ -249,7 +249,7 @@ export const id: LocalizedPage[] = [
   {
     groupId: "cost",
     symbol: "scales",
-    title: `Biaya Liburan ke Mesir — perkiraan nyata ${BUILD_YEAR} | Kemet`,
+    title: `Biaya Liburan ke Mesir — perkiraan nyata ${REVIEWED_YEAR} | Kemet`,
     description:
       "Berapa biaya liburan privat ke Mesir: kisaran per orang per hari, lima hal yang menggerakkan harga, dan apa saja yang sudah termasuk.",
     keywords:

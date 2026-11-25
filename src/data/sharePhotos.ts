@@ -29,7 +29,7 @@ const img = (p: string) => `/images/${p}.webp`;
 const CHOICES: Choice[] = [
   // ---- Translated pages of one subject: the same photograph in every language
   {
-    src: img("giza/giza-great-pyramid-clear-sky"),
+    src: img("dahshur/dahshur-red-pyramid-clear-sky"),
     alt: {
       en: "The Red Pyramid of Dahshur, the first true pyramid, under a clear desert sky",
       de: "Die Rote Pyramide von Dahschur, die erste echte Pyramide, unter klarem Wüstenhimmel",

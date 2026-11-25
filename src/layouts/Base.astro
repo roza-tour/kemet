@@ -238,7 +238,10 @@ const ogLocaleAlternates = alternates
   <title>{title}</title>
   <meta name="description" content={description} />
   <meta name="keywords" content={keywords} />
-  <link rel="canonical" href={canonicalUrl} />
+  {/* A page that asks not to be indexed names no canonical: the 404 page
+      used to declare the home page as its canonical, which tells a crawler
+      that every missing address is a copy of the front page. */}
+  {!Astro.props.noindex && <link rel="canonical" href={canonicalUrl} />}
   {/* The same page as plain Markdown, for assistants and agents — written by
       scripts/markdown-pages.mjs after the build, and also what the server
       answers with when a request asks for text/markdown (.htaccess). Declared

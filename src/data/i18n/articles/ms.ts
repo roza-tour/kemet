@@ -822,7 +822,7 @@ export const msArticles: ArtText[] = [
       { label: "Kaherah → Luxor (penerbangan)", value: "~55 minit" },
       { label: "Kaherah → Luxor (kereta api Talgo)", value: "~9–10 jam" },
       { label: "Luxor → Aswan (pelayaran)", value: "3–4 malam" },
-      { label: "Aswan → Abu Simbel (jalan raya)", value: "3.5 jam setiap hala" },
+      { label: "Aswan → Abu Simbel (jalan raya)", value: "3 jam setiap hala" },
       { label: "Laluan Metro Kaherah", value: "3 laluan, ~90 stesen" },
       { label: "Pelayaran Nil bertolak dari", value: "Luxor (ke selatan) atau Aswan (ke utara)" },
     ],
@@ -864,7 +864,7 @@ export const msArticles: ArtText[] = [
       },
       {
         title: "Ke Abu Simbel",
-        body: "Abu Simbel, kuil batu raksasa Ramses II sejauh 280 kilometer ke selatan Aswan, boleh dicapai dengan penerbangan 45 minit bersama EgyptAir (jadual terhad) atau perjalanan jalan raya 3.5 jam dengan kenderaan persendirian melalui gurun. Kebanyakan pelawat menjadikannya lawatan sehari dengan permulaan awal dari Aswan, bertolak sebelum pukul 4 pagi untuk tiba ketika dibuka dan mengelakkan bahang tengah hari.",
+        body: "Abu Simbel, kuil batu raksasa Ramses II sejauh 280 kilometer ke selatan Aswan, boleh dicapai dengan penerbangan 45 minit bersama EgyptAir (jadual terhad) atau perjalanan jalan raya 3 jam dengan kenderaan persendirian melalui gurun. Kebanyakan pelawat menjadikannya lawatan sehari dengan permulaan awal dari Aswan, bertolak sebelum pukul 4 pagi untuk tiba ketika dibuka dan mengelakkan bahang tengah hari.",
         items: [],
       },
       {

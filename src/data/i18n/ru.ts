@@ -28,7 +28,7 @@ import { tours } from "@/data/tours";
 
 // Read from the journeys, so the figure follows the catalogue when prices move.
 const FLY_EXTRA = tours.find((t) => t.flyOption)?.flyOption?.extra ?? 0;
-import { BUILD_YEAR } from "@/utils/format";
+import { REVIEWED_YEAR } from "@/utils/format";
 import { beforeDate, ECLIPSE_2027 } from "@/data/timeboxed";
 
 export const ru: LocalizedPage[] = [
@@ -240,7 +240,7 @@ export const ru: LocalizedPage[] = [
   {
     groupId: "cost",
     symbol: "scales",
-    title: `Сколько стоит поездка в Египет — расчёт ${BUILD_YEAR} | Kemet`,
+    title: `Сколько стоит поездка в Египет — расчёт ${REVIEWED_YEAR} | Kemet`,
     description:
       "Сколько на самом деле стоит индивидуальная поездка в Египет: диапазоны на человека в день, пять факторов цены и что в неё уже включено.",
     keywords:
