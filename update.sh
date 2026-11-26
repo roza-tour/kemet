@@ -158,21 +158,47 @@ else
   if [ "$N_URLS" -eq 0 ]; then
     ok "لا صفحات اتغيرت · no page content changed in this update — nothing to report"
   else
-    URLS="$(printf '%s\n' "$CHANGED_URLS" | grep . | sed 's|^|"|; s|$|"|' | paste -sd, -)"
-    PAYLOAD="{\"host\":\"kemet-travel.com\",\"key\":\"$INDEXNOW_KEY\",\"keyLocation\":\"https://kemet-travel.com/$INDEXNOW_KEY.txt\",\"urlList\":[$URLS]}"
-    CODE="$(printf '%s' "$PAYLOAD" | curl -s -o /dev/null -w '%{http_code}' -m 25 \
-             -X POST 'https://api.indexnow.org/indexnow' \
-             -H 'Content-Type: application/json; charset=utf-8' --data-binary @- 2>/dev/null)"
-    case "$CODE" in
-      200|202) ok "IndexNow accepted $N_URLS changed page(s) (HTTP $CODE) — Bing, Yandex and the IndexNow engines notified:"
-               printf '%s\n' "$CHANGED_URLS" | grep . | head -8 | sed 's/^/       /'
-               [ "$N_URLS" -gt 8 ] && echo "       … and $((N_URLS - 8)) more" ;;
-      "")      bad "Could not reach IndexNow (no network) — skipped, site is live." ;;
-      403)     bad "IndexNow says the key is not valid (HTTP 403) — check https://kemet-travel.com/$INDEXNOW_KEY.txt" ;;
-      422)     bad "IndexNow rejected the URLs (HTTP 422: wrong host, or key file mismatch) — skipped, site is live." ;;
-      429)     bad "IndexNow asked us to slow down (HTTP 429) — skipped this time, site is live." ;;
-      *)       bad "IndexNow replied HTTP $CODE — skipped, site is live." ;;
-    esac
+    # Small groups, not one big list. Bing Webmaster Tools flagged the single
+    # urlList this step used to send as "IndexNow is in batch mode" (moderate,
+    # seen 26 Nov 2026): a template change touches every page in every
+    # language, and one POST of hundreds of URLs is the pattern it says
+    # overloads and slows indexing. Groups of 10, two seconds apart, are what
+    # it calls streaming. A failed group stops the rest — after a 429 the
+    # engine has asked us to slow down — and the site is live either way.
+    GROUP_SIZE=10
+    GROUPS_JSON="$(printf '%s\n' "$CHANGED_URLS" | grep . | sed 's|^|"|; s|$|"|' \
+      | awk -v n="$GROUP_SIZE" '{ printf "%s%s", (NR % n == 1 ? "" : ","), $0 }
+                                NR % n == 0 { print "" }
+                                END { if (NR % n) print "" }')"
+    N_GROUPS="$(printf '%s\n' "$GROUPS_JSON" | grep -c . || true)"
+    SENT_GROUPS=0
+    CODE=""
+    while IFS= read -r URLS; do
+      [ -n "$URLS" ] || continue
+      [ "$SENT_GROUPS" -gt 0 ] && sleep 2
+      PAYLOAD="{\"host\":\"kemet-travel.com\",\"key\":\"$INDEXNOW_KEY\",\"keyLocation\":\"https://kemet-travel.com/$INDEXNOW_KEY.txt\",\"urlList\":[$URLS]}"
+      CODE="$(printf '%s' "$PAYLOAD" | curl -s -o /dev/null -w '%{http_code}' -m 25 \
+               -X POST 'https://api.indexnow.org/indexnow' \
+               -H 'Content-Type: application/json; charset=utf-8' --data-binary @- 2>/dev/null)"
+      case "$CODE" in
+        200|202) SENT_GROUPS=$((SENT_GROUPS + 1)) ;;
+        *)       break ;;
+      esac
+    done < <(printf '%s\n' "$GROUPS_JSON")
+    if [ "$SENT_GROUPS" -eq "$N_GROUPS" ]; then
+      ok "IndexNow accepted $N_URLS changed page(s) in $N_GROUPS group(s) of up to $GROUP_SIZE (HTTP $CODE) — Bing, Yandex and the IndexNow engines notified:"
+      printf '%s\n' "$CHANGED_URLS" | grep . | head -8 | sed 's/^/       /'
+      [ "$N_URLS" -gt 8 ] && echo "       … and $((N_URLS - 8)) more"
+    else
+      [ "$SENT_GROUPS" -gt 0 ] && bad "IndexNow took $SENT_GROUPS of $N_GROUPS group(s) before it stopped:"
+      case "$CODE" in
+        "")  bad "Could not reach IndexNow (no network) — skipped, site is live." ;;
+        403) bad "IndexNow says the key is not valid (HTTP 403) — check https://kemet-travel.com/$INDEXNOW_KEY.txt" ;;
+        422) bad "IndexNow rejected the URLs (HTTP 422: wrong host, or key file mismatch) — skipped, site is live." ;;
+        429) bad "IndexNow asked us to slow down (HTTP 429) — the rest skipped this time, site is live." ;;
+        *)   bad "IndexNow replied HTTP $CODE — skipped, site is live." ;;
+      esac
+    fi
   fi
 fi
 
