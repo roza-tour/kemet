@@ -2723,7 +2723,8 @@ export const tours: Tour[] = [
       "1 night in a seafront hotel",
       ...baseIncluded.slice(1),
     ],
-    excluded: baseExcluded,
+    // The seafood dinner in the itinerary is part of the price (owner, 26 Nov 2026).
+    excluded: baseExcluded.map((x) => (x === "Meals" ? "Meals, except the waterfront seafood dinner in Alexandria" : x)),
     faqs: [
       {
         q: "Why stay overnight instead of the day trip?",
