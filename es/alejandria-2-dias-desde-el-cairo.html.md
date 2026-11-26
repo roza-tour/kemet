@@ -69,7 +69,7 @@ En excursión de un día, Alejandría es una carrera que vale la pena; con una n
 - Visa de entrada a Egipto
 - Propinas
 - Gastos personales
-- Comidas
+- Comidas, salvo la cena de pescado frente al mar en Alejandría
 - Extras opcionales que decida añadir — actividades, bebidas
 
 ## El ritmo

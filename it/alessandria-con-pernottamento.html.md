@@ -69,7 +69,7 @@ Alessandria in giornata è uno sprint rispettabile; Alessandria con una notte è
 - Il visto d'ingresso in Egitto
 - Le mance
 - Le spese personali
-- I pasti
+- I pasti, tranne la cena di pesce sul lungomare di Alessandria
 - I supplementi facoltativi a scelta — attività, bevande
 
 ## Il ritmo

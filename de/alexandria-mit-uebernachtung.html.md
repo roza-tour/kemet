@@ -69,7 +69,7 @@ Alexandria als Tagesausflug ist ein ordentlicher Sprint; Alexandria über Nacht 
 - Einreisevisum für Ägypten
 - Trinkgelder
 - Persönliche Ausgaben
-- Mahlzeiten
+- Mahlzeiten, außer dem Fischessen an der Uferpromenade in Alexandria
 - Optionale Zusatzleistungen nach Wahl — Aktivitäten, Getränke
 
 ## Wie anstrengend ist das

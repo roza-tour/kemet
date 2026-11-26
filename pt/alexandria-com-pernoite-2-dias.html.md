@@ -69,7 +69,7 @@ Alexandria em bate-volta é uma boa corrida; Alexandria com pernoite é outra ci
 - Visto de entrada no Egito
 - Gorjetas
 - Despesas pessoais
-- Refeições
+- Refeições, exceto o jantar de frutos do mar à beira-mar em Alexandria
 - Extras opcionais que vocês escolherem acrescentar — atividades, bebidas
 
 ## O ritmo

@@ -69,7 +69,7 @@ Alexandrie en excursion est un sprint honorable; Alexandrie avec une nuit est un
 - Le visa d'entrée en Égypte
 - Les pourboires
 - Les dépenses personnelles
-- Les repas
+- Les repas, sauf le dîner de poisson en bord de mer à Alexandrie
 - Les options que vous ajoutez — activités, boissons
 
 ## Le rythme

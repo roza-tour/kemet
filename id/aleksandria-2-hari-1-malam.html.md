@@ -69,7 +69,7 @@ Aleksandria sebagai tur sehari adalah lari cepat yang menyenangkan; Aleksandria 
 - Visa masuk Mesir
 - Tip
 - Pengeluaran pribadi
-- Makanan
+- Makanan, kecuali makan malam hidangan laut di tepi laut Alexandria
 - Tambahan opsional yang Anda pilih — aktivitas, minuman
 
 ## Ritme perjalanan

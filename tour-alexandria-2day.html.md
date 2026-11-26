@@ -55,7 +55,7 @@ Day **02**
 - Egypt entry visa
 - Tipping (gratuities)
 - Personal expenses
-- Meals
+- Meals, except the waterfront seafood dinner in Alexandria
 - Optional extras you choose to add — activities, drinks
 
 ## Comfort & pace

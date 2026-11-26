@@ -69,7 +69,7 @@ Alexandria sebagai lawatan sehari ialah larian pecut yang baik; Alexandria denga
 - Visa masuk Mesir
 - Tip
 - Perbelanjaan peribadi
-- Makanan
+- Makanan, kecuali makan malam makanan laut di tepi laut Iskandariah
 - Tambahan pilihan yang anda pilih sendiri — aktiviti, minuman
 
 ## Rentak perjalanan
